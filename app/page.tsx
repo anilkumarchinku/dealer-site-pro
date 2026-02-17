@@ -299,7 +299,7 @@ export default function WelcomePage() {
                                                         )}
                                                     </div>
                                                     <p className="text-xs font-medium truncate">{car.model}</p>
-                                                    <p className="text-xs text-gray-900 font-semibold">₹{(car.pricing.exShowroom.min / 100000).toFixed(1)}L</p>
+                                                    <p className="text-xs text-gray-900 font-semibold">₹{((car.pricing.exShowroom.min ?? 0) / 100000).toFixed(1)}L</p>
                                                 </div>
                                             ))}
                                         </div>

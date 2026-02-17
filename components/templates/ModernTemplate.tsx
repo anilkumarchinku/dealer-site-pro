@@ -227,7 +227,7 @@ export function ModernTemplate({
                                                     className="text-3xl font-bold"
                                                     style={{ color: brandColors.primary }}
                                                 >
-                                                    {featuredCars[activeCarIndex].pricing.exShowroom.min.toLocaleString(
+                                                    {(featuredCars[activeCarIndex].pricing.exShowroom.min ?? 0).toLocaleString(
                                                         'en-IN',
                                                         { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }
                                                     )}

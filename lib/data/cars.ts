@@ -375,13 +375,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/audi/audi-q8-e-tron.jpg",
@@ -415,13 +412,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/audi/audi-rs-e-tron-gt.jpg",
@@ -807,13 +801,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/bmw/bmw-5-series.jpg",
@@ -1023,13 +1014,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/bmw/bmw-ix.jpg",
@@ -1107,13 +1095,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/bmw/bmw-m2.jpg",
@@ -1235,13 +1220,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/bmw/bmw-m4-competition.jpg",
@@ -1319,13 +1301,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/bmw/bmw-m8-coupe-competition.jpg",
@@ -1755,13 +1734,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/byd/byd-emax-7.jpg",
@@ -1839,13 +1815,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/byd/byd-sealion-6.jpg",
@@ -1923,13 +1896,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/citroen/citroen-aircross.jpg",
@@ -4867,13 +4837,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/maruti/maruti-ciaz.jpg",
@@ -5699,13 +5666,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/mercedes-benz/mercedes-benz-amg-a-45-s.jpg",
@@ -5739,13 +5703,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/mercedes-benz/mercedes-benz-amg-c-63.jpg",
@@ -5779,13 +5740,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/mercedes-benz/mercedes-benz-amg-g-class.jpg",
@@ -5995,13 +5953,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/mercedes-benz/mercedes-benz-eqa.jpg",
@@ -6079,13 +6034,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/mercedes-benz/mercedes-benz-eqe-sedan.jpg",
@@ -6207,13 +6159,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/mercedes-benz/mercedes-benz-eqs-suv.jpg",
@@ -7259,13 +7208,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/porsche/porsche-panamera.jpg",
@@ -9059,13 +9005,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/volvo/volvo-ec40.jpg",
@@ -9143,13 +9086,10 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": [
-      "Automatic"
-    ],
-    "drivetrain": "FWD",
-    "fuelEfficiency": "TBD",
-    "seating": 5,
-    "features": [],
+    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "performance": {},
+    "dimensions": { "seatingCapacity": 5 },
+    "features": { "keyFeatures": [] },
     "colors": [],
     "images": {
       "hero": "/assets/cars/volvo/volvo-ex40.jpg",
@@ -9324,7 +9264,11 @@ export function getAllBodyTypes(): string[] {
 // Helper function to get cars within a price range
 export function getCarsByPriceRange(minPrice: number, maxPrice: number): Car[] {
   return allCars.filter(car =>
-    car.pricing.exShowroom.min >= minPrice &&
-    car.pricing.exShowroom.max <= maxPrice
+    (car.pricing.exShowroom.min ?? 0) >= minPrice &&
+    (car.pricing.exShowroom.max ?? Infinity) <= maxPrice
   );
+}
+
+export function getCarById(id: string): Car | undefined {
+  return allCars.find(car => car.id === id);
 }

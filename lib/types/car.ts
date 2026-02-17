@@ -15,8 +15,8 @@ export type DriveType = 'FWD' | 'RWD' | 'AWD' | '4WD' | string;
 
 export interface CarPricing {
     exShowroom: {
-        min: number;          // Starting price in INR
-        max: number;          // Top variant price in INR
+        min: number | null;   // Starting price in INR
+        max: number | null;   // Top variant price in INR
         currency: 'INR';
     };
     onRoad?: {
