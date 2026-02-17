@@ -25,8 +25,11 @@ import {
     Flame,
     Activity,
     TrendingUp,
+    MessageSquare,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
+import type { Service } from '@/lib/types';
 
 interface SportyTemplateProps {
     brandName: string;
@@ -43,6 +46,7 @@ interface SportyTemplateProps {
         tagline?: string;
     };
     previewMode?: boolean;
+    services?: Service[];
 }
 
 export function SportyTemplate({
@@ -52,9 +56,11 @@ export function SportyTemplate({
     contactInfo,
     config: customConfig,
     previewMode,
+    services,
 }: SportyTemplateProps) {
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [isScrolled, setIsScrolled] = useState(false);
+    const [enquireSidebarOpen, setEnquireSidebarOpen] = useState(false);
 
     // Get template configuration with brand colors
     const config = generateTemplateConfig(brandName, 'sporty');
@@ -79,16 +85,15 @@ export function SportyTemplate({
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
                         <div className="flex items-center cursor-pointer" onClick={() => setActiveTab('home')}>
-                            <div className="w-10 h-10 rounded-md flex items-center justify-center mr-3 bg-white/10 backdrop-blur-sm border border-white/20">
-                                <div className="relative w-8 h-8">
-                                    <Image
-                                        src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                        alt={brandName}
-                                        fill
-                                        className="object-contain"
-                                        sizes="32px"
-                                    />
-                                </div>
+                            <div className="relative w-10 h-10 mr-3">
+                                <Image
+                                    src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
+                                    alt={brandName}
+                                    fill
+                                    className="object-contain"
+                                    sizes="40px"
+                                    style={{ filter: 'brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,255,255,0.9)) drop-shadow(0 0 20px rgba(255,255,255,0.5))' }}
+                                />
                             </div>
                             <span className="text-xl font-bold">{dealerName}</span>
                         </div>
@@ -111,13 +116,34 @@ export function SportyTemplate({
                                 Contact
                             </a>
                         </div>
-                        <Button className="text-white font-bold" style={{ backgroundColor: brandColors.primary }}>
-                            <Phone className="w-4 h-4 mr-2" />
-                            CALL NOW
-                        </Button>
+                        <div className="flex items-center gap-2">
+                            <Button
+                                className="text-white font-bold hidden sm:flex"
+                                style={{ backgroundColor: `${brandColors.primary}cc` }}
+                                onClick={() => setEnquireSidebarOpen(true)}
+                            >
+                                <MessageSquare className="w-4 h-4 mr-2" />
+                                ENQUIRE
+                            </Button>
+                            <Button className="text-white font-bold" style={{ backgroundColor: brandColors.primary }} asChild>
+                                <a href={`tel:${contactInfo.phone}`}>
+                                    <Phone className="w-4 h-4 mr-2" />
+                                    CALL NOW
+                                </a>
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </nav>
+
+            <EnquireSidebar
+                open={enquireSidebarOpen}
+                onOpenChange={setEnquireSidebarOpen}
+                dealerName={dealerName}
+                brandColor={brandColors.primary}
+                services={services}
+                contactPhone={contactInfo.phone}
+            />
 
             {/* Home Tab */}
             {activeTab === 'home' && (
@@ -246,16 +272,15 @@ export function SportyTemplate({
                 <div className="max-w-7xl mx-auto px-4">
                     {/* Brand Logo */}
                     <div className="flex items-center mb-8 pb-6 border-b" style={{ borderColor: `${brandColors.primary}33` }}>
-                        <div className="w-12 h-12 rounded-md flex items-center justify-center mr-3 bg-white/5 border" style={{ borderColor: `${brandColors.primary}33` }}>
-                            <div className="relative w-10 h-10">
-                                <Image
-                                    src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                    alt={brandName}
-                                    fill
-                                    className="object-contain"
-                                    sizes="40px"
-                                />
-                            </div>
+                        <div className="relative w-12 h-12 mr-3">
+                            <Image
+                                src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
+                                alt={brandName}
+                                fill
+                                className="object-contain"
+                                sizes="48px"
+                                style={{ filter: 'brightness(0) invert(1) drop-shadow(0 0 12px rgba(255,255,255,0.9)) drop-shadow(0 0 24px rgba(255,255,255,0.5))' }}
+                            />
                         </div>
                         <div>
                             <span className="text-2xl font-black block">{dealerName}</span>
@@ -295,6 +320,20 @@ export function SportyTemplate({
                     </div>
                     <div className="border-t mt-8 pt-8 text-center text-gray-400" style={{ borderColor: `${brandColors.primary}33` }}>
                         <p>© {new Date().getFullYear()} {dealerName}. All rights reserved.</p>
+                        <div className="flex items-center justify-center gap-3 mt-3">
+                            <a
+                                href="https://www.cyepro.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:opacity-80 transition-opacity"
+                            >
+                                <div className="relative w-40 h-12">
+                                    <Image src="/assets/cyepro-logo.png" alt="Cyepro" fill className="object-contain" sizes="160px" />
+                                </div>
+                            </a>
+                            <span className="text-lg" style={{ color: '#E5197D' }}>|</span>
+                            <span className="text-sm font-medium" style={{ color: '#E5197D' }}>India&apos;s leading CRM providers</span>
+                        </div>
                     </div>
                 </div>
             </footer>

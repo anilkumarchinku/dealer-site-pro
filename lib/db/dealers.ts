@@ -76,6 +76,7 @@ export interface DealerPublicData {
     hero_subtitle: string | null
     hero_cta_text: string | null
     working_hours: string | null
+    services: string[] | null
     /** Set when the URL was a brand-specific slug, e.g. "abhi-motors-tata" */
     brandFilter: string | null
 }
@@ -134,8 +135,8 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
 
     if (!dealer) return null
 
-    // ── 3. Fetch brands, template config, and available vehicles in parallel
-    const [brandsResult, configResult, vehiclesResult] = await Promise.all([
+    // ── 3. Fetch brands, template config, vehicles, and services in parallel
+    const [brandsResult, configResult, vehiclesResult, servicesResult] = await Promise.all([
         supabase
             .from('dealer_brands')
             .select('brand_name')
@@ -151,6 +152,11 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
             .eq('dealer_id', dealer.id)
             .eq('status', 'available')
             .order('created_at', { ascending: false }),
+        supabase
+            .from('dealer_services')
+            .select('service_name')
+            .eq('dealer_id', dealer.id)
+            .eq('is_active', true),
     ])
 
     return {
@@ -171,6 +177,7 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
         hero_subtitle:   configResult.data?.hero_subtitle ?? null,
         hero_cta_text:   configResult.data?.hero_cta_text ?? null,
         working_hours:   configResult.data?.working_hours ?? null,
+        services:        servicesResult.data?.map(s => s.service_name) ?? null,
         brandFilter,
     }
 }

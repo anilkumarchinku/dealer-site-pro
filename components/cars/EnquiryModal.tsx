@@ -114,7 +114,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb' }
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
-            <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto p-0">
+            <DialogContent className="max-w-4xl max-h-[85vh] overflow-y-auto p-0">
                 {/* Car Details Section */}
                 <div className="relative">
                     {/* Hero Image */}
