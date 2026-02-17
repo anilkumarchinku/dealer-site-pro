@@ -8,10 +8,10 @@ import dns from 'dns/promises';
 
 export async function GET(
     request: NextRequest,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
     try {
-        const onboardingId = params.id;
+        const { id: onboardingId } = await params;
 
         if (!onboardingId) {
             return NextResponse.json(

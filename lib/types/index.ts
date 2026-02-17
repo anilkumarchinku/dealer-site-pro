@@ -44,7 +44,8 @@ export type StyleTemplate =
     | 'luxury'        // Premium: BMW, Mercedes, Audi
     | 'family'        // Friendly: Toyota, Honda, Subaru
     | 'sporty'        // Bold: Sports cars, performance
-    | 'professional'; // Business: Trucks, fleet, commercial
+    | 'professional'  // Business: Trucks, fleet, commercial
+    | 'modern';       // Modern multi-brand dealerships
 
 // Inventory management systems
 export type InventorySystem =
