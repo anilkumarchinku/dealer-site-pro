@@ -196,7 +196,7 @@ function PreviewContent() {
                 {/* Preview Banner - Fixed at top */}
                 <div className={cn(
                     "fixed top-0 left-0 right-0 z-[100] transition-all duration-300",
-                    isBannerExpanded ? "bg-white shadow-xl" : "bg-gray-900/95 backdrop-blur-sm"
+                    isBannerExpanded ? "bg-background shadow-xl border-b border-border" : "bg-gray-900/95 backdrop-blur-sm"
                 )}>
                     {/* Main Banner */}
                     <div className="max-w-7xl mx-auto px-4">
@@ -206,7 +206,7 @@ function PreviewContent() {
                                 <Link href="/dashboard">
                                     <Button variant="ghost" size="sm" className={cn(
                                         "gap-2",
-                                        isBannerExpanded ? "text-gray-700 hover:bg-gray-100" : "text-white/80 hover:text-white hover:bg-white/10"
+                                        isBannerExpanded ? "text-foreground hover:bg-muted" : "text-white/80 hover:text-white hover:bg-white/10"
                                     )}>
                                         <ArrowLeft className="w-4 h-4" />
                                         <span className="hidden sm:inline">Dashboard</span>
@@ -223,15 +223,15 @@ function PreviewContent() {
                                     </div>
                                     <div className={cn(
                                         "flex items-center gap-2 text-sm",
-                                        isBannerExpanded ? "text-gray-600" : "text-white/70"
+                                        isBannerExpanded ? "text-muted-foreground" : "text-white/70"
                                     )}>
                                         <LayoutTemplate className="w-4 h-4" />
                                         <span className="capitalize font-medium">{templateId}</span>
-                                        <span className={isBannerExpanded ? "text-gray-400" : "text-white/40"}>•</span>
+                                        <span className={isBannerExpanded ? "text-muted-foreground/50" : "text-white/40"}>•</span>
                                         <Car className="w-4 h-4" />
                                         <span className="font-medium">{primaryBrand}</span>
-                                        <span className={isBannerExpanded ? "text-gray-400" : "text-white/40"}>•</span>
-                                        <span className={isBannerExpanded ? "text-gray-500" : "text-white/50"}>{displayCars.length} cars</span>
+                                        <span className={isBannerExpanded ? "text-muted-foreground/50" : "text-white/40"}>•</span>
+                                        <span className={isBannerExpanded ? "text-muted-foreground" : "text-white/50"}>{displayCars.length} cars</span>
                                     </div>
                                 </div>
                             </div>
@@ -244,7 +244,7 @@ function PreviewContent() {
                                     onClick={() => setIsBannerExpanded(!isBannerExpanded)}
                                     className={cn(
                                         "gap-1",
-                                        isBannerExpanded ? "text-gray-700 hover:bg-gray-100" : "text-white/80 hover:text-white hover:bg-white/10"
+                                        isBannerExpanded ? "text-foreground hover:bg-muted" : "text-white/80 hover:text-white hover:bg-white/10"
                                     )}
                                 >
                                     <ChevronDown className={cn(
@@ -272,11 +272,11 @@ function PreviewContent() {
 
                     {/* Expanded Panel */}
                     {isBannerExpanded && (
-                        <div className="border-t border-gray-100 bg-white">
+                        <div className="border-t border-border bg-background">
                             <div className="max-w-7xl mx-auto px-4 py-4">
                                 {/* Template Selection */}
                                 <div className="mb-4">
-                                    <p className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2">Template Style</p>
+                                    <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">Template Style</p>
                                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                                         {['modern', 'luxury', 'sporty', 'family'].map((t) => (
                                             <Link
@@ -285,17 +285,17 @@ function PreviewContent() {
                                                 className={cn(
                                                     "p-3 rounded-xl border-2 transition-all text-center",
                                                     templateId === t
-                                                        ? `${templateColors[t].border} bg-gray-50`
-                                                        : "border-gray-200 hover:border-gray-300 hover:bg-gray-50"
+                                                        ? `${templateColors[t].border} bg-muted`
+                                                        : "border-border hover:border-border/80 hover:bg-muted/50"
                                                 )}
                                             >
                                                 <p className={cn(
                                                     "font-semibold capitalize",
-                                                    templateId === t ? templateColors[t].text : "text-gray-700"
+                                                    templateId === t ? templateColors[t].text : "text-foreground"
                                                 )}>
                                                     {t}
                                                 </p>
-                                                <p className="text-xs text-gray-500 mt-1">
+                                                <p className="text-xs text-muted-foreground mt-1">
                                                     {t === 'modern' && "Blue & Clean"}
                                                     {t === 'luxury' && "Gold & Dark"}
                                                     {t === 'sporty' && "Red & Bold"}
@@ -308,7 +308,7 @@ function PreviewContent() {
 
                                 {/* Brand Selection */}
                                 <div className="mb-4">
-                                    <p className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2">Select Brand</p>
+                                    <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-2">Select Brand</p>
                                     <div className="flex flex-wrap gap-2">
                                         {popularBrands.map((brand) => {
                                             const brandData = automotiveBrands[brand as keyof typeof automotiveBrands];
@@ -320,8 +320,8 @@ function PreviewContent() {
                                                     className={cn(
                                                         "flex items-center gap-2 px-3 py-2 rounded-lg border transition-all",
                                                         isSelected
-                                                            ? "border-gray-900 bg-gray-900 text-white"
-                                                            : "border-gray-200 hover:border-gray-300 bg-white hover:bg-gray-50"
+                                                            ? "border-foreground bg-foreground text-background"
+                                                            : "border-border hover:border-border/80 bg-background hover:bg-muted/50"
                                                     )}
                                                 >
                                                     <div className="w-6 h-6 relative">
@@ -347,20 +347,20 @@ function PreviewContent() {
                                 </div>
 
                                 {/* Info Bar */}
-                                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                                <div className="flex items-center justify-between pt-4 border-t border-border">
                                     <div className="flex items-center gap-4">
                                         <div className="flex items-center gap-2">
                                             <div
                                                 className="w-4 h-4 rounded"
                                                 style={{ backgroundColor: brandColors.primary }}
                                             />
-                                            <span className="text-sm text-gray-600">
+                                            <span className="text-sm text-muted-foreground">
                                                 Brand Color: <span className="font-mono text-xs">{brandColors.primary}</span>
                                             </span>
                                         </div>
-                                        <span className="text-gray-300">|</span>
-                                        <span className="text-sm text-gray-600">
-                                            Showing <span className="font-semibold">{displayCars.length}</span> {primaryBrand} cars
+                                        <span className="text-muted-foreground/40">|</span>
+                                        <span className="text-sm text-muted-foreground">
+                                            Showing <span className="font-semibold text-foreground">{displayCars.length}</span> {primaryBrand} cars
                                         </span>
                                     </div>
                                     <div className="flex items-center gap-2">
@@ -389,10 +389,10 @@ function PreviewContent() {
 export default function PreviewPage() {
     return (
         <Suspense fallback={
-            <div className="min-h-screen flex items-center justify-center bg-gray-50">
+            <div className="min-h-screen flex items-center justify-center bg-background">
                 <div className="text-center">
                     <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-                    <p className="text-gray-600">Loading preview...</p>
+                    <p className="text-muted-foreground">Loading preview...</p>
                 </div>
             </div>
         }>

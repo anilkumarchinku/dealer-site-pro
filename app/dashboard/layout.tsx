@@ -1,4 +1,5 @@
 "use client"
+import { useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -6,6 +7,7 @@ import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { signOut } from "@/lib/db/auth";
 import BrandLogo from "@/components/BrandLogo";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { supabase, isSupabaseReady } from "@/lib/supabase";
 import {
     LayoutDashboard,
     Users,
@@ -65,7 +67,59 @@ export default function DashboardLayout({
 }) {
     const pathname = usePathname();
     const router   = useRouter();
-    const { data } = useOnboardingStore();
+    const { data, updateData, setDealerId } = useOnboardingStore();
+
+    // Sync real dealer data from DB on first load (covers post-login case
+    // where the Zustand store is empty because onboarding wasn't done in
+    // this browser session).
+    useEffect(() => {
+        if (!isSupabaseReady()) return;
+        if (data.dealershipName) return; // store already populated
+
+        async function syncFromDB() {
+            try {
+                const { data: { user } } = await supabase.auth.getUser();
+                if (!user) return;
+
+                const { data: dealer } = await supabase
+                    .from('dealers')
+                    .select('id, dealership_name, tagline, location, full_address, phone, whatsapp, email, gstin, sells_new_cars, sells_used_cars, style_template, slug')
+                    .eq('user_id', user.id)
+                    .maybeSingle();
+
+                if (!dealer) return;
+
+                setDealerId(dealer.id);
+
+                const { data: brands } = await supabase
+                    .from('dealer_brands')
+                    .select('brand_name')
+                    .eq('dealer_id', dealer.id)
+                    .order('is_primary', { ascending: false });
+
+                updateData({
+                    dealershipName: dealer.dealership_name,
+                    tagline:        dealer.tagline        ?? '',
+                    location:       dealer.location,
+                    fullAddress:    dealer.full_address   ?? '',
+                    phone:          dealer.phone,
+                    whatsapp:       dealer.whatsapp       ?? '',
+                    email:          dealer.email,
+                    gstin:          dealer.gstin          ?? '',
+                    sellsNewCars:   dealer.sells_new_cars,
+                    sellsUsedCars:  dealer.sells_used_cars,
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    styleTemplate:  (dealer.style_template as any) ?? 'family',
+                    brands:         (brands?.map((b: { brand_name: string }) => b.brand_name) ?? []) as import('@/lib/types').Brand[],
+                });
+            } catch {
+                // Silently fail — dashboard still works without DB data
+            }
+        }
+
+        syncFromDB();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const handleSignOut = async () => {
         await signOut();
