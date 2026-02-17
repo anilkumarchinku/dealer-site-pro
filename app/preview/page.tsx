@@ -103,6 +103,9 @@ function PreviewContent() {
         }
     };
 
+    // Services selected by dealer during onboarding
+    const dealerServices = data.services || [];
+
     // Render the appropriate template with brand-specific data
     const renderTemplate = () => {
         const config = templateConfigs[templateId as keyof typeof templateConfigs] || templateConfigs.modern;
@@ -116,6 +119,7 @@ function PreviewContent() {
                         cars={displayCars}
                         contactInfo={contactInfo}
                         config={config}
+                        services={dealerServices}
                         previewMode
                     />
                 );
@@ -127,6 +131,7 @@ function PreviewContent() {
                         cars={displayCars}
                         contactInfo={contactInfo}
                         config={config}
+                        services={dealerServices}
                         previewMode
                     />
                 );
@@ -138,6 +143,7 @@ function PreviewContent() {
                         cars={displayCars}
                         contactInfo={contactInfo}
                         config={config}
+                        services={dealerServices}
                         previewMode
                     />
                 );
@@ -150,6 +156,7 @@ function PreviewContent() {
                         cars={displayCars}
                         contactInfo={contactInfo}
                         config={config}
+                        services={dealerServices}
                         previewMode
                     />
                 );

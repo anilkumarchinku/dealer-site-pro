@@ -17,7 +17,7 @@ export function getBrandHeroImage(brandName: string): string {
         'byd': 'webp',
         'citroen': 'jpg',
         'force-motors': 'png',
-        'honda': 'png',
+        'honda': 'jpg',
         'hyundai': 'png',
         'isuzu': 'jpg',
         'jaguar': 'jpg',

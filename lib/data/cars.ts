@@ -200,7 +200,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -332,7 +332,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -375,10 +375,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/audi/audi-q8-e-tron.jpg",
@@ -412,10 +419,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/audi/audi-rs-e-tron-gt.jpg",
@@ -801,10 +815,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/bmw/bmw-5-series.jpg",
@@ -971,7 +992,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -1014,10 +1035,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/bmw/bmw-ix.jpg",
@@ -1052,7 +1080,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -1095,10 +1123,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/bmw/bmw-m2.jpg",
@@ -1133,7 +1168,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -1220,10 +1255,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/bmw/bmw-m4-competition.jpg",
@@ -1301,10 +1343,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/bmw/bmw-m8-coupe-competition.jpg",
@@ -1339,7 +1388,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -1647,7 +1696,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -1691,7 +1740,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -1734,10 +1783,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/byd/byd-emax-7.jpg",
@@ -1772,7 +1828,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -1815,10 +1871,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/byd/byd-sealion-6.jpg",
@@ -1896,10 +1959,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/citroen/citroen-aircross.jpg",
@@ -1934,7 +2004,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -1943,7 +2013,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "cruise control"
+      ]
     },
     "images": {
       "hero": "/assets/cars/citroen/basalt.jpg",
@@ -2022,7 +2094,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -2066,7 +2138,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -2075,7 +2147,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry"
+      ]
     },
     "images": {
       "hero": "/assets/cars/citroen/ec3.jpg",
@@ -2110,7 +2184,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -2207,7 +2281,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry"
+      ]
     },
     "images": {
       "hero": "/assets/cars/honda/amaze.jpg",
@@ -2330,7 +2406,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -2383,7 +2459,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "cruise control"
+      ]
     },
     "images": {
       "hero": "/assets/cars/hyundai/alcazar.jpg",
@@ -2462,7 +2540,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -2471,7 +2549,18 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry",
+        "push button start/stop",
+        "auto headlamps",
+        "cruise control",
+        "six airbags",
+        "abs with ebd",
+        "electronic stability control",
+        "hill assist",
+        "rear parking sensors",
+        "connected car technology"
+      ]
     },
     "images": {
       "hero": "/assets/cars/hyundai/creta.jpg",
@@ -2559,7 +2648,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "push button start/stop"
+      ]
     },
     "images": {
       "hero": "/assets/cars/hyundai/exter.jpg",
@@ -2647,7 +2738,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry"
+      ]
     },
     "images": {
       "hero": "/assets/cars/hyundai/i20.jpg",
@@ -2735,7 +2828,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "connected car technology"
+      ]
     },
     "images": {
       "hero": "/assets/cars/hyundai/tucson.jpg",
@@ -2823,7 +2918,11 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "push button start/stop",
+        "six airbags",
+        "abs with ebd"
+      ]
     },
     "images": {
       "hero": "/assets/cars/hyundai/verna.jpg",
@@ -2902,7 +3001,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -3078,7 +3177,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -3254,7 +3353,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -3298,7 +3397,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -3395,7 +3494,11 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry",
+        "six airbags",
+        "connected car technology"
+      ]
     },
     "images": {
       "hero": "/assets/cars/kia/sonet.jpg",
@@ -3562,7 +3665,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -3738,7 +3841,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -4090,7 +4193,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -4486,7 +4589,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -4495,7 +4598,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry"
+      ]
     },
     "images": {
       "hero": "/assets/cars/mahindra/scorpio-n.jpg",
@@ -4750,7 +4855,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -4803,7 +4908,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "cruise control"
+      ]
     },
     "images": {
       "hero": "/assets/cars/mahindra/xuv700.jpg",
@@ -4837,10 +4944,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/maruti/maruti-ciaz.jpg",
@@ -4972,7 +5086,10 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry",
+        "cruise control"
+      ]
     },
     "images": {
       "hero": "/assets/cars/maruti-suzuki/brezza.jpg",
@@ -5060,7 +5177,10 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry",
+        "cruise control"
+      ]
     },
     "images": {
       "hero": "/assets/cars/maruti-suzuki/dzire.jpg",
@@ -5148,7 +5268,10 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry",
+        "cruise control"
+      ]
     },
     "images": {
       "hero": "/assets/cars/maruti-suzuki/ertiga.jpg",
@@ -5192,7 +5315,13 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry",
+        "push button start/stop",
+        "auto headlamps",
+        "cruise control",
+        "connected car technology"
+      ]
     },
     "images": {
       "hero": "/assets/cars/maruti-suzuki/fronx.jpg",
@@ -5236,7 +5365,10 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry",
+        "cruise control"
+      ]
     },
     "images": {
       "hero": "/assets/cars/maruti-suzuki/grand-vitara.jpg",
@@ -5368,7 +5500,10 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry",
+        "cruise control"
+      ]
     },
     "images": {
       "hero": "/assets/cars/maruti-suzuki/jimny.jpg",
@@ -5456,7 +5591,10 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry",
+        "cruise control"
+      ]
     },
     "images": {
       "hero": "/assets/cars/maruti-suzuki/swift.jpg",
@@ -5588,7 +5726,10 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry",
+        "cruise control"
+      ]
     },
     "images": {
       "hero": "/assets/cars/maruti-suzuki/xl6.jpg",
@@ -5666,10 +5807,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/mercedes-benz/mercedes-benz-amg-a-45-s.jpg",
@@ -5703,10 +5851,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/mercedes-benz/mercedes-benz-amg-c-63.jpg",
@@ -5740,10 +5895,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/mercedes-benz/mercedes-benz-amg-g-class.jpg",
@@ -5953,10 +6115,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/mercedes-benz/mercedes-benz-eqa.jpg",
@@ -6034,10 +6203,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/mercedes-benz/mercedes-benz-eqe-sedan.jpg",
@@ -6116,7 +6292,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -6159,10 +6335,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/mercedes-benz/mercedes-benz-eqs-suv.jpg",
@@ -6197,7 +6380,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -6558,7 +6741,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "connected car technology"
+      ]
     },
     "images": {
       "hero": "/assets/cars/mg/astor.jpg",
@@ -6593,7 +6778,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -6690,7 +6875,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry"
+      ]
     },
     "images": {
       "hero": "/assets/cars/mg/hector.jpg",
@@ -6813,7 +7000,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -6822,7 +7009,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "connected car technology"
+      ]
     },
     "images": {
       "hero": "/assets/cars/mg/zs-ev.jpg",
@@ -6998,7 +7187,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "cruise control"
+      ]
     },
     "images": {
       "hero": "/assets/cars/nissan/magnite.jpg",
@@ -7033,7 +7224,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -7208,10 +7399,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/porsche/porsche-panamera.jpg",
@@ -7246,7 +7444,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -7431,7 +7629,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry"
+      ]
     },
     "images": {
       "hero": "/assets/cars/skoda/kodiaq.jpg",
@@ -7607,7 +7807,10 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry",
+        "six airbags"
+      ]
     },
     "images": {
       "hero": "/assets/cars/skoda/slavia.jpg",
@@ -7730,7 +7933,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -7827,7 +8030,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry"
+      ]
     },
     "images": {
       "hero": "/assets/cars/tata/harrier.jpg",
@@ -7862,7 +8067,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -7906,7 +8111,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -7915,7 +8120,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry"
+      ]
     },
     "images": {
       "hero": "/assets/cars/tata/nexon.jpg",
@@ -7950,7 +8157,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -7959,7 +8166,10 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry",
+        "cruise control"
+      ]
     },
     "images": {
       "hero": "/assets/cars/tata/nexon-ev.jpg",
@@ -8038,7 +8248,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -8047,7 +8257,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry"
+      ]
     },
     "images": {
       "hero": "/assets/cars/tata/punch-ev.jpg",
@@ -8082,7 +8294,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -8091,7 +8303,10 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "abs with ebd",
+        "electronic stability control"
+      ]
     },
     "images": {
       "hero": "/assets/cars/tata/safari.jpg",
@@ -8258,7 +8473,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -8399,7 +8614,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry"
+      ]
     },
     "images": {
       "hero": "/assets/cars/toyota/camry.jpg",
@@ -8531,7 +8748,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry"
+      ]
     },
     "images": {
       "hero": "/assets/cars/toyota/hilux.jpg",
@@ -8654,7 +8873,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -8707,7 +8926,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "cruise control"
+      ]
     },
     "images": {
       "hero": "/assets/cars/toyota/rumion.jpg",
@@ -8795,7 +9016,12 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry",
+        "push button start/stop",
+        "auto headlamps",
+        "cruise control"
+      ]
     },
     "images": {
       "hero": "/assets/cars/toyota/urban-cruiser-hyryder.jpg",
@@ -8839,7 +9065,10 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry",
+        "cruise control"
+      ]
     },
     "images": {
       "hero": "/assets/cars/toyota/vellfire.jpg",
@@ -8918,7 +9147,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0
@@ -8971,7 +9200,12 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "keyless entry",
+        "push button start/stop",
+        "auto headlamps",
+        "cruise control"
+      ]
     },
     "images": {
       "hero": "/assets/cars/volkswagen/virtus.jpg",
@@ -9005,10 +9239,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/volvo/volvo-ec40.jpg",
@@ -9086,10 +9327,17 @@ export const allCars: Car[] = [
       "power": "TBD",
       "torque": "TBD"
     },
-    "transmission": { "type": "Automatic", "driveType": "FWD" },
+    "transmission": {
+      "type": "Automatic",
+      "driveType": "FWD"
+    },
     "performance": {},
-    "dimensions": { "seatingCapacity": 5 },
-    "features": { "keyFeatures": [] },
+    "dimensions": {
+      "seatingCapacity": 5
+    },
+    "features": {
+      "keyFeatures": []
+    },
     "colors": [],
     "images": {
       "hero": "/assets/cars/volvo/volvo-ex40.jpg",
@@ -9177,7 +9425,9 @@ export const allCars: Car[] = [
       "seatingCapacity": 5
     },
     "features": {
-      "keyFeatures": []
+      "keyFeatures": [
+        "connected car technology"
+      ]
     },
     "images": {
       "hero": "/assets/cars/volvo/xc60.jpg",
@@ -9212,7 +9462,7 @@ export const allCars: Car[] = [
       "torque": "TBD"
     },
     "transmission": {
-      "type": "TBD"
+      "type": "Manual"
     },
     "performance": {
       "fuelEfficiency": 0

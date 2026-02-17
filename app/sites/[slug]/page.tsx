@@ -6,6 +6,7 @@ import { allCars, getCarsByMake } from '@/lib/data/cars'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import type { Car } from '@/lib/types/car'
 import type { DBVehicle } from '@/lib/db/vehicles'
+import type { Service } from '@/lib/types'
 
 interface SitePageProps {
     params: Promise<{ slug: string }>
@@ -197,6 +198,7 @@ export default async function SitePage({ params }: SitePageProps) {
         dealerName: dealer.dealership_name,
         cars,
         contactInfo,
+        services: (dealer.services ?? []) as Service[],
     }
 
     // ── Render the chosen template ────────────────────────────────────────────

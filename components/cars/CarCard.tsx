@@ -13,17 +13,14 @@ import type { Car } from '@/lib/types/car';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { EnquiryModal } from './EnquiryModal';
 import { QuickViewModal } from './QuickViewModal';
 import {
-    Heart,
     Fuel,
     Gauge,
     Users,
     Zap,
     Star,
-    Sparkles,
     Shield,
     TrendingUp,
     Send,
@@ -36,7 +33,6 @@ interface CarCardProps {
     showEMI?: boolean;
     onViewDetails?: (carId: string) => void;
     onCompare?: (carId: string) => void;
-    onWishlist?: (carId: string) => void;
     className?: string;
     brandColor?: string;
 }
@@ -46,7 +42,6 @@ export function CarCard({
     variant = 'compact',
     showEMI = true,
     onViewDetails,
-    onWishlist,
     className,
     brandColor = '#2563eb', // default blue
 }: CarCardProps) {
@@ -54,6 +49,13 @@ export function CarCard({
     const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
     const priceRange = formatPriceInLakhs(car.pricing.exShowroom.min);
     const maxPrice = formatPriceInLakhs(car.pricing.exShowroom.max);
+
+    // Normalize placeholder values
+    const transmissionType = (!car.transmission?.type || car.transmission.type === 'TBD' || car.transmission.type === 'Transmission')
+        ? null : car.transmission.type;
+    const engineType = (!car.engine?.type || car.engine.type === 'TBD') ? null : car.engine.type;
+    const mileage = car.performance?.fuelEfficiency && car.performance.fuelEfficiency > 0
+        ? car.performance.fuelEfficiency : null;
 
     const handleEnquireNow = () => {
         setIsEnquiryModalOpen(true);
@@ -63,19 +65,6 @@ export function CarCard({
         e.stopPropagation();
         setIsQuickViewOpen(true);
     };
-
-    const handleWishlist = (e: React.MouseEvent) => {
-        e.stopPropagation();
-        if (onWishlist) {
-            onWishlist(car.id);
-        }
-    };
-
-    // Determine badge type
-    const isNewLaunch = car.meta.launchDate &&
-        new Date(car.meta.launchDate) > new Date(Date.now() - 90 * 24 * 60 * 60 * 1000);
-    const isTopRated = car.rating && car.rating.overall >= 4.5;
-    const isFuelEfficient = car.performance?.fuelEfficiency && car.performance.fuelEfficiency >= 20;
 
     return (
         <>
@@ -109,35 +98,6 @@ export function CarCard({
                 {/* Gradient Overlay on Hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                {/* Top Badges */}
-                <div className="absolute top-3 left-3 flex flex-wrap gap-2">
-                    {isNewLaunch && (
-                        <Badge className="bg-gradient-to-r from-emerald-500 to-green-600 text-white border-0 shadow-lg shadow-emerald-500/30">
-                            <Sparkles className="w-3 h-3 mr-1" />
-                            New
-                        </Badge>
-                    )}
-                    {isTopRated && (
-                        <Badge className="bg-gradient-to-r from-amber-500 to-orange-500 text-white border-0 shadow-lg shadow-amber-500/30">
-                            <Star className="w-3 h-3 mr-1" />
-                            Top Rated
-                        </Badge>
-                    )}
-                    {isFuelEfficient && (
-                        <Badge className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 shadow-lg shadow-blue-500/30">
-                            <Zap className="w-3 h-3 mr-1" />
-                            Efficient
-                        </Badge>
-                    )}
-                </div>
-
-                {/* Wishlist Button - Top Right */}
-                <button
-                    onClick={handleWishlist}
-                    className="absolute top-3 right-3 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white hover:scale-110 transition-all duration-300 group/heart"
-                >
-                    <Heart className="w-5 h-5 text-gray-600 group-hover/heart:text-red-500 transition-colors" />
-                </button>
 
                 {/* Quick View Button - Shows on Hover */}
                 <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
@@ -190,41 +150,47 @@ export function CarCard({
 
                 {/* Quick Specs - Modern Grid */}
                 <div className="grid grid-cols-2 gap-3 mb-4">
-                    <div className="flex items-center gap-2.5 p-2.5 bg-gray-50 rounded-xl">
-                        <div className="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center">
-                            <Fuel className="w-4 h-4 text-emerald-600" />
+                    {engineType && (
+                        <div className="flex items-center gap-2.5 p-2.5 bg-gray-50 rounded-xl">
+                            <div className="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center">
+                                <Fuel className="w-4 h-4 text-emerald-600" />
+                            </div>
+                            <div>
+                                <p className="text-xs text-gray-400">Fuel</p>
+                                <p className="text-sm font-semibold text-gray-900">{engineType}</p>
+                            </div>
                         </div>
-                        <div>
-                            <p className="text-xs text-gray-400">Fuel</p>
-                            <p className="text-sm font-semibold text-gray-900">{car.engine.type}</p>
+                    )}
+                    {transmissionType && (
+                        <div className="flex items-center gap-2.5 p-2.5 bg-gray-50 rounded-xl">
+                            <div className="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center">
+                                <Gauge className="w-4 h-4 text-blue-600" />
+                            </div>
+                            <div>
+                                <p className="text-xs text-gray-400">Trans</p>
+                                <p className="text-sm font-semibold text-gray-900">{transmissionType}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="flex items-center gap-2.5 p-2.5 bg-gray-50 rounded-xl">
-                        <div className="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center">
-                            <Gauge className="w-4 h-4 text-blue-600" />
+                    )}
+                    {car.dimensions?.seatingCapacity && (
+                        <div className="flex items-center gap-2.5 p-2.5 bg-gray-50 rounded-xl">
+                            <div className="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center">
+                                <Users className="w-4 h-4 text-purple-600" />
+                            </div>
+                            <div>
+                                <p className="text-xs text-gray-400">Seats</p>
+                                <p className="text-sm font-semibold text-gray-900">{car.dimensions.seatingCapacity}</p>
+                            </div>
                         </div>
-                        <div>
-                            <p className="text-xs text-gray-400">Trans</p>
-                            <p className="text-sm font-semibold text-gray-900">{car.transmission.type}</p>
-                        </div>
-                    </div>
-                    <div className="flex items-center gap-2.5 p-2.5 bg-gray-50 rounded-xl">
-                        <div className="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center">
-                            <Users className="w-4 h-4 text-purple-600" />
-                        </div>
-                        <div>
-                            <p className="text-xs text-gray-400">Seats</p>
-                            <p className="text-sm font-semibold text-gray-900">{car.dimensions?.seatingCapacity || 'N/A'}</p>
-                        </div>
-                    </div>
-                    {car.performance?.fuelEfficiency && (
+                    )}
+                    {mileage && (
                         <div className="flex items-center gap-2.5 p-2.5 bg-gray-50 rounded-xl">
                             <div className="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center">
                                 <Zap className="w-4 h-4 text-amber-600" />
                             </div>
                             <div>
                                 <p className="text-xs text-gray-400">Mileage</p>
-                                <p className="text-sm font-semibold text-gray-900">{car.performance.fuelEfficiency} km/l</p>
+                                <p className="text-sm font-semibold text-gray-900">{mileage} km/l</p>
                             </div>
                         </div>
                     )}

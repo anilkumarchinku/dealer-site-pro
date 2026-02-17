@@ -25,8 +25,11 @@ import {
     Award,
     Users,
     Car as CarIcon,
+    MessageSquare,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
+import type { Service } from '@/lib/types';
 
 interface ModernTemplateProps {
     brandName: string; // Brand name for colors (e.g., "Toyota", "BMW")
@@ -42,6 +45,7 @@ interface ModernTemplateProps {
         heroSubtitle?: string;
     };
     previewMode?: boolean;
+    services?: Service[];
 }
 
 export function ModernTemplate({
@@ -51,10 +55,12 @@ export function ModernTemplate({
     contactInfo,
     config: customConfig,
     previewMode,
+    services,
 }: ModernTemplateProps) {
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeCarIndex, setActiveCarIndex] = useState(0);
+    const [enquireSidebarOpen, setEnquireSidebarOpen] = useState(false);
 
     // Get template configuration with brand colors
     const config = generateTemplateConfig(brandName, 'modern');
@@ -94,16 +100,19 @@ export function ModernTemplate({
                     <div className="flex justify-between items-center h-16">
                         {/* Logo */}
                         <div className="flex items-center cursor-pointer" onClick={() => setActiveTab('home')}>
-                            <div className="w-10 h-10 rounded-lg flex items-center justify-center mr-3 bg-white shadow-sm">
-                                <div className="relative w-8 h-8">
-                                    <Image
-                                        src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                        alt={brandName}
-                                        fill
-                                        className="object-contain"
-                                        sizes="32px"
-                                    />
-                                </div>
+                            <div className="relative w-10 h-10 mr-3">
+                                <Image
+                                    src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
+                                    alt={brandName}
+                                    fill
+                                    className="object-contain transition-all duration-300"
+                                    sizes="40px"
+                                    style={{
+                                        filter: isScrolled
+                                            ? 'drop-shadow(0 2px 6px rgba(0,0,0,0.25)) saturate(1.3)'
+                                            : 'brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,255,255,0.9)) drop-shadow(0 0 20px rgba(255,255,255,0.5))'
+                                    }}
+                                />
                             </div>
                             <span className={`text-xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
                                 {dealerName}
@@ -152,17 +161,39 @@ export function ModernTemplate({
                             </a>
                         </div>
 
-                        {/* CTA Button */}
-                        <Button
-                            className="text-white shadow-lg"
-                            style={{ backgroundColor: brandColors.primary }}
-                        >
-                            <Phone className="w-4 h-4 mr-2" />
-                            Call Now
-                        </Button>
+                        {/* CTA Buttons */}
+                        <div className="flex items-center gap-2">
+                            <Button
+                                variant="outline"
+                                className={`hidden sm:flex bg-transparent ${isScrolled ? 'text-gray-700 border-gray-300 hover:bg-gray-100' : 'text-white border-white/40 hover:bg-white/10'}`}
+                                onClick={() => setEnquireSidebarOpen(true)}
+                            >
+                                <MessageSquare className="w-4 h-4 mr-2" />
+                                Enquire Now
+                            </Button>
+                            <Button
+                                className="text-white shadow-lg"
+                                style={{ backgroundColor: brandColors.primary }}
+                                asChild
+                            >
+                                <a href={`tel:${contactInfo.phone}`}>
+                                    <Phone className="w-4 h-4 mr-2" />
+                                    Call Now
+                                </a>
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </nav>
+
+            <EnquireSidebar
+                open={enquireSidebarOpen}
+                onOpenChange={setEnquireSidebarOpen}
+                dealerName={dealerName}
+                brandColor={brandColors.primary}
+                services={services}
+                contactPhone={contactInfo.phone}
+            />
 
             {/* Home Tab */}
             {activeTab === 'home' && (
@@ -342,16 +373,15 @@ export function ModernTemplate({
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Brand Logo */}
                     <div className="flex items-center mb-8 pb-6 border-b border-gray-800">
-                        <div className="w-12 h-12 rounded-lg flex items-center justify-center mr-3 bg-white">
-                            <div className="relative w-10 h-10">
-                                <Image
-                                    src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                    alt={brandName}
-                                    fill
-                                    className="object-contain"
-                                    sizes="40px"
-                                />
-                            </div>
+                        <div className="relative w-12 h-12 mr-3">
+                            <Image
+                                src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
+                                alt={brandName}
+                                fill
+                                className="object-contain"
+                                sizes="48px"
+                                style={{ filter: 'brightness(0) invert(1) drop-shadow(0 0 12px rgba(255,255,255,0.9)) drop-shadow(0 0 24px rgba(255,255,255,0.5))' }}
+                            />
                         </div>
                         <div>
                             <span className="text-2xl font-bold block">{dealerName}</span>
@@ -398,6 +428,20 @@ export function ModernTemplate({
                     </div>
                     <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
                         <p>© {new Date().getFullYear()} {dealerName}. All rights reserved.</p>
+                        <div className="flex items-center justify-center gap-3 mt-3">
+                            <a
+                                href="https://www.cyepro.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:opacity-80 transition-opacity"
+                            >
+                                <div className="relative w-40 h-12">
+                                    <Image src="/assets/cyepro-logo.png" alt="Cyepro" fill className="object-contain" sizes="160px" />
+                                </div>
+                            </a>
+                            <span className="text-lg" style={{ color: '#E5197D' }}>|</span>
+                            <span className="text-sm font-medium" style={{ color: '#E5197D' }}>India&apos;s leading CRM providers</span>
+                        </div>
                     </div>
                 </div>
             </footer>

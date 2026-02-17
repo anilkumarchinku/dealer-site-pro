@@ -12,8 +12,10 @@ import { CarFilters } from '@/components/cars/CarFilters';
 import { Button } from '@/components/ui/button';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
-import { ArrowRight, Phone, MapPin, Mail, Award, ShieldCheck, Star, ChevronRight, Crown } from 'lucide-react';
+import { ArrowRight, Phone, MapPin, Mail, Award, ShieldCheck, Star, ChevronRight, Crown, MessageSquare } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
+import type { Service } from '@/lib/types';
 
 interface LuxuryTemplateProps {
     brandName: string;
@@ -22,11 +24,13 @@ interface LuxuryTemplateProps {
     contactInfo: { phone: string; email: string; address: string };
     config?: { heroTitle?: string; heroSubtitle?: string; tagline?: string };
     previewMode?: boolean;
+    services?: Service[];
 }
 
-export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, config: customConfig, previewMode }: LuxuryTemplateProps) {
+export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, config: customConfig, previewMode, services }: LuxuryTemplateProps) {
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [isScrolled, setIsScrolled] = useState(false);
+    const [enquireSidebarOpen, setEnquireSidebarOpen] = useState(false);
 
     const config = generateTemplateConfig(brandName, 'luxury');
     const { brandColors } = config;
@@ -49,16 +53,15 @@ export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, confi
                 <div className="max-w-7xl mx-auto px-4 py-4">
                     <div className="flex justify-between items-center">
                         <div className="flex items-center gap-3 cursor-pointer" onClick={() => setActiveTab('home')}>
-                            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-white/10 backdrop-blur-sm">
-                                <div className="relative w-8 h-8">
-                                    <Image
-                                        src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                        alt={brandName}
-                                        fill
-                                        className="object-contain"
-                                        sizes="32px"
-                                    />
-                                </div>
+                            <div className="relative w-10 h-10">
+                                <Image
+                                    src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
+                                    alt={brandName}
+                                    fill
+                                    className="object-contain"
+                                    sizes="40px"
+                                    style={{ filter: 'brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,255,255,0.9)) drop-shadow(0 0 20px rgba(255,255,255,0.5))' }}
+                                />
                             </div>
                             <span className="text-2xl font-light tracking-widest">{dealerName}</span>
                         </div>
@@ -67,13 +70,34 @@ export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, confi
                             <button onClick={() => setActiveTab('inventory')} className="text-sm tracking-wider hover:opacity-70" style={activeTab === 'inventory' ? { color: brandColors.primary } : {}}>Collection</button>
                             <a href="#contact" className="text-sm tracking-wider hover:opacity-70">Contact</a>
                         </div>
-                        <Button variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                            <Phone className="w-4 h-4 mr-2" />
-                            Inquire
-                        </Button>
+                        <div className="flex items-center gap-2">
+                            <Button
+                                variant="outline"
+                                className="border-white/30 bg-transparent text-white hover:bg-white/10 hidden sm:flex"
+                                onClick={() => setEnquireSidebarOpen(true)}
+                            >
+                                <MessageSquare className="w-4 h-4 mr-2" />
+                                Enquire Now
+                            </Button>
+                            <Button variant="outline" className="border-white/30 bg-transparent text-white hover:bg-white/10" asChild>
+                                <a href={`tel:${contactInfo.phone}`}>
+                                    <Phone className="w-4 h-4 mr-2" />
+                                    Call
+                                </a>
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </nav>
+
+            <EnquireSidebar
+                open={enquireSidebarOpen}
+                onOpenChange={setEnquireSidebarOpen}
+                dealerName={dealerName}
+                brandColor={brandColors.primary}
+                services={services}
+                contactPhone={contactInfo.phone}
+            />
 
             {activeTab === 'home' && (
                 <>
@@ -146,16 +170,15 @@ export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, confi
                 <div className="max-w-7xl mx-auto px-4">
                     {/* Brand Logo */}
                     <div className="flex items-center mb-8 pb-6 border-b border-white/10">
-                        <div className="w-12 h-12 rounded-lg flex items-center justify-center mr-3 bg-white/10 backdrop-blur-sm">
-                            <div className="relative w-10 h-10">
-                                <Image
-                                    src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                    alt={brandName}
-                                    fill
-                                    className="object-contain"
-                                    sizes="40px"
-                                />
-                            </div>
+                        <div className="relative w-12 h-12 mr-3">
+                            <Image
+                                src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
+                                alt={brandName}
+                                fill
+                                className="object-contain"
+                                sizes="48px"
+                                style={{ filter: 'brightness(0) invert(1) drop-shadow(0 0 12px rgba(255,255,255,0.9)) drop-shadow(0 0 24px rgba(255,255,255,0.5))' }}
+                            />
                         </div>
                         <div>
                             <span className="text-2xl font-light tracking-widest block text-white">{dealerName}</span>
@@ -184,6 +207,20 @@ export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, confi
                     </div>
                     <div className="border-t border-white/10 mt-8 pt-8 text-center text-gray-500">
                         <p>© {new Date().getFullYear()} {dealerName}</p>
+                        <div className="flex items-center justify-center gap-3 mt-3">
+                            <a
+                                href="https://www.cyepro.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:opacity-80 transition-opacity"
+                            >
+                                <div className="relative w-40 h-12">
+                                    <Image src="/assets/cyepro-logo.png" alt="Cyepro" fill className="object-contain" sizes="160px" />
+                                </div>
+                            </a>
+                            <span className="text-lg" style={{ color: '#E5197D' }}>|</span>
+                            <span className="text-sm font-medium" style={{ color: '#E5197D' }}>India&apos;s leading CRM providers</span>
+                        </div>
                     </div>
                 </div>
             </footer>
