@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
         }
 
         // Validate and clean domain
-        const cleanDomain = DomainVerificationService.extractDomain(domain_name);
+        const cleanDomain = DomainVerificationService.extractBaseDomain(domain_name);
         if (!DomainVerificationService.isValidDomain(cleanDomain)) {
             return NextResponse.json(
                 { error: 'Invalid domain format' },

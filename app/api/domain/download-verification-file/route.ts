@@ -19,7 +19,7 @@ export async function GET(request: NextRequest) {
         }
 
         // Generate HTML content
-        const htmlContent = DomainVerificationService.generateVerificationHTML(token);
+        const htmlContent = DomainVerificationService.generateHTMLFile(token);
 
         // Return as downloadable file
         return new NextResponse(htmlContent, {

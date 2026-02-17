@@ -86,7 +86,7 @@ export async function POST(request: NextRequest) {
                 onboarding.verification.token
             );
 
-            const htmlContent = DomainVerificationService.generateVerificationHTML(
+            const htmlContent = DomainVerificationService.generateHTMLFile(
                 onboarding.verification.token
             );
 
@@ -144,6 +144,10 @@ export async function POST(request: NextRequest) {
         //     status: verificationResult.verified ? 'success' : 'pending',
         //     attempted_at: new Date()
         // });
+
+        if (!verificationResult) {
+            return NextResponse.json({ error: 'Invalid verification method' }, { status: 400 });
+        }
 
         console.log(`📝 Verification attempt: ${method} - ${verificationResult.verified ? 'SUCCESS' : 'PENDING'}`);
 
