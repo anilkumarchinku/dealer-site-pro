@@ -4,7 +4,7 @@
  * NO "use client" — this runs only on the server
  */
 
-import { createClient } from '@supabase/supabase-js'
+import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 import type { DBVehicle } from './vehicles'
 
 // ── Known brand slug patterns (longest first for correct suffix matching) ───
@@ -88,7 +88,7 @@ function getServerSupabase() {
 }
 
 /** Try to resolve a dealer row directly by its main slug */
-async function findDealerByExactSlug(supabase: ReturnType<typeof createClient>, slug: string) {
+async function findDealerByExactSlug(supabase: SupabaseClient, slug: string) {
     const { data, error } = await supabase
         .from('dealers')
         .select('id, dealership_name, tagline, phone, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars')

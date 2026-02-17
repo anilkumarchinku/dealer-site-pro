@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { X, Globe, Copy, Check, AlertCircle, Loader2, Palette } from 'lucide-react'
 import { getDNSInstructions } from '@/lib/services/dns-verification-service'
-import { allTemplates } from '@/lib/templates/template-styles'
+import { allTemplates, TemplateStyle } from '@/lib/templates/template-styles'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
@@ -16,7 +16,6 @@ interface Props {
 }
 
 type Step = 'enter-domain' | 'select-template' | 'dns-instructions' | 'verifying' | 'success' | 'failed'
-type TemplateStyle = 'luxury' | 'family' | 'sporty' | 'professional'
 
 export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, onSuccess }: Props) {
     const [step, setStep] = useState<Step>('enter-domain')

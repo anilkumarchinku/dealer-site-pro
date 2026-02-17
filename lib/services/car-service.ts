@@ -87,7 +87,7 @@ export async function getSimilarCars(carId: string, limit: number = 4): Promise<
         .filter(c =>
             c.id !== carId &&
             c.segment === car.segment &&
-            Math.abs(c.pricing.exShowroom.min - car.pricing.exShowroom.min) <= priceVariance
+            Math.abs((c.pricing.exShowroom.min ?? 0) - (car.pricing.exShowroom.min ?? 0)) <= priceVariance
         )
         .sort((a, b) => (b.meta.popularityScore || 0) - (a.meta.popularityScore || 0))
         .slice(0, limit);
@@ -112,8 +112,8 @@ export async function getCarsByBudget(
 ): Promise<Car[]> {
     return allCars
         .filter(car =>
-            car.pricing.exShowroom.min >= minBudget &&
-            car.pricing.exShowroom.min <= maxBudget
+            (car.pricing.exShowroom.min ?? 0) >= minBudget &&
+            (car.pricing.exShowroom.min ?? 0) <= maxBudget
         )
         .sort((a, b) => (b.rating?.overall || 0) - (a.rating?.overall || 0))
         .slice(0, limit);

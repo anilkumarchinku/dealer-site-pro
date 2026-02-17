@@ -49,7 +49,7 @@ export default function CarsDemoPage() {
 
     const totalCars = cars.length;
     const makes = Array.from(new Set(cars.map(c => c.make)));
-    const avgPrice = cars.reduce((sum, c) => sum + c.pricing.exShowroom.min, 0) / cars.length;
+    const avgPrice = cars.reduce((sum, c) => sum + (c.pricing.exShowroom.min ?? 0), 0) / cars.length;
 
     return (
         <div className="min-h-screen bg-gray-50 py-12">

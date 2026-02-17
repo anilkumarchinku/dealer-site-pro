@@ -20,7 +20,8 @@ export function generateCarId(make: string, model: string, variant: string): str
 /**
  * Format price to Indian currency
  */
-export function formatPrice(price: number): string {
+export function formatPrice(price: number | null): string {
+    if (price === null) return 'N/A';
     return new Intl.NumberFormat('en-IN', {
         style: 'currency',
         currency: 'INR',
@@ -31,7 +32,8 @@ export function formatPrice(price: number): string {
 /**
  * Format price in lakhs (Indian numbering system)
  */
-export function formatPriceInLakhs(price: number): string {
+export function formatPriceInLakhs(price: number | null): string {
+    if (price === null) return 'N/A';
     const lakhs = price / 100000;
     if (lakhs >= 1) {
         return `₹${lakhs.toFixed(2)} Lakh${lakhs > 1 ? 's' : ''}`;
@@ -153,8 +155,8 @@ export function filterCars(cars: Car[], filters: CarFilters): Car[] {
     // Filter by price range
     if (filters.priceRange) {
         filtered = filtered.filter(car =>
-            car.pricing.exShowroom.min >= filters.priceRange!.min &&
-            car.pricing.exShowroom.max <= filters.priceRange!.max
+            (car.pricing.exShowroom.min ?? 0) >= filters.priceRange!.min &&
+            (car.pricing.exShowroom.max ?? Infinity) <= filters.priceRange!.max
         );
     }
 
@@ -163,7 +165,7 @@ export function filterCars(cars: Car[], filters: CarFilters): Car[] {
         const capacities = Array.isArray(filters.seatingCapacity)
             ? filters.seatingCapacity
             : [filters.seatingCapacity];
-        filtered = filtered.filter(car => capacities.includes(car.dimensions.seatingCapacity));
+        filtered = filtered.filter(car => car.dimensions.seatingCapacity !== null && capacities.includes(car.dimensions.seatingCapacity));
     }
 
     // Sort results
@@ -192,10 +194,10 @@ export function sortCars(
 
     switch (sortBy) {
         case 'price_asc':
-            return sorted.sort((a, b) => a.pricing.exShowroom.min - b.pricing.exShowroom.min);
+            return sorted.sort((a, b) => (a.pricing.exShowroom.min ?? 0) - (b.pricing.exShowroom.min ?? 0));
 
         case 'price_desc':
-            return sorted.sort((a, b) => b.pricing.exShowroom.min - a.pricing.exShowroom.min);
+            return sorted.sort((a, b) => (b.pricing.exShowroom.min ?? 0) - (a.pricing.exShowroom.min ?? 0));
 
         case 'popularity':
             return sorted.sort((a, b) => (b.meta.popularityScore || 0) - (a.meta.popularityScore || 0));
@@ -245,10 +247,10 @@ export function getUniqueFilterOptions(cars: Car[]) {
         fuelTypes: Array.from(new Set(cars.map(car => car.engine.type))).sort(),
         transmissions: Array.from(new Set(cars.map(car => car.transmission.type))).sort(),
         segments: Array.from(new Set(cars.map(car => car.segment))).sort(),
-        seatingCapacities: Array.from(new Set(cars.map(car => car.dimensions.seatingCapacity))).sort((a, b) => a - b),
+        seatingCapacities: Array.from(new Set(cars.map(car => car.dimensions.seatingCapacity).filter((s): s is number => s !== null))).sort((a, b) => a - b),
         priceRange: {
-            min: Math.min(...cars.map(car => car.pricing.exShowroom.min)),
-            max: Math.max(...cars.map(car => car.pricing.exShowroom.max)),
+            min: Math.min(...cars.map(car => car.pricing.exShowroom.min ?? 0)),
+            max: Math.max(...cars.map(car => car.pricing.exShowroom.max ?? 0)),
         },
     };
 }
@@ -261,8 +263,8 @@ export function getRecommendedByBudget(cars: Car[], budget: number): Car[] {
 
     return cars
         .filter(car =>
-            car.pricing.exShowroom.min >= budget - variance &&
-            car.pricing.exShowroom.min <= budget + variance
+            (car.pricing.exShowroom.min ?? 0) >= budget - variance &&
+            (car.pricing.exShowroom.min ?? 0) <= budget + variance
         )
         .sort((a, b) => (b.rating?.overall || 0) - (a.rating?.overall || 0))
         .slice(0, 6);
@@ -278,7 +280,7 @@ export function getSimilarCars(car: Car, allCars: Car[], limit: number = 4): Car
         .filter(c =>
             c.id !== car.id &&
             c.segment === car.segment &&
-            Math.abs(c.pricing.exShowroom.min - car.pricing.exShowroom.min) <= priceVariance
+            Math.abs((c.pricing.exShowroom.min ?? 0) - (car.pricing.exShowroom.min ?? 0)) <= priceVariance
         )
         .sort((a, b) => (b.meta.popularityScore || 0) - (a.meta.popularityScore || 0))
         .slice(0, limit);

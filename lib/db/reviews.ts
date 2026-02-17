@@ -29,7 +29,7 @@ export interface DBReview {
 // ── Normalize DB row → UI shape ───────────────────────────────
 function normalize(row: Record<string, unknown>): DBReview {
     return {
-        ...(row as DBReview),
+        ...(row as unknown as DBReview),
         review_text:     row.content as string | undefined,
         dealer_response: row.admin_reply as string | undefined,
         platform:        row.source as string | undefined,

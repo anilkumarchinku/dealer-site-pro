@@ -97,6 +97,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb' }
         powerRange: detailedInfo.length > 1
             ? `${Math.min(...detailedInfo.map(v => v.power_bhp))} - ${Math.max(...detailedInfo.map(v => v.power_bhp))} bhp`
             : detailedVariant?.power_bhp ? `${detailedVariant.power_bhp} bhp` : null,
+        mileages: detailedVariant?.mileage_kmpl_or_ev_range || null,
     } : null;
 
     // Parse features from detailed info
