@@ -107,8 +107,16 @@ export async function middleware(request: NextRequest) {
         },
     })
 
-    const { data: { session } } = await supabase.auth.getSession()
-    const isLoggedIn = !!session
+    // Wrap Supabase session check in try/catch — if it times out or fails on
+    // Vercel Edge we fail-open (allow request through) rather than crashing.
+    let isLoggedIn = false
+    try {
+        const { data: { session } } = await supabase.auth.getSession()
+        isLoggedIn = !!session
+    } catch {
+        // Supabase unreachable — skip auth guard, let the page handle it
+        return response
+    }
 
     const isProtected = PROTECTED_PREFIXES.some(p => pathname.startsWith(p))
     const isAuthPage  = AUTH_PAGES.some(p => pathname.startsWith(p))

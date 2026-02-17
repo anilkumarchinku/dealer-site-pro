@@ -8,8 +8,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { brandToUrlSlug } from '@/lib/db/dealers'
-import { dealerSiteUrl, BASE_DOMAIN } from '@/lib/utils/domain'
+import { dealerSiteUrl, brandToUrlSlug, BASE_DOMAIN } from '@/lib/utils/domain'
 
 interface Props {
     dealerId: string
