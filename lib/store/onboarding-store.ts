@@ -12,12 +12,16 @@ interface OnboardingStore {
     // Supabase: dealer row ID after onboarding is saved
     dealerId: string | null;
 
+    // Supabase: dealer URL slug
+    dealerSlug: string | null;
+
     // Actions
     setStep: (step: number) => void;
     nextStep: () => void;
     prevStep: () => void;
     updateData: (data: Partial<OnboardingData>) => void;
     setDealerId: (id: string) => void;
+    setDealerSlug: (slug: string) => void;
     reset: () => void;
 
     // Computed
@@ -63,6 +67,7 @@ export const useOnboardingStore = create<OnboardingStore>()(
             currentStep: 1,
             data: initialData,
             dealerId: null,
+            dealerSlug: null,
 
             setStep: (step) => set({ currentStep: step }),
 
@@ -80,7 +85,9 @@ export const useOnboardingStore = create<OnboardingStore>()(
 
             setDealerId: (id) => set({ dealerId: id }),
 
-            reset: () => set({ currentStep: 1, data: initialData, dealerId: null }),
+            setDealerSlug: (slug) => set({ dealerSlug: slug }),
+
+            reset: () => set({ currentStep: 1, data: initialData, dealerId: null, dealerSlug: null }),
 
             isComplete: () => {
                 const { data } = get();
