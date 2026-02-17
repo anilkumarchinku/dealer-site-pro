@@ -116,6 +116,7 @@ function PreviewContent() {
                         cars={displayCars}
                         contactInfo={contactInfo}
                         config={config}
+                        previewMode
                     />
                 );
             case 'sporty':
@@ -126,6 +127,7 @@ function PreviewContent() {
                         cars={displayCars}
                         contactInfo={contactInfo}
                         config={config}
+                        previewMode
                     />
                 );
             case 'family':
@@ -136,6 +138,7 @@ function PreviewContent() {
                         cars={displayCars}
                         contactInfo={contactInfo}
                         config={config}
+                        previewMode
                     />
                 );
             case 'modern':
@@ -147,6 +150,7 @@ function PreviewContent() {
                         cars={displayCars}
                         contactInfo={contactInfo}
                         config={config}
+                        previewMode
                     />
                 );
         }
@@ -366,7 +370,7 @@ function PreviewContent() {
                     )}
                 </div>
 
-                {/* Template Content - with top padding for banner */}
+                {/* Template Content - pt-12 = preview banner height; template navbar sits below it */}
                 <div className="pt-12">
                     {renderTemplate()}
                 </div>

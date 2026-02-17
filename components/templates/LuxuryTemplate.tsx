@@ -21,9 +21,10 @@ interface LuxuryTemplateProps {
     cars: Car[];
     contactInfo: { phone: string; email: string; address: string };
     config?: { heroTitle?: string; heroSubtitle?: string; tagline?: string };
+    previewMode?: boolean;
 }
 
-export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, config: customConfig }: LuxuryTemplateProps) {
+export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, config: customConfig, previewMode }: LuxuryTemplateProps) {
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -44,7 +45,7 @@ export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, confi
 
     return (
         <div className="min-h-screen bg-gray-900 text-white font-serif">
-            <nav className={`fixed top-0 left-0 right-0 z-50 transition-all ${isScrolled ? 'bg-gray-900/95 backdrop-blur-lg' : 'bg-transparent'}`}>
+            <nav className={`fixed ${previewMode ? 'top-12' : 'top-0'} left-0 right-0 z-50 transition-all ${isScrolled ? 'bg-gray-900/95 backdrop-blur-lg' : 'bg-transparent'}`}>
                 <div className="max-w-7xl mx-auto px-4 py-4">
                     <div className="flex justify-between items-center">
                         <div className="flex items-center gap-3 cursor-pointer" onClick={() => setActiveTab('home')}>
@@ -82,7 +83,11 @@ export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, confi
                             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-gray-900/80" />
                         </div>
                         <div className="relative z-10 max-w-7xl mx-auto px-4 py-32 text-center">
-                            <p className="text-sm tracking-widest uppercase mb-6" style={{ color: brandColors.primary }}>{tagline}</p>
+                            <p className="text-sm tracking-widest uppercase mb-4" style={{ color: brandColors.primary }}>{tagline}</p>
+                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm mb-6">
+                                <Crown className="w-3.5 h-3.5 text-white/60" />
+                                <span className="text-sm font-light tracking-widest text-white/80">{dealerName}</span>
+                            </div>
                             <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-8 leading-tight">{heroTitle}</h1>
                             <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">{heroSubtitle}</p>
                             <Button size="lg" className="text-white" style={{ backgroundColor: brandColors.primary }} onClick={() => setActiveTab('inventory')}>

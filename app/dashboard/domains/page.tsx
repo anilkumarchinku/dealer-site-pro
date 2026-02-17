@@ -7,6 +7,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import ConnectCustomDomainModal from '@/components/ConnectCustomDomainModal'
 import PurchaseManagedDomainModal from '@/components/PurchaseManagedDomainModal'
 import DomainMonitoringWidget from '@/components/DomainMonitoringWidget'
+import { useOnboardingStore } from '@/lib/store/onboarding-store'
 
 interface Domain {
     id: string
@@ -25,14 +26,14 @@ export default function DomainSettingsPage() {
     const [showConnectModal, setShowConnectModal] = useState(false)
     const [showPurchaseModal, setShowPurchaseModal] = useState(false)
 
-    // TODO: Replace with actual dealer ID from auth
-    const dealerId = 'temp-dealer-id'
+    const { dealerId } = useOnboardingStore()
 
     useEffect(() => {
-        fetchDomains()
-    }, [])
+        if (dealerId) fetchDomains()
+    }, [dealerId])
 
     async function fetchDomains() {
+        if (!dealerId) return
         try {
             const response = await fetch(`/api/domains?dealer_id=${dealerId}`)
             const data = await response.json()
@@ -57,7 +58,7 @@ export default function DomainSettingsPage() {
             </div>
 
             {/* Monitoring Widget */}
-            <DomainMonitoringWidget dealerId={dealerId} />
+            {dealerId && <DomainMonitoringWidget dealerId={dealerId} />}
 
             {/* Current Domain */}
             {loading ? (
@@ -250,13 +251,13 @@ export default function DomainSettingsPage() {
             <ConnectCustomDomainModal
                 isOpen={showConnectModal}
                 onClose={() => setShowConnectModal(false)}
-                dealerId={dealerId}
+                dealerId={dealerId!}
                 onSuccess={fetchDomains}
             />
             <PurchaseManagedDomainModal
                 isOpen={showPurchaseModal}
                 onClose={() => setShowPurchaseModal(false)}
-                dealerId={dealerId}
+                dealerId={dealerId!}
                 onSuccess={fetchDomains}
             />
         </div>

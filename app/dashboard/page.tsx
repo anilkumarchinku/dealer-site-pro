@@ -3,10 +3,11 @@ import { useState, useEffect } from "react";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import WebsiteLiveBanner from "@/components/WebsiteLiveBanner";
 import Link from "next/link";
 import {
     Users, Car, Calendar, Plus, ArrowRight, Eye,
-    Mail, Phone, Clock, Target, Zap, BarChart3, Loader2,
+    Mail, Phone, Clock, Target, Zap, BarChart3, Loader2, ChevronDown,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { isSupabaseReady } from "@/lib/supabase";
@@ -36,7 +37,9 @@ const priorityColors = {
 export default function DashboardPage() {
     const { data, dealerId } = useOnboardingStore();
     const primaryBrand = data.brands?.[0] ?? "Maruti Suzuki";
+    const isMultiBrand  = (data.brands?.length ?? 0) > 1;
 
+    const [showBrandPicker, setShowBrandPicker] = useState(false);
     const [statsLoading, setStatsLoading] = useState(false);
     const [leadsLoading, setLeadsLoading] = useState(false);
     const [visitors, setVisitors]         = useState<number | null>(null);
@@ -107,12 +110,51 @@ export default function DashboardPage() {
                     )}
                 </div>
                 <div className="flex items-center gap-3">
-                    <Link href={`/preview?brand=${encodeURIComponent(primaryBrand)}&template=${data.styleTemplate || "modern"}`}>
-                        <Button variant="outline" className="gap-2">
-                            <Eye className="w-4 h-4" />
-                            View Website
-                        </Button>
-                    </Link>
+                    {/* View Website — single brand: direct link; multi-brand: picker */}
+                    {isMultiBrand ? (
+                        <div className="relative">
+                            <Button
+                                variant="outline"
+                                className="gap-2"
+                                onClick={() => setShowBrandPicker(v => !v)}
+                            >
+                                <Eye className="w-4 h-4" />
+                                View Website
+                                <ChevronDown className={cn("w-4 h-4 transition-transform", showBrandPicker && "rotate-180")} />
+                            </Button>
+                            {showBrandPicker && (
+                                <>
+                                    <div className="fixed inset-0 z-10" onClick={() => setShowBrandPicker(false)} />
+                                    <div className="absolute right-0 mt-2 w-56 rounded-xl border border-border bg-popover shadow-lg z-20 overflow-hidden">
+                                        <div className="px-3 py-2 border-b border-border">
+                                            <p className="text-xs font-medium text-muted-foreground">Choose a brand website</p>
+                                        </div>
+                                        {data.brands?.map(brand => (
+                                            <Link
+                                                key={brand}
+                                                href={`/preview?brand=${encodeURIComponent(brand)}&template=${data.styleTemplate || "modern"}`}
+                                                onClick={() => setShowBrandPicker(false)}
+                                            >
+                                                <div className="flex items-center gap-3 px-3 py-2.5 hover:bg-muted/50 cursor-pointer">
+                                                    <div className="p-1.5 rounded-lg bg-blue-500/10">
+                                                        <Car className="w-3.5 h-3.5 text-blue-500" />
+                                                    </div>
+                                                    <span className="text-sm font-medium">{brand}</span>
+                                                </div>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </>
+                            )}
+                        </div>
+                    ) : (
+                        <Link href={`/preview?brand=${encodeURIComponent(primaryBrand)}&template=${data.styleTemplate || "modern"}`}>
+                            <Button variant="outline" className="gap-2">
+                                <Eye className="w-4 h-4" />
+                                View Website
+                            </Button>
+                        </Link>
+                    )}
                     <Link href="/dashboard/inventory/add">
                         <Button className="gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
                             <Plus className="w-4 h-4" />
@@ -121,6 +163,18 @@ export default function DashboardPage() {
                     </Link>
                 </div>
             </div>
+
+            {/* Go Live Banner */}
+            {dealerId && (
+                <WebsiteLiveBanner
+                    dealerId={dealerId}
+                    dealershipName={data.dealershipName || "your dealership"}
+                    vehicleCount={topVehicles.length}
+                    sellsNewCars={data.sellsNewCars ?? false}
+                    sellsUsedCars={data.sellsUsedCars ?? false}
+                    brands={data.brands ?? []}
+                />
+            )}
 
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

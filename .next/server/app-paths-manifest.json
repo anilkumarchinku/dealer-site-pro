@@ -1,13 +1,7 @@
 {
   "/preview/page": "app/preview/page.js",
-  "/admin/page": "app/admin/page.js",
-  "/dashboard/leads/page": "app/dashboard/leads/page.js",
-  "/dashboard/inventory/page": "app/dashboard/inventory/page.js",
   "/dashboard/page": "app/dashboard/page.js",
-  "/dashboard/analytics/page": "app/dashboard/analytics/page.js",
-  "/dashboard/reviews/page": "app/dashboard/reviews/page.js",
-  "/dashboard/messages/page": "app/dashboard/messages/page.js",
-  "/dashboard/help/page": "app/dashboard/help/page.js",
-  "/dashboard/settings/page": "app/dashboard/settings/page.js",
-  "/dashboard/inventory/add/page": "app/dashboard/inventory/add/page.js"
+  "/sites/[slug]/page": "app/sites/[slug]/page.js",
+  "/dashboard/domains/page": "app/dashboard/domains/page.js",
+  "/dashboard/settings/page": "app/dashboard/settings/page.js"
 }

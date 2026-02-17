@@ -42,6 +42,7 @@ interface SportyTemplateProps {
         heroSubtitle?: string;
         tagline?: string;
     };
+    previewMode?: boolean;
 }
 
 export function SportyTemplate({
@@ -49,7 +50,8 @@ export function SportyTemplate({
     dealerName,
     cars,
     contactInfo,
-    config: customConfig
+    config: customConfig,
+    previewMode,
 }: SportyTemplateProps) {
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [isScrolled, setIsScrolled] = useState(false);
@@ -73,7 +75,7 @@ export function SportyTemplate({
     return (
         <div className="min-h-screen bg-black text-white font-sans">
             {/* Navigation */}
-            <nav className={`fixed top-0 left-0 right-0 z-50 transition-all ${isScrolled ? 'bg-black/95 backdrop-blur-lg' : 'bg-transparent'}`}>
+            <nav className={`fixed ${previewMode ? 'top-12' : 'top-0'} left-0 right-0 z-50 transition-all ${isScrolled ? 'bg-black/95 backdrop-blur-lg' : 'bg-transparent'}`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
                         <div className="flex items-center cursor-pointer" onClick={() => setActiveTab('home')}>
@@ -129,8 +131,13 @@ export function SportyTemplate({
                         </div>
                         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
                             <div className="max-w-3xl">
-                                <div className="inline-block px-4 py-2 rounded-md mb-6 font-bold text-sm uppercase tracking-wider" style={{ backgroundColor: `${brandColors.primary}33`, borderLeft: `4px solid ${brandColors.primary}` }}>
-                                    {tagline}
+                                <div className="flex items-center gap-3 mb-4">
+                                    <div className="inline-block px-4 py-2 rounded-md font-bold text-sm uppercase tracking-wider" style={{ backgroundColor: `${brandColors.primary}33`, borderLeft: `4px solid ${brandColors.primary}` }}>
+                                        {tagline}
+                                    </div>
+                                    <div className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-white/10 backdrop-blur-sm border border-white/20">
+                                        <span className="text-xs font-bold uppercase tracking-wider text-white/80">{dealerName}</span>
+                                    </div>
                                 </div>
                                 <h1 className="text-6xl md:text-8xl font-black leading-none mb-6 tracking-tight">
                                     {heroTitle.split(' ').map((word, i) => (

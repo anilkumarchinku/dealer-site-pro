@@ -33,9 +33,10 @@ interface FamilyTemplateProps {
     cars: Car[];
     contactInfo: { phone: string; email: string; address: string };
     config?: { heroTitle?: string; heroSubtitle?: string; tagline?: string };
+    previewMode?: boolean;
 }
 
-export function FamilyTemplate({ brandName, dealerName, cars, contactInfo, config: customConfig }: FamilyTemplateProps) {
+export function FamilyTemplate({ brandName, dealerName, cars, contactInfo, config: customConfig, previewMode }: FamilyTemplateProps) {
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -56,7 +57,7 @@ export function FamilyTemplate({ brandName, dealerName, cars, contactInfo, confi
 
     return (
         <div className="min-h-screen bg-white text-gray-900 font-sans">
-            <nav className={`fixed top-0 left-0 right-0 z-50 transition-all ${isScrolled ? 'bg-white shadow-md' : 'bg-white/95'}`}>
+            <nav className={`fixed ${previewMode ? 'top-12' : 'top-0'} left-0 right-0 z-50 transition-all ${isScrolled ? 'bg-white shadow-md' : 'bg-white/95'}`}>
                 <div className="max-w-7xl mx-auto px-4 py-4">
                     <div className="flex justify-between items-center">
                         <div className="flex items-center gap-3 cursor-pointer" onClick={() => setActiveTab('home')}>
@@ -92,8 +93,13 @@ export function FamilyTemplate({ brandName, dealerName, cars, contactInfo, confi
                         <div className="max-w-7xl mx-auto px-4">
                             <div className="grid lg:grid-cols-2 gap-12 items-center">
                                 <div className="space-y-6">
-                                    <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold" style={{ backgroundColor: `${brandColors.primary}20`, color: brandColors.primary }}>
-                                        {tagline}
+                                    <div className="flex items-center gap-3 flex-wrap">
+                                        <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold" style={{ backgroundColor: `${brandColors.primary}20`, color: brandColors.primary }}>
+                                            {tagline}
+                                        </div>
+                                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-semibold text-gray-700" style={{ borderColor: `${brandColors.primary}40`, backgroundColor: `${brandColors.primary}08` }}>
+                                            {dealerName}
+                                        </div>
                                     </div>
                                     <h1 className="text-5xl md:text-6xl font-bold leading-tight">{heroTitle}</h1>
                                     <p className="text-xl text-gray-600">{heroSubtitle}</p>

@@ -5,6 +5,10 @@ import { extractSlugFromHostname } from './lib/utils/slug'
 const PROTECTED_PREFIXES = ['/dashboard', '/onboarding']
 const AUTH_PAGES       = ['/auth/login', '/auth/register']
 
+// Base domain from env (e.g. "your-project.vercel.app" or "dealersitepro.com")
+const BASE_DOMAIN = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'dealersitepro.com'
+const USE_SUBDOMAIN = process.env.NEXT_PUBLIC_USE_SUBDOMAIN === 'true'
+
 // In-memory cache for domain lookups
 const domainCache = new Map<string, { slug: string; expires: number }>()
 const CACHE_TTL = 60000 // 60 seconds
@@ -24,16 +28,22 @@ export async function middleware(request: NextRequest) {
         return NextResponse.next()
     }
 
-    // ── Subdomain / custom domain routing ────────────────────
+    // ── Main domain detection ─────────────────────────────────
+    // Always treat the configured BASE_DOMAIN, localhost, and all
+    // *.vercel.app URLs as the "main" domain — never as dealer subdomains.
     const isMainDomain =
-        hostname === 'dealersitepro.com' ||
-        hostname === 'www.dealersitepro.com' ||
-        hostname.startsWith('localhost')
+        hostname === BASE_DOMAIN ||
+        hostname === `www.${BASE_DOMAIN}` ||
+        hostname.startsWith('localhost') ||
+        hostname.endsWith('.vercel.app')   // Vercel preview/production deployments
 
-    if (!isMainDomain) {
-        const slug = extractSlugFromHostname(hostname)
+    // ── Subdomain / custom domain routing ────────────────────
+    // Only active when USE_SUBDOMAIN=true AND we're NOT on the main domain.
+    // Requires wildcard DNS pointing to this app (e.g. *.dealersitepro.com).
+    if (!isMainDomain && USE_SUBDOMAIN) {
+        const slug = extractSlugFromHostname(hostname, BASE_DOMAIN)
         if (!slug) {
-            return NextResponse.redirect(new URL('https://dealersitepro.com/not-found', request.url))
+            return NextResponse.redirect(new URL(`https://${BASE_DOMAIN}/not-found`, request.url))
         }
 
         const cached = domainCache.get(hostname)
@@ -46,6 +56,25 @@ export async function middleware(request: NextRequest) {
         domainCache.set(hostname, { slug, expires: Date.now() + CACHE_TTL })
         const url = request.nextUrl.clone()
         url.pathname = `/sites/${slug}${pathname}`
+        return NextResponse.rewrite(url)
+    }
+
+    // ── Custom domain routing (non-Vercel, non-BASE_DOMAIN hosts) ──────────
+    // A dealer may point their own domain (abcmotors.com) here.
+    // In that case we look up the slug from the dealer_domains table via
+    // the /api/domains/resolve route (handled separately).
+    if (!isMainDomain && !USE_SUBDOMAIN) {
+        // Unknown host — treat as a custom domain dealer site
+        const slug = extractSlugFromHostname(hostname, BASE_DOMAIN)
+        if (slug) {
+            const url = request.nextUrl.clone()
+            url.pathname = `/sites/${slug}${pathname}`
+            return NextResponse.rewrite(url)
+        }
+        // Custom domain (abcmotors.com) — rewrite to /sites/[custom-domain]
+        // The page.tsx will resolve it via dealer_domains lookup
+        const url = request.nextUrl.clone()
+        url.pathname = `/sites/${hostname}${pathname}`
         return NextResponse.rewrite(url)
     }
 

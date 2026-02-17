@@ -146,6 +146,26 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/admin/page.js"
+    ],
+    "/api/domains/connect-custom/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/domains/connect-custom/route.js"
+    ],
+    "/sites/[slug]/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sites/[slug]/layout.js"
+    ],
+    "/sites/[slug]/error": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sites/[slug]/error.js"
+    ],
+    "/sites/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sites/[slug]/page.js"
     ]
   }
 }

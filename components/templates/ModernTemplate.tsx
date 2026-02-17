@@ -41,6 +41,7 @@ interface ModernTemplateProps {
         heroTitle?: string;
         heroSubtitle?: string;
     };
+    previewMode?: boolean;
 }
 
 export function ModernTemplate({
@@ -48,7 +49,8 @@ export function ModernTemplate({
     dealerName,
     cars,
     contactInfo,
-    config: customConfig
+    config: customConfig,
+    previewMode,
 }: ModernTemplateProps) {
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [isScrolled, setIsScrolled] = useState(false);
@@ -84,7 +86,7 @@ export function ModernTemplate({
         <div className="min-h-screen bg-white font-sans text-gray-900">
             {/* Navigation */}
             <nav
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+                className={`fixed ${previewMode ? 'top-12' : 'top-0'} left-0 right-0 z-50 transition-all duration-300 ${
                     isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
                 }`}
             >
@@ -184,6 +186,9 @@ export function ModernTemplate({
                             <div className="grid lg:grid-cols-2 gap-12 items-center">
                                 {/* Text */}
                                 <div className="text-white space-y-6">
+                                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">
+                                        <span className="text-sm font-medium text-white/90">{dealerName}</span>
+                                    </div>
                                     <h1 className="text-5xl md:text-6xl font-bold leading-tight">
                                         {heroTitle}
                                     </h1>
