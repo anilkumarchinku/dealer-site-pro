@@ -160,17 +160,17 @@ export default function Step1Page() {
                 />
 
                 {subdomainPreview && (
-                    <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
+                    <div className="bg-blue-500/10 border-2 border-blue-500/20 rounded-xl p-4">
                         <div className="flex items-start gap-3">
-                            <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                            <CheckCircle className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
                             <div>
-                                <p className="text-sm font-semibold text-blue-900 mb-1">
+                                <p className="text-sm font-semibold text-foreground mb-1">
                                     Your free website URL:
                                 </p>
-                                <p className="text-lg font-mono font-bold text-blue-600">
+                                <p className="text-lg font-mono font-bold text-blue-500">
                                     {subdomainPreview}
                                 </p>
-                                <p className="text-xs text-blue-700 mt-1">
+                                <p className="text-xs text-blue-500/80 mt-1">
                                     ✨ Free forever • SSL included • Live instantly
                                 </p>
                             </div>
