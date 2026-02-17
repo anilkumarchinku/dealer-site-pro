@@ -60,6 +60,7 @@ export default function DashboardPage() {
                     setTestDrives(s.testDrives);
                 }
             })
+            .catch(() => {})
             .finally(() => setStatsLoading(false));
 
         setLeadsLoading(true);
@@ -69,7 +70,7 @@ export default function DashboardPage() {
         ]).then(([leads, vehicles]) => {
             setRecentLeads(leads.slice(0, 4));
             setTopVehicles(vehicles);
-        }).finally(() => setLeadsLoading(false));
+        }).catch(() => {}).finally(() => setLeadsLoading(false));
     }, [dealerId]);
 
     const fmt = (n: number) => n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n);
