@@ -1,0 +1,47 @@
+{
+  "id": "bmw-x1",
+  "make": "BMW",
+  "model": "X1",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 50.60 - 52.20 Lakh*Get On-Road Price*Ex-Showroom Price in New Delhi",
+  "pricing": {
+    "exShowroom": {
+      "min": 5060000,
+      "max": 5220000,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Petrol",
+    "power": "Power",
+    "torque": "Torque",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Manual"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": null,
+    "bootSpace": 0,
+    "groundClearance": 0,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": []
+  },
+  "images": {
+    "hero": "/assets/cars/bmw/x1.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:10:00.542Z",
+    "sourceUrl": "https://www.cardekho.com/bmw/x1"
+  }
+}

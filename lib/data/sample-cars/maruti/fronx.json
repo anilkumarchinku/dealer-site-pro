@@ -1,0 +1,53 @@
+{
+  "id": "maruti-fronx",
+  "make": "Maruti Suzuki",
+  "model": "Fronx",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 6.85 - 11.98 Lakh*Get On-Road Price*Ex-Showroom Price in New Delhi",
+  "pricing": {
+    "exShowroom": {
+      "min": 685000,
+      "max": 1198000,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Petrol",
+    "power": "Power",
+    "torque": "Torque",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Transmission"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": 5,
+    "bootSpace": 0,
+    "groundClearance": 0,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": [
+      "keyless entry",
+      "push button start/stop",
+      "auto headlamps",
+      "cruise control",
+      "connected car technology"
+    ]
+  },
+  "images": {
+    "hero": "/assets/cars/maruti/fronx.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:07:37.585Z",
+    "sourceUrl": "https://www.cardekho.com/maruti/fronx"
+  }
+}

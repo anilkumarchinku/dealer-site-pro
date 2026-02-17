@@ -1,0 +1,50 @@
+{
+  "id": "maruti-brezza",
+  "make": "Maruti Suzuki",
+  "model": "Brezza",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 8.26 - 13.01 Lakh*Get On-Road Price*Ex-Showroom Price in New Delhi",
+  "pricing": {
+    "exShowroom": {
+      "min": 826000,
+      "max": 1301000,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Petrol",
+    "power": "Power",
+    "torque": "Torque",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Transmission"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": null,
+    "bootSpace": 0,
+    "groundClearance": null,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": [
+      "keyless entry",
+      "cruise control"
+    ]
+  },
+  "images": {
+    "hero": "/assets/cars/maruti/brezza.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:07:36.694Z",
+    "sourceUrl": "https://www.cardekho.com/maruti/brezza"
+  }
+}

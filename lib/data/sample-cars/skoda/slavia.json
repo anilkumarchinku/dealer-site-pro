@@ -1,0 +1,50 @@
+{
+  "id": "skoda-slavia",
+  "make": "Skoda",
+  "model": "Slavia",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 10 - 17.99 Lakh*Get On-Road Price*Ex-Showroom Price in New Delhi",
+  "pricing": {
+    "exShowroom": {
+      "min": 1000000,
+      "max": 1798999.9999999998,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Fuel",
+    "power": "Power",
+    "torque": "Torque",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Transmission"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": 5,
+    "bootSpace": 0,
+    "groundClearance": 0,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": [
+      "keyless entry",
+      "six airbags"
+    ]
+  },
+  "images": {
+    "hero": "/assets/cars/skoda/slavia.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:09:13.508Z",
+    "sourceUrl": "https://www.cardekho.com/skoda/slavia"
+  }
+}

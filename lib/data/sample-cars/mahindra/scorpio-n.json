@@ -1,0 +1,49 @@
+{
+  "id": "mahindra-scorpio-n",
+  "make": "Mahindra",
+  "model": "Scorpio n",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 13.20 - 24.17 Lakh*Get On-Road Price*Ex-Showroom Price in New Delhi",
+  "pricing": {
+    "exShowroom": {
+      "min": 1320000,
+      "max": 2417000,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Petrol",
+    "power": "Power",
+    "torque": "Torque",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Manual"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": null,
+    "bootSpace": 0,
+    "groundClearance": 0,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": [
+      "keyless entry"
+    ]
+  },
+  "images": {
+    "hero": "/assets/cars/mahindra/scorpio-n.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:08:23.750Z",
+    "sourceUrl": "https://www.cardekho.com/mahindra/scorpio-n"
+  }
+}

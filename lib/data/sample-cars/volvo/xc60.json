@@ -1,0 +1,49 @@
+{
+  "id": "volvo-xc60",
+  "make": "Volvo",
+  "model": "Xc60",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 67.11 Lakh*Get On-Road Price*Ex-Showroom Price in New Delhi",
+  "pricing": {
+    "exShowroom": {
+      "min": 6711000,
+      "max": 0,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Petrol",
+    "power": "Power",
+    "torque": "Torque",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Transmission"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": null,
+    "bootSpace": 0,
+    "groundClearance": null,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": [
+      "connected car technology"
+    ]
+  },
+  "images": {
+    "hero": "/assets/cars/volvo/xc60.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:10:33.867Z",
+    "sourceUrl": "https://www.cardekho.com/volvo/xc60"
+  }
+}

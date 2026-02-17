@@ -1,0 +1,49 @@
+{
+  "id": "hyundai-i20",
+  "make": "Hyundai",
+  "model": "I20",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 5.99 - 10.44 Lakh*Get On-Road Price*Ex-Showroom Price in New Delhi",
+  "pricing": {
+    "exShowroom": {
+      "min": 599000,
+      "max": 1044000,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Fuel",
+    "power": "Power",
+    "torque": "Torque",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Transmission"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": 5,
+    "bootSpace": 0,
+    "groundClearance": 0,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": [
+      "keyless entry"
+    ]
+  },
+  "images": {
+    "hero": "/assets/cars/hyundai/i20.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:07:54.374Z",
+    "sourceUrl": "https://www.cardekho.com/hyundai/i20"
+  }
+}

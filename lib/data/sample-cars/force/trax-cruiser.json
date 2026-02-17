@@ -1,0 +1,47 @@
+{
+  "id": "force-trax-cruiser",
+  "make": "Force",
+  "model": "Trax cruiser",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 6 Lakh - 15.23 Lakh*",
+  "pricing": {
+    "exShowroom": {
+      "min": 600000,
+      "max": 1523000,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Fuel",
+    "power": "TBD",
+    "torque": "TBD",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Transmission"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": null,
+    "bootSpace": 0,
+    "groundClearance": 0,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": []
+  },
+  "images": {
+    "hero": "/assets/cars/force/trax-cruiser.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:09:40.021Z",
+    "sourceUrl": "https://www.cardekho.com/force/trax-cruiser"
+  }
+}

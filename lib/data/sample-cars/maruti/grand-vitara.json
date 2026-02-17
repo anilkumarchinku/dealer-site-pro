@@ -1,0 +1,50 @@
+{
+  "id": "maruti-grand-vitara",
+  "make": "Maruti Suzuki",
+  "model": "Grand vitara",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 10.77 - 19.72 Lakh*Get On-Road Price*Ex-Showroom Price in New Delhi",
+  "pricing": {
+    "exShowroom": {
+      "min": 1077000,
+      "max": 1972000,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Petrol",
+    "power": "Power",
+    "torque": "Torque",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Transmission"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": null,
+    "bootSpace": 0,
+    "groundClearance": null,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": [
+      "keyless entry",
+      "cruise control"
+    ]
+  },
+  "images": {
+    "hero": "/assets/cars/maruti/grand-vitara.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:07:39.410Z",
+    "sourceUrl": "https://www.cardekho.com/maruti/grand-vitara"
+  }
+}

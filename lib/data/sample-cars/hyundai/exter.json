@@ -1,0 +1,49 @@
+{
+  "id": "hyundai-exter",
+  "make": "Hyundai",
+  "model": "Exter",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 5.64 - 9.61 Lakh*Get On-Road Price*Ex-Showroom Price in New Delhi",
+  "pricing": {
+    "exShowroom": {
+      "min": 564000,
+      "max": 961000,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Petrol",
+    "power": "Power",
+    "torque": "Torque",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Transmission"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": 5,
+    "bootSpace": 0,
+    "groundClearance": 0,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": [
+      "push button start/stop"
+    ]
+  },
+  "images": {
+    "hero": "/assets/cars/hyundai/exter.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:07:56.538Z",
+    "sourceUrl": "https://www.cardekho.com/hyundai/exter"
+  }
+}

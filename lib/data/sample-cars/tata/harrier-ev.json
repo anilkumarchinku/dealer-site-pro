@@ -1,0 +1,47 @@
+{
+  "id": "tata-harrier-ev",
+  "make": "Tata",
+  "model": "Harrier ev",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 21.49 - 30.23 Lakh*Get On-Road Price*Ex-Showroom Price in New Delhi",
+  "pricing": {
+    "exShowroom": {
+      "min": 2149000,
+      "max": 3023000,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Petrol",
+    "power": "Power",
+    "torque": "Torque",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Manual"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": 5,
+    "bootSpace": null,
+    "groundClearance": 0,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": []
+  },
+  "images": {
+    "hero": "/assets/cars/tata/harrier-ev.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:08:22.953Z",
+    "sourceUrl": "https://www.cardekho.com/tata/harrier-ev"
+  }
+}

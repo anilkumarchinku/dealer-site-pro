@@ -1,0 +1,47 @@
+{
+  "id": "isuzu-mu-x",
+  "make": "Isuzu",
+  "model": "Mu x",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 34.53 - 37.71 Lakh*Get On-Road Price*Ex-Showroom Price in New Delhi",
+  "pricing": {
+    "exShowroom": {
+      "min": 3453000,
+      "max": 3771000,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Petrol",
+    "power": "Power",
+    "torque": "Torque",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Manual"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": null,
+    "bootSpace": 0,
+    "groundClearance": null,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": []
+  },
+  "images": {
+    "hero": "/assets/cars/isuzu/mu-x.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:09:41.905Z",
+    "sourceUrl": "https://www.cardekho.com/isuzu/mu-x"
+  }
+}

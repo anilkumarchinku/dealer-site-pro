@@ -1,0 +1,47 @@
+{
+  "id": "toyota-fortuner",
+  "make": "Toyota",
+  "model": "Fortuner",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 34.16 - 49.59 Lakh*Get On-Road Price*Ex-Showroom Price in New Delhi",
+  "pricing": {
+    "exShowroom": {
+      "min": 3415999.9999999995,
+      "max": 4959000,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Petrol",
+    "power": "Power",
+    "torque": "Torque",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Transmission"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": null,
+    "bootSpace": 0,
+    "groundClearance": 0,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": []
+  },
+  "images": {
+    "hero": "/assets/cars/toyota/fortuner.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:08:42.379Z",
+    "sourceUrl": "https://www.cardekho.com/toyota/fortuner"
+  }
+}

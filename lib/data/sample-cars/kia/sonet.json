@@ -1,0 +1,51 @@
+{
+  "id": "kia-sonet",
+  "make": "Kia",
+  "model": "Sonet",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 7.30 - 14 Lakh*Get On-Road Price*Ex-Showroom Price in New Delhi",
+  "pricing": {
+    "exShowroom": {
+      "min": 730000,
+      "max": 1400000,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Petrol",
+    "power": "Power",
+    "torque": "Torque",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Transmission"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": null,
+    "bootSpace": 0,
+    "groundClearance": 0,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": [
+      "keyless entry",
+      "six airbags",
+      "connected car technology"
+    ]
+  },
+  "images": {
+    "hero": "/assets/cars/kia/sonet.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:08:55.830Z",
+    "sourceUrl": "https://www.cardekho.com/kia/sonet"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "mercedes-benz-e-class",
+  "make": "Mercedes-Benz",
+  "model": "E class",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 78.51 - 91.66 Lakh*Get On-Road Price*Ex-Showroom Price in New Delhi",
+  "pricing": {
+    "exShowroom": {
+      "min": 7851000.000000001,
+      "max": 9166000,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Fuel",
+    "power": "Power",
+    "torque": "Torque",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Transmission"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": 5,
+    "bootSpace": 0,
+    "groundClearance": 0,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": []
+  },
+  "images": {
+    "hero": "/assets/cars/mercedes-benz/e-class.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:09:45.213Z",
+    "sourceUrl": "https://www.cardekho.com/mercedes-benz/e-class"
+  }
+}

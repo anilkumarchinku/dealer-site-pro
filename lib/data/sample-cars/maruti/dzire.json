@@ -1,0 +1,50 @@
+{
+  "id": "maruti-dzire",
+  "make": "Maruti Suzuki",
+  "model": "Dzire",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 6.26 - 9.31 Lakh*Get On-Road Price*Ex-Showroom Price in New Delhi",
+  "pricing": {
+    "exShowroom": {
+      "min": 626000,
+      "max": 931000,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Fuel",
+    "power": "Power",
+    "torque": "Torque",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Transmission"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": 5,
+    "bootSpace": 0,
+    "groundClearance": 0,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": [
+      "keyless entry",
+      "cruise control"
+    ]
+  },
+  "images": {
+    "hero": "/assets/cars/maruti/dzire.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:07:34.724Z",
+    "sourceUrl": "https://www.cardekho.com/maruti/dzire"
+  }
+}

@@ -1,0 +1,577 @@
+{
+  "withInfo": [
+    {
+      "id": "maruti-alto-k10",
+      "brand": "Maruti Suzuki",
+      "name": "Alto K10",
+      "imageUrl": "/assets/hero/maruti-suzuki.jpg",
+      "variants": 2,
+      "imageCount": 1
+    },
+    {
+      "id": "maruti-baleno",
+      "brand": "Maruti Suzuki",
+      "name": "Baleno",
+      "imageUrl": "/assets/hero/maruti-suzuki.jpg",
+      "variants": 1,
+      "imageCount": 1
+    },
+    {
+      "id": "maruti-brezza",
+      "brand": "Maruti Suzuki",
+      "name": "Brezza",
+      "imageUrl": "/assets/hero/maruti-suzuki.jpg",
+      "variants": 1,
+      "imageCount": 1
+    },
+    {
+      "id": "mahindra-xuv-3xo",
+      "brand": "Mahindra",
+      "name": "XUV 3XO",
+      "imageUrl": "/assets/cars/mahindra/xuv-3xo.jpg",
+      "variants": 2,
+      "imageCount": 1
+    },
+    {
+      "id": "mahindra-scorpio-n",
+      "brand": "Mahindra",
+      "name": "Scorpio N",
+      "imageUrl": "/assets/hero/mahindra.jpg",
+      "variants": 2,
+      "imageCount": 1
+    },
+    {
+      "id": "mahindra-xuv700",
+      "brand": "Mahindra",
+      "name": "XUV700",
+      "imageUrl": "/assets/hero/mahindra.jpg",
+      "variants": 2,
+      "imageCount": 1
+    },
+    {
+      "id": "hyundai-i10-nios",
+      "brand": "Hyundai",
+      "name": "Grand i10 Nios",
+      "imageUrl": "/assets/hero/hyundai.png",
+      "variants": 6,
+      "imageCount": 1
+    },
+    {
+      "id": "hyundai-creta",
+      "brand": "Hyundai",
+      "name": "Creta",
+      "imageUrl": "/assets/hero/hyundai.png",
+      "variants": 13,
+      "imageCount": 1
+    },
+    {
+      "id": "hyundai-venue",
+      "brand": "Hyundai",
+      "name": "Venue",
+      "imageUrl": "/assets/hero/hyundai.png",
+      "variants": 7,
+      "imageCount": 1
+    },
+    {
+      "id": "honda-amaze",
+      "brand": "Honda",
+      "name": "Amaze",
+      "imageUrl": "/assets/hero/honda.jpg",
+      "variants": 6,
+      "imageCount": 1
+    },
+    {
+      "id": "honda-city",
+      "brand": "Honda",
+      "name": "City",
+      "imageUrl": "/assets/hero/honda.jpg",
+      "variants": 9,
+      "imageCount": 1
+    },
+    {
+      "id": "honda-elevate",
+      "brand": "Honda",
+      "name": "Elevate",
+      "imageUrl": "/assets/hero/honda.jpg",
+      "variants": 13,
+      "imageCount": 1
+    },
+    {
+      "id": "kia-sonet",
+      "brand": "Kia",
+      "name": "Sonet",
+      "imageUrl": "/assets/hero/kia.jpg",
+      "variants": 3,
+      "imageCount": 1
+    },
+    {
+      "id": "kia-seltos",
+      "brand": "Kia",
+      "name": "Seltos",
+      "imageUrl": "/assets/hero/kia.jpg",
+      "variants": 6,
+      "imageCount": 1
+    },
+    {
+      "id": "kia-carens",
+      "brand": "Kia",
+      "name": "Carens",
+      "imageUrl": "/assets/hero/kia.jpg",
+      "variants": 2,
+      "imageCount": 1
+    },
+    {
+      "id": "renault-kwid",
+      "brand": "Renault",
+      "name": "Kwid",
+      "imageUrl": "/assets/hero/renault.jpg",
+      "variants": 5,
+      "imageCount": 1
+    },
+    {
+      "id": "renault-kiger",
+      "brand": "Renault",
+      "name": "Kiger",
+      "imageUrl": "/assets/hero/renault.jpg",
+      "variants": 15,
+      "imageCount": 1
+    },
+    {
+      "id": "nissan-magnite",
+      "brand": "Nissan",
+      "name": "Magnite",
+      "imageUrl": "/assets/hero/nissan.jpg",
+      "variants": 19,
+      "imageCount": 1
+    },
+    {
+      "id": "nissan-x-trail",
+      "brand": "Nissan",
+      "name": "X-Trail",
+      "imageUrl": "/assets/hero/nissan.jpg",
+      "variants": 1,
+      "imageCount": 1
+    },
+    {
+      "id": "vw-taigun",
+      "brand": "Volkswagen",
+      "name": "Taigun",
+      "imageUrl": "/assets/hero/volkswagen.jpg",
+      "variants": 11,
+      "imageCount": 1
+    },
+    {
+      "id": "vw-virtus",
+      "brand": "Volkswagen",
+      "name": "Virtus",
+      "imageUrl": "/assets/hero/volkswagen.jpg",
+      "variants": 11,
+      "imageCount": 1
+    },
+    {
+      "id": "skoda-kushaq",
+      "brand": "Skoda",
+      "name": "Kushaq",
+      "imageUrl": "/assets/hero/skoda.jpg",
+      "variants": 13,
+      "imageCount": 1
+    },
+    {
+      "id": "skoda-slavia",
+      "brand": "Skoda",
+      "name": "Slavia",
+      "imageUrl": "/assets/hero/skoda.jpg",
+      "variants": 12,
+      "imageCount": 1
+    },
+    {
+      "id": "mg-astor",
+      "brand": "MG",
+      "name": "Astor",
+      "imageUrl": "/assets/hero/mg.jpg",
+      "variants": 8,
+      "imageCount": 1
+    },
+    {
+      "id": "jeep-compass",
+      "brand": "Jeep",
+      "name": "Compass",
+      "imageUrl": "/assets/hero/jeep.jpg",
+      "variants": 13,
+      "imageCount": 1
+    },
+    {
+      "id": "citroen-c3",
+      "brand": "Citroen",
+      "name": "C3",
+      "imageUrl": "/assets/hero/citroen.jpg",
+      "variants": 21,
+      "imageCount": 1
+    },
+    {
+      "id": "citroen-c3-aircross",
+      "brand": "Citroen",
+      "name": "C3 Aircross",
+      "imageUrl": "/assets/hero/citroen.jpg",
+      "variants": 25,
+      "imageCount": 1
+    },
+    {
+      "id": "force-gurkha",
+      "brand": "Force Motors",
+      "name": "Gurkha",
+      "imageUrl": "/assets/hero/force-motors.png",
+      "variants": 2,
+      "imageCount": 1
+    },
+    {
+      "id": "isuzu-v-cross",
+      "brand": "Isuzu",
+      "name": "D-Max V-Cross",
+      "imageUrl": "/assets/hero/isuzu.jpg",
+      "variants": 9,
+      "imageCount": 1
+    },
+    {
+      "id": "mercedes-a-class",
+      "brand": "Mercedes Benz",
+      "name": "A-Class Limousine",
+      "imageUrl": "/assets/hero/mercedes-benz.jpg",
+      "variants": 2,
+      "imageCount": 1
+    },
+    {
+      "id": "mercedes-glc",
+      "brand": "Mercedes Benz",
+      "name": "GLC",
+      "imageUrl": "/assets/hero/mercedes-benz.jpg",
+      "variants": 2,
+      "imageCount": 1
+    },
+    {
+      "id": "mercedes-e-class",
+      "brand": "Mercedes Benz",
+      "name": "E-Class",
+      "imageUrl": "/assets/hero/mercedes-benz.jpg",
+      "variants": 3,
+      "imageCount": 1
+    },
+    {
+      "id": "bmw-2-series",
+      "brand": "BMW",
+      "name": "2 Series Gran Coupe",
+      "imageUrl": "/assets/hero/bmw.png",
+      "variants": 2,
+      "imageCount": 1
+    },
+    {
+      "id": "bmw-3-series",
+      "brand": "BMW",
+      "name": "3 Series Gran Limousine",
+      "imageUrl": "/assets/hero/bmw.png",
+      "variants": 2,
+      "imageCount": 1
+    },
+    {
+      "id": "audi-a4",
+      "brand": "Audi",
+      "name": "A4",
+      "imageUrl": "/assets/hero/audi.jpg",
+      "variants": 4,
+      "imageCount": 1
+    },
+    {
+      "id": "audi-q5",
+      "brand": "Audi",
+      "name": "Q5",
+      "imageUrl": "/assets/hero/audi.jpg",
+      "variants": 4,
+      "imageCount": 1
+    },
+    {
+      "id": "jaguar-f-pace",
+      "brand": "Jaguar",
+      "name": "F-Pace",
+      "imageUrl": "/assets/hero/jaguar.jpg",
+      "variants": 3,
+      "imageCount": 1
+    },
+    {
+      "id": "landrover-defender",
+      "brand": "Land Rover",
+      "name": "Defender",
+      "imageUrl": "/assets/hero/land-rover.jpg",
+      "variants": 6,
+      "imageCount": 1
+    },
+    {
+      "id": "volvo-xc60",
+      "brand": "Volvo",
+      "name": "XC60",
+      "imageUrl": "/assets/hero/volvo.jpg",
+      "variants": 1,
+      "imageCount": 1
+    },
+    {
+      "id": "lexus-es",
+      "brand": "Lexus",
+      "name": "ES",
+      "imageUrl": "/assets/hero/lexus.jpg",
+      "variants": 2,
+      "imageCount": 1
+    },
+    {
+      "id": "lexus-nx",
+      "brand": "Lexus",
+      "name": "NX",
+      "imageUrl": "/assets/hero/lexus.jpg",
+      "variants": 4,
+      "imageCount": 1
+    },
+    {
+      "id": "bentley-continental-gt",
+      "brand": "Bentley",
+      "name": "Continental GT",
+      "imageUrl": "/assets/hero/bentley.jpg",
+      "variants": 2,
+      "imageCount": 1
+    },
+    {
+      "id": "lamborghini-urus",
+      "brand": "Lamborghini",
+      "name": "Urus",
+      "imageUrl": "/assets/hero/lamborghini.jpg",
+      "variants": 3,
+      "imageCount": 1
+    },
+    {
+      "id": "byd-atto-3",
+      "brand": "BYD",
+      "name": "Atto 3",
+      "imageUrl": "/assets/hero/byd.webp",
+      "variants": 3,
+      "imageCount": 1
+    },
+    {
+      "id": "byd-seal",
+      "brand": "BYD",
+      "name": "Seal",
+      "imageUrl": "/assets/hero/byd.webp",
+      "variants": 5,
+      "imageCount": 1
+    }
+  ],
+  "withInfoNoImages": [
+    {
+      "id": "toyota-hyryder",
+      "brand": "Toyota",
+      "name": "Urban Cruiser Hyryder",
+      "imageUrl": "/assets/hero/toyota.jpg",
+      "variants": 13,
+      "sampleData": {
+        "make": "Toyota",
+        "model": "Hyryder",
+        "variant_name": "E",
+        "fuel_type": "Petrol",
+        "transmission": "Manual",
+        "source_url": "https://www.cardekho.com/toyota/hyryder",
+        "launch_year": 2024,
+        "ex_showroom_price_min_inr": 1099000,
+        "hyderabad_on_road_price_inr": 1411621,
+        "seating_capacity": 5
+      }
+    },
+    {
+      "id": "toyota-fortuner",
+      "brand": "Toyota",
+      "name": "Fortuner",
+      "imageUrl": "/assets/hero/toyota.jpg",
+      "variants": 8,
+      "sampleData": {
+        "make": "Toyota",
+        "model": "Fortuner",
+        "variant_name": "4X2 AT",
+        "fuel_type": "Petrol",
+        "transmission": "Automatic",
+        "source_url": "https://www.cardekho.com/toyota/fortuner",
+        "launch_year": 2024,
+        "hyderabad_on_road_price_inr": 4347592,
+        "seating_capacity": 5
+      }
+    }
+  ],
+  "noInfo": [
+    {
+      "id": "maruti-swift",
+      "brand": "Maruti Suzuki",
+      "name": "Swift",
+      "imageUrl": "/assets/hero/maruti-suzuki.jpg",
+      "reason": "model_not_found",
+      "availableModels": [
+        "Alto K10",
+        "Baleno",
+        "Brezza",
+        "Celerio",
+        "Dzire",
+        "Eeco",
+        "Ertiga",
+        "Fronx",
+        "Grand Vitara"
+      ]
+    },
+    {
+      "id": "tata-punch",
+      "brand": "Tata",
+      "name": "Punch",
+      "imageUrl": "/assets/hero/tata-motors.jpg",
+      "reason": "model_not_found",
+      "availableModels": [
+        "Altroz",
+        "Curvv"
+      ]
+    },
+    {
+      "id": "tata-nexon",
+      "brand": "Tata",
+      "name": "Nexon",
+      "imageUrl": "/assets/hero/tata-motors.jpg",
+      "reason": "model_not_found",
+      "availableModels": [
+        "Altroz",
+        "Curvv"
+      ]
+    },
+    {
+      "id": "tata-harrier",
+      "brand": "Tata",
+      "name": "Harrier",
+      "imageUrl": "/assets/hero/tata-motors.jpg",
+      "reason": "model_not_found",
+      "availableModels": [
+        "Altroz",
+        "Curvv"
+      ]
+    },
+    {
+      "id": "toyota-glanza",
+      "brand": "Toyota",
+      "name": "Glanza",
+      "imageUrl": "/assets/hero/toyota.jpg",
+      "reason": "model_not_found",
+      "availableModels": [
+        "Camry",
+        "Fortuner",
+        "Innova Crysta",
+        "Hyryder",
+        "Innova Hycross"
+      ]
+    },
+    {
+      "id": "mg-hector",
+      "brand": "MG",
+      "name": "Hector",
+      "imageUrl": "/assets/hero/mg.jpg",
+      "reason": "model_not_found",
+      "availableModels": [
+        "Astor",
+        "Comet EV",
+        "Cyberster",
+        "Gloster"
+      ]
+    },
+    {
+      "id": "jeep-meridian",
+      "brand": "Jeep",
+      "name": "Meridian",
+      "imageUrl": "/assets/hero/jeep.jpg",
+      "reason": "model_not_found",
+      "availableModels": [
+        "Compass"
+      ]
+    },
+    {
+      "id": "force-urbania",
+      "brand": "Force Motors",
+      "name": "Urbania",
+      "imageUrl": "/assets/hero/force-motors.png",
+      "reason": "model_not_found",
+      "availableModels": [
+        "Gurkha",
+        "Gurkha 5 Door"
+      ]
+    },
+    {
+      "id": "bmw-x1",
+      "brand": "BMW",
+      "name": "X1",
+      "imageUrl": "/assets/hero/bmw.png",
+      "reason": "model_not_found",
+      "availableModels": [
+        "2 Series Gran Coupe",
+        "3 Series",
+        "3 Series LWB"
+      ]
+    },
+    {
+      "id": "landrover-discovery",
+      "brand": "Land Rover",
+      "name": "Discovery Sport",
+      "imageUrl": "/assets/hero/land-rover.jpg",
+      "reason": "model_not_found",
+      "availableModels": [
+        "Defender"
+      ]
+    }
+  ],
+  "brandNotFound": [
+    {
+      "id": "porsche-macan",
+      "brand": "Porsche",
+      "name": "Macan",
+      "imageUrl": "/assets/hero/porsche.jpg",
+      "reason": "brand_not_found"
+    },
+    {
+      "id": "tesla-model-3",
+      "brand": "Tesla",
+      "name": "Model 3",
+      "imageUrl": "/assets/hero/tesla.jpg",
+      "reason": "brand_not_found"
+    },
+    {
+      "id": "tesla-model-y",
+      "brand": "Tesla",
+      "name": "Model Y",
+      "imageUrl": "/assets/hero/tesla.jpg",
+      "reason": "brand_not_found"
+    },
+    {
+      "id": "ola-s1-pro",
+      "brand": "Ola Electric",
+      "name": "S1 Pro Gen 3",
+      "imageUrl": "/assets/hero/ola.jpg",
+      "reason": "brand_not_found"
+    },
+    {
+      "id": "ola-s1-air",
+      "brand": "Ola Electric",
+      "name": "S1 Air",
+      "imageUrl": "/assets/hero/ola.jpg",
+      "reason": "brand_not_found"
+    },
+    {
+      "id": "ather-rizta",
+      "brand": "Ather Energy",
+      "name": "Rizta",
+      "imageUrl": "/assets/hero/ather.jpg",
+      "reason": "brand_not_found"
+    },
+    {
+      "id": "ather-450x",
+      "brand": "Ather Energy",
+      "name": "450X",
+      "imageUrl": "/assets/hero/ather.jpg",
+      "reason": "brand_not_found"
+    }
+  ]
+}

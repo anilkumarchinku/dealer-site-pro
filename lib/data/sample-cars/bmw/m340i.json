@@ -1,0 +1,47 @@
+{
+  "id": "bmw-m340i",
+  "make": "BMW",
+  "model": "M340i",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs.2.01 Cr* (View On Road Price)",
+  "pricing": {
+    "exShowroom": {
+      "min": 20099999.999999996,
+      "max": 20099999.999999996,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Fuel Type",
+    "power": "TBD",
+    "torque": "TBD",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Manual"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": 5,
+    "bootSpace": 0,
+    "groundClearance": 0,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": []
+  },
+  "images": {
+    "hero": "",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:10:09.460Z",
+    "sourceUrl": "https://www.cardekho.com/bmw/m340i"
+  }
+}

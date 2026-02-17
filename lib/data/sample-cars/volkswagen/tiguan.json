@@ -1,0 +1,47 @@
+{
+  "id": "volkswagen-tiguan",
+  "make": "Volkswagen",
+  "model": "Tiguan",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 33.50 Lakh - 40 Lakh*",
+  "pricing": {
+    "exShowroom": {
+      "min": 3350000,
+      "max": 4000000,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Petrol",
+    "power": "Power",
+    "torque": "Torque",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Manual"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": null,
+    "bootSpace": 0,
+    "groundClearance": 0,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": []
+  },
+  "images": {
+    "hero": "/assets/cars/volkswagen/tiguan.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:09:12.578Z",
+    "sourceUrl": "https://www.cardekho.com/volkswagen/tiguan"
+  }
+}

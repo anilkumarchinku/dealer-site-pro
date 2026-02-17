@@ -1,0 +1,47 @@
+{
+  "id": "audi-rs5",
+  "make": "Audi",
+  "model": "Rs5",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 1.13 Cr - 1.13 Cr*",
+  "pricing": {
+    "exShowroom": {
+      "min": 11299999.999999998,
+      "max": 11299999.999999998,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Fuel",
+    "power": "Power",
+    "torque": "TBD",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Transmission"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": null,
+    "bootSpace": 0,
+    "groundClearance": 0,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": []
+  },
+  "images": {
+    "hero": "/assets/cars/audi/rs5.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:10:17.334Z",
+    "sourceUrl": "https://www.cardekho.com/audi/rs5"
+  }
+}

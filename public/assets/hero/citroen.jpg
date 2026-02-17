@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Citroën</title>
+  <base href="/">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="facebook-domain-verification" content="zjruuwo3sz69fwiecp8fjkofmywk0l" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet"  type="text/css"  href="assets/css/animation.css">
+  <link rel="stylesheet"  type="text/css"  href="./assets/css/animates.min.css">
+  <link href="./assets/css/aos.css" type="text/css" rel="stylesheet">
+
+  <!-- GOOGLE MAP -->
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3IuK2MZ8OrLaGgxyD6oZBSFDRtYNNxg8&libraries=places&language=en"></script> -->
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNkm4E94jgTC-RGLdOoAvIYkgaKfQ-VH8&libraries=places&language=en"></script>    -->
+  <!-- <script src = "https://www.youtube.com/player_api"></script> -->
+
+  <!-- <script type="text/javascript">
+    // if (!window._laq) {
+      // window._laq = [];
+    // }
+    // window._laq.push(function() {
+        // liveagent.showWhenOnline('5730p0000008ORb', document.getElementById('liveagent_button_online_5730p0000008ORb'));
+      //  // liveagent.showWhenOffline('5730p0000008ORb', document.getElementById('liveagent_button_offline_5730p0000008ORb'));
+    // });
+    if (!window._laq) {
+      window._laq = [];
+    }
+    window._laq.push(function(){
+	  liveagent.showWhenOnline('5730o000000DBqb', document.getElementById('liveagent_button_online_5730o000000DBqb'));
+	  // liveagent.showWhenOffline('5730o000000DBqb', document.getElementById('liveagent_button_offline_5730o000000DBqb'));
+});
+  </script> -->
+
+
+  <!-- live agent deployment TEMP COMMENT OUT -->
+  <!-- <script type='text/javascript' src='https://c.la1-c1cs-hnd.salesforceliveagent.com/content/g/js/50.0/deployment.js'></script> -->
+  <!-- <script type='text/javascript' src='https://c.la1-c2-ukb.salesforceliveagent.com/content/g/js/51.0/deployment.js'></script> -->
+  <!-- <script type='text/javascript'>
+    liveagent.init('https://d.la1-c1cs-hnd.salesforceliveagent.com/chat', '5720p0000008OTm', '00D0p0000008ciD');
+  </script> -->
+  <!-- <script type='text/javascript'>
+    liveagent.init('https://d.la1-c2-ukb.salesforceliveagent.com/chat', '5720o0000008xoc', '00D0o0000016btu');
+  </script> -->
+  <script type='text/javascript'>
+    if(navigator.serviceWorker !== undefined){
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        console.log("serviceWorker removal process initiated");
+        for (let registration of registrations) {
+          registration.unregister().then(function() {
+              console.log("Unregister successfully");
+          });
+        }
+      });
+    }
+  </script>
+  <!-- ONE3D -->
+  <script>
+      // var script = document.createElement("script");
+      // script.src = "assets/one3d/assets/C5 Aircross Web/functions.js"; //VERIONS 5
+      // //script.src = "assets/one3d/assets/C5 Aircross/functions.js"; //VERIONS 4
+      // script.type = "text/javascript";
+      // document.getElementsByTagName("head")[0].appendChild(script);
+  </script>
+
+  <!-- <script>
+    function chat() {
+      liveagent.startChat('5730o000000DBqb');
+    }
+    function chatDataLayerPush() {
+      console.log("hi")
+      let d = {
+        "event": "uaevent",
+        "eventCategory": "Chat",
+        "eventAction": "Click To Chat",
+        "eventLabel": "Click To Chat",
+      }
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(d);
+    }
+  </script> -->
+
+<!-- <script>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+      'gtm.start': new Date().getTime(),
+      event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-5JG4B2B');
+</script> -->
+
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "nm26bnich3");
+</script>
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-752514368"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-752514368');
+</script> -->
+
+<!-- <script>
+  (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+              'gtm.start': new Date().getTime(),
+              event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s),
+              dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+          })(window, document, 'script', 'dataLayer', 'GTM-T78PSFW');
+
+
+
+</script> -->
+
+
+
+
+
+<link rel="stylesheet" href="styles.22cdcd878b885ff4f916.css"></head>
+<body>
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T78PSFW" height="0" width="0"
+    style="display:none;visibility:hidden"></iframe></noscript> -->
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T78PSFW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <app-root></app-root>
+  <!-- live chat button -->
+
+  <!-- <div class="chat-container">
+
+    <a id="liveagent_button_online_5730o000000DBqb" href="javascript://Chat" style="display: none;" onclick="chat();chatDataLayerPush();">
+      <svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="397px" height="398px"
+      viewBox="0 0 397 398" enable-background="new 0 0 397 398" xml:space="preserve">
+   <g>
+     <g>
+       <g>
+         <path fill="#FFFFFF" d="M24.104,5c98.313,0,196.621,0,294.932,0c20.866,1.762,15.899,35.828,15.899,63.207
+           c0,37.41,0,82.143,0,118.411c0,22.108,4.092,55.567-10.334,62.405c-9.351,4.434-29.646,1.602-42.134,1.602
+           c-32.354,0-53.792,0-85.856,0c-14.276,0-31.847-2.688-42.928,0c-8.933,2.166-18.456,16.975-27.029,25.604
+           c-25.349,25.512-45.781,46.36-71.547,71.205c-1.218,1.177-2.677,5.403-5.564,4.001c0-33.604,0-67.206,0-100.81
+           c-19.58,1.037-37.966,0.873-40.543-15.201c0-71.741,0-143.48,0-215.222C11.415,12.497,16.449,7.43,24.104,5z"/>
+         <path fill="#FFFFFF" d="M393.666,184.821c0,43.738,0,87.474,0,131.212c-2.802,16.114-20.35,17.39-40.543,16.001
+           c0,20.536,0,41.071,0,61.605c-20.941-15.736-40.499-30.063-62.007-46.404c-7.539-5.729-14.321-13.646-21.464-15.201
+           c-13.344-2.904-34.982,0-54.057,0c-19.352,0-41.349,3.418-54.059-0.8c-18.728-6.217-10.642-38.809-11.128-60.807
+           c42.052,0,97.666,0,143.093,0c14.208,0,35.043,3.072,46.902-0.801c16.813-5.49,12.72-31.813,12.72-53.604
+           c0-16.885,0-32.582,0-48.005C374.063,166.146,389.579,169.731,393.666,184.821z"/>
+       </g>
+     </g>
+     <ellipse fill="#9D0605" cx="171.758" cy="118.664" rx="20.535" ry="20"/>
+     <ellipse fill="#9D0605" cx="102.205" cy="119.331" rx="20.535" ry="20"/>
+     <ellipse fill="#9D0605" cx="236.012" cy="118.664" rx="20.535" ry="20"/>
+   </g>
+   </svg></a>
+
+
+    <div id="liveagent_button_offline_5730o000000DBqb" style="display: none;">
+
+      <img src="assets/images/chatbot-icon.svg" alt="chat bot icon" title="chat bot icon" />
+    </div>
+  </div> -->
+  <script src = "https://www.youtube.com/iframe_api"></script>
+  <form>
+    <input type="hidden" id="gclid" name="gclid" value="">
+    <input type="hidden" id="fblid" name="fblid" value="">
+  </form>
+  <script>
+    function getParam(p) {
+      var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
+      return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+    }
+
+    function getExpiryRecord(value) {
+      var expiryPeriod = 90 * 24 * 60 * 60 * 1000; // 90 day expiry in milliseconds
+
+      var expiryDate = new Date().getTime() + expiryPeriod;
+      return {
+        value: value,
+        expiryDate: expiryDate
+      };
+    }
+
+    function addGclid() {
+      var gclidParam = getParam('gclid');
+      var gclidFormFields = ['gclid']; // all possible gclid form field ids here
+      var gclidRecord = null;
+      var currGclidFormField;
+
+      var gclsrcParam = getParam('gclsrc');
+      var isGclsrcValid = !gclsrcParam || gclsrcParam.indexOf('aw') !== -1;
+
+      gclidFormFields.forEach(function (field) {
+        if (document.getElementById(field)) {
+          currGclidFormField = document.getElementById(field);
+        }
+      });
+
+      if (gclidParam && isGclsrcValid) {
+        gclidRecord = getExpiryRecord(gclidParam);
+        sessionStorage.setItem('gclid', JSON.stringify(gclidRecord));
+      }
+
+      var gclid = gclidRecord || JSON.parse(sessionStorage.getItem('gclid'));
+      var isGclidValid = gclid && new Date().getTime() < gclid.expiryDate;
+
+
+      if (currGclidFormField && isGclidValid) {
+        currGclidFormField.value = gclid.value;
+      }
+    }
+
+    function addFblid() {
+      var fblidParam = getParam('fblid');
+      var fblidFormFields = ['fblid']; // all possible fblid form field ids here
+      var fblidRecord = null;
+      var currFblidFormField;
+
+      var fblsrcParam = getParam('fblsrc');
+      var isFblsrcValid = !fblsrcParam || fblsrcParam.indexOf('aw') !== -1;
+
+      fblidFormFields.forEach(function (field) {
+        if (document.getElementById(field)) {
+          currFblidFormField = document.getElementById(field);
+        }
+      });
+
+      if (fblidParam && isFblsrcValid) {
+        fblidRecord = getExpiryRecord(fblidParam);
+        sessionStorage.setItem('fblid', JSON.stringify(fblidRecord));
+      }
+
+      var fblid = fblidRecord || JSON.parse(sessionStorage.getItem('fblid'));
+      var isFblidValid = fblid && new Date().getTime() < fblid.expiryDate;
+
+
+      if (currFblidFormField && isFblidValid) {
+        currFblidFormField.value = fblid.value;
+      }
+    }
+
+    window.addEventListener('load', addGclid);
+    window.addEventListener('load', addFblid);
+  </script>
+  <script src="./assets/js/aos.js"></script>
+  <script>
+    AOS.init();
+    window.addEventListener("scroll", function(){ AOS.init(); });
+ </script>
+ <script async defer>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1764194987711477');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1764194987711477&ev=PageView&noscript=1"
+  /></noscript>
+  <script  id="chat360__whatsapp_script"  src="https://app.chat360.io/widget/chatbox/common_scripts/whatsapp-script.js?number=917391055934&message=&label=&web-script=1" async ></script>
+  <script>
+    (function (botId) {
+      var s = document.createElement("script");
+      s.async = true;
+      s.type = 'text/javascript';
+      s.src = "https://app.chat360.io/widget/chatbox/common_scripts/script.js";
+      s.onload = function () {
+        window.loadChat360Bot(botId);
+      };
+      s.onerror = function (err) {
+        console.error(err);
+      };
+      document.body.appendChild(s);
+    })("d996338e-1674-4ae3-993e-2469954deb67");
+  </script>
+  <script type="text/javascript">
+    var s = document.createElement("script");
+    s.src = "https://app.chat360.io/push/notification/script.js";
+    s.async = true;
+    s.onload = function () {
+      window.Chat360Notification.initialize({
+        channelId: "0ea7cd53-60e8-4d42-bc94-4cdb4910c513",
+      });
+      window.chat360Push("startTrack");
+    }
+    document.head.appendChild(s);
+  </script>
+<script src="runtime-es2015.251b2c330be1f357324c.js" type="module"></script><script src="runtime-es5.251b2c330be1f357324c.js" nomodule defer></script><script src="polyfills-es5.1e33df0ee83d8f62e4b5.js" nomodule defer></script><script src="polyfills-es2015.b3779b84165c47d489a4.js" type="module"></script><script src="scripts.08695e9dc23b8428c49e.js" defer></script><script src="main-es2015.5d189442cafc568f0693.js" type="module"></script><script src="main-es5.5d189442cafc568f0693.js" nomodule defer></script></body>
+</html>

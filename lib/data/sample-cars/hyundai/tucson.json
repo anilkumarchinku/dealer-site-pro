@@ -1,0 +1,49 @@
+{
+  "id": "hyundai-tucson",
+  "make": "Hyundai",
+  "model": "Tucson",
+  "variant": "Standard",
+  "year": 2026,
+  "bodyType": "Hatchback",
+  "segment": "B",
+  "price": "Rs. 27.32 Lakh - 35.46 Lakh*",
+  "pricing": {
+    "exShowroom": {
+      "min": 2732000,
+      "max": 3546000,
+      "currency": "INR"
+    }
+  },
+  "engine": {
+    "type": "Petrol",
+    "power": "Power",
+    "torque": "Torque",
+    "displacement": 0
+  },
+  "transmission": {
+    "type": "Transmission"
+  },
+  "performance": {
+    "fuelEfficiency": 0
+  },
+  "dimensions": {
+    "seatingCapacity": null,
+    "bootSpace": 0,
+    "groundClearance": 0,
+    "fuelTankCapacity": 0
+  },
+  "features": {
+    "keyFeatures": [
+      "connected car technology"
+    ]
+  },
+  "images": {
+    "hero": "/assets/cars/hyundai/tucson.jpg",
+    "exterior": [],
+    "interior": []
+  },
+  "meta": {
+    "scrapedAt": "2026-02-09T11:07:59.295Z",
+    "sourceUrl": "https://www.cardekho.com/hyundai/tucson"
+  }
+}
