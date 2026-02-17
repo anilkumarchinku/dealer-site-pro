@@ -67,7 +67,7 @@ export default function DashboardLayout({
 }) {
     const pathname = usePathname();
     const router   = useRouter();
-    const { data, updateData, setDealerId } = useOnboardingStore();
+    const { data, updateData, setDealerId, setDealerSlug } = useOnboardingStore();
 
     // Sync real dealer data from DB on first load (covers post-login case
     // where the Zustand store is empty because onboarding wasn't done in
@@ -90,6 +90,7 @@ export default function DashboardLayout({
                 if (!dealer) return;
 
                 setDealerId(dealer.id);
+                if (dealer.slug) setDealerSlug(dealer.slug);
 
                 const { data: brands } = await supabase
                     .from('dealer_brands')

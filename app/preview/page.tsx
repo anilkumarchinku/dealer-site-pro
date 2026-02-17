@@ -36,7 +36,7 @@ import { SportyTemplate } from "@/components/templates/SportyTemplate";
 import { FamilyTemplate } from "@/components/templates/FamilyTemplate";
 
 function PreviewContent() {
-    const { data } = useOnboardingStore();
+    const { data, dealerSlug } = useOnboardingStore();
     const searchParams = useSearchParams();
     const urlBrand = searchParams.get('brand');
     const urlTemplate = searchParams.get('template');
@@ -364,7 +364,7 @@ function PreviewContent() {
                                         </span>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <Link href={`/sites/demo?template=${templateId}`}>
+                                        <Link href={dealerSlug ? `/sites/${dealerSlug}` : `/preview?template=${templateId}&brand=${encodeURIComponent(primaryBrand)}`}>
                                             <Button variant="outline" size="sm" className="gap-2">
                                                 <ExternalLink className="w-4 h-4" />
                                                 Open Full Site
