@@ -6,7 +6,6 @@
 
 // Export template definitions
 export {
-  modernTemplate,
   luxuryTemplate,
   familyTemplate,
   sportyTemplate,

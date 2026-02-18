@@ -5,11 +5,12 @@
  * Renders the selected template with brand-specific colors and cars
  */
 
-import React, { useState, Suspense } from 'react';
+import React, { useState, Suspense, useEffect } from 'react';
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { getPrimaryBrand, automotiveBrands } from "@/lib/colors/automotive-brands";
 import type { TemplateStyle } from "@/lib/templates";
-import { allCars, getCarsByMake } from "@/lib/data/cars";
+import { getCarsByMake, getAllCars } from "@/lib/services/car-service";
+import type { Car } from "@/lib/types/car";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -24,7 +25,7 @@ import {
     Palette,
     LayoutTemplate,
     ChevronDown,
-    Car,
+    Car as CarIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -55,10 +56,39 @@ function PreviewContent() {
         hover: brandConfig.hover || brandConfig.primary,
     };
 
-    // Get cars for the selected brand - filter by make
-    const brandCars = getCarsByMake(primaryBrand);
-    // If no cars for this brand, show all cars
-    const displayCars = brandCars.length > 0 ? brandCars : allCars;
+    // State for cars
+    const [displayCars, setDisplayCars] = useState<Car[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        let isMounted = true;
+
+        async function fetchCars() {
+            setIsLoading(true);
+            try {
+                // Try fetching by brand first
+                let cars = await getCarsByMake(primaryBrand);
+
+                // If no cars for this brand, fallback to all cars (or latest)
+                if (cars.length === 0) {
+                    const result = await getAllCars({ limit: 8 });
+                    cars = result.cars;
+                }
+
+                if (isMounted) {
+                    setDisplayCars(cars);
+                    setIsLoading(false);
+                }
+            } catch (error) {
+                console.error("Failed to fetch cars for preview", error);
+                if (isMounted) setIsLoading(false);
+            }
+        }
+
+        fetchCars();
+
+        return () => { isMounted = false; };
+    }, [primaryBrand]);
 
     // Page load animation
     const { showAnimation, isReady } = useTemplatePageAnimation(primaryBrand as any, templateId);
@@ -110,56 +140,24 @@ function PreviewContent() {
     const renderTemplate = () => {
         const config = templateConfigs[templateId as keyof typeof templateConfigs] || templateConfigs.modern;
 
+        // If loading, maybe show a skeleton or just empty? 
+        // For now, passing empty array is handled by templates usually.
+
+        const props = {
+            brandName: primaryBrand,
+            dealerName: dealerName,
+            cars: displayCars,
+            contactInfo: contactInfo,
+            config: config,
+            services: dealerServices,
+            previewMode: true
+        };
+
         switch (templateId) {
-            case 'luxury':
-                return (
-                    <LuxuryTemplate
-                        brandName={primaryBrand}
-                        dealerName={dealerName}
-                        cars={displayCars}
-                        contactInfo={contactInfo}
-                        config={config}
-                        services={dealerServices}
-                        previewMode
-                    />
-                );
-            case 'sporty':
-                return (
-                    <SportyTemplate
-                        brandName={primaryBrand}
-                        dealerName={dealerName}
-                        cars={displayCars}
-                        contactInfo={contactInfo}
-                        config={config}
-                        services={dealerServices}
-                        previewMode
-                    />
-                );
-            case 'family':
-                return (
-                    <FamilyTemplate
-                        brandName={primaryBrand}
-                        dealerName={dealerName}
-                        cars={displayCars}
-                        contactInfo={contactInfo}
-                        config={config}
-                        services={dealerServices}
-                        previewMode
-                    />
-                );
-            case 'modern':
-            default:
-                return (
-                    <ModernTemplate
-                        brandName={primaryBrand}
-                        dealerName={dealerName}
-                        cars={displayCars}
-                        contactInfo={contactInfo}
-                        config={config}
-                        services={dealerServices}
-                        previewMode
-                    />
-                );
+            case 'luxury': return <LuxuryTemplate {...props} />;
+            case 'sporty': return <SportyTemplate {...props} />;
+            case 'family': return <FamilyTemplate {...props} />;
+            default: return <ModernTemplate {...props} />;
         }
     };
 
@@ -228,10 +226,12 @@ function PreviewContent() {
                                         <LayoutTemplate className="w-4 h-4" />
                                         <span className="capitalize font-medium">{templateId}</span>
                                         <span className={isBannerExpanded ? "text-muted-foreground/50" : "text-white/40"}>•</span>
-                                        <Car className="w-4 h-4" />
+                                        <CarIcon className="w-4 h-4" />
                                         <span className="font-medium">{primaryBrand}</span>
                                         <span className={isBannerExpanded ? "text-muted-foreground/50" : "text-white/40"}>•</span>
-                                        <span className={isBannerExpanded ? "text-muted-foreground" : "text-white/50"}>{displayCars.length} cars</span>
+                                        <span className={isBannerExpanded ? "text-muted-foreground" : "text-white/50"}>
+                                            {isLoading ? "Loading..." : `${displayCars.length} cars`}
+                                        </span>
                                     </div>
                                 </div>
                             </div>

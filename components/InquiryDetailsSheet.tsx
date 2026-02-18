@@ -14,14 +14,14 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { CalendarIcon, Clock, Car, Wrench, Phone, ShoppingBag } from "lucide-react";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
-import { CarModel } from "@/lib/data/car-models";
+import { Car as CarType } from "@/lib/types/car";
 
 interface InquiryDetailsSheetProps {
     isOpen: boolean;
     onClose: () => void;
     brandName: string;
     brandColor: string;
-    availableCars: CarModel[];
+    availableCars: CarType[];
     initialTab?: string;
 }
 
@@ -79,7 +79,7 @@ export function InquiryDetailsSheet({
                                     <SelectContent>
                                         {availableCars.map(car => (
                                             <SelectItem key={car.id} value={car.id}>
-                                                {car.name}
+                                                {car.model}
                                             </SelectItem>
                                         ))}
                                     </SelectContent>
@@ -264,7 +264,7 @@ export function InquiryDetailsSheet({
                                     <SelectContent>
                                         {availableCars.map(car => (
                                             <SelectItem key={car.id} value={car.id}>
-                                                {car.name}
+                                                {car.model}
                                             </SelectItem>
                                         ))}
                                     </SelectContent>

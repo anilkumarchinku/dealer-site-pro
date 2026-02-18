@@ -10,6 +10,7 @@ import { Car } from '@/lib/types/car';
 import { CarGrid } from '@/components/cars/CarGrid';
 import { CarFilters } from '@/components/cars/CarFilters';
 import { Button } from '@/components/ui/button';
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
 import {
@@ -26,14 +27,31 @@ import {
     Activity,
     TrendingUp,
     MessageSquare,
+    Clock,
+    CheckCircle2,
+    Send,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
 import type { Service } from '@/lib/types';
 
+const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
+    new_car_sales:       { label: 'New Cars',           icon: '🚗' },
+    used_car_sales:      { label: 'Used Cars',           icon: '🔄' },
+    financing:           { label: 'Finance & EMI',       icon: '💰' },
+    service_maintenance: { label: 'Service & Repairs',   icon: '🔧' },
+    parts_accessories:   { label: 'Parts & Accessories', icon: '⚙️' },
+    test_drive:          { label: 'Test Drive',          icon: '🏎️' },
+    insurance:           { label: 'Insurance',           icon: '🛡️' },
+    extended_warranty:   { label: 'Extended Warranty',   icon: '✅' },
+    roadside_assistance: { label: 'Roadside Assist',     icon: '🆘' },
+    car_exchange:        { label: 'Car Exchange',        icon: '🔃' },
+}
+
 interface SportyTemplateProps {
     brandName: string;
     dealerName: string;
+    dealerId?: string;
     cars: Car[];
     contactInfo: {
         phone: string;
@@ -47,22 +65,28 @@ interface SportyTemplateProps {
     };
     previewMode?: boolean;
     services?: Service[];
+    workingHours?: string | null;
 }
 
 export function SportyTemplate({
     brandName,
     dealerName,
+    dealerId = '',
     cars,
     contactInfo,
     config: customConfig,
     previewMode,
     services,
+    workingHours,
 }: SportyTemplateProps) {
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [isScrolled, setIsScrolled] = useState(false);
     const [enquireSidebarOpen, setEnquireSidebarOpen] = useState(false);
 
-    // Get template configuration with brand colors
+    // Lead form state
+    const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
+    const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+
     const config = generateTemplateConfig(brandName, 'sporty');
     const { brandColors } = config;
 
@@ -72,11 +96,35 @@ export function SportyTemplate({
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Show all cars instead of just 6
     const featuredCars = cars;
     const heroTitle = customConfig?.heroTitle || 'UNLEASH THE POWER';
     const heroSubtitle = customConfig?.heroSubtitle || 'Experience raw performance';
     const tagline = customConfig?.tagline || 'Built for Speed';
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!formData.name || !formData.phone) return;
+        setFormStatus('sending');
+        try {
+            const res = await fetch('/api/leads', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    dealer_id: dealerId,
+                    name: formData.name,
+                    phone: formData.phone,
+                    email: formData.email,
+                    message: formData.message,
+                    lead_source: 'contact_form',
+                }),
+            });
+            setFormStatus(res.ok ? 'sent' : 'error');
+        } catch {
+            setFormStatus('error');
+        }
+    };
+
+    const serviceList = services && services.length > 0 ? services : [];
 
     return (
         <div className="min-h-screen bg-black text-white font-sans">
@@ -157,7 +205,7 @@ export function SportyTemplate({
                         </div>
                         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
                             <div className="max-w-3xl">
-                                <div className="flex items-center gap-3 mb-4">
+                                <div className="flex flex-wrap items-center gap-3 mb-4">
                                     <div className="inline-block px-4 py-2 rounded-md font-bold text-sm uppercase tracking-wider" style={{ backgroundColor: `${brandColors.primary}33`, borderLeft: `4px solid ${brandColors.primary}` }}>
                                         {tagline}
                                     </div>
@@ -173,10 +221,13 @@ export function SportyTemplate({
                                     ))}
                                 </h1>
                                 <p className="text-2xl text-gray-300 mb-8">{heroSubtitle}</p>
-                                <div className="flex gap-4">
+                                <div className="flex flex-wrap gap-4">
                                     <Button size="lg" className="text-white font-bold text-lg uppercase tracking-wider" style={{ backgroundColor: brandColors.primary }} onClick={() => setActiveTab('inventory')}>
                                         EXPLORE
                                         <ArrowRight className="ml-2 w-5 h-5" />
+                                    </Button>
+                                    <Button size="lg" variant="outline" className="font-bold uppercase border-2 text-white hover:bg-white/10" style={{ borderColor: brandColors.primary, color: brandColors.primary }}>
+                                        <a href="#contact">BOOK TEST DRIVE</a>
                                     </Button>
                                 </div>
                             </div>
@@ -202,6 +253,33 @@ export function SportyTemplate({
                             </div>
                         </div>
                     </section>
+
+                    {/* Services — sporty badges */}
+                    {serviceList.length > 0 && (
+                        <section className="py-16" style={{ borderBottom: `1px solid ${brandColors.primary}33` }}>
+                            <div className="max-w-7xl mx-auto px-4">
+                                <div className="mb-10">
+                                    <span className="font-black text-sm uppercase tracking-widest" style={{ color: brandColors.primary }}>WHAT WE DO</span>
+                                    <h2 className="text-4xl font-black mt-2 uppercase">Our Services</h2>
+                                </div>
+                                <div className="flex flex-wrap gap-3">
+                                    {serviceList.map((svc) => {
+                                        const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: '🚘' };
+                                        return (
+                                            <div
+                                                key={svc as string}
+                                                className="flex items-center gap-2 px-4 py-2.5 rounded-md border-2 font-bold text-sm uppercase tracking-wide transition-colors"
+                                                style={{ borderColor: brandColors.primary, color: brandColors.primary, backgroundColor: `${brandColors.primary}15` }}
+                                            >
+                                                <span>{meta.icon}</span>
+                                                <span>{meta.label}</span>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        </section>
+                    )}
 
                     {/* Featured Cars */}
                     <section className="py-20">
@@ -242,6 +320,119 @@ export function SportyTemplate({
                             </div>
                         </div>
                     </section>
+
+                    {/* Book a Test Drive — Lead Form */}
+                    <section id="contact" className="py-20 border-t" style={{ borderColor: `${brandColors.primary}33` }}>
+                        <div className="max-w-7xl mx-auto px-4">
+                            <div className="grid lg:grid-cols-2 gap-12 items-start">
+                                {/* Info */}
+                                <div>
+                                    <span className="font-black text-sm uppercase tracking-widest" style={{ color: brandColors.primary }}>GET IN TOUCH</span>
+                                    <h2 className="text-5xl font-black mt-2 mb-6 uppercase">Book a Test Drive</h2>
+                                    <p className="text-gray-400 mb-8 text-lg">
+                                        Feel the power firsthand. Book your test drive today and experience performance like never before.
+                                    </p>
+                                    <div className="space-y-4">
+                                        <div className="flex items-center gap-3">
+                                            <Phone className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                            <a href={`tel:${contactInfo.phone}`} className="text-gray-300 hover:text-white font-bold">{contactInfo.phone}</a>
+                                        </div>
+                                        <div className="flex items-center gap-3">
+                                            <Mail className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                            <a href={`mailto:${contactInfo.email}`} className="text-gray-300 hover:text-white">{contactInfo.email}</a>
+                                        </div>
+                                        <div className="flex items-start gap-3">
+                                            <MapPin className="w-5 h-5 mt-0.5" style={{ color: brandColors.primary }} />
+                                            <span className="text-gray-300">{contactInfo.address}</span>
+                                        </div>
+                                        {workingHours && (
+                                            <div className="flex items-center gap-3">
+                                                <Clock className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                                <span className="text-gray-300">{workingHours}</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+
+                                {/* Form */}
+                                <div className="rounded-lg border-2 p-8" style={{ borderColor: `${brandColors.primary}33`, backgroundColor: `${brandColors.primary}08` }}>
+                                    {formStatus === 'sent' ? (
+                                        <div className="text-center py-10">
+                                            <CheckCircle2 className="w-16 h-16 mx-auto mb-4" style={{ color: brandColors.primary }} />
+                                            <h3 className="text-2xl font-black uppercase mb-2">Request Received!</h3>
+                                            <p className="text-gray-400">Our team will confirm your test drive shortly.</p>
+                                        </div>
+                                    ) : (
+                                        <form onSubmit={handleSubmit} className="space-y-4">
+                                            <h3 className="text-xl font-black uppercase mb-6">Test Drive Request</h3>
+                                            <div>
+                                                <label className="block text-xs font-black uppercase tracking-widest text-gray-400 mb-2">Name *</label>
+                                                <input
+                                                    type="text"
+                                                    required
+                                                    value={formData.name}
+                                                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-md text-white placeholder-gray-600 focus:outline-none"
+                                                    style={{ borderColor: `${brandColors.primary}40` }}
+                                                    placeholder="Full name"
+                                                />
+                                            </div>
+                                            <div>
+                                                <label className="block text-xs font-black uppercase tracking-widest text-gray-400 mb-2">Phone *</label>
+                                                <input
+                                                    type="tel"
+                                                    required
+                                                    value={formData.phone}
+                                                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-md text-white placeholder-gray-600 focus:outline-none"
+                                                    style={{ borderColor: `${brandColors.primary}40` }}
+                                                    placeholder="Your contact number"
+                                                />
+                                            </div>
+                                            <div>
+                                                <label className="block text-xs font-black uppercase tracking-widest text-gray-400 mb-2">Email</label>
+                                                <input
+                                                    type="email"
+                                                    value={formData.email}
+                                                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-md text-white placeholder-gray-600 focus:outline-none"
+                                                    style={{ borderColor: `${brandColors.primary}40` }}
+                                                    placeholder="your@email.com"
+                                                />
+                                            </div>
+                                            <div>
+                                                <label className="block text-xs font-black uppercase tracking-widest text-gray-400 mb-2">Which car? / Message</label>
+                                                <textarea
+                                                    rows={4}
+                                                    value={formData.message}
+                                                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                                                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-md text-white placeholder-gray-600 focus:outline-none resize-none"
+                                                    style={{ borderColor: `${brandColors.primary}40` }}
+                                                    placeholder="Tell us which vehicle you want to test drive"
+                                                />
+                                            </div>
+                                            {formStatus === 'error' && (
+                                                <p className="text-red-400 text-sm">Something went wrong. Please call us directly.</p>
+                                            )}
+                                            <Button
+                                                type="submit"
+                                                disabled={formStatus === 'sending'}
+                                                className="w-full text-white py-3 rounded-md font-black uppercase tracking-wider"
+                                                style={{ backgroundColor: brandColors.primary }}
+                                            >
+                                                {formStatus === 'sending' ? 'SUBMITTING...' : (
+                                                    <>
+                                                        <Send className="w-4 h-4 mr-2" />
+                                                        BOOK TEST DRIVE
+                                                    </>
+                                                )}
+                                            </Button>
+                                        </form>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </>
             )}
 
@@ -268,9 +459,8 @@ export function SportyTemplate({
             )}
 
             {/* Footer */}
-            <footer id="contact" className="border-t py-12" style={{ borderColor: `${brandColors.primary}33` }}>
+            <footer className="border-t py-12" style={{ borderColor: `${brandColors.primary}33` }}>
                 <div className="max-w-7xl mx-auto px-4">
-                    {/* Brand Logo */}
                     <div className="flex items-center mb-8 pb-6 border-b" style={{ borderColor: `${brandColors.primary}33` }}>
                         <div className="relative w-12 h-12 mr-3">
                             <Image
@@ -304,6 +494,12 @@ export function SportyTemplate({
                                     <MapPin className="w-5 h-5 mt-1" style={{ color: brandColors.primary }} />
                                     <span>{contactInfo.address}</span>
                                 </div>
+                                {workingHours && (
+                                    <div className="flex items-center gap-2">
+                                        <Clock className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                        <span>{workingHours}</span>
+                                    </div>
+                                )}
                             </div>
                         </div>
                         <div>
@@ -311,6 +507,7 @@ export function SportyTemplate({
                             <div className="space-y-2 text-gray-400">
                                 <button onClick={() => setActiveTab('home')} className="block hover:text-white">Home</button>
                                 <button onClick={() => setActiveTab('inventory')} className="block hover:text-white">Inventory</button>
+                                <a href="#contact" className="block hover:text-white">Contact</a>
                             </div>
                         </div>
                         <div>
@@ -337,6 +534,9 @@ export function SportyTemplate({
                     </div>
                 </div>
             </footer>
+
+            {/* WhatsApp Float Button */}
+            <WhatsAppButton phone={contactInfo.phone} />
         </div>
     );
 }

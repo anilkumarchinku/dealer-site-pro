@@ -2,6 +2,7 @@
 
 import { supabase, isSupabaseReady } from "@/lib/supabase";
 import { generateSlug, makeSlugUnique } from "@/lib/utils/slug";
+import { BASE_DOMAIN, USE_SUBDOMAIN } from "@/lib/utils/domain";
 import type { OnboardingData } from "@/lib/types";
 
 export interface SaveDealerResult {
@@ -72,7 +73,7 @@ export async function saveDealer(
         const { data: { user } } = await supabase.auth.getUser();
 
         if (existingDealerId) {
-            // Update existing dealer (slug/subdomain already set at registration)
+            // Happy path: update the dealer created at registration
             const { error } = await supabase
                 .from("dealers")
                 .update({ ...dealerPayload, slug: undefined, subdomain: undefined })
@@ -80,18 +81,47 @@ export async function saveDealer(
 
             if (error) throw error;
         } else {
-            // Fallback: insert if no dealer was created at registration
-            const { data: inserted, error } = await supabase
-                .from("dealers")
-                .insert({
-                    ...dealerPayload,
-                    ...(user ? { user_id: user.id } : {}),
-                })
-                .select("id")
-                .single();
+            // existingDealerId is missing (Zustand wiped by page-refresh).
+            // The DB trigger may have already created a stub dealer row for this user,
+            // so try to find it before inserting — avoids the 409 unique_violation on user_id.
+            if (user) {
+                const { data: stubDealer } = await supabase
+                    .from("dealers")
+                    .select("id")
+                    .eq("user_id", user.id)
+                    .maybeSingle();
 
-            if (error) throw error;
-            dealerId = inserted.id;
+                if (stubDealer) {
+                    // Row exists — update it in place
+                    const { error } = await supabase
+                        .from("dealers")
+                        .update({ ...dealerPayload, slug: undefined, subdomain: undefined })
+                        .eq("id", stubDealer.id);
+
+                    if (error) throw error;
+                    dealerId = stubDealer.id;
+                } else {
+                    // Truly new — insert with slug
+                    const { data: inserted, error } = await supabase
+                        .from("dealers")
+                        .insert({ ...dealerPayload, user_id: user.id })
+                        .select("id")
+                        .single();
+
+                    if (error) throw error;
+                    dealerId = inserted.id;
+                }
+            } else {
+                // No auth session — insert without user_id
+                const { data: inserted, error } = await supabase
+                    .from("dealers")
+                    .insert(dealerPayload)
+                    .select("id")
+                    .single();
+
+                if (error) throw error;
+                dealerId = inserted.id;
+            }
         }
 
         if (!dealerId) throw new Error("No dealer ID returned");
@@ -149,11 +179,43 @@ export async function saveDealer(
             if (error) throw error;
         }
 
+        // ── Auto-register free subdomain domain record ──────────
+        const subdomainValue = USE_SUBDOMAIN
+            ? `${slug}.${BASE_DOMAIN}`
+            : `${BASE_DOMAIN}/sites/${slug}`
+
+        const { error: domainErr } = await supabase
+            .from('domains')
+            .upsert(
+                {
+                    dealer_id:  dealerId,
+                    domain:     subdomainValue,
+                    slug,
+                    type:       'subdomain',
+                    status:     'active',
+                    ssl_status: 'active',
+                    is_primary: true,
+                    auto_renew: false,
+                },
+                { onConflict: 'dealer_id' }
+            )
+
+        if (domainErr) {
+            // Non-fatal — domain record is best-effort
+            console.warn('[saveDealer] domain upsert failed:', domainErr.message)
+        }
+
         return { success: true, dealerId, slug };
 
     } catch (err: unknown) {
-        const message = err instanceof Error ? err.message : "Unknown error";
-        console.error("[saveDealer] error:", message);
+        // Supabase throws PostgrestError (not a standard Error), so check both
+        let message = "Unknown error";
+        if (err instanceof Error) {
+            message = err.message;
+        } else if (err && typeof err === "object" && "message" in err) {
+            message = String((err as { message: unknown }).message);
+        }
+        console.error("[saveDealer] error:", message, err);
         return { success: false, error: message };
     }
 }

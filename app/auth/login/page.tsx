@@ -40,11 +40,14 @@ export default function LoginPage() {
 
             if (result.dealerId) setDealerId(result.dealerId);
 
-            // Redirect based on onboarding status
+            // Use window.location.href (full reload) so the new Supabase session
+            // cookie is guaranteed to be committed before the next request hits
+            // the middleware. router.push() is a soft nav that races with cookie
+            // flushing and the middleware bounces the user back to login.
             if (result.onboardingComplete) {
-                router.push("/dashboard");
+                window.location.href = "/dashboard";
             } else {
-                router.push("/onboarding/step-1");
+                window.location.href = "/onboarding/step-1";
             }
         } finally {
             setLoading(false);

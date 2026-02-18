@@ -42,7 +42,7 @@ export default function WebsiteLiveBanner({
     // ── Fetch domains ───────────────────────────────────────────────────────
     useEffect(() => {
         if (!dealerId) return
-        fetch(`/api/domains?dealer_id=${dealerId}`)
+        fetch('/api/domains')
             .then(r => r.json())
             .then(data => { if (data.success) setDomains(data.domains ?? []) })
             .catch(() => {})

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { ModernTemplate } from '@/components/templates/ModernTemplate'
 import { LuxuryTemplate } from '@/components/templates/LuxuryTemplate'
 import { SportyTemplate } from '@/components/templates/SportyTemplate'
@@ -104,6 +105,52 @@ function NoStockPage({ dealerName, phone, email }: { dealerName: string; phone: 
     )
 }
 
+export async function generateMetadata({ params }: SitePageProps): Promise<Metadata> {
+    const { slug } = await params
+    const dealer = await fetchDealerBySlug(slug)
+
+    if (!dealer) {
+        return {
+            title: 'Dealership | DealerSite Pro',
+            description: 'Car dealership website powered by DealerSite Pro',
+        }
+    }
+
+    const title       = `${dealer.dealership_name} | ${dealer.location}`
+    const description = dealer.tagline
+        ?? `${dealer.dealership_name} — your trusted car dealership in ${dealer.location}. Browse our inventory of ${dealer.brands.join(', ')} vehicles.`
+
+    const brandKeywords = dealer.brands.join(', ')
+    const serviceKeywords = (dealer.services ?? [])
+        .map(s => s.replace(/_/g, ' '))
+        .join(', ')
+
+    return {
+        title,
+        description,
+        keywords: `${dealer.dealership_name}, car dealership, ${brandKeywords}, ${dealer.location}, ${serviceKeywords}`,
+        openGraph: {
+            title,
+            description,
+            type:      'website',
+            siteName:  dealer.dealership_name,
+            locale:    'en_IN',
+        },
+        twitter: {
+            card:        'summary',
+            title,
+            description,
+        },
+        robots: {
+            index:  true,
+            follow: true,
+        },
+        alternates: {
+            canonical: `https://${dealer.slug}.dealersitepro.com`,
+        },
+    }
+}
+
 export default async function SitePage({ params }: SitePageProps) {
     const { slug } = await params
 
@@ -196,9 +243,11 @@ export default async function SitePage({ params }: SitePageProps) {
     const sharedProps = {
         brandName,
         dealerName: dealer.dealership_name,
+        dealerId: dealer.id,
         cars,
         contactInfo,
         services: (dealer.services ?? []) as Service[],
+        workingHours: dealer.working_hours ?? null,
     }
 
     // ── Render the chosen template ────────────────────────────────────────────
