@@ -1,26 +1,18 @@
 import { NextResponse } from 'next/server'
-import { supabase, isSupabaseReady, getSupabaseConfigError } from '@/lib/supabase'
 import { isValidDomain } from '@/lib/services/dns-verification-service'
+import { registerDomainOnMainProject } from '@/lib/services/vercel-service'
+import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
 /**
  * POST /api/domains/connect-custom
  * Initiates custom domain connection (PRO tier)
+ * Requires authentication — dealer ownership is verified server-side.
  */
 export async function POST(request: Request) {
     try {
-        // Check if Supabase is configured
-        if (!isSupabaseReady()) {
-            const configError = getSupabaseConfigError()
-            console.error('Supabase not configured:', configError)
-            return NextResponse.json(
-                {
-                    success: false,
-                    error: 'Database not configured. Please contact support.',
-                    details: process.env.NODE_ENV === 'development' ? configError : undefined
-                },
-                { status: 503 }
-            )
-        }
+        // ── Auth: require signed-in user ──────────────────────────────────────
+        const { user, supabase, errorResponse: authErr } = await requireAuth()
+        if (authErr) return authErr
 
         const body = await request.json()
         const { dealerId, customDomain, templateId } = body
@@ -31,6 +23,10 @@ export async function POST(request: Request) {
                 { status: 400 }
             )
         }
+
+        // ── Ownership: verify user owns this dealer ───────────────────────────
+        const { errorResponse: ownerErr } = await requireDealerOwnership(supabase, user.id, dealerId)
+        if (ownerErr) return ownerErr
 
         // Default to 'family' template if not provided
         const template = templateId || 'family'
@@ -100,10 +96,27 @@ export async function POST(request: Request) {
             )
         }
 
+        // Attempt to register domain on the main Vercel project.
+        // Errors here are non-fatal — domain is already saved in DB.
+        let vercelRegistered = false
+        try {
+            await registerDomainOnMainProject(customDomain)
+            vercelRegistered = true
+        } catch (vercelError) {
+            console.error('Vercel domain registration failed (non-fatal):', vercelError)
+        }
+
         return NextResponse.json({
             success: true,
             domain: newDomain,
-            message: 'Domain added. Please configure DNS settings to verify.'
+            dns: {
+                type:  'CNAME',
+                host:  '@',
+                value: 'cname.vercel-dns.com',
+                ttl:   600,
+                note:  'For www: add CNAME with host "www" pointing to cname.vercel-dns.com',
+            },
+            vercelRegistered,
         })
     } catch (error) {
         console.error('Error in POST /api/domains/connect-custom:', error)

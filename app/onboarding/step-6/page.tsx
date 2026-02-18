@@ -3,11 +3,12 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { saveDealer } from "@/lib/actions/save-dealer";
+import { dealerSiteUrl, dealerSiteHref } from "@/lib/utils/domain";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
-    CheckCircle, ArrowLeft, Crown, Link as LinkIcon,
-    Sparkles, Globe, Shield, Zap, Loader2, AlertCircle,
+    CheckCircle, ArrowLeft, ArrowRight, Crown, Link as LinkIcon,
+    Sparkles, Globe, Shield, Zap, Loader2, AlertCircle, ExternalLink,
 } from "lucide-react";
 
 export default function Step6Page() {
@@ -16,6 +17,9 @@ export default function Step6Page() {
     const [showUpgradeOptions, setShowUpgradeOptions] = useState(true);
     const [saving, setSaving] = useState(false);
     const [saveError, setSaveError] = useState<string | null>(null);
+    const [showSuccess, setShowSuccess] = useState(false);
+    const [liveSiteSlug, setLiveSiteSlug] = useState<string | null>(null);
+    const [copied, setCopied] = useState(false);
 
     useEffect(() => {
         setStep(6);
@@ -29,7 +33,8 @@ export default function Step6Page() {
             const result = await saveDealer(data, dealerId ?? undefined);
             if (result.success) {
                 if (result.dealerId) setDealerId(result.dealerId);
-                router.push("/dashboard");
+                if (result.slug) setLiveSiteSlug(result.slug);
+                setShowSuccess(true);
             } else {
                 setSaveError(result.error ?? "Failed to save. Please try again.");
             }
@@ -41,6 +46,98 @@ export default function Step6Page() {
     const handleBack = () => {
         router.push("/onboarding/step-5");
     };
+
+    const handleCopyUrl = () => {
+        if (!liveSiteSlug) return;
+        navigator.clipboard.writeText(dealerSiteHref(liveSiteSlug)).then(() => {
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        });
+    };
+
+    if (showSuccess && liveSiteSlug) {
+        const liveUrl = dealerSiteUrl(liveSiteSlug);
+        const liveHref = dealerSiteHref(liveSiteSlug);
+        return (
+            <div className="space-y-6 animate-fade-in flex flex-col items-center justify-center min-h-[60vh]">
+                <Card className="w-full max-w-lg">
+                    <CardContent className="p-8 text-center space-y-6">
+                        {/* Big check icon */}
+                        <div className="flex justify-center">
+                            <div className="p-4 rounded-full bg-emerald-500/10">
+                                <CheckCircle className="w-16 h-16 text-emerald-500" />
+                            </div>
+                        </div>
+
+                        {/* Title & subtitle */}
+                        <div className="space-y-2">
+                            <h1 className="text-2xl font-bold text-foreground">
+                                Your Dealership Website is Live!
+                            </h1>
+                            <p className="text-muted-foreground">
+                                Congratulations! Customers can now find{" "}
+                                <span className="font-semibold text-foreground">
+                                    {data.dealershipName}
+                                </span>{" "}
+                                online.
+                            </p>
+                        </div>
+
+                        {/* Live URL box with copy */}
+                        <div className="space-y-2">
+                            <p className="text-sm text-muted-foreground text-left">Your live site URL</p>
+                            <div className="flex items-center gap-2 rounded-xl border border-border bg-muted px-4 py-3">
+                                <span className="flex-1 font-mono text-sm text-foreground break-all text-left">
+                                    {liveUrl}
+                                </span>
+                                <Button
+                                    variant="ghost"
+                                    size="sm"
+                                    className="shrink-0 text-muted-foreground hover:text-foreground"
+                                    onClick={handleCopyUrl}
+                                >
+                                    {copied ? "Copied!" : "Copy"}
+                                </Button>
+                            </div>
+                        </div>
+
+                        {/* 3 checklist items */}
+                        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                            {[
+                                "Free SSL included",
+                                "Live in seconds",
+                                "No setup required",
+                            ].map((item) => (
+                                <div key={item} className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                                    <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
+                                    <span>{item}</span>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* CTA buttons */}
+                        <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                            <Button
+                                variant="outline"
+                                className="flex-1 gap-2 rounded-xl"
+                                onClick={() => window.open(liveHref, "_blank")}
+                            >
+                                <ExternalLink className="w-4 h-4" />
+                                Preview Your Site
+                            </Button>
+                            <Button
+                                className="flex-1 gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                                onClick={() => router.push("/dashboard")}
+                            >
+                                Go to Dashboard
+                                <ArrowRight className="w-4 h-4" />
+                            </Button>
+                        </div>
+                    </CardContent>
+                </Card>
+            </div>
+        );
+    }
 
     return (
         <div className="space-y-6 animate-fade-in">

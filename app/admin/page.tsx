@@ -5,7 +5,7 @@
  * Professional control center for template and brand management
  */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
@@ -30,7 +30,8 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { automotiveBrands } from "@/lib/colors/automotive-brands";
-import { allCars } from "@/lib/data/cars";
+import { getAllCars } from "@/lib/services/car-service";
+import type { Car as CarType } from "@/lib/types/car";
 import { CarGrid } from "@/components/cars/CarGrid";
 
 const TEMPLATES = [
@@ -111,6 +112,15 @@ export default function AdminDashboard() {
     const [selectedBrand, setSelectedBrand] = useState<string>(data.brands?.[0] || "Toyota");
     const [isLaunching, setIsLaunching] = useState(false);
     const [activeCategory, setActiveCategory] = useState<string>("all");
+    const [cars, setCars] = useState<CarType[]>([]);
+
+    useEffect(() => {
+        let isMounted = true;
+        getAllCars({ limit: 12 }).then(res => {
+            if (isMounted) setCars(res.cars);
+        });
+        return () => { isMounted = false; };
+    }, []);
 
     const handleLaunch = () => {
         setIsLaunching(true);
@@ -376,7 +386,7 @@ export default function AdminDashboard() {
                                         "text-xs font-medium text-center line-clamp-1",
                                         isSelected ? "font-bold" : "text-gray-600"
                                     )}
-                                    style={isSelected ? { color: brandColor } : {}}>
+                                        style={isSelected ? { color: brandColor } : {}}>
                                         {brandName}
                                     </span>
 
@@ -422,7 +432,7 @@ export default function AdminDashboard() {
                     </div>
 
                     <CarGrid
-                        cars={allCars}
+                        cars={cars}
                         variant="compact"
                         showEMI={true}
                         onViewDetails={(carId) => router.push(`/cars/${carId}`)}

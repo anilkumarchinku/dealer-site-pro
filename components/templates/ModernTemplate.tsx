@@ -10,6 +10,7 @@ import { Car } from '@/lib/types/car';
 import { CarGrid } from '@/components/cars/CarGrid';
 import { CarFilters } from '@/components/cars/CarFilters';
 import { Button } from '@/components/ui/button';
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
 import {
@@ -26,14 +27,29 @@ import {
     Users,
     Car as CarIcon,
     MessageSquare,
+    Send,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
 import type { Service } from '@/lib/types';
 
+const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
+    new_car_sales:       { label: 'New Cars',           icon: '🚗' },
+    used_car_sales:      { label: 'Used Cars',           icon: '🔄' },
+    financing:           { label: 'Finance & EMI',       icon: '💰' },
+    service_maintenance: { label: 'Service & Repairs',   icon: '🔧' },
+    parts_accessories:   { label: 'Parts & Accessories', icon: '⚙️' },
+    test_drive:          { label: 'Test Drive',          icon: '🏎️' },
+    insurance:           { label: 'Insurance',           icon: '🛡️' },
+    extended_warranty:   { label: 'Extended Warranty',   icon: '✅' },
+    roadside_assistance: { label: 'Roadside Assist',     icon: '🆘' },
+    car_exchange:        { label: 'Car Exchange',        icon: '🔃' },
+}
+
 interface ModernTemplateProps {
-    brandName: string; // Brand name for colors (e.g., "Toyota", "BMW")
+    brandName: string;
     dealerName: string;
+    dealerId?: string;
     cars: Car[];
     contactInfo: {
         phone: string;
@@ -46,24 +62,31 @@ interface ModernTemplateProps {
     };
     previewMode?: boolean;
     services?: Service[];
+    workingHours?: string | null;
 }
 
 export function ModernTemplate({
     brandName,
     dealerName,
+    dealerId = '',
     cars,
     contactInfo,
     config: customConfig,
     previewMode,
     services,
+    workingHours,
 }: ModernTemplateProps) {
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeCarIndex, setActiveCarIndex] = useState(0);
     const [enquireSidebarOpen, setEnquireSidebarOpen] = useState(false);
 
+    // Lead form state
+    const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
+    const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+
     // Get template configuration with brand colors
-    const config = generateTemplateConfig(brandName, 'modern');
+    const config = generateTemplateConfig(brandName, 'family');
     const { brandColors } = config;
 
     // Handle scroll
@@ -73,7 +96,7 @@ export function ModernTemplate({
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Show all cars instead of just 6
+    // Show all cars
     const featuredCars = cars;
 
     // Rotate featured car
@@ -87,6 +110,31 @@ export function ModernTemplate({
 
     const heroTitle = customConfig?.heroTitle || 'Find Your Perfect Drive';
     const heroSubtitle = customConfig?.heroSubtitle || 'Explore our premium collection of certified vehicles';
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!formData.name || !formData.phone) return;
+        setFormStatus('sending');
+        try {
+            const res = await fetch('/api/leads', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    dealer_id: dealerId,
+                    name: formData.name,
+                    phone: formData.phone,
+                    email: formData.email,
+                    message: formData.message,
+                    lead_source: 'contact_form',
+                }),
+            });
+            setFormStatus(res.ok ? 'sent' : 'error');
+        } catch {
+            setFormStatus('error');
+        }
+    };
+
+    const serviceList = services && services.length > 0 ? services : [];
 
     return (
         <div className="min-h-screen bg-white font-sans text-gray-900">
@@ -125,12 +173,8 @@ export function ModernTemplate({
                                 onClick={() => setActiveTab('home')}
                                 className={`font-medium transition-colors ${
                                     activeTab === 'home'
-                                        ? isScrolled
-                                            ? 'text-gray-900'
-                                            : 'text-white'
-                                        : isScrolled
-                                        ? 'text-gray-600 hover:text-gray-900'
-                                        : 'text-white/80 hover:text-white'
+                                        ? isScrolled ? 'text-gray-900' : 'text-white'
+                                        : isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'
                                 }`}
                                 style={activeTab === 'home' ? { color: brandColors.primary } : {}}
                             >
@@ -140,12 +184,8 @@ export function ModernTemplate({
                                 onClick={() => setActiveTab('inventory')}
                                 className={`font-medium transition-colors ${
                                     activeTab === 'inventory'
-                                        ? isScrolled
-                                            ? 'text-gray-900'
-                                            : 'text-white'
-                                        : isScrolled
-                                        ? 'text-gray-600 hover:text-gray-900'
-                                        : 'text-white/80 hover:text-white'
+                                        ? isScrolled ? 'text-gray-900' : 'text-white'
+                                        : isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'
                                 }`}
                                 style={activeTab === 'inventory' ? { color: brandColors.primary } : {}}
                             >
@@ -200,7 +240,6 @@ export function ModernTemplate({
                 <>
                     {/* Hero Section */}
                     <section className="relative min-h-[85vh] flex items-center bg-gray-900 overflow-hidden">
-                        {/* Background */}
                         <div className="absolute inset-0">
                             <Image
                                 src={getBrandHeroImage(brandName)}
@@ -212,7 +251,6 @@ export function ModernTemplate({
                             <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent" />
                         </div>
 
-                        {/* Content */}
                         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                             <div className="grid lg:grid-cols-2 gap-12 items-center">
                                 {/* Text */}
@@ -224,7 +262,7 @@ export function ModernTemplate({
                                         {heroTitle}
                                     </h1>
                                     <p className="text-xl text-gray-300">{heroSubtitle}</p>
-                                    <div className="flex gap-4">
+                                    <div className="flex flex-wrap gap-4">
                                         <Button
                                             size="lg"
                                             className="text-white"
@@ -233,6 +271,14 @@ export function ModernTemplate({
                                         >
                                             View Inventory
                                             <ArrowRight className="ml-2 w-5 h-5" />
+                                        </Button>
+                                        <Button
+                                            size="lg"
+                                            variant="outline"
+                                            className="bg-transparent text-white border-white/40 hover:bg-white/10"
+                                            asChild
+                                        >
+                                            <a href="#contact">Get a Quote</a>
                                         </Button>
                                     </div>
                                 </div>
@@ -294,6 +340,38 @@ export function ModernTemplate({
                         </div>
                     </section>
 
+                    {/* Services Section */}
+                    {serviceList.length > 0 && (
+                        <section className="py-16 bg-white">
+                            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <div className="text-center mb-10">
+                                    <span
+                                        className="font-semibold text-sm uppercase tracking-wider"
+                                        style={{ color: brandColors.primary }}
+                                    >
+                                        What We Offer
+                                    </span>
+                                    <h2 className="text-3xl font-bold text-gray-900 mt-2">Our Services</h2>
+                                </div>
+                                <div className="flex flex-wrap justify-center gap-4">
+                                    {serviceList.map((svc) => {
+                                        const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: '🚘' };
+                                        return (
+                                            <div
+                                                key={svc as string}
+                                                className="flex items-center gap-3 px-5 py-3 rounded-xl border bg-gray-50 hover:shadow-md transition-shadow"
+                                                style={{ borderColor: `${brandColors.primary}30` }}
+                                            >
+                                                <span className="text-2xl">{meta.icon}</span>
+                                                <span className="font-semibold text-gray-800">{meta.label}</span>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        </section>
+                    )}
+
                     {/* Featured Cars */}
                     <section className="py-20 bg-gray-50">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -343,6 +421,131 @@ export function ModernTemplate({
                             </div>
                         </div>
                     </section>
+
+                    {/* Lead Capture / Contact Us */}
+                    <section id="contact" className="py-20 bg-gray-50">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="grid lg:grid-cols-2 gap-12 items-start">
+                                {/* Left — info */}
+                                <div>
+                                    <span
+                                        className="font-semibold text-sm uppercase tracking-wider"
+                                        style={{ color: brandColors.primary }}
+                                    >
+                                        Contact Us
+                                    </span>
+                                    <h2 className="text-4xl font-bold text-gray-900 mt-2 mb-6">Get a Quote Today</h2>
+                                    <p className="text-gray-600 mb-8">
+                                        Fill in the form and one of our experts will get back to you promptly with the best deal available.
+                                    </p>
+                                    <div className="space-y-4">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${brandColors.primary}20` }}>
+                                                <Phone className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                            </div>
+                                            <a href={`tel:${contactInfo.phone}`} className="text-gray-700 font-medium hover:underline">{contactInfo.phone}</a>
+                                        </div>
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${brandColors.primary}20` }}>
+                                                <Mail className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                            </div>
+                                            <a href={`mailto:${contactInfo.email}`} className="text-gray-700 font-medium hover:underline">{contactInfo.email}</a>
+                                        </div>
+                                        <div className="flex items-start gap-3">
+                                            <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${brandColors.primary}20` }}>
+                                                <MapPin className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                            </div>
+                                            <span className="text-gray-700">{contactInfo.address}</span>
+                                        </div>
+                                        {workingHours && (
+                                            <div className="flex items-center gap-3">
+                                                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${brandColors.primary}20` }}>
+                                                    <Clock className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                                </div>
+                                                <span className="text-gray-700">{workingHours}</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+
+                                {/* Right — form */}
+                                <div className="bg-white rounded-2xl shadow-xl p-8">
+                                    {formStatus === 'sent' ? (
+                                        <div className="text-center py-10">
+                                            <CheckCircle2 className="w-16 h-16 mx-auto mb-4" style={{ color: brandColors.primary }} />
+                                            <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
+                                            <p className="text-gray-600">We&apos;ll be in touch with you shortly.</p>
+                                        </div>
+                                    ) : (
+                                        <form onSubmit={handleSubmit} className="space-y-4">
+                                            <h3 className="text-xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
+                                            <div>
+                                                <label className="block text-sm font-medium text-gray-700 mb-1">Name *</label>
+                                                <input
+                                                    type="text"
+                                                    required
+                                                    value={formData.name}
+                                                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 text-gray-900"
+                                                    style={{ '--tw-ring-color': brandColors.primary } as React.CSSProperties}
+                                                    placeholder="Your full name"
+                                                />
+                                            </div>
+                                            <div>
+                                                <label className="block text-sm font-medium text-gray-700 mb-1">Phone *</label>
+                                                <input
+                                                    type="tel"
+                                                    required
+                                                    value={formData.phone}
+                                                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 text-gray-900"
+                                                    placeholder="Your phone number"
+                                                />
+                                            </div>
+                                            <div>
+                                                <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                                <input
+                                                    type="email"
+                                                    value={formData.email}
+                                                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 text-gray-900"
+                                                    placeholder="your@email.com"
+                                                />
+                                            </div>
+                                            <div>
+                                                <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                                <textarea
+                                                    rows={4}
+                                                    value={formData.message}
+                                                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 text-gray-900 resize-none"
+                                                    placeholder="What vehicle are you interested in?"
+                                                />
+                                            </div>
+                                            {formStatus === 'error' && (
+                                                <p className="text-red-600 text-sm">Something went wrong. Please try again or call us directly.</p>
+                                            )}
+                                            <Button
+                                                type="submit"
+                                                disabled={formStatus === 'sending'}
+                                                className="w-full text-white py-3 rounded-xl font-semibold"
+                                                style={{ backgroundColor: brandColors.primary }}
+                                            >
+                                                {formStatus === 'sending' ? (
+                                                    'Sending...'
+                                                ) : (
+                                                    <>
+                                                        <Send className="w-4 h-4 mr-2" />
+                                                        Send Enquiry
+                                                    </>
+                                                )}
+                                            </Button>
+                                        </form>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </>
             )}
 
@@ -369,7 +572,7 @@ export function ModernTemplate({
             )}
 
             {/* Footer */}
-            <footer id="contact" className="bg-gray-900 text-white py-12">
+            <footer className="bg-gray-900 text-white py-12">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Brand Logo */}
                     <div className="flex items-center mb-8 pb-6 border-b border-gray-800">
@@ -405,6 +608,12 @@ export function ModernTemplate({
                                     <MapPin className="w-5 h-5 mt-1" style={{ color: brandColors.primary }} />
                                     <span>{contactInfo.address}</span>
                                 </div>
+                                {workingHours && (
+                                    <div className="flex items-center gap-2">
+                                        <Clock className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                        <span>{workingHours}</span>
+                                    </div>
+                                )}
                             </div>
                         </div>
                         <div>
@@ -416,6 +625,7 @@ export function ModernTemplate({
                                 <button onClick={() => setActiveTab('inventory')} className="block hover:text-gray-300">
                                     Inventory
                                 </button>
+                                <a href="#contact" className="block hover:text-gray-300">Contact</a>
                             </div>
                         </div>
                         <div>
@@ -445,6 +655,9 @@ export function ModernTemplate({
                     </div>
                 </div>
             </footer>
+
+            {/* WhatsApp Float Button */}
+            <WhatsAppButton phone={contactInfo.phone} />
         </div>
     );
 }

@@ -25,7 +25,7 @@
  * ═══════════════════════════════════════════════════════════════════════════
  */
 
-export type TemplateStyle = 'luxury' | 'family' | 'sporty' | 'professional' | 'modern';
+export type TemplateStyle = 'luxury' | 'family' | 'sporty' | 'professional';
 
 export interface TemplateConfig {
   id: TemplateStyle;
@@ -348,77 +348,10 @@ export const professionalTemplate: TemplateConfig = {
 
 /**
  * ═══════════════════════════════════════════════════════════════════════════
- * TEMPLATE 5: MODERN & CLEAN 🔵
- * ═══════════════════════════════════════════════════════════════════════════
- *
- * Clean, contemporary design with blue tones
- * Perfect for: Any brand wanting a fresh, modern look
- *
- * Design Characteristics:
- * - Clean, modern typography
- * - Blue accent colors
- * - Balanced white space
- * - Subtle shadows
- * - Contemporary grid layouts
- */
-export const modernTemplate: TemplateConfig = {
-  id: 'modern' as TemplateStyle,
-  name: 'Modern & Clean',
-  icon: '🔵',
-  description: 'Clean, contemporary design with blue tones',
-  perfectFor: 'Any brand, Multi-brand dealerships',
-
-  design: {
-    typography: {
-      headingFont: 'Inter, sans-serif',
-      bodyFont: 'Inter, sans-serif',
-      headingWeight: 700,
-      bodyWeight: 400,
-      headingSize: 'medium',
-      letterSpacing: 'normal',
-    },
-
-    spacing: {
-      sectionPadding: 'normal',
-      cardGap: 'medium',
-      containerWidth: 'normal',
-    },
-
-    shapes: {
-      borderRadius: 'medium',
-      cardStyle: 'shadow',
-      buttonStyle: 'rounded',
-    },
-
-    effects: {
-      animations: 'subtle',
-      transitions: 'normal',
-      shadows: 'medium',
-      gradients: true,
-    },
-
-    layout: {
-      headerStyle: 'standard',
-      heroStyle: 'split',
-      gridColumns: 3,
-      imageRatio: 'landscape',
-    },
-  },
-
-  colorUsage: {
-    primaryUsage: 'balanced',
-    backgroundStyle: 'light',
-    accentPlacement: 'buttons',
-  },
-};
-
-/**
- * ═══════════════════════════════════════════════════════════════════════════
  * ALL TEMPLATES
  * ═══════════════════════════════════════════════════════════════════════════
  */
 export const allTemplates: TemplateConfig[] = [
-  modernTemplate,
   luxuryTemplate,
   familyTemplate,
   sportyTemplate,
@@ -431,7 +364,7 @@ export const allTemplates: TemplateConfig[] = [
 export function getTemplate(templateId: TemplateStyle): TemplateConfig {
   const template = allTemplates.find(t => t.id === templateId);
   if (!template) {
-    return modernTemplate; // Default to modern & clean
+    return familyTemplate; // Default to family & friendly
   }
   return template;
 }

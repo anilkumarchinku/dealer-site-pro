@@ -10,16 +10,17 @@ export async function GET(request: Request) {
     try {
         const { searchParams } = new URL(request.url)
         const businessName = searchParams.get('name')
+        const directSlug   = searchParams.get('slug')
 
-        if (!businessName) {
+        if (!businessName && !directSlug) {
             return NextResponse.json(
-                { error: 'Business name is required' },
+                { error: 'Business name or slug is required' },
                 { status: 400 }
             )
         }
 
-        // Generate slug from business name
-        const slug = generateSlug(businessName)
+        // Use direct slug if provided, otherwise generate from business name
+        const slug = directSlug ?? generateSlug(businessName!)
 
         // Validate slug
         const validation = validateSlug(slug)
@@ -41,10 +42,9 @@ export async function GET(request: Request) {
             success: true,
             slug,
             available,
-            subdomain: available ? `${slug}.dealersitepro.com` : null,
             message: available
-                ? 'Subdomain is available'
-                : 'This subdomain is already taken. We\'ll add your city to make it unique.'
+                ? 'Site name is available!'
+                : 'This name is already taken — try a different one.'
         })
     } catch (error) {
         console.error('Error in GET /api/domains/check-slug:', error)

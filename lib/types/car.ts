@@ -229,6 +229,7 @@ export interface CarFilters {
     sortBy?: 'price_asc' | 'price_desc' | 'popularity' | 'rating' | 'launch_date' | 'fuel_efficiency';
     limit?: number;
     offset?: number;
+    searchQuery?: string;
 }
 
 /**

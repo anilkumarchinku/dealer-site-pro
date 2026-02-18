@@ -10,27 +10,57 @@ import { Car } from '@/lib/types/car';
 import { CarGrid } from '@/components/cars/CarGrid';
 import { CarFilters } from '@/components/cars/CarFilters';
 import { Button } from '@/components/ui/button';
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
-import { ArrowRight, Phone, MapPin, Mail, Award, ShieldCheck, Star, ChevronRight, Crown, MessageSquare } from 'lucide-react';
+import { ArrowRight, Phone, MapPin, Mail, Award, ShieldCheck, Star, ChevronRight, Crown, Clock, MessageSquare, CheckCircle2, Send } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
 import type { Service } from '@/lib/types';
 
+const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
+    new_car_sales:       { label: 'New Cars',           icon: '🚗' },
+    used_car_sales:      { label: 'Used Cars',           icon: '🔄' },
+    financing:           { label: 'Finance & EMI',       icon: '💰' },
+    service_maintenance: { label: 'Service & Repairs',   icon: '🔧' },
+    parts_accessories:   { label: 'Parts & Accessories', icon: '⚙️' },
+    test_drive:          { label: 'Test Drive',          icon: '🏎️' },
+    insurance:           { label: 'Insurance',           icon: '🛡️' },
+    extended_warranty:   { label: 'Extended Warranty',   icon: '✅' },
+    roadside_assistance: { label: 'Roadside Assist',     icon: '🆘' },
+    car_exchange:        { label: 'Car Exchange',        icon: '🔃' },
+}
+
 interface LuxuryTemplateProps {
     brandName: string;
     dealerName: string;
+    dealerId?: string;
     cars: Car[];
     contactInfo: { phone: string; email: string; address: string };
     config?: { heroTitle?: string; heroSubtitle?: string; tagline?: string };
     previewMode?: boolean;
     services?: Service[];
+    workingHours?: string | null;
 }
 
-export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, config: customConfig, previewMode, services }: LuxuryTemplateProps) {
+export function LuxuryTemplate({
+    brandName,
+    dealerName,
+    dealerId = '',
+    cars,
+    contactInfo,
+    config: customConfig,
+    previewMode,
+    services,
+    workingHours,
+}: LuxuryTemplateProps) {
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [isScrolled, setIsScrolled] = useState(false);
     const [enquireSidebarOpen, setEnquireSidebarOpen] = useState(false);
+
+    // Lead form state
+    const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
+    const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
     const config = generateTemplateConfig(brandName, 'luxury');
     const { brandColors } = config;
@@ -41,11 +71,35 @@ export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, confi
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Show all cars instead of just 6
     const featuredCars = cars;
     const heroTitle = customConfig?.heroTitle || 'THE ART OF PERFORMANCE';
     const heroSubtitle = customConfig?.heroSubtitle || 'Experience automotive excellence';
     const tagline = customConfig?.tagline || 'Excellence in Motion';
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!formData.name || !formData.phone) return;
+        setFormStatus('sending');
+        try {
+            const res = await fetch('/api/leads', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    dealer_id: dealerId,
+                    name: formData.name,
+                    phone: formData.phone,
+                    email: formData.email,
+                    message: formData.message,
+                    lead_source: 'contact_form',
+                }),
+            });
+            setFormStatus(res.ok ? 'sent' : 'error');
+        } catch {
+            setFormStatus('error');
+        }
+    };
+
+    const serviceList = services && services.length > 0 ? services : [];
 
     return (
         <div className="min-h-screen bg-gray-900 text-white font-serif">
@@ -101,6 +155,7 @@ export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, confi
 
             {activeTab === 'home' && (
                 <>
+                    {/* Hero */}
                     <section className="relative min-h-screen flex items-center">
                         <div className="absolute inset-0">
                             <Image src={getBrandHeroImage(brandName)} alt={`${brandName} Luxury`} fill className="object-cover opacity-20" priority />
@@ -114,13 +169,46 @@ export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, confi
                             </div>
                             <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-8 leading-tight">{heroTitle}</h1>
                             <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">{heroSubtitle}</p>
-                            <Button size="lg" className="text-white" style={{ backgroundColor: brandColors.primary }} onClick={() => setActiveTab('inventory')}>
-                                Explore Collection
-                                <ArrowRight className="ml-2 w-5 h-5" />
-                            </Button>
+                            <div className="flex flex-wrap items-center justify-center gap-4">
+                                <Button size="lg" className="text-white" style={{ backgroundColor: brandColors.primary }} onClick={() => setActiveTab('inventory')}>
+                                    Explore Collection
+                                    <ArrowRight className="ml-2 w-5 h-5" />
+                                </Button>
+                                <Button size="lg" variant="outline" className="border-white/30 bg-transparent text-white hover:bg-white/10">
+                                    <a href="#contact">Request Private Viewing</a>
+                                </Button>
+                            </div>
                         </div>
                     </section>
 
+                    {/* Services — luxury chips */}
+                    {serviceList.length > 0 && (
+                        <section className="py-16 bg-black">
+                            <div className="max-w-7xl mx-auto px-4">
+                                <div className="text-center mb-10">
+                                    <span className="text-sm tracking-widest uppercase" style={{ color: brandColors.primary }}>Our Services</span>
+                                    <h2 className="text-3xl font-light mt-2">What We Offer</h2>
+                                </div>
+                                <div className="flex flex-wrap justify-center gap-3">
+                                    {serviceList.map((svc) => {
+                                        const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: '🚘' };
+                                        return (
+                                            <div
+                                                key={svc as string}
+                                                className="flex items-center gap-2 px-5 py-2.5 rounded-full border text-sm tracking-wide"
+                                                style={{ borderColor: `${brandColors.primary}60`, color: brandColors.primary, backgroundColor: `${brandColors.primary}10` }}
+                                            >
+                                                <span>{meta.icon}</span>
+                                                <span>{meta.label}</span>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        </section>
+                    )}
+
+                    {/* Featured Collection */}
                     <section className="py-24 bg-black">
                         <div className="max-w-7xl mx-auto px-4">
                             <div className="text-center mb-16">
@@ -128,9 +216,16 @@ export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, confi
                                 <h2 className="text-5xl font-light mt-4">Featured Collection</h2>
                             </div>
                             <CarGrid cars={featuredCars} brandColor={brandColors.primary} />
+                            <div className="text-center mt-10">
+                                <Button variant="outline" className="border-white/30 bg-transparent text-white hover:bg-white/10" onClick={() => setActiveTab('inventory')}>
+                                    View Full Collection
+                                    <ChevronRight className="ml-1 w-4 h-4" />
+                                </Button>
+                            </div>
                         </div>
                     </section>
 
+                    {/* The Difference */}
                     <section className="py-24">
                         <div className="max-w-7xl mx-auto px-4">
                             <h2 className="text-5xl font-light text-center mb-16">The Difference</h2>
@@ -149,9 +244,119 @@ export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, confi
                             </div>
                         </div>
                     </section>
+
+                    {/* Request a Callback — Lead Form */}
+                    <section id="contact" className="py-24 bg-black">
+                        <div className="max-w-7xl mx-auto px-4">
+                            <div className="grid lg:grid-cols-2 gap-16 items-start">
+                                {/* Info */}
+                                <div>
+                                    <span className="text-sm tracking-widest uppercase" style={{ color: brandColors.primary }}>Contact</span>
+                                    <h2 className="text-5xl font-light mt-4 mb-6">Request a Callback</h2>
+                                    <p className="text-gray-400 mb-8 text-lg">
+                                        Our advisors will personally reach out to curate the finest selection for your needs.
+                                    </p>
+                                    <div className="space-y-5">
+                                        <div className="flex items-center gap-4">
+                                            <Phone className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                            <a href={`tel:${contactInfo.phone}`} className="text-gray-300 hover:text-white transition-colors">{contactInfo.phone}</a>
+                                        </div>
+                                        <div className="flex items-center gap-4">
+                                            <Mail className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                            <a href={`mailto:${contactInfo.email}`} className="text-gray-300 hover:text-white transition-colors">{contactInfo.email}</a>
+                                        </div>
+                                        <div className="flex items-start gap-4">
+                                            <MapPin className="w-5 h-5 mt-0.5" style={{ color: brandColors.primary }} />
+                                            <span className="text-gray-300">{contactInfo.address}</span>
+                                        </div>
+                                        {workingHours && (
+                                            <div className="flex items-center gap-4">
+                                                <Clock className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                                <span className="text-gray-300">{workingHours}</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+
+                                {/* Form */}
+                                <div className="border border-white/10 rounded-2xl p-8 bg-white/5 backdrop-blur-sm">
+                                    {formStatus === 'sent' ? (
+                                        <div className="text-center py-12">
+                                            <CheckCircle2 className="w-16 h-16 mx-auto mb-4" style={{ color: brandColors.primary }} />
+                                            <h3 className="text-2xl font-light mb-2">Thank You</h3>
+                                            <p className="text-gray-400">Our advisor will contact you shortly.</p>
+                                        </div>
+                                    ) : (
+                                        <form onSubmit={handleSubmit} className="space-y-5">
+                                            <h3 className="text-xl font-light tracking-wide mb-6">Private Consultation Request</h3>
+                                            <div>
+                                                <label className="block text-xs tracking-widest text-gray-400 uppercase mb-2">Your Name *</label>
+                                                <input
+                                                    type="text"
+                                                    required
+                                                    value={formData.name}
+                                                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-white/30"
+                                                    placeholder="Full name"
+                                                />
+                                            </div>
+                                            <div>
+                                                <label className="block text-xs tracking-widest text-gray-400 uppercase mb-2">Phone *</label>
+                                                <input
+                                                    type="tel"
+                                                    required
+                                                    value={formData.phone}
+                                                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-white/30"
+                                                    placeholder="Your contact number"
+                                                />
+                                            </div>
+                                            <div>
+                                                <label className="block text-xs tracking-widest text-gray-400 uppercase mb-2">Email</label>
+                                                <input
+                                                    type="email"
+                                                    value={formData.email}
+                                                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-white/30"
+                                                    placeholder="your@email.com"
+                                                />
+                                            </div>
+                                            <div>
+                                                <label className="block text-xs tracking-widest text-gray-400 uppercase mb-2">Message</label>
+                                                <textarea
+                                                    rows={4}
+                                                    value={formData.message}
+                                                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                                                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-white/30 resize-none"
+                                                    placeholder="Which vehicle interests you?"
+                                                />
+                                            </div>
+                                            {formStatus === 'error' && (
+                                                <p className="text-red-400 text-sm">Something went wrong. Please try again.</p>
+                                            )}
+                                            <Button
+                                                type="submit"
+                                                disabled={formStatus === 'sending'}
+                                                className="w-full text-white py-3 rounded-lg font-light tracking-widest uppercase text-sm"
+                                                style={{ backgroundColor: brandColors.primary }}
+                                            >
+                                                {formStatus === 'sending' ? 'Sending...' : (
+                                                    <>
+                                                        <Send className="w-4 h-4 mr-2" />
+                                                        Submit Request
+                                                    </>
+                                                )}
+                                            </Button>
+                                        </form>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </>
             )}
 
+            {/* Inventory Tab */}
             {activeTab === 'inventory' && (
                 <div className="pt-24 pb-12 min-h-screen">
                     <div className="max-w-7xl mx-auto px-4">
@@ -166,9 +371,9 @@ export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, confi
                 </div>
             )}
 
-            <footer id="contact" className="border-t border-white/10 py-12">
+            {/* Footer */}
+            <footer className="border-t border-white/10 py-12">
                 <div className="max-w-7xl mx-auto px-4">
-                    {/* Brand Logo */}
                     <div className="flex items-center mb-8 pb-6 border-b border-white/10">
                         <div className="relative w-12 h-12 mr-3">
                             <Image
@@ -193,6 +398,9 @@ export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, confi
                                 <div className="flex items-center gap-2"><Phone className="w-4 h-4" style={{ color: brandColors.primary }} /><a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a></div>
                                 <div className="flex items-center gap-2"><Mail className="w-4 h-4" style={{ color: brandColors.primary }} /><a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></div>
                                 <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-1" style={{ color: brandColors.primary }} /><span>{contactInfo.address}</span></div>
+                                {workingHours && (
+                                    <div className="flex items-center gap-2"><Clock className="w-4 h-4" style={{ color: brandColors.primary }} /><span>{workingHours}</span></div>
+                                )}
                             </div>
                         </div>
                         <div>
@@ -224,6 +432,9 @@ export function LuxuryTemplate({ brandName, dealerName, cars, contactInfo, confi
                     </div>
                 </div>
             </footer>
+
+            {/* WhatsApp Float Button */}
+            <WhatsAppButton phone={contactInfo.phone} />
         </div>
     );
 }

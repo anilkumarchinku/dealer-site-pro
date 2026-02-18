@@ -60,7 +60,6 @@ export function TemplateSelector({
     family: 'bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600',
     sporty: 'bg-gradient-to-br from-red-500 via-red-600 to-orange-600',
     professional: 'bg-gradient-to-br from-gray-500 via-gray-600 to-cyan-600',
-    modern: 'bg-gradient-to-br from-violet-500 via-violet-600 to-indigo-600',
   };
 
   return (

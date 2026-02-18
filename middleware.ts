@@ -61,21 +61,48 @@ export async function middleware(request: NextRequest) {
 
     // ── Custom domain routing (non-Vercel, non-BASE_DOMAIN hosts) ──────────
     // A dealer may point their own domain (abcmotors.com) here.
-    // In that case we look up the slug from the dealer_domains table via
-    // the /api/domains/resolve route (handled separately).
+    // We resolve the slug via the /api/domains/resolve endpoint and cache it.
     if (!isMainDomain && !USE_SUBDOMAIN) {
-        // Unknown host — treat as a custom domain dealer site
+        // ── Try subdomain-style slug extraction first ────────────────────────
         const slug = extractSlugFromHostname(hostname, BASE_DOMAIN)
         if (slug) {
+            domainCache.set(hostname, { slug, expires: Date.now() + CACHE_TTL })
             const url = request.nextUrl.clone()
             url.pathname = `/sites/${slug}${pathname}`
             return NextResponse.rewrite(url)
         }
-        // Custom domain (abcmotors.com) — rewrite to /sites/[custom-domain]
-        // The page.tsx will resolve it via dealer_domains lookup
-        const url = request.nextUrl.clone()
-        url.pathname = `/sites/${hostname}${pathname}`
-        return NextResponse.rewrite(url)
+
+        // ── Check in-memory cache ────────────────────────────────────────────
+        const cached = domainCache.get(hostname)
+        if (cached && cached.expires > Date.now()) {
+            const url = request.nextUrl.clone()
+            url.pathname = `/sites/${cached.slug}${pathname}`
+            return NextResponse.rewrite(url)
+        }
+
+        // ── Look up custom domain via resolve API ────────────────────────────
+        try {
+            const resolveUrl = new URL(request.url)
+            resolveUrl.pathname = '/api/domains/resolve'
+            resolveUrl.search = `?domain=${encodeURIComponent(hostname)}`
+
+            const res = await fetch(resolveUrl.toString(), {
+                signal: AbortSignal.timeout(2000), // 2s timeout
+            })
+
+            if (res.ok) {
+                const { slug: resolvedSlug } = await res.json() as { slug: string }
+                domainCache.set(hostname, { slug: resolvedSlug, expires: Date.now() + CACHE_TTL })
+                const url = request.nextUrl.clone()
+                url.pathname = `/sites/${resolvedSlug}${pathname}`
+                return NextResponse.rewrite(url)
+            }
+        } catch {
+            // Timeout or error — fall through to not-found
+        }
+
+        // ── Domain not found ─────────────────────────────────────────────────
+        return NextResponse.redirect(new URL(`https://${BASE_DOMAIN}/not-found`, request.url))
     }
 
     // ── Auth guard (only on main domain) ─────────────────────

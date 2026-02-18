@@ -28,6 +28,11 @@ export default function OnboardingLayout({
         return <>{children}</>;
     }
 
+    // Step 4 is invisible (own layout), so map steps 5→4 and 6→5
+    // giving 5 visible progress steps: Info, Brands, Services, Customize, Review
+    const progressStep = step > 4 ? step - 1 : step;
+    const progressLabels = ["Your Info", "Brands", "Services", "Customize", "Review"];
+
     return (
         <div className="min-h-screen flex flex-col bg-background">
             {/* Header - shadcn/ui style */}
@@ -52,7 +57,7 @@ export default function OnboardingLayout({
 
             {/* Progress */}
             <div className="container max-w-3xl mx-auto w-full px-8 pt-12 pb-8">
-                <Progress currentStep={step} />
+                <Progress currentStep={progressStep} totalSteps={5} labels={progressLabels} />
             </div>
 
             {/* Main Content */}

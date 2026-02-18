@@ -22,6 +22,7 @@ import {
     LogOut,
     ChevronDown,
     Star,
+    Rocket,
 } from "lucide-react";
 
 const navGroups = [
@@ -48,6 +49,12 @@ const navGroups = [
         ],
     },
     {
+        label: "Publish",
+        items: [
+            { name: "Deploy Site", href: "/dashboard/deployment", icon: Rocket },
+        ],
+    },
+    {
         label: "Configure",
         items: [
             { name: "Domains",  href: "/dashboard/domains",  icon: Globe       },
@@ -69,12 +76,13 @@ export default function DashboardLayout({
     const router   = useRouter();
     const { data, updateData, setDealerId, setDealerSlug } = useOnboardingStore();
 
-    // Sync real dealer data from DB on first load (covers post-login case
-    // where the Zustand store is empty because onboarding wasn't done in
-    // this browser session).
+    // On every mount: verify the user has completed onboarding.
+    // The early-exit on data.dealershipName was intentionally removed —
+    // we must always hit the DB to check onboarding_complete because the
+    // Zustand store can be pre-populated (e.g. after register) even though
+    // the user never finished onboarding.
     useEffect(() => {
         if (!isSupabaseReady()) return;
-        if (data.dealershipName) return; // store already populated
 
         async function syncFromDB() {
             try {
@@ -83,14 +91,21 @@ export default function DashboardLayout({
 
                 const { data: dealer } = await supabase
                     .from('dealers')
-                    .select('id, dealership_name, tagline, location, full_address, phone, whatsapp, email, gstin, sells_new_cars, sells_used_cars, style_template, slug')
+                    .select('id, dealership_name, tagline, location, full_address, phone, whatsapp, email, gstin, sells_new_cars, sells_used_cars, style_template, slug, onboarding_complete')
                     .eq('user_id', user.id)
                     .maybeSingle();
 
-                if (!dealer) return;
+                // No dealer record or onboarding not finished → send back to onboarding
+                if (!dealer || !dealer.onboarding_complete) {
+                    router.replace('/onboarding/step-1');
+                    return;
+                }
 
                 setDealerId(dealer.id);
                 if (dealer.slug) setDealerSlug(dealer.slug);
+
+                // Store already populated — skip the extra brands query
+                if (data.dealershipName) return;
 
                 const { data: brands } = await supabase
                     .from('dealer_brands')

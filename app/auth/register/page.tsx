@@ -1,6 +1,5 @@
 "use client"
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -11,7 +10,6 @@ import { registerUser } from "@/lib/db/auth";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 
 export default function RegisterPage() {
-    const router = useRouter();
     const { setDealerId, updateData, reset } = useOnboardingStore();
 
     const [form, setForm] = useState({
@@ -82,8 +80,10 @@ export default function RegisterPage() {
             }
 
             setSuccess(true);
-            // Small delay so user sees success state, then redirect to onboarding
-            setTimeout(() => router.push("/onboarding/step-1"), 1000);
+            // Small delay so user sees success state, then full reload to /onboarding
+            // (window.location.href ensures the Supabase session cookie is flushed
+            //  before the request hits middleware — router.push races with it)
+            setTimeout(() => { window.location.href = "/onboarding/step-1"; }, 1000);
 
         } finally {
             setLoading(false);
