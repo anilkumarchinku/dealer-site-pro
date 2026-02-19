@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { saveDealer } from "@/lib/actions/save-dealer";
-import { dealerSiteUrl, dealerSiteHref } from "@/lib/utils/domain";
+import { dealerSiteUrl, dealerSiteHref, BASE_DOMAIN } from "@/lib/utils/domain";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -234,11 +234,7 @@ export default function Step6Page() {
                                         Your dealer website will be live at:
                                     </p>
                                     <div className="rounded-lg px-3 py-2 border border-blue-500/30 bg-background font-mono text-sm text-blue-600 dark:text-blue-400 break-all">
-                                        {data.dealershipName
-                                            ?.toLowerCase()
-                                            .replace(/\s+/g, "-")
-                                            .replace(/[^a-z0-9-]/g, "")
-                                        }.dealersitepro.com
+                                        {dealerSiteUrl(data.slug || data.dealershipName?.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "") || "")}
                                     </div>
                                     <div className="mt-3 flex items-center gap-2 text-xs text-blue-600 dark:text-blue-400">
                                         <Shield className="w-4 h-4" />
