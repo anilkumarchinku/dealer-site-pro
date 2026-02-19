@@ -89,7 +89,7 @@ export function ModernTemplate({
     const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
     // Get template configuration with brand colors
-    const config = generateTemplateConfig(brandName, 'modern');
+    const config = generateTemplateConfig(brandName, 'professional');
     const { brandColors } = config;
 
     // Handle scroll
