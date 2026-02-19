@@ -22,9 +22,10 @@ import {
     LogOut,
     ChevronDown,
     Star,
-    Rocket,
     Layout,
+    Store,
 } from "lucide-react";
+import { dealerSiteHref } from "@/lib/utils/domain";
 
 const navGroups = [
     {
@@ -52,16 +53,15 @@ const navGroups = [
     {
         label: "My Website",
         items: [
-            { name: "My Webpage",  href: "/dashboard/webpage",    icon: Layout  },
-            { name: "Deploy Site", href: "/dashboard/deployment", icon: Rocket  },
+            { name: "My Webpage", href: "/dashboard/webpage",  icon: Layout },
+            { name: "Domains",   href: "/dashboard/domains",  icon: Store  },
         ],
     },
     {
         label: "Configure",
         items: [
-            { name: "Domains",  href: "/dashboard/domains",  icon: Globe       },
-            { name: "Settings", href: "/dashboard/settings", icon: Settings    },
-            { name: "Help",     href: "/dashboard/help",     icon: HelpCircle  },
+            { name: "Settings", href: "/dashboard/settings", icon: Settings   },
+            { name: "Help",     href: "/dashboard/help",     icon: HelpCircle },
         ],
     },
 ];
@@ -76,7 +76,7 @@ export default function DashboardLayout({
 }) {
     const pathname = usePathname();
     const router   = useRouter();
-    const { data, updateData, setDealerId, setDealerSlug } = useOnboardingStore();
+    const { data, updateData, setDealerId, setDealerSlug, dealerSlug } = useOnboardingStore();
 
     // On every mount: verify the user has completed onboarding.
     // The early-exit on data.dealershipName was intentionally removed —
@@ -228,13 +228,15 @@ export default function DashboardLayout({
                             {/* Divider */}
                             <div className="w-px h-5 bg-border" />
 
-                            <Link
-                                href="/preview"
+                            <a
+                                href={dealerSlug ? dealerSiteHref(dealerSlug) : '#'}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors px-2 py-1.5 rounded-lg hover:bg-muted"
                             >
                                 <Globe className="w-4 h-4" />
                                 View Website
-                            </Link>
+                            </a>
                             <button
                                 onClick={handleSignOut}
                                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors px-2 py-1.5 rounded-lg hover:bg-muted"

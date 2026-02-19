@@ -136,7 +136,10 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
     if (!dealer) return null
 
     // ── 3. Fetch brands, template config, vehicles, and services in parallel
-    const [brandsResult, configResult, vehiclesResult, servicesResult] = await Promise.all([
+    // For brand-specific sites, also try dealer_site_configs for per-brand overrides
+    const brandSlugForConfig = brandFilter ? brandToUrlSlug(brandFilter) : null
+
+    const [brandsResult, mainConfigResult, siteConfigResult, vehiclesResult, servicesResult] = await Promise.all([
         supabase
             .from('dealer_brands')
             .select('brand_name')
@@ -146,6 +149,15 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
             .select('hero_title, hero_subtitle, hero_cta_text, working_hours')
             .eq('dealer_id', dealer.id)
             .single(),
+        // Only query dealer_site_configs when rendering a brand-specific page
+        brandSlugForConfig
+            ? supabase
+                .from('dealer_site_configs')
+                .select('style_template, hero_title, hero_subtitle, hero_cta_text, working_hours, tagline')
+                .eq('dealer_id', dealer.id)
+                .eq('brand_slug', brandSlugForConfig)
+                .maybeSingle()
+            : Promise.resolve({ data: null }),
         supabase
             .from('vehicles')
             .select('*')
@@ -159,24 +171,27 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
             .eq('is_active', true),
     ])
 
+    // Brand-specific config takes priority over the shared main config
+    const cfg = siteConfigResult.data ?? mainConfigResult.data
+
     return {
         id:              dealer.id,
         dealership_name: dealer.dealership_name,
-        tagline:         dealer.tagline ?? null,
+        tagline:         (siteConfigResult.data?.tagline ?? dealer.tagline) ?? null,
         phone:           dealer.phone,
         email:           dealer.email,
         location:        dealer.location,
         full_address:    dealer.full_address ?? null,
         slug:            dealer.slug,
-        style_template:  dealer.style_template ?? 'family',
+        style_template:  siteConfigResult.data?.style_template ?? dealer.style_template ?? 'family',
         sells_new_cars:  dealer.sells_new_cars ?? false,
         sells_used_cars: dealer.sells_used_cars ?? false,
         brands:          brandsResult.data?.map(b => b.brand_name) ?? [],
         vehicles:        (vehiclesResult.data ?? []) as DBVehicle[],
-        hero_title:      configResult.data?.hero_title ?? null,
-        hero_subtitle:   configResult.data?.hero_subtitle ?? null,
-        hero_cta_text:   configResult.data?.hero_cta_text ?? null,
-        working_hours:   configResult.data?.working_hours ?? null,
+        hero_title:      cfg?.hero_title ?? null,
+        hero_subtitle:   cfg?.hero_subtitle ?? null,
+        hero_cta_text:   cfg?.hero_cta_text ?? null,
+        working_hours:   cfg?.working_hours ?? null,
         services:        servicesResult.data?.map(s => s.service_name) ?? null,
         brandFilter,
     }
