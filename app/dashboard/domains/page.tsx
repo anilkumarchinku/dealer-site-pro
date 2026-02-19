@@ -84,13 +84,16 @@ export default function DomainSettingsPage() {
     }
 
     async function handleVerifyDNS() {
-        if (!dealerId) return
+        if (!pendingCustomDomain) return
         setVerifying(true)
         try {
             const response = await fetch('/api/domains/verify-dns', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ dealerId }),
+                body: JSON.stringify({
+                    domainId: pendingCustomDomain.id,
+                    domain: pendingCustomDomain.domain,
+                }),
             })
             if (response.ok) {
                 await fetchDomains()

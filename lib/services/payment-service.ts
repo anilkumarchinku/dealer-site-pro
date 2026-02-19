@@ -1,7 +1,10 @@
 /**
  * Razorpay Payment Service
- * Handles subscription payments for PRO and PREMIUM tiers
+ * Handles subscription payments for PRO (₹499/mo) and PREMIUM (₹999/mo) tiers.
+ * Uses Razorpay REST API via fetch — no npm SDK required.
  */
+
+import { createHmac } from 'crypto'
 
 export interface CreateSubscriptionParams {
     dealerId: string
@@ -16,132 +19,100 @@ export interface SubscriptionResult {
     error?: string
 }
 
+function razorpayAuth(): string {
+    const keyId = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID
+    const keySecret = process.env.RAZORPAY_KEY_SECRET
+    return Buffer.from(`${keyId}:${keySecret}`).toString('base64')
+}
+
+function isConfigured(): boolean {
+    const keyId = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID
+    const keySecret = process.env.RAZORPAY_KEY_SECRET
+    return !!(
+        keyId && !keyId.includes('xxx') &&
+        keySecret && keySecret !== 'your_razorpay_secret_key_here'
+    )
+}
+
 /**
- * Creates a Razorpay subscription for domain tiers
- * 
- * PRO Tier: ₹499/month
- * PREMIUM Tier: ₹999/month
+ * Creates a Razorpay subscription for PRO or PREMIUM tier.
  */
 export async function createDomainSubscription(
     params: CreateSubscriptionParams
 ): Promise<SubscriptionResult> {
-    try {
-        const { dealerId, tier, domainId } = params
+    const { dealerId, tier, domainId } = params
 
-        // Plan IDs (replace with your actual Razorpay plan IDs)
-        const planIds = {
-            pro: process.env.RAZORPAY_PRO_PLAN_ID || 'plan_pro_monthly',
-            premium: process.env.RAZORPAY_PREMIUM_PLAN_ID || 'plan_premium_monthly'
+    if (!isConfigured()) {
+        return { success: false, error: 'Payment gateway not configured. Please contact support.' }
+    }
+
+    const planIds: Record<string, string | undefined> = {
+        pro: process.env.RAZORPAY_PRO_PLAN_ID,
+        premium: process.env.RAZORPAY_PREMIUM_PLAN_ID,
+    }
+
+    const planId = planIds[tier]
+    if (!planId || planId.startsWith('plan_xxx')) {
+        return { success: false, error: `${tier.toUpperCase()} plan not configured. Please contact support.` }
+    }
+
+    try {
+        const response = await fetch('https://api.razorpay.com/v1/subscriptions', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Basic ${razorpayAuth()}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                plan_id: planId,
+                customer_notify: 1,
+                total_count: 120, // up to 10 years; cancel anytime
+                quantity: 1,
+                notes: {
+                    dealer_id: dealerId,
+                    domain_id: domainId ?? '',
+                    tier,
+                },
+            }),
+        })
+
+        const data = await response.json()
+
+        if (!response.ok) {
+            const msg = data?.error?.description ?? 'Failed to create subscription'
+            console.error('Razorpay subscription error:', data)
+            return { success: false, error: msg }
         }
 
-        const planId = planIds[tier]
-
-        // In production, call Razorpay API to create subscription
-        // For now, return mock response
-
-        // Example Razorpay integration:
-        /*
-        const Razorpay = require('razorpay');
-        const razorpay = new Razorpay({
-          key_id: process.env.RAZORPAY_KEY_ID,
-          key_secret: process.env.RAZORPAY_KEY_SECRET
-        });
-    
-        const subscription = await razorpay.subscriptions.create({
-          plan_id: planId,
-          customer_notify: 1,
-          total_count: 12, // 12 months
-          quantity: 1,
-          notes: {
-            dealer_id: dealerId,
-            domain_id: domainId || '',
-            tier: tier
-          }
-        });
-    
-        return {
-          success: true,
-          subscriptionId: subscription.id,
-          orderId: subscription.short_url
-        };
-        */
-
-        // Mock response for development
         return {
             success: true,
-            subscriptionId: `sub_${Date.now()}`,
-            orderId: `order_${Date.now()}`
+            subscriptionId: data.id,
+            orderId: data.id, // for subscriptions, orderId == subscriptionId
         }
     } catch (error) {
-        console.error('Error creating subscription:', error)
-        return {
-            success: false,
-            error: 'Failed to create subscription'
-        }
+        console.error('Error calling Razorpay API:', error)
+        return { success: false, error: 'Payment service unavailable. Please try again.' }
     }
 }
 
 /**
- * Verifies Razorpay payment signature
+ * Verifies Razorpay payment signature for subscriptions.
+ * Razorpay signs subscriptions as HMAC-SHA256(payment_id + "|" + subscription_id).
  */
 export function verifyPaymentSignature(
-    orderId: string,
     paymentId: string,
+    subscriptionId: string,
     signature: string
 ): boolean {
-    // In production, verify using Razorpay secret
-    /*
-    const crypto = require('crypto');
-    const generatedSignature = crypto
-      .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET)
-      .update(orderId + '|' + paymentId)
-      .digest('hex');
-    
-    return generatedSignature === signature;
-    */
-
-    // Mock verification for development
-    return true
-}
-
-/**
- * Initializes Razorpay checkout
- * Call this from frontend to open payment modal
- */
-export function initializeRazorpayCheckout(
-    orderId: string,
-    amount: number,
-    tier: 'pro' | 'premium',
-    onSuccess: (response: any) => void,
-    onFailure: (error: any) => void
-) {
-    // This should be called from the frontend with Razorpay SDK loaded
-    const options = {
-        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
-        subscription_id: orderId,
-        name: 'DealerSite Pro',
-        description: `${tier.toUpperCase()} Tier Subscription`,
-        image: '/logo.png',
-        handler: function (response: any) {
-            onSuccess(response)
-        },
-        prefill: {
-            name: '',
-            email: '',
-            contact: ''
-        },
-        notes: {
-            tier: tier
-        },
-        theme: {
-            color: tier === 'pro' ? '#2563eb' : '#9333ea'
-        },
-        modal: {
-            ondismiss: function () {
-                onFailure({ error: 'Payment cancelled by user' })
-            }
-        }
+    const secret = process.env.RAZORPAY_KEY_SECRET
+    if (!secret || secret === 'your_razorpay_secret_key_here') {
+        console.warn('RAZORPAY_KEY_SECRET not configured — skipping signature verification')
+        return true // fail-open in dev; remove this for strict prod
     }
 
-    return options
+    const generated = createHmac('sha256', secret)
+        .update(`${paymentId}|${subscriptionId}`)
+        .digest('hex')
+
+    return generated === signature
 }
