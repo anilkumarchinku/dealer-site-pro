@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Loader2, CheckCircle, XCircle, Globe, Edit3 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { BASE_DOMAIN, USE_SUBDOMAIN } from "@/lib/utils/domain";
 
 // Sanitize input into a URL-safe slug
 function toSlug(value: string) {
@@ -137,10 +138,9 @@ export default function Step1Page() {
 
     useEffect(() => { setStep(1); }, [setStep]);
 
-    // Site base URL for the preview
-    const baseUrl = typeof window !== "undefined"
-        ? window.location.origin
-        : "https://dealer-site-pro.vercel.app";
+    // URL preview helpers — driven by env vars, not browser location
+    const urlPrefix = USE_SUBDOMAIN ? null          : `${BASE_DOMAIN}/sites/`
+    const urlSuffix = USE_SUBDOMAIN ? `.${BASE_DOMAIN}` : null
 
     return (
         <Card className="animate-fade-in">
@@ -179,10 +179,12 @@ export default function Step1Page() {
                             slugStatus === "invalid"   ? "border-red-500/40    bg-red-500/5"     :
                                                          "border-border        bg-muted/30"
                         )}>
-                            {/* Fixed prefix */}
-                            <span className="px-3 py-2.5 text-sm text-muted-foreground bg-muted/50 border-r border-border whitespace-nowrap select-none">
-                                {baseUrl}/sites/
-                            </span>
+                            {/* Path-based mode: [domain/sites/] [slug] */}
+                            {urlPrefix && (
+                                <span className="px-3 py-2.5 text-sm text-muted-foreground bg-muted/50 border-r border-border whitespace-nowrap select-none">
+                                    {urlPrefix}
+                                </span>
+                            )}
 
                             {/* Editable slug */}
                             <input
@@ -193,6 +195,13 @@ export default function Step1Page() {
                                 placeholder="your-dealership-name"
                                 spellCheck={false}
                             />
+
+                            {/* Subdomain mode: [slug] [.domain] */}
+                            {urlSuffix && (
+                                <span className="px-3 py-2.5 text-sm text-muted-foreground bg-muted/50 border-l border-border whitespace-nowrap select-none">
+                                    {urlSuffix}
+                                </span>
+                            )}
 
                             {/* Status icon */}
                             <div className="px-3">
@@ -223,7 +232,11 @@ export default function Step1Page() {
                         <p className="text-xs text-muted-foreground flex items-center gap-1.5">
                             <Edit3 className="w-3 h-3 shrink-0" />
                             After you pick brands, e.g.{" "}
-                            <code className="font-mono bg-muted px-1 rounded">{siteSlug}-toyota</code>{" "}
+                            <code className="font-mono bg-muted px-1 rounded">
+                                {USE_SUBDOMAIN
+                                    ? `${siteSlug}-toyota${urlSuffix}`
+                                    : `${urlPrefix}${siteSlug}-toyota`}
+                            </code>{" "}
                             will also work automatically.
                         </p>
                     </div>
