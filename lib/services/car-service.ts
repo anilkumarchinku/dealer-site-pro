@@ -187,35 +187,81 @@ export async function getSimilarCars(carId: string, limit: number = 4): Promise<
 // ... other functions can be similarly adapted or just use getAllCars internals
 
 /**
- * Helper to map DB result to Car interface
+ * Helper to map DB result to Car interface.
+ * Handles both old JSONB-column schema and the current
+ * flat car_catalog schema (price_min_paise / price_max_paise).
  */
 function mapDbCarToCar(dbCar: any): Car {
+    // Build pricing from flat paise columns (car_catalog table)
+    const minPaise = dbCar.price_min_paise ?? 0
+    const maxPaise = dbCar.price_max_paise ?? 0
+    const minINR   = minPaise > 0 ? Math.round(minPaise / 100) : null
+    const maxINR   = maxPaise > 0 ? Math.round(maxPaise / 100) : null
+
+    const pricing = dbCar.pricing ?? {
+        exShowroom: {
+            min:      minINR,
+            max:      maxINR,
+            currency: 'INR' as const,
+        },
+    }
+
+    // Ensure exShowroom always exists to avoid downstream crashes
+    if (!pricing.exShowroom) {
+        pricing.exShowroom = { min: minINR, max: maxINR, currency: 'INR' as const }
+    }
+
     return {
-        id: dbCar.id,
-        make: dbCar.make,
-        model: dbCar.model,
-        variant: dbCar.variant,
-        year: dbCar.year,
+        id:       dbCar.id,
+        make:     dbCar.make,
+        model:    dbCar.model,
+        variant:  dbCar.variant,
+        year:     dbCar.year,
         bodyType: dbCar.body_type,
-        segment: dbCar.segment,
-        price: dbCar.price, // display string
+        segment:  dbCar.segment,
+        price:    minINR ? `₹${minINR.toLocaleString('en-IN')}` : (dbCar.price ?? undefined),
 
-        // Reconstruct complex objects from JSONB columns
-        pricing: dbCar.pricing || {},
-        engine: dbCar.engine || { type: dbCar.fuel_type },
-        transmission: dbCar.transmission || { type: dbCar.transmission_type },
-        performance: dbCar.performance || { fuelEfficiency: dbCar.fuel_efficiency },
-        dimensions: dbCar.dimensions || { seatingCapacity: dbCar.seating_capacity },
-        features: dbCar.features || { keyFeatures: [] },
-        images: dbCar.images || {},
-        colors: dbCar.colors || [],
-        meta: dbCar.meta || {},
-
-        // Optional fields
-        rating: dbCar.rating,
-        variants: dbCar.variants,
+        pricing,
+        engine:       dbCar.engine       ?? { type: dbCar.fuel_type ?? 'Petrol', power: '—', torque: '—' },
+        transmission: dbCar.transmission ?? { type: dbCar.transmission ?? 'Manual' },
+        performance:  dbCar.performance  ?? { fuelEfficiency: dbCar.fuel_efficiency },
+        dimensions:   dbCar.dimensions   ?? { seatingCapacity: dbCar.seating_capacity ?? 5 },
+        features:     dbCar.features     ?? { keyFeatures: [] },
+        images:       dbCar.images       ?? {
+            hero:     dbCar.image_url ?? '/placeholder-car.jpg',
+            exterior: dbCar.image_url ? [dbCar.image_url] : [],
+            interior: [],
+        },
+        colors:    dbCar.colors     ?? [],
+        meta:      dbCar.meta       ?? {
+            lastUpdated: dbCar.scraped_at ?? undefined,
+            isAvailable: dbCar.is_active ?? true,
+        },
+        rating:      dbCar.rating,
+        variants:    dbCar.variants,
         competitors: dbCar.competitors,
-        ownership: dbCar.ownership,
+        ownership:   dbCar.ownership,
     };
+}
+
+export async function getFuelEfficientCars(limit: number = 6): Promise<Car[]> {
+    const { data } = await supabase
+        .from(CAR_TABLE)
+        .select('*')
+        .in('fuel_type', ['Electric', 'Hybrid', 'CNG'])
+        .eq('is_active', true)
+        .order('year', { ascending: false })
+        .limit(limit)
+    return (data ?? []).map(mapDbCarToCar)
+}
+
+export async function getTopRatedCars(limit: number = 6): Promise<Car[]> {
+    const { data } = await supabase
+        .from(CAR_TABLE)
+        .select('*')
+        .eq('is_active', true)
+        .order('year', { ascending: false })
+        .limit(limit)
+    return (data ?? []).map(mapDbCarToCar)
 }
 

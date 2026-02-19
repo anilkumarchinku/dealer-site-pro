@@ -15,7 +15,6 @@ export function getBrandHeroImage(brandName: string): string {
         'bentley': 'jpg',
         'bmw': 'png',
         'byd': 'webp',
-        'citroen': 'jpg',
         'force-motors': 'png',
         'honda': 'jpg',
         'hyundai': 'png',
@@ -26,26 +25,25 @@ export function getBrandHeroImage(brandName: string): string {
         'lamborghini': 'jpg',
         'land-rover': 'jpg',
         'lexus': 'png',
-        'mahindra': 'jpg',
         'maruti-suzuki': 'jpg',
         'mercedes-benz': 'jpg',
         'mg': 'jpg',
-        'nissan': 'jpg',
         'ola': 'jpg',
         'ola-electric': 'jpg',
         'porsche': 'jpg',
-        'renault': 'jpg',
         'skoda': 'jpg',
         'tata-motors': 'jpg',
         'tesla': 'jpg',
-        'toyota': 'png',
-        'volkswagen': 'jpg',
+        'toyota': 'jpg',
         'volvo': 'jpg',
     };
 
-    const extension = brandImageMap[normalizedBrand] || 'jpg';
-    return `/assets/hero/${normalizedBrand}.${extension}`;
+    // If brand not in the map, return the default hero rather than a broken path
+    if (!brandImageMap[normalizedBrand]) {
+        return DEFAULT_HERO_IMAGE;
+    }
+    return `/assets/hero/${normalizedBrand}.${brandImageMap[normalizedBrand]}`;
 }
 
 // Fallback hero image if brand not found
-export const DEFAULT_HERO_IMAGE = '/assets/hero/toyota.png';
+export const DEFAULT_HERO_IMAGE = '/assets/hero/toyota.jpg';

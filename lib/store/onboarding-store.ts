@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { OnboardingData, DealerType, Brand, Service, StyleTemplate, InventorySystem } from '@/lib/types';
+import type { OnboardingData, DealerType, DealerCategory, Brand, Service, StyleTemplate, InventorySystem } from '@/lib/types';
 
 interface OnboardingStore {
     // Current step (1-5)
@@ -27,6 +27,7 @@ interface OnboardingStore {
     // Computed
     isComplete: () => boolean;
     getDealerType: () => DealerType | null;
+    isUsedCarDealer: () => boolean;
 }
 
 const initialData: Partial<OnboardingData> = {
@@ -47,6 +48,10 @@ const initialData: Partial<OnboardingData> = {
     services: [],
     styleTemplate: 'family',
     dealerType: null,
+    dealerCategory: undefined,
+    brandColor: undefined,
+    brandColorPreset: undefined,
+    brandLogo: undefined,
     templateConfig: {
         heroTitle: '',
         heroSubtitle: '',
@@ -129,6 +134,11 @@ export const useOnboardingStore = create<OnboardingStore>()(
                 }
 
                 return null;
+            },
+
+            isUsedCarDealer: () => {
+                const { data } = get();
+                return data.dealerCategory === 'used';
             },
         }),
         {

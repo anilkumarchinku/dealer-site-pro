@@ -141,6 +141,7 @@ export function SportyTemplate({
                                     className="object-contain"
                                     sizes="40px"
                                     style={{ filter: 'brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,255,255,0.9)) drop-shadow(0 0 20px rgba(255,255,255,0.5))' }}
+                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                                 />
                             </div>
                             <span className="text-xl font-bold">{dealerName}</span>
@@ -470,6 +471,7 @@ export function SportyTemplate({
                                 className="object-contain"
                                 sizes="48px"
                                 style={{ filter: 'brightness(0) invert(1) drop-shadow(0 0 12px rgba(255,255,255,0.9)) drop-shadow(0 0 24px rgba(255,255,255,0.5))' }}
+                                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                             />
                         </div>
                         <div>

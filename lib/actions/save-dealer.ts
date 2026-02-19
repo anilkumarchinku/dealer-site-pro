@@ -73,10 +73,15 @@ export async function saveDealer(
         const { data: { user } } = await supabase.auth.getUser();
 
         if (existingDealerId) {
-            // Happy path: update the dealer created at registration
+            // Happy path: update the dealer created at registration.
+            // Preserve the existing slug if already set; otherwise stamp the new one.
+            const { data: cur } = await supabase
+                .from("dealers").select("slug").eq("id", existingDealerId).maybeSingle();
+            const finalSlug = cur?.slug || slug;
+
             const { error } = await supabase
                 .from("dealers")
-                .update({ ...dealerPayload, slug: undefined, subdomain: undefined })
+                .update({ ...dealerPayload, slug: finalSlug, subdomain: finalSlug })
                 .eq("id", existingDealerId);
 
             if (error) throw error;
@@ -87,15 +92,16 @@ export async function saveDealer(
             if (user) {
                 const { data: stubDealer } = await supabase
                     .from("dealers")
-                    .select("id")
+                    .select("id, slug")
                     .eq("user_id", user.id)
                     .maybeSingle();
 
                 if (stubDealer) {
-                    // Row exists — update it in place
+                    // Row exists — update it in place, preserving existing slug if set
+                    const finalSlug = stubDealer.slug || slug;
                     const { error } = await supabase
                         .from("dealers")
-                        .update({ ...dealerPayload, slug: undefined, subdomain: undefined })
+                        .update({ ...dealerPayload, slug: finalSlug, subdomain: finalSlug })
                         .eq("id", stubDealer.id);
 
                     if (error) throw error;

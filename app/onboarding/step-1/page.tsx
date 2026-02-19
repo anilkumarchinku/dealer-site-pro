@@ -106,6 +106,8 @@ export default function Step1Page() {
         return Object.keys(newErrors).length === 0;
     };
 
+    const isUsedCarDealer = useOnboardingStore((s) => s.isUsedCarDealer());
+
     const handleNext = async () => {
         if (!validate()) return;
         if (slugStatus === "checking") return; // wait for check
@@ -126,7 +128,8 @@ export default function Step1Page() {
                 slug:           siteSlug,
             });
             setStep(2);
-            router.push("/onboarding/step-2");
+            // Route to the correct step-2 based on dealer category
+            router.push(isUsedCarDealer ? "/onboarding/step-2-used" : "/onboarding/step-2");
         } finally {
             setIsSubmitting(false);
         }

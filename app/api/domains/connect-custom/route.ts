@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { isValidDomain } from '@/lib/services/dns-verification-service'
-import { registerDomainOnMainProject } from '@/lib/services/vercel-service'
+import { addDomainToProject, registerDomainOnMainProject } from '@/lib/services/vercel-service'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
 /**
@@ -96,11 +96,28 @@ export async function POST(request: Request) {
             )
         }
 
-        // Attempt to register domain on the main Vercel project.
+        // ── Fetch dealer type to decide which Vercel project to register on ──
+        const { data: dealerInfo } = await supabase
+            .from('dealers')
+            .select('sells_new_cars, sells_used_cars, slug')
+            .eq('id', dealerId)
+            .single()
+
+        // 1st hand (new cars only) → main multi-tenant project
+        // 2nd hand / hybrid        → their individual Vercel project
+        const isFirstHand = dealerInfo?.sells_new_cars === true && dealerInfo?.sells_used_cars === false
+
+        // Attempt to register domain on the appropriate Vercel project.
         // Errors here are non-fatal — domain is already saved in DB.
         let vercelRegistered = false
         try {
-            await registerDomainOnMainProject(customDomain)
+            if (isFirstHand) {
+                await registerDomainOnMainProject(customDomain)
+            } else {
+                const slug = dealerInfo?.slug
+                if (!slug) throw new Error('Dealer slug not found')
+                await addDomainToProject(slug, customDomain)
+            }
             vercelRegistered = true
         } catch (vercelError) {
             console.error('Vercel domain registration failed (non-fatal):', vercelError)

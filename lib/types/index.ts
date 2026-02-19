@@ -5,6 +5,9 @@ export type DealerType =
     | 'used_only'     // Type 3: Used cars only
     | 'hybrid';       // Type 4: Both new and used
 
+// Dealer category selected at the start of onboarding
+export type DealerCategory = 'new' | 'used';
+
 // OEM Brands - Indian Automobile Market
 export type Brand =
     // Mass Market (Popular in India)
@@ -69,8 +72,16 @@ export interface OnboardingData {
     email: string;
     gstin?: string;
     logo?: string;
+    brandLogo?: string; // Base64 or URL — uploaded by used-car dealers
     subdomain?: string; // Auto-generated FREE subdomain
     slug?: string; // URL slug for the subdomain
+
+    // Dealer category chosen at onboarding entry
+    dealerCategory?: DealerCategory;
+
+    // Brand color chosen by used-car dealers (hex, e.g. "#003328")
+    brandColor?: string;
+    brandColorPreset?: string; // Preset palette name e.g. "prestige"
 
     // Step 2: Your Brands
     sellsNewCars: boolean;

@@ -26,12 +26,27 @@ function headers() {
 }
 
 async function vFetch(path: string, init?: RequestInit) {
-    const res = await fetch(`${BASE}${path}`, { ...init, headers: headers() })
-    if (!res.ok) {
-        const body = await res.text()
-        throw new Error(`Vercel API ${path} → ${res.status}: ${body}`)
+    const controller = new AbortController()
+    const timeout    = setTimeout(() => controller.abort(), 30_000)
+    try {
+        const res = await fetch(`${BASE}${path}`, {
+            ...init,
+            headers: headers(),
+            signal: controller.signal,
+        })
+        if (!res.ok) {
+            const body = await res.text()
+            throw new Error(`Vercel API ${path} → ${res.status}: ${body}`)
+        }
+        return res.json()
+    } catch (err) {
+        if ((err as Error).name === 'AbortError') {
+            throw new Error(`Vercel API ${path} timed out after 30s`)
+        }
+        throw err
+    } finally {
+        clearTimeout(timeout)
     }
-    return res.json()
 }
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -104,8 +119,9 @@ export async function createVercelProject(
 }
 
 /**
- * Set environment variables on a Vercel project.
- * Typically the NEXT_PUBLIC_SUPABASE_* vars so the deployed site can read DB.
+ * Set environment variables on a Vercel project — idempotent.
+ * Fetches existing vars first: updates them if they exist, creates if not.
+ * This ensures Redeploy never fails with "env var already exists".
  */
 export async function setProjectEnvVars(
     dealerSlug: string,
@@ -115,17 +131,34 @@ export async function setProjectEnvVars(
     const projectId = `dealer-${dealerSlug}`
     const targets   = ['production', 'preview', 'development'] as const
 
-    const body = Object.entries(envVars).map(([key, value]) => ({
-        key,
-        value,
-        type:   'encrypted',
-        target: targets,
-    }))
+    // Fetch existing env vars to build key→id map
+    let existingMap: Record<string, string> = {}
+    try {
+        const res = await vFetch(`/v10/projects/${projectId}/env${q}`)
+        const envList = (res as { envs?: { id: string; key: string }[] }).envs ?? []
+        for (const e of envList) {
+            existingMap[e.key] = e.id
+        }
+    } catch {
+        // If fetching fails (e.g. project just created), proceed with create-only
+    }
 
-    await vFetch(`/v10/projects/${projectId}/env${q}`, {
-        method: 'POST',
-        body: JSON.stringify(body),
-    })
+    for (const [key, value] of Object.entries(envVars)) {
+        const existingId = existingMap[key]
+        if (existingId) {
+            // PATCH to update the existing var
+            await vFetch(`/v10/projects/${projectId}/env/${existingId}${q}`, {
+                method: 'PATCH',
+                body: JSON.stringify({ value, type: 'encrypted', target: targets }),
+            })
+        } else {
+            // POST to create a new var
+            await vFetch(`/v10/projects/${projectId}/env${q}`, {
+                method: 'POST',
+                body: JSON.stringify([{ key, value, type: 'encrypted', target: targets }]),
+            })
+        }
+    }
 }
 
 /**
