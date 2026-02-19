@@ -38,32 +38,10 @@ export async function middleware(request: NextRequest) {
         hostname.endsWith('.vercel.app')   // Vercel preview/production deployments
 
     // ── Subdomain / custom domain routing ────────────────────
-    // Only active when USE_SUBDOMAIN=true AND we're NOT on the main domain.
-    // Requires wildcard DNS pointing to this app (e.g. *.dealersitepro.com).
-    if (!isMainDomain && USE_SUBDOMAIN) {
-        const slug = extractSlugFromHostname(hostname, BASE_DOMAIN)
-        if (!slug) {
-            return NextResponse.redirect(new URL(`https://${BASE_DOMAIN}/not-found`, request.url))
-        }
-
-        const cached = domainCache.get(hostname)
-        if (cached && cached.expires > Date.now()) {
-            const url = request.nextUrl.clone()
-            url.pathname = `/sites/${cached.slug}${pathname}`
-            return NextResponse.rewrite(url)
-        }
-
-        domainCache.set(hostname, { slug, expires: Date.now() + CACHE_TTL })
-        const url = request.nextUrl.clone()
-        url.pathname = `/sites/${slug}${pathname}`
-        return NextResponse.rewrite(url)
-    }
-
-    // ── Custom domain routing (non-Vercel, non-BASE_DOMAIN hosts) ──────────
-    // A dealer may point their own domain (abcmotors.com) here.
-    // We resolve the slug via the /api/domains/resolve endpoint and cache it.
-    if (!isMainDomain && !USE_SUBDOMAIN) {
-        // ── Try subdomain-style slug extraction first ────────────────────────
+    // Handles both slug.indrav.in subdomains AND custom domains (ganeshmotor.com).
+    // Runs for any host that is not the main domain.
+    if (!isMainDomain) {
+        // 1. Fast path: subdomain-style slug (e.g. ganesh.indrav.in → "ganesh")
         const slug = extractSlugFromHostname(hostname, BASE_DOMAIN)
         if (slug) {
             domainCache.set(hostname, { slug, expires: Date.now() + CACHE_TTL })
@@ -72,7 +50,7 @@ export async function middleware(request: NextRequest) {
             return NextResponse.rewrite(url)
         }
 
-        // ── Check in-memory cache ────────────────────────────────────────────
+        // 2. Check in-memory cache for previously resolved custom domains
         const cached = domainCache.get(hostname)
         if (cached && cached.expires > Date.now()) {
             const url = request.nextUrl.clone()
@@ -80,7 +58,7 @@ export async function middleware(request: NextRequest) {
             return NextResponse.rewrite(url)
         }
 
-        // ── Look up custom domain via resolve API ────────────────────────────
+        // 3. Look up custom domain via resolve API (e.g. ganeshmotor.com)
         try {
             const resolveUrl = new URL(request.url)
             resolveUrl.pathname = '/api/domains/resolve'
@@ -101,7 +79,7 @@ export async function middleware(request: NextRequest) {
             // Timeout or error — fall through to not-found
         }
 
-        // ── Domain not found ─────────────────────────────────────────────────
+        // 4. Nothing matched — domain not registered
         return NextResponse.redirect(new URL(`https://${BASE_DOMAIN}/not-found`, request.url))
     }
 
