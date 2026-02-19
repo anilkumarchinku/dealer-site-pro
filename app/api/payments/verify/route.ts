@@ -18,8 +18,8 @@ export async function POST(request: Request) {
             )
         }
 
-        // Verify signature
-        const isValid = verifyPaymentSignature(orderId, paymentId, signature)
+        // Verify signature — Razorpay signs subscriptions as payment_id|subscription_id
+        const isValid = verifyPaymentSignature(paymentId, subscriptionId ?? orderId, signature)
 
         if (!isValid) {
             return NextResponse.json(

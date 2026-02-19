@@ -1,9 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import { X, Globe, Copy, Check, AlertCircle, Loader2, Palette } from 'lucide-react'
+import { X, Globe, Copy, Check, AlertCircle, Loader2, Palette, CreditCard } from 'lucide-react'
 import { getDNSInstructions } from '@/lib/services/dns-verification-service'
 import { allTemplates, TemplateStyle } from '@/lib/templates/template-styles'
+import { openRazorpayCheckout, type RazorpaySuccessResponse } from '@/lib/utils/razorpay'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
@@ -15,7 +16,7 @@ interface Props {
     onSuccess: () => void
 }
 
-type Step = 'enter-domain' | 'select-template' | 'dns-instructions' | 'verifying' | 'success' | 'failed'
+type Step = 'enter-domain' | 'select-template' | 'payment' | 'dns-instructions' | 'verifying' | 'success' | 'failed'
 
 export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, onSuccess }: Props) {
     const [step, setStep] = useState<Step>('enter-domain')
@@ -31,44 +32,96 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
     const dnsInstructions = domain ? getDNSInstructions(domain) : null
 
     const handleContinueToTemplate = () => {
-        if (domain) {
+        if (domain) setStep('select-template')
+    }
+
+    // Step 2 → payment → domain connect → DNS instructions
+    const handleProceedToPayment = async () => {
+        setError('')
+        setIsLoading(true)
+        setStep('payment')
+
+        try {
+            // 1. Create Razorpay subscription
+            const subRes = await fetch('/api/payments/create-subscription', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ dealerId, tier: 'pro' }),
+            })
+            const subData = await subRes.json()
+
+            if (!subData.success) {
+                setError(subData.error || 'Failed to initialise payment')
+                setStep('select-template')
+                setIsLoading(false)
+                return
+            }
+
+            // 2. Open Razorpay checkout
+            openRazorpayCheckout({
+                subscriptionId: subData.subscriptionId,
+                tier: 'pro',
+                onSuccess: async (paymentData: RazorpaySuccessResponse) => {
+                    // 3. Verify payment
+                    const verifyRes = await fetch('/api/payments/verify', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            orderId: subData.orderId,
+                            paymentId: paymentData.razorpay_payment_id,
+                            signature: paymentData.razorpay_signature,
+                            subscriptionId: paymentData.razorpay_subscription_id,
+                        }),
+                    })
+                    const verifyData = await verifyRes.json()
+
+                    if (!verifyData.success) {
+                        setError('Payment verification failed. Please contact support.')
+                        setStep('select-template')
+                        setIsLoading(false)
+                        return
+                    }
+
+                    // 4. Connect the custom domain
+                    await connectDomain()
+                },
+                onFailure: (err) => {
+                    setError(err.error || 'Payment failed. Please try again.')
+                    setStep('select-template')
+                    setIsLoading(false)
+                },
+            })
+        } catch {
+            setError('Payment initialisation failed. Please try again.')
             setStep('select-template')
+            setIsLoading(false)
         }
     }
 
-    const handleSubmitDomain = async () => {
-        setError('')
-        setIsLoading(true)
-
+    // Called after payment succeeds — registers domain in DB + Vercel
+    const connectDomain = async () => {
         try {
             const response = await fetch('/api/domains/connect-custom', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    dealerId,
-                    customDomain: domain,
-                    templateId: selectedTemplate
-                })
+                body: JSON.stringify({ dealerId, customDomain: domain, templateId: selectedTemplate }),
             })
-
             const result = await response.json()
 
             if (result.success) {
                 setDomainId(result.domain.id)
                 setStep('dns-instructions')
             } else {
-                // Show detailed error message
-                let errorMessage = result.error || 'Failed to add domain'
+                let msg = result.error || 'Failed to add domain'
                 if (result.details && process.env.NODE_ENV === 'development') {
-                    errorMessage += `\n\nDetails: ${result.details}`
+                    msg += `\n\nDetails: ${result.details}`
                 }
-                setError(errorMessage)
-                setStep('enter-domain')
+                setError(msg)
+                setStep('select-template')
             }
-        } catch (err) {
-            console.error('Error submitting domain:', err)
+        } catch {
             setError('Network error. Please check your connection and try again.')
-            setStep('enter-domain')
+            setStep('select-template')
         } finally {
             setIsLoading(false)
         }
@@ -82,9 +135,8 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
             const response = await fetch('/api/domains/verify-dns', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ domainId, domain })
+                body: JSON.stringify({ domainId, domain }),
             })
-
             const result = await response.json()
 
             if (result.success && result.verification.allVerified) {
@@ -97,7 +149,7 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
                 setStep('failed')
                 setError(result.verification?.message || 'DNS verification failed')
             }
-        } catch (err) {
+        } catch {
             setStep('failed')
             setError('Failed to verify DNS. Please try again.')
         }
@@ -115,6 +167,7 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
         setSelectedTemplate('family')
         setDomainId('')
         setError('')
+        setIsLoading(false)
         onClose()
     }
 
@@ -128,7 +181,7 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
                         </div>
                         <div>
                             <DialogTitle>Connect Custom Domain</DialogTitle>
-                            <p className="text-sm text-muted-foreground">PRO Tier - ₹499/month</p>
+                            <p className="text-sm text-muted-foreground">PRO Tier – ₹499/month</p>
                         </div>
                     </div>
                 </DialogHeader>
@@ -138,9 +191,7 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
                     {step === 'enter-domain' && (
                         <div className="space-y-4">
                             <div>
-                                <label className="block text-sm font-semibold mb-2">
-                                    Your Domain Name
-                                </label>
+                                <label className="block text-sm font-semibold mb-2">Your Domain Name</label>
                                 <Input
                                     type="text"
                                     placeholder="example.com"
@@ -159,11 +210,7 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
                                 </div>
                             )}
 
-                            <Button
-                                onClick={handleContinueToTemplate}
-                                disabled={!domain}
-                                className="w-full"
-                            >
+                            <Button onClick={handleContinueToTemplate} disabled={!domain} className="w-full">
                                 Continue
                             </Button>
                         </div>
@@ -175,9 +222,7 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
                             <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-4">
                                 <div className="flex items-center gap-2 mb-1">
                                     <Palette className="w-5 h-5 text-blue-500" />
-                                    <p className="text-sm text-foreground font-semibold">
-                                        Choose Your Website Style
-                                    </p>
+                                    <p className="text-sm text-foreground font-semibold">Choose Your Website Style</p>
                                 </div>
                                 <p className="text-xs text-muted-foreground">
                                     Domain: <strong className="text-foreground">{domain}</strong>
@@ -210,10 +255,14 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
                                 ))}
                             </div>
 
-                            <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-3">
-                                <p className="text-xs text-muted-foreground">
-                                    💡 <strong className="text-foreground">Tip:</strong> You can change the template anytime from your dashboard settings.
-                                </p>
+                            <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-4 flex items-start gap-3">
+                                <CreditCard className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
+                                <div className="text-sm">
+                                    <p className="font-semibold text-foreground">PRO Plan – ₹499/month</p>
+                                    <p className="text-muted-foreground mt-0.5">
+                                        You'll complete payment via Razorpay on the next step. Includes free SSL and DNS setup guide.
+                                    </p>
+                                </div>
                             </div>
 
                             {error && (
@@ -224,44 +273,52 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
                             )}
 
                             <div className="flex gap-3">
-                                <Button
-                                    variant="outline"
-                                    onClick={() => setStep('enter-domain')}
-                                    className="flex-1"
-                                >
+                                <Button variant="outline" onClick={() => setStep('enter-domain')} className="flex-1">
                                     Back
                                 </Button>
-                                <Button
-                                    onClick={handleSubmitDomain}
-                                    disabled={isLoading}
-                                    className="flex-1"
-                                >
+                                <Button onClick={handleProceedToPayment} disabled={isLoading} className="flex-1">
                                     {isLoading ? (
                                         <>
                                             <Loader2 className="w-5 h-5 animate-spin mr-2" />
                                             Processing...
                                         </>
                                     ) : (
-                                        'Continue'
+                                        <>
+                                            <CreditCard className="w-4 h-4 mr-2" />
+                                            Pay & Connect Domain
+                                        </>
                                     )}
                                 </Button>
                             </div>
                         </div>
                     )}
 
+                    {/* Payment in progress (Razorpay popup is open) */}
+                    {step === 'payment' && (
+                        <div className="py-12 text-center">
+                            <CreditCard className="w-16 h-16 text-blue-500 mx-auto mb-4" />
+                            <h3 className="text-lg font-semibold text-foreground mb-2">Complete Payment</h3>
+                            <p className="text-muted-foreground">
+                                Complete the payment in the Razorpay popup to continue.
+                            </p>
+                            <p className="text-xs text-muted-foreground mt-2">
+                                Do not close this window.
+                            </p>
+                        </div>
+                    )}
+
                     {/* Step 3: DNS Instructions */}
                     {step === 'dns-instructions' && dnsInstructions && (
                         <div className="space-y-6">
-                            <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-4">
-                                <p className="text-sm text-foreground font-semibold mb-2">
-                                    📋 Configure these DNS records at your domain registrar:
+                            <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4">
+                                <p className="text-sm text-emerald-600 dark:text-emerald-400 font-semibold mb-1">
+                                    ✅ Payment successful! Now configure DNS.
                                 </p>
                                 <p className="text-xs text-muted-foreground">
-                                    Domain: <strong className="text-foreground">{domain}</strong> • Template: <strong className="capitalize text-foreground">{selectedTemplate}</strong>
+                                    Domain: <strong className="text-foreground">{domain}</strong>
                                 </p>
                             </div>
 
-                            {/* DNS Records Table */}
                             <div className="border border-border rounded-xl overflow-hidden">
                                 <table className="w-full text-sm">
                                     <thead className="bg-muted/50">
@@ -276,9 +333,9 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
                                     <tbody className="divide-y divide-border">
                                         {dnsInstructions.records.map((record, index) => (
                                             <tr key={index} className="hover:bg-muted/30 transition-colors">
-                                                <td className="px-4 py-3 font-mono text-xs text-foreground">{record.type}</td>
-                                                <td className="px-4 py-3 font-mono text-xs text-foreground">{record.name}</td>
-                                                <td className="px-4 py-3 font-mono text-xs text-foreground">{record.value}</td>
+                                                <td className="px-4 py-3 font-mono text-xs">{record.type}</td>
+                                                <td className="px-4 py-3 font-mono text-xs">{record.name}</td>
+                                                <td className="px-4 py-3 font-mono text-xs">{record.value}</td>
                                                 <td className="px-4 py-3 font-mono text-xs text-muted-foreground">{record.ttl}</td>
                                                 <td className="px-4 py-3">
                                                     <button
@@ -298,9 +355,8 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
                                 </table>
                             </div>
 
-                            {/* Step-by-step instructions */}
                             <div>
-                                <h3 className="font-semibold text-foreground mb-3">Step-by-Step Guide:</h3>
+                                <h3 className="font-semibold mb-3">Step-by-Step Guide:</h3>
                                 <ol className="space-y-2">
                                     {dnsInstructions.steps.map((stepText, index) => (
                                         <li key={index} className="flex gap-3">
@@ -313,77 +369,56 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
                                 </ol>
                             </div>
 
-                            <div className="flex gap-3">
-                                <Button
-                                    variant="outline"
-                                    onClick={() => setStep('select-template')}
-                                    className="flex-1"
-                                >
-                                    Back
-                                </Button>
-                                <Button
-                                    onClick={handleVerifyDNS}
-                                    className="flex-1"
-                                >
-                                    Verify Domain
-                                </Button>
-                            </div>
+                            <Button onClick={handleVerifyDNS} className="w-full">
+                                Verify Domain
+                            </Button>
                         </div>
                     )}
 
-                    {/* Step 4: Verifying */}
+                    {/* Verifying */}
                     {step === 'verifying' && (
                         <div className="py-12 text-center">
                             <Loader2 className="w-16 h-16 text-blue-500 animate-spin mx-auto mb-4" />
-                            <h3 className="text-lg font-semibold text-foreground mb-2">Verifying DNS Records...</h3>
+                            <h3 className="text-lg font-semibold mb-2">Verifying DNS Records...</h3>
                             <p className="text-muted-foreground">This may take a few seconds</p>
                         </div>
                     )}
 
-                    {/* Step 5: Success */}
+                    {/* Success */}
                     {step === 'success' && (
                         <div className="py-12 text-center">
                             <div className="w-16 h-16 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <Check className="w-8 h-8 text-emerald-500" />
                             </div>
-                            <h3 className="text-lg font-semibold text-foreground mb-2">Domain Verified! 🎉</h3>
-                            <p className="text-muted-foreground">Your custom domain is now connected and SSL is being provisioned.</p>
-                            <p className="text-sm text-muted-foreground mt-2">Template: <span className="capitalize font-semibold text-foreground">{selectedTemplate}</span></p>
+                            <h3 className="text-lg font-semibold mb-2">Domain Connected! 🎉</h3>
+                            <p className="text-muted-foreground">
+                                Your custom domain is live. SSL is being provisioned automatically.
+                            </p>
                         </div>
                     )}
 
-                    {/* Step 6: Failed */}
+                    {/* Failed */}
                     {step === 'failed' && (
                         <div className="space-y-4">
-                            <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-4">
-                                <div className="flex items-start gap-3">
-                                    <AlertCircle className="w-6 h-6 text-destructive flex-shrink-0" />
-                                    <div>
-                                        <h3 className="font-semibold mb-1">Verification Failed</h3>
-                                        <p className="text-sm text-muted-foreground">{error}</p>
-                                    </div>
+                            <div className="bg-destructive/10 border border-destructive/20 rounded-xl p-4 flex items-start gap-3">
+                                <AlertCircle className="w-6 h-6 text-destructive flex-shrink-0" />
+                                <div>
+                                    <h3 className="font-semibold mb-1">Verification Failed</h3>
+                                    <p className="text-sm text-muted-foreground">{error}</p>
                                 </div>
                             </div>
 
-                            <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4">
-                                <p className="text-sm">
-                                    <strong>Note:</strong> DNS changes can take up to 48 hours to propagate.
-                                    Please wait a few minutes and try again.
+                            <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4">
+                                <p className="text-sm text-muted-foreground">
+                                    DNS changes can take up to 48 hours to propagate. Please wait a few minutes and try again.
                                 </p>
                             </div>
 
                             <div className="flex gap-3">
-                                <Button
-                                    variant="outline"
-                                    onClick={() => setStep('dns-instructions')}
-                                    className="flex-1"
-                                >
+                                <Button variant="outline" onClick={() => setStep('dns-instructions')} className="flex-1">
                                     Review DNS Settings
                                 </Button>
-                                <Button
-                                    onClick={handleVerifyDNS}
-                                    className="flex-1"
-                                >
+                                <Button onClick={handleVerifyDNS} className="flex-1">
                                     Try Again
                                 </Button>
                             </div>
