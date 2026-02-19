@@ -2,11 +2,12 @@
 
 import { useState, useEffect, useCallback } from "react"
 import { useOnboardingStore } from "@/lib/store/onboarding-store"
+import { supabase } from "@/lib/supabase"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import {
     Rocket, Github, Globe, CheckCircle, XCircle,
-    Loader2, RefreshCw, ExternalLink, Clock, Zap
+    Loader2, RefreshCw, ExternalLink, Clock, Zap, Store
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -52,6 +53,41 @@ function getStepStatus(
 
 export default function DeploymentPage() {
     const { dealerId } = useOnboardingStore()
+
+    // Dealer type fetched from Supabase — null while loading
+    const [isFirstHand, setIsFirstHand]     = useState<boolean | null>(null)
+    const [multiTenantUrl, setMultiTenantUrl] = useState<string | null>(null)
+    const [dealerLoading, setDealerLoading] = useState(true)
+
+    // Fetch dealer type on mount
+    useEffect(() => {
+        if (!dealerId) { setDealerLoading(false); return }
+
+        async function load() {
+            try {
+                const { data } = await supabase
+                    .from('dealers')
+                    .select('sells_new_cars, sells_used_cars, slug')
+                    .eq('id', dealerId!)
+                    .single()
+                if (!data) return
+                const firstHand = data.sells_new_cars === true && data.sells_used_cars === false
+                setIsFirstHand(firstHand)
+                if (firstHand && data.slug) {
+                    const baseDomain = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'dealersitepro.com'
+                    const useSubdomain = process.env.NEXT_PUBLIC_USE_SUBDOMAIN === 'true'
+                    setMultiTenantUrl(
+                        useSubdomain
+                            ? `https://${data.slug}.${baseDomain}`
+                            : `https://${baseDomain}/sites/${data.slug}`
+                    )
+                }
+            } finally {
+                setDealerLoading(false)
+            }
+        }
+        load()
+    }, [dealerId])
 
     const [state, setState] = useState<DeployState>({
         deployId:   null,
@@ -134,13 +170,94 @@ export default function DeploymentPage() {
     const isError   = state.status === "error"
     const isIdle    = state.status === "idle"
 
+    // ── Loading state ─────────────────────────────────────────────────────────
+    if (dealerLoading) {
+        return (
+            <div className="flex items-center justify-center h-64">
+                <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" />
+            </div>
+        )
+    }
+
+    // ── 1st Hand Dealer: Multi-Tenant (site already live, no action needed) ──
+    if (isFirstHand) {
+        return (
+            <div className="space-y-6 animate-fade-in">
+                <div>
+                    <h1 className="text-2xl font-bold">Your Site</h1>
+                    <p className="text-muted-foreground">
+                        As an authorised new-car dealer, your site runs on our shared platform — no deployment needed.
+                    </p>
+                </div>
+
+                <Card variant="glass">
+                    <CardHeader>
+                        <CardTitle className="flex items-center gap-2">
+                            <Store className="w-5 h-5 text-emerald-500" />
+                            You&apos;re Live on Our Platform
+                        </CardTitle>
+                        <CardDescription>
+                            Your dealership website is hosted on DealerSite Pro&apos;s shared infrastructure.
+                            Your inventory is always up to date — no redeployment required when you add or update cars.
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-5">
+                        <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/5 p-4 space-y-3">
+                            <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+                                <CheckCircle className="w-4 h-4" />
+                                Site is live
+                            </p>
+                            {multiTenantUrl && (
+                                <a
+                                    href={multiTenantUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 text-sm text-blue-500 hover:underline"
+                                >
+                                    <Globe className="w-4 h-4" />
+                                    {multiTenantUrl}
+                                    <ExternalLink className="w-3 h-3" />
+                                </a>
+                            )}
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-muted-foreground">
+                            <div className="flex items-start gap-2">
+                                <CheckCircle className="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" />
+                                <span>Instant inventory updates — add a car and it appears on your site immediately</span>
+                            </div>
+                            <div className="flex items-start gap-2">
+                                <CheckCircle className="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" />
+                                <span>Shared SSL &amp; CDN — fast, secure, always on</span>
+                            </div>
+                            <div className="flex items-start gap-2">
+                                <CheckCircle className="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" />
+                                <span>Custom domain — connect your own domain in the Domains section</span>
+                            </div>
+                        </div>
+
+                        {multiTenantUrl && (
+                            <Button asChild className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700">
+                                <a href={multiTenantUrl} target="_blank" rel="noopener noreferrer">
+                                    <ExternalLink className="mr-2 w-4 h-4" />
+                                    View My Site
+                                </a>
+                            </Button>
+                        )}
+                    </CardContent>
+                </Card>
+            </div>
+        )
+    }
+
+    // ── 2nd Hand / Hybrid Dealer: Standalone GitHub + Vercel pipeline ─────────
     return (
         <div className="space-y-6 animate-fade-in">
             {/* Header */}
             <div>
                 <h1 className="text-2xl font-bold">Deploy Your Site</h1>
                 <p className="text-muted-foreground">
-                    Publish your dealership website to the web in under 2 minutes
+                    Your site gets its own private GitHub repo and Vercel deployment — fully isolated and customisable.
                 </p>
             </div>
 
@@ -212,8 +329,8 @@ export default function DeploymentPage() {
                         Deployment Pipeline
                     </CardTitle>
                     <CardDescription>
-                        Each deployment creates a GitHub repo with your site code and
-                        publishes it on Vercel automatically.
+                        Each deployment creates a private GitHub repo with your site code
+                        and publishes it on Vercel — your own standalone site, fully separate.
                     </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">

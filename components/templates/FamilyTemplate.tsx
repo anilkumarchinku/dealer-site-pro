@@ -142,6 +142,7 @@ export function FamilyTemplate({
                                     className="object-contain"
                                     sizes="40px"
                                     style={{ filter: 'saturate(1.4) brightness(1.05) drop-shadow(0 4px 10px rgba(0,0,0,0.25)) drop-shadow(0 1px 3px rgba(0,0,0,0.15))' }}
+                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                                 />
                             </div>
                             <span className="text-xl font-semibold">{dealerName}</span>
@@ -508,6 +509,7 @@ export function FamilyTemplate({
                                 className="object-contain"
                                 sizes="48px"
                                 style={{ filter: 'saturate(1.4) brightness(1.05) drop-shadow(0 4px 10px rgba(0,0,0,0.25)) drop-shadow(0 1px 3px rgba(0,0,0,0.15))' }}
+                                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                             />
                         </div>
                         <div>

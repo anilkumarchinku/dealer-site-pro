@@ -27,18 +27,28 @@ const SERVICES: { id: Service; icon: string; title: string; description: string 
 
 export default function Step3Page() {
     const router = useRouter();
-    const { data, updateData, setStep } = useOnboardingStore();
+    const { data, updateData, setStep, isUsedCarDealer } = useOnboardingStore();
 
-    // Pre-select services for new car dealers
+    const isUsed = isUsedCarDealer();
+
+    // Pre-select sensible defaults based on dealer type
     const getDefaultServices = (): Service[] => {
-        const defaults: Service[] = [
+        if (isUsed) {
+            return [
+                "used_car_sales",
+                "financing",
+                "trade_in",
+                "service_maintenance",
+                "insurance",
+            ];
+        }
+        return [
             "new_car_sales",
             "financing",
             "service_maintenance",
             "parts_accessories",
-            "trade_in"
+            "trade_in",
         ];
-        return defaults;
     };
 
     const [selectedServices, setSelectedServices] = useState<Service[]>(
@@ -67,7 +77,8 @@ export default function Step3Page() {
     };
 
     const handleBack = () => {
-        router.push("/onboarding/step-2");
+        // Go back to the correct step-2 based on dealer type
+        router.push(isUsed ? "/onboarding/step-2-used" : "/onboarding/step-2");
     };
 
     useEffect(() => {
@@ -79,7 +90,9 @@ export default function Step3Page() {
             <CardHeader>
                 <CardTitle>What services do you offer?</CardTitle>
                 <CardDescription>
-                    We'll create pages for each service on your website
+                    {isUsed
+                        ? "Tell us what you offer — we'll build service pages tailored for pre-owned car buyers"
+                        : "We'll create pages for each service on your website"}
                 </CardDescription>
             </CardHeader>
 

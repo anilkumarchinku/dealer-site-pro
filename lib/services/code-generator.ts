@@ -51,7 +51,7 @@ export function generateDealerConfig(dealer: DealerConfigInput): string {
     return `// AUTO-GENERATED — do not edit manually.
 // Regenerated on every settings change via dealer-site-pro dashboard.
 
-import type { DealerConfig } from './types/dealer-config'
+import type { DealerConfig } from '@/lib/types/dealer-config'
 
 const config: DealerConfig = {
     // ── Identity ──────────────────────────────────────────────────────────

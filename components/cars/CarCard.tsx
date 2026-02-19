@@ -47,8 +47,9 @@ export function CarCard({
 }: CarCardProps) {
     const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
     const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
-    const priceRange = formatPriceInLakhs(car.pricing.exShowroom.min);
-    const maxPrice = formatPriceInLakhs(car.pricing.exShowroom.max);
+    const exShowroom = car.pricing?.exShowroom ?? { min: null, max: null }
+    const priceRange = formatPriceInLakhs(exShowroom.min);
+    const maxPrice = formatPriceInLakhs(exShowroom.max);
 
     // Normalize placeholder values
     const transmissionType = (!car.transmission?.type || car.transmission.type === 'TBD' || car.transmission.type === 'Transmission')

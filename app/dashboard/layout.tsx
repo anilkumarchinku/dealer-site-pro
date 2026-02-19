@@ -23,6 +23,7 @@ import {
     ChevronDown,
     Star,
     Rocket,
+    Layout,
 } from "lucide-react";
 
 const navGroups = [
@@ -49,9 +50,10 @@ const navGroups = [
         ],
     },
     {
-        label: "Publish",
+        label: "My Website",
         items: [
-            { name: "Deploy Site", href: "/dashboard/deployment", icon: Rocket },
+            { name: "My Webpage",  href: "/dashboard/webpage",    icon: Layout  },
+            { name: "Deploy Site", href: "/dashboard/deployment", icon: Rocket  },
         ],
     },
     {

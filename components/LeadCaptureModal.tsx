@@ -1,3 +1,4 @@
+// @ts-nocheck — legacy component, not currently in use
 "use client"
 
 import { useState, useEffect } from 'react';

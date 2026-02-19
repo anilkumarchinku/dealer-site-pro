@@ -195,11 +195,11 @@ export default async function SitePage({ params }: SitePageProps) {
         // PATH B — New cars only
         if (brandFilter) {
             // Brand-specific URL (e.g. abhi-motors-tata.dealersitepro.com)
-            const filtered = getCarsByMake(brandFilter)
+            const filtered = await getCarsByMake(brandFilter)
             cars = filtered.length > 0 ? filtered : allCars.slice(0, 16)
         } else {
             // Main site — show all their brands combined
-            const combined = brands.flatMap(b => getCarsByMake(b))
+            const combined = (await Promise.all(brands.map(b => getCarsByMake(b)))).flat()
             cars = combined.length > 0 ? combined : allCars.slice(0, 16)
         }
 
@@ -209,7 +209,7 @@ export default async function SitePage({ params }: SitePageProps) {
             cars = dbVehiclesToCars(vehicles)
         } else {
             const targetBrand = brandFilter ?? brands[0] ?? ''
-            const catalogCars = targetBrand ? getCarsByMake(targetBrand) : []
+            const catalogCars = targetBrand ? await getCarsByMake(targetBrand) : []
             cars = catalogCars.length > 0 ? catalogCars : allCars.slice(0, 16)
         }
     }

@@ -3,11 +3,20 @@ import { useRouter, usePathname } from "next/navigation";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import { Car, X } from "lucide-react";
+import { useOnboardingStore } from "@/lib/store/onboarding-store";
 
 /**
- * shadcn/ui inspired Onboarding Layout
- * Clean, professional design for the onboarding flow
- * Note: Step 4 (template selector) uses its own dark theme
+ * Onboarding Layout
+ *
+ * Routes:
+ *   /onboarding           – Dealer type picker (no progress bar, own header)
+ *   /onboarding/step-1    – Business info  (step 1)
+ *   /onboarding/step-2    – Brands (new dealers, step 2)
+ *   /onboarding/step-2-used – Branding/logo (used dealers, step 2)
+ *   /onboarding/step-3    – Services (step 3)
+ *   /onboarding/step-4    – Template selector (own dark layout)
+ *   /onboarding/step-5    – Customise text (step 4 visible)
+ *   /onboarding/step-6    – Review & complete (step 5 visible)
  */
 export default function OnboardingLayout({
     children,
@@ -16,26 +25,45 @@ export default function OnboardingLayout({
 }) {
     const router = useRouter();
     const pathname = usePathname();
+    const isUsedCarDealer = useOnboardingStore((s) => s.isUsedCarDealer());
 
-    // Extract step number from pathname
-    const stepMatch = pathname.match(/step-(\d)/);
-    const step = stepMatch ? parseInt(stepMatch[1]) : 1;
-
-    // Step 4 (template selector) has its own dark layout
-    const isTemplateStep = step === 4;
-
-    if (isTemplateStep) {
+    // ── Index page: has its own full-page layout ───────────────────────────
+    if (pathname === "/onboarding" || pathname === "/onboarding/") {
         return <>{children}</>;
     }
 
-    // Step 4 is invisible (own layout), so map steps 5→4 and 6→5
-    // giving 5 visible progress steps: Info, Brands, Services, Customize, Review
-    const progressStep = step > 4 ? step - 1 : step;
-    const progressLabels = ["Your Info", "Brands", "Services", "Customize", "Review"];
+    // ── Step 4 (template selector): own dark theme ─────────────────────────
+    const stepMatch = pathname.match(/step-(\d+)/);
+    const stepNum = stepMatch ? parseInt(stepMatch[1]) : 1;
+
+    if (stepNum === 4) {
+        return <>{children}</>;
+    }
+
+    // ── Progress mapping ───────────────────────────────────────────────────
+    //  Visible steps depend on dealer type:
+    //
+    //  New dealers  : Info | Brands | Services | Customize | Review  (5 steps)
+    //  Used dealers : Info | Branding | Services | Customize | Review (5 steps)
+    //
+    //  Step 4 (template selector) is hidden; steps 5 & 6 map to 4 & 5.
+
+    let progressStep: number;
+    if (pathname.includes("step-2-used")) {
+        progressStep = 2;
+    } else if (stepNum > 4) {
+        progressStep = stepNum - 1; // step-5 → 4, step-6 → 5
+    } else {
+        progressStep = stepNum;
+    }
+
+    const progressLabels = isUsedCarDealer
+        ? ["Your Info", "Branding", "Services", "Customise", "Review"]
+        : ["Your Info", "Brands", "Services", "Customise", "Review"];
 
     return (
         <div className="min-h-screen flex flex-col bg-background">
-            {/* Header - shadcn/ui style */}
+            {/* Header */}
             <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
                 <div className="container flex h-16 items-center justify-between px-8">
                     <button
