@@ -18,6 +18,8 @@ interface CarGridProps {
     className?: string;
     emptyMessage?: string;
     brandColor?: string;
+    /** Use white/light card styling (for light-background templates like Modern/Family) */
+    light?: boolean;
 }
 
 export function CarGrid({
@@ -29,13 +31,14 @@ export function CarGrid({
     className,
     emptyMessage = 'No cars found matching your criteria.',
     brandColor,
+    light,
 }: CarGridProps) {
     if (cars.length === 0) {
         return (
             <div className="text-center py-12">
                 <div className="text-6xl mb-4">🚗</div>
-                <p className="text-gray-600 text-lg">{emptyMessage}</p>
-                <p className="text-gray-500 text-sm mt-2">Try adjusting your filters</p>
+                <p className={cn('text-lg', light ? 'text-gray-600' : 'text-gray-300')}>{emptyMessage}</p>
+                <p className={cn('text-sm mt-2', light ? 'text-gray-500' : 'text-gray-400')}>Try adjusting your filters</p>
             </div>
         );
     }
@@ -56,6 +59,7 @@ export function CarGrid({
                     onViewDetails={onViewDetails}
                     onCompare={onCompare}
                     brandColor={brandColor}
+                    light={light}
                 />
             ))}
         </div>

@@ -29,6 +29,8 @@ import {
     Clock,
     Calculator,
     Send,
+    Menu,
+    X,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
@@ -73,6 +75,7 @@ export function FamilyTemplate({
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [isScrolled, setIsScrolled] = useState(false);
     const [enquireSidebarOpen, setEnquireSidebarOpen] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     // Lead form state
     const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
@@ -168,8 +171,51 @@ export function FamilyTemplate({
                                     Call Us
                                 </a>
                             </Button>
+                            <button
+                                className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+                                onClick={() => setMobileMenuOpen(o => !o)}
+                                aria-label="Toggle navigation menu"
+                            >
+                                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                            </button>
                         </div>
                     </div>
+                    {/* Mobile menu */}
+                    {mobileMenuOpen && (
+                        <div className="md:hidden border-t border-gray-100 bg-white shadow-lg">
+                            <div className="px-4 py-3 space-y-1">
+                                <button
+                                    onClick={() => { setActiveTab('home'); setMobileMenuOpen(false); }}
+                                    className="block w-full text-left px-3 py-2.5 rounded-xl font-medium text-gray-900 hover:bg-gray-50 transition-colors"
+                                >
+                                    Home
+                                </button>
+                                <button
+                                    onClick={() => { setActiveTab('inventory'); setMobileMenuOpen(false); }}
+                                    className="block w-full text-left px-3 py-2.5 rounded-xl font-medium text-gray-900 hover:bg-gray-50 transition-colors"
+                                >
+                                    Inventory
+                                </button>
+                                <a
+                                    href="#contact"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="block px-3 py-2.5 rounded-xl font-medium text-gray-900 hover:bg-gray-50 transition-colors"
+                                >
+                                    Contact
+                                </a>
+                                <div className="pt-2 border-t border-gray-100">
+                                    <Button
+                                        className="w-full rounded-full text-white"
+                                        style={{ backgroundColor: brandColors.primary }}
+                                        onClick={() => { setEnquireSidebarOpen(true); setMobileMenuOpen(false); }}
+                                    >
+                                        <MessageSquare className="w-4 h-4 mr-2" />
+                                        Enquire Now
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </nav>
 
@@ -204,7 +250,7 @@ export function FamilyTemplate({
                                             Browse Cars
                                             <ArrowRight className="ml-2 w-5 h-5" />
                                         </Button>
-                                        <Button size="lg" variant="outline" className="rounded-full" style={{ borderColor: brandColors.primary, color: brandColors.primary }}>
+                                        <Button size="lg" variant="outline" className="rounded-full" style={{ borderColor: brandColors.primary, color: brandColors.primary }} asChild>
                                             <a href="#contact">Talk to Our Team</a>
                                         </Button>
                                     </div>
@@ -279,9 +325,9 @@ export function FamilyTemplate({
                                 </span>
                                 <h2 className="text-4xl font-bold mt-2">Family-Friendly Vehicles</h2>
                             </div>
-                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} />
+                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light />
                             <div className="text-center mt-8">
-                                <Button variant="outline" size="lg" className="rounded-full" onClick={() => setActiveTab('inventory')}>
+                                <Button variant="outline" size="lg" className="rounded-full text-gray-700 border-gray-300 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>
                                     View All Cars
                                     <ChevronRight className="ml-1 w-4 h-4" />
                                 </Button>
@@ -491,7 +537,7 @@ export function FamilyTemplate({
                             <div className="w-full lg:w-72">
                                 <div className="sticky top-24 bg-white rounded-2xl shadow-sm p-6"><CarFilters /></div>
                             </div>
-                            <div className="flex-1"><CarGrid cars={cars} brandColor={brandColors.primary} /></div>
+                            <div className="flex-1"><CarGrid cars={cars} brandColor={brandColors.primary} light /></div>
                         </div>
                     </div>
                 </div>

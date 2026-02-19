@@ -35,6 +35,8 @@ interface CarCardProps {
     onCompare?: (carId: string) => void;
     className?: string;
     brandColor?: string;
+    /** Light card styling for templates with a white/light background */
+    light?: boolean;
 }
 
 export function CarCard({
@@ -44,6 +46,7 @@ export function CarCard({
     onViewDetails,
     className,
     brandColor = '#2563eb', // default blue
+    light,
 }: CarCardProps) {
     const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
     const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
@@ -72,7 +75,9 @@ export function CarCard({
             <Card
                 className={cn(
                     'group relative overflow-hidden transition-all duration-500 cursor-pointer',
-                    'bg-card border border-border',
+                    light
+                        ? 'bg-white border border-gray-200 text-gray-900'
+                        : 'bg-card border border-border',
                     'hover:shadow-2xl hover:shadow-black/10 hover:-translate-y-1',
                     'rounded-2xl',
                     className
@@ -121,16 +126,16 @@ export function CarCard({
                     <p className="text-xs font-medium uppercase tracking-wider mb-1" style={{ color: brandColor }}>
                         {car.make}
                     </p>
-                    <h3 className="text-xl font-bold text-foreground leading-tight line-clamp-1 transition-colors" style={{ ['--hover-color' as any]: brandColor }}>
+                    <h3 className={cn('text-xl font-bold leading-tight line-clamp-1 transition-colors', light ? 'text-gray-900' : 'text-foreground')}>
                         {car.model}
                     </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-1">{car.variant}</p>
+                    <p className={cn('text-sm line-clamp-1', light ? 'text-gray-500' : 'text-muted-foreground')}>{car.variant}</p>
                 </div>
 
                 {/* Price */}
-                <div className="mb-4 pb-4 border-b border-border">
+                <div className={cn('mb-4 pb-4 border-b', light ? 'border-gray-100' : 'border-border')}>
                     <div className="flex items-baseline gap-2">
-                        <span className="text-2xl font-bold text-foreground">
+                        <span className={cn('text-2xl font-bold', light ? 'text-gray-900' : 'text-foreground')}>
                             {priceRange}
                         </span>
                         {car.pricing.exShowroom.min !== car.pricing.exShowroom.max && (
@@ -152,46 +157,46 @@ export function CarCard({
                 {/* Quick Specs - Modern Grid */}
                 <div className="grid grid-cols-2 gap-3 mb-4">
                     {engineType && (
-                        <div className="flex items-center gap-2.5 p-2.5 bg-muted/50 rounded-xl">
-                            <div className="w-8 h-8 rounded-lg bg-background shadow-sm flex items-center justify-center">
+                        <div className={cn('flex items-center gap-2.5 p-2.5 rounded-xl', light ? 'bg-gray-50' : 'bg-muted/50')}>
+                            <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
                                 <Fuel className="w-4 h-4 text-emerald-600" />
                             </div>
                             <div>
-                                <p className="text-xs text-muted-foreground">Fuel</p>
-                                <p className="text-sm font-semibold text-foreground">{engineType}</p>
+                                <p className={cn('text-xs', light ? 'text-gray-500' : 'text-muted-foreground')}>Fuel</p>
+                                <p className={cn('text-sm font-semibold', light ? 'text-gray-900' : 'text-foreground')}>{engineType}</p>
                             </div>
                         </div>
                     )}
                     {transmissionType && (
-                        <div className="flex items-center gap-2.5 p-2.5 bg-muted/50 rounded-xl">
-                            <div className="w-8 h-8 rounded-lg bg-background shadow-sm flex items-center justify-center">
+                        <div className={cn('flex items-center gap-2.5 p-2.5 rounded-xl', light ? 'bg-gray-50' : 'bg-muted/50')}>
+                            <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
                                 <Gauge className="w-4 h-4 text-blue-600" />
                             </div>
                             <div>
-                                <p className="text-xs text-muted-foreground">Trans</p>
-                                <p className="text-sm font-semibold text-foreground">{transmissionType}</p>
+                                <p className={cn('text-xs', light ? 'text-gray-500' : 'text-muted-foreground')}>Trans</p>
+                                <p className={cn('text-sm font-semibold', light ? 'text-gray-900' : 'text-foreground')}>{transmissionType}</p>
                             </div>
                         </div>
                     )}
                     {car.dimensions?.seatingCapacity && (
-                        <div className="flex items-center gap-2.5 p-2.5 bg-muted/50 rounded-xl">
-                            <div className="w-8 h-8 rounded-lg bg-background shadow-sm flex items-center justify-center">
+                        <div className={cn('flex items-center gap-2.5 p-2.5 rounded-xl', light ? 'bg-gray-50' : 'bg-muted/50')}>
+                            <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
                                 <Users className="w-4 h-4 text-purple-600" />
                             </div>
                             <div>
-                                <p className="text-xs text-muted-foreground">Seats</p>
-                                <p className="text-sm font-semibold text-foreground">{car.dimensions.seatingCapacity}</p>
+                                <p className={cn('text-xs', light ? 'text-gray-500' : 'text-muted-foreground')}>Seats</p>
+                                <p className={cn('text-sm font-semibold', light ? 'text-gray-900' : 'text-foreground')}>{car.dimensions.seatingCapacity}</p>
                             </div>
                         </div>
                     )}
                     {mileage && (
-                        <div className="flex items-center gap-2.5 p-2.5 bg-muted/50 rounded-xl">
-                            <div className="w-8 h-8 rounded-lg bg-background shadow-sm flex items-center justify-center">
+                        <div className={cn('flex items-center gap-2.5 p-2.5 rounded-xl', light ? 'bg-gray-50' : 'bg-muted/50')}>
+                            <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
                                 <Zap className="w-4 h-4 text-amber-600" />
                             </div>
                             <div>
-                                <p className="text-xs text-muted-foreground">Mileage</p>
-                                <p className="text-sm font-semibold text-foreground">{mileage} km/l</p>
+                                <p className={cn('text-xs', light ? 'text-gray-500' : 'text-muted-foreground')}>Mileage</p>
+                                <p className={cn('text-sm font-semibold', light ? 'text-gray-900' : 'text-foreground')}>{mileage} km/l</p>
                             </div>
                         </div>
                     )}

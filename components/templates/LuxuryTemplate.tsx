@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/button';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
-import { ArrowRight, Phone, MapPin, Mail, Award, ShieldCheck, Star, ChevronRight, Crown, Clock, MessageSquare, CheckCircle2, Send } from 'lucide-react';
+import { ArrowRight, Phone, MapPin, Mail, Award, ShieldCheck, Star, ChevronRight, Crown, Clock, MessageSquare, CheckCircle2, Send, Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
 import type { Service } from '@/lib/types';
@@ -57,6 +57,7 @@ export function LuxuryTemplate({
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [isScrolled, setIsScrolled] = useState(false);
     const [enquireSidebarOpen, setEnquireSidebarOpen] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     // Lead form state
     const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
@@ -64,6 +65,19 @@ export function LuxuryTemplate({
 
     const config = generateTemplateConfig(brandName, 'luxury');
     const { brandColors } = config;
+
+    // Dark template: ensure accent color is visible on bg-gray-900 / bg-black.
+    // Brands like Jaguar, Renault, Kia, Mercedes, VW, MINI, Bentley etc. have
+    // very dark primary colors that become invisible on dark backgrounds.
+    const brandAccent: string = (() => {
+        const brightness = (hex: string): number => {
+            const h = hex.replace('#', '');
+            return (parseInt(h.slice(0,2),16)*299 + parseInt(h.slice(2,4),16)*587 + parseInt(h.slice(4,6),16)*114) / 1000;
+        };
+        if (brightness(brandColors.primary) > 60) return brandColors.primary;
+        if (brightness(brandColors.secondary) > 60) return brandColors.secondary;
+        return '#C8C8C8';
+    })();
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -121,8 +135,8 @@ export function LuxuryTemplate({
                             <span className="text-2xl font-light tracking-widest">{dealerName}</span>
                         </div>
                         <div className="hidden md:flex items-center gap-8">
-                            <button onClick={() => setActiveTab('home')} className="text-sm tracking-wider hover:opacity-70" style={activeTab === 'home' ? { color: brandColors.primary } : {}}>Home</button>
-                            <button onClick={() => setActiveTab('inventory')} className="text-sm tracking-wider hover:opacity-70" style={activeTab === 'inventory' ? { color: brandColors.primary } : {}}>Collection</button>
+                            <button onClick={() => setActiveTab('home')} className="text-sm tracking-wider hover:opacity-70" style={activeTab === 'home' ? { color: brandAccent } : {}}>Home</button>
+                            <button onClick={() => setActiveTab('inventory')} className="text-sm tracking-wider hover:opacity-70" style={activeTab === 'inventory' ? { color: brandAccent } : {}}>Collection</button>
                             <a href="#contact" className="text-sm tracking-wider hover:opacity-70">Contact</a>
                         </div>
                         <div className="flex items-center gap-2">
@@ -140,8 +154,51 @@ export function LuxuryTemplate({
                                     Call
                                 </a>
                             </Button>
+                            <button
+                                className="md:hidden p-2 rounded-lg text-white transition-colors hover:bg-white/10"
+                                onClick={() => setMobileMenuOpen(o => !o)}
+                                aria-label="Toggle navigation menu"
+                            >
+                                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                            </button>
                         </div>
                     </div>
+                    {/* Mobile menu */}
+                    {mobileMenuOpen && (
+                        <div className="md:hidden border-t border-white/10 bg-gray-900/95 backdrop-blur-lg">
+                            <div className="px-4 py-3 space-y-1">
+                                <button
+                                    onClick={() => { setActiveTab('home'); setMobileMenuOpen(false); }}
+                                    className="block w-full text-left px-3 py-2.5 rounded-lg text-sm tracking-wider text-white hover:bg-white/10 transition-colors"
+                                >
+                                    Home
+                                </button>
+                                <button
+                                    onClick={() => { setActiveTab('inventory'); setMobileMenuOpen(false); }}
+                                    className="block w-full text-left px-3 py-2.5 rounded-lg text-sm tracking-wider text-white hover:bg-white/10 transition-colors"
+                                >
+                                    Collection
+                                </button>
+                                <a
+                                    href="#contact"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="block px-3 py-2.5 rounded-lg text-sm tracking-wider text-white hover:bg-white/10 transition-colors"
+                                >
+                                    Contact
+                                </a>
+                                <div className="pt-2 border-t border-white/10">
+                                    <Button
+                                        className="w-full text-white"
+                                        style={{ backgroundColor: brandAccent }}
+                                        onClick={() => { setEnquireSidebarOpen(true); setMobileMenuOpen(false); }}
+                                    >
+                                        <MessageSquare className="w-4 h-4 mr-2" />
+                                        Enquire Now
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </nav>
 
@@ -149,7 +206,7 @@ export function LuxuryTemplate({
                 open={enquireSidebarOpen}
                 onOpenChange={setEnquireSidebarOpen}
                 dealerName={dealerName}
-                brandColor={brandColors.primary}
+                brandColor={brandAccent}
                 services={services}
                 contactPhone={contactInfo.phone}
             />
@@ -159,11 +216,11 @@ export function LuxuryTemplate({
                     {/* Hero */}
                     <section className="relative min-h-screen flex items-center">
                         <div className="absolute inset-0">
-                            <Image src={getBrandHeroImage(brandName)} alt={`${brandName} Luxury`} fill className="object-cover opacity-20" priority />
+                            <Image src={getBrandHeroImage(brandName)} alt={`${brandName} Luxury`} fill className="object-cover opacity-35" priority />
                             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-gray-900/80" />
                         </div>
                         <div className="relative z-10 max-w-7xl mx-auto px-4 py-32 text-center">
-                            <p className="text-sm tracking-widest uppercase mb-4" style={{ color: brandColors.primary }}>{tagline}</p>
+                            <p className="text-sm tracking-widest uppercase mb-4" style={{ color: brandAccent }}>{tagline}</p>
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm mb-6">
                                 <Crown className="w-3.5 h-3.5 text-white/60" />
                                 <span className="text-sm font-light tracking-widest text-white/80">{dealerName}</span>
@@ -171,11 +228,11 @@ export function LuxuryTemplate({
                             <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-8 leading-tight">{heroTitle}</h1>
                             <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">{heroSubtitle}</p>
                             <div className="flex flex-wrap items-center justify-center gap-4">
-                                <Button size="lg" className="text-white" style={{ backgroundColor: brandColors.primary }} onClick={() => setActiveTab('inventory')}>
+                                <Button size="lg" className="text-white" style={{ backgroundColor: brandAccent }} onClick={() => setActiveTab('inventory')}>
                                     Explore Collection
                                     <ArrowRight className="ml-2 w-5 h-5" />
                                 </Button>
-                                <Button size="lg" variant="outline" className="border-white/30 bg-transparent text-white hover:bg-white/10">
+                                <Button size="lg" variant="outline" className="border-white/30 bg-transparent text-white hover:bg-white/10" asChild>
                                     <a href="#contact">Request Private Viewing</a>
                                 </Button>
                             </div>
@@ -187,7 +244,7 @@ export function LuxuryTemplate({
                         <section className="py-16 bg-black">
                             <div className="max-w-7xl mx-auto px-4">
                                 <div className="text-center mb-10">
-                                    <span className="text-sm tracking-widest uppercase" style={{ color: brandColors.primary }}>Our Services</span>
+                                    <span className="text-sm tracking-widest uppercase" style={{ color: brandAccent }}>Our Services</span>
                                     <h2 className="text-3xl font-light mt-2">What We Offer</h2>
                                 </div>
                                 <div className="flex flex-wrap justify-center gap-3">
@@ -197,7 +254,7 @@ export function LuxuryTemplate({
                                             <div
                                                 key={svc as string}
                                                 className="flex items-center gap-2 px-5 py-2.5 rounded-full border text-sm tracking-wide"
-                                                style={{ borderColor: `${brandColors.primary}60`, color: brandColors.primary, backgroundColor: `${brandColors.primary}10` }}
+                                                style={{ borderColor: `${brandAccent}60`, color: brandAccent, backgroundColor: `${brandAccent}10` }}
                                             >
                                                 <span>{meta.icon}</span>
                                                 <span>{meta.label}</span>
@@ -213,10 +270,10 @@ export function LuxuryTemplate({
                     <section className="py-24 bg-black">
                         <div className="max-w-7xl mx-auto px-4">
                             <div className="text-center mb-16">
-                                <span className="text-sm tracking-widest uppercase" style={{ color: brandColors.primary }}>Curated Selection</span>
+                                <span className="text-sm tracking-widest uppercase" style={{ color: brandAccent }}>Curated Selection</span>
                                 <h2 className="text-5xl font-light mt-4">Featured Collection</h2>
                             </div>
-                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} />
+                            <CarGrid cars={featuredCars} brandColor={brandAccent} />
                             <div className="text-center mt-10">
                                 <Button variant="outline" className="border-white/30 bg-transparent text-white hover:bg-white/10" onClick={() => setActiveTab('inventory')}>
                                     View Full Collection
@@ -237,7 +294,7 @@ export function LuxuryTemplate({
                                     { icon: Star, title: 'Premium Selection', desc: 'Curated for perfection' },
                                 ].map((f, i) => (
                                     <div key={i} className="text-center">
-                                        <f.icon className="w-12 h-12 mx-auto mb-6" style={{ color: brandColors.primary }} />
+                                        <f.icon className="w-12 h-12 mx-auto mb-6" style={{ color: brandAccent }} />
                                         <h3 className="text-2xl font-light mb-4">{f.title}</h3>
                                         <p className="text-gray-400">{f.desc}</p>
                                     </div>
@@ -252,27 +309,27 @@ export function LuxuryTemplate({
                             <div className="grid lg:grid-cols-2 gap-16 items-start">
                                 {/* Info */}
                                 <div>
-                                    <span className="text-sm tracking-widest uppercase" style={{ color: brandColors.primary }}>Contact</span>
+                                    <span className="text-sm tracking-widest uppercase" style={{ color: brandAccent }}>Contact</span>
                                     <h2 className="text-5xl font-light mt-4 mb-6">Request a Callback</h2>
                                     <p className="text-gray-400 mb-8 text-lg">
                                         Our advisors will personally reach out to curate the finest selection for your needs.
                                     </p>
                                     <div className="space-y-5">
                                         <div className="flex items-center gap-4">
-                                            <Phone className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                            <Phone className="w-5 h-5" style={{ color: brandAccent }} />
                                             <a href={`tel:${contactInfo.phone}`} className="text-gray-300 hover:text-white transition-colors">{contactInfo.phone}</a>
                                         </div>
                                         <div className="flex items-center gap-4">
-                                            <Mail className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                            <Mail className="w-5 h-5" style={{ color: brandAccent }} />
                                             <a href={`mailto:${contactInfo.email}`} className="text-gray-300 hover:text-white transition-colors">{contactInfo.email}</a>
                                         </div>
                                         <div className="flex items-start gap-4">
-                                            <MapPin className="w-5 h-5 mt-0.5" style={{ color: brandColors.primary }} />
+                                            <MapPin className="w-5 h-5 mt-0.5" style={{ color: brandAccent }} />
                                             <span className="text-gray-300">{contactInfo.address}</span>
                                         </div>
                                         {workingHours && (
                                             <div className="flex items-center gap-4">
-                                                <Clock className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                                <Clock className="w-5 h-5" style={{ color: brandAccent }} />
                                                 <span className="text-gray-300">{workingHours}</span>
                                             </div>
                                         )}
@@ -283,7 +340,7 @@ export function LuxuryTemplate({
                                 <div className="border border-white/10 rounded-2xl p-8 bg-white/5 backdrop-blur-sm">
                                     {formStatus === 'sent' ? (
                                         <div className="text-center py-12">
-                                            <CheckCircle2 className="w-16 h-16 mx-auto mb-4" style={{ color: brandColors.primary }} />
+                                            <CheckCircle2 className="w-16 h-16 mx-auto mb-4" style={{ color: brandAccent }} />
                                             <h3 className="text-2xl font-light mb-2">Thank You</h3>
                                             <p className="text-gray-400">Our advisor will contact you shortly.</p>
                                         </div>
@@ -339,7 +396,7 @@ export function LuxuryTemplate({
                                                 type="submit"
                                                 disabled={formStatus === 'sending'}
                                                 className="w-full text-white py-3 rounded-lg font-light tracking-widest uppercase text-sm"
-                                                style={{ backgroundColor: brandColors.primary }}
+                                                style={{ backgroundColor: brandAccent }}
                                             >
                                                 {formStatus === 'sending' ? 'Sending...' : (
                                                     <>
@@ -366,7 +423,7 @@ export function LuxuryTemplate({
                             <div className="w-full lg:w-72">
                                 <div className="sticky top-24 bg-white/5 rounded-lg p-6"><CarFilters /></div>
                             </div>
-                            <div className="flex-1"><CarGrid cars={cars} brandColor={brandColors.primary} /></div>
+                            <div className="flex-1"><CarGrid cars={cars} brandColor={brandAccent} /></div>
                         </div>
                     </div>
                 </div>
@@ -397,11 +454,11 @@ export function LuxuryTemplate({
                         <div>
                             <h4 className="text-white font-light text-lg mb-4">Contact</h4>
                             <div className="space-y-2">
-                                <div className="flex items-center gap-2"><Phone className="w-4 h-4" style={{ color: brandColors.primary }} /><a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a></div>
-                                <div className="flex items-center gap-2"><Mail className="w-4 h-4" style={{ color: brandColors.primary }} /><a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></div>
-                                <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-1" style={{ color: brandColors.primary }} /><span>{contactInfo.address}</span></div>
+                                <div className="flex items-center gap-2"><Phone className="w-4 h-4" style={{ color: brandAccent }} /><a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a></div>
+                                <div className="flex items-center gap-2"><Mail className="w-4 h-4" style={{ color: brandAccent }} /><a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></div>
+                                <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-1" style={{ color: brandAccent }} /><span>{contactInfo.address}</span></div>
                                 {workingHours && (
-                                    <div className="flex items-center gap-2"><Clock className="w-4 h-4" style={{ color: brandColors.primary }} /><span>{workingHours}</span></div>
+                                    <div className="flex items-center gap-2"><Clock className="w-4 h-4" style={{ color: brandAccent }} /><span>{workingHours}</span></div>
                                 )}
                             </div>
                         </div>

@@ -27,6 +27,8 @@ import {
     Users,
     Car as CarIcon,
     MessageSquare,
+    Menu,
+    X,
     Send,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
@@ -80,13 +82,14 @@ export function ModernTemplate({
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeCarIndex, setActiveCarIndex] = useState(0);
     const [enquireSidebarOpen, setEnquireSidebarOpen] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     // Lead form state
     const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
     const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
     // Get template configuration with brand colors
-    const config = generateTemplateConfig(brandName, 'family');
+    const config = generateTemplateConfig(brandName, 'modern');
     const { brandColors } = config;
 
     // Handle scroll
@@ -222,8 +225,52 @@ export function ModernTemplate({
                                     Call Now
                                 </a>
                             </Button>
+                            <button
+                                className="md:hidden p-2 rounded-lg transition-colors"
+                                style={{ color: isScrolled ? '#111827' : '#ffffff' }}
+                                onClick={() => setMobileMenuOpen(o => !o)}
+                                aria-label="Toggle navigation menu"
+                            >
+                                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                            </button>
                         </div>
                     </div>
+                    {/* Mobile menu */}
+                    {mobileMenuOpen && (
+                        <div className={`md:hidden border-t ${isScrolled ? 'border-gray-100 bg-white' : 'border-white/10 bg-gray-900/95 backdrop-blur-lg'}`}>
+                            <div className="px-4 py-3 space-y-1">
+                                <button
+                                    onClick={() => { setActiveTab('home'); setMobileMenuOpen(false); }}
+                                    className={`block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors ${isScrolled ? 'text-gray-900 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
+                                >
+                                    Home
+                                </button>
+                                <button
+                                    onClick={() => { setActiveTab('inventory'); setMobileMenuOpen(false); }}
+                                    className={`block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors ${isScrolled ? 'text-gray-900 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
+                                >
+                                    Inventory
+                                </button>
+                                <a
+                                    href="#contact"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className={`block px-3 py-2.5 rounded-lg font-medium transition-colors ${isScrolled ? 'text-gray-900 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
+                                >
+                                    Contact
+                                </a>
+                                <div className={`pt-2 border-t ${isScrolled ? 'border-gray-200' : 'border-white/10'}`}>
+                                    <Button
+                                        className="w-full text-white"
+                                        style={{ backgroundColor: brandColors.primary }}
+                                        onClick={() => { setEnquireSidebarOpen(true); setMobileMenuOpen(false); }}
+                                    >
+                                        <MessageSquare className="w-4 h-4 mr-2" />
+                                        Enquire Now
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </nav>
 
@@ -386,12 +433,12 @@ export function ModernTemplate({
                                     </span>
                                     <h2 className="text-4xl font-bold text-gray-900 mt-2">Featured Vehicles</h2>
                                 </div>
-                                <Button variant="outline" onClick={() => setActiveTab('inventory')}>
+                                <Button variant="outline" className="text-gray-700 border-gray-300 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>
                                     View All
                                     <ChevronRight className="ml-1 w-4 h-4" />
                                 </Button>
                             </div>
-                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} />
+                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light />
                         </div>
                     </section>
 
@@ -565,7 +612,7 @@ export function ModernTemplate({
                                 </div>
                             </div>
                             <div className="flex-1">
-                                <CarGrid cars={cars} brandColor={brandColors.primary} />
+                                <CarGrid cars={cars} brandColor={brandColors.primary} light />
                             </div>
                         </div>
                     </div>
