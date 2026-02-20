@@ -138,7 +138,7 @@ export const useOnboardingStore = create<OnboardingStore>()(
 
             isUsedCarDealer: () => {
                 const { data } = get();
-                return data.dealerCategory === 'used';
+                return data.dealerCategory === 'used' || data.dealerCategory === 'both';
             },
         }),
         {

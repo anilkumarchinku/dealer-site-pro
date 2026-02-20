@@ -71,7 +71,7 @@ export default function Step2Page() {
 
         updateData({
             sellsNewCars: true,
-            sellsUsedCars: false,
+            sellsUsedCars: data.dealerCategory === 'both',
             brands: selectedBrands,
         });
         setStep(3);
@@ -98,7 +98,12 @@ export default function Step2Page() {
             <CardHeader>
                 <CardTitle>Select Your Authorized Brands</CardTitle>
                 <CardDescription>
-                    Choose the manufacturers you're authorized to sell new vehicles for
+                    Choose the manufacturers you&apos;re authorized to sell new vehicles for
+                    {data.dealerCategory === 'both' && (
+                        <span className="block mt-1 text-violet-600 font-medium">
+                            Hybrid dealership — new car brands + used inventory will both be enabled
+                        </span>
+                    )}
                 </CardDescription>
             </CardHeader>
 
