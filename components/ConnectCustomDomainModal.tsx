@@ -35,18 +35,36 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
         if (domain) setStep('select-template')
     }
 
-    // Step 2 → payment → domain connect → DNS instructions
+    // Step 2 → create domain record → payment → DNS instructions
     const handleProceedToPayment = async () => {
         setError('')
         setIsLoading(true)
         setStep('payment')
 
         try {
-            // 1. Create Razorpay subscription
+            // 1. Create domain record first (pending status) to get a domain_id
+            const domainRes = await fetch('/api/domains/connect-custom', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ dealerId, customDomain: domain, templateId: selectedTemplate }),
+            })
+            const domainData = await domainRes.json()
+
+            if (!domainData.success) {
+                setError(domainData.error || 'Failed to register domain')
+                setStep('select-template')
+                setIsLoading(false)
+                return
+            }
+
+            const createdDomainId = domainData.domain.id
+            setDomainId(createdDomainId)
+
+            // 2. Create Razorpay subscription with domain_id
             const subRes = await fetch('/api/payments/create-subscription', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ dealerId, tier: 'pro' }),
+                body: JSON.stringify({ dealerId, tier: 'pro', domainId: createdDomainId }),
             })
             const subData = await subRes.json()
 
@@ -57,12 +75,12 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
                 return
             }
 
-            // 2. Open Razorpay checkout
+            // 3. Open Razorpay checkout (mock or real)
             openRazorpayCheckout({
                 subscriptionId: subData.subscriptionId,
                 tier: 'pro',
                 onSuccess: async (paymentData: RazorpaySuccessResponse) => {
-                    // 3. Verify payment
+                    // 4. Verify payment
                     const verifyRes = await fetch('/api/payments/verify', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
@@ -82,8 +100,9 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
                         return
                     }
 
-                    // 4. Connect the custom domain
-                    await connectDomain()
+                    // 5. Done — show DNS instructions
+                    setStep('dns-instructions')
+                    setIsLoading(false)
                 },
                 onFailure: (err) => {
                     setError(err.error || 'Payment failed. Please try again.')
@@ -94,35 +113,6 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
         } catch {
             setError('Payment initialisation failed. Please try again.')
             setStep('select-template')
-            setIsLoading(false)
-        }
-    }
-
-    // Called after payment succeeds — registers domain in DB + Vercel
-    const connectDomain = async () => {
-        try {
-            const response = await fetch('/api/domains/connect-custom', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ dealerId, customDomain: domain, templateId: selectedTemplate }),
-            })
-            const result = await response.json()
-
-            if (result.success) {
-                setDomainId(result.domain.id)
-                setStep('dns-instructions')
-            } else {
-                let msg = result.error || 'Failed to add domain'
-                if (result.details && process.env.NODE_ENV === 'development') {
-                    msg += `\n\nDetails: ${result.details}`
-                }
-                setError(msg)
-                setStep('select-template')
-            }
-        } catch {
-            setError('Network error. Please check your connection and try again.')
-            setStep('select-template')
-        } finally {
             setIsLoading(false)
         }
     }
