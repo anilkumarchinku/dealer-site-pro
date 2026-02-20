@@ -11,6 +11,7 @@ import {
     Phone, Mail, MapPin, Building2,
     ExternalLink, Sun, Moon, Info,
     Plug, Eye, EyeOff, CheckCircle2, XCircle, Loader2,
+    Link2, Copy, RefreshCw, Trash2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -54,6 +55,17 @@ export default function SettingsPage() {
     const [cyeproError,     setCyeproError]     = useState("");
     const [cyeproConnected, setCyeproConnected] = useState(false);
 
+    // ── Custom Domain state ───────────────────────────────────────────────────
+    const [domainInput,   setDomainInput]   = useState("");
+    const [savedDomain,   setSavedDomain]   = useState("");
+    const [domainId,      setDomainId]      = useState<string | null>(null);
+    const [domainStep,    setDomainStep]    = useState<"input" | "dns" | "verified">("input");
+    const [domainError,   setDomainError]   = useState("");
+    const [domainLoading, setDomainLoading] = useState(false);
+    const [verifying,     setVerifying]     = useState(false);
+    const [verifyResult,  setVerifyResult]  = useState<{ allVerified: boolean; message: string } | null>(null);
+    const [copied,        setCopied]        = useState(false);
+
     // Load existing Cyepro key (masked) from DB on mount
     useEffect(() => {
         if (!dealerId) return;
@@ -67,6 +79,25 @@ export default function SettingsPage() {
                     setCyeproConnected(true);
                     // Show a placeholder so user knows a key is saved
                     setCyeproKey("••••••••••••••••••••");
+                }
+            });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [dealerId]);
+
+    // Load existing custom domain for this dealer
+    useEffect(() => {
+        if (!dealerId) return;
+        supabase
+            .from("dealer_domains")
+            .select("id, custom_domain, status, dns_verified")
+            .eq("dealer_id", dealerId)
+            .eq("domain_type", "custom")
+            .maybeSingle()
+            .then(({ data }) => {
+                if (data?.custom_domain) {
+                    setSavedDomain(data.custom_domain);
+                    setDomainId(data.id);
+                    setDomainStep(data.dns_verified ? "verified" : "dns");
                 }
             });
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -107,6 +138,96 @@ export default function SettingsPage() {
             setCyeproKey("");
             setCyeproStatus("idle");
         }
+    };
+
+    // ── Custom Domain handlers ────────────────────────────────────────────────
+    const handleAddDomain = async () => {
+        if (!dealerId) return;
+        const cleaned = domainInput.trim().toLowerCase()
+            .replace(/^https?:\/\//, "")
+            .replace(/\/$/, "");
+
+        // Client-side format validation
+        const domainRegex = /^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$/i;
+        if (!cleaned) {
+            setDomainError("Please enter a domain name.");
+            return;
+        }
+        if (!domainRegex.test(cleaned)) {
+            setDomainError("Invalid domain format. Use: heromotors.com");
+            return;
+        }
+        if (cleaned.endsWith("indrav.in") || cleaned.endsWith("dealersitepro.com")) {
+            setDomainError("That's one of our own domains — enter your custom domain.");
+            return;
+        }
+
+        setDomainLoading(true);
+        setDomainError("");
+
+        const res = await fetch("/api/domains/connect-custom", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ dealerId, customDomain: cleaned }),
+        });
+        const json = await res.json();
+        setDomainLoading(false);
+
+        if (!json.success) {
+            setDomainError(json.error || "Failed to add domain. Please try again.");
+            return;
+        }
+
+        setSavedDomain(cleaned);
+        setDomainId(json.domain?.id ?? null);
+        setDomainStep("dns");
+        setDomainInput("");
+    };
+
+    const handleVerifyDns = async () => {
+        if (!domainId || !savedDomain) return;
+        setVerifying(true);
+        setVerifyResult(null);
+
+        const res = await fetch("/api/domains/verify-dns", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ domainId, domain: savedDomain }),
+        });
+        const json = await res.json();
+        setVerifying(false);
+
+        const result = json.verification as { allVerified: boolean; message: string } | undefined;
+        if (result?.allVerified) {
+            setDomainStep("verified");
+        }
+        setVerifyResult(result ?? { allVerified: false, message: "Verification check failed. Try again." });
+    };
+
+    const handleRemoveDomain = async () => {
+        if (!domainId || !savedDomain || !dealerId) return;
+
+        const res = await fetch("/api/domains/remove-custom", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ domainId, domain: savedDomain, dealerId }),
+        });
+        const json = await res.json();
+
+        if (json.success) {
+            setSavedDomain("");
+            setDomainId(null);
+            setDomainStep("input");
+            setDomainInput("");
+            setVerifyResult(null);
+            setDomainError("");
+        }
+    };
+
+    const copyToClipboard = (text: string) => {
+        navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
     };
 
     const handleChange = (field: string, value: string) => {
@@ -386,6 +507,217 @@ export default function SettingsPage() {
                                     </p>
                                 </div>
                             </div>
+
+                        </CardContent>
+                    </Card>
+
+                    {/* ── Custom Domain ── */}
+                    <Card variant="glass">
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-2.5 text-lg">
+                                <div className="p-2 rounded-lg bg-blue-500/10">
+                                    <Link2 className="w-4 h-4 text-blue-500" />
+                                </div>
+                                Custom Domain
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+
+                            {/* ── Step 1: No domain yet — show input ── */}
+                            {domainStep === "input" && (
+                                <div className="space-y-3">
+                                    <p className="text-sm text-muted-foreground">
+                                        Connect your own domain (e.g. <span className="font-mono">heromotors.com</span>) to your dealer website.
+                                        Your free <span className="font-mono text-xs">.indrav.in</span> subdomain will keep working too.
+                                    </p>
+
+                                    <div className="flex gap-2">
+                                        <input
+                                            type="text"
+                                            value={domainInput}
+                                            onChange={(e) => {
+                                                setDomainInput(e.target.value);
+                                                setDomainError("");
+                                            }}
+                                            placeholder="heromotors.com"
+                                            className="flex-1 h-10 text-sm rounded-lg border border-input bg-background px-3 focus:outline-none focus:ring-2 focus:ring-ring"
+                                            onKeyDown={(e) => e.key === "Enter" && handleAddDomain()}
+                                        />
+                                        <Button
+                                            size="sm"
+                                            disabled={domainLoading || !domainInput.trim()}
+                                            onClick={handleAddDomain}
+                                            className="gap-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                                        >
+                                            {domainLoading
+                                                ? <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                                                : <Link2 className="w-3.5 h-3.5" />}
+                                            Add Domain
+                                        </Button>
+                                    </div>
+
+                                    {domainError && (
+                                        <p className="text-xs text-destructive flex items-center gap-1.5">
+                                            <XCircle className="w-3.5 h-3.5 flex-shrink-0" />
+                                            {domainError}
+                                        </p>
+                                    )}
+                                </div>
+                            )}
+
+                            {/* ── Step 2: Domain added — show DNS instructions ── */}
+                            {domainStep === "dns" && savedDomain && (
+                                <div className="space-y-4">
+                                    {/* Domain badge */}
+                                    <div className="flex items-center justify-between px-3 py-2.5 rounded-lg bg-muted/30 border border-border">
+                                        <div className="flex items-center gap-2 min-w-0">
+                                            <Globe className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                                            <span className="text-sm font-mono font-medium truncate">{savedDomain}</span>
+                                        </div>
+                                        <span className="text-xs text-amber-600 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded-full ml-2 flex-shrink-0">
+                                            Pending DNS
+                                        </span>
+                                    </div>
+
+                                    {/* Instructions */}
+                                    <div className="rounded-xl border border-border bg-muted/20 p-4 space-y-3">
+                                        <p className="text-sm font-semibold">Set up DNS at your registrar</p>
+                                        <p className="text-xs text-muted-foreground">
+                                            Log in to GoDaddy, Namecheap, or wherever you bought <span className="font-mono">{savedDomain}</span> and add these records:
+                                        </p>
+
+                                        {/* DNS records table */}
+                                        <div className="overflow-x-auto rounded-lg border border-border bg-background">
+                                            <table className="w-full text-xs">
+                                                <thead>
+                                                    <tr className="border-b border-border bg-muted/40">
+                                                        <th className="text-left px-3 py-2 text-muted-foreground font-medium">Type</th>
+                                                        <th className="text-left px-3 py-2 text-muted-foreground font-medium">Name</th>
+                                                        <th className="text-left px-3 py-2 text-muted-foreground font-medium">Value</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr className="border-b border-border/50">
+                                                        <td className="px-3 py-2 font-mono font-semibold text-blue-600">A</td>
+                                                        <td className="px-3 py-2 font-mono">@</td>
+                                                        <td className="px-3 py-2 font-mono flex items-center gap-2">
+                                                            76.76.21.21
+                                                            <button
+                                                                type="button"
+                                                                onClick={() => copyToClipboard("76.76.21.21")}
+                                                                className="text-muted-foreground hover:text-foreground"
+                                                            >
+                                                                <Copy className="w-3 h-3" />
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td className="px-3 py-2 font-mono font-semibold text-violet-600">CNAME</td>
+                                                        <td className="px-3 py-2 font-mono">www</td>
+                                                        <td className="px-3 py-2 font-mono flex items-center gap-2">
+                                                            cname.vercel-dns.com
+                                                            <button
+                                                                type="button"
+                                                                onClick={() => copyToClipboard("cname.vercel-dns.com")}
+                                                                className="text-muted-foreground hover:text-foreground"
+                                                            >
+                                                                <Copy className="w-3 h-3" />
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        {copied && (
+                                            <p className="text-xs text-emerald-600 flex items-center gap-1">
+                                                <CheckCircle2 className="w-3 h-3" /> Copied!
+                                            </p>
+                                        )}
+
+                                        <p className="text-xs text-muted-foreground">
+                                            DNS changes take 5–30 minutes to propagate. Once done, click Verify below.
+                                        </p>
+                                    </div>
+
+                                    {/* Verify result */}
+                                    {verifyResult && (
+                                        <div className={cn(
+                                            "rounded-lg px-3 py-2.5 text-xs flex items-start gap-2",
+                                            verifyResult.allVerified
+                                                ? "bg-emerald-500/10 text-emerald-700 border border-emerald-500/20"
+                                                : "bg-red-500/10 text-red-700 border border-red-500/20"
+                                        )}>
+                                            {verifyResult.allVerified
+                                                ? <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
+                                                : <XCircle className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />}
+                                            {verifyResult.message}
+                                        </div>
+                                    )}
+
+                                    {/* Actions */}
+                                    <div className="flex items-center gap-2">
+                                        <Button
+                                            size="sm"
+                                            disabled={verifying}
+                                            onClick={handleVerifyDns}
+                                            className="gap-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                                        >
+                                            {verifying
+                                                ? <><Loader2 className="w-3.5 h-3.5 animate-spin" /> Checking...</>
+                                                : <><RefreshCw className="w-3.5 h-3.5" /> Verify DNS</>}
+                                        </Button>
+                                        <Button
+                                            size="sm"
+                                            variant="outline"
+                                            onClick={handleRemoveDomain}
+                                            className="text-red-500 border-red-500/30 hover:bg-red-500/5 gap-1.5"
+                                        >
+                                            <Trash2 className="w-3.5 h-3.5" /> Remove
+                                        </Button>
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* ── Step 3: DNS verified — domain is live ── */}
+                            {domainStep === "verified" && savedDomain && (
+                                <div className="space-y-3">
+                                    <div className="flex items-center justify-between px-3 py-2.5 rounded-lg bg-emerald-500/5 border border-emerald-500/20">
+                                        <div className="flex items-center gap-2 min-w-0">
+                                            <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                                            <span className="text-sm font-mono font-medium truncate">{savedDomain}</span>
+                                        </div>
+                                        <span className="text-xs text-emerald-600 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full ml-2 flex-shrink-0">
+                                            Active
+                                        </span>
+                                    </div>
+
+                                    <div className="flex items-center gap-2">
+                                        <a
+                                            href={`https://${savedDomain}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-1.5 text-xs text-blue-600 hover:underline"
+                                        >
+                                            <ExternalLink className="w-3.5 h-3.5" />
+                                            Open {savedDomain}
+                                        </a>
+                                        <span className="text-muted-foreground">·</span>
+                                        <Button
+                                            size="sm"
+                                            variant="outline"
+                                            onClick={handleRemoveDomain}
+                                            className="text-red-500 border-red-500/30 hover:bg-red-500/5 gap-1.5 h-7 text-xs px-2"
+                                        >
+                                            <Trash2 className="w-3 h-3" /> Disconnect
+                                        </Button>
+                                    </div>
+
+                                    <p className="text-xs text-muted-foreground">
+                                        Your website is live at <span className="font-mono">{savedDomain}</span> with SSL automatically managed.
+                                    </p>
+                                </div>
+                            )}
 
                         </CardContent>
                     </Card>
