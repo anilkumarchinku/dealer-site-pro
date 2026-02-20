@@ -6,7 +6,7 @@ export type DealerType =
     | 'hybrid';       // Type 4: Both new and used
 
 // Dealer category selected at the start of onboarding
-export type DealerCategory = 'new' | 'used';
+export type DealerCategory = 'new' | 'used' | 'both';
 
 // OEM Brands - Indian Automobile Market
 export type Brand =

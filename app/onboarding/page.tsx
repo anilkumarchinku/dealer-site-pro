@@ -74,6 +74,37 @@ const DEALER_TYPES: {
         borderClass: "border-amber-500/30 hover:border-amber-600/70",
         bgClass: "hover:bg-amber-500/3",
     },
+    {
+        id: "both",
+        icon: (
+            <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="16" width="20" height="16" rx="3" fill="#2563eb" opacity="0.18" />
+                <rect x="26" y="16" width="20" height="16" rx="3" fill="#b8962e" opacity="0.18" />
+                <circle cx="10" cy="34" r="3" fill="#2563eb" />
+                <circle cx="20" cy="34" r="3" fill="#2563eb" />
+                <circle cx="28" cy="34" r="3" fill="#b8962e" />
+                <circle cx="38" cy="34" r="3" fill="#b8962e" />
+                <path d="M4 22l3-6h12l3 6" stroke="#2563eb" strokeWidth="1.8" strokeLinecap="round" />
+                <path d="M28 22l3-6h12l3 6" stroke="#b8962e" strokeWidth="1.8" strokeLinecap="round" />
+                <path d="M22 24h4" stroke="#6366f1" strokeWidth="2" strokeLinecap="round" />
+                <circle cx="24" cy="10" r="3" fill="#6366f1" />
+                <path d="M22 10h-3M26 10h3" stroke="#6366f1" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+        ),
+        title: "Both New & Used",
+        subtitle: "Hybrid Dealership",
+        description: "You sell both brand new authorised vehicles and pre-owned cars. Get the best of both worlds — OEM brand pages plus a used car inventory showcase.",
+        highlights: [
+            "New car OEM pages + used inventory",
+            "Unified brand identity",
+            "New & pre-owned enquiry flows",
+            "Full service & trade-in support",
+        ],
+        accentClass: "text-violet-600",
+        badgeClass: "bg-violet-500/10 text-violet-600 border border-violet-500/20",
+        borderClass: "border-violet-500/30 hover:border-violet-500/70",
+        bgClass: "hover:bg-violet-500/3",
+    },
 ];
 
 export default function OnboardingIndexPage() {
@@ -109,7 +140,7 @@ export default function OnboardingIndexPage() {
             </header>
 
             <main className="flex-1 flex flex-col items-center justify-center px-4 py-16">
-                <div className="w-full max-w-3xl mx-auto space-y-10">
+                <div className="w-full max-w-5xl mx-auto space-y-10">
 
                     {/* Hero text */}
                     <div className="text-center space-y-3">
@@ -126,7 +157,7 @@ export default function OnboardingIndexPage() {
                     </div>
 
                     {/* Selection cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                         {DEALER_TYPES.map((type) => (
                             <button
                                 key={type.id}
