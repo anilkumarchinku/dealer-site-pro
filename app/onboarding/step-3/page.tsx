@@ -30,9 +30,19 @@ export default function Step3Page() {
     const { data, updateData, setStep, isUsedCarDealer } = useOnboardingStore();
 
     const isUsed = isUsedCarDealer();
+    const isBoth = data.dealerCategory === 'both';
 
     // Pre-select sensible defaults based on dealer type
     const getDefaultServices = (): Service[] => {
+        if (isBoth) {
+            return [
+                "new_car_sales",
+                "used_car_sales",
+                "financing",
+                "service_maintenance",
+                "trade_in",
+            ];
+        }
         if (isUsed) {
             return [
                 "used_car_sales",
@@ -77,8 +87,8 @@ export default function Step3Page() {
     };
 
     const handleBack = () => {
-        // Go back to the correct step-2 based on dealer type
-        router.push(isUsed ? "/onboarding/step-2-used" : "/onboarding/step-2");
+        // 'used' → back to brand colours step; 'new' and 'both' → back to OEM brand step
+        router.push(data.dealerCategory === 'used' ? "/onboarding/step-2-used" : "/onboarding/step-2");
     };
 
     useEffect(() => {
@@ -90,9 +100,11 @@ export default function Step3Page() {
             <CardHeader>
                 <CardTitle>What services do you offer?</CardTitle>
                 <CardDescription>
-                    {isUsed
-                        ? "Tell us what you offer — we'll build service pages tailored for pre-owned car buyers"
-                        : "We'll create pages for each service on your website"}
+                    {isBoth
+                        ? "You sell both new and pre-owned vehicles — select all services you offer"
+                        : isUsed
+                            ? "Tell us what you offer — we'll build service pages tailored for pre-owned car buyers"
+                            : "We'll create pages for each service on your website"}
                 </CardDescription>
             </CardHeader>
 
