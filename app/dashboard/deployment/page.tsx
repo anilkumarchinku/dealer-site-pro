@@ -71,9 +71,9 @@ export default function DeploymentPage() {
                     .eq('id', dealerId!)
                     .single()
                 if (!data) return
-                const firstHand = data.sells_new_cars === true && data.sells_used_cars === false
-                setIsFirstHand(firstHand)
-                if (firstHand && data.slug) {
+                // All dealers use the multi-tenant platform
+                setIsFirstHand(true)
+                if (data.slug) {
                     const baseDomain = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'dealersitepro.com'
                     const useSubdomain = process.env.NEXT_PUBLIC_USE_SUBDOMAIN === 'true'
                     setMultiTenantUrl(
@@ -186,7 +186,7 @@ export default function DeploymentPage() {
                 <div>
                     <h1 className="text-2xl font-bold">Your Site</h1>
                     <p className="text-muted-foreground">
-                        As an authorised new-car dealer, your site runs on our shared platform — no deployment needed.
+                        Your site runs on our shared platform — no separate deployment needed.
                     </p>
                 </div>
 
@@ -198,7 +198,7 @@ export default function DeploymentPage() {
                         </CardTitle>
                         <CardDescription>
                             Your dealership website is hosted on DealerSite Pro&apos;s shared infrastructure.
-                            Your inventory is always up to date — no redeployment required when you add or update cars.
+                            Your inventory is always up to date — no redeployment required when you add or update vehicles.
                         </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-5">
