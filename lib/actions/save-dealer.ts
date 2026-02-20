@@ -185,6 +185,46 @@ export async function saveDealer(
             if (error) throw error;
         }
 
+        // ── Save Cyepro API key if dealer chose Cyepro integration ─
+        if (data.inventorySource === 'cyepro' && data.cyeproApiKey) {
+            const { error: keyErr } = await supabase
+                .from('dealers')
+                .update({ cyepro_api_key: data.cyeproApiKey })
+                .eq('id', dealerId)
+            if (keyErr) console.warn('[saveDealer] cyepro key save failed:', keyErr.message)
+        }
+
+        // ── Save bulk-uploaded vehicles if dealer chose own stock ──
+        if (data.inventorySource === 'own' && data.uploadedVehicles?.length) {
+            // Soft-delete any previously uploaded vehicles for this dealer
+            await supabase
+                .from('vehicles')
+                .update({ status: 'inactive' })
+                .eq('dealer_id', dealerId)
+                .eq('condition', 'used')
+
+            const vehicleRows = data.uploadedVehicles.map(v => ({
+                dealer_id:    dealerId,
+                make:         v.make,
+                model:        v.model,
+                variant:      v.variant      ?? null,
+                year:         v.year,
+                price_paise:  v.price_inr,   // stored in ₹ (not paise) from CSV
+                mileage_km:   v.km_driven    ?? null,
+                fuel_type:    v.fuel         ?? null,
+                transmission: v.transmission ?? null,
+                color:        v.color        ?? null,
+                vin:          v.reg_number   ?? null,
+                features:     [],
+                condition:    'used' as const,
+                status:       'available' as const,
+                view_count:   0,
+            }))
+
+            const { error: vErr } = await supabase.from('vehicles').insert(vehicleRows)
+            if (vErr) console.warn('[saveDealer] vehicle insert failed:', vErr.message)
+        }
+
         // ── Auto-register free subdomain domain record ──────────
         const subdomainValue = USE_SUBDOMAIN
             ? `${slug}.${BASE_DOMAIN}`

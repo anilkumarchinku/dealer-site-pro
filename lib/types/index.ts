@@ -58,6 +58,23 @@ export type InventorySystem =
     | 'manual'
     | 'other';
 
+// How a used-car dealer manages their vehicle inventory
+export type InventorySource = 'cyepro' | 'own';
+
+// A single row from a dealer's bulk-uploaded CSV
+export interface VehicleUploadRow {
+    make:          string;
+    model:         string;
+    variant?:      string;
+    year:          number;
+    price_inr:     number;   // selling price in ₹
+    km_driven?:    number;
+    fuel?:         string;
+    transmission?: string;
+    color?:        string;
+    reg_number?:   string;
+}
+
 // Onboarding data collected
 export interface OnboardingData {
     // Step 1: About You
@@ -112,6 +129,13 @@ export interface OnboardingData {
         // Operations
         workingHours?: string;
     };
+
+    // Inventory source for used-car dealers
+    inventorySource?: InventorySource;
+    cyeproApiKey?:    string;
+
+    // Vehicles uploaded via CSV bulk upload (saved to DB in step-6)
+    uploadedVehicles?: VehicleUploadRow[];
 
     // Computed
     dealerType: DealerType | null;
