@@ -160,11 +160,11 @@ export default async function SitePage({ params }: SitePageProps) {
     const dealer = await fetchDealerBySlug(slug)
     if (!dealer) return <ComingSoon slug={slug} />
 
-    const { sells_new_cars, sells_used_cars, brandFilter, brands, vehicles } = dealer
+    const { sells_new_cars, sells_used_cars, brandFilter, brands, vehicles, usedCarSite } = dealer
 
     // ── Smart car selection ───────────────────────────────────────────────────
     //
-    // PATH A — Used-only dealer
+    // PATH A — Used-only dealer OR hybrid's "-used" site
     //   → Show ONLY their manually-added DB stock
     //   → If nothing added yet → NoStockPage
     //
@@ -172,14 +172,16 @@ export default async function SitePage({ params }: SitePageProps) {
     //   → brandFilter set (brand-specific URL): show that brand's scraped catalog
     //   → brandFilter null (main URL, multi-brand): combine all brand catalogs
     //
-    // PATH C — Hybrid dealer (sells both new + used)
-    //   → If they have DB vehicles → show those (their unique used/mixed stock)
+    // PATH C — Hybrid dealer main site (new + used, NOT the -used sub-site)
+    //   → If they have DB vehicles → show those
     //   → Otherwise fall back to brand catalog
     //
     let cars: Car[]
 
-    if (sells_used_cars && !sells_new_cars) {
-        // PATH A — Used only
+    const isUsedCarPath = (sells_used_cars && !sells_new_cars) || usedCarSite
+
+    if (isUsedCarPath) {
+        // PATH A — Used only, or hybrid's dedicated used-car site
         if (vehicles.length === 0) {
             return (
                 <NoStockPage
@@ -204,7 +206,7 @@ export default async function SitePage({ params }: SitePageProps) {
         }
 
     } else {
-        // PATH C — Hybrid (new + used) OR fallback
+        // PATH C — Hybrid main site (new + used, not the -used sub-site)
         if (vehicles.length > 0) {
             cars = dbVehiclesToCars(vehicles)
         } else {
@@ -215,7 +217,9 @@ export default async function SitePage({ params }: SitePageProps) {
     }
 
     // ── Brand name for template colour theming ────────────────────────────────
-    const brandName = brandFilter ?? brands[0] ?? dealer.dealership_name
+    // Used-car sites always get the Bentley prestige palette (deep green + gold)
+    // — no Bentley branding, just the colours
+    const brandName = isUsedCarPath ? 'Bentley' : (brandFilter ?? brands[0] ?? dealer.dealership_name)
 
     const contactInfo = {
         phone:   dealer.phone,

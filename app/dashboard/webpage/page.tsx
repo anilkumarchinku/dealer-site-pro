@@ -17,12 +17,14 @@ import {
 // ── Types ──────────────────────────────────────────────────────────────────────
 
 interface SiteCard {
-    /** Full URL slug, e.g. "abhi-motors-tata" or "abhi-motors" */
+    /** Full URL slug, e.g. "abhi-motors-tata" or "abhi-motors-used" */
     slug: string
     /** Brand name for multi-OEM, or null for single-OEM / used-car dealer */
     brand: string | null
     /** Display label shown on the card */
     label: string
+    /** True for the hybrid dealer's used-car sub-site */
+    isUsed?: boolean
 }
 
 // ── Component ──────────────────────────────────────────────────────────────────
@@ -31,10 +33,12 @@ export default function WebpagePage() {
     const router = useRouter()
     const { dealerId, dealerSlug, setDealerId, setDealerSlug, data } = useOnboardingStore()
 
-    const [sites,       setSites]       = useState<SiteCard[]>([])
-    const [loading,     setLoading]     = useState(true)
-    const [copied,      setCopied]      = useState<string | null>(null)
-    const [domainSite,  setDomainSite]  = useState<SiteCard | null>(null)
+    const [sites,           setSites]           = useState<SiteCard[]>([])
+    const [loading,         setLoading]         = useState(true)
+    const [copied,          setCopied]          = useState<string | null>(null)
+    const [domainSite,      setDomainSite]      = useState<SiteCard | null>(null)
+    const [sellsUsedCars,   setSellsUsedCars]   = useState(data.sellsUsedCars ?? false)
+    const [sellsNewCars,    setSellsNewCars]     = useState(data.sellsNewCars ?? true)
 
     // ── Bootstrap: if store not yet populated, load from DB ──────────────────
     useEffect(() => {
@@ -46,12 +50,14 @@ export default function WebpagePage() {
                 if (!user) return
                 const { data: dealer } = await supabase
                     .from("dealers")
-                    .select("id, slug")
+                    .select("id, slug, sells_new_cars, sells_used_cars")
                     .eq("user_id", user.id)
                     .eq("onboarding_complete", true)
                     .maybeSingle()
                 if (dealer?.id)   setDealerId(dealer.id)
                 if (dealer?.slug) setDealerSlug(dealer.slug)
+                if (dealer?.sells_used_cars != null) setSellsUsedCars(dealer.sells_used_cars)
+                if (dealer?.sells_new_cars  != null) setSellsNewCars(dealer.sells_new_cars)
             } finally {
                 setLoading(false)
             }
@@ -60,23 +66,52 @@ export default function WebpagePage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    // ── Build site cards whenever slug / brands change ────────────────────────
+    // ── Build site cards whenever slug / brands / dealer type change ─────────
     useEffect(() => {
         if (!dealerSlug) return
-        buildSiteCards(dealerSlug, data.brands ?? [])
+        buildSiteCards(dealerSlug, data.brands ?? [], sellsNewCars, sellsUsedCars)
         setLoading(false)
-    }, [dealerSlug, data.brands])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [dealerSlug, data.brands, sellsNewCars, sellsUsedCars])
 
-    function buildSiteCards(slug: string, brands: string[]) {
-        if (brands.length <= 1) {
-            // Single-OEM or used-car dealer: one main site
+    function buildSiteCards(slug: string, brands: string[], isNew: boolean, isUsed: boolean) {
+        const isHybrid = isNew && isUsed
+
+        if (isUsed && !isNew) {
+            // Pure used-car dealer: one site
+            setSites([{
+                slug,
+                brand: null,
+                label: data.dealershipName ?? "My Site",
+                isUsed: true,
+            }])
+        } else if (brands.length <= 1 && !isHybrid) {
+            // Single-OEM new-car dealer: one main site
             setSites([{
                 slug,
                 brand: null,
                 label: data.dealershipName ?? "My Site",
             }])
+        } else if (isHybrid) {
+            // Hybrid: brand-specific new-car sites + a used-car site
+            const brandCards: SiteCard[] = brands.length > 0
+                ? brands.map(brand => ({
+                    slug:  `${slug}-${brandToUrlSlug(brand)}`,
+                    brand,
+                    label: brand,
+                }))
+                : [{ slug, brand: null, label: data.dealershipName ?? "My Site" }]
+            setSites([
+                ...brandCards,
+                {
+                    slug:   `${slug}-used`,
+                    brand:  null,
+                    label:  "Pre-Owned",
+                    isUsed: true,
+                },
+            ])
         } else {
-            // Multi-OEM: one card per brand (brand-specific sites)
+            // Multi-OEM new-car dealer: one card per brand
             setSites(brands.map(brand => ({
                 slug:  `${slug}-${brandToUrlSlug(brand)}`,
                 brand,
@@ -163,6 +198,9 @@ interface SiteCardProps {
     onDomain:   () => void
 }
 
+// Bentley prestige palette — used for all used-car site accents
+const BENTLEY = { primary: '#003328', accent: '#B8962E' } as const
+
 function SiteCard({ site, isMulti, dealerName, copied, onCopy, onEdit, onDomain }: SiteCardProps) {
     const liveUrl     = dealerSiteHref(site.slug)
     const displayUrl  = dealerSiteUrl(site.slug)
@@ -172,11 +210,16 @@ function SiteCard({ site, isMulti, dealerName, copied, onCopy, onEdit, onDomain 
     return (
         <Card variant="glass" className="overflow-hidden flex flex-col">
 
-            {/* Brand badge */}
+            {/* Brand / Used badge */}
             {isMulti && (
                 <div className="px-4 pt-4 pb-1">
-                    <span className="inline-block px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-semibold uppercase tracking-wider">
-                        {site.label}
+                    <span className={cn(
+                        "inline-block px-2.5 py-1 rounded-md text-xs font-semibold uppercase tracking-wider",
+                        site.isUsed
+                            ? "bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20"
+                            : "bg-blue-500/10 text-blue-600 dark:text-blue-400"
+                    )}>
+                        {site.isUsed ? "Pre-Owned / Used Cars" : site.label}
                     </span>
                 </div>
             )}
@@ -205,7 +248,11 @@ function SiteCard({ site, isMulti, dealerName, copied, onCopy, onEdit, onDomain 
                 {/* Name + live URL */}
                 <div>
                     <p className="text-sm font-semibold leading-snug">
-                        {isMulti ? `${dealerName} — ${site.label}` : dealerName}
+                        {isMulti
+                            ? site.isUsed
+                                ? `${dealerName} — Pre-Owned`
+                                : `${dealerName} — ${site.label}`
+                            : dealerName}
                     </p>
                     <div className="flex items-center gap-1.5 mt-1.5">
                         <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
@@ -252,14 +299,25 @@ function SiteCard({ site, isMulti, dealerName, copied, onCopy, onEdit, onDomain 
                         <Edit3 className="w-3.5 h-3.5" />
                         Edit Design
                     </Button>
-                    <Button
-                        size="sm"
-                        className="flex-1 gap-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
-                        onClick={onDomain}
-                    >
-                        <Globe className="w-3.5 h-3.5" />
-                        Domain
-                    </Button>
+                    {site.isUsed ? (
+                        <button
+                            onClick={onDomain}
+                            className="flex-1 flex items-center justify-center gap-1.5 text-xs px-2.5 py-1.5 rounded-lg font-medium transition-opacity hover:opacity-90"
+                            style={{ background: BENTLEY.primary, color: BENTLEY.accent }}
+                        >
+                            <Globe className="w-3.5 h-3.5" />
+                            Domain
+                        </button>
+                    ) : (
+                        <Button
+                            size="sm"
+                            className="flex-1 gap-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                            onClick={onDomain}
+                        >
+                            <Globe className="w-3.5 h-3.5" />
+                            Domain
+                        </Button>
+                    )}
                 </div>
 
             </CardContent>
