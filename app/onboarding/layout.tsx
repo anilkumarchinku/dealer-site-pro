@@ -49,17 +49,33 @@ export default function OnboardingLayout({
     //  Step 4 (template selector) is hidden; steps 5 & 6 map to 4 & 5.
 
     let progressStep: number;
-    if (pathname.includes("step-2-used") || pathname.includes("step-2-inventory")) {
-        progressStep = 2;
-    } else if (stepNum > 4) {
-        progressStep = stepNum - 1; // step-5 → 4, step-6 → 5
-    } else {
-        progressStep = stepNum;
-    }
+    let totalSteps: number;
+    let progressLabels: string[];
 
-    const progressLabels = isUsedCarDealer
-        ? ["Your Info", "Brand & Stock", "Services", "Customise", "Review"]
-        : ["Your Info", "Brands", "Services", "Customise", "Review"];
+    if (isUsedCarDealer) {
+        // 2nd hand: 5 steps — Info | Brand & Stock | Services | Customise | Review
+        totalSteps = 5;
+        progressLabels = ["Your Info", "Brand & Stock", "Services", "Customise", "Review"];
+        if (pathname.includes("step-2-used") || pathname.includes("step-2-inventory")) {
+            progressStep = 2;
+        } else if (stepNum === 3) {
+            progressStep = 3;
+        } else if (stepNum > 4) {
+            progressStep = stepNum - 1; // step-5 → 4, step-6 → 5
+        } else {
+            progressStep = stepNum;
+        }
+    } else {
+        // 1st hand: 4 steps — Info & Brands | Services | Customise | Review
+        // (brands captured inside step-1, step-2 URL is skipped entirely)
+        totalSteps = 4;
+        progressLabels = ["Your Info & Brands", "Services", "Customise", "Review"];
+        if (stepNum === 1)      progressStep = 1;
+        else if (stepNum === 3) progressStep = 2;
+        else if (stepNum === 5) progressStep = 3;
+        else if (stepNum === 6) progressStep = 4;
+        else                    progressStep = 1;
+    }
 
     return (
         <div className="min-h-screen flex flex-col bg-background">
@@ -85,7 +101,7 @@ export default function OnboardingLayout({
 
             {/* Progress */}
             <div className="container max-w-3xl mx-auto w-full px-8 pt-12 pb-8">
-                <Progress currentStep={progressStep} totalSteps={5} labels={progressLabels} />
+                <Progress currentStep={progressStep} totalSteps={totalSteps} labels={progressLabels} />
             </div>
 
             {/* Main Content */}

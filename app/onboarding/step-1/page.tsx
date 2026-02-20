@@ -1,13 +1,15 @@
 "use client"
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Loader2, CheckCircle, XCircle, Globe, Edit3 } from "lucide-react";
+import { ArrowRight, Loader2, CheckCircle, XCircle, Globe, Edit3, Check, Building2, Car } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BASE_DOMAIN, USE_SUBDOMAIN } from "@/lib/utils/domain";
+import type { Brand } from "@/lib/types";
 
 // Sanitize input into a URL-safe slug
 function toSlug(value: string) {
@@ -21,44 +23,80 @@ function toSlug(value: string) {
         .substring(0, 63);
 }
 
+const BRANDS: { name: Brand; logo: string }[] = [
+    { name: "Maruti Suzuki",  logo: "/assets/logos/maruti-suzuki.png" },
+    { name: "Tata Motors",    logo: "/assets/logos/tata-motors.png" },
+    { name: "Mahindra",       logo: "/assets/logos/mahindra.png" },
+    { name: "Hyundai",        logo: "/assets/logos/hyundai.png" },
+    { name: "Honda",          logo: "/assets/logos/honda.png" },
+    { name: "Toyota",         logo: "/assets/logos/toyota.png" },
+    { name: "Kia",            logo: "/assets/logos/kia.png" },
+    { name: "Renault",        logo: "/assets/logos/renault.png" },
+    { name: "Nissan",         logo: "/assets/logos/nissan.png" },
+    { name: "Volkswagen",     logo: "/assets/logos/volkswagen.png" },
+    { name: "Skoda",          logo: "/assets/logos/skoda.png" },
+    { name: "MG",             logo: "/assets/logos/mg.png" },
+    { name: "Jeep",           logo: "/assets/logos/jeep.png" },
+    { name: "Citroen",        logo: "/assets/logos/citroen.png" },
+    { name: "Force Motors",   logo: "/assets/logos/force-motors.png" },
+    { name: "Isuzu",          logo: "/assets/logos/isuzu.png" },
+    { name: "Mercedes-Benz",  logo: "/assets/logos/mercedes-benz.png" },
+    { name: "BMW",            logo: "/assets/logos/bmw.png" },
+    { name: "Audi",           logo: "/assets/logos/audi.png" },
+    { name: "Jaguar",         logo: "/assets/logos/jaguar.png" },
+    { name: "Land Rover",     logo: "/assets/logos/land-rover.png" },
+    { name: "Volvo",          logo: "/assets/logos/volvo.png" },
+    { name: "Lexus",          logo: "/assets/logos/lexus.png" },
+    { name: "Porsche",        logo: "/assets/logos/porsche.png" },
+    { name: "Bentley",        logo: "/assets/logos/bentley.png" },
+    { name: "Lamborghini",    logo: "/assets/logos/lamborghini.png" },
+    { name: "BYD",            logo: "/assets/logos/byd.png" },
+    { name: "Tesla",          logo: "/assets/logos/tesla.png" },
+];
+
 export default function Step1Page() {
     const router = useRouter();
     const { data, updateData, setStep } = useOnboardingStore();
 
+    const isFirstHand = data.dealerCategory === 'new';
+
     const [formData, setFormData] = useState({
-        dealershipName: data.dealershipName || "",
-        tagline: data.tagline || "",
-        location: data.location || "",
-        fullAddress: data.fullAddress || "",
-        mapLink: data.mapLink || "",
+        dealershipName:  data.dealershipName || "",
+        tagline:         data.tagline || "",
+        location:        data.location || "",
+        fullAddress:     data.fullAddress || "",
+        mapLink:         data.mapLink || "",
         yearsInBusiness: data.yearsInBusiness?.toString() || "",
-        phone: data.phone || "",
-        whatsapp: data.whatsapp || "",
-        email: data.email || "",
-        gstin: data.gstin || "",
+        phone:           data.phone || "",
+        whatsapp:        data.whatsapp || "",
+        email:           data.email || "",
+        gstin:           data.gstin || "",
     });
 
-    const [errors, setErrors] = useState<Record<string, string>>({});
+    const [errors,       setErrors]       = useState<Record<string, string>>({});
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     // Slug / site name state
-    const [siteSlug, setSiteSlug] = useState(data.slug || "");
-    const [slugEdited, setSlugEdited] = useState(false);   // true once user manually edits
+    const [siteSlug,   setSiteSlug]   = useState(data.slug || "");
+    const [slugEdited, setSlugEdited] = useState(false);
     const [slugStatus, setSlugStatus] = useState<"idle" | "checking" | "available" | "taken" | "invalid">("idle");
-    const [slugError, setSlugError] = useState("");
+    const [slugError,  setSlugError]  = useState("");
     const checkRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-    // Auto-generate slug from dealership name (unless user has manually edited it)
+    // OEM brand state (1st hand only)
+    const [selectedBrands, setSelectedBrands] = useState<Brand[]>(data.brands || []);
+    const [brandError,     setBrandError]     = useState("");
+
+    // Auto-generate slug from dealership name
     useEffect(() => {
         if (!slugEdited && formData.dealershipName) {
             setSiteSlug(toSlug(formData.dealershipName));
         }
     }, [formData.dealershipName, slugEdited]);
 
-    // Debounced availability check whenever slug changes
+    // Debounced slug availability check
     useEffect(() => {
         if (!siteSlug) { setSlugStatus("idle"); return; }
-
         if (checkRef.current) clearTimeout(checkRef.current);
         setSlugStatus("checking");
 
@@ -88,9 +126,15 @@ export default function Step1Page() {
     };
 
     const handleSlugChange = (value: string) => {
-        const sanitized = toSlug(value);
-        setSiteSlug(sanitized);
+        setSiteSlug(toSlug(value));
         setSlugEdited(true);
+    };
+
+    const toggleBrand = (brand: Brand) => {
+        setSelectedBrands(prev =>
+            prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]
+        );
+        setBrandError("");
     };
 
     const validate = () => {
@@ -109,26 +153,45 @@ export default function Step1Page() {
 
     const handleNext = async () => {
         if (!validate()) return;
-        if (slugStatus === "checking") return; // wait for check
+        if (slugStatus === "checking") return;
+
+        // For 1st hand, also require at least one brand
+        if (isFirstHand && selectedBrands.length === 0) {
+            setBrandError("Please select at least one brand you're authorised to sell");
+            // Scroll to brand section
+            document.getElementById("brand-section")?.scrollIntoView({ behavior: "smooth", block: "center" });
+            return;
+        }
 
         setIsSubmitting(true);
         try {
             updateData({
-                dealershipName: formData.dealershipName,
-                tagline:        formData.tagline,
-                location:       formData.location,
-                fullAddress:    formData.fullAddress,
-                mapLink:        formData.mapLink,
+                dealershipName:  formData.dealershipName,
+                tagline:         formData.tagline,
+                location:        formData.location,
+                fullAddress:     formData.fullAddress,
+                mapLink:         formData.mapLink,
                 yearsInBusiness: formData.yearsInBusiness ? parseInt(formData.yearsInBusiness) : null,
-                phone:          formData.phone,
-                whatsapp:       formData.whatsapp || formData.phone,
-                email:          formData.email,
-                gstin:          formData.gstin,
-                slug:           siteSlug,
+                phone:           formData.phone,
+                whatsapp:        formData.whatsapp || formData.phone,
+                email:           formData.email,
+                gstin:           formData.gstin,
+                slug:            siteSlug,
+                ...(isFirstHand && {
+                    brands:       selectedBrands,
+                    sellsNewCars: true,
+                    sellsUsedCars: false,
+                }),
             });
             setStep(2);
-            // 'used' → brand colours/logo step; 'new' and 'both' → OEM brand selection
-            router.push(data.dealerCategory === 'used' ? "/onboarding/step-2-used" : "/onboarding/step-2");
+
+            if (isFirstHand) {
+                // Brands captured here — skip step-2, go straight to Services
+                router.push("/onboarding/step-3");
+            } else {
+                // 2nd hand → brand colours/logo
+                router.push("/onboarding/step-2-used");
+            }
         } finally {
             setIsSubmitting(false);
         }
@@ -136,16 +199,32 @@ export default function Step1Page() {
 
     useEffect(() => { setStep(1); }, [setStep]);
 
-    // URL preview helpers — driven by env vars, not browser location
-    const urlPrefix = USE_SUBDOMAIN ? null          : `${BASE_DOMAIN}/sites/`
+    const urlPrefix = USE_SUBDOMAIN ? null             : `${BASE_DOMAIN}/sites/`
     const urlSuffix = USE_SUBDOMAIN ? `.${BASE_DOMAIN}` : null
 
     return (
         <Card className="animate-fade-in">
             <CardHeader>
+                {/* ── Dealer type badge ── */}
+                <div className="mb-3">
+                    <span className={cn(
+                        "inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border",
+                        isFirstHand
+                            ? "bg-blue-500/10 text-blue-600 border-blue-500/20"
+                            : "bg-amber-500/10 text-amber-700 border-amber-500/20"
+                    )}>
+                        {isFirstHand
+                            ? <Building2 className="w-3.5 h-3.5" />
+                            : <Car className="w-3.5 h-3.5" />}
+                        {isFirstHand ? "1st Hand Dealer — Authorised New Car Dealership" : "2nd Hand Dealer — Pre-Owned Cars"}
+                    </span>
+                </div>
+
                 <CardTitle>Tell us about your dealership</CardTitle>
                 <CardDescription>
-                    We&apos;ll use this information to create your personalised website
+                    {isFirstHand
+                        ? "We'll use this to build your authorised dealership website with OEM brand pages"
+                        : "We'll use this to create your premium pre-owned car website"}
                 </CardDescription>
             </CardHeader>
 
@@ -169,7 +248,6 @@ export default function Step1Page() {
                             Your Site URL
                         </label>
 
-                        {/* URL Preview bar */}
                         <div className={cn(
                             "flex items-center rounded-xl border-2 overflow-hidden transition-colors",
                             slugStatus === "available" ? "border-emerald-500/40 bg-emerald-500/5" :
@@ -177,14 +255,11 @@ export default function Step1Page() {
                             slugStatus === "invalid"   ? "border-red-500/40    bg-red-500/5"     :
                                                          "border-border        bg-muted/30"
                         )}>
-                            {/* Path-based mode: [domain/sites/] [slug] */}
                             {urlPrefix && (
                                 <span className="px-3 py-2.5 text-sm text-muted-foreground bg-muted/50 border-r border-border whitespace-nowrap select-none">
                                     {urlPrefix}
                                 </span>
                             )}
-
-                            {/* Editable slug */}
                             <input
                                 type="text"
                                 value={siteSlug}
@@ -193,15 +268,11 @@ export default function Step1Page() {
                                 placeholder="your-dealership-name"
                                 spellCheck={false}
                             />
-
-                            {/* Subdomain mode: [slug] [.domain] */}
                             {urlSuffix && (
                                 <span className="px-3 py-2.5 text-sm text-muted-foreground bg-muted/50 border-l border-border whitespace-nowrap select-none">
                                     {urlSuffix}
                                 </span>
                             )}
-
-                            {/* Status icon */}
                             <div className="px-3">
                                 {slugStatus === "checking"  && <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" />}
                                 {slugStatus === "available" && <CheckCircle className="w-4 h-4 text-emerald-500" />}
@@ -209,7 +280,6 @@ export default function Step1Page() {
                             </div>
                         </div>
 
-                        {/* Status message */}
                         {slugStatus === "available" && (
                             <p className="text-xs text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5">
                                 <CheckCircle className="w-3.5 h-3.5" />
@@ -226,17 +296,18 @@ export default function Step1Page() {
                             <p className="text-xs text-red-500">{errors.siteSlug}</p>
                         )}
 
-                        {/* Brand URL note */}
-                        <p className="text-xs text-muted-foreground flex items-center gap-1.5">
-                            <Edit3 className="w-3 h-3 shrink-0" />
-                            After you pick brands, e.g.{" "}
-                            <code className="font-mono bg-muted px-1 rounded">
-                                {USE_SUBDOMAIN
-                                    ? `${siteSlug}-toyota${urlSuffix}`
-                                    : `${urlPrefix}${siteSlug}-toyota`}
-                            </code>{" "}
-                            will also work automatically.
-                        </p>
+                        {isFirstHand && (
+                            <p className="text-xs text-muted-foreground flex items-center gap-1.5">
+                                <Edit3 className="w-3 h-3 shrink-0" />
+                                After picking brands, e.g.{" "}
+                                <code className="font-mono bg-muted px-1 rounded">
+                                    {USE_SUBDOMAIN
+                                        ? `${siteSlug}-toyota${urlSuffix}`
+                                        : `${urlPrefix}${siteSlug}-toyota`}
+                                </code>{" "}
+                                will also work automatically.
+                            </p>
+                        )}
                     </div>
                 )}
 
@@ -302,7 +373,7 @@ export default function Step1Page() {
                             Full Address (Optional)
                         </label>
                         <textarea
-                            className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                             placeholder="123 Main Street, Industrial Area, City, State - Pin Code"
                             value={formData.fullAddress}
                             onChange={(e) => handleChange("fullAddress", e.target.value)}
@@ -329,6 +400,81 @@ export default function Step1Page() {
                     onChange={(e) => handleChange("whatsapp", e.target.value)}
                     helperText="For instant chat button on site"
                 />
+
+                {/* ── OEM Brand Selection (1st hand only) ──────────────────── */}
+                {isFirstHand && (
+                    <div id="brand-section" className="border-t border-border pt-6 space-y-4">
+                        <div>
+                            <h3 className="text-base font-semibold flex items-center gap-2">
+                                <span className="w-6 h-6 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-xs font-bold text-blue-600">
+                                    OEM
+                                </span>
+                                Which brands are you authorised to sell?
+                            </h3>
+                            <p className="text-sm text-muted-foreground mt-1">
+                                Select all OEM brands you hold an authorised dealership for
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
+                            {BRANDS.map((brand) => (
+                                <button
+                                    key={brand.name}
+                                    type="button"
+                                    onClick={() => toggleBrand(brand.name)}
+                                    className={cn(
+                                        "p-3 rounded-xl border-2 flex flex-col items-center gap-2 transition-all hover:bg-accent relative",
+                                        selectedBrands.includes(brand.name)
+                                            ? "border-blue-500 bg-blue-500/5"
+                                            : "border-input"
+                                    )}
+                                >
+                                    <div className="relative w-10 h-10 flex items-center justify-center">
+                                        <Image
+                                            src={brand.logo}
+                                            alt={brand.name}
+                                            width={40}
+                                            height={40}
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                    <span className="text-xs font-medium truncate w-full text-center leading-tight">
+                                        {brand.name}
+                                    </span>
+                                    {selectedBrands.includes(brand.name) && (
+                                        <div className="absolute top-1 right-1 w-4 h-4 rounded-full bg-blue-500 flex items-center justify-center">
+                                            <Check className="w-2.5 h-2.5 text-white" />
+                                        </div>
+                                    )}
+                                </button>
+                            ))}
+                        </div>
+
+                        {selectedBrands.length > 0 && (
+                            <p className="text-sm text-muted-foreground">
+                                Selected:{" "}
+                                <strong className="text-foreground">
+                                    {selectedBrands.length} brand{selectedBrands.length > 1 ? "s" : ""}
+                                </strong>
+                                {selectedBrands.length <= 3 && (
+                                    <span className="text-muted-foreground"> ({selectedBrands.join(", ")})</span>
+                                )}
+                                {selectedBrands.length > 1 && (
+                                    <span className="ml-2 text-xs text-blue-600 bg-blue-500/10 px-2 py-0.5 rounded-full border border-blue-500/20">
+                                        Multi-OEM Dealer
+                                    </span>
+                                )}
+                            </p>
+                        )}
+
+                        {brandError && (
+                            <p className="text-sm text-destructive flex items-center gap-1.5">
+                                <XCircle className="w-4 h-4 flex-shrink-0" />
+                                {brandError}
+                            </p>
+                        )}
+                    </div>
+                )}
             </CardContent>
 
             <CardFooter className="justify-end">
