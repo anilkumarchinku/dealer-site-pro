@@ -79,6 +79,8 @@ export interface DealerPublicData {
     services: string[] | null
     /** Set when the URL was a brand-specific slug, e.g. "abhi-motors-tata" */
     brandFilter: string | null
+    /** True when the URL had the "-used" suffix — render the used-car site with Bentley colours */
+    usedCarSite: boolean
 }
 
 function getServerSupabase() {
@@ -116,8 +118,19 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
     // ── 1. Try exact match first ──────────────────────────────────────────
     let dealer = await findDealerByExactSlug(supabase, slug)
     let brandFilter: string | null = null
+    let usedCarSite = false
 
-    // ── 2. If not found, detect brand suffix and try parent slug ──────────
+    // ── 2. Detect "-used" suffix (hybrid dealer's used-car site) ──────────
+    if (!dealer && slug.endsWith('-used')) {
+        const parentSlug = slug.slice(0, -'-used'.length)
+        const parentDealer = await findDealerByExactSlug(supabase, parentSlug)
+        if (parentDealer) {
+            dealer = parentDealer
+            usedCarSite = true
+        }
+    }
+
+    // ── 3. If not found, detect brand suffix and try parent slug ──────────
     if (!dealer) {
         for (const { slug: brandSlug, name: brandName } of KNOWN_BRAND_SLUGS) {
             const suffix = `-${brandSlug}`
@@ -194,5 +207,6 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
         working_hours:   cfg?.working_hours ?? null,
         services:        servicesResult.data?.map(s => s.service_name) ?? null,
         brandFilter,
+        usedCarSite,
     }
 }
