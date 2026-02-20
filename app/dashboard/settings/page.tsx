@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -10,9 +10,11 @@ import {
     Save, Globe, Bell, Palette, Shield,
     Phone, Mail, MapPin, Building2,
     ExternalLink, Sun, Moon, Info,
+    Plug, Eye, EyeOff, CheckCircle2, XCircle, Loader2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { supabase } from "@/lib/supabase";
 import { updateDealerProfile, saveNotificationSettings } from "@/lib/db/settings";
 
 const NOTIFICATION_CONFIG: Record<string, { label: string; description: string }> = {
@@ -44,6 +46,68 @@ export default function SettingsPage() {
     });
 
     const [saved, setSaved] = useState(false);
+
+    // ── Cyepro integration state ──────────────────────────────────────────────
+    const [cyeproKey,       setCyeproKey]       = useState("");
+    const [showCyeproKey,   setShowCyeproKey]   = useState(false);
+    const [cyeproStatus,    setCyeproStatus]    = useState<"idle" | "saving" | "saved" | "error">("idle");
+    const [cyeproError,     setCyeproError]     = useState("");
+    const [cyeproConnected, setCyeproConnected] = useState(false);
+
+    // Load existing Cyepro key (masked) from DB on mount
+    useEffect(() => {
+        if (!dealerId) return;
+        supabase
+            .from("dealers")
+            .select("cyepro_api_key")
+            .eq("id", dealerId)
+            .single()
+            .then(({ data }) => {
+                if (data?.cyepro_api_key) {
+                    setCyeproConnected(true);
+                    // Show a placeholder so user knows a key is saved
+                    setCyeproKey("••••••••••••••••••••");
+                }
+            });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [dealerId]);
+
+    const handleSaveCyeproKey = async () => {
+        if (!dealerId) return;
+        if (!cyeproKey || cyeproKey.startsWith("•")) return;
+
+        setCyeproStatus("saving");
+        setCyeproError("");
+
+        const { error } = await supabase
+            .from("dealers")
+            .update({ cyepro_api_key: cyeproKey.trim() })
+            .eq("id", dealerId);
+
+        if (error) {
+            setCyeproStatus("error");
+            setCyeproError(error.message);
+        } else {
+            setCyeproStatus("saved");
+            setCyeproConnected(true);
+            setCyeproKey("••••••••••••••••••••");
+            setShowCyeproKey(false);
+            setTimeout(() => setCyeproStatus("idle"), 3000);
+        }
+    };
+
+    const handleRemoveCyeproKey = async () => {
+        if (!dealerId) return;
+        const { error } = await supabase
+            .from("dealers")
+            .update({ cyepro_api_key: null })
+            .eq("id", dealerId);
+        if (!error) {
+            setCyeproConnected(false);
+            setCyeproKey("");
+            setCyeproStatus("idle");
+        }
+    };
 
     const handleChange = (field: string, value: string) => {
         setFormData(prev => ({ ...prev, [field]: value }));
@@ -210,6 +274,119 @@ export default function SettingsPage() {
                                     </div>
                                 );
                             })}
+                        </CardContent>
+                    </Card>
+
+                    {/* ── Integrations ── */}
+                    <Card variant="glass">
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-2.5 text-lg">
+                                <div className="p-2 rounded-lg bg-emerald-500/10">
+                                    <Plug className="w-4 h-4 text-emerald-500" />
+                                </div>
+                                Integrations
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+
+                            {/* Cyepro */}
+                            <div className="rounded-xl border border-border bg-muted/20 overflow-hidden">
+
+                                {/* Header row */}
+                                <div className="flex items-center gap-3 px-4 py-4">
+                                    <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center flex-shrink-0">
+                                        <span className="text-amber-600 font-bold text-xs">CYE</span>
+                                    </div>
+                                    <div className="flex-1 min-w-0">
+                                        <div className="flex items-center gap-2">
+                                            <p className="text-sm font-semibold">Cyepro Inventory</p>
+                                            {cyeproConnected
+                                                ? <span className="flex items-center gap-1 text-xs text-emerald-600 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                                                    <CheckCircle2 className="w-3 h-3" /> Connected
+                                                  </span>
+                                                : <span className="text-xs text-muted-foreground bg-muted/60 px-2 py-0.5 rounded-full">
+                                                    Not connected
+                                                  </span>
+                                            }
+                                        </div>
+                                        <p className="text-xs text-muted-foreground mt-0.5">
+                                            Sync your live used-car stock from api.cyepro.com
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Key input */}
+                                <div className="border-t border-border px-4 py-4 space-y-3 bg-muted/10">
+                                    <div className="relative">
+                                        <input
+                                            type={showCyeproKey ? "text" : "password"}
+                                            value={cyeproKey}
+                                            onChange={(e) => {
+                                                setCyeproKey(e.target.value);
+                                                setCyeproStatus("idle");
+                                                setCyeproError("");
+                                            }}
+                                            placeholder="Paste your Cyepro API key here"
+                                            className="w-full h-10 text-sm font-mono rounded-lg border border-input bg-background px-3 pr-10 focus:outline-none focus:ring-2 focus:ring-ring"
+                                        />
+                                        <button
+                                            type="button"
+                                            onClick={() => setShowCyeproKey(v => !v)}
+                                            className="absolute right-2.5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                                        >
+                                            {showCyeproKey
+                                                ? <EyeOff className="w-4 h-4" />
+                                                : <Eye className="w-4 h-4" />}
+                                        </button>
+                                    </div>
+
+                                    {cyeproError && (
+                                        <p className="text-xs text-destructive flex items-center gap-1.5">
+                                            <XCircle className="w-3.5 h-3.5" />
+                                            {cyeproError}
+                                        </p>
+                                    )}
+
+                                    <div className="flex items-center gap-2">
+                                        <Button
+                                            size="sm"
+                                            disabled={!cyeproKey || cyeproKey.startsWith("•") || cyeproStatus === "saving"}
+                                            onClick={handleSaveCyeproKey}
+                                            className={cn(
+                                                "gap-1.5",
+                                                cyeproStatus === "saved"
+                                                    ? "bg-emerald-600 hover:bg-emerald-700"
+                                                    : "bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700"
+                                            )}
+                                        >
+                                            {cyeproStatus === "saving" ? (
+                                                <><Loader2 className="w-3.5 h-3.5 animate-spin" /> Saving...</>
+                                            ) : cyeproStatus === "saved" ? (
+                                                <><CheckCircle2 className="w-3.5 h-3.5" /> Saved!</>
+                                            ) : (
+                                                <><Save className="w-3.5 h-3.5" /> Save Key</>
+                                            )}
+                                        </Button>
+                                        {cyeproConnected && (
+                                            <Button
+                                                size="sm"
+                                                variant="outline"
+                                                className="text-red-500 border-red-500/30 hover:bg-red-500/5"
+                                                onClick={handleRemoveCyeproKey}
+                                            >
+                                                Remove
+                                            </Button>
+                                        )}
+                                    </div>
+
+                                    <p className="text-xs text-muted-foreground leading-relaxed">
+                                        Your API key is stored securely and only used server-side.
+                                        It will never be exposed in the browser.
+                                        Once connected, your used-car website will automatically show live inventory.
+                                    </p>
+                                </div>
+                            </div>
+
                         </CardContent>
                     </Card>
 

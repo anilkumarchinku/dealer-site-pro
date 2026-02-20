@@ -5,6 +5,7 @@ import { SportyTemplate } from '@/components/templates/SportyTemplate'
 import { FamilyTemplate } from '@/components/templates/FamilyTemplate'
 import { allCars, getCarsByMake } from '@/lib/data/cars'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
+import { fetchCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
 import type { Car } from '@/lib/types/car'
 import type { DBVehicle } from '@/lib/db/vehicles'
 import type { Service } from '@/lib/types'
@@ -160,13 +161,14 @@ export default async function SitePage({ params }: SitePageProps) {
     const dealer = await fetchDealerBySlug(slug)
     if (!dealer) return <ComingSoon slug={slug} />
 
-    const { sells_new_cars, sells_used_cars, brandFilter, brands, vehicles, usedCarSite } = dealer
+    const { sells_new_cars, sells_used_cars, brandFilter, brands, vehicles, usedCarSite, cyepro_api_key } = dealer
 
     // ── Smart car selection ───────────────────────────────────────────────────
     //
     // PATH A — Used-only dealer OR hybrid's "-used" site
-    //   → Show ONLY their manually-added DB stock
-    //   → If nothing added yet → NoStockPage
+    //   → If dealer has Cyepro API key → fetch live inventory from Cyepro
+    //   → Fallback: manually-added DB stock
+    //   → If still empty → NoStockPage
     //
     // PATH B — New-car-only dealer
     //   → brandFilter set (brand-specific URL): show that brand's scraped catalog
@@ -182,7 +184,20 @@ export default async function SitePage({ params }: SitePageProps) {
 
     if (isUsedCarPath) {
         // PATH A — Used only, or hybrid's dedicated used-car site
-        if (vehicles.length === 0) {
+
+        // 1. Try Cyepro live inventory first (if API key is configured)
+        const cyeproCars = cyepro_api_key
+            ? await fetchCyeproInventoryAsCars(cyepro_api_key, { size: 30 })
+            : []
+
+        if (cyeproCars.length > 0) {
+            // Live Cyepro inventory available
+            cars = cyeproCars
+        } else if (vehicles.length > 0) {
+            // 2. Fallback: manually-added DB stock
+            cars = dbVehiclesToCars(vehicles)
+        } else {
+            // 3. No inventory at all → holding page
             return (
                 <NoStockPage
                     dealerName={dealer.dealership_name}
@@ -191,7 +206,6 @@ export default async function SitePage({ params }: SitePageProps) {
                 />
             )
         }
-        cars = dbVehiclesToCars(vehicles)
 
     } else if (sells_new_cars && !sells_used_cars) {
         // PATH B — New cars only
