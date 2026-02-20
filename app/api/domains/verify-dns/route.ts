@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { verifyCustomDomain } from '@/lib/services/dns-verification-service'
-import { supabase, isSupabaseReady, getSupabaseConfigError } from '@/lib/supabase'
+import { createRouteClient } from '@/lib/supabase-server'
 
 /**
  * POST /api/domains/verify-dns
@@ -8,20 +8,6 @@ import { supabase, isSupabaseReady, getSupabaseConfigError } from '@/lib/supabas
  */
 export async function POST(request: Request) {
     try {
-        // Check if Supabase is configured
-        if (!isSupabaseReady()) {
-            const configError = getSupabaseConfigError()
-            console.error('Supabase not configured:', configError)
-            return NextResponse.json(
-                {
-                    success: false,
-                    error: 'Database not configured. Please contact support.',
-                    details: process.env.NODE_ENV === 'development' ? configError : undefined
-                },
-                { status: 503 }
-            )
-        }
-
         const body = await request.json()
         const { domainId, domain } = body
 
@@ -32,10 +18,12 @@ export async function POST(request: Request) {
             )
         }
 
+        const supabase = await createRouteClient()
+
         // Verify DNS
         const verification = await verifyCustomDomain(domain)
 
-        // Save verification results
+        // Save verification results to domain_verifications
         await supabase.from('domain_verifications').insert(
             verification.records.map(record => ({
                 domain_id: domainId,
@@ -48,21 +36,23 @@ export async function POST(request: Request) {
             }))
         )
 
-        // Update domain status
+        // Update dealer_domains status
         if (verification.allVerified) {
             await supabase
-                .from('domains')
+                .from('dealer_domains')
                 .update({
                     status: 'active',
+                    dns_verified: true,
                     dns_verified_at: new Date().toISOString(),
                     last_checked_at: new Date().toISOString()
                 })
                 .eq('id', domainId)
         } else {
             await supabase
-                .from('domains')
+                .from('dealer_domains')
                 .update({
-                    status: 'failed',
+                    status: 'pending',
+                    dns_verified: false,
                     last_checked_at: new Date().toISOString()
                 })
                 .eq('id', domainId)
