@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { createDomainSubscription } from '@/lib/services/payment-service'
-import { createAdminClient } from '@/lib/supabase-server'
+import { createRouteClient } from '@/lib/supabase-server'
 
 /**
  * POST /api/payments/create-subscription
@@ -40,7 +40,7 @@ export async function POST(request: Request) {
         }
 
         // Save subscription to database
-        const supabase = createAdminClient()
+        const supabase = await createRouteClient()
         const { data: subscription, error: dbError } = await supabase
             .from('domain_subscriptions')
             .insert({
