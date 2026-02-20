@@ -49,7 +49,7 @@ export default function OnboardingLayout({
     //  Step 4 (template selector) is hidden; steps 5 & 6 map to 4 & 5.
 
     let progressStep: number;
-    if (pathname.includes("step-2-used")) {
+    if (pathname.includes("step-2-used") || pathname.includes("step-2-inventory")) {
         progressStep = 2;
     } else if (stepNum > 4) {
         progressStep = stepNum - 1; // step-5 → 4, step-6 → 5
@@ -58,7 +58,7 @@ export default function OnboardingLayout({
     }
 
     const progressLabels = isUsedCarDealer
-        ? ["Your Info", "Branding", "Services", "Customise", "Review"]
+        ? ["Your Info", "Brand & Stock", "Services", "Customise", "Review"]
         : ["Your Info", "Brands", "Services", "Customise", "Review"];
 
     return (

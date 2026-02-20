@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { OnboardingData, DealerType, DealerCategory, Brand, Service, StyleTemplate, InventorySystem } from '@/lib/types';
+import type { OnboardingData, DealerType, DealerCategory, Brand, Service, StyleTemplate, InventorySystem, InventorySource, VehicleUploadRow } from '@/lib/types';
 
 interface OnboardingStore {
     // Current step (1-5)
@@ -52,6 +52,9 @@ const initialData: Partial<OnboardingData> = {
     brandColor: undefined,
     brandColorPreset: undefined,
     brandLogo: undefined,
+    inventorySource: undefined,
+    cyeproApiKey: undefined,
+    uploadedVehicles: undefined,
     templateConfig: {
         heroTitle: '',
         heroSubtitle: '',

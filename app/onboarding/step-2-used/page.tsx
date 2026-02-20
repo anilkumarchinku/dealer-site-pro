@@ -158,8 +158,8 @@ export default function Step2UsedPage() {
             brandColorPreset: finalPreset + "|" + finalAccent, // encode both colors
             brandLogo: logoPreview || undefined,
         });
-        setStep(3);
-        router.push("/onboarding/step-3");
+        // Go to inventory source selection before services
+        router.push("/onboarding/step-2-inventory");
     };
 
     const handleBack = () => {

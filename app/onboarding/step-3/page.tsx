@@ -87,8 +87,13 @@ export default function Step3Page() {
     };
 
     const handleBack = () => {
-        // 'used' → back to brand colours step; 'new' and 'both' → back to OEM brand step
-        router.push(data.dealerCategory === 'used' ? "/onboarding/step-2-used" : "/onboarding/step-2");
+        if (data.dealerCategory === 'used') {
+            // Used dealers: back to inventory source selection
+            router.push("/onboarding/step-2-inventory")
+        } else {
+            // New and hybrid dealers: back to OEM brand selection
+            router.push("/onboarding/step-2")
+        }
     };
 
     useEffect(() => {
