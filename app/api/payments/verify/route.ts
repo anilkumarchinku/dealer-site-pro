@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { verifyPaymentSignature } from '@/lib/services/payment-service'
-import { createAdminClient } from '@/lib/supabase-server'
+import { createRouteClient } from '@/lib/supabase-server'
 
 /**
  * POST /api/payments/verify
@@ -29,7 +29,7 @@ export async function POST(request: Request) {
         }
 
         // Update subscription status to active
-        const supabase = createAdminClient()
+        const supabase = await createRouteClient()
         const { data: subscription, error: updateError } = await supabase
             .from('domain_subscriptions')
             .update({
