@@ -11,9 +11,9 @@ export async function POST(request: Request) {
         const body = await request.json()
         const { dealerId, tier, domainId } = body
 
-        if (!dealerId || !tier) {
+        if (!dealerId || !tier || !domainId) {
             return NextResponse.json(
-                { success: false, error: 'Dealer ID and tier are required' },
+                { success: false, error: 'Dealer ID, tier, and domain ID are required' },
                 { status: 400 }
             )
         }
@@ -46,12 +46,11 @@ export async function POST(request: Request) {
             .insert({
                 domain_id: domainId,
                 dealer_id: dealerId,
-                tier: tier,
-                status: 'pending',
+                plan: tier,
+                status: 'trialing',
                 razorpay_subscription_id: subscriptionResult.subscriptionId,
-                razorpay_order_id: subscriptionResult.orderId,
                 current_period_start: new Date().toISOString(),
-                current_period_end: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString() // 30 days
+                current_period_end: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString()
             })
             .select()
             .single()
