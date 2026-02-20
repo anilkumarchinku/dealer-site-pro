@@ -32,10 +32,7 @@ export async function POST(request: Request) {
         const supabase = await createRouteClient()
         const { data: subscription, error: updateError } = await supabase
             .from('domain_subscriptions')
-            .update({
-                status: 'active',
-                razorpay_payment_id: paymentId
-            })
+            .update({ status: 'active' })
             .eq('razorpay_subscription_id', subscriptionId)
             .select()
             .single()
@@ -48,10 +45,10 @@ export async function POST(request: Request) {
             )
         }
 
-        // If domain_id exists, update domain status
+        // Update domain status to active
         if (subscription.domain_id) {
             await supabase
-                .from('domains')
+                .from('dealer_domains')
                 .update({ status: 'active' })
                 .eq('id', subscription.domain_id)
         }
