@@ -42,9 +42,9 @@ export async function POST(request: Request) {
 
         // Check if domain already exists
         const { data: existingDomain } = await supabase
-            .from('domains')
-            .select('*')
-            .eq('domain', customDomain)
+            .from('dealer_domains')
+            .select('id')
+            .eq('custom_domain', customDomain)
             .single()
 
         if (existingDomain) {
@@ -56,16 +56,15 @@ export async function POST(request: Request) {
 
         // Create domain record with pending status
         const { data: newDomain, error } = await supabase
-            .from('domains')
+            .from('dealer_domains')
             .insert({
                 dealer_id: dealerId,
-                domain: customDomain,
-                slug: customDomain.replace(/\./g, '-'), // example-com
-                type: 'custom',
-                template_id: template, // Save selected template
+                custom_domain: customDomain,
+                domain_type: 'custom',
                 status: 'pending',
                 ssl_status: 'pending',
-                is_primary: false // Don't make primary until verified
+                is_primary: false,
+                dns_verified: false,
             })
             .select()
             .single()
