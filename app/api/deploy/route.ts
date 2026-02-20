@@ -104,25 +104,21 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'Dealer slug is not set' }, { status: 400 })
         }
 
-        // ── Deployment mode: branch by dealer type ────────────────────────────
-        // 1st hand dealers (new cars only) → multi-tenant platform (no GitHub/Vercel needed)
-        // 2nd hand dealers (used cars, or hybrid) → standalone GitHub + Vercel per dealer
-        const isFirstHand = dealer.sells_new_cars === true && dealer.sells_used_cars === false
+        // ── Deployment mode: ALL dealers use multi-tenant platform ──────────────
+        // No standalone GitHub/Vercel repos — both new and used car dealers are
+        // served from this shared Next.js app at /sites/[slug].
+        const baseDomain = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'dealersitepro.com'
+        const useSubdomain = process.env.NEXT_PUBLIC_USE_SUBDOMAIN === 'true'
+        const siteUrl = useSubdomain
+            ? `https://${dealerSlug}.${baseDomain}`
+            : `https://${baseDomain}/sites/${dealerSlug}`
 
-        if (isFirstHand) {
-            const baseDomain = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'dealersitepro.com'
-            const useSubdomain = process.env.NEXT_PUBLIC_USE_SUBDOMAIN === 'true'
-            const siteUrl = useSubdomain
-                ? `https://${dealerSlug}.${baseDomain}`
-                : `https://${baseDomain}/sites/${dealerSlug}`
-
-            return NextResponse.json({
-                success: true,
-                deploymentMode: 'multi-tenant',
-                siteUrl,
-                message: 'Your site is live on our shared platform. No separate deployment needed.',
-            })
-        }
+        return NextResponse.json({
+            success: true,
+            deploymentMode: 'multi-tenant',
+            siteUrl,
+            message: 'Your site is live on our shared platform. No separate deployment needed.',
+        })
 
         // ── 2. Generate dealer.config.ts content ─────────────────────────────
         const configContent = generateDealerConfig({
