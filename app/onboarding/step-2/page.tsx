@@ -54,6 +54,17 @@ export default function Step2Page() {
     const [selectedBrands, setSelectedBrands] = useState<Brand[]>(data.brands || []);
     const [error, setError] = useState("");
 
+    // Step-2 is now retired — brands are collected in step-1.
+    // Redirect anyone who lands here to the correct next step.
+    useEffect(() => {
+        if (data.dealerCategory === 'used') {
+            router.replace('/onboarding/step-2-used');
+        } else {
+            // 'new', 'both', or unset — brands are already in step-1, go to services
+            router.replace('/onboarding/step-3');
+        }
+    }, [data.dealerCategory, router]);
+
     const toggleBrand = (brand: Brand) => {
         setSelectedBrands(prev =>
             prev.includes(brand)
