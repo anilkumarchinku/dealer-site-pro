@@ -107,8 +107,6 @@ export default function Step1Page() {
         return Object.keys(newErrors).length === 0;
     };
 
-    const isUsedCarDealer = useOnboardingStore((s) => s.isUsedCarDealer());
-
     const handleNext = async () => {
         if (!validate()) return;
         if (slugStatus === "checking") return; // wait for check
@@ -129,8 +127,8 @@ export default function Step1Page() {
                 slug:           siteSlug,
             });
             setStep(2);
-            // Route to the correct step-2 based on dealer category
-            router.push(isUsedCarDealer ? "/onboarding/step-2-used" : "/onboarding/step-2");
+            // 'used' → brand colours/logo step; 'new' and 'both' → OEM brand selection
+            router.push(data.dealerCategory === 'used' ? "/onboarding/step-2-used" : "/onboarding/step-2");
         } finally {
             setIsSubmitting(false);
         }
