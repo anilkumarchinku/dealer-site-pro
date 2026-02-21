@@ -256,7 +256,7 @@ export async function saveDealer(
                 model:        v.model,
                 variant:      v.variant      ?? null,
                 year:         v.year,
-                price_paise:  v.price_inr,   // stored in ₹ (not paise) from CSV
+                price_paise:  v.price_inr * 100, // CSV is in ₹, DB stores paise
                 mileage_km:   v.km_driven    ?? null,
                 fuel_type:    v.fuel         ?? null,
                 transmission: v.transmission ?? null,
@@ -265,11 +265,11 @@ export async function saveDealer(
                 features:     [],
                 condition:    'used' as const,
                 status:       'available' as const,
-                view_count:   0,
+                views:        0,             // DB column is "views" not "view_count"
             }))
 
             const { error: vErr } = await supabase.from('vehicles').insert(vehicleRows)
-            if (vErr) console.warn('[saveDealer] vehicle insert failed:', vErr.message)
+            if (vErr) throw new Error(`Vehicle insert failed: ${vErr.message}`)
         }
 
         // ── Auto-register free subdomain domain record ──────────
