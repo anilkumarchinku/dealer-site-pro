@@ -1,4 +1,5 @@
 "use client"
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,13 @@ import { cn } from "@/lib/utils";
 export default function OnboardingIndexPage() {
     const router = useRouter();
     const { updateData, reset } = useOnboardingStore();
+
+    // Clear any stale persisted data (e.g. from a previous session) so the
+    // user always starts fresh from this selection screen.
+    useEffect(() => {
+        reset();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const handleSelect = (category: "new" | "used") => {
         reset();

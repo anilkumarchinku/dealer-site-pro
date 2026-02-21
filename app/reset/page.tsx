@@ -12,7 +12,7 @@ export default function ResetPage() {
 
         // Redirect to onboarding
         setTimeout(() => {
-            router.push("/onboarding/step-1");
+            router.push("/onboarding");
         }, 1000);
     }, [router]);
 
