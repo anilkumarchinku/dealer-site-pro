@@ -99,7 +99,7 @@ export default function DashboardLayout({
 
                 // No dealer record or onboarding not finished → send back to onboarding
                 if (!dealer || !dealer.onboarding_complete) {
-                    router.replace('/onboarding/step-1');
+                    router.replace('/onboarding');
                     return;
                 }
 

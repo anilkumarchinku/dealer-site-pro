@@ -83,8 +83,8 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
 
     useEffect(() => { setIsVisible(true); }, []);
 
-    const handleStart = () => { reset(); setTimeout(() => router.push("/onboarding/step-1"), 100); };
-    const handleContinue = () => router.push("/onboarding/step-1");
+    const handleStart = () => { reset(); setTimeout(() => router.push("/onboarding"), 100); };
+    const handleContinue = () => router.push("/onboarding");
     const handleDashboard = () => router.push("/dashboard");
     const handleReset = () => { reset(); window.location.reload(); };
 

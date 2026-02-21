@@ -83,7 +83,7 @@ export default function RegisterPage() {
             // Small delay so user sees success state, then full reload to /onboarding
             // (window.location.href ensures the Supabase session cookie is flushed
             //  before the request hits middleware — router.push races with it)
-            setTimeout(() => { window.location.href = "/onboarding/step-1"; }, 1000);
+            setTimeout(() => { window.location.href = "/onboarding"; }, 1000);
 
         } finally {
             setLoading(false);

@@ -47,7 +47,7 @@ export default function LoginPage() {
             if (result.onboardingComplete) {
                 window.location.href = "/dashboard";
             } else {
-                window.location.href = "/onboarding/step-1";
+                window.location.href = "/onboarding";
             }
         } finally {
             setLoading(false);
