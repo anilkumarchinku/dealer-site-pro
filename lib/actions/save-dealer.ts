@@ -4,10 +4,12 @@ import { supabase, isSupabaseReady } from "@/lib/supabase";
 import { generateSlug, makeSlugUnique } from "@/lib/utils/slug";
 import { BASE_DOMAIN, USE_SUBDOMAIN } from "@/lib/utils/domain";
 import type { OnboardingData } from "@/lib/types";
+import type { SupabaseClient } from "@supabase/supabase-js";
 
 /** Upload a base64 image to Supabase Storage and return the public URL, or null on failure */
 async function uploadBase64Image(
-    supabase: ReturnType<typeof import('@supabase/supabase-js').createClient>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    client: SupabaseClient<any, any, any>,
     base64: string,
     dealerId: string,
     fieldName: 'logo' | 'hero'
@@ -23,11 +25,11 @@ async function uploadBase64Image(
         for (let i = 0; i < binary.length; i++) array[i] = binary.charCodeAt(i)
         const blob = new Blob([array], { type: mime })
         const path = `dealers/${dealerId}/${fieldName}.${ext}`
-        const { error } = await supabase.storage
+        const { error } = await client.storage
             .from('dealer-assets')
             .upload(path, blob, { upsert: true, contentType: mime })
         if (error) return null
-        const { data: { publicUrl } } = supabase.storage.from('dealer-assets').getPublicUrl(path)
+        const { data: { publicUrl } } = client.storage.from('dealer-assets').getPublicUrl(path)
         return publicUrl
     } catch {
         return null
