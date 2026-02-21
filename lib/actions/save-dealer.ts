@@ -29,20 +29,27 @@ export async function saveDealer(
     }
 
     try {
-        // ── Generate a unique slug ──────────────────────────────
-        const baseSlug = generateSlug(data.dealershipName || "dealer");
+        // ── Determine slug ──────────────────────────────────────
+        // Prefer the slug the user picked in step-1 (data.slug).
+        // Fall back to generating one from dealership name only if not set.
+        let slug: string;
 
-        // Check for slug conflicts in DB
-        const { data: existingSlugs } = await supabase
-            .from("dealers")
-            .select("slug")
-            .like("slug", `${baseSlug}%`);
+        if (data.slug) {
+            slug = data.slug;
+        } else {
+            const baseSlug = generateSlug(data.dealershipName || "dealer");
 
-        const takenSlugs = (existingSlugs ?? [])
-            .map((r: { slug: string }) => r.slug)
-            .filter(Boolean);
+            const { data: existingSlugs } = await supabase
+                .from("dealers")
+                .select("slug")
+                .like("slug", `${baseSlug}%`);
 
-        const slug = makeSlugUnique(baseSlug, data.location, takenSlugs);
+            const takenSlugs = (existingSlugs ?? [])
+                .map((r: { slug: string }) => r.slug)
+                .filter(Boolean);
+
+            slug = makeSlugUnique(baseSlug, data.location, takenSlugs);
+        }
 
         // ── Upsert dealers row ──────────────────────────────────
         const dealerPayload = {
@@ -74,10 +81,10 @@ export async function saveDealer(
 
         if (existingDealerId) {
             // Happy path: update the dealer created at registration.
-            // Preserve the existing slug if already set; otherwise stamp the new one.
+            // Use user-picked slug (data.slug) first; fall back to existing DB slug.
             const { data: cur } = await supabase
                 .from("dealers").select("slug").eq("id", existingDealerId).maybeSingle();
-            const finalSlug = cur?.slug || slug;
+            const finalSlug = slug || cur?.slug || slug;
 
             const { error } = await supabase
                 .from("dealers")
@@ -97,8 +104,8 @@ export async function saveDealer(
                     .maybeSingle();
 
                 if (stubDealer) {
-                    // Row exists — update it in place, preserving existing slug if set
-                    const finalSlug = stubDealer.slug || slug;
+                    // Row exists — update it in place, prefer user-picked slug
+                    const finalSlug = slug || stubDealer.slug;
                     const { error } = await supabase
                         .from("dealers")
                         .update({ ...dealerPayload, slug: finalSlug, subdomain: finalSlug })
