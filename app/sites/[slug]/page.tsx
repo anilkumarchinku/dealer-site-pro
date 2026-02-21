@@ -197,14 +197,10 @@ export default async function SitePage({ params }: SitePageProps) {
             // 2. Fallback: manually-added DB stock
             cars = dbVehiclesToCars(vehicles)
         } else {
-            // 3. No inventory at all → holding page
-            return (
-                <NoStockPage
-                    dealerName={dealer.dealership_name}
-                    phone={dealer.phone}
-                    email={dealer.email}
-                />
-            )
+            // 3. No inventory yet — still render the dealer's template
+            // so they see their branding, services & contact info live.
+            // The inventory section will show empty / "no cars available".
+            cars = []
         }
 
     } else if (sells_new_cars && !sells_used_cars) {
