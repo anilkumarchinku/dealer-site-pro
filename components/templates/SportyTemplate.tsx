@@ -293,7 +293,7 @@ export function SportyTemplate({
                                         EXPLORE
                                         <ArrowRight className="ml-2 w-5 h-5" />
                                     </Button>
-                                    <Button size="lg" variant="outline" className="font-bold uppercase border-2 text-white hover:bg-white/10" style={{ borderColor: brandAccent, color: brandAccent }} asChild>
+                                    <Button size="lg" variant="outline" className="font-bold uppercase border-2 bg-transparent hover:bg-white/10" style={{ borderColor: brandAccent, color: brandAccent }} asChild>
                                         <a href="#contact">BOOK TEST DRIVE</a>
                                     </Button>
                                 </div>
@@ -358,7 +358,7 @@ export function SportyTemplate({
                                     </span>
                                     <h2 className="text-5xl font-black mt-2">FEATURED BEASTS</h2>
                                 </div>
-                                <Button variant="outline" className="border-2 font-bold uppercase" style={{ borderColor: brandAccent, color: brandAccent }} onClick={() => setActiveTab('inventory')}>
+                                <Button variant="outline" className="border-2 font-bold uppercase bg-transparent" style={{ borderColor: brandAccent, color: brandAccent }} onClick={() => setActiveTab('inventory')}>
                                     VIEW ALL
                                     <ChevronRight className="ml-1 w-4 h-4" />
                                 </Button>

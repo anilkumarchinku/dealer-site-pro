@@ -160,7 +160,7 @@ export function FamilyTemplate({
                         </div>
                         <div className="flex items-center gap-2">
                             <Button
-                                className="rounded-full hidden sm:flex"
+                                className="rounded-full hidden sm:flex bg-white"
                                 variant="outline"
                                 style={{ borderColor: brandColors.primary, color: brandColors.primary }}
                                 onClick={() => setEnquireSidebarOpen(true)}
@@ -253,7 +253,7 @@ export function FamilyTemplate({
                                             Browse Cars
                                             <ArrowRight className="ml-2 w-5 h-5" />
                                         </Button>
-                                        <Button size="lg" variant="outline" className="rounded-full" style={{ borderColor: brandColors.primary, color: brandColors.primary }} asChild>
+                                        <Button size="lg" variant="outline" className="rounded-full bg-white" style={{ borderColor: brandColors.primary, color: brandColors.primary }} asChild>
                                             <a href="#contact">Talk to Our Team</a>
                                         </Button>
                                     </div>
@@ -330,7 +330,7 @@ export function FamilyTemplate({
                             </div>
                             <CarGrid cars={featuredCars} brandColor={brandColors.primary} light />
                             <div className="text-center mt-8">
-                                <Button variant="outline" size="lg" className="rounded-full text-gray-700 border-gray-300 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>
+                                <Button variant="outline" size="lg" className="rounded-full bg-white text-gray-700 border-gray-300 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>
                                     View All Cars
                                     <ChevronRight className="ml-1 w-4 h-4" />
                                 </Button>
