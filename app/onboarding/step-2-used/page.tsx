@@ -92,6 +92,12 @@ export default function Step2UsedPage() {
     const [isDragging, setIsDragging] = useState(false);
     const fileInputRef = useRef<HTMLInputElement>(null);
 
+    // ── Hero image state ────────────────────────────────────────────────────
+    const [heroPreview, setHeroPreview] = useState<string>(data.heroImage || "");
+    const [heroError, setHeroError] = useState("");
+    const [isHeroDragging, setIsHeroDragging] = useState(false);
+    const heroInputRef = useRef<HTMLInputElement>(null);
+
     // Sync preset accent when preset changes
     useEffect(() => {
         if (!useCustom) {
@@ -136,6 +142,37 @@ export default function Step2UsedPage() {
         if (file) processLogoFile(file);
     };
 
+    // ── Hero image upload ───────────────────────────────────────────────────
+    const processHeroFile = useCallback(async (file: File) => {
+        if (!file.type.startsWith("image/")) {
+            setHeroError("Please upload an image file (PNG, JPG, WEBP)");
+            return;
+        }
+        if (file.size > 5 * 1024 * 1024) {
+            setHeroError("Hero image must be under 5 MB");
+            return;
+        }
+        setHeroError("");
+        try {
+            const base64 = await fileToBase64(file);
+            setHeroPreview(base64);
+        } catch {
+            setHeroError("Failed to read the file. Please try again.");
+        }
+    }, []);
+
+    const handleHeroFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0];
+        if (file) processHeroFile(file);
+    };
+
+    const handleHeroDrop = (e: React.DragEvent<HTMLDivElement>) => {
+        e.preventDefault();
+        setIsHeroDragging(false);
+        const file = e.dataTransfer.files?.[0];
+        if (file) processHeroFile(file);
+    };
+
     // ── Navigation ─────────────────────────────────────────────────────────
     const handleNext = () => {
         // Validate custom colours if entered
@@ -157,6 +194,7 @@ export default function Step2UsedPage() {
             brandColor: finalColor,
             brandColorPreset: finalPreset + "|" + finalAccent, // encode both colors
             brandLogo: logoPreview || undefined,
+            heroImage: heroPreview || undefined,
         });
         // Go to inventory source selection before services
         router.push("/onboarding/step-2-inventory");
@@ -444,6 +482,79 @@ export default function Step2UsedPage() {
                         <p className="text-xs text-destructive flex items-center gap-1.5">
                             <X className="w-3.5 h-3.5" />
                             {logoError}
+                        </p>
+                    )}
+                </div>
+
+                {/* ── Hero image upload ────────────────────────────────── */}
+                <div className="space-y-3">
+                    <div>
+                        <h3 className="text-sm font-semibold">Upload Hero / Banner Image</h3>
+                        <p className="text-xs text-muted-foreground">Optional — shown as the background of your website&apos;s header · PNG, JPG, WEBP · Max 5 MB</p>
+                    </div>
+
+                    {heroPreview ? (
+                        <div className="relative flex items-center gap-4 p-4 rounded-xl border-2 border-emerald-500/40 bg-emerald-500/5">
+                            <div className="w-16 h-16 rounded-xl border border-border bg-white flex items-center justify-center overflow-hidden flex-shrink-0">
+                                <Image
+                                    src={heroPreview}
+                                    alt="Hero preview"
+                                    width={64}
+                                    height={64}
+                                    className="object-contain w-full h-full p-1"
+                                />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                                <p className="text-sm font-medium flex items-center gap-1.5">
+                                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                                    Hero image uploaded
+                                </p>
+                                <p className="text-xs text-muted-foreground">Looking great! You can replace it below.</p>
+                            </div>
+                            <button
+                                onClick={() => { setHeroPreview(""); if (heroInputRef.current) heroInputRef.current.value = ""; }}
+                                className="p-1.5 rounded-lg hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
+                            >
+                                <X className="w-4 h-4" />
+                            </button>
+                        </div>
+                    ) : (
+                        <div
+                            onDragOver={(e) => { e.preventDefault(); setIsHeroDragging(true); }}
+                            onDragLeave={() => setIsHeroDragging(false)}
+                            onDrop={handleHeroDrop}
+                            onClick={() => heroInputRef.current?.click()}
+                            className={cn(
+                                "flex flex-col items-center justify-center gap-3 p-8 rounded-xl border-2 border-dashed cursor-pointer transition-all duration-200",
+                                isHeroDragging
+                                    ? "border-amber-500/60 bg-amber-500/5"
+                                    : "border-border hover:border-amber-400/50 hover:bg-muted/30"
+                            )}
+                        >
+                            <div className="w-12 h-12 rounded-2xl bg-muted flex items-center justify-center">
+                                <Upload className="w-5 h-5 text-muted-foreground" />
+                            </div>
+                            <div className="text-center">
+                                <p className="text-sm font-medium">
+                                    {isHeroDragging ? "Drop it here!" : "Click or drag & drop your hero image"}
+                                </p>
+                                <p className="text-xs text-muted-foreground mt-0.5">PNG, JPG, WEBP · Max 5 MB</p>
+                            </div>
+                        </div>
+                    )}
+
+                    <input
+                        ref={heroInputRef}
+                        type="file"
+                        accept="image/png,image/jpeg,image/jpg,image/webp"
+                        onChange={handleHeroFileChange}
+                        className="hidden"
+                    />
+
+                    {heroError && (
+                        <p className="text-xs text-destructive flex items-center gap-1.5">
+                            <X className="w-3.5 h-3.5" />
+                            {heroError}
                         </p>
                     )}
                 </div>

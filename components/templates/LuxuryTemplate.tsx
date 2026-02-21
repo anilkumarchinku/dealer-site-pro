@@ -41,6 +41,8 @@ interface LuxuryTemplateProps {
     previewMode?: boolean;
     services?: Service[];
     workingHours?: string | null;
+    logoUrl?: string;
+    heroImageUrl?: string;
 }
 
 export function LuxuryTemplate({
@@ -53,6 +55,8 @@ export function LuxuryTemplate({
     previewMode,
     services,
     workingHours,
+    logoUrl,
+    heroImageUrl,
 }: LuxuryTemplateProps) {
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [isScrolled, setIsScrolled] = useState(false);
@@ -123,12 +127,11 @@ export function LuxuryTemplate({
                         <div className="flex items-center gap-3 cursor-pointer" onClick={() => setActiveTab('home')}>
                             <div className="relative w-10 h-10">
                                 <Image
-                                    src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                    alt={brandName}
+                                    src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
+                                    alt={logoUrl ? dealerName : brandName}
                                     fill
                                     className="object-contain"
                                     sizes="40px"
-                                    style={{ filter: 'brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,255,255,0.9)) drop-shadow(0 0 20px rgba(255,255,255,0.5))' }}
                                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                                 />
                             </div>
@@ -216,7 +219,7 @@ export function LuxuryTemplate({
                     {/* Hero */}
                     <section className="relative min-h-screen flex items-center">
                         <div className="absolute inset-0">
-                            <Image src={getBrandHeroImage(brandName)} alt={`${brandName} Luxury`} fill className="object-cover opacity-35" priority />
+                            <Image src={heroImageUrl || getBrandHeroImage(brandName)} alt={`${brandName} Luxury`} fill className="object-cover opacity-35" priority />
                             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-gray-900/80" />
                         </div>
                         <div className="relative z-10 max-w-7xl mx-auto px-4 py-32 text-center">

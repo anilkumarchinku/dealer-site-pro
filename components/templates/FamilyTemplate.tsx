@@ -59,6 +59,8 @@ interface FamilyTemplateProps {
     previewMode?: boolean;
     services?: Service[];
     workingHours?: string | null;
+    logoUrl?: string;
+    heroImageUrl?: string;
 }
 
 export function FamilyTemplate({
@@ -71,6 +73,8 @@ export function FamilyTemplate({
     previewMode,
     services,
     workingHours,
+    logoUrl,
+    heroImageUrl,
 }: FamilyTemplateProps) {
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [isScrolled, setIsScrolled] = useState(false);
@@ -139,12 +143,11 @@ export function FamilyTemplate({
                         <div className="flex items-center gap-3 cursor-pointer" onClick={() => setActiveTab('home')}>
                             <div className="relative w-10 h-10">
                                 <Image
-                                    src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                    alt={brandName}
+                                    src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
+                                    alt={logoUrl ? dealerName : brandName}
                                     fill
                                     className="object-contain"
                                     sizes="40px"
-                                    style={{ filter: 'saturate(1.4) brightness(1.05) drop-shadow(0 4px 10px rgba(0,0,0,0.25)) drop-shadow(0 1px 3px rgba(0,0,0,0.15))' }}
                                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                                 />
                             </div>
@@ -256,7 +259,7 @@ export function FamilyTemplate({
                                     </div>
                                 </div>
                                 <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl">
-                                    <Image src={getBrandHeroImage(brandName)} alt={`${brandName} Family`} fill className="object-cover" priority />
+                                    <Image src={heroImageUrl || getBrandHeroImage(brandName)} alt={`${brandName} Family`} fill className="object-cover" priority />
                                 </div>
                             </div>
                         </div>

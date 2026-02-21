@@ -83,6 +83,8 @@ export interface DealerPublicData {
     usedCarSite: boolean
     /** Cyepro inventory API key — server-side only, never sent to browser */
     cyepro_api_key: string | null
+    logo_url: string | null
+    hero_image_url: string | null
 }
 
 function getServerSupabase() {
@@ -96,7 +98,7 @@ function getServerSupabase() {
 async function findDealerByExactSlug(supabase: SupabaseClient, slug: string) {
     const { data, error } = await supabase
         .from('dealers')
-        .select('id, dealership_name, tagline, phone, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars, cyepro_api_key')
+        .select('id, dealership_name, tagline, phone, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars, cyepro_api_key, logo_url, hero_image_url')
         .eq('slug', slug)
         .eq('onboarding_complete', true)
         .single()
@@ -211,5 +213,7 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
         brandFilter,
         usedCarSite,
         cyepro_api_key:  dealer.cyepro_api_key ?? null,
+        logo_url:        dealer.logo_url       ?? null,
+        hero_image_url:  dealer.hero_image_url ?? null,
     }
 }

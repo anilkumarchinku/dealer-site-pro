@@ -65,6 +65,8 @@ interface ModernTemplateProps {
     previewMode?: boolean;
     services?: Service[];
     workingHours?: string | null;
+    logoUrl?: string;
+    heroImageUrl?: string;
 }
 
 export function ModernTemplate({
@@ -77,6 +79,8 @@ export function ModernTemplate({
     previewMode,
     services,
     workingHours,
+    logoUrl,
+    heroImageUrl,
 }: ModernTemplateProps) {
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [isScrolled, setIsScrolled] = useState(false);
@@ -153,16 +157,11 @@ export function ModernTemplate({
                         <div className="flex items-center cursor-pointer" onClick={() => setActiveTab('home')}>
                             <div className="relative w-10 h-10 mr-3">
                                 <Image
-                                    src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                    alt={brandName}
+                                    src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
+                                    alt={logoUrl ? dealerName : brandName}
                                     fill
                                     className="object-contain transition-all duration-300"
                                     sizes="40px"
-                                    style={{
-                                        filter: isScrolled
-                                            ? 'drop-shadow(0 2px 6px rgba(0,0,0,0.25)) saturate(1.3)'
-                                            : 'brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,255,255,0.9)) drop-shadow(0 0 20px rgba(255,255,255,0.5))'
-                                    }}
                                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                                 />
                             </div>
@@ -290,7 +289,7 @@ export function ModernTemplate({
                     <section className="relative min-h-[85vh] flex items-center bg-gray-900 overflow-hidden">
                         <div className="absolute inset-0">
                             <Image
-                                src={getBrandHeroImage(brandName)}
+                                src={heroImageUrl || getBrandHeroImage(brandName)}
                                 alt={`${brandName} Hero`}
                                 fill
                                 className="object-cover opacity-40"

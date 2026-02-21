@@ -68,6 +68,8 @@ interface SportyTemplateProps {
     previewMode?: boolean;
     services?: Service[];
     workingHours?: string | null;
+    logoUrl?: string;
+    heroImageUrl?: string;
 }
 
 export function SportyTemplate({
@@ -80,6 +82,8 @@ export function SportyTemplate({
     previewMode,
     services,
     workingHours,
+    logoUrl,
+    heroImageUrl,
 }: SportyTemplateProps) {
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [isScrolled, setIsScrolled] = useState(false);
@@ -155,12 +159,11 @@ export function SportyTemplate({
                         <div className="flex items-center cursor-pointer" onClick={() => setActiveTab('home')}>
                             <div className="relative w-10 h-10 mr-3 rounded-full bg-white/15 border border-white/30 flex items-center justify-center overflow-hidden p-1">
                                 <Image
-                                    src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                    alt={brandName}
+                                    src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
+                                    alt={logoUrl ? dealerName : brandName}
                                     fill
-                                    className="object-contain p-1"
+                                    className="object-contain"
                                     sizes="40px"
-                                    style={{ filter: 'brightness(0) invert(1)' }}
                                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                                 />
                             </div>
@@ -263,7 +266,7 @@ export function SportyTemplate({
                     {/* Hero Section */}
                     <section className="relative min-h-screen flex items-center overflow-hidden">
                         <div className="absolute inset-0">
-                            <Image src={getBrandHeroImage(brandName)} alt={`${brandName} Hero`} fill className="object-cover opacity-30" priority />
+                            <Image src={heroImageUrl || getBrandHeroImage(brandName)} alt={`${brandName} Hero`} fill className="object-cover opacity-30" priority />
                             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent" />
                             <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, rgba(0,0,0,0.9) 0%, ${brandAccent}22 100%)` }} />
                         </div>
