@@ -89,10 +89,10 @@ export default function Step3Page() {
     const handleBack = () => {
         if (data.dealerCategory === 'used') {
             // Used dealers: back to inventory source selection
-            router.push("/onboarding/step-2-inventory")
+            router.push("/onboarding/step-2-inventory");
         } else {
-            // New and hybrid dealers: back to OEM brand selection
-            router.push("/onboarding/step-2")
+            // New dealers: brands are collected in step-1, go back there
+            router.push("/onboarding/step-1");
         }
     };
 
