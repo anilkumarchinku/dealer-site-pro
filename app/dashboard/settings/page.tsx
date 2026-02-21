@@ -1,5 +1,6 @@
 "use client"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
+import Image from "next/image";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -11,7 +12,7 @@ import {
     Phone, Mail, MapPin, Building2,
     ExternalLink, Sun, Moon, Info,
     Plug, Eye, EyeOff, CheckCircle2, XCircle, Loader2,
-    Link2, Copy, RefreshCw, Trash2,
+    Link2, Copy, RefreshCw, Trash2, Upload, ImageIcon, X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -65,6 +66,88 @@ export default function SettingsPage() {
     const [verifying,     setVerifying]     = useState(false);
     const [verifyResult,  setVerifyResult]  = useState<{ allVerified: boolean; message: string } | null>(null);
     const [copied,        setCopied]        = useState(false);
+
+    // ── Brand Assets state ────────────────────────────────────────────────────
+    const [logoPreview,    setLogoPreview]    = useState<string>("");
+    const [heroPreview,    setHeroPreview]    = useState<string>("");
+    const [logoUploading,  setLogoUploading]  = useState(false);
+    const [heroUploading,  setHeroUploading]  = useState(false);
+    const [logoSaved,      setLogoSaved]      = useState(false);
+    const [heroSaved,      setHeroSaved]      = useState(false);
+    const [logoError,      setLogoError]      = useState("");
+    const [heroError,      setHeroError]      = useState("");
+    const logoInputRef = useRef<HTMLInputElement>(null);
+    const heroInputRef = useRef<HTMLInputElement>(null);
+
+    // Load existing logo/hero URLs on mount
+    useEffect(() => {
+        if (!dealerId) return;
+        supabase
+            .from("dealers")
+            .select("logo_url, hero_image_url")
+            .eq("id", dealerId)
+            .single()
+            .then(({ data }) => {
+                if (data?.logo_url)        setLogoPreview(data.logo_url);
+                if (data?.hero_image_url)  setHeroPreview(data.hero_image_url);
+            });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [dealerId]);
+
+    const uploadAsset = useCallback(async (
+        file: File,
+        field: "logo" | "hero",
+        maxSizeMB: number,
+    ) => {
+        if (!dealerId) return;
+        if (!file.type.startsWith("image/")) {
+            if (field === "logo") setLogoError("Please upload a PNG, JPG, SVG or WEBP image");
+            else setHeroError("Please upload a PNG, JPG or WEBP image");
+            return;
+        }
+        if (file.size > maxSizeMB * 1024 * 1024) {
+            if (field === "logo") setLogoError(`Logo must be under ${maxSizeMB} MB`);
+            else setHeroError(`Hero image must be under ${maxSizeMB} MB`);
+            return;
+        }
+
+        if (field === "logo") { setLogoUploading(true); setLogoError(""); }
+        else                  { setHeroUploading(true); setHeroError(""); }
+
+        try {
+            const mime = file.type;
+            const ext  = mime.split("/")[1]?.replace("svg+xml", "svg").replace("jpeg", "jpg") ?? "png";
+            const path = `dealers/${dealerId}/${field}.${ext}`;
+
+            const { error: upErr } = await supabase.storage
+                .from("dealer-assets")
+                .upload(path, file, { upsert: true, contentType: mime });
+
+            if (upErr) throw upErr;
+
+            const { data: { publicUrl } } = supabase.storage
+                .from("dealer-assets")
+                .getPublicUrl(path);
+
+            const dbField = field === "logo" ? "logo_url" : "hero_image_url";
+            const { error: dbErr } = await supabase
+                .from("dealers")
+                .update({ [dbField]: publicUrl })
+                .eq("id", dealerId);
+
+            if (dbErr) throw dbErr;
+
+            if (field === "logo") { setLogoPreview(publicUrl); setLogoSaved(true); setTimeout(() => setLogoSaved(false), 3000); }
+            else                  { setHeroPreview(publicUrl); setHeroSaved(true); setTimeout(() => setHeroSaved(false), 3000); }
+        } catch (err: unknown) {
+            const msg = err instanceof Error ? err.message : "Upload failed";
+            if (field === "logo") setLogoError(msg);
+            else setHeroError(msg);
+        } finally {
+            if (field === "logo") setLogoUploading(false);
+            else                  setHeroUploading(false);
+        }
+    }, [dealerId]);
 
     // Load existing Cyepro key (masked) from DB on mount
     useEffect(() => {
@@ -718,6 +801,131 @@ export default function SettingsPage() {
                                     </p>
                                 </div>
                             )}
+
+                        </CardContent>
+                    </Card>
+
+                    {/* ── Brand Assets ── */}
+                    <Card variant="glass">
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-2.5 text-lg">
+                                <div className="p-2 rounded-lg bg-amber-500/10">
+                                    <ImageIcon className="w-4 h-4 text-amber-500" />
+                                </div>
+                                Brand Assets
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-6">
+
+                            {/* Logo */}
+                            <div className="space-y-3">
+                                <div>
+                                    <p className="text-sm font-semibold">Dealership Logo</p>
+                                    <p className="text-xs text-muted-foreground">PNG, JPG, SVG or WEBP · Max 2 MB</p>
+                                </div>
+                                <div className="flex items-center gap-4">
+                                    {/* Preview */}
+                                    <div className="w-16 h-16 rounded-xl border border-border bg-muted/40 flex items-center justify-center overflow-hidden flex-shrink-0">
+                                        {logoPreview ? (
+                                            <Image src={logoPreview} alt="Logo" width={64} height={64} className="object-contain w-full h-full p-1" unoptimized />
+                                        ) : (
+                                            <ImageIcon className="w-6 h-6 text-muted-foreground/40" />
+                                        )}
+                                    </div>
+                                    <div className="flex-1 space-y-2">
+                                        <Button
+                                            size="sm"
+                                            variant="outline"
+                                            disabled={logoUploading}
+                                            onClick={() => logoInputRef.current?.click()}
+                                            className="gap-1.5"
+                                        >
+                                            {logoUploading
+                                                ? <><Loader2 className="w-3.5 h-3.5 animate-spin" /> Uploading...</>
+                                                : logoSaved
+                                                    ? <><CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> Saved!</>
+                                                    : <><Upload className="w-3.5 h-3.5" /> {logoPreview ? "Replace Logo" : "Upload Logo"}</>
+                                            }
+                                        </Button>
+                                        {logoPreview && !logoUploading && (
+                                            <button
+                                                onClick={async () => {
+                                                    if (!dealerId) return;
+                                                    await supabase.from("dealers").update({ logo_url: null }).eq("id", dealerId);
+                                                    setLogoPreview("");
+                                                }}
+                                                className="flex items-center gap-1 text-xs text-red-500 hover:text-red-700"
+                                            >
+                                                <X className="w-3 h-3" /> Remove logo
+                                            </button>
+                                        )}
+                                        {logoError && <p className="text-xs text-destructive">{logoError}</p>}
+                                    </div>
+                                </div>
+                                <input
+                                    ref={logoInputRef}
+                                    type="file"
+                                    accept="image/png,image/jpeg,image/jpg,image/svg+xml,image/webp"
+                                    className="hidden"
+                                    onChange={(e) => { const f = e.target.files?.[0]; if (f) uploadAsset(f, "logo", 2); }}
+                                />
+                            </div>
+
+                            <div className="border-t border-border" />
+
+                            {/* Hero / Banner Image */}
+                            <div className="space-y-3">
+                                <div>
+                                    <p className="text-sm font-semibold">Hero / Banner Image</p>
+                                    <p className="text-xs text-muted-foreground">Shown in the header section of your website · PNG, JPG, WEBP · Max 5 MB</p>
+                                </div>
+                                <div className="flex items-start gap-4">
+                                    {/* Preview */}
+                                    <div className="w-24 h-16 rounded-xl border border-border bg-muted/40 flex items-center justify-center overflow-hidden flex-shrink-0">
+                                        {heroPreview ? (
+                                            <Image src={heroPreview} alt="Hero" width={96} height={64} className="object-cover w-full h-full" unoptimized />
+                                        ) : (
+                                            <ImageIcon className="w-6 h-6 text-muted-foreground/40" />
+                                        )}
+                                    </div>
+                                    <div className="flex-1 space-y-2">
+                                        <Button
+                                            size="sm"
+                                            variant="outline"
+                                            disabled={heroUploading}
+                                            onClick={() => heroInputRef.current?.click()}
+                                            className="gap-1.5"
+                                        >
+                                            {heroUploading
+                                                ? <><Loader2 className="w-3.5 h-3.5 animate-spin" /> Uploading...</>
+                                                : heroSaved
+                                                    ? <><CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> Saved!</>
+                                                    : <><Upload className="w-3.5 h-3.5" /> {heroPreview ? "Replace Image" : "Upload Image"}</>
+                                            }
+                                        </Button>
+                                        {heroPreview && !heroUploading && (
+                                            <button
+                                                onClick={async () => {
+                                                    if (!dealerId) return;
+                                                    await supabase.from("dealers").update({ hero_image_url: null }).eq("id", dealerId);
+                                                    setHeroPreview("");
+                                                }}
+                                                className="flex items-center gap-1 text-xs text-red-500 hover:text-red-700"
+                                            >
+                                                <X className="w-3 h-3" /> Remove image
+                                            </button>
+                                        )}
+                                        {heroError && <p className="text-xs text-destructive">{heroError}</p>}
+                                    </div>
+                                </div>
+                                <input
+                                    ref={heroInputRef}
+                                    type="file"
+                                    accept="image/png,image/jpeg,image/jpg,image/webp"
+                                    className="hidden"
+                                    onChange={(e) => { const f = e.target.files?.[0]; if (f) uploadAsset(f, "hero", 5); }}
+                                />
+                            </div>
 
                         </CardContent>
                     </Card>
