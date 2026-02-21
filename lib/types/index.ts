@@ -90,6 +90,7 @@ export interface OnboardingData {
     gstin?: string;
     logo?: string;
     brandLogo?: string; // Base64 or URL — uploaded by used-car dealers
+    heroImage?: string; // Base64 or URL — hero/banner image uploaded by used-car dealers
     subdomain?: string; // Auto-generated FREE subdomain
     slug?: string; // URL slug for the subdomain
 

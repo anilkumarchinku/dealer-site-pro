@@ -161,7 +161,7 @@ export default async function SitePage({ params }: SitePageProps) {
     const dealer = await fetchDealerBySlug(slug)
     if (!dealer) return <ComingSoon slug={slug} />
 
-    const { sells_new_cars, sells_used_cars, brandFilter, brands, vehicles, usedCarSite, cyepro_api_key } = dealer
+    const { sells_new_cars, sells_used_cars, brandFilter, brands, vehicles, usedCarSite, cyepro_api_key, logo_url, hero_image_url } = dealer
 
     // ── Smart car selection ───────────────────────────────────────────────────
     //
@@ -262,6 +262,8 @@ export default async function SitePage({ params }: SitePageProps) {
         contactInfo,
         services: (dealer.services ?? []) as Service[],
         workingHours: dealer.working_hours ?? null,
+        logoUrl: logo_url ?? undefined,
+        heroImageUrl: hero_image_url ?? undefined,
     }
 
     // ── Render the chosen template ────────────────────────────────────────────

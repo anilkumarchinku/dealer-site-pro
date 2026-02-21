@@ -5,6 +5,35 @@ import { generateSlug, makeSlugUnique } from "@/lib/utils/slug";
 import { BASE_DOMAIN, USE_SUBDOMAIN } from "@/lib/utils/domain";
 import type { OnboardingData } from "@/lib/types";
 
+/** Upload a base64 image to Supabase Storage and return the public URL, or null on failure */
+async function uploadBase64Image(
+    supabase: ReturnType<typeof import('@supabase/supabase-js').createClient>,
+    base64: string,
+    dealerId: string,
+    fieldName: 'logo' | 'hero'
+): Promise<string | null> {
+    try {
+        if (!base64 || !base64.startsWith('data:')) return null
+        const [header, rawData] = base64.split(',')
+        if (!rawData) return null
+        const mime = header.match(/:(.*?);/)?.[1] ?? 'image/png'
+        const ext = mime.split('/')[1]?.replace('svg+xml', 'svg').replace('jpeg', 'jpg') ?? 'png'
+        const binary = atob(rawData)
+        const array = new Uint8Array(binary.length)
+        for (let i = 0; i < binary.length; i++) array[i] = binary.charCodeAt(i)
+        const blob = new Blob([array], { type: mime })
+        const path = `dealers/${dealerId}/${fieldName}.${ext}`
+        const { error } = await supabase.storage
+            .from('dealer-assets')
+            .upload(path, blob, { upsert: true, contentType: mime })
+        if (error) return null
+        const { data: { publicUrl } } = supabase.storage.from('dealer-assets').getPublicUrl(path)
+        return publicUrl
+    } catch {
+        return null
+    }
+}
+
 export interface SaveDealerResult {
     success: boolean;
     dealerId?: string;
@@ -138,6 +167,17 @@ export async function saveDealer(
         }
 
         if (!dealerId) throw new Error("No dealer ID returned");
+
+        // ── Upload logo and hero image to storage ──────────────────────────
+        const logoUrl   = data.brandLogo ? await uploadBase64Image(supabase, data.brandLogo, dealerId, 'logo') : null
+        const heroUrl   = data.heroImage  ? await uploadBase64Image(supabase, data.heroImage,  dealerId, 'hero') : null
+
+        if (logoUrl || heroUrl) {
+            const imageUpdate: Record<string, string> = {}
+            if (logoUrl)  imageUpdate.logo_url       = logoUrl
+            if (heroUrl)  imageUpdate.hero_image_url = heroUrl
+            await supabase.from('dealers').update(imageUpdate).eq('id', dealerId)
+        }
 
         // ── Insert dealer_brands ────────────────────────────────
         if (data.brands && data.brands.length > 0) {
