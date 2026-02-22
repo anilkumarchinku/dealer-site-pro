@@ -27,13 +27,13 @@ import {
     PiggyBank,
     MessageSquare,
     Clock,
-    Calculator,
     Send,
     Menu,
     X,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
+import { EmiCalculator } from '@/components/ui/EmiCalculator';
 import type { Service } from '@/lib/types';
 
 const SERVICE_LABELS: Record<string, { label: string; icon: string; desc: string }> = {
@@ -61,6 +61,8 @@ interface FamilyTemplateProps {
     workingHours?: string | null;
     logoUrl?: string;
     heroImageUrl?: string;
+    sellsNewCars?: boolean;
+    sellsUsedCars?: boolean;
 }
 
 export function FamilyTemplate({
@@ -75,8 +77,12 @@ export function FamilyTemplate({
     workingHours,
     logoUrl,
     heroImageUrl,
+    sellsNewCars = false,
+    sellsUsedCars = false,
 }: FamilyTemplateProps) {
+    const isHybrid = sellsNewCars && sellsUsedCars;
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
+    const [inventoryTab, setInventoryTab] = useState<'all' | 'new' | 'used'>('all');
     const [isScrolled, setIsScrolled] = useState(false);
     const [enquireSidebarOpen, setEnquireSidebarOpen] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -84,10 +90,6 @@ export function FamilyTemplate({
     // Lead form state
     const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
     const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
-
-    // EMI Calculator state
-    const [emiPrice, setEmiPrice] = useState('');
-    const [emiResult, setEmiResult] = useState<number | null>(null);
 
     const config = generateTemplateConfig(brandName, 'family');
     const { brandColors } = config;
@@ -124,13 +126,6 @@ export function FamilyTemplate({
         } catch {
             setFormStatus('error');
         }
-    };
-
-    const calculateEmi = () => {
-        const priceNum = parseFloat(emiPrice.replace(/[^0-9.]/g, ''));
-        if (isNaN(priceNum) || priceNum <= 0) return;
-        // Simple approximation: 2% of price per month for 5yr (~20% down, 10% pa interest)
-        setEmiResult(Math.round(priceNum * 0.02));
     };
 
     const serviceList = services && services.length > 0 ? services : [];
@@ -340,50 +335,15 @@ export function FamilyTemplate({
 
                     {/* EMI Calculator */}
                     <section className="py-16 bg-white">
-                        <div className="max-w-3xl mx-auto px-4">
+                        <div className="max-w-4xl mx-auto px-4">
                             <div className="text-center mb-8">
                                 <span className="font-semibold uppercase tracking-wider text-sm" style={{ color: brandColors.primary }}>
                                     Finance Tool
                                 </span>
-                                <h2 className="text-3xl font-bold mt-2">Quick EMI Calculator</h2>
-                                <p className="text-gray-600 mt-2">Get an instant estimate of your monthly payments</p>
+                                <h2 className="text-3xl font-bold mt-2">EMI Calculator</h2>
+                                <p className="text-gray-600 mt-2">Plan your budget with real inputs — price, down payment, tenure &amp; rate</p>
                             </div>
-                            <div className="bg-gray-50 rounded-2xl p-8 border" style={{ borderColor: `${brandColors.primary}30` }}>
-                                <div className="flex flex-col sm:flex-row gap-4">
-                                    <div className="flex-1">
-                                        <label className="block text-sm font-semibold text-gray-700 mb-2">
-                                            Vehicle Price (₹)
-                                        </label>
-                                        <input
-                                            type="number"
-                                            value={emiPrice}
-                                            onChange={(e) => { setEmiPrice(e.target.value); setEmiResult(null); }}
-                                            placeholder="e.g. 800000"
-                                            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none text-gray-900 bg-white"
-                                        />
-                                    </div>
-                                    <div className="flex items-end">
-                                        <Button
-                                            onClick={calculateEmi}
-                                            className="rounded-xl text-white px-6 py-3 font-semibold w-full sm:w-auto"
-                                            style={{ backgroundColor: brandColors.primary }}
-                                        >
-                                            <Calculator className="w-4 h-4 mr-2" />
-                                            Calculate
-                                        </Button>
-                                    </div>
-                                </div>
-                                {emiResult !== null && (
-                                    <div className="mt-6 p-5 rounded-xl text-center" style={{ backgroundColor: `${brandColors.primary}10`, borderLeft: `4px solid ${brandColors.primary}` }}>
-                                        <p className="text-sm text-gray-600 mb-1">Approx. Monthly EMI</p>
-                                        <p className="text-4xl font-bold" style={{ color: brandColors.primary }}>
-                                            ₹{emiResult.toLocaleString('en-IN')}
-                                            <span className="text-lg font-normal text-gray-600">/month</span>
-                                        </p>
-                                        <p className="text-xs text-gray-500 mt-2">*Indicative estimate for 5-year loan at ~10% p.a. Actual EMI depends on bank terms.</p>
-                                    </div>
-                                )}
-                            </div>
+                            <EmiCalculator brandColor={brandColors.primary} theme="light" />
                         </div>
                     </section>
 
@@ -535,12 +495,45 @@ export function FamilyTemplate({
             {activeTab === 'inventory' && (
                 <div className="pt-24 pb-12 bg-gray-50 min-h-screen">
                     <div className="max-w-7xl mx-auto px-4">
-                        <h1 className="text-4xl font-bold mb-8">Our Inventory</h1>
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+                            <h1 className="text-4xl font-bold">Our Inventory</h1>
+                            {/* Hybrid inventory tabs */}
+                            {isHybrid && (
+                                <div className="flex items-center gap-1 p-1 bg-white rounded-xl border border-gray-200 shadow-sm w-fit">
+                                    {([
+                                        { id: 'all',  label: `All (${cars.length})` },
+                                        { id: 'new',  label: `New (${cars.filter(c => c.condition === 'new').length})` },
+                                        { id: 'used', label: `Pre-Owned (${cars.filter(c => c.condition !== 'new').length})` },
+                                    ] as const).map(t => (
+                                        <button
+                                            key={t.id}
+                                            onClick={() => setInventoryTab(t.id)}
+                                            className="px-4 py-1.5 rounded-lg text-sm font-medium transition-all"
+                                            style={inventoryTab === t.id ? { backgroundColor: brandColors.primary, color: '#fff' } : { color: '#6b7280' }}
+                                        >
+                                            {t.label}
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
                         <div className="flex flex-col lg:flex-row gap-8">
                             <div className="w-full lg:w-72">
-                                <div className="sticky top-24 bg-white rounded-2xl shadow-sm p-6"><CarFilters /></div>
+                                <div className="sticky top-24 bg-white rounded-2xl shadow-sm p-6"><CarFilters hideBrand={sellsNewCars} /></div>
                             </div>
-                            <div className="flex-1"><CarGrid cars={cars} brandColor={brandColors.primary} light /></div>
+                            <div className="flex-1">
+                                <CarGrid
+                                    cars={isHybrid
+                                        ? inventoryTab === 'new'
+                                            ? cars.filter(c => c.condition === 'new')
+                                            : inventoryTab === 'used'
+                                                ? cars.filter(c => c.condition !== 'new')
+                                                : cars
+                                        : cars}
+                                    brandColor={brandColors.primary}
+                                    light
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -552,8 +545,8 @@ export function FamilyTemplate({
                     <div className="flex items-center mb-8 pb-6 border-b border-gray-200">
                         <div className="relative w-12 h-12 mr-3">
                             <Image
-                                src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                alt={brandName}
+                                src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
+                                alt={logoUrl ? dealerName : brandName}
                                 fill
                                 className="object-contain"
                                 sizes="48px"

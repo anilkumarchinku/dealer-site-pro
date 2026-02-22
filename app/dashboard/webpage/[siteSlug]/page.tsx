@@ -260,7 +260,7 @@ export default function SiteEditorPage() {
                     {brandLabel && (
                         <>
                             <span className="text-muted-foreground">/</span>
-                            <span className="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-semibold uppercase tracking-wider">
+                            <span className="px-2.5 py-1 rounded-md bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider">
                                 {brandLabel}
                             </span>
                         </>
@@ -271,7 +271,7 @@ export default function SiteEditorPage() {
                     onClick={handleSave}
                     disabled={saving || !dealerId}
                     size="lg"
-                    className="gap-2 font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                    className="gap-2 font-semibold bg-primary hover:bg-primary/90"
                 >
                     {saving ? (
                         <><Loader2 className="w-4 h-4 animate-spin" /> Saving...</>
@@ -298,7 +298,7 @@ export default function SiteEditorPage() {
                             href={liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-1.5 text-sm font-mono text-blue-500 hover:underline"
+                            className="flex items-center gap-1.5 text-sm font-mono text-primary hover:underline"
                         >
                             <Globe className="w-3.5 h-3.5" />
                             {liveUrlDisplay}
@@ -313,7 +313,7 @@ export default function SiteEditorPage() {
                                 className="gap-1.5 h-8 text-xs"
                             >
                                 {copied
-                                    ? <><Check className="w-3.5 h-3.5 text-emerald-500" /> Copied!</>
+                                    ? <><Check className="w-3.5 h-3.5 text-green-500" /> Copied!</>
                                     : <><Copy className="w-3.5 h-3.5" /> Copy Link</>}
                             </Button>
                             <Button size="sm" asChild className="gap-1.5 h-8 text-xs">
@@ -386,7 +386,7 @@ export default function SiteEditorPage() {
                     <div className={cn("bg-muted/30 flex justify-center p-4", "min-h-[600px]")}>
                         {initializing ? (
                             <div className="flex flex-col items-center justify-center h-[400px] gap-3">
-                                <Loader2 className="w-10 h-10 text-blue-500 animate-spin" />
+                                <Loader2 className="w-10 h-10 text-primary animate-spin" />
                                 <p className="text-muted-foreground text-sm">Loading preview…</p>
                             </div>
                         ) : (
@@ -411,7 +411,7 @@ export default function SiteEditorPage() {
                             className="w-full flex items-center justify-between p-4 text-left"
                         >
                             <div className="flex items-center gap-2 font-semibold">
-                                <Edit3 className="w-4 h-4 text-blue-500" />
+                                <Edit3 className="w-4 h-4 text-primary" />
                                 Edit Design
                             </div>
                             <ChevronDown className={cn(
@@ -436,7 +436,7 @@ export default function SiteEditorPage() {
                                                 className={cn(
                                                     "p-3 rounded-xl border-2 text-left transition-all",
                                                     editForm.styleTemplate === t.id
-                                                        ? "border-blue-500 bg-blue-500/10"
+                                                        ? "border-primary bg-primary/10"
                                                         : "border-border hover:border-muted-foreground/40"
                                                 )}
                                             >
@@ -511,7 +511,7 @@ export default function SiteEditorPage() {
                                     {saving ? (
                                         <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Saving...</>
                                     ) : saveOk ? (
-                                        <><CheckCircle className="w-4 h-4 mr-2 text-emerald-500" /> Saved!</>
+                                        <><CheckCircle className="w-4 h-4 mr-2 text-green-500" /> Saved!</>
                                     ) : (
                                         <><Save className="w-4 h-4 mr-2" /> Save Changes</>
                                     )}

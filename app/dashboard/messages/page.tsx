@@ -79,7 +79,7 @@ export default function MessagesPage() {
     };
 
     const STATS = [
-        { label: "Total Messages", value: displayMessages.length, icon: MessageSquare, bg: "bg-blue-500/10", text: "text-blue-500" },
+        { label: "Total Messages", value: displayMessages.length, icon: MessageSquare, bg: "bg-primary/10", text: "text-primary" },
         { label: "Unread",         value: unread,                  icon: Mail,          bg: "bg-amber-500/10",  text: "text-amber-500"  },
         { label: "Starred",        value: displayMessages.filter(m => m.is_starred).length, icon: Star, bg: "bg-violet-500/10", text: "text-violet-500" },
     ];
@@ -169,15 +169,15 @@ export default function MessagesPage() {
                                             onClick={() => handleSelect(msg)}
                                             className={cn(
                                                 "flex items-start gap-3 p-4 cursor-pointer transition-colors",
-                                                selected?.id === msg.id ? "bg-blue-500/5" : "hover:bg-muted/30",
-                                                !msg.is_read && "bg-blue-500/5"
+                                                selected?.id === msg.id ? "bg-primary/5" : "hover:bg-muted/30",
+                                                !msg.is_read && "bg-primary/5"
                                             )}
                                         >
                                             {/* Read indicator */}
                                             <div className="mt-1 shrink-0">
                                                 {msg.is_read
                                                     ? <MailOpen className="w-4 h-4 text-muted-foreground" />
-                                                    : <Mail className="w-4 h-4 text-blue-500" />
+                                                    : <Mail className="w-4 h-4 text-primary" />
                                                 }
                                             </div>
 

@@ -369,7 +369,7 @@ export default function SettingsPage() {
                         "gap-2 transition-all duration-300",
                         saved
                             ? "bg-emerald-600 hover:bg-emerald-700"
-                            : "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                            : "bg-primary hover:bg-primary/90"
                     )}
                 >
                     <Save className="w-4 h-4" />
@@ -387,8 +387,8 @@ export default function SettingsPage() {
                     <Card variant="glass">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2.5 text-lg">
-                                <div className="p-2 rounded-lg bg-blue-500/10">
-                                    <Globe className="w-4 h-4 text-blue-500" />
+                                <div className="p-2 rounded-lg bg-primary/10">
+                                    <Globe className="w-4 h-4 text-primary" />
                                 </div>
                                 Business Information
                             </CardTitle>
@@ -485,8 +485,8 @@ export default function SettingsPage() {
                     <Card variant="glass">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2.5 text-lg">
-                                <div className="p-2 rounded-lg bg-emerald-500/10">
-                                    <Plug className="w-4 h-4 text-emerald-500" />
+                                <div className="p-2 rounded-lg bg-green-500/10">
+                                    <Plug className="w-4 h-4 text-green-500" />
                                 </div>
                                 Integrations
                             </CardTitle>
@@ -505,7 +505,7 @@ export default function SettingsPage() {
                                         <div className="flex items-center gap-2">
                                             <p className="text-sm font-semibold">Cyepro Inventory</p>
                                             {cyeproConnected
-                                                ? <span className="flex items-center gap-1 text-xs text-emerald-600 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                                                ? <span className="flex items-center gap-1 text-xs text-emerald-600 bg-green-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
                                                     <CheckCircle2 className="w-3 h-3" /> Connected
                                                   </span>
                                                 : <span className="text-xs text-muted-foreground bg-muted/60 px-2 py-0.5 rounded-full">
@@ -575,7 +575,7 @@ export default function SettingsPage() {
                                             <Button
                                                 size="sm"
                                                 variant="outline"
-                                                className="text-red-500 border-red-500/30 hover:bg-red-500/5"
+                                                className="text-destructive border-red-500/30 hover:bg-red-500/5"
                                                 onClick={handleRemoveCyeproKey}
                                             >
                                                 Remove
@@ -598,8 +598,8 @@ export default function SettingsPage() {
                     <Card variant="glass">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2.5 text-lg">
-                                <div className="p-2 rounded-lg bg-blue-500/10">
-                                    <Link2 className="w-4 h-4 text-blue-500" />
+                                <div className="p-2 rounded-lg bg-primary/10">
+                                    <Link2 className="w-4 h-4 text-primary" />
                                 </div>
                                 Custom Domain
                             </CardTitle>
@@ -630,7 +630,7 @@ export default function SettingsPage() {
                                             size="sm"
                                             disabled={domainLoading || !domainInput.trim()}
                                             onClick={handleAddDomain}
-                                            className="gap-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                                            className="gap-1.5 bg-primary hover:bg-primary/90"
                                         >
                                             {domainLoading
                                                 ? <Loader2 className="w-3.5 h-3.5 animate-spin" />
@@ -654,7 +654,7 @@ export default function SettingsPage() {
                                     {/* Domain badge */}
                                     <div className="flex items-center justify-between px-3 py-2.5 rounded-lg bg-muted/30 border border-border">
                                         <div className="flex items-center gap-2 min-w-0">
-                                            <Globe className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                                            <Globe className="w-4 h-4 text-primary flex-shrink-0" />
                                             <span className="text-sm font-mono font-medium truncate">{savedDomain}</span>
                                         </div>
                                         <span className="text-xs text-amber-600 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded-full ml-2 flex-shrink-0">
@@ -681,7 +681,7 @@ export default function SettingsPage() {
                                                 </thead>
                                                 <tbody>
                                                     <tr className="border-b border-border/50">
-                                                        <td className="px-3 py-2 font-mono font-semibold text-blue-600">A</td>
+                                                        <td className="px-3 py-2 font-mono font-semibold text-primary">A</td>
                                                         <td className="px-3 py-2 font-mono">@</td>
                                                         <td className="px-3 py-2 font-mono flex items-center gap-2">
                                                             76.76.21.21
@@ -728,8 +728,8 @@ export default function SettingsPage() {
                                         <div className={cn(
                                             "rounded-lg px-3 py-2.5 text-xs flex items-start gap-2",
                                             verifyResult.allVerified
-                                                ? "bg-emerald-500/10 text-emerald-700 border border-emerald-500/20"
-                                                : "bg-red-500/10 text-red-700 border border-red-500/20"
+                                                ? "bg-green-500/10 text-emerald-700 border border-emerald-500/20"
+                                                : "bg-destructive/10 text-red-700 border border-destructive/20"
                                         )}>
                                             {verifyResult.allVerified
                                                 ? <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
@@ -744,7 +744,7 @@ export default function SettingsPage() {
                                             size="sm"
                                             disabled={verifying}
                                             onClick={handleVerifyDns}
-                                            className="gap-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                                            className="gap-1.5 bg-primary hover:bg-primary/90"
                                         >
                                             {verifying
                                                 ? <><Loader2 className="w-3.5 h-3.5 animate-spin" /> Checking...</>
@@ -754,7 +754,7 @@ export default function SettingsPage() {
                                             size="sm"
                                             variant="outline"
                                             onClick={handleRemoveDomain}
-                                            className="text-red-500 border-red-500/30 hover:bg-red-500/5 gap-1.5"
+                                            className="text-destructive border-red-500/30 hover:bg-red-500/5 gap-1.5"
                                         >
                                             <Trash2 className="w-3.5 h-3.5" /> Remove
                                         </Button>
@@ -767,10 +767,10 @@ export default function SettingsPage() {
                                 <div className="space-y-3">
                                     <div className="flex items-center justify-between px-3 py-2.5 rounded-lg bg-emerald-500/5 border border-emerald-500/20">
                                         <div className="flex items-center gap-2 min-w-0">
-                                            <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                                            <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                                             <span className="text-sm font-mono font-medium truncate">{savedDomain}</span>
                                         </div>
-                                        <span className="text-xs text-emerald-600 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full ml-2 flex-shrink-0">
+                                        <span className="text-xs text-emerald-600 bg-green-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full ml-2 flex-shrink-0">
                                             Active
                                         </span>
                                     </div>
@@ -780,7 +780,7 @@ export default function SettingsPage() {
                                             href={`https://${savedDomain}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-1.5 text-xs text-blue-600 hover:underline"
+                                            className="inline-flex items-center gap-1.5 text-xs text-primary hover:underline"
                                         >
                                             <ExternalLink className="w-3.5 h-3.5" />
                                             Open {savedDomain}
@@ -790,7 +790,7 @@ export default function SettingsPage() {
                                             size="sm"
                                             variant="outline"
                                             onClick={handleRemoveDomain}
-                                            className="text-red-500 border-red-500/30 hover:bg-red-500/5 gap-1.5 h-7 text-xs px-2"
+                                            className="text-destructive border-red-500/30 hover:bg-red-500/5 gap-1.5 h-7 text-xs px-2"
                                         >
                                             <Trash2 className="w-3 h-3" /> Disconnect
                                         </Button>
@@ -854,7 +854,7 @@ export default function SettingsPage() {
                                                     await supabase.from("dealers").update({ logo_url: null }).eq("id", dealerId);
                                                     setLogoPreview("");
                                                 }}
-                                                className="flex items-center gap-1 text-xs text-red-500 hover:text-red-700"
+                                                className="flex items-center gap-1 text-xs text-destructive hover:text-red-700"
                                             >
                                                 <X className="w-3 h-3" /> Remove logo
                                             </button>
@@ -910,7 +910,7 @@ export default function SettingsPage() {
                                                     await supabase.from("dealers").update({ hero_image_url: null }).eq("id", dealerId);
                                                     setHeroPreview("");
                                                 }}
-                                                className="flex items-center gap-1 text-xs text-red-500 hover:text-red-700"
+                                                className="flex items-center gap-1 text-xs text-destructive hover:text-red-700"
                                             >
                                                 <X className="w-3 h-3" /> Remove image
                                             </button>
@@ -959,17 +959,17 @@ export default function SettingsPage() {
                     </Card>
 
                     {/* Danger Zone */}
-                    <Card variant="glass" className="border-red-500/20">
+                    <Card variant="glass" className="border-destructive/20">
                         <CardHeader>
-                            <CardTitle className="flex items-center gap-2.5 text-lg text-red-600 dark:text-red-400">
-                                <div className="p-2 rounded-lg bg-red-500/10">
-                                    <Shield className="w-4 h-4 text-red-500" />
+                            <CardTitle className="flex items-center gap-2.5 text-lg text-destructive">
+                                <div className="p-2 rounded-lg bg-destructive/10">
+                                    <Shield className="w-4 h-4 text-destructive" />
                                 </div>
                                 Danger Zone
                             </CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <div className="flex items-center justify-between px-4 py-3.5 rounded-xl bg-red-500/5 border border-red-500/20">
+                            <div className="flex items-center justify-between px-4 py-3.5 rounded-xl bg-red-500/5 border border-destructive/20">
                                 <div>
                                     <p className="text-sm font-medium text-foreground">Reset Onboarding</p>
                                     <p className="text-xs text-muted-foreground mt-0.5">

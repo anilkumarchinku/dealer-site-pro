@@ -130,7 +130,7 @@ export default function WebpagePage() {
     if (loading) {
         return (
             <div className="flex items-center justify-center h-64">
-                <Loader2 className="w-8 h-8 animate-spin text-blue-500" />
+                <Loader2 className="w-8 h-8 animate-spin text-primary" />
             </div>
         )
     }
@@ -217,7 +217,7 @@ function SiteCard({ site, isMulti, dealerName, copied, onCopy, onEdit, onDomain 
                         "inline-block px-2.5 py-1 rounded-md text-xs font-semibold uppercase tracking-wider",
                         site.isUsed
                             ? "bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20"
-                            : "bg-blue-500/10 text-blue-600 dark:text-blue-400"
+                            : "bg-primary/10 text-primary"
                     )}>
                         {site.isUsed ? "Pre-Owned / Used Cars" : site.label}
                     </span>
@@ -260,7 +260,7 @@ function SiteCard({ site, isMulti, dealerName, copied, onCopy, onEdit, onDomain 
                             href={liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-xs font-mono text-blue-500 hover:underline truncate"
+                            className="text-xs font-mono text-primary hover:underline truncate"
                         >
                             {displayUrl}
                         </a>
@@ -274,7 +274,7 @@ function SiteCard({ site, isMulti, dealerName, copied, onCopy, onEdit, onDomain 
                         className="flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded-lg border border-border hover:bg-muted transition-colors"
                     >
                         {isCopied
-                            ? <><Check className="w-3.5 h-3.5 text-emerald-500" /> Copied!</>
+                            ? <><Check className="w-3.5 h-3.5 text-green-500" /> Copied!</>
                             : <><Copy className="w-3.5 h-3.5" /> Copy Link</>}
                     </button>
                     <a
@@ -311,7 +311,7 @@ function SiteCard({ site, isMulti, dealerName, copied, onCopy, onEdit, onDomain 
                     ) : (
                         <Button
                             size="sm"
-                            className="flex-1 gap-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                            className="flex-1 gap-1.5 bg-primary hover:bg-primary/90"
                             onClick={onDomain}
                         >
                             <Globe className="w-3.5 h-3.5" />

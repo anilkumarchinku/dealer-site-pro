@@ -45,6 +45,7 @@ function dbVehiclesToCars(vehicles: DBVehicle[]): Car[] {
         images: { hero: '/placeholder-car.jpg', exterior: [], interior: [] },
         meta: { viewCount: v.view_count },
         price: `₹${(v.price_paise / 100).toLocaleString('en-IN')}`,
+        condition: v.condition,
     }))
 }
 
@@ -264,6 +265,8 @@ export default async function SitePage({ params }: SitePageProps) {
         workingHours: dealer.working_hours ?? null,
         logoUrl: logo_url ?? undefined,
         heroImageUrl: hero_image_url ?? undefined,
+        sellsNewCars:  sells_new_cars,
+        sellsUsedCars: sells_used_cars,
     }
 
     // ── Render the chosen template ────────────────────────────────────────────

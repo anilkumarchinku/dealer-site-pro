@@ -24,21 +24,21 @@ function StatusBadge({ status }: { status: string }) {
     switch (status) {
         case 'active':
             return (
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-green-500/10 text-green-500 border border-emerald-500/20">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                     Active + SSL
                 </span>
             )
         case 'verifying':
             return (
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-500 border border-blue-500/20">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
                     Verifying
                 </span>
             )
         case 'failed':
             return (
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-red-500/10 text-red-500 border border-red-500/20">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-destructive/10 text-destructive border border-destructive/20">
                     <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
                     Failed
                 </span>
@@ -141,27 +141,27 @@ export default function DomainSettingsPage() {
                 <Card variant="glass">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
-                            <Globe className="w-5 h-5 text-blue-500" />
+                            <Globe className="w-5 h-5 text-primary" />
                             Current Domain
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-4 mb-4">
+                        <div className="bg-primary/10 border border-primary/20 rounded-xl p-4 mb-4">
                             <p className="text-2xl font-mono font-bold text-blue-400">
                                 {primaryDomain.domain}
                             </p>
                         </div>
                         <div className="flex flex-wrap gap-4 text-sm mb-4">
                             <div className="flex items-center gap-2">
-                                <CheckCircle className="w-4 h-4 text-emerald-500" />
+                                <CheckCircle className="w-4 h-4 text-green-500" />
                                 <span className="text-muted-foreground">
-                                    Status: <strong className="text-emerald-500">{primaryDomain.status}</strong>
+                                    Status: <strong className="text-green-500">{primaryDomain.status}</strong>
                                 </span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Lock className="w-4 h-4 text-emerald-500" />
+                                <Lock className="w-4 h-4 text-green-500" />
                                 <span className="text-muted-foreground">
-                                    SSL: <strong className="text-emerald-500">Secure (HTTPS)</strong>
+                                    SSL: <strong className="text-green-500">Secure (HTTPS)</strong>
                                 </span>
                             </div>
                             <div className="flex items-center gap-2">
@@ -230,7 +230,7 @@ export default function DomainSettingsPage() {
                     <CardContent>
                         <ol className="space-y-4 text-sm">
                             <li className="flex gap-3">
-                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center text-xs font-bold">
+                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs font-bold">
                                     1
                                 </span>
                                 <span className="text-muted-foreground pt-0.5">
@@ -238,7 +238,7 @@ export default function DomainSettingsPage() {
                                 </span>
                             </li>
                             <li className="flex gap-3">
-                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center text-xs font-bold">
+                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs font-bold">
                                     2
                                 </span>
                                 <span className="text-muted-foreground pt-0.5">
@@ -247,7 +247,7 @@ export default function DomainSettingsPage() {
                                 </span>
                             </li>
                             <li className="flex gap-3">
-                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center text-xs font-bold">
+                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs font-bold">
                                     3
                                 </span>
                                 <div className="pt-0.5 flex-1">
@@ -270,7 +270,7 @@ export default function DomainSettingsPage() {
                                                     <p className="font-bold">cname.vercel-dns.com</p>
                                                     <button
                                                         onClick={handleCopyCname}
-                                                        className="text-blue-500 hover:text-blue-400 flex items-center gap-1"
+                                                        className="text-primary hover:text-blue-400 flex items-center gap-1"
                                                         title="Copy to clipboard"
                                                     >
                                                         <Copy className="w-3 h-3" />
@@ -290,7 +290,7 @@ export default function DomainSettingsPage() {
                                 </div>
                             </li>
                             <li className="flex gap-3">
-                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center text-xs font-bold">
+                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs font-bold">
                                     4
                                 </span>
                                 <div className="pt-0.5 flex items-start gap-2">
@@ -302,7 +302,7 @@ export default function DomainSettingsPage() {
                                 </div>
                             </li>
                             <li className="flex gap-3">
-                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center text-xs font-bold">
+                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs font-bold">
                                     5
                                 </span>
                                 <span className="text-muted-foreground pt-0.5">
@@ -315,7 +315,7 @@ export default function DomainSettingsPage() {
                         <Button
                             onClick={handleVerifyDNS}
                             disabled={verifying}
-                            className="mt-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 gap-2"
+                            className="mt-6 bg-primary hover:bg-primary/90 gap-2"
                         >
                             {verifying ? (
                                 <>
@@ -335,7 +335,7 @@ export default function DomainSettingsPage() {
 
             {/* Connect Custom Domain CTA — shown when no custom domain exists yet */}
             {!loading && !hasCustomDomain && (
-                <Card className="border-dashed border-2 hover:border-blue-500/50 transition-colors">
+                <Card className="border-dashed border-2 hover:border-primary/50 transition-colors">
                     <CardContent className="p-8 text-center">
                         <Globe className="w-12 h-12 mx-auto mb-4 text-muted-foreground" />
                         <h3 className="font-bold text-lg mb-2">Connect Your Domain</h3>
@@ -344,7 +344,7 @@ export default function DomainSettingsPage() {
                         </p>
                         <Button
                             onClick={() => setShowConnectModal(true)}
-                            className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                            className="bg-primary hover:bg-primary/90"
                         >
                             Connect Domain
                             <ArrowRight className="w-4 h-4 ml-2" />
@@ -362,11 +362,11 @@ export default function DomainSettingsPage() {
 
                 <div className="grid md:grid-cols-2 gap-6">
                     {/* PRO Plan */}
-                    <Card variant="glass" className="border-blue-500/30 hover:border-blue-500/50 transition-colors">
+                    <Card variant="glass" className="border-primary/30 hover:border-primary/50 transition-colors">
                         <CardContent className="pt-6">
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="p-2.5 rounded-xl bg-blue-500/10">
-                                    <Zap className="w-6 h-6 text-blue-500" />
+                                <div className="p-2.5 rounded-xl bg-primary/10">
+                                    <Zap className="w-6 h-6 text-primary" />
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-bold">PRO</h3>
@@ -388,7 +388,7 @@ export default function DomainSettingsPage() {
                                     'Easy DNS setup guide',
                                 ].map((item) => (
                                     <li key={item} className="flex items-start gap-2">
-                                        <CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
+                                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
                                         <span className="text-sm text-muted-foreground">{item}</span>
                                     </li>
                                 ))}
@@ -396,7 +396,7 @@ export default function DomainSettingsPage() {
 
                             <Button
                                 onClick={() => setShowConnectModal(true)}
-                                className="w-full gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                                className="w-full gap-2 bg-primary hover:bg-primary/90"
                             >
                                 Connect My Domain
                                 <ArrowRight className="w-4 h-4" />
@@ -473,7 +473,7 @@ export default function DomainSettingsPage() {
                             <span className="text-muted-foreground">Active + SSL — fully working</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <XCircle className="w-3.5 h-3.5 text-red-500" />
+                            <XCircle className="w-3.5 h-3.5 text-destructive" />
                             <span className="text-muted-foreground">Failed — check DNS settings</span>
                         </div>
                     </div>

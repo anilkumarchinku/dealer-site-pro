@@ -16,6 +16,7 @@ import { getBrandHeroImage } from '@/lib/utils/brand-hero';
 import { ArrowRight, Phone, MapPin, Mail, Award, ShieldCheck, Star, ChevronRight, Crown, Clock, MessageSquare, CheckCircle2, Send, Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
+import { EmiCalculator } from '@/components/ui/EmiCalculator';
 import type { Service } from '@/lib/types';
 
 const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
@@ -43,6 +44,8 @@ interface LuxuryTemplateProps {
     workingHours?: string | null;
     logoUrl?: string;
     heroImageUrl?: string;
+    sellsNewCars?: boolean;
+    sellsUsedCars?: boolean;
 }
 
 export function LuxuryTemplate({
@@ -57,8 +60,12 @@ export function LuxuryTemplate({
     workingHours,
     logoUrl,
     heroImageUrl,
+    sellsNewCars = false,
+    sellsUsedCars = false,
 }: LuxuryTemplateProps) {
+    const isHybrid = sellsNewCars && sellsUsedCars;
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
+    const [inventoryTab, setInventoryTab] = useState<'all' | 'new' | 'used'>('all');
     const [isScrolled, setIsScrolled] = useState(false);
     const [enquireSidebarOpen, setEnquireSidebarOpen] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -306,6 +313,18 @@ export function LuxuryTemplate({
                         </div>
                     </section>
 
+                    {/* EMI Calculator */}
+                    <section className="py-24">
+                        <div className="max-w-4xl mx-auto px-4">
+                            <div className="text-center mb-10">
+                                <span className="text-sm tracking-widest uppercase" style={{ color: brandAccent }}>Finance</span>
+                                <h2 className="text-5xl font-light mt-4">EMI Calculator</h2>
+                                <p className="text-gray-400 mt-3">Plan your investment with precision</p>
+                            </div>
+                            <EmiCalculator brandColor={brandAccent} theme="dark" />
+                        </div>
+                    </section>
+
                     {/* Request a Callback — Lead Form */}
                     <section id="contact" className="py-24 bg-black">
                         <div className="max-w-7xl mx-auto px-4">
@@ -421,12 +440,40 @@ export function LuxuryTemplate({
             {activeTab === 'inventory' && (
                 <div className="pt-24 pb-12 min-h-screen">
                     <div className="max-w-7xl mx-auto px-4">
-                        <h1 className="text-5xl font-light mb-12">Our Collection</h1>
+                        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
+                            <h1 className="text-5xl font-light">Our Collection</h1>
+                            {isHybrid && (
+                                <div className="flex items-center gap-1 p-1 rounded-lg border border-white/20 w-fit">
+                                    {([
+                                        { id: 'all',  label: `All (${cars.length})` },
+                                        { id: 'new',  label: `New (${cars.filter(c => c.condition === 'new').length})` },
+                                        { id: 'used', label: `Pre-Owned (${cars.filter(c => c.condition !== 'new').length})` },
+                                    ] as const).map(t => (
+                                        <button
+                                            key={t.id}
+                                            onClick={() => setInventoryTab(t.id)}
+                                            className="px-4 py-1.5 rounded-md text-sm font-medium tracking-wider transition-all"
+                                            style={inventoryTab === t.id ? { backgroundColor: brandAccent, color: '#000' } : { color: 'rgba(255,255,255,0.6)' }}
+                                        >
+                                            {t.label}
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
                         <div className="flex flex-col lg:flex-row gap-8">
                             <div className="w-full lg:w-72">
-                                <div className="sticky top-24 bg-white/5 rounded-lg p-6"><CarFilters /></div>
+                                <div className="sticky top-24 bg-white/5 rounded-lg p-6"><CarFilters hideBrand={sellsNewCars} /></div>
                             </div>
-                            <div className="flex-1"><CarGrid cars={cars} brandColor={brandAccent} /></div>
+                            <div className="flex-1">
+                                <CarGrid
+                                    cars={isHybrid
+                                        ? inventoryTab === 'new' ? cars.filter(c => c.condition === 'new')
+                                        : inventoryTab === 'used' ? cars.filter(c => c.condition !== 'new')
+                                        : cars : cars}
+                                    brandColor={brandAccent}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -438,8 +485,8 @@ export function LuxuryTemplate({
                     <div className="flex items-center mb-8 pb-6 border-b border-white/10">
                         <div className="relative w-12 h-12 mr-3">
                             <Image
-                                src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                alt={brandName}
+                                src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
+                                alt={logoUrl ? dealerName : brandName}
                                 fill
                                 className="object-contain"
                                 sizes="48px"

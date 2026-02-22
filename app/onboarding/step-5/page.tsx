@@ -54,7 +54,7 @@ export default function Step5Page() {
             <Card>
                 <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                        <LayoutTemplate className="w-6 h-6 text-blue-600" />
+                        <LayoutTemplate className="w-6 h-6 text-primary" />
                         Customize Your Website
                     </CardTitle>
                     <CardDescription>
@@ -137,9 +137,9 @@ export default function Step5Page() {
             </Card>
 
             {/* Preview Hint */}
-            <div className="rounded-xl p-4 flex gap-3 border border-blue-500/20 bg-blue-500/5">
-                <div className="p-1.5 rounded-lg bg-blue-500/10 h-fit">
-                    <Globe className="w-4 h-4 text-blue-500" />
+            <div className="rounded-xl p-4 flex gap-3 border border-primary/20 bg-primary/5">
+                <div className="p-1.5 rounded-lg bg-primary/10 h-fit">
+                    <Globe className="w-4 h-4 text-primary" />
                 </div>
                 <div>
                     <h4 className="font-semibold text-foreground">Pro Tip</h4>

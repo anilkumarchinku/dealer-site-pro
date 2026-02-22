@@ -84,8 +84,8 @@ export default function ReviewsPage() {
                 <Card className="hover:shadow-lg transition-all duration-300">
                     <CardContent className="p-6">
                         <div className="mb-4">
-                            <div className="p-3 rounded-xl w-fit bg-blue-500/10">
-                                <MessageSquare className="w-6 h-6 text-blue-500" />
+                            <div className="p-3 rounded-xl w-fit bg-primary/10">
+                                <MessageSquare className="w-6 h-6 text-primary" />
                             </div>
                         </div>
                         <div className="space-y-1">
@@ -97,8 +97,8 @@ export default function ReviewsPage() {
                 <Card className="hover:shadow-lg transition-all duration-300">
                     <CardContent className="p-6">
                         <div className="mb-4">
-                            <div className="p-3 rounded-xl w-fit bg-emerald-500/10">
-                                <CheckCircle className="w-6 h-6 text-emerald-500" />
+                            <div className="p-3 rounded-xl w-fit bg-green-500/10">
+                                <CheckCircle className="w-6 h-6 text-green-500" />
                             </div>
                         </div>
                         <div className="space-y-1">
@@ -181,7 +181,7 @@ export default function ReviewsPage() {
 
                                 {/* Dealer response */}
                                 {review.dealer_response && (
-                                    <div className="pl-3 border-l-2 border-blue-500/30">
+                                    <div className="pl-3 border-l-2 border-primary/30">
                                         <p className="text-xs text-muted-foreground mb-0.5 font-medium">Your response:</p>
                                         <p className="text-sm text-foreground">{review.dealer_response}</p>
                                     </div>
@@ -199,7 +199,7 @@ export default function ReviewsPage() {
                                         />
                                         <div className="flex gap-2">
                                             <Button size="sm" onClick={() => handleRespond(review.id)}
-                                                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
+                                                className="bg-primary hover:bg-primary/90">
                                                 Post Response
                                             </Button>
                                             <Button size="sm" variant="ghost" onClick={() => { setRespondingTo(null); setResponseText(""); }}>

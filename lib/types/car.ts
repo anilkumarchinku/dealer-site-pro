@@ -210,6 +210,9 @@ export interface Car {
     // Metadata
     meta: CarMeta;
     price?: string;
+
+    // Hybrid: vehicle condition (for filtering in hybrid dealerships)
+    condition?: 'new' | 'used' | 'certified_pre_owned';
 }
 
 /**

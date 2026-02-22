@@ -57,7 +57,7 @@ export default function HelpPage() {
             </Card>
 
             {/* Contact */}
-            <Card variant="glass" className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 border-blue-500/20">
+            <Card variant="glass" className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 border-primary/20">
                 <CardContent className="py-8 text-center">
                     <h2 className="text-xl font-bold mb-2">Still need help?</h2>
                     <p className="text-muted-foreground mb-4">Our support team is here to help you succeed</p>

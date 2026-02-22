@@ -71,6 +71,7 @@ function fileToBase64(file: File): Promise<string> {
 export default function Step2UsedPage() {
     const router = useRouter();
     const { data, updateData, setStep } = useOnboardingStore();
+    const isHybrid = data.dealerCategory === 'both';
 
     // ── Colour state ───────────────────────────────────────────────────────
     const [selectedPreset, setSelectedPreset] = useState<string>(
@@ -188,16 +189,22 @@ export default function Step2UsedPage() {
         const finalPreset = useCustom ? "custom" : selectedPreset;
 
         updateData({
-            sellsNewCars: false,
+            // For hybrid: keep sellsNewCars: true and brands already set in step-1
+            // For pure used: reset new car flags
+            ...(isHybrid ? {} : { sellsNewCars: false, brands: [] }),
             sellsUsedCars: true,
-            brands: [],
             brandColor: finalColor,
             brandColorPreset: finalPreset + "|" + finalAccent, // encode both colors
             brandLogo: logoPreview || undefined,
             heroImage: heroPreview || undefined,
         });
-        // Go to inventory source selection before services
-        router.push("/onboarding/step-2-inventory");
+        if (isHybrid) {
+            // Hybrid: skip inventory source selection, go straight to services
+            router.push("/onboarding/step-3");
+        } else {
+            // Pure used: go to inventory source selection before services
+            router.push("/onboarding/step-2-inventory");
+        }
     };
 
     const handleBack = () => {
@@ -212,12 +219,23 @@ export default function Step2UsedPage() {
     return (
         <Card className="animate-fade-in">
             <CardHeader>
+                {isHybrid && (
+                    <div className="mb-3 flex items-start gap-3 p-3 rounded-xl bg-violet-500/5 border border-violet-500/20">
+                        <span className="text-lg">🔀</span>
+                        <div>
+                            <p className="text-sm font-semibold text-violet-700 dark:text-violet-300">Pre-Owned Section Branding</p>
+                            <p className="text-xs text-muted-foreground">This colour & logo will be used for your pre-owned car section. Your OEM brands were selected in the previous step.</p>
+                        </div>
+                    </div>
+                )}
                 <CardTitle className="flex items-center gap-2">
                     <Palette className="w-5 h-5 text-amber-600" />
-                    Your Brand Identity
+                    {isHybrid ? "Pre-Owned Section Identity" : "Your Brand Identity"}
                 </CardTitle>
                 <CardDescription>
-                    Choose a colour palette that represents your dealership. You can also upload your logo.
+                    {isHybrid
+                        ? "Choose a colour palette for the pre-owned section of your dealership website."
+                        : "Choose a colour palette that represents your dealership. You can also upload your logo."}
                 </CardDescription>
             </CardHeader>
 

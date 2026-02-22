@@ -64,8 +64,8 @@ export default function Step6Page() {
                     <CardContent className="p-8 text-center space-y-6">
                         {/* Big check icon */}
                         <div className="flex justify-center">
-                            <div className="p-4 rounded-full bg-emerald-500/10">
-                                <CheckCircle className="w-16 h-16 text-emerald-500" />
+                            <div className="p-4 rounded-full bg-green-500/10">
+                                <CheckCircle className="w-16 h-16 text-green-500" />
                             </div>
                         </div>
 
@@ -109,7 +109,7 @@ export default function Step6Page() {
                                 "No setup required",
                             ].map((item) => (
                                 <div key={item} className="flex items-center gap-1.5 text-sm text-muted-foreground">
-                                    <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
+                                    <CheckCircle className="w-4 h-4 text-green-500 shrink-0" />
                                     <span>{item}</span>
                                 </div>
                             ))}
@@ -126,7 +126,7 @@ export default function Step6Page() {
                                 Preview Your Site
                             </Button>
                             <Button
-                                className="flex-1 gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                                className="flex-1 gap-2 rounded-xl"
                                 onClick={() => router.push("/dashboard")}
                             >
                                 Go to Dashboard
@@ -145,7 +145,7 @@ export default function Step6Page() {
             <Card>
                 <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                        <CheckCircle className="w-6 h-6 text-emerald-500" />
+                        <CheckCircle className="w-6 h-6 text-green-500" />
                         Review Your Information
                     </CardTitle>
                     <CardDescription>
@@ -172,8 +172,8 @@ export default function Step6Page() {
                             <p className="text-sm text-muted-foreground">Phone</p>
                             <p className="font-semibold text-foreground">{data.phone}</p>
                             {data.whatsapp && (
-                                <p className="text-xs text-emerald-600 dark:text-emerald-400 flex items-center gap-1 mt-0.5">
-                                    <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
+                                <p className="text-xs text-green-600 dark:text-green-400 flex items-center gap-1 mt-0.5">
+                                    <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
                                     WhatsApp: {data.whatsapp}
                                 </p>
                             )}
@@ -209,7 +209,7 @@ export default function Step6Page() {
                                 {data.brands.map((brand) => (
                                     <span
                                         key={brand}
-                                        className="px-3 py-1 bg-blue-500/10 text-blue-600 dark:text-blue-400 text-sm rounded-full border border-blue-500/20"
+                                        className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full border border-primary/20"
                                     >
                                         {brand}
                                     </span>
@@ -225,18 +225,18 @@ export default function Step6Page() {
 
                     {/* FREE Subdomain Info */}
                     <div className="border-t border-border pt-4">
-                        <div className="rounded-xl p-4 border border-blue-500/20 bg-blue-500/5">
+                        <div className="rounded-xl p-4 border border-primary/20 bg-primary/5">
                             <div className="flex items-start gap-3">
-                                <Globe className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                                <Globe className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                                 <div className="flex-1">
                                     <h4 className="font-semibold text-foreground mb-1">Your FREE Website Domain</h4>
                                     <p className="text-sm text-muted-foreground mb-2">
                                         Your dealer website will be live at:
                                     </p>
-                                    <div className="rounded-lg px-3 py-2 border border-blue-500/30 bg-background font-mono text-sm text-blue-600 dark:text-blue-400 break-all">
+                                    <div className="rounded-lg px-3 py-2 border border-primary/30 bg-background font-mono text-sm text-primary break-all">
                                         {dealerSiteUrl(data.slug || data.dealershipName?.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "") || "")}
                                     </div>
-                                    <div className="mt-3 flex items-center gap-2 text-xs text-blue-600 dark:text-blue-400">
+                                    <div className="mt-3 flex items-center gap-2 text-xs text-primary">
                                         <Shield className="w-4 h-4" />
                                         <span>Free SSL certificate included · No setup required</span>
                                     </div>
@@ -247,7 +247,7 @@ export default function Step6Page() {
 
                     {/* Save error */}
                     {saveError && (
-                        <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-red-500/10 border border-red-500/20 text-sm text-red-600 dark:text-red-400">
+                        <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-destructive/10 border border-destructive/20 text-sm text-destructive">
                             <AlertCircle className="w-4 h-4 flex-shrink-0" />
                             <span>{saveError}</span>
                         </div>
@@ -262,7 +262,7 @@ export default function Step6Page() {
                     <Button
                         onClick={handleFinish}
                         size="lg"
-                        className="px-8 gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                        className="px-8 gap-2"
                         disabled={saving}
                     >
                         {saving ? (
@@ -291,13 +291,13 @@ export default function Step6Page() {
 
                     <div className="grid md:grid-cols-2 gap-6">
                         {/* PRO Tier */}
-                        <Card className="border-2 border-blue-500/30 hover:border-blue-500/60 transition-colors relative overflow-hidden">
-                            <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                        <Card className="border-2 border-primary/30 hover:border-primary/60 transition-colors relative overflow-hidden">
+                            <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-bl-lg">
                                 POPULAR
                             </div>
                             <CardHeader>
                                 <div className="flex items-center gap-2 mb-2">
-                                    <LinkIcon className="w-6 h-6 text-blue-500" />
+                                    <LinkIcon className="w-6 h-6 text-primary" />
                                     <CardTitle className="text-xl">PRO Tier</CardTitle>
                                 </div>
                                 <CardDescription className="text-lg font-semibold text-foreground">
@@ -317,20 +317,20 @@ export default function Step6Page() {
                                         "Professional email setup support",
                                     ].map((item) => (
                                         <div key={item} className="flex items-start gap-2 text-sm">
-                                            <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
+                                            <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
                                             <span className="text-muted-foreground">{item}</span>
                                         </div>
                                     ))}
                                 </div>
-                                <div className="rounded-xl p-3 border border-blue-500/20 bg-blue-500/5">
-                                    <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">
+                                <div className="rounded-xl p-3 border border-primary/20 bg-primary/5">
+                                    <p className="text-xs text-primary font-medium">
                                         Perfect if you already own a domain
                                     </p>
                                 </div>
                             </CardContent>
                             <CardFooter>
                                 <Button
-                                    className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                                    className="w-full"
                                     onClick={() => router.push("/dashboard/domains")}
                                 >
                                     Connect My Domain
@@ -366,7 +366,7 @@ export default function Step6Page() {
                                         "Auto-renewal & domain management",
                                     ].map((item) => (
                                         <div key={item} className="flex items-start gap-2 text-sm">
-                                            <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
+                                            <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
                                             <span className="text-muted-foreground">{item}</span>
                                         </div>
                                     ))}
@@ -397,8 +397,8 @@ export default function Step6Page() {
                     <Card variant="glass">
                         <CardContent className="p-6">
                             <div className="flex items-start gap-3">
-                                <div className="p-2 rounded-xl bg-blue-500/10">
-                                    <Globe className="w-5 h-5 text-blue-500" />
+                                <div className="p-2 rounded-xl bg-primary/10">
+                                    <Globe className="w-5 h-5 text-primary" />
                                 </div>
                                 <div className="flex-1">
                                     <h4 className="font-semibold text-foreground mb-2">Not sure which to choose?</h4>
@@ -409,7 +409,7 @@ export default function Step6Page() {
                                     </div>
                                     <Button
                                         variant="link"
-                                        className="mt-3 px-0 h-auto text-blue-600 dark:text-blue-400"
+                                        className="mt-3 px-0 h-auto text-primary"
                                         onClick={() => setShowUpgradeOptions(false)}
                                     >
                                         No thanks, I'll stick with my free subdomain for now →

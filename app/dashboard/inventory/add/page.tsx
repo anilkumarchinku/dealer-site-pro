@@ -17,7 +17,9 @@ const FEATURES = [
 
 export default function AddVehiclePage() {
     const router = useRouter();
-    const { dealerId } = useOnboardingStore();
+    const { dealerId, data } = useOnboardingStore();
+    const isHybrid = data.sellsNewCars && data.sellsUsedCars;
+
     const [formData, setFormData] = useState({
         vin: "",
         make: "",
@@ -30,6 +32,7 @@ export default function AddVehiclePage() {
         fuelType: "Petrol",
         features: [] as string[],
         description: "",
+        condition: isHybrid ? "" : "used",  // hybrid must choose; others default to used
     });
     const [isGenerating, setIsGenerating] = useState(false);
     const [isSaving, setIsSaving] = useState(false);
@@ -73,6 +76,10 @@ export default function AddVehiclePage() {
             setSaveError("Please fill in Make, Model, Year and Price.");
             return;
         }
+        if (isHybrid && !formData.condition) {
+            setSaveError("Please select whether this is a New or Used vehicle.");
+            return;
+        }
         if (!dealerId) {
             setSaveError("Dealer profile not found. Please complete onboarding first.");
             return;
@@ -94,7 +101,7 @@ export default function AddVehiclePage() {
             fuel_type:   formData.fuelType as "Petrol" | "Diesel" | "CNG" | "Electric" | "Hybrid",
             features:    formData.features,
             description: formData.description || undefined,
-            condition:   "used",
+            condition:   (formData.condition || "used") as "new" | "used" | "certified_pre_owned",
         });
 
         setIsSaving(false);
@@ -119,7 +126,9 @@ export default function AddVehiclePage() {
                 </Button>
                 <div>
                     <h1 className="text-2xl font-bold">Add Vehicle</h1>
-                    <p className="text-muted-foreground">Add a used car to your inventory</p>
+                    <p className="text-muted-foreground">
+                        {isHybrid ? "Add a new or pre-owned vehicle to your inventory" : "Add a vehicle to your inventory"}
+                    </p>
                 </div>
             </div>
 
@@ -135,6 +144,46 @@ export default function AddVehiclePage() {
                         </CardHeader>
 
                         <CardContent className="space-y-6">
+                            {/* ── Condition picker (hybrid only) ──────────── */}
+                            {isHybrid && (
+                                <div>
+                                    <label className="block text-sm font-medium mb-3">
+                                        Vehicle Condition <span className="text-destructive">*</span>
+                                    </label>
+                                    <div className="grid grid-cols-3 gap-3">
+                                        {[
+                                            { value: "new",  label: "New",  emoji: "✨", desc: "Brand new OEM model" },
+                                            { value: "used", label: "Used", emoji: "🚗", desc: "Pre-owned vehicle" },
+                                            { value: "certified_pre_owned", label: "CPO", emoji: "🛡️", desc: "Certified pre-owned" },
+                                        ].map(opt => (
+                                            <button
+                                                key={opt.value}
+                                                type="button"
+                                                onClick={() => handleChange("condition", opt.value)}
+                                                className={cn(
+                                                    "p-4 rounded-xl border-2 text-left transition-all",
+                                                    formData.condition === opt.value
+                                                        ? opt.value === "new"
+                                                            ? "border-blue-500 bg-blue-500/5"
+                                                            : "border-amber-500 bg-amber-500/5"
+                                                        : "border-border hover:border-muted-foreground/40"
+                                                )}
+                                            >
+                                                <div className="text-2xl mb-1">{opt.emoji}</div>
+                                                <div className="font-semibold text-sm">{opt.label}</div>
+                                                <div className="text-xs text-muted-foreground mt-0.5">{opt.desc}</div>
+                                                {formData.condition === opt.value && (
+                                                    <Check className={cn("w-4 h-4 mt-2", opt.value === "new" ? "text-blue-500" : "text-amber-500")} />
+                                                )}
+                                            </button>
+                                        ))}
+                                    </div>
+                                    {!formData.condition && (
+                                        <p className="text-xs text-muted-foreground mt-2">Select condition to tag this vehicle correctly in your hybrid inventory</p>
+                                    )}
+                                </div>
+                            )}
+
                             {/* VIN */}
                             <div>
                                 <label className="block text-sm font-medium mb-2">VIN (Vehicle Identification Number)</label>
@@ -149,7 +198,7 @@ export default function AddVehiclePage() {
                             {/* Basic Info */}
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 <div>
-                                    <label className="block text-sm font-medium mb-2">Make <span className="text-red-500">*</span></label>
+                                    <label className="block text-sm font-medium mb-2">Make <span className="text-destructive">*</span></label>
                                     <select
                                         value={formData.make}
                                         onChange={(e) => handleChange("make", e.target.value)}
@@ -170,7 +219,7 @@ export default function AddVehiclePage() {
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-medium mb-2">Model <span className="text-red-500">*</span></label>
+                                    <label className="block text-sm font-medium mb-2">Model <span className="text-destructive">*</span></label>
                                     <Input
                                         placeholder="e.g. City, Creta, Nexon"
                                         value={formData.model}
@@ -179,7 +228,7 @@ export default function AddVehiclePage() {
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-medium mb-2">Year <span className="text-red-500">*</span></label>
+                                    <label className="block text-sm font-medium mb-2">Year <span className="text-destructive">*</span></label>
                                     <select
                                         value={formData.year}
                                         onChange={(e) => handleChange("year", e.target.value)}
@@ -196,7 +245,7 @@ export default function AddVehiclePage() {
                             {/* Price & Mileage */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label className="block text-sm font-medium mb-2">Price (₹) <span className="text-red-500">*</span></label>
+                                    <label className="block text-sm font-medium mb-2">Price (₹) <span className="text-destructive">*</span></label>
                                     <Input
                                         placeholder="e.g. 850000"
                                         type="number"
@@ -205,7 +254,7 @@ export default function AddVehiclePage() {
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium mb-2">Mileage (km) <span className="text-red-500">*</span></label>
+                                    <label className="block text-sm font-medium mb-2">Mileage (km) <span className="text-destructive">*</span></label>
                                     <Input
                                         placeholder="e.g. 32450"
                                         type="number"
@@ -269,7 +318,7 @@ export default function AddVehiclePage() {
                                             className={cn(
                                                 "px-3 py-2 rounded-lg text-sm border transition-all flex items-center gap-2 text-left",
                                                 formData.features.includes(feature)
-                                                    ? "border-blue-500 bg-blue-500/10 text-blue-600 dark:text-blue-400"
+                                                    ? "border-primary bg-primary/10 text-primary"
                                                     : "border-border text-muted-foreground hover:text-foreground hover:border-muted-foreground hover:bg-muted/50"
                                             )}
                                         >
@@ -307,7 +356,7 @@ export default function AddVehiclePage() {
 
                         <CardFooter className="flex-col items-stretch gap-3">
                             {saveError && (
-                                <p className="text-sm text-red-600 dark:text-red-400 px-1">{saveError}</p>
+                                <p className="text-sm text-destructive px-1">{saveError}</p>
                             )}
                             <div className="flex justify-end gap-3">
                                 <Button variant="outline" onClick={() => router.push("/dashboard/inventory")} disabled={isSaving}>
@@ -316,7 +365,7 @@ export default function AddVehiclePage() {
                                 <Button
                                     onClick={handleSubmit}
                                     disabled={isSaving}
-                                    className="gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                                    className="gap-2 bg-primary hover:bg-primary/90"
                                 >
                                     {isSaving ? (
                                         <><Loader2 className="w-4 h-4 animate-spin" /> Saving…</>
@@ -362,7 +411,7 @@ export default function AddVehiclePage() {
                                     "Select all relevant features",
                                 ].map((tip, i) => (
                                     <li key={i} className="flex items-start gap-2">
-                                        <span className="w-5 h-5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs flex items-center justify-center flex-shrink-0 mt-0.5 font-medium">
+                                        <span className="w-5 h-5 rounded-full bg-primary/10 text-primary text-xs flex items-center justify-center flex-shrink-0 mt-0.5 font-medium">
                                             {i + 1}
                                         </span>
                                         {tip}
