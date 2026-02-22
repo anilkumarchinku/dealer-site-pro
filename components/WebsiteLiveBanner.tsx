@@ -10,6 +10,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { supabase } from '@/lib/supabase'
+import { dealerSiteHref, brandToUrlSlug } from '@/lib/utils/domain'
 
 interface Props {
     dealerId: string
@@ -18,6 +19,7 @@ interface Props {
     sellsNewCars: boolean
     sellsUsedCars: boolean
     brands: string[]
+    slug: string
 }
 
 interface Deployment {
@@ -28,7 +30,7 @@ interface Deployment {
 }
 
 export default function WebsiteLiveBanner({
-    dealerId, dealershipName, vehicleCount, sellsNewCars, sellsUsedCars, brands
+    dealerId, dealershipName, vehicleCount, sellsNewCars, sellsUsedCars, brands, slug
 }: Props) {
     const [deployment,      setDeployment]      = useState<Deployment | null>(null)
     const [hasCustomDomain, setHasCustomDomain] = useState(false)
@@ -38,6 +40,57 @@ export default function WebsiteLiveBanner({
 
     const isNewCarDealer  = sellsNewCars && !sellsUsedCars
     const isUsedCarDealer = sellsUsedCars && !sellsNewCars
+    const isHybridDealer  = sellsNewCars && sellsUsedCars
+
+    // Build the live site links based on dealer type
+    const siteLinks = (() => {
+        if (!slug) return []
+        if (isHybridDealer) {
+            return [
+                {
+                    label: 'New Cars Site',
+                    sublabel: brands[0] ?? 'New Cars',
+                    href: dealerSiteHref(`${slug}-${brandToUrlSlug(brands[0] ?? 'new')}`),
+                    color: 'blue' as const,
+                    icon: '🚗',
+                },
+                {
+                    label: 'Pre-Owned Site',
+                    sublabel: 'Used Cars',
+                    href: dealerSiteHref(`${slug}-used`),
+                    color: 'amber' as const,
+                    icon: '🔁',
+                },
+            ]
+        }
+        if (isNewCarDealer) {
+            // Multi-brand: one link per brand; single brand: one main link
+            if (brands.length > 1) {
+                return brands.map(brand => ({
+                    label: `${brand} Site`,
+                    sublabel: 'New Cars',
+                    href: dealerSiteHref(`${slug}-${brandToUrlSlug(brand)}`),
+                    color: 'blue' as const,
+                    icon: '🚗',
+                }))
+            }
+            return [{
+                label: 'New Cars Site',
+                sublabel: brands[0] ?? 'New Cars',
+                href: dealerSiteHref(brands.length === 1 ? `${slug}-${brandToUrlSlug(brands[0])}` : slug),
+                color: 'blue' as const,
+                icon: '🚗',
+            }]
+        }
+        // Used-only
+        return [{
+            label: 'Pre-Owned Site',
+            sublabel: 'Used Cars',
+            href: dealerSiteHref(slug),
+            color: 'amber' as const,
+            icon: '🔁',
+        }]
+    })()
 
     useEffect(() => {
         if (!dealerId) return
@@ -123,8 +176,56 @@ export default function WebsiteLiveBanner({
         )
     }
 
+    const linkColors = {
+        blue:  { card: 'border-blue-500/30 bg-blue-500/5 hover:border-blue-400/60 hover:bg-blue-500/10', icon: 'bg-blue-500/15 border-blue-500/30', text: 'text-blue-400', btn: 'text-blue-400 hover:text-blue-300' },
+        amber: { card: 'border-amber-500/30 bg-amber-500/5 hover:border-amber-400/60 hover:bg-amber-500/10', icon: 'bg-amber-500/15 border-amber-500/30', text: 'text-amber-400', btn: 'text-amber-400 hover:text-amber-300' },
+    }
+
     return (
         <div className="space-y-4">
+            {/* ── My Websites ─────────────────────────────────────────────────── */}
+            {siteLinks.length > 0 && (
+                <Card className="border-border">
+                    <CardContent className="p-5">
+                        <div className="flex items-center gap-2 mb-4">
+                            <Globe className="w-4 h-4 text-muted-foreground" />
+                            <p className="text-sm font-semibold text-foreground">
+                                My Website{siteLinks.length > 1 ? 's' : ''}
+                            </p>
+                            <span className="text-xs px-2 py-0.5 rounded-full bg-muted text-muted-foreground border border-border">
+                                {siteLinks.length} site{siteLinks.length > 1 ? 's' : ''}
+                            </span>
+                        </div>
+                        <div className={`grid gap-3 ${siteLinks.length > 1 ? 'sm:grid-cols-2' : 'grid-cols-1'}`}>
+                            {siteLinks.map((site) => {
+                                const c = linkColors[site.color]
+                                return (
+                                    <a
+                                        key={site.href}
+                                        href={site.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={`group flex items-center gap-3 p-4 rounded-xl border-2 transition-all duration-200 ${c.card}`}
+                                    >
+                                        <div className={`w-10 h-10 rounded-xl border flex items-center justify-center flex-shrink-0 text-lg ${c.icon}`}>
+                                            {site.icon}
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                            <p className="text-sm font-semibold text-foreground truncate">{site.label}</p>
+                                            <p className={`text-xs truncate ${c.text}`}>{site.sublabel}</p>
+                                            <p className="text-xs text-muted-foreground font-mono truncate mt-0.5">
+                                                {site.href.replace('https://', '').replace('http://', '')}
+                                            </p>
+                                        </div>
+                                        <ExternalLink className={`w-4 h-4 flex-shrink-0 transition-colors ${c.btn}`} />
+                                    </a>
+                                )
+                            })}
+                        </div>
+                    </CardContent>
+                </Card>
+            )}
+
             {/* ── Status Card ─────────────────────────────────────────────────── */}
             {isLive ? (
                 /* DEPLOYED — show Vercel URL */

@@ -174,6 +174,7 @@ export default function DashboardPage() {
                     sellsNewCars={data.sellsNewCars ?? false}
                     sellsUsedCars={data.sellsUsedCars ?? false}
                     brands={data.brands ?? []}
+                    slug={data.slug ?? ""}
                 />
             )}
 
