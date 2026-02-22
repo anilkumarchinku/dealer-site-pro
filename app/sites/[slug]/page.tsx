@@ -263,7 +263,8 @@ export default async function SitePage({ params }: SitePageProps) {
         contactInfo,
         services: (dealer.services ?? []) as Service[],
         workingHours: dealer.working_hours ?? null,
-        logoUrl: logo_url ?? undefined,
+        // 1st-hand (new car) dealers always show the brand logo, not the uploaded dealer logo
+        logoUrl: sells_new_cars && !sells_used_cars ? undefined : (logo_url ?? undefined),
         heroImageUrl: hero_image_url ?? undefined,
         sellsNewCars:  sells_new_cars,
         sellsUsedCars: sells_used_cars,
