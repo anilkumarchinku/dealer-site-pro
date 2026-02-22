@@ -181,56 +181,52 @@ export default async function SitePage({ params }: SitePageProps) {
     //
     let cars: Car[]
 
+    // ── Determine which "mode" this URL is in ────────────────────────────────
+    //
+    //  brandFilter set  → brand-specific new-car page (e.g. shiv-motors-mahindra)
+    //                     ALWAYS shows new catalog cars only, regardless of dealer type
+    //  usedCarSite      → hybrid's "-used" sub-site: used stock only
+    //  used-only dealer → used stock only
+    //  new-only dealer  → all brand catalogs combined
+    //  hybrid main site → new catalog + used stock merged (tab switcher)
+    //
     const isUsedCarPath = (sells_used_cars && !sells_new_cars) || usedCarSite
 
-    if (isUsedCarPath) {
-        // PATH A — Used only, or hybrid's dedicated used-car site
+    if (brandFilter) {
+        // BRAND-SPECIFIC URL — always new car catalog for that one brand,
+        // regardless of whether the dealer is new-only or hybrid.
+        const filtered = await getCarsByMake(brandFilter)
+        cars = (filtered.length > 0 ? filtered : allCars.slice(0, 16))
+            .map(c => ({ ...c, condition: 'new' as const }))
 
-        // 1. Try Cyepro live inventory first (if API key is configured)
+    } else if (isUsedCarPath) {
+        // USED-ONLY or hybrid "-used" sub-site
         const cyeproCars = cyepro_api_key
             ? await fetchCyeproInventoryAsCars(cyepro_api_key, { size: 30 })
             : []
 
         if (cyeproCars.length > 0) {
-            // Live Cyepro inventory available
             cars = cyeproCars
         } else if (vehicles.length > 0) {
-            // 2. Fallback: manually-added DB stock
             cars = dbVehiclesToCars(vehicles)
         } else {
-            // 3. No inventory yet — still render the dealer's template
-            // so they see their branding, services & contact info live.
-            // The inventory section will show empty / "no cars available".
             cars = []
         }
 
     } else if (sells_new_cars && !sells_used_cars) {
-        // PATH B — New cars only
-        if (brandFilter) {
-            // Brand-specific URL (e.g. abhi-motors-tata.dealersitepro.com)
-            const filtered = await getCarsByMake(brandFilter)
-            cars = filtered.length > 0 ? filtered : allCars.slice(0, 16)
-        } else {
-            // Main site — show all their brands combined
-            const combined = (await Promise.all(brands.map(b => getCarsByMake(b)))).flat()
-            cars = combined.length > 0 ? combined : allCars.slice(0, 16)
-        }
-
-    } else {
-        // PATH C — Hybrid main site (new + used, not the -used sub-site)
-        //
-        // New cars  → OEM brand catalog, tagged condition: 'new'
-        // Used cars → Cyepro live feed first, then DB vehicles, tagged condition: 'used'
-        // Both are merged so the template's New / Pre-Owned tab switcher works correctly.
-
-        // 1. New car catalog (same logic as PATH B)
-        const combinedCatalog = brandFilter
-            ? await getCarsByMake(brandFilter)
-            : (await Promise.all(brands.map(b => getCarsByMake(b)))).flat()
-        const newCars: Car[] = (combinedCatalog.length > 0 ? combinedCatalog : allCars.slice(0, 16))
+        // NEW-ONLY dealer main site — all their brands combined
+        const combined = (await Promise.all(brands.map(b => getCarsByMake(b)))).flat()
+        cars = (combined.length > 0 ? combined : allCars.slice(0, 16))
             .map(c => ({ ...c, condition: 'new' as const }))
 
-        // 2. Used car inventory (Cyepro → DB vehicles)
+    } else {
+        // HYBRID main site — new catalog + used stock merged
+        // New cars: all brand catalogs tagged condition:'new'
+        const combined = (await Promise.all(brands.map(b => getCarsByMake(b)))).flat()
+        const newCars: Car[] = (combined.length > 0 ? combined : allCars.slice(0, 16))
+            .map(c => ({ ...c, condition: 'new' as const }))
+
+        // Used cars: Cyepro → DB vehicles
         const cyeproCars = cyepro_api_key
             ? await fetchCyeproInventoryAsCars(cyepro_api_key, { size: 30 })
             : []
@@ -277,8 +273,9 @@ export default async function SitePage({ params }: SitePageProps) {
         contactInfo,
         services: (dealer.services ?? []) as Service[],
         workingHours: dealer.working_hours ?? null,
-        // 1st-hand (new car) dealers always show the brand logo, not the uploaded dealer logo
-        logoUrl: sells_new_cars && !sells_used_cars ? undefined : (logo_url ?? undefined),
+        // Brand-specific URLs and new-only dealers always show OEM brand logo (not uploaded logo).
+        // Used-only and hybrid main sites show the uploaded dealer logo.
+        logoUrl: (brandFilter || (!sells_used_cars && sells_new_cars)) ? undefined : (logo_url ?? undefined),
         heroImageUrl: hero_image_url ?? undefined,
         sellsNewCars:  sells_new_cars,
         sellsUsedCars: sells_used_cars,
