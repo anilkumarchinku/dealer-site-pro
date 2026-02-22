@@ -97,14 +97,11 @@ export async function saveDealer(
             sells_new_cars:      data.sellsNewCars ?? false,
             sells_used_cars:     data.sellsUsedCars ?? false,
             inventory_system:    data.inventorySystem ?? null,
-            // DB CHECK constraint: ('luxury','family','sporty','professional')
-        // Normalize any legacy/invalid value to a safe one
+            // DB CHECK constraint: ('luxury','family','sporty','modern','professional')
         style_template: (() => {
-            const VALID = ['luxury', 'family', 'sporty', 'professional'];
-            const ALIASES: Record<string, string> = { modern: 'professional' };
+            const VALID = ['luxury', 'family', 'sporty', 'modern', 'professional'];
             const raw = data.styleTemplate ?? 'family';
-            if (VALID.includes(raw)) return raw;
-            return ALIASES[raw] ?? 'family';
+            return VALID.includes(raw) ? raw : 'family';
         })(),
             dealer_type:         data.dealerType ?? null,
             slug,

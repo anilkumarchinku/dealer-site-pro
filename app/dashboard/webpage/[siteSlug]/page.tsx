@@ -164,10 +164,8 @@ export default function SiteEditorPage() {
     // ── Save ─────────────────────────────────────────────────────────────────
     // Normalise template value before any DB write
     function normaliseTemplate(t: string): string {
-        const VALID = ['luxury', 'family', 'sporty', 'professional'];
-        const ALIASES: Record<string, string> = { modern: 'professional' };
-        if (VALID.includes(t)) return t;
-        return ALIASES[t] ?? 'family';
+        const VALID = ['luxury', 'family', 'sporty', 'modern', 'professional'];
+        return VALID.includes(t) ? t : 'family';
     }
 
     async function handleSave() {
