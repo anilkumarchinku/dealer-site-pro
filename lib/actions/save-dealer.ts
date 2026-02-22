@@ -97,7 +97,9 @@ export async function saveDealer(
             sells_new_cars:      data.sellsNewCars ?? false,
             sells_used_cars:     data.sellsUsedCars ?? false,
             inventory_system:    data.inventorySystem ?? null,
-            style_template:      data.styleTemplate ?? "family",
+            // DB CHECK constraint: ('luxury','family','sporty','professional')
+        // UI uses 'modern' as the alias for 'professional'
+        style_template:      (data.styleTemplate === 'modern' ? 'professional' : data.styleTemplate) ?? "family",
             dealer_type:         data.dealerType ?? null,
             slug,
             subdomain:           slug,
