@@ -169,6 +169,7 @@ export function mapCyeproVehicleToCar(v: CyeproVehicle): Car {
         },
 
         price: formatPrice(v.customerSellingPrice),
+        condition: 'used' as const,
     }
 }
 

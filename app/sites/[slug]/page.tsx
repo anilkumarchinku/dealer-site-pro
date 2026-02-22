@@ -218,13 +218,27 @@ export default async function SitePage({ params }: SitePageProps) {
 
     } else {
         // PATH C — Hybrid main site (new + used, not the -used sub-site)
-        if (vehicles.length > 0) {
-            cars = dbVehiclesToCars(vehicles)
-        } else {
-            const targetBrand = brandFilter ?? brands[0] ?? ''
-            const catalogCars = targetBrand ? await getCarsByMake(targetBrand) : []
-            cars = catalogCars.length > 0 ? catalogCars : allCars.slice(0, 16)
-        }
+        //
+        // New cars  → OEM brand catalog, tagged condition: 'new'
+        // Used cars → Cyepro live feed first, then DB vehicles, tagged condition: 'used'
+        // Both are merged so the template's New / Pre-Owned tab switcher works correctly.
+
+        // 1. New car catalog (same logic as PATH B)
+        const combinedCatalog = brandFilter
+            ? await getCarsByMake(brandFilter)
+            : (await Promise.all(brands.map(b => getCarsByMake(b)))).flat()
+        const newCars: Car[] = (combinedCatalog.length > 0 ? combinedCatalog : allCars.slice(0, 16))
+            .map(c => ({ ...c, condition: 'new' as const }))
+
+        // 2. Used car inventory (Cyepro → DB vehicles)
+        const cyeproCars = cyepro_api_key
+            ? await fetchCyeproInventoryAsCars(cyepro_api_key, { size: 30 })
+            : []
+        const usedCars: Car[] = cyeproCars.length > 0
+            ? cyeproCars
+            : dbVehiclesToCars(vehicles)
+
+        cars = [...newCars, ...usedCars]
     }
 
     // ── Brand name for template colour theming ────────────────────────────────
