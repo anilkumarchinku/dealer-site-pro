@@ -87,11 +87,8 @@ export default function Step3Page() {
     };
 
     const handleBack = () => {
-        if (data.dealerCategory === 'both') {
-            // Hybrid: back to used-section branding
-            router.push("/onboarding/step-2-used");
-        } else if (data.dealerCategory === 'used') {
-            // Used dealers: back to inventory source selection
+        if (data.dealerCategory === 'both' || data.dealerCategory === 'used') {
+            // Hybrid & used dealers: back to inventory source selection
             router.push("/onboarding/step-2-inventory");
         } else {
             // New dealers: brands are collected in step-1, go back there
