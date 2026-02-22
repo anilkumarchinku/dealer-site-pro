@@ -162,6 +162,14 @@ export default function SiteEditorPage() {
     }
 
     // ── Save ─────────────────────────────────────────────────────────────────
+    // Normalise template value before any DB write
+    function normaliseTemplate(t: string): string {
+        const VALID = ['luxury', 'family', 'sporty', 'professional'];
+        const ALIASES: Record<string, string> = { modern: 'professional' };
+        if (VALID.includes(t)) return t;
+        return ALIASES[t] ?? 'family';
+    }
+
     async function handleSave() {
         if (!dealerId) return
         setSaving(true)
@@ -174,7 +182,7 @@ export default function SiteEditorPage() {
                 .upsert({
                     dealer_id:     dealerId,
                     brand_slug:    brandSlug,
-                    style_template: editForm.styleTemplate,
+                    style_template: normaliseTemplate(editForm.styleTemplate),
                     hero_title:    editForm.heroTitle    || null,
                     hero_subtitle: editForm.heroSubtitle || null,
                     hero_cta_text: editForm.heroCtaText  || null,
@@ -186,7 +194,7 @@ export default function SiteEditorPage() {
             await supabase
                 .from("dealers")
                 .update({
-                    style_template: editForm.styleTemplate,
+                    style_template: normaliseTemplate(editForm.styleTemplate),
                     tagline:        editForm.tagline || null,
                 })
                 .eq("id", dealerId)
