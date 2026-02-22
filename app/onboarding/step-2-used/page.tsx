@@ -198,13 +198,8 @@ export default function Step2UsedPage() {
             brandLogo: logoPreview || undefined,
             heroImage: heroPreview || undefined,
         });
-        if (isHybrid) {
-            // Hybrid: skip inventory source selection, go straight to services
-            router.push("/onboarding/step-3");
-        } else {
-            // Pure used: go to inventory source selection before services
-            router.push("/onboarding/step-2-inventory");
-        }
+        // Both hybrid and pure used go to inventory source selection (Cyepro / bulk upload)
+        router.push("/onboarding/step-2-inventory");
     };
 
     const handleBack = () => {
