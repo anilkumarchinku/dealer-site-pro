@@ -67,8 +67,8 @@ export default function AnalyticsPage() {
     })();
 
     const STATS = [
-        { label: "Total Visitors", value: loading ? null : (data ? fmt(data.visitors)      : "—"), icon: Eye,          bg: "bg-blue-500/10",    text: "text-blue-500"    },
-        { label: "New Leads",      value: loading ? null : (data ? String(data.leads)      : "—"), icon: Users,        bg: "bg-emerald-500/10", text: "text-emerald-500" },
+        { label: "Total Visitors", value: loading ? null : (data ? fmt(data.visitors)      : "—"), icon: Eye,          bg: "bg-primary/10",    text: "text-primary"    },
+        { label: "New Leads",      value: loading ? null : (data ? String(data.leads)      : "—"), icon: Users,        bg: "bg-green-500/10", text: "text-green-500" },
         { label: "Page Views",     value: loading ? null : (data ? fmt(data.pageViews)     : "—"), icon: MousePointer, bg: "bg-violet-500/10",  text: "text-violet-500"  },
         { label: "Test Drives",    value: loading ? null : (data ? String(data.testDrives) : "—"), icon: Car,          bg: "bg-amber-500/10",   text: "text-amber-500"   },
     ];
@@ -121,7 +121,7 @@ export default function AnalyticsPage() {
                                 <div className={cn("p-3 rounded-xl", stat.bg)}>
                                     <stat.icon className={cn("w-6 h-6", stat.text)} />
                                 </div>
-                                <TrendingUp className="w-4 h-4 text-emerald-500" />
+                                <TrendingUp className="w-4 h-4 text-green-500" />
                             </div>
                             <div className="space-y-1">
                                 <p className="text-sm text-muted-foreground">{stat.label}</p>

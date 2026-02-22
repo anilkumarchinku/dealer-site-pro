@@ -171,7 +171,7 @@ export default function DashboardLayout({
                                             className={cn(
                                                 "flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all",
                                                 isActive
-                                                    ? "bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20"
+                                                    ? "bg-primary/10 text-primary border border-primary/20"
                                                     : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                                             )}
                                         >
@@ -188,7 +188,7 @@ export default function DashboardLayout({
                 {/* Dealer Info */}
                 <div className="p-4 border-t border-border">
                     <div className="flex items-center gap-3 p-3 rounded-xl bg-muted/30">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold">
+                        <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold">
                             {data.dealershipName?.charAt(0) || "D"}
                         </div>
                         <div className="flex-1 min-w-0">
@@ -222,7 +222,7 @@ export default function DashboardLayout({
                             {/* Notifications */}
                             <button className="relative w-9 h-9 flex items-center justify-center rounded-lg border border-border hover:bg-muted transition-colors">
                                 <Bell className="w-4 h-4 text-muted-foreground" />
-                                <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full" />
+                                <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-destructive rounded-full" />
                             </button>
 
                             {/* Divider */}

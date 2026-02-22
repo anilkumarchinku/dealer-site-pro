@@ -35,6 +35,7 @@ import {
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
+import { EmiCalculator } from '@/components/ui/EmiCalculator';
 import type { Service } from '@/lib/types';
 
 const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
@@ -70,6 +71,8 @@ interface SportyTemplateProps {
     workingHours?: string | null;
     logoUrl?: string;
     heroImageUrl?: string;
+    sellsNewCars?: boolean;
+    sellsUsedCars?: boolean;
 }
 
 export function SportyTemplate({
@@ -84,8 +87,12 @@ export function SportyTemplate({
     workingHours,
     logoUrl,
     heroImageUrl,
+    sellsNewCars = false,
+    sellsUsedCars = false,
 }: SportyTemplateProps) {
+    const isHybrid = sellsNewCars && sellsUsedCars;
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
+    const [inventoryTab, setInventoryTab] = useState<'all' | 'new' | 'used'>('all');
     const [isScrolled, setIsScrolled] = useState(false);
     const [enquireSidebarOpen, setEnquireSidebarOpen] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -388,6 +395,20 @@ export function SportyTemplate({
                         </div>
                     </section>
 
+                    {/* EMI Calculator */}
+                    <section className="py-20 border-t" style={{ borderColor: `${brandAccent}33` }}>
+                        <div className="max-w-4xl mx-auto px-4">
+                            <div className="mb-10">
+                                <span className="font-black text-sm uppercase tracking-widest" style={{ color: brandAccent }}>
+                                    FINANCE
+                                </span>
+                                <h2 className="text-5xl font-black mt-2">EMI CALCULATOR</h2>
+                                <p className="text-gray-400 mt-2">Know your numbers before you race to the showroom</p>
+                            </div>
+                            <EmiCalculator brandColor={brandAccent} theme="dark" />
+                        </div>
+                    </section>
+
                     {/* Book a Test Drive — Lead Form */}
                     <section id="contact" className="py-20 border-t" style={{ borderColor: `${brandAccent}33` }}>
                         <div className="max-w-7xl mx-auto px-4">
@@ -507,18 +528,44 @@ export function SportyTemplate({
             {activeTab === 'inventory' && (
                 <div className="pt-20 pb-12 min-h-screen">
                     <div className="max-w-7xl mx-auto px-4">
-                        <div className="mb-8">
-                            <h1 className="text-5xl font-black uppercase">INVENTORY</h1>
-                            <p className="text-gray-400 mt-2">{cars.length}+ Performance Machines</p>
+                        <div className="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+                            <div>
+                                <h1 className="text-5xl font-black uppercase">INVENTORY</h1>
+                                <p className="text-gray-400 mt-2">{cars.length}+ {isHybrid ? 'Vehicles' : 'Performance Machines'}</p>
+                            </div>
+                            {isHybrid && (
+                                <div className="flex items-center gap-1 p-1 rounded-lg border w-fit" style={{ borderColor: `${brandAccent}44` }}>
+                                    {([
+                                        { id: 'all',  label: `All (${cars.length})` },
+                                        { id: 'new',  label: `New (${cars.filter(c => c.condition === 'new').length})` },
+                                        { id: 'used', label: `Pre-Owned (${cars.filter(c => c.condition !== 'new').length})` },
+                                    ] as const).map(t => (
+                                        <button
+                                            key={t.id}
+                                            onClick={() => setInventoryTab(t.id)}
+                                            className="px-4 py-1.5 rounded-md text-sm font-bold uppercase tracking-widest transition-all"
+                                            style={inventoryTab === t.id ? { backgroundColor: brandAccent, color: '#fff' } : { color: '#9ca3af' }}
+                                        >
+                                            {t.label}
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                         <div className="flex flex-col lg:flex-row gap-8">
                             <div className="w-full lg:w-72">
                                 <div className="sticky top-24 bg-white/5 rounded-lg backdrop-blur-lg p-6 border" style={{ borderColor: `${brandAccent}33` }}>
-                                    <CarFilters />
+                                    <CarFilters hideBrand={sellsNewCars} />
                                 </div>
                             </div>
                             <div className="flex-1">
-                                <CarGrid cars={cars} brandColor={brandAccent} />
+                                <CarGrid
+                                    cars={isHybrid
+                                        ? inventoryTab === 'new' ? cars.filter(c => c.condition === 'new')
+                                        : inventoryTab === 'used' ? cars.filter(c => c.condition !== 'new')
+                                        : cars : cars}
+                                    brandColor={brandAccent}
+                                />
                             </div>
                         </div>
                     </div>
@@ -531,8 +578,8 @@ export function SportyTemplate({
                     <div className="flex items-center mb-8 pb-6 border-b" style={{ borderColor: `${brandAccent}33` }}>
                         <div className="relative w-12 h-12 mr-3 rounded-full bg-white/15 border border-white/30 flex items-center justify-center overflow-hidden p-1">
                             <Image
-                                src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                alt={brandName}
+                                src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
+                                alt={logoUrl ? dealerName : brandName}
                                 fill
                                 className="object-contain p-1"
                                 sizes="48px"

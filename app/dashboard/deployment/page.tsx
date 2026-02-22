@@ -193,7 +193,7 @@ export default function DeploymentPage() {
                 <Card variant="glass">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
-                            <Store className="w-5 h-5 text-emerald-500" />
+                            <Store className="w-5 h-5 text-green-500" />
                             You&apos;re Live on Our Platform
                         </CardTitle>
                         <CardDescription>
@@ -212,7 +212,7 @@ export default function DeploymentPage() {
                                     href={multiTenantUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-sm text-blue-500 hover:underline"
+                                    className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
                                 >
                                     <Globe className="w-4 h-4" />
                                     {multiTenantUrl}
@@ -223,15 +223,15 @@ export default function DeploymentPage() {
 
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-muted-foreground">
                             <div className="flex items-start gap-2">
-                                <CheckCircle className="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" />
+                                <CheckCircle className="w-4 h-4 mt-0.5 text-green-500 shrink-0" />
                                 <span>Instant inventory updates — add a car and it appears on your site immediately</span>
                             </div>
                             <div className="flex items-start gap-2">
-                                <CheckCircle className="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" />
+                                <CheckCircle className="w-4 h-4 mt-0.5 text-green-500 shrink-0" />
                                 <span>Shared SSL &amp; CDN — fast, secure, always on</span>
                             </div>
                             <div className="flex items-start gap-2">
-                                <CheckCircle className="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" />
+                                <CheckCircle className="w-4 h-4 mt-0.5 text-green-500 shrink-0" />
                                 <span>Custom domain — connect your own domain in the Domains section</span>
                             </div>
                         </div>
@@ -266,8 +266,8 @@ export default function DeploymentPage() {
                 <Card className="hover:shadow-lg transition-all duration-300">
                     <CardContent className="p-6">
                         <div className="mb-4">
-                            <div className="p-3 rounded-xl w-fit bg-blue-500/10">
-                                <Github className="w-6 h-6 text-blue-500" />
+                            <div className="p-3 rounded-xl w-fit bg-primary/10">
+                                <Github className="w-6 h-6 text-primary" />
                             </div>
                         </div>
                         <p className="text-sm text-muted-foreground">GitHub Repo</p>
@@ -287,8 +287,8 @@ export default function DeploymentPage() {
                         <p className="text-sm text-muted-foreground">Build Status</p>
                         <p className={cn(
                             "text-sm font-semibold mt-1 capitalize",
-                            isReady ? "text-emerald-500" :
-                            isError ? "text-red-500"     :
+                            isReady ? "text-green-500" :
+                            isError ? "text-destructive"     :
                             isRunning ? "text-amber-500" : "text-muted-foreground"
                         )}>
                             {state.status === "idle" ? "Not deployed yet" : state.status}
@@ -299,8 +299,8 @@ export default function DeploymentPage() {
                 <Card className="hover:shadow-lg transition-all duration-300">
                     <CardContent className="p-6">
                         <div className="mb-4">
-                            <div className="p-3 rounded-xl w-fit bg-emerald-500/10">
-                                <Globe className="w-6 h-6 text-emerald-500" />
+                            <div className="p-3 rounded-xl w-fit bg-green-500/10">
+                                <Globe className="w-6 h-6 text-green-500" />
                             </div>
                         </div>
                         <p className="text-sm text-muted-foreground">Live URL</p>
@@ -309,7 +309,7 @@ export default function DeploymentPage() {
                                 href={state.siteUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-sm font-semibold mt-1 text-blue-500 hover:underline flex items-center gap-1 truncate"
+                                className="text-sm font-semibold mt-1 text-primary hover:underline flex items-center gap-1 truncate"
                             >
                                 {state.siteUrl.replace("https://", "")}
                                 <ExternalLink className="w-3 h-3 shrink-0" />
@@ -366,9 +366,9 @@ export default function DeploymentPage() {
                             return (
                                 <div key={step.id} className="flex items-center gap-3">
                                     <div className="shrink-0">
-                                        {stepStatus === "done"   && <CheckCircle className="w-5 h-5 text-emerald-500" />}
-                                        {stepStatus === "active" && <Loader2     className="w-5 h-5 text-blue-500 animate-spin" />}
-                                        {stepStatus === "error"  && <XCircle     className="w-5 h-5 text-red-500" />}
+                                        {stepStatus === "done"   && <CheckCircle className="w-5 h-5 text-green-500" />}
+                                        {stepStatus === "active" && <Loader2     className="w-5 h-5 text-primary animate-spin" />}
+                                        {stepStatus === "error"  && <XCircle     className="w-5 h-5 text-destructive" />}
                                         {stepStatus === "pending" && (
                                             <div className="w-5 h-5 rounded-full border-2 border-border" />
                                         )}
@@ -376,8 +376,8 @@ export default function DeploymentPage() {
                                     <span className={cn(
                                         "text-sm",
                                         stepStatus === "done"    ? "text-foreground font-medium" :
-                                        stepStatus === "active"  ? "text-blue-500 font-medium"   :
-                                        stepStatus === "error"   ? "text-red-500"                :
+                                        stepStatus === "active"  ? "text-primary font-medium"   :
+                                        stepStatus === "error"   ? "text-destructive"                :
                                                                    "text-muted-foreground"
                                     )}>
                                         {step.label}
@@ -394,7 +394,7 @@ export default function DeploymentPage() {
 
                     {/* Error message */}
                     {isError && state.error && (
-                        <div className="rounded-xl border border-red-500/30 bg-red-500/5 p-4 text-sm text-red-500">
+                        <div className="rounded-xl border border-red-500/30 bg-red-500/5 p-4 text-sm text-destructive">
                             <strong>Error:</strong> {state.error}
                         </div>
                     )}
@@ -410,7 +410,7 @@ export default function DeploymentPage() {
                                 href={state.siteUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 text-sm text-blue-500 hover:underline"
+                                className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
                             >
                                 <Globe className="w-4 h-4" />
                                 {state.siteUrl}
@@ -424,7 +424,7 @@ export default function DeploymentPage() {
                         <Button
                             onClick={handleDeploy}
                             disabled={isRunning || !dealerId}
-                            className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                            className="bg-primary hover:bg-primary/90"
                         >
                             {isRunning ? (
                                 <>

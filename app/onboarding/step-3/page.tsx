@@ -87,7 +87,10 @@ export default function Step3Page() {
     };
 
     const handleBack = () => {
-        if (data.dealerCategory === 'used') {
+        if (data.dealerCategory === 'both') {
+            // Hybrid: back to used-section branding
+            router.push("/onboarding/step-2-used");
+        } else if (data.dealerCategory === 'used') {
             // Used dealers: back to inventory source selection
             router.push("/onboarding/step-2-inventory");
         } else {

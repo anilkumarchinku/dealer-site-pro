@@ -24,9 +24,11 @@ import { getAllMakes } from '@/lib/data/cars'; // We'll use this for static gene
 interface CarFiltersProps {
     className?: string;
     onFilterChange?: (filters: any) => void;
+    /** Hide the Brand/Make filter — for 1st-hand dealers who sell only their own brand */
+    hideBrand?: boolean;
 }
 
-export function CarFilters({ className, onFilterChange }: CarFiltersProps) {
+export function CarFilters({ className, onFilterChange, hideBrand = false }: CarFiltersProps) {
     const router = useRouter();
     const searchParams = useSearchParams();
 
@@ -136,24 +138,26 @@ export function CarFilters({ className, onFilterChange }: CarFiltersProps) {
                     </AccordionContent>
                 </AccordionItem>
 
-                {/* Brand/Make */}
-                <AccordionItem value="make">
-                    <AccordionTrigger>Brand</AccordionTrigger>
-                    <AccordionContent>
-                        <div className="space-y-2 max-h-60 overflow-y-auto pr-2">
-                            {getAllMakes().map((make) => (
-                                <div key={make} className="flex items-center space-x-2">
-                                    <Checkbox
-                                        id={`make-${make}`}
-                                        checked={selectedMakes.includes(make)}
-                                        onCheckedChange={() => toggleArrayItem(make, selectedMakes, setSelectedMakes)}
-                                    />
-                                    <Label htmlFor={`make-${make}`}>{make}</Label>
-                                </div>
-                            ))}
-                        </div>
-                    </AccordionContent>
-                </AccordionItem>
+                {/* Brand/Make — hidden for 1st-hand single-brand dealers */}
+                {!hideBrand && (
+                    <AccordionItem value="make">
+                        <AccordionTrigger>Brand</AccordionTrigger>
+                        <AccordionContent>
+                            <div className="space-y-2 max-h-60 overflow-y-auto pr-2">
+                                {getAllMakes().map((make) => (
+                                    <div key={make} className="flex items-center space-x-2">
+                                        <Checkbox
+                                            id={`make-${make}`}
+                                            checked={selectedMakes.includes(make)}
+                                            onCheckedChange={() => toggleArrayItem(make, selectedMakes, setSelectedMakes)}
+                                        />
+                                        <Label htmlFor={`make-${make}`}>{make}</Label>
+                                    </div>
+                                ))}
+                            </div>
+                        </AccordionContent>
+                    </AccordionItem>
+                )}
 
                 {/* Body Type */}
                 <AccordionItem value="bodyType">

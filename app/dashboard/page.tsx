@@ -22,16 +22,16 @@ const QUICK_ACTIONS = [
 ];
 
 const COLOR = {
-    blue:    { bg: "bg-blue-500/10",    text: "text-blue-500"    },
-    emerald: { bg: "bg-emerald-500/10", text: "text-emerald-500" },
+    blue:    { bg: "bg-primary/10",     text: "text-primary"     },
+    emerald: { bg: "bg-green-500/10",   text: "text-green-500"   },
     violet:  { bg: "bg-violet-500/10",  text: "text-violet-500"  },
     amber:   { bg: "bg-amber-500/10",   text: "text-amber-500"   },
 };
 
 const priorityColors = {
-    hot:  { bg: "bg-red-500/10",   text: "text-red-500",   border: "border-red-500/20",   dot: "bg-red-500"   },
-    warm: { bg: "bg-amber-500/10", text: "text-amber-500", border: "border-amber-500/20", dot: "bg-amber-500" },
-    cold: { bg: "bg-blue-500/10",  text: "text-blue-500",  border: "border-blue-500/20",  dot: "bg-blue-500"  },
+    hot:  { bg: "bg-destructive/10", text: "text-destructive", border: "border-destructive/20", dot: "bg-destructive" },
+    warm: { bg: "bg-amber-500/10",   text: "text-amber-500",   border: "border-amber-500/20",   dot: "bg-amber-500"   },
+    cold: { bg: "bg-primary/10",     text: "text-primary",     border: "border-primary/20",     dot: "bg-primary"     },
 };
 
 export default function DashboardPage() {
@@ -137,8 +137,8 @@ export default function DashboardPage() {
                                                 onClick={() => setShowBrandPicker(false)}
                                             >
                                                 <div className="flex items-center gap-3 px-3 py-2.5 hover:bg-muted/50 cursor-pointer">
-                                                    <div className="p-1.5 rounded-lg bg-blue-500/10">
-                                                        <Car className="w-3.5 h-3.5 text-blue-500" />
+                                                    <div className="p-1.5 rounded-lg bg-primary/10">
+                                                        <Car className="w-3.5 h-3.5 text-primary" />
                                                     </div>
                                                     <span className="text-sm font-medium">{brand}</span>
                                                 </div>
@@ -157,7 +157,7 @@ export default function DashboardPage() {
                         </Link>
                     )}
                     <Link href="/dashboard/inventory/add">
-                        <Button className="gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
+                        <Button className="gap-2">
                             <Plus className="w-4 h-4" />
                             Add Vehicle
                         </Button>
@@ -205,8 +205,8 @@ export default function DashboardPage() {
                 <Card className="lg:col-span-2">
                     <CardHeader className="flex-row items-center justify-between pb-4">
                         <div className="flex items-center gap-3">
-                            <div className="p-2 rounded-lg bg-emerald-500/10">
-                                <Users className="w-5 h-5 text-emerald-500" />
+                            <div className="p-2 rounded-lg bg-green-500/10">
+                                <Users className="w-5 h-5 text-green-500" />
                             </div>
                             <div>
                                 <CardTitle className="text-lg">Recent Leads</CardTitle>
@@ -238,7 +238,7 @@ export default function DashboardPage() {
                                     const initials = lead.name.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase();
                                     return (
                                         <div key={lead.id} className="flex items-start gap-4 p-4 rounded-xl bg-muted/30 hover:bg-muted/50 transition-colors">
-                                            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-semibold flex-shrink-0">
+                                            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-semibold flex-shrink-0">
                                                 {initials}
                                             </div>
                                             <div className="flex-1 min-w-0">
@@ -299,8 +299,8 @@ export default function DashboardPage() {
                     <Card>
                         <CardHeader className="pb-4">
                             <div className="flex items-center gap-3">
-                                <div className="p-2 rounded-lg bg-blue-500/10">
-                                    <Car className="w-5 h-5 text-blue-500" />
+                                <div className="p-2 rounded-lg bg-primary/10">
+                                    <Car className="w-5 h-5 text-primary" />
                                 </div>
                                 <div>
                                     <CardTitle className="text-lg">Top Vehicles</CardTitle>

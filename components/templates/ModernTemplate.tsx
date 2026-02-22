@@ -33,6 +33,7 @@ import {
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
+import { EmiCalculator } from '@/components/ui/EmiCalculator';
 import type { Service } from '@/lib/types';
 
 const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
@@ -67,6 +68,8 @@ interface ModernTemplateProps {
     workingHours?: string | null;
     logoUrl?: string;
     heroImageUrl?: string;
+    sellsNewCars?: boolean;
+    sellsUsedCars?: boolean;
 }
 
 export function ModernTemplate({
@@ -81,8 +84,12 @@ export function ModernTemplate({
     workingHours,
     logoUrl,
     heroImageUrl,
+    sellsNewCars = false,
+    sellsUsedCars = false,
 }: ModernTemplateProps) {
+    const isHybrid = sellsNewCars && sellsUsedCars;
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
+    const [inventoryTab, setInventoryTab] = useState<'all' | 'new' | 'used'>('all');
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeCarIndex, setActiveCarIndex] = useState(0);
     const [enquireSidebarOpen, setEnquireSidebarOpen] = useState(false);
@@ -469,6 +476,23 @@ export function ModernTemplate({
                         </div>
                     </section>
 
+                    {/* EMI Calculator */}
+                    <section className="py-20 bg-white">
+                        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="text-center mb-10">
+                                <span
+                                    className="font-semibold text-sm uppercase tracking-wider"
+                                    style={{ color: brandColors.primary }}
+                                >
+                                    Finance Tool
+                                </span>
+                                <h2 className="text-4xl font-bold text-gray-900 mt-2">EMI Calculator</h2>
+                                <p className="text-gray-500 mt-2">Enter your details to estimate your monthly payment</p>
+                            </div>
+                            <EmiCalculator brandColor={brandColors.primary} theme="light" />
+                        </div>
+                    </section>
+
                     {/* Lead Capture / Contact Us */}
                     <section id="contact" className="py-20 bg-gray-50">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -600,18 +624,45 @@ export function ModernTemplate({
             {activeTab === 'inventory' && (
                 <div className="pt-20 pb-12 bg-gray-50 min-h-screen">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="mb-8">
-                            <h1 className="text-4xl font-bold text-gray-900">Our Inventory</h1>
-                            <p className="text-gray-600 mt-2">Browse {cars.length}+ quality vehicles</p>
+                        <div className="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+                            <div>
+                                <h1 className="text-4xl font-bold text-gray-900">Our Inventory</h1>
+                                <p className="text-gray-600 mt-2">Browse {cars.length}+ quality vehicles</p>
+                            </div>
+                            {isHybrid && (
+                                <div className="flex items-center gap-1 p-1 bg-white rounded-xl border border-gray-200 shadow-sm w-fit">
+                                    {([
+                                        { id: 'all',  label: `All (${cars.length})` },
+                                        { id: 'new',  label: `New (${cars.filter(c => c.condition === 'new').length})` },
+                                        { id: 'used', label: `Pre-Owned (${cars.filter(c => c.condition !== 'new').length})` },
+                                    ] as const).map(t => (
+                                        <button
+                                            key={t.id}
+                                            onClick={() => setInventoryTab(t.id)}
+                                            className="px-4 py-1.5 rounded-lg text-sm font-medium transition-all"
+                                            style={inventoryTab === t.id ? { backgroundColor: brandColors.primary, color: '#fff' } : { color: '#6b7280' }}
+                                        >
+                                            {t.label}
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                         <div className="flex flex-col lg:flex-row gap-8">
                             <div className="w-full lg:w-72">
                                 <div className="sticky top-24 bg-white rounded-xl shadow-sm p-6">
-                                    <CarFilters />
+                                    <CarFilters hideBrand={sellsNewCars} />
                                 </div>
                             </div>
                             <div className="flex-1">
-                                <CarGrid cars={cars} brandColor={brandColors.primary} light />
+                                <CarGrid
+                                    cars={isHybrid
+                                        ? inventoryTab === 'new' ? cars.filter(c => c.condition === 'new')
+                                        : inventoryTab === 'used' ? cars.filter(c => c.condition !== 'new')
+                                        : cars : cars}
+                                    brandColor={brandColors.primary}
+                                    light
+                                />
                             </div>
                         </div>
                     </div>
@@ -625,8 +676,8 @@ export function ModernTemplate({
                     <div className="flex items-center mb-8 pb-6 border-b border-gray-800">
                         <div className="relative w-12 h-12 mr-3">
                             <Image
-                                src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                alt={brandName}
+                                src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
+                                alt={logoUrl ? dealerName : brandName}
                                 fill
                                 className="object-contain"
                                 sizes="48px"

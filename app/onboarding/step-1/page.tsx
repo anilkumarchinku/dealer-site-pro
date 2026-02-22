@@ -59,6 +59,8 @@ export default function Step1Page() {
     const { data, updateData, setStep } = useOnboardingStore();
 
     const isFirstHand = data.dealerCategory === 'new';
+    const isHybrid    = data.dealerCategory === 'both';
+    const showBrandPicker = isFirstHand || isHybrid;
 
     const [formData, setFormData] = useState({
         dealershipName:  data.dealershipName || "",
@@ -155,10 +157,9 @@ export default function Step1Page() {
         if (!validate()) return;
         if (slugStatus === "checking") return;
 
-        // For 1st hand, also require at least one brand
-        if (isFirstHand && selectedBrands.length === 0) {
+        // For 1st hand and hybrid, require at least one OEM brand
+        if (showBrandPicker && selectedBrands.length === 0) {
             setBrandError("Please select at least one brand you're authorised to sell");
-            // Scroll to brand section
             document.getElementById("brand-section")?.scrollIntoView({ behavior: "smooth", block: "center" });
             return;
         }
@@ -178,18 +179,23 @@ export default function Step1Page() {
                 gstin:           formData.gstin,
                 slug:            siteSlug,
                 ...(isFirstHand && {
-                    brands:       selectedBrands,
-                    sellsNewCars: true,
+                    brands:        selectedBrands,
+                    sellsNewCars:  true,
                     sellsUsedCars: false,
+                }),
+                ...(isHybrid && {
+                    brands:        selectedBrands,
+                    sellsNewCars:  true,
+                    sellsUsedCars: true,
                 }),
             });
             setStep(2);
 
             if (isFirstHand) {
-                // Brands captured here — skip step-2, go straight to Services
+                // 1st hand: brands captured here — skip step-2, go straight to Services
                 router.push("/onboarding/step-3");
             } else {
-                // 2nd hand → brand colours/logo
+                // 2nd hand & hybrid → brand colours/logo for the used section
                 router.push("/onboarding/step-2-used");
             }
         } finally {
@@ -209,22 +215,32 @@ export default function Step1Page() {
                 <div className="mb-3">
                     <span className={cn(
                         "inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border",
-                        isFirstHand
-                            ? "bg-blue-500/10 text-blue-600 border-blue-500/20"
-                            : "bg-amber-500/10 text-amber-700 border-amber-500/20"
+                        isHybrid
+                            ? "bg-violet-500/10 text-violet-600 border-violet-500/20"
+                            : isFirstHand
+                                ? "bg-blue-500/10 text-blue-600 border-blue-500/20"
+                                : "bg-amber-500/10 text-amber-700 border-amber-500/20"
                     )}>
-                        {isFirstHand
-                            ? <Building2 className="w-3.5 h-3.5" />
-                            : <Car className="w-3.5 h-3.5" />}
-                        {isFirstHand ? "1st Hand Dealer — Authorised New Car Dealership" : "2nd Hand Dealer — Pre-Owned Cars"}
+                        {isHybrid
+                            ? <><Building2 className="w-3.5 h-3.5" /><span>+</span><Car className="w-3.5 h-3.5" /></>
+                            : isFirstHand
+                                ? <Building2 className="w-3.5 h-3.5" />
+                                : <Car className="w-3.5 h-3.5" />}
+                        {isHybrid
+                            ? "Hybrid Dealer — New + Pre-Owned Cars"
+                            : isFirstHand
+                                ? "1st Hand Dealer — Authorised New Car Dealership"
+                                : "2nd Hand Dealer — Pre-Owned Cars"}
                     </span>
                 </div>
 
                 <CardTitle>Tell us about your dealership</CardTitle>
                 <CardDescription>
-                    {isFirstHand
-                        ? "We'll use this to build your authorised dealership website with OEM brand pages"
-                        : "We'll use this to create your premium pre-owned car website"}
+                    {isHybrid
+                        ? "We'll build you a combined website showcasing both your new OEM models and pre-owned stock"
+                        : isFirstHand
+                            ? "We'll use this to build your authorised dealership website with OEM brand pages"
+                            : "We'll use this to create your premium pre-owned car website"}
                 </CardDescription>
             </CardHeader>
 
@@ -401,12 +417,26 @@ export default function Step1Page() {
                     helperText="For instant chat button on site"
                 />
 
-                {/* ── OEM Brand Selection (1st hand only) ──────────────────── */}
-                {isFirstHand && (
+                {/* ── OEM Brand Selection (1st hand + hybrid) ──────────────────── */}
+                {showBrandPicker && (
                     <div id="brand-section" className="border-t border-border pt-6 space-y-4">
+                        {isHybrid && (
+                            <div className="flex items-start gap-3 p-3 rounded-xl bg-violet-500/5 border border-violet-500/20">
+                                <span className="text-lg">🔀</span>
+                                <div>
+                                    <p className="text-sm font-semibold text-violet-700 dark:text-violet-300">New Cars (OEM Section)</p>
+                                    <p className="text-xs text-muted-foreground">Select the brands you&apos;re authorised to sell new. Your pre-owned stock will be set up in the next step.</p>
+                                </div>
+                            </div>
+                        )}
                         <div>
                             <h3 className="text-base font-semibold flex items-center gap-2">
-                                <span className="w-6 h-6 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-xs font-bold text-blue-600">
+                                <span className={cn(
+                                    "w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold",
+                                    isHybrid
+                                        ? "bg-violet-500/10 border border-violet-500/20 text-violet-600"
+                                        : "bg-blue-500/10 border border-blue-500/20 text-blue-600"
+                                )}>
                                     OEM
                                 </span>
                                 Which brands are you authorised to sell?
