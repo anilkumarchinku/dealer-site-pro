@@ -289,7 +289,7 @@ export default function Step6Page() {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="max-w-md mx-auto">
                         {/* PRO Tier */}
                         <Card className="border-2 border-primary/30 hover:border-primary/60 transition-colors relative overflow-hidden">
                             <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-bl-lg">
@@ -328,96 +328,16 @@ export default function Step6Page() {
                                     </p>
                                 </div>
                             </CardContent>
-                            <CardFooter>
-                                <Button
-                                    className="w-full"
-                                    onClick={() => router.push("/dashboard/domains")}
-                                >
+                            <CardFooter className="flex-col gap-2">
+                                <Button className="w-full" onClick={() => router.push("/dashboard/domains")}>
                                     Connect My Domain
                                 </Button>
-                            </CardFooter>
-                        </Card>
-
-                        {/* PREMIUM Tier */}
-                        <Card className="border-2 border-violet-500/30 hover:border-violet-500/60 transition-colors relative overflow-hidden">
-                            <div className="absolute top-0 right-0 bg-gradient-to-r from-violet-600 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg flex items-center gap-1">
-                                <Crown className="w-3 h-3" />
-                                PREMIUM
-                            </div>
-                            <CardHeader>
-                                <div className="flex items-center gap-2 mb-2">
-                                    <Sparkles className="w-6 h-6 text-violet-500" />
-                                    <CardTitle className="text-xl">PREMIUM Tier</CardTitle>
-                                </div>
-                                <CardDescription className="text-lg font-semibold text-foreground">
-                                    ₹999/month
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent className="space-y-4">
-                                <p className="font-medium text-foreground">Get a Brand New Domain</p>
-                                <p className="text-sm text-muted-foreground">
-                                    Don't have a domain? We'll help you find and register the perfect one — fully managed.
-                                </p>
-                                <div className="space-y-2">
-                                    {[
-                                        "Search & purchase new domains (.com, .in, etc.)",
-                                        "Automatic DNS configuration (zero setup!)",
-                                        "Free SSL certificate (HTTPS)",
-                                        "Auto-renewal & domain management",
-                                    ].map((item) => (
-                                        <div key={item} className="flex items-start gap-2 text-sm">
-                                            <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                                            <span className="text-muted-foreground">{item}</span>
-                                        </div>
-                                    ))}
-                                    <div className="flex items-start gap-2 text-sm">
-                                        <Zap className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
-                                        <span className="text-foreground font-semibold">Live instantly — no waiting!</span>
-                                    </div>
-                                </div>
-                                <div className="rounded-xl p-3 border border-violet-500/20 bg-violet-500/5">
-                                    <p className="text-xs text-violet-600 dark:text-violet-400 font-medium">
-                                        Fully managed — we handle everything!
-                                    </p>
-                                </div>
-                            </CardContent>
-                            <CardFooter>
-                                <Button
-                                    className="w-full bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-700 hover:to-pink-700"
-                                    onClick={() => router.push("/dashboard/domains")}
-                                >
-                                    <Crown className="w-4 h-4 mr-2" />
-                                    Get My Domain
+                                <Button variant="link" className="h-auto text-muted-foreground text-xs" onClick={() => setShowUpgradeOptions(false)}>
+                                    No thanks, I'll use my free subdomain for now →
                                 </Button>
                             </CardFooter>
                         </Card>
                     </div>
-
-                    {/* Comparison Note */}
-                    <Card variant="glass">
-                        <CardContent className="p-6">
-                            <div className="flex items-start gap-3">
-                                <div className="p-2 rounded-xl bg-primary/10">
-                                    <Globe className="w-5 h-5 text-primary" />
-                                </div>
-                                <div className="flex-1">
-                                    <h4 className="font-semibold text-foreground mb-2">Not sure which to choose?</h4>
-                                    <div className="space-y-2 text-sm text-muted-foreground">
-                                        <p><strong className="text-foreground">Choose PRO</strong> if you already own a domain like "yourcompany.com"</p>
-                                        <p><strong className="text-foreground">Choose PREMIUM</strong> if you need help finding and purchasing a new domain</p>
-                                        <p><strong className="text-foreground">Stay FREE</strong> for now and upgrade anytime from your dashboard</p>
-                                    </div>
-                                    <Button
-                                        variant="link"
-                                        className="mt-3 px-0 h-auto text-primary"
-                                        onClick={() => setShowUpgradeOptions(false)}
-                                    >
-                                        No thanks, I'll stick with my free subdomain for now →
-                                    </Button>
-                                </div>
-                            </div>
-                        </CardContent>
-                    </Card>
                 </div>
             )}
         </div>

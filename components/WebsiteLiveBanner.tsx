@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import {
     Globe, CheckCircle, Circle, Copy, Check, ArrowRight,
-    ExternalLink, Zap, Crown, ChevronDown, ChevronUp, Car,
+    ExternalLink, Zap, ChevronDown, ChevronUp, Car,
     Rocket, Loader2,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -386,7 +386,7 @@ export default function WebsiteLiveBanner({
                                 Every DealerSite Pro account starts with a <strong className="text-foreground">free Vercel subdomain</strong>.
                                 Upgrade anytime to a branded custom domain.
                             </p>
-                            <div className="grid sm:grid-cols-3 gap-3">
+                            <div className="grid sm:grid-cols-2 gap-3">
                                 {/* FREE */}
                                 <div className="p-3 rounded-xl bg-muted/30 border border-border">
                                     <div className="flex items-center gap-2 mb-2">
@@ -421,31 +421,6 @@ export default function WebsiteLiveBanner({
                                         <Link href="/dashboard/domains">
                                             <Button size="sm" className="w-full mt-2 h-7 text-xs gap-1">
                                                 Connect Domain <ArrowRight className="w-3 h-3" />
-                                            </Button>
-                                        </Link>
-                                    )}
-                                </div>
-                                {/* PREMIUM */}
-                                <div className="p-3 rounded-xl border border-violet-500/30 bg-violet-500/5">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <div className="p-1.5 rounded-lg bg-violet-500/10">
-                                            <Crown className="w-4 h-4 text-violet-500" />
-                                        </div>
-                                        <div>
-                                            <p className="text-xs font-bold text-foreground">PREMIUM</p>
-                                            <p className="text-xs text-violet-400 font-semibold">₹999/month</p>
-                                        </div>
-                                    </div>
-                                    <p className="text-xs text-muted-foreground leading-relaxed">
-                                        <strong className="text-foreground">We buy & manage</strong> a domain for you. Includes renewal + email forwarding.
-                                    </p>
-                                    {!hasCustomDomain && (
-                                        <Link href="/dashboard/domains">
-                                            <Button
-                                                size="sm"
-                                                className="w-full mt-2 h-7 text-xs gap-1 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700"
-                                            >
-                                                Get My Domain <ArrowRight className="w-3 h-3" />
                                             </Button>
                                         </Link>
                                     )}

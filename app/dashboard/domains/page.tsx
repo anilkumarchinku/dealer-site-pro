@@ -1,11 +1,10 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Globe, Lock, CheckCircle, ArrowRight, Crown, Zap, HelpCircle, Copy, RefreshCw, XCircle, Clock } from 'lucide-react'
+import { Globe, Lock, CheckCircle, ArrowRight, Zap, HelpCircle, Copy, RefreshCw, XCircle, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
 import ConnectCustomDomainModal from '@/components/ConnectCustomDomainModal'
-import PurchaseManagedDomainModal from '@/components/PurchaseManagedDomainModal'
 import DomainMonitoringWidget from '@/components/DomainMonitoringWidget'
 import { useOnboardingStore } from '@/lib/store/onboarding-store'
 
@@ -60,7 +59,6 @@ export default function DomainSettingsPage() {
     const [verifying, setVerifying] = useState(false)
     const [copiedCname, setCopiedCname] = useState(false)
     const [showConnectModal, setShowConnectModal] = useState(false)
-    const [showPurchaseModal, setShowPurchaseModal] = useState(false)
 
     const { dealerId } = useOnboardingStore()
 
@@ -360,7 +358,7 @@ export default function DomainSettingsPage() {
                     Stand out with your own professional domain name
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="max-w-md">
                     {/* PRO Plan */}
                     <Card variant="glass" className="border-primary/30 hover:border-primary/50 transition-colors">
                         <CardContent className="pt-6">
@@ -401,51 +399,6 @@ export default function DomainSettingsPage() {
                                 Connect My Domain
                                 <ArrowRight className="w-4 h-4" />
                             </Button>
-                            <p className="text-xs text-muted-foreground mt-2 text-center">Phase 2 — Active</p>
-                        </CardContent>
-                    </Card>
-
-                    {/* PREMIUM Plan */}
-                    <Card variant="glass" className="border-violet-500/30 hover:border-violet-500/50 transition-colors">
-                        <CardContent className="pt-6">
-                            <div className="flex items-center gap-3 mb-4">
-                                <div className="p-2.5 rounded-xl bg-violet-500/10">
-                                    <Crown className="w-6 h-6 text-violet-500" />
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold">PREMIUM</h3>
-                                    <p className="text-2xl font-bold text-violet-400">
-                                        ₹999<span className="text-sm font-normal text-muted-foreground">/month</span>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <p className="text-muted-foreground text-sm mb-4">
-                                Don't have a domain? We'll purchase and manage one for you — completely hands-off.
-                            </p>
-
-                            <ul className="space-y-2.5 mb-6">
-                                {[
-                                    'Domain purchase included',
-                                    'Annual renewal included',
-                                    'Email forwarding included',
-                                    '100% managed by us',
-                                ].map((item) => (
-                                    <li key={item} className="flex items-start gap-2">
-                                        <CheckCircle className="w-4 h-4 text-violet-500 flex-shrink-0 mt-0.5" />
-                                        <span className="text-sm text-muted-foreground">{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-
-                            <Button
-                                onClick={() => setShowPurchaseModal(true)}
-                                className="w-full gap-2 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700"
-                            >
-                                Get My Domain
-                                <ArrowRight className="w-4 h-4" />
-                            </Button>
-                            <p className="text-xs text-muted-foreground mt-2 text-center">Phase 3 — Active</p>
                         </CardContent>
                     </Card>
                 </div>
@@ -495,10 +448,6 @@ export default function DomainSettingsPage() {
                             a: `Yes! Your ${primaryDomain?.domain ?? 'subdomain'} is completely free forever, even if you upgrade to a custom domain.`,
                         },
                         {
-                            q: "What's the difference between PRO and PREMIUM?",
-                            a: 'PRO requires you to purchase your own domain from any registrar and connect it (we guide you through DNS setup). PREMIUM means we handle everything — domain purchase, renewal, and management.',
-                        },
-                        {
                             q: 'How long does it take to connect a custom domain?',
                             a: 'DNS changes typically take 5–30 minutes, but can take up to 48 hours. SSL certificates are provisioned automatically within 2–5 minutes after DNS verification.',
                         },
@@ -519,12 +468,6 @@ export default function DomainSettingsPage() {
             <ConnectCustomDomainModal
                 isOpen={showConnectModal}
                 onClose={() => setShowConnectModal(false)}
-                dealerId={dealerId!}
-                onSuccess={fetchDomains}
-            />
-            <PurchaseManagedDomainModal
-                isOpen={showPurchaseModal}
-                onClose={() => setShowPurchaseModal(false)}
                 dealerId={dealerId!}
                 onSuccess={fetchDomains}
             />

@@ -3,13 +3,12 @@
 import { useState } from 'react'
 import {
     X, Globe, Copy, Check, ExternalLink,
-    Link2, ShoppingBag, ChevronRight,
+    Link2, ChevronRight,
 } from 'lucide-react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
 import { dealerSiteHref, dealerSiteUrl } from '@/lib/utils/domain'
 import ConnectCustomDomainModal from '@/components/ConnectCustomDomainModal'
-import PurchaseManagedDomainModal from '@/components/PurchaseManagedDomainModal'
 
 interface SiteInfo {
     slug: string
@@ -23,7 +22,7 @@ interface Props {
     onClose: () => void
 }
 
-type SubModal = 'custom' | 'managed' | null
+type SubModal = 'custom' | null
 
 export function SiteDomainModal({ site, dealerId, dealerName, onClose }: Props) {
     const [copied, setCopied] = useState(false)
@@ -51,17 +50,6 @@ export function SiteDomainModal({ site, dealerId, dealerName, onClose }: Props) 
             />
         )
     }
-    if (subModal === 'managed') {
-        return (
-            <PurchaseManagedDomainModal
-                isOpen
-                onClose={() => setSubModal(null)}
-                dealerId={dealerId}
-                onSuccess={() => { setSubModal(null); onClose() }}
-            />
-        )
-    }
-
     return (
         <Dialog open onOpenChange={onClose}>
             <DialogContent className="sm:max-w-md">
@@ -148,30 +136,6 @@ export function SiteDomainModal({ site, dealerId, dealerName, onClose }: Props) 
                         </div>
                         <p className="text-xs text-muted-foreground mt-3 pl-12">
                             Point a domain you already own to this site. Add a CNAME record — we verify and connect it automatically.
-                        </p>
-                    </button>
-
-                    {/* ── Option 3: Buy a managed domain ── */}
-                    <button
-                        onClick={() => setSubModal('managed')}
-                        className="w-full rounded-xl border border-border hover:border-indigo-500/50 hover:bg-indigo-500/5 p-4 text-left transition-all group"
-                    >
-                        <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-3">
-                                <div className="w-9 h-9 rounded-lg bg-indigo-500/10 flex items-center justify-center">
-                                    <ShoppingBag className="w-4 h-4 text-indigo-500" />
-                                </div>
-                                <div>
-                                    <p className="text-sm font-semibold">Buy a New Domain</p>
-                                    <p className="text-xs text-muted-foreground mt-0.5">
-                                        e.g. abhimotorstata.in &nbsp;·&nbsp; ₹999/month
-                                    </p>
-                                </div>
-                            </div>
-                            <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors" />
-                        </div>
-                        <p className="text-xs text-muted-foreground mt-3 pl-12">
-                            Search for an available domain. We register and manage it for you — DNS, SSL, renewals all included.
                         </p>
                     </button>
 
