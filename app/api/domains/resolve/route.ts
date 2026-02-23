@@ -21,7 +21,9 @@ export const runtime = 'edge'
 
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url)
-    const domain = searchParams.get('domain')?.toLowerCase().trim()
+    const rawDomain = searchParams.get('domain')?.toLowerCase().trim()
+    // Normalize: strip leading "www." so both qwickbill.com and www.qwickbill.com resolve correctly
+    const domain = rawDomain?.replace(/^www\./, '')
 
     if (!domain) {
         return NextResponse.json({ error: 'domain param required' }, { status: 400 })

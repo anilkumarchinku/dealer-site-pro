@@ -40,18 +40,34 @@ export async function POST(request: Request) {
             )
         }
 
-        // Check if domain already exists
+        // Check if domain already exists for a DIFFERENT dealer
         const { data: existingDomain } = await supabase
             .from('dealer_domains')
-            .select('id')
+            .select('id, dealer_id')
             .eq('custom_domain', customDomain)
             .single()
 
-        if (existingDomain) {
+        if (existingDomain && existingDomain.dealer_id !== dealerId) {
             return NextResponse.json(
                 { success: false, error: 'This domain is already connected to another dealer' },
                 { status: 400 }
             )
+        }
+
+        // If domain already belongs to this dealer, return success (idempotent)
+        if (existingDomain && existingDomain.dealer_id === dealerId) {
+            return NextResponse.json({
+                success: true,
+                domain: existingDomain,
+                dns: {
+                    type:  'CNAME',
+                    host:  '@',
+                    value: 'cname.vercel-dns.com',
+                    ttl:   600,
+                    note:  'For www: add CNAME with host "www" pointing to cname.vercel-dns.com',
+                },
+                vercelRegistered: false,
+            })
         }
 
         // Create domain record with pending status
