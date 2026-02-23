@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Upload, Sparkles, Check, Loader2 } from "lucide-react";
+import { ArrowLeft, Upload, Sparkles, Check, Loader2, Car } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { addVehicle } from "@/lib/db/vehicles";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
