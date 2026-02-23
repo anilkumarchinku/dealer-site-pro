@@ -87,6 +87,29 @@ export async function addVehicle(
     return { success: true, id: data.id };
 }
 
+// ── Bulk insert vehicles ──────────────────────────────────────
+export async function bulkAddVehicles(
+    payloads: AddVehiclePayload[]
+): Promise<{ success: boolean; count: number; errors: string[] }> {
+    if (!isSupabaseReady()) return { success: false, count: 0, errors: ["Supabase not configured"] };
+
+    const rows = payloads.map(p => ({
+        ...p,
+        features:   p.features  ?? [],
+        condition:  p.condition ?? "used",
+        status:     "available",
+        view_count: 0,
+    }));
+
+    const { data, error } = await supabase.from("vehicles").insert(rows).select("id");
+
+    if (error) {
+        console.error("[bulkAddVehicles]", error.message);
+        return { success: false, count: 0, errors: [error.message] };
+    }
+    return { success: true, count: data?.length ?? 0, errors: [] };
+}
+
 // ── Delete a vehicle ─────────────────────────────────────────
 export async function deleteVehicle(
     id: string

@@ -58,7 +58,7 @@ export default function AddVehiclePage() {
         fuelType: "Petrol",
         features: [] as string[],
         description: "",
-        condition: isHybrid ? "" : "used",  // hybrid must choose; others default to used
+        condition: "used",  // 2nd hand & hybrid only add used/CPO vehicles
     });
     const [isGenerating, setIsGenerating] = useState(false);
     const [isSaving, setIsSaving] = useState(false);
@@ -102,8 +102,8 @@ export default function AddVehiclePage() {
             setSaveError("Please fill in Make, Model, Year and Price.");
             return;
         }
-        if (isHybrid && !formData.condition) {
-            setSaveError("Please select whether this is a New or Used vehicle.");
+        if (!formData.condition) {
+            setSaveError("Please select a vehicle condition.");
             return;
         }
         if (!dealerId) {
@@ -170,45 +170,42 @@ export default function AddVehiclePage() {
                         </CardHeader>
 
                         <CardContent className="space-y-6">
-                            {/* ── Condition picker (hybrid only) ──────────── */}
-                            {isHybrid && (
-                                <div>
-                                    <label className="block text-sm font-medium mb-3">
-                                        Vehicle Condition <span className="text-destructive">*</span>
-                                    </label>
-                                    <div className="grid grid-cols-3 gap-3">
-                                        {[
-                                            { value: "new",  label: "New",  emoji: "✨", desc: "Brand new OEM model" },
-                                            { value: "used", label: "Used", emoji: "🚗", desc: "Pre-owned vehicle" },
-                                            { value: "certified_pre_owned", label: "CPO", emoji: "🛡️", desc: "Certified pre-owned" },
-                                        ].map(opt => (
-                                            <button
-                                                key={opt.value}
-                                                type="button"
-                                                onClick={() => handleChange("condition", opt.value)}
-                                                className={cn(
-                                                    "p-4 rounded-xl border-2 text-left transition-all",
-                                                    formData.condition === opt.value
-                                                        ? opt.value === "new"
-                                                            ? "border-blue-500 bg-blue-500/5"
-                                                            : "border-amber-500 bg-amber-500/5"
-                                                        : "border-border hover:border-muted-foreground/40"
-                                                )}
-                                            >
-                                                <div className="text-2xl mb-1">{opt.emoji}</div>
-                                                <div className="font-semibold text-sm">{opt.label}</div>
-                                                <div className="text-xs text-muted-foreground mt-0.5">{opt.desc}</div>
-                                                {formData.condition === opt.value && (
-                                                    <Check className={cn("w-4 h-4 mt-2", opt.value === "new" ? "text-blue-500" : "text-amber-500")} />
-                                                )}
-                                            </button>
-                                        ))}
-                                    </div>
-                                    {!formData.condition && (
-                                        <p className="text-xs text-muted-foreground mt-2">Select condition to tag this vehicle correctly in your hybrid inventory</p>
-                                    )}
+                            {/* ── Condition picker (Used / CPO only — New is auto-managed) ── */}
+                            <div>
+                                <label className="block text-sm font-medium mb-3">
+                                    Vehicle Condition <span className="text-destructive">*</span>
+                                </label>
+                                <div className="grid grid-cols-2 gap-3">
+                                    {[
+                                        { value: "used", label: "Used", emoji: "🚗", desc: "Pre-owned vehicle" },
+                                        { value: "certified_pre_owned", label: "CPO", emoji: "🛡️", desc: "Certified pre-owned" },
+                                    ].map(opt => (
+                                        <button
+                                            key={opt.value}
+                                            type="button"
+                                            onClick={() => handleChange("condition", opt.value)}
+                                            className={cn(
+                                                "p-4 rounded-xl border-2 text-left transition-all",
+                                                formData.condition === opt.value
+                                                    ? "border-amber-500 bg-amber-500/5"
+                                                    : "border-border hover:border-muted-foreground/40"
+                                            )}
+                                        >
+                                            <div className="text-2xl mb-1">{opt.emoji}</div>
+                                            <div className="font-semibold text-sm">{opt.label}</div>
+                                            <div className="text-xs text-muted-foreground mt-0.5">{opt.desc}</div>
+                                            {formData.condition === opt.value && (
+                                                <Check className="w-4 h-4 mt-2 text-amber-500" />
+                                            )}
+                                        </button>
+                                    ))}
                                 </div>
-                            )}
+                                {isHybrid && (
+                                    <p className="text-xs text-muted-foreground mt-2">
+                                        New car catalog is managed automatically. Only add used/CPO stock here.
+                                    </p>
+                                )}
+                            </div>
 
                             {/* VIN */}
                             <div>

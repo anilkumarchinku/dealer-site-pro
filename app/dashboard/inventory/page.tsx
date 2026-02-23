@@ -6,9 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
-import { Search, Plus, Car, CheckCircle, LayoutGrid, Building2, Loader2, Sparkles, RefreshCw } from "lucide-react";
+import { Search, Plus, Car, CheckCircle, LayoutGrid, Building2, Loader2, Sparkles, RefreshCw, Upload } from "lucide-react";
 import { fetchVehicles, deleteVehicle, type DBVehicle } from "@/lib/db/vehicles";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
+import BulkUploadModal from "@/components/BulkUploadModal";
 
 const STAT_CONFIG = [
     { label: "Total Stock",  icon: Car,        bg: "bg-primary/10",    text: "text-primary" },
@@ -21,8 +22,11 @@ type ConditionTab = "all" | "new" | "used";
 
 export default function InventoryPage() {
     const { dealerId, data } = useOnboardingStore();
-    const isHybrid    = data.sellsNewCars && data.sellsUsedCars;
-    const isFirstHand = data.sellsNewCars && !data.sellsUsedCars;
+    const isHybrid      = data.sellsNewCars && data.sellsUsedCars;
+    const isFirstHand   = data.sellsNewCars && !data.sellsUsedCars;
+    const canAddVehicles = !isFirstHand; // 2nd hand + hybrid can add vehicles
+
+    const [showBulkUpload, setShowBulkUpload] = useState(false);
 
     const [searchQuery, setSearchQuery] = useState("");
     const [filterCategory, setFilterCategory] = useState<string>("all");
@@ -76,6 +80,16 @@ export default function InventoryPage() {
 
     return (
         <div className="space-y-6 animate-fade-in">
+            {/* Bulk Upload Modal */}
+            {dealerId && (
+                <BulkUploadModal
+                    isOpen={showBulkUpload}
+                    onClose={() => setShowBulkUpload(false)}
+                    dealerId={dealerId}
+                    onSuccess={(count) => { setShowBulkUpload(false); load(); }}
+                />
+            )}
+
             {/* Header */}
             <div className="flex items-center justify-between">
                 <div>
@@ -99,18 +113,28 @@ export default function InventoryPage() {
                                 : <RefreshCw className="w-4 h-4" />}
                         </button>
                     )}
-                    {isFirstHand ? (
+                    {canAddVehicles ? (
+                        <>
+                            <Button
+                                variant="outline"
+                                className="gap-2"
+                                onClick={() => setShowBulkUpload(true)}
+                            >
+                                <Upload className="w-4 h-4" />
+                                Bulk Upload
+                            </Button>
+                            <Link href="/dashboard/inventory/add">
+                                <Button className="gap-2 bg-primary hover:bg-primary/90">
+                                    <Plus className="w-4 h-4" />
+                                    Add Vehicle
+                                </Button>
+                            </Link>
+                        </>
+                    ) : (
                         <Button disabled className="gap-2 opacity-40 cursor-not-allowed" title="Only hybrid & used-car dealers can add vehicles">
                             <Plus className="w-4 h-4" />
                             Add Vehicle
                         </Button>
-                    ) : (
-                        <Link href="/dashboard/inventory/add">
-                            <Button className="gap-2 bg-primary hover:bg-primary/90">
-                                <Plus className="w-4 h-4" />
-                                Add Vehicle
-                            </Button>
-                        </Link>
                     )}
                 </div>
             </div>
