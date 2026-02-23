@@ -93,7 +93,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb' }
     // Aggregate specifications across all variants
     const aggregatedSpecs = detailedInfo.length > 0 ? {
         fuelTypes: [...new Set(detailedInfo.map(v => v.fuel_type).filter(Boolean))].join(' / '),
-        transmissions: [...new Set(detailedInfo.map(v => v.transmission).filter(Boolean))].join(' / '),
+        transmissions: [...new Set(detailedInfo.map(v => v.transmission).filter(Boolean))].map(t => t === 'Automatic' ? 'Auto' : t).join(' / '),
         powerRange: detailedInfo.length > 1
             ? `${Math.min(...detailedInfo.map(v => v.power_bhp))} - ${Math.max(...detailedInfo.map(v => v.power_bhp))} bhp`
             : detailedVariant?.power_bhp ? `${detailedVariant.power_bhp} bhp` : null,

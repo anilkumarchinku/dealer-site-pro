@@ -54,12 +54,16 @@ export function CarCard({
     const priceRange = formatPriceInLakhs(exShowroom.min);
     const maxPrice = formatPriceInLakhs(exShowroom.max);
 
-    // Normalize placeholder values
+    // Normalize placeholder values — these may now be multi-option strings like "Manual / Auto / CVT"
     const transmissionType = (!car.transmission?.type || car.transmission.type === 'TBD' || car.transmission.type === 'Transmission')
         ? null : car.transmission.type;
     const engineType = (!car.engine?.type || car.engine.type === 'TBD') ? null : car.engine.type;
     const mileage = car.performance?.fuelEfficiency && car.performance.fuelEfficiency > 0
         ? car.performance.fuelEfficiency : null;
+
+    // For multi-value strings like "Manual / Auto / CVT", use a smaller font so it fits
+    const isMultiTransmission = transmissionType ? transmissionType.includes('/') : false;
+    const isMultiFuel = engineType ? engineType.includes('/') : false;
 
     const handleEnquireNow = () => {
         setIsEnquiryModalOpen(true);
@@ -158,23 +162,35 @@ export function CarCard({
                 <div className="grid grid-cols-2 gap-3 mb-4">
                     {engineType && (
                         <div className={cn('flex items-center gap-2.5 p-2.5 rounded-xl', light ? 'bg-gray-50' : 'bg-muted/50')}>
-                            <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
+                            <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
                                 <Fuel className="w-4 h-4 text-emerald-600" />
                             </div>
-                            <div>
+                            <div className="min-w-0">
                                 <p className={cn('text-xs', light ? 'text-gray-500' : 'text-muted-foreground')}>Fuel</p>
-                                <p className={cn('text-sm font-semibold', light ? 'text-gray-900' : 'text-foreground')}>{engineType}</p>
+                                <p className={cn(
+                                    'font-semibold leading-tight',
+                                    isMultiFuel ? 'text-xs' : 'text-sm',
+                                    light ? 'text-gray-900' : 'text-foreground'
+                                )}>
+                                    {engineType}
+                                </p>
                             </div>
                         </div>
                     )}
                     {transmissionType && (
                         <div className={cn('flex items-center gap-2.5 p-2.5 rounded-xl', light ? 'bg-gray-50' : 'bg-muted/50')}>
-                            <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
+                            <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
                                 <Gauge className="w-4 h-4 text-blue-600" />
                             </div>
-                            <div>
+                            <div className="min-w-0">
                                 <p className={cn('text-xs', light ? 'text-gray-500' : 'text-muted-foreground')}>Trans</p>
-                                <p className={cn('text-sm font-semibold', light ? 'text-gray-900' : 'text-foreground')}>{transmissionType}</p>
+                                <p className={cn(
+                                    'font-semibold leading-tight',
+                                    isMultiTransmission ? 'text-xs' : 'text-sm',
+                                    light ? 'text-gray-900' : 'text-foreground'
+                                )}>
+                                    {transmissionType}
+                                </p>
                             </div>
                         </div>
                     )}
@@ -202,15 +218,15 @@ export function CarCard({
                     )}
                 </div>
 
-                {/* Key Features - Detailed Variant */}
-                {variant === 'detailed' && car.features.keyFeatures.length > 0 && (
+                {/* Key Features - shown on all cards when data is available */}
+                {car.features.keyFeatures.length > 0 && (
                     <div className="mb-4 p-3 bg-muted/30 rounded-xl">
                         <p className="text-xs font-semibold text-foreground mb-2 flex items-center gap-1.5">
                             <Shield className="w-3.5 h-3.5 text-green-600" />
                             Top Features
                         </p>
                         <div className="flex flex-wrap gap-2">
-                            {car.features.keyFeatures.slice(0, 3).map((feature, idx) => (
+                            {car.features.keyFeatures.slice(0, variant === 'detailed' ? 5 : 3).map((feature, idx) => (
                                 <span
                                     key={idx}
                                     className="text-xs px-2.5 py-1 bg-background rounded-full text-muted-foreground border border-border"

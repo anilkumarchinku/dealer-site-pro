@@ -81,7 +81,7 @@ export function QuickViewModal({
     // Aggregate specifications across all variants
     const aggregatedSpecs = detailedInfo.length > 0 ? {
         fuelTypes: [...new Set(detailedInfo.map(v => v.fuel_type).filter(Boolean))].join(' / '),
-        transmissions: [...new Set(detailedInfo.map(v => v.transmission).filter(Boolean))].join(' / '),
+        transmissions: [...new Set(detailedInfo.map(v => v.transmission).filter(Boolean))].map(t => t === 'Automatic' ? 'Auto' : t).join(' / '),
         powerRange: detailedInfo.length > 1
             ? `${Math.min(...detailedInfo.map(v => v.power_bhp))} - ${Math.max(...detailedInfo.map(v => v.power_bhp))} bhp`
             : detailedVariant?.power_bhp ? `${detailedVariant.power_bhp} bhp` : null,
@@ -89,15 +89,20 @@ export function QuickViewModal({
         mileages: [...new Set(detailedInfo.map(v => v.mileage_kmpl || v.mileage_kmpl_or_ev_range).filter(Boolean))].join(' / ')
     } : null;
 
-    // Parse features from detailed info
+    // Parse features from detailed info (carInfo.json), fall back to DB features
     const additionalKeyFeatures = detailedVariant ? parseKeyFeatures(detailedVariant.key_features) : [];
-    const safetyFeatures = detailedVariant ? parseSafetyFeatures(detailedVariant.safety_features) : [];
+    const additionalSafetyFeatures = detailedVariant ? parseSafetyFeatures(detailedVariant.safety_features) : [];
 
-    // Merge features with existing car features
+    // Merge features — DB features + carInfo.json features, deduplicated
     const allKeyFeatures = [
         ...(car.features?.keyFeatures || []),
         ...additionalKeyFeatures
-    ].filter((v, i, a) => a.indexOf(v) === i); // Remove duplicates
+    ].filter((v, i, a) => a.indexOf(v) === i);
+
+    const safetyFeatures = [
+        ...(car.features?.safetyFeatures || []),
+        ...additionalSafetyFeatures
+    ].filter((v, i, a) => a.indexOf(v) === i);
 
     const mainImage = activeImage || car.images.hero;
     const allImages = [
