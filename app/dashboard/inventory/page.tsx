@@ -21,7 +21,8 @@ type ConditionTab = "all" | "new" | "used";
 
 export default function InventoryPage() {
     const { dealerId, data } = useOnboardingStore();
-    const isHybrid = data.sellsNewCars && data.sellsUsedCars;
+    const isHybrid    = data.sellsNewCars && data.sellsUsedCars;
+    const isFirstHand = data.sellsNewCars && !data.sellsUsedCars;
 
     const [searchQuery, setSearchQuery] = useState("");
     const [filterCategory, setFilterCategory] = useState<string>("all");
@@ -98,12 +99,19 @@ export default function InventoryPage() {
                                 : <RefreshCw className="w-4 h-4" />}
                         </button>
                     )}
-                    <Link href="/dashboard/inventory/add">
-                        <Button className="gap-2 bg-primary hover:bg-primary/90">
+                    {isFirstHand ? (
+                        <Button disabled className="gap-2 opacity-40 cursor-not-allowed" title="Only hybrid & used-car dealers can add vehicles">
                             <Plus className="w-4 h-4" />
                             Add Vehicle
                         </Button>
-                    </Link>
+                    ) : (
+                        <Link href="/dashboard/inventory/add">
+                            <Button className="gap-2 bg-primary hover:bg-primary/90">
+                                <Plus className="w-4 h-4" />
+                                Add Vehicle
+                            </Button>
+                        </Link>
+                    )}
                 </div>
             </div>
 

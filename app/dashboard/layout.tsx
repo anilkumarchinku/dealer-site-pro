@@ -77,6 +77,7 @@ export default function DashboardLayout({
     const pathname = usePathname();
     const router   = useRouter();
     const { data, updateData, setDealerId, setDealerSlug, dealerSlug } = useOnboardingStore();
+    const isFirstHand = data.sellsNewCars && !data.sellsUsedCars;
 
     // On every mount: verify the user has completed onboarding.
     // The early-exit on data.dealershipName was intentionally removed —
@@ -164,6 +165,20 @@ export default function DashboardLayout({
                                 {group.items.map((item) => {
                                     const isActive = pathname === item.href ||
                                         (item.href !== "/dashboard" && pathname.startsWith(item.href));
+                                    const isLocked = isFirstHand && item.href === "/dashboard/inventory/add";
+                                    if (isLocked) {
+                                        return (
+                                            <Link
+                                                key={item.name}
+                                                href="/dashboard/inventory/add"
+                                                title="Only hybrid & used-car dealers can add vehicles"
+                                                className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium opacity-40 cursor-not-allowed text-muted-foreground pointer-events-none"
+                                            >
+                                                <item.icon className="w-5 h-5 shrink-0" />
+                                                {item.name}
+                                            </Link>
+                                        );
+                                    }
                                     return (
                                         <Link
                                             key={item.name}

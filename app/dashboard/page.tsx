@@ -38,6 +38,7 @@ export default function DashboardPage() {
     const { data, dealerId } = useOnboardingStore();
     const primaryBrand = data.brands?.[0] ?? "Maruti Suzuki";
     const isMultiBrand  = (data.brands?.length ?? 0) > 1;
+    const isFirstHand   = data.sellsNewCars && !data.sellsUsedCars;
 
     const [showBrandPicker, setShowBrandPicker] = useState(false);
     const [statsLoading, setStatsLoading] = useState(false);
@@ -156,12 +157,14 @@ export default function DashboardPage() {
                             </Button>
                         </Link>
                     )}
-                    <Link href="/dashboard/inventory/add">
-                        <Button className="gap-2">
-                            <Plus className="w-4 h-4" />
-                            Add Vehicle
-                        </Button>
-                    </Link>
+                    {!isFirstHand && (
+                        <Link href="/dashboard/inventory/add">
+                            <Button className="gap-2">
+                                <Plus className="w-4 h-4" />
+                                Add Vehicle
+                            </Button>
+                        </Link>
+                    )}
                 </div>
             </div>
 
@@ -283,7 +286,7 @@ export default function DashboardPage() {
                             </div>
                         </CardHeader>
                         <CardContent className="grid grid-cols-2 gap-3">
-                            {QUICK_ACTIONS.map((action, i) => (
+                            {QUICK_ACTIONS.filter(a => !(isFirstHand && a.href === "/dashboard/inventory/add")).map((action, i) => (
                                 <Link key={i} href={action.href}>
                                     <Button variant="outline" className="w-full h-auto py-4 flex-col gap-2 hover:bg-muted/50">
                                         <div className={cn("p-2 rounded-lg", COLOR[action.color as keyof typeof COLOR].bg)}>

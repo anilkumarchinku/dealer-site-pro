@@ -18,7 +18,33 @@ const FEATURES = [
 export default function AddVehiclePage() {
     const router = useRouter();
     const { dealerId, data } = useOnboardingStore();
-    const isHybrid = data.sellsNewCars && data.sellsUsedCars;
+    const isHybrid    = data.sellsNewCars && data.sellsUsedCars;
+    const isFirstHand = data.sellsNewCars && !data.sellsUsedCars;
+
+    // 1st hand (new-car only) dealers cannot add vehicles — their catalog is auto-managed
+    if (isFirstHand) {
+        return (
+            <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-6">
+                <div className="w-20 h-20 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-6">
+                    <Car className="w-10 h-10 text-amber-500" />
+                </div>
+                <h1 className="text-2xl font-bold mb-2">Not Available for Your Plan</h1>
+                <p className="text-muted-foreground max-w-md mb-2">
+                    Vehicle adding is only available for <strong>hybrid</strong> and <strong>used-car</strong> dealers.
+                </p>
+                <p className="text-sm text-muted-foreground max-w-md mb-8">
+                    As a new-car dealer, your brand catalog is managed automatically — no manual inventory needed.
+                </p>
+                <button
+                    onClick={() => router.back()}
+                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
+                >
+                    <ArrowLeft className="w-4 h-4" />
+                    Go Back
+                </button>
+            </div>
+        )
+    }
 
     const [formData, setFormData] = useState({
         vin: "",
