@@ -73,71 +73,127 @@ function ComingSoon({ slug }: { slug: string }) {
     )
 }
 
-// ── Hybrid Landing Portal — choose between new & used sites ──────────────────
-function HybridLandingPage({
-    dealerName, location, phone, email, slug, brands,
+// ── Multi-Site Portal — shown for hybrid & multi-brand dealers on their main URL
+function MultiSitePortal({
+    dealerName, location, phone, email, tagline, slug, brands, isHybrid,
 }: {
     dealerName: string; location: string; phone: string; email: string;
-    slug: string; brands: string[];
+    tagline?: string | null; slug: string; brands: string[]; isHybrid: boolean;
 }) {
-    const brandLabel = brands.length > 0 ? brands.join(', ') : 'New Cars'
+    const attractiveLine = tagline ?? `Your Trusted Automobile Partner in ${location}`
+
+    // Build site cards
+    const siteCards: { label: string; sublabel: string; href: string; color: string; emoji: string }[] = []
+
+    if (isHybrid) {
+        // Hybrid: brand new + pre-owned
+        const brandSlug = brands[0]?.toLowerCase().replace(/\s+/g, '-') ?? 'new'
+        siteCards.push({
+            label:    'New Cars',
+            sublabel: brands.length > 0 ? brands.join(' · ') : 'Brand New Vehicles',
+            href:     `/${slug}-${brandSlug}`,
+            color:    'blue',
+            emoji:    '🚗',
+        })
+        siteCards.push({
+            label:    'Pre-Owned Cars',
+            sublabel: 'Certified Used Vehicles',
+            href:     `/${slug}-used`,
+            color:    'amber',
+            emoji:    '🛡️',
+        })
+    } else {
+        // Multi-brand new-car only: one card per brand
+        brands.forEach(brand => {
+            const brandSlug = brand.toLowerCase().replace(/\s+/g, '-')
+            siteCards.push({
+                label:    brand,
+                sublabel: 'New Cars · Authorised Dealer',
+                href:     `/${slug}-${brandSlug}`,
+                color:    'blue',
+                emoji:    '✨',
+            })
+        })
+    }
+
+    const colorMap: Record<string, { border: string; bg: string; text: string; btn: string }> = {
+        blue:  { border: 'border-blue-500/30',  bg: 'bg-blue-500/5',  text: 'text-blue-400',  btn: 'bg-blue-500 hover:bg-blue-600'  },
+        amber: { border: 'border-amber-500/30', bg: 'bg-amber-500/5', text: 'text-amber-400', btn: 'bg-amber-500 hover:bg-amber-600' },
+    }
+
     return (
-        <div className="min-h-screen bg-gray-950 flex items-center justify-center px-4">
-            <div className="w-full max-w-lg text-center">
-                <h1 className="text-3xl font-bold text-white mb-1">{dealerName}</h1>
-                <p className="text-gray-400 text-sm mb-10">{location}</p>
+        <div className="min-h-screen bg-gray-950 flex flex-col items-center justify-center px-4 py-12">
+            <div className="w-full max-w-2xl">
 
-                <p className="text-gray-300 text-base mb-6 font-medium">What are you looking for?</p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-                    {/* New Cars */}
-                    <a
-                        href={`/${slug}-${brands[0]?.toLowerCase().replace(/\s+/g, '-') ?? 'new'}`}
-                        className="group flex flex-col items-center gap-4 p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5 hover:border-blue-400/60 hover:bg-blue-500/10 transition-all duration-200"
-                    >
-                        <div className="w-16 h-16 rounded-2xl bg-blue-500/15 border border-blue-500/30 flex items-center justify-center">
-                            <svg className="w-8 h-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                                    d="M5 3l14 9-14 9V3z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <p className="text-white font-bold text-lg">New Cars</p>
-                            <p className="text-blue-400 text-sm mt-1">{brandLabel}</p>
-                            <p className="text-gray-500 text-xs mt-1">Brand new vehicles from the showroom</p>
-                        </div>
-                        <span className="text-xs font-semibold text-blue-400 group-hover:underline">Browse New Cars →</span>
-                    </a>
-
-                    {/* Pre-Owned Cars */}
-                    <a
-                        href={`/${slug}-used`}
-                        className="group flex flex-col items-center gap-4 p-8 rounded-2xl border-2 border-amber-500/30 bg-amber-500/5 hover:border-amber-400/60 hover:bg-amber-500/10 transition-all duration-200"
-                    >
-                        <div className="w-16 h-16 rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center">
-                            <svg className="w-8 h-8 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                                    d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                                    d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h10l2-2z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <p className="text-white font-bold text-lg">Pre-Owned Cars</p>
-                            <p className="text-amber-400 text-sm mt-1">Certified Used Vehicles</p>
-                            <p className="text-gray-500 text-xs mt-1">Quality pre-owned cars at great prices</p>
-                        </div>
-                        <span className="text-xs font-semibold text-amber-400 group-hover:underline">Browse Used Cars →</span>
-                    </a>
+                {/* ── Hero section ── */}
+                <div className="text-center mb-10">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold mb-4 uppercase tracking-wide">
+                        Authorised Dealership
+                    </div>
+                    <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-3 tracking-tight">
+                        {dealerName}
+                    </h1>
+                    <p className="text-gray-400 text-base mb-4">{location}</p>
+                    <p className="text-lg text-gray-300 font-medium max-w-md mx-auto leading-relaxed">
+                        {attractiveLine}
+                    </p>
                 </div>
 
-                <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
-                    <a href={`tel:${phone}`} className="hover:text-gray-300 transition-colors">📞 {phone}</a>
-                    <a href={`mailto:${email}`} className="hover:text-gray-300 transition-colors">✉️ {email}</a>
+                {/* ── Site cards ── */}
+                <div className={`grid gap-4 mb-10 ${siteCards.length === 2 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}>
+                    {siteCards.map((card, i) => {
+                        const c = colorMap[card.color] ?? colorMap.blue
+                        return (
+                            <a
+                                key={i}
+                                href={card.href}
+                                className={`group flex flex-col gap-4 p-6 rounded-2xl border-2 ${c.border} ${c.bg} hover:scale-[1.02] transition-all duration-200`}
+                            >
+                                <div className="flex items-center gap-3">
+                                    <span className="text-3xl">{card.emoji}</span>
+                                    <div>
+                                        <p className="text-white font-bold text-base">{card.label}</p>
+                                        <p className={`text-xs mt-0.5 ${c.text}`}>{card.sublabel}</p>
+                                    </div>
+                                </div>
+                                <span className={`text-xs font-semibold ${c.text} group-hover:underline`}>
+                                    Explore {card.label} →
+                                </span>
+                            </a>
+                        )
+                    })}
                 </div>
-                <div className="mt-8 text-xs text-gray-700">
+
+                {/* ── Contact Sales section ── */}
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center">
+                    <p className="text-gray-400 text-sm mb-4 font-medium">Need help choosing? Talk to our sales team</p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                        <a
+                            href={`tel:${phone}`}
+                            className="flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold transition-colors w-full sm:w-auto justify-center"
+                        >
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            Call Sales — {phone}
+                        </a>
+                        <a
+                            href={`mailto:${email}`}
+                            className="flex items-center gap-2 px-6 py-3 rounded-xl border border-white/20 hover:bg-white/10 text-gray-300 text-sm font-semibold transition-colors w-full sm:w-auto justify-center"
+                        >
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            {email}
+                        </a>
+                    </div>
+                </div>
+
+                <p className="text-center mt-8 text-xs text-gray-700">
                     Powered by <span className="text-blue-500 font-semibold">DealerSite Pro</span>
-                </div>
+                </p>
             </div>
         </div>
     )
@@ -234,20 +290,23 @@ export default async function SitePage({ params }: SitePageProps) {
 
     const { sells_new_cars, sells_used_cars, brandFilter, brands, vehicles, usedCarSite, cyepro_api_key, logo_url, hero_image_url } = dealer
 
-    const isHybridDealer = sells_new_cars && sells_used_cars
+    const isHybridDealer    = sells_new_cars && sells_used_cars
+    const isMultiBrandNewOnly = sells_new_cars && !sells_used_cars && brands.length > 1
 
-    // ── Hybrid dealer on their MAIN URL → show portal landing page ───────────
-    // Each site is separate: brand URL = new cars, -used URL = used cars.
-    // The main slug is just a portal to navigate to either site.
-    if (isHybridDealer && !brandFilter && !usedCarSite) {
+    // ── Portal landing page for dealers with multiple sites ───────────────────
+    // Triggered for: hybrid dealers OR multi-brand new-car-only dealers
+    // on their MAIN URL (no brand/used suffix in slug).
+    if (!brandFilter && !usedCarSite && (isHybridDealer || isMultiBrandNewOnly)) {
         return (
-            <HybridLandingPage
+            <MultiSitePortal
                 dealerName={dealer.dealership_name}
                 location={dealer.location}
                 phone={dealer.phone}
                 email={dealer.email}
+                tagline={dealer.tagline}
                 slug={dealer.slug}
                 brands={brands}
+                isHybrid={isHybridDealer}
             />
         )
     }
