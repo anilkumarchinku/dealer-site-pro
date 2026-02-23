@@ -46,6 +46,7 @@ export function SiteDomainModal({ site, dealerId, dealerName, onClose }: Props) 
                 isOpen
                 onClose={() => setSubModal(null)}
                 dealerId={dealerId}
+                siteSlug={site.slug}
                 onSuccess={() => { setSubModal(null); onClose() }}
             />
         )

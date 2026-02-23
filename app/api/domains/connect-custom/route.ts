@@ -15,7 +15,7 @@ export async function POST(request: Request) {
         if (authErr) return authErr
 
         const body = await request.json()
-        const { dealerId, customDomain, templateId } = body
+        const { dealerId, customDomain, templateId, siteSlug } = body
 
         if (!dealerId || !customDomain) {
             return NextResponse.json(
@@ -81,6 +81,7 @@ export async function POST(request: Request) {
                 ssl_status: 'pending',
                 is_primary: false,
                 dns_verified: false,
+                site_slug: siteSlug ?? null,
             })
             .select()
             .single()

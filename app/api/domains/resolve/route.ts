@@ -34,7 +34,7 @@ export async function GET(request: Request) {
     // Look up by custom_domain in dealer_domains table
     const { data, error } = await supabase
         .from('dealer_domains')
-        .select('dealer_id, subdomain, custom_domain, status, dealers(slug, id)')
+        .select('dealer_id, subdomain, custom_domain, status, site_slug, dealers(slug, id)')
         .or(`custom_domain.eq.${domain},subdomain_url.eq.${domain}`)
         .eq('status', 'active')
         .limit(1)
@@ -64,8 +64,12 @@ export async function GET(request: Request) {
         return NextResponse.json({ error: 'Dealer not found' }, { status: 404 })
     }
 
+    // If a specific brand site was stored, use that slug (e.g. "shiv-motors-mahindra")
+    // so the custom domain routes directly to that site instead of the main dealer hub.
+    const resolvedSlug = data.site_slug ?? dealer.slug
+
     return NextResponse.json(
-        { slug: dealer.slug, dealerId: dealer.id },
+        { slug: resolvedSlug, dealerId: dealer.id },
         { headers: { 'Cache-Control': 'public, max-age=60, stale-while-revalidate=30' } }
     )
 }

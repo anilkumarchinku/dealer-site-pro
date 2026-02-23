@@ -13,12 +13,13 @@ interface Props {
     isOpen: boolean
     onClose: () => void
     dealerId: string
+    siteSlug?: string   // e.g. "shiv-motors-mahindra" — routes domain directly to this site
     onSuccess: () => void
 }
 
 type Step = 'enter-domain' | 'select-template' | 'payment' | 'dns-instructions' | 'verifying' | 'success' | 'failed'
 
-export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, onSuccess }: Props) {
+export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, siteSlug, onSuccess }: Props) {
     const [step, setStep] = useState<Step>('enter-domain')
     const [domain, setDomain] = useState('')
     const [selectedTemplate, setSelectedTemplate] = useState<TemplateStyle>('family')
@@ -46,7 +47,7 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, on
             const domainRes = await fetch('/api/domains/connect-custom', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ dealerId, customDomain: domain, templateId: selectedTemplate }),
+                body: JSON.stringify({ dealerId, customDomain: domain, templateId: selectedTemplate, siteSlug }),
             })
             const domainData = await domainRes.json()
 
