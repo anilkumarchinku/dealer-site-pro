@@ -102,16 +102,40 @@ export async function POST(request: Request) {
             body: testBody,
         })
 
+        let res: Response
         const startTime = Date.now()
-        const res = await fetch(
-            `${BASE_URL}/dynamicForms/search/vehicles/filterQueryApi`,
-            {
-                method: 'POST',
-                headers,
-                body: JSON.stringify(testBody),
-                cache: 'no-store',
-            },
-        )
+        try {
+            res = await fetch(
+                `${BASE_URL}/dynamicForms/search/vehicles/filterQueryApi`,
+                {
+                    method: 'POST',
+                    headers,
+                    body: JSON.stringify(testBody),
+                    cache: 'no-store',
+                },
+            )
+        } catch (fetchErr) {
+            const duration = Date.now() - startTime
+            const errMsg = fetchErr instanceof Error ? fetchErr.message : String(fetchErr)
+            diagnostics.steps.push({
+                step: 'api_network_error',
+                status: 'FAIL',
+                error: errMsg,
+                durationMs: duration,
+                hint: errMsg.includes('ENOTFOUND') || errMsg.includes('getaddrinfo')
+                    ? 'DNS resolution failed — api.cyepro.com may not exist or is unreachable'
+                    : errMsg.includes('ECONNREFUSED')
+                        ? 'Connection refused — the API server is not accepting connections'
+                        : errMsg.includes('ETIMEDOUT') || errMsg.includes('timeout')
+                            ? 'Connection timed out — the API server is not responding'
+                            : 'Network error — check if the API URL is correct',
+            })
+            return NextResponse.json({
+                success: false,
+                message: `Cannot reach api.cyepro.com: ${errMsg}`,
+                diagnostics,
+            })
+        }
         const duration = Date.now() - startTime
 
         diagnostics.steps.push({
@@ -120,7 +144,6 @@ export async function POST(request: Request) {
             httpStatus: res.status,
             statusText: res.statusText,
             durationMs: duration,
-            responseHeaders: Object.fromEntries(res.headers.entries()),
         })
 
         if (!res.ok) {

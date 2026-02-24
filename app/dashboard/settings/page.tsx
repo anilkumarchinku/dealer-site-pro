@@ -227,14 +227,27 @@ export default function SettingsPage() {
                 body: JSON.stringify({ dealerId }),
             });
             const json = await res.json();
+
+            // Extract detailed error from diagnostics steps
+            let detailedMessage = json.message || "";
+            if (!json.success && json.diagnostics?.steps) {
+                const failedStep = json.diagnostics.steps.find((s: any) => s.status === "FAIL");
+                if (failedStep) {
+                    detailedMessage = `Step "${failedStep.step}" failed: ${failedStep.error || JSON.stringify(failedStep)}`;
+                    if (failedStep.httpStatus) detailedMessage += ` (HTTP ${failedStep.httpStatus})`;
+                    if (failedStep.body) detailedMessage += ` — ${failedStep.body.substring(0, 200)}`;
+                }
+            }
+
             setCyeproTestResult({
                 success: json.success,
-                message: json.message || (json.success ? "Connected!" : "Connection failed. Check your API key."),
+                message: detailedMessage || (json.success ? "Connected!" : "Connection failed. Check your API key."),
             });
             // Log full diagnostics to console for debugging
             console.log("[Cyepro Test] Full diagnostics:", json.diagnostics);
         } catch (err) {
-            setCyeproTestResult({ success: false, message: "Network error testing connection." });
+            const errMsg = err instanceof Error ? err.message : String(err);
+            setCyeproTestResult({ success: false, message: `Network error: ${errMsg}` });
         } finally {
             setCyeproTesting(false);
         }
