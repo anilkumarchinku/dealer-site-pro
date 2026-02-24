@@ -6,52 +6,94 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Eye, EyeOff, Loader2, AlertCircle } from "lucide-react";
-import { loginUser } from "@/lib/db/auth";
+import { Loader2, AlertCircle, CheckCircle, Mail } from "lucide-react";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
+import { verifyOtpAndLogin } from "@/lib/actions/auth-otp";
 
 export default function LoginPage() {
     const router = useRouter();
     const { setDealerId } = useOnboardingStore();
 
+    const [step, setStep] = useState<'email' | 'otp'>('email');
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [showPassword, setShowPassword] = useState(false);
+    const [otp, setOtp] = useState("");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
+    const [success, setSuccess] = useState(false);
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    // Step 1: Send OTP to email
+    const handleSendOtp = async (e: React.FormEvent) => {
         e.preventDefault();
         setError(null);
 
-        if (!email.trim() || !password) {
-            setError("Please enter your email and password");
+        if (!email.trim() || !email.includes('@')) {
+            setError("Please enter a valid email");
             return;
         }
 
         setLoading(true);
         try {
-            const result = await loginUser(email.trim().toLowerCase(), password);
+            const response = await fetch('/api/auth/send-otp', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: email.trim().toLowerCase(), purpose: 'login' }),
+            });
 
-            if (!result.success) {
-                setError(result.error ?? "Invalid email or password");
+            const data = await response.json();
+
+            if (!response.ok) {
+                setError(data.error || "Failed to send OTP");
                 return;
             }
 
-            if (result.dealerId) setDealerId(result.dealerId);
-
-            // Use window.location.href (full reload) so the new Supabase session
-            // cookie is guaranteed to be committed before the next request hits
-            // the middleware. router.push() is a soft nav that races with cookie
-            // flushing and the middleware bounces the user back to login.
-            if (result.onboardingComplete) {
-                window.location.href = "/dashboard";
-            } else {
-                window.location.href = "/onboarding";
-            }
+            setSuccess(true);
+            setStep('otp');
+            setError(null);
+        } catch (err) {
+            const msg = err instanceof Error ? err.message : String(err);
+            setError(msg || "Failed to send OTP");
         } finally {
             setLoading(false);
         }
+    };
+
+    // Step 2: Verify OTP and login
+    const handleVerifyOtp = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setError(null);
+
+        if (!otp || otp.length !== 6) {
+            setError("Please enter a 6-digit code");
+            return;
+        }
+
+        setLoading(true);
+        try {
+            const result = await verifyOtpAndLogin(email.trim().toLowerCase(), otp);
+
+            if (!result.success) {
+                setError(result.error || "Invalid OTP code");
+                return;
+            }
+
+            // Redirect to dashboard or onboarding
+            if (result.redirectTo) {
+                window.location.href = result.redirectTo;
+            } else {
+                window.location.href = "/dashboard";
+            }
+        } catch (err) {
+            const msg = err instanceof Error ? err.message : String(err);
+            setError(msg || "Verification failed");
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleResendOtp = async () => {
+        setError(null);
+        setSuccess(false);
+        await handleSendOtp(new Event('submit') as any);
     };
 
     return (
@@ -62,83 +104,128 @@ export default function LoginPage() {
             </CardHeader>
 
             <CardContent className="pt-4">
-                <form onSubmit={handleSubmit} className="space-y-4">
-                    {/* Email */}
-                    <div className="space-y-1.5">
-                        <Label htmlFor="email">Email Address</Label>
-                        <Input
-                            id="email"
-                            type="email"
-                            placeholder="rajesh@rammotors.in"
-                            value={email}
-                            onChange={e => setEmail(e.target.value)}
-                            autoComplete="email"
-                            disabled={loading}
-                        />
-                    </div>
-
-                    {/* Password */}
-                    <div className="space-y-1.5">
-                        <div className="flex items-center justify-between">
-                            <Label htmlFor="password">Password</Label>
-                            <Link
-                                href="/auth/forgot-password"
-                                className="text-xs text-blue-600 dark:text-blue-400 hover:underline"
-                            >
-                                Forgot password?
-                            </Link>
-                        </div>
-                        <div className="relative">
+                {step === 'email' ? (
+                    // Step 1: Email Entry
+                    <form onSubmit={handleSendOtp} className="space-y-4">
+                        <div className="space-y-1.5">
+                            <Label htmlFor="email">Email Address</Label>
                             <Input
-                                id="password"
-                                type={showPassword ? "text" : "password"}
-                                placeholder="Enter your password"
-                                value={password}
-                                onChange={e => setPassword(e.target.value)}
-                                autoComplete="current-password"
+                                id="email"
+                                type="email"
+                                placeholder="rajesh@rammotors.in"
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
+                                autoComplete="email"
                                 disabled={loading}
-                                className="pr-10"
                             />
+                            <p className="text-xs text-muted-foreground">
+                                We'll send a 6-digit code to this email
+                            </p>
+                        </div>
+
+                        {/* Error */}
+                        {error && (
+                            <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-red-500/10 border border-red-500/20 text-sm text-red-600 dark:text-red-400">
+                                <AlertCircle className="w-4 h-4 shrink-0" />
+                                <span>{error}</span>
+                            </div>
+                        )}
+
+                        {/* Submit */}
+                        <Button
+                            type="submit"
+                            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                            size="lg"
+                            disabled={loading}
+                        >
+                            {loading ? (
+                                <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Sending code…</>
+                            ) : (
+                                <><Mail className="w-4 h-4 mr-2" /> Send verification code</>
+                            )}
+                        </Button>
+
+                        <p className="text-center text-sm text-muted-foreground">
+                            Don't have an account?{" "}
+                            <Link href="/auth/register" className="font-medium text-blue-600 dark:text-blue-400 hover:underline">
+                                Create one free
+                            </Link>
+                        </p>
+                    </form>
+                ) : (
+                    // Step 2: OTP Verification
+                    <form onSubmit={handleVerifyOtp} className="space-y-4">
+                        {success && (
+                            <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-sm text-emerald-600 dark:text-emerald-400">
+                                <CheckCircle className="w-4 h-4 shrink-0" />
+                                <span>Code sent to {email}</span>
+                            </div>
+                        )}
+
+                        <div className="space-y-1.5">
+                            <Label htmlFor="otp">6-Digit Code</Label>
+                            <Input
+                                id="otp"
+                                type="text"
+                                placeholder="000000"
+                                value={otp}
+                                onChange={e => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))}
+                                maxLength={6}
+                                disabled={loading}
+                                className="text-center text-2xl tracking-widest font-mono"
+                                autoComplete="off"
+                                autoFocus
+                            />
+                            <p className="text-xs text-muted-foreground">
+                                Check your email for the 6-digit code. It expires in 10 minutes.
+                            </p>
+                        </div>
+
+                        {/* Error */}
+                        {error && (
+                            <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-red-500/10 border border-red-500/20 text-sm text-red-600 dark:text-red-400">
+                                <AlertCircle className="w-4 h-4 shrink-0" />
+                                <span>{error}</span>
+                            </div>
+                        )}
+
+                        {/* Submit */}
+                        <Button
+                            type="submit"
+                            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                            size="lg"
+                            disabled={loading || otp.length !== 6}
+                        >
+                            {loading ? (
+                                <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Verifying…</>
+                            ) : (
+                                "Verify & Sign In"
+                            )}
+                        </Button>
+
+                        {/* Resend */}
+                        <div className="text-center">
                             <button
                                 type="button"
-                                onClick={() => setShowPassword(p => !p)}
-                                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                                tabIndex={-1}
+                                onClick={handleResendOtp}
+                                disabled={loading}
+                                className="text-sm text-muted-foreground hover:text-foreground"
                             >
-                                {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                                Didn't receive the code?{" "}
+                                <span className="font-medium text-blue-600 dark:text-blue-400 hover:underline">Resend</span>
                             </button>
                         </div>
-                    </div>
 
-                    {/* Error */}
-                    {error && (
-                        <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-red-500/10 border border-red-500/20 text-sm text-red-600 dark:text-red-400">
-                            <AlertCircle className="w-4 h-4 shrink-0" />
-                            <span>{error}</span>
-                        </div>
-                    )}
-
-                    {/* Submit */}
-                    <Button
-                        type="submit"
-                        className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
-                        size="lg"
-                        disabled={loading}
-                    >
-                        {loading ? (
-                            <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Signing in…</>
-                        ) : (
-                            "Sign In"
-                        )}
-                    </Button>
-
-                    <p className="text-center text-sm text-muted-foreground">
-                        Don't have an account?{" "}
-                        <Link href="/auth/register" className="font-medium text-blue-600 dark:text-blue-400 hover:underline">
-                            Create one free
-                        </Link>
-                    </p>
-                </form>
+                        {/* Back */}
+                        <button
+                            type="button"
+                            onClick={() => { setStep('email'); setOtp(''); setError(null); setSuccess(false); }}
+                            className="w-full text-sm text-muted-foreground hover:text-foreground py-2"
+                        >
+                            ← Change email
+                        </button>
+                    </form>
+                )}
             </CardContent>
         </Card>
     );

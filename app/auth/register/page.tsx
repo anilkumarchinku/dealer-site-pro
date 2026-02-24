@@ -5,27 +5,24 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Eye, EyeOff, Loader2, AlertCircle, CheckCircle, Mail } from "lucide-react";
-import { registerUser } from "@/lib/db/auth";
+import { Loader2, AlertCircle, CheckCircle, Mail } from "lucide-react";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
+import { verifyOtpAndRegister } from "@/lib/actions/auth-otp";
 
 export default function RegisterPage() {
-    const { setDealerId, updateData, reset } = useOnboardingStore();
+    const { updateData, reset } = useOnboardingStore();
 
+    const [step, setStep] = useState<'form' | 'otp'>('form');
     const [form, setForm] = useState({
         fullName: "",
         mobileNumber: "",
         dealershipName: "",
         email: "",
-        password: "",
-        confirmPassword: "",
     });
-    const [showPassword, setShowPassword] = useState(false);
-    const [showConfirm, setShowConfirm] = useState(false);
+    const [otp, setOtp] = useState("");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [success, setSuccess] = useState(false);
-    const [needsEmailConfirmation, setNeedsEmailConfirmation] = useState(false);
 
     const update = (field: string, value: string) =>
         setForm(prev => ({ ...prev, [field]: value }));
@@ -38,12 +35,11 @@ export default function RegisterPage() {
         if (!form.dealershipName.trim())  return "Dealership name is required";
         if (!form.email.trim())           return "Email is required";
         if (!/\S+@\S+\.\S+/.test(form.email)) return "Enter a valid email address";
-        if (form.password.length < 8)     return "Password must be at least 8 characters";
-        if (form.password !== form.confirmPassword) return "Passwords do not match";
         return null;
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    // Step 1: Send OTP
+    const handleSendOtp = async (e: React.FormEvent) => {
         e.preventDefault();
         setError(null);
 
@@ -52,42 +48,80 @@ export default function RegisterPage() {
 
         setLoading(true);
         try {
-            const result = await registerUser({
-                fullName:       form.fullName.trim(),
-                mobileNumber:   form.mobileNumber.trim().replace(/\s/g, ""),
-                dealershipName: form.dealershipName.trim(),
-                email:          form.email.trim().toLowerCase(),
-                password:       form.password,
+            const response = await fetch('/api/auth/send-otp', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: form.email.trim().toLowerCase(), purpose: 'register' }),
             });
 
-            if (!result.success) {
-                setError(result.error ?? "Registration failed. Please try again.");
+            const data = await response.json();
+
+            if (!response.ok) {
+                setError(data.error || "Failed to send OTP");
                 return;
             }
 
-            // Pre-fill onboarding store with registration data
+            setSuccess(true);
+            setStep('otp');
+            setError(null);
+        } catch (err) {
+            const msg = err instanceof Error ? err.message : String(err);
+            setError(msg || "Failed to send OTP");
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // Step 2: Verify OTP and register
+    const handleVerifyOtp = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setError(null);
+
+        if (!otp || otp.length !== 6) {
+            setError("Please enter a 6-digit code");
+            return;
+        }
+
+        setLoading(true);
+        try {
+            const result = await verifyOtpAndRegister(
+                form.email.trim().toLowerCase(),
+                otp,
+                {
+                    fullName: form.fullName.trim(),
+                    mobileNumber: form.mobileNumber.trim().replace(/\s/g, ""),
+                    dealershipName: form.dealershipName.trim(),
+                }
+            );
+
+            if (!result.success) {
+                setError(result.error || "Registration failed");
+                return;
+            }
+
+            // Pre-fill onboarding store
             reset();
-            if (result.dealerId) setDealerId(result.dealerId);
             updateData({
                 dealershipName: form.dealershipName.trim(),
                 phone:          form.mobileNumber.trim().replace(/\s/g, ""),
                 email:          form.email.trim().toLowerCase(),
             });
 
-            if (result.needsEmailConfirmation) {
-                setNeedsEmailConfirmation(true);
-                return;
-            }
-
+            // Redirect to onboarding
             setSuccess(true);
-            // Small delay so user sees success state, then full reload to /onboarding
-            // (window.location.href ensures the Supabase session cookie is flushed
-            //  before the request hits middleware — router.push races with it)
             setTimeout(() => { window.location.href = "/onboarding"; }, 1000);
-
+        } catch (err) {
+            const msg = err instanceof Error ? err.message : String(err);
+            setError(msg || "Verification failed");
         } finally {
             setLoading(false);
         }
+    };
+
+    const handleResendOtp = async () => {
+        setError(null);
+        setSuccess(false);
+        await handleSendOtp(new Event('submit') as any);
     };
 
     return (
@@ -98,36 +132,9 @@ export default function RegisterPage() {
             </CardHeader>
 
             <CardContent className="pt-4">
-                {needsEmailConfirmation ? (
-                    <div className="flex flex-col items-center gap-3 py-8 text-center">
-                        <div className="p-4 rounded-full bg-blue-500/10">
-                            <Mail className="w-10 h-10 text-blue-500" />
-                        </div>
-                        <h3 className="font-semibold text-lg">Check your email</h3>
-                        <p className="text-sm text-muted-foreground max-w-xs">
-                            We sent a confirmation link to <strong>{form.email}</strong>.
-                            Click the link to verify your email and continue setup.
-                        </p>
-                        <p className="text-xs text-muted-foreground">
-                            Already confirmed?{" "}
-                            <Link href="/auth/login" className="text-blue-600 dark:text-blue-400 hover:underline">
-                                Sign in
-                            </Link>
-                        </p>
-                    </div>
-                ) : success ? (
-                    <div className="flex flex-col items-center gap-3 py-8 text-center">
-                        <div className="p-4 rounded-full bg-emerald-500/10">
-                            <CheckCircle className="w-10 h-10 text-emerald-500" />
-                        </div>
-                        <h3 className="font-semibold text-lg">Account Created!</h3>
-                        <p className="text-sm text-muted-foreground">
-                            Redirecting you to set up your dealership…
-                        </p>
-                        <Loader2 className="w-5 h-5 animate-spin text-muted-foreground" />
-                    </div>
-                ) : (
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                {step === 'form' ? (
+                    // Step 1: Registration Form
+                    <form onSubmit={handleSendOtp} className="space-y-4">
                         {/* Full Name */}
                         <div className="space-y-1.5">
                             <Label htmlFor="fullName">Full Name</Label>
@@ -136,36 +143,29 @@ export default function RegisterPage() {
                                 placeholder="Rajesh Kumar"
                                 value={form.fullName}
                                 onChange={e => update("fullName", e.target.value)}
-                                autoComplete="name"
                                 disabled={loading}
                             />
                         </div>
 
                         {/* Mobile Number */}
                         <div className="space-y-1.5">
-                            <Label htmlFor="mobileNumber">Mobile Number</Label>
-                            <div className="flex gap-2">
-                                <div className="flex items-center px-3 rounded-lg border border-border bg-muted/30 text-sm text-muted-foreground shrink-0">
-                                    +91
-                                </div>
-                                <Input
-                                    id="mobileNumber"
-                                    placeholder="98765 43210"
-                                    value={form.mobileNumber}
-                                    onChange={e => update("mobileNumber", e.target.value.replace(/[^\d\s]/g, ""))}
-                                    maxLength={12}
-                                    autoComplete="tel"
-                                    disabled={loading}
-                                />
-                            </div>
+                            <Label htmlFor="mobile">Mobile Number</Label>
+                            <Input
+                                id="mobile"
+                                placeholder="98765 43210"
+                                value={form.mobileNumber}
+                                onChange={e => update("mobileNumber", e.target.value)}
+                                disabled={loading}
+                            />
+                            <p className="text-xs text-muted-foreground">10-digit Indian mobile number</p>
                         </div>
 
                         {/* Dealership Name */}
                         <div className="space-y-1.5">
-                            <Label htmlFor="dealershipName">Dealership Name</Label>
+                            <Label htmlFor="dealership">Dealership Name</Label>
                             <Input
-                                id="dealershipName"
-                                placeholder="Ram Motors"
+                                id="dealership"
+                                placeholder="Raj Motors"
                                 value={form.dealershipName}
                                 onChange={e => update("dealershipName", e.target.value)}
                                 disabled={loading}
@@ -174,66 +174,16 @@ export default function RegisterPage() {
 
                         {/* Email */}
                         <div className="space-y-1.5">
-                            <Label htmlFor="email">Email Address</Label>
+                            <Label htmlFor="email">Business Email</Label>
                             <Input
                                 id="email"
                                 type="email"
-                                placeholder="rajesh@rammotors.in"
+                                placeholder="rajesh@rajmotors.in"
                                 value={form.email}
                                 onChange={e => update("email", e.target.value)}
-                                autoComplete="email"
                                 disabled={loading}
                             />
-                        </div>
-
-                        {/* Password */}
-                        <div className="space-y-1.5">
-                            <Label htmlFor="password">Password</Label>
-                            <div className="relative">
-                                <Input
-                                    id="password"
-                                    type={showPassword ? "text" : "password"}
-                                    placeholder="Min. 8 characters"
-                                    value={form.password}
-                                    onChange={e => update("password", e.target.value)}
-                                    autoComplete="new-password"
-                                    disabled={loading}
-                                    className="pr-10"
-                                />
-                                <button
-                                    type="button"
-                                    onClick={() => setShowPassword(p => !p)}
-                                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                                    tabIndex={-1}
-                                >
-                                    {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-                                </button>
-                            </div>
-                        </div>
-
-                        {/* Confirm Password */}
-                        <div className="space-y-1.5">
-                            <Label htmlFor="confirmPassword">Confirm Password</Label>
-                            <div className="relative">
-                                <Input
-                                    id="confirmPassword"
-                                    type={showConfirm ? "text" : "password"}
-                                    placeholder="Repeat your password"
-                                    value={form.confirmPassword}
-                                    onChange={e => update("confirmPassword", e.target.value)}
-                                    autoComplete="new-password"
-                                    disabled={loading}
-                                    className="pr-10"
-                                />
-                                <button
-                                    type="button"
-                                    onClick={() => setShowConfirm(p => !p)}
-                                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                                    tabIndex={-1}
-                                >
-                                    {showConfirm ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-                                </button>
-                            </div>
+                            <p className="text-xs text-muted-foreground">We'll send a 6-digit code here</p>
                         </div>
 
                         {/* Error */}
@@ -252,9 +202,9 @@ export default function RegisterPage() {
                             disabled={loading}
                         >
                             {loading ? (
-                                <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Creating account…</>
+                                <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Sending code…</>
                             ) : (
-                                "Create Free Account"
+                                <><Mail className="w-4 h-4 mr-2" /> Continue</>
                             )}
                         </Button>
 
@@ -264,6 +214,85 @@ export default function RegisterPage() {
                                 Sign in
                             </Link>
                         </p>
+
+                        <p className="text-xs text-muted-foreground text-center">
+                            By signing up, you agree to our{" "}
+                            <Link href="/terms" className="hover:underline">Terms of Service</Link> and{" "}
+                            <Link href="/privacy" className="hover:underline">Privacy Policy</Link>
+                        </p>
+                    </form>
+                ) : (
+                    // Step 2: OTP Verification
+                    <form onSubmit={handleVerifyOtp} className="space-y-4">
+                        {success && (
+                            <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-sm text-emerald-600 dark:text-emerald-400">
+                                <CheckCircle className="w-4 h-4 shrink-0" />
+                                <span>Code sent to {form.email}</span>
+                            </div>
+                        )}
+
+                        <div className="space-y-1.5">
+                            <Label htmlFor="otp">6-Digit Code</Label>
+                            <Input
+                                id="otp"
+                                type="text"
+                                placeholder="000000"
+                                value={otp}
+                                onChange={e => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))}
+                                maxLength={6}
+                                disabled={loading}
+                                className="text-center text-2xl tracking-widest font-mono"
+                                autoComplete="off"
+                                autoFocus
+                            />
+                            <p className="text-xs text-muted-foreground">
+                                Check your email for the 6-digit code. It expires in 10 minutes.
+                            </p>
+                        </div>
+
+                        {/* Error */}
+                        {error && (
+                            <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-red-500/10 border border-red-500/20 text-sm text-red-600 dark:text-red-400">
+                                <AlertCircle className="w-4 h-4 shrink-0" />
+                                <span>{error}</span>
+                            </div>
+                        )}
+
+                        {/* Submit */}
+                        <Button
+                            type="submit"
+                            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                            size="lg"
+                            disabled={loading || otp.length !== 6}
+                        >
+                            {loading ? (
+                                <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Verifying…</>
+                            ) : (
+                                "Verify & Create Account"
+                            )}
+                        </Button>
+
+                        {/* Resend */}
+                        <div className="text-center">
+                            <button
+                                type="button"
+                                onClick={handleResendOtp}
+                                disabled={loading}
+                                className="text-sm text-muted-foreground hover:text-foreground"
+                            >
+                                Didn't receive the code?{" "}
+                                <span className="font-medium text-blue-600 dark:text-blue-400 hover:underline">Resend</span>
+                            </button>
+                        </div>
+
+                        {/* Back */}
+                        <button
+                            type="button"
+                            onClick={() => { setStep('form'); setOtp(''); setError(null); setSuccess(false); }}
+                            className="w-full text-sm text-muted-foreground hover:text-foreground py-2"
+                        >
+                            ← Change email
+                        </button>
                     </form>
                 )}
             </CardContent>

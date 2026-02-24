@@ -215,3 +215,51 @@ export async function sendSSLRenewalNotification(params: EmailParams & { status:
     console.log(`[Email] SSL renewal ${status} notification sent to ${to} for ${domain}`)
     return { success: true }
 }
+
+/**
+ * Sends OTP code via email for login/registration
+ */
+export async function sendOtpEmail(
+    to: string,
+    subject: string,
+    html: string
+): Promise<{ success: boolean; error?: string }> {
+    try {
+        const resendApiKey = process.env.RESEND_API_KEY
+
+        if (!resendApiKey) {
+            console.warn('[OTP Email] RESEND_API_KEY not configured, logging to console')
+            console.log(`[OTP Email] To: ${to}`)
+            console.log(`[OTP Email] Subject: ${subject}`)
+            console.log(`[OTP Email] HTML: ${html}`)
+            return { success: true }
+        }
+
+        // Send via Resend API
+        const response = await fetch('https://api.resend.com/emails', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${resendApiKey}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                from: 'DealerSite Pro <auth@dealersitepro.com>',
+                to,
+                subject,
+                html,
+            }),
+        })
+
+        if (!response.ok) {
+            const error = await response.text()
+            throw new Error(`Resend API error: ${error}`)
+        }
+
+        console.log(`[OTP Email] Sent successfully to ${to}`)
+        return { success: true }
+    } catch (error) {
+        const msg = error instanceof Error ? error.message : String(error)
+        console.error('[OTP Email] Failed:', msg)
+        return { success: false, error: msg }
+    }
+}
