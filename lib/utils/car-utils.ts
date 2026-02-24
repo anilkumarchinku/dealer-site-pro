@@ -30,29 +30,52 @@ export function formatPrice(price: number | null): string {
 }
 
 /**
+ * Format a lakh/crore number cleanly — drops unnecessary decimals
+ * e.g. 5.00 → "5", 5.50 → "5.50", 5.99 → "5.99"
+ */
+function formatLakhValue(lakhs: number): string {
+    if (lakhs >= 100) {
+        const crores = lakhs / 100;
+        const formatted = crores % 1 === 0 ? crores.toFixed(0) : crores.toFixed(2).replace(/0$/, '');
+        return `${formatted} Cr`;
+    }
+    const formatted = lakhs % 1 === 0 ? lakhs.toFixed(0) : lakhs.toFixed(2).replace(/0$/, '');
+    return `${formatted} L`;
+}
+
+/**
  * Format price in lakhs (Indian numbering system)
+ * e.g. 500000 → "₹5 L", 1250000 → "₹12.50 L", 15000000 → "₹1.50 Cr"
  */
 export function formatPriceInLakhs(price: number | null): string {
     if (price === null) return 'N/A';
     const lakhs = price / 100000;
     if (lakhs >= 1) {
-        return `₹${lakhs.toFixed(2)} Lakh${lakhs > 1 ? 's' : ''}`;
+        return `₹${formatLakhValue(lakhs)}`;
     }
     return formatPrice(price);
 }
 
 /**
  * Get price range display string
+ * e.g. "₹5 - 8 L" or "₹12.50 L - 1.50 Cr"
  */
 export function getPriceRangeDisplay(min: number, max: number): string {
     const minLakhs = min / 100000;
     const maxLakhs = max / 100000;
 
     if (minLakhs === maxLakhs) {
-        return `₹${minLakhs.toFixed(2)} Lakh`;
+        return `₹${formatLakhValue(minLakhs)}`;
     }
 
-    return `₹${minLakhs.toFixed(2)} - ${maxLakhs.toFixed(2)} Lakh`;
+    // If both in same unit (lakhs or crores), share the suffix
+    if (minLakhs < 100 && maxLakhs < 100) {
+        const minStr = minLakhs % 1 === 0 ? minLakhs.toFixed(0) : minLakhs.toFixed(2).replace(/0$/, '');
+        const maxStr = maxLakhs % 1 === 0 ? maxLakhs.toFixed(0) : maxLakhs.toFixed(2).replace(/0$/, '');
+        return `₹${minStr} - ${maxStr} L`;
+    }
+
+    return `₹${formatLakhValue(minLakhs)} - ${formatLakhValue(maxLakhs)}`;
 }
 
 /**

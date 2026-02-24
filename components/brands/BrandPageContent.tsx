@@ -176,43 +176,41 @@ export function BrandPageContent({ brand, cars, brandInfo }: BrandPageContentPro
                         <h2 className="text-xl font-bold mb-4">{brand} Price Range</h2>
                         <Card>
                             <CardContent className="p-5">
-                                <div className="space-y-3">
+                                <div className="space-y-4">
                                     {cars
                                         .sort((a, b) => (a.pricing.exShowroom.min || 0) - (b.pricing.exShowroom.min || 0))
                                         .map((car) => {
                                             const min = car.pricing.exShowroom.min || 0;
                                             const max = car.pricing.exShowroom.max || min;
                                             const maxBrandPrice = expensive || 5000000;
-                                            const widthPct = maxBrandPrice > 0 ? Math.max(5, ((max - min) / maxBrandPrice) * 100) : 5;
-                                            const leftPct = maxBrandPrice > 0 ? (min / maxBrandPrice) * 100 : 0;
+                                            const barEnd = maxBrandPrice > 0 ? Math.max(8, (max / maxBrandPrice) * 100) : 8;
 
                                             return (
-                                                <div key={car.id} className="flex items-center gap-4">
-                                                    <Link
-                                                        href={`/cars/${car.id}`}
-                                                        className="w-40 text-sm font-medium hover:text-primary truncate shrink-0"
-                                                    >
-                                                        {car.model}
-                                                    </Link>
-                                                    <div className="flex-1 relative h-6">
-                                                        <div
-                                                            className="absolute top-1 h-4 rounded-full overflow-hidden"
-                                                            style={{
-                                                                left: `${leftPct}%`,
-                                                                width: `${Math.min(widthPct, 100 - leftPct)}%`,
-                                                            }}
+                                                <div key={car.id}>
+                                                    <div className="flex items-center justify-between mb-1.5">
+                                                        <Link
+                                                            href={`/cars/${car.id}`}
+                                                            className="text-sm font-semibold hover:text-primary transition-colors"
                                                         >
-                                                            <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-primary/70 rounded-full" />
-                                                        </div>
+                                                            {car.model}
+                                                        </Link>
+                                                        <span className="text-sm font-bold text-primary">
+                                                            {formatPriceInLakhs(min)}
+                                                            {max !== min && <span className="text-muted-foreground font-normal"> — </span>}
+                                                            {max !== min && formatPriceInLakhs(max)}
+                                                        </span>
                                                     </div>
-                                                    <span className="text-xs text-muted-foreground w-36 text-right shrink-0">
-                                                        {formatPriceInLakhs(min)}
-                                                        {max !== min && ` - ${formatPriceInLakhs(max)}`}
-                                                    </span>
+                                                    <div className="w-full bg-muted/50 rounded-full h-2">
+                                                        <div
+                                                            className="h-2 rounded-full bg-gradient-to-r from-primary/60 to-primary"
+                                                            style={{ width: `${Math.min(barEnd, 100)}%` }}
+                                                        />
+                                                    </div>
                                                 </div>
                                             );
                                         })}
                                 </div>
+                                <p className="text-[11px] text-muted-foreground mt-4">* Ex-showroom prices. Actual prices may vary by city.</p>
                             </CardContent>
                         </Card>
                     </div>
