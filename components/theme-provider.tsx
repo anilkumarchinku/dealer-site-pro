@@ -26,6 +26,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         const initial: Theme = stored ?? (prefersDark ? 'dark' : 'light')
         applyTheme(initial)
         setThemeState(initial)
+        return;
     }, [])
 
     function applyTheme(next: Theme) {

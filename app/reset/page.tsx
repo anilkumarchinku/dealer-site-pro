@@ -14,6 +14,7 @@ export default function ResetPage() {
         setTimeout(() => {
             router.push("/onboarding");
         }, 1000);
+        return;
     }, [router]);
 
     return (

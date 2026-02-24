@@ -38,6 +38,7 @@ export function PropagationTracker({
     useEffect(() => {
         // Initial check
         checkPropagation();
+        return;
     }, []);
 
     useEffect(() => {
@@ -48,6 +49,7 @@ export function PropagationTracker({
 
             return () => clearInterval(interval);
         }
+        return;
     }, [autoCheckEnabled, propagationStatus]);
 
     const checkPropagation = async () => {

@@ -90,11 +90,13 @@ export default function SiteEditorPage() {
             }
         }
         selfInit()
+        return;
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     useEffect(() => {
         if (dealerId) loadEditorData(dealerId)
+        return;
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dealerId, brandSlug])
 

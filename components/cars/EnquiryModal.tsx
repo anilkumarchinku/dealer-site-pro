@@ -63,6 +63,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb' }
                     console.error('Error fetching detailed car info:', error);
                 });
         }
+        return;
     }, [open, car]);
 
     const handleSubmit = async (e: React.FormEvent) => {

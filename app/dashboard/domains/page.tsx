@@ -64,6 +64,7 @@ export default function DomainSettingsPage() {
 
     useEffect(() => {
         if (dealerId) fetchDomains()
+        return;
     }, [dealerId])
 
     async function fetchDomains() {

@@ -117,6 +117,7 @@ export default function WebsiteLiveBanner({
             }
         }
         load()
+        return;
     }, [dealerId])
 
     const isLive  = deployment?.status === 'ready' && !!deployment?.site_url

@@ -87,6 +87,7 @@ export default function DeploymentPage() {
             }
         }
         load()
+        return;
     }, [dealerId])
 
     const [state, setState] = useState<DeployState>({

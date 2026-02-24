@@ -52,6 +52,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false }: Car
 
         const makes = searchParams.get('make')?.split(',') || [];
         setSelectedMakes(makes);
+        return;
 
         // ... similarly for others if needed
     }, [searchParams]);

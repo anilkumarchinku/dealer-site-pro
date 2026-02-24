@@ -145,6 +145,7 @@ export default function BulkUploadPage() {
             setParseErrors(errors)
         }
         reader.readAsText(file)
+        return;
     }, [])
 
     const handleDrop = (e: React.DragEvent) => {

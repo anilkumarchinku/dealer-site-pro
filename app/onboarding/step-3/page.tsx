@@ -98,6 +98,7 @@ export default function Step3Page() {
 
     useEffect(() => {
         setStep(3);
+        return;
     }, [setStep]);
 
     return (

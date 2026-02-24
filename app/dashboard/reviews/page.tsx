@@ -21,6 +21,7 @@ export default function ReviewsPage() {
         fetchReviews(dealerId)
             .then(setReviews)
             .finally(() => setLoading(false));
+            return;
     }, [dealerId]);
 
     const displayReviews = reviews;

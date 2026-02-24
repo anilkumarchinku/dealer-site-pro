@@ -42,6 +42,7 @@ export default function Step4Page() {
 
     useEffect(() => {
         setStep(4);
+        return;
     }, [setStep]);
 
     // Get smart recommendation for the user's brands

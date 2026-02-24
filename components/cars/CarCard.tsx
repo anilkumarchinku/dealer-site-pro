@@ -70,6 +70,7 @@ export function CarCard({
         };
 
         fetchSpecs();
+        return;
     }, [car.make, car.model]);
 
     const exShowroom = car.pricing?.exShowroom ?? { min: null, max: null }

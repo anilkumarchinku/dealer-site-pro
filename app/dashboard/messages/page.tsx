@@ -43,6 +43,7 @@ export default function MessagesPage() {
 
     useEffect(() => {
         if (dealerId) load();
+        return;
     }, [dealerId]); // eslint-disable-line
 
     const displayMessages = messages.filter(m =>

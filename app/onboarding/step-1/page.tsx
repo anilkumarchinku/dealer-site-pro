@@ -94,6 +94,7 @@ export default function Step1Page() {
         if (!slugEdited && formData.dealershipName) {
             setSiteSlug(toSlug(formData.dealershipName));
         }
+        return;
     }, [formData.dealershipName, slugEdited]);
 
     // Debounced slug availability check

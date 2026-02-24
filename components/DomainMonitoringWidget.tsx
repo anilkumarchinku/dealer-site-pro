@@ -21,6 +21,7 @@ export default function DomainMonitoringWidget({ dealerId }: { dealerId: string 
 
     useEffect(() => {
         fetchStats()
+        return;
     }, [dealerId])
 
     async function fetchStats() {

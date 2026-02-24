@@ -28,6 +28,7 @@ export default function Step5Page() {
 
     useEffect(() => {
         setStep(5);
+        return;
     }, [setStep]);
 
     // Update store when config changes

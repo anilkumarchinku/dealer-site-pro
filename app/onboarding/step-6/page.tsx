@@ -23,6 +23,7 @@ export default function Step6Page() {
 
     useEffect(() => {
         setStep(6);
+        return;
     }, [setStep]);
 
     const handleFinish = async () => {

@@ -69,6 +69,7 @@ export function QuickViewModal({
                     setLoading(false);
                 });
         }
+        return;
     }, [open, car]);
 
     if (!car) return null;

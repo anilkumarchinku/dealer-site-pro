@@ -72,6 +72,7 @@ export default function DashboardPage() {
             setRecentLeads(leads.slice(0, 4));
             setTopVehicles(vehicles);
         }).catch(() => {}).finally(() => setLeadsLoading(false));
+        return;
     }, [dealerId]);
 
     const fmt = (n: number) => n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n);

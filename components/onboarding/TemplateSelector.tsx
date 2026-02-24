@@ -208,6 +208,7 @@ export function TemplateSelector({
       const result = validateCombination(primaryBrand, selectedTemplate);
       setValidation(result);
     }
+    return;
   }, [primaryBrand, selectedTemplate]);
 
   return (

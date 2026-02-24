@@ -33,6 +33,7 @@ export default function AnalyticsPage() {
             setSummary(s);
             setTopVehicles(tv);
         }).finally(() => setLoading(false));
+        return;
     }, [dealerId, dateRange, useDB]);
 
     // Format large numbers

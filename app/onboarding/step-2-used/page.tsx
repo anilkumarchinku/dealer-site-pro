@@ -108,6 +108,7 @@ export default function Step2UsedPage() {
                 setCustomAccent(preset.accent);
             }
         }
+        return;
     }, [selectedPreset, useCustom]);
 
     useEffect(() => { setStep(2); }, [setStep]);
@@ -129,6 +130,7 @@ export default function Step2UsedPage() {
         } catch {
             setLogoError("Failed to read the file. Please try again.");
         }
+        return;
     }, []);
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {

@@ -55,6 +55,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, brandColors }: 
                 setIsSuccess(false);
             }, 300);
         }
+        return;
     }, [isOpen]);
 
     // Close on ESC key

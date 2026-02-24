@@ -91,6 +91,8 @@ export default function SettingsPage() {
                 if (data?.logo_url)        setLogoPreview(data.logo_url);
                 if (data?.hero_image_url)  setHeroPreview(data.hero_image_url);
             });
+        return;
+        return;
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dealerId]);
 
@@ -164,6 +166,7 @@ export default function SettingsPage() {
                     setCyeproKey("••••••••••••••••••••");
                 }
             });
+            return;
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dealerId]);
 
@@ -183,6 +186,7 @@ export default function SettingsPage() {
                     setDomainStep(data.dns_verified ? "verified" : "dns");
                 }
             });
+            return;
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dealerId]);
 

@@ -46,6 +46,7 @@ function CarsContent() {
         };
 
         fetchCars();
+        return;
     }, [searchParams]);
 
     return (
