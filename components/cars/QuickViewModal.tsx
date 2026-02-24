@@ -35,6 +35,7 @@ import {
     TrendingUp,
 } from 'lucide-react';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
+import { getBrandLogo } from '@/lib/data/brand-logos';
 
 interface QuickViewModalProps {
     car: Car | null;
@@ -129,7 +130,10 @@ export function QuickViewModal({
                 <DialogHeader className="p-4 pb-0">
                     <div className="flex items-start justify-between">
                         <div>
-                            <DialogTitle className="text-2xl font-bold text-gray-900">
+                            <DialogTitle className="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                                {getBrandLogo(car.make) && (
+                                    <Image src={getBrandLogo(car.make)!} alt={car.make} width={28} height={28} className="object-contain" />
+                                )}
                                 {car.make} {car.model}
                             </DialogTitle>
                             <p className="text-sm text-gray-500 mt-1">{car.variant} • {car.year}</p>

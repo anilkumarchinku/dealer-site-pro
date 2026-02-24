@@ -29,6 +29,7 @@ import {
     Car as CarIcon,
     ArrowRight,
 } from 'lucide-react';
+import { getBrandLogo } from '@/lib/data/brand-logos';
 
 const MAX_COMPARE = 4;
 
@@ -180,7 +181,12 @@ export function ComparePageContent() {
                                                 </div>
                                             )}
                                         </div>
-                                        <p className="text-xs text-muted-foreground">{car.make}</p>
+                                        <div className="flex items-center justify-center gap-1">
+                                            {getBrandLogo(car.make) && (
+                                                <Image src={getBrandLogo(car.make)!} alt={car.make} width={14} height={14} className="object-contain" />
+                                            )}
+                                            <p className="text-xs text-muted-foreground">{car.make}</p>
+                                        </div>
                                         <p className="text-sm font-semibold line-clamp-1">{car.model}</p>
                                         <p className="text-xs font-medium text-primary mt-0.5">
                                             {formatPriceInLakhs(car.pricing.exShowroom.min)}
@@ -243,7 +249,12 @@ export function ComparePageContent() {
                                                 )}
                                             </div>
                                             <div className="flex-1 min-w-0">
-                                                <p className="text-sm font-medium">{car.make} {car.model}</p>
+                                                <p className="text-sm font-medium flex items-center gap-1.5">
+                                                    {getBrandLogo(car.make) && (
+                                                        <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} className="object-contain shrink-0" />
+                                                    )}
+                                                    {car.make} {car.model}
+                                                </p>
                                                 <p className="text-xs text-muted-foreground">{formatPriceInLakhs(car.pricing.exShowroom.min)}</p>
                                             </div>
                                             <Plus className="w-4 h-4 text-muted-foreground shrink-0" />

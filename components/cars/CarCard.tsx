@@ -29,6 +29,7 @@ import {
     MapPin,
     Calendar,
 } from 'lucide-react';
+import { getBrandLogo } from '@/lib/data/brand-logos';
 
 interface CarCardProps {
     car: Car;
@@ -161,9 +162,14 @@ export function CarCard({
                 <CardContent className="flex flex-col flex-1 p-3 pt-2.5">
                     {/* Brand & Model */}
                     <div className="mb-1.5">
-                        <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: brandColor }}>
-                            {car.make}
-                        </p>
+                        <div className="flex items-center gap-1.5">
+                            {getBrandLogo(car.make) && (
+                                <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} className="object-contain" />
+                            )}
+                            <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: brandColor }}>
+                                {car.make}
+                            </p>
+                        </div>
                         <h3 className={cn('text-base font-bold leading-tight line-clamp-1', 'text-foreground')}>
                             {car.model}
                         </h3>

@@ -33,6 +33,7 @@ import {
     CheckCircle,
 } from 'lucide-react';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
+import { getBrandLogo } from '@/lib/data/brand-logos';
 
 interface EnquiryModalProps {
     car: Car | null;
@@ -136,9 +137,14 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb' }
 
                         {/* Title Overlay */}
                         <div className="absolute bottom-4 left-6 right-6 text-white">
-                            <p className="text-sm font-medium uppercase tracking-wider mb-1" style={{ color: brandColor }}>
-                                {car.make}
-                            </p>
+                            <div className="flex items-center gap-2 mb-1">
+                                {getBrandLogo(car.make) && (
+                                    <Image src={getBrandLogo(car.make)!} alt={car.make} width={24} height={24} className="object-contain" />
+                                )}
+                                <p className="text-sm font-medium uppercase tracking-wider" style={{ color: brandColor }}>
+                                    {car.make}
+                                </p>
+                            </div>
                             <h2 className="text-3xl font-bold">{car.model}</h2>
                             <p className="text-sm opacity-90">{car.variant}</p>
                         </div>

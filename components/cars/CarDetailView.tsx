@@ -31,6 +31,7 @@ import {
 } from '@/components/ui/table';
 import { Slider } from '@/components/ui/slider';
 import { CarCard } from './CarCard';
+import { getBrandLogo } from '@/lib/data/brand-logos';
 import {
     ChevronRight,
     Download,
@@ -325,7 +326,12 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                             <CardContent className="p-5">
                                 {/* Title */}
                                 <div className="mb-3">
-                                    <h1 className="text-xl font-bold text-foreground">{car.make} {car.model}</h1>
+                                    <h1 className="text-xl font-bold text-foreground flex items-center gap-2">
+                                        {getBrandLogo(car.make) && (
+                                            <Image src={getBrandLogo(car.make)!} alt={car.make} width={24} height={24} className="object-contain" />
+                                        )}
+                                        {car.make} {car.model}
+                                    </h1>
                                     <p className="text-sm text-muted-foreground">{car.variant} {car.year && `• ${car.year}`}</p>
                                 </div>
 

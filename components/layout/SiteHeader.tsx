@@ -184,7 +184,12 @@ export function SiteHeader() {
                                             )}
                                         </div>
                                         <div className="flex-1 min-w-0">
-                                            <p className="text-sm font-medium truncate">{car.make} {car.model}</p>
+                                            <p className="text-sm font-medium truncate flex items-center gap-1.5">
+                                                {getBrandLogo(car.make) && (
+                                                    <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} className="object-contain shrink-0" />
+                                                )}
+                                                {car.make} {car.model}
+                                            </p>
                                             <p className="text-xs text-muted-foreground">{formatPriceInLakhs(car.pricing.exShowroom.min)}</p>
                                         </div>
                                     </button>
@@ -413,7 +418,12 @@ export function SiteHeader() {
                                     onClick={() => handleSearchSelect(car.id)}
                                     className="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-muted text-left text-sm"
                                 >
-                                    <span className="font-medium">{car.make} {car.model}</span>
+                                    <span className="font-medium flex items-center gap-1.5">
+                                        {getBrandLogo(car.make) && (
+                                            <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} className="object-contain shrink-0" />
+                                        )}
+                                        {car.make} {car.model}
+                                    </span>
                                     <span className="text-muted-foreground text-xs ml-auto">{formatPriceInLakhs(car.pricing.exShowroom.min)}</span>
                                 </button>
                             ))}
