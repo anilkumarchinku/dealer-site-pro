@@ -10,6 +10,8 @@ import type { Car } from '@/lib/types/car'
 import type { DBVehicle } from '@/lib/db/vehicles'
 import type { Service } from '@/lib/types'
 
+export const runtime = 'edge'
+
 interface SitePageProps {
     params: Promise<{ slug: string }>
 }

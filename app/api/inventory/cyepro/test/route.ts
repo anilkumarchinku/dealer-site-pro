@@ -8,6 +8,8 @@
 import { NextResponse } from 'next/server'
 import { requireAuth } from '@/lib/supabase-server'
 
+export const runtime = 'edge'
+
 const BASE_URL   = 'https://api.cyepro.com'
 const SERVICE_ID = '460'
 const TIME_ZONE  = 'Asia/Calcutta'

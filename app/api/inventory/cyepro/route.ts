@@ -19,6 +19,8 @@ import {
     type CyeproSearchBody,
 } from '@/lib/services/cyepro-service'
 
+export const runtime = 'edge'
+
 export async function POST(request: Request) {
     try {
         // ── Auth: signed-in user only ─────────────────────────────────────────
