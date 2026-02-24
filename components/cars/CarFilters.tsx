@@ -29,9 +29,10 @@ interface CarFiltersProps {
     className?: string;
     onFilterChange?: (filters: any) => void;
     hideBrand?: boolean;
+    showUsedCarFilters?: boolean;
 }
 
-export function CarFilters({ className, onFilterChange, hideBrand = false }: CarFiltersProps) {
+export function CarFilters({ className, onFilterChange, hideBrand = false, showUsedCarFilters = false }: CarFiltersProps) {
     const router = useRouter();
     const searchParams = useSearchParams();
 
@@ -40,10 +41,30 @@ export function CarFilters({ className, onFilterChange, hideBrand = false }: Car
     const [selectedBodyTypes, setSelectedBodyTypes] = useState<string[]>([]);
     const [selectedFuelTypes, setSelectedFuelTypes] = useState<string[]>([]);
     const [selectedTransmissions, setSelectedTransmissions] = useState<string[]>([]);
+    const [selectedYears, setSelectedYears] = useState<string[]>([]);
+    const [selectedSeating, setSelectedSeating] = useState<string[]>([]);
+    const [selectedColors, setSelectedColors] = useState<string[]>([]);
+    const [selectedOwners, setSelectedOwners] = useState<string[]>([]);
+    const [kmRange, setKmRange] = useState<[number, number]>([0, 200000]);
 
     const BODY_TYPES = ['Hatchback', 'Sedan', 'SUV', 'MUV', 'Compact SUV', 'Luxury'];
     const FUEL_TYPES = ['Petrol', 'Diesel', 'CNG', 'Electric', 'Hybrid'];
     const TRANSMISSIONS = ['Manual', 'Automatic', 'AMT', 'CVT', 'DCT'];
+    const YEARS = ['2026', '2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018'];
+    const SEATING = ['2', '4', '5', '6', '7', '8+'];
+    const COLORS = [
+        { name: 'White', hex: '#FFFFFF' },
+        { name: 'Black', hex: '#1a1a1a' },
+        { name: 'Silver', hex: '#C0C0C0' },
+        { name: 'Grey', hex: '#808080' },
+        { name: 'Red', hex: '#DC2626' },
+        { name: 'Blue', hex: '#2563EB' },
+        { name: 'Brown', hex: '#92400E' },
+        { name: 'Green', hex: '#16A34A' },
+        { name: 'Orange', hex: '#EA580C' },
+        { name: 'Yellow', hex: '#CA8A04' },
+    ];
+    const OWNERS = ['1st Owner', '2nd Owner', '3rd Owner', '4th+ Owner'];
 
     // Sync from URL params
     useEffect(() => {
@@ -62,6 +83,22 @@ export function CarFilters({ className, onFilterChange, hideBrand = false }: Car
 
         const trans = searchParams.get('transmission')?.split(',').filter(Boolean) || [];
         setSelectedTransmissions(trans);
+
+        const years = searchParams.get('year')?.split(',').filter(Boolean) || [];
+        setSelectedYears(years);
+
+        const seating = searchParams.get('seating')?.split(',').filter(Boolean) || [];
+        setSelectedSeating(seating);
+
+        const colors = searchParams.get('color')?.split(',').filter(Boolean) || [];
+        setSelectedColors(colors);
+
+        const owners = searchParams.get('owners')?.split(',').filter(Boolean) || [];
+        setSelectedOwners(owners);
+
+        const minKm = searchParams.get('minKm') ? parseInt(searchParams.get('minKm')!) : 0;
+        const maxKm = searchParams.get('maxKm') ? parseInt(searchParams.get('maxKm')!) : 200000;
+        setKmRange([minKm, maxKm]);
         return;
     }, [searchParams]);
 
@@ -80,8 +117,26 @@ export function CarFilters({ className, onFilterChange, hideBrand = false }: Car
         if (selectedTransmissions.length > 0) params.set('transmission', selectedTransmissions.join(','));
         else params.delete('transmission');
 
+        if (selectedYears.length > 0) params.set('year', selectedYears.join(','));
+        else params.delete('year');
+
+        if (selectedSeating.length > 0) params.set('seating', selectedSeating.join(','));
+        else params.delete('seating');
+
+        if (selectedColors.length > 0) params.set('color', selectedColors.join(','));
+        else params.delete('color');
+
+        if (selectedOwners.length > 0) params.set('owners', selectedOwners.join(','));
+        else params.delete('owners');
+
         params.set('minPrice', priceRange[0].toString());
         params.set('maxPrice', priceRange[1].toString());
+
+        if (showUsedCarFilters) {
+            params.set('minKm', kmRange[0].toString());
+            params.set('maxKm', kmRange[1].toString());
+        }
+
         params.set('page', '1');
 
         router.push(`?${params.toString()}`);
@@ -92,7 +147,12 @@ export function CarFilters({ className, onFilterChange, hideBrand = false }: Car
                 bodyType: selectedBodyTypes,
                 fuelType: selectedFuelTypes,
                 transmission: selectedTransmissions,
+                year: selectedYears,
+                seating: selectedSeating,
+                color: selectedColors,
+                owners: selectedOwners,
                 priceRange: { min: priceRange[0], max: priceRange[1] },
+                kmRange: { min: kmRange[0], max: kmRange[1] },
             });
         }
     };
@@ -103,6 +163,11 @@ export function CarFilters({ className, onFilterChange, hideBrand = false }: Car
         setSelectedBodyTypes([]);
         setSelectedFuelTypes([]);
         setSelectedTransmissions([]);
+        setSelectedYears([]);
+        setSelectedSeating([]);
+        setSelectedColors([]);
+        setSelectedOwners([]);
+        setKmRange([0, 200000]);
         router.push('?');
     };
 
@@ -111,7 +176,9 @@ export function CarFilters({ className, onFilterChange, hideBrand = false }: Car
     };
 
     const totalActive = selectedMakes.length + selectedBodyTypes.length + selectedFuelTypes.length + selectedTransmissions.length +
-        (priceRange[0] > 0 || priceRange[1] < 5000000 ? 1 : 0);
+        selectedYears.length + selectedSeating.length + selectedColors.length + selectedOwners.length +
+        (priceRange[0] > 0 || priceRange[1] < 5000000 ? 1 : 0) +
+        (showUsedCarFilters && (kmRange[0] > 0 || kmRange[1] < 200000) ? 1 : 0);
 
     return (
         <Card className={className}>
@@ -265,6 +332,153 @@ export function CarFilters({ className, onFilterChange, hideBrand = false }: Car
                             </div>
                         </AccordionContent>
                     </AccordionItem>
+
+                    {/* Year */}
+                    <AccordionItem value="year" className="border-b-0">
+                        <AccordionTrigger className="text-sm font-medium py-3 hover:no-underline">
+                            <span className="flex items-center gap-2">
+                                Year
+                                {selectedYears.length > 0 && (
+                                    <Badge variant="secondary" className="text-[10px] h-4 px-1">{selectedYears.length}</Badge>
+                                )}
+                            </span>
+                        </AccordionTrigger>
+                        <AccordionContent className="pb-4">
+                            <div className="flex flex-wrap gap-2">
+                                {YEARS.map((year) => (
+                                    <button
+                                        key={year}
+                                        onClick={() => toggleItem(year, selectedYears, setSelectedYears)}
+                                        className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${
+                                            selectedYears.includes(year)
+                                                ? 'bg-primary text-primary-foreground border-primary'
+                                                : 'bg-background text-foreground border-border hover:bg-muted'
+                                        }`}
+                                    >
+                                        {year}
+                                    </button>
+                                ))}
+                            </div>
+                        </AccordionContent>
+                    </AccordionItem>
+
+                    {/* Seating Capacity */}
+                    <AccordionItem value="seating" className="border-b-0">
+                        <AccordionTrigger className="text-sm font-medium py-3 hover:no-underline">
+                            <span className="flex items-center gap-2">
+                                Seating Capacity
+                                {selectedSeating.length > 0 && (
+                                    <Badge variant="secondary" className="text-[10px] h-4 px-1">{selectedSeating.length}</Badge>
+                                )}
+                            </span>
+                        </AccordionTrigger>
+                        <AccordionContent className="pb-4">
+                            <div className="flex flex-wrap gap-2">
+                                {SEATING.map((seats) => (
+                                    <button
+                                        key={seats}
+                                        onClick={() => toggleItem(seats, selectedSeating, setSelectedSeating)}
+                                        className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${
+                                            selectedSeating.includes(seats)
+                                                ? 'bg-primary text-primary-foreground border-primary'
+                                                : 'bg-background text-foreground border-border hover:bg-muted'
+                                        }`}
+                                    >
+                                        {seats} Seater
+                                    </button>
+                                ))}
+                            </div>
+                        </AccordionContent>
+                    </AccordionItem>
+
+                    {/* Color */}
+                    <AccordionItem value="color" className="border-b-0">
+                        <AccordionTrigger className="text-sm font-medium py-3 hover:no-underline">
+                            <span className="flex items-center gap-2">
+                                Color
+                                {selectedColors.length > 0 && (
+                                    <Badge variant="secondary" className="text-[10px] h-4 px-1">{selectedColors.length}</Badge>
+                                )}
+                            </span>
+                        </AccordionTrigger>
+                        <AccordionContent className="pb-4">
+                            <div className="grid grid-cols-5 gap-2">
+                                {COLORS.map((color) => (
+                                    <button
+                                        key={color.name}
+                                        onClick={() => toggleItem(color.name, selectedColors, setSelectedColors)}
+                                        className="flex flex-col items-center gap-1 group/color"
+                                        title={color.name}
+                                    >
+                                        <div
+                                            className={`w-8 h-8 rounded-full border-2 transition-all ${
+                                                selectedColors.includes(color.name)
+                                                    ? 'border-primary scale-110 ring-2 ring-primary/30'
+                                                    : 'border-border hover:scale-105'
+                                            }`}
+                                            style={{ backgroundColor: color.hex }}
+                                        />
+                                        <span className="text-[9px] text-muted-foreground leading-none">{color.name}</span>
+                                    </button>
+                                ))}
+                            </div>
+                        </AccordionContent>
+                    </AccordionItem>
+
+                    {/* KM Driven — only for used cars */}
+                    {showUsedCarFilters && (
+                        <AccordionItem value="kmDriven" className="border-b-0">
+                            <AccordionTrigger className="text-sm font-medium py-3 hover:no-underline">
+                                KM Driven
+                            </AccordionTrigger>
+                            <AccordionContent className="pb-4">
+                                <Slider
+                                    value={kmRange}
+                                    max={200000}
+                                    step={5000}
+                                    onValueChange={(val) => setKmRange(val as [number, number])}
+                                    className="mb-3"
+                                />
+                                <div className="flex items-center justify-between">
+                                    <span className="text-xs font-medium px-2 py-1 bg-muted rounded-md">
+                                        {kmRange[0].toLocaleString()} km
+                                    </span>
+                                    <span className="text-xs text-muted-foreground">to</span>
+                                    <span className="text-xs font-medium px-2 py-1 bg-muted rounded-md">
+                                        {kmRange[1].toLocaleString()} km
+                                    </span>
+                                </div>
+                            </AccordionContent>
+                        </AccordionItem>
+                    )}
+
+                    {/* Owners — only for used cars */}
+                    {showUsedCarFilters && (
+                        <AccordionItem value="owners" className="border-b-0">
+                            <AccordionTrigger className="text-sm font-medium py-3 hover:no-underline">
+                                <span className="flex items-center gap-2">
+                                    No. of Owners
+                                    {selectedOwners.length > 0 && (
+                                        <Badge variant="secondary" className="text-[10px] h-4 px-1">{selectedOwners.length}</Badge>
+                                    )}
+                                </span>
+                            </AccordionTrigger>
+                            <AccordionContent className="pb-4">
+                                <div className="space-y-2.5">
+                                    {OWNERS.map((owner) => (
+                                        <div key={owner} className="flex items-center gap-2">
+                                            <Checkbox
+                                                id={`owner-${owner}`}
+                                                checked={selectedOwners.includes(owner)}
+                                                onCheckedChange={() => toggleItem(owner, selectedOwners, setSelectedOwners)}
+                                            />
+                                            <Label htmlFor={`owner-${owner}`} className="text-sm font-normal cursor-pointer">{owner}</Label>
+                                        </div>
+                                    ))}
+                                </div>
+                            </AccordionContent>
+                        </AccordionItem>
+                    )}
                 </Accordion>
 
                 <Button className="w-full mt-4" size="sm" onClick={applyFilters}>

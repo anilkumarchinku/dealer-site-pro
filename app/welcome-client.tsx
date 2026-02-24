@@ -22,8 +22,12 @@ import {
     Car,
     Award,
     Shield,
-    Palette
+    Palette,
+    CalendarClock,
+    Fuel,
+    Gauge
 } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { CarGrid } from "@/components/cars/CarGrid";
 import { Car as CarType } from "@/lib/types/car";
@@ -73,6 +77,15 @@ const STATS = [
     { value: "50,000+", label: "Leads Generated" },
     { value: "4.9/5", label: "Customer Rating" },
     { value: "10 Min", label: "Average Setup Time" },
+];
+
+const UPCOMING_LAUNCHES = [
+    { brand: 'Tata', model: 'Curvv EV', expectedPrice: '17.49 - 21.99 Lakh', launchDate: 'Mar 2026', type: 'Electric SUV', emoji: '⚡' },
+    { brand: 'Hyundai', model: 'Creta N Line', expectedPrice: '16.50 - 20.00 Lakh', launchDate: 'Apr 2026', type: 'Sport SUV', emoji: '🏎️' },
+    { brand: 'Maruti', model: 'eVX', expectedPrice: '15.00 - 20.00 Lakh', launchDate: 'Q2 2026', type: 'Electric SUV', emoji: '⚡' },
+    { brand: 'Mahindra', model: 'XUV.e8', expectedPrice: '18.00 - 25.00 Lakh', launchDate: 'May 2026', type: 'Electric SUV', emoji: '⚡' },
+    { brand: 'Kia', model: 'EV6 Facelift', expectedPrice: '60.00 - 65.00 Lakh', launchDate: 'Q3 2026', type: 'Electric Crossover', emoji: '⚡' },
+    { brand: 'Toyota', model: 'Urban Cruiser EV', expectedPrice: '12.00 - 17.00 Lakh', launchDate: 'Jun 2026', type: 'Electric Compact SUV', emoji: '⚡' },
 ];
 
 export default function WelcomeClient({ cars }: WelcomeClientProps) {
@@ -317,6 +330,141 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                             View All Cars with Filters
                             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </Button>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Browse by Brand ── */}
+            <section className="py-16 bg-muted/20 border-y border-border">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-10">
+                        <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">Popular Brands</p>
+                        <h2 className="text-3xl font-bold text-foreground">Browse by Brand</h2>
+                    </div>
+                    <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-10 gap-4">
+                        {['Maruti Suzuki','Hyundai','Tata Motors','Kia','Mahindra','Toyota','Honda','MG','Skoda','BMW'].map((brand) => (
+                            <Link key={brand} href={`/brands/${encodeURIComponent(brand)}`}
+                                className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-card hover:shadow-md transition-all group">
+                                <div className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-lg font-bold text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                                    {brand.charAt(0)}
+                                </div>
+                                <span className="text-[11px] font-medium text-muted-foreground group-hover:text-foreground text-center leading-tight">{brand}</span>
+                            </Link>
+                        ))}
+                    </div>
+                    <div className="text-center mt-8">
+                        <Link href="/brands">
+                            <Button variant="outline" size="sm" className="group">
+                                View All Brands
+                                <ArrowRight className="ml-1.5 w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                            </Button>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Browse by Body Type ── */}
+            <section className="py-16 bg-background">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-10">
+                        <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">Find Your Style</p>
+                        <h2 className="text-3xl font-bold text-foreground">Browse by Body Type</h2>
+                    </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+                        {[
+                            { name: 'Hatchback', emoji: '🚗' },
+                            { name: 'Sedan', emoji: '🚘' },
+                            { name: 'SUV', emoji: '🚙' },
+                            { name: 'MUV', emoji: '🚐' },
+                            { name: 'Compact SUV', emoji: '🏎️' },
+                            { name: 'Luxury', emoji: '✨' },
+                        ].map((type) => (
+                            <Link key={type.name} href={`/cars?bodyType=${encodeURIComponent(type.name)}`}>
+                                <Card className="p-5 text-center hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer group border-border">
+                                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{type.emoji}</div>
+                                    <p className="text-sm font-semibold text-foreground">{type.name}</p>
+                                </Card>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Upcoming Launches ── */}
+            <section className="py-16 bg-muted/20 border-y border-border">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-10">
+                        <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">Coming Soon</p>
+                        <h2 className="text-3xl font-bold text-foreground">Upcoming Car Launches</h2>
+                        <p className="text-muted-foreground mt-2">Most anticipated cars launching in India in 2026</p>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {UPCOMING_LAUNCHES.map((car, i) => (
+                            <Card key={i} className="p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all border-border group">
+                                <div className="flex items-start justify-between mb-3">
+                                    <div>
+                                        <p className="text-xs text-muted-foreground font-medium">{car.brand}</p>
+                                        <p className="text-base font-bold text-foreground">{car.model}</p>
+                                    </div>
+                                    <span className="text-2xl">{car.emoji}</span>
+                                </div>
+                                <div className="flex items-center gap-2 mb-3">
+                                    <Badge variant="secondary" className="text-[10px]">{car.type}</Badge>
+                                    <Badge variant="outline" className="text-[10px] gap-1">
+                                        <CalendarClock className="w-3 h-3" />
+                                        {car.launchDate}
+                                    </Badge>
+                                </div>
+                                <div className="pt-3 border-t border-border">
+                                    <p className="text-xs text-muted-foreground">Expected Price</p>
+                                    <p className="text-sm font-bold text-primary">{car.expectedPrice}</p>
+                                </div>
+                            </Card>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Popular Comparisons ── */}
+            <section className="py-16 bg-muted/20 border-y border-border">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-10">
+                        <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">Head to Head</p>
+                        <h2 className="text-3xl font-bold text-foreground">Popular Comparisons</h2>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {[
+                            { a: 'Hyundai Creta', b: 'Kia Seltos' },
+                            { a: 'Tata Nexon', b: 'Maruti Brezza' },
+                            { a: 'Mahindra XUV700', b: 'Tata Safari' },
+                            { a: 'Maruti Swift', b: 'Hyundai i20' },
+                            { a: 'Toyota Fortuner', b: 'MG Gloster' },
+                            { a: 'Honda City', b: 'Hyundai Verna' },
+                        ].map((pair, i) => (
+                            <Link key={i} href="/compare">
+                                <Card className="p-4 hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer border-border">
+                                    <div className="flex items-center justify-between">
+                                        <div className="text-center flex-1">
+                                            <p className="text-sm font-semibold text-foreground">{pair.a}</p>
+                                        </div>
+                                        <div className="mx-3 px-2.5 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full shrink-0">
+                                            VS
+                                        </div>
+                                        <div className="text-center flex-1">
+                                            <p className="text-sm font-semibold text-foreground">{pair.b}</p>
+                                        </div>
+                                    </div>
+                                </Card>
+                            </Link>
+                        ))}
+                    </div>
+                    <div className="text-center mt-8">
+                        <Link href="/compare">
+                            <Button variant="outline" size="sm" className="group">
+                                Compare Any Cars
+                                <ArrowRight className="ml-1.5 w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </section>

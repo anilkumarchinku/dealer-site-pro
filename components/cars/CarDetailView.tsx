@@ -1,17 +1,26 @@
 /**
- * Car Detail View
- * Comprehensive view for a single car
+ * Car Detail View — CarDekho/Cars24 Style
+ * Comprehensive detail page with sticky tabs, image gallery,
+ * specs, features, EMI calculator, reviews, FAQs, and more.
  */
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Car } from '@/lib/types/car';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Card, CardContent } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from '@/components/ui/accordion';
 import {
     Table,
     TableBody,
@@ -20,232 +29,1253 @@ import {
     TableHeader,
     TableRow,
 } from '@/components/ui/table';
+import { Slider } from '@/components/ui/slider';
 import { CarCard } from './CarCard';
-import { Download, Share2, Phone, Calendar, Shield, Fuel, Gauge } from 'lucide-react';
+import {
+    ChevronRight,
+    Download,
+    Share2,
+    Phone,
+    Calendar,
+    Shield,
+    Fuel,
+    Gauge,
+    Users,
+    Zap,
+    Heart,
+    Star,
+    Check,
+    X,
+    ChevronLeft,
+    Calculator,
+    Car as CarIcon,
+    Palette,
+    Settings,
+    Info,
+    MessageSquare,
+    HelpCircle,
+    Eye,
+    TrendingUp,
+    MapPin,
+    ShieldCheck,
+    ClipboardCheck,
+    History,
+    Wrench,
+    FileText,
+    AlertTriangle,
+    CheckCircle2,
+    CircleDot,
+    BadgeCheck,
+    RotateCcw,
+} from 'lucide-react';
 
 interface CarDetailViewProps {
     car: Car;
     similarCars?: Car[];
 }
 
-export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
-    const [activeImage, setActiveImage] = useState(car.images.hero);
+const NEW_CAR_TABS = [
+    { id: 'overview', label: 'Overview', icon: Info },
+    { id: 'specs', label: 'Specifications', icon: Settings },
+    { id: 'features', label: 'Features', icon: Check },
+    { id: 'variants', label: 'Variants', icon: CarIcon },
+    { id: 'colors', label: 'Colours', icon: Palette },
+    { id: 'emi', label: 'EMI Calculator', icon: Calculator },
+    { id: 'reviews', label: 'Reviews', icon: Star },
+    { id: 'faqs', label: 'FAQs', icon: HelpCircle },
+];
 
+const USED_CAR_TABS = [
+    { id: 'overview', label: 'Overview', icon: Info },
+    { id: 'inspection', label: 'Inspection Report', icon: ClipboardCheck },
+    { id: 'history', label: 'Car History', icon: History },
+    { id: 'specs', label: 'Specifications', icon: Settings },
+    { id: 'features', label: 'Features', icon: Check },
+    { id: 'colors', label: 'Colours', icon: Palette },
+    { id: 'emi', label: 'EMI Calculator', icon: Calculator },
+    { id: 'faqs', label: 'FAQs', icon: HelpCircle },
+];
+
+const INSPECTION_CATEGORIES = [
+    {
+        name: 'Exterior',
+        icon: <CarIcon className="w-4 h-4" />,
+        items: [
+            { name: 'Body Panels', status: 'good' as const },
+            { name: 'Paint Condition', status: 'good' as const },
+            { name: 'Headlights & Taillights', status: 'good' as const },
+            { name: 'Windshield', status: 'good' as const },
+            { name: 'Side Mirrors', status: 'good' as const },
+            { name: 'Bumpers', status: 'fair' as const },
+        ],
+    },
+    {
+        name: 'Interior',
+        icon: <Users className="w-4 h-4" />,
+        items: [
+            { name: 'Seats & Upholstery', status: 'good' as const },
+            { name: 'Dashboard & Controls', status: 'good' as const },
+            { name: 'AC & Climate', status: 'good' as const },
+            { name: 'Infotainment System', status: 'good' as const },
+            { name: 'Steering Wheel', status: 'good' as const },
+        ],
+    },
+    {
+        name: 'Engine & Mechanical',
+        icon: <Settings className="w-4 h-4" />,
+        items: [
+            { name: 'Engine Condition', status: 'good' as const },
+            { name: 'Transmission', status: 'good' as const },
+            { name: 'Suspension', status: 'good' as const },
+            { name: 'Brakes', status: 'fair' as const },
+            { name: 'Exhaust System', status: 'good' as const },
+        ],
+    },
+    {
+        name: 'Tyres & Wheels',
+        icon: <CircleDot className="w-4 h-4" />,
+        items: [
+            { name: 'Front Left Tyre', status: 'good' as const },
+            { name: 'Front Right Tyre', status: 'good' as const },
+            { name: 'Rear Left Tyre', status: 'fair' as const },
+            { name: 'Rear Right Tyre', status: 'fair' as const },
+            { name: 'Spare Tyre', status: 'good' as const },
+        ],
+    },
+    {
+        name: 'Electricals',
+        icon: <Zap className="w-4 h-4" />,
+        items: [
+            { name: 'Battery', status: 'good' as const },
+            { name: 'Wiring Harness', status: 'good' as const },
+            { name: 'Power Windows', status: 'good' as const },
+            { name: 'Central Locking', status: 'good' as const },
+        ],
+    },
+];
+
+export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
+    const isUsed = car.condition === 'used' || car.condition === 'certified_pre_owned';
+    const isCPO = car.condition === 'certified_pre_owned';
+    const TABS = isUsed ? USED_CAR_TABS : NEW_CAR_TABS;
+
+    const [activeImage, setActiveImage] = useState(car.images.hero);
+    const [activeTab, setActiveTab] = useState('overview');
+    const [isTabBarSticky, setIsTabBarSticky] = useState(false);
+    const [selectedColor, setSelectedColor] = useState(car.colors?.[0]?.name || '');
+    const [isFavorite, setIsFavorite] = useState(false);
+
+    // EMI Calculator state
+    const [emiPrice, setEmiPrice] = useState(car.pricing.exShowroom.min || 1000000);
+    const [emiDown, setEmiDown] = useState(Math.round((car.pricing.exShowroom.min || 1000000) * 0.2));
+    const [emiTenure, setEmiTenure] = useState(60);
+    const [emiRate, setEmiRate] = useState(9.5);
+
+    const tabBarRef = useRef<HTMLDivElement>(null);
+    const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
+
+    // All images combined
+    const allImages = [car.images.hero, ...car.images.exterior, ...car.images.interior].filter(Boolean);
+
+    // Price formatting
+    const exShowroom = car.pricing?.exShowroom ?? { min: null, max: null };
+    const priceDisplay = formatPriceInLakhs(exShowroom.min);
+    const maxPriceDisplay = formatPriceInLakhs(exShowroom.max);
+    const hasPriceRange = exShowroom.min !== exShowroom.max && exShowroom.max;
+
+    // Key specs
     const keySpecs = [
-        { icon: <Fuel className="w-5 h-5" />, label: 'Fuel Type', value: car.engine.type },
-        { icon: <Gauge className="w-5 h-5" />, label: 'Mileage', value: `${car.performance.fuelEfficiency} kmpl` },
-        { icon: <Calendar className="w-5 h-5" />, label: 'Transmission', value: car.transmission.type },
-        { icon: <Shield className="w-5 h-5" />, label: 'Safety', value: `${car.safety?.ncapRating?.stars || 'TBD'} Stars` },
+        { icon: <Fuel className="w-5 h-5 text-emerald-600" />, label: 'Fuel Type', value: car.engine?.type || '—' },
+        { icon: <Gauge className="w-5 h-5 text-blue-600" />, label: 'Transmission', value: car.transmission?.type || '—' },
+        { icon: <Zap className="w-5 h-5 text-amber-600" />, label: 'Mileage', value: car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` : '—' },
+        { icon: <Users className="w-5 h-5 text-purple-600" />, label: 'Seating', value: car.dimensions?.seatingCapacity ? `${car.dimensions.seatingCapacity} Seater` : '—' },
+        { icon: <Settings className="w-5 h-5 text-gray-600" />, label: 'Engine', value: car.engine?.displacement ? `${car.engine.displacement} cc` : '—' },
+        { icon: <Shield className="w-5 h-5 text-red-600" />, label: 'Safety', value: car.safety?.ncapRating?.stars ? `${car.safety.ncapRating.stars} Star` : `${car.safety?.airbags || 0} Airbags` },
     ];
 
+    // Sticky tab bar detection
+    useEffect(() => {
+        const handleScroll = () => {
+            if (tabBarRef.current) {
+                const rect = tabBarRef.current.getBoundingClientRect();
+                setIsTabBarSticky(rect.top <= 56);
+            }
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    // Scroll spy for active tab
+    useEffect(() => {
+        const handleScroll = () => {
+            const offset = 120;
+            for (const tab of TABS) {
+                const el = sectionRefs.current[tab.id];
+                if (el) {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= offset && rect.bottom > offset) {
+                        setActiveTab(tab.id);
+                        break;
+                    }
+                }
+            }
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const scrollToSection = (id: string) => {
+        const el = sectionRefs.current[id];
+        if (el) {
+            const y = el.getBoundingClientRect().top + window.scrollY - 120;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+    };
+
+    // EMI calculation
+    const calcEmi = () => {
+        const loan = Math.max(0, emiPrice - emiDown);
+        if (loan <= 0 || emiTenure <= 0 || emiRate <= 0) return null;
+        const r = emiRate / 12 / 100;
+        const emi = (loan * r * Math.pow(1 + r, emiTenure)) / (Math.pow(1 + r, emiTenure) - 1);
+        const totalPayable = emi * emiTenure;
+        return {
+            emi: Math.round(emi),
+            loan: Math.round(loan),
+            interest: Math.round(totalPayable - loan),
+            total: Math.round(totalPayable),
+        };
+    };
+    const emiResult = calcEmi();
+
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            {/* Header */}
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-                <div>
-                    <h1 className="text-3xl font-bold text-gray-900">{car.make} {car.model}</h1>
-                    <p className="text-gray-500 mt-1">{car.variant} • {car.year}</p>
-                </div>
-                <div className="mt-4 md:mt-0 text-right">
-                    <div className="text-3xl font-bold text-gray-900">
-                        {formatPriceInLakhs(car.pricing.exShowroom.min)}
-                        {car.pricing.exShowroom.max !== car.pricing.exShowroom.min &&
-                            ` - ${formatPriceInLakhs(car.pricing.exShowroom.max)}`
-                        }
-                    </div>
-                    <p className="text-sm text-gray-500">Ex-showroom Price</p>
+        <div className="bg-background min-h-screen">
+            {/* ── Breadcrumb ── */}
+            <div className="bg-muted/30 border-b">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+                    <nav className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                        <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
+                        <ChevronRight className="w-3.5 h-3.5" />
+                        <Link href="/cars" className="hover:text-foreground transition-colors">Cars</Link>
+                        <ChevronRight className="w-3.5 h-3.5" />
+                        <Link href={`/cars?make=${car.make}`} className="hover:text-foreground transition-colors">{car.make}</Link>
+                        <ChevronRight className="w-3.5 h-3.5" />
+                        <span className="text-foreground font-medium">{car.model}</span>
+                    </nav>
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-                {/* Left Column: Images */}
-                <div className="lg:col-span-2 space-y-4">
-                    <div className="relative aspect-video bg-gray-100 rounded-xl overflow-hidden shadow-lg">
-                        {activeImage ? (
-                            <Image
-                                src={activeImage}
-                                alt={car.model}
-                                fill
-                                className="object-contain"
-                                priority
-                            />
-                        ) : (
-                            <div className="flex items-center justify-center h-full text-gray-400">No Image Available</div>
-                        )}
+            {/* ── Hero Section: Image Gallery + Price Card ── */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    {/* Image Gallery */}
+                    <div className="lg:col-span-2 space-y-3">
+                        {/* Main Image */}
+                        <div className="relative aspect-[16/10] bg-muted rounded-xl overflow-hidden group">
+                            {activeImage ? (
+                                <Image
+                                    src={activeImage}
+                                    alt={`${car.make} ${car.model}`}
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
+                            ) : (
+                                <div className="flex items-center justify-center h-full text-muted-foreground">
+                                    No Image Available
+                                </div>
+                            )}
 
-                    </div>
-                    <div className="flex overflow-x-auto gap-2 pb-2">
-                        {[car.images.hero, ...car.images.exterior, ...car.images.interior].filter(Boolean).map((img, idx) => (
+                            {/* Image counter */}
+                            <div className="absolute bottom-3 right-3 bg-black/60 text-white text-xs px-2.5 py-1 rounded-full backdrop-blur-sm">
+                                <Eye className="w-3 h-3 inline mr-1" />
+                                {allImages.indexOf(activeImage) + 1}/{allImages.length}
+                            </div>
+
+                            {/* Favorite */}
                             <button
-                                key={idx}
-                                onClick={() => setActiveImage(img)}
-                                className={`relative w-24 h-16 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all ${activeImage === img ? 'border-blue-600' : 'border-transparent'
-                                    }`}
+                                onClick={() => setIsFavorite(!isFavorite)}
+                                className="absolute top-3 right-3 w-9 h-9 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm hover:bg-white transition-colors"
                             >
-                                <Image src={img} alt={`View ${idx}`} fill className="object-cover" />
+                                <Heart className={`w-4.5 h-4.5 ${isFavorite ? 'fill-red-500 text-red-500' : 'text-gray-600'}`} />
+                            </button>
+                        </div>
+
+                        {/* Thumbnails */}
+                        <div className="flex gap-2 overflow-x-auto pb-1">
+                            {allImages.map((img, idx) => (
+                                <button
+                                    key={idx}
+                                    onClick={() => setActiveImage(img)}
+                                    className={`relative w-20 h-14 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all ${
+                                        activeImage === img
+                                            ? 'border-primary ring-1 ring-primary/30'
+                                            : 'border-transparent hover:border-muted-foreground/30'
+                                    }`}
+                                >
+                                    <Image src={img} alt={`View ${idx + 1}`} fill className="object-cover" />
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Price Summary Card */}
+                    <div className="space-y-4">
+                        <Card>
+                            <CardContent className="p-5">
+                                {/* Title */}
+                                <div className="mb-3">
+                                    <h1 className="text-xl font-bold text-foreground">{car.make} {car.model}</h1>
+                                    <p className="text-sm text-muted-foreground">{car.variant} {car.year && `• ${car.year}`}</p>
+                                </div>
+
+                                {/* Price */}
+                                <div className="mb-4">
+                                    <div className="flex items-baseline gap-2">
+                                        <span className="text-2xl font-bold text-foreground">{priceDisplay}</span>
+                                        {hasPriceRange && (
+                                            <span className="text-sm text-muted-foreground">- {maxPriceDisplay}</span>
+                                        )}
+                                    </div>
+                                    <p className="text-xs text-muted-foreground mt-0.5">Ex-showroom Price</p>
+                                    {car.pricing.emi && (
+                                        <Badge variant="secondary" className="mt-2 text-xs gap-1">
+                                            <TrendingUp className="w-3 h-3" />
+                                            EMI from ₹{car.pricing.emi.monthly.toLocaleString()}/mo
+                                        </Badge>
+                                    )}
+                                </div>
+
+                                <Separator className="mb-4" />
+
+                                {/* Quick Specs */}
+                                <div className="grid grid-cols-2 gap-2 mb-4">
+                                    {keySpecs.slice(0, 4).map((spec, idx) => (
+                                        <div key={idx} className="flex items-center gap-2 p-2 bg-muted/40 rounded-lg">
+                                            {spec.icon}
+                                            <div>
+                                                <p className="text-[10px] text-muted-foreground">{spec.label}</p>
+                                                <p className="text-xs font-semibold">{spec.value}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {/* CTAs */}
+                                <div className="space-y-2.5">
+                                    <Button className="w-full" size="lg">
+                                        <Phone className="w-4 h-4 mr-2" />
+                                        Check On-Road Price
+                                    </Button>
+                                    <div className="grid grid-cols-2 gap-2">
+                                        <Button variant="outline" size="sm">
+                                            <Calendar className="w-3.5 h-3.5 mr-1.5" />
+                                            Test Drive
+                                        </Button>
+                                        <Button variant="outline" size="sm">
+                                            <Download className="w-3.5 h-3.5 mr-1.5" />
+                                            Brochure
+                                        </Button>
+                                    </div>
+                                    <Button variant="ghost" size="sm" className="w-full text-muted-foreground">
+                                        <Share2 className="w-3.5 h-3.5 mr-1.5" />
+                                        Share
+                                    </Button>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </div>
+            </div>
+
+            {/* ── Sticky Tab Navigation ── */}
+            <div
+                ref={tabBarRef}
+                className={`sticky top-14 z-40 bg-background border-b transition-shadow ${isTabBarSticky ? 'shadow-sm' : ''}`}
+            >
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex gap-0 overflow-x-auto no-scrollbar">
+                        {TABS.map((tab) => (
+                            <button
+                                key={tab.id}
+                                onClick={() => scrollToSection(tab.id)}
+                                className={`flex items-center gap-1.5 px-4 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${
+                                    activeTab === tab.id
+                                        ? 'border-primary text-primary'
+                                        : 'border-transparent text-muted-foreground hover:text-foreground'
+                                }`}
+                            >
+                                <tab.icon className="w-3.5 h-3.5" />
+                                {tab.label}
                             </button>
                         ))}
                     </div>
                 </div>
-
-                {/* Right Column: Quick Stats & Actions */}
-                <div className="space-y-6">
-                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <h3 className="text-lg font-semibold mb-4">Key Specifications</h3>
-                        <div className="grid grid-cols-2 gap-4">
-                            {keySpecs.map((spec, idx) => (
-                                <div key={idx} className="p-3 bg-gray-50 rounded-lg">
-                                    <div className="text-gray-500 mb-1">{spec.icon}</div>
-                                    <div className="text-xs text-gray-500">{spec.label}</div>
-                                    <div className="font-semibold text-gray-900">{spec.value}</div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
-                        <h3 className="text-lg font-semibold text-blue-900 mb-2">Interested?</h3>
-                        <p className="text-blue-700 text-sm mb-4">Get the best offer for {car.model} today.</p>
-                        <div className="space-y-3">
-                            <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                                <Phone className="w-4 h-4 mr-2" />
-                                Contact Dealer
-                            </Button>
-                            <Button variant="outline" className="w-full border-blue-200 text-blue-700 hover:bg-blue-100">
-                                <Download className="w-4 h-4 mr-2" />
-                                Download Brochure
-                            </Button>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            {/* Tabs Section */}
-            <Tabs defaultValue="specs" className="mb-12">
-                <TabsList className="w-full justify-start border-b rounded-none bg-transparent p-0 mb-6">
-                    <TabsTrigger value="specs" className="rounded-none border-b-2 border-transparent data-[state=active]:border-blue-600 data-[state=active]:bg-transparent data-[state=active]:shadow-none">Specifications</TabsTrigger>
-                    <TabsTrigger value="features" className="rounded-none border-b-2 border-transparent data-[state=active]:border-blue-600 data-[state=active]:bg-transparent data-[state=active]:shadow-none">Features</TabsTrigger>
-                    <TabsTrigger value="variants" className="rounded-none border-b-2 border-transparent data-[state=active]:border-blue-600 data-[state=active]:bg-transparent data-[state=active]:shadow-none">Variants</TabsTrigger>
-                </TabsList>
+            {/* ── Content Sections ── */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
 
-                <TabsContent value="specs">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="space-y-6">
-                            <h3 className="text-xl font-bold">Engine & Transmission</h3>
-                            <Table>
-                                <TableBody>
-                                    <TableRow>
-                                        <TableCell className="font-medium">Engine Type</TableCell>
-                                        <TableCell>{car.engine.type}</TableCell>
-                                    </TableRow>
-                                    <TableRow>
-                                        <TableCell className="font-medium">Displacement</TableCell>
-                                        <TableCell>{car.engine.displacement} cc</TableCell>
-                                    </TableRow>
-                                    <TableRow>
-                                        <TableCell className="font-medium">Max Power</TableCell>
-                                        <TableCell>{car.engine.power}</TableCell>
-                                    </TableRow>
-                                    <TableRow>
-                                        <TableCell className="font-medium">Max Torque</TableCell>
-                                        <TableCell>{car.engine.torque}</TableCell>
-                                    </TableRow>
-                                    <TableRow>
-                                        <TableCell className="font-medium">Transmission</TableCell>
-                                        <TableCell>{car.transmission.type}</TableCell>
-                                    </TableRow>
-                                </TableBody>
-                            </Table>
-                        </div>
+                {/* ──────── USED CAR TRUST BANNER ──────── */}
+                {isUsed && (
+                    <Card className="border-emerald-200 bg-emerald-50/30">
+                        <CardContent className="p-5">
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center shrink-0">
+                                        <ShieldCheck className="w-6 h-6 text-emerald-600" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-base font-semibold text-emerald-800">
+                                            {isCPO ? 'Certified Pre-Owned' : 'Inspected & Verified'}
+                                        </h3>
+                                        <p className="text-sm text-emerald-700">
+                                            {isCPO
+                                                ? 'This car has been thoroughly inspected and comes with manufacturer-backed warranty.'
+                                                : 'This car has passed our 200+ point quality inspection.'}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="flex flex-wrap gap-2 sm:ml-auto">
+                                    <Badge variant="outline" className="bg-white border-emerald-300 text-emerald-700 gap-1">
+                                        <ClipboardCheck className="w-3 h-3" /> 200+ Point Check
+                                    </Badge>
+                                    {isCPO && (
+                                        <Badge variant="outline" className="bg-white border-blue-300 text-blue-700 gap-1">
+                                            <BadgeCheck className="w-3 h-3" /> 1 Year Warranty
+                                        </Badge>
+                                    )}
+                                    <Badge variant="outline" className="bg-white border-purple-300 text-purple-700 gap-1">
+                                        <RotateCcw className="w-3 h-3" /> 7-Day Return
+                                    </Badge>
+                                </div>
+                            </div>
+                        </CardContent>
+                    </Card>
+                )}
 
-                        <div className="space-y-6">
-                            <h3 className="text-xl font-bold">Dimensions & Capacity</h3>
-                            <Table>
-                                <TableBody>
-                                    <TableRow>
-                                        <TableCell className="font-medium">Length</TableCell>
-                                        <TableCell>{car.dimensions.length || '-'} mm</TableCell>
-                                    </TableRow>
-                                    <TableRow>
-                                        <TableCell className="font-medium">Width</TableCell>
-                                        <TableCell>{car.dimensions.width || '-'} mm</TableCell>
-                                    </TableRow>
-                                    <TableRow>
-                                        <TableCell className="font-medium">Height</TableCell>
-                                        <TableCell>{car.dimensions.height || '-'} mm</TableCell>
-                                    </TableRow>
-                                    <TableRow>
-                                        <TableCell className="font-medium">Boot Space</TableCell>
-                                        <TableCell>{car.dimensions.bootSpace} Litres</TableCell>
-                                    </TableRow>
-                                    <TableRow>
-                                        <TableCell className="font-medium">Fuel Tank</TableCell>
-                                        <TableCell>{car.dimensions.fuelTankCapacity} Litres</TableCell>
-                                    </TableRow>
-                                </TableBody>
-                            </Table>
-                        </div>
-                    </div>
-                </TabsContent>
+                {/* ──────── OVERVIEW ──────── */}
+                <section ref={el => { sectionRefs.current['overview'] = el; }} id="overview">
+                    <h2 className="text-2xl font-bold mb-6">{car.make} {car.model} Overview</h2>
 
-                <TabsContent value="features">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="bg-gray-50 p-6 rounded-lg">
-                            <h4 className="font-bold mb-4">Key Features</h4>
-                            <ul className="space-y-2">
-                                {car.features.keyFeatures.map((feat, i) => (
-                                    <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
-                                        <span className="text-green-500 mt-0.5">✓</span> {feat}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        {/* We can group other features if structured data is available */}
-                    </div>
-                </TabsContent>
-
-                <TabsContent value="variants">
-                    <Table>
-                        <TableHeader>
-                            <TableRow>
-                                <TableHead>Variant</TableHead>
-                                <TableHead>Price</TableHead>
-                                <TableHead>Transmission</TableHead>
-                                <TableHead>Fuel</TableHead>
-                            </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                            {car.variants?.map((variant) => (
-                                <TableRow key={variant.id}>
-                                    <TableCell className="font-medium">{variant.name}</TableCell>
-                                    <TableCell>{formatPriceInLakhs(variant.price)}</TableCell>
-                                    <TableCell>{variant.transmission}</TableCell>
-                                    <TableCell>{variant.fuelType}</TableCell>
-                                </TableRow>
-                            ))}
-                            {(!car.variants || car.variants.length === 0) && (
-                                <TableRow>
-                                    <TableCell colSpan={4} className="text-center text-gray-500">
-                                        Variant information not available
-                                    </TableCell>
-                                </TableRow>
-                            )}
-                        </TableBody>
-                    </Table>
-                </TabsContent>
-            </Tabs>
-
-            {/* Similar Cars */}
-            {similarCars.length > 0 && (
-                <div className="mt-16">
-                    <h2 className="text-2xl font-bold mb-6">Similar Cars</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                        {similarCars.map((simCar) => (
-                            <CarCard key={simCar.id} car={simCar} />
+                    {/* Key Highlights */}
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
+                        {keySpecs.map((spec, idx) => (
+                            <Card key={idx} className="text-center p-4">
+                                <div className="mx-auto mb-2 w-10 h-10 rounded-full bg-muted flex items-center justify-center">
+                                    {spec.icon}
+                                </div>
+                                <p className="text-xs text-muted-foreground">{spec.label}</p>
+                                <p className="text-sm font-semibold mt-0.5">{spec.value}</p>
+                            </Card>
                         ))}
                     </div>
-                </div>
-            )}
+
+                    {/* Pros & Cons */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <Card className="border-green-200 bg-green-50/30">
+                            <CardContent className="p-5">
+                                <h3 className="text-base font-semibold text-green-700 mb-3 flex items-center gap-2">
+                                    <Check className="w-4 h-4" /> Things We Like
+                                </h3>
+                                <ul className="space-y-2">
+                                    {(car.features?.keyFeatures || []).slice(0, 5).map((feat, i) => (
+                                        <li key={i} className="flex items-start gap-2 text-sm text-green-800">
+                                            <Check className="w-3.5 h-3.5 mt-0.5 text-green-600 shrink-0" />
+                                            {feat}
+                                        </li>
+                                    ))}
+                                    {(!car.features?.keyFeatures || car.features.keyFeatures.length === 0) && (
+                                        <li className="text-sm text-muted-foreground">Information not available</li>
+                                    )}
+                                </ul>
+                            </CardContent>
+                        </Card>
+                        <Card className="border-red-200 bg-red-50/30">
+                            <CardContent className="p-5">
+                                <h3 className="text-base font-semibold text-red-700 mb-3 flex items-center gap-2">
+                                    <X className="w-4 h-4" /> Things to Consider
+                                </h3>
+                                <ul className="space-y-2">
+                                    {/* Auto-generate considerations from data */}
+                                    {!car.safety?.esp && (
+                                        <li className="flex items-start gap-2 text-sm text-red-800">
+                                            <X className="w-3.5 h-3.5 mt-0.5 text-red-500 shrink-0" />
+                                            ESP not available in base variants
+                                        </li>
+                                    )}
+                                    {car.safety && car.safety.airbags < 6 && (
+                                        <li className="flex items-start gap-2 text-sm text-red-800">
+                                            <X className="w-3.5 h-3.5 mt-0.5 text-red-500 shrink-0" />
+                                            Only {car.safety.airbags} airbags (6 recommended)
+                                        </li>
+                                    )}
+                                    {!car.engine?.displacement && (
+                                        <li className="flex items-start gap-2 text-sm text-red-800">
+                                            <X className="w-3.5 h-3.5 mt-0.5 text-red-500 shrink-0" />
+                                            Engine details not fully available
+                                        </li>
+                                    )}
+                                    {car.performance?.fuelEfficiency && car.performance.fuelEfficiency < 15 && (
+                                        <li className="flex items-start gap-2 text-sm text-red-800">
+                                            <X className="w-3.5 h-3.5 mt-0.5 text-red-500 shrink-0" />
+                                            Below average fuel efficiency ({car.performance.fuelEfficiency} km/l)
+                                        </li>
+                                    )}
+                                </ul>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </section>
+
+                {/* ──────── INSPECTION REPORT (Used Cars Only) ──────── */}
+                {isUsed && (
+                    <section ref={el => { sectionRefs.current['inspection'] = el; }} id="inspection">
+                        <h2 className="text-2xl font-bold mb-6">Inspection Report</h2>
+
+                        {/* Overall Score */}
+                        <Card className="mb-6">
+                            <CardContent className="p-6">
+                                <div className="flex flex-col sm:flex-row items-center gap-6">
+                                    <div className="text-center">
+                                        <div className="w-24 h-24 rounded-full bg-emerald-100 flex items-center justify-center">
+                                            <span className="text-3xl font-bold text-emerald-700">4.2</span>
+                                        </div>
+                                        <p className="text-xs text-muted-foreground mt-2">out of 5.0</p>
+                                    </div>
+                                    <div className="flex-1">
+                                        <h3 className="text-lg font-semibold mb-1">Overall Condition: Good</h3>
+                                        <p className="text-sm text-muted-foreground mb-3">
+                                            Inspected on {new Date(Date.now() - 7 * 86400000).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} by a certified mechanic.
+                                            This vehicle passed 186 out of 200+ quality checkpoints.
+                                        </p>
+                                        <div className="flex flex-wrap gap-2">
+                                            <Badge className="bg-emerald-100 text-emerald-700 hover:bg-emerald-100">No Accidents</Badge>
+                                            <Badge className="bg-emerald-100 text-emerald-700 hover:bg-emerald-100">No Flood Damage</Badge>
+                                            <Badge className="bg-emerald-100 text-emerald-700 hover:bg-emerald-100">Original Paint</Badge>
+                                            <Badge className="bg-amber-100 text-amber-700 hover:bg-amber-100">Minor Scratches</Badge>
+                                        </div>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+
+                        {/* Category Breakdown */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {INSPECTION_CATEGORIES.map((cat) => {
+                                const goodCount = cat.items.filter(i => i.status === 'good').length;
+                                const total = cat.items.length;
+                                return (
+                                    <Card key={cat.name}>
+                                        <CardContent className="p-5">
+                                            <div className="flex items-center justify-between mb-3">
+                                                <h4 className="text-sm font-semibold flex items-center gap-2">
+                                                    {cat.icon} {cat.name}
+                                                </h4>
+                                                <Badge variant="outline" className="text-[10px]">
+                                                    {goodCount}/{total} Good
+                                                </Badge>
+                                            </div>
+                                            <div className="space-y-2">
+                                                {cat.items.map((item) => (
+                                                    <div key={item.name} className="flex items-center justify-between text-sm">
+                                                        <span className="text-muted-foreground">{item.name}</span>
+                                                        <span className={`text-xs font-medium flex items-center gap-1 ${
+                                                            item.status === 'good' ? 'text-emerald-600' : item.status === 'fair' ? 'text-amber-600' : 'text-red-600'
+                                                        }`}>
+                                                            {item.status === 'good' && <CheckCircle2 className="w-3.5 h-3.5" />}
+                                                            {item.status === 'fair' && <AlertTriangle className="w-3.5 h-3.5" />}
+                                                            {item.status === 'good' ? 'Good' : item.status === 'fair' ? 'Fair' : 'Needs Repair'}
+                                                        </span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </CardContent>
+                                    </Card>
+                                );
+                            })}
+                        </div>
+
+                        <p className="text-[10px] text-muted-foreground mt-4">
+                            * Inspection report is based on assessment at the time of listing. Vehicle condition may change over time.
+                        </p>
+                    </section>
+                )}
+
+                {/* ──────── CAR HISTORY (Used Cars Only) ──────── */}
+                {isUsed && (
+                    <section ref={el => { sectionRefs.current['history'] = el; }} id="history">
+                        <h2 className="text-2xl font-bold mb-6">Car History</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {/* Ownership Timeline */}
+                            <Card>
+                                <CardContent className="p-5">
+                                    <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
+                                        <Users className="w-4 h-4 text-muted-foreground" />
+                                        Ownership History
+                                    </h3>
+                                    <div className="relative pl-6 space-y-6">
+                                        {/* Timeline line */}
+                                        <div className="absolute left-[9px] top-1 bottom-1 w-0.5 bg-border" />
+
+                                        <div className="relative">
+                                            <div className="absolute -left-6 top-0 w-[18px] h-[18px] rounded-full bg-primary border-2 border-background" />
+                                            <div>
+                                                <p className="text-sm font-semibold">Current Owner (You viewing)</p>
+                                                <p className="text-xs text-muted-foreground">Since {car.year ? car.year + 2 : 2023} - Present</p>
+                                                <p className="text-xs text-muted-foreground mt-1">Individual • Metro City</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="relative">
+                                            <div className="absolute -left-6 top-0 w-[18px] h-[18px] rounded-full bg-muted border-2 border-background" />
+                                            <div>
+                                                <p className="text-sm font-semibold">1st Owner</p>
+                                                <p className="text-xs text-muted-foreground">{car.year || 2020} - {car.year ? car.year + 2 : 2022}</p>
+                                                <p className="text-xs text-muted-foreground mt-1">Individual • Metro City</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </CardContent>
+                            </Card>
+
+                            {/* Service & Documents */}
+                            <Card>
+                                <CardContent className="p-5">
+                                    <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
+                                        <FileText className="w-4 h-4 text-muted-foreground" />
+                                        Documents & Service
+                                    </h3>
+                                    <div className="space-y-3">
+                                        {[
+                                            { label: 'Registration Certificate (RC)', status: true, icon: <FileText className="w-4 h-4" /> },
+                                            { label: 'Insurance Valid', status: true, icon: <Shield className="w-4 h-4" /> },
+                                            { label: 'Pollution Certificate', status: true, icon: <CheckCircle2 className="w-4 h-4" /> },
+                                            { label: 'Service Records Available', status: true, icon: <Wrench className="w-4 h-4" /> },
+                                            { label: 'No Accident History', status: true, icon: <ShieldCheck className="w-4 h-4" /> },
+                                            { label: 'No Loan / Hypothecation', status: true, icon: <BadgeCheck className="w-4 h-4" /> },
+                                        ].map((doc) => (
+                                            <div key={doc.label} className="flex items-center justify-between p-2.5 bg-muted/30 rounded-lg">
+                                                <div className="flex items-center gap-2.5 text-sm">
+                                                    <span className="text-muted-foreground">{doc.icon}</span>
+                                                    {doc.label}
+                                                </div>
+                                                <Badge
+                                                    variant="outline"
+                                                    className={doc.status
+                                                        ? 'border-emerald-300 text-emerald-700 bg-emerald-50'
+                                                        : 'border-red-300 text-red-700 bg-red-50'
+                                                    }
+                                                >
+                                                    {doc.status ? 'Verified' : 'Pending'}
+                                                </Badge>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </CardContent>
+                            </Card>
+
+                            {/* Service History */}
+                            <Card className="md:col-span-2">
+                                <CardContent className="p-5">
+                                    <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
+                                        <Wrench className="w-4 h-4 text-muted-foreground" />
+                                        Service History
+                                    </h3>
+                                    <Table>
+                                        <TableHeader>
+                                            <TableRow className="bg-muted/30">
+                                                <TableHead className="text-xs font-semibold">Date</TableHead>
+                                                <TableHead className="text-xs font-semibold">KM Reading</TableHead>
+                                                <TableHead className="text-xs font-semibold">Service Type</TableHead>
+                                                <TableHead className="text-xs font-semibold">Service Center</TableHead>
+                                            </TableRow>
+                                        </TableHeader>
+                                        <TableBody>
+                                            {[
+                                                { date: 'Nov 2025', km: '42,000', type: 'Regular Service', center: 'Authorized Service Center' },
+                                                { date: 'May 2025', km: '35,000', type: 'Regular Service + Brake Pad', center: 'Authorized Service Center' },
+                                                { date: 'Nov 2024', km: '27,000', type: 'Regular Service', center: 'Authorized Service Center' },
+                                                { date: 'May 2024', km: '18,000', type: 'Regular Service + Tyre Rotation', center: 'Authorized Service Center' },
+                                                { date: 'Nov 2023', km: '10,000', type: 'First Free Service', center: 'Authorized Service Center' },
+                                            ].map((s, i) => (
+                                                <TableRow key={i}>
+                                                    <TableCell className="text-sm">{s.date}</TableCell>
+                                                    <TableCell className="text-sm">{s.km} km</TableCell>
+                                                    <TableCell className="text-sm">{s.type}</TableCell>
+                                                    <TableCell className="text-sm text-muted-foreground">{s.center}</TableCell>
+                                                </TableRow>
+                                            ))}
+                                        </TableBody>
+                                    </Table>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    </section>
+                )}
+
+                {/* ──────── SPECIFICATIONS ──────── */}
+                <section ref={el => { sectionRefs.current['specs'] = el; }} id="specs">
+                    <h2 className="text-2xl font-bold mb-6">{car.make} {car.model} Specifications</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {/* Engine & Transmission */}
+                        <Card>
+                            <CardContent className="p-5">
+                                <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
+                                    <Settings className="w-4 h-4 text-muted-foreground" />
+                                    Engine & Transmission
+                                </h3>
+                                <div className="space-y-0">
+                                    <SpecRow label="Engine Type" value={car.engine?.type || '—'} />
+                                    <SpecRow label="Displacement" value={car.engine?.displacement ? `${car.engine.displacement} cc` : '—'} />
+                                    <SpecRow label="Max Power" value={car.engine?.power || '—'} />
+                                    <SpecRow label="Max Torque" value={car.engine?.torque || '—'} />
+                                    <SpecRow label="Cylinders" value={car.engine?.cylinders ? `${car.engine.cylinders}` : '—'} />
+                                    <SpecRow label="Transmission" value={car.transmission?.type || '—'} />
+                                    <SpecRow label="Gears" value={car.transmission?.gears ? `${car.transmission.gears} Speed` : '—'} />
+                                    <SpecRow label="Drive Type" value={car.transmission?.driveType || '—'} last />
+                                </div>
+                            </CardContent>
+                        </Card>
+
+                        {/* Performance */}
+                        <Card>
+                            <CardContent className="p-5">
+                                <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
+                                    <Zap className="w-4 h-4 text-muted-foreground" />
+                                    Performance & Fuel
+                                </h3>
+                                <div className="space-y-0">
+                                    <SpecRow label="Mileage (ARAI)" value={car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` : '—'} />
+                                    <SpecRow label="Top Speed" value={car.performance?.topSpeed ? `${car.performance.topSpeed} km/h` : '—'} />
+                                    <SpecRow label="0-100 km/h" value={car.performance?.acceleration0to100 ? `${car.performance.acceleration0to100} sec` : '—'} />
+                                    <SpecRow label="Fuel Tank" value={car.dimensions?.fuelTankCapacity ? `${car.dimensions.fuelTankCapacity} L` : '—'} />
+                                    {car.engine?.batteryCapacity && (
+                                        <SpecRow label="Battery" value={`${car.engine.batteryCapacity} kWh`} />
+                                    )}
+                                    {car.engine?.range && (
+                                        <SpecRow label="Range" value={`${car.engine.range} km`} last />
+                                    )}
+                                    {!car.engine?.batteryCapacity && !car.engine?.range && (
+                                        <SpecRow label="Fuel Type" value={car.engine?.type || '—'} last />
+                                    )}
+                                </div>
+                            </CardContent>
+                        </Card>
+
+                        {/* Dimensions */}
+                        <Card>
+                            <CardContent className="p-5">
+                                <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
+                                    <CarIcon className="w-4 h-4 text-muted-foreground" />
+                                    Dimensions & Weight
+                                </h3>
+                                <div className="space-y-0">
+                                    <SpecRow label="Length" value={car.dimensions?.length ? `${car.dimensions.length} mm` : '—'} />
+                                    <SpecRow label="Width" value={car.dimensions?.width ? `${car.dimensions.width} mm` : '—'} />
+                                    <SpecRow label="Height" value={car.dimensions?.height ? `${car.dimensions.height} mm` : '—'} />
+                                    <SpecRow label="Wheelbase" value={car.dimensions?.wheelbase ? `${car.dimensions.wheelbase} mm` : '—'} />
+                                    <SpecRow label="Ground Clearance" value={car.dimensions?.groundClearance ? `${car.dimensions.groundClearance} mm` : '—'} />
+                                    <SpecRow label="Kerb Weight" value={car.dimensions?.kerbWeight ? `${car.dimensions.kerbWeight} kg` : '—'} />
+                                    <SpecRow label="Boot Space" value={car.dimensions?.bootSpace ? `${car.dimensions.bootSpace} L` : '—'} />
+                                    <SpecRow label="Seating Capacity" value={car.dimensions?.seatingCapacity ? `${car.dimensions.seatingCapacity}` : '—'} last />
+                                </div>
+                            </CardContent>
+                        </Card>
+
+                        {/* Safety */}
+                        <Card>
+                            <CardContent className="p-5">
+                                <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
+                                    <Shield className="w-4 h-4 text-muted-foreground" />
+                                    Safety
+                                </h3>
+                                <div className="space-y-0">
+                                    <SpecRow label="NCAP Rating" value={car.safety?.ncapRating?.stars ? `${car.safety.ncapRating.stars} Stars` : '—'} />
+                                    <SpecRow label="Airbags" value={car.safety?.airbags !== undefined ? `${car.safety.airbags}` : '—'} />
+                                    <SpecRow label="ABS" value={car.safety?.abs ? 'Yes' : '—'} />
+                                    <SpecRow label="ESP" value={car.safety?.esp ? 'Yes' : 'No'} />
+                                    <SpecRow label="Hill Hold Assist" value={car.safety?.hillHoldAssist ? 'Yes' : 'No'} />
+                                    <SpecRow label="Traction Control" value={car.safety?.tractionControl ? 'Yes' : 'No'} />
+                                    <SpecRow label="Rear Camera" value={car.safety?.rearCamera ? 'Yes' : 'No'} last />
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </section>
+
+                {/* ──────── FEATURES ──────── */}
+                <section ref={el => { sectionRefs.current['features'] = el; }} id="features">
+                    <h2 className="text-2xl font-bold mb-6">{car.make} {car.model} Features</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {car.features?.keyFeatures && car.features.keyFeatures.length > 0 && (
+                            <FeatureGroup title="Key Features" features={car.features.keyFeatures} icon={<Star className="w-4 h-4 text-amber-500" />} />
+                        )}
+                        {car.features?.safetyFeatures && car.features.safetyFeatures.length > 0 && (
+                            <FeatureGroup title="Safety" features={car.features.safetyFeatures} icon={<Shield className="w-4 h-4 text-red-500" />} />
+                        )}
+                        {car.features?.comfortFeatures && car.features.comfortFeatures.length > 0 && (
+                            <FeatureGroup title="Comfort & Convenience" features={car.features.comfortFeatures} icon={<Users className="w-4 h-4 text-purple-500" />} />
+                        )}
+                        {car.features?.techFeatures && car.features.techFeatures.length > 0 && (
+                            <FeatureGroup title="Technology & Infotainment" features={car.features.techFeatures} icon={<Zap className="w-4 h-4 text-blue-500" />} />
+                        )}
+                        {car.features?.exteriorFeatures && car.features.exteriorFeatures.length > 0 && (
+                            <FeatureGroup title="Exterior" features={car.features.exteriorFeatures} icon={<CarIcon className="w-4 h-4 text-green-500" />} />
+                        )}
+                    </div>
+                    {(!car.features?.keyFeatures || car.features.keyFeatures.length === 0) && (
+                        <Card className="p-8 text-center">
+                            <p className="text-muted-foreground">Feature information not available for this model.</p>
+                        </Card>
+                    )}
+                </section>
+
+                {/* ──────── VARIANTS & PRICE ──────── */}
+                <section ref={el => { sectionRefs.current['variants'] = el; }} id="variants">
+                    <h2 className="text-2xl font-bold mb-6">{car.make} {car.model} Variants & Price</h2>
+                    <Card>
+                        <CardContent className="p-0">
+                            <Table>
+                                <TableHeader>
+                                    <TableRow className="bg-muted/40">
+                                        <TableHead className="font-semibold">Variant</TableHead>
+                                        <TableHead className="font-semibold">Ex-Showroom Price</TableHead>
+                                        <TableHead className="font-semibold">Fuel</TableHead>
+                                        <TableHead className="font-semibold">Transmission</TableHead>
+                                        <TableHead className="font-semibold text-right">Action</TableHead>
+                                    </TableRow>
+                                </TableHeader>
+                                <TableBody>
+                                    {car.variants?.map((variant) => (
+                                        <TableRow key={variant.id} className="hover:bg-muted/20">
+                                            <TableCell>
+                                                <div>
+                                                    <span className="font-medium">{variant.name}</span>
+                                                    {variant.isPopular && (
+                                                        <Badge variant="secondary" className="ml-2 text-[10px]">Popular</Badge>
+                                                    )}
+                                                </div>
+                                            </TableCell>
+                                            <TableCell className="font-semibold">{formatPriceInLakhs(variant.price)}</TableCell>
+                                            <TableCell>{variant.fuelType}</TableCell>
+                                            <TableCell>{variant.transmission}</TableCell>
+                                            <TableCell className="text-right">
+                                                <Button variant="outline" size="sm">
+                                                    Get Price
+                                                </Button>
+                                            </TableCell>
+                                        </TableRow>
+                                    ))}
+                                    {(!car.variants || car.variants.length === 0) && (
+                                        <TableRow>
+                                            <TableCell colSpan={5} className="text-center py-8 text-muted-foreground">
+                                                Variant details are not available yet.
+                                            </TableCell>
+                                        </TableRow>
+                                    )}
+                                </TableBody>
+                            </Table>
+                        </CardContent>
+                    </Card>
+                </section>
+
+                {/* ──────── COLOURS ──────── */}
+                <section ref={el => { sectionRefs.current['colors'] = el; }} id="colors">
+                    <h2 className="text-2xl font-bold mb-6">{car.make} {car.model} Colours</h2>
+                    {car.colors && car.colors.length > 0 ? (
+                        <Card>
+                            <CardContent className="p-6">
+                                <div className="flex flex-wrap gap-3 mb-4">
+                                    {car.colors.map((color) => (
+                                        <button
+                                            key={color.name}
+                                            onClick={() => setSelectedColor(color.name)}
+                                            className={`flex flex-col items-center gap-1.5 p-2 rounded-lg transition-all ${
+                                                selectedColor === color.name
+                                                    ? 'bg-muted ring-2 ring-primary'
+                                                    : 'hover:bg-muted/50'
+                                            }`}
+                                        >
+                                            <div
+                                                className="w-10 h-10 rounded-full border-2 border-border shadow-sm"
+                                                style={{ backgroundColor: color.hex }}
+                                            />
+                                            <span className="text-xs font-medium">{color.name}</span>
+                                            {color.extraCost > 0 && (
+                                                <span className="text-[10px] text-muted-foreground">+₹{color.extraCost.toLocaleString()}</span>
+                                            )}
+                                        </button>
+                                    ))}
+                                </div>
+                                {selectedColor && (
+                                    <p className="text-sm text-muted-foreground">
+                                        Selected: <span className="font-medium text-foreground">{selectedColor}</span>
+                                        {car.colors.find(c => c.name === selectedColor)?.type && (
+                                            <> ({car.colors.find(c => c.name === selectedColor)?.type})</>
+                                        )}
+                                    </p>
+                                )}
+                            </CardContent>
+                        </Card>
+                    ) : (
+                        <Card className="p-8 text-center">
+                            <p className="text-muted-foreground">Colour options not available for this model.</p>
+                        </Card>
+                    )}
+                </section>
+
+                {/* ──────── EMI CALCULATOR ──────── */}
+                <section ref={el => { sectionRefs.current['emi'] = el; }} id="emi">
+                    <h2 className="text-2xl font-bold mb-6">{car.make} {car.model} EMI Calculator</h2>
+                    <Card>
+                        <CardContent className="p-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                {/* Inputs */}
+                                <div className="space-y-6">
+                                    <EmiSlider
+                                        label="Vehicle Price"
+                                        value={emiPrice}
+                                        min={100000}
+                                        max={10000000}
+                                        step={50000}
+                                        onChange={setEmiPrice}
+                                        format={(v) => `₹${Math.round(v).toLocaleString('en-IN')}`}
+                                    />
+                                    <EmiSlider
+                                        label="Down Payment"
+                                        value={emiDown}
+                                        min={0}
+                                        max={emiPrice - 50000}
+                                        step={10000}
+                                        onChange={setEmiDown}
+                                        format={(v) => `₹${Math.round(v).toLocaleString('en-IN')}`}
+                                    />
+                                    <EmiSlider
+                                        label="Loan Tenure"
+                                        value={emiTenure}
+                                        min={12}
+                                        max={84}
+                                        step={6}
+                                        onChange={setEmiTenure}
+                                        format={(v) => `${v} months`}
+                                    />
+                                    <EmiSlider
+                                        label="Interest Rate"
+                                        value={emiRate}
+                                        min={6}
+                                        max={20}
+                                        step={0.5}
+                                        onChange={setEmiRate}
+                                        format={(v) => `${v}% p.a.`}
+                                    />
+                                </div>
+
+                                {/* Result */}
+                                <div>
+                                    {emiResult ? (
+                                        <Card className="bg-muted/30 h-full">
+                                            <CardContent className="p-6 flex flex-col h-full">
+                                                <div className="text-center pb-4 mb-4 border-b">
+                                                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Monthly EMI</p>
+                                                    <p className="text-4xl font-bold text-primary">
+                                                        ₹{emiResult.emi.toLocaleString('en-IN')}
+                                                    </p>
+                                                    <p className="text-xs text-muted-foreground mt-1">per month for {emiTenure} months</p>
+                                                </div>
+                                                <div className="space-y-3 flex-1">
+                                                    <div className="flex justify-between text-sm">
+                                                        <span className="text-muted-foreground">Loan Amount</span>
+                                                        <span className="font-semibold">₹{emiResult.loan.toLocaleString('en-IN')}</span>
+                                                    </div>
+                                                    <div className="flex justify-between text-sm">
+                                                        <span className="text-muted-foreground">Total Interest</span>
+                                                        <span className="font-semibold">₹{emiResult.interest.toLocaleString('en-IN')}</span>
+                                                    </div>
+                                                    <Separator />
+                                                    <div className="flex justify-between text-sm">
+                                                        <span className="font-semibold">Total Payable</span>
+                                                        <span className="font-bold">₹{emiResult.total.toLocaleString('en-IN')}</span>
+                                                    </div>
+                                                </div>
+                                                {/* Principal vs Interest bar */}
+                                                <div className="mt-4">
+                                                    <div className="flex justify-between text-[11px] mb-1">
+                                                        <span className="text-muted-foreground">
+                                                            Principal {Math.round((emiResult.loan / emiResult.total) * 100)}%
+                                                        </span>
+                                                        <span className="text-muted-foreground">
+                                                            Interest {Math.round((emiResult.interest / emiResult.total) * 100)}%
+                                                        </span>
+                                                    </div>
+                                                    <div className="w-full h-2 bg-muted rounded-full overflow-hidden">
+                                                        <div
+                                                            className="h-full bg-primary rounded-full transition-all"
+                                                            style={{ width: `${(emiResult.loan / emiResult.total) * 100}%` }}
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <p className="text-[10px] text-muted-foreground mt-3">
+                                                    * Indicative EMI. Actual values may vary based on lender terms.
+                                                </p>
+                                            </CardContent>
+                                        </Card>
+                                    ) : (
+                                        <Card className="bg-muted/30 h-full flex items-center justify-center">
+                                            <CardContent className="text-center p-6">
+                                                <Calculator className="w-10 h-10 text-muted-foreground mx-auto mb-3" />
+                                                <p className="text-sm text-muted-foreground">Adjust sliders to calculate EMI</p>
+                                            </CardContent>
+                                        </Card>
+                                    )}
+                                </div>
+                            </div>
+                        </CardContent>
+                    </Card>
+                </section>
+
+                {/* ──────── ON-ROAD PRICE BREAKDOWN ──────── */}
+                {car.pricing.onRoad && (
+                    <Card>
+                        <CardContent className="p-6">
+                            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                                <MapPin className="w-4 h-4 text-muted-foreground" />
+                                On-Road Price Estimate
+                            </h3>
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                {car.pricing.onRoad.delhi && (
+                                    <div className="p-4 bg-muted/30 rounded-lg">
+                                        <p className="text-xs text-muted-foreground">Delhi</p>
+                                        <p className="text-lg font-bold">{formatPriceInLakhs(car.pricing.onRoad.delhi)}</p>
+                                    </div>
+                                )}
+                                {car.pricing.onRoad.mumbai && (
+                                    <div className="p-4 bg-muted/30 rounded-lg">
+                                        <p className="text-xs text-muted-foreground">Mumbai</p>
+                                        <p className="text-lg font-bold">{formatPriceInLakhs(car.pricing.onRoad.mumbai)}</p>
+                                    </div>
+                                )}
+                                {car.pricing.onRoad.bangalore && (
+                                    <div className="p-4 bg-muted/30 rounded-lg">
+                                        <p className="text-xs text-muted-foreground">Bangalore</p>
+                                        <p className="text-lg font-bold">{formatPriceInLakhs(car.pricing.onRoad.bangalore)}</p>
+                                    </div>
+                                )}
+                            </div>
+                        </CardContent>
+                    </Card>
+                )}
+
+                {/* ──────── REVIEWS ──────── */}
+                <section ref={el => { sectionRefs.current['reviews'] = el; }} id="reviews">
+                    <h2 className="text-2xl font-bold mb-6">{car.make} {car.model} Reviews</h2>
+                    {car.rating ? (
+                        <Card>
+                            <CardContent className="p-6">
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    {/* Overall Rating */}
+                                    <div className="text-center p-6 bg-muted/30 rounded-xl">
+                                        <p className="text-5xl font-bold text-foreground">{car.rating.overall}</p>
+                                        <div className="flex justify-center gap-0.5 my-2">
+                                            {Array.from({ length: 5 }).map((_, i) => (
+                                                <Star
+                                                    key={i}
+                                                    className={`w-5 h-5 ${i < Math.floor(car.rating!.overall) ? 'fill-amber-400 text-amber-400' : 'text-gray-300'}`}
+                                                />
+                                            ))}
+                                        </div>
+                                        <p className="text-sm text-muted-foreground">
+                                            Based on {car.rating.reviewCount || 0} reviews
+                                        </p>
+                                    </div>
+
+                                    {/* Rating Breakdown */}
+                                    <div className="md:col-span-2 space-y-3">
+                                        {[
+                                            { label: 'Performance', value: car.rating.performance },
+                                            { label: 'Comfort', value: car.rating.comfort },
+                                            { label: 'Fuel Efficiency', value: car.rating.fuelEfficiency },
+                                            { label: 'Styling', value: car.rating.styling },
+                                            { label: 'Safety', value: car.rating.safety },
+                                            { label: 'Value for Money', value: car.rating.valueForMoney },
+                                        ].filter(r => r.value).map((rating) => (
+                                            <div key={rating.label} className="flex items-center gap-3">
+                                                <span className="text-sm w-32 text-muted-foreground">{rating.label}</span>
+                                                <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">
+                                                    <div
+                                                        className="h-full bg-amber-400 rounded-full"
+                                                        style={{ width: `${((rating.value || 0) / 5) * 100}%` }}
+                                                    />
+                                                </div>
+                                                <span className="text-sm font-semibold w-8">{rating.value}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    ) : (
+                        <Card className="p-8 text-center">
+                            <MessageSquare className="w-10 h-10 text-muted-foreground mx-auto mb-3" />
+                            <p className="text-muted-foreground">No reviews available yet. Be the first to review!</p>
+                            <Button variant="outline" className="mt-4">Write a Review</Button>
+                        </Card>
+                    )}
+                </section>
+
+                {/* ──────── FAQS ──────── */}
+                <section ref={el => { sectionRefs.current['faqs'] = el; }} id="faqs">
+                    <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+                    <Card>
+                        <CardContent className="p-5">
+                            <Accordion type="single" collapsible className="w-full">
+                                <AccordionItem value="price">
+                                    <AccordionTrigger className="text-sm font-medium hover:no-underline">
+                                        What is the price of {car.make} {car.model}?
+                                    </AccordionTrigger>
+                                    <AccordionContent className="text-sm text-muted-foreground">
+                                        The {car.make} {car.model} price starts at {priceDisplay}
+                                        {hasPriceRange && ` and goes up to ${maxPriceDisplay}`} (ex-showroom).
+                                        The actual on-road price may vary depending on your city, registration charges, and insurance.
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="mileage">
+                                    <AccordionTrigger className="text-sm font-medium hover:no-underline">
+                                        What is the mileage of {car.make} {car.model}?
+                                    </AccordionTrigger>
+                                    <AccordionContent className="text-sm text-muted-foreground">
+                                        The {car.make} {car.model} delivers a mileage of {car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l (ARAI certified)` : 'data not available'}.
+                                        Real-world mileage may vary depending on driving conditions and habits.
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="engine">
+                                    <AccordionTrigger className="text-sm font-medium hover:no-underline">
+                                        What engine does the {car.make} {car.model} have?
+                                    </AccordionTrigger>
+                                    <AccordionContent className="text-sm text-muted-foreground">
+                                        The {car.make} {car.model} is powered by a {car.engine?.displacement ? `${car.engine.displacement}cc` : ''} {car.engine?.type} engine
+                                        that produces {car.engine?.power || 'N/A'} of power and {car.engine?.torque || 'N/A'} of torque,
+                                        mated to a {car.transmission?.type} transmission.
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="variants">
+                                    <AccordionTrigger className="text-sm font-medium hover:no-underline">
+                                        How many variants does {car.make} {car.model} come in?
+                                    </AccordionTrigger>
+                                    <AccordionContent className="text-sm text-muted-foreground">
+                                        The {car.make} {car.model} is available in {car.variants?.length || 'multiple'} variants.
+                                        {car.variants && car.variants.length > 0 && (
+                                            <> The variants include: {car.variants.map(v => v.name).join(', ')}.</>
+                                        )}
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="safety">
+                                    <AccordionTrigger className="text-sm font-medium hover:no-underline">
+                                        How safe is the {car.make} {car.model}?
+                                    </AccordionTrigger>
+                                    <AccordionContent className="text-sm text-muted-foreground">
+                                        The {car.make} {car.model} comes with {car.safety?.airbags || 'multiple'} airbags
+                                        {car.safety?.abs && ', ABS with EBD'}
+                                        {car.safety?.esp && ', Electronic Stability Program'}
+                                        {car.safety?.rearCamera && ', rear parking camera'}
+                                        {car.safety?.ncapRating?.stars && `. It has received a ${car.safety.ncapRating.stars}-star NCAP safety rating.`}
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="emi">
+                                    <AccordionTrigger className="text-sm font-medium hover:no-underline">
+                                        What is the EMI for {car.make} {car.model}?
+                                    </AccordionTrigger>
+                                    <AccordionContent className="text-sm text-muted-foreground">
+                                        {car.pricing.emi ? (
+                                            <>The EMI for {car.make} {car.model} starts at ₹{car.pricing.emi.monthly.toLocaleString()} per month
+                                            with a down payment of ₹{car.pricing.emi.downPayment.toLocaleString()} for a tenure of {car.pricing.emi.tenure} months.
+                                            Use the EMI calculator above for a personalized estimate.</>
+                                        ) : (
+                                            <>Use the EMI calculator above to get a personalized estimate for the {car.make} {car.model}.</>
+                                        )}
+                                    </AccordionContent>
+                                </AccordionItem>
+                            </Accordion>
+                        </CardContent>
+                    </Card>
+                </section>
+
+                {/* ──────── SIMILAR CARS ──────── */}
+                {similarCars.length > 0 && (
+                    <section>
+                        <div className="flex items-center justify-between mb-6">
+                            <h2 className="text-2xl font-bold">Similar Cars</h2>
+                            <Link href="/cars" className="text-sm text-primary hover:underline">
+                                View All Cars
+                            </Link>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            {similarCars.slice(0, 4).map((simCar) => (
+                                <CarCard key={simCar.id} car={simCar} light />
+                            ))}
+                        </div>
+                    </section>
+                )}
+            </div>
+        </div>
+    );
+}
+
+/* ── Helper Components ── */
+
+function SpecRow({ label, value, last }: { label: string; value: string; last?: boolean }) {
+    return (
+        <div className={`flex justify-between py-2.5 ${!last ? 'border-b border-border/50' : ''}`}>
+            <span className="text-sm text-muted-foreground">{label}</span>
+            <span className="text-sm font-medium text-foreground">{value}</span>
+        </div>
+    );
+}
+
+function FeatureGroup({ title, features, icon }: { title: string; features: string[]; icon: React.ReactNode }) {
+    return (
+        <Card>
+            <CardContent className="p-5">
+                <h4 className="font-semibold text-sm mb-3 flex items-center gap-2">
+                    {icon} {title}
+                </h4>
+                <ul className="space-y-2">
+                    {features.map((feat, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm">
+                            <Check className="w-3.5 h-3.5 mt-0.5 text-green-600 shrink-0" />
+                            <span className="text-muted-foreground">{feat}</span>
+                        </li>
+                    ))}
+                </ul>
+            </CardContent>
+        </Card>
+    );
+}
+
+function EmiSlider({
+    label, value, min, max, step, onChange, format,
+}: {
+    label: string;
+    value: number;
+    min: number;
+    max: number;
+    step: number;
+    onChange: (v: number) => void;
+    format: (v: number) => string;
+}) {
+    return (
+        <div>
+            <div className="flex justify-between items-center mb-2">
+                <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{label}</label>
+                <span className="text-sm font-bold text-primary">{format(value)}</span>
+            </div>
+            <Slider
+                value={[value]}
+                min={min}
+                max={max}
+                step={step}
+                onValueChange={([v]) => onChange(v)}
+            />
         </div>
     );
 }

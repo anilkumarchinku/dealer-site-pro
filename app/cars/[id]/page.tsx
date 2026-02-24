@@ -6,6 +6,8 @@
 import { Metadata } from 'next';
 import { getCarById, getSimilarCars } from '@/lib/services/car-service';
 import { CarDetailView } from '@/components/cars/CarDetailView';
+import { SiteHeader } from '@/components/layout/SiteHeader';
+import { SiteFooter } from '@/components/layout/SiteFooter';
 import { notFound } from 'next/navigation';
 
 interface Props {
@@ -38,5 +40,11 @@ export default async function CarPage({ params }: Props) {
 
     const similarCars = await getSimilarCars(id);
 
-    return <CarDetailView car={car} similarCars={similarCars} />;
+    return (
+        <>
+            <SiteHeader />
+            <CarDetailView car={car} similarCars={similarCars} />
+            <SiteFooter />
+        </>
+    );
 }

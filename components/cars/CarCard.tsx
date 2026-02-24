@@ -24,7 +24,10 @@ import {
     Zap,
     TrendingUp,
     Send,
-    Eye
+    Eye,
+    ShieldCheck,
+    MapPin,
+    Calendar,
 } from 'lucide-react';
 
 interface CarCardProps {
@@ -65,6 +68,8 @@ export function CarCard({
         fetchSpecs();
         return;
     }, [car.make, car.model]);
+
+    const isUsed = car.condition === 'used' || car.condition === 'certified_pre_owned';
 
     const exShowroom = car.pricing?.exShowroom ?? { min: null, max: null };
     const priceRange = formatPriceInLakhs(exShowroom.min);
@@ -119,6 +124,22 @@ export function CarCard({
                         </div>
                     )}
 
+                    {/* Condition Badge — top-left */}
+                    {car.condition && car.condition !== 'new' && (
+                        <div className="absolute top-2 left-2 flex gap-1.5">
+                            {car.condition === 'certified_pre_owned' && (
+                                <span className="flex items-center gap-1 bg-emerald-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-sm">
+                                    <ShieldCheck className="w-3 h-3" /> Assured
+                                </span>
+                            )}
+                            {car.condition === 'used' && (
+                                <span className="bg-amber-500 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-sm">
+                                    Used
+                                </span>
+                            )}
+                        </div>
+                    )}
+
                     {/* Hover overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -153,6 +174,23 @@ export function CarCard({
                         )}
                     </div>
 
+                    {/* Used Car Info Pills */}
+                    {isUsed && (
+                        <div className="flex flex-wrap gap-1.5 mb-1.5">
+                            {car.year && (
+                                <span className={cn('inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded', light ? 'bg-gray-100 text-gray-600' : 'bg-muted text-muted-foreground')}>
+                                    <Calendar className="w-2.5 h-2.5" />{car.year}
+                                </span>
+                            )}
+                            <span className={cn('inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded', light ? 'bg-gray-100 text-gray-600' : 'bg-muted text-muted-foreground')}>
+                                <Fuel className="w-2.5 h-2.5" />{fuelDisplay}
+                            </span>
+                            <span className={cn('inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded', light ? 'bg-gray-100 text-gray-600' : 'bg-muted text-muted-foreground')}>
+                                <Gauge className="w-2.5 h-2.5" />{transDisplay}
+                            </span>
+                        </div>
+                    )}
+
                     {/* Price */}
                     <div className="mb-2">
                         <div className="flex items-baseline gap-1.5 flex-wrap">
@@ -182,6 +220,23 @@ export function CarCard({
                         <SpecItem icon={<Users className="w-3.5 h-3.5 text-purple-600" />} label="Seats" value={seatingDisplay} light={light} />
                         <SpecItem icon={<Zap className="w-3.5 h-3.5 text-amber-600" />} label="Mileage" value={mileageDisplay} light={light} />
                     </div>
+
+                    {/* Trust Badges for Used Cars */}
+                    {isUsed && (
+                        <div className="flex items-center gap-2 mb-1.5">
+                            <span className="inline-flex items-center gap-1 text-[9px] font-medium text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">
+                                <ShieldCheck className="w-2.5 h-2.5" />Inspected
+                            </span>
+                            <span className="inline-flex items-center gap-1 text-[9px] font-medium text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">
+                                Warranty
+                            </span>
+                            {car.condition === 'certified_pre_owned' && (
+                                <span className="inline-flex items-center gap-1 text-[9px] font-medium text-purple-700 bg-purple-50 px-1.5 py-0.5 rounded">
+                                    7-Day Return
+                                </span>
+                            )}
+                        </div>
+                    )}
 
                     {/* CTA */}
                     <Button

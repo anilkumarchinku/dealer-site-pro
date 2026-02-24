@@ -317,3 +317,77 @@ export async function getTopRatedCars(limit: number = 6): Promise<Car[]> {
     return (data ?? []).map(mapDbCarToCar)
 }
 
+/**
+ * Get all brands with model count and price range
+ */
+export async function getAllBrandsWithStats(): Promise<{
+    name: string;
+    modelCount: number;
+    priceMin: number | null;
+    priceMax: number | null;
+    bodyTypes: string[];
+}[]> {
+    const { data } = await supabase
+        .from(CAR_TABLE)
+        .select('make, body_type, price_min_paise, price_max_paise')
+        .eq('is_active', true);
+
+    if (!data) return [];
+
+    const brandMap = new Map<string, {
+        modelCount: number;
+        priceMin: number;
+        priceMax: number;
+        bodyTypes: Set<string>;
+    }>();
+
+    for (const row of data) {
+        const existing = brandMap.get(row.make);
+        const minP = row.price_min_paise ? Math.round(row.price_min_paise / 100) : 0;
+        const maxP = row.price_max_paise ? Math.round(row.price_max_paise / 100) : 0;
+
+        if (existing) {
+            existing.modelCount++;
+            if (minP > 0 && (existing.priceMin === 0 || minP < existing.priceMin)) existing.priceMin = minP;
+            if (maxP > existing.priceMax) existing.priceMax = maxP;
+            if (row.body_type) existing.bodyTypes.add(row.body_type);
+        } else {
+            brandMap.set(row.make, {
+                modelCount: 1,
+                priceMin: minP,
+                priceMax: maxP,
+                bodyTypes: new Set(row.body_type ? [row.body_type] : []),
+            });
+        }
+    }
+
+    return Array.from(brandMap.entries())
+        .map(([name, stats]) => ({
+            name,
+            modelCount: stats.modelCount,
+            priceMin: stats.priceMin || null,
+            priceMax: stats.priceMax || null,
+            bodyTypes: Array.from(stats.bodyTypes),
+        }))
+        .sort((a, b) => b.modelCount - a.modelCount);
+}
+
+/**
+ * Get cars by make with optional body type filter
+ */
+export async function getCarsByMakeAndBodyType(make: string, bodyType?: string): Promise<Car[]> {
+    let query = supabase
+        .from(CAR_TABLE)
+        .select('*')
+        .eq('make', make)
+        .eq('is_active', true);
+
+    if (bodyType && bodyType !== 'All') {
+        query = query.eq('body_type', bodyType);
+    }
+
+    const { data } = await query.order('popularity_score', { ascending: false });
+    if (!data) return [];
+    return data.map(mapDbCarToCar);
+}
+

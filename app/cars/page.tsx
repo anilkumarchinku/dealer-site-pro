@@ -7,6 +7,8 @@
 
 import { Suspense, useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { SiteHeader } from '@/components/layout/SiteHeader';
+import { SiteFooter } from '@/components/layout/SiteFooter';
 import { CarFilters } from '@/components/cars/CarFilters';
 import { CarGrid } from '@/components/cars/CarGrid';
 import { Car } from '@/lib/types/car';
@@ -19,7 +21,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from '@/components/ui/select';
-import { Filter, LayoutGrid, List, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Filter, LayoutGrid, List, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import {
     Sheet,
     SheetContent,
@@ -99,15 +101,67 @@ function CarsContent() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-    // Count active filters
-    const activeFilterCount = [
-        searchParams.get('make'),
-        searchParams.get('bodyType'),
-        searchParams.get('fuelType'),
-        searchParams.get('transmission'),
-        (searchParams.get('minPrice') && searchParams.get('minPrice') !== '0') ? 'price' : null,
-        (searchParams.get('maxPrice') && searchParams.get('maxPrice') !== '5000000') ? 'price' : null,
-    ].filter(Boolean).length;
+    // Build active filter chips
+    const buildFilterChips = () => {
+        const chips: { label: string; key: string; value: string }[] = [];
+
+        const makeParam = searchParams.get('make');
+        if (makeParam) makeParam.split(',').forEach(m => chips.push({ label: m, key: 'make', value: m }));
+
+        const bodyParam = searchParams.get('bodyType');
+        if (bodyParam) bodyParam.split(',').forEach(b => chips.push({ label: b, key: 'bodyType', value: b }));
+
+        const fuelParam = searchParams.get('fuelType');
+        if (fuelParam) fuelParam.split(',').forEach(f => chips.push({ label: f, key: 'fuelType', value: f }));
+
+        const transParam = searchParams.get('transmission');
+        if (transParam) transParam.split(',').forEach(t => chips.push({ label: t, key: 'transmission', value: t }));
+
+        const yearParam = searchParams.get('year');
+        if (yearParam) yearParam.split(',').forEach(y => chips.push({ label: y, key: 'year', value: y }));
+
+        const seatingParam = searchParams.get('seating');
+        if (seatingParam) seatingParam.split(',').forEach(s => chips.push({ label: `${s} Seater`, key: 'seating', value: s }));
+
+        const colorParam = searchParams.get('color');
+        if (colorParam) colorParam.split(',').forEach(c => chips.push({ label: c, key: 'color', value: c }));
+
+        const minPrice = searchParams.get('minPrice');
+        const maxPrice = searchParams.get('maxPrice');
+        if ((minPrice && minPrice !== '0') || (maxPrice && maxPrice !== '5000000')) {
+            chips.push({ label: `Price: ${formatPriceLabel(Number(minPrice || 0))} - ${formatPriceLabel(Number(maxPrice || 5000000))}`, key: 'price', value: 'price' });
+        }
+
+        return chips;
+    };
+
+    const formatPriceLabel = (price: number) => {
+        if (price >= 10000000) return `${(price / 10000000).toFixed(1)} Cr`;
+        if (price >= 100000) return `${(price / 100000).toFixed(1)} L`;
+        return `${(price / 1000).toFixed(0)}K`;
+    };
+
+    const removeFilter = (key: string, value: string) => {
+        const params = new URLSearchParams(searchParams.toString());
+        if (key === 'price') {
+            params.delete('minPrice');
+            params.delete('maxPrice');
+        } else {
+            const current = params.get(key)?.split(',').filter(Boolean) || [];
+            const updated = current.filter(v => v !== value);
+            if (updated.length > 0) params.set(key, updated.join(','));
+            else params.delete(key);
+        }
+        params.set('page', '1');
+        router.push(`?${params.toString()}`);
+    };
+
+    const clearAllFilters = () => {
+        router.push('?');
+    };
+
+    const filterChips = buildFilterChips();
+    const activeFilterCount = filterChips.length;
 
     return (
         <div className="flex flex-col lg:flex-row gap-6">
@@ -151,9 +205,11 @@ function CarsContent() {
                         {/* Result count */}
                         {!loading && (
                             <p className="text-sm text-muted-foreground">
-                                Showing <span className="font-semibold text-foreground">{cars.length}</span>
-                                {totalCount > cars.length && <> of <span className="font-semibold text-foreground">{totalCount}</span></>}
-                                {' '}cars
+                                <span className="font-semibold text-foreground">{totalCount.toLocaleString()}</span>
+                                {' '}Cars found
+                                {filterChips.length > 0 && (
+                                    <span className="text-muted-foreground"> matching filters</span>
+                                )}
                             </p>
                         )}
                     </div>
@@ -172,6 +228,35 @@ function CarsContent() {
                     </Select>
                 </div>
 
+                {/* Active Filter Chips */}
+                {filterChips.length > 0 && (
+                    <div className="flex flex-wrap items-center gap-2 mb-4">
+                        {filterChips.map((chip, idx) => (
+                            <Badge
+                                key={`${chip.key}-${chip.value}-${idx}`}
+                                variant="secondary"
+                                className="pl-2.5 pr-1 py-1 text-xs font-medium gap-1 cursor-pointer hover:bg-muted/80 transition-colors"
+                            >
+                                {chip.label}
+                                <button
+                                    onClick={() => removeFilter(chip.key, chip.value)}
+                                    className="ml-0.5 p-0.5 rounded-full hover:bg-foreground/10"
+                                >
+                                    <X className="w-3 h-3" />
+                                </button>
+                            </Badge>
+                        ))}
+                        {filterChips.length > 1 && (
+                            <button
+                                onClick={clearAllFilters}
+                                className="text-xs text-destructive hover:underline font-medium ml-1"
+                            >
+                                Clear all
+                            </button>
+                        )}
+                    </div>
+                )}
+
                 {/* Car Grid or Skeleton */}
                 {loading ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -183,39 +268,81 @@ function CarsContent() {
                     <>
                         <CarGrid cars={cars} light />
 
-                        {/* Pagination */}
+                        {/* Load More + Pagination */}
                         {totalPages > 1 && (
-                            <div className="flex items-center justify-center gap-2 mt-8">
-                                <Button
-                                    variant="outline"
-                                    size="sm"
-                                    onClick={() => handlePageChange(currentPage - 1)}
-                                    disabled={currentPage <= 1}
-                                >
-                                    <ChevronLeft className="w-4 h-4" />
-                                </Button>
-                                {Array.from({ length: Math.min(totalPages, 5) }).map((_, i) => {
-                                    const page = i + 1;
-                                    return (
+                            <div className="mt-8 space-y-4">
+                                {/* Load More Button */}
+                                {currentPage < totalPages && (
+                                    <div className="flex justify-center">
                                         <Button
-                                            key={page}
-                                            variant={currentPage === page ? "default" : "outline"}
-                                            size="sm"
-                                            onClick={() => handlePageChange(page)}
-                                            className="w-9"
+                                            variant="outline"
+                                            size="lg"
+                                            className="px-8"
+                                            onClick={() => handlePageChange(currentPage + 1)}
                                         >
-                                            {page}
+                                            Load More Cars
                                         </Button>
-                                    );
-                                })}
-                                <Button
-                                    variant="outline"
-                                    size="sm"
-                                    onClick={() => handlePageChange(currentPage + 1)}
-                                    disabled={currentPage >= totalPages}
-                                >
-                                    <ChevronRight className="w-4 h-4" />
-                                </Button>
+                                    </div>
+                                )}
+
+                                {/* Page Navigation */}
+                                <div className="flex items-center justify-center gap-2">
+                                    <Button
+                                        variant="outline"
+                                        size="sm"
+                                        onClick={() => handlePageChange(currentPage - 1)}
+                                        disabled={currentPage <= 1}
+                                    >
+                                        <ChevronLeft className="w-4 h-4" />
+                                    </Button>
+
+                                    {(() => {
+                                        const pages: number[] = [];
+                                        const maxVisible = 5;
+                                        let start = Math.max(1, currentPage - Math.floor(maxVisible / 2));
+                                        const end = Math.min(totalPages, start + maxVisible - 1);
+                                        start = Math.max(1, end - maxVisible + 1);
+
+                                        if (start > 1) {
+                                            pages.push(1);
+                                            if (start > 2) pages.push(-1); // ellipsis
+                                        }
+                                        for (let i = start; i <= end; i++) pages.push(i);
+                                        if (end < totalPages) {
+                                            if (end < totalPages - 1) pages.push(-2); // ellipsis
+                                            pages.push(totalPages);
+                                        }
+
+                                        return pages.map((page, idx) =>
+                                            page < 0 ? (
+                                                <span key={`ellipsis-${idx}`} className="px-1 text-muted-foreground">...</span>
+                                            ) : (
+                                                <Button
+                                                    key={page}
+                                                    variant={currentPage === page ? "default" : "outline"}
+                                                    size="sm"
+                                                    onClick={() => handlePageChange(page)}
+                                                    className="w-9"
+                                                >
+                                                    {page}
+                                                </Button>
+                                            )
+                                        );
+                                    })()}
+
+                                    <Button
+                                        variant="outline"
+                                        size="sm"
+                                        onClick={() => handlePageChange(currentPage + 1)}
+                                        disabled={currentPage >= totalPages}
+                                    >
+                                        <ChevronRight className="w-4 h-4" />
+                                    </Button>
+
+                                    <span className="text-xs text-muted-foreground ml-2">
+                                        Page {currentPage} of {totalPages}
+                                    </span>
+                                </div>
                             </div>
                         )}
                     </>
@@ -227,25 +354,29 @@ function CarsContent() {
 
 export default function CarsPage() {
     return (
-        <div className="bg-background min-h-screen">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                {/* Page Header */}
-                <div className="mb-8">
-                    <p className="text-sm text-muted-foreground mb-1">Home / Cars</p>
-                    <h1 className="text-3xl font-bold tracking-tight">All Cars</h1>
-                    <p className="text-muted-foreground mt-1">Browse and compare cars from top brands</p>
-                </div>
-
-                <Suspense fallback={
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:ml-[304px]">
-                        {Array.from({ length: 6 }).map((_, i) => (
-                            <CarCardSkeleton key={i} />
-                        ))}
+        <>
+            <SiteHeader />
+            <div className="bg-background min-h-screen">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    {/* Page Header */}
+                    <div className="mb-8">
+                        <p className="text-sm text-muted-foreground mb-1">Home / Cars</p>
+                        <h1 className="text-3xl font-bold tracking-tight">All Cars</h1>
+                        <p className="text-muted-foreground mt-1">Browse and compare cars from top brands</p>
                     </div>
-                }>
-                    <CarsContent />
-                </Suspense>
+
+                    <Suspense fallback={
+                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:ml-[304px]">
+                            {Array.from({ length: 6 }).map((_, i) => (
+                                <CarCardSkeleton key={i} />
+                            ))}
+                        </div>
+                    }>
+                        <CarsContent />
+                    </Suspense>
+                </div>
             </div>
-        </div>
+            <SiteFooter />
+        </>
     );
 }
