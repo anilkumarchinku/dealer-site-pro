@@ -31,6 +31,7 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { CarGrid } from "@/components/cars/CarGrid";
 import { Car as CarType } from "@/lib/types/car";
+import { getBrandLogo } from "@/lib/data/brand-logos";
 
 interface WelcomeClientProps {
     cars: CarType[];
@@ -345,8 +346,12 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                         {['Maruti Suzuki','Hyundai','Tata Motors','Kia','Mahindra','Toyota','Honda','MG','Skoda','BMW'].map((brand) => (
                             <Link key={brand} href={`/brands/${encodeURIComponent(brand)}`}
                                 className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-card hover:shadow-md transition-all group">
-                                <div className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-lg font-bold text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                                    {brand.charAt(0)}
+                                <div className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center overflow-hidden group-hover:border-primary transition-colors">
+                                    {getBrandLogo(brand) ? (
+                                        <Image src={getBrandLogo(brand)!} alt={brand} width={36} height={36} className="object-contain" />
+                                    ) : (
+                                        <span className="text-lg font-bold text-primary">{brand.charAt(0)}</span>
+                                    )}
                                 </div>
                                 <span className="text-[11px] font-medium text-muted-foreground group-hover:text-foreground text-center leading-tight">{brand}</span>
                             </Link>

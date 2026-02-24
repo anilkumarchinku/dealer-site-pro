@@ -19,6 +19,8 @@ import {
     Gauge,
     Fuel,
 } from 'lucide-react';
+import Image from 'next/image';
+import { getBrandLogo } from '@/lib/data/brand-logos';
 
 interface BrandPageContentProps {
     brand: string;
@@ -72,9 +74,13 @@ export function BrandPageContent({ brand, cars, brandInfo }: BrandPageContentPro
 
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                         <div className="flex items-center gap-4">
-                            {/* Brand initial */}
-                            <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center text-primary text-2xl font-bold shrink-0">
-                                {brand.charAt(0)}
+                            {/* Brand Logo */}
+                            <div className="w-16 h-16 rounded-xl bg-card border border-border flex items-center justify-center overflow-hidden shrink-0">
+                                {getBrandLogo(brand) ? (
+                                    <Image src={getBrandLogo(brand)!} alt={brand} width={48} height={48} className="object-contain p-1.5" />
+                                ) : (
+                                    <span className="text-primary text-2xl font-bold">{brand.charAt(0)}</span>
+                                )}
                             </div>
                             <div>
                                 <h1 className="text-2xl md:text-3xl font-bold">{brand} Cars</h1>

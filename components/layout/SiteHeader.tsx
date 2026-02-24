@@ -29,6 +29,7 @@ import {
 } from 'lucide-react';
 import type { Car as CarType } from '@/lib/types/car';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
+import { getBrandLogo } from '@/lib/data/brand-logos';
 
 const POPULAR_BRANDS = [
     'Maruti Suzuki', 'Hyundai', 'Tata Motors', 'Kia', 'Mahindra',
@@ -263,8 +264,13 @@ export function SiteHeader() {
                                             <Link
                                                 key={brand}
                                                 href={`/brands/${encodeURIComponent(brand)}`}
-                                                className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                                                className="flex items-center gap-2 px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
                                             >
+                                                {getBrandLogo(brand) ? (
+                                                    <Image src={getBrandLogo(brand)!} alt={brand} width={18} height={18} className="object-contain" />
+                                                ) : (
+                                                    <span className="w-[18px] h-[18px] rounded-full bg-muted text-[9px] font-bold flex items-center justify-center">{brand.charAt(0)}</span>
+                                                )}
                                                 {brand}
                                             </Link>
                                         ))}
@@ -300,14 +306,19 @@ export function SiteHeader() {
                             {/* Popular Brands */}
                             <div>
                                 <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Popular Brands</h3>
-                                <div className="space-y-1">
+                                <div className="space-y-0.5">
                                     {POPULAR_BRANDS.map((brand) => (
                                         <Link
                                             key={brand}
                                             href={`/brands/${encodeURIComponent(brand)}`}
-                                            className="block py-1.5 text-sm hover:text-primary transition-colors"
+                                            className="flex items-center gap-2.5 py-1.5 text-sm hover:text-primary transition-colors"
                                             onClick={() => setActiveMegaMenu(null)}
                                         >
+                                            {getBrandLogo(brand) ? (
+                                                <Image src={getBrandLogo(brand)!} alt={brand} width={20} height={20} className="object-contain" />
+                                            ) : (
+                                                <span className="w-5 h-5 rounded-full bg-muted text-[10px] font-bold flex items-center justify-center">{brand.charAt(0)}</span>
+                                            )}
                                             {brand}
                                         </Link>
                                     ))}

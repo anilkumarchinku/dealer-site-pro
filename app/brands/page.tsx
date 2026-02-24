@@ -12,6 +12,8 @@ import { Badge } from '@/components/ui/badge';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { ChevronRight } from 'lucide-react';
+import Image from 'next/image';
+import { getBrandLogo } from '@/lib/data/brand-logos';
 
 export const metadata: Metadata = {
     title: 'All Car Brands | DealerSite Pro',
@@ -50,9 +52,13 @@ export default async function BrandsPage() {
                         >
                             <Card className="h-full hover:shadow-md hover:-translate-y-0.5 transition-all cursor-pointer group">
                                 <CardContent className="p-4 text-center">
-                                    {/* Brand Initial Circle */}
-                                    <div className="w-14 h-14 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xl font-bold group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                                        {brand.name.charAt(0)}
+                                    {/* Brand Logo */}
+                                    <div className="w-14 h-14 mx-auto mb-3 rounded-full bg-muted/50 border border-border flex items-center justify-center overflow-hidden group-hover:border-primary transition-colors">
+                                        {getBrandLogo(brand.name) ? (
+                                            <Image src={getBrandLogo(brand.name)!} alt={brand.name} width={40} height={40} className="object-contain p-1" />
+                                        ) : (
+                                            <span className="text-primary text-xl font-bold">{brand.name.charAt(0)}</span>
+                                        )}
                                     </div>
 
                                     <h3 className="font-semibold text-sm text-foreground line-clamp-1">
