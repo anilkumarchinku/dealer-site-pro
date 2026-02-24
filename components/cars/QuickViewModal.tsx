@@ -186,10 +186,11 @@ export function QuickViewModal({
 
                     {/* Tabs for Details */}
                     <Tabs defaultValue="specs" className="w-full">
-                        <TabsList className="grid w-full grid-cols-3">
+                        <TabsList className="grid w-full grid-cols-4">
                             <TabsTrigger value="specs">Specifications</TabsTrigger>
                             <TabsTrigger value="features">Features</TabsTrigger>
                             <TabsTrigger value="overview">Overview</TabsTrigger>
+                            <TabsTrigger value="variants">Variants</TabsTrigger>
                         </TabsList>
 
                         {/* Specifications Tab */}
@@ -442,7 +443,85 @@ export function QuickViewModal({
                                     )}
                                 </div>
                             )}
+                        
+                        {/* Variants Tab */}
+                        <TabsContent value="variants" className="mt-4 space-y-4">
+                            <h3 className="text-lg font-semibold text-gray-900 mb-4">Available Variants</h3>
+                            
+                            {detailedInfo && detailedInfo.length > 0 ? (
+                                <div className="space-y-3 max-h-[500px] overflow-y-auto">
+                                    {detailedInfo.map((variant, idx) => (
+                                        <div key={idx} className="p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors">
+                                            {/* Variant Name and Price */}
+                                            <div className="flex items-start justify-between mb-3">
+                                                <div className="flex-1">
+                                                    <p className="font-semibold text-gray-900 text-sm">{variant.variant_name}</p>
+                                                    <p className="text-xs text-gray-500 mt-0.5">
+                                                        ₹{(variant.ex_showroom_price_min_inr / 100000).toFixed(2)}L
+                                                        {variant.ex_showroom_price_max_inr && variant.ex_showroom_price_max_inr !== variant.ex_showroom_price_min_inr &&
+                                                            ` - ₹${(variant.ex_showroom_price_max_inr / 100000).toFixed(2)}L`}
+                                                    </p>
+                                                </div>
+                                                {variant.availability_status === 'on_sale' && (
+                                                    <span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded whitespace-nowrap ml-2">
+                                                        Available
+                                                    </span>
+                                                )}
+                                            </div>
+
+                                            {/* Variant Specs Grid */}
+                                            <div className="grid grid-cols-3 gap-2">
+                                                <div className="p-2 bg-gray-50 rounded">
+                                                    <p className="text-xs text-gray-500 mb-0.5">Fuel</p>
+                                                    <p className="text-xs font-semibold text-gray-900">{variant.fuel_type}</p>
+                                                </div>
+                                                <div className="p-2 bg-gray-50 rounded">
+                                                    <p className="text-xs text-gray-500 mb-0.5">Trans</p>
+                                                    <p className="text-xs font-semibold text-gray-900">{variant.transmission === 'Automatic' ? 'Auto' : variant.transmission}</p>
+                                                </div>
+                                                <div className="p-2 bg-gray-50 rounded">
+                                                    <p className="text-xs text-gray-500 mb-0.5">Engine</p>
+                                                    <p className="text-xs font-semibold text-gray-900">{variant.engine_displacement_cc}cc</p>
+                                                </div>
+                                                <div className="p-2 bg-gray-50 rounded">
+                                                    <p className="text-xs text-gray-500 mb-0.5">Power</p>
+                                                    <p className="text-xs font-semibold text-gray-900">{variant.power_bhp} bhp</p>
+                                                </div>
+                                                <div className="p-2 bg-gray-50 rounded">
+                                                    <p className="text-xs text-gray-500 mb-0.5">Torque</p>
+                                                    <p className="text-xs font-semibold text-gray-900">{variant.torque_nm} Nm</p>
+                                                </div>
+                                                <div className="p-2 bg-gray-50 rounded">
+                                                    <p className="text-xs text-gray-500 mb-0.5">Mileage</p>
+                                                    <p className="text-xs font-semibold text-gray-900">{variant.mileage_kmpl ? `${variant.mileage_kmpl}` : variant.mileage_kmpl_or_ev_range || 'N/A'} km/l</p>
+                                                </div>
+                                                <div className="p-2 bg-gray-50 rounded">
+                                                    <p className="text-xs text-gray-500 mb-0.5">Seating</p>
+                                                    <p className="text-xs font-semibold text-gray-900">{variant.seating_capacity} seats</p>
+                                                </div>
+                                                {variant.boot_space_l && (
+                                                    <div className="p-2 bg-gray-50 rounded">
+                                                        <p className="text-xs text-gray-500 mb-0.5">Boot</p>
+                                                        <p className="text-xs font-semibold text-gray-900">{variant.boot_space_l}L</p>
+                                                    </div>
+                                                )}
+                                                {variant.ground_clearance_mm && (
+                                                    <div className="p-2 bg-gray-50 rounded">
+                                                        <p className="text-xs text-gray-500 mb-0.5">Clearance</p>
+                                                        <p className="text-xs font-semibold text-gray-900">{variant.ground_clearance_mm}mm</p>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            ) : (
+                                <p className="text-gray-500 text-center py-6 text-sm">
+                                    {loading ? 'Loading variants...' : 'No variant details available'}
+                                </p>
+                            )}
                         </TabsContent>
+</TabsContent>
                     </Tabs>
 
                     {/* Action Buttons */}

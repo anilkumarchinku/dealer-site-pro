@@ -1,16 +1,17 @@
 /**
- * CarCard Component - PRO Edition
- * A premium, modern card for displaying car information
- * Features: Smooth animations, gradient accents, modern typography
+ * CarCard Component - PRO Edition - ENHANCED
+ * Now fetches and displays complete car specifications from all variants
+ * Features: All fuel types, transmissions, seating, mileage, and power
  */
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import type { Car } from '@/lib/types/car';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
+import { getAggregatedCarSpecs, formatSpecsForDisplay } from '@/lib/utils/car-specs-aggregator';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { EnquiryModal } from './EnquiryModal';
@@ -50,20 +51,47 @@ export function CarCard({
 }: CarCardProps) {
     const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
     const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
+    const [aggregatedSpecs, setAggregatedSpecs] = useState<ReturnType<typeof formatSpecsForDisplay>>(null);
+    const [loading, setLoading] = useState(true);
+
+    // Fetch aggregated specs from all variants when component mounts
+    useEffect(() => {
+        const fetchSpecs = async () => {
+            try {
+                setLoading(true);
+                const specs = await getAggregatedCarSpecs(car.make, car.model);
+                const formatted = formatSpecsForDisplay(specs);
+                setAggregatedSpecs(formatted);
+            } catch (error) {
+                console.warn('Could not fetch aggregated specs:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchSpecs();
+    }, [car.make, car.model]);
+
     const exShowroom = car.pricing?.exShowroom ?? { min: null, max: null }
     const priceRange = formatPriceInLakhs(exShowroom.min);
     const maxPrice = formatPriceInLakhs(exShowroom.max);
 
-    // Normalize placeholder values — these may now be multi-option strings like "Manual / Auto / CVT"
-    const transmissionType = (!car.transmission?.type || car.transmission.type === 'TBD' || car.transmission.type === 'Transmission')
+    // Use aggregated specs from all variants if available, fallback to single car data
+    const fuelTypes = aggregatedSpecs?.fuelsDisplay || 
+        (!car.engine?.type || car.engine.type === 'TBD') ? null : car.engine.type;
+    const transmissionTypes = aggregatedSpecs?.transmissionsDisplay || 
+        (!car.transmission?.type || car.transmission.type === 'TBD' || car.transmission.type === 'Transmission')
         ? null : car.transmission.type;
-    const engineType = (!car.engine?.type || car.engine.type === 'TBD') ? null : car.engine.type;
-    const mileage = car.performance?.fuelEfficiency && car.performance.fuelEfficiency > 0
-        ? car.performance.fuelEfficiency : null;
+    const mileageRange = aggregatedSpecs?.mileageDisplay || 
+        (car.performance?.fuelEfficiency && car.performance.fuelEfficiency > 0
+        ? `${car.performance.fuelEfficiency} km/l` : null);
+    const powerRange = aggregatedSpecs?.powerDisplay || null;
+    const seatingCapacities = aggregatedSpecs?.seatingDisplay || 
+        (car.dimensions?.seatingCapacity ? `${car.dimensions.seatingCapacity} seater` : null);
 
     // For multi-value strings like "Manual / Auto / CVT", use a smaller font so it fits
-    const isMultiTransmission = transmissionType ? transmissionType.includes('/') : false;
-    const isMultiFuel = engineType ? engineType.includes('/') : false;
+    const isMultiTransmission = transmissionTypes ? transmissionTypes.includes('/') : false;
+    const isMultiFuel = fuelTypes ? fuelTypes.includes('/') : false;
 
     const handleEnquireNow = () => {
         setIsEnquiryModalOpen(true);
@@ -107,7 +135,6 @@ export function CarCard({
 
                 {/* Gradient Overlay on Hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
 
                 {/* Quick View Button - Shows on Hover */}
                 <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
@@ -158,9 +185,9 @@ export function CarCard({
                     )}
                 </div>
 
-                {/* Quick Specs - Modern Grid */}
+                {/* Comprehensive Specs Grid - Now showing ALL variants info */}
                 <div className="grid grid-cols-2 gap-3 mb-4">
-                    {engineType && (
+                    {fuelTypes && (
                         <div className={cn('flex items-center gap-2.5 p-2.5 rounded-xl', light ? 'bg-gray-50' : 'bg-muted/50')}>
                             <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
                                 <Fuel className="w-4 h-4 text-emerald-600" />
@@ -171,13 +198,13 @@ export function CarCard({
                                     'font-semibold leading-tight',
                                     isMultiFuel ? 'text-xs' : 'text-sm',
                                     light ? 'text-gray-900' : 'text-foreground'
-                                )}>
-                                    {engineType}
+                                )} title={fuelTypes}>
+                                    {fuelTypes}
                                 </p>
                             </div>
                         </div>
                     )}
-                    {transmissionType && (
+                    {transmissionTypes && (
                         <div className={cn('flex items-center gap-2.5 p-2.5 rounded-xl', light ? 'bg-gray-50' : 'bg-muted/50')}>
                             <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
                                 <Gauge className="w-4 h-4 text-blue-600" />
@@ -188,37 +215,54 @@ export function CarCard({
                                     'font-semibold leading-tight',
                                     isMultiTransmission ? 'text-xs' : 'text-sm',
                                     light ? 'text-gray-900' : 'text-foreground'
-                                )}>
-                                    {transmissionType}
+                                )} title={transmissionTypes}>
+                                    {transmissionTypes}
                                 </p>
                             </div>
                         </div>
                     )}
-                    {car.dimensions?.seatingCapacity && (
+                    {seatingCapacities && (
                         <div className={cn('flex items-center gap-2.5 p-2.5 rounded-xl', light ? 'bg-gray-50' : 'bg-muted/50')}>
                             <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
                                 <Users className="w-4 h-4 text-purple-600" />
                             </div>
                             <div>
                                 <p className={cn('text-xs', light ? 'text-gray-500' : 'text-muted-foreground')}>Seats</p>
-                                <p className={cn('text-sm font-semibold', light ? 'text-gray-900' : 'text-foreground')}>{car.dimensions.seatingCapacity}</p>
+                                <p className={cn('text-sm font-semibold', light ? 'text-gray-900' : 'text-foreground')} title={seatingCapacities}>
+                                    {seatingCapacities}
+                                </p>
                             </div>
                         </div>
                     )}
-                    {mileage && (
+                    {mileageRange && (
                         <div className={cn('flex items-center gap-2.5 p-2.5 rounded-xl', light ? 'bg-gray-50' : 'bg-muted/50')}>
                             <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
                                 <Zap className="w-4 h-4 text-amber-600" />
                             </div>
                             <div>
                                 <p className={cn('text-xs', light ? 'text-gray-500' : 'text-muted-foreground')}>Mileage</p>
-                                <p className={cn('text-sm font-semibold', light ? 'text-gray-900' : 'text-foreground')}>{mileage} km/l</p>
+                                <p className={cn('text-sm font-semibold', light ? 'text-gray-900' : 'text-foreground')} title={mileageRange}>
+                                    {mileageRange}
+                                </p>
+                            </div>
+                        </div>
+                    )}
+                    {powerRange && (
+                        <div className={cn('flex items-center gap-2.5 p-2.5 rounded-xl col-span-2', light ? 'bg-gray-50' : 'bg-muted/50')}>
+                            <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
+                                <Star className="w-4 h-4 text-yellow-600" />
+                            </div>
+                            <div>
+                                <p className={cn('text-xs', light ? 'text-gray-500' : 'text-muted-foreground')}>Power</p>
+                                <p className={cn('text-sm font-semibold', light ? 'text-gray-900' : 'text-foreground')} title={powerRange}>
+                                    {powerRange}
+                                </p>
                             </div>
                         </div>
                     )}
                 </div>
 
-                {/* Key Features - shown on all cards when data is available */}
+                {/* Key Features */}
                 {car.features.keyFeatures.length > 0 && (
                     <div className="mb-4 p-3 bg-muted/30 rounded-xl">
                         <p className="text-xs font-semibold text-foreground mb-2 flex items-center gap-1.5">
