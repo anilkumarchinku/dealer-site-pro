@@ -72,6 +72,7 @@ export interface DealerPublicData {
     sells_used_cars: boolean
     brands: string[]
     vehicles: DBVehicle[]
+    branches?: Array<{ city: string; address: string; phone?: string }> | null
     hero_title: string | null
     hero_subtitle: string | null
     hero_cta_text: string | null
@@ -98,7 +99,7 @@ function getServerSupabase() {
 async function findDealerByExactSlug(supabase: SupabaseClient, slug: string) {
     const { data, error } = await supabase
         .from('dealers')
-        .select('id, dealership_name, tagline, phone, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars, cyepro_api_key, logo_url, hero_image_url')
+        .select('id, dealership_name, tagline, phone, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars, branches, cyepro_api_key, logo_url, hero_image_url')
         .eq('slug', slug)
         .eq('onboarding_complete', true)
         .single()

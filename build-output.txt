@@ -1,0 +1,24 @@
+
+> dealer-site-pro@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.12
+   - Environments: .env
+
+   Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (133kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+ ✓ Compiled successfully in 6.1s
+   Linting and checking validity of types ...
+Failed to compile.
+
+./components/domain-onboarding/VerificationProgress.tsx:40:15
+Type error: Not all code paths return a value.
+
+[0m [90m 38 |[39m     }[33m;[39m
+ [90m 39 |[39m
+[31m[1m>[22m[39m[90m 40 |[39m     useEffect(() [33m=>[39m {
+ [90m    |[39m               [31m[1m^[22m[39m
+ [90m 41 |[39m         [36mif[39m (autoCheckEnabled [33m&&[39m [33m![39mverified) {
+ [90m 42 |[39m             [36mconst[39m interval [33m=[39m setInterval(() [33m=>[39m {
+ [90m 43 |[39m                 checkVerification()[33m;[39m[0m
+Next.js build worker exited with code: 1 and signal: null

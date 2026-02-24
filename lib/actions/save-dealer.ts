@@ -97,6 +97,7 @@ export async function saveDealer(
             sells_new_cars:      data.sellsNewCars ?? false,
             sells_used_cars:     data.sellsUsedCars ?? false,
             inventory_system:    data.inventorySystem ?? null,
+            branches:            data.hasMultipleBranches && data.branches && data.branches.length > 0 ? data.branches : null,
             // DB CHECK constraint: ('luxury','family','sporty','modern','professional')
         style_template: (() => {
             const VALID = ['luxury', 'family', 'sporty', 'modern', 'professional'];

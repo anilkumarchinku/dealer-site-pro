@@ -93,6 +93,8 @@ export interface OnboardingData {
     heroImage?: string; // Base64 or URL — hero/banner image uploaded by used-car dealers
     subdomain?: string; // Auto-generated FREE subdomain
     slug?: string; // URL slug for the subdomain
+    hasMultipleBranches?: boolean; // For new/hybrid dealers with multiple showrooms
+    branches?: Array<{ city: string; address: string; phone?: string }>; // Additional branch locations
 
     // Dealer category chosen at onboarding entry
     dealerCategory?: DealerCategory;

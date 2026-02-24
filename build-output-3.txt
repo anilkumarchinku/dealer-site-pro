@@ -1,0 +1,380 @@
+
+> dealer-site-pro@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.12
+   - Environments: .env
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 2.1s
+   Linting and checking validity of types ...
+
+Failed to compile.
+
+./app/api/cron/monitor-domains/route.ts
+30:9  Warning: Unexpected console statement.  no-console
+
+./app/api/deploy/route.ts
+74:16  Error: 'servicesRes' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+74:29  Error: 'configRes' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./app/api/domain/configure/route.ts
+166:9  Warning: Unexpected console statement.  no-console
+
+./app/api/domain/dns-scan/[id]/route.ts
+51:9  Warning: Unexpected console statement.  no-console
+106:9  Warning: Unexpected console statement.  no-console
+
+./app/api/domain/propagation-status/[id]/route.ts
+48:9  Warning: Unexpected console statement.  no-console
+56:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+57:13  Warning: Unexpected console statement.  no-console
+67:22  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+68:17  Warning: Unexpected console statement.  no-console
+79:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+80:13  Warning: Unexpected console statement.  no-console
+138:13  Warning: Unexpected console statement.  no-console
+
+./app/api/domain/start-onboarding/route.ts
+37:15  Error: 'onboarding' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+63:9  Warning: Unexpected console statement.  no-console
+
+./app/api/domain/verification-status/[id]/route.ts
+105:13  Warning: Unexpected console statement.  no-console
+
+./app/api/domain/verify-ownership/route.ts
+152:9  Warning: Unexpected console statement.  no-console
+
+./app/api/domains/connect-custom/route.ts
+32:15  Error: 'template' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./app/api/inventory/cyepro/route.ts
+15:10  Error: 'createRouteClient' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./app/api/leads/route.ts
+66:65  Error: 'car_name' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./app/api/payments/verify/route.ts
+61:13  Warning: Unexpected console statement.  no-console
+
+./app/auth/login/page.tsx
+14:11  Error: 'router' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+136:28  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/auth/register/page.tsx
+97:72  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/cars-demo/cars-demo-client.tsx
+16:9  Warning: Unexpected console statement.  no-console
+22:9  Warning: Unexpected console statement.  no-console
+
+./app/dashboard/domains/page.tsx
+68:8  Warning: React Hook useEffect has a missing dependency: 'fetchDomains'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+123:73  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/dashboard/inventory/add/page.tsx
+49:37  Error: React Hook "useState" is called conditionally. React Hooks must be called in the exact same order in every component render.  react-hooks/rules-of-hooks
+63:45  Error: React Hook "useState" is called conditionally. React Hooks must be called in the exact same order in every component render.  react-hooks/rules-of-hooks
+64:37  Error: React Hook "useState" is called conditionally. React Hooks must be called in the exact same order in every component render.  react-hooks/rules-of-hooks
+65:39  Error: React Hook "useState" is called conditionally. React Hooks must be called in the exact same order in every component render.  react-hooks/rules-of-hooks
+
+./app/dashboard/inventory/page.tsx
+89:33  Error: 'count' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./app/dashboard/page.tsx
+95:62  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+95:69  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/dashboard/reviews/page.tsx
+181:78  Warning: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+181:99  Warning: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+
+./app/dashboard/webpage/page.tsx
+14:21  Error: 'Plus' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./app/demo/templates/page.tsx
+373:59  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/onboarding/step-5/page.tsx
+148:29  Warning: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+148:37  Warning: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+
+./app/onboarding/step-6/page.tsx
+6:41  Error: 'BASE_DOMAIN' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+10:41  Error: 'Crown' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+11:5  Error: 'Sparkles' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+11:30  Error: 'Zap' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+164:85  Warning: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+164:100  Warning: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+337:49  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/preview/page.tsx
+25:5  Error: 'Palette' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./app/sites/[slug]/error.tsx
+25:11  Error: Do not use an `<a>` element to navigate to `/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+
+./app/sites/[slug]/page.tsx
+203:10  Error: 'NoStockPage' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+337:9  Warning: Unexpected console statement.  no-console
+347:9  Warning: Unexpected console statement.  no-console
+354:13  Warning: Unexpected console statement.  no-console
+357:13  Warning: Unexpected console statement.  no-console
+360:13  Warning: Unexpected console statement.  no-console
+
+./components/BrandLogo.tsx
+6:10  Error: 'Car' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/BulkUploadModal.tsx
+4:10  Error: 'X' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+30:7  Error: 'EXPECTED_HEADERS' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+39:33  Error: 'i' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/ConnectCustomDomainModal.tsx
+4:10  Error: 'X' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+254:44  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/DomainMonitoringWidget.tsx
+4:20  Error: 'TrendingUp' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+25:8  Warning: React Hook useEffect has a missing dependency: 'fetchStats'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./components/InquiryDetailsSheet.tsx
+14:24  Error: 'Clock' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/LeadCaptureModal.tsx
+1:1  Error: Do not use "@ts-nocheck" because it alters compilation errors.  @typescript-eslint/ban-ts-comment
+5:20  Error: 'Mail' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:26  Error: 'MessageSquare' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:41  Error: 'Calendar' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:51  Error: 'Fuel' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:57  Error: 'Gauge' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:64  Error: 'Users' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:82  Error: 'Car' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:87  Error: 'Palette' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:109  Error: 'Award' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+125:9  Warning: Unexpected console statement.  no-console
+334:102  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/PurchaseManagedDomainModal.tsx
+347:40  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+399:83  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/SiteDomainModal.tsx
+5:5  Error: 'X' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/WebsiteLiveBanner.tsx
+33:15  Error: 'dealershipName' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/cars/CarCard.tsx
+47:5  Error: 'onViewDetails' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+55:12  Error: 'loading' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/cars/CarDetailView.tsx
+13:10  Error: 'Badge' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+24:20  Error: 'Share2' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/cars/EnquireSidebar.tsx
+191:9  Warning: Unexpected console statement.  no-console
+218:65  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+246:36  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/cars/EnquiryModal.tsx
+15:5  Error: 'DialogDescription' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+16:5  Error: 'DialogHeader' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+17:5  Error: 'DialogTitle' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/cars/QuickViewModal.tsx
+19:10  Error: 'Badge' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+31:5  Error: 'Phone' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+32:5  Error: 'Mail' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/domain-onboarding/ConfigurationWizard.tsx
+341:18  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+345:20  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+345:32  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/domain-onboarding/DNSAnalysisDisplay.tsx
+60:35  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+281:73  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/domain-onboarding/DomainInputForm.tsx
+81:32  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+102:49  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+190:28  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/domain-onboarding/DomainOnboardingWizard.tsx
+254:39  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/domain-onboarding/PropagationTracker.tsx
+42:8  Warning: React Hook useEffect has a missing dependency: 'checkPropagation'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+53:8  Warning: React Hook useEffect has a missing dependency: 'checkPropagation'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+211:90  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+214:43  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+297:78  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/domain-onboarding/VerificationProgress.tsx
+11:24  Error: 'XCircle' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+23:5  Error: 'domain' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+50:8  Warning: React Hook useEffect has a missing dependency: 'checkVerification'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+70:18  Error: 'err' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./components/domain-onboarding/VerificationSelector.tsx
+94:47  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/ui/calendar.tsx
+58:45  Error: 'rest' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/ui/textarea.tsx
+6:18  Error: An interface declaring no members is equivalent to its supertype.  @typescript-eslint/no-empty-object-type
+
+./lib/db/leads.ts
+63:5  Warning: Unexpected console statement.  no-console
+
+./lib/services/cloudflare.ts
+75:9  Warning: Unexpected console statement.  no-console
+87:9  Warning: Unexpected console statement.  no-console
+88:9  Warning: Unexpected console statement.  no-console
+137:9  Warning: Unexpected console statement.  no-console
+151:9  Warning: Unexpected console statement.  no-console
+167:9  Warning: Unexpected console statement.  no-console
+173:9  Warning: Unexpected console statement.  no-console
+184:9  Warning: Unexpected console statement.  no-console
+191:9  Warning: Unexpected console statement.  no-console
+202:9  Warning: Unexpected console statement.  no-console
+209:9  Warning: Unexpected console statement.  no-console
+216:9  Warning: Unexpected console statement.  no-console
+223:9  Warning: Unexpected console statement.  no-console
+230:9  Warning: Unexpected console statement.  no-console
+237:9  Warning: Unexpected console statement.  no-console
+244:9  Warning: Unexpected console statement.  no-console
+267:9  Warning: Unexpected console statement.  no-console
+281:9  Warning: Unexpected console statement.  no-console
+288:9  Warning: Unexpected console statement.  no-console
+295:13  Warning: Unexpected console statement.  no-console
+296:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+297:13  Warning: Unexpected console statement.  no-console
+306:13  Warning: Unexpected console statement.  no-console
+307:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+308:13  Warning: Unexpected console statement.  no-console
+311:9  Warning: Unexpected console statement.  no-console
+325:9  Warning: Unexpected console statement.  no-console
+352:9  Warning: Unexpected console statement.  no-console
+353:9  Warning: Unexpected console statement.  no-console
+354:41  Warning: Unexpected console statement.  no-console
+392:9  Warning: Unexpected console statement.  no-console
+399:9  Warning: Unexpected console statement.  no-console
+
+./lib/services/cyepro-service.ts
+194:9  Warning: Unexpected console statement.  no-console
+221:9  Warning: Unexpected console statement.  no-console
+
+./lib/services/deployment-orchestrator.ts
+79:9  Warning: Unexpected console statement.  no-console
+144:9  Warning: Unexpected console statement.  no-console
+157:9  Warning: Unexpected console statement.  no-console
+166:19  Error: 'targetDomain' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+211:13  Warning: Unexpected console statement.  no-console
+235:25  Warning: Unexpected console statement.  no-console
+259:9  Warning: Unexpected console statement.  no-console
+271:9  Warning: Unexpected console statement.  no-console
+285:9  Warning: Unexpected console statement.  no-console
+294:9  Warning: Unexpected console statement.  no-console
+317:13  Warning: Unexpected console statement.  no-console
+327:9  Warning: Unexpected console statement.  no-console
+328:9  Warning: Unexpected console statement.  no-console
+361:9  Warning: Unexpected console statement.  no-console
+362:9  Warning: Unexpected console statement.  no-console
+394:9  Warning: Unexpected console statement.  no-console
+402:9  Warning: Unexpected console statement.  no-console
+
+./lib/services/dns-analysis.ts
+20:9  Warning: Unexpected console statement.  no-console
+54:9  Warning: Unexpected console statement.  no-console
+55:9  Warning: Unexpected console statement.  no-console
+69:13  Warning: Unexpected console statement.  no-console
+71:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+72:13  Warning: Unexpected console statement.  no-console
+83:13  Warning: Unexpected console statement.  no-console
+85:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+86:13  Warning: Unexpected console statement.  no-console
+98:13  Warning: Unexpected console statement.  no-console
+100:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+101:13  Warning: Unexpected console statement.  no-console
+113:13  Warning: Unexpected console statement.  no-console
+115:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+116:13  Warning: Unexpected console statement.  no-console
+133:21  Warning: Unexpected console statement.  no-console
+135:22  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+162:21  Warning: Unexpected console statement.  no-console
+165:22  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+171:9  Warning: Unexpected console statement.  no-console
+
+./lib/services/dns-verification-service.ts
+64:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+82:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+123:14  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+137:11  Error: 'rootDomain' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./lib/services/domain-search-service.ts
+46:13  Warning: Unexpected console statement.  no-console
+217:13  Warning: Unexpected console statement.  no-console
+
+./lib/services/domain-service.ts
+214:14  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./lib/services/domain-verification.ts
+53:13  Warning: Unexpected console statement.  no-console
+64:13  Warning: Unexpected console statement.  no-console
+112:13  Warning: Unexpected console statement.  no-console
+127:21  Warning: Unexpected console statement.  no-console
+144:29  Warning: Unexpected console statement.  no-console
+151:26  Error: 'err' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./lib/services/email-service.ts
+20:15  Error: 'emailContent' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+104:9  Warning: Unexpected console statement.  no-console
+118:11  Error: 'emailContent' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+185:5  Warning: Unexpected console statement.  no-console
+193:17  Error: 'dealerName' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+195:5  Warning: Unexpected console statement.  no-console
+203:17  Error: 'dealerName' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+205:5  Warning: Unexpected console statement.  no-console
+213:17  Error: 'dealerName' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+215:5  Warning: Unexpected console statement.  no-console
+
+./lib/services/github-service.ts
+224:17  Warning: Unexpected console statement.  no-console
+
+./lib/services/monitoring-service.ts
+7:35  Error: 'sendSSLRenewalNotification' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+146:17  Warning: Unexpected console statement.  no-console
+
+./lib/services/vercel-service.ts
+135:9  Error: 'existingMap' is never reassigned. Use 'const' instead.  prefer-const
+
+./lib/store/onboarding-store.ts
+3:43  Error: 'DealerCategory' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+3:59  Error: 'Brand' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+3:66  Error: 'Service' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+3:75  Error: 'StyleTemplate' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+3:90  Error: 'InventorySystem' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+3:107  Error: 'InventorySource' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+3:124  Error: 'VehicleUploadRow' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./lib/templates/template-utils.ts
+131:9  Error: 'brandColors' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./lib/utils/car-audit.ts
+6:33  Error: 'formatSpecsForDisplay' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./lib/utils/car-info-fetcher.ts
+37:9  Warning: Unexpected console statement.  no-console
+42:9  Warning: Unexpected console statement.  no-console
+51:9  Warning: Unexpected console statement.  no-console
+66:5  Warning: Unexpected console statement.  no-console
+77:5  Warning: Unexpected console statement.  no-console
+103:5  Warning: Unexpected console statement.  no-console
+125:5  Warning: Unexpected console statement.  no-console
+128:9  Warning: Unexpected console statement.  no-console
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules

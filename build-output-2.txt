@@ -1,0 +1,1621 @@
+
+> dealer-site-pro@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.12
+   - Environments: .env
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 2.5s
+   Linting and checking validity of types ...
+
+Failed to compile.
+
+./app/admin/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+107:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+129:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+129:48  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+130:39  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/api/cars/[id]/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+9:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/api/cars/featured/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+14:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/api/cars/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+10:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+26:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+26:55  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+32:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+32:55  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+38:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+38:63  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+44:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+44:53  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+72:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+72:40  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/api/cron/monitor-domains/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+13:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+30:9  Warning: Unexpected console statement.  no-console
+
+./app/api/deploy/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+34:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+46:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+74:16  Error: 'servicesRes' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+74:29  Error: 'configRes' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+83:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./app/api/deploy/status/[id]/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+62:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+81:27  Warning: Unsafe object destructuring of a property with an `any` value.  @typescript-eslint/no-unsafe-assignment
+89:28  Warning: Unsafe member access .status on an `any` value.  @typescript-eslint/no-unsafe-member-access
+89:57  Warning: Unsafe member access .status on an `any` value.  @typescript-eslint/no-unsafe-member-access
+91:25  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+91:42  Warning: Unsafe member access .status on an `any` value.  @typescript-eslint/no-unsafe-member-access
+92:25  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+92:42  Warning: Unsafe member access .site_url on an `any` value.  @typescript-eslint/no-unsafe-member-access
+93:25  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+93:42  Warning: Unsafe member access .error_message on an `any` value.  @typescript-eslint/no-unsafe-member-access
+99:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+99:43  Warning: Unsafe member access .status on an `any` value.  @typescript-eslint/no-unsafe-member-access
+103:28  Warning: Unsafe member access .vercel_deploy_id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+105:77  Warning: Unsafe member access .vercel_deploy_id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+109:53  Warning: Unsafe member access .status on an `any` value.  @typescript-eslint/no-unsafe-member-access
+114:37  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+128:61  Warning: Unsafe member access .dealer_id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+142:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+143:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+143:38  Warning: Unsafe member access .site_url on an `any` value.  @typescript-eslint/no-unsafe-member-access
+
+./app/api/domain/configure/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+8:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+10:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+11:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+46:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+61:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+63:35  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+96:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+103:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+166:9  Warning: Unexpected console statement.  no-console
+170:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+172:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./app/api/domain/dns-scan/[id]/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+9:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+51:9  Warning: Unexpected console statement.  no-console
+106:9  Warning: Unexpected console statement.  no-console
+
+./app/api/domain/download-verification-file/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+9:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/api/domain/propagation-status/[id]/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+9:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+48:9  Warning: Unexpected console statement.  no-console
+56:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+57:13  Warning: Unexpected console statement.  no-console
+67:22  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+68:17  Warning: Unexpected console statement.  no-console
+79:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+80:13  Warning: Unexpected console statement.  no-console
+138:13  Warning: Unexpected console statement.  no-console
+
+./app/api/domain/start-onboarding/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+9:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+11:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+12:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+37:15  Error: 'onboarding' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+39:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+41:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+42:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+63:9  Warning: Unexpected console statement.  no-console
+
+./app/api/domain/verification-status/[id]/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+9:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+105:13  Warning: Unexpected console statement.  no-console
+
+./app/api/domain/verify-ownership/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+9:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+11:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+12:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+39:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+152:9  Warning: Unexpected console statement.  no-console
+157:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./app/api/domains/check-slug/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+9:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/api/domains/connect-custom/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+11:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+17:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+18:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+32:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+32:15  Error: 'template' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+74:23  Warning: Unsafe object destructuring of a property with an `any` value.  @typescript-eslint/no-unsafe-assignment
+77:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+78:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+84:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+133:23  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+144:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./app/api/domains/create-subdomain/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+9:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+25:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+26:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+37:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+38:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+39:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./app/api/domains/purchase-managed/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+9:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+11:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+12:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+32:23  Warning: Unsafe object destructuring of a property with an `any` value.  @typescript-eslint/no-unsafe-assignment
+35:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+36:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+37:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+37:23  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+37:30  Warning: Unsafe member access .replace on an `any` value.  @typescript-eslint/no-unsafe-member-access
+62:34  Warning: Unsafe member access .id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+66:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./app/api/domains/remove-custom/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+10:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+15:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+16:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./app/api/domains/resolve/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+22:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+54:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+54:38  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+69:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+72:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+72:31  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./app/api/domains/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+10:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/api/domains/search/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+8:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/api/domains/stats/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+8:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/api/domains/verify-dns/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+9:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+11:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+12:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+29:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./app/api/inventory/cyepro/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+15:10  Error: 'createRouteClient' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+22:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+28:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+29:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+64:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+65:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+66:42  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+67:42  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+68:42  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+69:42  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+70:42  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+71:42  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+72:42  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./app/api/leads/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+51:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+65:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+66:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+66:65  Error: 'car_name' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+91:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+116:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+116:33  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+116:40  Warning: Unsafe member access .trim on an `any` value.  @typescript-eslint/no-unsafe-member-access
+117:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+117:33  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+117:42  Warning: Unsafe member access .trim on an `any` value.  @typescript-eslint/no-unsafe-member-access
+118:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+119:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+130:51  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./app/api/payments/create-subscription/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+9:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+11:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+12:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+30:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+31:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+32:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+44:23  Warning: Unsafe object destructuring of a property with an `any` value.  @typescript-eslint/no-unsafe-assignment
+47:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+48:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+49:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+68:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./app/api/payments/verify/route.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+61:13  Warning: Unexpected console statement.  no-console
+93:23  Warning: Unsafe object destructuring of a property with an `any` value.  @typescript-eslint/no-unsafe-assignment
+109:27  Warning: Unsafe member access .domain_id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+113:40  Warning: Unsafe member access .domain_id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+
+./app/auth/layout.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+5:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/auth/login/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+13:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+14:11  Error: 'router' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+136:28  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/auth/register/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+12:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+97:72  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/cars/[id]/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+31:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/cars/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+37:23  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+38:26  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+39:34  Warning: Unsafe member access .data on an `any` value.  @typescript-eslint/no-unsafe-member-access
+95:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/cars-demo/cars-demo-client.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+12:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+16:9  Warning: Unexpected console statement.  no-console
+22:9  Warning: Unexpected console statement.  no-console
+
+./app/cars-demo/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+4:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/dashboard/analytics/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+16:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/dashboard/deployment/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+54:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+107:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+110:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+110:32  Warning: Unsafe member access .status on an `any` value.  @typescript-eslint/no-unsafe-member-access
+111:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+111:32  Warning: Unsafe member access .progress on an `any` value.  @typescript-eslint/no-unsafe-member-access
+112:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+112:32  Warning: Unsafe member access .siteUrl on an `any` value.  @typescript-eslint/no-unsafe-member-access
+113:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+113:32  Warning: Unsafe member access .error on an `any` value.  @typescript-eslint/no-unsafe-member-access
+139:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+141:34  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+145:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+145:34  Warning: Unsafe member access .error on an `any` value.  @typescript-eslint/no-unsafe-member-access
+152:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+152:34  Warning: Unsafe member access .deployId on an `any` value.  @typescript-eslint/no-unsafe-member-access
+153:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+153:34  Warning: Unsafe member access .siteUrl on an `any` value.  @typescript-eslint/no-unsafe-member-access
+154:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+154:34  Warning: Unsafe member access .githubRepo on an `any` value.  @typescript-eslint/no-unsafe-member-access
+155:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+155:34  Warning: Unsafe member access .vercelUrl on an `any` value.  @typescript-eslint/no-unsafe-member-access
+
+./app/dashboard/domains/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+56:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+68:8  Warning: React Hook useEffect has a missing dependency: 'fetchDomains'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+74:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+75:22  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+76:33  Warning: Unsafe member access .domains on an `any` value.  @typescript-eslint/no-unsafe-member-access
+123:73  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/dashboard/help/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+20:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/dashboard/inventory/add/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+18:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+49:37  Error: React Hook "useState" is called conditionally. React Hooks must be called in the exact same order in every component render.  react-hooks/rules-of-hooks
+63:45  Error: React Hook "useState" is called conditionally. React Hooks must be called in the exact same order in every component render.  react-hooks/rules-of-hooks
+64:37  Error: React Hook "useState" is called conditionally. React Hooks must be called in the exact same order in every component render.  react-hooks/rules-of-hooks
+65:39  Error: React Hook "useState" is called conditionally. React Hooks must be called in the exact same order in every component render.  react-hooks/rules-of-hooks
+
+./app/dashboard/inventory/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+23:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+89:33  Error: 'count' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./app/dashboard/layout.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+72:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+120:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+121:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+122:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+123:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+124:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+125:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+126:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+127:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+128:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+129:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+131:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./app/dashboard/leads/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+13:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/dashboard/messages/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+28:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/dashboard/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+37:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+95:62  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+95:69  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/dashboard/reviews/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+11:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+181:78  Warning: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+181:99  Warning: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+
+./app/dashboard/settings/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+30:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+260:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+263:19  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+264:33  Warning: Unsafe member access .error on an `any` value.  @typescript-eslint/no-unsafe-member-access
+269:26  Warning: Unsafe member access .domain on an `any` value.  @typescript-eslint/no-unsafe-member-access
+284:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+287:29  Warning: Unsafe member access .verification on an `any` value.  @typescript-eslint/no-unsafe-member-access
+302:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+304:18  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+
+./app/dashboard/webpage/[siteSlug]/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+41:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+129:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+130:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+131:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+132:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+133:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+134:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+153:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+154:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+155:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+156:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+157:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+158:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./app/dashboard/webpage/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+14:21  Error: 'Plus' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+32:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/demo/templates/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+30:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+373:59  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/error.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+3:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/layout.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+16:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/onboarding/layout.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+21:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/onboarding/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+334:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/onboarding/step-1/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+57:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+110:23  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+111:29  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+113:41  Warning: Unsafe member access .error on an `any` value.  @typescript-eslint/no-unsafe-member-access
+115:42  Warning: Unsafe member access .available on an `any` value.  @typescript-eslint/no-unsafe-member-access
+116:41  Warning: Unsafe member access .message on an `any` value.  @typescript-eslint/no-unsafe-member-access
+
+./app/onboarding/step-2-inventory/bulk-upload/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+114:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/onboarding/step-2-inventory/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+16:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/onboarding/step-2-used/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+71:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/onboarding/step-3/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+28:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/onboarding/step-4/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+10:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/onboarding/step-5/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+11:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+148:29  Warning: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+148:37  Warning: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+
+./app/onboarding/step-6/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+6:41  Error: 'BASE_DOMAIN' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+10:41  Error: 'Crown' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+11:5  Error: 'Sparkles' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+11:30  Error: 'Zap' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+14:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+164:85  Warning: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+164:100  Warning: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+337:49  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+4:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/preview/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+25:5  Error: 'Palette' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+94:81  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+185:28  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+185:44  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+389:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/reset/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+6:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/sites/[slug]/error.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+3:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+25:11  Error: Do not use an `<a>` element to navigate to `/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+
+./app/sites/[slug]/layout.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+15:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/sites/[slug]/loading.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+1:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/sites/[slug]/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+203:10  Error: 'NoStockPage' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+282:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+337:9  Warning: Unexpected console statement.  no-console
+347:9  Warning: Unexpected console statement.  no-console
+354:13  Warning: Unexpected console statement.  no-console
+357:13  Warning: Unexpected console statement.  no-console
+360:13  Warning: Unexpected console statement.  no-console
+
+./app/sites/__domain_not_found/page.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+1:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./app/welcome-client.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+78:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/BrandLogo.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+6:10  Error: 'Car' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+13:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/BulkUploadModal.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+4:10  Error: 'X' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+30:7  Error: 'EXPECTED_HEADERS' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+39:33  Error: 'i' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+77:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/ConnectCustomDomainModal.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+4:10  Error: 'X' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+22:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+52:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+54:29  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+55:37  Warning: Unsafe member access .error on an `any` value.  @typescript-eslint/no-unsafe-member-access
+61:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+61:48  Warning: Unsafe member access .domain on an `any` value.  @typescript-eslint/no-unsafe-member-access
+68:63  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+70:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+72:26  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+73:34  Warning: Unsafe member access .error on an `any` value.  @typescript-eslint/no-unsafe-member-access
+81:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+81:41  Warning: Unsafe member access .subscriptionId on an `any` value.  @typescript-eslint/no-unsafe-member-access
+89:29  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+89:46  Warning: Unsafe member access .orderId on an `any` value.  @typescript-eslint/no-unsafe-member-access
+95:27  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+97:37  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+131:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+133:24  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+133:42  Warning: Unsafe member access .verification on an `any` value.  @typescript-eslint/no-unsafe-member-access
+141:33  Warning: Unsafe member access .verification on an `any` value.  @typescript-eslint/no-unsafe-member-access
+254:44  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/DomainMonitoringWidget.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+4:20  Error: 'TrendingUp' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+18:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+25:8  Warning: React Hook useEffect has a missing dependency: 'fetchStats'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+30:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+32:22  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+33:31  Warning: Unsafe member access .stats on an `any` value.  @typescript-eslint/no-unsafe-member-access
+
+./components/InquiryDetailsSheet.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+14:24  Error: 'Clock' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+28:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/LeadCaptureModal.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+1:1  Error: Do not use "@ts-nocheck" because it alters compilation errors.  @typescript-eslint/ban-ts-comment
+5:20  Error: 'Mail' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:26  Error: 'MessageSquare' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:41  Error: 'Calendar' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:51  Error: 'Fuel' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:57  Error: 'Gauge' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:64  Error: 'Users' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:82  Error: 'Car' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:87  Error: 'Palette' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:109  Error: 'Award' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+28:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+125:9  Warning: Unexpected console statement.  no-console
+334:102  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/PurchaseManagedDomainModal.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+15:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+35:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+36:22  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+37:33  Warning: Unsafe member access .results on an `any` value.  @typescript-eslint/no-unsafe-member-access
+39:31  Warning: Unsafe member access .error on an `any` value.  @typescript-eslint/no-unsafe-member-access
+67:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+69:26  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+70:34  Warning: Unsafe member access .error on an `any` value.  @typescript-eslint/no-unsafe-member-access
+77:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+77:41  Warning: Unsafe member access .subscriptionId on an `any` value.  @typescript-eslint/no-unsafe-member-access
+90:29  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+90:46  Warning: Unsafe member access .orderId on an `any` value.  @typescript-eslint/no-unsafe-member-access
+96:27  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+98:37  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+129:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+131:22  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+138:31  Warning: Unsafe member access .error on an `any` value.  @typescript-eslint/no-unsafe-member-access
+270:48  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+270:64  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+270:69  Warning: Unsafe member access [key] on an `any` value.  @typescript-eslint/no-unsafe-member-access
+347:40  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+399:83  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/SiteDomainModal.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+5:5  Error: 'X' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+27:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/WebsiteLiveBanner.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+32:16  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+33:15  Error: 'dealershipName' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/cars/CarCard.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+43:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+47:5  Error: 'onViewDetails' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+55:12  Error: 'loading' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/cars/CarDetailView.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+13:10  Error: 'Badge' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+24:20  Error: 'Share2' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+31:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/cars/CarFilters.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+26:32  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+31:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/cars/CarGrid.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+25:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/cars/EnquireSidebar.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+162:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+191:9  Warning: Unexpected console statement.  no-console
+218:65  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+246:36  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/cars/EnquiryModal.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+15:5  Error: 'DialogDescription' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+16:5  Error: 'DialogHeader' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+17:5  Error: 'DialogTitle' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+44:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+220:129  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+220:135  Warning: Unsafe member access .mileage_kmpl on an `any` value.  @typescript-eslint/no-unsafe-member-access
+230:71  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+230:77  Warning: Unsafe member access .mileage_kmpl on an `any` value.  @typescript-eslint/no-unsafe-member-access
+230:115  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+230:120  Warning: Unsafe member access .mileage_kmpl on an `any` value.  @typescript-eslint/no-unsafe-member-access
+
+./components/cars/QuickViewModal.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+19:10  Error: 'Badge' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+31:5  Error: 'Phone' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+32:5  Error: 'Mail' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+47:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+244:133  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+244:139  Warning: Unsafe member access .mileage_kmpl on an `any` value.  @typescript-eslint/no-unsafe-member-access
+253:71  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+253:77  Warning: Unsafe member access .mileage_kmpl on an `any` value.  @typescript-eslint/no-unsafe-member-access
+253:115  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+253:120  Warning: Unsafe member access .mileage_kmpl on an `any` value.  @typescript-eslint/no-unsafe-member-access
+309:51  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+309:57  Warning: Unsafe member access .length_mm on an `any` value.  @typescript-eslint/no-unsafe-member-access
+317:59  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+317:65  Warning: Unsafe member access .length_mm on an `any` value.  @typescript-eslint/no-unsafe-member-access
+320:69  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+320:75  Warning: Unsafe member access .length_mm on an `any` value.  @typescript-eslint/no-unsafe-member-access
+321:78  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+321:83  Warning: Unsafe member access .length_mm on an `any` value.  @typescript-eslint/no-unsafe-member-access
+321:118  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+321:123  Warning: Unsafe member access .width_mm on an `any` value.  @typescript-eslint/no-unsafe-member-access
+321:157  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+321:162  Warning: Unsafe member access .height_mm on an `any` value.  @typescript-eslint/no-unsafe-member-access
+
+./components/dashboard/InventoryTable.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+17:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+23:21  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+24:21  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./components/domain-onboarding/ConfigurationWizard.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+23:22  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+24:26  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+25:23  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+30:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+48:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+48:42  Warning: Unsafe member access .registrar_specific_help on an `any` value.  @typescript-eslint/no-unsafe-member-access
+49:21  Warning: Unsafe member access [registrar] on an `any` value.  @typescript-eslint/no-unsafe-member-access
+49:40  Warning: Unsafe member access .other on an `any` value.  @typescript-eslint/no-unsafe-member-access
+155:34  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+155:54  Warning: Unsafe member access .steps on an `any` value.  @typescript-eslint/no-unsafe-member-access
+177:34  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+177:50  Warning: Unsafe member access .records_to_add on an `any` value.  @typescript-eslint/no-unsafe-member-access
+177:78  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+187:94  Warning: Unsafe member access .description on an `any` value.  @typescript-eslint/no-unsafe-member-access
+192:87  Warning: Unsafe member access .value on an `any` value.  @typescript-eslint/no-unsafe-member-access
+205:92  Warning: Unsafe member access .type on an `any` value.  @typescript-eslint/no-unsafe-member-access
+209:92  Warning: Unsafe member access .name on an `any` value.  @typescript-eslint/no-unsafe-member-access
+213:102  Warning: Unsafe member access .value on an `any` value.  @typescript-eslint/no-unsafe-member-access
+217:92  Warning: Unsafe member access .ttl on an `any` value.  @typescript-eslint/no-unsafe-member-access
+259:64  Warning: Unsafe member access .available on an `any` value.  @typescript-eslint/no-unsafe-member-access
+267:34  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+267:51  Warning: Unsafe member access .benefits on an `any` value.  @typescript-eslint/no-unsafe-member-access
+288:38  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+288:55  Warning: Unsafe member access .nameservers on an `any` value.  @typescript-eslint/no-unsafe-member-access
+307:38  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+307:55  Warning: Unsafe member access .steps on an `any` value.  @typescript-eslint/no-unsafe-member-access
+341:18  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+345:20  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+345:32  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/domain-onboarding/DNSAnalysisDisplay.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+23:15  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+27:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+28:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+60:35  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+60:57  Warning: Unsafe member access .domain on an `any` value.  @typescript-eslint/no-unsafe-member-access
+77:54  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+77:72  Warning: Unsafe member access .has_active_website on an `any` value.  @typescript-eslint/no-unsafe-member-access
+81:52  Warning: Unsafe member access .has_active_website on an `any` value.  @typescript-eslint/no-unsafe-member-access
+90:54  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+90:72  Warning: Unsafe member access .has_email on an `any` value.  @typescript-eslint/no-unsafe-member-access
+94:52  Warning: Unsafe member access .has_email on an `any` value.  @typescript-eslint/no-unsafe-member-access
+95:54  Warning: Unsafe member access .mx_records on an `any` value.  @typescript-eslint/no-unsafe-member-access
+103:54  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+103:72  Warning: Unsafe member access .using_cloudflare on an `any` value.  @typescript-eslint/no-unsafe-member-access
+107:52  Warning: Unsafe member access .using_cloudflare on an `any` value.  @typescript-eslint/no-unsafe-member-access
+128:44  Warning: Unsafe member access .detected on an `any` value.  @typescript-eslint/no-unsafe-member-access
+130:52  Warning: Unsafe member access .detected on an `any` value.  @typescript-eslint/no-unsafe-member-access
+135:34  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+135:46  Warning: Unsafe member access .nameservers on an `any` value.  @typescript-eslint/no-unsafe-member-access
+144:38  Warning: Unsafe member access .a_records on an `any` value.  @typescript-eslint/no-unsafe-member-access
+148:38  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+148:50  Warning: Unsafe member access .a_records on an `any` value.  @typescript-eslint/no-unsafe-member-access
+158:38  Warning: Unsafe member access .mx_records on an `any` value.  @typescript-eslint/no-unsafe-member-access
+162:38  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+162:50  Warning: Unsafe member access .mx_records on an `any` value.  @typescript-eslint/no-unsafe-member-access
+172:50  Warning: Unsafe member access .cname_records on an `any` value.  @typescript-eslint/no-unsafe-member-access
+176:65  Warning: Unsafe member access .cname_records on an `any` value.  @typescript-eslint/no-unsafe-member-access
+176:115  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+189:46  Warning: Unsafe member access .txt_records_count on an `any` value.  @typescript-eslint/no-unsafe-member-access
+198:32  Warning: Unsafe member access .route on an `any` value.  @typescript-eslint/no-unsafe-member-access
+204:41  Warning: Unsafe member access .route on an `any` value.  @typescript-eslint/no-unsafe-member-access
+211:48  Warning: Unsafe member access .route on an `any` value.  @typescript-eslint/no-unsafe-member-access
+215:69  Warning: Unsafe member access .route on an `any` value.  @typescript-eslint/no-unsafe-member-access
+218:48  Warning: Unsafe member access .route on an `any` value.  @typescript-eslint/no-unsafe-member-access
+222:49  Warning: Unsafe member access .explanation on an `any` value.  @typescript-eslint/no-unsafe-member-access
+228:37  Warning: Unsafe member access .warnings on an `any` value.  @typescript-eslint/no-unsafe-member-access
+232:34  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+232:49  Warning: Unsafe member access .warnings on an `any` value.  @typescript-eslint/no-unsafe-member-access
+249:40  Warning: Unsafe member access .route on an `any` value.  @typescript-eslint/no-unsafe-member-access
+256:37  Warning: Unsafe member access .route on an `any` value.  @typescript-eslint/no-unsafe-member-access
+266:40  Warning: Unsafe member access .route on an `any` value.  @typescript-eslint/no-unsafe-member-access
+273:37  Warning: Unsafe member access .route on an `any` value.  @typescript-eslint/no-unsafe-member-access
+281:73  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/domain-onboarding/DomainInputForm.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+25:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+81:32  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+102:49  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+190:28  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/domain-onboarding/DomainOnboardingWizard.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+31:33  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+32:20  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+35:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+67:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+69:24  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+72:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+72:43  Warning: Unsafe member access .onboarding_id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+73:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+73:41  Warning: Unsafe member access .domain_name on an `any` value.  @typescript-eslint/no-unsafe-member-access
+75:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+75:48  Warning: Unsafe member access .verification_token on an `any` value.  @typescript-eslint/no-unsafe-member-access
+79:30  Warning: Unsafe member access .error on an `any` value.  @typescript-eslint/no-unsafe-member-access
+103:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+105:24  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+109:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+109:55  Warning: Unsafe member access .instructions on an `any` value.  @typescript-eslint/no-unsafe-member-access
+113:30  Warning: Unsafe member access .error on an `any` value.  @typescript-eslint/no-unsafe-member-access
+130:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+132:24  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+135:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+135:42  Warning: Unsafe member access .analysis on an `any` value.  @typescript-eslint/no-unsafe-member-access
+144:30  Warning: Unsafe member access .error on an `any` value.  @typescript-eslint/no-unsafe-member-access
+243:47  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+254:39  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+277:99  Warning: Unsafe member access .domain on an `any` value.  @typescript-eslint/no-unsafe-member-access
+282:73  Warning: Unsafe member access .existing_services on an `any` value.  @typescript-eslint/no-unsafe-member-access
+288:73  Warning: Unsafe member access .existing_services on an `any` value.  @typescript-eslint/no-unsafe-member-access
+294:54  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+294:73  Warning: Unsafe member access .recommendation on an `any` value.  @typescript-eslint/no-unsafe-member-access
+299:98  Warning: Unsafe member access .recommendation on an `any` value.  @typescript-eslint/no-unsafe-member-access
+
+./components/domain-onboarding/PropagationTracker.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+27:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+34:12  Warning: Unsafe array destructuring of a tuple element with an `any` value.  @typescript-eslint/no-unsafe-assignment
+34:64  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+42:8  Warning: React Hook useEffect has a missing dependency: 'checkPropagation'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+45:53  Warning: Unsafe member access .overall on an `any` value.  @typescript-eslint/no-unsafe-member-access
+53:8  Warning: React Hook useEffect has a missing dependency: 'checkPropagation'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+61:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+63:22  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+64:43  Warning: Unsafe member access .propagation_status on an `any` value.  @typescript-eslint/no-unsafe-member-access
+66:26  Warning: Unsafe member access .propagation_status on an `any` value.  @typescript-eslint/no-unsafe-member-access
+78:56  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+81:25  Warning: Unsafe member access .propagated on an `any` value.  @typescript-eslint/no-unsafe-member-access
+91:33  Warning: Unsafe member access .propagated on an `any` value.  @typescript-eslint/no-unsafe-member-access
+95:21  Warning: Unsafe member access .current_values on an `any` value.  @typescript-eslint/no-unsafe-member-access
+95:46  Warning: Unsafe member access .current_values on an `any` value.  @typescript-eslint/no-unsafe-member-access
+98:62  Warning: Unsafe member access .current_values on an `any` value.  @typescript-eslint/no-unsafe-member-access
+116:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+117:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+117:32  Warning: Unsafe member access .fully_propagated on an `any` value.  @typescript-eslint/no-unsafe-member-access
+141:59  Warning: Unsafe member access .checks_passed on an `any` value.  @typescript-eslint/no-unsafe-member-access
+141:86  Warning: Unsafe member access .total_checks on an `any` value.  @typescript-eslint/no-unsafe-member-access
+155:42  Warning: Unsafe member access .percentage on an `any` value.  @typescript-eslint/no-unsafe-member-access
+163:60  Warning: Unsafe member access .percentage on an `any` value.  @typescript-eslint/no-unsafe-member-access
+184:37  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+184:45  Warning: Unsafe member access .a_record on an `any` value.  @typescript-eslint/no-unsafe-member-access
+188:71  Warning: Unsafe member access .www_record on an `any` value.  @typescript-eslint/no-unsafe-member-access
+190:41  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+190:49  Warning: Unsafe member access .www_record on an `any` value.  @typescript-eslint/no-unsafe-member-access
+196:37  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+196:45  Warning: Unsafe member access .txt_record on an `any` value.  @typescript-eslint/no-unsafe-member-access
+211:90  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+214:43  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+297:78  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/domain-onboarding/RouteSelector.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+25:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/domain-onboarding/VerificationProgress.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+11:24  Error: 'XCircle' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+17:19  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+21:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+23:5  Error: 'domain' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+50:8  Warning: React Hook useEffect has a missing dependency: 'checkVerification'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+58:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+60:22  Warning: Unsafe member access .verified on an `any` value.  @typescript-eslint/no-unsafe-member-access
+65:34  Warning: Unsafe member access .attempts on an `any` value.  @typescript-eslint/no-unsafe-member-access
+66:27  Warning: Unsafe member access .result on an `any` value.  @typescript-eslint/no-unsafe-member-access
+67:35  Warning: Unsafe member access .result on an `any` value.  @typescript-eslint/no-unsafe-member-access
+70:18  Error: 'err' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./components/domain-onboarding/VerificationSelector.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+20:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+94:47  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/onboarding/TemplatePageLoader.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+24:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+140:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/onboarding/TemplateSelector.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+185:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+361:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/onboarding/TemplateWarning.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+18:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+126:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+138:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/templates/FamilyTemplate.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+68:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/templates/LuxuryTemplate.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+51:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/templates/ModernTemplate.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+75:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/templates/SportyTemplate.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+78:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/theme-provider.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+19:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+58:28  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/ui/EmiCalculator.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+24:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/ui/WhatsAppButton.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+8:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/ui/accordion.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./components/ui/badge.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+32:1  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/ui/button.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./components/ui/calendar.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+13:1  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+58:45  Error: 'rest' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./components/ui/card.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./components/ui/checkbox.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./components/ui/dialog.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+59:42  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+73:42  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/ui/input.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./components/ui/label.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./components/ui/popover.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./components/ui/progress.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+9:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/ui/select.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./components/ui/sheet.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+80:42  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+94:42  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./components/ui/slider.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./components/ui/table.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./components/ui/tabs.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./components/ui/textarea.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+6:18  Error: An interface declaring no members is equivalent to its supertype.  @typescript-eslint/no-empty-object-type
+
+./components/ui/theme-toggle.tsx
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+11:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./lib/actions/save-dealer.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+123:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+127:45  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+127:62  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+144:27  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+147:53  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+147:70  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+151:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+161:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+172:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./lib/colors/automotive-brands.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+1784:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./lib/data/car-models.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./lib/data/cars.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+64:38  Warning: Unsafe member access .price_min_paise on an `any` value.  @typescript-eslint/no-unsafe-member-access
+65:38  Warning: Unsafe member access .price_max_paise on an `any` value.  @typescript-eslint/no-unsafe-member-access
+67:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+67:23  Warning: Unsafe member access .id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+68:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+68:23  Warning: Unsafe member access .make on an `any` value.  @typescript-eslint/no-unsafe-member-access
+69:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+69:23  Warning: Unsafe member access .model on an `any` value.  @typescript-eslint/no-unsafe-member-access
+70:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+70:23  Warning: Unsafe member access .variant on an `any` value.  @typescript-eslint/no-unsafe-member-access
+71:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+71:23  Warning: Unsafe member access .year on an `any` value.  @typescript-eslint/no-unsafe-member-access
+72:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+72:23  Warning: Unsafe member access .body_type on an `any` value.  @typescript-eslint/no-unsafe-member-access
+82:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+82:25  Warning: Unsafe member access .fuel_type on an `any` value.  @typescript-eslint/no-unsafe-member-access
+87:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+87:23  Warning: Unsafe member access .transmission on an `any` value.  @typescript-eslint/no-unsafe-member-access
+91:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+91:34  Warning: Unsafe member access .seating_capacity on an `any` value.  @typescript-eslint/no-unsafe-member-access
+95:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+95:27  Warning: Unsafe member access .image_url on an `any` value.  @typescript-eslint/no-unsafe-member-access
+96:13  Warning: Unsafe assignment of type `any[]` to a variable of type `string[]`.  @typescript-eslint/no-unsafe-assignment
+96:27  Warning: Unsafe member access .image_url on an `any` value.  @typescript-eslint/no-unsafe-member-access
+96:44  Warning: Unsafe member access .image_url on an `any` value.  @typescript-eslint/no-unsafe-member-access
+100:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+100:30  Warning: Unsafe member access .scraped_at on an `any` value.  @typescript-eslint/no-unsafe-member-access
+101:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+101:30  Warning: Unsafe member access .source_url on an `any` value.  @typescript-eslint/no-unsafe-member-access
+102:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+102:30  Warning: Unsafe member access .is_active on an `any` value.  @typescript-eslint/no-unsafe-member-access
+
+./lib/db/analytics.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./lib/db/auth.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+64:29  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+93:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+94:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./lib/db/dealers.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+195:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+196:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+197:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+198:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+199:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+200:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+201:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+202:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+203:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+204:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+205:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+206:9  Warning: Unsafe assignment of type `any[]` to a variable of type `string[]`.  @typescript-eslint/no-unsafe-assignment
+208:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+209:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+210:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+211:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+215:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+216:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+217:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./lib/db/leads.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+63:5  Warning: Unexpected console statement.  no-console
+
+./lib/db/messages.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./lib/db/reviews.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+79:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./lib/db/settings.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+85:13  Warning: Unsafe object destructuring of a property with an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./lib/db/vehicles.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+87:29  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+130:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./lib/services/car-service.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+101:13  Warning: Unsafe object destructuring of a property with an `any` value.  @typescript-eslint/no-unsafe-assignment
+189:31  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+192:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+192:28  Warning: Unsafe member access .price_min_paise on an `any` value.  @typescript-eslint/no-unsafe-member-access
+193:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+193:28  Warning: Unsafe member access .price_max_paise on an `any` value.  @typescript-eslint/no-unsafe-member-access
+203:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+203:27  Warning: Unsafe member access .pricing on an `any` value.  @typescript-eslint/no-unsafe-member-access
+208:18  Warning: Unsafe member access .exShowroom on an `any` value.  @typescript-eslint/no-unsafe-member-access
+209:17  Warning: Unsafe member access .exShowroom on an `any` value.  @typescript-eslint/no-unsafe-member-access
+212:18  Warning: Unsafe member access .emi on an `any` value.  @typescript-eslint/no-unsafe-member-access
+213:17  Warning: Unsafe member access .emi on an `any` value.  @typescript-eslint/no-unsafe-member-access
+219:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+220:29  Warning: Unsafe member access .fuel_types on an `any` value.  @typescript-eslint/no-unsafe-member-access
+220:50  Warning: Unsafe member access .fuel_types on an `any` value.  @typescript-eslint/no-unsafe-member-access
+221:21  Warning: Unsafe member access .fuel_types on an `any` value.  @typescript-eslint/no-unsafe-member-access
+222:22  Warning: Unsafe member access .fuel_type on an `any` value.  @typescript-eslint/no-unsafe-member-access
+222:41  Warning: Unsafe member access .fuel_type on an `any` value.  @typescript-eslint/no-unsafe-member-access
+228:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+229:29  Warning: Unsafe member access .transmissions on an `any` value.  @typescript-eslint/no-unsafe-member-access
+229:53  Warning: Unsafe member access .transmissions on an `any` value.  @typescript-eslint/no-unsafe-member-access
+230:21  Warning: Unsafe member access .transmissions on an `any` value.  @typescript-eslint/no-unsafe-member-access
+231:22  Warning: Unsafe member access .transmission on an `any` value.  @typescript-eslint/no-unsafe-member-access
+231:44  Warning: Unsafe member access .transmission on an `any` value.  @typescript-eslint/no-unsafe-member-access
+237:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+237:35  Warning: Unsafe member access .transmission on an `any` value.  @typescript-eslint/no-unsafe-member-access
+237:64  Warning: Unsafe member access .transmission on an `any` value.  @typescript-eslint/no-unsafe-member-access
+238:17  Warning: Unsafe member access .transmission on an `any` value.  @typescript-eslint/no-unsafe-member-access
+243:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+243:29  Warning: Unsafe member access .engine on an `any` value.  @typescript-eslint/no-unsafe-member-access
+245:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+245:29  Warning: Unsafe member access .engine_cc on an `any` value.  @typescript-eslint/no-unsafe-member-access
+246:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+246:29  Warning: Unsafe member access .engine_power on an `any` value.  @typescript-eslint/no-unsafe-member-access
+247:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+247:29  Warning: Unsafe member access .engine_torque on an `any` value.  @typescript-eslint/no-unsafe-member-access
+253:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+253:34  Warning: Unsafe member access .performance on an `any` value.  @typescript-eslint/no-unsafe-member-access
+254:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+254:31  Warning: Unsafe member access .fuel_efficiency on an `any` value.  @typescript-eslint/no-unsafe-member-access
+258:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+258:33  Warning: Unsafe member access .dimensions on an `any` value.  @typescript-eslint/no-unsafe-member-access
+259:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+259:32  Warning: Unsafe member access .seating_capacity on an `any` value.  @typescript-eslint/no-unsafe-member-access
+263:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+263:25  Warning: Unsafe member access .id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+264:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+264:25  Warning: Unsafe member access .make on an `any` value.  @typescript-eslint/no-unsafe-member-access
+265:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+265:25  Warning: Unsafe member access .model on an `any` value.  @typescript-eslint/no-unsafe-member-access
+266:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+266:25  Warning: Unsafe member access .variant on an `any` value.  @typescript-eslint/no-unsafe-member-access
+267:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+267:25  Warning: Unsafe member access .year on an `any` value.  @typescript-eslint/no-unsafe-member-access
+268:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+268:25  Warning: Unsafe member access .body_type on an `any` value.  @typescript-eslint/no-unsafe-member-access
+269:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+269:25  Warning: Unsafe member access .segment on an `any` value.  @typescript-eslint/no-unsafe-member-access
+270:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+270:74  Warning: Unsafe member access .price on an `any` value.  @typescript-eslint/no-unsafe-member-access
+272:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+273:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+274:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+275:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+276:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+277:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+277:29  Warning: Unsafe member access .features on an `any` value.  @typescript-eslint/no-unsafe-member-access
+278:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+278:50  Warning: Unsafe member access .key_features on an `any` value.  @typescript-eslint/no-unsafe-member-access
+278:75  Warning: Unsafe member access .key_features on an `any` value.  @typescript-eslint/no-unsafe-member-access
+279:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+279:50  Warning: Unsafe member access .safety_features on an `any` value.  @typescript-eslint/no-unsafe-member-access
+279:75  Warning: Unsafe member access .safety_features on an `any` value.  @typescript-eslint/no-unsafe-member-access
+281:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+281:29  Warning: Unsafe member access .images on an `any` value.  @typescript-eslint/no-unsafe-member-access
+282:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+282:29  Warning: Unsafe member access .image_url on an `any` value.  @typescript-eslint/no-unsafe-member-access
+283:13  Warning: Unsafe assignment of type `any[]` to a variable of type `string[]`.  @typescript-eslint/no-unsafe-assignment
+283:29  Warning: Unsafe member access .image_url on an `any` value.  @typescript-eslint/no-unsafe-member-access
+283:48  Warning: Unsafe member access .image_url on an `any` value.  @typescript-eslint/no-unsafe-member-access
+286:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+286:26  Warning: Unsafe member access .colors on an `any` value.  @typescript-eslint/no-unsafe-member-access
+287:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+287:26  Warning: Unsafe member access .meta on an `any` value.  @typescript-eslint/no-unsafe-member-access
+288:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+288:35  Warning: Unsafe member access .scraped_at on an `any` value.  @typescript-eslint/no-unsafe-member-access
+289:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+289:35  Warning: Unsafe member access .is_active on an `any` value.  @typescript-eslint/no-unsafe-member-access
+290:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+290:36  Warning: Unsafe member access .popularity_score on an `any` value.  @typescript-eslint/no-unsafe-member-access
+292:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+292:28  Warning: Unsafe member access .rating on an `any` value.  @typescript-eslint/no-unsafe-member-access
+293:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+293:28  Warning: Unsafe member access .variants on an `any` value.  @typescript-eslint/no-unsafe-member-access
+294:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+294:28  Warning: Unsafe member access .competitors on an `any` value.  @typescript-eslint/no-unsafe-member-access
+295:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+295:28  Warning: Unsafe member access .ownership on an `any` value.  @typescript-eslint/no-unsafe-member-access
+
+./lib/services/cloudflare.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+49:16  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+61:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+63:19  Warning: Unsafe member access .success on an `any` value.  @typescript-eslint/no-unsafe-member-access
+64:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+64:28  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+64:28  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+64:33  Warning: Unsafe member access .errors on an `any` value.  @typescript-eslint/no-unsafe-member-access
+64:49  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+64:59  Warning: Unsafe member access .message on an `any` value.  @typescript-eslint/no-unsafe-member-access
+64:68  Warning: Unsafe member access .join on an `any` value.  @typescript-eslint/no-unsafe-member-access
+68:21  Warning: Unsafe member access .result on an `any` value.  @typescript-eslint/no-unsafe-member-access
+75:9  Warning: Unexpected console statement.  no-console
+77:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+87:9  Warning: Unexpected console statement.  no-console
+87:47  Warning: Unsafe member access .id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+88:9  Warning: Unexpected console statement.  no-console
+88:40  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+88:47  Warning: Unsafe member access .name_servers on an `any` value.  @typescript-eslint/no-unsafe-member-access
+91:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+91:24  Warning: Unsafe member access .id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+92:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+92:26  Warning: Unsafe member access .name on an `any` value.  @typescript-eslint/no-unsafe-member-access
+93:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+93:28  Warning: Unsafe member access .status on an `any` value.  @typescript-eslint/no-unsafe-member-access
+94:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+94:34  Warning: Unsafe member access .name_servers on an `any` value.  @typescript-eslint/no-unsafe-member-access
+103:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+105:23  Warning: Unsafe member access .length on an `any` value.  @typescript-eslint/no-unsafe-member-access
+109:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+109:32  Warning: Unsafe member access [0] on an `any` value.  @typescript-eslint/no-unsafe-member-access
+111:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+111:26  Warning: Unsafe member access .id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+112:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+112:28  Warning: Unsafe member access .name on an `any` value.  @typescript-eslint/no-unsafe-member-access
+113:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+113:30  Warning: Unsafe member access .status on an `any` value.  @typescript-eslint/no-unsafe-member-access
+114:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+114:36  Warning: Unsafe member access .name_servers on an `any` value.  @typescript-eslint/no-unsafe-member-access
+136:16  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+137:9  Warning: Unexpected console statement.  no-console
+139:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+151:9  Warning: Unexpected console statement.  no-console
+151:51  Warning: Unsafe member access .id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+158:51  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+159:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+167:9  Warning: Unexpected console statement.  no-console
+173:9  Warning: Unexpected console statement.  no-console
+183:16  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+184:9  Warning: Unexpected console statement.  no-console
+186:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+191:9  Warning: Unexpected console statement.  no-console
+202:9  Warning: Unexpected console statement.  no-console
+209:9  Warning: Unexpected console statement.  no-console
+216:9  Warning: Unexpected console statement.  no-console
+223:9  Warning: Unexpected console statement.  no-console
+230:9  Warning: Unexpected console statement.  no-console
+237:9  Warning: Unexpected console statement.  no-console
+244:9  Warning: Unexpected console statement.  no-console
+246:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+248:20  Warning: Unsafe member access .length on an `any` value.  @typescript-eslint/no-unsafe-member-access
+255:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+255:29  Warning: Unsafe member access [0] on an `any` value.  @typescript-eslint/no-unsafe-member-access
+257:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+257:26  Warning: Unsafe member access .status on an `any` value.  @typescript-eslint/no-unsafe-member-access
+258:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+258:41  Warning: Unsafe member access .certificate_authority on an `any` value.  @typescript-eslint/no-unsafe-member-access
+259:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+259:30  Warning: Unsafe member access .expires_on on an `any` value.  @typescript-eslint/no-unsafe-member-access
+267:9  Warning: Unexpected console statement.  no-console
+281:9  Warning: Unexpected console statement.  no-console
+288:9  Warning: Unexpected console statement.  no-console
+295:13  Warning: Unexpected console statement.  no-console
+296:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+297:13  Warning: Unexpected console statement.  no-console
+306:13  Warning: Unexpected console statement.  no-console
+307:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+308:13  Warning: Unexpected console statement.  no-console
+311:9  Warning: Unexpected console statement.  no-console
+323:18  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+325:9  Warning: Unexpected console statement.  no-console
+334:23  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+352:9  Warning: Unexpected console statement.  no-console
+353:9  Warning: Unexpected console statement.  no-console
+354:41  Warning: Unexpected console statement.  no-console
+392:9  Warning: Unexpected console statement.  no-console
+399:9  Warning: Unexpected console statement.  no-console
+408:16  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+411:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./lib/services/code-generator.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./lib/services/cyepro-service.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+194:9  Warning: Unexpected console statement.  no-console
+221:9  Warning: Unexpected console statement.  no-console
+
+./lib/services/deployment-orchestrator.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+79:9  Warning: Unexpected console statement.  no-console
+144:9  Warning: Unexpected console statement.  no-console
+157:9  Warning: Unexpected console statement.  no-console
+166:19  Error: 'targetDomain' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+211:13  Warning: Unexpected console statement.  no-console
+235:25  Warning: Unexpected console statement.  no-console
+259:9  Warning: Unexpected console statement.  no-console
+271:9  Warning: Unexpected console statement.  no-console
+285:9  Warning: Unexpected console statement.  no-console
+294:9  Warning: Unexpected console statement.  no-console
+317:13  Warning: Unexpected console statement.  no-console
+327:9  Warning: Unexpected console statement.  no-console
+328:9  Warning: Unexpected console statement.  no-console
+361:9  Warning: Unexpected console statement.  no-console
+362:9  Warning: Unexpected console statement.  no-console
+394:9  Warning: Unexpected console statement.  no-console
+402:9  Warning: Unexpected console statement.  no-console
+
+./lib/services/dns-analysis.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+20:9  Warning: Unexpected console statement.  no-console
+54:9  Warning: Unexpected console statement.  no-console
+55:9  Warning: Unexpected console statement.  no-console
+69:13  Warning: Unexpected console statement.  no-console
+71:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+72:13  Warning: Unexpected console statement.  no-console
+83:13  Warning: Unexpected console statement.  no-console
+85:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+86:13  Warning: Unexpected console statement.  no-console
+98:13  Warning: Unexpected console statement.  no-console
+100:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+101:13  Warning: Unexpected console statement.  no-console
+113:13  Warning: Unexpected console statement.  no-console
+115:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+116:13  Warning: Unexpected console statement.  no-console
+133:21  Warning: Unexpected console statement.  no-console
+135:22  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+162:21  Warning: Unexpected console statement.  no-console
+165:22  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+171:9  Warning: Unexpected console statement.  no-console
+
+./lib/services/dns-verification-service.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+64:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+64:25  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+82:18  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+82:25  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+123:14  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+137:11  Error: 'rootDomain' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./lib/services/domain-search-service.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+46:13  Warning: Unexpected console statement.  no-console
+70:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+73:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+73:29  Warning: Unsafe member access .available on an `any` value.  @typescript-eslint/no-unsafe-member-access
+74:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+74:30  Warning: Unsafe member access .definitive on an `any` value.  @typescript-eslint/no-unsafe-member-access
+75:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+75:25  Warning: Unsafe member access .price on an `any` value.  @typescript-eslint/no-unsafe-member-access
+118:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+119:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+119:25  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+119:30  Warning: Unsafe member access .find on an `any` value.  @typescript-eslint/no-unsafe-member-access
+119:39  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+119:49  Warning: Unsafe member access .name on an `any` value.  @typescript-eslint/no-unsafe-member-access
+121:32  Warning: Unsafe member access .price on an `any` value.  @typescript-eslint/no-unsafe-member-access
+124:38  Warning: Unsafe member access .price on an `any` value.  @typescript-eslint/no-unsafe-member-access
+217:13  Warning: Unexpected console statement.  no-console
+271:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+275:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+275:34  Warning: Unsafe member access .message on an `any` value.  @typescript-eslint/no-unsafe-member-access
+279:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+283:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+283:29  Warning: Unsafe member access .orderId on an `any` value.  @typescript-eslint/no-unsafe-member-access
+
+./lib/services/domain-service.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+58:23  Warning: Unsafe object destructuring of a property with an `any` value.  @typescript-eslint/no-unsafe-assignment
+72:23  Warning: Unsafe object destructuring of a property with an `any` value.  @typescript-eslint/no-unsafe-assignment
+98:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+114:17  Warning: Unsafe object destructuring of a property with an `any` value.  @typescript-eslint/no-unsafe-assignment
+137:17  Warning: Unsafe object destructuring of a property with an `any` value.  @typescript-eslint/no-unsafe-assignment
+184:17  Warning: Unsafe object destructuring of a property with an `any` value.  @typescript-eslint/no-unsafe-assignment
+214:14  Error: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./lib/services/domain-verification.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+53:13  Warning: Unexpected console statement.  no-console
+64:13  Warning: Unexpected console statement.  no-console
+75:25  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+79:23  Warning: Unsafe member access .code on an `any` value.  @typescript-eslint/no-unsafe-member-access
+87:23  Warning: Unsafe member access .code on an `any` value.  @typescript-eslint/no-unsafe-member-access
+87:51  Warning: Unsafe member access .code on an `any` value.  @typescript-eslint/no-unsafe-member-access
+98:52  Warning: Unsafe member access .message on an `any` value.  @typescript-eslint/no-unsafe-member-access
+112:13  Warning: Unexpected console statement.  no-console
+127:21  Warning: Unexpected console statement.  no-console
+144:29  Warning: Unexpected console statement.  no-console
+151:26  Error: 'err' is defined but never used.  @typescript-eslint/no-unused-vars
+162:25  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+166:68  Warning: Unsafe member access .message on an `any` value.  @typescript-eslint/no-unsafe-member-access
+
+./lib/services/email-service.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+15:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+20:15  Error: 'emailContent' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+104:9  Warning: Unexpected console statement.  no-console
+115:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+118:11  Error: 'emailContent' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+185:5  Warning: Unexpected console statement.  no-console
+192:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+193:17  Error: 'dealerName' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+195:5  Warning: Unexpected console statement.  no-console
+202:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+203:17  Error: 'dealerName' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+205:5  Warning: Unexpected console statement.  no-console
+212:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+213:17  Error: 'dealerName' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+215:5  Warning: Unexpected console statement.  no-console
+
+./lib/services/github-service.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+77:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+100:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+117:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+224:17  Warning: Unexpected console statement.  no-console
+
+./lib/services/monitoring-service.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+7:35  Error: 'sendSSLRenewalNotification' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+49:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+66:64  Warning: Unsafe member access .domain on an `any` value.  @typescript-eslint/no-unsafe-member-access
+69:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+69:39  Warning: Unsafe member access .ssl_status on an `any` value.  @typescript-eslint/no-unsafe-member-access
+81:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+84:34  Warning: Unsafe member access .id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+87:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+87:32  Warning: Unsafe member access .domain on an `any` value.  @typescript-eslint/no-unsafe-member-access
+88:17  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+104:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+122:25  Warning: Unsafe member access .registration_expires_at on an `any` value.  @typescript-eslint/no-unsafe-member-access
+124:48  Warning: Unsafe member access .registration_expires_at on an `any` value.  @typescript-eslint/no-unsafe-member-access
+130:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+130:32  Warning: Unsafe member access .dealer on an `any` value.  @typescript-eslint/no-unsafe-member-access
+131:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+131:40  Warning: Unsafe member access .dealer on an `any` value.  @typescript-eslint/no-unsafe-member-access
+132:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+132:36  Warning: Unsafe member access .domain on an `any` value.  @typescript-eslint/no-unsafe-member-access
+137:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+137:36  Warning: Unsafe member access .domain on an `any` value.  @typescript-eslint/no-unsafe-member-access
+139:21  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+139:38  Warning: Unsafe member access .dealer_id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+144:24  Warning: Unsafe member access .type on an `any` value.  @typescript-eslint/no-unsafe-member-access
+144:53  Warning: Unsafe member access .auto_renew on an `any` value.  @typescript-eslint/no-unsafe-member-access
+146:17  Warning: Unexpected console statement.  no-console
+146:69  Warning: Unsafe member access .domain on an `any` value.  @typescript-eslint/no-unsafe-member-access
+154:38  Warning: Unsafe member access .id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+168:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+179:51  Warning: Unsafe member access .status on an `any` value.  @typescript-eslint/no-unsafe-member-access
+180:48  Warning: Unsafe member access .ssl_status on an `any` value.  @typescript-eslint/no-unsafe-member-access
+182:24  Warning: Unsafe member access .registration_expires_at on an `any` value.  @typescript-eslint/no-unsafe-member-access
+184:33  Warning: Unsafe member access .registration_expires_at on an `any` value.  @typescript-eslint/no-unsafe-member-access
+189:51  Warning: Unsafe member access .type on an `any` value.  @typescript-eslint/no-unsafe-member-access
+190:48  Warning: Unsafe member access .type on an `any` value.  @typescript-eslint/no-unsafe-member-access
+191:49  Warning: Unsafe member access .type on an `any` value.  @typescript-eslint/no-unsafe-member-access
+
+./lib/services/payment-service.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+84:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+87:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+87:31  Warning: Unsafe member access .error on an `any` value.  @typescript-eslint/no-unsafe-member-access
+89:38  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+94:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+94:34  Warning: Unsafe member access .id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+95:13  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+95:27  Warning: Unsafe member access .id on an `any` value.  @typescript-eslint/no-unsafe-member-access
+
+./lib/services/vercel-service.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+93:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+102:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+135:9  Error: 'existingMap' is never reassigned. Use 'const' instead.  prefer-const
+137:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+173:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+197:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+212:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+240:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+264:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+298:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+
+./lib/store/onboarding-store.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+3:43  Error: 'DealerCategory' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+3:59  Error: 'Brand' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+3:66  Error: 'Service' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+3:75  Error: 'StyleTemplate' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+3:90  Error: 'InventorySystem' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+3:107  Error: 'InventorySource' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+3:124  Error: 'VehicleUploadRow' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./lib/supabase-server.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+15:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+27:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./lib/supabase.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./lib/templates/index.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./lib/templates/rugged-adventure-template.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+21:3  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+21:22  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./lib/templates/tech-modern-template.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+21:3  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+21:24  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./lib/templates/template-styles.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./lib/templates/template-utils.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+12:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+131:9  Error: 'brandColors' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+220:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./lib/templates/template-validation.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./lib/types/car.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./lib/types/dealer-config.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./lib/types/domain-onboarding.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./lib/types/index.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./lib/utils/brand-hero.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./lib/utils/car-audit.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+6:33  Error: 'formatSpecsForDisplay' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./lib/utils/car-info-fetcher.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+30:19  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+35:51  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+37:9  Warning: Unexpected console statement.  no-console
+42:9  Warning: Unexpected console statement.  no-console
+50:9  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+51:9  Warning: Unexpected console statement.  no-console
+66:5  Warning: Unexpected console statement.  no-console
+68:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+77:5  Warning: Unexpected console statement.  no-console
+79:11  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+79:31  Warning: Unsafe member access [brandKey] on an `any` value.  @typescript-eslint/no-unsafe-member-access
+87:18  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+89:15  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+89:33  Warning: Unsafe member access [key] on an `any` value.  @typescript-eslint/no-unsafe-member-access
+93:64  Warning: Unsafe member access .model on an `any` value.  @typescript-eslint/no-unsafe-member-access
+101:23  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+101:42  Warning: Unsafe member access .model on an `any` value.  @typescript-eslint/no-unsafe-member-access
+102:20  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+102:32  Warning: Unsafe member access .model on an `any` value.  @typescript-eslint/no-unsafe-member-access
+103:5  Warning: Unexpected console statement.  no-console
+111:24  Warning: Unsafe member access .model on an `any` value.  @typescript-eslint/no-unsafe-member-access
+112:19  Warning: Unsafe assignment of an `any` value.  @typescript-eslint/no-unsafe-assignment
+112:40  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+112:40  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+112:44  Warning: Unsafe member access .model on an `any` value.  @typescript-eslint/no-unsafe-member-access
+112:64  Warning: Unsafe member access .trim on an `any` value.  @typescript-eslint/no-unsafe-member-access
+119:22  Warning: Unsafe call of an `any` typed value.  @typescript-eslint/no-unsafe-call
+119:41  Warning: Unsafe member access .includes on an `any` value.  @typescript-eslint/no-unsafe-member-access
+125:5  Warning: Unexpected console statement.  no-console
+128:9  Warning: Unexpected console statement.  no-console
+139:54  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+145:50  Warning: Unsafe member access .value on an `any` value.  @typescript-eslint/no-unsafe-member-access
+145:60  Warning: Unsafe member access .value on an `any` value.  @typescript-eslint/no-unsafe-member-access
+160:57  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+166:50  Warning: Unsafe member access .value on an `any` value.  @typescript-eslint/no-unsafe-member-access
+166:60  Warning: Unsafe member access .value on an `any` value.  @typescript-eslint/no-unsafe-member-access
+
+./lib/utils/car-specs-aggregator.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+116:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+137:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./lib/utils/car-utils.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+243:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+./lib/utils/domain.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./lib/utils/razorpay.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./lib/utils/slug.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+
+./lib/utils.ts
+1:1  Error: Definition for rule '@typescript-eslint/explicit-function-return-types' was not found.  @typescript-eslint/explicit-function-return-types
+4:8  Warning: Missing return type on function.  @typescript-eslint/explicit-module-boundary-types
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
