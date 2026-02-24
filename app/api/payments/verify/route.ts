@@ -75,12 +75,13 @@ export async function POST(request: Request): Promise<NextResponse<PaymentVerify
 
         if (!isValid) {
             // Log failed verification (but don't prevent retries)
-            await supabase.from('payment_idempotency_log').insert({
+            const { error: logError } = await supabase.from('payment_idempotency_log').insert({
                 idempotency_key: idempotencyKey,
                 payment_id: paymentId,
                 response: { success: false, error: 'Invalid signature' },
                 created_at: new Date().toISOString(),
-            }).catch(err => console.error('Failed to log verification error:', err))
+            })
+            if (logError) console.error('Failed to log verification error:', logError)
 
             return NextResponse.json(
                 { success: false, error: 'Invalid payment signature' },
