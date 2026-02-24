@@ -35,10 +35,10 @@ export function CarGrid({
 }: CarGridProps) {
     if (cars.length === 0) {
         return (
-            <div className="text-center py-12">
-                <div className="text-6xl mb-4">🚗</div>
-                <p className={cn('text-lg', light ? 'text-gray-600' : 'text-gray-300')}>{emptyMessage}</p>
-                <p className={cn('text-sm mt-2', light ? 'text-gray-500' : 'text-gray-400')}>Try adjusting your filters</p>
+            <div className="text-center py-16 px-4">
+                <div className="text-5xl mb-3">🚗</div>
+                <p className={cn('text-base font-medium', light ? 'text-gray-700' : 'text-foreground')}>{emptyMessage}</p>
+                <p className={cn('text-sm mt-1', light ? 'text-gray-500' : 'text-muted-foreground')}>Try adjusting your filters</p>
             </div>
         );
     }
@@ -46,7 +46,7 @@ export function CarGrid({
     return (
         <div
             className={cn(
-                'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',
+                'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5',
                 className
             )}
         >

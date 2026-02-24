@@ -1,7 +1,6 @@
 /**
- * CarCard Component - PRO Edition - ENHANCED
- * Now fetches and displays complete car specifications from all variants
- * Features: All fuel types, transmissions, seating, mileage, and power
+ * CarCard Component - PRO Edition
+ * Clean, consistent card with equal heights across the grid
  */
 
 'use client';
@@ -13,7 +12,9 @@ import type { Car } from '@/lib/types/car';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { getAggregatedCarSpecs, formatSpecsForDisplay } from '@/lib/utils/car-specs-aggregator';
 import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
 import { EnquiryModal } from './EnquiryModal';
 import { QuickViewModal } from './QuickViewModal';
 import {
@@ -21,7 +22,6 @@ import {
     Gauge,
     Users,
     Zap,
-    Star,
     Shield,
     TrendingUp,
     Send,
@@ -46,57 +46,45 @@ export function CarCard({
     showEMI = true,
     onViewDetails,
     className,
-    brandColor = '#2563eb', // default blue
+    brandColor = '#2563eb',
     light,
 }: CarCardProps) {
     const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
     const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
     const [aggregatedSpecs, setAggregatedSpecs] = useState<ReturnType<typeof formatSpecsForDisplay>>(null);
-    const [loading, setLoading] = useState(true);
 
-    // Fetch aggregated specs from all variants when component mounts
     useEffect(() => {
         const fetchSpecs = async () => {
             try {
-                setLoading(true);
                 const specs = await getAggregatedCarSpecs(car.make, car.model);
                 const formatted = formatSpecsForDisplay(specs);
                 setAggregatedSpecs(formatted);
             } catch (error) {
                 console.warn('Could not fetch aggregated specs:', error);
-            } finally {
-                setLoading(false);
             }
         };
-
         fetchSpecs();
         return;
     }, [car.make, car.model]);
 
-    const exShowroom = car.pricing?.exShowroom ?? { min: null, max: null }
+    const exShowroom = car.pricing?.exShowroom ?? { min: null, max: null };
     const priceRange = formatPriceInLakhs(exShowroom.min);
     const maxPrice = formatPriceInLakhs(exShowroom.max);
+    const hasPriceRange = exShowroom.min !== exShowroom.max && exShowroom.max;
 
-    // Use aggregated specs from all variants if available, fallback to single car data
-    const fuelTypes = aggregatedSpecs?.fuelsDisplay || 
-        (!car.engine?.type || car.engine.type === 'TBD') ? null : car.engine.type;
-    const transmissionTypes = aggregatedSpecs?.transmissionsDisplay || 
-        (!car.transmission?.type || car.transmission.type === 'TBD' || car.transmission.type === 'Transmission')
-        ? null : car.transmission.type;
-    const mileageRange = aggregatedSpecs?.mileageDisplay || 
+    // Resolved specs — always show 4 items for consistent grid
+    const fuelDisplay = aggregatedSpecs?.fuelsDisplay ||
+        (car.engine?.type && car.engine.type !== 'TBD' ? car.engine.type : '—');
+    const transDisplay = aggregatedSpecs?.transmissionsDisplay ||
+        (car.transmission?.type && car.transmission.type !== 'TBD' && car.transmission.type !== 'Transmission'
+            ? car.transmission.type : '—');
+    const seatingDisplay = aggregatedSpecs?.seatingDisplay ||
+        (car.dimensions?.seatingCapacity ? `${car.dimensions.seatingCapacity}` : '—');
+    const mileageDisplay = aggregatedSpecs?.mileageDisplay ||
         (car.performance?.fuelEfficiency && car.performance.fuelEfficiency > 0
-        ? `${car.performance.fuelEfficiency} km/l` : null);
-    const powerRange = aggregatedSpecs?.powerDisplay || null;
-    const seatingCapacities = aggregatedSpecs?.seatingDisplay || 
-        (car.dimensions?.seatingCapacity ? `${car.dimensions.seatingCapacity} seater` : null);
+            ? `${car.performance.fuelEfficiency} km/l` : '—');
 
-    // For multi-value strings like "Manual / Auto / CVT", use a smaller font so it fits
-    const isMultiTransmission = transmissionTypes ? transmissionTypes.includes('/') : false;
-    const isMultiFuel = fuelTypes ? fuelTypes.includes('/') : false;
-
-    const handleEnquireNow = () => {
-        setIsEnquiryModalOpen(true);
-    };
+    const handleEnquireNow = () => setIsEnquiryModalOpen(true);
 
     const handleQuickView = (e: React.MouseEvent) => {
         e.stopPropagation();
@@ -107,231 +95,201 @@ export function CarCard({
         <>
             <Card
                 className={cn(
-                    'group relative overflow-hidden transition-all duration-500 cursor-pointer',
+                    'group relative flex flex-col overflow-hidden transition-all duration-300 cursor-pointer h-full',
                     light
-                        ? 'bg-white border border-gray-200 text-gray-900'
-                        : 'bg-card border border-border',
-                    'hover:shadow-2xl hover:shadow-black/10 hover:-translate-y-1',
-                    'rounded-2xl',
+                        ? 'bg-white border border-gray-200/80 hover:border-gray-300 text-gray-900'
+                        : 'bg-card border border-border hover:border-border/80',
+                    'hover:shadow-lg hover:-translate-y-0.5',
+                    'rounded-xl',
                     className
                 )}
                 onClick={handleEnquireNow}
             >
-            {/* Image Section */}
-            <div className="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-muted to-muted/50">
-                {car.images.hero ? (
-                    <Image
-                        src={car.images.hero}
-                        alt={`${car.make} ${car.model}`}
-                        fill
-                        className="object-cover transition-all duration-700 group-hover:scale-110"
-                    />
-                ) : (
-                    <div className="flex items-center justify-center h-full">
-                        <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center">
+                {/* ── Image ── */}
+                <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+                    {car.images.hero ? (
+                        <Image
+                            src={car.images.hero}
+                            alt={`${car.make} ${car.model}`}
+                            fill
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                    ) : (
+                        <div className="flex items-center justify-center h-full bg-muted">
                             <span className="text-4xl">🚗</span>
                         </div>
+                    )}
+
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                    {/* Quick View */}
+                    <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                        <Button
+                            size="sm"
+                            variant="secondary"
+                            className="w-full bg-white/90 backdrop-blur-sm text-gray-900 hover:bg-white shadow-md"
+                            onClick={handleQuickView}
+                        >
+                            <Eye className="w-3.5 h-3.5 mr-1.5" />
+                            Quick View
+                        </Button>
                     </div>
-                )}
+                </div>
 
-                {/* Gradient Overlay on Hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                {/* ── Content ── */}
+                <CardContent className="flex flex-col flex-1 p-4">
+                    {/* Brand & Model */}
+                    <div className="mb-2">
+                        <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: brandColor }}>
+                            {car.make}
+                        </p>
+                        <h3 className={cn('text-lg font-bold leading-tight line-clamp-1', light ? 'text-gray-900' : 'text-foreground')}>
+                            {car.model}
+                        </h3>
+                        {car.variant && (
+                            <p className={cn('text-xs line-clamp-1 mt-0.5', light ? 'text-gray-400' : 'text-muted-foreground')}>
+                                {car.variant}
+                            </p>
+                        )}
+                    </div>
 
-                {/* Quick View Button - Shows on Hover */}
-                <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                    {/* Price */}
+                    <div className="mb-3">
+                        <div className="flex items-baseline gap-1.5 flex-wrap">
+                            <span className={cn('text-xl font-bold', light ? 'text-gray-900' : 'text-foreground')}>
+                                {priceRange}
+                            </span>
+                            {hasPriceRange && (
+                                <span className="text-sm text-muted-foreground">– {maxPrice}</span>
+                            )}
+                        </div>
+                        <p className="text-[11px] text-muted-foreground">Ex-showroom price</p>
+
+                        {showEMI && car.pricing.emi && (
+                            <Badge variant="secondary" className="mt-1.5 text-[11px] font-medium gap-1" style={{ color: brandColor }}>
+                                <TrendingUp className="w-3 h-3" />
+                                EMI ₹{car.pricing.emi.monthly.toLocaleString()}/mo
+                            </Badge>
+                        )}
+                    </div>
+
+                    <Separator className="mb-3" />
+
+                    {/* Specs Grid — always 4 items */}
+                    <div className="grid grid-cols-2 gap-2 mb-3">
+                        <SpecItem icon={<Fuel className="w-3.5 h-3.5 text-emerald-600" />} label="Fuel" value={fuelDisplay} light={light} />
+                        <SpecItem icon={<Gauge className="w-3.5 h-3.5 text-blue-600" />} label="Trans" value={transDisplay} light={light} />
+                        <SpecItem icon={<Users className="w-3.5 h-3.5 text-purple-600" />} label="Seats" value={seatingDisplay} light={light} />
+                        <SpecItem icon={<Zap className="w-3.5 h-3.5 text-amber-600" />} label="Mileage" value={mileageDisplay} light={light} />
+                    </div>
+
+                    {/* Key Features — max 3 */}
+                    {car.features.keyFeatures.length > 0 && (
+                        <div className="mb-3">
+                            <p className="text-[11px] font-semibold text-muted-foreground mb-1.5 flex items-center gap-1">
+                                <Shield className="w-3 h-3 text-green-600" />
+                                Top Features
+                            </p>
+                            <div className="flex flex-wrap gap-1.5">
+                                {car.features.keyFeatures.slice(0, 3).map((feature, idx) => (
+                                    <span
+                                        key={idx}
+                                        className={cn(
+                                            'text-[11px] px-2 py-0.5 rounded-md truncate max-w-[140px]',
+                                            light
+                                                ? 'bg-gray-100 text-gray-600'
+                                                : 'bg-muted text-muted-foreground'
+                                        )}
+                                        title={feature}
+                                    >
+                                        {feature}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Spacer to push CTA to bottom */}
+                    <div className="flex-1" />
+
+                    {/* CTA */}
                     <Button
-                        className="w-full bg-background/95 backdrop-blur-sm text-foreground hover:bg-background shadow-xl"
+                        className="w-full text-white mt-2"
+                        size="sm"
+                        style={{ backgroundColor: brandColor }}
                         onClick={(e) => {
                             e.stopPropagation();
-                            handleQuickView(e);
+                            handleEnquireNow();
                         }}
                     >
-                        <Eye className="w-4 h-4 mr-2" />
-                        Quick View
+                        <Send className="w-3.5 h-3.5 mr-1.5" />
+                        Enquire Now
                     </Button>
-                </div>
-            </div>
+                </CardContent>
 
-            <CardContent className="p-5">
-                {/* Brand & Model */}
-                <div className="mb-3">
-                    <p className="text-xs font-medium uppercase tracking-wider mb-1" style={{ color: brandColor }}>
-                        {car.make}
-                    </p>
-                    <h3 className={cn('text-xl font-bold leading-tight line-clamp-1 transition-colors', light ? 'text-gray-900' : 'text-foreground')}>
-                        {car.model}
-                    </h3>
-                    <p className={cn('text-sm line-clamp-1', light ? 'text-gray-500' : 'text-muted-foreground')}>{car.variant}</p>
-                </div>
-
-                {/* Price */}
-                <div className={cn('mb-4 pb-4 border-b', light ? 'border-gray-100' : 'border-border')}>
-                    <div className="flex items-baseline gap-2">
-                        <span className={cn('text-2xl font-bold', light ? 'text-gray-900' : 'text-foreground')}>
-                            {priceRange}
-                        </span>
-                        {car.pricing.exShowroom.min !== car.pricing.exShowroom.max && (
-                            <span className="text-sm text-muted-foreground">- {maxPrice}</span>
-                        )}
-                    </div>
-                    <p className="text-xs text-muted-foreground mt-0.5">Ex-showroom price</p>
-
-                    {showEMI && car.pricing.emi && (
-                        <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full" style={{ backgroundColor: `${brandColor}15` }}>
-                            <TrendingUp className="w-3 h-3" style={{ color: brandColor }} />
-                            <span className="text-xs font-medium" style={{ color: brandColor }}>
-                                EMI ₹{car.pricing.emi.monthly.toLocaleString()}/mo
-                            </span>
-                        </div>
-                    )}
-                </div>
-
-                {/* Comprehensive Specs Grid - Now showing ALL variants info */}
-                <div className="grid grid-cols-2 gap-3 mb-4">
-                    {fuelTypes && (
-                        <div className={cn('flex items-center gap-2.5 p-2.5 rounded-xl', light ? 'bg-gray-50' : 'bg-muted/50')}>
-                            <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
-                                <Fuel className="w-4 h-4 text-emerald-600" />
-                            </div>
-                            <div className="min-w-0">
-                                <p className={cn('text-xs', light ? 'text-gray-500' : 'text-muted-foreground')}>Fuel</p>
-                                <p className={cn(
-                                    'font-semibold leading-tight',
-                                    isMultiFuel ? 'text-xs' : 'text-sm',
-                                    light ? 'text-gray-900' : 'text-foreground'
-                                )} title={fuelTypes}>
-                                    {fuelTypes}
-                                </p>
-                            </div>
-                        </div>
-                    )}
-                    {transmissionTypes && (
-                        <div className={cn('flex items-center gap-2.5 p-2.5 rounded-xl', light ? 'bg-gray-50' : 'bg-muted/50')}>
-                            <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
-                                <Gauge className="w-4 h-4 text-blue-600" />
-                            </div>
-                            <div className="min-w-0">
-                                <p className={cn('text-xs', light ? 'text-gray-500' : 'text-muted-foreground')}>Trans</p>
-                                <p className={cn(
-                                    'font-semibold leading-tight',
-                                    isMultiTransmission ? 'text-xs' : 'text-sm',
-                                    light ? 'text-gray-900' : 'text-foreground'
-                                )} title={transmissionTypes}>
-                                    {transmissionTypes}
-                                </p>
-                            </div>
-                        </div>
-                    )}
-                    {seatingCapacities && (
-                        <div className={cn('flex items-center gap-2.5 p-2.5 rounded-xl', light ? 'bg-gray-50' : 'bg-muted/50')}>
-                            <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
-                                <Users className="w-4 h-4 text-purple-600" />
-                            </div>
-                            <div>
-                                <p className={cn('text-xs', light ? 'text-gray-500' : 'text-muted-foreground')}>Seats</p>
-                                <p className={cn('text-sm font-semibold', light ? 'text-gray-900' : 'text-foreground')} title={seatingCapacities}>
-                                    {seatingCapacities}
-                                </p>
-                            </div>
-                        </div>
-                    )}
-                    {mileageRange && (
-                        <div className={cn('flex items-center gap-2.5 p-2.5 rounded-xl', light ? 'bg-gray-50' : 'bg-muted/50')}>
-                            <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
-                                <Zap className="w-4 h-4 text-amber-600" />
-                            </div>
-                            <div>
-                                <p className={cn('text-xs', light ? 'text-gray-500' : 'text-muted-foreground')}>Mileage</p>
-                                <p className={cn('text-sm font-semibold', light ? 'text-gray-900' : 'text-foreground')} title={mileageRange}>
-                                    {mileageRange}
-                                </p>
-                            </div>
-                        </div>
-                    )}
-                    {powerRange && (
-                        <div className={cn('flex items-center gap-2.5 p-2.5 rounded-xl col-span-2', light ? 'bg-gray-50' : 'bg-muted/50')}>
-                            <div className={cn('w-8 h-8 rounded-lg flex items-center justify-center', light ? 'bg-white shadow-sm' : 'bg-background shadow-sm')}>
-                                <Star className="w-4 h-4 text-yellow-600" />
-                            </div>
-                            <div>
-                                <p className={cn('text-xs', light ? 'text-gray-500' : 'text-muted-foreground')}>Power</p>
-                                <p className={cn('text-sm font-semibold', light ? 'text-gray-900' : 'text-foreground')} title={powerRange}>
-                                    {powerRange}
-                                </p>
-                            </div>
-                        </div>
-                    )}
-                </div>
-
-                {/* Key Features */}
-                {car.features.keyFeatures.length > 0 && (
-                    <div className="mb-4 p-3 bg-muted/30 rounded-xl">
-                        <p className="text-xs font-semibold text-foreground mb-2 flex items-center gap-1.5">
-                            <Shield className="w-3.5 h-3.5 text-green-600" />
-                            Top Features
-                        </p>
-                        <div className="flex flex-wrap gap-2">
-                            {car.features.keyFeatures.slice(0, variant === 'detailed' ? 5 : 3).map((feature, idx) => (
-                                <span
-                                    key={idx}
-                                    className="text-xs px-2.5 py-1 bg-background rounded-full text-muted-foreground border border-border"
-                                >
-                                    {feature}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-                )}
-
-                {/* Rating */}
-                {car.rating && (
-                    <div className="flex items-center gap-3 mb-4">
-                        <div className="flex items-center gap-1.5 px-2.5 py-1.5 bg-amber-500/10 rounded-lg">
-                            <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
-                            <span className="font-bold text-foreground">{car.rating.overall.toFixed(1)}</span>
-                        </div>
-                        {car.rating.reviewCount && (
-                            <span className="text-xs text-muted-foreground">
-                                {car.rating.reviewCount.toLocaleString()} reviews
-                            </span>
-                        )}
-                    </div>
-                )}
-
-                {/* Action Button */}
-                <Button
-                    className="w-full text-white transition-all duration-300 group/btn"
+                {/* Bottom accent */}
+                <div
+                    className="h-0.5 w-0 group-hover:w-full transition-all duration-500"
                     style={{ backgroundColor: brandColor }}
-                    onClick={(e) => {
-                        e.stopPropagation();
-                        handleEnquireNow();
-                    }}
-                >
-                    <Send className="w-4 h-4 mr-2" />
-                    Enquire Now
-                </Button>
-            </CardContent>
+                />
+            </Card>
 
-            {/* Hover Accent Line */}
-            <div className="absolute bottom-0 left-0 right-0 h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" style={{ backgroundColor: brandColor }} />
-        </Card>
-
-        {/* Quick View Modal */}
-        <QuickViewModal
-            car={car}
-            open={isQuickViewOpen}
-            onOpenChange={setIsQuickViewOpen}
-            onEnquireNow={handleEnquireNow}
-            brandColor={brandColor}
-        />
-
-        {/* Enquiry Modal */}
-        <EnquiryModal
-            car={car}
-            open={isEnquiryModalOpen}
-            onOpenChange={setIsEnquiryModalOpen}
-            brandColor={brandColor}
-        />
+            {/* Modals */}
+            <QuickViewModal
+                car={car}
+                open={isQuickViewOpen}
+                onOpenChange={setIsQuickViewOpen}
+                onEnquireNow={handleEnquireNow}
+                brandColor={brandColor}
+            />
+            <EnquiryModal
+                car={car}
+                open={isEnquiryModalOpen}
+                onOpenChange={setIsEnquiryModalOpen}
+                brandColor={brandColor}
+            />
         </>
+    );
+}
+
+/** Small spec item used in the 2x2 grid */
+function SpecItem({
+    icon,
+    label,
+    value,
+    light,
+}: {
+    icon: React.ReactNode;
+    label: string;
+    value: string;
+    light?: boolean;
+}) {
+    const isLong = value.includes('/');
+    return (
+        <div className={cn(
+            'flex items-center gap-2 p-2 rounded-lg',
+            light ? 'bg-gray-50' : 'bg-muted/40'
+        )}>
+            <div className={cn(
+                'w-7 h-7 rounded-md flex items-center justify-center shrink-0',
+                light ? 'bg-white shadow-sm' : 'bg-background shadow-sm'
+            )}>
+                {icon}
+            </div>
+            <div className="min-w-0">
+                <p className="text-[10px] text-muted-foreground leading-none">{label}</p>
+                <p
+                    className={cn(
+                        'font-semibold leading-tight truncate',
+                        isLong ? 'text-[11px]' : 'text-xs',
+                        light ? 'text-gray-900' : 'text-foreground'
+                    )}
+                    title={value}
+                >
+                    {value}
+                </p>
+            </div>
+        </div>
     );
 }
