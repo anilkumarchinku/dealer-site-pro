@@ -132,7 +132,7 @@ export async function setProjectEnvVars(
     const targets   = ['production', 'preview', 'development'] as const
 
     // Fetch existing env vars to build key→id map
-    let existingMap: Record<string, string> = {}
+    const existingMap: Record<string, string> = {}
     try {
         const res = await vFetch(`/v10/projects/${projectId}/env${q}`)
         const envList = (res as { envs?: { id: string; key: string }[] }).envs ?? []

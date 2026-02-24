@@ -45,6 +45,8 @@ export function VerificationProgress({
 
             return () => clearInterval(interval);
         }
+        // Return undefined for other cases (no cleanup needed)
+        return undefined;
     }, [autoCheckEnabled, verified]);
 
     const checkVerification = async () => {
@@ -79,172 +81,83 @@ export function VerificationProgress({
                 <CardHeader>
                     <div className="flex items-center gap-3">
                         {verified ? (
-                            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                                <CheckCircle2 className="w-6 h-6 text-green-600" />
-                            </div>
-                        ) : isChecking ? (
-                            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                                <Loader2 className="w-6 h-6 text-blue-600 animate-spin" />
-                            </div>
+                            <>
+                                <CheckCircle2 className="w-5 h-5 text-green-600" />
+                                <div>
+                                    <CardTitle>Verification Complete</CardTitle>
+                                    <CardDescription>Your domain has been successfully verified</CardDescription>
+                                </div>
+                            </>
                         ) : (
-                            <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
-                                <Clock className="w-6 h-6 text-yellow-600" />
-                            </div>
+                            <>
+                                <Clock className="w-5 h-5 text-blue-600" />
+                                <div>
+                                    <CardTitle>Verifying Domain</CardTitle>
+                                    <CardDescription>Waiting for {methodNames[method]} verification</CardDescription>
+                                </div>
+                            </>
                         )}
-                        <div>
-                            <CardTitle className="text-2xl">
-                                {verified ? 'Domain Verified!' : 'Waiting for Verification'}
-                            </CardTitle>
-                            <CardDescription>
-                                {verified
-                                    ? `Successfully verified ownership of ${domain}`
-                                    : `Using ${methodNames[method]} method`}
-                            </CardDescription>
-                        </div>
                     </div>
                 </CardHeader>
+                {error && (
+                    <CardContent>
+                        <div className="flex items-start gap-3 p-3 bg-red-50 border border-red-200 rounded-lg">
+                            <AlertCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
+                            <p className="text-sm text-red-700">{error}</p>
+                        </div>
+                    </CardContent>
+                )}
             </Card>
 
-            {!verified && (
-                <>
-                    {/* Instructions Card */}
-                    <Card>
-                        <CardHeader>
-                            <CardTitle>Complete These Steps</CardTitle>
-                            <CardDescription>
-                                Follow the instructions below to verify your domain ownership
-                            </CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                            <ol className="space-y-3">
-                                {instructions.steps.map((step: string, idx: number) => (
-                                    <li key={idx} className="flex items-start gap-3">
-                                        <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-semibold">
-                                            {idx + 1}
-                                        </span>
-                                        <span className="pt-0.5">{step}</span>
-                                    </li>
-                                ))}
-                            </ol>
-
-                            {/* Method-specific details */}
-                            {method === 'dns_txt' && instructions.txt_record && (
-                                <div className="mt-6 p-4 bg-gray-50 rounded-lg border">
-                                    <h4 className="font-semibold mb-2">DNS Record Details:</h4>
-                                    <div className="space-y-2 text-sm font-mono">
-                                        <div className="grid grid-cols-2 gap-2">
-                                            <span className="text-gray-600">Type:</span>
-                                            <span>{instructions.txt_record.type}</span>
-                                        </div>
-                                        <div className="grid grid-cols-2 gap-2">
-                                            <span className="text-gray-600">Name:</span>
-                                            <span>{instructions.txt_record.name}</span>
-                                        </div>
-                                        <div className="grid grid-cols-2 gap-2">
-                                            <span className="text-gray-600">Value:</span>
-                                            <span className="break-all">{instructions.txt_record.value}</span>
-                                        </div>
-                                        <div className="grid grid-cols-2 gap-2">
-                                            <span className="text-gray-600">TTL:</span>
-                                            <span>{instructions.txt_record.ttl}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
-
-                            {method === 'html_file' && instructions.file && (
-                                <div className="mt-6 p-4 bg-gray-50 rounded-lg border">
-                                    <h4 className="font-semibold mb-2">File Details:</h4>
-                                    <div className="space-y-2 text-sm">
-                                        <div>
-                                            <span className="text-gray-600">File Name: </span>
-                                            <span className="font-mono">{instructions.file.name}</span>
-                                        </div>
-                                        <div>
-                                            <span className="text-gray-600">Upload Path: </span>
-                                            <span className="font-mono">{instructions.file.upload_path}</span>
-                                        </div>
-                                        <Button
-                                            variant="outline"
-                                            size="sm"
-                                            onClick={() => window.open(instructions.download_url, '_blank')}
-                                        >
-                                            Download File
-                                        </Button>
-                                    </div>
-                                </div>
-                            )}
-                        </CardContent>
-                    </Card>
-
-                    {/* Error Message */}
-                    {error && (
-                        <Card className="border-yellow-200 bg-yellow-50">
-                            <CardContent className="p-4">
-                                <div className="flex items-start gap-3">
-                                    <AlertCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
-                                    <div>
-                                        <p className="font-semibold text-yellow-900">Not verified yet</p>
-                                        <p className="text-sm text-yellow-800 mt-1">{error}</p>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    )}
-
-                    {/* Action Buttons */}
-                    <div className="flex gap-4">
-                        <Button
-                            size="lg"
-                            className="flex-1"
-                            onClick={checkVerification}
-                            disabled={isChecking}
-                        >
-                            {isChecking ? (
-                                <>
-                                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                                    Checking...
-                                </>
-                            ) : (
-                                <>Check Verification Status</>
-                            )}
-                        </Button>
-
-                        <Button
-                            size="lg"
-                            variant={autoCheckEnabled ? 'secondary' : 'outline'}
-                            onClick={() => setAutoCheckEnabled(!autoCheckEnabled)}
-                        >
-                            {autoCheckEnabled ? 'Auto-checking enabled' : 'Enable Auto-check'}
-                        </Button>
+            {/* Instructions Card */}
+            <Card>
+                <CardHeader>
+                    <CardTitle>Verification Instructions</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <div className="space-y-4">
+                        {instructions && Object.entries(instructions).map(([key, value]) => (
+                            <div key={key} className="text-sm">
+                                <p className="font-semibold text-gray-900 mb-1">{key}:</p>
+                                <p className="text-gray-600">{String(value)}</p>
+                            </div>
+                        ))}
                     </div>
+                </CardContent>
+            </Card>
 
-                    {autoCheckEnabled && (
-                        <p className="text-sm text-center text-gray-500">
-                            Automatically checking every 30 seconds...
-                        </p>
+            {/* Action Buttons */}
+            <div className="flex gap-2">
+                <Button
+                    onClick={checkVerification}
+                    disabled={isChecking || verified}
+                    className="flex-1"
+                >
+                    {isChecking ? (
+                        <>
+                            <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                            Checking...
+                        </>
+                    ) : (
+                        'Check Now'
                     )}
+                </Button>
+                <Button
+                    variant={autoCheckEnabled ? 'default' : 'outline'}
+                    onClick={() => setAutoCheckEnabled(!autoCheckEnabled)}
+                    disabled={verified}
+                    className="flex-1"
+                >
+                    {autoCheckEnabled ? 'Auto-checking enabled' : 'Enable Auto-check'}
+                </Button>
+            </div>
 
-                    {attempts > 0 && (
-                        <p className="text-sm text-center text-gray-500">
-                            Verification attempts: {attempts}
-                        </p>
-                    )}
-                </>
-            )}
-
-            {verified && (
-                <Card className="border-green-200 bg-green-50">
-                    <CardContent className="p-6 text-center">
-                        <CheckCircle2 className="w-16 h-16 text-green-600 mx-auto mb-4" />
-                        <h3 className="text-xl font-bold text-green-900 mb-2">
-                            Domain Ownership Verified!
-                        </h3>
-                        <p className="text-green-800 mb-4">
-                            Proceeding to DNS analysis...
-                        </p>
-                    </CardContent>
-                </Card>
+            {/* Status Information */}
+            {!verified && (
+                <div className="text-sm text-gray-600 space-y-1">
+                    <p>Attempts: {attempts}</p>
+                    {autoCheckEnabled && <p>Auto-checking every 30 seconds...</p>}
+                </div>
             )}
         </div>
     );
