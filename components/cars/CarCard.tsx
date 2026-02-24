@@ -22,7 +22,6 @@ import {
     Gauge,
     Users,
     Zap,
-    Shield,
     TrendingUp,
     Send,
     Eye
@@ -138,84 +137,55 @@ export function CarCard({
                 </div>
 
                 {/* ── Content ── */}
-                <CardContent className="flex flex-col flex-1 p-4">
+                <CardContent className="flex flex-col flex-1 p-3 pt-2.5">
                     {/* Brand & Model */}
-                    <div className="mb-2">
+                    <div className="mb-1.5">
                         <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: brandColor }}>
                             {car.make}
                         </p>
-                        <h3 className={cn('text-lg font-bold leading-tight line-clamp-1', light ? 'text-gray-900' : 'text-foreground')}>
+                        <h3 className={cn('text-base font-bold leading-tight line-clamp-1', light ? 'text-gray-900' : 'text-foreground')}>
                             {car.model}
                         </h3>
                         {car.variant && (
-                            <p className={cn('text-xs line-clamp-1 mt-0.5', light ? 'text-gray-400' : 'text-muted-foreground')}>
+                            <p className={cn('text-[11px] line-clamp-1', light ? 'text-gray-400' : 'text-muted-foreground')}>
                                 {car.variant}
                             </p>
                         )}
                     </div>
 
                     {/* Price */}
-                    <div className="mb-3">
+                    <div className="mb-2">
                         <div className="flex items-baseline gap-1.5 flex-wrap">
-                            <span className={cn('text-xl font-bold', light ? 'text-gray-900' : 'text-foreground')}>
+                            <span className={cn('text-lg font-bold', light ? 'text-gray-900' : 'text-foreground')}>
                                 {priceRange}
                             </span>
                             {hasPriceRange && (
-                                <span className="text-sm text-muted-foreground">– {maxPrice}</span>
+                                <span className="text-xs text-muted-foreground">– {maxPrice}</span>
                             )}
                         </div>
-                        <p className="text-[11px] text-muted-foreground">Ex-showroom price</p>
+                        <p className="text-[10px] text-muted-foreground">Ex-showroom price</p>
 
                         {showEMI && car.pricing.emi && (
-                            <Badge variant="secondary" className="mt-1.5 text-[11px] font-medium gap-1" style={{ color: brandColor }}>
+                            <Badge variant="secondary" className="mt-1 text-[10px] font-medium gap-1 h-5" style={{ color: brandColor }}>
                                 <TrendingUp className="w-3 h-3" />
                                 EMI ₹{car.pricing.emi.monthly.toLocaleString()}/mo
                             </Badge>
                         )}
                     </div>
 
-                    <Separator className="mb-3" />
+                    <Separator className="mb-2" />
 
                     {/* Specs Grid — always 4 items */}
-                    <div className="grid grid-cols-2 gap-2 mb-3">
+                    <div className="grid grid-cols-2 gap-1.5 mb-2">
                         <SpecItem icon={<Fuel className="w-3.5 h-3.5 text-emerald-600" />} label="Fuel" value={fuelDisplay} light={light} />
                         <SpecItem icon={<Gauge className="w-3.5 h-3.5 text-blue-600" />} label="Trans" value={transDisplay} light={light} />
                         <SpecItem icon={<Users className="w-3.5 h-3.5 text-purple-600" />} label="Seats" value={seatingDisplay} light={light} />
                         <SpecItem icon={<Zap className="w-3.5 h-3.5 text-amber-600" />} label="Mileage" value={mileageDisplay} light={light} />
                     </div>
 
-                    {/* Key Features — max 3 */}
-                    {car.features.keyFeatures.length > 0 && (
-                        <div className="mb-3">
-                            <p className="text-[11px] font-semibold text-muted-foreground mb-1.5 flex items-center gap-1">
-                                <Shield className="w-3 h-3 text-green-600" />
-                                Top Features
-                            </p>
-                            <div className="flex flex-wrap gap-1.5">
-                                {car.features.keyFeatures.slice(0, 3).map((feature, idx) => (
-                                    <span
-                                        key={idx}
-                                        className={cn(
-                                            'text-[11px] px-2 py-0.5 rounded-md truncate max-w-[140px]',
-                                            light
-                                                ? 'bg-gray-100 text-gray-600'
-                                                : 'bg-muted text-muted-foreground'
-                                        )}
-                                        title={feature}
-                                    >
-                                        {feature}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    )}
-
-                    {/* Spacer to push CTA to bottom */}
-                    <div className="flex-1" />
-
                     {/* CTA */}
                     <Button
-                        className="w-full text-white mt-2"
+                        className="w-full text-white mt-1"
                         size="sm"
                         style={{ backgroundColor: brandColor }}
                         onClick={(e) => {
