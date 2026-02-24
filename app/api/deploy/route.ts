@@ -80,9 +80,6 @@ export async function POST(request: Request) {
                 .single(),
         ])
 
-        const brands = brandsRes.data?.map(b => b.brand_name) ?? []
-        const services = servicesRes.data?.map(s => s.service_name) ?? []
-        const tc = configRes.data
 
         const dealerSlug = dealer.slug
         if (!dealerSlug) {
