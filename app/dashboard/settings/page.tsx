@@ -55,6 +55,8 @@ export default function SettingsPage() {
     const [cyeproStatus,    setCyeproStatus]    = useState<"idle" | "saving" | "saved" | "error">("idle");
     const [cyeproError,     setCyeproError]     = useState("");
     const [cyeproConnected, setCyeproConnected] = useState(false);
+    const [cyeproTesting,   setCyeproTesting]   = useState(false);
+    const [cyeproTestResult, setCyeproTestResult] = useState<{ success: boolean; message: string } | null>(null);
 
     // ── Custom Domain state ───────────────────────────────────────────────────
     const [domainInput,   setDomainInput]   = useState("");
@@ -211,6 +213,30 @@ export default function SettingsPage() {
             setCyeproKey("••••••••••••••••••••");
             setShowCyeproKey(false);
             setTimeout(() => setCyeproStatus("idle"), 3000);
+        }
+    };
+
+    const handleTestCyeproConnection = async () => {
+        if (!dealerId) return;
+        setCyeproTesting(true);
+        setCyeproTestResult(null);
+        try {
+            const res = await fetch("/api/inventory/cyepro/test", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ dealerId }),
+            });
+            const json = await res.json();
+            setCyeproTestResult({
+                success: json.success,
+                message: json.message || (json.success ? "Connected!" : "Connection failed. Check your API key."),
+            });
+            // Log full diagnostics to console for debugging
+            console.log("[Cyepro Test] Full diagnostics:", json.diagnostics);
+        } catch (err) {
+            setCyeproTestResult({ success: false, message: "Network error testing connection." });
+        } finally {
+            setCyeproTesting(false);
         }
     };
 
@@ -579,6 +605,19 @@ export default function SettingsPage() {
                                             <Button
                                                 size="sm"
                                                 variant="outline"
+                                                disabled={cyeproTesting}
+                                                onClick={handleTestCyeproConnection}
+                                                className="gap-1.5"
+                                            >
+                                                {cyeproTesting
+                                                    ? <><Loader2 className="w-3.5 h-3.5 animate-spin" /> Testing...</>
+                                                    : <><RefreshCw className="w-3.5 h-3.5" /> Test Connection</>}
+                                            </Button>
+                                        )}
+                                        {cyeproConnected && (
+                                            <Button
+                                                size="sm"
+                                                variant="outline"
                                                 className="text-destructive border-red-500/30 hover:bg-red-500/5"
                                                 onClick={handleRemoveCyeproKey}
                                             >
@@ -586,6 +625,20 @@ export default function SettingsPage() {
                                             </Button>
                                         )}
                                     </div>
+
+                                    {cyeproTestResult && (
+                                        <div className={cn(
+                                            "rounded-lg px-3 py-2.5 text-xs flex items-start gap-2",
+                                            cyeproTestResult.success
+                                                ? "bg-green-500/10 text-emerald-700 border border-emerald-500/20"
+                                                : "bg-destructive/10 text-red-700 border border-destructive/20"
+                                        )}>
+                                            {cyeproTestResult.success
+                                                ? <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
+                                                : <XCircle className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />}
+                                            {cyeproTestResult.message}
+                                        </div>
+                                    )}
 
                                     <p className="text-xs text-muted-foreground leading-relaxed">
                                         Your API key is stored securely and only used server-side.

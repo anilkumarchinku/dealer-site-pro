@@ -198,10 +198,11 @@ export async function fetchCyeproVehicles(
                 method:  'POST',
                 headers: buildHeaders(apiKey),
                 body:    JSON.stringify(body),
-                // Server-side fetch — use Next.js cache with 5-minute revalidation
-                next:    { revalidate: 300 },
+                cache:   'no-store',  // Don't cache — always fetch fresh data
             },
         )
+
+        console.log('[Cyepro] Response status:', res.status)
 
         if (res.status === 401) {
             console.error('[Cyepro] ❌ Invalid API key (401)')
@@ -217,8 +218,22 @@ export async function fetchCyeproVehicles(
             return null
         }
 
-        const data = await res.json() as CyeproSearchResponse
-        console.log(`[Cyepro] ✅ Fetched ${data.vehicles.length} vehicles`)
+        const rawData = await res.json()
+        console.log('[Cyepro] Raw response keys:', Object.keys(rawData))
+
+        // Handle different possible response formats from Cyepro API
+        const vehicles = rawData.vehicles ?? rawData.data ?? rawData.results ?? rawData.content ?? []
+        const totalCount = rawData.totalCount ?? rawData.total ?? rawData.totalElements ?? vehicles.length
+
+        const data: CyeproSearchResponse = {
+            vehicles,
+            totalCount,
+            pageNumber:  rawData.pageNumber  ?? rawData.page     ?? body.page,
+            pageSize:    rawData.pageSize    ?? rawData.size     ?? body.size,
+            totalPages:  rawData.totalPages  ?? Math.ceil(totalCount / body.size) ?? 1,
+        }
+
+        console.log(`[Cyepro] ✅ Fetched ${data.vehicles.length} vehicles (total: ${data.totalCount})`)
         return data
     } catch (err) {
         console.error('[Cyepro] ❌ Network error:', err instanceof Error ? err.message : err)
@@ -241,7 +256,7 @@ export async function fetchCyeproAggregations(
             {
                 method:  'GET',
                 headers: buildHeaders(apiKey),
-                next:    { revalidate: 300 },
+                cache:   'no-store',
             },
         )
 
