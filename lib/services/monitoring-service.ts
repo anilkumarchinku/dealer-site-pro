@@ -60,7 +60,7 @@ export async function monitorSSLCertificates() {
             return { success: false, error }
         }
 
-        const results = []
+        const results: any[] = []
 
         for (const domain of domains || []) {
             const sslStatus = await checkSSLCertificate(domain.domain)

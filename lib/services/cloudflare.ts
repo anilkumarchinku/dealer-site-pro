@@ -328,7 +328,7 @@ export class CloudflareService {
         const zone = await this.createZone(domainName);
 
         // Step 2: Add DNS records
-        const addedRecords = [];
+        const addedRecords: any[] = [];
         for (const record of dnsRecords) {
             try {
                 const result = await this.addDNSRecord(zone.id, record);
