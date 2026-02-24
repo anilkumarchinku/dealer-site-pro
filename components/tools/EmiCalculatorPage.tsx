@@ -14,7 +14,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from '@/components/ui/accordion';
-import { ChevronRight, Calculator, Info, HelpCircle } from 'lucide-react';
+import { ChevronRight, Calculator, Info, HelpCircle, TrendingDown, Percent, Calendar, CreditCard } from 'lucide-react';
 
 export function EmiCalculatorPageContent() {
     return (
@@ -80,22 +80,37 @@ export function EmiCalculatorPageContent() {
                                 {
                                     title: 'Compare Multiple Lenders',
                                     desc: 'Interest rates vary across banks and NBFCs. Compare at least 3-4 lenders before choosing.',
+                                    icon: TrendingDown,
+                                    color: 'text-blue-500',
+                                    border: 'border-blue-500/50',
                                 },
                                 {
                                     title: 'Higher Down Payment',
                                     desc: 'A 20-30% down payment reduces your loan amount and total interest significantly.',
+                                    icon: Percent,
+                                    color: 'text-emerald-500',
+                                    border: 'border-emerald-500/50',
                                 },
                                 {
                                     title: 'Shorter Tenure',
                                     desc: 'While EMI is higher, a shorter tenure (3-4 years) saves you thousands in interest.',
+                                    icon: Calendar,
+                                    color: 'text-amber-500',
+                                    border: 'border-amber-500/50',
                                 },
                                 {
                                     title: 'Check Processing Fees',
                                     desc: 'Banks charge 0.5-2% processing fee. Negotiate this or look for zero-processing offers.',
+                                    icon: CreditCard,
+                                    color: 'text-purple-500',
+                                    border: 'border-purple-500/50',
                                 },
                             ].map((tip, i) => (
-                                <div key={i} className="p-4 bg-muted/30 rounded-lg">
-                                    <h3 className="text-sm font-semibold mb-1">{tip.title}</h3>
+                                <div key={i} className={`p-4 bg-muted/30 rounded-lg border-l-4 ${tip.border}`}>
+                                    <h3 className="text-sm font-semibold mb-1 flex items-center gap-2">
+                                        <tip.icon className={`w-4 h-4 ${tip.color}`} />
+                                        {tip.title}
+                                    </h3>
                                     <p className="text-xs text-muted-foreground">{tip.desc}</p>
                                 </div>
                             ))}

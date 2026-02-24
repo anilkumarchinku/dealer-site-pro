@@ -418,18 +418,18 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
 
                 {/* ──────── USED CAR TRUST BANNER ──────── */}
                 {isUsed && (
-                    <Card className="border-emerald-200 bg-emerald-50/30">
+                    <Card className="border-emerald-500/20 bg-emerald-500/5">
                         <CardContent className="p-5">
                             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                                 <div className="flex items-center gap-3">
-                                    <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center shrink-0">
-                                        <ShieldCheck className="w-6 h-6 text-emerald-600" />
+                                    <div className="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0">
+                                        <ShieldCheck className="w-6 h-6 text-emerald-500" />
                                     </div>
                                     <div>
-                                        <h3 className="text-base font-semibold text-emerald-800">
+                                        <h3 className="text-base font-semibold text-emerald-600 dark:text-emerald-400">
                                             {isCPO ? 'Certified Pre-Owned' : 'Inspected & Verified'}
                                         </h3>
-                                        <p className="text-sm text-emerald-700">
+                                        <p className="text-sm text-emerald-600 dark:text-emerald-400">
                                             {isCPO
                                                 ? 'This car has been thoroughly inspected and comes with manufacturer-backed warranty.'
                                                 : 'This car has passed our 200+ point quality inspection.'}
@@ -437,15 +437,15 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     </div>
                                 </div>
                                 <div className="flex flex-wrap gap-2 sm:ml-auto">
-                                    <Badge variant="outline" className="bg-white border-emerald-300 text-emerald-700 gap-1">
+                                    <Badge variant="outline" className="bg-emerald-500/10 border-emerald-500/30 text-emerald-500 gap-1">
                                         <ClipboardCheck className="w-3 h-3" /> 200+ Point Check
                                     </Badge>
                                     {isCPO && (
-                                        <Badge variant="outline" className="bg-white border-blue-300 text-blue-700 gap-1">
+                                        <Badge variant="outline" className="bg-blue-500/10 border-blue-500/30 text-blue-500 gap-1">
                                             <BadgeCheck className="w-3 h-3" /> 1 Year Warranty
                                         </Badge>
                                     )}
-                                    <Badge variant="outline" className="bg-white border-purple-300 text-purple-700 gap-1">
+                                    <Badge variant="outline" className="bg-purple-500/10 border-purple-500/30 text-purple-500 gap-1">
                                         <RotateCcw className="w-3 h-3" /> 7-Day Return
                                     </Badge>
                                 </div>
@@ -473,15 +473,15 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
 
                     {/* Pros & Cons */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <Card className="border-green-200 bg-green-50/30">
+                        <Card className="border-emerald-500/20 bg-emerald-500/5">
                             <CardContent className="p-5">
-                                <h3 className="text-base font-semibold text-green-700 mb-3 flex items-center gap-2">
+                                <h3 className="text-base font-semibold text-emerald-600 dark:text-emerald-400 mb-3 flex items-center gap-2">
                                     <Check className="w-4 h-4" /> Things We Like
                                 </h3>
                                 <ul className="space-y-2">
                                     {(car.features?.keyFeatures || []).slice(0, 5).map((feat, i) => (
-                                        <li key={i} className="flex items-start gap-2 text-sm text-green-800">
-                                            <Check className="w-3.5 h-3.5 mt-0.5 text-green-600 shrink-0" />
+                                        <li key={i} className="flex items-start gap-2 text-sm text-emerald-700 dark:text-emerald-300">
+                                            <Check className="w-3.5 h-3.5 mt-0.5 text-emerald-500 shrink-0" />
                                             {feat}
                                         </li>
                                     ))}
@@ -491,33 +491,33 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                 </ul>
                             </CardContent>
                         </Card>
-                        <Card className="border-red-200 bg-red-50/30">
+                        <Card className="border-red-500/20 bg-red-500/5">
                             <CardContent className="p-5">
-                                <h3 className="text-base font-semibold text-red-700 mb-3 flex items-center gap-2">
+                                <h3 className="text-base font-semibold text-red-600 dark:text-red-400 mb-3 flex items-center gap-2">
                                     <X className="w-4 h-4" /> Things to Consider
                                 </h3>
                                 <ul className="space-y-2">
                                     {/* Auto-generate considerations from data */}
                                     {!car.safety?.esp && (
-                                        <li className="flex items-start gap-2 text-sm text-red-800">
+                                        <li className="flex items-start gap-2 text-sm text-red-700 dark:text-red-300">
                                             <X className="w-3.5 h-3.5 mt-0.5 text-red-500 shrink-0" />
                                             ESP not available in base variants
                                         </li>
                                     )}
                                     {car.safety && car.safety.airbags < 6 && (
-                                        <li className="flex items-start gap-2 text-sm text-red-800">
+                                        <li className="flex items-start gap-2 text-sm text-red-700 dark:text-red-300">
                                             <X className="w-3.5 h-3.5 mt-0.5 text-red-500 shrink-0" />
                                             Only {car.safety.airbags} airbags (6 recommended)
                                         </li>
                                     )}
                                     {!car.engine?.displacement && (
-                                        <li className="flex items-start gap-2 text-sm text-red-800">
+                                        <li className="flex items-start gap-2 text-sm text-red-700 dark:text-red-300">
                                             <X className="w-3.5 h-3.5 mt-0.5 text-red-500 shrink-0" />
                                             Engine details not fully available
                                         </li>
                                     )}
                                     {car.performance?.fuelEfficiency && car.performance.fuelEfficiency < 15 && (
-                                        <li className="flex items-start gap-2 text-sm text-red-800">
+                                        <li className="flex items-start gap-2 text-sm text-red-700 dark:text-red-300">
                                             <X className="w-3.5 h-3.5 mt-0.5 text-red-500 shrink-0" />
                                             Below average fuel efficiency ({car.performance.fuelEfficiency} km/l)
                                         </li>
@@ -538,8 +538,8 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                             <CardContent className="p-6">
                                 <div className="flex flex-col sm:flex-row items-center gap-6">
                                     <div className="text-center">
-                                        <div className="w-24 h-24 rounded-full bg-emerald-100 flex items-center justify-center">
-                                            <span className="text-3xl font-bold text-emerald-700">4.2</span>
+                                        <div className="w-24 h-24 rounded-full bg-emerald-500/10 flex items-center justify-center">
+                                            <span className="text-3xl font-bold text-emerald-500">4.2</span>
                                         </div>
                                         <p className="text-xs text-muted-foreground mt-2">out of 5.0</p>
                                     </div>
@@ -550,10 +550,10 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                             This vehicle passed 186 out of 200+ quality checkpoints.
                                         </p>
                                         <div className="flex flex-wrap gap-2">
-                                            <Badge className="bg-emerald-100 text-emerald-700 hover:bg-emerald-100">No Accidents</Badge>
-                                            <Badge className="bg-emerald-100 text-emerald-700 hover:bg-emerald-100">No Flood Damage</Badge>
-                                            <Badge className="bg-emerald-100 text-emerald-700 hover:bg-emerald-100">Original Paint</Badge>
-                                            <Badge className="bg-amber-100 text-amber-700 hover:bg-amber-100">Minor Scratches</Badge>
+                                            <Badge className="bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500/10">No Accidents</Badge>
+                                            <Badge className="bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500/10">No Flood Damage</Badge>
+                                            <Badge className="bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500/10">Original Paint</Badge>
+                                            <Badge className="bg-amber-500/10 text-amber-500 hover:bg-amber-500/10">Minor Scratches</Badge>
                                         </div>
                                     </div>
                                 </div>
@@ -663,8 +663,8 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                                 <Badge
                                                     variant="outline"
                                                     className={doc.status
-                                                        ? 'border-emerald-300 text-emerald-700 bg-emerald-50'
-                                                        : 'border-red-300 text-red-700 bg-red-50'
+                                                        ? 'border-emerald-500/30 text-emerald-500 bg-emerald-500/10'
+                                                        : 'border-red-500/30 text-red-500 bg-red-500/10'
                                                     }
                                                 >
                                                     {doc.status ? 'Verified' : 'Pending'}
@@ -1242,7 +1242,7 @@ function FeatureGroup({ title, features, icon }: { title: string; features: stri
                 <ul className="space-y-2">
                     {features.map((feat, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm">
-                            <Check className="w-3.5 h-3.5 mt-0.5 text-green-600 shrink-0" />
+                            <Check className="w-3.5 h-3.5 mt-0.5 text-emerald-500 shrink-0" />
                             <span className="text-muted-foreground">{feat}</span>
                         </li>
                     ))}

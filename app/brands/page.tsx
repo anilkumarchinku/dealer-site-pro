@@ -50,14 +50,16 @@ export default async function BrandsPage() {
                             key={brand.name}
                             href={`/brands/${encodeURIComponent(brand.name)}`}
                         >
-                            <Card className="h-full hover:shadow-md hover:-translate-y-0.5 transition-all cursor-pointer group">
+                            <Card className="h-full hover:shadow-md hover:-translate-y-0.5 transition-all cursor-pointer group hover:bg-gradient-to-b hover:from-primary/5 hover:to-transparent">
                                 <CardContent className="p-4 text-center">
                                     {/* Brand Logo */}
-                                    <div className="w-14 h-14 mx-auto mb-3 rounded-full bg-muted/50 border border-border flex items-center justify-center overflow-hidden group-hover:border-primary transition-colors">
+                                    <div className="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
                                         {getBrandLogo(brand.name) ? (
-                                            <Image src={getBrandLogo(brand.name)!} alt={brand.name} width={40} height={40} className="object-contain p-1" />
+                                            <Image src={getBrandLogo(brand.name)!} alt={brand.name} width={56} height={56} className="object-contain" />
                                         ) : (
-                                            <span className="text-primary text-xl font-bold">{brand.name.charAt(0)}</span>
+                                            <div className="w-14 h-14 rounded-full bg-muted/50 border border-border flex items-center justify-center group-hover:border-primary transition-colors">
+                                                <span className="text-primary text-xl font-bold">{brand.name.charAt(0)}</span>
+                                            </div>
                                         )}
                                     </div>
 

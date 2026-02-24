@@ -266,10 +266,10 @@ export function SellCarFlow() {
                                     <h4 className="text-sm font-semibold mb-3">Why sell with us?</h4>
                                     <div className="space-y-3">
                                         {[
-                                            { icon: <ShieldCheck className="w-4 h-4 text-emerald-600" />, text: 'Free doorstep inspection' },
-                                            { icon: <Banknote className="w-4 h-4 text-blue-600" />, text: 'Best price guarantee' },
-                                            { icon: <Clock className="w-4 h-4 text-amber-600" />, text: 'Payment within 24 hours' },
-                                            { icon: <Car className="w-4 h-4 text-purple-600" />, text: 'Free RC transfer assistance' },
+                                            { icon: <ShieldCheck className="w-4 h-4 text-emerald-500" />, text: 'Free doorstep inspection' },
+                                            { icon: <Banknote className="w-4 h-4 text-blue-500" />, text: 'Best price guarantee' },
+                                            { icon: <Clock className="w-4 h-4 text-amber-500" />, text: 'Payment within 24 hours' },
+                                            { icon: <Car className="w-4 h-4 text-purple-500" />, text: 'Free RC transfer assistance' },
                                         ].map((item, i) => (
                                             <div key={i} className="flex items-center gap-2.5 text-sm">
                                                 {item.icon}
@@ -427,8 +427,8 @@ export function SellCarFlow() {
                     <div className="max-w-lg mx-auto">
                         <Card className="border-primary/20">
                             <CardContent className="p-8 text-center">
-                                <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-4">
-                                    <Check className="w-8 h-8 text-emerald-600" />
+                                <div className="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-4">
+                                    <Check className="w-8 h-8 text-emerald-500" />
                                 </div>
 
                                 <h2 className="text-2xl font-bold mb-2">Inspection Scheduled!</h2>

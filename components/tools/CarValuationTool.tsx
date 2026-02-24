@@ -20,7 +20,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from '@/components/ui/select';
-import { ChevronRight, Car, TrendingDown, TrendingUp, Calculator, Info } from 'lucide-react';
+import { ChevronRight, Car, TrendingDown, TrendingUp, Calculator, Info, Calendar, Gauge, Users } from 'lucide-react';
 import { CAR_MAKES } from '@/lib/data/cars';
 
 const BODY_TYPES = ['Hatchback', 'Sedan', 'SUV', 'MUV', 'Compact SUV', 'Luxury'];
@@ -220,7 +220,7 @@ export function CarValuationTool() {
                                     </p>
 
                                     {/* Price Range */}
-                                    <div className="bg-primary/5 rounded-xl p-6 text-center mb-6">
+                                    <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 text-center mb-6">
                                         <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Estimated Value Range</p>
                                         <div className="flex items-center justify-center gap-3">
                                             <span className="text-2xl font-bold">₹{toIN(result.estimatedLow)}</span>
@@ -234,7 +234,7 @@ export function CarValuationTool() {
                                         <div className="p-3 bg-muted/30 rounded-lg text-center">
                                             <p className="text-xs text-muted-foreground">Depreciation</p>
                                             <p className="text-lg font-bold flex items-center justify-center gap-1">
-                                                <TrendingDown className="w-4 h-4 text-red-500" />
+                                                <TrendingDown className="w-4 h-4 text-red-500 dark:text-red-400" />
                                                 {result.depreciation}%
                                             </p>
                                         </div>
@@ -296,17 +296,32 @@ export function CarValuationTool() {
                                 Our valuation algorithm considers the following factors to estimate your car's current market value:
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
-                                <div className="p-3 bg-muted/30 rounded-lg">
-                                    <p className="font-medium text-foreground text-xs mb-1">Age Depreciation</p>
-                                    <p className="text-xs">Cars lose ~8% value per year for the first 5 years, then ~4% per year after.</p>
+                                <div className="p-3 bg-muted/30 rounded-lg flex gap-3">
+                                    <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center shrink-0">
+                                        <Calendar className="w-4 h-4 text-blue-500" />
+                                    </div>
+                                    <div>
+                                        <p className="font-medium text-foreground text-xs mb-1">Age Depreciation</p>
+                                        <p className="text-xs">Cars lose ~8% value per year for the first 5 years, then ~4% per year after.</p>
+                                    </div>
                                 </div>
-                                <div className="p-3 bg-muted/30 rounded-lg">
-                                    <p className="font-medium text-foreground text-xs mb-1">Mileage Impact</p>
-                                    <p className="text-xs">Higher-than-average mileage reduces value, while low mileage adds a premium.</p>
+                                <div className="p-3 bg-muted/30 rounded-lg flex gap-3">
+                                    <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center shrink-0">
+                                        <Gauge className="w-4 h-4 text-emerald-500" />
+                                    </div>
+                                    <div>
+                                        <p className="font-medium text-foreground text-xs mb-1">Mileage Impact</p>
+                                        <p className="text-xs">Higher-than-average mileage reduces value, while low mileage adds a premium.</p>
+                                    </div>
                                 </div>
-                                <div className="p-3 bg-muted/30 rounded-lg">
-                                    <p className="font-medium text-foreground text-xs mb-1">Ownership History</p>
-                                    <p className="text-xs">Single-owner cars retain more value. Each additional owner reduces the estimated price.</p>
+                                <div className="p-3 bg-muted/30 rounded-lg flex gap-3">
+                                    <div className="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center shrink-0">
+                                        <Users className="w-4 h-4 text-purple-500" />
+                                    </div>
+                                    <div>
+                                        <p className="font-medium text-foreground text-xs mb-1">Ownership History</p>
+                                        <p className="text-xs">Single-owner cars retain more value. Each additional owner reduces the estimated price.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

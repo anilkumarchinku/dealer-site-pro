@@ -27,7 +27,9 @@ export function SiteFooter() {
     const year = new Date().getFullYear();
 
     return (
-        <footer className="bg-muted/30 border-t">
+        <footer className="bg-muted/30 border-t-0 relative">
+            {/* Gradient separator */}
+            <div className="h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
                     {/* About */}

@@ -18,7 +18,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from '@/components/ui/select';
-import { ChevronRight, MapPin, Calculator, Info } from 'lucide-react';
+import { ChevronRight, MapPin, Calculator, Info, Car, FileText, Shield, Percent } from 'lucide-react';
 
 const CITIES = [
     { name: 'Delhi', rtoPercent: 4.0, insuranceMultiplier: 1.0 },
@@ -165,25 +165,45 @@ export function OnRoadPriceCalculator() {
                 <Card className="mt-8">
                     <CardContent className="p-6">
                         <h2 className="text-base font-semibold mb-3 flex items-center gap-2">
-                            <Info className="w-4 h-4 text-blue-500" />
+                            <Info className="w-4 h-4 text-primary" />
                             What is included in On-Road Price?
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-muted-foreground">
-                            <div>
-                                <p className="font-medium text-foreground mb-1">Ex-Showroom Price</p>
-                                <p>Base price of the vehicle set by the manufacturer, excluding taxes and registration.</p>
+                            <div className="flex gap-3">
+                                <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center shrink-0">
+                                    <Car className="w-4 h-4 text-blue-500" />
+                                </div>
+                                <div>
+                                    <p className="font-medium text-foreground mb-1">Ex-Showroom Price</p>
+                                    <p>Base price of the vehicle set by the manufacturer, excluding taxes and registration.</p>
+                                </div>
                             </div>
-                            <div>
-                                <p className="font-medium text-foreground mb-1">RTO Registration</p>
-                                <p>One-time registration charges paid to Regional Transport Office. Varies by state (3-12%).</p>
+                            <div className="flex gap-3">
+                                <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center shrink-0">
+                                    <FileText className="w-4 h-4 text-emerald-500" />
+                                </div>
+                                <div>
+                                    <p className="font-medium text-foreground mb-1">RTO Registration</p>
+                                    <p>One-time registration charges paid to Regional Transport Office. Varies by state (3-12%).</p>
+                                </div>
                             </div>
-                            <div>
-                                <p className="font-medium text-foreground mb-1">Insurance</p>
-                                <p>Mandatory comprehensive motor insurance for the first year. Includes third-party liability cover.</p>
+                            <div className="flex gap-3">
+                                <div className="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center shrink-0">
+                                    <Shield className="w-4 h-4 text-purple-500" />
+                                </div>
+                                <div>
+                                    <p className="font-medium text-foreground mb-1">Insurance</p>
+                                    <p>Mandatory comprehensive motor insurance for the first year. Includes third-party liability cover.</p>
+                                </div>
                             </div>
-                            <div>
-                                <p className="font-medium text-foreground mb-1">TCS (Tax Collected at Source)</p>
-                                <p>1% tax applicable on vehicles priced above ₹10 lakh, collected by the dealer on behalf of the government.</p>
+                            <div className="flex gap-3">
+                                <div className="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center shrink-0">
+                                    <Percent className="w-4 h-4 text-amber-500" />
+                                </div>
+                                <div>
+                                    <p className="font-medium text-foreground mb-1">TCS (Tax Collected at Source)</p>
+                                    <p>1% tax applicable on vehicles priced above ₹10 lakh, collected by the dealer on behalf of the government.</p>
+                                </div>
                             </div>
                         </div>
                     </CardContent>

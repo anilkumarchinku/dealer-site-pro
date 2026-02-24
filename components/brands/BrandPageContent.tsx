@@ -18,6 +18,7 @@ import {
     TrendingUp,
     Gauge,
     Fuel,
+    ArrowUp,
 } from 'lucide-react';
 import Image from 'next/image';
 import { getBrandLogo } from '@/lib/data/brand-logos';
@@ -75,11 +76,13 @@ export function BrandPageContent({ brand, cars, brandInfo }: BrandPageContentPro
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                         <div className="flex items-center gap-4">
                             {/* Brand Logo */}
-                            <div className="w-16 h-16 rounded-xl bg-card border border-border flex items-center justify-center overflow-hidden shrink-0">
+                            <div className="w-16 h-16 flex items-center justify-center shrink-0">
                                 {getBrandLogo(brand) ? (
-                                    <Image src={getBrandLogo(brand)!} alt={brand} width={48} height={48} className="object-contain p-1.5" />
+                                    <Image src={getBrandLogo(brand)!} alt={brand} width={56} height={56} className="object-contain" />
                                 ) : (
-                                    <span className="text-primary text-2xl font-bold">{brand.charAt(0)}</span>
+                                    <div className="w-14 h-14 rounded-xl bg-card border border-border flex items-center justify-center">
+                                        <span className="text-primary text-2xl font-bold">{brand.charAt(0)}</span>
+                                    </div>
                                 )}
                             </div>
                             <div>
@@ -94,13 +97,17 @@ export function BrandPageContent({ brand, cars, brandInfo }: BrandPageContentPro
                         <div className="flex gap-3">
                             {cheapest && (
                                 <Card className="px-4 py-2.5">
-                                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider">Starting From</div>
+                                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider flex items-center gap-1">
+                                        <TrendingUp className="w-3 h-3 text-emerald-500" /> Starting From
+                                    </div>
                                     <div className="text-sm font-bold">{formatPriceInLakhs(cheapest)}</div>
                                 </Card>
                             )}
                             {expensive && (
                                 <Card className="px-4 py-2.5">
-                                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider">Goes Up To</div>
+                                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider flex items-center gap-1">
+                                        <ArrowUp className="w-3 h-3 text-blue-500" /> Goes Up To
+                                    </div>
                                     <div className="text-sm font-bold">{formatPriceInLakhs(expensive)}</div>
                                 </Card>
                             )}
@@ -189,13 +196,13 @@ export function BrandPageContent({ brand, cars, brandInfo }: BrandPageContentPro
                                                     </Link>
                                                     <div className="flex-1 relative h-6">
                                                         <div
-                                                            className="absolute top-1 h-4 bg-primary/20 rounded-full"
+                                                            className="absolute top-1 h-4 rounded-full overflow-hidden"
                                                             style={{
                                                                 left: `${leftPct}%`,
                                                                 width: `${Math.min(widthPct, 100 - leftPct)}%`,
                                                             }}
                                                         >
-                                                            <div className="absolute inset-0 bg-primary/60 rounded-full" />
+                                                            <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-primary/70 rounded-full" />
                                                         </div>
                                                     </div>
                                                     <span className="text-xs text-muted-foreground w-36 text-right shrink-0">

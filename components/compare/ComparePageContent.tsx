@@ -295,7 +295,7 @@ export function ComparePageContent() {
                                                                     <div
                                                                         key={car.id}
                                                                         className={`px-4 py-3 text-sm font-medium flex items-center gap-1.5 ${
-                                                                            isWinner ? 'text-primary bg-primary/5' : ''
+                                                                            isWinner ? 'text-primary bg-amber-500/5' : ''
                                                                         } ${carIdx < selectedCars.length - 1 ? 'border-r' : ''}`}
                                                                     >
                                                                         {isWinner && <Trophy className="w-3.5 h-3.5 text-amber-500 shrink-0" />}
@@ -318,7 +318,9 @@ export function ComparePageContent() {
                 {/* Empty State */}
                 {selectedCars.length < 2 && (
                     <Card className="p-12 text-center">
-                        <CarIcon className="w-14 h-14 text-muted-foreground mx-auto mb-4" />
+                        <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center mx-auto mb-4">
+                            <CarIcon className="w-10 h-10 text-primary/60" />
+                        </div>
                         <h3 className="text-lg font-semibold mb-2">Select Cars to Compare</h3>
                         <p className="text-muted-foreground text-sm max-w-md mx-auto">
                             Add at least 2 cars using the search above to see a detailed side-by-side comparison of price, specs, features, and safety.

@@ -101,7 +101,7 @@ export function CarCard({
                 className={cn(
                     'group relative flex flex-col overflow-hidden transition-all duration-300 cursor-pointer h-full',
                     light
-                        ? 'bg-white border border-gray-200/80 hover:border-gray-300 text-gray-900'
+                        ? 'bg-card border border-border hover:border-border/80 text-foreground'
                         : 'bg-card border border-border hover:border-border/80',
                     'hover:shadow-lg hover:-translate-y-0.5',
                     'rounded-xl',
@@ -164,11 +164,11 @@ export function CarCard({
                         <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: brandColor }}>
                             {car.make}
                         </p>
-                        <h3 className={cn('text-base font-bold leading-tight line-clamp-1', light ? 'text-gray-900' : 'text-foreground')}>
+                        <h3 className={cn('text-base font-bold leading-tight line-clamp-1', 'text-foreground')}>
                             {car.model}
                         </h3>
                         {car.variant && (
-                            <p className={cn('text-[11px] line-clamp-1', light ? 'text-gray-400' : 'text-muted-foreground')}>
+                            <p className={cn('text-[11px] line-clamp-1', 'text-muted-foreground')}>
                                 {car.variant}
                             </p>
                         )}
@@ -178,14 +178,14 @@ export function CarCard({
                     {isUsed && (
                         <div className="flex flex-wrap gap-1.5 mb-1.5">
                             {car.year && (
-                                <span className={cn('inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded', light ? 'bg-gray-100 text-gray-600' : 'bg-muted text-muted-foreground')}>
+                                <span className={cn('inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded', 'bg-muted text-muted-foreground')}>
                                     <Calendar className="w-2.5 h-2.5" />{car.year}
                                 </span>
                             )}
-                            <span className={cn('inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded', light ? 'bg-gray-100 text-gray-600' : 'bg-muted text-muted-foreground')}>
+                            <span className={cn('inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded', 'bg-muted text-muted-foreground')}>
                                 <Fuel className="w-2.5 h-2.5" />{fuelDisplay}
                             </span>
-                            <span className={cn('inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded', light ? 'bg-gray-100 text-gray-600' : 'bg-muted text-muted-foreground')}>
+                            <span className={cn('inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded', 'bg-muted text-muted-foreground')}>
                                 <Gauge className="w-2.5 h-2.5" />{transDisplay}
                             </span>
                         </div>
@@ -194,7 +194,7 @@ export function CarCard({
                     {/* Price */}
                     <div className="mb-2">
                         <div className="flex items-baseline gap-1.5 flex-wrap">
-                            <span className={cn('text-lg font-bold', light ? 'text-gray-900' : 'text-foreground')}>
+                            <span className={cn('text-lg font-bold', 'text-foreground')}>
                                 {priceRange}
                             </span>
                             {hasPriceRange && (
@@ -224,14 +224,14 @@ export function CarCard({
                     {/* Trust Badges for Used Cars */}
                     {isUsed && (
                         <div className="flex items-center gap-2 mb-1.5">
-                            <span className="inline-flex items-center gap-1 text-[9px] font-medium text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">
+                            <span className="inline-flex items-center gap-1 text-[9px] font-medium text-emerald-500 bg-emerald-500/10 px-1.5 py-0.5 rounded">
                                 <ShieldCheck className="w-2.5 h-2.5" />Inspected
                             </span>
-                            <span className="inline-flex items-center gap-1 text-[9px] font-medium text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">
+                            <span className="inline-flex items-center gap-1 text-[9px] font-medium text-blue-500 bg-blue-500/10 px-1.5 py-0.5 rounded">
                                 Warranty
                             </span>
                             {car.condition === 'certified_pre_owned' && (
-                                <span className="inline-flex items-center gap-1 text-[9px] font-medium text-purple-700 bg-purple-50 px-1.5 py-0.5 rounded">
+                                <span className="inline-flex items-center gap-1 text-[9px] font-medium text-purple-500 bg-purple-500/10 px-1.5 py-0.5 rounded">
                                     7-Day Return
                                 </span>
                             )}
@@ -294,11 +294,11 @@ function SpecItem({
     return (
         <div className={cn(
             'flex items-center gap-2 p-2 rounded-lg',
-            light ? 'bg-gray-50' : 'bg-muted/40'
+            light ? 'bg-muted/40' : 'bg-muted/40'
         )}>
             <div className={cn(
                 'w-7 h-7 rounded-md flex items-center justify-center shrink-0',
-                light ? 'bg-white shadow-sm' : 'bg-background shadow-sm'
+                light ? 'bg-background shadow-sm' : 'bg-background shadow-sm'
             )}>
                 {icon}
             </div>
@@ -308,7 +308,7 @@ function SpecItem({
                     className={cn(
                         'font-semibold leading-tight truncate',
                         isLong ? 'text-[11px]' : 'text-xs',
-                        light ? 'text-gray-900' : 'text-foreground'
+                        'text-foreground'
                     )}
                     title={value}
                 >

@@ -38,10 +38,10 @@ interface WelcomeClientProps {
 }
 
 const FEATURES = [
-    { icon: Clock, title: "10 Minutes Setup", description: "Answer 5 simple questions and your website is live instantly" },
-    { icon: Zap, title: "100% FREE Forever", description: "No setup fees, no monthly costs — completely free to use" },
-    { icon: TrendingUp, title: "Automatic Marketing", description: "SEO, social media, and email campaigns — all automated" },
-    { icon: Users, title: "More Customers", description: "Leads start coming in within days of launch" },
+    { icon: Clock, title: "10 Minutes Setup", description: "Answer 5 simple questions and your website is live instantly", color: "bg-blue-500/10 text-blue-500" },
+    { icon: Zap, title: "100% FREE Forever", description: "No setup fees, no monthly costs — completely free to use", color: "bg-amber-500/10 text-amber-500" },
+    { icon: TrendingUp, title: "Automatic Marketing", description: "SEO, social media, and email campaigns — all automated", color: "bg-emerald-500/10 text-emerald-500" },
+    { icon: Users, title: "More Customers", description: "Leads start coming in within days of launch", color: "bg-purple-500/10 text-purple-500" },
 ];
 
 const STEPS = [
@@ -74,10 +74,10 @@ const TESTIMONIALS = [
 ];
 
 const STATS = [
-    { value: "10,000+", label: "Dealers Trust Us" },
-    { value: "50,000+", label: "Leads Generated" },
-    { value: "4.9/5", label: "Customer Rating" },
-    { value: "10 Min", label: "Average Setup Time" },
+    { value: "10,000+", label: "Dealers Trust Us", icon: Users, color: "bg-blue-500/10 text-blue-500" },
+    { value: "50,000+", label: "Leads Generated", icon: Car, color: "bg-emerald-500/10 text-emerald-500" },
+    { value: "4.9/5", label: "Customer Rating", icon: Star, color: "bg-amber-500/10 text-amber-500" },
+    { value: "10 Min", label: "Average Setup Time", icon: Clock, color: "bg-purple-500/10 text-purple-500" },
 ];
 
 const UPCOMING_LAUNCHES = [
@@ -298,6 +298,9 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-border">
                         {STATS.map((stat, i) => (
                             <div key={i} className="text-center px-4">
+                                <div className={`w-10 h-10 rounded-xl ${stat.color} flex items-center justify-center mx-auto mb-3`}>
+                                    <stat.icon className="w-5 h-5" />
+                                </div>
                                 <p className="text-4xl font-bold text-foreground mb-1">{stat.value}</p>
                                 <p className="text-muted-foreground text-sm">{stat.label}</p>
                             </div>
@@ -346,11 +349,13 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                         {['Maruti Suzuki','Hyundai','Tata Motors','Kia','Mahindra','Toyota','Honda','MG','Skoda','BMW'].map((brand) => (
                             <Link key={brand} href={`/brands/${encodeURIComponent(brand)}`}
                                 className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-card hover:shadow-md transition-all group">
-                                <div className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center overflow-hidden group-hover:border-primary transition-colors">
+                                <div className="w-12 h-12 flex items-center justify-center">
                                     {getBrandLogo(brand) ? (
-                                        <Image src={getBrandLogo(brand)!} alt={brand} width={36} height={36} className="object-contain" />
+                                        <Image src={getBrandLogo(brand)!} alt={brand} width={40} height={40} className="object-contain" />
                                     ) : (
-                                        <span className="text-lg font-bold text-primary">{brand.charAt(0)}</span>
+                                        <div className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center group-hover:border-primary transition-colors">
+                                            <span className="text-lg font-bold text-primary">{brand.charAt(0)}</span>
+                                        </div>
                                     )}
                                 </div>
                                 <span className="text-[11px] font-medium text-muted-foreground group-hover:text-foreground text-center leading-tight">{brand}</span>
@@ -488,8 +493,8 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {FEATURES.map((feature, i) => (
                             <Card key={i} className="p-6 hover:shadow-xl transition-all duration-300 group border border-border bg-card hover:-translate-y-1">
-                                <div className="w-14 h-14 rounded-2xl bg-foreground/8 flex items-center justify-center mb-6 transition-transform group-hover:scale-110">
-                                    <feature.icon className="w-7 h-7 text-foreground" />
+                                <div className={`w-14 h-14 rounded-2xl ${feature.color} flex items-center justify-center mb-6 transition-transform group-hover:scale-110`}>
+                                    <feature.icon className="w-7 h-7" />
                                 </div>
                                 <h3 className="text-xl font-bold text-foreground mb-3">{feature.title}</h3>
                                 <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
@@ -552,8 +557,10 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {TESTIMONIALS.map((t, i) => (
-                            <Card key={i} className="p-6 bg-card border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        {TESTIMONIALS.map((t, i) => {
+                            const borderColors = ['border-l-blue-500/50', 'border-l-emerald-500/50', 'border-l-purple-500/50'];
+                            return (
+                            <Card key={i} className={`p-6 bg-card border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-l-4 ${borderColors[i % 3]}`}>
                                 <div className="flex gap-1 mb-5">
                                     {Array.from({ length: 5 }).map((_, j) => (
                                         <Star key={j} className="w-4 h-4 text-foreground fill-foreground" />
@@ -570,7 +577,8 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                                     </div>
                                 </div>
                             </Card>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </section>
