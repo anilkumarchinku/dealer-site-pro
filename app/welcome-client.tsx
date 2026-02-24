@@ -81,12 +81,30 @@ const STATS = [
 ];
 
 const UPCOMING_LAUNCHES = [
-    { brand: 'Tata', model: 'Curvv EV', expectedPrice: '17.49 - 21.99 Lakh', launchDate: 'Mar 2026', type: 'Electric SUV', emoji: '⚡' },
-    { brand: 'Hyundai', model: 'Creta N Line', expectedPrice: '16.50 - 20.00 Lakh', launchDate: 'Apr 2026', type: 'Sport SUV', emoji: '🏎️' },
-    { brand: 'Maruti', model: 'eVX', expectedPrice: '15.00 - 20.00 Lakh', launchDate: 'Q2 2026', type: 'Electric SUV', emoji: '⚡' },
-    { brand: 'Mahindra', model: 'XUV.e8', expectedPrice: '18.00 - 25.00 Lakh', launchDate: 'May 2026', type: 'Electric SUV', emoji: '⚡' },
-    { brand: 'Kia', model: 'EV6 Facelift', expectedPrice: '60.00 - 65.00 Lakh', launchDate: 'Q3 2026', type: 'Electric Crossover', emoji: '⚡' },
-    { brand: 'Toyota', model: 'Urban Cruiser EV', expectedPrice: '12.00 - 17.00 Lakh', launchDate: 'Jun 2026', type: 'Electric Compact SUV', emoji: '⚡' },
+    { brand: 'Tata Motors', model: 'Curvv EV', expectedPrice: '17.49 - 21.99 Lakh', launchDate: 'Mar 2026', type: 'Electric SUV' },
+    { brand: 'Hyundai', model: 'Creta N Line', expectedPrice: '16.50 - 20.00 Lakh', launchDate: 'Apr 2026', type: 'Sport SUV' },
+    { brand: 'Maruti Suzuki', model: 'eVX', expectedPrice: '15.00 - 20.00 Lakh', launchDate: 'Q2 2026', type: 'Electric SUV' },
+    { brand: 'Mahindra', model: 'XUV.e8', expectedPrice: '18.00 - 25.00 Lakh', launchDate: 'May 2026', type: 'Electric SUV' },
+    { brand: 'Kia', model: 'EV6 Facelift', expectedPrice: '60.00 - 65.00 Lakh', launchDate: 'Q3 2026', type: 'Electric Crossover' },
+    { brand: 'Toyota', model: 'Urban Cruiser EV', expectedPrice: '12.00 - 17.00 Lakh', launchDate: 'Jun 2026', type: 'Electric Compact SUV' },
+];
+
+const LAUNCH_COLORS = [
+    'border-l-blue-500',
+    'border-l-emerald-500',
+    'border-l-purple-500',
+    'border-l-amber-500',
+    'border-l-red-500',
+    'border-l-indigo-500',
+];
+
+const LAUNCH_BADGE_COLORS = [
+    'bg-blue-500/10 text-blue-600',
+    'bg-emerald-500/10 text-emerald-600',
+    'bg-purple-500/10 text-purple-600',
+    'bg-amber-500/10 text-amber-600',
+    'bg-red-500/10 text-red-600',
+    'bg-indigo-500/10 text-indigo-600',
 ];
 
 export default function WelcomeClient({ cars }: WelcomeClientProps) {
@@ -382,20 +400,66 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
                         {[
-                            { name: 'Hatchback', emoji: '🚗' },
-                            { name: 'Sedan', emoji: '🚘' },
-                            { name: 'SUV', emoji: '🚙' },
-                            { name: 'MUV', emoji: '🚐' },
-                            { name: 'Compact SUV', emoji: '🏎️' },
-                            { name: 'Luxury', emoji: '✨' },
-                        ].map((type) => (
-                            <Link key={type.name} href={`/cars?bodyType=${encodeURIComponent(type.name)}`}>
-                                <Card className="p-5 text-center hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer group border-border">
-                                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{type.emoji}</div>
-                                    <p className="text-sm font-semibold text-foreground">{type.name}</p>
-                                </Card>
-                            </Link>
-                        ))}
+                            { name: 'Hatchback', icon: (
+                                <svg viewBox="0 0 64 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-14 h-7">
+                                    <path d="M4 22h56M8 22l4-10c1-2 3-3 5-3h10l6-4h8l3 4h4c2 0 4 1.5 4 3v10M12 22v0M52 22v0" />
+                                    <circle cx="16" cy="22" r="4" fill="currentColor" opacity="0.2" />
+                                    <circle cx="48" cy="22" r="4" fill="currentColor" opacity="0.2" />
+                                </svg>
+                            )},
+                            { name: 'Sedan', icon: (
+                                <svg viewBox="0 0 64 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-14 h-7">
+                                    <path d="M2 22h60M6 22l3-8c1-2 3-3 5-3h14l8-5h10l4 5h4c3 0 5 1.5 5 3v8M10 22v0M54 22v0" />
+                                    <circle cx="14" cy="22" r="4" fill="currentColor" opacity="0.2" />
+                                    <circle cx="50" cy="22" r="4" fill="currentColor" opacity="0.2" />
+                                </svg>
+                            )},
+                            { name: 'SUV', icon: (
+                                <svg viewBox="0 0 64 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-14 h-7">
+                                    <path d="M2 24h60M6 24l2-12c1-2 3-3 5-3h16l6-3h10l5 3h4c3 0 4 2 4 4v11M10 24v0M54 24v0" />
+                                    <circle cx="14" cy="24" r="4" fill="currentColor" opacity="0.2" />
+                                    <circle cx="50" cy="24" r="4" fill="currentColor" opacity="0.2" />
+                                </svg>
+                            )},
+                            { name: 'MUV', icon: (
+                                <svg viewBox="0 0 64 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-14 h-7">
+                                    <path d="M2 24h60M8 24V10c0-2 2-4 4-4h28l10 6h6c3 0 4 2 4 4v8M12 24v0M52 24v0" />
+                                    <circle cx="14" cy="24" r="4" fill="currentColor" opacity="0.2" />
+                                    <circle cx="50" cy="24" r="4" fill="currentColor" opacity="0.2" />
+                                </svg>
+                            )},
+                            { name: 'Compact SUV', icon: (
+                                <svg viewBox="0 0 64 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-14 h-7">
+                                    <path d="M3 23h58M7 23l3-10c1-2 3-3 5-3h12l7-4h9l4 4h5c2 0 4 2 4 4v9M11 23v0M53 23v0" />
+                                    <circle cx="15" cy="23" r="4" fill="currentColor" opacity="0.2" />
+                                    <circle cx="49" cy="23" r="4" fill="currentColor" opacity="0.2" />
+                                </svg>
+                            )},
+                            { name: 'Luxury', icon: (
+                                <svg viewBox="0 0 64 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-14 h-7">
+                                    <path d="M1 22h62M5 22l2-7c1-3 3-4 6-4h16l9-5h10l4 5h3c3 0 5 2 5 4v7M9 22v0M55 22v0" />
+                                    <circle cx="13" cy="22" r="4" fill="currentColor" opacity="0.2" />
+                                    <circle cx="51" cy="22" r="4" fill="currentColor" opacity="0.2" />
+                                </svg>
+                            )},
+                        ].map((type) => {
+                            const count = cars.filter(c => c.bodyType?.toLowerCase() === type.name.toLowerCase()).length;
+                            return (
+                                <Link key={type.name} href={`/cars?bodyType=${encodeURIComponent(type.name)}`}>
+                                    <Card className="p-5 text-center hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer group border-border">
+                                        <div className="flex justify-center mb-3">
+                                            <div className="p-3 rounded-xl bg-muted/40 group-hover:bg-primary/5 transition-colors text-muted-foreground group-hover:text-primary">
+                                                {type.icon}
+                                            </div>
+                                        </div>
+                                        <p className="text-sm font-semibold text-foreground mb-1">{type.name}</p>
+                                        {count > 0 && (
+                                            <p className="text-[10px] text-muted-foreground">{count} {count === 1 ? 'car' : 'cars'}</p>
+                                        )}
+                                    </Card>
+                                </Link>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
@@ -410,24 +474,28 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {UPCOMING_LAUNCHES.map((car, i) => (
-                            <Card key={i} className="p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all border-border group">
+                            <Card key={i} className={`p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all border-border group border-l-4 ${LAUNCH_COLORS[i % LAUNCH_COLORS.length]}`}>
                                 <div className="flex items-start justify-between mb-3">
                                     <div>
-                                        <p className="text-xs text-muted-foreground font-medium">{car.brand}</p>
+                                        <div className="flex items-center gap-1.5 mb-1">
+                                            {getBrandLogo(car.brand) && (
+                                                <Image src={getBrandLogo(car.brand)!} alt={car.brand} width={20} height={20} className="object-contain" />
+                                            )}
+                                            <p className="text-xs text-muted-foreground font-medium">{car.brand}</p>
+                                        </div>
                                         <p className="text-base font-bold text-foreground">{car.model}</p>
                                     </div>
-                                    <span className="text-2xl">{car.emoji}</span>
+                                    <span className={`inline-flex items-center gap-1 text-[10px] font-medium px-2 py-1 rounded-full ${LAUNCH_BADGE_COLORS[i % LAUNCH_BADGE_COLORS.length]}`}>
+                                        <CalendarClock className="w-3 h-3" />
+                                        {car.launchDate}
+                                    </span>
                                 </div>
                                 <div className="flex items-center gap-2 mb-3">
                                     <Badge variant="secondary" className="text-[10px]">{car.type}</Badge>
-                                    <Badge variant="outline" className="text-[10px] gap-1">
-                                        <CalendarClock className="w-3 h-3" />
-                                        {car.launchDate}
-                                    </Badge>
                                 </div>
                                 <div className="pt-3 border-t border-border">
-                                    <p className="text-xs text-muted-foreground">Expected Price</p>
-                                    <p className="text-sm font-bold text-primary">{car.expectedPrice}</p>
+                                    <p className="text-xs text-muted-foreground mb-0.5">Expected Price</p>
+                                    <p className="text-base font-bold text-primary">&#8377; {car.expectedPrice}</p>
                                 </div>
                             </Card>
                         ))}
