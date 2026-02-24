@@ -107,15 +107,15 @@ export async function POST(request: Request): Promise<NextResponse<PaymentVerify
 
         // ── UPDATE DOMAIN STATUS ─────────────────────────────────
         if (subscription?.domain_id) {
-            await supabase
+            const { error: domainError } = await supabase
                 .from('dealer_domains')
                 .update({ status: 'active' })
                 .eq('id', subscription.domain_id)
-                .catch(err => console.error('Failed to update domain status:', err))
+            if (domainError) console.error('Failed to update domain status:', domainError)
         }
 
         // ── LOG SUCCESSFUL VERIFICATION ──────────────────────────
-        await supabase
+        const { error: logError } = await supabase
             .from('payment_idempotency_log')
             .insert({
                 idempotency_key: idempotencyKey,
@@ -124,7 +124,7 @@ export async function POST(request: Request): Promise<NextResponse<PaymentVerify
                 response: { success: true, message: 'Payment verified' },
                 created_at: new Date().toISOString(),
             })
-            .catch(err => console.error('Failed to log payment verification:', err))
+        if (logError) console.error('Failed to log payment verification:', logError)
 
         return NextResponse.json(
             {
