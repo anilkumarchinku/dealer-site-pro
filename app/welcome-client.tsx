@@ -25,7 +25,12 @@ import {
     Palette,
     CalendarClock,
     Fuel,
-    Gauge
+    Gauge,
+    Truck,
+    Bus,
+    Crown,
+    CircleDot,
+    Mountain
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
@@ -367,12 +372,12 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                         {['Maruti Suzuki','Hyundai','Tata Motors','Kia','Mahindra','Toyota','Honda','MG','Skoda','BMW'].map((brand) => (
                             <Link key={brand} href={`/brands/${encodeURIComponent(brand)}`}
                                 className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-card hover:shadow-md transition-all group">
-                                <div className="w-12 h-12 flex items-center justify-center">
+                                <div className="w-16 h-16 flex items-center justify-center">
                                     {getBrandLogo(brand) ? (
-                                        <Image src={getBrandLogo(brand)!} alt={brand} width={40} height={40} className="object-contain" />
+                                        <Image src={getBrandLogo(brand)!} alt={brand} width={56} height={56} className="object-contain" />
                                     ) : (
-                                        <div className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center group-hover:border-primary transition-colors">
-                                            <span className="text-lg font-bold text-primary">{brand.charAt(0)}</span>
+                                        <div className="w-16 h-16 rounded-full bg-card border border-border flex items-center justify-center group-hover:border-primary transition-colors">
+                                            <span className="text-xl font-bold text-primary">{brand.charAt(0)}</span>
                                         </div>
                                     )}
                                 </div>
@@ -400,56 +405,20 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
                         {[
-                            { name: 'Hatchback', icon: (
-                                <svg viewBox="0 0 64 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-14 h-7">
-                                    <path d="M4 22h56M8 22l4-10c1-2 3-3 5-3h10l6-4h8l3 4h4c2 0 4 1.5 4 3v10M12 22v0M52 22v0" />
-                                    <circle cx="16" cy="22" r="4" fill="currentColor" opacity="0.2" />
-                                    <circle cx="48" cy="22" r="4" fill="currentColor" opacity="0.2" />
-                                </svg>
-                            )},
-                            { name: 'Sedan', icon: (
-                                <svg viewBox="0 0 64 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-14 h-7">
-                                    <path d="M2 22h60M6 22l3-8c1-2 3-3 5-3h14l8-5h10l4 5h4c3 0 5 1.5 5 3v8M10 22v0M54 22v0" />
-                                    <circle cx="14" cy="22" r="4" fill="currentColor" opacity="0.2" />
-                                    <circle cx="50" cy="22" r="4" fill="currentColor" opacity="0.2" />
-                                </svg>
-                            )},
-                            { name: 'SUV', icon: (
-                                <svg viewBox="0 0 64 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-14 h-7">
-                                    <path d="M2 24h60M6 24l2-12c1-2 3-3 5-3h16l6-3h10l5 3h4c3 0 4 2 4 4v11M10 24v0M54 24v0" />
-                                    <circle cx="14" cy="24" r="4" fill="currentColor" opacity="0.2" />
-                                    <circle cx="50" cy="24" r="4" fill="currentColor" opacity="0.2" />
-                                </svg>
-                            )},
-                            { name: 'MUV', icon: (
-                                <svg viewBox="0 0 64 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-14 h-7">
-                                    <path d="M2 24h60M8 24V10c0-2 2-4 4-4h28l10 6h6c3 0 4 2 4 4v8M12 24v0M52 24v0" />
-                                    <circle cx="14" cy="24" r="4" fill="currentColor" opacity="0.2" />
-                                    <circle cx="50" cy="24" r="4" fill="currentColor" opacity="0.2" />
-                                </svg>
-                            )},
-                            { name: 'Compact SUV', icon: (
-                                <svg viewBox="0 0 64 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-14 h-7">
-                                    <path d="M3 23h58M7 23l3-10c1-2 3-3 5-3h12l7-4h9l4 4h5c2 0 4 2 4 4v9M11 23v0M53 23v0" />
-                                    <circle cx="15" cy="23" r="4" fill="currentColor" opacity="0.2" />
-                                    <circle cx="49" cy="23" r="4" fill="currentColor" opacity="0.2" />
-                                </svg>
-                            )},
-                            { name: 'Luxury', icon: (
-                                <svg viewBox="0 0 64 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-14 h-7">
-                                    <path d="M1 22h62M5 22l2-7c1-3 3-4 6-4h16l9-5h10l4 5h3c3 0 5 2 5 4v7M9 22v0M55 22v0" />
-                                    <circle cx="13" cy="22" r="4" fill="currentColor" opacity="0.2" />
-                                    <circle cx="51" cy="22" r="4" fill="currentColor" opacity="0.2" />
-                                </svg>
-                            )},
+                            { name: 'Hatchback', Icon: Gauge, color: 'bg-blue-500/10 text-blue-500' },
+                            { name: 'Sedan', Icon: Car, color: 'bg-emerald-500/10 text-emerald-500' },
+                            { name: 'SUV', Icon: Truck, color: 'bg-orange-500/10 text-orange-500' },
+                            { name: 'MUV', Icon: Bus, color: 'bg-purple-500/10 text-purple-500' },
+                            { name: 'Compact SUV', Icon: Mountain, color: 'bg-rose-500/10 text-rose-500' },
+                            { name: 'Luxury', Icon: Crown, color: 'bg-amber-500/10 text-amber-500' },
                         ].map((type) => {
                             const count = cars.filter(c => c.bodyType?.toLowerCase() === type.name.toLowerCase()).length;
                             return (
                                 <Link key={type.name} href={`/cars?bodyType=${encodeURIComponent(type.name)}`}>
                                     <Card className="p-5 text-center hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer group border-border">
                                         <div className="flex justify-center mb-3">
-                                            <div className="p-3 rounded-xl bg-muted/40 group-hover:bg-primary/5 transition-colors text-muted-foreground group-hover:text-primary">
-                                                {type.icon}
+                                            <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${type.color} group-hover:scale-110 transition-transform`}>
+                                                <type.Icon className="w-6 h-6" />
                                             </div>
                                         </div>
                                         <p className="text-sm font-semibold text-foreground mb-1">{type.name}</p>
