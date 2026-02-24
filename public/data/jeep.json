@@ -1,0 +1,203 @@
+{
+  "jeep": {
+    "model": "Compass, Grand Cherokee, Wrangler",
+    "variants": [
+      {
+        "make": "Jeep",
+        "model": "Compass",
+        "variant_name": "2.0 Sport",
+        "ex_showroom_price": 1799000,
+        "hyderabad_on_road_price": 2269117,
+        "powertrain": {
+          "fuel": "Diesel",
+          "transmission": "Manual",
+          "drivetrain": "FWD"
+        },
+        "engine_specs": {
+          "displacement": "1956 cc",
+          "power": "168 bhp @ 3700-3800 rpm",
+          "torque": "350 Nm @ 1750-2500 rpm",
+          "mileage": "14.9-17.1 kmpl"
+        },
+        "dimensions": {
+          "length": "4405 mm",
+          "width": "1818 mm",
+          "height": "1640 mm"
+        },
+        "key_features": [
+          {
+            "value": "10.1-inch free-standing touchscreen"
+          },
+          {
+            "value": "10.25-inch digital instrument cluster"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Compass/10938/1755774843690/front-left-side-47.jpg?tr=w-230"
+          }
+        ]
+      },
+      {
+        "make": "Jeep",
+        "model": "Compass",
+        "variant_name": "2.0 Longitude Opt AT",
+        "ex_showroom_price": 2338000,
+        "hyderabad_on_road_price": 2957502,
+        "powertrain": {
+          "fuel": "Diesel",
+          "transmission": "Automatic",
+          "drivetrain": "AWD"
+        },
+        "engine_specs": {
+          "displacement": "1956 cc",
+          "power": "168 bhp",
+          "torque": "350 Nm",
+          "mileage": "14.9"
+        },
+        "dimensions": {
+          "length": "4405 mm",
+          "width": "1818 mm",
+          "height": "1640 mm"
+        },
+        "key_features": [
+          {
+            "value": "10.1-inch free-standing touchscreen"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Compass/10938/1755774843690/front-left-side-47.jpg?tr=w-230"
+          }
+        ]
+      },
+      {
+        "make": "Jeep",
+        "model": "Grand Cherokee",
+        "variant_name": "Limited Opt",
+        "ex_showroom_price": 6300000,
+        "hyderabad_on_road_price": 7977666,
+        "powertrain": {
+          "fuel": "Petrol",
+          "transmission": "Automatic",
+          "drivetrain": "4WD"
+        },
+        "engine_specs": {
+          "displacement": "1995 cc",
+          "power": "268.27 bhp",
+          "torque": "400 Nm",
+          "mileage": "7.2 kmpl"
+        },
+        "dimensions": {
+          "length": "4914 mm",
+          "width": "1979 mm",
+          "height": "1792 mm"
+        },
+        "key_features": [
+          {
+            "value": "Power Steering"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "8 Airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Grand-Cherokee/10945/1767782308966/front-left-side-47.jpg?tr=w-230"
+          }
+        ]
+      },
+      {
+        "make": "Jeep",
+        "model": "Wrangler",
+        "variant_name": "Unlimited",
+        "ex_showroom_price": 6458000,
+        "hyderabad_on_road_price": 8157679,
+        "powertrain": {
+          "fuel": "Petrol",
+          "transmission": "8-speed Automatic",
+          "drivetrain": "4-WD"
+        },
+        "engine_specs": {
+          "displacement": "1995 cc",
+          "power": "268.20 bhp",
+          "torque": "400 Nm",
+          "mileage": "10.6 kmpl"
+        },
+        "dimensions": {
+          "length": "4867 mm",
+          "width": "1931 mm",
+          "height": "1864 mm"
+        },
+        "key_features": [
+          {
+            "value": "12.3-inch touchscreen"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 Airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Wrangler/9782/1767782355459/front-left-side-47.jpg?tr=w-230"
+          }
+        ]
+      },
+      {
+        "make": "Jeep",
+        "model": "Wrangler",
+        "variant_name": "Rubicon",
+        "ex_showroom_price": 6831000,
+        "hyderabad_on_road_price": 8629233,
+        "powertrain": {
+          "fuel": "Petrol",
+          "transmission": "8-speed Automatic",
+          "drivetrain": "4-WD"
+        },
+        "engine_specs": {
+          "displacement": "1995 cc",
+          "power": "268.20 bhp",
+          "torque": "400 Nm",
+          "mileage": "10.6 kmpl"
+        },
+        "dimensions": {
+          "length": "4867 mm",
+          "width": "1931 mm",
+          "height": "1864 mm"
+        },
+        "key_features": [
+          {
+            "value": "12.3-inch touchscreen"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 Airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Wrangler/9782/1767782355459/front-left-side-47.jpg?tr=w-230"
+          }
+        ]
+      }
+    ]
+  }
+}

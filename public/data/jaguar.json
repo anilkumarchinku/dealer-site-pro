@@ -1,0 +1,106 @@
+{
+  "jaguar": {
+    "variants": [
+      {
+        "variant_name": "Jaguar F-Pace 2.0 R-Dynamic S (Petrol)",
+        "pricing": {
+          "ex_showroom_min": 7290000,
+          "ex_showroom_max": 7290000,
+          "on_road_hyderabad": 8985443
+        },
+        "powertrain": {
+          "fuel": "Petrol",
+          "transmission": "Automatic",
+          "drivetrain": "AWD"
+        },
+        "engine_specs": {
+          "displacement": "1997 cc",
+          "power": "246.74 bhp @ 5500 rpm",
+          "torque": "365 Nm @ 1500-4000 rpm",
+          "mileage": "12.9 kmpl (highway)"
+        },
+        "dimensions": {
+          "length": "4747 mm",
+          "width": "2175 mm",
+          "height": "1664 mm",
+          "ground_clearance_laden": "213 mm",
+          "boot_space": "613 L"
+        },
+        "key_features": [
+          {
+            "value": "Heads Up Display"
+          },
+          {
+            "value": "360 Degree Camera"
+          },
+          {
+            "value": "Massage Seats"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "Anti-lock Braking System (ABS)"
+          },
+          {
+            "value": "6 Airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jaguar/F-Pace/10644/1755774688332/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+          }
+        ]
+      },
+      {
+        "variant_name": "Jaguar F-Pace 2.0 R-Dynamic S Diesel",
+        "pricing": {
+          "ex_showroom_min": 7290000,
+          "ex_showroom_max": 7290000,
+          "on_road_hyderabad": 8985443
+        },
+        "powertrain": {
+          "fuel": "Diesel",
+          "transmission": "Automatic",
+          "drivetrain": "AWD"
+        },
+        "engine_specs": {
+          "displacement": "1997 cc",
+          "power": "201.15 bhp @ 3750 rpm",
+          "torque": "430 Nm @ 1750-2500 rpm",
+          "mileage": "19.3 kmpl (highway)"
+        },
+        "dimensions": {
+          "length": "4747 mm",
+          "width": "2175 mm",
+          "height": "1664 mm",
+          "ground_clearance_laden": "213 mm",
+          "boot_space": "613 L"
+        },
+        "key_features": [
+          {
+            "value": "Heads Up Display"
+          },
+          {
+            "value": "360 Degree Camera"
+          },
+          {
+            "value": "Massage Seats"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "Anti-lock Braking System (ABS)"
+          },
+          {
+            "value": "6 Airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jaguar/F-Pace/10644/1755774688332/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+          }
+        ]
+      }
+    ]
+  }
+}

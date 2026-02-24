@@ -1,0 +1,2120 @@
+{
+  "land_rover": [
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Defender",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "2.0 l Petrol 110 X-Dynamic HSE",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm",
+      "ex_showroom_price": 9800000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm",
+      "hyderabad_on_road_price": 12924734,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm",
+      "engine_displacement_cc": 1997,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm",
+      "power_bhp": 296.3,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm",
+      "torque_nm": 400,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm",
+      "mileage_kmpl": 11.5,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm",
+      "dimensions": {
+        "seating": 7,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm",
+        "boot": 499,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm",
+        "ground_clearance": 291,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm",
+        "length": 5018,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm",
+        "width": 2105,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm",
+        "height": 1967,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Adjustable Headrest",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9080/1755764417900/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_X-Dynamic_HSE.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Defender",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "3.0 l Diesel 90 X-Dynamic HSE",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm",
+      "ex_showroom_price": 11946000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm",
+      "hyderabad_on_road_price": 15570529,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm",
+      "engine_displacement_cc": 2997,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm",
+      "power_bhp": 296.36,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm",
+      "torque_nm": 650,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm",
+      "mileage_kmpl": 14.01,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm",
+      "dimensions": {
+        "seating": 6,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm",
+        "boot": 499,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm",
+        "ground_clearance": 219,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm",
+        "length": 4583,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm",
+        "width": 2105,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm",
+        "height": 1974,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Adjustable Headrest",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9080/1755764417900/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_90_X-Dynamic_HSE.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Defender",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "3.0 l Diesel 110 X-Dynamic HSE",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm",
+      "ex_showroom_price": 12600000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm",
+      "hyderabad_on_road_price": 16403709,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm",
+      "engine_displacement_cc": 2997,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm",
+      "power_bhp": 296,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm",
+      "torque_nm": 650,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm",
+      "mileage_kmpl": 11.5,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm",
+      "dimensions": {
+        "seating": 6,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm",
+        "boot": 499,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm",
+        "ground_clearance": 228,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm",
+        "length": 5018,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm",
+        "width": 2105,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm",
+        "height": 1967,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Adjustable Headrest",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9080/1755764417900/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X-Dynamic_HSE.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Defender",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "3.0 l Diesel 110 Sedona Edition",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm",
+      "ex_showroom_price": 13253000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm",
+      "hyderabad_on_road_price": 17205960,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm",
+      "engine_displacement_cc": 2997,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm",
+      "power_bhp": 296,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm",
+      "torque_nm": 650,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm",
+      "mileage_kmpl": 11.5,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm",
+      "dimensions": {
+        "seating": 6,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm",
+        "boot": 499,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm",
+        "ground_clearance": 228,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm",
+        "length": 5018,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm",
+        "width": 2105,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm",
+        "height": 1967,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm"
+        },
+        {
+          "value": "Adjustable Headrest",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9080/1755764417900/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_Sedona_Edition.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Defender",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "3.0 l Diesel 110 X",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm",
+      "ex_showroom_price": 13533000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm",
+      "hyderabad_on_road_price": 17548458,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm",
+      "engine_displacement_cc": 2997,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm",
+      "power_bhp": 296,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm",
+      "torque_nm": 650,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm",
+      "mileage_kmpl": 11.5,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm",
+      "dimensions": {
+        "seating": 6,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm",
+        "boot": 499,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm",
+        "ground_clearance": 228,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm",
+        "length": 5018,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm",
+        "width": 2105,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm",
+        "height": 1967,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm"
+        },
+        {
+          "value": "Adjustable Headrest",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9080/1755764417900/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_110_X.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Defender",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "5.0 l V8 Petrol 110 X-Dynamic HSE",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm",
+      "ex_showroom_price": 13906000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm",
+      "hyderabad_on_road_price": 18007812,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm",
+      "engine_displacement_cc": 5000,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm",
+      "power_bhp": 518,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm",
+      "torque_nm": 625,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm",
+      "mileage_kmpl": 6.8,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm",
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm",
+        "ground_clearance": 228,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm",
+        "length": 5018,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm",
+        "width": 2105,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm",
+        "height": 1967,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Adjustable Headrest",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9080/1755764417900/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X-Dynamic_HSE.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Defender",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "3.0 l Diesel 130 X-Dynamic HSE",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm",
+      "ex_showroom_price": 13906000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm",
+      "hyderabad_on_road_price": 18007812,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm",
+      "engine_displacement_cc": 2997,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm",
+      "power_bhp": 296,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm",
+      "torque_nm": 650,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm",
+      "mileage_kmpl": 11.4,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm",
+        "boot": 499,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm",
+        "ground_clearance": 219,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm",
+        "length": 5099,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm",
+        "width": 2008,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm",
+        "height": 1970,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Adjustable Headrest",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9080/1755764417900/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X-Dynamic_HSE.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Defender",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "5.0 l V8 Petrol 90 X",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm",
+      "ex_showroom_price": 14186000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm",
+      "hyderabad_on_road_price": 18418009,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm",
+      "engine_displacement_cc": 5000,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm",
+      "power_bhp": 518,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm",
+      "torque_nm": 625,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm",
+      "mileage_kmpl": 6.8,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm",
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm",
+        "ground_clearance": 228,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm",
+        "length": 4583,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm",
+        "width": 2105,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm",
+        "height": 1974,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm"
+        },
+        {
+          "value": "Adjustable Headrest",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9080/1755764417900/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_90_X.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Defender",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "5.0 l V8 Petrol 110 X",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm",
+      "ex_showroom_price": 14840000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm",
+      "hyderabad_on_road_price": 19221289,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm",
+      "engine_displacement_cc": 5000,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm",
+      "power_bhp": 518,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm",
+      "torque_nm": 625,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm",
+      "mileage_kmpl": 6.8,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm",
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm",
+        "ground_clearance": 228,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm",
+        "length": 5018,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm",
+        "width": 2105,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm",
+        "height": 1967,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm"
+        },
+        {
+          "value": "Adjustable Headrest",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9080/1755764417900/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_X.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Defender",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "3.0 l Diesel 130 X",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm",
+      "ex_showroom_price": 14840000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm",
+      "hyderabad_on_road_price": 19221289,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm",
+      "engine_displacement_cc": 2997,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm",
+      "power_bhp": 296,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm",
+      "torque_nm": 650,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm",
+      "mileage_kmpl": 11.4,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm",
+        "boot": 499,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm",
+        "ground_clearance": 219,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm",
+        "length": 5099,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm",
+        "width": 2008,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm",
+        "height": 1970,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm"
+        },
+        {
+          "value": "Adjustable Headrest",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9080/1755764417900/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_3.0_l_Diesel_130_X.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Defender",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "5.0 l V8 Petrol 130 X-Dynamic HSE",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm",
+      "ex_showroom_price": 15400000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm",
+      "hyderabad_on_road_price": 19908484,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm",
+      "engine_displacement_cc": 5000,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm",
+      "power_bhp": 518,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm",
+      "torque_nm": 625,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm",
+      "mileage_kmpl": 6.8,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm",
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm",
+        "ground_clearance": 219,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm",
+        "length": 5099,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm",
+        "width": 2008,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm",
+        "height": 1970,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Adjustable Headrest",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9080/1755764417900/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X-Dynamic_HSE.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Defender",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "2.0 l Petrol 110 PHEV Sedona Red Edition",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm",
+      "ex_showroom_price": 16040000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm",
+      "hyderabad_on_road_price": 20696164,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm",
+      "fuel_type": "Petrol (PHEV)",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm",
+      "engine_displacement_cc": 1997,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm",
+      "power_bhp": 296.3,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm",
+      "torque_nm": 400,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm",
+      "mileage_kmpl": 14.01,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm",
+      "dimensions": {
+        "seating": 7,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm",
+        "boot": 107,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm",
+        "ground_clearance": 291,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm",
+        "length": 5018,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm",
+        "width": 2105,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm",
+        "height": 1967,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm"
+        },
+        {
+          "value": "Adjustable Headrest",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9080/1755764417900/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_2.0_l_Petrol_110_PHEV_Sedona_Red_Edition.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Defender",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "5.0 l V8 Petrol 130 X",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm",
+      "ex_showroom_price": 16333000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm",
+      "hyderabad_on_road_price": 21055732,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm",
+      "transmission": "8-speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm",
+      "engine_displacement_cc": 5000,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm",
+      "power_bhp": 518,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm",
+      "torque_nm": 625,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm",
+      "mileage_kmpl": 6.8,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm",
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm",
+        "ground_clearance": 219,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm",
+        "length": 5099,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm",
+        "width": 2008,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm",
+        "height": 1970,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm"
+        },
+        {
+          "value": "Adjustable Headrest",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9080/1755764417900/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_130_X.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Defender",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "5.0 l V8 Petrol 110 V8",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm",
+      "ex_showroom_price": 16706000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm",
+      "hyderabad_on_road_price": 21512486,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm",
+      "engine_displacement_cc": 5000,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm",
+      "power_bhp": 518,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm",
+      "torque_nm": 625,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm",
+      "mileage_kmpl": 6.8,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm",
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm",
+        "ground_clearance": 228,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm",
+        "length": 5018,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm",
+        "width": 2105,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm",
+        "height": 1967,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm"
+        },
+        {
+          "value": "Adjustable Headrest",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9080/1755764417900/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_5.0_l_V8_Petrol_110_V8.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Defender",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "4.4 l V8 Petrol 110 OCTA",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm",
+      "ex_showroom_price": 24173000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm",
+      "hyderabad_on_road_price": 30834362,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm",
+      "engine_displacement_cc": 4367,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm",
+      "power_bhp": 626,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm",
+      "torque_nm": 750,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm",
+      "mileage_kmpl": 14.01,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm",
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm",
+        "ground_clearance": 228,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm",
+        "length": 5018,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm",
+        "width": 2105,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm",
+        "height": 1967,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm"
+        },
+        {
+          "value": "Adjustable Headrest",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9080/1755764417900/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Defender",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "4.4 l V8 Petrol 110 OCTA Edition One",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm",
+      "ex_showroom_price": 26040000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm",
+      "hyderabad_on_road_price": 33127688,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm",
+      "engine_displacement_cc": 4367,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm",
+      "power_bhp": 626,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm",
+      "torque_nm": 750,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm",
+      "mileage_kmpl": 14.01,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm",
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm",
+        "ground_clearance": 228,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm",
+        "length": 5018,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm",
+        "width": 2105,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm",
+        "height": 1967,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm"
+        },
+        {
+          "value": "Adjustable Headrest",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9080/1755764417900/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Defender/Land_Rover_Defender_4.4_l_V8_Petrol_110_OCTA_Edition_One.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Discovery",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "3.0 Diesel S",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm",
+      "ex_showroom_price": 12525000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm",
+      "hyderabad_on_road_price": 15416967,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm",
+      "engine_displacement_cc": 2996,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm",
+      "power_bhp": 296.36,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm",
+      "torque_nm": 650,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm",
+      "mileage_kmpl": 12.37,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm",
+      "dimensions": {
+        "seating": 7,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm",
+        "boot": 123,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm",
+        "ground_clearance": 207,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm",
+        "length": 4949,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm",
+        "width": 2073,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm",
+        "height": 1869,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm"
+      },
+      "key_features": [
+        {
+          "value": "Air suspension",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm"
+        },
+        {
+          "value": "7-seat flexible interior",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm"
+        },
+        {
+          "value": "8-airbag safety package",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm"
+        },
+        {
+          "value": "All-Wheel Drive",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm"
+        },
+        {
+          "value": "Touchscreen",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Discovery/8520/1767783067458/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_S.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Discovery",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "3.0 Diesel Dynamic HSE",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm",
+      "ex_showroom_price": 12973000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm",
+      "hyderabad_on_road_price": 15967363,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm",
+      "engine_displacement_cc": 2996,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm",
+      "power_bhp": 296.36,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm",
+      "torque_nm": 650,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm",
+      "mileage_kmpl": 13.2,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm",
+      "dimensions": {
+        "seating": 7,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm",
+        "boot": 123,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm",
+        "ground_clearance": 207,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm",
+        "length": 4949,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm",
+        "width": 2073,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm",
+        "height": 1869,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm"
+      },
+      "key_features": [
+        {
+          "value": "Air suspension",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm"
+        },
+        {
+          "value": "7-seat flexible interior",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm"
+        },
+        {
+          "value": "8-airbag safety package",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm"
+        },
+        {
+          "value": "All-Wheel Drive",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm"
+        },
+        {
+          "value": "Touchscreen",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Discovery/8520/1767783067458/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Dynamic_HSE.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Discovery",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "3.0 Diesel Metropolitan Edition",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm",
+      "ex_showroom_price": 13682000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm",
+      "hyderabad_on_road_price": 16838414,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm",
+      "engine_displacement_cc": 2996,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm",
+      "power_bhp": 296.36,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm",
+      "torque_nm": 650,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm",
+      "mileage_kmpl": 13.2,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm",
+      "dimensions": {
+        "seating": 7,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm",
+        "boot": 123,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm",
+        "ground_clearance": 207,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm",
+        "length": 4949,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm",
+        "width": 2073,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm",
+        "height": 1869,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm"
+      },
+      "key_features": [
+        {
+          "value": "Air suspension",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm"
+        },
+        {
+          "value": "7-seat flexible interior",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm"
+        },
+        {
+          "value": "8-airbag safety package",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm"
+        },
+        {
+          "value": "All-Wheel Drive",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm"
+        },
+        {
+          "value": "Touchscreen",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Discovery/8520/1767783067458/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery/Land_Rover_Discovery_3.0_Diesel_Metropolitan_Edition.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Discovery Sport",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "Dynamic SE (Petrol)",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm",
+      "ex_showroom_price": 6337000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm",
+      "hyderabad_on_road_price": 7814623,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm",
+      "transmission": "9-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm",
+      "engine_displacement_cc": 1997,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm",
+      "power_bhp": 247,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm",
+      "torque_nm": 365,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm",
+      "mileage_kmpl": 12.97,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm",
+      "dimensions": {
+        "seating": 7,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm",
+        "boot": 559,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm",
+        "ground_clearance": 167,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm",
+        "length": 4597,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm",
+        "width": 2069,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm",
+        "height": 1727,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm"
+        },
+        {
+          "value": "ADAS",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm"
+        },
+        {
+          "value": "Multi-function Steering Wheel",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Discovery-Sport/7575/1767783116820/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Discovery Sport",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "Dynamic SE Diesel",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm",
+      "ex_showroom_price": 6337000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm",
+      "hyderabad_on_road_price": 7814623,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm",
+      "transmission": "9-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm",
+      "engine_displacement_cc": 1999,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm",
+      "power_bhp": 201,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm",
+      "torque_nm": 430,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm",
+      "mileage_kmpl": 12.97,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm",
+      "dimensions": {
+        "seating": 7,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm",
+        "boot": 559,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm",
+        "ground_clearance": 167,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm",
+        "length": 4597,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm",
+        "width": 2069,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm",
+        "height": 1727,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm"
+        },
+        {
+          "value": "ADAS",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm"
+        },
+        {
+          "value": "Multi-function Steering Wheel",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Discovery-Sport/7575/1767783116820/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Discovery_Sport/Land_Rover_Discovery_Sport_Dynamic_SE_Diesel.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Range Rover Evoque",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "Autobiography (Petrol)",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm",
+      "ex_showroom_price": 6486000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm",
+      "hyderabad_on_road_price": 8341379,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm",
+      "engine_displacement_cc": 1997,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm",
+      "power_bhp": 247,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm",
+      "torque_nm": 365,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm",
+      "mileage_kmpl": 12.82,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm",
+        "boot": 472,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm",
+        "ground_clearance": 212,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm",
+        "length": 4371,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm",
+        "width": 1996,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm",
+        "height": 1649,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm"
+        },
+        {
+          "value": "ADAS",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm"
+        },
+        {
+          "value": "Valet Mode",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Range-Rover-Evoque/12549/1767783202589/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Range Rover Evoque",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "Autobiography Diesel",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm",
+      "ex_showroom_price": 6486000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm",
+      "hyderabad_on_road_price": 8341379,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm",
+      "engine_displacement_cc": 1997,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm",
+      "power_bhp": 201,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm",
+      "torque_nm": 430,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm",
+      "mileage_kmpl": 14.71,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm",
+        "boot": 472,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm",
+        "ground_clearance": 212,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm",
+        "length": 4371,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm",
+        "width": 1996,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm",
+        "height": 1649,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm"
+      },
+      "key_features": [
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm"
+        },
+        {
+          "value": "ADAS",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm"
+        },
+        {
+          "value": "Valet Mode",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Range-Rover-Evoque/12549/1767783202589/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Evoque/Land_Rover_Range_Rover_Evoque_Autobiography_Diesel.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Range Rover Sport",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "3.0 l Petrol Dynamic HSE",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm",
+      "ex_showroom_price": 13766000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm",
+      "hyderabad_on_road_price": 16941613,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm",
+      "engine_displacement_cc": 2998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm",
+      "power_bhp": 345.98,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm",
+      "torque_nm": 700,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm",
+        "boot": 530,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm",
+        "length": 4946,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm",
+        "width": 2209,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm",
+        "height": 1820,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm"
+      },
+      "key_features": [
+        {
+          "value": "Heads-Up Display (HUD)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm"
+        },
+        {
+          "value": "Active Noise Cancellation",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm"
+        },
+        {
+          "value": "Multi-function Steering Wheel",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Range-Rover-Sport/12528/1745923553937/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Range Rover Sport",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "3.0 l Diesel Dynamic HSE",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm",
+      "ex_showroom_price": 13766000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm",
+      "hyderabad_on_road_price": 16941613,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm",
+      "engine_displacement_cc": 2998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm",
+      "power_bhp": 345.98,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm",
+      "torque_nm": 700,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm",
+        "boot": 530,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm",
+        "length": 4946,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm",
+        "width": 2209,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm",
+        "height": 1820,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm"
+      },
+      "key_features": [
+        {
+          "value": "Heads-Up Display (HUD)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm"
+        },
+        {
+          "value": "Active Noise Cancellation",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm"
+        },
+        {
+          "value": "Multi-function Steering Wheel",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Range-Rover-Sport/12528/1745923553937/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Range Rover Sport",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "3.0 l PHEV Autobiography",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm",
+      "ex_showroom_price": 19600001,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm",
+      "hyderabad_on_road_price": 24109047,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm",
+      "fuel_type": "Petrol (PHEV)",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm",
+      "engine_displacement_cc": 2998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm",
+      "power_bhp": 453.26,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm",
+      "torque_nm": 660,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm",
+        "boot": 530,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm",
+        "length": 4946,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm",
+        "width": 2209,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm",
+        "height": 1820,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm"
+      },
+      "key_features": [
+        {
+          "value": "Heads-Up Display (HUD)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm"
+        },
+        {
+          "value": "Active Noise Cancellation",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm"
+        },
+        {
+          "value": "Multi-function Steering Wheel",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Range-Rover-Sport/12528/1745923553937/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Range Rover Sport",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "4.4 l Autobiography",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm",
+      "ex_showroom_price": 19740001,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm",
+      "hyderabad_on_road_price": 24281046,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm",
+      "engine_displacement_cc": 4395,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm",
+      "power_bhp": 345.98,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm",
+      "torque_nm": 700,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm",
+        "boot": 530,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm",
+        "length": 4946,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm",
+        "width": 2209,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm",
+        "height": 1820,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm"
+      },
+      "key_features": [
+        {
+          "value": "Heads-Up Display (HUD)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm"
+        },
+        {
+          "value": "Active Noise Cancellation",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm"
+        },
+        {
+          "value": "Multi-function Steering Wheel",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Range-Rover-Sport/12528/1745923553937/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Range Rover Sport",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "4.4 l SV Edition Two",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm",
+      "ex_showroom_price": 27530001,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm",
+      "hyderabad_on_road_price": 33851547,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm",
+      "engine_displacement_cc": 4395,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm",
+      "power_bhp": 626.25,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm",
+      "torque_nm": 700,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm",
+        "boot": 530,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm",
+        "length": 4946,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm",
+        "width": 2209,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm",
+        "height": 1820,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm"
+      },
+      "key_features": [
+        {
+          "value": "Heads-Up Display (HUD)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm"
+        },
+        {
+          "value": "Active Noise Cancellation",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm"
+        },
+        {
+          "value": "Multi-function Steering Wheel",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Range-Rover-Sport/12528/1745923553937/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Range Rover Velar",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "2.0 l Petrol Autobiography",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm",
+      "ex_showroom_price": 8390000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm",
+      "hyderabad_on_road_price": 10749661,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm",
+      "engine_displacement_cc": 1997,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm",
+      "power_bhp": 183.9,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm",
+      "torque_nm": 365,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm",
+      "mileage_kmpl": 15.8,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm",
+        "boot": 673,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm",
+        "ground_clearance": 156,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm",
+        "length": 4797,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm",
+        "width": 2147,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm",
+        "height": 1678,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm"
+      },
+      "key_features": [
+        {
+          "value": "Heads-Up Display (HUD)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm"
+        },
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm"
+        },
+        {
+          "value": "Massage Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm"
+        },
+        {
+          "value": "Touchscreen",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Range-Rover-Velar/12767/1767783260921/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "model": "Range Rover Velar",
+      "model_citation": "https://www.cardekho.com/cars/Land_Rover",
+      "variant_name": "2.0 l Diesel Autobiography",
+      "variant_name_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm",
+      "ex_showroom_price": 8390000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm",
+      "hyderabad_on_road_price": 10749661,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm",
+      "engine_displacement_cc": 1997,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm",
+      "power_bhp": 150,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm",
+      "torque_nm": 430,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm",
+      "mileage_kmpl": 15.8,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm",
+        "boot": 673,
+        "boot_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm",
+        "ground_clearance": 156,
+        "ground_clearance_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm",
+        "length": 4797,
+        "length_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm",
+        "width": 2147,
+        "width_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm",
+        "height": 1678,
+        "height_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm"
+      },
+      "key_features": [
+        {
+          "value": "Heads-Up Display (HUD)",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm"
+        },
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm"
+        },
+        {
+          "value": "Massage Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm"
+        },
+        {
+          "value": "Touchscreen",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Range-Rover-Velar/12767/1767783260921/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm"
+    }
+  ]
+}

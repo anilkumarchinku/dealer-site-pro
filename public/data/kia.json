@@ -1,0 +1,956 @@
+{
+  "kia": [
+    {
+      "make": "Kia",
+      "model": "Carnival",
+      "variant_name": "Carnival Limousine Plus",
+      "ex_showroom_price": 5942000,
+      "hyderabad_on_road_price": 7621082,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 2151,
+      "power_bhp": 190,
+      "torque_nm": 441,
+      "mileage_kmpl": 14.85,
+      "seating_capacity": 7,
+      "ground_clearance_mm": 180,
+      "length_mm": 5155,
+      "width_mm": 1995,
+      "height_mm": 1775,
+      "key_features": [
+        {
+          "value": "VIP Lounge Seats",
+          "value_citation": "https://www.cardekho.com/kia/carnival/specs"
+        },
+        {
+          "value": "Dual 12.3-inch touchscreens",
+          "value_citation": "https://www.cardekho.com/kia/carnival/specs"
+        },
+        {
+          "value": "Level 2 ADAS",
+          "value_citation": "https://www.cardekho.com/kia/carnival/specs"
+        },
+        {
+          "value": "Dual Sunroof",
+          "value_citation": "https://www.cardekho.com/kia/carnival/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "8 airbags",
+          "value_citation": "https://www.cardekho.com/kia/carnival/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/carnival/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/carnival/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/kia/carnival/specs"
+        },
+        {
+          "value": "360° view camera",
+          "value_citation": "https://www.cardekho.com/kia/carnival/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carnival/8001/1755866555419/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/carnival/specs"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "https://www.cardekho.com/overview/Kia_Carnival/Kia_Carnival_Limousine_Plus.htm"
+    },
+    {
+      "make": "Kia",
+      "model": "Carens",
+      "variant_name": "Carens Premium Opt",
+      "ex_showroom_price": 1099000,
+      "hyderabad_on_road_price": 1355000,
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "engine_displacement_cc": 1497,
+      "seating_capacity": 7,
+      "boot_space_l": 216,
+      "length_mm": 4540,
+      "width_mm": 1800,
+      "height_mm": 1708,
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "Power Windows",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "One-touch fold-and-tumble third-row",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "Hill-Assist",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens/11623/1755774968732/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "https://www.cardekho.com/overview/Kia_Carens/Carens_Premium_Opt.htm"
+    },
+    {
+      "make": "Kia",
+      "model": "Carens",
+      "variant_name": "Carens Premium Opt CNG",
+      "ex_showroom_price": 1177000,
+      "hyderabad_on_road_price": 1506000,
+      "fuel_type": "CNG",
+      "transmission": "Manual",
+      "engine_displacement_cc": 1497,
+      "seating_capacity": 7,
+      "boot_space_l": 216,
+      "length_mm": 4540,
+      "width_mm": 1800,
+      "height_mm": 1708,
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "Power Windows",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "One-touch fold-and-tumble third-row",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "Hill-Assist",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens/11623/1755774968732/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "https://www.cardekho.com/overview/Kia_Carens/Carens_Premium_Opt_CNG.htm"
+    },
+    {
+      "make": "Kia",
+      "model": "Carens",
+      "variant_name": "Carens Premium Opt Diesel",
+      "ex_showroom_price": 1277000,
+      "hyderabad_on_road_price": 1622000,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "engine_displacement_cc": 1493,
+      "power_bhp": 114.41,
+      "torque_nm": 250,
+      "seating_capacity": 7,
+      "boot_space_l": 216,
+      "length_mm": 4540,
+      "width_mm": 1800,
+      "height_mm": 1708,
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "Power Windows",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "One-touch fold-and-tumble third-row",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        },
+        {
+          "value": "Hill-Assist",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens/11623/1755774968732/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/carens/specs"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "https://www.cardekho.com/overview/Kia_Carens/Carens_Premium_Opt_Diesel.htm"
+    },
+    {
+      "make": "Kia",
+      "model": "Seltos",
+      "variant_name": "Seltos HTE",
+      "ex_showroom_price": 1099000,
+      "hyderabad_on_road_price": 1350000,
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "engine_displacement_cc": 1497,
+      "seating_capacity": 5,
+      "boot_space_l": 447,
+      "length_mm": 4460,
+      "width_mm": 1830,
+      "height_mm": 1635,
+      "key_features": [
+        {
+          "value": "12.3-inch touchscreen",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "Ventilated seats",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "Level-2 ADAS",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "ABS + EBD",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Seltos-2026/12770/1766479168733/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "https://www.cardekho.com/overview/Kia_Seltos/Seltos_HTE.htm"
+    },
+    {
+      "make": "Kia",
+      "model": "Seltos",
+      "variant_name": "Seltos HTE Diesel",
+      "ex_showroom_price": 1259000,
+      "hyderabad_on_road_price": 1545000,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "engine_displacement_cc": 1493,
+      "power_bhp": 114,
+      "torque_nm": 250,
+      "seating_capacity": 5,
+      "boot_space_l": 447,
+      "length_mm": 4460,
+      "width_mm": 1830,
+      "height_mm": 1635,
+      "key_features": [
+        {
+          "value": "12.3-inch touchscreen",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "Ventilated seats",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "Level-2 ADAS",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "ABS + EBD",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Seltos-2026/12770/1766479168733/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "https://www.cardekho.com/overview/Kia_Seltos/Seltos_HTE_Diesel.htm"
+    },
+    {
+      "make": "Kia",
+      "model": "Seltos",
+      "variant_name": "Seltos HTK",
+      "ex_showroom_price": 1309000,
+      "hyderabad_on_road_price": 1606000,
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "engine_displacement_cc": 1497,
+      "seating_capacity": 5,
+      "boot_space_l": 447,
+      "length_mm": 4460,
+      "width_mm": 1830,
+      "height_mm": 1635,
+      "key_features": [
+        {
+          "value": "12.3-inch touchscreen",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "Ventilated seats",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "Level-2 ADAS",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "ABS + EBD",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Seltos-2026/12770/1766479168733/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "https://www.cardekho.com/overview/Kia_Seltos/Seltos_HTK.htm"
+    },
+    {
+      "make": "Kia",
+      "model": "Seltos",
+      "variant_name": "Seltos HTX",
+      "ex_showroom_price": 1559000,
+      "hyderabad_on_road_price": 1910000,
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "engine_displacement_cc": 1497,
+      "seating_capacity": 5,
+      "boot_space_l": 447,
+      "length_mm": 4460,
+      "width_mm": 1830,
+      "height_mm": 1635,
+      "key_features": [
+        {
+          "value": "12.3-inch touchscreen",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "Ventilated seats",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "Level-2 ADAS",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "ABS + EBD",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Seltos-2026/12770/1766479168733/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "https://www.cardekho.com/overview/Kia_Seltos/Seltos_HTX.htm"
+    },
+    {
+      "make": "Kia",
+      "model": "Seltos",
+      "variant_name": "Seltos GTX A iVT",
+      "ex_showroom_price": 1949000,
+      "hyderabad_on_road_price": 2384000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1497,
+      "seating_capacity": 5,
+      "boot_space_l": 447,
+      "length_mm": 4460,
+      "width_mm": 1830,
+      "height_mm": 1635,
+      "key_features": [
+        {
+          "value": "12.3-inch touchscreen",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "Ventilated seats",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "Level-2 ADAS",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "ABS + EBD",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Seltos-2026/12770/1766479168733/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "https://www.cardekho.com/overview/Kia_Seltos/Seltos_GTX_A_iVT.htm"
+    },
+    {
+      "make": "Kia",
+      "model": "Seltos",
+      "variant_name": "Seltos X-Line Diesel AT",
+      "ex_showroom_price": 1979000,
+      "hyderabad_on_road_price": 2421000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1493,
+      "power_bhp": 114,
+      "torque_nm": 250,
+      "seating_capacity": 5,
+      "boot_space_l": 447,
+      "length_mm": 4460,
+      "width_mm": 1830,
+      "height_mm": 1635,
+      "key_features": [
+        {
+          "value": "12.3-inch touchscreen",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "Ventilated seats",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "Level-2 ADAS",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "ABS + EBD",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Seltos-2026/12770/1766479168733/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/seltos/specs"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "https://www.cardekho.com/overview/Kia_Seltos/Seltos_X-Line_Diesel_AT.htm"
+    },
+    {
+      "make": "Kia",
+      "model": "Sonet",
+      "variant_name": "Sonet HTE",
+      "ex_showroom_price": 730000,
+      "hyderabad_on_road_price": 870000,
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "engine_displacement_cc": 1197,
+      "seating_capacity": 5,
+      "boot_space_l": 385,
+      "length_mm": 3995,
+      "width_mm": 1790,
+      "height_mm": 1642,
+      "key_features": [
+        {
+          "value": "360-degree camera",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "Ventilated front seats",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Sonet/9783/1755775200530/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "https://www.cardekho.com/overview/Kia_Sonet/Sonet_HTE.htm"
+    },
+    {
+      "make": "Kia",
+      "model": "Sonet",
+      "variant_name": "Sonet HTK Plus",
+      "ex_showroom_price": 910000,
+      "hyderabad_on_road_price": 1080000,
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "engine_displacement_cc": 1197,
+      "seating_capacity": 5,
+      "boot_space_l": 385,
+      "length_mm": 3995,
+      "width_mm": 1790,
+      "height_mm": 1642,
+      "key_features": [
+        {
+          "value": "360-degree camera",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "Ventilated front seats",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Sonet/9783/1755775200530/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "https://www.cardekho.com/overview/Kia_Sonet/Sonet_HTK_Plus.htm"
+    },
+    {
+      "make": "Kia",
+      "model": "Sonet",
+      "variant_name": "Sonet HTX Diesel",
+      "ex_showroom_price": 1125000,
+      "hyderabad_on_road_price": 1387000,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "engine_displacement_cc": 1493,
+      "seating_capacity": 5,
+      "boot_space_l": 385,
+      "length_mm": 3995,
+      "width_mm": 1790,
+      "height_mm": 1642,
+      "key_features": [
+        {
+          "value": "360-degree camera",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "Ventilated front seats",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Sonet/9783/1755775200530/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "https://www.cardekho.com/overview/Kia_Sonet/Sonet_HTX_Diesel.htm"
+    },
+    {
+      "make": "Kia",
+      "model": "Sonet",
+      "variant_name": "Sonet GTX Plus Diesel AT",
+      "ex_showroom_price": 1400000,
+      "hyderabad_on_road_price": 1717000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1493,
+      "seating_capacity": 5,
+      "boot_space_l": 385,
+      "length_mm": 3995,
+      "width_mm": 1790,
+      "height_mm": 1642,
+      "key_features": [
+        {
+          "value": "360-degree camera",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "Ventilated front seats",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Sonet/9783/1755775200530/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/sonet/specs"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "https://www.cardekho.com/overview/Kia_Sonet/Sonet_GTX_Plus_Diesel_AT.htm"
+    },
+    {
+      "make": "Kia",
+      "model": "Syros",
+      "variant_name": "Syros HTK Turbo",
+      "ex_showroom_price": 867053,
+      "hyderabad_on_road_price": 1027000,
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "engine_displacement_cc": 998,
+      "seating_capacity": 5,
+      "boot_space_l": 465,
+      "length_mm": 3995,
+      "width_mm": 1805,
+      "height_mm": 1680,
+      "key_features": [
+        {
+          "value": "12.3-inch Touchscreen",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        },
+        {
+          "value": "Rear Seat Ventilation",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        },
+        {
+          "value": "23 in-cabin storage spaces",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        },
+        {
+          "value": "360° View Camera",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Syros/11791/1755867065601/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "https://www.cardekho.com/overview/Kia_Syros/Syros_HTK_Turbo.htm"
+    },
+    {
+      "make": "Kia",
+      "model": "Syros",
+      "variant_name": "Syros HTK Plus Diesel",
+      "ex_showroom_price": 1146160,
+      "hyderabad_on_road_price": 1419000,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "engine_displacement_cc": 1493,
+      "seating_capacity": 5,
+      "boot_space_l": 465,
+      "length_mm": 3995,
+      "width_mm": 1805,
+      "height_mm": 1680,
+      "key_features": [
+        {
+          "value": "12.3-inch Touchscreen",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        },
+        {
+          "value": "Rear Seat Ventilation",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        },
+        {
+          "value": "23 in-cabin storage spaces",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        },
+        {
+          "value": "360° View Camera",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Syros/11791/1755867065601/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "https://www.cardekho.com/overview/Kia_Syros/Syros_HTK_Plus_Diesel.htm"
+    },
+    {
+      "make": "Kia",
+      "model": "Syros",
+      "variant_name": "Syros HTX Plus Opt Diesel AT",
+      "ex_showroom_price": 1593898,
+      "hyderabad_on_road_price": 1968000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1493,
+      "seating_capacity": 5,
+      "boot_space_l": 465,
+      "length_mm": 3995,
+      "width_mm": 1805,
+      "height_mm": 1680,
+      "key_features": [
+        {
+          "value": "12.3-inch Touchscreen",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        },
+        {
+          "value": "Rear Seat Ventilation",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        },
+        {
+          "value": "23 in-cabin storage spaces",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        },
+        {
+          "value": "360° View Camera",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Syros/11791/1755867065601/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/syros/specs"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "https://www.cardekho.com/overview/Kia_Syros/Syros_HTX_Plus_Opt_Diesel_AT.htm"
+    }
+  ]
+}

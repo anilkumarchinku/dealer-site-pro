@@ -1,0 +1,649 @@
+{
+  "lexus": {
+    "model_name": "ES, LM, LS, NX, RX",
+    "variants": [
+      {
+        "make": "Lexus",
+        "model": "ES",
+        "variant_name": "300h Exquisite",
+        "pricing": {
+          "ex_showroom_min": 6265000,
+          "ex_showroom_max": 6265000
+        },
+        "powertrain": {
+          "fuel": "Petrol + Electric (Hybrid)",
+          "transmission": "Automatic (E-CVT)"
+        },
+        "engine_specs": {
+          "displacement": "2487 cc",
+          "power": "175.67 bhp",
+          "torque": "221 Nm",
+          "mileage": "18 kmpl"
+        },
+        "dimensions": {
+          "seating": 5,
+          "boot": "454 L",
+          "ground_clearance": "151 mm",
+          "length": "4975 mm",
+          "width": "1865 mm",
+          "height": "1445 mm"
+        },
+        "key_features": [
+          {
+            "value": "17-speaker Mark Levinson sound system"
+          },
+          {
+            "value": "12.3-inch infotainment"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "10 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/ES/9398/1769080992566/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lexus",
+        "model": "ES",
+        "variant_name": "300h Luxury",
+        "pricing": {
+          "ex_showroom_min": 6823000,
+          "ex_showroom_max": 6823000
+        },
+        "powertrain": {
+          "fuel": "Petrol + Electric (Hybrid)",
+          "transmission": "Automatic (E-CVT)"
+        },
+        "engine_specs": {
+          "displacement": "2487 cc",
+          "power": "175.67 bhp",
+          "torque": "221 Nm",
+          "mileage": "18 kmpl"
+        },
+        "dimensions": {
+          "seating": 5,
+          "boot": "454 L",
+          "ground_clearance": "151 mm",
+          "length": "4975 mm",
+          "width": "1865 mm",
+          "height": "1445 mm"
+        },
+        "key_features": [
+          {
+            "value": "Premium leather upholstery"
+          },
+          {
+            "value": "Ambient lighting"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "10 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/ES/9398/1769080992566/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lexus",
+        "model": "LM",
+        "variant_name": "350h 7-Seater VIP",
+        "pricing": {
+          "ex_showroom_min": 21538000,
+          "ex_showroom_max": 21538000
+        },
+        "powertrain": {
+          "fuel": "Petrol",
+          "transmission": "Automatic"
+        },
+        "engine_specs": {
+          "displacement": "2487 cc",
+          "power": "190.42 bhp",
+          "torque": "242 Nm",
+          "mileage": "0"
+        },
+        "dimensions": {
+          "seating": 7,
+          "boot": "752 L",
+          "ground_clearance": "150 mm",
+          "length": "5125 mm",
+          "width": "1890 mm",
+          "height": "1940 mm"
+        },
+        "key_features": [
+          {
+            "value": "Power Steering"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "14 Airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LM/9569/1769081102595/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lexus",
+        "model": "LM",
+        "variant_name": "350h 4-Seater Ultra Luxury",
+        "pricing": {
+          "ex_showroom_min": 26923000,
+          "ex_showroom_max": 26923000
+        },
+        "powertrain": {
+          "fuel": "Petrol",
+          "transmission": "Automatic"
+        },
+        "engine_specs": {
+          "displacement": "2487 cc",
+          "power": "190.42 bhp",
+          "torque": "242 Nm",
+          "mileage": "0"
+        },
+        "dimensions": {
+          "seating": 4,
+          "boot": "752 L",
+          "ground_clearance": "150 mm",
+          "length": "5125 mm",
+          "width": "1890 mm",
+          "height": "1940 mm"
+        },
+        "key_features": [
+          {
+            "value": "Power Steering"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "14 Airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LM/9569/1769081102595/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lexus",
+        "model": "LS",
+        "variant_name": "500h Distinct",
+        "pricing": {
+          "ex_showroom_min": 19371000,
+          "ex_showroom_max": 19371000
+        },
+        "powertrain": {
+          "fuel": "Petrol (Hybrid)",
+          "transmission": "Automatic 10-speed"
+        },
+        "engine_specs": {
+          "displacement": "3456 cc",
+          "power": "292.34 bhp",
+          "torque": "350 Nm",
+          "mileage": "15.4 kmpl"
+        },
+        "dimensions": {
+          "seating": 4,
+          "boot": "480 L",
+          "ground_clearance": "147 mm",
+          "length": "5235 mm",
+          "width": "1900 mm",
+          "height": "1450 mm"
+        },
+        "key_features": [
+          {
+            "value": "Power steering"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "14 airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LS/4924/1622802604706/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lexus",
+        "model": "LS",
+        "variant_name": "500h Luxury",
+        "pricing": {
+          "ex_showroom_min": 19552000,
+          "ex_showroom_max": 19552000
+        },
+        "powertrain": {
+          "fuel": "Petrol (Hybrid)",
+          "transmission": "Automatic 10-speed"
+        },
+        "engine_specs": {
+          "displacement": "3456 cc",
+          "power": "292.34 bhp",
+          "torque": "350 Nm",
+          "mileage": "15.4 kmpl"
+        },
+        "dimensions": {
+          "seating": 4,
+          "boot": "480 L",
+          "ground_clearance": "147 mm",
+          "length": "5235 mm",
+          "width": "1900 mm",
+          "height": "1450 mm"
+        },
+        "key_features": [
+          {
+            "value": "Power steering"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "14 airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LS/4924/1622802604706/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lexus",
+        "model": "LS",
+        "variant_name": "500h Ultra Luxury",
+        "pricing": {
+          "ex_showroom_min": 20143000,
+          "ex_showroom_max": 20143000
+        },
+        "powertrain": {
+          "fuel": "Petrol (Hybrid)",
+          "transmission": "Automatic 10-speed"
+        },
+        "engine_specs": {
+          "displacement": "3456 cc",
+          "power": "292.34 bhp",
+          "torque": "350 Nm",
+          "mileage": "15.4 kmpl"
+        },
+        "dimensions": {
+          "seating": 4,
+          "boot": "480 L",
+          "ground_clearance": "147 mm",
+          "length": "5235 mm",
+          "width": "1900 mm",
+          "height": "1450 mm"
+        },
+        "key_features": [
+          {
+            "value": "Power steering"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "14 airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LS/4924/1622802604706/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lexus",
+        "model": "LS",
+        "variant_name": "500h Kiriko",
+        "pricing": {
+          "ex_showroom_min": 22679000,
+          "ex_showroom_max": 22679000
+        },
+        "powertrain": {
+          "fuel": "Petrol (Hybrid)",
+          "transmission": "Automatic 10-speed"
+        },
+        "engine_specs": {
+          "displacement": "3456 cc",
+          "power": "292.34 bhp",
+          "torque": "350 Nm",
+          "mileage": "15.4 kmpl"
+        },
+        "dimensions": {
+          "seating": 4,
+          "boot": "480 L",
+          "ground_clearance": "147 mm",
+          "length": "5235 mm",
+          "width": "1900 mm",
+          "height": "1450 mm"
+        },
+        "key_features": [
+          {
+            "value": "Kiriko glass ornamentation"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "14 airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LS/4924/1622802604706/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lexus",
+        "model": "LS",
+        "variant_name": "500h Nishijin",
+        "pricing": {
+          "ex_showroom_min": 22679000,
+          "ex_showroom_max": 22679000
+        },
+        "powertrain": {
+          "fuel": "Petrol (Hybrid)",
+          "transmission": "Automatic 10-speed"
+        },
+        "engine_specs": {
+          "displacement": "3456 cc",
+          "power": "292.34 bhp",
+          "torque": "350 Nm",
+          "mileage": "15.4 kmpl"
+        },
+        "dimensions": {
+          "seating": 4,
+          "boot": "480 L",
+          "ground_clearance": "147 mm",
+          "length": "5235 mm",
+          "width": "1900 mm",
+          "height": "1450 mm"
+        },
+        "key_features": [
+          {
+            "value": "Nishijin-ori interior trim"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "14 airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LS/4924/1622802604706/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lexus",
+        "model": "NX",
+        "variant_name": "350h Exquisite",
+        "pricing": {
+          "ex_showroom_min": 6659000,
+          "ex_showroom_max": 6659000
+        },
+        "powertrain": {
+          "fuel": "Petrol (Hybrid-electric assist)",
+          "transmission": "Automatic (E-CVT)"
+        },
+        "engine_specs": {
+          "displacement": "2487 cc",
+          "power": "187.74 bhp",
+          "torque": "239 Nm",
+          "mileage": "15 kmpl"
+        },
+        "dimensions": {
+          "seating": 5,
+          "boot": "520 L",
+          "ground_clearance": "195 mm",
+          "length": "4660 mm",
+          "width": "1865 mm",
+          "height": "1670 mm"
+        },
+        "key_features": [
+          {
+            "value": "Panoramic roof"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "8 airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/NX/8887/1769081441968/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lexus",
+        "model": "NX",
+        "variant_name": "350h Overtrail",
+        "pricing": {
+          "ex_showroom_min": 7037000,
+          "ex_showroom_max": 7037000
+        },
+        "powertrain": {
+          "fuel": "Petrol (Hybrid-electric assist)",
+          "transmission": "Automatic (E-CVT)"
+        },
+        "engine_specs": {
+          "displacement": "2487 cc",
+          "power": "187.74 bhp",
+          "torque": "239 Nm",
+          "mileage": "15 kmpl"
+        },
+        "dimensions": {
+          "seating": 5,
+          "boot": "520 L",
+          "ground_clearance": "195 mm",
+          "length": "4660 mm",
+          "width": "1865 mm",
+          "height": "1670 mm"
+        },
+        "key_features": [
+          {
+            "value": "Adaptive variable suspension"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "8 airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/NX/8887/1769081441968/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lexus",
+        "model": "NX",
+        "variant_name": "350h Luxury",
+        "pricing": {
+          "ex_showroom_min": 7126000,
+          "ex_showroom_max": 7126000
+        },
+        "powertrain": {
+          "fuel": "Petrol (Hybrid-electric assist)",
+          "transmission": "Automatic (E-CVT)"
+        },
+        "engine_specs": {
+          "displacement": "2487 cc",
+          "power": "187.74 bhp",
+          "torque": "239 Nm",
+          "mileage": "15 kmpl"
+        },
+        "dimensions": {
+          "seating": 5,
+          "boot": "520 L",
+          "ground_clearance": "195 mm",
+          "length": "4660 mm",
+          "width": "1865 mm",
+          "height": "1670 mm"
+        },
+        "key_features": [
+          {
+            "value": "Heads-up display"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "8 airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/NX/8887/1769081441968/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lexus",
+        "model": "NX",
+        "variant_name": "350h F-sport",
+        "pricing": {
+          "ex_showroom_min": 7340000,
+          "ex_showroom_max": 7340000
+        },
+        "powertrain": {
+          "fuel": "Petrol (Hybrid-electric assist)",
+          "transmission": "Automatic (E-CVT)"
+        },
+        "engine_specs": {
+          "displacement": "2487 cc",
+          "power": "187.74 bhp",
+          "torque": "239 Nm",
+          "mileage": "15 kmpl"
+        },
+        "dimensions": {
+          "seating": 5,
+          "boot": "520 L",
+          "ground_clearance": "195 mm",
+          "length": "4660 mm",
+          "width": "1865 mm",
+          "height": "1670 mm"
+        },
+        "key_features": [
+          {
+            "value": "Paddle shifters"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "8 airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/NX/8887/1769081441968/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lexus",
+        "model": "RX",
+        "variant_name": "350h Luxury Premium System",
+        "pricing": {
+          "ex_showroom_min": 9613000,
+          "ex_showroom_max": 9613000
+        },
+        "powertrain": {
+          "fuel": "Petrol (Hybrid)",
+          "transmission": "Automatic"
+        },
+        "engine_specs": {
+          "displacement": "2393 cc",
+          "power": "268 bhp",
+          "torque": "460 Nm",
+          "mileage": "15 kmpl"
+        },
+        "dimensions": {
+          "seating": 5,
+          "boot": "505 L",
+          "ground_clearance": "195 mm",
+          "length": "4890 mm",
+          "width": "1920 mm",
+          "height": "1695 mm"
+        },
+        "key_features": [
+          {
+            "value": "14-inch touchscreen (EMV)"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "10 airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/RX/11360/1769081565510/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lexus",
+        "model": "RX",
+        "variant_name": "500h F-SPORT Premium System",
+        "pricing": {
+          "ex_showroom_min": 11846000,
+          "ex_showroom_max": 11846000
+        },
+        "powertrain": {
+          "fuel": "Petrol (Hybrid)",
+          "transmission": "6-speed automatic"
+        },
+        "engine_specs": {
+          "displacement": "2393 cc",
+          "power": "268 bhp",
+          "torque": "460 Nm",
+          "mileage": "15 kmpl"
+        },
+        "dimensions": {
+          "seating": 5,
+          "boot": "505 L",
+          "ground_clearance": "195 mm",
+          "length": "4890 mm",
+          "width": "1920 mm",
+          "height": "1695 mm"
+        },
+        "key_features": [
+          {
+            "value": "F SPORT styling"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "10 airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/RX/11360/1769081565510/front-left-side-47.jpg"
+          }
+        ]
+      }
+    ]
+  }
+}

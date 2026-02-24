@@ -1,0 +1,1106 @@
+{
+  "mini": {
+    "models": [
+      {
+        "variant_name": "Cooper S STD",
+        "variant_name_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "ex_showroom_price": 4370000,
+        "ex_showroom_price_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "transmission": "Automatic (7-speed DCT)",
+        "transmission_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "engine_displacement_or_battery_capacity": "1998 cc",
+        "engine_displacement_or_battery_capacity_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "power": "201 bhp",
+        "power_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "torque": "300 Nm @ 1450-4500 rpm",
+        "torque_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "mileage_or_range": "15 kmpl",
+        "mileage_or_range_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "dimensions": {
+          "length": "3876 mm",
+          "length_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+          "width": "1744 mm",
+          "width_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+          "height": "1432 mm",
+          "height_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+        },
+        "key_features": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Power Windows Front",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "2 Airbags",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Day & Night Rear View Mirror",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Seat Belt Warning",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Door Ajar Warning",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Engine Immobilizer",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "ESC",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Rear Camera with Guided Lines",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Anti-Pinch Power Windows",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Speed Alert",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "HUD",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mini/Cooper-S/11777/1769679331815/front-left-side-47.jpg?tr=w-230",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          }
+        ]
+      },
+      {
+        "variant_name": "Cooper S Classic Pack",
+        "variant_name_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "ex_showroom_price": 4915000,
+        "ex_showroom_price_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "transmission": "Automatic (7-speed DCT)",
+        "transmission_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "engine_displacement_or_battery_capacity": "1998 cc",
+        "engine_displacement_or_battery_capacity_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "power": "201 bhp",
+        "power_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "torque": "300 Nm @ 1450-4500 rpm",
+        "torque_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "mileage_or_range": "15 kmpl",
+        "mileage_or_range_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "dimensions": {
+          "length": "3876 mm",
+          "length_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+          "width": "1744 mm",
+          "width_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+          "height": "1432 mm",
+          "height_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+        },
+        "key_features": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Power Windows Front",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "2 Airbags",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Day & Night Rear View Mirror",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Seat Belt Warning",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Door Ajar Warning",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Engine Immobilizer",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "ESC",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Rear Camera with Guided Lines",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Anti-Pinch Power Windows",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Speed Alert",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "HUD",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mini/Cooper-S/11777/1769679331815/front-left-side-47.jpg?tr=w-230",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          }
+        ]
+      },
+      {
+        "variant_name": "Cooper S Favoured Pack",
+        "variant_name_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "ex_showroom_price": 5200000,
+        "ex_showroom_price_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "transmission": "Automatic (7-speed DCT)",
+        "transmission_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "engine_displacement_or_battery_capacity": "1998 cc",
+        "engine_displacement_or_battery_capacity_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "power": "201 bhp",
+        "power_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "torque": "300 Nm @ 1450-4500 rpm",
+        "torque_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "mileage_or_range": "15 kmpl",
+        "mileage_or_range_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "dimensions": {
+          "length": "3876 mm",
+          "length_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+          "width": "1744 mm",
+          "width_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+          "height": "1432 mm",
+          "height_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+        },
+        "key_features": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Power Windows Front",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "2 Airbags",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Day & Night Rear View Mirror",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Seat Belt Warning",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Door Ajar Warning",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Engine Immobilizer",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "ESC",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Rear Camera with Guided Lines",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Anti-Pinch Power Windows",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Speed Alert",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "HUD",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mini/Cooper-S/11777/1769679331815/front-left-side-47.jpg?tr=w-230",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          }
+        ]
+      },
+      {
+        "variant_name": "Cooper S JCW Pack",
+        "variant_name_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "ex_showroom_price": 5440000,
+        "ex_showroom_price_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "transmission": "Automatic (7-speed DCT)",
+        "transmission_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "engine_displacement_or_battery_capacity": "1998 cc",
+        "engine_displacement_or_battery_capacity_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "power": "201 bhp",
+        "power_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "torque": "300 Nm @ 1450-4500 rpm",
+        "torque_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "mileage_or_range": "15 kmpl",
+        "mileage_or_range_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+        "dimensions": {
+          "length": "3876 mm",
+          "length_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+          "width": "1744 mm",
+          "width_citation": "https://www.cardekho.com/mini/cooper-s/specs",
+          "height": "1432 mm",
+          "height_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+        },
+        "key_features": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Power Windows Front",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "2 Airbags",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Day & Night Rear View Mirror",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Seat Belt Warning",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Door Ajar Warning",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Engine Immobilizer",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "ESC",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Rear Camera with Guided Lines",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Anti-Pinch Power Windows",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "Speed Alert",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          },
+          {
+            "value": "HUD",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mini/Cooper-S/11777/1769679331815/front-left-side-47.jpg?tr=w-230",
+            "value_citation": "https://www.cardekho.com/mini/cooper-s/specs"
+          }
+        ]
+      },
+      {
+        "variant_name": "Countryman JCW",
+        "variant_name_citation": "https://www.cardekho.com/mini/countryman/specs",
+        "ex_showroom_price": 6490000,
+        "ex_showroom_price_citation": "https://www.cardekho.com/mini/countryman/specs",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.cardekho.com/mini/countryman/specs",
+        "transmission": "Automatic",
+        "transmission_citation": "https://www.cardekho.com/mini/countryman/specs",
+        "engine_displacement_or_battery_capacity": "1998 cc",
+        "engine_displacement_or_battery_capacity_citation": "https://www.cardekho.com/mini/countryman/specs",
+        "power": "296 bhp",
+        "power_citation": "https://www.cardekho.com/mini/countryman/specs",
+        "torque": "400 Nm",
+        "torque_citation": "https://www.cardekho.com/mini/countryman/specs",
+        "dimensions": {
+          "length": "4299 mm",
+          "length_citation": "https://www.cardekho.com/mini/countryman/specs",
+          "width": "1822 mm",
+          "width_citation": "https://www.cardekho.com/mini/countryman/specs",
+          "height": "1557 mm",
+          "height_citation": "https://www.cardekho.com/mini/countryman/specs"
+        },
+        "key_features": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Engine Start/Stop Button",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Day & Night Rear View Mirror",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Seat Belt Warning",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Door Ajar Warning",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Engine Immobilizer",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "ESC",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Rear Camera with Guided Lines",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mini/Countryman/12992/1760438648158/front-left-side-47.jpg?tr=w-230",
+            "value_citation": "https://www.cardekho.com/mini/countryman/specs"
+          }
+        ]
+      },
+      {
+        "variant_name": "Countryman Electric S",
+        "variant_name_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+        "ex_showroom_price": 5490000,
+        "ex_showroom_price_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+        "transmission": "Automatic",
+        "transmission_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+        "engine_displacement_or_battery_capacity": "66.4 kWh",
+        "engine_displacement_or_battery_capacity_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+        "power": "313 bhp",
+        "power_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+        "torque": "494 Nm",
+        "torque_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+        "mileage_or_range": "462 km",
+        "mileage_or_range_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+        "dimensions": {
+          "length": "4445 mm",
+          "length_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+          "width": "2069 mm",
+          "width_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+          "height": "1635 mm",
+          "height_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+        },
+        "key_features": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Power Windows Front",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "2 Airbags",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Day & Night Rear View Mirror",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Seat Belt Warning",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Door Ajar Warning",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Engine Immobilizer",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "ESC",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Rear Camera with Guided Lines",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mini/Countryman-Electric/5191/1769679539585/front-left-side-47.jpg?tr=w-230",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          }
+        ]
+      },
+      {
+        "variant_name": "Countryman Electric Favoured Pack",
+        "variant_name_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+        "ex_showroom_price": 5995001,
+        "ex_showroom_price_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+        "transmission": "Automatic",
+        "transmission_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+        "engine_displacement_or_battery_capacity": "66.4 kWh",
+        "engine_displacement_or_battery_capacity_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+        "power": "313 bhp",
+        "power_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+        "torque": "494 Nm",
+        "torque_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+        "mileage_or_range": "462 km",
+        "mileage_or_range_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+        "dimensions": {
+          "length": "4445 mm",
+          "length_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+          "width": "2069 mm",
+          "width_citation": "https://www.cardekho.com/mini/countryman-electric/specs",
+          "height": "1635 mm",
+          "height_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+        },
+        "key_features": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Power Windows Front",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "2 Airbags",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Day & Night Rear View Mirror",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Seat Belt Warning",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Door Ajar Warning",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Engine Immobilizer",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "ESC",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Rear Camera with Guided Lines",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mini/Countryman-Electric/5191/1769679539585/front-left-side-47.jpg?tr=w-230",
+            "value_citation": "https://www.cardekho.com/mini/countryman-electric/specs"
+          }
+        ]
+      },
+      {
+        "variant_name": "Cooper Convertible S",
+        "variant_name_citation": "https://www.cardekho.com/mini/cooper-convertible/specs",
+        "ex_showroom_price": 5850000,
+        "ex_showroom_price_citation": "https://www.cardekho.com/mini/cooper-convertible/specs",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.cardekho.com/mini/cooper-convertible/specs",
+        "transmission": "Automatic",
+        "transmission_citation": "https://www.cardekho.com/mini/cooper-convertible/specs",
+        "engine_displacement_or_battery_capacity": "1998 cc",
+        "engine_displacement_or_battery_capacity_citation": "https://www.cardekho.com/mini/cooper-convertible/specs",
+        "power": "201 bhp",
+        "power_citation": "https://www.cardekho.com/mini/cooper-convertible/specs",
+        "torque": "300 Nm @ 1450-4500 rpm",
+        "torque_citation": "https://www.cardekho.com/mini/cooper-convertible/specs",
+        "dimensions": {
+          "length": "3821 mm",
+          "length_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+        },
+        "key_features": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          },
+          {
+            "value": "2 Airbags",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          },
+          {
+            "value": "Day & Night Rear View Mirror",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          },
+          {
+            "value": "Seat Belt Warning",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          },
+          {
+            "value": "Door Ajar Warning",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          },
+          {
+            "value": "Rear Camera with Guided Lines",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          },
+          {
+            "value": "Speed Alert",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          },
+          {
+            "value": "HUD",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mini/Cooper-Convertible/13122/1765541689610/front-left-side-47.jpg?tr=w-230",
+            "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
+          }
+        ]
+      }
+    ]
+  }
+}

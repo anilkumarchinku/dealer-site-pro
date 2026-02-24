@@ -183,11 +183,15 @@ export async function fetchCyeproVehicles(
     apiKey:  string,
     options: Partial<CyeproSearchBody> = {},
 ): Promise<CyeproSearchResponse | null> {
-    if (!apiKey) return null
+    if (!apiKey) {
+        console.warn('[Cyepro] No API key provided')
+        return null
+    }
 
     const body: CyeproSearchBody = { ...DEFAULT_SEARCH, ...options }
 
     try {
+        console.log('[Cyepro] Fetching vehicles...', { page: body.page, size: body.size })
         const res = await fetch(
             `${BASE_URL}/dynamicForms/search/vehicles/filterQueryApi`,
             {
@@ -200,21 +204,24 @@ export async function fetchCyeproVehicles(
         )
 
         if (res.status === 401) {
-            console.error('[Cyepro] Invalid API key')
+            console.error('[Cyepro] ❌ Invalid API key (401)')
             return null
         }
         if (res.status === 429) {
-            console.error('[Cyepro] Rate limit reached')
+            console.error('[Cyepro] ⚠️ Rate limit reached (429)')
             return null
         }
         if (!res.ok) {
-            console.error(`[Cyepro] Fetch vehicles failed: ${res.status}`)
+            const errorText = await res.text()
+            console.error(`[Cyepro] ❌ Fetch failed: ${res.status}`, errorText)
             return null
         }
 
-        return (await res.json()) as CyeproSearchResponse
+        const data = await res.json() as CyeproSearchResponse
+        console.log(`[Cyepro] ✅ Fetched ${data.vehicles.length} vehicles`)
+        return data
     } catch (err) {
-        console.error('[Cyepro] Network error:', err)
+        console.error('[Cyepro] ❌ Network error:', err instanceof Error ? err.message : err)
         return null
     }
 }

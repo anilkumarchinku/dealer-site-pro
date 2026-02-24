@@ -1,0 +1,105 @@
+{
+  "cardekho_cars": [
+    {
+      "make": "Bentley",
+      "model": "Bentayga",
+      "variant_name": "V8",
+      "ex_showroom_price_min": 50032967,
+      "ex_showroom_price_max": 50032967,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3956,
+      "power": 542,
+      "torque": 770,
+      "mileage": 7.6,
+      "dimensions_length": 5125,
+      "dimensions_width": 2222,
+      "dimensions_height": 1728,
+      "capacities_seating": 4,
+      "capacities_boot_space": 484,
+      "key_features": [
+        {
+          "value": "Heads-Up Display (HUD)"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Bentayga/7891/1770880450103/front-left-side-47.jpg"
+        }
+      ]
+    },
+    {
+      "make": "Bentley",
+      "model": "Flying Spur",
+      "variant_name": "V8",
+      "ex_showroom_price_min": 55018177,
+      "ex_showroom_price_max": 55018177,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3993,
+      "power": 500,
+      "torque": 660,
+      "mileage": 12.5,
+      "dimensions_length": 5316,
+      "dimensions_width": 2013,
+      "dimensions_height": 1484,
+      "capacities_seating": 4,
+      "capacities_boot_space": 467,
+      "ground_clearance": 110,
+      "key_features": [
+        {
+          "value": "Touchscreen Remote"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Flying-Spur/11205/1769061207122/front-left-side-47.jpg"
+        }
+      ]
+    },
+    {
+      "make": "Bentley",
+      "model": "Continental GT",
+      "variant_name": "Speed",
+      "ex_showroom_price_min": 64596706,
+      "ex_showroom_price_max": 64596706,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 5950,
+      "power": 650,
+      "torque": 900,
+      "mileage": 12.9,
+      "dimensions_length": 4807,
+      "dimensions_width": 2226,
+      "dimensions_height": 1401,
+      "capacities_seating": 4,
+      "capacities_boot_space": 358,
+      "ground_clearance": 152,
+      "key_features": [
+        {
+          "value": "Twin Turbo-Charged W12 engine"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "4 airbags"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Continental/10473/1769060132454/front-left-side-47.jpg"
+        }
+      ]
+    }
+  ]
+}

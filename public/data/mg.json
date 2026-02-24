@@ -1,0 +1,510 @@
+{
+  "mg": [
+    {
+      "make": "MG",
+      "model": "Astor",
+      "variant_name": "Sprint",
+      "ex_showroom_price_range": "9,78,999",
+      "default_hyderabad_on_road_price": "11,65,000",
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "drivetrain": "FWD",
+      "engine_displacement": "1498 cc",
+      "power": "108.49bhp",
+      "torque": "144Nm",
+      "mileage_range": "15.43 kmpl",
+      "dimensions": "4323 x 1809 x 1650 mm, Wheelbase: 2585 mm",
+      "seating_capacity": 5,
+      "boot_space": "488 L",
+      "ground_clearance": "190 mm",
+      "key_features": [
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Power Adjustable Exterior Rear View Mirror"
+        },
+        {
+          "value": "Touchscreen"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Rear Parking Sensors"
+        }
+      ]
+    },
+    {
+      "make": "MG",
+      "model": "Astor",
+      "variant_name": "Shine",
+      "ex_showroom_price_range": "11,34,000",
+      "default_hyderabad_on_road_price": "13,93,000",
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "engine_displacement": "1498 cc",
+      "power": "108.49bhp",
+      "torque": "144Nm",
+      "mileage_range": "15.43 kmpl",
+      "dimensions": "4323 x 1809 x 1650 mm",
+      "seating_capacity": 5,
+      "boot_space": "488 L",
+      "ground_clearance": "190 mm",
+      "key_features": [
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Alloy Wheels"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Airbags"
+        }
+      ]
+    },
+    {
+      "make": "MG",
+      "model": "Astor",
+      "variant_name": "Select",
+      "ex_showroom_price_range": "12,40,000",
+      "default_hyderabad_on_road_price": "15,22,000",
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "engine_displacement": "1498 cc",
+      "power": "108.49bhp",
+      "torque": "144Nm",
+      "mileage_range": "15.43 kmpl",
+      "seating_capacity": 5
+    },
+    {
+      "make": "MG",
+      "model": "Astor",
+      "variant_name": "Sharp Pro",
+      "ex_showroom_price_range": "13,37,000",
+      "default_hyderabad_on_road_price": "16,39,999",
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "engine_displacement": "1498 cc",
+      "power": "108.49bhp",
+      "torque": "144Nm",
+      "mileage_range": "15.43 kmpl",
+      "seating_capacity": 5
+    },
+    {
+      "make": "MG",
+      "model": "Astor",
+      "variant_name": "Select CVT",
+      "ex_showroom_price_range": "13,56,000",
+      "default_hyderabad_on_road_price": "16,63,000",
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": "1498 cc",
+      "power": "108.49bhp",
+      "torque": "144Nm",
+      "mileage_range": "14.82 kmpl",
+      "seating_capacity": 5
+    },
+    {
+      "make": "MG",
+      "model": "Astor",
+      "variant_name": "Sharp Pro CVT",
+      "ex_showroom_price_range": "14,52,000",
+      "default_hyderabad_on_road_price": "17,80,000",
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": "1498 cc",
+      "power": "108.49bhp",
+      "torque": "144Nm",
+      "mileage_range": "14.82 kmpl",
+      "seating_capacity": 5
+    },
+    {
+      "make": "MG",
+      "model": "Astor",
+      "variant_name": "Savvy Pro CVT",
+      "ex_showroom_price_range": "15,30,000",
+      "default_hyderabad_on_road_price": "18,75,000",
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": "1498 cc",
+      "power": "108.49bhp",
+      "torque": "144Nm",
+      "mileage_range": "14.82 kmpl",
+      "seating_capacity": 5
+    },
+    {
+      "make": "MG",
+      "model": "Astor",
+      "variant_name": "Savvy Pro Sangria CVT",
+      "ex_showroom_price_range": "15,50,000",
+      "default_hyderabad_on_road_price": "18,98,999",
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": "1498 cc",
+      "power": "108.49bhp",
+      "torque": "144Nm",
+      "mileage_range": "14.82 kmpl",
+      "seating_capacity": 5
+    },
+    {
+      "make": "MG",
+      "model": "Gloster",
+      "variant_name": "Sharp 4x2 7Str",
+      "ex_showroom_price_range": "38,33,000",
+      "default_hyderabad_on_road_price": "47,87,000",
+      "fuel_type": "Diesel",
+      "transmission": "8-Speed Automatic",
+      "drivetrain": "2WD",
+      "engine_displacement": "1996 cc",
+      "power": "158.79 bhp",
+      "torque": "373.5 Nm",
+      "mileage_range": "10 kmpl",
+      "dimensions": "4985 x 1926 x 1867 mm",
+      "seating_capacity": 7,
+      "boot_space": "343 Litres",
+      "ground_clearance": "210 mm",
+      "key_features": [
+        {
+          "value": "Sunroof"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Ventilated Seats"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ]
+    },
+    {
+      "make": "MG",
+      "model": "Gloster",
+      "variant_name": "Savvy 4x2 6Str",
+      "ex_showroom_price_range": "39,80,000",
+      "default_hyderabad_on_road_price": "49,69,000",
+      "fuel_type": "Diesel",
+      "drivetrain": "2WD",
+      "seating_capacity": 6
+    },
+    {
+      "make": "MG",
+      "model": "Gloster",
+      "variant_name": "Savvy 4x2 7Str",
+      "ex_showroom_price_range": "39,80,000",
+      "default_hyderabad_on_road_price": "49,69,000",
+      "fuel_type": "Diesel",
+      "drivetrain": "2WD",
+      "seating_capacity": 7
+    },
+    {
+      "make": "MG",
+      "model": "Gloster",
+      "variant_name": "Black Storm 4x2 6Str",
+      "ex_showroom_price_range": "40,46,000",
+      "default_hyderabad_on_road_price": "5,050,000",
+      "fuel_type": "Diesel",
+      "drivetrain": "2WD",
+      "seating_capacity": 6
+    },
+    {
+      "make": "MG",
+      "model": "Gloster",
+      "variant_name": "Black Storm 4x2 7Str",
+      "ex_showroom_price_range": "40,46,000",
+      "default_hyderabad_on_road_price": "5,050,000",
+      "fuel_type": "Diesel",
+      "drivetrain": "2WD",
+      "seating_capacity": 7
+    },
+    {
+      "make": "MG",
+      "model": "Gloster",
+      "variant_name": "Savvy 4x4 6Str",
+      "ex_showroom_price_range": "42,49,000",
+      "default_hyderabad_on_road_price": "5,301,000",
+      "fuel_type": "Diesel",
+      "drivetrain": "4WD",
+      "power": "212.55 bhp",
+      "torque": "478.5 Nm",
+      "seating_capacity": 6
+    },
+    {
+      "make": "MG",
+      "model": "Gloster",
+      "variant_name": "Savvy 4x4 7Str",
+      "ex_showroom_price_range": "42,49,000",
+      "default_hyderabad_on_road_price": "5,301,000",
+      "fuel_type": "Diesel",
+      "drivetrain": "4WD",
+      "power": "212.55 bhp",
+      "torque": "478.5 Nm",
+      "seating_capacity": 7
+    },
+    {
+      "make": "MG",
+      "model": "Gloster",
+      "variant_name": "Black Storm 4x4 6Str",
+      "ex_showroom_price_range": "43,16,000",
+      "default_hyderabad_on_road_price": "5,384,000",
+      "fuel_type": "Diesel",
+      "drivetrain": "4WD",
+      "power": "212.55 bhp",
+      "torque": "478.5 Nm",
+      "seating_capacity": 6
+    },
+    {
+      "make": "MG",
+      "model": "Gloster",
+      "variant_name": "Black Storm 4x4 7Str",
+      "ex_showroom_price_range": "43,16,000",
+      "default_hyderabad_on_road_price": "5,384,000",
+      "fuel_type": "Diesel",
+      "drivetrain": "4WD",
+      "power": "212.55 bhp",
+      "torque": "478.5 Nm",
+      "seating_capacity": 7
+    },
+    {
+      "make": "MG",
+      "model": "Hector",
+      "variant_name": "Style 5Str",
+      "ex_showroom_price_range": "11,99,000",
+      "default_hyderabad_on_road_price": "14,71,701",
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "drivetrain": "FWD",
+      "engine_displacement": "1451 cc",
+      "power": "141.04 bhp",
+      "torque": "250 Nm",
+      "mileage_range": "13.79 kmpl",
+      "dimensions": "4699 x 1835 x 1760 mm",
+      "seating_capacity": 5,
+      "boot_space": "587 Litres",
+      "ground_clearance": "192 mm",
+      "key_features": [
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Air Conditioner"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "2 Airbags"
+        },
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "EBD"
+        }
+      ]
+    },
+    {
+      "make": "MG",
+      "model": "Hector",
+      "variant_name": "Select Pro 5Str",
+      "ex_showroom_price_range": "13,99,000",
+      "default_hyderabad_on_road_price": "17,15,061",
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "seating_capacity": 5
+    },
+    {
+      "make": "MG",
+      "model": "Hector",
+      "variant_name": "Smart Pro 5Str",
+      "ex_showroom_price_range": "14,99,000",
+      "default_hyderabad_on_road_price": "18,36,742",
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "seating_capacity": 5
+    },
+    {
+      "make": "MG",
+      "model": "Hector",
+      "variant_name": "Smart Pro 5Str CVT",
+      "ex_showroom_price_range": "16,29,000",
+      "default_hyderabad_on_road_price": "19,94,926",
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (CVT)",
+      "seating_capacity": 5
+    },
+    {
+      "make": "MG",
+      "model": "Hector",
+      "variant_name": "Sharp Pro 5Str",
+      "ex_showroom_price_range": "16,79,000",
+      "default_hyderabad_on_road_price": "20,55,766",
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "seating_capacity": 5
+    },
+    {
+      "make": "MG",
+      "model": "Hector",
+      "variant_name": "Sharp Pro 5Str CVT",
+      "ex_showroom_price_range": "18,09,000",
+      "default_hyderabad_on_road_price": "22,13,950",
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (CVT)",
+      "seating_capacity": 5
+    },
+    {
+      "make": "MG",
+      "model": "Hector",
+      "variant_name": "Savvy Pro 5Str CVT",
+      "ex_showroom_price_range": "18,99,000",
+      "default_hyderabad_on_road_price": "23,23,463",
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (CVT)",
+      "seating_capacity": 5
+    },
+    {
+      "make": "MG",
+      "model": "Hector Plus",
+      "variant_name": "Sharp Pro 7-Str",
+      "ex_showroom_price_range": "17,29,000",
+      "default_hyderabad_on_road_price": "21,17,000 - 23,84,000",
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "engine_displacement": "1451 cc",
+      "power": "141.04 bhp",
+      "torque": "250 Nm",
+      "mileage_range": "13.79 kmpl",
+      "seating_capacity": 7,
+      "key_features": [
+        {
+          "value": "14-inch Touchscreen"
+        },
+        {
+          "value": "Ventilated Seats"
+        },
+        {
+          "value": "360 Camera"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ADAS"
+        }
+      ]
+    },
+    {
+      "make": "MG",
+      "model": "Hector Plus",
+      "variant_name": "Sharp Pro 7-Str CVT",
+      "ex_showroom_price_range": "18,59,000",
+      "default_hyderabad_on_road_price": "21,17,000 - 23,84,000",
+      "fuel_type": "Petrol",
+      "transmission": "CVT",
+      "seating_capacity": 7
+    },
+    {
+      "make": "MG",
+      "model": "Hector Plus",
+      "variant_name": "Savvy Pro 7-Str CVT",
+      "ex_showroom_price_range": "19,49,000",
+      "default_hyderabad_on_road_price": "21,17,000 - 23,84,000",
+      "fuel_type": "Petrol",
+      "transmission": "CVT",
+      "seating_capacity": 7
+    },
+    {
+      "make": "MG",
+      "model": "Windsor EV",
+      "variant_name": "Excite",
+      "ex_showroom_price_range": "13,99,800",
+      "default_hyderabad_on_road_price": "15,50,663",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "drivetrain": "FWD",
+      "battery_capacity_ev": "38 kWh",
+      "power": "134 bhp",
+      "torque": "200 Nm",
+      "mileage_range": "332 km",
+      "dimensions": "4295 x 2126 x 1677 mm",
+      "seating_capacity": 5,
+      "boot_space": "579 Litres",
+      "ground_clearance": "186 mm",
+      "key_features": [
+        {
+          "value": "LED Lighting"
+        },
+        {
+          "value": "10.1-inch touchscreen"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "TPMS"
+        }
+      ]
+    },
+    {
+      "make": "MG",
+      "model": "Windsor EV",
+      "variant_name": "Exclusive",
+      "ex_showroom_price_range": "15,52,900",
+      "default_hyderabad_on_road_price": "16,89,449",
+      "fuel_type": "Electric",
+      "battery_capacity_ev": "38 kWh",
+      "mileage_range": "332 km"
+    },
+    {
+      "make": "MG",
+      "model": "Windsor EV",
+      "variant_name": "Essence",
+      "ex_showroom_price_range": "16,52,900",
+      "default_hyderabad_on_road_price": "17,98,126",
+      "fuel_type": "Electric",
+      "battery_capacity_ev": "38 kWh",
+      "mileage_range": "332 km"
+    },
+    {
+      "make": "MG",
+      "model": "Windsor EV",
+      "variant_name": "Exclusive Pro",
+      "ex_showroom_price_range": "17,37,900",
+      "default_hyderabad_on_road_price": "18,86,717",
+      "fuel_type": "Electric",
+      "battery_capacity_ev": "52.9 kWh",
+      "mileage_range": "449 km"
+    },
+    {
+      "make": "MG",
+      "model": "Windsor EV",
+      "variant_name": "Essence Pro",
+      "ex_showroom_price_range": "18,49,900",
+      "default_hyderabad_on_road_price": "20,02,943",
+      "fuel_type": "Electric",
+      "battery_capacity_ev": "52.9 kWh",
+      "mileage_range": "449 km"
+    }
+  ]
+}

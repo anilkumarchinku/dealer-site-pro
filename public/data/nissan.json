@@ -1,0 +1,4596 @@
+{
+  "nissan": [
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Visia",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 561650,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 561650,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 668000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 668000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "mileage": 19.4,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Visia Plus",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 616000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 616000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 732000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 732000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "mileage": 19.4,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Visia AMT",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 620600,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 620600,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 737000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 737000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "transmission": "AMT",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "mileage": 19.7,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Visia CNG",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 633642,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 633642,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 752000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 752000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "CNG",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "mileage": 24,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Acenta",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 676500,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 676500,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 803000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 803000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "mileage": 19.4,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Visia Plus CNG",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 679379,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 679379,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 806000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 806000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "CNG",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "mileage": 24,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Acenta AMT",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 732000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 732000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 868000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 868000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "transmission": "AMT",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "mileage": 19.7,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Acenta CNG",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 738836,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 738836,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 876000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 876000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "CNG",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "mileage": 24,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "N Connecta",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 739500,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 739500,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 877000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 877000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "mileage": 19.4,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "KURO Edition",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 774500,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 774500,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 918000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 918000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "mileage": 19.4,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "N Connecta AMT",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 795000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 795000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 942000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 942000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "transmission": "AMT",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "mileage": 19.7,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "N Connecta CNG",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 801038,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 801038,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 949000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 949000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "CNG",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "mileage": 24,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "KURO Edition AMT",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 830000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 830000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 983000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 983000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "transmission": "AMT",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "mileage": 19.7,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Tekna",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 832500,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 832500,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 986000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 986000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "mileage": 19.4,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Tekna Plus",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 865500,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 865500,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 1025000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 1025000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "mileage": 19.4,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "N Connecta Turbo",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 870500,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 870500,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 1031000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 1031000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "power": 99,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "torque": 160,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "mileage": 19.9,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Tekna CNG",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 887937,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 887937,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 1051000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 1051000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "CNG",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "mileage": 24,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Tekna AMT",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 888000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 888000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 1051000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 1051000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "transmission": "AMT",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "mileage": 19.7,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "KURO Edition Turbo",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 905500,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 905500,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 1072000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 1072000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "power": 99,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "torque": 160,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "mileage": 19.9,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Tekna Plus CNG",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 919952,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 919952,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 1089000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 1089000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "CNG",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm",
+        "mileage": 24,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia_CNG.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Tekna Plus AMT",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 921000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 921000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 1090000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 1090000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "transmission": "AMT",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "power": 71,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm",
+        "mileage": 19.7,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Visia.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Acenta Turbo CVT",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 925000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 925000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 1120000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 1120000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "transmission": "CVT",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "power": 99,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "torque": 152,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "mileage": 17.9,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Tekna Turbo",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 950500,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 950500,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 1125000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 1125000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "power": 99,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "torque": 160,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "mileage": 19.9,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "N Connecta Turbo CVT",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 967400,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 967400,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 1145000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 1145000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "transmission": "CVT",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "power": 99,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "torque": 152,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "mileage": 17.9,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Tekna Plus Turbo",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 984400,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 984400,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 1165000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 1165000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "power": 99,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "torque": 160,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "mileage": 19.9,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "KURO Edition Turbo CVT",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 999400,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 999400,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 1182000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 1182000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "transmission": "CVT",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "power": 99,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "torque": 152,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "mileage": 17.9,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Tekna Turbo CVT",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 1062300,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 1062300,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 1299000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 1299000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "transmission": "CVT",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "power": 99,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "torque": 152,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "mileage": 17.9,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Magnite",
+      "model_citation": "https://www.cardekho.com/nissan/magnite",
+      "variant_name": "Tekna Plus Turbo CVT",
+      "variant_name_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 1096000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 1096000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 1340000,
+          "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
+          "max": 1340000,
+          "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "transmission": "CVT",
+        "transmission_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "power": 99,
+        "power_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "torque": 152,
+        "torque_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm",
+        "mileage": 17.9,
+        "mileage_citation": "https://www.cardekho.com/overview/Nissan_Magnite/Nissan_Magnite_Acenta_Turbo_CVT.htm"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "boot_space": 336,
+        "boot_space_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "ground_clearance": 205,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "length": 3994,
+        "length_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "width": 1758,
+        "width_citation": "https://www.cardekho.com/nissan/magnite/specs",
+        "height": 1572,
+        "height_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Driver Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Passenger Airbag",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Multi-function Steering Wheel",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Engine Start-Stop Button",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Brake Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Central Locking",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Child Safety Locks",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Anti-Theft Alarm",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Traction Control",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "Hill Assist",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          },
+          {
+            "value": "360 View Camera",
+            "value_citation": "https://www.cardekho.com/nissan/magnite/specs"
+          }
+        ],
+        "ncap_rating": "5 Star",
+        "ncap_rating_citation": "https://www.cardekho.com/nissan/magnite/specs"
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Nissan/Magnite/11793/1760004620755/side-view-(left)-90.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carinteriorimages/930x620/Nissan/Magnite/11793/1760004175324/dashboard-59.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
+        }
+      ]
+    }
+  ]
+}

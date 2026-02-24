@@ -1,0 +1,326 @@
+{
+  "lamborghini": {
+    "models": [
+      {
+        "make": "Lamborghini",
+        "model": "Revuelto",
+        "variant_name": "LB 744",
+        "pricing": {
+          "ex_showroom_min": 88900001,
+          "ex_showroom_max": 88900001
+        },
+        "powertrain": {
+          "fuel": "Petrol (Hybrid)",
+          "transmission": "Automatic 8-Speed DCT"
+        },
+        "engine_performance": {
+          "displacement": "6498 cc",
+          "power": "1001.11 bhp @ 9250 rpm",
+          "torque": "725 Nm @ 6750 rpm"
+        },
+        "dimensions": {
+          "seating": 2,
+          "boot": "158 L",
+          "ground_clearance": "107 mm",
+          "length_width_height": "4947 x 2266 x 1160 mm"
+        },
+        "features": {
+          "key_features": [
+            {
+              "value": "Multi-function steering wheel"
+            },
+            {
+              "value": "Touchscreen"
+            },
+            {
+              "value": "Automatic climate control"
+            },
+            {
+              "value": "Engine start/stop button"
+            },
+            {
+              "value": "Alloy wheels"
+            }
+          ],
+          "safety_features": [
+            {
+              "value": "ABS"
+            },
+            {
+              "value": "Brake assist"
+            },
+            {
+              "value": "5 airbags"
+            },
+            {
+              "value": "Traction control"
+            },
+            {
+              "value": "TPMS"
+            },
+            {
+              "value": "ESC"
+            },
+            {
+              "value": "Rear camera with guided lines"
+            }
+          ]
+        },
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lamborghini/Revuelto/9770/1769059148249/front-left-side-47.jpg?tr=w-300"
+          }
+        ]
+      },
+      {
+        "make": "Lamborghini",
+        "model": "Huracan EVO",
+        "variant_name": "Spyder",
+        "pricing": {
+          "ex_showroom_min": 40000000,
+          "ex_showroom_max": 40000000
+        },
+        "powertrain": {
+          "fuel": "Petrol",
+          "transmission": "Automatic (7-Speed DCT)"
+        },
+        "engine_performance": {
+          "displacement": "5204 cc",
+          "power": "630.3 bhp @ 8000 rpm",
+          "torque": "600 Nm @ 6500 rpm",
+          "mileage": "5.9 kmpl (city)"
+        },
+        "dimensions": {
+          "seating": 2,
+          "boot": "150 L",
+          "ground_clearance": "135 mm",
+          "length_width_height": "4520 x 1933 x 1180 mm"
+        },
+        "features": {
+          "key_features": [
+            {
+              "value": "8.4” HMI Touchscreen"
+            },
+            {
+              "value": "Carbon-ceramic brakes"
+            },
+            {
+              "value": "Paddle shifters"
+            },
+            {
+              "value": "Automatic climate control"
+            }
+          ],
+          "safety_features": [
+            {
+              "value": "6 airbags"
+            },
+            {
+              "value": "ABS"
+            },
+            {
+              "value": "Brake Assist"
+            },
+            {
+              "value": "360° camera"
+            }
+          ]
+        },
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lamborghini/Huracan-EVO/10643/1769680298561/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lamborghini",
+        "model": "Huracan EVO",
+        "variant_name": "Tecnica",
+        "pricing": {
+          "ex_showroom_min": 40400000,
+          "ex_showroom_max": 40400000
+        },
+        "powertrain": {
+          "fuel": "Petrol",
+          "transmission": "Automatic"
+        },
+        "engine_performance": {
+          "displacement": "5204 cc",
+          "power": "630.28 bhp @ 8000 rpm",
+          "torque": "565 Nm @ 6500 rpm",
+          "mileage": "5.9 kmpl (city)"
+        },
+        "dimensions": {
+          "seating": 2,
+          "boot": "150 L",
+          "ground_clearance": "135 mm",
+          "length_width_height": "4567 x 1933 x 1165 mm"
+        },
+        "features": {
+          "key_features": [
+            {
+              "value": "Multi-function Steering Wheel"
+            },
+            {
+              "value": "Touchscreen"
+            },
+            {
+              "value": "Automatic Climate Control"
+            },
+            {
+              "value": "ABS"
+            },
+            {
+              "value": "Alloy Wheels"
+            }
+          ],
+          "safety_features": [
+            {
+              "value": "6 Airbags"
+            },
+            {
+              "value": "ABS"
+            },
+            {
+              "value": "ESC"
+            },
+            {
+              "value": "TPMS"
+            }
+          ]
+        },
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lamborghini/Huracan-EVO/10643/1769680298561/front-left-side-47.jpg?tr=w-300"
+          }
+        ]
+      },
+      {
+        "make": "Lamborghini",
+        "model": "Huracan EVO",
+        "variant_name": "Sterrato",
+        "pricing": {
+          "ex_showroom_min": 46100000,
+          "ex_showroom_max": 46100000
+        },
+        "powertrain": {
+          "fuel": "Petrol",
+          "transmission": "Automatic"
+        },
+        "engine_performance": {
+          "displacement": "5204 cc",
+          "power": "602.11 bhp @ 8000 rpm",
+          "torque": "560 Nm @ 6500 rpm",
+          "mileage": "7.3 kmpl"
+        },
+        "dimensions": {
+          "seating": 2,
+          "boot": "150 L",
+          "ground_clearance": "135 mm",
+          "length_width_height": "4549 x 2236 x 1220 mm"
+        },
+        "features": {
+          "key_features": [
+            {
+              "value": "Magnetorheological shock absorbers"
+            },
+            {
+              "value": "AWD with Haldex system"
+            },
+            {
+              "value": "Carbon-fiber/aluminium chassis"
+            },
+            {
+              "value": "7-speed LDF DCT"
+            }
+          ],
+          "safety_features": [
+            {
+              "value": "6 airbags"
+            },
+            {
+              "value": "ESC"
+            },
+            {
+              "value": "TPMS"
+            },
+            {
+              "value": "360° view camera"
+            },
+            {
+              "value": "HUD"
+            }
+          ]
+        },
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lamborghini/Huracan-EVO/10643/1769680298561/front-left-side-47.jpg?tr=w-300"
+          }
+        ]
+      },
+      {
+        "make": "Lamborghini",
+        "model": "Huracan EVO",
+        "variant_name": "STO",
+        "pricing": {
+          "ex_showroom_min": 49900000,
+          "ex_showroom_max": 49900000
+        },
+        "powertrain": {
+          "fuel": "Petrol",
+          "transmission": "Automatic (7-speed LDF DCT)"
+        },
+        "engine_performance": {
+          "displacement": "5204 cc",
+          "power": "630.28 bhp @ 8000 rpm",
+          "torque": "565 Nm @ 6500 rpm",
+          "mileage": "5.9 kmpl (city)"
+        },
+        "dimensions": {
+          "seating": 2,
+          "boot": "150 L",
+          "ground_clearance": "135 mm",
+          "length_width_height": "4549 x 2236 x 1220 mm"
+        },
+        "features": {
+          "key_features": [
+            {
+              "value": "8.4-inch HMI capacitive touchscreen"
+            },
+            {
+              "value": "Brake cooling system"
+            },
+            {
+              "value": "Carbon-fiber interior trims"
+            },
+            {
+              "value": "Paddle shifters"
+            }
+          ],
+          "safety_features": [
+            {
+              "value": "6-airbag safety pack"
+            },
+            {
+              "value": "ESC"
+            },
+            {
+              "value": "TPMS"
+            },
+            {
+              "value": "360° view camera"
+            },
+            {
+              "value": "Blind-spot monitor"
+            }
+          ]
+        },
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lamborghini/Huracan-EVO/10643/1769680298561/front-left-side-47.jpg?tr=w-300"
+          }
+        ]
+      }
+    ]
+  }
+}

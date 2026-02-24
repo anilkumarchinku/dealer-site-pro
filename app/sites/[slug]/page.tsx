@@ -334,15 +334,30 @@ export default async function SitePage({ params }: SitePageProps) {
 
     } else {
         // USED-CAR site — used-only dealer OR hybrid "-used" sub-site
+        console.log('[SitePage] Used-car site detected', {
+            slug,
+            hasCyeproKey: !!cyepro_api_key,
+            dbVehicleCount: vehicles.length,
+        })
+
         const cyeproCars = cyepro_api_key
             ? await fetchCyeproInventoryAsCars(cyepro_api_key, { size: 30 })
             : []
+
+        console.log('[SitePage] Cyepro fetch result:', {
+            cyeproCarsCount: cyeproCars.length,
+            fallbackDbVehicleCount: vehicles.length,
+        })
+
         if (cyeproCars.length > 0) {
             cars = cyeproCars
+            console.log('[SitePage] ✅ Using Cyepro inventory')
         } else if (vehicles.length > 0) {
             cars = dbVehiclesToCars(vehicles)
+            console.log('[SitePage] ✅ Using local database vehicles')
         } else {
             cars = []
+            console.log('[SitePage] ⚠️ No cars found from either source')
         }
         templateSellsNew  = false
         templateSellsUsed = true

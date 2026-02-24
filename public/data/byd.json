@@ -1,0 +1,102 @@
+{
+  "cardekho_variants": [
+    {
+      "make": "BYD",
+      "model": "Sealion 7",
+      "variant_name": "Premium",
+      "ex_showroom_price_min_inr": 4890000,
+      "ex_showroom_price_max_inr": 4890000,
+      "hyderabad_on_road_price_inr": 5147000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "battery_capacity_kwh": 82.56,
+      "range_km": 567,
+      "power_bhp": 308,
+      "torque_nm": 380,
+      "seating_capacity": 5,
+      "boot_space_l": 500,
+      "ground_clearance_mm": 0,
+      "length_mm": 4830,
+      "width_mm": 1925,
+      "height_mm": 1620,
+      "key_features": [
+        {
+          "value": "Digital Instrument Cluster"
+        },
+        {
+          "value": "Wireless Charging"
+        },
+        {
+          "value": "Rear Camera"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "11 Airbags"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BYD/Sealion-7/12273/1768892259667/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2025
+    },
+    {
+      "make": "BYD",
+      "model": "Sealion 7",
+      "variant_name": "Performance",
+      "ex_showroom_price_min_inr": 5490000,
+      "ex_showroom_price_max_inr": 5490000,
+      "hyderabad_on_road_price_inr": 5776000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "battery_capacity_kwh": 82.56,
+      "range_km": 542,
+      "power_bhp": 523,
+      "torque_nm": 690,
+      "seating_capacity": 5,
+      "boot_space_l": 500,
+      "ground_clearance_mm": 163,
+      "length_mm": 4830,
+      "width_mm": 1925,
+      "height_mm": 1620,
+      "key_features": [
+        {
+          "value": "Heads Up Display"
+        },
+        {
+          "value": "360 Degree Camera"
+        },
+        {
+          "value": "Active Noise Cancellation"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "11 Airbags"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BYD/Sealion-7/12273/1768892259667/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2025
+    }
+  ]
+}

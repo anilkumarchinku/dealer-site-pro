@@ -1,0 +1,522 @@
+{
+  "honda": {
+    "models": [
+      {
+        "model": "Amaze",
+        "variants": [
+          {
+            "variant_name": "V",
+            "ex_showroom_price_min_inr": 747790,
+            "hyderabad_on_road_price_inr": 860000,
+            "fuel_type": "Petrol",
+            "transmission": "Manual",
+            "engine_displacement_cc": 1199,
+            "power_bhp": 89,
+            "torque_nm": 110,
+            "mileage_kmpl": 18.65,
+            "seating_capacity": 5,
+            "boot_space_l": 416,
+            "ground_clearance_mm": 172,
+            "length_mm": 3995,
+            "width_mm": 1733,
+            "height_mm": 1500,
+            "key_features": [
+              {
+                "value": "8-inch touchscreen with wireless Android Auto & Apple CarPlay"
+              },
+              {
+                "value": "7-inch digital driver’s display"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              },
+              {
+                "value": "ABS with EBD"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/Amaze/12185/1755764679476/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2024
+          },
+          {
+            "variant_name": "VX",
+            "ex_showroom_price_min_inr": 848390,
+            "hyderabad_on_road_price_inr": 972000,
+            "fuel_type": "Petrol",
+            "transmission": "Manual",
+            "engine_displacement_cc": 1199,
+            "power_bhp": 89,
+            "torque_nm": 110,
+            "mileage_kmpl": 18.65,
+            "seating_capacity": 5,
+            "boot_space_l": 416,
+            "ground_clearance_mm": 172,
+            "length_mm": 3995,
+            "width_mm": 1733,
+            "height_mm": 1500,
+            "key_features": [
+              {
+                "value": "8-inch touchscreen with wireless Android Auto & Apple CarPlay"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/Amaze/12185/1755764679476/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2024
+          },
+          {
+            "variant_name": "V CVT",
+            "ex_showroom_price_min_inr": 862090,
+            "hyderabad_on_road_price_inr": 987000,
+            "fuel_type": "Petrol",
+            "transmission": "Automatic",
+            "engine_displacement_cc": 1199,
+            "power_bhp": 89,
+            "torque_nm": 110,
+            "mileage_kmpl": 19.46,
+            "seating_capacity": 5,
+            "boot_space_l": 416,
+            "ground_clearance_mm": 172,
+            "length_mm": 3995,
+            "width_mm": 1733,
+            "height_mm": 1500,
+            "key_features": [
+              {
+                "value": "8-inch touchscreen with wireless Android Auto & Apple CarPlay"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/Amaze/12185/1755764679476/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2024
+          },
+          {
+            "variant_name": "VX CVT",
+            "ex_showroom_price_min_inr": 921590,
+            "hyderabad_on_road_price_inr": 1053000,
+            "fuel_type": "Petrol",
+            "transmission": "Automatic",
+            "engine_displacement_cc": 1199,
+            "power_bhp": 89,
+            "torque_nm": 110,
+            "mileage_kmpl": 19.46,
+            "seating_capacity": 5,
+            "boot_space_l": 416,
+            "ground_clearance_mm": 172,
+            "length_mm": 3995,
+            "width_mm": 1733,
+            "height_mm": 1500,
+            "key_features": [
+              {
+                "value": "8-inch touchscreen with wireless Android Auto & Apple CarPlay"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/Amaze/12185/1755764679476/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2024
+          },
+          {
+            "variant_name": "ZX",
+            "ex_showroom_price_min_inr": 921590,
+            "hyderabad_on_road_price_inr": 1053000,
+            "fuel_type": "Petrol",
+            "transmission": "Manual",
+            "engine_displacement_cc": 1199,
+            "power_bhp": 89,
+            "torque_nm": 110,
+            "mileage_kmpl": 18.65,
+            "seating_capacity": 5,
+            "boot_space_l": 416,
+            "ground_clearance_mm": 172,
+            "length_mm": 3995,
+            "width_mm": 1733,
+            "height_mm": 1500,
+            "key_features": [
+              {
+                "value": "8-inch touchscreen with wireless Android Auto & Apple CarPlay"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/Amaze/12185/1755764679476/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2024
+          },
+          {
+            "variant_name": "ZX CVT",
+            "ex_showroom_price_min_inr": 999900,
+            "hyderabad_on_road_price_inr": 1140000,
+            "fuel_type": "Petrol",
+            "transmission": "Automatic",
+            "engine_displacement_cc": 1199,
+            "power_bhp": 89,
+            "torque_nm": 110,
+            "mileage_kmpl": 19.46,
+            "seating_capacity": 5,
+            "boot_space_l": 416,
+            "ground_clearance_mm": 172,
+            "length_mm": 3995,
+            "width_mm": 1733,
+            "height_mm": 1500,
+            "key_features": [
+              {
+                "value": "8-inch touchscreen with wireless Android Auto & Apple CarPlay"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/Amaze/12185/1755764679476/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2024
+          }
+        ]
+      },
+      {
+        "model": "City",
+        "variants": [
+          {
+            "variant_name": "SV",
+            "ex_showroom_price_min_inr": 1195300,
+            "hyderabad_on_road_price_inr": 1379000,
+            "fuel_type": "Petrol",
+            "transmission": "Manual",
+            "engine_displacement_cc": 1498,
+            "power_bhp": 119.35,
+            "torque_nm": 145,
+            "mileage_kmpl": 17.8,
+            "seating_capacity": 5,
+            "boot_space_l": 506,
+            "ground_clearance_mm": 165,
+            "length_mm": 4583,
+            "width_mm": 1748,
+            "height_mm": 1489,
+            "key_features": [
+              {
+                "value": "8-inch touchscreen"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/City/12093/1755764990493/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2023
+          },
+          {
+            "variant_name": "V",
+            "ex_showroom_price_min_inr": 1269500,
+            "hyderabad_on_road_price_inr": 1463000,
+            "fuel_type": "Petrol",
+            "transmission": "Manual",
+            "engine_displacement_cc": 1498,
+            "power_bhp": 119.35,
+            "torque_nm": 145,
+            "mileage_kmpl": 17.8,
+            "seating_capacity": 5,
+            "boot_space_l": 506,
+            "ground_clearance_mm": 165,
+            "length_mm": 4583,
+            "width_mm": 1748,
+            "height_mm": 1489,
+            "key_features": [
+              {
+                "value": "8-inch touchscreen"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/City/12093/1755764990493/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2023
+          },
+          {
+            "variant_name": "VX",
+            "ex_showroom_price_min_inr": 1372800,
+            "hyderabad_on_road_price_inr": 1580000,
+            "fuel_type": "Petrol",
+            "transmission": "Manual",
+            "engine_displacement_cc": 1498,
+            "power_bhp": 119.35,
+            "torque_nm": 145,
+            "mileage_kmpl": 17.8,
+            "seating_capacity": 5,
+            "boot_space_l": 506,
+            "ground_clearance_mm": 165,
+            "length_mm": 4583,
+            "width_mm": 1748,
+            "height_mm": 1489,
+            "key_features": [
+              {
+                "value": "8-inch touchscreen"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/City/12093/1755764990493/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2023
+          },
+          {
+            "variant_name": "V CVT",
+            "ex_showroom_price_min_inr": 1390200,
+            "hyderabad_on_road_price_inr": 1600000,
+            "fuel_type": "Petrol",
+            "transmission": "Automatic",
+            "engine_displacement_cc": 1498,
+            "power_bhp": 119.35,
+            "torque_nm": 145,
+            "mileage_kmpl": 18.4,
+            "seating_capacity": 5,
+            "boot_space_l": 506,
+            "ground_clearance_mm": 165,
+            "length_mm": 4583,
+            "width_mm": 1748,
+            "height_mm": 1489,
+            "key_features": [
+              {
+                "value": "8-inch touchscreen"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/City/12093/1755764990493/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2023
+          },
+          {
+            "variant_name": "Sport",
+            "ex_showroom_price_min_inr": 1437500,
+            "hyderabad_on_road_price_inr": 1653000,
+            "fuel_type": "Petrol",
+            "transmission": "Automatic",
+            "engine_displacement_cc": 1498,
+            "power_bhp": 119.35,
+            "torque_nm": 145,
+            "mileage_kmpl": 18.4,
+            "seating_capacity": 5,
+            "boot_space_l": 506,
+            "ground_clearance_mm": 165,
+            "length_mm": 4583,
+            "width_mm": 1748,
+            "height_mm": 1489,
+            "key_features": [
+              {
+                "value": "8-inch touchscreen"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/City/12093/1755764990493/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2023
+          },
+          {
+            "variant_name": "ZX",
+            "ex_showroom_price_min_inr": 1486800,
+            "hyderabad_on_road_price_inr": 1709000,
+            "fuel_type": "Petrol",
+            "transmission": "Manual",
+            "engine_displacement_cc": 1498,
+            "power_bhp": 119.35,
+            "torque_nm": 145,
+            "mileage_kmpl": 17.8,
+            "seating_capacity": 5,
+            "boot_space_l": 506,
+            "ground_clearance_mm": 165,
+            "length_mm": 4583,
+            "width_mm": 1748,
+            "height_mm": 1489,
+            "key_features": [
+              {
+                "value": "8-inch touchscreen"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/City/12093/1755764990493/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2023
+          },
+          {
+            "variant_name": "VX CVT",
+            "ex_showroom_price_min_inr": 1493500,
+            "hyderabad_on_road_price_inr": 1717000,
+            "fuel_type": "Petrol",
+            "transmission": "Automatic",
+            "engine_displacement_cc": 1498,
+            "power_bhp": 119.35,
+            "torque_nm": 145,
+            "mileage_kmpl": 18.4,
+            "seating_capacity": 5,
+            "boot_space_l": 506,
+            "ground_clearance_mm": 165,
+            "length_mm": 4583,
+            "width_mm": 1748,
+            "height_mm": 1489,
+            "key_features": [
+              {
+                "value": "8-inch touchscreen"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/City/12093/1755764990493/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2023
+          },
+          {
+            "variant_name": "ZX CVT",
+            "ex_showroom_price_min_inr": 1607400,
+            "hyderabad_on_road_price_inr": 1845000,
+            "fuel_type": "Petrol",
+            "transmission": "Automatic",
+            "engine_displacement_cc": 1498,
+            "power_bhp": 119.35,
+            "torque_nm": 145,
+            "mileage_kmpl": 18.4,
+            "seating_capacity": 5,
+            "boot_space_l": 506,
+            "ground_clearance_mm": 165,
+            "length_mm": 4583,
+            "width_mm": 1748,
+            "height_mm": 1489,
+            "key_features": [
+              {
+                "value": "8-inch touchscreen"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/City/12093/1755764990493/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2023
+          }
+        ]
+      },
+      {
+        "model": "City Hybrid",
+        "variants": [
+          {
+            "variant_name": "ZX CVT",
+            "ex_showroom_price_min_inr": 1999900,
+            "hyderabad_on_road_price_inr": 2308907,
+            "fuel_type": "Petrol",
+            "transmission": "Automatic",
+            "engine_displacement_cc": 1498,
+            "power_bhp": 96.55,
+            "torque_nm": 127,
+            "mileage_kmpl": 27.13,
+            "seating_capacity": 5,
+            "boot_space_l": 410,
+            "ground_clearance_mm": 165,
+            "length_mm": 4583,
+            "width_mm": 1748,
+            "height_mm": 1489,
+            "key_features": [
+              {
+                "value": "8-inch touchscreen with wireless Android Auto & Apple CarPlay"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Honda/City-Hybrid/12091/1762413619363/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2022
+          }
+        ]
+      }
+    ]
+  }
+}

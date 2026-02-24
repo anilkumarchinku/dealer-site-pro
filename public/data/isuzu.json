@@ -1,0 +1,380 @@
+{
+  "isuzu": [
+    {
+      "variant_name": "V-Cross 4x2 Z AT",
+      "ex_showroom_price_min_inr": 2426580,
+      "ex_showroom_price_max_inr": 2426580,
+      "hyderabad_on_road_price_inr": 3010427,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "drivetrain": "4x2",
+      "engine_displacement_cc": 1898,
+      "power_bhp": 160.92,
+      "torque_nm": 360,
+      "mileage_kmpl": 12.4,
+      "seating_capacity": 5,
+      "length_mm": 5332,
+      "width_mm": 1880,
+      "height_mm": 1855,
+      "key_features": [
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Automatic Climate Control"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/V-Cross/9891/1768897857216/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    {
+      "variant_name": "V-Cross 4x4 Z",
+      "ex_showroom_price_min_inr": 2498260,
+      "ex_showroom_price_max_inr": 2498260,
+      "hyderabad_on_road_price_inr": 3098490,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "drivetrain": "4x4",
+      "engine_displacement_cc": 1898,
+      "power_bhp": 160.92,
+      "torque_nm": 360,
+      "mileage_kmpl": 12.4,
+      "seating_capacity": 5,
+      "length_mm": 5332,
+      "width_mm": 1880,
+      "height_mm": 1855,
+      "key_features": [
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Automatic Climate Control"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/V-Cross/9891/1768897857216/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    {
+      "variant_name": "V-Cross 4x4 Z Prestige",
+      "ex_showroom_price_min_inr": 2605590,
+      "ex_showroom_price_max_inr": 2605590,
+      "hyderabad_on_road_price_inr": 3230352,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "drivetrain": "4x4",
+      "engine_displacement_cc": 1898,
+      "power_bhp": 160.92,
+      "torque_nm": 360,
+      "mileage_kmpl": 12.4,
+      "seating_capacity": 5,
+      "length_mm": 5332,
+      "width_mm": 1880,
+      "height_mm": 1855,
+      "key_features": [
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Automatic Climate Control"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/V-Cross/9891/1768897857216/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    {
+      "variant_name": "V-Cross 4x4 Z Prestige AT",
+      "ex_showroom_price_min_inr": 2936640,
+      "ex_showroom_price_max_inr": 2936640,
+      "hyderabad_on_road_price_inr": 3637068,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "drivetrain": "4x4",
+      "engine_displacement_cc": 1898,
+      "power_bhp": 160.92,
+      "torque_nm": 360,
+      "mileage_kmpl": 12.4,
+      "seating_capacity": 5,
+      "length_mm": 5332,
+      "width_mm": 1880,
+      "height_mm": 1855,
+      "key_features": [
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Automatic Climate Control"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/V-Cross/9891/1768897857216/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    {
+      "variant_name": "Hi-Lander 4x2 MT",
+      "ex_showroom_price_min_inr": 2034580,
+      "ex_showroom_price_max_inr": 2034580,
+      "hyderabad_on_road_price_inr": 2528830,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "drivetrain": "4x2",
+      "engine_displacement_cc": 1898,
+      "power_bhp": 160.92,
+      "torque_nm": 360,
+      "mileage_kmpl": 12.4,
+      "seating_capacity": 5,
+      "ground_clearance_mm": 205,
+      "length_mm": 5295,
+      "width_mm": 1860,
+      "height_mm": 1785,
+      "key_features": [
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Automatic Climate Control"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "2 Airbags"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/Hi-Lander/9888/1768896503880/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    {
+      "variant_name": "D-Max CBC HR 2.0",
+      "ex_showroom_price_min_inr": 1050060,
+      "ex_showroom_price_max_inr": 1050060,
+      "hyderabad_on_road_price_inr": 1308786,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "drivetrain": "4x2",
+      "engine_displacement_cc": 2499,
+      "power_bhp": 77.77,
+      "torque_nm": 176,
+      "mileage_kmpl": 12,
+      "seating_capacity": 2,
+      "boot_space_l": 1495,
+      "ground_clearance_mm": 220,
+      "length_mm": 5375,
+      "width_mm": 1860,
+      "height_mm": 1800,
+      "key_features": [
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Air Conditioner"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "1 Airbag"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/D-Max/9427/1768892642798/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    {
+      "variant_name": "D-Max Flat Deck HR",
+      "ex_showroom_price_min_inr": 1190270,
+      "ex_showroom_price_max_inr": 1190270,
+      "hyderabad_on_road_price_inr": 1479639,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "drivetrain": "4x2",
+      "engine_displacement_cc": 2499,
+      "power_bhp": 77.77,
+      "torque_nm": 176,
+      "mileage_kmpl": 12,
+      "seating_capacity": 2,
+      "boot_space_l": 1495,
+      "ground_clearance_mm": 220,
+      "length_mm": 5375,
+      "width_mm": 1860,
+      "height_mm": 1800,
+      "key_features": [
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Air Conditioner"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "1 Airbag"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/D-Max/9427/1768892642798/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    {
+      "variant_name": "D-Max Flat Deck HR 2.0",
+      "ex_showroom_price_min_inr": 1200010,
+      "ex_showroom_price_max_inr": 1200010,
+      "hyderabad_on_road_price_inr": 1491509,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "drivetrain": "4x2",
+      "engine_displacement_cc": 2499,
+      "power_bhp": 77.77,
+      "torque_nm": 176,
+      "mileage_kmpl": 12,
+      "seating_capacity": 2,
+      "boot_space_l": 1495,
+      "ground_clearance_mm": 220,
+      "length_mm": 5375,
+      "width_mm": 1860,
+      "height_mm": 1800,
+      "key_features": [
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Air Conditioner"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "1 Airbag"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/D-Max/9427/1768892642798/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    {
+      "variant_name": "D-Max Flat Deck HR AC 1.2",
+      "ex_showroom_price_min_inr": 1227150,
+      "ex_showroom_price_max_inr": 1227150,
+      "hyderabad_on_road_price_inr": 1524581,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "drivetrain": "4x2",
+      "engine_displacement_cc": 2499,
+      "power_bhp": 77.77,
+      "torque_nm": 176,
+      "mileage_kmpl": 12,
+      "seating_capacity": 2,
+      "boot_space_l": 1495,
+      "ground_clearance_mm": 220,
+      "length_mm": 5375,
+      "width_mm": 1860,
+      "height_mm": 1800,
+      "key_features": [
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Air Conditioner"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "1 Airbag"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/D-Max/9427/1768892642798/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    {
+      "variant_name": "D-Max Flat Deck HR AC 2.0",
+      "ex_showroom_price_min_inr": 1250390,
+      "ex_showroom_price_max_inr": 1250390,
+      "hyderabad_on_road_price_inr": 1552900,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "drivetrain": "4x2",
+      "engine_displacement_cc": 2499,
+      "power_bhp": 77.77,
+      "torque_nm": 176,
+      "mileage_kmpl": 12,
+      "seating_capacity": 2,
+      "boot_space_l": 1495,
+      "ground_clearance_mm": 220,
+      "length_mm": 5375,
+      "width_mm": 1860,
+      "height_mm": 1800,
+      "key_features": [
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Air Conditioner"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "1 Airbag"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/D-Max/9427/1768892642798/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    }
+  ]
+}

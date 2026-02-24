@@ -1,0 +1,638 @@
+{
+  "0": {
+    "make": "Citroën",
+    "model": "C3",
+    "variant_name": "Live",
+    "ex_showroom_price_min_inr": 495000,
+    "ex_showroom_price_max_inr": 495000,
+    "hyderabad_on_road_price_inr": 611622,
+    "fuel_type": "Petrol",
+    "transmission": "Manual",
+    "engine_displacement_cc": 1198,
+    "power_bhp": 80.46,
+    "torque_nm": 115,
+    "mileage_kmpl": 19.3,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "Air Conditioner"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/10946/1758802259604/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2022
+  },
+  "1": {
+    "make": "Citroën",
+    "model": "C3",
+    "variant_name": "Live CNG",
+    "ex_showroom_price_min_inr": 573000,
+    "ex_showroom_price_max_inr": 573000,
+    "hyderabad_on_road_price_inr": 687062,
+    "fuel_type": "CNG",
+    "transmission": "Manual",
+    "engine_displacement_cc": 1198,
+    "power_bhp": 72,
+    "torque_nm": 95,
+    "mileage_kmpl": 28.1,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "Air Conditioner"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/10946/1758802259604/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  },
+  "2": {
+    "make": "Citroën",
+    "model": "C3",
+    "variant_name": "Feel",
+    "ex_showroom_price_min_inr": 585000,
+    "ex_showroom_price_max_inr": 585000,
+    "hyderabad_on_road_price_inr": 722984,
+    "fuel_type": "Petrol",
+    "transmission": "Manual",
+    "engine_displacement_cc": 1198,
+    "power_bhp": 80.46,
+    "torque_nm": 115,
+    "mileage_kmpl": 19.3,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "10.2 inch Touchscreen"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/10946/1758802259604/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2022
+  },
+  "3": {
+    "make": "Citroën",
+    "model": "C3",
+    "variant_name": "Feel Optional",
+    "ex_showroom_price_min_inr": 680000,
+    "ex_showroom_price_max_inr": 680000,
+    "hyderabad_on_road_price_inr": 835980,
+    "fuel_type": "Petrol",
+    "transmission": "Manual",
+    "engine_displacement_cc": 1198,
+    "power_bhp": 80.46,
+    "torque_nm": 115,
+    "mileage_kmpl": 19.3,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "10.2 inch Touchscreen"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/10946/1758802259604/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2022
+  },
+  "4": {
+    "make": "Citroën",
+    "model": "C3",
+    "variant_name": "Feel Optional CNG",
+    "ex_showroom_price_min_inr": 758000,
+    "ex_showroom_price_max_inr": 758000,
+    "hyderabad_on_road_price_inr": 904771,
+    "fuel_type": "CNG",
+    "transmission": "Manual",
+    "engine_displacement_cc": 1198,
+    "power_bhp": 72,
+    "torque_nm": 95,
+    "mileage_kmpl": 28.1,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "10.2 inch Touchscreen"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/10946/1758802259604/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  },
+  "5": {
+    "make": "Citroën",
+    "model": "C3",
+    "variant_name": "Feel CNG",
+    "ex_showroom_price_min_inr": 845000,
+    "ex_showroom_price_max_inr": 845000,
+    "hyderabad_on_road_price_inr": 1007153,
+    "fuel_type": "CNG",
+    "transmission": "Manual",
+    "engine_displacement_cc": 1198,
+    "power_bhp": 72,
+    "torque_nm": 95,
+    "mileage_kmpl": 28.1,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "10.2 inch Touchscreen"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/10946/1758802259604/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  },
+  "6": {
+    "make": "Citroën",
+    "model": "C3",
+    "variant_name": "X Shine",
+    "ex_showroom_price_min_inr": 763000,
+    "ex_showroom_price_max_inr": 763000,
+    "hyderabad_on_road_price_inr": 910655,
+    "fuel_type": "Petrol",
+    "transmission": "Manual",
+    "engine_displacement_cc": 1198,
+    "power_bhp": 80.46,
+    "torque_nm": 115,
+    "mileage_kmpl": 19.3,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "Alloy Wheels"
+      },
+      {
+        "value": "10.2 inch Touchscreen"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      },
+      {
+        "value": "Rear Camera"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/10946/1758802259604/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  },
+  "7": {
+    "make": "Citroën",
+    "model": "C3",
+    "variant_name": "X Shine CNG",
+    "ex_showroom_price_min_inr": 816000,
+    "ex_showroom_price_max_inr": 816000,
+    "hyderabad_on_road_price_inr": 973025,
+    "fuel_type": "CNG",
+    "transmission": "Manual",
+    "engine_displacement_cc": 1198,
+    "power_bhp": 72,
+    "torque_nm": 95,
+    "mileage_kmpl": 28.1,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "Alloy Wheels"
+      },
+      {
+        "value": "10.2 inch Touchscreen"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      },
+      {
+        "value": "Rear Camera"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/10946/1758802259604/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  },
+  "8": {
+    "make": "Citroën",
+    "model": "C3",
+    "variant_name": "Shine Dark Edition",
+    "ex_showroom_price_min_inr": 838300,
+    "ex_showroom_price_max_inr": 838300,
+    "hyderabad_on_road_price_inr": 999268,
+    "fuel_type": "Petrol",
+    "transmission": "Manual",
+    "engine_displacement_cc": 1198,
+    "power_bhp": 80.46,
+    "torque_nm": 115,
+    "mileage_kmpl": 19.3,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "Alloy Wheels"
+      },
+      {
+        "value": "10.2 inch Touchscreen"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      },
+      {
+        "value": "Rear Camera"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/10946/1758802259604/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  },
+  "9": {
+    "make": "Citroën",
+    "model": "C3",
+    "variant_name": "Shine Dark Edition CNG",
+    "ex_showroom_price_min_inr": 931300,
+    "ex_showroom_price_max_inr": 931300,
+    "hyderabad_on_road_price_inr": 1108711,
+    "fuel_type": "CNG",
+    "transmission": "Manual",
+    "engine_displacement_cc": 1198,
+    "power_bhp": 72,
+    "torque_nm": 95,
+    "mileage_kmpl": 28.1,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "Alloy Wheels"
+      },
+      {
+        "value": "10.2 inch Touchscreen"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      },
+      {
+        "value": "Rear Camera"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/10946/1758802259604/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  },
+  "10": {
+    "make": "Citroën",
+    "model": "C3",
+    "variant_name": "X Shine Turbo",
+    "ex_showroom_price_min_inr": 874000,
+    "ex_showroom_price_max_inr": 874000,
+    "hyderabad_on_road_price_inr": 1041280,
+    "fuel_type": "Petrol",
+    "transmission": "Manual",
+    "engine_displacement_cc": 1199,
+    "power_bhp": 108.62,
+    "torque_nm": 190,
+    "mileage_kmpl": 19.3,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "Alloy Wheels"
+      },
+      {
+        "value": "10.2 inch Touchscreen"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      },
+      {
+        "value": "Rear Camera"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/10946/1758802259604/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  },
+  "11": {
+    "make": "Citroën",
+    "model": "C3",
+    "variant_name": "X Shine Turbo AT",
+    "ex_showroom_price_min_inr": 945000,
+    "ex_showroom_price_max_inr": 945000,
+    "hyderabad_on_road_price_inr": 1124833,
+    "fuel_type": "Petrol",
+    "transmission": "Automatic",
+    "engine_displacement_cc": 1199,
+    "power_bhp": 108.62,
+    "torque_nm": 205,
+    "mileage_kmpl": 19.3,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "Alloy Wheels"
+      },
+      {
+        "value": "10.2 inch Touchscreen"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      },
+      {
+        "value": "Rear Camera"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/10946/1758802259604/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  },
+  "12": {
+    "make": "Citroën",
+    "model": "C3",
+    "variant_name": "Shine Turbo Dark Edition",
+    "ex_showroom_price_min_inr": 958300,
+    "ex_showroom_price_max_inr": 958300,
+    "hyderabad_on_road_price_inr": 1140484,
+    "fuel_type": "Petrol",
+    "transmission": "Manual",
+    "engine_displacement_cc": 1199,
+    "power_bhp": 108.62,
+    "torque_nm": 190,
+    "mileage_kmpl": 19.3,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "Alloy Wheels"
+      },
+      {
+        "value": "10.2 inch Touchscreen"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      },
+      {
+        "value": "Rear Camera"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/10946/1758802259604/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  },
+  "13": {
+    "make": "Citroën",
+    "model": "C3",
+    "variant_name": "Shine Turbo Dark Edition AT",
+    "ex_showroom_price_min_inr": 1019300,
+    "ex_showroom_price_max_inr": 1019300,
+    "hyderabad_on_road_price_inr": 1253041,
+    "fuel_type": "Petrol",
+    "transmission": "Automatic",
+    "engine_displacement_cc": 1199,
+    "power_bhp": 108.62,
+    "torque_nm": 205,
+    "mileage_kmpl": 19.3,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "Alloy Wheels"
+      },
+      {
+        "value": "10.2 inch Touchscreen"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      },
+      {
+        "value": "Rear Camera"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/10946/1758802259604/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  },
+  "14": {
+    "make": "Citroën",
+    "model": "C3",
+    "variant_name": "Turbo Shine DT AT",
+    "ex_showroom_price_min_inr": 1014800,
+    "ex_showroom_price_max_inr": 1014800,
+    "hyderabad_on_road_price_inr": 1284966,
+    "fuel_type": "Petrol",
+    "transmission": "Automatic",
+    "engine_displacement_cc": 1199,
+    "power_bhp": 108.62,
+    "torque_nm": 205,
+    "mileage_kmpl": 19.3,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "Alloy Wheels"
+      },
+      {
+        "value": "10.2 inch Touchscreen"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      },
+      {
+        "value": "Rear Camera"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/10946/1758802259604/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  },
+  "15": {
+    "make": "Citroën",
+    "model": "C3",
+    "variant_name": "Turbo Shine Sport Edition AT",
+    "ex_showroom_price_min_inr": 1020801,
+    "ex_showroom_price_max_inr": 1020801,
+    "hyderabad_on_road_price_inr": 1254868,
+    "fuel_type": "Petrol",
+    "transmission": "Automatic",
+    "engine_displacement_cc": 1199,
+    "power_bhp": 108.62,
+    "torque_nm": 205,
+    "mileage_kmpl": 19.3,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "Alloy Wheels"
+      },
+      {
+        "value": "10.2 inch Touchscreen"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      },
+      {
+        "value": "Rear Camera"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/10946/1758802259604/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  }
+}

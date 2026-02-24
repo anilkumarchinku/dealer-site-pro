@@ -1,0 +1,3612 @@
+{
+  "mercedes": {
+    "0": {
+      "make": "Mercedes-Benz",
+      "model_name": "A-Class",
+      "variant_name": "A 200",
+      "ex_showroom_price_min": 4446207,
+      "ex_showroom_price_max": 4446207,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 1332,
+      "dimensions_seating": 5,
+      "dimensions_boot": 395,
+      "dimensions_ground_clearance": 160,
+      "dimensions_length": 4549,
+      "dimensions_width": 1992,
+      "dimensions_height": 1446,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "TPMS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/A-Class-Limousine/10868/1763467279231/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "1": {
+      "make": "Mercedes-Benz",
+      "model_name": "A-Class",
+      "variant_name": "A 200d",
+      "ex_showroom_price_min": 4592568,
+      "ex_showroom_price_max": 4592568,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement": 1950,
+      "power": 160.92,
+      "torque": 250,
+      "mileage_range": 15.5,
+      "dimensions_seating": 5,
+      "dimensions_boot": 395,
+      "dimensions_ground_clearance": 160,
+      "dimensions_length": 4549,
+      "dimensions_width": 1992,
+      "dimensions_height": 1446,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "TPMS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/A-Class-Limousine/10868/1763467279231/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "2": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG GT",
+      "variant_name": "63 S E Performance",
+      "ex_showroom_price_min": 32700000,
+      "ex_showroom_price_max": 32700000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3982,
+      "power": 630.28,
+      "torque": 900,
+      "mileage_range": 7,
+      "dimensions_seating": 5,
+      "dimensions_boot": 461,
+      "dimensions_length": 5054,
+      "dimensions_width": 1953,
+      "dimensions_height": 1447,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "TPMS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-GT-4-Door-Coupe/9792/1769679914036/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "3": {
+      "make": "Mercedes-Benz",
+      "model_name": "EQB",
+      "variant_name": "250 Plus",
+      "ex_showroom_price_min": 7220000,
+      "ex_showroom_price_max": 7220000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "power": 288.32,
+      "torque": 520,
+      "mileage_range": 447,
+      "dimensions_seating": 5,
+      "dimensions_boot": 495,
+      "dimensions_length": 4684,
+      "dimensions_width": 2020,
+      "dimensions_height": 1689,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "TPMS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/EQB/11834/1763471553252/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "4": {
+      "make": "Mercedes-Benz",
+      "model_name": "EQB",
+      "variant_name": "350 4Matic",
+      "ex_showroom_price_min": 7890000,
+      "ex_showroom_price_max": 7890000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "power": 288.32,
+      "torque": 520,
+      "mileage_range": 447,
+      "dimensions_seating": 5,
+      "dimensions_boot": 495,
+      "dimensions_length": 4684,
+      "dimensions_width": 2020,
+      "dimensions_height": 1689,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "TPMS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/EQB/11834/1763471553252/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "5": {
+      "make": "Mercedes-Benz",
+      "model_name": "EQE SUV",
+      "variant_name": "500 4MATIC",
+      "ex_showroom_price_min": 14100000,
+      "ex_showroom_price_max": 14100000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "power": 402.3,
+      "torque": 858,
+      "mileage_range": 550,
+      "dimensions_seating": 5,
+      "dimensions_boot": 520,
+      "dimensions_ground_clearance": 184,
+      "dimensions_length": 4863,
+      "dimensions_width": 2141,
+      "dimensions_height": 1685,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "TPMS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/EQE-SUV/9404/1763471752200/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "6": {
+      "make": "Mercedes-Benz",
+      "model_name": "GLC",
+      "variant_name": "300",
+      "ex_showroom_price_min": 73966667,
+      "ex_showroom_price_max": 73966667,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 1999,
+      "mileage_range": 19.4,
+      "dimensions_seating": 5,
+      "dimensions_boot": 620,
+      "dimensions_ground_clearance": 201,
+      "dimensions_length": 4716,
+      "dimensions_width": 1890,
+      "dimensions_height": 1640,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "TPMS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/GLC/9132/1763534747895/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "7": {
+      "make": "Mercedes-Benz",
+      "model_name": "GLC",
+      "variant_name": "220d",
+      "ex_showroom_price_min": 73966667,
+      "ex_showroom_price_max": 73966667,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement": 1993,
+      "power": 194.44,
+      "torque": 440,
+      "mileage_range": 19.4,
+      "dimensions_seating": 5,
+      "dimensions_boot": 620,
+      "dimensions_ground_clearance": 201,
+      "dimensions_length": 4716,
+      "dimensions_width": 1890,
+      "dimensions_height": 1640,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "TPMS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/GLC/9132/1763534747895/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "8": {
+      "make": "Mercedes-Benz",
+      "model_name": "Maybach S-Class",
+      "variant_name": "S580",
+      "ex_showroom_price_min": 27430000,
+      "ex_showroom_price_max": 27430000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 5980,
+      "power": 603.46,
+      "torque": 900,
+      "mileage_range": 23,
+      "dimensions_seating": 5,
+      "dimensions_boot": 495,
+      "dimensions_ground_clearance": 146,
+      "dimensions_length": 5469,
+      "dimensions_width": 2109,
+      "dimensions_height": 1510,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "TPMS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/Maybach-S-Class/10866/1763536299202/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "9": {
+      "make": "Mercedes-Benz",
+      "model_name": "Maybach S-Class",
+      "variant_name": "S680",
+      "ex_showroom_price_min": 34735000,
+      "ex_showroom_price_max": 34735000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 5980,
+      "power": 603.46,
+      "torque": 900,
+      "mileage_range": 23,
+      "dimensions_seating": 5,
+      "dimensions_boot": 495,
+      "dimensions_ground_clearance": 146,
+      "dimensions_length": 5469,
+      "dimensions_width": 2109,
+      "dimensions_height": 1510,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "TPMS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/Maybach-S-Class/10866/1763536299202/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "10": {
+      "make": "Mercedes-Benz",
+      "model_name": "S-Class",
+      "variant_name": "S450 4Matic",
+      "ex_showroom_price_min": 17954054,
+      "ex_showroom_price_max": 17954054,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 2999,
+      "power": 362.07,
+      "torque": 500,
+      "mileage_range": 12,
+      "dimensions_seating": 5,
+      "dimensions_boot": 550,
+      "dimensions_ground_clearance": 96,
+      "dimensions_length": 5289,
+      "dimensions_width": 2109,
+      "dimensions_height": 1503,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "TPMS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/S-Class/10852/1763536912245/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "11": {
+      "make": "Mercedes-Benz",
+      "model_name": "S-Class",
+      "variant_name": "S 350d",
+      "ex_showroom_price_min": 17783784,
+      "ex_showroom_price_max": 17783784,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement": 2925,
+      "mileage_range": 15,
+      "dimensions_seating": 5,
+      "dimensions_boot": 550,
+      "dimensions_ground_clearance": 96,
+      "dimensions_length": 5289,
+      "dimensions_width": 2109,
+      "dimensions_height": 1503,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "TPMS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/S-Class/10852/1763536912245/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "12": {
+      "make": "Mercedes-Benz",
+      "model_name": "C-Class",
+      "variant_name": "Mercedes-Benz C-Class C 220d",
+      "ex_showroom_price_min": 5865000,
+      "ex_showroom_price_max": 5865000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement": 1993,
+      "power": 197.13,
+      "torque": 440,
+      "mileage_range": 23,
+      "dimensions_seating": 5,
+      "dimensions_boot": 540,
+      "dimensions_length": 4751,
+      "dimensions_width": 1820,
+      "dimensions_height": 1437,
+      "key_features": [
+        {
+          "value": "Power Windows Front"
+        },
+        {
+          "value": "Power Windows Rear"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Power Adjustable Exterior Rear View Mirror"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Fog Lights - Front"
+        },
+        {
+          "value": "Foldable Rear Seat"
+        },
+        {
+          "value": "Automatic Climate Control"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "Anti-Theft Alarm"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Side Airbag-Rear"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Anti-Theft Device"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/C-Class/10859/Mercedes-Benz-C-Class-C-220d/1720160327253/front-view-118.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "13": {
+      "make": "Mercedes-Benz",
+      "model_name": "C-Class",
+      "variant_name": "Mercedes-Benz C-Class C 200",
+      "ex_showroom_price_min": 5890000,
+      "ex_showroom_price_max": 5890000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 1496,
+      "power": 201.15,
+      "torque": 300,
+      "mileage_range": 16.9,
+      "dimensions_seating": 5,
+      "dimensions_boot": 540,
+      "dimensions_length": 4751,
+      "dimensions_width": 1820,
+      "dimensions_height": 1437,
+      "key_features": [
+        {
+          "value": "Power Windows Front"
+        },
+        {
+          "value": "Power Windows Rear"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Power Adjustable Exterior Rear View Mirror"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Fog Lights - Front"
+        },
+        {
+          "value": "Foldable Rear Seat"
+        },
+        {
+          "value": "Automatic Climate Control"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "Anti-Theft Alarm"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Side Airbag-Rear"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Anti-Theft Device"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/C-Class/10858/Mercedes-Benz-C-Class-C-200/1720160050225/front-view-118.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "14": {
+      "make": "Mercedes-Benz",
+      "model_name": "C-Class",
+      "variant_name": "Mercedes-Benz C-Class C 300",
+      "ex_showroom_price_min": 6431999.999999999,
+      "ex_showroom_price_max": 6431999.999999999,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 1999,
+      "power": 254.79,
+      "torque": 400,
+      "mileage_range": 15,
+      "dimensions_seating": 5,
+      "dimensions_boot": 455,
+      "dimensions_length": 4751,
+      "dimensions_width": 1820,
+      "dimensions_height": 1437,
+      "key_features": [
+        {
+          "value": "Power Windows Front"
+        },
+        {
+          "value": "Power Windows Rear"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Power Adjustable Exterior Rear View Mirror"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Fog Lights - Front"
+        },
+        {
+          "value": "Foldable Rear Seat"
+        },
+        {
+          "value": "Automatic Climate Control"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "Anti-Theft Alarm"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Side Airbag-Rear"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Anti-Theft Device"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/C-Class/11760/Mercedes-Benz-C-Class-C-300/1720160570800/front-view-118.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "15": {
+      "make": "Mercedes-Benz",
+      "model_name": "CLE",
+      "variant_name": "Mercedes-Benz AMG CLE 53 4Matic",
+      "ex_showroom_price_min": 12800000,
+      "ex_showroom_price_max": 12800000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 2999,
+      "power": 442,
+      "dimensions_seating": 4,
+      "dimensions_length": 4941,
+      "key_features": [
+        {
+          "value": "Air Conditioner"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Adjustable Steering"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Rear Seat Headrest"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Side Airbag-Rear"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Curtain Airbag"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Anti-Pinch Power Windows"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Heads-Up Display (HUD)"
+        },
+        {
+          "value": "Pretensioners & Force Limiter Seatbelts"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-CLE-53/12771/1763468198459/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "16": {
+      "make": "Mercedes-Benz",
+      "model_name": "E-Class",
+      "variant_name": "Mercedes-Benz E-Class E 200",
+      "ex_showroom_price_min": 7851000.000000001,
+      "ex_showroom_price_max": 7851000.000000001,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 1999,
+      "power": 201,
+      "torque": 320,
+      "mileage_range": 15,
+      "dimensions_seating": 5,
+      "dimensions_length": 4949,
+      "dimensions_width": 1880,
+      "dimensions_height": 1468,
+      "key_features": [
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Adjustable Steering"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Cup Holders"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Central Console Armrest"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Rear Seat Headrest"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "Anti-Theft Alarm"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Side Airbag-Rear"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Curtain Airbag"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Anti-Theft Device"
+        },
+        {
+          "value": "Anti-Pinch Power Windows"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Pretensioners & Force Limiter Seatbelts"
+        },
+        {
+          "value": "Hill Descent Control"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/E-Class/9790/1763471140336/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "17": {
+      "make": "Mercedes-Benz",
+      "model_name": "E-Class",
+      "variant_name": "Mercedes-Benz E-Class E 220d",
+      "ex_showroom_price_min": 8041000,
+      "ex_showroom_price_max": 8041000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement": 1993,
+      "power": 194,
+      "torque": 440,
+      "mileage_range": 15,
+      "dimensions_seating": 5,
+      "dimensions_length": 4949,
+      "dimensions_width": 1880,
+      "dimensions_height": 1468,
+      "key_features": [
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Adjustable Steering"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Cup Holders"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Central Console Armrest"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Rear Seat Headrest"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "Anti-Theft Alarm"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Side Airbag-Rear"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Curtain Airbag"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Anti-Theft Device"
+        },
+        {
+          "value": "Anti-Pinch Power Windows"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Pretensioners & Force Limiter Seatbelts"
+        },
+        {
+          "value": "Hill Descent Control"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/E-Class/9790/1763471140336/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "18": {
+      "make": "Mercedes-Benz",
+      "model_name": "E-Class",
+      "variant_name": "Mercedes-Benz E-Class E 450",
+      "ex_showroom_price_min": 9166000,
+      "ex_showroom_price_max": 9166000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 2999,
+      "power": 375,
+      "torque": 500,
+      "mileage_range": 12,
+      "dimensions_seating": 5,
+      "dimensions_length": 4949,
+      "dimensions_width": 1880,
+      "dimensions_height": 1468,
+      "key_features": [
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Adjustable Steering"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Cup Holders"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Central Console Armrest"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Rear Seat Headrest"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "Anti-Theft Alarm"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Side Airbag-Rear"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Curtain Airbag"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Anti-Theft Device"
+        },
+        {
+          "value": "Anti-Pinch Power Windows"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Pretensioners & Force Limiter Seatbelts"
+        },
+        {
+          "value": "Hill Descent Control"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/E-Class/9790/1763471140336/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "19": {
+      "make": "Mercedes-Benz",
+      "model_name": "GLA",
+      "variant_name": "Mercedes-Benz GLA 200",
+      "ex_showroom_price_min": 4972000,
+      "ex_showroom_price_max": 4972000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 1332,
+      "power": 160.92,
+      "torque": 270,
+      "mileage_range": 17.4,
+      "dimensions_seating": 5,
+      "dimensions_boot": 425,
+      "dimensions_length": 4412,
+      "dimensions_width": 2020,
+      "dimensions_height": 1616,
+      "key_features": [
+        {
+          "value": "Power Windows Front"
+        },
+        {
+          "value": "Power Windows Rear"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Power Adjustable Exterior Rear View Mirror"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Additional Features"
+        },
+        {
+          "value": "Passenger Airbag"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Curtain Airbag"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "Knee Airbags"
+        },
+        {
+          "value": "Pretensioners & Force Limiter Seatbelts"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/GLA/9731/1763534227744/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "20": {
+      "make": "Mercedes-Benz",
+      "model_name": "GLA",
+      "variant_name": "Mercedes-Benz GLA 220d 4MATIC",
+      "ex_showroom_price_min": 5087000,
+      "ex_showroom_price_max": 5087000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement": 1950,
+      "power": 187.74,
+      "torque": 400,
+      "mileage_range": 18.9,
+      "dimensions_seating": 5,
+      "dimensions_boot": 427,
+      "dimensions_length": 4412,
+      "dimensions_width": 2020,
+      "dimensions_height": 1616,
+      "key_features": [
+        {
+          "value": "Power Windows Front"
+        },
+        {
+          "value": "Power Windows Rear"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Power Adjustable Exterior Rear View Mirror"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Additional Features"
+        },
+        {
+          "value": "Passenger Airbag"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Curtain Airbag"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "Knee Airbags"
+        },
+        {
+          "value": "Pretensioners & Force Limiter Seatbelts"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/GLA/9731/1763534227744/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "21": {
+      "make": "Mercedes-Benz",
+      "model_name": "GLA",
+      "variant_name": "Mercedes-Benz GLA 220d 4MATIC AMG Line",
+      "ex_showroom_price_min": 5273000,
+      "ex_showroom_price_max": 5273000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement": 1950,
+      "power": 187.74,
+      "torque": 400,
+      "mileage_range": 18.9,
+      "dimensions_seating": 5,
+      "dimensions_boot": 427,
+      "dimensions_length": 4412,
+      "dimensions_width": 2020,
+      "dimensions_height": 1616,
+      "key_features": [
+        {
+          "value": "Power Windows Front"
+        },
+        {
+          "value": "Power Windows Rear"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Power Adjustable Exterior Rear View Mirror"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Additional Features"
+        },
+        {
+          "value": "Passenger Airbag"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Curtain Airbag"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "Knee Airbags"
+        },
+        {
+          "value": "Pretensioners & Force Limiter Seatbelts"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/GLA/9731/1763534227744/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "22": {
+      "make": "Mercedes-Benz",
+      "model_name": "GLE",
+      "variant_name": "Mercedes-Benz GLE 300d 4Matic AMG Line",
+      "ex_showroom_price_min": 9614000,
+      "ex_showroom_price_max": 9614000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement": 1993,
+      "power": 265.52,
+      "torque": 550,
+      "mileage_range": 16,
+      "dimensions_seating": 5,
+      "dimensions_boot": 630,
+      "dimensions_length": 4924,
+      "dimensions_width": 2157,
+      "dimensions_height": 1795,
+      "key_features": [
+        {
+          "value": "Power Windows Front"
+        },
+        {
+          "value": "Power Windows Rear"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Power Adjustable Exterior Rear View Mirror"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Central Console Armrest"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Rear Seat Headrest"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "Anti-Theft Alarm"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Side Airbag-Rear"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Curtain Airbag"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Anti-Theft Device"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "Knee Airbags"
+        },
+        {
+          "value": "Heads-Up Display (HUD)"
+        },
+        {
+          "value": "Pretensioners & Force Limiter Seatbelts"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/GLE/11332/1763535294500/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "23": {
+      "make": "Mercedes-Benz",
+      "model_name": "GLE",
+      "variant_name": "Mercedes-Benz GLE 450 4Matic",
+      "ex_showroom_price_min": 10700000,
+      "ex_showroom_price_max": 10700000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 2999,
+      "power": 375.48,
+      "torque": 500,
+      "mileage_range": 11.17,
+      "dimensions_seating": 5,
+      "dimensions_boot": 630,
+      "dimensions_length": 4926,
+      "dimensions_width": 2157,
+      "dimensions_height": 1797,
+      "key_features": [
+        {
+          "value": "Power Windows Front"
+        },
+        {
+          "value": "Power Windows Rear"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Power Adjustable Exterior Rear View Mirror"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Central Console Armrest"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Automatic Climate Control"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "Anti-Theft Alarm"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Side Airbag-Rear"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Curtain Airbag"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Anti-Theft Device"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "Knee Airbags"
+        },
+        {
+          "value": "Heads-Up Display (HUD)"
+        },
+        {
+          "value": "Pretensioners & Force Limiter Seatbelts"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/GLE/11332/1763535294500/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "24": {
+      "make": "Mercedes-Benz",
+      "model_name": "GLE",
+      "variant_name": "Mercedes-Benz GLE 450d 4Matic",
+      "ex_showroom_price_min": 11200000.000000002,
+      "ex_showroom_price_max": 11200000.000000002,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement": 2989,
+      "power": 362,
+      "torque": 750,
+      "mileage_range": 11.17,
+      "dimensions_seating": 5,
+      "dimensions_boot": 630,
+      "dimensions_length": 4926,
+      "dimensions_width": 2157,
+      "dimensions_height": 1797,
+      "key_features": [
+        {
+          "value": "Power Windows Front"
+        },
+        {
+          "value": "Power Windows Rear"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Power Adjustable Exterior Rear View Mirror"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Central Console Armrest"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Automatic Climate Control"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "Anti-Theft Alarm"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Side Airbag-Rear"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Curtain Airbag"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Anti-Theft Device"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "Knee Airbags"
+        },
+        {
+          "value": "Heads-Up Display (HUD)"
+        },
+        {
+          "value": "Pretensioners & Force Limiter Seatbelts"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/GLE/11332/1763535294500/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "25": {
+      "make": "Mercedes-Benz",
+      "model_name": "GLS",
+      "variant_name": "Mercedes-Benz GLS 450 4MATIC",
+      "ex_showroom_price_min": 13200000,
+      "ex_showroom_price_max": 13200000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 2999,
+      "power": 375.48,
+      "torque": 500,
+      "mileage_range": 12,
+      "dimensions_seating": 7,
+      "dimensions_length": 5209,
+      "dimensions_width": 2157,
+      "dimensions_height": 1823,
+      "key_features": [
+        {
+          "value": "Power Windows Front"
+        },
+        {
+          "value": "Power Windows Rear"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Power Adjustable Exterior Rear View Mirror"
+        },
+        {
+          "value": "Foldable Rear Seat"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Additional Features"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Automatic Climate Control"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "Anti-Theft Alarm"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Side Airbag-Rear"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Curtain Airbag"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Acoustic Vehicle Alert System"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Anti-Theft Device"
+        },
+        {
+          "value": "Anti-Pinch Power Windows"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "Knee Airbags"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Pretensioners & Force Limiter Seatbelts"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/GLS/9791/1763535546980/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "26": {
+      "make": "Mercedes-Benz",
+      "model_name": "GLS",
+      "variant_name": "Mercedes-Benz GLS 450 4MATIC AMG Line",
+      "ex_showroom_price_min": 13200000,
+      "ex_showroom_price_max": 13200000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 2999,
+      "power": 375.48,
+      "torque": 500,
+      "mileage_range": 12,
+      "dimensions_seating": 7,
+      "dimensions_length": 5209,
+      "dimensions_width": 2157,
+      "dimensions_height": 1823,
+      "key_features": [
+        {
+          "value": "Power Windows Front"
+        },
+        {
+          "value": "Power Windows Rear"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Power Adjustable Exterior Rear View Mirror"
+        },
+        {
+          "value": "Foldable Rear Seat"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Automatic Climate Control"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "Anti-Theft Alarm"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Side Airbag-Rear"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Curtain Airbag"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Acoustic Vehicle Alert System"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Anti-Theft Device"
+        },
+        {
+          "value": "Anti-Pinch Power Windows"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "Knee Airbags"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Pretensioners & Force Limiter Seatbelts"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/GLS/9791/1763535546980/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "27": {
+      "make": "Mercedes-Benz",
+      "model_name": "GLS",
+      "variant_name": "Mercedes-Benz GLS 450d 4MATIC AMG Line",
+      "ex_showroom_price_min": 13400000,
+      "ex_showroom_price_max": 13400000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement": 2925,
+      "power": 362.07,
+      "torque": 750,
+      "mileage_range": 12,
+      "dimensions_seating": 7,
+      "dimensions_length": 5209,
+      "dimensions_width": 2157,
+      "dimensions_height": 1823,
+      "key_features": [
+        {
+          "value": "Power Windows Front"
+        },
+        {
+          "value": "Power Windows Rear"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Power Adjustable Exterior Rear View Mirror"
+        },
+        {
+          "value": "Foldable Rear Seat"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Automatic Climate Control"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "Anti-Theft Alarm"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Side Airbag-Rear"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Curtain Airbag"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Acoustic Vehicle Alert System"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Anti-Theft Device"
+        },
+        {
+          "value": "Anti-Pinch Power Windows"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "Knee Airbags"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Pretensioners & Force Limiter Seatbelts"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/GLS/9791/1763535546980/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "28": {
+      "make": "Mercedes-Benz",
+      "model_name": "GLS",
+      "variant_name": "Mercedes-Benz GLS 450d 4MATIC",
+      "ex_showroom_price_min": 13400000,
+      "ex_showroom_price_max": 13400000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement": 2925,
+      "power": 362.07,
+      "torque": 750,
+      "mileage_range": 12,
+      "dimensions_seating": 7,
+      "dimensions_length": 5209,
+      "dimensions_width": 2157,
+      "dimensions_height": 1823,
+      "key_features": [
+        {
+          "value": "Power Windows Front"
+        },
+        {
+          "value": "Power Windows Rear"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Power Adjustable Exterior Rear View Mirror"
+        },
+        {
+          "value": "Foldable Rear Seat"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Additional Features"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Automatic Climate Control"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "Anti-Theft Alarm"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Side Airbag-Rear"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Curtain Airbag"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Acoustic Vehicle Alert System"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Anti-Theft Device"
+        },
+        {
+          "value": "Anti-Pinch Power Windows"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "Knee Airbags"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Pretensioners & Force Limiter Seatbelts"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/GLS/9791/1763535546980/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "29": {
+      "make": "Mercedes-Benz",
+      "model_name": "Maybach GLS",
+      "variant_name": "Mercedes-Benz Maybach GLS 600 4MATIC",
+      "ex_showroom_price_min": 31700000,
+      "ex_showroom_price_max": 31700000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3982,
+      "power": 550,
+      "torque": 700,
+      "mileage_range": 10,
+      "dimensions_seating": 5,
+      "dimensions_boot": 520,
+      "dimensions_length": 5208,
+      "dimensions_width": 2157,
+      "dimensions_height": 1838,
+      "key_features": [
+        {
+          "value": "Power Windows Front"
+        },
+        {
+          "value": "Power Windows Rear"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Power Adjustable Exterior Rear View Mirror"
+        },
+        {
+          "value": "Foldable Rear Seat"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Additional Features"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Rear Seat Headrest"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "Anti-Theft Alarm"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Side Airbag-Rear"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Curtain Airbag"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Anti-Theft Device"
+        },
+        {
+          "value": "Anti-Pinch Power Windows"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Pretensioners & Force Limiter Seatbelts"
+        },
+        {
+          "value": "Blind Spot Camera"
+        },
+        {
+          "value": "Hill Descent Control"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/Maybach-GLS/8443/1763536042881/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "30": {
+      "make": "Mercedes-Benz",
+      "model_name": "Maybach GLS",
+      "variant_name": "Mercedes-Benz Maybach GLS 600 Night Series",
+      "ex_showroom_price_min": 37100000,
+      "ex_showroom_price_max": 37100000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3982,
+      "power": 550,
+      "torque": 700,
+      "mileage_range": 10,
+      "dimensions_seating": 5,
+      "dimensions_boot": 520,
+      "dimensions_length": 5208,
+      "dimensions_width": 2157,
+      "dimensions_height": 1838,
+      "key_features": [
+        {
+          "value": "Power Windows Front"
+        },
+        {
+          "value": "Power Windows Rear"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Power Adjustable Exterior Rear View Mirror"
+        },
+        {
+          "value": "Foldable Rear Seat"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Rear Seat Headrest"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "Anti-Theft Alarm"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Side Airbag-Rear"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Curtain Airbag"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Anti-Theft Device"
+        },
+        {
+          "value": "Anti-Pinch Power Windows"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Pretensioners & Force Limiter Seatbelts"
+        },
+        {
+          "value": "Blind Spot Camera"
+        },
+        {
+          "value": "Hill Descent Control"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/Maybach-GLS/8443/1763536042881/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "31": {
+      "make": "Mercedes-Benz",
+      "model_name": "Maybach GLS",
+      "variant_name": "Mercedes-Benz Maybach GLS 600 Celebration Edition",
+      "ex_showroom_price_min": 41000000,
+      "ex_showroom_price_max": 41000000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3982,
+      "power": 550,
+      "torque": 700,
+      "mileage_range": 10,
+      "dimensions_seating": 5,
+      "dimensions_boot": 520,
+      "dimensions_length": 5208,
+      "dimensions_width": 2157,
+      "dimensions_height": 1838,
+      "key_features": [
+        {
+          "value": "Power Windows Front"
+        },
+        {
+          "value": "Power Windows Rear"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Power Adjustable Exterior Rear View Mirror"
+        },
+        {
+          "value": "Foldable Rear Seat"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Rear Seat Headrest"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Central Locking"
+        },
+        {
+          "value": "Child Safety Locks"
+        },
+        {
+          "value": "Anti-Theft Alarm"
+        },
+        {
+          "value": "No. of Airbags"
+        },
+        {
+          "value": "Driver Airbag"
+        },
+        {
+          "value": "Passenger Airbag"
+        },
+        {
+          "value": "Side Airbag"
+        },
+        {
+          "value": "Side Airbag-Rear"
+        },
+        {
+          "value": "Day & Night Rear View Mirror"
+        },
+        {
+          "value": "Curtain Airbag"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Door Ajar Warning"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "Engine Immobilizer"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Anti-Theft Device"
+        },
+        {
+          "value": "Anti-Pinch Power Windows"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Pretensioners & Force Limiter Seatbelts"
+        },
+        {
+          "value": "Blind Spot Camera"
+        },
+        {
+          "value": "Hill Descent Control"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Impact Sensing Auto Door Unlock"
+        },
+        {
+          "value": "360 View Camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/Maybach-GLS/8443/1763536042881/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    }
+  }
+}
