@@ -37,7 +37,13 @@ export async function GET(request: Request) {
         const { error } = await supabase.auth.exchangeCodeForSession(code)
 
         if (!error) {
-            return NextResponse.redirect(`${origin}${next}`)
+            // If coming from registration, redirect to login with success banner
+            if (next === '/auth/login') {
+                // Sign out so user can log in with their password
+                await supabase.auth.signOut()
+                return NextResponse.redirect(`${origin}/auth/login?registered=true`)
+            }
+            return NextResponse.redirect(`${origin}${next || '/dashboard'}`)
         }
     }
 
