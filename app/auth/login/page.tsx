@@ -1,20 +1,24 @@
 "use client"
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Loader2, AlertCircle, CheckCircle, Mail } from "lucide-react";
+import { Loader2, AlertCircle, CheckCircle, LogIn } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
 export default function LoginPage() {
+    const searchParams = useSearchParams();
+    const justRegistered = searchParams.get("registered") === "true";
+
     const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
-    const [sent, setSent] = useState(false);
 
-    const handleSendMagicLink = async (e: React.FormEvent) => {
+    const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
         setError(null);
 
@@ -22,25 +26,34 @@ export default function LoginPage() {
             setError("Please enter a valid email");
             return;
         }
+        if (!password) {
+            setError("Please enter your password");
+            return;
+        }
 
         setLoading(true);
         try {
-            const { error: authError } = await supabase.auth.signInWithOtp({
+            const { error: authError } = await supabase.auth.signInWithPassword({
                 email: email.trim().toLowerCase(),
-                options: {
-                    emailRedirectTo: `${window.location.origin}/auth/callback`,
-                },
+                password,
             });
 
             if (authError) {
-                setError(authError.message);
+                if (authError.message.includes("Email not confirmed")) {
+                    setError("Please verify your email first. Check your inbox for the verification link.");
+                } else if (authError.message.includes("Invalid login credentials")) {
+                    setError("Invalid email or password. Please try again.");
+                } else {
+                    setError(authError.message);
+                }
                 return;
             }
 
-            setSent(true);
+            // Redirect to dashboard
+            window.location.href = "/dashboard";
         } catch (err) {
             const msg = err instanceof Error ? err.message : String(err);
-            setError(msg || "Failed to send magic link");
+            setError(msg || "Login failed");
         } finally {
             setLoading(false);
         }
@@ -54,79 +67,73 @@ export default function LoginPage() {
             </CardHeader>
 
             <CardContent className="pt-4">
-                {sent ? (
-                    // Success: magic link sent
-                    <div className="space-y-4">
+                <form onSubmit={handleLogin} className="space-y-4">
+
+                    {/* Registration success banner */}
+                    {justRegistered && (
                         <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-sm text-emerald-600 dark:text-emerald-400">
                             <CheckCircle className="w-4 h-4 shrink-0" />
-                            <span>Magic link sent to <strong>{email}</strong></span>
+                            <span>Email verified! You can now sign in.</span>
                         </div>
+                    )}
 
-                        <div className="text-center space-y-3">
-                            <p className="text-sm text-muted-foreground">
-                                Check your email and click the link to sign in.
-                                The link expires in 1 hour.
-                            </p>
-
-                            <button
-                                type="button"
-                                onClick={() => { setSent(false); setError(null); }}
-                                className="text-sm text-muted-foreground hover:text-foreground"
-                            >
-                                Didn't receive it?{" "}
-                                <span className="font-medium text-blue-600 dark:text-blue-400 hover:underline">Try again</span>
-                            </button>
-                        </div>
-                    </div>
-                ) : (
-                    // Email entry form
-                    <form onSubmit={handleSendMagicLink} className="space-y-4">
-                        <div className="space-y-1.5">
-                            <Label htmlFor="email">Email Address</Label>
-                            <Input
-                                id="email"
-                                type="email"
-                                placeholder="rajesh@rammotors.in"
-                                value={email}
-                                onChange={e => setEmail(e.target.value)}
-                                autoComplete="email"
-                                disabled={loading}
-                            />
-                            <p className="text-xs text-muted-foreground">
-                                We'll send a magic sign-in link to this email
-                            </p>
-                        </div>
-
-                        {/* Error */}
-                        {error && (
-                            <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-red-500/10 border border-red-500/20 text-sm text-red-600 dark:text-red-400">
-                                <AlertCircle className="w-4 h-4 shrink-0" />
-                                <span>{error}</span>
-                            </div>
-                        )}
-
-                        {/* Submit */}
-                        <Button
-                            type="submit"
-                            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
-                            size="lg"
+                    {/* Email */}
+                    <div className="space-y-1.5">
+                        <Label htmlFor="email">Email Address</Label>
+                        <Input
+                            id="email"
+                            type="email"
+                            placeholder="rajesh@rammotors.in"
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
+                            autoComplete="email"
                             disabled={loading}
-                        >
-                            {loading ? (
-                                <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Sending…</>
-                            ) : (
-                                <><Mail className="w-4 h-4 mr-2" /> Send magic link</>
-                            )}
-                        </Button>
+                        />
+                    </div>
 
-                        <p className="text-center text-sm text-muted-foreground">
-                            Don't have an account?{" "}
-                            <Link href="/auth/register" className="font-medium text-blue-600 dark:text-blue-400 hover:underline">
-                                Create one free
-                            </Link>
-                        </p>
-                    </form>
-                )}
+                    {/* Password */}
+                    <div className="space-y-1.5">
+                        <Label htmlFor="password">Password</Label>
+                        <Input
+                            id="password"
+                            type="password"
+                            placeholder="Enter your password"
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                            autoComplete="current-password"
+                            disabled={loading}
+                        />
+                    </div>
+
+                    {/* Error */}
+                    {error && (
+                        <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-red-500/10 border border-red-500/20 text-sm text-red-600 dark:text-red-400">
+                            <AlertCircle className="w-4 h-4 shrink-0" />
+                            <span>{error}</span>
+                        </div>
+                    )}
+
+                    {/* Submit */}
+                    <Button
+                        type="submit"
+                        className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                        size="lg"
+                        disabled={loading}
+                    >
+                        {loading ? (
+                            <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Signing in…</>
+                        ) : (
+                            <><LogIn className="w-4 h-4 mr-2" /> Sign In</>
+                        )}
+                    </Button>
+
+                    <p className="text-center text-sm text-muted-foreground">
+                        Don't have an account?{" "}
+                        <Link href="/auth/register" className="font-medium text-blue-600 dark:text-blue-400 hover:underline">
+                            Create one free
+                        </Link>
+                    </p>
+                </form>
             </CardContent>
         </Card>
     );

@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Loader2, AlertCircle, CheckCircle, Mail } from "lucide-react";
+import { Loader2, AlertCircle, CheckCircle, Mail, Lock } from "lucide-react";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { supabase } from "@/lib/supabase";
 
@@ -17,6 +17,8 @@ export default function RegisterPage() {
         mobileNumber: "",
         dealershipName: "",
         email: "",
+        password: "",
+        confirmPassword: "",
     });
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -33,10 +35,13 @@ export default function RegisterPage() {
         if (!form.dealershipName.trim()) return "Dealership name is required";
         if (!form.email.trim()) return "Email is required";
         if (!/\S+@\S+\.\S+/.test(form.email)) return "Enter a valid email address";
+        if (!form.password) return "Password is required";
+        if (form.password.length < 6) return "Password must be at least 6 characters";
+        if (form.password !== form.confirmPassword) return "Passwords do not match";
         return null;
     };
 
-    const handleSendMagicLink = async (e: React.FormEvent) => {
+    const handleRegister = async (e: React.FormEvent) => {
         e.preventDefault();
         setError(null);
 
@@ -45,7 +50,7 @@ export default function RegisterPage() {
 
         setLoading(true);
         try {
-            // Store form data in onboarding store before sending magic link
+            // Store form data in onboarding store
             reset();
             updateData({
                 dealershipName: form.dealershipName.trim(),
@@ -53,8 +58,9 @@ export default function RegisterPage() {
                 email: form.email.trim().toLowerCase(),
             });
 
-            const { error: authError } = await supabase.auth.signInWithOtp({
+            const { error: authError } = await supabase.auth.signUp({
                 email: form.email.trim().toLowerCase(),
+                password: form.password,
                 options: {
                     emailRedirectTo: `${window.location.origin}/auth/callback?next=/auth/login`,
                     data: {
@@ -73,7 +79,7 @@ export default function RegisterPage() {
             setSent(true);
         } catch (err) {
             const msg = err instanceof Error ? err.message : String(err);
-            setError(msg || "Failed to send magic link");
+            setError(msg || "Registration failed");
         } finally {
             setLoading(false);
         }
@@ -88,17 +94,20 @@ export default function RegisterPage() {
 
             <CardContent className="pt-4">
                 {sent ? (
-                    // Success: magic link sent
+                    // Success: verification email sent
                     <div className="space-y-4">
                         <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-sm text-emerald-600 dark:text-emerald-400">
                             <CheckCircle className="w-4 h-4 shrink-0" />
-                            <span>Magic link sent to <strong>{form.email}</strong></span>
+                            <span>Verification email sent to <strong>{form.email}</strong></span>
                         </div>
 
                         <div className="text-center space-y-3">
                             <p className="text-sm text-muted-foreground">
-                                Check your email and click the link to complete registration.
-                                The link expires in 1 hour.
+                                Please check your email and click the verification link.
+                                Once verified, you can{" "}
+                                <Link href="/auth/login" className="font-medium text-blue-600 dark:text-blue-400 hover:underline">
+                                    log in with your email and password
+                                </Link>.
                             </p>
 
                             <button
@@ -113,7 +122,7 @@ export default function RegisterPage() {
                     </div>
                 ) : (
                     // Registration Form
-                    <form onSubmit={handleSendMagicLink} className="space-y-4">
+                    <form onSubmit={handleRegister} className="space-y-4">
                         {/* Full Name */}
                         <div className="space-y-1.5">
                             <Label htmlFor="fullName">Full Name</Label>
@@ -162,7 +171,32 @@ export default function RegisterPage() {
                                 onChange={e => update("email", e.target.value)}
                                 disabled={loading}
                             />
-                            <p className="text-xs text-muted-foreground">We'll send a magic sign-in link here</p>
+                        </div>
+
+                        {/* Password */}
+                        <div className="space-y-1.5">
+                            <Label htmlFor="password">Password</Label>
+                            <Input
+                                id="password"
+                                type="password"
+                                placeholder="Min 6 characters"
+                                value={form.password}
+                                onChange={e => update("password", e.target.value)}
+                                disabled={loading}
+                            />
+                        </div>
+
+                        {/* Confirm Password */}
+                        <div className="space-y-1.5">
+                            <Label htmlFor="confirmPassword">Confirm Password</Label>
+                            <Input
+                                id="confirmPassword"
+                                type="password"
+                                placeholder="Re-enter password"
+                                value={form.confirmPassword}
+                                onChange={e => update("confirmPassword", e.target.value)}
+                                disabled={loading}
+                            />
                         </div>
 
                         {/* Error */}
@@ -181,9 +215,9 @@ export default function RegisterPage() {
                             disabled={loading}
                         >
                             {loading ? (
-                                <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Sending…</>
+                                <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Creating account…</>
                             ) : (
-                                <><Mail className="w-4 h-4 mr-2" /> Continue</>
+                                <><Mail className="w-4 h-4 mr-2" /> Create Account</>
                             )}
                         </Button>
 
