@@ -28,7 +28,7 @@ export function SiteDomainModal({ site, dealerId, dealerName, onClose }: Props) 
     const [copied, setCopied] = useState(false)
     const [subModal, setSubModal] = useState<SubModal>(null)
 
-    const freeUrl     = dealerSiteUrl(site.slug)
+    const freeUrl = dealerSiteUrl(site.slug)
     const freeUrlFull = dealerSiteHref(site.slug)
 
     function handleCopy() {
@@ -128,7 +128,7 @@ export function SiteDomainModal({ site, dealerId, dealerName, onClose }: Props) 
                                 <div>
                                     <p className="text-sm font-semibold">Connect Your Domain</p>
                                     <p className="text-xs text-muted-foreground mt-0.5">
-                                        e.g. tata.abhimotors.com &nbsp;·&nbsp; ₹499/month
+                                        e.g. tata.abhimotors.com
                                     </p>
                                 </div>
                             </div>

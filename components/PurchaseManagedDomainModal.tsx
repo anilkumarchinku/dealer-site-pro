@@ -51,68 +51,11 @@ export default function PurchaseManagedDomainModal({ isOpen, onClose, dealerId, 
         setStep('contact')
     }
 
-    // confirm → open Razorpay → verify → purchase domain
+    // Skip payment for now — go directly to domain purchase
     const handleProceedToPayment = async () => {
         if (!selectedDomain) return
         setError('')
-        setStep('payment')
-
-        try {
-            // 1. Create PREMIUM subscription
-            const subRes = await fetch('/api/payments/create-subscription', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ dealerId, tier: 'premium' }),
-            })
-            const subData = await subRes.json()
-
-            if (!subData.success) {
-                setError(subData.error || 'Failed to initialise payment')
-                setStep('confirm')
-                return
-            }
-
-            // 2. Open Razorpay checkout
-            openRazorpayCheckout({
-                subscriptionId: subData.subscriptionId,
-                tier: 'premium',
-                prefill: {
-                    name: contactInfo.name,
-                    email: contactInfo.email,
-                    contact: contactInfo.phone,
-                },
-                onSuccess: async (paymentData: RazorpaySuccessResponse) => {
-                    // 3. Verify payment
-                    const verifyRes = await fetch('/api/payments/verify', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            orderId: subData.orderId,
-                            paymentId: paymentData.razorpay_payment_id,
-                            signature: paymentData.razorpay_signature,
-                            subscriptionId: paymentData.razorpay_subscription_id,
-                        }),
-                    })
-                    const verifyData = await verifyRes.json()
-
-                    if (!verifyData.success) {
-                        setError('Payment verification failed. Please contact support.')
-                        setStep('confirm')
-                        return
-                    }
-
-                    // 4. Purchase domain
-                    await purchaseDomain()
-                },
-                onFailure: (err) => {
-                    setError(err.error || 'Payment failed. Please try again.')
-                    setStep('confirm')
-                },
-            })
-        } catch {
-            setError('Payment initialisation failed. Please try again.')
-            setStep('confirm')
-        }
+        await purchaseDomain()
     }
 
     const purchaseDomain = async () => {
@@ -166,7 +109,7 @@ export default function PurchaseManagedDomainModal({ isOpen, onClose, dealerId, 
                         </div>
                         <div>
                             <h2 className="text-xl font-bold">Get Managed Domain</h2>
-                            <p className="text-sm text-muted-foreground">PREMIUM Tier – ₹999/month</p>
+                            <p className="text-sm text-muted-foreground">We'll register and manage your domain</p>
                         </div>
                     </div>
                     <button onClick={handleClose} className="text-muted-foreground hover:text-foreground transition-colors">
@@ -216,11 +159,10 @@ export default function PurchaseManagedDomainModal({ isOpen, onClose, dealerId, 
                                         <div
                                             key={index}
                                             onClick={() => handleSelectDomain(result)}
-                                            className={`flex items-center justify-between p-4 border rounded-xl transition-colors ${
-                                                result.available
-                                                    ? 'border-violet-500/30 bg-violet-500/5 hover:bg-violet-500/10 cursor-pointer'
-                                                    : 'border-border bg-muted/30 opacity-50'
-                                            }`}
+                                            className={`flex items-center justify-between p-4 border rounded-xl transition-colors ${result.available
+                                                ? 'border-violet-500/30 bg-violet-500/5 hover:bg-violet-500/10 cursor-pointer'
+                                                : 'border-border bg-muted/30 opacity-50'
+                                                }`}
                                         >
                                             <div className="flex items-center gap-3">
                                                 {result.available
@@ -306,46 +248,23 @@ export default function PurchaseManagedDomainModal({ isOpen, onClose, dealerId, 
                                     disabled={!contactInfo.name || !contactInfo.email || !contactInfo.phone}
                                     className="flex-1 py-3 bg-violet-600 text-white rounded-xl font-semibold hover:bg-violet-700 disabled:opacity-50 transition-colors"
                                 >
-                                    Continue to Payment
+                                    Continue
                                 </button>
                             </div>
                         </div>
                     )}
 
-                    {/* Step 3: Confirm & Pay */}
+                    {/* Step 3: Confirm */}
                     {step === 'confirm' && selectedDomain && (
                         <div className="space-y-6">
                             <div className="border-2 border-violet-500/30 rounded-xl p-6">
-                                <h3 className="font-bold text-lg mb-4">Order Summary</h3>
-                                <div className="space-y-3 mb-4">
+                                <h3 className="font-bold text-lg mb-4">Confirm Domain</h3>
+                                <div className="space-y-3">
                                     <div className="flex justify-between">
                                         <span className="text-muted-foreground">Domain:</span>
                                         <span className="font-mono font-semibold">{selectedDomain.domain}</span>
                                     </div>
-                                    <div className="flex justify-between">
-                                        <span className="text-muted-foreground">Registration (1 year):</span>
-                                        <span className="font-semibold">{formatPrice(selectedDomain.price!)}</span>
-                                    </div>
-                                    <div className="flex justify-between">
-                                        <span className="text-muted-foreground">PREMIUM Subscription:</span>
-                                        <span className="font-semibold">₹999/month</span>
-                                    </div>
-                                    <div className="border-t border-border pt-3 flex justify-between">
-                                        <span className="font-bold">First Payment:</span>
-                                        <span className="font-bold text-violet-500">{formatPrice(selectedDomain.price! + 99900)}</span>
-                                    </div>
                                 </div>
-                                <p className="text-xs text-muted-foreground">
-                                    Includes domain registration + first month PREMIUM subscription
-                                </p>
-                            </div>
-
-                            <div className="bg-violet-500/10 border border-violet-500/20 rounded-xl p-4 flex items-start gap-3">
-                                <CreditCard className="w-5 h-5 text-violet-500 flex-shrink-0 mt-0.5" />
-                                <p className="text-sm text-muted-foreground">
-                                    Payment is securely processed via <strong className="text-foreground">Razorpay</strong>.
-                                    You'll be redirected to complete payment in a popup.
-                                </p>
                             </div>
 
                             {error && (
@@ -362,8 +281,7 @@ export default function PurchaseManagedDomainModal({ isOpen, onClose, dealerId, 
                                     onClick={handleProceedToPayment}
                                     className="flex-1 py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-xl font-semibold hover:from-violet-700 hover:to-purple-700 flex items-center justify-center gap-2 transition-colors"
                                 >
-                                    <CreditCard className="w-4 h-4" />
-                                    Pay & Purchase Domain
+                                    Purchase Domain
                                 </button>
                             </div>
                         </div>

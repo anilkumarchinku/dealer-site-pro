@@ -370,7 +370,7 @@ export default function DomainSettingsPage() {
                                 <div>
                                     <h3 className="text-xl font-bold">PRO</h3>
                                     <p className="text-2xl font-bold text-blue-400">
-                                        ₹499<span className="text-sm font-normal text-muted-foreground">/month</span>
+                                        PRO<span className="text-sm font-normal text-muted-foreground"> — Custom Domain</span>
                                     </p>
                                 </div>
                             </div>

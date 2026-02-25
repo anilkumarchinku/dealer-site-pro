@@ -32,15 +32,15 @@ interface Deployment {
 export default function WebsiteLiveBanner({
     dealerId, dealershipName, vehicleCount, sellsNewCars, sellsUsedCars, brands, slug
 }: Props) {
-    const [deployment,      setDeployment]      = useState<Deployment | null>(null)
+    const [deployment, setDeployment] = useState<Deployment | null>(null)
     const [hasCustomDomain, setHasCustomDomain] = useState(false)
-    const [loading,         setLoading]         = useState(true)
-    const [copiedUrl,       setCopiedUrl]       = useState(false)
+    const [loading, setLoading] = useState(true)
+    const [copiedUrl, setCopiedUrl] = useState(false)
     const [showDomainGuide, setShowDomainGuide] = useState(false)
 
-    const isNewCarDealer  = sellsNewCars && !sellsUsedCars
+    const isNewCarDealer = sellsNewCars && !sellsUsedCars
     const isUsedCarDealer = sellsUsedCars && !sellsNewCars
-    const isHybridDealer  = sellsNewCars && sellsUsedCars
+    const isHybridDealer = sellsNewCars && sellsUsedCars
 
     // Build the live site links based on dealer type
     const siteLinks = (() => {
@@ -120,7 +120,7 @@ export default function WebsiteLiveBanner({
         return;
     }, [dealerId])
 
-    const isLive  = deployment?.status === 'ready' && !!deployment?.site_url
+    const isLive = deployment?.status === 'ready' && !!deployment?.site_url
     const siteUrl = deployment?.site_url ?? null
 
     const copyUrl = () => {
@@ -133,34 +133,34 @@ export default function WebsiteLiveBanner({
     const checklist = [
         {
             label: 'Website created',
-            done:  true,
+            done: true,
             description: 'Your dealership site is ready to be published.',
-            href:  null,
+            href: null,
         },
         isNewCarDealer
             ? {
                 label: `${brands[0] ?? 'Brand'} catalog is live`,
-                done:  true,
+                done: true,
                 description: `Your website automatically shows the full ${brands[0] ?? ''} catalog.`,
-                href:  null,
+                href: null,
             }
             : {
                 label: vehicleCount > 0
                     ? `${vehicleCount} vehicle${vehicleCount > 1 ? 's' : ''} in stock`
                     : 'Add your first vehicle',
-                done:  vehicleCount > 0,
+                done: vehicleCount > 0,
                 description: vehicleCount > 0
                     ? 'Customers can browse your listed vehicles.'
                     : 'Add your used cars to start showing inventory.',
-                href:  vehicleCount === 0 ? '/dashboard/inventory/add' : '/dashboard/inventory',
+                href: vehicleCount === 0 ? '/dashboard/inventory/add' : '/dashboard/inventory',
             },
         {
             label: hasCustomDomain ? 'Custom domain connected' : 'Connect a custom domain',
-            done:  hasCustomDomain,
+            done: hasCustomDomain,
             description: hasCustomDomain
                 ? 'You\'re on a custom domain — great for brand recognition!'
-                : 'Upgrade to a professional domain (e.g. abcmotors.com) for ₹499/mo.',
-            href:  hasCustomDomain ? null : '/dashboard/domains',
+                : 'Upgrade to a professional domain (e.g. abcmotors.com).',
+            href: hasCustomDomain ? null : '/dashboard/domains',
         },
     ]
 
@@ -178,7 +178,7 @@ export default function WebsiteLiveBanner({
     }
 
     const linkColors = {
-        blue:  { card: 'border-blue-500/30 bg-blue-500/5 hover:border-blue-400/60 hover:bg-blue-500/10', icon: 'bg-blue-500/15 border-blue-500/30', text: 'text-blue-400', btn: 'text-blue-400 hover:text-blue-300' },
+        blue: { card: 'border-blue-500/30 bg-blue-500/5 hover:border-blue-400/60 hover:bg-blue-500/10', icon: 'bg-blue-500/15 border-blue-500/30', text: 'text-blue-400', btn: 'text-blue-400 hover:text-blue-300' },
         amber: { card: 'border-amber-500/30 bg-amber-500/5 hover:border-amber-400/60 hover:bg-amber-500/10', icon: 'bg-amber-500/15 border-amber-500/30', text: 'text-amber-400', btn: 'text-amber-400 hover:text-amber-300' },
     }
 
@@ -288,15 +288,14 @@ export default function WebsiteLiveBanner({
                                 {checklist.map((item, i) => (
                                     <div
                                         key={i}
-                                        className={`flex items-start gap-2.5 p-3 rounded-xl border transition-colors ${
-                                            item.done
+                                        className={`flex items-start gap-2.5 p-3 rounded-xl border transition-colors ${item.done
                                                 ? 'bg-emerald-500/5 border-emerald-500/20'
                                                 : 'bg-muted/30 border-border hover:border-blue-500/30'
-                                        }`}
+                                            }`}
                                     >
                                         {item.done
                                             ? <CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
-                                            : <Circle      className="w-4 h-4 text-muted-foreground/40 flex-shrink-0 mt-0.5" />
+                                            : <Circle className="w-4 h-4 text-muted-foreground/40 flex-shrink-0 mt-0.5" />
                                         }
                                         <div className="flex-1 min-w-0">
                                             <p className={`text-xs font-semibold ${item.done ? 'text-emerald-400' : 'text-foreground'}`}>
@@ -376,7 +375,7 @@ export default function WebsiteLiveBanner({
                             </div>
                         </div>
                         {showDomainGuide
-                            ? <ChevronUp   className="w-4 h-4 text-muted-foreground" />
+                            ? <ChevronUp className="w-4 h-4 text-muted-foreground" />
                             : <ChevronDown className="w-4 h-4 text-muted-foreground" />
                         }
                     </button>
@@ -412,7 +411,7 @@ export default function WebsiteLiveBanner({
                                         </div>
                                         <div>
                                             <p className="text-xs font-bold text-foreground">PRO</p>
-                                            <p className="text-xs text-blue-400 font-semibold">₹499/month</p>
+                                            <p className="text-xs text-blue-400 font-semibold">Custom Domain</p>
                                         </div>
                                     </div>
                                     <p className="text-xs text-muted-foreground leading-relaxed">
