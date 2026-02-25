@@ -3,7 +3,7 @@
 import { useState, useRef } from 'react'
 import { X, Upload, FileText, CheckCircle, AlertCircle, Loader2, Download } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { bulkAddVehicles } from '@/lib/db/vehicles'
 
 interface Props {
@@ -41,7 +41,7 @@ function parseCSV(text: string): ParsedRow[] {
         const [make, model, yearStr, priceStr, mileageStr, color, transmission, fuel_type, condition] = cols
         const errors: string[] = []
 
-        if (!make)  errors.push('make missing')
+        if (!make) errors.push('make missing')
         if (!model) errors.push('model missing')
         const year = parseInt(yearStr)
         if (isNaN(year) || year < 1990 || year > 2026) errors.push('invalid year')
@@ -54,17 +54,17 @@ function parseCSV(text: string): ParsedRow[] {
             : 'used'
 
         return {
-            make:        make ?? '',
-            model:       model ?? '',
+            make: make ?? '',
+            model: model ?? '',
             year,
             price_paise: Math.round(price * 100),
-            mileage_km:  mileageStr ? parseInt(mileageStr) || undefined : undefined,
-            color:       color || undefined,
+            mileage_km: mileageStr ? parseInt(mileageStr) || undefined : undefined,
+            color: color || undefined,
             transmission: transmission || undefined,
-            fuel_type:   fuel_type || undefined,
-            condition:   validCondition,
-            _raw:        line,
-            _error:      errors.length ? errors.join(', ') : undefined,
+            fuel_type: fuel_type || undefined,
+            condition: validCondition,
+            _raw: line,
+            _error: errors.length ? errors.join(', ') : undefined,
         } as ParsedRow
     })
 }
@@ -75,13 +75,13 @@ Honda,City,2021,900000,35000,White,Automatic,Petrol,used
 Hyundai,Creta,2020,1100000,42000,Blue,Automatic,Diesel,certified_pre_owned`
 
 export default function BulkUploadModal({ isOpen, onClose, dealerId, onSuccess }: Props) {
-    const [rows, setRows]         = useState<ParsedRow[]>([])
+    const [rows, setRows] = useState<ParsedRow[]>([])
     const [uploading, setUploading] = useState(false)
-    const [done, setDone]         = useState<{ count: number } | null>(null)
-    const [error, setError]       = useState('')
+    const [done, setDone] = useState<{ count: number } | null>(null)
+    const [error, setError] = useState('')
     const fileRef = useRef<HTMLInputElement>(null)
 
-    const validRows   = rows.filter(r => !r._error)
+    const validRows = rows.filter(r => !r._error)
     const invalidRows = rows.filter(r => r._error)
 
     function handleFile(file: File) {
@@ -112,17 +112,17 @@ export default function BulkUploadModal({ isOpen, onClose, dealerId, onSuccess }
         setError('')
 
         const payloads = validRows.map(r => ({
-            dealer_id:    dealerId,
-            make:         r.make,
-            model:        r.model,
-            year:         r.year,
-            price_paise:  r.price_paise,
-            mileage_km:   r.mileage_km,
-            color:        r.color,
+            dealer_id: dealerId,
+            make: r.make,
+            model: r.model,
+            year: r.year,
+            price_paise: r.price_paise,
+            mileage_km: r.mileage_km,
+            color: r.color,
             transmission: r.transmission,
-            fuel_type:    r.fuel_type,
-            condition:    r.condition,
-            features:     [],
+            fuel_type: r.fuel_type,
+            condition: r.condition,
+            features: [],
         }))
 
         const result = await bulkAddVehicles(payloads)
@@ -145,9 +145,9 @@ export default function BulkUploadModal({ isOpen, onClose, dealerId, onSuccess }
 
     function downloadSample() {
         const blob = new Blob([SAMPLE_CSV], { type: 'text/csv' })
-        const url  = URL.createObjectURL(blob)
-        const a    = document.createElement('a')
-        a.href     = url
+        const url = URL.createObjectURL(blob)
+        const a = document.createElement('a')
+        a.href = url
         a.download = 'bulk-upload-sample.csv'
         a.click()
         URL.revokeObjectURL(url)
@@ -163,6 +163,7 @@ export default function BulkUploadModal({ isOpen, onClose, dealerId, onSuccess }
                         </div>
                         <div>
                             <DialogTitle>Bulk Upload Vehicles</DialogTitle>
+                            <DialogDescription className="sr-only">Upload multiple vehicle listings at once via CSV or manual entry</DialogDescription>
                             <p className="text-sm text-muted-foreground">Upload a CSV to add multiple vehicles at once</p>
                         </div>
                     </div>
@@ -236,7 +237,7 @@ export default function BulkUploadModal({ isOpen, onClose, dealerId, onSuccess }
                                             <table className="w-full text-xs">
                                                 <thead className="bg-muted/50 sticky top-0">
                                                     <tr>
-                                                        {['Make','Model','Year','Price (₹)','Mileage','Condition','Status'].map(h => (
+                                                        {['Make', 'Model', 'Year', 'Price (₹)', 'Mileage', 'Condition', 'Status'].map(h => (
                                                             <th key={h} className="px-3 py-2 text-left font-semibold text-muted-foreground">{h}</th>
                                                         ))}
                                                     </tr>
@@ -247,7 +248,7 @@ export default function BulkUploadModal({ isOpen, onClose, dealerId, onSuccess }
                                                             <td className="px-3 py-2">{row.make}</td>
                                                             <td className="px-3 py-2">{row.model}</td>
                                                             <td className="px-3 py-2">{row.year || '—'}</td>
-                                                            <td className="px-3 py-2">{row.price_paise ? `₹${(row.price_paise/100).toLocaleString('en-IN')}` : '—'}</td>
+                                                            <td className="px-3 py-2">{row.price_paise ? `₹${(row.price_paise / 100).toLocaleString('en-IN')}` : '—'}</td>
                                                             <td className="px-3 py-2">{row.mileage_km ? `${row.mileage_km.toLocaleString()} km` : '—'}</td>
                                                             <td className="px-3 py-2">{row.condition === 'certified_pre_owned' ? 'CPO' : 'Used'}</td>
                                                             <td className="px-3 py-2">

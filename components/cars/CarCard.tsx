@@ -1,6 +1,7 @@
 /**
  * CarCard Component - PRO Edition
- * Clean, consistent card with equal heights across the grid
+ * Clean, consistent card with equal heights across the grid.
+ * Now includes a per-model variant accordion (Option B).
  */
 
 'use client';
@@ -11,10 +12,12 @@ import { cn } from '@/lib/utils';
 import type { Car } from '@/lib/types/car';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { getAggregatedCarSpecs, formatSpecsForDisplay } from '@/lib/utils/car-specs-aggregator';
+import { fetchCarInfoData } from '@/lib/utils/car-info-fetcher';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+
 import { EnquiryModal } from './EnquiryModal';
 import { QuickViewModal } from './QuickViewModal';
 import {
@@ -28,8 +31,48 @@ import {
     ShieldCheck,
     MapPin,
     Calendar,
+    ChevronDown,
+    ChevronUp,
+    Settings,
+    Box,
+    MoveVertical,
+    BadgeCheck,
+    Info,
 } from 'lucide-react';
 import { getBrandLogo } from '@/lib/data/brand-logos';
+
+// ── Variant types for the accordion ──────────────────────────────────────────
+interface CarVariantInfo {
+    make: string;
+    model: string;
+    variant_name: string;
+    ex_showroom_price_min_inr?: number;
+    fuel_type?: string;
+    transmission?: string;
+    engine_displacement_cc?: number;
+    power_bhp?: number;
+    torque_nm?: number;
+    mileage_kmpl_or_ev_range?: string | number;
+    seating_capacity?: number;
+    boot_space_l?: number;
+    ground_clearance_mm?: number;
+    key_features?: string;
+    safety_features?: string;
+    image_urls?: { value: string }[];
+    launch_year?: number;
+}
+
+function fmtPrice(inr?: number) {
+    if (!inr) return '—';
+    return `₹${(inr / 100000).toFixed(2)}L`;
+}
+
+function fuelChipClass(fuel?: string) {
+    if (fuel === 'Electric') return 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30';
+    if (fuel === 'Diesel') return 'bg-amber-500/15  text-amber-400  border-amber-500/30';
+    if (fuel === 'CNG') return 'bg-teal-500/15   text-teal-400   border-teal-500/30';
+    return 'bg-blue-500/15   text-blue-400   border-blue-500/30';
+}
 
 interface CarCardProps {
     car: Car;
@@ -117,6 +160,7 @@ export function CarCard({
                             src={car.images.hero}
                             alt={`${car.make} ${car.model}`}
                             fill
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                     ) : (
@@ -244,19 +288,28 @@ export function CarCard({
                         </div>
                     )}
 
-                    {/* CTA */}
-                    <Button
-                        className="w-full text-white mt-1"
-                        size="sm"
-                        style={{ backgroundColor: brandColor }}
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            handleEnquireNow();
-                        }}
-                    >
-                        <Send className="w-3.5 h-3.5 mr-1.5" />
-                        Enquire Now
-                    </Button>
+                    {/* CTA row — Enquire + Quick View */}
+                    <div className="flex gap-2 mt-1">
+                        <Button
+                            className="flex-1 text-white"
+                            size="sm"
+                            style={{ backgroundColor: brandColor }}
+                            onClick={(e) => { e.stopPropagation(); handleEnquireNow(); }}
+                        >
+                            <Send className="w-3.5 h-3.5 mr-1.5" />
+                            Enquire
+                        </Button>
+                        <Button
+                            size="sm"
+                            variant="outline"
+                            className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium"
+                            style={{ borderColor: brandColor, color: brandColor }}
+                            onClick={(e) => { e.stopPropagation(); setIsQuickViewOpen(true); }}
+                        >
+                            <Info className="w-3.5 h-3.5" />
+                            Quick View
+                        </Button>
+                    </div>
                 </CardContent>
 
                 {/* Bottom accent */}
@@ -324,3 +377,260 @@ function SpecItem({
         </div>
     );
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// VariantAccordionButton — popup with chips + inline spec panel
+// ─────────────────────────────────────────────────────────────────────────────
+function VariantAccordionButton({
+    make,
+    model,
+    brandColor,
+}: {
+    make: string;
+    model: string;
+    brandColor: string;
+}) {
+    const [open, setOpen] = useState(false);
+    const [variants, setVariants] = useState<CarVariantInfo[]>([]);
+    const [loading, setLoading] = useState(false);
+    const [selected, setSelected] = useState<CarVariantInfo | null>(null);
+    const logoSrc = getBrandLogo(make);
+
+    const handleToggle = async (e: React.MouseEvent) => {
+        e.stopPropagation();
+        if (!open && variants.length === 0) {
+            setLoading(true);
+            try {
+                const data = await fetchCarInfoData();
+                if (data) {
+                    const brandKey = make.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_');
+                    let bData: any = null;
+                    for (const alias of [brandKey, brandKey.replace('_motors', ''), 'mercedes_benz', 'maruti_suzuki']) {
+                        if (data[alias]) { bData = data[alias]; break; }
+                    }
+                    if (bData) {
+                        const items: CarVariantInfo[] = [];
+                        if (bData.variants && Array.isArray(bData.variants)) items.push(...bData.variants);
+                        else if (bData.car_variants && Array.isArray(bData.car_variants)) items.push(...bData.car_variants);
+                        else {
+                            for (const k of Object.keys(bData)) {
+                                const v = bData[k];
+                                if (v && typeof v === 'object' && v.model) items.push(v);
+                            }
+                        }
+                        const modelNorm = model.toLowerCase().trim();
+                        const matching = items.filter(v => (v.model || '').toLowerCase().trim() === modelNorm);
+                        setVariants(matching);
+                        if (matching.length > 0) setSelected(matching[0]); // auto-select first
+                    }
+                }
+            } catch (e) { /* silent */ } finally {
+                setLoading(false);
+            }
+        }
+        setOpen(o => !o);
+    };
+
+    return (
+        <>
+            {/* Toggle button */}
+            <Button
+                size="sm"
+                variant="outline"
+                className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium"
+                style={{ borderColor: brandColor, color: brandColor }}
+                onClick={handleToggle}
+            >
+                {loading ? (
+                    <div className="w-3 h-3 border border-current border-t-transparent rounded-full animate-spin" />
+                ) : open ? (
+                    <ChevronUp className="w-3.5 h-3.5" />
+                ) : (
+                    <ChevronDown className="w-3.5 h-3.5" />
+                )}
+                Variants
+            </Button>
+
+            {/* Popup overlay */}
+            {open && !loading && (
+                <div
+                    className="fixed inset-0 z-40 flex items-end sm:items-center justify-center p-3 sm:p-4 bg-black/50 backdrop-blur-sm"
+                    onClick={e => { e.stopPropagation(); setOpen(false); }}
+                >
+                    <div
+                        className="w-full max-w-lg bg-card rounded-2xl border border-border shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
+                        onClick={e => e.stopPropagation()}
+                    >
+                        {/* ── Header ── */}
+                        <div
+                            className="px-4 py-3 flex items-center justify-between shrink-0"
+                            style={{ background: `linear-gradient(135deg, ${brandColor}20, transparent)` }}
+                        >
+                            <div className="flex items-center gap-2">
+                                {logoSrc && <Image src={logoSrc} alt={make} width={20} height={20} className="object-contain" />}
+                                <div>
+                                    <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: brandColor }}>{make}</p>
+                                    <p className="text-sm font-bold text-foreground leading-tight">{model}</p>
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Badge variant="outline" className="text-[11px]">
+                                    {variants.length > 0 ? `${variants.length} variants` : 'No data'}
+                                </Badge>
+                                <button
+                                    onClick={e => { e.stopPropagation(); setOpen(false); }}
+                                    className="w-7 h-7 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
+                                >
+                                    <ChevronDown className="w-4 h-4" />
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* ── Scrollable body ── */}
+                        <div className="overflow-y-auto flex-1">
+                            {variants.length === 0 ? (
+                                <p className="text-sm text-muted-foreground text-center py-8 px-5">
+                                    No variant data available for {model}
+                                </p>
+                            ) : (
+                                <>
+                                    {/* Variant chips */}
+                                    <div className="px-4 pt-3 pb-2">
+                                        <p className="text-[11px] text-muted-foreground mb-2">Select a variant to see specs</p>
+                                        <div className="flex flex-wrap gap-2">
+                                            {variants.map((v) => {
+                                                const isSelected = selected?.variant_name === v.variant_name;
+                                                return (
+                                                    <button
+                                                        key={v.variant_name}
+                                                        onClick={e => { e.stopPropagation(); setSelected(v); }}
+                                                        className={cn(
+                                                            'px-3 py-1.5 rounded-lg border text-xs font-medium transition-all duration-150 text-left',
+                                                            fuelChipClass(v.fuel_type),
+                                                            isSelected
+                                                                ? 'ring-2 ring-offset-1 scale-105 shadow-md'
+                                                                : 'hover:scale-[1.03] opacity-80 hover:opacity-100'
+                                                        )}
+                                                        style={isSelected ? { outline: `2px solid ${brandColor}`, outlineOffset: '2px' } : {}}
+                                                    >
+                                                        <span className="block font-semibold">{v.variant_name}</span>
+                                                        {v.ex_showroom_price_min_inr && (
+                                                            <span className="block opacity-70 font-normal text-[10px] mt-0.5">{fmtPrice(v.ex_showroom_price_min_inr)}</span>
+                                                        )}
+                                                    </button>
+                                                );
+                                            })}
+                                        </div>
+                                        {/* Fuel legend */}
+                                        <div className="flex flex-wrap gap-2 mt-3 pt-2 border-t border-border">
+                                            {Array.from(new Set(variants.map(v => v.fuel_type).filter(Boolean))).map(fuel => (
+                                                <span key={fuel} className={cn('text-[10px] px-2 py-0.5 rounded border', fuelChipClass(fuel))}>{fuel}</span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* ── Selected variant specs (inline) ── */}
+                                    {selected && (
+                                        <div className="border-t border-border mx-4 mt-1 pt-3 pb-4 space-y-3">
+                                            {/* Price + badges */}
+                                            <div className="flex items-end justify-between">
+                                                <div>
+                                                    <p className="text-[10px] text-muted-foreground">Ex-Showroom</p>
+                                                    <p className="text-xl font-bold" style={{ color: brandColor }}>
+                                                        {fmtPrice(selected.ex_showroom_price_min_inr)}
+                                                    </p>
+                                                </div>
+                                                <div className="flex gap-1.5">
+                                                    {selected.fuel_type && (
+                                                        <Badge variant="outline" className="text-[10px]" style={{ borderColor: brandColor, color: brandColor }}>
+                                                            {selected.fuel_type}
+                                                        </Badge>
+                                                    )}
+                                                    {selected.transmission && (
+                                                        <Badge variant="outline" className="text-[10px]">{selected.transmission}</Badge>
+                                                    )}
+                                                </div>
+                                            </div>
+
+                                            {/* Spec grid — 2 columns */}
+                                            <div className="grid grid-cols-2 gap-2">
+                                                <PopSpecChip icon={<Settings className="w-3.5 h-3.5 text-orange-400" />} label="Engine"
+                                                    value={selected.engine_displacement_cc ? `${selected.engine_displacement_cc} cc` : (selected.fuel_type === 'Electric' ? 'Electric' : '—')} />
+                                                <PopSpecChip icon={<Zap className="w-3.5 h-3.5 text-yellow-400" />} label="Power"
+                                                    value={selected.power_bhp ? `${selected.power_bhp} bhp` : '—'} />
+                                                <PopSpecChip icon={<BadgeCheck className="w-3.5 h-3.5 text-emerald-400" />} label="Torque"
+                                                    value={selected.torque_nm ? `${selected.torque_nm} Nm` : '—'} />
+                                                <PopSpecChip icon={<Gauge className="w-3.5 h-3.5 text-green-400" />} label="Mileage"
+                                                    value={selected.mileage_kmpl_or_ev_range ? String(selected.mileage_kmpl_or_ev_range) : '—'} />
+                                                <PopSpecChip icon={<Users className="w-3.5 h-3.5 text-cyan-400" />} label="Seating"
+                                                    value={selected.seating_capacity ? `${selected.seating_capacity} seats` : '—'} />
+                                                <PopSpecChip icon={<Box className="w-3.5 h-3.5 text-pink-400" />} label="Boot"
+                                                    value={selected.boot_space_l ? `${selected.boot_space_l} L` : '—'} />
+                                                {selected.ground_clearance_mm && (
+                                                    <PopSpecChip icon={<MoveVertical className="w-3.5 h-3.5 text-indigo-400" />} label="Ground Clr."
+                                                        value={`${selected.ground_clearance_mm} mm`} />
+                                                )}
+                                                {selected.launch_year && (
+                                                    <PopSpecChip icon={<Calendar className="w-3.5 h-3.5 text-slate-400" />} label="Year"
+                                                        value={`${selected.launch_year}`} />
+                                                )}
+                                            </div>
+
+                                            {/* Key features */}
+                                            {selected.key_features && (
+                                                <div>
+                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">Key Features</p>
+                                                    <div className="flex flex-wrap gap-1.5">
+                                                        {String(selected.key_features).split(',').map((f, i) => (
+                                                            <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">{f.trim()}</span>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            )}
+
+                                            {/* Safety features */}
+                                            {selected.safety_features && (
+                                                <div>
+                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">Safety</p>
+                                                    <div className="flex flex-wrap gap-1.5">
+                                                        {String(selected.safety_features).split(',').map((f, i) => (
+                                                            <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-red-500/10 text-red-400 border border-red-500/20">{f.trim()}</span>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            )}
+
+                                            {/* Enquire CTA */}
+                                            <Button
+                                                className="w-full text-white gap-2 mt-1"
+                                                style={{ backgroundColor: brandColor }}
+                                                onClick={e => e.stopPropagation()}
+                                            >
+                                                <Send className="w-4 h-4" />
+                                                Enquire — {selected.model} {selected.variant_name}
+                                            </Button>
+                                        </div>
+                                    )}
+                                </>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            )}
+        </>
+    );
+}
+
+/** Compact spec chip inside the inline popup */
+function PopSpecChip({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
+    return (
+        <div className="flex items-center gap-2 p-2 rounded-lg bg-muted/50 border border-border/40">
+            <div className="w-6 h-6 rounded-md bg-background flex items-center justify-center shrink-0 shadow-sm">{icon}</div>
+            <div className="min-w-0">
+                <p className="text-[9px] text-muted-foreground leading-none">{label}</p>
+                <p className="text-[11px] font-semibold text-foreground mt-0.5 truncate" title={value}>{value}</p>
+            </div>
+        </div>
+    );
+}
+

@@ -5,7 +5,7 @@ import {
     X, Globe, Copy, Check, ExternalLink,
     Link2, ChevronRight,
 } from 'lucide-react'
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
 import { dealerSiteHref, dealerSiteUrl } from '@/lib/utils/domain'
 import ConnectCustomDomainModal from '@/components/ConnectCustomDomainModal'
@@ -63,6 +63,7 @@ export function SiteDomainModal({ site, dealerId, dealerName, onClose }: Props) 
                             </span>
                         )}
                     </DialogTitle>
+                    <DialogDescription className="sr-only">Manage your site domain settings</DialogDescription>
                 </DialogHeader>
 
                 <div className="space-y-3 pt-1">

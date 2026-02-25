@@ -278,6 +278,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     src={activeImage}
                                     alt={`${car.make} ${car.model}`}
                                     fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 60vw"
                                     className="object-cover"
                                     priority
                                 />
@@ -308,11 +309,10 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                 <button
                                     key={idx}
                                     onClick={() => setActiveImage(img)}
-                                    className={`relative w-20 h-14 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all ${
-                                        activeImage === img
+                                    className={`relative w-20 h-14 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all ${activeImage === img
                                             ? 'border-primary ring-1 ring-primary/30'
                                             : 'border-transparent hover:border-muted-foreground/30'
-                                    }`}
+                                        }`}
                                 >
                                     <Image src={img} alt={`View ${idx + 1}`} fill className="object-cover" />
                                 </button>
@@ -405,11 +405,10 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                             <button
                                 key={tab.id}
                                 onClick={() => scrollToSection(tab.id)}
-                                className={`flex items-center gap-1.5 px-4 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${
-                                    activeTab === tab.id
+                                className={`flex items-center gap-1.5 px-4 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${activeTab === tab.id
                                         ? 'border-primary text-primary'
                                         : 'border-transparent text-muted-foreground hover:text-foreground'
-                                }`}
+                                    }`}
                             >
                                 <tab.icon className="w-3.5 h-3.5" />
                                 {tab.label}
@@ -586,9 +585,8 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                                 {cat.items.map((item) => (
                                                     <div key={item.name} className="flex items-center justify-between text-sm">
                                                         <span className="text-muted-foreground">{item.name}</span>
-                                                        <span className={`text-xs font-medium flex items-center gap-1 ${
-                                                            item.status === 'good' ? 'text-emerald-600' : item.status === 'fair' ? 'text-amber-600' : 'text-red-600'
-                                                        }`}>
+                                                        <span className={`text-xs font-medium flex items-center gap-1 ${item.status === 'good' ? 'text-emerald-600' : item.status === 'fair' ? 'text-amber-600' : 'text-red-600'
+                                                            }`}>
                                                             {item.status === 'good' && <CheckCircle2 className="w-3.5 h-3.5" />}
                                                             {item.status === 'fair' && <AlertTriangle className="w-3.5 h-3.5" />}
                                                             {item.status === 'good' ? 'Good' : item.status === 'fair' ? 'Fair' : 'Needs Repair'}
@@ -897,11 +895,10 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                         <button
                                             key={color.name}
                                             onClick={() => setSelectedColor(color.name)}
-                                            className={`flex flex-col items-center gap-1.5 p-2 rounded-lg transition-all ${
-                                                selectedColor === color.name
+                                            className={`flex flex-col items-center gap-1.5 p-2 rounded-lg transition-all ${selectedColor === color.name
                                                     ? 'bg-muted ring-2 ring-primary'
                                                     : 'hover:bg-muted/50'
-                                            }`}
+                                                }`}
                                         >
                                             <div
                                                 className="w-10 h-10 rounded-full border-2 border-border shadow-sm"
@@ -1194,8 +1191,8 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     <AccordionContent className="text-sm text-muted-foreground">
                                         {car.pricing.emi ? (
                                             <>The EMI for {car.make} {car.model} starts at ₹{car.pricing.emi.monthly.toLocaleString()} per month
-                                            with a down payment of ₹{car.pricing.emi.downPayment.toLocaleString()} for a tenure of {car.pricing.emi.tenure} months.
-                                            Use the EMI calculator above for a personalized estimate.</>
+                                                with a down payment of ₹{car.pricing.emi.downPayment.toLocaleString()} for a tenure of {car.pricing.emi.tenure} months.
+                                                Use the EMI calculator above for a personalized estimate.</>
                                         ) : (
                                             <>Use the EMI calculator above to get a personalized estimate for the {car.make} {car.model}.</>
                                         )}

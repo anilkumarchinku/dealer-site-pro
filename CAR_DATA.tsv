@@ -1,0 +1,818 @@
+Brand	Model	Variant	Price (INR)	Price (Lakhs)	Fuel Type	Transmission	Engine (cc)	Power (bhp)	Torque (Nm)	Mileage	Seating	Boot (L)	Ground Clearance (mm)	Year
+Audi	A4	Premium	4625000	46.25	Petrol	Automatic	1984	207	320	15	5	460		2024
+Audi	A4	Premium Plus	5117000	51.17	Petrol	Automatic	1984	207	320	15	5	460		2024
+Audi	A4	Signature Edition	5400000	54.00	Petrol	Automatic	1984	207	320	15	5	460		2024
+Audi	A4	Technology	5511000	55.11	Petrol	Automatic	1984	207	320	15	5	460		2024
+Audi	A6	45 TFSI Premium Plus	6373999	63.74	Petrol	Automatic	1984	241	370	14.11	5	530	165	2024
+Audi	A6	45 TFSI Technology	6989000	69.89	Petrol	Automatic	1984	241	370	14.11	5	530	165	2024
+Audi	Q3	Premium	4307000	43.07	Petrol	Automatic	1984	188	320	10.14	5	460	170	2022
+Audi	Q3	Premium Plus	4755000	47.55	Petrol	Automatic	1984	188	320	10.14	5	460	170	2022
+Audi	Q3	Technology	5231000	52.31	Petrol	Automatic	1984	188	320	10.14	5	460	170	2022
+Audi	Q3	Signature Line	5231000	52.31	Petrol	Automatic	1984	188	320	10.14	5	460	170	2022
+Audi	Q3	Bold Edition	5298000	52.98	Petrol	Automatic	1984	188	320	10.14	5	460	170	2022
+Audi	Q3 Sportback	Bold Edition	5298000	52.98	Petrol	Automatic	1984	188	320	10.14	5	380	200	2022
+Audi	Q3 Sportback	40 TFSI Quattro	5355000	53.55	Petrol	Automatic	1984	188	320	10.14	5	380	200	2022
+Audi	Q3 Sportback	Signature Line	5355000	53.55	Petrol	Automatic	1984	188	320	10.14	5	380	200	2022
+Audi	Q5	Premium Plus	6474000	64.74	Petrol	Automatic	1984	246	370	13.47	5	520		2021
+Audi	Q5	Bold Edition	6986000	69.86	Petrol	Automatic	1984	246	370	13.47	5	520		2021
+Audi	Q5	Signature Line	6986000	69.86	Petrol	Automatic	1984	246	370	13.47	5	520		2021
+Audi	Q5	Technology	6986000	69.86	Petrol	Automatic	1984	246	370	13.47	5	520		2021
+Audi	Q7	Premium Plus	8613999	86.14	Petrol	Automatic	2995	335	500	11	7		178	2025
+Audi	Q7	Bold Edition	9315000	93.15	Petrol	Automatic	2995	335	500	11	7		178	2025
+Audi	Q7	Technology	9502999	95.03	Petrol	Automatic	2995	335	500	11	7		178	2025
+Audi	Q7	Signature Edition	9503000	95.03	Petrol	Automatic	2995	335	500	11	7		178	2025
+Audi	Q8	Quattro	11000000	110.00	Petrol	Automatic	2995	335	500	10	5	605	254	2024
+Audi	RS Q8	Standard	23200000	232.00	Petrol	Automatic	3998	632	850	9	5		254	2024
+Audi	e-tron GT	Quattro	17200000	172.00	Electric	Automatic	EV	523	630		5	405	165	2024
+Audi	RS e-tron GT	Quattro	19500000	195.00	Electric	Automatic	EV	637	830		5	405	165	2024
+Audi	S5 Sportback	3.0L TFSI	7357001	73.57	Petrol	Automatic	2994	349	500	7.6	5	480		2021
+Audi	S5 Sportback	Platinum Edition	8050001	80.50	Petrol	Automatic	2994	349	500	7.6	5	480		2021
+Audi	Q8 e-tron	50 Quattro	11473000	114.73	Electric	Automatic	EV	402	664		5	505		2023
+Audi	Q8 e-tron	55 Quattro	12713000	127.13	Electric	Automatic	EV	402	664		5	505		2023
+Audi	Q8 Sportback e-tron	50 Quattro	11923000	119.23	Electric	Automatic	EV	402	664		5	535		2023
+Audi	Q8 Sportback e-tron	55 Quattro	13163000	131.63	Electric	Automatic	EV	402	664		5	535		2023
+Bentley	Bentayga	V8	50032967	500.33	Petrol	Automatic	3956	542	770	7.6	4	484		2026
+Bentley	Flying Spur	V8	55018177	550.18	Petrol	Automatic	3993	500	660	12.5	4	467	110	2026
+Bentley	Continental GT	Speed	64596706	645.97	Petrol	Automatic	5950	650	900	12.9	4	358	152	2026
+Bmw	2 Series Gran Coupe	218 M Sport	4530000	45.30	Petrol	7-Speed DCT (Automatic)	1499	154	230		5	430	128	2024
+Bmw	2 Series Gran Coupe	218 M Sport Pro	4720000	47.20	Petrol	7-Speed DCT (Automatic)	1499	154	230		5	430	128	2024
+Bmw	3 Series	M340i 50 Jahre Edition	7285000	72.85	Petrol	8-Speed Steptronic Automatic	2998	369	500		5	480	130	2024
+Bmw	3 Series	M340i xDrive	7395000	73.95	Petrol	8-Speed Steptronic Automatic	2998	369	500		5	480	130	2024
+Bmw	3 Series LWB	330Li M Sport	6050000	60.50	Petrol	8-Speed Automatic	1998	255	400		5	480	130	2024
+Bmw	3 Series LWB	330Li M Sport 50 Jahre Edition	6060000	60.60	Petrol	8-Speed Automatic	1998	255	400		5	480	130	2024
+Bmw	X1	sDrive18i xLine	4190000	41.90	Petrol	Automatic	1499	136	230	15.7	5	540	175	2024
+Bmw	X1	sDrive18i M Sport	4390000	43.90	Petrol	Automatic	1499	136	230	15.7	5	540	175	2024
+Bmw	X1	sDrive20d M Sport	4990000	49.90	Diesel	Automatic	1995	150	360	20.3	5	540	175	2024
+Bmw	X3	xDrive20d xLine	6690000	66.90	Diesel	Automatic	1995	190	400	18.5	5	550	204	2024
+Bmw	X3	xDrive20d M Sport	7290000	72.90	Diesel	Automatic	1995	190	400	18.5	5	550	204	2024
+Bmw	X5	xDrive30d xLine	9390000	93.90	Diesel	Automatic	2993	286	650	14.48	5	645	214	2024
+Bmw	X5	xDrive30d M Sport	10490000	104.90	Diesel	Automatic	2993	286	650	14.48	5	645	214	2024
+Bmw	X7	xDrive40i M Sport	13590000	135.90	Petrol	Automatic	2998	381	520	11.2	7	750	193	2024
+Bmw	5 Series	520d M Sport	7190000	71.90	Diesel	Automatic	1995	190	400	20.37	5	520	142	2024
+Bmw	5 Series	530d M Sport	8390000	83.90	Diesel	Automatic	2993	286	650	16.8	5	520	142	2024
+Bmw	7 Series	740d M Sport	16900000	169.00	Diesel	Automatic	2993	340	700	14.4	5	540	145	2024
+Bmw	i4	eDrive40 M Sport	7290000	72.90	Electric	Automatic	EV	340	430	590 km	5	470	144	2024
+Bmw	iX	xDrive40	8690000	86.90	Electric	Automatic	EV	326	630	425 km	5	500	200	2024
+Byd	Sealion 7	Premium	4890000	48.90	Electric	Automatic	EV	308	380	567	5	500		2025
+Byd	Sealion 7	Performance	5490000	54.90	Electric	Automatic	EV	523	690	542	5	500	163	2025
+Byd	Seal	Dynamic	4099000	40.99	Electric	Automatic	EV	204	310	510 km	5	400	150	2024
+Byd	Seal	Premium	5399000	53.99	Electric	Automatic	EV	313	360	580 km	5	400	150	2024
+Byd	Atto 3	Dynamic	2499000	24.99	Electric	Automatic	EV	204	310	521 km	5	440	175	2024
+Byd	Atto 3	Superior	3399000	33.99	Electric	Automatic	EV	204	310	521 km	5	440	175	2024
+Byd	e6	GL	2960000	29.60	Electric	Automatic	EV	95	180	415 km	5	580	175	2024
+Citroen	C3	Live	495000	4.95	Petrol	Manual	1198	80	115	19.3	5	315	180	2022
+Citroen	C3	Live CNG	573000	5.73	CNG	Manual	1198	72	95	28.1	5	315	180	2024
+Citroen	C3	Feel	585000	5.85	Petrol	Manual	1198	80	115	19.3	5	315	180	2022
+Citroen	C3	Feel Optional	680000	6.80	Petrol	Manual	1198	80	115	19.3	5	315	180	2022
+Citroen	C3	Feel Optional CNG	758000	7.58	CNG	Manual	1198	72	95	28.1	5	315	180	2024
+Citroen	C3	Feel CNG	845000	8.45	CNG	Manual	1198	72	95	28.1	5	315	180	2024
+Citroen	C3	X Shine	763000	7.63	Petrol	Manual	1198	80	115	19.3	5	315	180	2024
+Citroen	C3	X Shine CNG	816000	8.16	CNG	Manual	1198	72	95	28.1	5	315	180	2024
+Citroen	C3	Shine Dark Edition	838300	8.38	Petrol	Manual	1198	80	115	19.3	5	315	180	2024
+Citroen	C3	Shine Dark Edition CNG	931300	9.31	CNG	Manual	1198	72	95	28.1	5	315	180	2024
+Citroen	C3	X Shine Turbo	874000	8.74	Petrol	Manual	1199	108	190	19.3	5	315	180	2024
+Citroen	C3	X Shine Turbo AT	945000	9.45	Petrol	Automatic	1199	108	205	19.3	5	315	180	2024
+Citroen	C3	Shine Turbo Dark Edition	958300	9.58	Petrol	Manual	1199	108	190	19.3	5	315	180	2024
+Citroen	C3	Shine Turbo Dark Edition AT	1019300	10.19	Petrol	Automatic	1199	108	205	19.3	5	315	180	2024
+Citroen	C3	Turbo Shine DT AT	1014800	10.15	Petrol	Automatic	1199	108	205	19.3	5	315	180	2024
+Citroen	C3	Turbo Shine Sport Edition AT	1020801	10.21	Petrol	Automatic	1199	108	205	19.3	5	315	180	2024
+Citroen	C3 Aircross	Plus	989000	9.89	Petrol	Manual	1199	82	115	18.64	5	460	190	2024
+Citroen	C3 Aircross	Max	1049000	10.49	Petrol	Manual	1199	82	115	18.64	7	460	190	2024
+Citroen	C3 Aircross	Max Turbo	1189000	11.89	Petrol	Manual	1199	110	190	18.64	7	460	190	2024
+Citroen	Basalt	Plus	799000	7.99	Petrol	Manual	1199	82	115	18.7	5	470	180	2024
+Citroen	Basalt	Max	889000	8.89	Petrol	Manual	1199	82	115	18.7	5	470	180	2024
+Citroen	Basalt	Max Turbo AT	1069000	10.69	Petrol	Automatic	1199	110	190	18.7	5	470	180	2024
+Force Motors	Trax Cruiser	Force Trax Cruiser 9 Str	1383208	13.83	Diesel	Manual	2596	90	250	17	9		191	2026
+Force Motors	Trax Cruiser	Force Trax Cruiser 9 Str AC	1398935	13.99	Diesel	Manual	2596	90	250	17	9		191	2026
+Force Motors	Trax Cruiser	Force Trax Cruiser 12 Str	1521986	15.22	Diesel	Manual	2596	90	250	17	12		191	2026
+Force Motors	Trax Cruiser	Force Trax Cruiser 12 Str AC	1523458	15.23	Diesel	Manual	2596	90	250	17	12		191	2026
+Force Motors	Gurkha	2.6 Diesel	1595358	15.95	Diesel	Manual	2596	138	320	12	4	500	233	2024
+Force Motors	Gurkha 5 Door	Gurkha 5 Door	1726949	17.27	Diesel	Manual	2596	138	320	12	7		233	2024
+Honda	Amaze	V	747790	7.48	Petrol	Manual	1199	89	110	18.65	5	416	172	2024
+Honda	Amaze	VX	848390	8.48	Petrol	Manual	1199	89	110	18.65	5	416	172	2024
+Honda	Amaze	V CVT	862090	8.62	Petrol	Automatic	1199	89	110	19.46	5	416	172	2024
+Honda	Amaze	VX CVT	921590	9.22	Petrol	Automatic	1199	89	110	19.46	5	416	172	2024
+Honda	Amaze	ZX	921590	9.22	Petrol	Manual	1199	89	110	18.65	5	416	172	2024
+Honda	Amaze	ZX CVT	999900	10.00	Petrol	Automatic	1199	89	110	19.46	5	416	172	2024
+Honda	City	SV	1195300	11.95	Petrol	Manual	1498	119	145	17.8	5	506	165	2023
+Honda	City	V	1269500	12.70	Petrol	Manual	1498	119	145	17.8	5	506	165	2023
+Honda	City	VX	1372800	13.73	Petrol	Manual	1498	119	145	17.8	5	506	165	2023
+Honda	City	V CVT	1390200	13.90	Petrol	Automatic	1498	119	145	18.4	5	506	165	2023
+Honda	City	Sport	1437500	14.38	Petrol	Automatic	1498	119	145	18.4	5	506	165	2023
+Honda	City	ZX	1486800	14.87	Petrol	Manual	1498	119	145	17.8	5	506	165	2023
+Honda	City	VX CVT	1493500	14.94	Petrol	Automatic	1498	119	145	18.4	5	506	165	2023
+Honda	City	ZX CVT	1607400	16.07	Petrol	Automatic	1498	119	145	18.4	5	506	165	2023
+Honda	City Hybrid	ZX CVT	1999900	20.00	Petrol	Automatic	1498	96	127	27.13	5	410	165	2022
+Honda	Elevate	SV	1104500	11.04	Petrol	Manual	1498	121	145	15.31	5	458	220	2024
+Honda	Elevate	V	1229500	12.29	Petrol	Manual	1498	121	145	15.31	5	458	220	2024
+Honda	Elevate	VX CVT	1489500	14.89	Petrol	Automatic	1498	121	145	15.31	5	458	220	2024
+Honda	Elevate	ZX CVT	1599500	15.99	Petrol	Automatic	1498	121	145	15.31	5	458	220	2024
+Hyundai	Alcazar	Alcazar Executive	1449900	14.50	Petrol	Manual	1482	158	253	18.8	7	180	200	2024
+Hyundai	Alcazar	Alcazar Prestige	1672500	16.73	Petrol	Manual	1482	158	253	18.8	7	180	200	2024
+Hyundai	Alcazar	Alcazar Prestige DCT	1799500	18.00	Petrol	DCT	1482	158	253	18.8	7	180	200	2024
+Hyundai	Alcazar	Alcazar Platinum	1892500	18.93	Petrol	Manual	1482	158	253	18.8	7	180	200	2024
+Hyundai	Alcazar	Alcazar Signature DCT	2087000	20.87	Petrol	DCT	1482	158	253	18.8	7	180	200	2024
+Hyundai	Alcazar	Alcazar Executive Diesel	1549000	15.49	Diesel	Manual	1493	114	250	20.4	7	180	200	2024
+Hyundai	Alcazar	Alcazar Signature Diesel AT	2087000	20.87	Diesel	Automatic	1493	114	250	20.4	7	180	200	2024
+Hyundai	Aura	Aura E	648600	6.49	Petrol	Manual	1197	82	113.8	17.0	5	402	165	2023
+Hyundai	Aura	Aura S	732600	7.33	Petrol	Manual	1197	82	113.8	17.0	5	402	165	2023
+Hyundai	Aura	Aura SX	809400	8.09	Petrol	Manual	1197	82	113.8	17.0	5	402	165	2023
+Hyundai	Aura	Aura SX Plus AMT	889300	8.89	Petrol	AMT	1197	82	113.8	17.0	5	402	165	2023
+Hyundai	Aura	Aura S CNG	830900	8.31	CNG	Manual	1197	68	95.2	22.0	5	402	165	2023
+Hyundai	Aura	Aura SX CNG	904600	9.05	CNG	Manual	1197	68	95.2	22.0	5	402	165	2023
+Hyundai	Creta	Creta E	1099900	11.00	Petrol	Manual	1497	113	144	17.4	5	433	190	2024
+Hyundai	Creta	Creta EX	1221300	12.21	Petrol	Manual	1497	113	144	17.4	5	433	190	2024
+Hyundai	Creta	Creta SX Tech	1598000	15.98	Petrol	Manual	1497	113	144	17.4	5	433	190	2024
+Hyundai	Creta	Creta SX (O) iVT	1873000	18.73	Petrol	iVT	1497	113	144	17.4	5	433	190	2024
+Hyundai	Creta	Creta SX (O) Turbo DCT	1999900	20.00	Petrol	DCT	1482	158	253	17.4	5	433	190	2024
+Hyundai	Creta	Creta E Diesel	1255900	12.56	Diesel	Manual	1493	114	250	21.8	5	433	190	2024
+Hyundai	Creta	Creta SX (O) Diesel AT	2014900	20.15	Diesel	Automatic	1493	114	250	21.8	5	433	190	2024
+Hyundai	Creta EV	Creta Electric Executive	1802200	18.02	Electric	Automatic	EV	136	395	450 km	5	433	190	2025
+Hyundai	Creta EV	Creta Electric Premium	1999900	20.00	Electric	Automatic	EV	136	395	450 km	5	433	190	2025
+Hyundai	Creta EV	Creta Electric Excellence	2129900	21.30	Electric	Automatic	EV	136	395	450 km	5	433	190	2025
+Hyundai	Creta N Line	Creta N Line N8 DCT	1783000	17.83	Petrol	DCT	1482	158	253	18.0	5	433	190	2024
+Hyundai	Creta N Line	Creta N Line N10	1902500	19.02	Petrol	Manual	1482	158	253	18.0	5	433	190	2024
+Hyundai	Creta N Line	Creta N Line N10 DCT	1995000	19.95	Petrol	DCT	1482	158	253	18.0	5	433	190	2024
+Hyundai	Exter	Exter EX	564200	5.64	Petrol	Manual	1197	81.8	113.8	19.4	5	391	185	2023
+Hyundai	Exter	Exter S	713000	7.13	Petrol	Manual	1197	81.8	113.8	19.4	5	391	185	2023
+Hyundai	Exter	Exter SX	770000	7.70	Petrol	Manual	1197	81.8	113.8	19.4	5	391	185	2023
+Hyundai	Exter	Exter SX AMT	831500	8.31	Petrol	AMT	1197	81.8	113.8	19.4	5	391	185	2023
+Hyundai	Exter	Exter SX Opt Connect	898257	8.98	Petrol	Manual	1197	81.8	113.8	19.4	5	391	185	2023
+Hyundai	Exter	Exter S CNG	789304	7.89	CNG	Manual	1197	68	95.2	27.1	5	391	185	2023
+Hyundai	Grand i10 Nios	Grand i10 Nios Era	555000	5.55	Petrol	Manual	1197	82	113.8	18.0	5	260	165	2023
+Hyundai	Grand i10 Nios	Grand i10 Nios Magna	628000	6.28	Petrol	Manual	1197	82	113.8	18.0	5	260	165	2023
+Hyundai	Grand i10 Nios	Grand i10 Nios Sportz	683500	6.83	Petrol	Manual	1197	82	113.8	18.0	5	260	165	2023
+Hyundai	Grand i10 Nios	Grand i10 Nios Asta	739735	7.40	Petrol	Manual	1197	82	113.8	18.0	5	260	165	2023
+Hyundai	Grand i10 Nios	Grand i10 Nios Sportz AMT	735500	7.36	Petrol	AMT	1197	82	113.8	18.0	5	260	165	2023
+Hyundai	Grand i10 Nios	Grand i10 Nios Magna CNG	722000	7.22	CNG	Manual	1197	68	95.2	27.0	5	260	165	2023
+Hyundai	i20	i20 Era	599000	5.99	Petrol	Manual	1197	82	115	20.0	5	311	170	2023
+Hyundai	i20	i20 Magna	699900	7.00	Petrol	Manual	1197	82	115	20.0	5	311	170	2023
+Hyundai	i20	i20 Sportz	774500	7.75	Petrol	Manual	1197	82	115	20.0	5	311	170	2023
+Hyundai	i20	i20 Asta Opt	915000	9.15	Petrol	Manual	1197	82	115	20.0	5	311	170	2023
+Hyundai	i20	i20 Asta Opt IVT	1034000	10.34	Petrol	IVT	1197	82	115	20.0	5	311	170	2023
+Hyundai	Ioniq 5	Ioniq 5 RWD	4630000	46.30	Electric	Automatic	EV	214.56	350	631 km	5	584	163	2023
+Hyundai	Tucson	Tucson Platinum AT	2731661	27.32	Petrol	Automatic	1999	154	192	13.0	5	540	181	2022
+Hyundai	Tucson	Tucson Signature AT	3110000	31.10	Petrol	Automatic	1999	154	192	13.0	5	540	181	2022
+Hyundai	Tucson	Tucson Platinum Diesel AT	2953793	29.54	Diesel	Automatic	1997	184	416	18.0	5	540	181	2022
+Hyundai	Tucson	Tucson Signature Diesel 4WD AT	3349897	33.50	Diesel	Automatic	1997	184	416	18.0	5	540	181	2022
+Hyundai	Venue	Venue HX 2	799900	8.00	Petrol	Manual	1197	82	115	17.5	5	350	190	2023
+Hyundai	Venue	Venue HX 5	934900	9.35	Petrol	Manual	1197	82	115	17.5	5	350	190	2023
+Hyundai	Venue	Venue HX 5 Turbo DCT	1081900	10.82	Petrol	DCT	998	118	172	17.5	5	350	190	2023
+Hyundai	Venue	Venue HX 8 Turbo	1190700	11.91	Petrol	Manual	998	118	172	17.5	5	350	190	2023
+Hyundai	Venue	Venue HX 10 Turbo DCT	1456200	14.56	Petrol	DCT	998	118	172	17.5	5	350	190	2023
+Hyundai	Venue	Venue HX 2 Diesel	979900	9.80	Diesel	Manual	1493	114	250	23.4	5	350	190	2023
+Hyundai	Venue	Venue HX 10 Diesel AT	1551100	15.51	Diesel	Automatic	1493	114	250	23.4	5	350	190	2023
+Hyundai	Verna	Verna EX	1079500	10.79	Petrol	Manual	1497	113	144	18.6	5	528	170	2023
+Hyundai	Verna	Verna S	1195000	11.95	Petrol	Manual	1497	113	144	18.6	5	528	170	2023
+Hyundai	Verna	Verna SX	1285500	12.86	Petrol	Manual	1497	113	144	18.6	5	528	170	2023
+Hyundai	Verna	Verna SX IVT	1406000	14.06	Petrol	IVT	1497	113	144	18.6	5	528	170	2023
+Hyundai	Verna	Verna SX Opt Turbo DCT	1697760	16.98	Petrol	DCT	1482	158	253	20.0	5	528	170	2023
+Isuzu	V-Cross	4x2 Z AT	2426580	24.27	Diesel	Automatic	1898	160	360	12.4	5			2026
+Isuzu	V-Cross	4x4 Z	2498260	24.98	Diesel	Manual	1898	160	360	12.4	5			2026
+Isuzu	V-Cross	4x4 Z Prestige	2605590	26.06	Diesel	Manual	1898	160	360	12.4	5			2026
+Isuzu	V-Cross	4x4 Z Prestige AT	2936640	29.37	Diesel	Automatic	1898	160	360	12.4	5			2026
+Isuzu	Hi-Lander	4x2 MT	2034580	20.35	Diesel	Manual	1898	160	360	12.4	5		205	2026
+Isuzu	D-Max	CBC HR 2.0	1050060	10.50	Diesel	Manual	2499	77	176	12	2	1495	220	2026
+Isuzu	D-Max	Flat Deck HR	1190270	11.90	Diesel	Manual	2499	77	176	12	2	1495	220	2026
+Isuzu	D-Max	Flat Deck HR 2.0	1200010	12.00	Diesel	Manual	2499	77	176	12	2	1495	220	2026
+Isuzu	D-Max	Flat Deck HR AC 1.2	1227150	12.27	Diesel	Manual	2499	77	176	12	2	1495	220	2026
+Isuzu	D-Max	Flat Deck HR AC 2.0	1250390	12.50	Diesel	Manual	2499	77	176	12	2	1495	220	2026
+Jaguar	F-Pace	2.0 R-Dynamic S (Petrol)	7290000	72.90	Petrol	Automatic	1997	246	365	12.9	5	613	213	2026
+Jaguar	F-Pace	2.0 R-Dynamic S Diesel	7290000	72.90	Diesel	Automatic	1997	201	430	19.3	5	613	213	2026
+Jaguar	F-Pace	R-Dynamic S	8190000	81.90	Petrol	Automatic	1997	250	365	12.2	5	755	213	2024
+Jaguar	F-Pace	R-Dynamic HSE	9490000	94.90	Diesel	Automatic	1999	204	430	14.1	5	755	213	2024
+Jaguar	I-Pace	EV400 HSE	10590000	105.90	Electric	Automatic	EV	400	696	470 km	5	656	142	2024
+Jeep	Compass	2.0 Sport	1799000	17.99	Diesel	Manual	1956	168	350	14.9	5	438	200	2026
+Jeep	Compass	2.0 Longitude Opt AT	2338000	23.38	Diesel	Automatic	1956	168	350	14.9	5	438	200	2026
+Jeep	Grand Cherokee	Limited Opt	6300000	63.00	Petrol	Automatic	1995	268	400	7.2	5	438	200	2026
+Jeep	Wrangler	Unlimited	6458000	64.58	Petrol	8-speed	1995	268	400	10.6	5	438	200	2026
+Jeep	Wrangler	Rubicon	6831000	68.31	Petrol	8-speed	1995	268	400	10.6	5	438	200	2026
+Jeep	Meridian	Limited	3499000	34.99	Diesel	Automatic	1956	170	350	15.1	7	233	203	2024
+Jeep	Meridian	Limited (O)	3699000	36.99	Diesel	Automatic	1956	170	350	15.1	7	233	203	2024
+Jeep	Meridian	Overland 4x4	4199000	41.99	Diesel	Automatic	1956	170	350	14.2	7	233	203	2024
+Kia	Carnival	Carnival Limousine Plus	5942000	59.42	Diesel	Automatic	2151	190	441	14.85	7		180	2026
+Kia	Carens	Carens Premium Opt	1099000	10.99	Petrol	Manual	1497			0	7	216		2026
+Kia	Carens	Carens Premium Opt CNG	1177000	11.77	CNG	Manual	1497			0	7	216		2026
+Kia	Carens	Carens Premium Opt Diesel	1277000	12.77	Diesel	Manual	1493	114	250	0	7	216		2026
+Kia	Seltos	Seltos HTE	1099000	10.99	Petrol	Manual	1497			0	5	447		2026
+Kia	Seltos	Seltos HTE Diesel	1259000	12.59	Diesel	Manual	1493	114	250	0	5	447		2026
+Kia	Seltos	Seltos HTK	1309000	13.09	Petrol	Manual	1497			0	5	447		2026
+Kia	Seltos	Seltos HTX	1559000	15.59	Petrol	Manual	1497			0	5	447		2026
+Kia	Seltos	Seltos GTX A iVT	1949000	19.49	Petrol	Automatic	1497			0	5	447		2026
+Kia	Seltos	Seltos X-Line Diesel AT	1979000	19.79	Diesel	Automatic	1493	114	250	0	5	447		2026
+Kia	Sonet	Sonet HTE	730000	7.30	Petrol	Manual	1197			0	5	385		2026
+Kia	Sonet	Sonet HTK Plus	910000	9.10	Petrol	Manual	1197			0	5	385		2026
+Kia	Sonet	Sonet HTX Diesel	1125000	11.25	Diesel	Manual	1493			0	5	385		2026
+Kia	Sonet	Sonet GTX Plus Diesel AT	1400000	14.00	Diesel	Automatic	1493			0	5	385		2026
+Kia	Syros	Syros HTK Turbo	867053	8.67	Petrol	Manual	998			0	5	465		2026
+Kia	Syros	Syros HTK Plus Diesel	1146160	11.46	Diesel	Manual	1493			0	5	465		2026
+Kia	Syros	Syros HTX Plus Opt Diesel AT	1593898	15.94	Diesel	Automatic	1493			0	5	465		2026
+Lamborghini	Revuelto	LB 744	88900001	889.00	Petrol	Automatic	6498	1001	7256750	0	2	158	107	2026
+Lamborghini	Huracan EVO	Spyder	40000000	400.00	Petrol	Automatic	5204	630	6006500	5.9	2	150	135	2026
+Lamborghini	Huracan EVO	Tecnica	40400000	404.00	Petrol	Automatic	5204	630	5656500	5.9	2	150	135	2026
+Lamborghini	Huracan EVO	Sterrato	46100000	461.00	Petrol	Automatic	5204	602	5606500	7.3	2	150	135	2026
+Lamborghini	Huracan EVO	STO	49900000	499.00	Petrol	Automatic	5204	630	5656500	5.9	2	150	135	2026
+Lamborghini	Urus	S	40000000	400.00	Petrol	Automatic	3996	666	850	7.9	5	616	248	2024
+Lamborghini	Urus	Performante	43000000	430.00	Petrol	Automatic	3996	666	850	7.9	5	616	248	2024
+Land Rover	Defender	2.0 l Petrol 110 X-Dynamic HSE	9800000	98.00	Petrol	8-Speed	1997	296	400	11.5	7	499	291	2026
+Land Rover	Defender	3.0 l Diesel 90 X-Dynamic HSE	11946000	119.46	Diesel	8-Speed	2997	296	650	14.01	6	499	219	2026
+Land Rover	Defender	3.0 l Diesel 110 X-Dynamic HSE	12600000	126.00	Diesel	8-Speed	2997	296	650	11.5	6	499	228	2026
+Land Rover	Defender	3.0 l Diesel 110 Sedona Edition	13253000	132.53	Diesel	8-Speed	2997	296	650	11.5	6	499	228	2026
+Land Rover	Defender	3.0 l Diesel 110 X	13533000	135.33	Diesel	8-Speed	2997	296	650	11.5	6	499	228	2026
+Land Rover	Defender	5.0 l V8 Petrol 110 X-Dynamic HSE	13906000	139.06	Petrol	Automatic	5000	518	625	6.8	5		228	2026
+Land Rover	Defender	3.0 l Diesel 130 X-Dynamic HSE	13906000	139.06	Diesel	8-Speed	2997	296	650	11.4	5	499	219	2026
+Land Rover	Defender	5.0 l V8 Petrol 90 X	14186000	141.86	Petrol	Automatic	5000	518	625	6.8	5		228	2026
+Land Rover	Defender	5.0 l V8 Petrol 110 X	14840000	148.40	Petrol	Automatic	5000	518	625	6.8	5		228	2026
+Land Rover	Defender	3.0 l Diesel 130 X	14840000	148.40	Diesel	8-Speed	2997	296	650	11.4	5	499	219	2026
+Land Rover	Defender	5.0 l V8 Petrol 130 X-Dynamic HSE	15400000	154.00	Petrol	8-Speed	5000	518	625	6.8	5		219	2026
+Land Rover	Defender	2.0 l Petrol 110 PHEV Sedona Red Edition	16040000	160.40	Petrol	8-Speed	1997	296	400	14.01	7	107	291	2026
+Land Rover	Defender	5.0 l V8 Petrol 130 X	16333000	163.33	Petrol	8-speed	5000	518	625	6.8	5		219	2026
+Land Rover	Defender	5.0 l V8 Petrol 110 V8	16706000	167.06	Petrol	Automatic	5000	518	625	6.8	5		228	2026
+Land Rover	Defender	4.4 l V8 Petrol 110 OCTA	24173000	241.73	Petrol	Automatic	4367	626	750	14.01	5		228	2026
+Land Rover	Defender	4.4 l V8 Petrol 110 OCTA Edition One	26040000	260.40	Petrol	Automatic	4367	626	750	14.01	5		228	2026
+Land Rover	Discovery	3.0 Diesel S	12525000	125.25	Diesel	8-Speed	2996	296	650	12.37	7	123	207	2026
+Land Rover	Discovery	3.0 Diesel Dynamic HSE	12973000	129.73	Diesel	8-Speed	2996	296	650	13.2	7	123	207	2026
+Land Rover	Discovery	3.0 Diesel Metropolitan Edition	13682000	136.82	Diesel	8-Speed	2996	296	650	13.2	7	123	207	2026
+Land Rover	Discovery Sport	Dynamic SE (Petrol)	6337000	63.37	Petrol	9-Speed	1997	247	365	12.97	7	559	167	2026
+Land Rover	Discovery Sport	Dynamic SE Diesel	6337000	63.37	Diesel	9-Speed	1999	201	430	12.97	7	559	167	2026
+Land Rover	Range Rover Evoque	Autobiography (Petrol)	6486000	64.86	Petrol	Automatic	1997	247	365	12.82	5	472	212	2026
+Land Rover	Range Rover Evoque	Autobiography Diesel	6486000	64.86	Diesel	Automatic	1997	201	430	14.71	5	472	212	2026
+Land Rover	Range Rover Sport	3.0 l Petrol Dynamic HSE	13766000	137.66	Petrol	8-Speed	2998	345	700	0	5	530		2026
+Land Rover	Range Rover Sport	3.0 l Diesel Dynamic HSE	13766000	137.66	Diesel	8-Speed	2998	345	700	0	5	530		2026
+Land Rover	Range Rover Sport	3.0 l PHEV Autobiography	19600001	196.00	Petrol	8-Speed	2998	453	660	0	5	530		2026
+Land Rover	Range Rover Sport	4.4 l Autobiography	19740001	197.40	Petrol	8-Speed	4395	345	700	0	5	530		2026
+Land Rover	Range Rover Sport	4.4 l SV Edition Two	27530001	275.30	Petrol	Automatic	4395	626	700	0	5	530		2026
+Land Rover	Range Rover Velar	2.0 l Petrol Autobiography	8390000	83.90	Petrol	8-Speed	1997	183	365	15.8	5	673	156	2026
+Land Rover	Range Rover Velar	2.0 l Diesel Autobiography	8390000	83.90	Diesel	8-Speed	1997	150	430	15.8	5	673	156	2026
+Lexus	ES	300h Exquisite	6265000	62.65	Petrol	Automatic	2487	175	221	18	5	454	151	2026
+Lexus	ES	300h Luxury	6823000	68.23	Petrol	Automatic	2487	175	221	18	5	454	151	2026
+Lexus	LM	350h 7-Seater VIP	21538000	215.38	Petrol	Automatic	2487	190	242	0	7	752	150	2026
+Lexus	LM	350h 4-Seater Ultra Luxury	26923000	269.23	Petrol	Automatic	2487	190	242	0	4	752	150	2026
+Lexus	LS	500h Distinct	19371000	193.71	Petrol	Automatic	3456	292	350	15.4	4	480	147	2026
+Lexus	LS	500h Luxury	19552000	195.52	Petrol	Automatic	3456	292	350	15.4	4	480	147	2026
+Lexus	LS	500h Ultra Luxury	20143000	201.43	Petrol	Automatic	3456	292	350	15.4	4	480	147	2026
+Lexus	LS	500h Kiriko	22679000	226.79	Petrol	Automatic	3456	292	350	15.4	4	480	147	2026
+Lexus	LS	500h Nishijin	22679000	226.79	Petrol	Automatic	3456	292	350	15.4	4	480	147	2026
+Lexus	NX	350h Exquisite	6659000	66.59	Petrol	Automatic	2487	187	239	15	5	520	195	2026
+Lexus	NX	350h Overtrail	7037000	70.37	Petrol	Automatic	2487	187	239	15	5	520	195	2026
+Lexus	NX	350h Luxury	7126000	71.26	Petrol	Automatic	2487	187	239	15	5	520	195	2026
+Lexus	NX	350h F-sport	7340000	73.40	Petrol	Automatic	2487	187	239	15	5	520	195	2026
+Lexus	RX	350h Luxury Premium System	9613000	96.13	Petrol	Automatic	2393	268	460	15	5	505	195	2026
+Lexus	RX	500h F-SPORT Premium System	11846000	118.46	Petrol	6-speed	2393	268	460	15	5	505	195	2026
+Mahindra	BE 6	Pack One (Base)	1890001	18.90	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	Pack One 7.2 kW Charger	1940000	19.40	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	Pack One 11.2 kW Charger	1965001	19.65	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	Pack One Above	2050001	20.50	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	Pack One Above 7.2 kW Charger	2100000	21.00	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	Pack One Above 11.2 kW Charger	2125001	21.25	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	Pack Two (Base)	2190001	21.90	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	Pack Two 7.2 kW Charger	2240000	22.40	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	Pack Two 11.2 kW Charger	2265001	22.65	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	Pack Two 79 kWh	2350000	23.50	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	Pack Two 79 kWh 7.2 kW Charger	2400001	24.00	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	Pack Two 79 kWh 11.2 kW Charger	2425001	24.25	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	FE2	2369000	23.69	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	Pack Three Select	2450001	24.50	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	Pack Three Select 7.2 kW Charger	2500000	25.00	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	Pack Three Select 11.2 kW Charger	2525001	25.25	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	Pack Three (Base)	2690000	26.90	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	Pack Three 79 kWh 7.2 kW Charger	2740000	27.40	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	Pack Three 79 kWh 11.2 kW Charger	2765000	27.65	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	BE 6	FE3	2449000	24.49	Electric	Automatic	EV	282	380	683 km	5		207	2024
+Mahindra	Bolero	B4	799000	7.99	Diesel	Manual	1493	74.96	210	16 kmpl	7			2024
+Mahindra	Bolero	B6	869000	8.69	Diesel	Manual	1493	74.96	210	16 kmpl	7			2024
+Mahindra	Bolero	B6 Opt	909000	9.09	Diesel	Manual	1493	74.96	210	16 kmpl	7			2024
+Mahindra	Bolero	B8	969000	9.69	Diesel	Manual	1493	74.96	210	16 kmpl	7			2024
+Mahindra	Bolero Camper	2WD Non-AC	985000	9.85	Diesel	Manual	2523	80.05	220	16 kmpl	5		185	2024
+Mahindra	Bolero Camper	4WD Diesel	997699	9.98	Diesel	Manual	2523	80.05	220	16 kmpl	5		185	2024
+Mahindra	Bolero Camper	ZX	999899	10.00	Diesel	Manual	2523	80.05	220	16 kmpl	5		185	2024
+Mahindra	Bolero Camper	4WD Non-AC	1013001	10.13	Diesel	Manual	2523	80.05	220	16 kmpl	5		185	2024
+Mahindra	Bolero Camper	GOLD ZX	1020000	10.20	Diesel	Manual	2523	80.05	220	16 kmpl	5		185	2024
+Mahindra	Bolero Camper	GOLD RX	1025000	10.25	Diesel	Manual	2523	80.05	220	16 kmpl	5		185	2024
+Mahindra	Bolero Camper	GOLD RX 4WD	1049000	10.49	Diesel	Manual	2523	80.05	220	16 kmpl	5		185	2024
+Mahindra	Bolero Neo	N4	849000	8.49	Diesel	Manual	1493	98.56	260	17.29 kmpl	7		180	2024
+Mahindra	Bolero Neo	N8	929000	9.29	Diesel	Manual	1493	98.56	260	17.29 kmpl	7		180	2024
+Mahindra	Bolero Neo	N10 R	979000	9.79	Diesel	Manual	1493	98.56	260	17.29 kmpl	7		180	2024
+Mahindra	Bolero Neo	N10	997000	9.97	Diesel	Manual	1493	98.56	260	17.29 kmpl	7		180	2024
+Mahindra	Bolero Neo	N11	999000	9.99	Diesel	Manual	1493	98.56	260	17.29 kmpl	7		180	2024
+Mahindra	Bolero Neo	N10 Opt	1049000	10.49	Diesel	Manual	1493	98.56	260	17.29 kmpl	7		180	2024
+Mahindra	Marazzo	M2 8Str	1405900	14.06	Diesel	Manual	1497	120.96	300	17.3 kmpl	8		200	2024
+Mahindra	Marazzo	M2	1405900	14.06	Diesel	Manual	1497	120.96	300	17.3 kmpl	7		200	2024
+Mahindra	Marazzo	M4 Plus	1527800	15.28	Diesel	Manual	1497	120.96	300	17.3 kmpl	7		200	2024
+Mahindra	Marazzo	M4 Plus 8Str	1535700	15.36	Diesel	Manual	1497	120.96	300	17.3 kmpl	8		200	2024
+Mahindra	Marazzo	M6 Plus	1630000	16.30	Diesel	Manual	1497	120.96	300	17.3 kmpl	7		200	2024
+Mahindra	Marazzo	M6 Plus 8Str	1637900	16.38	Diesel	Manual	1497	120.96	300	17.3 kmpl	8		200	2024
+Mahindra	Scorpio Classic	S	1297701	12.98	Diesel	Manual	2184	130	370	14.44 kmpl	7			2024
+Mahindra	Scorpio Classic	S 9 Seater	1319398	13.19	Diesel	Manual	2184	130	370	14.44 kmpl	9			2024
+Mahindra	Scorpio Classic	S 11 7CC	1670498	16.70	Diesel	Manual	2184	130	370	14.44 kmpl	7			2024
+Mahindra	Scorpio Classic	S 11	1670498	16.70	Diesel	Manual	2184	130	370	14.44 kmpl	7			2024
+Mahindra	Thar	AXT RWD Diesel	999000	9.99	Diesel	Manual	2184	130	300	11 kmpl	4		226	2024
+Mahindra	Thar	LXT RWD Diesel	1219000	12.19	Diesel	Manual	2184	130	300	11 kmpl	4		226	2024
+Mahindra	Thar	LXT RWD AT (Petrol)	1399000	13.99	Petrol	Automatic	1997	130	300	11 kmpl	4		226	2024
+Mahindra	Thar	LXT 4WD (Petrol)	1469000	14.69	Petrol	Manual	1997	130	300	11 kmpl	4		226	2024
+Mahindra	Thar	LXT 4WD Diesel	1549000	15.49	Diesel	Manual	2184	130	300	11 kmpl	4		226	2024
+Mahindra	Thar	LXT 4WD AT (Petrol)	1625000	16.25	Petrol	Automatic	1997	130	300	11 kmpl	4		226	2024
+Mahindra	Thar	LXT 4WD Diesel AT	1699000	16.99	Diesel	Automatic	2184	130	300	11 kmpl	4		226	2024
+Mahindra	Thar Roxx	MX1 RWD (Petrol)	1239001	12.39	Petrol	Manual	1997	172	370	12.4 kmpl	5			2024
+Mahindra	Thar Roxx	MX1 RWD Diesel	1360000	13.60	Diesel	Manual	2184	172	370	15.2 kmpl	5			2024
+Mahindra	Thar Roxx	MX3 RWD AT (Petrol)	1457001	14.57	Petrol	Automatic	1997	172	370	12.4 kmpl	5			2024
+Mahindra	Thar Roxx	MX3 RWD Diesel	1549001	15.49	Diesel	Manual	2184	172	370	15.2 kmpl	5			2024
+Mahindra	Thar Roxx	MX5 RWD (Petrol)	1590000	15.90	Petrol	Manual	1997	172	370	12.4 kmpl	5			2024
+Mahindra	Thar Roxx	MX5 RWD Diesel	1649001	16.49	Diesel	Manual	2184	172	370	15.2 kmpl	5			2024
+Mahindra	Thar Roxx	Star Edition Diesel (RWD)	1685000	16.85	Diesel	Manual	2184	172	370	15.2 kmpl	5			2024
+Mahindra	Thar Roxx	Star Edition Diesel AT	1685000	16.85	Diesel	Automatic	2184	172	370	15.2 kmpl	5			2024
+Mahindra	Thar Roxx	MX3 RWD Diesel AT	1695001	16.95	Diesel	Automatic	2184	172	370	15.2 kmpl	5			2024
+Mahindra	Thar Roxx	MX5 RWD AT (Petrol)	1735000	17.35	Petrol	Automatic	1997	172	370	12.4 kmpl	5			2024
+Mahindra	Thar Roxx	Star Edition AT (Petrol)	1785000	17.85	Petrol	Automatic	1997	172	370	12.4 kmpl	5			2024
+Mahindra	Thar Roxx	MX5 RWD Diesel AT	1790001	17.90	Diesel	Automatic	2184	172	370	15.2 kmpl	5			2024
+Mahindra	Thar Roxx	AX5L RWD Diesel AT	1839001	18.39	Diesel	Automatic	2184	172	370	15.2 kmpl	5			2024
+Mahindra	Thar Roxx	MX5 4WD Diesel	1849001	18.49	Diesel	Manual	2184	172	370	15.2 kmpl	5			2024
+Mahindra	Thar Roxx	AX7L RWD Diesel	1886001	18.86	Diesel	Manual	2184	172	370	15.2 kmpl	5			2024
+Mahindra	Thar Roxx	AX7L RWD AT (Petrol)	1970001	19.70	Petrol	Automatic	1997	172	370	12.4 kmpl	5			2024
+Mahindra	Thar Roxx	AX7L RWD Diesel AT	1999901	20.00	Diesel	Automatic	2184	172	370	15.2 kmpl	5			2024
+Mahindra	Thar Roxx	AX5L 4WD Diesel AT	2038001	20.38	Diesel	Automatic	2184	172	370	15.2 kmpl	5			2024
+Mahindra	Thar Roxx	AX7L 4WD Diesel	2085001	20.85	Diesel	Manual	2184	172	370	15.2 kmpl	5			2024
+Mahindra	Thar Roxx	AX7L 4WD Diesel AT	2225001	22.25	Diesel	Automatic	2184	172	370	15.2 kmpl	5			2024
+Mahindra	XEV 9e	Pack One	2190000	21.90	Electric	Automatic	EV	282	380	656 km	5		207	2024
+Mahindra	XEV 9e	Pack One 7.2 kW Charger	2240001	22.40	Electric	Automatic	EV	282	380	656 km	5		207	2024
+Mahindra	XEV 9e	Pack One 11.2 kW Charger	2265000	22.65	Electric	Automatic	EV	282	380	656 km	5		207	2024
+Mahindra	XEV 9e	Pack Two	2490000	24.90	Electric	Automatic	EV	282	380	656 km	5		207	2024
+Mahindra	XEV 9e	Pack Two 7.2 kW Charger	2540001	25.40	Electric	Automatic	EV	282	380	656 km	5		207	2024
+Mahindra	XEV 9e	Pack Two 11.2 kW Charger	2565001	25.65	Electric	Automatic	EV	282	380	656 km	5		207	2024
+Mahindra	XEV 9e	Pack Two 79 kWh	2650001	26.50	Electric	Automatic	EV	282	380	656 km	5		207	2024
+Mahindra	XEV 9e	Pack Two 79 kWh 7.2 kW Charger	2700001	27.00	Electric	Automatic	EV	282	380	656 km	5		207	2024
+Mahindra	XEV 9e	Pack Two 79 kWh 11.2 kW Charger	2725001	27.25	Electric	Automatic	EV	282	380	656 km	5		207	2024
+Mahindra	XEV 9e	Pack Three Select	2790000	27.90	Electric	Automatic	EV	282	380	656 km	5		207	2024
+Mahindra	XEV 9e	Pack Three Select 7.2 kW Charger	2840001	28.40	Electric	Automatic	EV	282	380	656 km	5		207	2024
+Mahindra	XEV 9e	Pack Three Select 11.2 kW Charger	2865001	28.65	Electric	Automatic	EV	282	380	656 km	5		207	2024
+Mahindra	XEV 9e	Pack Three	3050000	30.50	Electric	Automatic	EV	282	380	656 km	5		207	2024
+Mahindra	XEV 9e	Pack Three 7.2 kW Charger	3100001	31.00	Electric	Automatic	EV	282	380	656 km	5		207	2024
+Mahindra	XEV 9e	Pack Three 11.2 kW Charger	3125001	31.25	Electric	Automatic	EV	282	380	656 km	5		207	2024
+Mahindra	XUV 3XO	MX1	736500	7.37	Petrol	Manual	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	REVX M	814900	8.15	Petrol	Manual	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	REVX M (O)	870500	8.71	Petrol	Manual	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	MX2 Pro	879500	8.79	Petrol	Manual	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	MX3	898000	8.98	Petrol	Manual	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	MX2 Diesel	899500	8.99	Diesel	Manual	1498			20.6 kmpl	5			2024
+Mahindra	XUV 3XO	MX3 Pro	920500	9.21	Petrol	Manual	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	MX2 Pro Diesel	965500	9.65	Diesel	Manual	1498			20.6 kmpl	5			2024
+Mahindra	XUV 3XO	MX2 Pro AT	971000	9.71	Petrol	Automatic	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	AX5	999900	10.00	Petrol	Manual	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	MX3 Diesel	997000	9.97	Diesel	Manual	1498			20.6 kmpl	5			2024
+Mahindra	XUV 3XO	MX3 AT	1049400	10.49	Petrol	Automatic	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	MX3 Pro Diesel	1049000	10.49	Diesel	Manual	1498			20.6 kmpl	5			2024
+Mahindra	XUV 3XO	REVX A Turbo	1086000	10.86	Petrol	Manual	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	MX3 Pro AT	1076500	10.77	Petrol	Automatic	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	AX5 Diesel	1099000	10.99	Diesel	Manual	1498			20.6 kmpl	5			2024
+Mahindra	XUV 3XO	MX3 Diesel AMT	1085000	10.85	Diesel	Automatic	1498			20.6 kmpl	5			2024
+Mahindra	XUV 3XO	AX5 AT	1149500	11.49	Petrol	Automatic	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	AX5 L Turbo	1163000	11.63	Petrol	Manual	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	AX7 Turbo	1180000	11.80	Petrol	Manual	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	AX5 Diesel AMT	1179000	11.79	Diesel	Automatic	1498			20.6 kmpl	5			2024
+Mahindra	XUV 3XO	REVX A Turbo AT	1197000	11.97	Petrol	Automatic	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	AX7 Diesel	1260000	12.60	Diesel	Manual	1498			20.6 kmpl	5			2024
+Mahindra	XUV 3XO	AX5 L Turbo AT	1284000	12.84	Petrol	Automatic	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	AX7 L Turbo	1289000	12.89	Petrol	Manual	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	AX7 Turbo AT	1290500	12.90	Petrol	Automatic	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 3XO	AX7 Diesel AMT	1334000	13.34	Diesel	Automatic	1498			20.6 kmpl	5			2024
+Mahindra	XUV 3XO	AX7 L Diesel	1360000	13.60	Diesel	Manual	1498			20.6 kmpl	5			2024
+Mahindra	XUV 3XO	AX7 L Turbo AT	1455000	14.55	Petrol	Automatic	1197	128.73	230	18.89 kmpl	5			2024
+Mahindra	XUV 7XO	AX	1366000	13.66	Petrol	Manual	1997	182.37	450	15 kmpl	7			2024
+Mahindra	XUV 7XO	AX Diesel	1496000	14.96	Diesel	Manual	2184	182.37	450	17 kmpl	7			2024
+Mahindra	XUV 7XO	AX3	1602000	16.02	Petrol	Manual	1997	182.37	450	15 kmpl	7			2024
+Mahindra	XUV 7XO	AX3 Diesel	1649000	16.49	Diesel	Manual	2184	182.37	450	17 kmpl	7			2024
+Mahindra	XUV 7XO	AX3 AT	1747000	17.47	Petrol	Automatic	1997	182.37	450	15 kmpl	7			2024
+Mahindra	XUV 7XO	AX5	1752000	17.52	Petrol	Manual	1997	182.37	450	15 kmpl	7			2024
+Mahindra	XUV 7XO	AX3 Diesel AT	1794000	17.94	Diesel	Automatic	2184	182.37	450	17 kmpl	7			2024
+Mahindra	XUV 7XO	AX5 Diesel	1799000	17.99	Diesel	Manual	2184	182.37	450	17 kmpl	7			2024
+Mahindra	XUV 7XO	AX7	1848001	18.48	Petrol	Manual	1997	182.37	450	15 kmpl	7			2024
+Mahindra	XUV 7XO	AX7 Diesel	1895001	18.95	Diesel	Manual	2184	182.37	450	17 kmpl	7			2024
+Mahindra	XUV 7XO	AX5 AT	1897000	18.97	Petrol	Automatic	1997	182.37	450	15 kmpl	7			2024
+Mahindra	XUV 7XO	AX5 Diesel AT	1944000	19.44	Diesel	Automatic	2184	182.37	450	17 kmpl	7			2024
+Mahindra	XUV 7XO	AX7 AT	1993001	19.93	Petrol	Automatic	1997	182.37	450	15 kmpl	7			2024
+Mahindra	XUV 7XO	AX7 Diesel AT	2040001	20.40	Diesel	Automatic	2184	182.37	450	17 kmpl	7			2024
+Mahindra	XUV 7XO	AX7T Diesel	2099001	20.99	Diesel	Manual	2184	182.37	450	17 kmpl	7			2024
+Mahindra	XUV 7XO	AX7T 6Str Diesel	2139001	21.39	Diesel	Manual	2184	182.37	450	17 kmpl	7			2024
+Mahindra	XUV 7XO	AX7T AT	2197001	21.97	Petrol	Automatic	1997	182.37	450	15 kmpl	7			2024
+Mahindra	XUV 7XO	AX7T 6Str AT	2216001	22.16	Petrol	Automatic	1997	182.37	450	15 kmpl	7			2024
+Mahindra	XUV 7XO	AX7T Diesel AT	2244001	22.44	Diesel	Automatic	2184	182.37	450	17 kmpl	7			2024
+Mahindra	XUV 7XO	AX7L Diesel	2247001	22.47	Diesel	Manual	2184	182.37	450	17 kmpl	7			2024
+Mahindra	XUV 7XO	AX7T 6Str Diesel AT	2284001	22.84	Diesel	Automatic	2184	182.37	450	17 kmpl	7			2024
+Mahindra	XUV 7XO	AX7T Diesel AWD AT	2344001	23.44	Diesel	Automatic	2184	182.37	450	17 kmpl	7			2024
+Mahindra	XUV 7XO	AX7L AT	2345000	23.45	Petrol	Automatic	1997	182.37	450	15 kmpl	7			2024
+Mahindra	XUV 7XO	AX7L 6Str AT	2364001	23.64	Petrol	Automatic	1997	182.37	450	15 kmpl	7			2024
+Mahindra	XUV 7XO	AX7L 6Str Diesel AT	2411001	24.11	Diesel	Automatic	2184	182.37	450	17 kmpl	7			2024
+Mahindra	XUV 7XO	AX7L Diesel AWD AT	2492001	24.92	Diesel	Automatic	2184	182.37	450	17 kmpl	7			2024
+Mahindra	XUV700	MX 7Str	1365800	13.66	Petrol	Manual	1997			15 kmpl	7			2024
+Mahindra	XUV700	MX 7Str Diesel	1413000	14.13	Diesel	Manual	2198	182	450	17 kmpl	7			2024
+Mahindra	XUV700	MX E 7Str	1412900	14.13	Petrol	Manual	1997			15 kmpl	7			2024
+Mahindra	XUV700	MX E 7Str Diesel	1460100	14.60	Diesel	Manual	2198	182	450	17 kmpl	7			2024
+Mahindra	XUV700	AX5 S 7Str	1592100	15.92	Petrol	Manual	1997			15 kmpl	7			2024
+Mahindra	XUV700	AX5 S E 7Str	1639200	16.39	Petrol	Manual	1997			15 kmpl	7			2024
+Mahindra	XUV700	AX5 S 7Str Diesel	1672300	16.72	Diesel	Manual	2198	182	450	17 kmpl	7			2024
+Mahindra	XUV700	AX5 7Str	1728800	17.29	Petrol	Manual	1997			15 kmpl	7			2024
+Mahindra	XUV700	AX5 S 7Str AT	1757100	17.57	Petrol	Automatic	1997			15 kmpl	7			2024
+Mahindra	XUV700	AX5 E 7Str	1776000	17.76	Petrol	Manual	1997			15 kmpl	7			2024
+Mahindra	XUV700	AX5 7Str Diesel	1794799	17.95	Diesel	Manual	2198	182	450	17 kmpl	7			2024
+Mahindra	XUV700	AX5 S 7Str Diesel AT	1813701	18.14	Diesel	Automatic	2198	182	450	17 kmpl	7			2024
+Mahindra	XUV700	AX7 7Str	1837299	18.37	Petrol	Manual	1997			15 kmpl	7			2024
+Mahindra	XUV700	AX7 Ebony Edition 7Str	1851401	18.51	Petrol	Manual	1997			15 kmpl	7			2024
+Mahindra	XUV700	AX7 7Str Diesel	1884400	18.84	Diesel	Manual	2198	182	450	17 kmpl	7			2024
+Mahindra	XUV700	AX7 Ebony Edition 7Str Diesel	1898600	18.99	Diesel	Manual	2198	182	450	17 kmpl	7			2024
+Mahindra	XUV700	AX7 7Str Diesel AT	2044700	20.45	Diesel	Automatic	2198	182	450	17 kmpl	7			2024
+Mahindra	XUV700	AX7 7Str Diesel AT AWD	2157900	21.58	Diesel	Automatic	2198	182	450	17 kmpl	7			2024
+Mahindra	XUV700	AX7L 7Str Diesel AT AWD	2371000	23.71	Diesel	Automatic	2198	182	450	17 kmpl	7			2024
+Maruti Suzuki	Alto K10	STD				Manual					5			
+Maruti Suzuki	Alto K10	VXI AT				Automatic					5			
+Maruti Suzuki	Baleno	Sigma				Manual					5			
+Maruti Suzuki	Brezza	Lxi				Manual					5			
+Maruti Suzuki	Celerio	LXI				Manual					5			
+Maruti Suzuki	Dzire	LXI				Manual					5			
+Maruti Suzuki	Eeco	5 Seater STD				Manual					5			
+Maruti Suzuki	Ertiga	Lxi (O)				Manual					7			
+Maruti Suzuki	Fronx	Sigma				Manual					5			
+Maruti Suzuki	Grand Vitara	Sigma				Manual					5			
+Maruti Suzuki	Swift	LXi	599000	5.99	Petrol	Manual	1197	82	112	24.8	5	268	163	2024
+Maruti Suzuki	Swift	VXi	699000	6.99	Petrol	Manual	1197	82	112	24.8	5	268	163	2024
+Maruti Suzuki	Swift	ZXi+	849000	8.49	Petrol	Manual	1197	82	112	24.8	5	268	163	2024
+Maruti Suzuki	Swift	ZXi+ AMT	899000	8.99	Petrol	Automatic	1197	82	112	24.8	5	268	163	2024
+Maruti Suzuki	WagonR	LXi	549000	5.49	Petrol	Manual	1197	82	113	24.43	5	341	180	2024
+Maruti Suzuki	WagonR	ZXi	649000	6.49	Petrol	Manual	1197	82	113	24.43	5	341	180	2024
+Maruti Suzuki	WagonR	ZXi+ AGS	749000	7.49	Petrol	Automatic	1197	82	113	24.43	5	341	180	2024
+Maruti Suzuki	XL6	Zeta	1129000	11.29	Petrol	Manual	1462	103	138	20.97	6	209	180	2024
+Maruti Suzuki	XL6	Alpha+ AT	1399000	13.99	Petrol	Automatic	1462	103	138	20.97	6	209	180	2024
+Maruti Suzuki	Jimny	Zeta	1274900	12.75	Petrol	Manual	1462	103	138	16.94	4	208	210	2024
+Maruti Suzuki	Jimny	Alpha AT	1369900	13.70	Petrol	Automatic	1462	103	138	16.94	4	208	210	2024
+Maruti Suzuki	Invicto	Zeta+	2458000	24.58	Petrol	Automatic	1987	186	188	21.1	7		185	2024
+Maruti Suzuki	Invicto	Alpha+	2685000	26.85	Petrol	Automatic	1987	186	188	21.1	7		185	2024
+Maruti Suzuki	Ciaz	Sigma	899000	8.99	Petrol	Manual	1462	103	138	20.65	5	510	170	2024
+Maruti Suzuki	Ciaz	Alpha AT	1159000	11.59	Petrol	Automatic	1462	103	138	20.65	5	510	170	2024
+Maruti Suzuki	S-Presso	LXi	419000	4.19	Petrol	Manual	998	66	89	25.3	4	270	180	2024
+Maruti Suzuki	S-Presso	VXi+ AGS	559000	5.59	Petrol	Automatic	998	66	89	25.3	4	270	180	2024
+Mercedes Benz	A-Class	A 200	4446207	44.46	Petrol	Automatic	1332			0	5	395	160	2024
+Mercedes Benz	A-Class	A 200d	4592568	45.93	Diesel	Automatic	1950			0	5	395	160	2024
+Mercedes Benz	AMG GT	63 S E Performance	32700000	327.00	Petrol	Automatic	3982			0	5	461		2024
+Mercedes Benz	EQB	250 Plus	7220000	72.20	Electric	Automatic	EV			0	5	495		2024
+Mercedes Benz	EQB	350 4Matic	7890000	78.90	Electric	Automatic	EV			0	5	495		2024
+Mercedes Benz	EQE SUV	500 4MATIC	14100000	141.00	Electric	Automatic	EV			0	5	520	184	2024
+Mercedes Benz	GLC	300	73966667	739.67	Petrol	Automatic	1999			0	5	620	201	2024
+Mercedes Benz	GLC	220d	73966667	739.67	Diesel	Automatic	1993			0	5	620	201	2024
+Mercedes Benz	Maybach S-Class	S580	27430000	274.30	Petrol	Automatic	5980			0	5	495	146	2024
+Mercedes Benz	Maybach S-Class	S680	34735000	347.35	Petrol	Automatic	5980			0	5	495	146	2024
+Mercedes Benz	S-Class	S450 4Matic	17954054	179.54	Petrol	Automatic	2999			0	5	550	96	2024
+Mercedes Benz	S-Class	S 350d	17783784	177.84	Diesel	Automatic	2925			0	5	550	96	2024
+Mercedes Benz	C-Class	Mercedes-Benz C-Class C 220d	5865000	58.65	Diesel	Automatic	1993			0	5	540		2024
+Mercedes Benz	C-Class	Mercedes-Benz C-Class C 200	5890000	58.90	Petrol	Automatic	1496			0	5	540		2024
+Mercedes Benz	C-Class	Mercedes-Benz C-Class C 300	6431999.999999999	64.32	Petrol	Automatic	1999			0	5	455		2024
+Mercedes Benz	CLE	Mercedes-Benz AMG CLE 53 4Matic	12800000	128.00	Petrol	Automatic	2999			0	4			2024
+Mercedes Benz	E-Class	Mercedes-Benz E-Class E 200	7851000.000000001	78.51	Petrol	Automatic	1999			0	5			2024
+Mercedes Benz	E-Class	Mercedes-Benz E-Class E 220d	8041000	80.41	Diesel	Automatic	1993			0	5			2024
+Mercedes Benz	E-Class	Mercedes-Benz E-Class E 450	9166000	91.66	Petrol	Automatic	2999			0	5			2024
+Mercedes Benz	GLA	Mercedes-Benz GLA 200	4972000	49.72	Petrol	Automatic	1332			0	5	425		2024
+Mercedes Benz	GLA	Mercedes-Benz GLA 220d 4MATIC	5087000	50.87	Diesel	Automatic	1950			0	5	427		2024
+Mercedes Benz	GLA	Mercedes-Benz GLA 220d 4MATIC AMG Line	5273000	52.73	Diesel	Automatic	1950			0	5	427		2024
+Mercedes Benz	GLE	Mercedes-Benz GLE 300d 4Matic AMG Line	9614000	96.14	Diesel	Automatic	1993			0	5	630		2024
+Mercedes Benz	GLE	Mercedes-Benz GLE 450 4Matic	10700000	107.00	Petrol	Automatic	2999			0	5	630		2024
+Mercedes Benz	GLE	Mercedes-Benz GLE 450d 4Matic	11200000.000000002	112.00	Diesel	Automatic	2989			0	5	630		2024
+Mercedes Benz	GLS	Mercedes-Benz GLS 450 4MATIC	13200000	132.00	Petrol	Automatic	2999			0	7			2024
+Mercedes Benz	GLS	Mercedes-Benz GLS 450 4MATIC AMG Line	13200000	132.00	Petrol	Automatic	2999			0	7			2024
+Mercedes Benz	GLS	Mercedes-Benz GLS 450d 4MATIC AMG Line	13400000	134.00	Diesel	Automatic	2925			0	7			2024
+Mercedes Benz	GLS	Mercedes-Benz GLS 450d 4MATIC	13400000	134.00	Diesel	Automatic	2925			0	7			2024
+Mercedes Benz	Maybach GLS	Mercedes-Benz Maybach GLS 600 4MATIC	31700000	317.00	Petrol	Automatic	3982			0	5	520		2024
+Mercedes Benz	Maybach GLS	Mercedes-Benz Maybach GLS 600 Night Series	37100000	371.00	Petrol	Automatic	3982			0	5	520		2024
+Mercedes Benz	Maybach GLS	Mercedes-Benz Maybach GLS 600 Celebration Edition	41000000	410.00	Petrol	Automatic	3982			0	5	520		2024
+Mercedes Benz	A-Class Limousine	A 200	4446000	44.46	Petrol	Automatic	1332				5	395	160	2024
+Mercedes Benz	A-Class Limousine	A 200d	4593000	45.93	Diesel	Automatic	1950	161	250	15.5	5	395	160	2024
+Mercedes Benz	C-Class	C 200	5890000	58.90	Petrol	Automatic	1496				5	455		2024
+Mercedes Benz	C-Class	C 220d	5865000	58.65	Diesel	Automatic	1993				5	455		2024
+Mercedes Benz	C-Class	C 300	6432000	64.32	Petrol	Automatic	1999				5	455		2024
+Mercedes Benz	CLE	AMG CLE 53 4Matic	12800000	128.00	Petrol	Automatic	2999	442	560		4			2025
+Mercedes Benz	E-Class	E 200	7851000	78.51	Petrol	Automatic	1999				5			2024
+Mercedes Benz	E-Class	E 220d	8041000	80.41	Diesel	Automatic	1993				5			2024
+Mercedes Benz	E-Class	E 450	9166000	91.66	Petrol	Automatic	2999	375	500		5			2024
+Mercedes Benz	EQB	EQB 250 Plus	7220000	72.20	Electric	Automatic	EV	288	520		5	495		2024
+Mercedes Benz	EQB	EQB 350 4Matic	7890000	78.90	Electric	Automatic	EV	288	520		5	495		2024
+Mercedes Benz	EQE	500 4Matic	14100000	141.00	Electric	Automatic	EV	402	858		5	520	184	2024
+Mercedes Benz	EQS	580 4MATIC Celebration Edition	13000000	130.00	Electric	Automatic	EV	536	855		5	610	110	2025
+Mercedes Benz	EQS	580 4MATIC	16300000	163.00	Electric	Automatic	EV	751	855		5	610	110	2025
+Mercedes Benz	EQS SUV	450 4Matic	13300000	133.00	Electric	Automatic	EV	355			7			2024
+Mercedes Benz	EQS SUV	450 Celebration Edition	13400000	134.00	Electric	Automatic	EV	355			7			2024
+Mercedes Benz	EQS SUV	580 4Matic	14800000	148.00	Electric	Automatic	EV	536	858		7			2024
+Mercedes Benz	EQS SUV	580 Celebration Edition	14800000	148.00	Electric	Automatic	EV	536	858		7			2024
+Mercedes Benz	G-Class	400d Adventure Edition	25500000	255.00	Diesel	Automatic	2925				5	667	241	2024
+Mercedes Benz	G-Class	400d AMG Line	25500000	255.00	Diesel	Automatic	2925				5	667	241	2024
+Mercedes Benz	G-Class	450d Mild Hybrid	29000000	290.00	Diesel	Automatic	2989				5	667	241	2024
+Mercedes Benz	G-Class	AMG G 63	35900000	359.00	Petrol	Automatic	3982	577	850		5	667	241	2024
+Mercedes Benz	G-Class	AMG G 63 Collector's Edition	43000000	430.00	Petrol	Automatic	3982	577	850		5	667	241	2024
+Mercedes Benz	GLA	200	4972000	49.72	Petrol	Automatic	1332				5	427		2024
+Mercedes Benz	GLA	220d 4MATIC	5087000	50.87	Diesel	Automatic	1950	188	400	18.9	5	427		2024
+Mercedes Benz	GLA	220d 4MATIC AMG Line	5273000	52.73	Diesel	Automatic	1950	188	400	18.9	5	427		2024
+Mg	Astor	Sprint	978999	9.79	Petrol	Manual	1498	108	144	15.43	5	488	190	2026
+Mg	Astor	Shine	1134000	11.34	Petrol	Manual	1498	108	144	15.43	5	488	190	2026
+Mg	Astor	Select	1240000	12.40	Petrol	Manual	1498	108	144	15.43	5			2026
+Mg	Astor	Sharp Pro	1337000	13.37	Petrol	Manual	1498	108	144	15.43	5			2026
+Mg	Astor	Select CVT	1356000	13.56	Petrol	Automatic	1498	108	144	14.82	5			2026
+Mg	Astor	Sharp Pro CVT	1452000	14.52	Petrol	Automatic	1498	108	144	14.82	5			2026
+Mg	Astor	Savvy Pro CVT	1530000	15.30	Petrol	Automatic	1498	108	144	14.82	5			2026
+Mg	Astor	Savvy Pro Sangria CVT	1550000	15.50	Petrol	Automatic	1498	108	144	14.82	5			2026
+Mg	Gloster	Sharp 4x2 7Str	3833000	38.33	Diesel	8-Speed	1996	158	373	10	7	343	210	2026
+Mg	Gloster	Savvy 4x2 6Str	3980000	39.80	Diesel	Manual				0	6			2026
+Mg	Gloster	Savvy 4x2 7Str	3980000	39.80	Diesel	Manual				0	7			2026
+Mg	Gloster	Black Storm 4x2 6Str	4046000	40.46	Diesel	Manual				0	6			2026
+Mg	Gloster	Black Storm 4x2 7Str	4046000	40.46	Diesel	Manual				0	7			2026
+Mg	Gloster	Savvy 4x4 6Str	4249000	42.49	Diesel	Manual		212	478	0	6			2026
+Mg	Gloster	Savvy 4x4 7Str	4249000	42.49	Diesel	Manual		212	478	0	7			2026
+Mg	Gloster	Black Storm 4x4 6Str	4316000	43.16	Diesel	Manual		212	478	0	6			2026
+Mg	Gloster	Black Storm 4x4 7Str	4316000	43.16	Diesel	Manual		212	478	0	7			2026
+Mg	Hector	Style 5Str	1199000	11.99	Petrol	Manual	1451	141	250	13.79	5	587	192	2026
+Mg	Hector	Select Pro 5Str	1399000	13.99	Petrol	Manual				0	5			2026
+Mg	Hector	Smart Pro 5Str	1499000	14.99	Petrol	Manual				0	5			2026
+Mg	Hector	Smart Pro 5Str CVT	1629000	16.29	Petrol	Automatic				0	5			2026
+Mg	Hector	Sharp Pro 5Str	1679000	16.79	Petrol	Manual				0	5			2026
+Mg	Hector	Sharp Pro 5Str CVT	1809000	18.09	Petrol	Automatic				0	5			2026
+Mg	Hector	Savvy Pro 5Str CVT	1899000	18.99	Petrol	Automatic				0	5			2026
+Mg	Hector Plus	Sharp Pro 7-Str	1729000	17.29	Petrol	Manual	1451	141	250	13.79	7			2026
+Mg	Hector Plus	Sharp Pro 7-Str CVT	1859000	18.59	Petrol	CVT				0	7			2026
+Mg	Hector Plus	Savvy Pro 7-Str CVT	1949000	19.49	Petrol	CVT				0	7			2026
+Mg	Windsor EV	Excite	1399800	14.00	Electric	Automatic	EV	134	200	332	5	579	186	2026
+Mg	Windsor EV	Exclusive	1552900	15.53	Electric	Manual	EV			332	5			2026
+Mg	Windsor EV	Essence	1652900	16.53	Electric	Manual	EV			332	5			2026
+Mg	Windsor EV	Exclusive Pro	1737900	17.38	Electric	Manual	EV			449	5			2026
+Mg	Windsor EV	Essence Pro	1849900	18.50	Electric	Manual	EV			449	5			2026
+Mini	Cooper	Cooper S STD	4370000	43.70	Petrol	Automatic (7-speed DCT)	1998	201	30014504500	15	4	211	145	2026
+Mini	Cooper	Cooper S Classic Pack	4915000	49.15	Petrol	Automatic (7-speed DCT)	1998	201	30014504500	15	4	211	145	2026
+Mini	Cooper	Cooper S Favoured Pack	5200000	52.00	Petrol	Automatic (7-speed DCT)	1998	201	30014504500	15	4	211	145	2026
+Mini	Cooper	Cooper S JCW Pack	5440000	54.40	Petrol	Automatic (7-speed DCT)	1998	201	30014504500	15	4	211	145	2026
+Mini	Countryman	Countryman JCW	6490000	64.90	Petrol	Automatic	1998	296	400		4	211	145	2026
+Mini	Countryman	Countryman Electric S	5490000	54.90	Electric	Automatic	664	313	494	462	4	211	145	2026
+Mini	Countryman	Countryman Electric Favoured Pack	5995001	59.95	Electric	Automatic	664	313	494	462	4	211	145	2026
+Mini	Cooper Convertible	Cooper Convertible S	5850000	58.50	Petrol	Automatic	1998	201	30014504500		4	211	145	2026
+Nissan	Magnite	Visia	561650	5.62	Petrol	Manual	999	71	96	19.4	5	336	205	2024
+Nissan	Magnite	Visia Plus	616000	6.16	Petrol	Manual	999	71	96	19.4	5	336	205	2024
+Nissan	Magnite	Visia AMT	620600	6.21	Petrol	AMT	999	71	96	19.7	5	336	205	2024
+Nissan	Magnite	Visia CNG	633642	6.34	CNG	Manual	999	71	96	24	5	336	205	2024
+Nissan	Magnite	Acenta	676500	6.76	Petrol	Manual	999	71	96	19.4	5	336	205	2024
+Nissan	Magnite	Visia Plus CNG	679379	6.79	CNG	Manual	999	71	96	24	5	336	205	2024
+Nissan	Magnite	Acenta AMT	732000	7.32	Petrol	AMT	999	71	96	19.7	5	336	205	2024
+Nissan	Magnite	Acenta CNG	738836	7.39	CNG	Manual	999	71	96	24	5	336	205	2024
+Nissan	Magnite	N Connecta	739500	7.39	Petrol	Manual	999	71	96	19.4	5	336	205	2024
+Nissan	Magnite	KURO Edition	774500	7.75	Petrol	Manual	999	71	96	19.4	5	336	205	2024
+Nissan	Magnite	N Connecta AMT	795000	7.95	Petrol	AMT	999	71	96	19.7	5	336	205	2024
+Nissan	Magnite	N Connecta CNG	801038	8.01	CNG	Manual	999	71	96	24	5	336	205	2024
+Nissan	Magnite	KURO Edition AMT	830000	8.30	Petrol	AMT	999	71	96	19.7	5	336	205	2024
+Nissan	Magnite	Tekna	832500	8.32	Petrol	Manual	999	71	96	19.4	5	336	205	2024
+Nissan	Magnite	Tekna Plus	865500	8.65	Petrol	Manual	999	71	96	19.4	5	336	205	2024
+Nissan	Magnite	N Connecta Turbo	870500	8.71	Petrol	Manual	999	99	160	19.9	5	336	205	2024
+Nissan	Magnite	Tekna CNG	887937	8.88	CNG	Manual	999	71	96	24	5	336	205	2024
+Nissan	Magnite	Tekna AMT	888000	8.88	Petrol	AMT	999	71	96	19.7	5	336	205	2024
+Nissan	Magnite	KURO Edition Turbo	905500	9.05	Petrol	Manual	999	99	160	19.9	5	336	205	2024
+Nissan	Magnite	Tekna Plus CNG	919952	9.20	CNG	Manual	999	71	96	24	5	336	205	2024
+Nissan	Magnite	Tekna Plus AMT	921000	9.21	Petrol	AMT	999	71	96	19.7	5	336	205	2024
+Nissan	Magnite	Acenta Turbo CVT	925000	9.25	Petrol	CVT	999	99	152	17.9	5	336	205	2024
+Nissan	Magnite	Tekna Turbo	950500	9.51	Petrol	Manual	999	99	160	19.9	5	336	205	2024
+Nissan	Magnite	N Connecta Turbo CVT	967400	9.67	Petrol	CVT	999	99	152	17.9	5	336	205	2024
+Nissan	Magnite	Tekna Plus Turbo	984400	9.84	Petrol	Manual	999	99	160	19.9	5	336	205	2024
+Nissan	Magnite	KURO Edition Turbo CVT	999400	9.99	Petrol	CVT	999	99	152	17.9	5	336	205	2024
+Nissan	Magnite	Tekna Turbo CVT	1062300	10.62	Petrol	CVT	999	99	152	17.9	5	336	205	2024
+Nissan	Magnite	Tekna Plus Turbo CVT	1096000	10.96	Petrol	CVT	999	99	152	17.9	5	336	205	2024
+Porsche	911	911 Carrera	19984000	199.84	Petrol	Automatic	2981	380	450	9.17	4	132	109	2024
+Porsche	911	911 Carrera 4 GTS	27759000	277.59	Petrol	Automatic	3996	533	610	10.64	4	132	100	2024
+Porsche	911	911 Turbo 50 Years	37749000	377.49	Petrol	Automatic	3745	641	800	9	4	132	109	2024
+Porsche	911	911 Turbo S	38035001	380.35	Petrol	Automatic	3591	641	800	9	4	132	109	2024
+Porsche	Cayenne	Cayenne STD	13869001	138.69	Petrol	Automatic	2894	348.66	500	10.8	4	770		2024
+Porsche	Cayenne	Cayenne GTS	19417001	194.17	Petrol	Automatic	2894	348.66	500	10.7	4	770	192	2024
+Porsche	Macan	Macan Standard	8965000	89.65	Petrol	Automatic	1984	261.49	400	10.2	5	458	202	2024
+Renault	Kiger	Authentic			Petrol	Manual	999	71	96	19.71	5	405	205	
+Renault	Kiger	Evolution			Petrol	Manual	999	71	96	19.71	5	405	205	
+Renault	Kiger	Evolution AMT			Petrol	Automatic	999	71	96	19.83	5	405	205	
+Renault	Kiger	Techno			Petrol	Manual	999	71	96	19.71	5	405	205	
+Renault	Kiger	Techno DT			Petrol	Manual	999	71	96	19.71	5	405	205	
+Renault	Kiger	Techno AMT			Petrol	Automatic	999	71	96	19.83	5	405	205	
+Renault	Kiger	Techno DT AMT			Petrol	Automatic	999	71	96	19.83	5	405	205	
+Renault	Kiger	Emotion			Petrol	Manual	999	71	96	19.71	5	405	205	
+Renault	Kiger	Emotion DT			Petrol	Manual	999	71	96	19.71	5	405	205	
+Renault	Kiger	Emotion Turbo			Petrol	Manual	999	98.63	152	20.38	5	405	205	
+Renault	Kiger	Emotion Turbo DT			Petrol	Manual	999	98.63	152	20.38	5	405	205	
+Renault	Kiger	Techno Turbo CVT			Petrol	Automatic (CVT)	999	98.63	152	17.63	5	405	205	
+Renault	Kiger	Techno Turbo DT CVT			Petrol	Automatic (CVT)	999	98.63	152	17.63	5	405	205	
+Renault	Kiger	Emotion Turbo CVT			Petrol	Automatic (CVT)	999	98.63	152	17.63	5	405	205	
+Renault	Kiger	Emotion Turbo DT CVT			Petrol	Automatic (CVT)	999	98.63	152	17.63	5	405	205	
+Renault	Kwid	Authentic			Petrol	Manual	999	67.06	91	21.46	5	279	184	
+Renault	Kwid	Evolution			Petrol	Manual	999	67.06	91	21.46	5	279	184	
+Renault	Kwid	Evolution AMT			Petrol	Automatic	999	67.06	91	22.3	5	279	184	
+Renault	Kwid	Techno			Petrol	Manual	999	67.06	91	21.46	5	279	184	
+Renault	Kwid	Anniversary Edition			Petrol	Manual	999	67.06	91	21.46	5	279	184	
+Renault	Kiger	Renault Kiger Authentic	576300	5.76	Petrol	Manual	999	71	96	19.71	5	405	205	
+Renault	Kiger	Renault Kiger Evolution	649500	6.50	Petrol	Manual	999	71	96	19.71	5	405	205	
+Renault	Kiger	Renault Kiger Evolution AMT	695200	6.95	Petrol	AMT	999	71	96	19.71	5	405	205	
+Renault	Kiger	Renault Kiger Techno	750100	7.50	Petrol	Manual	999	71	96	19.71	5	405	205	
+Renault	Kiger	Renault Kiger Techno DT	771100	7.71	Petrol	Manual	999	71	96	19.71	5	405	205	
+Renault	Kiger	Renault Kiger Techno AMT	795800	7.96	Petrol	AMT	999	71	96	19.71	5	405	205	
+Renault	Kiger	Renault Kiger Techno DT AMT	816800	8.17	Petrol	AMT	999	71	96	19.71	5	405	205	
+Renault	Kiger	Renault Kiger Emotion	837000	8.37	Petrol	Manual	999	71	96	19.71	5	405	205	
+Renault	Kiger	Renault Kiger Emotion DT	858000	8.58	Petrol	Manual	999	71	96	19.71	5	405	205	
+Renault	Kiger	Renault Kiger Emotion Turbo	914700	9.15	Petrol	Manual	999	98.63	152	17.63	5	405	205	
+Renault	Kiger	Renault Kiger Emotion Turbo DT	914700	9.15	Petrol	Manual	999	98.63	152	17.63	5	405	205	
+Renault	Kiger	Renault Kiger Techno Turbo CVT	914700	9.15	Petrol	CVT	999	98.63	152	17.63	5	405	205	
+Renault	Kiger	Renault Kiger Techno Turbo DT CVT	914700	9.15	Petrol	CVT	999	98.63	152	17.63	5	405	205	
+Renault	Kiger	Renault Kiger Emotion Turbo CVT	1033600	10.34	Petrol	CVT	999	98.63	152	17.63	5	405	205	
+Renault	Kiger	Renault Kiger Emotion Turbo DT CVT	1033600	10.34	Petrol	CVT	999	98.63	152	17.63	5	405	205	
+Renault	Kwid	Renault KWID Authentic	429900	4.30	Petrol	Manual	999	67.06	91	21.46	5	279	184	
+Renault	Kwid	Renault KWID Evolution	466500	4.67	Petrol	Manual	999	67.06	91	21.46	5	279	184	
+Renault	Kwid	Renault KWID Evolution AMT	499900	5.00	Petrol	AMT	999	67.06	91	21.46	5	279	184	
+Renault	Kwid	Renault KWID Techno	499900	5.00	Petrol	Manual	999	67.06	91	21.46	5	279	184	
+Renault	Kwid	Renault KWID Anniversary Edition	514500	5.14	Petrol	Manual	999	67.06	91	21.46	5	279	184	
+Renault	Kwid	Renault KWID Techno AMT	548800	5.49	Petrol	AMT	999	67.06	91	21.46	5	279	184	
+Renault	Kwid	Renault KWID Anniversary Edition AMT	563500	5.63	Petrol	AMT	999	67.06	91	21.46	5	279	184	
+Renault	Kwid	Renault KWID 1.0 CLIMBER	547000	5.47	Petrol	Manual	999	67.06	91	21.46	5	279	184	
+Renault	Kwid	Renault KWID 1.0 CLIMBER DT	558000	5.58	Petrol	Manual	999	67.06	91	21.46	5	279	184	
+Renault	Kwid	Renault KWID 1.0 CLIMBER AMT	588200	5.88	Petrol	AMT	999	67.06	91	21.46	5	279	184	
+Renault	Kwid	Renault KWID 1.0 CLIMBER DT AMT	599100	5.99	Petrol	AMT	999	67.06	91	21.46	5	279	184	
+Renault	Triber	Renault Triber Authentic	576300	5.76	Petrol	Manual	999	71.01	96	17	7	84	182	
+Renault	Triber	Renault Triber Evolution	663200	6.63	Petrol	Manual	999	71.01	96	17	7	84	182	
+Renault	Triber	Renault Triber Techno	731800	7.32	Petrol	Manual	999	71.01	96	17	7	84	182	
+Renault	Triber	Renault Triber Emotion	791200	7.91	Petrol	Manual	999	71.01	96	17	7	84	182	
+Renault	Triber	Renault Triber Emotion Dual Tone	812300	8.12	Petrol	Manual	999	71.01	96	17	7	84	182	
+Renault	Triber	Renault Triber Emotion AMT	838800	8.39	Petrol	AMT	999	71.01	96	17	7	84	182	
+Renault	Triber	Renault Triber Emotion AMT Dual Tone	859800	8.60	Petrol	AMT	999	71.01	96	17	7	84	182	
+Skoda	Kodiaq	Kodiaq Lounge	3999000	39.99	Petrol	Automatic	1984	201	320	14.86	7	281	155	2025
+Skoda	Kodiaq	Kodiaq Sportline	4376000	43.76	Petrol	Automatic	1984	201	320	14.86	7	281	155	2025
+Skoda	Kodiaq	Kodiaq Selection L&K	4596000	45.96	Petrol	Automatic	1984	201	320	14.86	7	281	155	2025
+Skoda	Kushaq	Kushaq 1.0L Classic	1066000	10.66	Petrol	Manual	999	114	178	19.76	5	385	155	2021
+Skoda	Kushaq	Kushaq 1.0L Onyx AT	1319000	13.19	Petrol	Automatic	999	114	178	18.09	5	385	155	2021
+Skoda	Kushaq	Kushaq 1.0L Signature	1444000	14.44	Petrol	Manual	999	114	178	19.76	5	385	155	2021
+Skoda	Kushaq	Kushaq 1.0L Sportline	1459000	14.59	Petrol	Manual	999	114	178	19.76	5	385	155	2021
+Skoda	Kushaq	Kushaq 1.0L Signature AT	1549000	15.49	Petrol	Automatic	999	114	178	18.09	5	385	155	2021
+Skoda	Kushaq	Kushaq 1.0L Sportline AT	1564000	15.64	Petrol	Automatic	999	114	178	18.09	5	385	155	2021
+Skoda	Kushaq	Kushaq 1.0L Monte Carlo	1588000	15.88	Petrol	Manual	999	114	178	19.76	5	385	155	2021
+Skoda	Kushaq	Kushaq 1.0L Prestige	1588000	15.88	Petrol	Manual	999	114	178	19.76	5	385	155	2021
+Skoda	Kushaq	Kushaq 1.0L Monte Carlo AT	1695000	16.95	Petrol	Automatic	999	114	178	18.09	5	385	155	2021
+Skoda	Kushaq	Kushaq 1.0L Prestige AT	1695000	16.95	Petrol	Automatic	999	114	178	18.09	5	385	155	2021
+Skoda	Kushaq	Kushaq 1.5L Sportline DSG	1719000	17.19	Petrol	Automatic (DSG)	1498	147.5	250	18.86	5	385	155	2021
+Skoda	Kushaq	Kushaq 1.5L Monte Carlo DSG	1849000	18.49	Petrol	Automatic (DSG)	1498	147.5	250	18.86	5	385	155	2021
+Skoda	Kushaq	Kushaq 1.5L Prestige DSG	1849000	18.49	Petrol	Automatic (DSG)	1498	147.5	250	18.86	5	385	155	2021
+Skoda	Slavia	Slavia 1.0L Classic	1000000	10.00	Petrol	Manual	999	114	178	20.32	5	521	179	2022
+Skoda	Slavia	Slavia 1.0L Signature	1328000	13.28	Petrol	Manual	999	114	178	20.32	5	521	179	2022
+Skoda	Slavia	Slavia 1.0L Sportline	1349000	13.49	Petrol	Manual	999	114	178	20.32	5	521	179	2022
+Skoda	Slavia	Slavia 1.0L Signature AT	1434000	14.34	Petrol	Automatic	999	114	178	18.73	5	521	179	2022
+Skoda	Slavia	Slavia 1.0L Sportline AT	1455000	14.55	Petrol	Automatic	999	114	178	18.73	5	521	179	2022
+Skoda	Slavia	Slavia 1.0L Monte Carlo	1500000	15.00	Petrol	Manual	999	114	178	20.32	5	521	179	2022
+Skoda	Slavia	Slavia 1.0L Prestige	1500000	15.00	Petrol	Manual	999	114	178	20.32	5	521	179	2022
+Skoda	Slavia	Slavia 1.0L Prestige AT	1643000	16.43	Petrol	Automatic	999	114	178	18.73	5	521	179	2022
+Skoda	Slavia	Slavia 1.0L Monte Carlo AT	1649000	16.49	Petrol	Automatic	999	114	178	18.73	5	521	179	2022
+Skoda	Slavia	Slavia 1.5L Sportline DSG	1619000	16.19	Petrol	Automatic (DSG)	1498	147.51	250	19.36	5	521	179	2022
+Skoda	Slavia	Slavia 1.5L Prestige DSG	1793000	17.93	Petrol	Automatic (DSG)	1498	147.51	250	19.36	5	521	179	2022
+Skoda	Slavia	Slavia 1.5L Monte Carlo DSG	1799000	17.99	Petrol	Automatic (DSG)	1498	147.51	250	19.36	5	521	179	2022
+Skoda	Kylaq	Kylaq Classic	759000	7.59	Petrol	Manual	999	114	178	19.68	5	446	189	2025
+Tata	Altroz	Altroz Smart			Petrol	Manual	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Pure			Petrol	Manual	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Smart CNG			CNG	Manual	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Pure S			Petrol	Manual	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Pure AMT			Petrol	Automatic	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Pure S AMT			Petrol	Automatic	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Creative			Petrol	Manual	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Pure CNG			CNG	Manual	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Pure Diesel			Diesel	Manual	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Creative S			Petrol	Manual	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Pure S CNG			CNG	Manual	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Creative AMT			Petrol	Automatic	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Creative S AMT			Petrol	Automatic	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Creative CNG			CNG	Manual	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Accomplished S			Petrol	Manual	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Creative S CNG			CNG	Manual	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Creative S Diesel			Diesel	Manual	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Creative S DCA			Petrol	Automatic	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Accomplished S CNG			CNG	Manual	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Accomplished S Diesel			Diesel	Manual	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Accomplished S DCA			Petrol	Automatic	1199	86	113	18	5	345	165	
+Tata	Altroz	Altroz Accomplished Plus S DCA			Petrol	Automatic	1199	86	113	18	5	345	165	
+Tata	Curvv	Curvv Smart			Petrol	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Pure Plus			Petrol	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Smart Diesel			Diesel	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Pure Plus S			Petrol	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Creative			Petrol	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Pure Plus DCA			Petrol	Automatic	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Pure Plus Diesel			Diesel	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Creative S			Petrol	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Pure Plus S Diesel			Diesel	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Pure Plus S DCA			Petrol	Automatic	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Creative DCA			Petrol	Automatic	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Creative Diesel			Diesel	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Creative Plus S			Petrol	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Creative S Hyperion			Petrol	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Pure Plus Diesel DCA			Diesel	Automatic	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Creative S DCA			Petrol	Automatic	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Creative S Diesel			Diesel	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Pure Plus S Diesel DCA			Diesel	Automatic	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Accomplished S			Petrol	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Creative Plus S Hyperion			Petrol	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Creative Plus S DCA			Petrol	Automatic	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Creative Plus S Diesel			Diesel	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Creative S Diesel DCA			Diesel	Automatic	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Accomplished S Hyperion			Petrol	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Accomplished S Hyperion Dark			Petrol	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Accomplished S DCA			Petrol	Automatic	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Accomplished S Diesel			Diesel	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Accomplished S Dark Diesel			Diesel	Manual	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Creative Plus S Hyperion DCA			Petrol	Automatic	1199	120	170	14	5	500	208	
+Tata	Curvv	Curvv Creative Plus S Diesel DCA			Diesel	Automatic	1199	120	170	14	5	500	208	
+Tata	Nexon	Smart	799900	8.00	Petrol	Manual	1199	120	170	17.4	5	350	209	2024
+Tata	Nexon	Smart+ S	899900	9.00	Petrol	Manual	1199	120	170	17.4	5	350	209	2024
+Tata	Nexon	Creative+ S	1119900	11.20	Petrol	Manual	1199	120	170	17.4	5	350	209	2024
+Tata	Nexon	Fearless+ S AMT	1239900	12.40	Petrol	Automatic	1199	120	170	17.4	5	350	209	2024
+Tata	Nexon	Smart+ S	999900	10.00	Diesel	Manual	1497	115	260	23.2	5	350	209	2024
+Tata	Punch	Pure	599900	6.00	Petrol	Manual	1199	86	113	18.97	5	366	187	2024
+Tata	Punch	Adventure	719900	7.20	Petrol	Manual	1199	86	113	18.97	5	366	187	2024
+Tata	Punch	Creative	789900	7.90	Petrol	Manual	1199	86	113	18.97	5	366	187	2024
+Tata	Punch	Creative AMT	849900	8.50	Petrol	Automatic	1199	86	113	18.97	5	366	187	2024
+Tata	Harrier	Smart	1499900	15.00	Diesel	Manual	1956	170	350	16.8	5	425	198	2024
+Tata	Harrier	Fearless	1749900	17.50	Diesel	Manual	1956	170	350	16.8	5	425	198	2024
+Tata	Harrier	Fearless+ AT	2149900	21.50	Diesel	Automatic	1956	170	350	14.6	5	425	198	2024
+Tata	Safari	Smart	1599900	16.00	Diesel	Manual	1956	170	350	16.3	7	340	198	2024
+Tata	Safari	Accomplished+ AT	2249900	22.50	Diesel	Automatic	1956	170	350	14.6	7	340	198	2024
+Tata	Safari	Adventure+ AT	1999900	20.00	Diesel	Automatic	1956	170	350	14.6	7	340	198	2024
+Tata	Tiago	XE	549900	5.50	Petrol	Manual	1199	86	113	20.09	5	242	170	2024
+Tata	Tiago	XZ+	699900	7.00	Petrol	Manual	1199	86	113	20.09	5	242	170	2024
+Tata	Tiago	XZ+ AMT	749900	7.50	Petrol	Automatic	1199	86	113	20.09	5	242	170	2024
+Tata	Tigor	XE	599900	6.00	Petrol	Manual	1199	86	113	20.3	5	419	170	2024
+Tata	Tigor	XZ+	749900	7.50	Petrol	Manual	1199	86	113	20.3	5	419	170	2024
+Tata	Tigor	XZ+ AMT	799900	8.00	Petrol	Automatic	1199	86	113	20.3	5	419	170	2024
+Toyota	Camry	Sprint Edition	4748200	47.48	Petrol	Automatic	2487	227	221	25.49	5			2024
+Toyota	Camry	Elegance	4748200	47.48	Petrol	Automatic	2487	227	221	25.49	5		145	2024
+Toyota	Fortuner	4X2 AT			Petrol	Automatic					5			2024
+Toyota	Fortuner	Leader Edition 4x2 Diesel			Diesel	Manual					5			2024
+Toyota	Fortuner	4X2 Diesel			Diesel	Manual					5			2024
+Toyota	Fortuner	Leader Edition 4x2 Diesel AT			Diesel	Automatic					5			2024
+Toyota	Fortuner	4X2 Diesel AT			Diesel	Automatic					5			2024
+Toyota	Fortuner	4X4 Diesel			Diesel	Manual					5			2024
+Toyota	Fortuner	Neo Drive			Petrol	Manual					5			2024
+Toyota	Fortuner	GR S 4X4 Diesel AT			Diesel	Automatic					5			2024
+Toyota	Innova Crysta	2.4 GX 7Str	1885000	18.85	Petrol	Manual					5			2024
+Toyota	Innova Crysta	2.4 GX 8Str	1885000	18.85	Petrol	Manual					5			2024
+Toyota	Innova Crysta	2.4 GX Plus 7Str	2047000	20.47	Petrol	Manual					5			2024
+Toyota	Innova Crysta	2.4 GX Plus 8Str	2052000	20.52	Petrol	Manual					5			2024
+Toyota	Innova Crysta	2.4 VX 7Str	2395000	23.95	Diesel	Manual	2393	147.51	343	11.33	7	300	178	2024
+Toyota	Innova Crysta	2.4 VX 8Str	2400000	24.00	Petrol	Manual					5			2024
+Toyota	Innova Crysta	2.4 Zx 7Str	2553000	25.53	Petrol	Manual					5			2024
+Toyota	Hyryder	E	1099000	10.99	Petrol	Manual					5			2024
+Toyota	Hyryder	S	1251000	12.51	Petrol	Manual					5			2024
+Toyota	Hyryder	S CNG	1338000	13.38	CNG	Manual					5			2024
+Toyota	Hyryder	S AT	1377000	13.77	Petrol	Automatic					5			2024
+Toyota	Hyryder	G Opt	1423100	14.23	Petrol	Manual					5			2024
+Toyota	Hyryder	G CNG	1534000	15.34	CNG	Manual					5			2024
+Toyota	Hyryder	G Opt AT	1539000	15.39	Petrol	Automatic					5			2024
+Toyota	Hyryder	V	1597000	15.97	Petrol	Manual					5			2024
+Toyota	Hyryder	S HYBRID	1672000	16.72	Petrol	Manual					5			2024
+Toyota	Hyryder	V AT	1719000	17.19	Petrol	Automatic					5			2024
+Toyota	Hyryder	V AWD AT	1828600	18.29	Petrol	Automatic					5			2024
+Toyota	Hyryder	G Opt HYBRID	1844400	18.44	Petrol	Manual					5			2024
+Toyota	Hyryder	V HYBRID	1999000	19.99	Petrol	Manual					5			2024
+Toyota	Innova Hycross	G Fleet 7STR			Petrol	Manual					5			2024
+Toyota	Innova Hycross	G Fleet 8STR			Petrol	Manual					5			2024
+Toyota	Innova Hycross	GX 7STR			Petrol	Manual					5			2024
+Toyota	Innova Hycross	GX 8STR			Petrol	Manual					5			2024
+Toyota	Innova Hycross	GX (O) 8STR			Petrol	Manual					5			2024
+Toyota	Innova Hycross	GX (O) 7STR			Petrol	Manual					5			2024
+Toyota	Innova Hycross	VX 7STR Hybrid			Petrol	Manual					5			2024
+Toyota	Innova Hycross	VX 8STR Hybrid			Petrol	Manual					5			2024
+Toyota	Glanza	G	649000	6.49	Petrol	Manual	1197	90	113	22.35	5	318	170	2024
+Toyota	Glanza	V	779000	7.79	Petrol	Manual	1197	90	113	22.35	5	318	170	2024
+Toyota	Glanza	V AMT	829000	8.29	Petrol	Automatic	1197	90	113	22.35	5	318	170	2024
+Toyota	Urban Cruiser Taisor	G	739000	7.39	Petrol	Manual	1197	90	113	20.01	5	382	195	2024
+Toyota	Urban Cruiser Taisor	V Turbo	999000	9.99	Petrol	Manual	998	100	148	20.01	5	382	195	2024
+Toyota	Urban Cruiser Taisor	V Turbo AT	1099000	10.99	Petrol	Automatic	998	100	148	20.01	5	382	195	2024
+Toyota	Hilux	Standard	3060000	30.60	Diesel	Manual	2755	204	500	11.2	5		220	2024
+Toyota	Hilux	High	3685000	36.85	Diesel	Automatic	2755	204	500	10.1	5		220	2024
+Toyota	Land Cruiser	LC300 GX-R	21000000	210.00	Diesel	Automatic	3346	305	700	8	7		230	2024
+Volkswagen	Taigun	1.0 Comfortline	1141920	11.42	Petrol	Manual	999	114	178	19.89	5	385	188	2024
+Volkswagen	Taigun	1.0 Highline	1258959	12.59	Petrol	Manual	999	114	178	19.2	5	385	188	2024
+Volkswagen	Taigun	1.0 Highline AT	1355566	13.56	Petrol	Automatic	999	114	178	17.23	5	385	188	2024
+Volkswagen	Taigun	1.0 Highline Plus	1394152	13.94	Petrol	Manual	999	114	178	19.2	5	385	188	2024
+Volkswagen	Taigun	1.0 GT Line	1432748	14.33	Petrol	Manual	999	114	178	19.89	5	385	188	2024
+Volkswagen	Taigun	1.0 Highline Plus AT	1500357	15.00	Petrol	Automatic	999	114	178	18.15	5	385	188	2024
+Volkswagen	Taigun	1.0 GT Line AT	1538953	15.39	Petrol	Automatic	999	114	178	18.46	5	385	188	2024
+Volkswagen	Taigun	1.0 Topline ES	1603850	16.04	Petrol	Manual	999	114	178	19.2	5	385	188	2024
+Volkswagen	Taigun	1.0 Topline AT ES	1741751	17.42	Petrol	Automatic	999	114	178	17.23	5	385	188	2024
+Volkswagen	Taigun	1.5 GT Plus Chrome DSG ES	1894607	18.95	Petrol	Automatic (DSG)	1498	148	250	19.01	5	385	188	2024
+Volkswagen	Taigun	1.5 GT Plus Sports DSG	1918805	19.19	Petrol	Automatic (DSG)	1498	148	250	19.01	5	385	188	2024
+Volkswagen	Virtus	Comfortline	1049900	10.50	Petrol	Manual	999	113.98	178	20.8	5	521	179	2024
+Volkswagen	Virtus	Highline	1345900	13.46	Petrol	Manual	999	113.98	178	19.4	5	521	179	2024
+Volkswagen	Virtus	Highline Plus	1385900	13.86	Petrol	Manual	999	113.98	178	19.4	5	521	179	2024
+Volkswagen	Virtus	GT Line	1409900	14.10	Petrol	Manual	999	113.98	178	19.4	5	521	179	2024
+Volkswagen	Virtus	Highline AT	1465900	14.66	Petrol	Automatic	999	113.98	178	18.12	5	521	179	2024
+Volkswagen	Virtus	Highline Plus AT	1490900	14.91	Petrol	Automatic	999	113.98	178	18.12	5	521	179	2024
+Volkswagen	Virtus	GT Line AT	1499900	15.00	Petrol	Automatic	999	113.98	178	18.12	5	521	179	2024
+Volkswagen	Virtus	Topline ES	1510900	15.11	Petrol	Manual	999	113.98	178	20.08	5	521	179	2024
+Volkswagen	Virtus	Topline AT ES	1629900	16.30	Petrol	Automatic	999	113.98	178	18.12	5	521	179	2024
+Volkswagen	Virtus	GT Plus DSG ES	1879900	18.80	Petrol	Automatic (DSG)	1498	147.51	250	19.62	5	521	179	2024
+Volkswagen	Virtus	GT Plus Sport DSG	1899900	19.00	Petrol	Automatic (DSG)	1498	147.51	250	19.62	5	521	179	2024
+Volkswagen	Tiguan	Exclusive Edition	3349900	33.50	Petrol	Automatic (DSG)	1984	187.74	320	12.65	5	615		2024
+Volkswagen	Tiguan	2.0 TSI Elegance BSVI	3419900	34.20	Petrol	Automatic (DSG)	1984	187.74	320	12.65	5	615		2024
+Volkswagen	Tiguan	2.0 TSI Elegance	3816900	38.17	Petrol	Automatic (DSG)	1984	187.74	320	12.65	5	615		2024
+Volkswagen	Tiguan	R-Line	4000000	40.00	Petrol	Automatic (DSG)	1984	187.74	320	12.65	5	615		2024
+Volvo	EX30	EX30 RWD Ultra	3999001	39.99	Electric	Automatic (1-gear)	EV	272	343		5			
+Volvo	XC60	XC60 B5	6710667	67.11	Petrol	Automatic	1969	250	360		5			
+Volvo	XC40	B4 Ultimate	4690000	46.90	Petrol	Automatic	1969	197	300	14.1	5	452	211	2024
+Volvo	XC40 Recharge	Ultimate	5690000	56.90	Electric	Automatic	EV	408	660	418 km	5	452	175	2024
+Volvo	XC90	B6 Ultimate	9790000	97.90	Petrol	Automatic	1969	310	400	12.8	7	262	238	2024
+Volvo	S90	B5 Ultimate	6890000	68.90	Petrol	Automatic	1969	250	350	14.7	5	500	149	2024

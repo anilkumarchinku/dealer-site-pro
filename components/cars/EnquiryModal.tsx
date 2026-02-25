@@ -117,6 +117,13 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb' }
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent className="max-w-4xl max-h-[85vh] overflow-y-auto p-0">
+                {/* Visually hidden title for screen-reader accessibility (Radix requirement) */}
+                <DialogTitle className="sr-only">
+                    {car.make} {car.model} — Enquiry
+                </DialogTitle>
+                <DialogDescription className="sr-only">
+                    Enquiry form for {car.make} {car.model} {car.variant}
+                </DialogDescription>
                 {/* Car Details Section */}
                 <div className="relative">
                     {/* Hero Image */}
@@ -126,6 +133,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb' }
                                 src={car.images.hero}
                                 alt={`${car.make} ${car.model}`}
                                 fill
+                                sizes="(max-width: 1024px) 100vw, 896px"
                                 className="object-cover"
                             />
                         ) : (
@@ -232,9 +240,9 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb' }
                                             <p className="text-xs text-gray-500 uppercase tracking-wide">Mileage</p>
                                             <p className="text-sm font-semibold text-gray-900">
                                                 {aggregatedSpecs?.mileages ? `${aggregatedSpecs.mileages} km/l` :
-                                                 detailedVariant?.mileage_kmpl_or_ev_range ||
-                                                 ((detailedVariant as any)?.mileage_kmpl ? `${(detailedVariant as any).mileage_kmpl} km/l` : null) ||
-                                                 (car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` : 'N/A')}
+                                                    detailedVariant?.mileage_kmpl_or_ev_range ||
+                                                    ((detailedVariant as any)?.mileage_kmpl ? `${(detailedVariant as any).mileage_kmpl} km/l` : null) ||
+                                                    (car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` : 'N/A')}
                                             </p>
                                         </div>
                                     </div>

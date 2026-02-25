@@ -117,8 +117,9 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
     const { data, reset, isComplete } = useOnboardingStore();
     const hasStarted = data.dealershipName;
     const [isVisible, setIsVisible] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
-    useEffect(() => { setIsVisible(true); }, []);
+    useEffect(() => { setIsVisible(true); setMounted(true); }, []);
 
     const handleStart = () => { reset(); setTimeout(() => router.push("/onboarding"), 100); };
     const handleContinue = () => router.push("/onboarding");
@@ -138,12 +139,12 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                                 Browse Cars
                             </Button>
                             <ThemeToggle />
-                            {(hasStarted || isComplete()) && (
+                            {mounted && (hasStarted || isComplete()) && (
                                 <Button variant="outline" size="sm" onClick={handleReset} className="hidden sm:flex">
                                     Reset
                                 </Button>
                             )}
-                            {isComplete() ? (
+                            {mounted && isComplete() ? (
                                 <Button size="sm" onClick={handleDashboard} className="bg-foreground text-background hover:bg-foreground/90">
                                     Dashboard <ArrowRight className="ml-1 w-3.5 h-3.5" />
                                 </Button>
@@ -369,7 +370,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                         <h2 className="text-3xl font-bold text-foreground">Browse by Brand</h2>
                     </div>
                     <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-10 gap-4">
-                        {['Maruti Suzuki','Hyundai','Tata Motors','Kia','Mahindra','Toyota','Honda','MG','Skoda','BMW'].map((brand) => (
+                        {['Maruti Suzuki', 'Hyundai', 'Tata Motors', 'Kia', 'Mahindra', 'Toyota', 'Honda', 'MG', 'Skoda', 'BMW'].map((brand) => (
                             <Link key={brand} href={`/brands/${encodeURIComponent(brand)}`}
                                 className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-card hover:shadow-md transition-all group">
                                 <div className="w-16 h-16 flex items-center justify-center">
@@ -597,23 +598,23 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                         {TESTIMONIALS.map((t, i) => {
                             const borderColors = ['border-l-blue-500/50', 'border-l-emerald-500/50', 'border-l-purple-500/50'];
                             return (
-                            <Card key={i} className={`p-6 bg-card border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-l-4 ${borderColors[i % 3]}`}>
-                                <div className="flex gap-1 mb-5">
-                                    {Array.from({ length: 5 }).map((_, j) => (
-                                        <Star key={j} className="w-4 h-4 text-foreground fill-foreground" />
-                                    ))}
-                                </div>
-                                <p className="text-muted-foreground mb-6 leading-relaxed text-[15px]">&ldquo;{t.content}&rdquo;</p>
-                                <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-full bg-foreground flex items-center justify-center font-bold text-xs text-background">
-                                        {t.avatar}
+                                <Card key={i} className={`p-6 bg-card border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-l-4 ${borderColors[i % 3]}`}>
+                                    <div className="flex gap-1 mb-5">
+                                        {Array.from({ length: 5 }).map((_, j) => (
+                                            <Star key={j} className="w-4 h-4 text-foreground fill-foreground" />
+                                        ))}
                                     </div>
-                                    <div>
-                                        <p className="font-semibold text-foreground text-sm">{t.name}</p>
-                                        <p className="text-xs text-muted-foreground">{t.role}</p>
+                                    <p className="text-muted-foreground mb-6 leading-relaxed text-[15px]">&ldquo;{t.content}&rdquo;</p>
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-10 h-10 rounded-full bg-foreground flex items-center justify-center font-bold text-xs text-background">
+                                            {t.avatar}
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-foreground text-sm">{t.name}</p>
+                                            <p className="text-xs text-muted-foreground">{t.role}</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </Card>
+                                </Card>
                             );
                         })}
                     </div>
