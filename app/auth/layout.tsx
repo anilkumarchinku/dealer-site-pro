@@ -30,9 +30,9 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
 
                 <p className="mt-8 text-xs text-muted-foreground text-center">
                     By continuing you agree to our{" "}
-                    <Link href="#" className="underline hover:text-foreground">Terms of Service</Link>
+                    <Link href="/terms" className="underline hover:text-foreground">Terms of Service</Link>
                     {" "}and{" "}
-                    <Link href="#" className="underline hover:text-foreground">Privacy Policy</Link>
+                    <Link href="/privacy" className="underline hover:text-foreground">Privacy Policy</Link>
                 </p>
             </div>
         </div>

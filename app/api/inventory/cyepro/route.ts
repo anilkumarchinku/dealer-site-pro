@@ -10,16 +10,15 @@
  * Returns mapped Car[] + pagination metadata.
  */
 
-import { NextResponse }             from 'next/server'
-import { requireAuth }              from '@/lib/supabase-server'
-import { createRouteClient }        from '@/lib/supabase-server'
+import { NextResponse } from 'next/server'
+import { requireAuth } from '@/lib/supabase-server'
+import { createRouteClient } from '@/lib/supabase-server'
 import {
     fetchCyeproVehicles,
     mapCyeproVehicleToCar,
     type CyeproSearchBody,
 } from '@/lib/services/cyepro-service'
 
-export const runtime = 'edge'
 
 export async function POST(request: Request) {
     try {
@@ -30,10 +29,10 @@ export async function POST(request: Request) {
         const body = await request.json()
         const {
             dealerId,
-            page    = 1,
-            size    = 30,
+            page = 1,
+            size = 30,
             priceMin, priceMax,
-            yearMin,  yearMax,
+            yearMin, yearMax,
             kmDrivenMax,
             sortBy, order,
         } = body
@@ -65,13 +64,13 @@ export async function POST(request: Request) {
         const searchParams: Partial<CyeproSearchBody> = {
             page,
             size,
-            ...(priceMin    != null && { priceMin }),
-            ...(priceMax    != null && { priceMax }),
-            ...(yearMin     != null && { yearMin }),
-            ...(yearMax     != null && { yearMax }),
+            ...(priceMin != null && { priceMin }),
+            ...(priceMax != null && { priceMax }),
+            ...(yearMin != null && { yearMin }),
+            ...(yearMax != null && { yearMax }),
             ...(kmDrivenMax != null && { kmDrivenMax }),
-            ...(sortBy      != null && { sortBy }),
-            ...(order       != null && { order }),
+            ...(sortBy != null && { sortBy }),
+            ...(order != null && { order }),
         }
 
         // ── Call Cyepro API ───────────────────────────────────────────────────
@@ -88,12 +87,12 @@ export async function POST(request: Request) {
         const cars = cyeproRes.vehicles.map(mapCyeproVehicleToCar)
 
         return NextResponse.json({
-            success:     true,
+            success: true,
             cars,
-            totalCount:  cyeproRes.totalCount,
-            pageNumber:  cyeproRes.pageNumber,
-            pageSize:    cyeproRes.pageSize,
-            totalPages:  cyeproRes.totalPages,
+            totalCount: cyeproRes.totalCount,
+            pageNumber: cyeproRes.pageNumber,
+            pageSize: cyeproRes.pageSize,
+            totalPages: cyeproRes.totalPages,
         })
     } catch (error) {
         console.error('[/api/inventory/cyepro] Error:', error)

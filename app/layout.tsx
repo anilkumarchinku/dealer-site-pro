@@ -11,6 +11,9 @@ const inter = Inter({
 export const metadata: Metadata = {
     title: "DealerSite Pro - Free Dealership Websites",
     description: "Get a professional dealership website in 10 minutes. 100% FREE. No tech skills needed.",
+    icons: {
+        icon: "/favicon.svg",
+    },
 };
 
 export default function RootLayout({

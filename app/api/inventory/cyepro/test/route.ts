@@ -8,11 +8,10 @@
 import { NextResponse } from 'next/server'
 import { requireAuth } from '@/lib/supabase-server'
 
-export const runtime = 'edge'
 
-const BASE_URL   = 'https://api.cyepro.com'
+const BASE_URL = 'https://api.cyepro.com'
 const SERVICE_ID = '460'
-const TIME_ZONE  = 'Asia/Calcutta'
+const TIME_ZONE = 'Asia/Calcutta'
 
 export async function POST(request: Request) {
     const diagnostics: Record<string, any> = {
@@ -90,10 +89,10 @@ export async function POST(request: Request) {
         }
 
         const headers = {
-            'Content-Type':    'application/json',
-            'API-KEY':         dealer.cyepro_api_key,
+            'Content-Type': 'application/json',
+            'API-KEY': dealer.cyepro_api_key,
             'SERVICE-TYPE-ID': SERVICE_ID,
-            'timeZone':        TIME_ZONE,
+            'timeZone': TIME_ZONE,
         }
 
         diagnostics.steps.push({

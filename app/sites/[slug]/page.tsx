@@ -10,7 +10,6 @@ import type { Car } from '@/lib/types/car'
 import type { DBVehicle } from '@/lib/db/vehicles'
 import type { Service } from '@/lib/types'
 
-export const runtime = 'edge'
 
 interface SitePageProps {
     params: Promise<{ slug: string }>
@@ -91,35 +90,35 @@ function MultiSitePortal({
         // Hybrid: brand new + pre-owned
         const brandSlug = brands[0]?.toLowerCase().replace(/\s+/g, '-') ?? 'new'
         siteCards.push({
-            label:    'New Cars',
+            label: 'New Cars',
             sublabel: brands.length > 0 ? brands.join(' · ') : 'Brand New Vehicles',
-            href:     `/${slug}-${brandSlug}`,
-            color:    'blue',
-            emoji:    '🚗',
+            href: `/${slug}-${brandSlug}`,
+            color: 'blue',
+            emoji: '🚗',
         })
         siteCards.push({
-            label:    'Pre-Owned Cars',
+            label: 'Pre-Owned Cars',
             sublabel: 'Certified Used Vehicles',
-            href:     `/${slug}-used`,
-            color:    'amber',
-            emoji:    '🛡️',
+            href: `/${slug}-used`,
+            color: 'amber',
+            emoji: '🛡️',
         })
     } else {
         // Multi-brand new-car only: one card per brand
         brands.forEach(brand => {
             const brandSlug = brand.toLowerCase().replace(/\s+/g, '-')
             siteCards.push({
-                label:    brand,
+                label: brand,
                 sublabel: 'New Cars · Authorised Dealer',
-                href:     `/${slug}-${brandSlug}`,
-                color:    'blue',
-                emoji:    '✨',
+                href: `/${slug}-${brandSlug}`,
+                color: 'blue',
+                emoji: '✨',
             })
         })
     }
 
     const colorMap: Record<string, { border: string; bg: string; text: string; btn: string }> = {
-        blue:  { border: 'border-blue-500/30',  bg: 'bg-blue-500/5',  text: 'text-blue-400',  btn: 'bg-blue-500 hover:bg-blue-600'  },
+        blue: { border: 'border-blue-500/30', bg: 'bg-blue-500/5', text: 'text-blue-400', btn: 'bg-blue-500 hover:bg-blue-600' },
         amber: { border: 'border-amber-500/30', bg: 'bg-amber-500/5', text: 'text-amber-400', btn: 'bg-amber-500 hover:bg-amber-600' },
     }
 
@@ -246,7 +245,7 @@ export async function generateMetadata({ params }: SitePageProps): Promise<Metad
         }
     }
 
-    const title       = `${dealer.dealership_name} | ${dealer.location}`
+    const title = `${dealer.dealership_name} | ${dealer.location}`
     const description = dealer.tagline
         ?? `${dealer.dealership_name} — your trusted car dealership in ${dealer.location}. Browse our inventory of ${dealer.brands.join(', ')} vehicles.`
 
@@ -262,17 +261,17 @@ export async function generateMetadata({ params }: SitePageProps): Promise<Metad
         openGraph: {
             title,
             description,
-            type:      'website',
-            siteName:  dealer.dealership_name,
-            locale:    'en_IN',
+            type: 'website',
+            siteName: dealer.dealership_name,
+            locale: 'en_IN',
         },
         twitter: {
-            card:        'summary',
+            card: 'summary',
             title,
             description,
         },
         robots: {
-            index:  true,
+            index: true,
             follow: true,
         },
         alternates: {
@@ -292,7 +291,7 @@ export default async function SitePage({ params }: SitePageProps) {
 
     const { sells_new_cars, sells_used_cars, brandFilter, brands, vehicles, usedCarSite, cyepro_api_key, logo_url, hero_image_url } = dealer
 
-    const isHybridDealer    = sells_new_cars && sells_used_cars
+    const isHybridDealer = sells_new_cars && sells_used_cars
     const isMultiBrandNewOnly = sells_new_cars && !sells_used_cars && brands.length > 1
 
     // ── Portal landing page for dealers with multiple sites ───────────────────
@@ -321,7 +320,7 @@ export default async function SitePage({ params }: SitePageProps) {
     // NOTE: templateSellsNew / templateSellsUsed are what we pass to the template.
     // For hybrid sub-sites these are ALWAYS single-mode so the tab switcher never shows.
     let cars: Car[]
-    let templateSellsNew  = sells_new_cars
+    let templateSellsNew = sells_new_cars
     let templateSellsUsed = sells_used_cars
 
     if (brandFilter || (sells_new_cars && !sells_used_cars)) {
@@ -331,7 +330,7 @@ export default async function SitePage({ params }: SitePageProps) {
             : (await Promise.all(brands.map(b => getCarsByMake(b)))).flat()
         cars = (catalog.length > 0 ? catalog : allCars.slice(0, 16))
             .map(c => ({ ...c, condition: 'new' as const }))
-        templateSellsNew  = true
+        templateSellsNew = true
         templateSellsUsed = false
 
     } else {
@@ -361,7 +360,7 @@ export default async function SitePage({ params }: SitePageProps) {
             cars = []
             console.log('[SitePage] ⚠️ No cars found from either source')
         }
-        templateSellsNew  = false
+        templateSellsNew = false
         templateSellsUsed = true
     }
 
@@ -369,43 +368,43 @@ export default async function SitePage({ params }: SitePageProps) {
     // New-car sites use OEM brand name + brand logo (no uploaded logo)
     // Used-car sites use Bentley colour palette + uploaded dealer logo
     const isUsedSite = templateSellsUsed && !templateSellsNew
-    const brandName  = isUsedSite ? 'Bentley' : (brandFilter ?? brands[0] ?? dealer.dealership_name)
-    const logoUrl    = isUsedSite ? (logo_url ?? undefined) : undefined
+    const brandName = isUsedSite ? 'Bentley' : (brandFilter ?? brands[0] ?? dealer.dealership_name)
+    const logoUrl = isUsedSite ? (logo_url ?? undefined) : undefined
 
     const contactInfo = {
-        phone:   dealer.phone,
-        email:   dealer.email,
+        phone: dealer.phone,
+        email: dealer.email,
         address: dealer.full_address ?? dealer.location,
     }
 
     // ── Hero text ─────────────────────────────────────────────────────────────
     const heroDefaults: Record<string, { title: string; subtitle: string }> = {
-        luxury:       { title: 'THE ART OF PERFORMANCE',          subtitle: 'Experience automotive excellence with our curated collection' },
-        sporty:       { title: 'UNLEASH THE BEAST',               subtitle: 'Where raw power meets cutting-edge performance'               },
-        family:       { title: "Your Family's Perfect Car Awaits", subtitle: 'Safe, reliable, and affordable vehicles for every family'    },
-        professional: { title: 'Drive Your Dreams',               subtitle: 'Discover your perfect vehicle from our premium collection'    },
-        modern:       { title: 'Drive Your Dreams',               subtitle: 'Discover your perfect vehicle from our premium collection'    },
+        luxury: { title: 'THE ART OF PERFORMANCE', subtitle: 'Experience automotive excellence with our curated collection' },
+        sporty: { title: 'UNLEASH THE BEAST', subtitle: 'Where raw power meets cutting-edge performance' },
+        family: { title: "Your Family's Perfect Car Awaits", subtitle: 'Safe, reliable, and affordable vehicles for every family' },
+        professional: { title: 'Drive Your Dreams', subtitle: 'Discover your perfect vehicle from our premium collection' },
+        modern: { title: 'Drive Your Dreams', subtitle: 'Discover your perfect vehicle from our premium collection' },
     }
-    const defaults     = heroDefaults[dealer.style_template] ?? heroDefaults.modern
-    const heroTitle    = dealer.hero_title    || defaults.title
+    const defaults = heroDefaults[dealer.style_template] ?? heroDefaults.modern
+    const heroTitle = dealer.hero_title || defaults.title
     const heroSubtitle = dealer.hero_subtitle || defaults.subtitle
 
     const taglines: Record<string, string> = {
         luxury: 'Excellence in Motion', sporty: 'Built for Speed',
-        family: 'Trusted by Families',  professional: 'Your Trusted Dealer',
+        family: 'Trusted by Families', professional: 'Your Trusted Dealer',
     }
 
     const sharedProps = {
         brandName,
-        dealerName:   dealer.dealership_name,
-        dealerId:     dealer.id,
+        dealerName: dealer.dealership_name,
+        dealerId: dealer.id,
         cars,
         contactInfo,
-        services:     (dealer.services ?? []) as Service[],
+        services: (dealer.services ?? []) as Service[],
         workingHours: dealer.working_hours ?? null,
         logoUrl,
         heroImageUrl: hero_image_url ?? undefined,
-        sellsNewCars:  templateSellsNew,
+        sellsNewCars: templateSellsNew,
         sellsUsedCars: templateSellsUsed,
     }
 
