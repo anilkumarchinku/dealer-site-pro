@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -10,6 +10,14 @@ import { Loader2, AlertCircle, CheckCircle, LogIn } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
 export default function LoginPage() {
+    return (
+        <Suspense fallback={null}>
+            <LoginForm />
+        </Suspense>
+    );
+}
+
+function LoginForm() {
     const searchParams = useSearchParams();
     const justRegistered = searchParams.get("registered") === "true";
 
