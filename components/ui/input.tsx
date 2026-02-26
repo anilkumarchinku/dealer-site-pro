@@ -18,31 +18,31 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                 {label && (
                     <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                         {label}
-                        {props.required && <span className="text-destructive ml-1">*</span>}
+                        {props.required && <span className="text-red-500 ml-1">*</span>}
                     </label>
                 )}
                 <input
                     type={type}
                     ref={ref}
                     className={cn(
-                        "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm",
-                        "ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium",
-                        "placeholder:text-muted-foreground",
-                        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+                        "flex h-10 w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900",
+                        "ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium",
+                        "placeholder:text-gray-400",
+                        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2",
                         "disabled:cursor-not-allowed disabled:opacity-50",
                         "transition-colors",
-                        error && "border-destructive focus-visible:ring-destructive",
+                        error && "border-red-500 focus-visible:ring-red-500",
                         className
                     )}
                     {...props}
                 />
                 {helperText && !error && (
-                    <p className="text-[0.8rem] text-muted-foreground">
+                    <p className="text-[0.8rem] text-gray-500">
                         {helperText}
                     </p>
                 )}
                 {error && (
-                    <p className="text-[0.8rem] font-medium text-destructive">{error}</p>
+                    <p className="text-[0.8rem] font-medium text-red-500">{error}</p>
                 )}
             </div>
         );

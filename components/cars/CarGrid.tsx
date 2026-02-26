@@ -37,8 +37,8 @@ export function CarGrid({
         return (
             <div className="text-center py-16 px-4">
                 <div className="text-5xl mb-3">🚗</div>
-                <p className={cn('text-base font-medium', light ? 'text-gray-700' : 'text-foreground')}>{emptyMessage}</p>
-                <p className={cn('text-sm mt-1', light ? 'text-gray-500' : 'text-muted-foreground')}>Try adjusting your filters</p>
+                <p className="text-base font-medium text-gray-700">{emptyMessage}</p>
+                <p className="text-sm mt-1 text-gray-500">Try adjusting your filters</p>
             </div>
         );
     }

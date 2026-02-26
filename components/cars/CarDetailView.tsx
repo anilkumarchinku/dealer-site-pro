@@ -250,18 +250,18 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
     const emiResult = calcEmi();
 
     return (
-        <div className="bg-background min-h-screen">
+        <div className="bg-white min-h-screen">
             {/* ── Breadcrumb ── */}
-            <div className="bg-muted/30 border-b">
+            <div className="bg-gray-100/30 border-b">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-                    <nav className="flex items-center gap-1.5 text-sm text-muted-foreground">
-                        <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
+                    <nav className="flex items-center gap-1.5 text-sm text-gray-500">
+                        <Link href="/" className="hover:text-gray-900 transition-colors">Home</Link>
                         <ChevronRight className="w-3.5 h-3.5" />
-                        <Link href="/cars" className="hover:text-foreground transition-colors">Cars</Link>
+                        <Link href="/cars" className="hover:text-gray-900 transition-colors">Cars</Link>
                         <ChevronRight className="w-3.5 h-3.5" />
-                        <Link href={`/cars?make=${car.make}`} className="hover:text-foreground transition-colors">{car.make}</Link>
+                        <Link href={`/cars?make=${car.make}`} className="hover:text-gray-900 transition-colors">{car.make}</Link>
                         <ChevronRight className="w-3.5 h-3.5" />
-                        <span className="text-foreground font-medium">{car.model}</span>
+                        <span className="text-gray-900 font-medium">{car.model}</span>
                     </nav>
                 </div>
             </div>
@@ -272,7 +272,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                     {/* Image Gallery */}
                     <div className="lg:col-span-2 space-y-3">
                         {/* Main Image */}
-                        <div className="relative aspect-[16/10] bg-muted rounded-xl overflow-hidden group">
+                        <div className="relative aspect-[16/10] bg-gray-100 rounded-xl overflow-hidden group">
                             {activeImage ? (
                                 <Image
                                     src={activeImage}
@@ -283,7 +283,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     priority
                                 />
                             ) : (
-                                <div className="flex items-center justify-center h-full text-muted-foreground">
+                                <div className="flex items-center justify-center h-full text-gray-500">
                                     No Image Available
                                 </div>
                             )}
@@ -310,7 +310,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     key={idx}
                                     onClick={() => setActiveImage(img)}
                                     className={`relative w-20 h-14 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all ${activeImage === img
-                                            ? 'border-primary ring-1 ring-primary/30'
+                                            ? 'border-blue-600 ring-1 ring-blue-600/30'
                                             : 'border-transparent hover:border-muted-foreground/30'
                                         }`}
                                 >
@@ -326,24 +326,24 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                             <CardContent className="p-5">
                                 {/* Title */}
                                 <div className="mb-3">
-                                    <h1 className="text-xl font-bold text-foreground flex items-center gap-2">
+                                    <h1 className="text-xl font-bold text-gray-900 flex items-center gap-2">
                                         {getBrandLogo(car.make) && (
                                             <Image src={getBrandLogo(car.make)!} alt={car.make} width={24} height={24} className="object-contain" />
                                         )}
                                         {car.make} {car.model}
                                     </h1>
-                                    <p className="text-sm text-muted-foreground">{car.variant} {car.year && `• ${car.year}`}</p>
+                                    <p className="text-sm text-gray-500">{car.variant} {car.year && `• ${car.year}`}</p>
                                 </div>
 
                                 {/* Price */}
                                 <div className="mb-4">
                                     <div className="flex items-baseline gap-2">
-                                        <span className="text-2xl font-bold text-foreground">{priceDisplay}</span>
+                                        <span className="text-2xl font-bold text-gray-900">{priceDisplay}</span>
                                         {hasPriceRange && (
-                                            <span className="text-sm text-muted-foreground">- {maxPriceDisplay}</span>
+                                            <span className="text-sm text-gray-500">- {maxPriceDisplay}</span>
                                         )}
                                     </div>
-                                    <p className="text-xs text-muted-foreground mt-0.5">Ex-showroom Price</p>
+                                    <p className="text-xs text-gray-500 mt-0.5">Ex-showroom Price</p>
                                     {car.pricing.emi && (
                                         <Badge variant="secondary" className="mt-2 text-xs gap-1">
                                             <TrendingUp className="w-3 h-3" />
@@ -357,10 +357,10 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                 {/* Quick Specs */}
                                 <div className="grid grid-cols-2 gap-2 mb-4">
                                     {keySpecs.slice(0, 4).map((spec, idx) => (
-                                        <div key={idx} className="flex items-center gap-2 p-2 bg-muted/40 rounded-lg">
+                                        <div key={idx} className="flex items-center gap-2 p-2 bg-gray-100/40 rounded-lg">
                                             {spec.icon}
                                             <div>
-                                                <p className="text-[10px] text-muted-foreground">{spec.label}</p>
+                                                <p className="text-[10px] text-gray-500">{spec.label}</p>
                                                 <p className="text-xs font-semibold">{spec.value}</p>
                                             </div>
                                         </div>
@@ -383,7 +383,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                             Brochure
                                         </Button>
                                     </div>
-                                    <Button variant="ghost" size="sm" className="w-full text-muted-foreground">
+                                    <Button variant="ghost" size="sm" className="w-full text-gray-500">
                                         <Share2 className="w-3.5 h-3.5 mr-1.5" />
                                         Share
                                     </Button>
@@ -397,7 +397,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
             {/* ── Sticky Tab Navigation ── */}
             <div
                 ref={tabBarRef}
-                className={`sticky top-14 z-40 bg-background border-b transition-shadow ${isTabBarSticky ? 'shadow-sm' : ''}`}
+                className={`sticky top-14 z-40 bg-white border-b transition-shadow ${isTabBarSticky ? 'shadow-sm' : ''}`}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex gap-0 overflow-x-auto no-scrollbar">
@@ -406,8 +406,8 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                 key={tab.id}
                                 onClick={() => scrollToSection(tab.id)}
                                 className={`flex items-center gap-1.5 px-4 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${activeTab === tab.id
-                                        ? 'border-primary text-primary'
-                                        : 'border-transparent text-muted-foreground hover:text-foreground'
+                                        ? 'border-blue-600 text-blue-600'
+                                        : 'border-transparent text-gray-500 hover:text-gray-900'
                                     }`}
                             >
                                 <tab.icon className="w-3.5 h-3.5" />
@@ -467,10 +467,10 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
                         {keySpecs.map((spec, idx) => (
                             <Card key={idx} className="text-center p-4">
-                                <div className="mx-auto mb-2 w-10 h-10 rounded-full bg-muted flex items-center justify-center">
+                                <div className="mx-auto mb-2 w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
                                     {spec.icon}
                                 </div>
-                                <p className="text-xs text-muted-foreground">{spec.label}</p>
+                                <p className="text-xs text-gray-500">{spec.label}</p>
                                 <p className="text-sm font-semibold mt-0.5">{spec.value}</p>
                             </Card>
                         ))}
@@ -491,7 +491,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                         </li>
                                     ))}
                                     {(!car.features?.keyFeatures || car.features.keyFeatures.length === 0) && (
-                                        <li className="text-sm text-muted-foreground">Information not available</li>
+                                        <li className="text-sm text-gray-500">Information not available</li>
                                     )}
                                 </ul>
                             </CardContent>
@@ -546,11 +546,11 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                         <div className="w-24 h-24 rounded-full bg-emerald-500/10 flex items-center justify-center">
                                             <span className="text-3xl font-bold text-emerald-500">4.2</span>
                                         </div>
-                                        <p className="text-xs text-muted-foreground mt-2">out of 5.0</p>
+                                        <p className="text-xs text-gray-500 mt-2">out of 5.0</p>
                                     </div>
                                     <div className="flex-1">
                                         <h3 className="text-lg font-semibold mb-1">Overall Condition: Good</h3>
-                                        <p className="text-sm text-muted-foreground mb-3">
+                                        <p className="text-sm text-gray-500 mb-3">
                                             Inspected on {new Date(Date.now() - 7 * 86400000).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} by a certified mechanic.
                                             This vehicle passed 186 out of 200+ quality checkpoints.
                                         </p>
@@ -584,7 +584,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                             <div className="space-y-2">
                                                 {cat.items.map((item) => (
                                                     <div key={item.name} className="flex items-center justify-between text-sm">
-                                                        <span className="text-muted-foreground">{item.name}</span>
+                                                        <span className="text-gray-500">{item.name}</span>
                                                         <span className={`text-xs font-medium flex items-center gap-1 ${item.status === 'good' ? 'text-emerald-600' : item.status === 'fair' ? 'text-amber-600' : 'text-red-600'
                                                             }`}>
                                                             {item.status === 'good' && <CheckCircle2 className="w-3.5 h-3.5" />}
@@ -600,7 +600,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                             })}
                         </div>
 
-                        <p className="text-[10px] text-muted-foreground mt-4">
+                        <p className="text-[10px] text-gray-500 mt-4">
                             * Inspection report is based on assessment at the time of listing. Vehicle condition may change over time.
                         </p>
                     </section>
@@ -615,7 +615,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                             <Card>
                                 <CardContent className="p-5">
                                     <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
-                                        <Users className="w-4 h-4 text-muted-foreground" />
+                                        <Users className="w-4 h-4 text-gray-500" />
                                         Ownership History
                                     </h3>
                                     <div className="relative pl-6 space-y-6">
@@ -623,20 +623,20 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                         <div className="absolute left-[9px] top-1 bottom-1 w-0.5 bg-border" />
 
                                         <div className="relative">
-                                            <div className="absolute -left-6 top-0 w-[18px] h-[18px] rounded-full bg-primary border-2 border-background" />
+                                            <div className="absolute -left-6 top-0 w-[18px] h-[18px] rounded-full bg-blue-600 border-2 border-white" />
                                             <div>
                                                 <p className="text-sm font-semibold">Current Owner (You viewing)</p>
-                                                <p className="text-xs text-muted-foreground">Since {car.year ? car.year + 2 : 2023} - Present</p>
-                                                <p className="text-xs text-muted-foreground mt-1">Individual • Metro City</p>
+                                                <p className="text-xs text-gray-500">Since {car.year ? car.year + 2 : 2023} - Present</p>
+                                                <p className="text-xs text-gray-500 mt-1">Individual • Metro City</p>
                                             </div>
                                         </div>
 
                                         <div className="relative">
-                                            <div className="absolute -left-6 top-0 w-[18px] h-[18px] rounded-full bg-muted border-2 border-background" />
+                                            <div className="absolute -left-6 top-0 w-[18px] h-[18px] rounded-full bg-gray-100 border-2 border-white" />
                                             <div>
                                                 <p className="text-sm font-semibold">1st Owner</p>
-                                                <p className="text-xs text-muted-foreground">{car.year || 2020} - {car.year ? car.year + 2 : 2022}</p>
-                                                <p className="text-xs text-muted-foreground mt-1">Individual • Metro City</p>
+                                                <p className="text-xs text-gray-500">{car.year || 2020} - {car.year ? car.year + 2 : 2022}</p>
+                                                <p className="text-xs text-gray-500 mt-1">Individual • Metro City</p>
                                             </div>
                                         </div>
                                     </div>
@@ -647,7 +647,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                             <Card>
                                 <CardContent className="p-5">
                                     <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
-                                        <FileText className="w-4 h-4 text-muted-foreground" />
+                                        <FileText className="w-4 h-4 text-gray-500" />
                                         Documents & Service
                                     </h3>
                                     <div className="space-y-3">
@@ -659,9 +659,9 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                             { label: 'No Accident History', status: true, icon: <ShieldCheck className="w-4 h-4" /> },
                                             { label: 'No Loan / Hypothecation', status: true, icon: <BadgeCheck className="w-4 h-4" /> },
                                         ].map((doc) => (
-                                            <div key={doc.label} className="flex items-center justify-between p-2.5 bg-muted/30 rounded-lg">
+                                            <div key={doc.label} className="flex items-center justify-between p-2.5 bg-gray-100/30 rounded-lg">
                                                 <div className="flex items-center gap-2.5 text-sm">
-                                                    <span className="text-muted-foreground">{doc.icon}</span>
+                                                    <span className="text-gray-500">{doc.icon}</span>
                                                     {doc.label}
                                                 </div>
                                                 <Badge
@@ -683,12 +683,12 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                             <Card className="md:col-span-2">
                                 <CardContent className="p-5">
                                     <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
-                                        <Wrench className="w-4 h-4 text-muted-foreground" />
+                                        <Wrench className="w-4 h-4 text-gray-500" />
                                         Service History
                                     </h3>
                                     <Table>
                                         <TableHeader>
-                                            <TableRow className="bg-muted/30">
+                                            <TableRow className="bg-gray-100/30">
                                                 <TableHead className="text-xs font-semibold">Date</TableHead>
                                                 <TableHead className="text-xs font-semibold">KM Reading</TableHead>
                                                 <TableHead className="text-xs font-semibold">Service Type</TableHead>
@@ -707,7 +707,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                                     <TableCell className="text-sm">{s.date}</TableCell>
                                                     <TableCell className="text-sm">{s.km} km</TableCell>
                                                     <TableCell className="text-sm">{s.type}</TableCell>
-                                                    <TableCell className="text-sm text-muted-foreground">{s.center}</TableCell>
+                                                    <TableCell className="text-sm text-gray-500">{s.center}</TableCell>
                                                 </TableRow>
                                             ))}
                                         </TableBody>
@@ -726,7 +726,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                         <Card>
                             <CardContent className="p-5">
                                 <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
-                                    <Settings className="w-4 h-4 text-muted-foreground" />
+                                    <Settings className="w-4 h-4 text-gray-500" />
                                     Engine & Transmission
                                 </h3>
                                 <div className="space-y-0">
@@ -746,7 +746,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                         <Card>
                             <CardContent className="p-5">
                                 <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
-                                    <Zap className="w-4 h-4 text-muted-foreground" />
+                                    <Zap className="w-4 h-4 text-gray-500" />
                                     Performance & Fuel
                                 </h3>
                                 <div className="space-y-0">
@@ -771,7 +771,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                         <Card>
                             <CardContent className="p-5">
                                 <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
-                                    <CarIcon className="w-4 h-4 text-muted-foreground" />
+                                    <CarIcon className="w-4 h-4 text-gray-500" />
                                     Dimensions & Weight
                                 </h3>
                                 <div className="space-y-0">
@@ -791,7 +791,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                         <Card>
                             <CardContent className="p-5">
                                 <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
-                                    <Shield className="w-4 h-4 text-muted-foreground" />
+                                    <Shield className="w-4 h-4 text-gray-500" />
                                     Safety
                                 </h3>
                                 <div className="space-y-0">
@@ -830,7 +830,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                     </div>
                     {(!car.features?.keyFeatures || car.features.keyFeatures.length === 0) && (
                         <Card className="p-8 text-center">
-                            <p className="text-muted-foreground">Feature information not available for this model.</p>
+                            <p className="text-gray-500">Feature information not available for this model.</p>
                         </Card>
                     )}
                 </section>
@@ -842,7 +842,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                         <CardContent className="p-0">
                             <Table>
                                 <TableHeader>
-                                    <TableRow className="bg-muted/40">
+                                    <TableRow className="bg-gray-100/40">
                                         <TableHead className="font-semibold">Variant</TableHead>
                                         <TableHead className="font-semibold">Ex-Showroom Price</TableHead>
                                         <TableHead className="font-semibold">Fuel</TableHead>
@@ -852,7 +852,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                 </TableHeader>
                                 <TableBody>
                                     {car.variants?.map((variant) => (
-                                        <TableRow key={variant.id} className="hover:bg-muted/20">
+                                        <TableRow key={variant.id} className="hover:bg-gray-100/20">
                                             <TableCell>
                                                 <div>
                                                     <span className="font-medium">{variant.name}</span>
@@ -873,7 +873,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     ))}
                                     {(!car.variants || car.variants.length === 0) && (
                                         <TableRow>
-                                            <TableCell colSpan={5} className="text-center py-8 text-muted-foreground">
+                                            <TableCell colSpan={5} className="text-center py-8 text-gray-500">
                                                 Variant details are not available yet.
                                             </TableCell>
                                         </TableRow>
@@ -896,24 +896,24 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                             key={color.name}
                                             onClick={() => setSelectedColor(color.name)}
                                             className={`flex flex-col items-center gap-1.5 p-2 rounded-lg transition-all ${selectedColor === color.name
-                                                    ? 'bg-muted ring-2 ring-primary'
-                                                    : 'hover:bg-muted/50'
+                                                    ? 'bg-gray-100 ring-2 ring-blue-600'
+                                                    : 'hover:bg-gray-100/50'
                                                 }`}
                                         >
                                             <div
-                                                className="w-10 h-10 rounded-full border-2 border-border shadow-sm"
+                                                className="w-10 h-10 rounded-full border-2 border-gray-200 shadow-sm"
                                                 style={{ backgroundColor: color.hex }}
                                             />
                                             <span className="text-xs font-medium">{color.name}</span>
                                             {color.extraCost > 0 && (
-                                                <span className="text-[10px] text-muted-foreground">+₹{color.extraCost.toLocaleString()}</span>
+                                                <span className="text-[10px] text-gray-500">+₹{color.extraCost.toLocaleString()}</span>
                                             )}
                                         </button>
                                     ))}
                                 </div>
                                 {selectedColor && (
-                                    <p className="text-sm text-muted-foreground">
-                                        Selected: <span className="font-medium text-foreground">{selectedColor}</span>
+                                    <p className="text-sm text-gray-500">
+                                        Selected: <span className="font-medium text-gray-900">{selectedColor}</span>
                                         {car.colors.find(c => c.name === selectedColor)?.type && (
                                             <> ({car.colors.find(c => c.name === selectedColor)?.type})</>
                                         )}
@@ -923,7 +923,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                         </Card>
                     ) : (
                         <Card className="p-8 text-center">
-                            <p className="text-muted-foreground">Colour options not available for this model.</p>
+                            <p className="text-gray-500">Colour options not available for this model.</p>
                         </Card>
                     )}
                 </section>
@@ -977,22 +977,22 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                 {/* Result */}
                                 <div>
                                     {emiResult ? (
-                                        <Card className="bg-muted/30 h-full">
+                                        <Card className="bg-gray-100/30 h-full">
                                             <CardContent className="p-6 flex flex-col h-full">
                                                 <div className="text-center pb-4 mb-4 border-b">
-                                                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Monthly EMI</p>
-                                                    <p className="text-4xl font-bold text-primary">
+                                                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Monthly EMI</p>
+                                                    <p className="text-4xl font-bold text-blue-600">
                                                         ₹{emiResult.emi.toLocaleString('en-IN')}
                                                     </p>
-                                                    <p className="text-xs text-muted-foreground mt-1">per month for {emiTenure} months</p>
+                                                    <p className="text-xs text-gray-500 mt-1">per month for {emiTenure} months</p>
                                                 </div>
                                                 <div className="space-y-3 flex-1">
                                                     <div className="flex justify-between text-sm">
-                                                        <span className="text-muted-foreground">Loan Amount</span>
+                                                        <span className="text-gray-500">Loan Amount</span>
                                                         <span className="font-semibold">₹{emiResult.loan.toLocaleString('en-IN')}</span>
                                                     </div>
                                                     <div className="flex justify-between text-sm">
-                                                        <span className="text-muted-foreground">Total Interest</span>
+                                                        <span className="text-gray-500">Total Interest</span>
                                                         <span className="font-semibold">₹{emiResult.interest.toLocaleString('en-IN')}</span>
                                                     </div>
                                                     <Separator />
@@ -1004,30 +1004,30 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                                 {/* Principal vs Interest bar */}
                                                 <div className="mt-4">
                                                     <div className="flex justify-between text-[11px] mb-1">
-                                                        <span className="text-muted-foreground">
+                                                        <span className="text-gray-500">
                                                             Principal {Math.round((emiResult.loan / emiResult.total) * 100)}%
                                                         </span>
-                                                        <span className="text-muted-foreground">
+                                                        <span className="text-gray-500">
                                                             Interest {Math.round((emiResult.interest / emiResult.total) * 100)}%
                                                         </span>
                                                     </div>
-                                                    <div className="w-full h-2 bg-muted rounded-full overflow-hidden">
+                                                    <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
                                                         <div
-                                                            className="h-full bg-primary rounded-full transition-all"
+                                                            className="h-full bg-blue-600 rounded-full transition-all"
                                                             style={{ width: `${(emiResult.loan / emiResult.total) * 100}%` }}
                                                         />
                                                     </div>
                                                 </div>
-                                                <p className="text-[10px] text-muted-foreground mt-3">
+                                                <p className="text-[10px] text-gray-500 mt-3">
                                                     * Indicative EMI. Actual values may vary based on lender terms.
                                                 </p>
                                             </CardContent>
                                         </Card>
                                     ) : (
-                                        <Card className="bg-muted/30 h-full flex items-center justify-center">
+                                        <Card className="bg-gray-100/30 h-full flex items-center justify-center">
                                             <CardContent className="text-center p-6">
-                                                <Calculator className="w-10 h-10 text-muted-foreground mx-auto mb-3" />
-                                                <p className="text-sm text-muted-foreground">Adjust sliders to calculate EMI</p>
+                                                <Calculator className="w-10 h-10 text-gray-500 mx-auto mb-3" />
+                                                <p className="text-sm text-gray-500">Adjust sliders to calculate EMI</p>
                                             </CardContent>
                                         </Card>
                                     )}
@@ -1042,25 +1042,25 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                     <Card>
                         <CardContent className="p-6">
                             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                                <MapPin className="w-4 h-4 text-muted-foreground" />
+                                <MapPin className="w-4 h-4 text-gray-500" />
                                 On-Road Price Estimate
                             </h3>
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 {car.pricing.onRoad.delhi && (
-                                    <div className="p-4 bg-muted/30 rounded-lg">
-                                        <p className="text-xs text-muted-foreground">Delhi</p>
+                                    <div className="p-4 bg-gray-100/30 rounded-lg">
+                                        <p className="text-xs text-gray-500">Delhi</p>
                                         <p className="text-lg font-bold">{formatPriceInLakhs(car.pricing.onRoad.delhi)}</p>
                                     </div>
                                 )}
                                 {car.pricing.onRoad.mumbai && (
-                                    <div className="p-4 bg-muted/30 rounded-lg">
-                                        <p className="text-xs text-muted-foreground">Mumbai</p>
+                                    <div className="p-4 bg-gray-100/30 rounded-lg">
+                                        <p className="text-xs text-gray-500">Mumbai</p>
                                         <p className="text-lg font-bold">{formatPriceInLakhs(car.pricing.onRoad.mumbai)}</p>
                                     </div>
                                 )}
                                 {car.pricing.onRoad.bangalore && (
-                                    <div className="p-4 bg-muted/30 rounded-lg">
-                                        <p className="text-xs text-muted-foreground">Bangalore</p>
+                                    <div className="p-4 bg-gray-100/30 rounded-lg">
+                                        <p className="text-xs text-gray-500">Bangalore</p>
                                         <p className="text-lg font-bold">{formatPriceInLakhs(car.pricing.onRoad.bangalore)}</p>
                                     </div>
                                 )}
@@ -1077,8 +1077,8 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                             <CardContent className="p-6">
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                     {/* Overall Rating */}
-                                    <div className="text-center p-6 bg-muted/30 rounded-xl">
-                                        <p className="text-5xl font-bold text-foreground">{car.rating.overall}</p>
+                                    <div className="text-center p-6 bg-gray-100/30 rounded-xl">
+                                        <p className="text-5xl font-bold text-gray-900">{car.rating.overall}</p>
                                         <div className="flex justify-center gap-0.5 my-2">
                                             {Array.from({ length: 5 }).map((_, i) => (
                                                 <Star
@@ -1087,7 +1087,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                                 />
                                             ))}
                                         </div>
-                                        <p className="text-sm text-muted-foreground">
+                                        <p className="text-sm text-gray-500">
                                             Based on {car.rating.reviewCount || 0} reviews
                                         </p>
                                     </div>
@@ -1103,8 +1103,8 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                             { label: 'Value for Money', value: car.rating.valueForMoney },
                                         ].filter(r => r.value).map((rating) => (
                                             <div key={rating.label} className="flex items-center gap-3">
-                                                <span className="text-sm w-32 text-muted-foreground">{rating.label}</span>
-                                                <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">
+                                                <span className="text-sm w-32 text-gray-500">{rating.label}</span>
+                                                <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
                                                     <div
                                                         className="h-full bg-amber-400 rounded-full"
                                                         style={{ width: `${((rating.value || 0) / 5) * 100}%` }}
@@ -1119,8 +1119,8 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                         </Card>
                     ) : (
                         <Card className="p-8 text-center">
-                            <MessageSquare className="w-10 h-10 text-muted-foreground mx-auto mb-3" />
-                            <p className="text-muted-foreground">No reviews available yet. Be the first to review!</p>
+                            <MessageSquare className="w-10 h-10 text-gray-500 mx-auto mb-3" />
+                            <p className="text-gray-500">No reviews available yet. Be the first to review!</p>
                             <Button variant="outline" className="mt-4">Write a Review</Button>
                         </Card>
                     )}
@@ -1136,7 +1136,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     <AccordionTrigger className="text-sm font-medium hover:no-underline">
                                         What is the price of {car.make} {car.model}?
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-sm text-muted-foreground">
+                                    <AccordionContent className="text-sm text-gray-500">
                                         The {car.make} {car.model} price starts at {priceDisplay}
                                         {hasPriceRange && ` and goes up to ${maxPriceDisplay}`} (ex-showroom).
                                         The actual on-road price may vary depending on your city, registration charges, and insurance.
@@ -1146,7 +1146,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     <AccordionTrigger className="text-sm font-medium hover:no-underline">
                                         What is the mileage of {car.make} {car.model}?
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-sm text-muted-foreground">
+                                    <AccordionContent className="text-sm text-gray-500">
                                         The {car.make} {car.model} delivers a mileage of {car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l (ARAI certified)` : 'data not available'}.
                                         Real-world mileage may vary depending on driving conditions and habits.
                                     </AccordionContent>
@@ -1155,7 +1155,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     <AccordionTrigger className="text-sm font-medium hover:no-underline">
                                         What engine does the {car.make} {car.model} have?
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-sm text-muted-foreground">
+                                    <AccordionContent className="text-sm text-gray-500">
                                         The {car.make} {car.model} is powered by a {car.engine?.displacement ? `${car.engine.displacement}cc` : ''} {car.engine?.type} engine
                                         that produces {car.engine?.power || 'N/A'} of power and {car.engine?.torque || 'N/A'} of torque,
                                         mated to a {car.transmission?.type} transmission.
@@ -1165,7 +1165,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     <AccordionTrigger className="text-sm font-medium hover:no-underline">
                                         How many variants does {car.make} {car.model} come in?
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-sm text-muted-foreground">
+                                    <AccordionContent className="text-sm text-gray-500">
                                         The {car.make} {car.model} is available in {car.variants?.length || 'multiple'} variants.
                                         {car.variants && car.variants.length > 0 && (
                                             <> The variants include: {car.variants.map(v => v.name).join(', ')}.</>
@@ -1176,7 +1176,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     <AccordionTrigger className="text-sm font-medium hover:no-underline">
                                         How safe is the {car.make} {car.model}?
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-sm text-muted-foreground">
+                                    <AccordionContent className="text-sm text-gray-500">
                                         The {car.make} {car.model} comes with {car.safety?.airbags || 'multiple'} airbags
                                         {car.safety?.abs && ', ABS with EBD'}
                                         {car.safety?.esp && ', Electronic Stability Program'}
@@ -1188,7 +1188,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     <AccordionTrigger className="text-sm font-medium hover:no-underline">
                                         What is the EMI for {car.make} {car.model}?
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-sm text-muted-foreground">
+                                    <AccordionContent className="text-sm text-gray-500">
                                         {car.pricing.emi ? (
                                             <>The EMI for {car.make} {car.model} starts at ₹{car.pricing.emi.monthly.toLocaleString()} per month
                                                 with a down payment of ₹{car.pricing.emi.downPayment.toLocaleString()} for a tenure of {car.pricing.emi.tenure} months.
@@ -1208,7 +1208,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                     <section>
                         <div className="flex items-center justify-between mb-6">
                             <h2 className="text-2xl font-bold">Similar Cars</h2>
-                            <Link href="/cars" className="text-sm text-primary hover:underline">
+                            <Link href="/cars" className="text-sm text-blue-600 hover:underline">
                                 View All Cars
                             </Link>
                         </div>
@@ -1228,9 +1228,9 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
 
 function SpecRow({ label, value, last }: { label: string; value: string; last?: boolean }) {
     return (
-        <div className={`flex justify-between py-2.5 ${!last ? 'border-b border-border/50' : ''}`}>
-            <span className="text-sm text-muted-foreground">{label}</span>
-            <span className="text-sm font-medium text-foreground">{value}</span>
+        <div className={`flex justify-between py-2.5 ${!last ? 'border-b border-gray-200/50' : ''}`}>
+            <span className="text-sm text-gray-500">{label}</span>
+            <span className="text-sm font-medium text-gray-900">{value}</span>
         </div>
     );
 }
@@ -1246,7 +1246,7 @@ function FeatureGroup({ title, features, icon }: { title: string; features: stri
                     {features.map((feat, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm">
                             <Check className="w-3.5 h-3.5 mt-0.5 text-emerald-500 shrink-0" />
-                            <span className="text-muted-foreground">{feat}</span>
+                            <span className="text-gray-500">{feat}</span>
                         </li>
                     ))}
                 </ul>
@@ -1269,8 +1269,8 @@ function EmiSlider({
     return (
         <div>
             <div className="flex justify-between items-center mb-2">
-                <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{label}</label>
-                <span className="text-sm font-bold text-primary">{format(value)}</span>
+                <label className="text-xs font-semibold uppercase tracking-wider text-gray-500">{label}</label>
+                <span className="text-sm font-bold text-blue-600">{format(value)}</span>
             </div>
             <Slider
                 value={[value]}

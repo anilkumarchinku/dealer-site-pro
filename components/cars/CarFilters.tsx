@@ -218,9 +218,9 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                 className="mb-3"
                             />
                             <div className="flex items-center justify-between">
-                                <span className="text-xs font-medium px-2 py-1 bg-muted rounded-md">{formatPriceInLakhs(priceRange[0])}</span>
-                                <span className="text-xs text-muted-foreground">to</span>
-                                <span className="text-xs font-medium px-2 py-1 bg-muted rounded-md">{formatPriceInLakhs(priceRange[1])}</span>
+                                <span className="text-xs font-medium px-2 py-1 bg-gray-100 rounded-md">{formatPriceInLakhs(priceRange[0])}</span>
+                                <span className="text-xs text-gray-500">to</span>
+                                <span className="text-xs font-medium px-2 py-1 bg-gray-100 rounded-md">{formatPriceInLakhs(priceRange[1])}</span>
                             </div>
                         </AccordionContent>
                     </AccordionItem>
@@ -351,8 +351,8 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                         onClick={() => toggleItem(year, selectedYears, setSelectedYears)}
                                         className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${
                                             selectedYears.includes(year)
-                                                ? 'bg-primary text-primary-foreground border-primary'
-                                                : 'bg-background text-foreground border-border hover:bg-muted'
+                                                ? 'bg-gray-900 text-white border-gray-900'
+                                                : 'bg-white text-gray-900 border-gray-200 hover:bg-gray-50'
                                         }`}
                                     >
                                         {year}
@@ -380,8 +380,8 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                         onClick={() => toggleItem(seats, selectedSeating, setSelectedSeating)}
                                         className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${
                                             selectedSeating.includes(seats)
-                                                ? 'bg-primary text-primary-foreground border-primary'
-                                                : 'bg-background text-foreground border-border hover:bg-muted'
+                                                ? 'bg-gray-900 text-white border-gray-900'
+                                                : 'bg-white text-gray-900 border-gray-200 hover:bg-gray-50'
                                         }`}
                                     >
                                         {seats} Seater
@@ -413,12 +413,12 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                         <div
                                             className={`w-8 h-8 rounded-full border-2 transition-all ${
                                                 selectedColors.includes(color.name)
-                                                    ? 'border-primary scale-110 ring-2 ring-primary/30'
-                                                    : 'border-border hover:scale-105'
+                                                    ? 'border-gray-900 scale-110 ring-2 ring-gray-900/30'
+                                                    : 'border-gray-200 hover:scale-105'
                                             }`}
                                             style={{ backgroundColor: color.hex }}
                                         />
-                                        <span className="text-[9px] text-muted-foreground leading-none">{color.name}</span>
+                                        <span className="text-[9px] text-gray-500 leading-none">{color.name}</span>
                                     </button>
                                 ))}
                             </div>
@@ -440,11 +440,11 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                     className="mb-3"
                                 />
                                 <div className="flex items-center justify-between">
-                                    <span className="text-xs font-medium px-2 py-1 bg-muted rounded-md">
+                                    <span className="text-xs font-medium px-2 py-1 bg-gray-100 rounded-md">
                                         {kmRange[0].toLocaleString()} km
                                     </span>
-                                    <span className="text-xs text-muted-foreground">to</span>
-                                    <span className="text-xs font-medium px-2 py-1 bg-muted rounded-md">
+                                    <span className="text-xs text-gray-500">to</span>
+                                    <span className="text-xs font-medium px-2 py-1 bg-gray-100 rounded-md">
                                         {kmRange[1].toLocaleString()} km
                                     </span>
                                 </div>

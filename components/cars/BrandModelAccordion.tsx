@@ -142,7 +142,7 @@ export function BrandModelAccordion({
 
     // Fuel color helpers
     const fuelBadgeColor = (fuel?: string) => {
-        if (!fuel) return 'bg-muted text-muted-foreground';
+        if (!fuel) return 'bg-gray-100 text-gray-500';
         if (fuel === 'Electric') return 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30';
         if (fuel === 'Diesel') return 'bg-amber-500/15 text-amber-400 border-amber-500/30';
         if (fuel === 'CNG') return 'bg-teal-500/15 text-teal-400 border-teal-500/30';
@@ -150,7 +150,7 @@ export function BrandModelAccordion({
     };
 
     return (
-        <div className={cn('rounded-xl overflow-hidden border border-border bg-card transition-all duration-300', className)}>
+        <div className={cn('rounded-xl overflow-hidden border border-gray-200 bg-white transition-all duration-300', className)}>
             {/* ── Brand Card Header ── */}
             <div className="relative">
                 {/* Hero / gradient strip */}
@@ -161,7 +161,7 @@ export function BrandModelAccordion({
 
                 <div className="p-4 flex items-center gap-4">
                     {/* Logo */}
-                    <div className="w-12 h-12 rounded-xl bg-muted flex items-center justify-center shrink-0 overflow-hidden">
+                    <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center shrink-0 overflow-hidden">
                         {logoSrc ? (
                             <Image src={logoSrc} alt={brandDisplay} width={36} height={36} className="object-contain" />
                         ) : (
@@ -171,10 +171,10 @@ export function BrandModelAccordion({
 
                     {/* Name + counts */}
                     <div className="flex-1 min-w-0">
-                        <h3 className={cn('text-base font-bold leading-tight', light ? 'text-gray-900' : 'text-foreground')}>
+                        <h3 className={cn('text-base font-bold leading-tight', light ? 'text-gray-900' : 'text-gray-900')}>
                             {brandDisplay}
                         </h3>
-                        <p className="text-xs text-muted-foreground mt-0.5">
+                        <p className="text-xs text-gray-500 mt-0.5">
                             {expanded && totalModels > 0
                                 ? `${totalModels} models · ${totalVariants} variants`
                                 : 'Official Authorised Dealer'}
@@ -200,14 +200,14 @@ export function BrandModelAccordion({
 
             {/* ── Accordion Body ── */}
             {expanded && (
-                <div className="border-t border-border">
+                <div className="border-t border-gray-200">
                     {loading ? (
-                        <div className="flex items-center justify-center py-8 gap-2 text-muted-foreground text-sm">
-                            <div className="w-4 h-4 border-2 border-primary/40 border-t-primary rounded-full animate-spin" />
+                        <div className="flex items-center justify-center py-8 gap-2 text-gray-500 text-sm">
+                            <div className="w-4 h-4 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin" />
                             Loading models…
                         </div>
                     ) : Object.keys(models).length === 0 ? (
-                        <p className="text-center text-muted-foreground text-sm py-6">No model data available</p>
+                        <p className="text-center text-gray-500 text-sm py-6">No model data available</p>
                     ) : (
                         <div className="divide-y divide-border">
                             {Object.entries(models).map(([model, variants]) => {
@@ -221,7 +221,7 @@ export function BrandModelAccordion({
                                     <div key={model}>
                                         {/* Model Row — clickable header */}
                                         <button
-                                            className="w-full flex items-center gap-3 px-4 py-3 hover:bg-muted/40 transition-colors text-left"
+                                            className="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-100/40 transition-colors text-left"
                                             onClick={() => toggleModel(model)}
                                         >
                                             {/* Dot indicator */}
@@ -231,31 +231,31 @@ export function BrandModelAccordion({
                                             />
 
                                             <div className="flex-1 min-w-0">
-                                                <span className={cn('text-sm font-semibold', light ? 'text-gray-900' : 'text-foreground')}>
+                                                <span className={cn('text-sm font-semibold', light ? 'text-gray-900' : 'text-gray-900')}>
                                                     {model}
                                                 </span>
-                                                <span className="text-xs text-muted-foreground ml-2">
+                                                <span className="text-xs text-gray-500 ml-2">
                                                     {variants.length} variant{variants.length > 1 ? 's' : ''}
                                                 </span>
                                             </div>
 
                                             {/* Price range */}
                                             {priceMin && (
-                                                <span className="text-xs font-semibold text-foreground shrink-0">
+                                                <span className="text-xs font-semibold text-gray-900 shrink-0">
                                                     {formatPrice(priceMin)}
-                                                    {hasPriceRange && <span className="text-muted-foreground font-normal"> – {formatPrice(priceMax)}</span>}
+                                                    {hasPriceRange && <span className="text-gray-500 font-normal"> – {formatPrice(priceMax)}</span>}
                                                 </span>
                                             )}
 
-                                            <ChevronDown className={cn('w-4 h-4 text-muted-foreground transition-transform shrink-0', isOpen && 'rotate-180')} />
+                                            <ChevronDown className={cn('w-4 h-4 text-gray-500 transition-transform shrink-0', isOpen && 'rotate-180')} />
                                         </button>
 
                                         {/* Variant Chips */}
                                         {isOpen && (
-                                            <div className="px-4 pb-4 bg-muted/20">
+                                            <div className="px-4 pb-4 bg-gray-100/20">
                                                 {/* Quick spec row */}
                                                 {baseVariant && (
-                                                    <div className="flex flex-wrap gap-2 py-2 mb-3 text-[11px] text-muted-foreground">
+                                                    <div className="flex flex-wrap gap-2 py-2 mb-3 text-[11px] text-gray-500">
                                                         {baseVariant.fuel_type && (
                                                             <span className="flex items-center gap-1">
                                                                 <Fuel className="w-3 h-3" />{baseVariant.fuel_type}
@@ -335,13 +335,13 @@ export function BrandModelAccordion({
                                     <SheetTitle className="text-lg font-bold leading-snug">
                                         {selectedVariant.model}
                                     </SheetTitle>
-                                    <p className="text-sm text-muted-foreground">{selectedVariant.variant_name}</p>
+                                    <p className="text-sm text-gray-500">{selectedVariant.variant_name}</p>
                                 </SheetHeader>
                             </div>
 
                             {/* Car Image */}
                             {selectedVariant.image_urls?.[0]?.value && (
-                                <div className="relative aspect-video bg-muted shrink-0">
+                                <div className="relative aspect-video bg-gray-100 shrink-0">
                                     <Image
                                         src={selectedVariant.image_urls[0].value}
                                         alt={`${selectedVariant.model} ${selectedVariant.variant_name}`}
@@ -357,7 +357,7 @@ export function BrandModelAccordion({
                                 {/* Price */}
                                 {selectedVariant.ex_showroom_price_min_inr && (
                                     <div>
-                                        <p className="text-xs text-muted-foreground mb-1">Ex-Showroom Price</p>
+                                        <p className="text-xs text-gray-500 mb-1">Ex-Showroom Price</p>
                                         <p className="text-2xl font-bold" style={{ color: brandColor }}>
                                             {formatPrice(selectedVariant.ex_showroom_price_min_inr)}
                                         </p>
@@ -368,7 +368,7 @@ export function BrandModelAccordion({
 
                                 {/* Key Specs Grid */}
                                 <div>
-                                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Key Specs</p>
+                                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">Key Specs</p>
                                     <div className="grid grid-cols-2 gap-2.5">
                                         <SpecChip icon={<Fuel className="w-4 h-4 text-blue-400" />} label="Fuel" value={selectedVariant.fuel_type || '—'} />
                                         <SpecChip icon={<Gauge className="w-4 h-4 text-purple-400" />} label="Transmission" value={selectedVariant.transmission || '—'} />
@@ -390,10 +390,10 @@ export function BrandModelAccordion({
                                     <>
                                         <Separator />
                                         <div>
-                                            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Key Features</p>
+                                            <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">Key Features</p>
                                             <div className="flex flex-wrap gap-2">
                                                 {String(selectedVariant.key_features).split(',').map((f, i) => (
-                                                    <span key={i} className="text-xs px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                                                    <span key={i} className="text-xs px-2.5 py-1 rounded-full bg-gray-100 text-gray-700 border border-gray-200">
                                                         {f.trim()}
                                                     </span>
                                                 ))}
@@ -407,7 +407,7 @@ export function BrandModelAccordion({
                                     <>
                                         <Separator />
                                         <div>
-                                            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Safety Features</p>
+                                            <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">Safety Features</p>
                                             <div className="flex flex-wrap gap-2">
                                                 {String(selectedVariant.safety_features).split(',').map((f, i) => (
                                                     <span key={i} className="text-xs px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 border border-red-500/20">
@@ -421,7 +421,7 @@ export function BrandModelAccordion({
                             </div>
 
                             {/* Sticky Enquire Bar */}
-                            <div className="border-t border-border px-5 py-4 bg-card/95 backdrop-blur-sm">
+                            <div className="border-t border-gray-200 px-5 py-4 bg-white/95 backdrop-blur-sm">
                                 <div className="flex items-center gap-2 mb-3">
                                     <Badge variant="outline" className="text-[11px]" style={{ borderColor: brandColor, color: brandColor }}>
                                         {selectedVariant.fuel_type}
@@ -458,13 +458,13 @@ function SpecChip({
     value: string;
 }) {
     return (
-        <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-muted/50 border border-border/50">
-            <div className="w-8 h-8 rounded-lg bg-background flex items-center justify-center shrink-0 shadow-sm">
+        <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-gray-100/50 border border-gray-200/50">
+            <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shrink-0 shadow-sm">
                 {icon}
             </div>
             <div className="min-w-0">
-                <p className="text-[10px] text-muted-foreground leading-none">{label}</p>
-                <p className="text-xs font-semibold text-foreground mt-0.5 truncate" title={value}>{value}</p>
+                <p className="text-[10px] text-gray-500 leading-none">{label}</p>
+                <p className="text-xs font-semibold text-gray-900 mt-0.5 truncate" title={value}>{value}</p>
             </div>
         </div>
     );

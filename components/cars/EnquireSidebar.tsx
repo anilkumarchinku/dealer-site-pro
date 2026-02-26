@@ -354,7 +354,7 @@ export function EnquireSidebar({
                                     id="eq-time"
                                     value={form.preferredTime}
                                     onChange={e => handleChange('preferredTime', e.target.value)}
-                                    className="w-full h-10 rounded-md border border-input bg-background px-3 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring"
+                                    className="w-full h-10 rounded-md border border-gray-200 bg-white px-3 text-sm text-gray-900 ring-offset-white focus:outline-none focus:ring-2 focus:ring-gray-400"
                                 >
                                     <option value="">Any time</option>
                                     <option value="morning">Morning (9am – 12pm)</option>
