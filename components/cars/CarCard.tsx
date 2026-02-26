@@ -212,11 +212,11 @@ export function CarCard({
                                 {car.make}
                             </p>
                         </div>
-                        <h3 className={cn('text-base font-bold leading-tight line-clamp-1', 'text-foreground')}>
+                        <h3 className="text-base font-bold leading-tight line-clamp-1 text-gray-900">
                             {car.model}
                         </h3>
                         {car.variant && (
-                            <p className={cn('text-[11px] line-clamp-1', 'text-muted-foreground')}>
+                            <p className="text-[11px] line-clamp-1 text-gray-500">
                                 {car.variant}
                             </p>
                         )}
@@ -242,14 +242,14 @@ export function CarCard({
                     {/* Price */}
                     <div className="mb-2">
                         <div className="flex items-baseline gap-1.5 flex-wrap">
-                            <span className={cn('text-lg font-bold', 'text-foreground')}>
+                            <span className="text-lg font-bold text-gray-900">
                                 {priceRange}
                             </span>
                             {hasPriceRange && (
-                                <span className="text-xs text-muted-foreground">– {maxPrice}</span>
+                                <span className="text-xs text-gray-500">– {maxPrice}</span>
                             )}
                         </div>
-                        <p className="text-[10px] text-muted-foreground">Ex-showroom price</p>
+                        <p className="text-[10px] text-gray-500">Ex-showroom price</p>
 
                         {showEMI && car.pricing.emi && (
                             <Badge variant="secondary" className="mt-1 text-[10px] font-medium gap-1 h-5" style={{ color: brandColor }}>
@@ -354,12 +354,11 @@ function SpecItem({
                 {icon}
             </div>
             <div className="min-w-0">
-                <p className="text-[10px] text-muted-foreground leading-none">{label}</p>
+                <p className="text-[10px] text-gray-500 leading-none">{label}</p>
                 <p
                     className={cn(
-                        'font-semibold leading-tight truncate',
+                        'font-semibold leading-tight truncate text-gray-900',
                         isLong ? 'text-[11px]' : 'text-xs',
-                        'text-foreground'
                     )}
                     title={value}
                 >
@@ -450,7 +449,7 @@ function VariantAccordionButton({
                     onClick={e => { e.stopPropagation(); setOpen(false); }}
                 >
                     <div
-                        className="w-full max-w-lg bg-card rounded-2xl border border-border shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
+                        className="w-full max-w-lg bg-white rounded-2xl border border-gray-200 shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
                         onClick={e => e.stopPropagation()}
                     >
                         {/* ── Header ── */}
@@ -462,11 +461,11 @@ function VariantAccordionButton({
                                 {logoSrc && <Image src={logoSrc} alt={make} width={20} height={20} className="object-contain" />}
                                 <div>
                                     <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: brandColor }}>{make}</p>
-                                    <p className="text-sm font-bold text-foreground leading-tight">{model}</p>
+                                    <p className="text-sm font-bold text-gray-900 leading-tight">{model}</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Badge variant="outline" className="text-[11px]">
+                                <Badge variant="outline" className="text-[11px] text-gray-600 border-gray-200">
                                     {variants.length > 0 ? `${variants.length} variants` : 'No data'}
                                 </Badge>
                                 <button
@@ -481,14 +480,14 @@ function VariantAccordionButton({
                         {/* ── Scrollable body ── */}
                         <div className="overflow-y-auto flex-1">
                             {variants.length === 0 ? (
-                                <p className="text-sm text-muted-foreground text-center py-8 px-5">
+                                <p className="text-sm text-gray-500 text-center py-8 px-5">
                                     No variant data available for {model}
                                 </p>
                             ) : (
                                 <>
                                     {/* Variant chips */}
                                     <div className="px-4 pt-3 pb-2">
-                                        <p className="text-[11px] text-muted-foreground mb-2">Select a variant to see specs</p>
+                                        <p className="text-[11px] text-gray-500 mb-2">Select a variant to see specs</p>
                                         <div className="flex flex-wrap gap-2">
                                             {variants.map((v) => {
                                                 const isSelected = selected?.variant_name === v.variant_name;
@@ -514,7 +513,7 @@ function VariantAccordionButton({
                                             })}
                                         </div>
                                         {/* Fuel legend */}
-                                        <div className="flex flex-wrap gap-2 mt-3 pt-2 border-t border-border">
+                                        <div className="flex flex-wrap gap-2 mt-3 pt-2 border-t border-gray-200">
                                             {Array.from(new Set(variants.map(v => v.fuel_type).filter(Boolean))).map(fuel => (
                                                 <span key={fuel} className={cn('text-[10px] px-2 py-0.5 rounded border', fuelChipClass(fuel))}>{fuel}</span>
                                             ))}
@@ -523,11 +522,11 @@ function VariantAccordionButton({
 
                                     {/* ── Selected variant specs (inline) ── */}
                                     {selected && (
-                                        <div className="border-t border-border mx-4 mt-1 pt-3 pb-4 space-y-3">
+                                        <div className="border-t border-gray-200 mx-4 mt-1 pt-3 pb-4 space-y-3">
                                             {/* Price + badges */}
                                             <div className="flex items-end justify-between">
                                                 <div>
-                                                    <p className="text-[10px] text-muted-foreground">Ex-Showroom</p>
+                                                    <p className="text-[10px] text-gray-500">Ex-Showroom</p>
                                                     <p className="text-xl font-bold" style={{ color: brandColor }}>
                                                         {fmtPrice(selected.ex_showroom_price_min_inr)}
                                                     </p>
@@ -571,10 +570,10 @@ function VariantAccordionButton({
                                             {/* Key features */}
                                             {selected.key_features && (
                                                 <div>
-                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">Key Features</p>
+                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-1.5">Key Features</p>
                                                     <div className="flex flex-wrap gap-1.5">
                                                         {String(selected.key_features).split(',').map((f, i) => (
-                                                            <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">{f.trim()}</span>
+                                                            <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-gray-100 text-gray-700 border border-gray-200">{f.trim()}</span>
                                                         ))}
                                                     </div>
                                                 </div>
@@ -583,7 +582,7 @@ function VariantAccordionButton({
                                             {/* Safety features */}
                                             {selected.safety_features && (
                                                 <div>
-                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">Safety</p>
+                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-1.5">Safety</p>
                                                     <div className="flex flex-wrap gap-1.5">
                                                         {String(selected.safety_features).split(',').map((f, i) => (
                                                             <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-red-500/10 text-red-400 border border-red-500/20">{f.trim()}</span>
@@ -619,8 +618,8 @@ function PopSpecChip({ icon, label, value }: { icon: React.ReactNode; label: str
         <div className="flex items-center gap-2 p-2 rounded-lg bg-white border border-gray-100">
             <div className="w-6 h-6 rounded-md bg-white border border-gray-100 flex items-center justify-center shrink-0 shadow-sm">{icon}</div>
             <div className="min-w-0">
-                <p className="text-[9px] text-muted-foreground leading-none">{label}</p>
-                <p className="text-[11px] font-semibold text-foreground mt-0.5 truncate" title={value}>{value}</p>
+                <p className="text-[9px] text-gray-500 leading-none">{label}</p>
+                <p className="text-[11px] font-semibold text-gray-900 mt-0.5 truncate" title={value}>{value}</p>
             </div>
         </div>
     );
