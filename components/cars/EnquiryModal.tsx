@@ -34,6 +34,7 @@ import {
 } from 'lucide-react';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { getBrandLogo } from '@/lib/data/brand-logos';
+import { getContrastText } from '@/lib/utils/color-contrast';
 
 interface EnquiryModalProps {
     car: Car | null;
@@ -367,13 +368,13 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb' }
                                     </div>
                                     <Button
                                         type="submit"
-                                        className="w-full text-white"
-                                        style={{ backgroundColor: brandColor }}
+                                        className="w-full"
+                                        style={{ backgroundColor: brandColor, color: getContrastText(brandColor) }}
                                         disabled={isSubmitting}
                                     >
                                         {isSubmitting ? (
                                             <>
-                                                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+                                                <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin mr-2" />
                                                 Sending...
                                             </>
                                         ) : (

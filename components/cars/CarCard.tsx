@@ -40,6 +40,7 @@ import {
     Info,
 } from 'lucide-react';
 import { getBrandLogo } from '@/lib/data/brand-logos';
+import { getContrastText } from '@/lib/utils/color-contrast';
 
 // ── Variant types for the accordion ──────────────────────────────────────────
 interface CarVariantInfo {
@@ -289,9 +290,9 @@ export function CarCard({
                     {/* CTA row — Enquire + Quick View */}
                     <div className="flex gap-2 mt-1">
                         <Button
-                            className="flex-1 text-white"
+                            className="flex-1"
                             size="sm"
-                            style={{ backgroundColor: brandColor }}
+                            style={{ backgroundColor: brandColor, color: getContrastText(brandColor) }}
                             onClick={(e) => { e.stopPropagation(); handleEnquireNow(); }}
                         >
                             <Send className="w-3.5 h-3.5 mr-1.5" />
@@ -300,7 +301,7 @@ export function CarCard({
                         <Button
                             size="sm"
                             variant="outline"
-                            className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium"
+                            className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-white"
                             style={{ borderColor: brandColor, color: brandColor }}
                             onClick={(e) => { e.stopPropagation(); setIsQuickViewOpen(true); }}
                         >
@@ -428,7 +429,7 @@ function VariantAccordionButton({
             <Button
                 size="sm"
                 variant="outline"
-                className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium"
+                className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-white"
                 style={{ borderColor: brandColor, color: brandColor }}
                 onClick={handleToggle}
             >
@@ -593,8 +594,8 @@ function VariantAccordionButton({
 
                                             {/* Enquire CTA */}
                                             <Button
-                                                className="w-full text-white gap-2 mt-1"
-                                                style={{ backgroundColor: brandColor }}
+                                                className="w-full gap-2 mt-1"
+                                                style={{ backgroundColor: brandColor, color: getContrastText(brandColor) }}
                                                 onClick={e => e.stopPropagation()}
                                             >
                                                 <Send className="w-4 h-4" />

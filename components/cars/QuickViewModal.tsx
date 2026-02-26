@@ -32,6 +32,7 @@ import {
 } from 'lucide-react';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { getBrandLogo } from '@/lib/data/brand-logos';
+import { getContrastText } from '@/lib/utils/color-contrast';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface Props {
@@ -356,7 +357,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
 
                                                 {/* Enquire CTA */}
                                                 <div className="p-4 border-t border-gray-100 bg-gray-50">
-                                                    <Button className="w-full text-white gap-2 h-10" style={{ backgroundColor: brandColor }} onClick={enquire}>
+                                                    <Button className="w-full gap-2 h-10" style={{ backgroundColor: brandColor, color: getContrastText(brandColor) }} onClick={enquire}>
                                                         <Send className="w-4 h-4" />
                                                         Enquire — {selVariant.model} {selVariant.variant_name}
                                                     </Button>
@@ -626,7 +627,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                     <Button variant="outline" className="flex-1 h-10" onClick={() => onOpenChange(false)}>
                         Close
                     </Button>
-                    <Button className="flex-1 h-10 text-white gap-2" style={{ backgroundColor: brandColor }} onClick={enquire}>
+                    <Button className="flex-1 h-10 gap-2" style={{ backgroundColor: brandColor, color: getContrastText(brandColor) }} onClick={enquire}>
                         <Send className="w-4 h-4" /> Enquire Now
                     </Button>
                 </div>
