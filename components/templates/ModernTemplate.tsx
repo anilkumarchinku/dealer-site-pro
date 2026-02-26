@@ -243,28 +243,28 @@ export function ModernTemplate({
                     </div>
                     {/* Mobile menu */}
                     {mobileMenuOpen && (
-                        <div className={`md:hidden border-t ${isScrolled ? 'border-gray-100 bg-white' : 'border-white/10 bg-gray-900/95 backdrop-blur-lg'}`}>
+                        <div className="md:hidden border-t border-gray-100 bg-white">
                             <div className="px-4 py-3 space-y-1">
                                 <button
                                     onClick={() => { setActiveTab('home'); setMobileMenuOpen(false); }}
-                                    className={`block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors ${isScrolled ? 'text-gray-900 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
+                                    className="block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100"
                                 >
                                     Home
                                 </button>
                                 <button
                                     onClick={() => { setActiveTab('inventory'); setMobileMenuOpen(false); }}
-                                    className={`block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors ${isScrolled ? 'text-gray-900 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
+                                    className="block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100"
                                 >
                                     Inventory
                                 </button>
                                 <a
                                     href="#contact"
                                     onClick={() => setMobileMenuOpen(false)}
-                                    className={`block px-3 py-2.5 rounded-lg font-medium transition-colors ${isScrolled ? 'text-gray-900 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
+                                    className="block px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100"
                                 >
                                     Contact
                                 </a>
-                                <div className={`pt-2 border-t ${isScrolled ? 'border-gray-200' : 'border-white/10'}`}>
+                                <div className="pt-2 border-t border-gray-200">
                                     <Button
                                         className="w-full text-white"
                                         style={{ backgroundColor: brandColors.primary }}
@@ -293,29 +293,29 @@ export function ModernTemplate({
             {activeTab === 'home' && (
                 <>
                     {/* Hero Section */}
-                    <section className="relative min-h-[85vh] flex items-center bg-gray-900 overflow-hidden">
+                    <section className="relative min-h-[85vh] flex items-center bg-white overflow-hidden">
                         <div className="absolute inset-0">
                             <Image
                                 src={heroImageUrl || getBrandHeroImage(brandName)}
                                 alt={`${brandName} Hero`}
                                 fill
-                                className="object-cover opacity-40"
+                                className="object-cover opacity-20"
                                 priority
                             />
-                            <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
                         </div>
 
                         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                             <div className="grid lg:grid-cols-2 gap-12 items-center">
                                 {/* Text */}
-                                <div className="text-white space-y-6">
-                                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">
-                                        <span className="text-sm font-medium text-white/90">{dealerName}</span>
+                                <div className="text-gray-900 space-y-6">
+                                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 bg-gray-50">
+                                        <span className="text-sm font-medium text-gray-600">{dealerName}</span>
                                     </div>
-                                    <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+                                    <h1 className="text-5xl md:text-6xl font-bold leading-tight text-gray-900">
                                         {heroTitle}
                                     </h1>
-                                    <p className="text-xl text-gray-300">{heroSubtitle}</p>
+                                    <p className="text-xl text-gray-500">{heroSubtitle}</p>
                                     <div className="flex flex-wrap gap-4">
                                         <Button
                                             size="lg"
@@ -329,7 +329,7 @@ export function ModernTemplate({
                                         <Button
                                             size="lg"
                                             variant="outline"
-                                            className="bg-transparent text-white border-white/40 hover:bg-white/10"
+                                            className="bg-transparent text-gray-900 border-gray-300 hover:bg-gray-100"
                                             asChild
                                         >
                                             <a href="#contact">Get a Quote</a>
@@ -340,7 +340,7 @@ export function ModernTemplate({
                                 {/* Featured Car Card */}
                                 {featuredCars.length > 0 && (
                                     <div className="hidden lg:block">
-                                        <div className="bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 overflow-hidden">
+                                        <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
                                             <div className="aspect-video relative">
                                                 <Image
                                                     src={featuredCars[activeCarIndex].images.hero}
@@ -350,7 +350,7 @@ export function ModernTemplate({
                                                 />
                                             </div>
                                             <div className="p-6">
-                                                <h3 className="text-2xl font-bold text-white mb-2">
+                                                <h3 className="text-2xl font-bold text-gray-900 mb-2">
                                                     {featuredCars[activeCarIndex].make}{' '}
                                                     {featuredCars[activeCarIndex].model}
                                                 </h3>
@@ -670,10 +670,10 @@ export function ModernTemplate({
             )}
 
             {/* Footer */}
-            <footer className="bg-gray-900 text-white py-12">
+            <footer className="bg-gray-50 text-gray-900 py-12 border-t border-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Brand Logo */}
-                    <div className="flex items-center mb-8 pb-6 border-b border-gray-800">
+                    <div className="flex items-center mb-8 pb-6 border-b border-gray-200">
                         <div className="relative w-12 h-12 mr-3">
                             <Image
                                 src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
@@ -681,13 +681,12 @@ export function ModernTemplate({
                                 fill
                                 className="object-contain"
                                 sizes="48px"
-                                style={{ filter: 'brightness(0) invert(1) drop-shadow(0 0 12px rgba(255,255,255,0.9)) drop-shadow(0 0 24px rgba(255,255,255,0.5))' }}
                                 onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                             />
                         </div>
                         <div>
-                            <span className="text-2xl font-bold block">{dealerName}</span>
-                            <span className="text-sm text-gray-400">Your trusted automotive partner</span>
+                            <span className="text-2xl font-bold block text-gray-900">{dealerName}</span>
+                            <span className="text-sm text-gray-500">Your trusted automotive partner</span>
                         </div>
                     </div>
 
@@ -718,24 +717,24 @@ export function ModernTemplate({
                         <div>
                             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
                             <div className="space-y-2">
-                                <button onClick={() => setActiveTab('home')} className="block hover:text-gray-300">
+                                <button onClick={() => setActiveTab('home')} className="block text-gray-500 hover:text-gray-900">
                                     Home
                                 </button>
-                                <button onClick={() => setActiveTab('inventory')} className="block hover:text-gray-300">
+                                <button onClick={() => setActiveTab('inventory')} className="block text-gray-500 hover:text-gray-900">
                                     Inventory
                                 </button>
-                                <a href="#contact" className="block hover:text-gray-300">Contact</a>
+                                <a href="#contact" className="block text-gray-500 hover:text-gray-900">Contact</a>
                             </div>
                         </div>
                         <div>
                             <h4 className="text-lg font-semibold mb-4">{dealerName}</h4>
-                            <p className="text-gray-400">
+                            <p className="text-gray-500">
                                 Your trusted partner for quality vehicles. Committed to transparency and customer
                                 satisfaction.
                             </p>
                         </div>
                     </div>
-                    <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                    <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-400">
                         <p>© {new Date().getFullYear()} {dealerName}. All rights reserved.</p>
                         <div className="flex items-center justify-center gap-3 mt-3">
                             <a

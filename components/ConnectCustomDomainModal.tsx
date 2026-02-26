@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { X, Globe, Copy, Check, AlertCircle, Loader2, Palette, CreditCard } from 'lucide-react'
 import { getDNSInstructions } from '@/lib/services/dns-verification-service'
 import { allTemplates, TemplateStyle } from '@/lib/templates/template-styles'
-import { openRazorpayCheckout, type RazorpaySuccessResponse } from '@/lib/utils/razorpay'
+import { openRazorpayCheckout, verifyPaymentWithBackend, generateIdempotencyKey, type RazorpaySuccessResponse } from '@/lib/utils/razorpay'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog'
@@ -27,6 +27,7 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, si
     const [error, setError] = useState('')
     const [copiedIndex, setCopiedIndex] = useState<number | null>(null)
     const [isLoading, setIsLoading] = useState(false)
+    const [idempotencyKey] = useState(() => generateIdempotencyKey())
 
     if (!isOpen) return null
 

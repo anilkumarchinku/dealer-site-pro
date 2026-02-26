@@ -12,11 +12,12 @@ CREATE TABLE IF NOT EXISTS public.payment_idempotency_log (
     payment_id TEXT NOT NULL,
     subscription_id TEXT,
     response JSONB,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    INDEX idx_idempotency_key (idempotency_key),
-    INDEX idx_payment_id (payment_id),
-    INDEX idx_created_at (created_at)
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
+
+CREATE INDEX IF NOT EXISTS idx_idempotency_key ON public.payment_idempotency_log (idempotency_key);
+CREATE INDEX IF NOT EXISTS idx_payment_id ON public.payment_idempotency_log (payment_id);
+CREATE INDEX IF NOT EXISTS idx_idempotency_created_at ON public.payment_idempotency_log (created_at);
 
 -- Enable RLS on idempotency table (public read, app insert only)
 ALTER TABLE public.payment_idempotency_log ENABLE ROW LEVEL SECURITY;
@@ -122,11 +123,12 @@ CREATE TABLE IF NOT EXISTS public.audit_log (
     operation TEXT NOT NULL, -- 'INSERT', 'UPDATE', 'DELETE'
     record_id TEXT,
     changes JSONB,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    INDEX idx_user_id (user_id),
-    INDEX idx_table_name (table_name),
-    INDEX idx_created_at (created_at)
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
+
+CREATE INDEX IF NOT EXISTS idx_audit_user_id ON public.audit_log (user_id);
+CREATE INDEX IF NOT EXISTS idx_audit_table_name ON public.audit_log (table_name);
+CREATE INDEX IF NOT EXISTS idx_audit_created_at ON public.audit_log (created_at);
 
 -- Enable RLS on audit log
 ALTER TABLE public.audit_log ENABLE ROW LEVEL SECURITY;

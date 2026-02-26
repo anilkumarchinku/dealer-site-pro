@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { X, Search, Loader2, Check, AlertCircle, Crown, CreditCard } from 'lucide-react'
-import { openRazorpayCheckout, type RazorpaySuccessResponse } from '@/lib/utils/razorpay'
+import { openRazorpayCheckout, verifyPaymentWithBackend, generateIdempotencyKey, type RazorpaySuccessResponse } from '@/lib/utils/razorpay'
 import type { DomainAvailability } from '@/lib/services/domain-search-service'
 
 interface Props {
@@ -23,6 +23,7 @@ export default function PurchaseManagedDomainModal({ isOpen, onClose, dealerId, 
         address: '', city: '', state: '', postalCode: '', country: 'IN',
     })
     const [error, setError] = useState('')
+    const [idempotencyKey] = useState(() => generateIdempotencyKey())
 
     if (!isOpen) return null
 
@@ -51,11 +52,15 @@ export default function PurchaseManagedDomainModal({ isOpen, onClose, dealerId, 
         setStep('contact')
     }
 
+    const [isPurchasing, setIsPurchasing] = useState(false)
+
     // Skip payment for now — go directly to domain purchase
     const handleProceedToPayment = async () => {
-        if (!selectedDomain) return
+        if (!selectedDomain || isPurchasing) return
+        setIsPurchasing(true)
         setError('')
         await purchaseDomain()
+        setIsPurchasing(false)
     }
 
     const purchaseDomain = async () => {
@@ -279,9 +284,17 @@ export default function PurchaseManagedDomainModal({ isOpen, onClose, dealerId, 
                                 </button>
                                 <button
                                     onClick={handleProceedToPayment}
-                                    className="flex-1 py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-xl font-semibold hover:from-violet-700 hover:to-purple-700 flex items-center justify-center gap-2 transition-colors"
+                                    disabled={isPurchasing}
+                                    className="flex-1 py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-xl font-semibold hover:from-violet-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 transition-colors"
                                 >
-                                    Purchase Domain
+                                    {isPurchasing ? (
+                                        <>
+                                            <Loader2 className="w-5 h-5 animate-spin" />
+                                            Processing...
+                                        </>
+                                    ) : (
+                                        'Purchase Domain'
+                                    )}
                                 </button>
                             </div>
                         </div>

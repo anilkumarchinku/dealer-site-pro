@@ -86,12 +86,12 @@ export interface TemplateConfig {
  * TEMPLATE 1: LUXURY & PREMIUM ✨
  * ═══════════════════════════════════════════════════════════════════════════
  *
- * Elegant, sophisticated design with dark tones
+ * Elegant, sophisticated design with premium feel
  * Perfect for: BMW, Mercedes, Audi, Lexus, Porsche
  *
  * Design Characteristics:
  * - Large, dramatic typography
- * - Lots of white space
+ * - Clean white backgrounds
  * - Subtle animations
  * - Premium feel with elegant shadows
  * - Minimal color usage (let the brand color shine)
@@ -100,7 +100,7 @@ export const luxuryTemplate: TemplateConfig = {
   id: 'luxury',
   name: 'Luxury & Premium',
   icon: '✨',
-  description: 'Elegant, sophisticated design with dark tones',
+  description: 'Elegant, sophisticated design with premium feel',
   perfectFor: 'BMW, Mercedes, Audi, Lexus, Porsche',
 
   design: {
@@ -142,7 +142,7 @@ export const luxuryTemplate: TemplateConfig = {
 
   colorUsage: {
     primaryUsage: 'accent',
-    backgroundStyle: 'dark',
+    backgroundStyle: 'light',
     accentPlacement: 'subtle',
   },
 };
@@ -275,7 +275,7 @@ export const sportyTemplate: TemplateConfig = {
 
   colorUsage: {
     primaryUsage: 'dominant',
-    backgroundStyle: 'gradient',
+    backgroundStyle: 'light',
     accentPlacement: 'everywhere',
   },
 };

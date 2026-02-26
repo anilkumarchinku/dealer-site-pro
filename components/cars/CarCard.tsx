@@ -144,9 +144,7 @@ export function CarCard({
             <Card
                 className={cn(
                     'group relative flex flex-col overflow-hidden transition-all duration-300 cursor-pointer h-full',
-                    light
-                        ? 'bg-card border border-border hover:border-border/80 text-foreground'
-                        : 'bg-card border border-border hover:border-border/80',
+                    'bg-white border border-gray-200 hover:border-gray-300 text-gray-900',
                     'hover:shadow-lg hover:-translate-y-0.5',
                     'rounded-xl',
                     className
@@ -154,7 +152,7 @@ export function CarCard({
                 onClick={handleEnquireNow}
             >
                 {/* ── Image ── */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+                <div className="relative aspect-[16/10] overflow-hidden bg-white">
                     {car.images.hero ? (
                         <Image
                             src={car.images.hero}
@@ -164,7 +162,7 @@ export function CarCard({
                             className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                     ) : (
-                        <div className="flex items-center justify-center h-full bg-muted">
+                        <div className="flex items-center justify-center h-full bg-white border-b border-gray-100">
                             <span className="text-4xl">🚗</span>
                         </div>
                     )}
@@ -228,14 +226,14 @@ export function CarCard({
                     {isUsed && (
                         <div className="flex flex-wrap gap-1.5 mb-1.5">
                             {car.year && (
-                                <span className={cn('inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded', 'bg-muted text-muted-foreground')}>
+                                <span className="inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded bg-white border border-gray-200 text-gray-600">
                                     <Calendar className="w-2.5 h-2.5" />{car.year}
                                 </span>
                             )}
-                            <span className={cn('inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded', 'bg-muted text-muted-foreground')}>
+                            <span className="inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded bg-white border border-gray-200 text-gray-600">
                                 <Fuel className="w-2.5 h-2.5" />{fuelDisplay}
                             </span>
-                            <span className={cn('inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded', 'bg-muted text-muted-foreground')}>
+                            <span className="inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded bg-white border border-gray-200 text-gray-600">
                                 <Gauge className="w-2.5 h-2.5" />{transDisplay}
                             </span>
                         </div>
@@ -351,14 +349,8 @@ function SpecItem({
 }) {
     const isLong = value.includes('/');
     return (
-        <div className={cn(
-            'flex items-center gap-2 p-2 rounded-lg',
-            light ? 'bg-muted/40' : 'bg-muted/40'
-        )}>
-            <div className={cn(
-                'w-7 h-7 rounded-md flex items-center justify-center shrink-0',
-                light ? 'bg-background shadow-sm' : 'bg-background shadow-sm'
-            )}>
+        <div className="flex items-center gap-2 p-2 rounded-lg bg-white border border-gray-100">
+            <div className="w-7 h-7 rounded-md flex items-center justify-center shrink-0 bg-white shadow-sm border border-gray-100">
                 {icon}
             </div>
             <div className="min-w-0">
@@ -479,7 +471,7 @@ function VariantAccordionButton({
                                 </Badge>
                                 <button
                                     onClick={e => { e.stopPropagation(); setOpen(false); }}
-                                    className="w-7 h-7 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
+                                    className="w-7 h-7 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
                                 >
                                     <ChevronDown className="w-4 h-4" />
                                 </button>
@@ -624,8 +616,8 @@ function VariantAccordionButton({
 /** Compact spec chip inside the inline popup */
 function PopSpecChip({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
     return (
-        <div className="flex items-center gap-2 p-2 rounded-lg bg-muted/50 border border-border/40">
-            <div className="w-6 h-6 rounded-md bg-background flex items-center justify-center shrink-0 shadow-sm">{icon}</div>
+        <div className="flex items-center gap-2 p-2 rounded-lg bg-white border border-gray-100">
+            <div className="w-6 h-6 rounded-md bg-white border border-gray-100 flex items-center justify-center shrink-0 shadow-sm">{icon}</div>
             <div className="min-w-0">
                 <p className="text-[9px] text-muted-foreground leading-none">{label}</p>
                 <p className="text-[11px] font-semibold text-foreground mt-0.5 truncate" title={value}>{value}</p>

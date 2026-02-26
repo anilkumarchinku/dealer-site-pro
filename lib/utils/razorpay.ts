@@ -12,6 +12,46 @@ export interface RazorpaySuccessResponse {
     razorpay_signature: string
 }
 
+/**
+ * Generate a crypto-random UUID v4 for idempotency keys.
+ * Falls back to Math.random if crypto.randomUUID is unavailable.
+ */
+export function generateIdempotencyKey(): string {
+    if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+        return crypto.randomUUID()
+    }
+    // Fallback for older browsers
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+        const r = (Math.random() * 16) | 0
+        const v = c === 'x' ? r : (r & 0x3) | 0x8
+        return v.toString(16)
+    })
+}
+
+/**
+ * Verify a Razorpay payment with the backend, using an idempotency key
+ * to prevent duplicate processing.
+ */
+export async function verifyPaymentWithBackend(
+    response: RazorpaySuccessResponse,
+    idempotencyKey: string
+): Promise<{ success: boolean; message?: string; error?: string; idempotent?: boolean }> {
+    const res = await fetch('/api/payments/verify', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'idempotency-key': idempotencyKey,
+        },
+        body: JSON.stringify({
+            orderId: response.razorpay_subscription_id,
+            paymentId: response.razorpay_payment_id,
+            signature: response.razorpay_signature,
+            subscriptionId: response.razorpay_subscription_id,
+        }),
+    })
+    return res.json()
+}
+
 function loadScript(): Promise<boolean> {
     return new Promise((resolve) => {
         if (typeof window === 'undefined') { resolve(false); return }

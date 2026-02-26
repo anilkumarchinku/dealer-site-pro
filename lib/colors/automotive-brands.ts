@@ -1112,18 +1112,18 @@ export const automotiveBrands = {
                 },
                 buttons: {
                         "primary": {
-                                "background": "#000000",
+                                "background": "#B12B28",
                                 "text": "#FFFFFF",
-                                "hover": "#333333",
-                                "active": "#1A1A1A",
+                                "hover": "#8A211F",
+                                "active": "#6E1A18",
                                 "border": "none"
                         },
                         "secondary": {
                                 "background": "transparent",
-                                "text": "#000000",
-                                "hover": "#000000",
+                                "text": "#B12B28",
+                                "hover": "#B12B28",
                                 "hoverText": "#FFFFFF",
-                                "border": "#000000"
+                                "border": "#B12B28"
                         }
                 },
                 forms: {

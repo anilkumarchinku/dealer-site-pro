@@ -169,15 +169,8 @@ export function getBackgroundClasses(brand: string, templateId: TemplateStyle): 
   const template = getTemplate(templateId);
   const brandColors = getBrandColors(brand);
 
-  if (template.colorUsage.backgroundStyle === 'dark') {
-    return 'bg-gray-900 text-white';
-  } else if (template.colorUsage.backgroundStyle === 'gradient') {
-    return `bg-gradient-to-br ${brandColors.gradient}`;
-  } else if (template.colorUsage.backgroundStyle === 'mixed') {
-    return `bg-[${brandColors.lightGray}]`;
-  } else {
-    return 'bg-white';
-  }
+  // All templates use white backgrounds for clean, professional look
+  return 'bg-white text-gray-900';
 }
 
 /**
