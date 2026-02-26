@@ -1,24 +1,26 @@
 "use client"
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Upload, Sparkles, Check, Loader2, Car } from "lucide-react";
+import { ArrowLeft, Upload, Sparkles, Check, Loader2, Car, ImagePlus, X, Camera } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { addVehicle } from "@/lib/db/vehicles";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 
 const FEATURES = [
-    "Leather Seats", "Sunroof", "Navigation", "Backup Camera",
-    "Heated Seats", "Bluetooth", "All-Wheel Drive", "Third Row",
+    "Leather Seats", "Sunroof / Moonroof", "Navigation System", "Backup Camera",
+    "Heated Seats", "Bluetooth", "All-Wheel Drive", "Third Row Seating",
     "Apple CarPlay", "Android Auto", "Keyless Entry", "Remote Start",
+    "Cruise Control", "Lane Assist", "Parking Sensors", "Ventilated Seats",
 ];
 
 interface FormData {
     vin: string;
     make: string;
     model: string;
+    variant: string;
     year: string;
     price_paise: string;
     mileage_km: string;
@@ -35,12 +37,14 @@ export default function AddVehiclePage() {
     const { dealerId, data } = useOnboardingStore();
     const isHybrid    = data.sellsNewCars && data.sellsUsedCars;
     const isFirstHand = data.sellsNewCars && !data.sellsUsedCars;
+    const fileInputRef = useRef<HTMLInputElement>(null);
 
     // IMPORTANT: All hooks must be declared before any early returns
     const [formData, setFormData] = useState<FormData>({
         vin: "",
         make: "",
         model: "",
+        variant: "",
         year: "",
         price_paise: "",
         mileage_km: "",
@@ -51,9 +55,11 @@ export default function AddVehiclePage() {
         description: "",
         condition: "used",
     });
+    const [images, setImages]         = useState<File[]>([]);
+    const [imagePreviews, setImagePreviews] = useState<string[]>([]);
     const [isGenerating, setIsGenerating] = useState(false);
-    const [isSaving, setIsSaving] = useState(false);
-    const [saveError, setSaveError] = useState<string | null>(null);
+    const [isSaving, setIsSaving]     = useState(false);
+    const [saveError, setSaveError]   = useState<string | null>(null);
 
     const handleChange = (field: keyof FormData, value: string) => {
         setFormData(prev => ({ ...prev, [field]: value }));
@@ -68,35 +74,54 @@ export default function AddVehiclePage() {
         }));
     };
 
+    const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const files = Array.from(e.target.files ?? []);
+        if (!files.length) return;
+        const remaining = 5 - images.length;
+        const toAdd = files.slice(0, remaining);
+        setImages(prev => [...prev, ...toAdd]);
+        toAdd.forEach(file => {
+            const reader = new FileReader();
+            reader.onload = ev => {
+                setImagePreviews(prev => [...prev, ev.target?.result as string]);
+            };
+            reader.readAsDataURL(file);
+        });
+        // Reset input so same file can be re-selected
+        e.target.value = "";
+    };
+
+    const removeImage = (index: number) => {
+        setImages(prev => prev.filter((_, i) => i !== index));
+        setImagePreviews(prev => prev.filter((_, i) => i !== index));
+    };
+
     const generateFromVIN = async () => {
         if (!formData.vin) {
             setSaveError("Please enter a VIN");
             return;
         }
-
         setIsGenerating(true);
         setSaveError(null);
-
         try {
             const response = await fetch('/api/vehicles/decode-vin', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ vin: formData.vin })
             });
-
             const data = await response.json();
             if (data.success) {
                 setFormData(prev => ({
                     ...prev,
-                    make: data.make || prev.make,
-                    model: data.model || prev.model,
-                    year: data.year?.toString() || prev.year,
+                    make:      data.make      || prev.make,
+                    model:     data.model     || prev.model,
+                    year:      data.year?.toString() || prev.year,
                     fuel_type: data.fuel_type || prev.fuel_type,
                 }));
             } else {
                 setSaveError(data.error || 'Failed to decode VIN');
             }
-        } catch (err) {
+        } catch {
             setSaveError('Error decoding VIN');
         } finally {
             setIsGenerating(false);
@@ -104,47 +129,42 @@ export default function AddVehiclePage() {
     };
 
     const handleSave = async () => {
-        if (!dealerId) {
-            setSaveError("Dealer ID not found");
+        if (!dealerId) { setSaveError("Dealer ID not found"); return; }
+        if (!formData.make || !formData.model) {
+            setSaveError("Please fill in make and model");
             return;
         }
-        if (!formData.vin || !formData.make || !formData.model) {
-            setSaveError("Please fill in VIN, make, and model");
-            return;
-        }
-
         setIsSaving(true);
         setSaveError(null);
-
         try {
-            const result = await addVehicle({ 
-                dealer_id: dealerId,
-                vin: formData.vin,
-                make: formData.make,
-                model: formData.model,
-                year: parseInt(formData.year) || new Date().getFullYear(),
-                price_paise: Math.round((parseFloat(formData.price_paise) || 0) * 100),
-                mileage_km: parseInt(formData.mileage_km) || 0,
-                color: formData.color,
+            const result = await addVehicle({
+                dealer_id:    dealerId,
+                vin:          formData.vin,
+                make:         formData.make,
+                model:        formData.model,
+                year:         parseInt(formData.year) || new Date().getFullYear(),
+                price_paise:  Math.round((parseFloat(formData.price_paise) || 0) * 100),
+                mileage_km:   parseInt(formData.mileage_km) || 0,
+                color:        formData.color,
                 transmission: formData.transmission,
-                fuel_type: formData.fuel_type,
-                features: formData.features,
-                description: formData.description,
-                condition: formData.condition
+                fuel_type:    formData.fuel_type,
+                features:     formData.features,
+                description:  formData.description,
+                condition:    formData.condition,
             });
             if (result.success) {
                 router.push('/dashboard/inventory');
             } else {
                 setSaveError(result.error || 'Failed to save vehicle');
             }
-        } catch (err) {
+        } catch {
             setSaveError('Error saving vehicle');
         } finally {
             setIsSaving(false);
         }
     };
 
-    // Now the conditional early return
+    // Conditional early return — after all hooks
     if (isFirstHand) {
         return (
             <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-6">
@@ -166,47 +186,111 @@ export default function AddVehiclePage() {
                     Go Back
                 </button>
             </div>
-        )
+        );
     }
 
     return (
-        <div className="min-h-screen bg-background py-8 px-4">
+        <div className="py-4">
             <div className="max-w-2xl mx-auto space-y-6">
                 {/* Header */}
-                <div className="flex items-center gap-4 mb-8">
+                <div className="flex items-center gap-4">
                     <button
                         onClick={() => router.back()}
-                        className="p-2 hover:bg-muted rounded-lg transition-colors"
+                        className="p-2 hover:bg-muted rounded-xl transition-colors"
                     >
                         <ArrowLeft className="w-5 h-5" />
                     </button>
                     <div>
-                        <h1 className="text-3xl font-bold">Add Vehicle</h1>
-                        <p className="text-muted-foreground">Add a new vehicle to your inventory</p>
+                        <h1 className="text-2xl font-bold">Add Vehicle</h1>
+                        <p className="text-muted-foreground text-sm">Add a new vehicle to your inventory</p>
                     </div>
                 </div>
 
                 {saveError && (
-                    <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                    <div className="p-4 bg-red-50 border border-red-200 rounded-xl text-red-700 text-sm flex items-center gap-2">
+                        <X className="w-4 h-4 shrink-0" />
                         {saveError}
                     </div>
                 )}
+
+                {/* Photo Upload */}
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="flex items-center gap-2">
+                            <Camera className="w-5 h-5 text-muted-foreground" />
+                            Vehicle Photos
+                        </CardTitle>
+                        <CardDescription>
+                            Add photos to attract more buyers — listings with photos get 4× more enquiries
+                            <span className="ml-1 text-xs">({images.length}/5)</span>
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                        <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
+                            {imagePreviews.map((src, i) => (
+                                <div key={i} className="relative aspect-square rounded-xl overflow-hidden border border-gray-200 group">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img src={src} alt={`Photo ${i + 1}`} className="w-full h-full object-cover" />
+                                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                        <button
+                                            type="button"
+                                            onClick={() => removeImage(i)}
+                                            className="w-7 h-7 bg-white rounded-full flex items-center justify-center hover:bg-red-50 transition-colors"
+                                        >
+                                            <X className="w-4 h-4 text-red-600" />
+                                        </button>
+                                    </div>
+                                    {i === 0 && (
+                                        <span className="absolute bottom-1 left-1 text-[10px] bg-black/60 text-white px-1.5 py-0.5 rounded font-medium">
+                                            Main
+                                        </span>
+                                    )}
+                                </div>
+                            ))}
+                            {images.length < 5 && (
+                                <button
+                                    type="button"
+                                    onClick={() => fileInputRef.current?.click()}
+                                    disabled={isSaving}
+                                    className="aspect-square rounded-xl border-2 border-dashed border-gray-200 flex flex-col items-center justify-center gap-1.5 cursor-pointer hover:border-primary/50 hover:bg-primary/5 transition-all group"
+                                >
+                                    <ImagePlus className="w-6 h-6 text-gray-400 group-hover:text-primary transition-colors" />
+                                    <span className="text-xs text-gray-400 group-hover:text-primary transition-colors">Add Photo</span>
+                                </button>
+                            )}
+                        </div>
+                        <input
+                            ref={fileInputRef}
+                            type="file"
+                            accept="image/*"
+                            multiple
+                            className="hidden"
+                            onChange={handleImageUpload}
+                        />
+                        {images.length === 0 && (
+                            <p className="text-xs text-muted-foreground mt-3 text-center">
+                                JPG, PNG, WEBP · Max 5 photos · First photo will be the main listing image
+                            </p>
+                        )}
+                    </CardContent>
+                </Card>
 
                 {/* VIN Section */}
                 <Card>
                     <CardHeader>
                         <CardTitle>Vehicle Identification</CardTitle>
-                        <CardDescription>Enter VIN to auto-populate details</CardDescription>
+                        <CardDescription>Enter VIN to auto-fill make, model, and year</CardDescription>
                     </CardHeader>
-                    <CardContent className="space-y-4">
+                    <CardContent>
                         <div>
-                            <label className="block text-sm font-medium mb-2">VIN</label>
+                            <label className="block text-sm font-medium mb-2">VIN <span className="text-muted-foreground font-normal">(optional)</span></label>
                             <div className="flex gap-2">
                                 <Input
                                     value={formData.vin}
-                                    onChange={(e) => handleChange('vin', e.target.value)}
-                                    placeholder="Enter VIN"
+                                    onChange={(e) => handleChange('vin', e.target.value.toUpperCase())}
+                                    placeholder="e.g. MA3EYD61S00123456"
                                     disabled={isGenerating || isSaving}
+                                    className="font-mono tracking-wide"
                                 />
                                 <Button
                                     onClick={generateFromVIN}
@@ -214,15 +298,9 @@ export default function AddVehiclePage() {
                                     variant="outline"
                                 >
                                     {isGenerating ? (
-                                        <>
-                                            <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                                            Decoding...
-                                        </>
+                                        <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Decoding...</>
                                     ) : (
-                                        <>
-                                            <Sparkles className="w-4 h-4 mr-2" />
-                                            Decode
-                                        </>
+                                        <><Sparkles className="w-4 h-4 mr-2" />Decode</>
                                     )}
                                 </Button>
                             </div>
@@ -238,20 +316,29 @@ export default function AddVehiclePage() {
                     <CardContent className="space-y-4">
                         <div className="grid grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-sm font-medium mb-2">Make</label>
+                                <label className="block text-sm font-medium mb-2">Make <span className="text-red-500">*</span></label>
                                 <Input
                                     value={formData.make}
                                     onChange={(e) => handleChange('make', e.target.value)}
-                                    placeholder="e.g., Toyota"
+                                    placeholder="e.g., Maruti Suzuki"
                                     disabled={isSaving}
                                 />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium mb-2">Model</label>
+                                <label className="block text-sm font-medium mb-2">Model <span className="text-red-500">*</span></label>
                                 <Input
                                     value={formData.model}
                                     onChange={(e) => handleChange('model', e.target.value)}
-                                    placeholder="e.g., Camry"
+                                    placeholder="e.g., Swift"
+                                    disabled={isSaving}
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium mb-2">Variant / Trim</label>
+                                <Input
+                                    value={formData.variant}
+                                    onChange={(e) => handleChange('variant', e.target.value)}
+                                    placeholder="e.g., VXI, ZXI+, AT"
                                     disabled={isSaving}
                                 />
                             </div>
@@ -261,17 +348,28 @@ export default function AddVehiclePage() {
                                     type="number"
                                     value={formData.year}
                                     onChange={(e) => handleChange('year', e.target.value)}
-                                    placeholder="e.g., 2024"
+                                    placeholder="e.g., 2022"
+                                    min="1990"
+                                    max={new Date().getFullYear() + 1}
                                     disabled={isSaving}
                                 />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium mb-2">Price</label>
+                                <label className="block text-sm font-medium mb-2">Price (₹)</label>
                                 <Input
                                     type="number"
                                     value={formData.price_paise}
                                     onChange={(e) => handleChange('price_paise', e.target.value)}
-                                    placeholder="e.g., 25000"
+                                    placeholder="e.g., 650000"
+                                    disabled={isSaving}
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium mb-2">Color</label>
+                                <Input
+                                    value={formData.color}
+                                    onChange={(e) => handleChange('color', e.target.value)}
+                                    placeholder="e.g., Pearl White"
                                     disabled={isSaving}
                                 />
                             </div>
@@ -292,16 +390,7 @@ export default function AddVehiclePage() {
                                     type="number"
                                     value={formData.mileage_km}
                                     onChange={(e) => handleChange('mileage_km', e.target.value)}
-                                    placeholder="e.g., 50000"
-                                    disabled={isSaving}
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium mb-2">Color</label>
-                                <Input
-                                    value={formData.color}
-                                    onChange={(e) => handleChange('color', e.target.value)}
-                                    placeholder="e.g., Black"
+                                    placeholder="e.g., 32000"
                                     disabled={isSaving}
                                 />
                             </div>
@@ -311,10 +400,13 @@ export default function AddVehiclePage() {
                                     value={formData.transmission}
                                     onChange={(e) => handleChange('transmission', e.target.value)}
                                     disabled={isSaving}
-                                    className="w-full px-3 py-2 border border-input rounded-md text-sm"
+                                    className="w-full px-3 py-2 border border-gray-200 rounded-md text-sm bg-white text-gray-900 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200"
                                 >
                                     <option>Automatic</option>
                                     <option>Manual</option>
+                                    <option>CVT</option>
+                                    <option>DCT</option>
+                                    <option>AMT</option>
                                 </select>
                             </div>
                             <div>
@@ -323,15 +415,31 @@ export default function AddVehiclePage() {
                                     value={formData.fuel_type}
                                     onChange={(e) => handleChange('fuel_type', e.target.value)}
                                     disabled={isSaving}
-                                    className="w-full px-3 py-2 border border-input rounded-md text-sm"
+                                    className="w-full px-3 py-2 border border-gray-200 rounded-md text-sm bg-white text-gray-900 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200"
                                 >
                                     <option>Petrol</option>
                                     <option>Diesel</option>
                                     <option>CNG</option>
                                     <option>Electric</option>
                                     <option>Hybrid</option>
+                                    <option>LPG</option>
                                 </select>
                             </div>
+                            {isHybrid && (
+                                <div>
+                                    <label className="block text-sm font-medium mb-2">Condition</label>
+                                    <select
+                                        value={formData.condition}
+                                        onChange={(e) => handleChange('condition', e.target.value as FormData["condition"])}
+                                        disabled={isSaving}
+                                        className="w-full px-3 py-2 border border-gray-200 rounded-md text-sm bg-white text-gray-900 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200"
+                                    >
+                                        <option value="new">New</option>
+                                        <option value="used">Used</option>
+                                        <option value="certified_pre_owned">Certified Pre-Owned</option>
+                                    </select>
+                                </div>
+                            )}
                         </div>
                     </CardContent>
                 </Card>
@@ -339,28 +447,41 @@ export default function AddVehiclePage() {
                 {/* Features */}
                 <Card>
                     <CardHeader>
-                        <CardTitle>Features</CardTitle>
+                        <CardTitle>Features & Highlights</CardTitle>
+                        <CardDescription>
+                            Select all features this vehicle has
+                            {formData.features.length > 0 && (
+                                <span className="ml-1 font-medium text-primary">· {formData.features.length} selected</span>
+                            )}
+                        </CardDescription>
                     </CardHeader>
                     <CardContent>
-                        <div className="grid grid-cols-2 gap-3">
-                            {FEATURES.map(feature => (
-                                <button
-                                    key={feature}
-                                    onClick={() => toggleFeature(feature)}
-                                    disabled={isSaving}
-                                    className={cn(
-                                        "p-3 rounded-lg border-2 text-sm font-medium transition-all",
-                                        formData.features.includes(feature)
-                                            ? "border-primary bg-primary/5 text-primary"
-                                            : "border-input hover:border-primary/50"
-                                    )}
-                                >
-                                    {formData.features.includes(feature) && (
-                                        <Check className="w-4 h-4 inline mr-2" />
-                                    )}
-                                    {feature}
-                                </button>
-                            ))}
+                        <div className="grid grid-cols-2 gap-2.5">
+                            {FEATURES.map(feature => {
+                                const selected = formData.features.includes(feature);
+                                return (
+                                    <button
+                                        key={feature}
+                                        type="button"
+                                        onClick={() => toggleFeature(feature)}
+                                        disabled={isSaving}
+                                        className={cn(
+                                            "flex items-center gap-2 p-3 rounded-xl border-2 text-sm font-medium transition-all text-left",
+                                            selected
+                                                ? "border-primary bg-primary/5 text-primary"
+                                                : "border-gray-200 hover:border-primary/40 text-gray-700 hover:bg-gray-50"
+                                        )}
+                                    >
+                                        <div className={cn(
+                                            "w-4 h-4 rounded-full border-2 flex items-center justify-center shrink-0 transition-colors",
+                                            selected ? "border-primary bg-primary" : "border-gray-300"
+                                        )}>
+                                            {selected && <Check className="w-2.5 h-2.5 text-white" />}
+                                        </div>
+                                        {feature}
+                                    </button>
+                                );
+                            })}
                         </div>
                     </CardContent>
                 </Card>
@@ -369,42 +490,39 @@ export default function AddVehiclePage() {
                 <Card>
                     <CardHeader>
                         <CardTitle>Description</CardTitle>
+                        <CardDescription>Add a compelling description to attract buyers</CardDescription>
                     </CardHeader>
                     <CardContent>
                         <textarea
                             value={formData.description}
                             onChange={(e) => handleChange('description', e.target.value)}
-                            placeholder="Add any additional details about this vehicle..."
+                            placeholder="Describe the vehicle — its condition, service history, standout features, reason for selling..."
                             disabled={isSaving}
-                            className="w-full px-3 py-2 border border-input rounded-md text-sm min-h-[100px]"
+                            className="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm min-h-[120px] resize-none bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200"
                         />
+                        <p className="text-xs text-muted-foreground mt-2">{formData.description.length}/500 characters</p>
                     </CardContent>
                 </Card>
 
                 {/* Action Buttons */}
-                <div className="flex gap-4">
+                <div className="flex gap-3 pb-8">
                     <Button
                         variant="outline"
                         onClick={() => router.back()}
                         disabled={isSaving}
+                        className="px-6"
                     >
                         Cancel
                     </Button>
                     <Button
                         onClick={handleSave}
-                        disabled={isSaving || !formData.vin || !formData.make || !formData.model}
+                        disabled={isSaving || !formData.make || !formData.model}
                         className="flex-1"
                     >
                         {isSaving ? (
-                            <>
-                                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                                Saving...
-                            </>
+                            <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Saving...</>
                         ) : (
-                            <>
-                                <Upload className="w-4 h-4 mr-2" />
-                                Add Vehicle
-                            </>
+                            <><Upload className="w-4 h-4 mr-2" />Add Vehicle to Inventory</>
                         )}
                     </Button>
                 </div>

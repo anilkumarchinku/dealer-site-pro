@@ -77,6 +77,22 @@ export default function DashboardPage() {
 
     const fmt = (n: number) => n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n);
 
+    const timeAgo = (iso: string): string => {
+        if (!iso) return "";
+        const diff = Date.now() - new Date(iso).getTime();
+        const mins = Math.floor(diff / 60000);
+        if (mins < 1) return "just now";
+        if (mins < 60) return `${mins}m ago`;
+        const hrs = Math.floor(mins / 60);
+        if (hrs < 24) return `${hrs}h ago`;
+        const days = Math.floor(hrs / 24);
+        if (days < 7) return `${days}d ago`;
+        return new Date(iso).toLocaleDateString("en-IN", { day: "numeric", month: "short" });
+    };
+
+    const formatType = (type: string) =>
+        type.split("_").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+
     const STATS = [
         { label: "Total Visitors", value: visitors,   icon: Eye,      color: "blue"    as const },
         { label: "Active Leads",   value: leadsCount, icon: Users,    color: "emerald" as const },
@@ -255,7 +271,7 @@ export default function DashboardPage() {
                                                     </div>
                                                 </div>
                                                 <p className="text-sm text-muted-foreground mb-2">
-                                                    <span className="font-medium text-foreground">{lead.type.replace("_", " ")}</span>
+                                                    <span className="font-medium text-foreground">{formatType(lead.type)}</span>
                                                     {lead.vehicle_interest ? ` • ${lead.vehicle_interest}` : ""}
                                                 </p>
                                                 <div className="flex items-center gap-4 text-xs text-muted-foreground">
@@ -264,7 +280,7 @@ export default function DashboardPage() {
                                                 </div>
                                             </div>
                                             <span className="text-xs text-muted-foreground flex items-center gap-1 shrink-0">
-                                                <Clock className="w-3 h-3" />{lead.created_at}
+                                                <Clock className="w-3 h-3" />{timeAgo(lead.created_at)}
                                             </span>
                                         </div>
                                     );

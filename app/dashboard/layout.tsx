@@ -1,5 +1,5 @@
 "use client"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -78,6 +78,7 @@ export default function DashboardLayout({
     const router   = useRouter();
     const { data, updateData, setDealerId, setDealerSlug, dealerSlug } = useOnboardingStore();
     const isFirstHand = data.sellsNewCars && !data.sellsUsedCars;
+    const [unreadCount, setUnreadCount] = useState(0);
 
     // On every mount: verify the user has completed onboarding.
     // The early-exit on data.dealershipName was intentionally removed —
@@ -106,6 +107,15 @@ export default function DashboardLayout({
 
                 setDealerId(dealer.id);
                 if (dealer.slug) setDealerSlug(dealer.slug);
+
+                // Fetch unread message count for notification bell
+                const { count } = await supabase
+                    .from('messages')
+                    .select('id', { count: 'exact', head: true })
+                    .eq('dealer_id', dealer.id)
+                    .eq('is_read', false)
+                    .eq('is_archived', false);
+                setUnreadCount(count ?? 0);
 
                 // Store already populated — skip the extra brands query
                 if (data.dealershipName) return;
@@ -236,9 +246,13 @@ export default function DashboardLayout({
                             <ThemeToggle />
 
                             {/* Notifications */}
-                            <button className="relative w-9 h-9 flex items-center justify-center rounded-lg border border-border hover:bg-muted transition-colors">
+                            <button className="relative w-9 h-9 flex items-center justify-center rounded-lg border border-border hover:bg-muted transition-colors" title={unreadCount > 0 ? `${unreadCount} unread message${unreadCount > 1 ? 's' : ''}` : "No new notifications"}>
                                 <Bell className="w-4 h-4 text-muted-foreground" />
-                                <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-destructive rounded-full" />
+                                {unreadCount > 0 && (
+                                    <span className="absolute -top-1 -right-1 min-w-[16px] h-4 px-1 bg-destructive text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                                        {unreadCount > 9 ? "9+" : unreadCount}
+                                    </span>
+                                )}
                             </button>
 
                             {/* Divider */}
