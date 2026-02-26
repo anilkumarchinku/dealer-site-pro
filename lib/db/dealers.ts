@@ -99,7 +99,7 @@ function getServerSupabase() {
 async function findDealerByExactSlug(supabase: SupabaseClient, slug: string) {
     const { data, error } = await supabase
         .from('dealers')
-        .select('id, dealership_name, tagline, phone, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars, cyepro_api_key, logo_url, hero_image_url')
+        .select('id, dealership_name, tagline, phone, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars, cyepro_api_key, logo_url, hero_image_url, branches')
         .eq('slug', slug)
         .eq('onboarding_complete', true)
         .single()
@@ -206,6 +206,7 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
         sells_used_cars: dealer.sells_used_cars ?? false,
         brands:          brandsResult.data?.map(b => b.brand_name) ?? [],
         vehicles:        (vehiclesResult.data ?? []) as DBVehicle[],
+        branches:        dealer.branches ?? null,
         hero_title:      cfg?.hero_title ?? null,
         hero_subtitle:   cfg?.hero_subtitle ?? null,
         hero_cta_text:   cfg?.hero_cta_text ?? null,

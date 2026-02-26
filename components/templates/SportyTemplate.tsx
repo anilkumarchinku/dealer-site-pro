@@ -73,6 +73,7 @@ interface SportyTemplateProps {
     heroImageUrl?: string;
     sellsNewCars?: boolean;
     sellsUsedCars?: boolean;
+    branches?: Array<{ city: string; address: string; phone?: string }>;
 }
 
 export function SportyTemplate({
@@ -89,6 +90,7 @@ export function SportyTemplate({
     heroImageUrl,
     sellsNewCars = false,
     sellsUsedCars = false,
+    branches,
 }: SportyTemplateProps) {
     const isHybrid = sellsNewCars && sellsUsedCars;
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
@@ -574,7 +576,7 @@ export function SportyTemplate({
                         </div>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className={`grid gap-8 ${branches && branches.length > 0 ? 'md:grid-cols-4' : 'md:grid-cols-3'}`}>
                         <div>
                             <h4 className="text-lg font-black uppercase mb-4 text-gray-900">CONTACT</h4>
                             <div className="space-y-3 text-gray-500">
@@ -598,6 +600,28 @@ export function SportyTemplate({
                                 )}
                             </div>
                         </div>
+                        {branches && branches.length > 0 && (
+                            <div>
+                                <h4 className="text-lg font-black uppercase mb-4 text-gray-900">BRANCHES</h4>
+                                <div className="space-y-4 text-gray-500">
+                                    {branches.map((branch, idx) => (
+                                        <div key={idx} className="space-y-1">
+                                            <p className="font-bold text-gray-900 text-sm uppercase">{branch.city}</p>
+                                            <div className="flex items-start gap-2 text-sm">
+                                                <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0" style={{ color: brandAccent }} />
+                                                <span>{branch.address}</span>
+                                            </div>
+                                            {branch.phone && (
+                                                <div className="flex items-center gap-2 text-sm">
+                                                    <Phone className="w-3.5 h-3.5 shrink-0" style={{ color: brandAccent }} />
+                                                    <a href={`tel:${branch.phone}`}>{branch.phone}</a>
+                                                </div>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                         <div>
                             <h4 className="text-lg font-black uppercase mb-4 text-gray-900">QUICK LINKS</h4>
                             <div className="space-y-2 text-gray-500">

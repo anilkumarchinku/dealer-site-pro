@@ -70,6 +70,7 @@ interface ModernTemplateProps {
     heroImageUrl?: string;
     sellsNewCars?: boolean;
     sellsUsedCars?: boolean;
+    branches?: Array<{ city: string; address: string; phone?: string }>;
 }
 
 export function ModernTemplate({
@@ -86,6 +87,7 @@ export function ModernTemplate({
     heroImageUrl,
     sellsNewCars = false,
     sellsUsedCars = false,
+    branches,
 }: ModernTemplateProps) {
     const isHybrid = sellsNewCars && sellsUsedCars;
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
@@ -690,7 +692,7 @@ export function ModernTemplate({
                         </div>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className={`grid gap-8 ${branches && branches.length > 0 ? 'md:grid-cols-4' : 'md:grid-cols-3'}`}>
                         <div>
                             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
                             <div className="space-y-3">
@@ -714,6 +716,28 @@ export function ModernTemplate({
                                 )}
                             </div>
                         </div>
+                        {branches && branches.length > 0 && (
+                            <div>
+                                <h4 className="text-lg font-semibold mb-4">Our Branches</h4>
+                                <div className="space-y-4">
+                                    {branches.map((branch, idx) => (
+                                        <div key={idx} className="space-y-1">
+                                            <p className="font-semibold text-gray-900 text-sm">{branch.city}</p>
+                                            <div className="flex items-start gap-2 text-sm text-gray-500">
+                                                <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0" style={{ color: brandColors.primary }} />
+                                                <span>{branch.address}</span>
+                                            </div>
+                                            {branch.phone && (
+                                                <div className="flex items-center gap-2 text-sm text-gray-500">
+                                                    <Phone className="w-3.5 h-3.5 shrink-0" style={{ color: brandColors.primary }} />
+                                                    <a href={`tel:${branch.phone}`}>{branch.phone}</a>
+                                                </div>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                         <div>
                             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
                             <div className="space-y-2">

@@ -400,6 +400,7 @@ export default async function SitePage({ params }: SitePageProps) {
         dealerId: dealer.id,
         cars,
         contactInfo,
+        branches: dealer.branches ?? undefined,
         services: (dealer.services ?? []) as Service[],
         workingHours: dealer.working_hours ?? null,
         logoUrl,

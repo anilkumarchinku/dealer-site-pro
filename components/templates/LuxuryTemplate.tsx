@@ -46,6 +46,7 @@ interface LuxuryTemplateProps {
     heroImageUrl?: string;
     sellsNewCars?: boolean;
     sellsUsedCars?: boolean;
+    branches?: Array<{ city: string; address: string; phone?: string }>;
 }
 
 export function LuxuryTemplate({
@@ -62,6 +63,7 @@ export function LuxuryTemplate({
     heroImageUrl,
     sellsNewCars = false,
     sellsUsedCars = false,
+    branches,
 }: LuxuryTemplateProps) {
     const isHybrid = sellsNewCars && sellsUsedCars;
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
@@ -489,7 +491,7 @@ export function LuxuryTemplate({
                         </div>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8 text-gray-500">
+                    <div className={`grid gap-8 text-gray-500 ${branches && branches.length > 0 ? 'md:grid-cols-4' : 'md:grid-cols-3'}`}>
                         <div>
                             <h4 className="text-gray-900 font-light text-lg mb-4">Contact</h4>
                             <div className="space-y-2">
@@ -501,6 +503,28 @@ export function LuxuryTemplate({
                                 )}
                             </div>
                         </div>
+                        {branches && branches.length > 0 && (
+                            <div>
+                                <h4 className="text-gray-900 font-light text-lg mb-4">Our Showrooms</h4>
+                                <div className="space-y-4">
+                                    {branches.map((branch, idx) => (
+                                        <div key={idx} className="space-y-1">
+                                            <p className="font-medium text-gray-900 text-sm">{branch.city}</p>
+                                            <div className="flex items-start gap-2 text-sm">
+                                                <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0" style={{ color: brandAccent }} />
+                                                <span>{branch.address}</span>
+                                            </div>
+                                            {branch.phone && (
+                                                <div className="flex items-center gap-2 text-sm">
+                                                    <Phone className="w-3.5 h-3.5 shrink-0" style={{ color: brandAccent }} />
+                                                    <a href={`tel:${branch.phone}`}>{branch.phone}</a>
+                                                </div>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                         <div>
                             <h4 className="text-gray-900 font-light text-lg mb-4">Links</h4>
                             <button onClick={() => setActiveTab('home')} className="block mb-2 hover:text-gray-900">Home</button>
