@@ -153,7 +153,7 @@ export function SportyTemplate({
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
                         <div className="flex items-center cursor-pointer" onClick={() => setActiveTab('home')}>
-                            <div className="relative w-10 h-10 mr-3 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center overflow-hidden p-1">
+                            <div className="relative w-10 h-10 mr-3">
                                 <Image
                                     src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
                                     alt={logoUrl ? dealerName : brandName}
@@ -561,12 +561,12 @@ export function SportyTemplate({
             <footer className="border-t border-gray-200 py-12 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="flex items-center mb-8 pb-6 border-b border-gray-200">
-                        <div className="relative w-12 h-12 mr-3 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center overflow-hidden p-1">
+                        <div className="relative w-12 h-12 mr-3">
                             <Image
                                 src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
                                 alt={logoUrl ? dealerName : brandName}
                                 fill
-                                className="object-contain p-1"
+                                className="object-contain"
                                 sizes="48px"
                                 onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                             />
