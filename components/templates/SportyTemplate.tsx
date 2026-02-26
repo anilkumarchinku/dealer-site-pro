@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
+import { getContrastText } from '@/lib/utils/color-contrast';
 import {
     ArrowRight,
     Phone,
@@ -484,7 +485,7 @@ export function SportyTemplate({
                                                 />
                                             </div>
                                             {formStatus === 'error' && (
-                                                <p className="text-red-400 text-sm">Something went wrong. Please call us directly.</p>
+                                                <p className="text-red-600 text-sm">Something went wrong. Please call us directly.</p>
                                             )}
                                             <Button
                                                 type="submit"
@@ -528,7 +529,7 @@ export function SportyTemplate({
                                             key={t.id}
                                             onClick={() => setInventoryTab(t.id)}
                                             className="px-4 py-1.5 rounded-md text-sm font-bold uppercase tracking-widest transition-all"
-                                            style={inventoryTab === t.id ? { backgroundColor: brandAccent, color: '#fff' } : { color: '#9ca3af' }}
+                                            style={inventoryTab === t.id ? { backgroundColor: brandAccent, color: getContrastText(brandAccent) } : { color: '#9ca3af' }}
                                         >
                                             {t.label}
                                         </button>

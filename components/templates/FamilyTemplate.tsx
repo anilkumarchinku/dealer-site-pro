@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
+import { getContrastText } from '@/lib/utils/color-contrast';
 import {
     ArrowRight,
     Phone,
@@ -433,7 +434,7 @@ export function FamilyTemplate({
                                                     required
                                                     value={formData.name}
                                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none text-gray-900 bg-gray-50"
+                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200 text-gray-900 bg-gray-50 placeholder:text-gray-400"
                                                     placeholder="Full name"
                                                 />
                                             </div>
@@ -444,7 +445,7 @@ export function FamilyTemplate({
                                                     required
                                                     value={formData.phone}
                                                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none text-gray-900 bg-gray-50"
+                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200 text-gray-900 bg-gray-50 placeholder:text-gray-400"
                                                     placeholder="Your phone number"
                                                 />
                                             </div>
@@ -454,7 +455,7 @@ export function FamilyTemplate({
                                                     type="email"
                                                     value={formData.email}
                                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none text-gray-900 bg-gray-50"
+                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200 text-gray-900 bg-gray-50 placeholder:text-gray-400"
                                                     placeholder="your@email.com"
                                                 />
                                             </div>
@@ -464,7 +465,7 @@ export function FamilyTemplate({
                                                     rows={4}
                                                     value={formData.message}
                                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none text-gray-900 bg-gray-50 resize-none"
+                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200 text-gray-900 bg-gray-50 resize-none placeholder:text-gray-400"
                                                     placeholder="Which car are you looking for? Any specific requirements?"
                                                 />
                                             </div>
@@ -511,7 +512,7 @@ export function FamilyTemplate({
                                             key={t.id}
                                             onClick={() => setInventoryTab(t.id)}
                                             className="px-4 py-1.5 rounded-lg text-sm font-medium transition-all"
-                                            style={inventoryTab === t.id ? { backgroundColor: brandColors.primary, color: '#fff' } : { color: '#6b7280' }}
+                                            style={inventoryTab === t.id ? { backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) } : { color: '#6b7280' }}
                                         >
                                             {t.label}
                                         </button>

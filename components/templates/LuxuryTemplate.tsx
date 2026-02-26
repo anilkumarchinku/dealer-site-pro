@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
+import { getContrastText } from '@/lib/utils/color-contrast';
 import { ArrowRight, Phone, MapPin, Mail, Award, ShieldCheck, Star, ChevronRight, Crown, Clock, MessageSquare, CheckCircle2, Send, Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
@@ -224,7 +225,7 @@ export function LuxuryTemplate({
                         <div className="relative z-10 max-w-7xl mx-auto px-4 py-32 text-center">
                             <p className="text-sm tracking-widest uppercase mb-4" style={{ color: brandAccent }}>{tagline}</p>
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 bg-gray-50 mb-6">
-                                <Crown className="w-3.5 h-3.5 text-gray-400" />
+                                <Crown className="w-3.5 h-3.5 text-gray-500" />
                                 <span className="text-sm font-light tracking-widest text-gray-600">{dealerName}</span>
                             </div>
                             <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-8 leading-tight text-gray-900">{heroTitle}</h1>
@@ -404,7 +405,7 @@ export function LuxuryTemplate({
                                                 />
                                             </div>
                                             {formStatus === 'error' && (
-                                                <p className="text-red-400 text-sm">Something went wrong. Please try again.</p>
+                                                <p className="text-red-600 text-sm">Something went wrong. Please try again.</p>
                                             )}
                                             <Button
                                                 type="submit"
@@ -445,7 +446,7 @@ export function LuxuryTemplate({
                                             key={t.id}
                                             onClick={() => setInventoryTab(t.id)}
                                             className="px-4 py-1.5 rounded-md text-sm font-medium tracking-wider transition-all"
-                                            style={inventoryTab === t.id ? { backgroundColor: brandAccent, color: '#fff' } : { color: '#6b7280' }}
+                                            style={inventoryTab === t.id ? { backgroundColor: brandAccent, color: getContrastText(brandAccent) } : { color: '#6b7280' }}
                                         >
                                             {t.label}
                                         </button>

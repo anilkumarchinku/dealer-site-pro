@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
+import { getContrastText } from '@/lib/utils/color-contrast';
 import {
     ArrowRight,
     Phone,
@@ -642,7 +643,7 @@ export function ModernTemplate({
                                             key={t.id}
                                             onClick={() => setInventoryTab(t.id)}
                                             className="px-4 py-1.5 rounded-lg text-sm font-medium transition-all"
-                                            style={inventoryTab === t.id ? { backgroundColor: brandColors.primary, color: '#fff' } : { color: '#6b7280' }}
+                                            style={inventoryTab === t.id ? { backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) } : { color: '#6b7280' }}
                                         >
                                             {t.label}
                                         </button>
