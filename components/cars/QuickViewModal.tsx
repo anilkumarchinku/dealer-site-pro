@@ -147,7 +147,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
-            <DialogContent className="max-w-3xl max-h-[92vh] overflow-hidden flex flex-col p-0 gap-0">
+            <DialogContent className="max-w-3xl max-h-[92vh] overflow-hidden flex flex-col p-0 gap-0 dark:bg-white dark:text-gray-900 dark:border-gray-200">
 
                 {/* ══ HEADER ══════════════════════════════════════════════════ */}
                 <div className="shrink-0 border-b" style={{ background: `linear-gradient(135deg, ${brandColor}10 0%, transparent 60%)` }}>

@@ -145,7 +145,7 @@ export function CarCard({
             <Card
                 className={cn(
                     'group relative flex flex-col overflow-hidden transition-all duration-300 cursor-pointer h-full',
-                    'bg-white border border-gray-200 hover:border-gray-300 text-gray-900',
+                    'bg-white border border-gray-200 hover:border-gray-300 text-gray-900 dark:bg-white dark:border-gray-200 dark:text-gray-900',
                     'hover:shadow-lg hover:-translate-y-0.5',
                     'rounded-xl',
                     className

@@ -117,7 +117,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb' }
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
-            <DialogContent className="max-w-4xl max-h-[85vh] overflow-y-auto p-0">
+            <DialogContent className="max-w-4xl max-h-[85vh] overflow-y-auto p-0 dark:bg-white dark:text-gray-900 dark:border-gray-200">
                 {/* Visually hidden title for screen-reader accessibility (Radix requirement) */}
                 <DialogTitle className="sr-only">
                     {car.make} {car.model} — Enquiry
