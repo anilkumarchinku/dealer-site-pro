@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { TemplateSelector } from "@/components/onboarding/TemplateSelector";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { validateCombination, getSmartRecommendation } from "@/lib/templates/template-validation";
 import type { TemplateStyle } from "@/lib/templates";
 import type { Brand } from "@/lib/types";
@@ -49,14 +50,19 @@ export default function Step4Page() {
     const recommendation = data.brands ? getSmartRecommendation(data.brands as Brand[]) : null;
 
     return (
-        <TemplateSelector
-            selectedTemplate={data.styleTemplate as TemplateStyle}
-            onSelect={handleSelect}
-            onBack={handleBack}
-            onNext={handleNext}
-            primaryBrand={data.brands?.[0] as Brand}
-            recommendation={recommendation}
-            showBlockedWarning={showBlockedWarning}
-        />
+        <div className="relative">
+            <div className="absolute top-4 right-4 z-50">
+                <ThemeToggle />
+            </div>
+            <TemplateSelector
+                selectedTemplate={data.styleTemplate as TemplateStyle}
+                onSelect={handleSelect}
+                onBack={handleBack}
+                onNext={handleNext}
+                primaryBrand={data.brands?.[0] as Brand}
+                recommendation={recommendation}
+                showBlockedWarning={showBlockedWarning}
+            />
+        </div>
     );
 }

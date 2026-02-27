@@ -5,6 +5,7 @@ import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles, Car, ArrowRight, Building2, RefreshCw } from "lucide-react";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { cn } from "@/lib/utils";
 
 /* ─────────────────────────────────────────────
@@ -369,9 +370,12 @@ export default function OnboardingIndexPage() {
                         </div>
                         <span className="text-lg font-semibold text-foreground">DealerSite Pro</span>
                     </button>
-                    <Button variant="ghost" size="sm" onClick={() => router.push("/")}>
-                        Exit
-                    </Button>
+                    <div className="flex items-center gap-2">
+                        <ThemeToggle />
+                        <Button variant="ghost" size="sm" onClick={() => router.push("/")}>
+                            Exit
+                        </Button>
+                    </div>
                 </div>
             </header>
 

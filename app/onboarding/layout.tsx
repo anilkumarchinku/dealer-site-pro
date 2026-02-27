@@ -2,6 +2,7 @@
 import { useRouter, usePathname } from "next/navigation";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Car, X } from "lucide-react";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 
@@ -92,10 +93,13 @@ export default function OnboardingLayout({
                         <span className="text-lg font-semibold">DealerSite Pro</span>
                     </button>
 
-                    <Button variant="ghost" size="sm" onClick={() => router.push("/")}>
-                        <X className="w-4 h-4 mr-2" />
-                        Exit
-                    </Button>
+                    <div className="flex items-center gap-2">
+                        <ThemeToggle />
+                        <Button variant="ghost" size="sm" onClick={() => router.push("/")}>
+                            <X className="w-4 h-4 mr-2" />
+                            Exit
+                        </Button>
+                    </div>
                 </div>
             </header>
 
