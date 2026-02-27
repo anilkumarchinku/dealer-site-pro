@@ -22,7 +22,7 @@ export function Progress({ currentStep, totalSteps = 5, labels }: ProgressProps)
             {/* Progress Bar */}
             <div className="relative mb-8">
                 {/* Background Line */}
-                <div className="absolute top-4 left-0 right-0 h-1 bg-gray-200 rounded-full" />
+                <div className="absolute top-4 left-0 right-0 h-1 bg-gray-200 dark:bg-gray-700 rounded-full" />
 
                 {/* Active Line */}
                 <div
@@ -44,7 +44,7 @@ export function Progress({ currentStep, totalSteps = 5, labels }: ProgressProps)
                                         "w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300",
                                         isComplete && "bg-gradient-to-r from-blue-600 to-indigo-600 text-white",
                                         isCurrent && "bg-gradient-to-r from-blue-600 to-indigo-600 text-white ring-4 ring-blue-500/30",
-                                        !isComplete && !isCurrent && "bg-gray-200 text-gray-500"
+                                        !isComplete && !isCurrent && "bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400"
                                     )}
                                 >
                                     {isComplete ? (
@@ -58,7 +58,7 @@ export function Progress({ currentStep, totalSteps = 5, labels }: ProgressProps)
                                 <span
                                     className={cn(
                                         "mt-2 text-xs font-medium transition-colors",
-                                        isCurrent ? "text-gray-900" : "text-gray-500"
+                                        isCurrent ? "text-gray-900 dark:text-gray-100" : "text-gray-500 dark:text-gray-400"
                                     )}
                                 >
                                     {stepLabels[index]}

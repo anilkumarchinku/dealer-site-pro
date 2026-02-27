@@ -266,7 +266,7 @@ export default function Step1Page() {
                 {/* Site Name / Slug Picker */}
                 {siteSlug && (
                     <div className="space-y-2">
-                        <label className="text-sm font-medium text-gray-700 flex items-center gap-2">
+                        <label className="text-sm font-medium text-gray-700 dark:text-gray-200 flex items-center gap-2">
                             <Globe className="w-4 h-4" />
                             Your Site URL
                         </label>
@@ -348,7 +348,7 @@ export default function Step1Page() {
                 {showBrandPicker && (
                     <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900 rounded-lg p-4 space-y-4">
                         <div>
-                            <label className="text-sm font-medium text-gray-700 flex items-center gap-2">
+                            <label className="text-sm font-medium text-gray-700 dark:text-gray-200 flex items-center gap-2">
                                 <input
                                     type="checkbox"
                                     checked={hasMultipleBranches}
@@ -389,7 +389,7 @@ export default function Step1Page() {
                                                 newBranches[idx].city = e.target.value;
                                                 setBranches(newBranches);
                                             }}
-                                            className="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                                            className="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                                         />
                                         <textarea
                                             placeholder="Full address (e.g., 123 Main St, Mumbai, MH 400001)"
@@ -399,7 +399,7 @@ export default function Step1Page() {
                                                 newBranches[idx].address = e.target.value;
                                                 setBranches(newBranches);
                                             }}
-                                            className="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm min-h-[60px] placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                                            className="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground min-h-[60px] placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                                         />
                                         <input
                                             type="tel"
@@ -410,7 +410,7 @@ export default function Step1Page() {
                                                 newBranches[idx].phone = e.target.value;
                                                 setBranches(newBranches);
                                             }}
-                                            className="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                                            className="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                                         />
                                     </div>
                                 ))}
@@ -418,7 +418,7 @@ export default function Step1Page() {
                                 <button
                                     type="button"
                                     onClick={() => setBranches([...branches, { city: "", address: "", phone: "" }])}
-                                    className="w-full text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 font-medium py-2 border border-dashed border-blue-300 rounded-md"
+                                    className="w-full text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium py-2 border border-dashed border-blue-300 dark:border-blue-600 rounded-md"
                                 >
                                     + Add Another Branch
                                 </button>
@@ -475,7 +475,7 @@ export default function Step1Page() {
 
                 <div className="space-y-4">
                     <div className="space-y-2">
-                        <label className="text-sm font-medium leading-none text-gray-700">
+                        <label className="text-sm font-medium leading-none text-gray-700 dark:text-gray-200">
                             Full Address (Optional)
                         </label>
                         <textarea
