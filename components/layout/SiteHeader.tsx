@@ -30,6 +30,7 @@ import {
 import type { Car as CarType } from '@/lib/types/car';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { getBrandLogo } from '@/lib/data/brand-logos';
+import BrandLogo from '@/components/BrandLogo';
 
 const POPULAR_BRANDS = [
     'Maruti Suzuki', 'Hyundai', 'Tata Motors', 'Kia', 'Mahindra',
@@ -143,10 +144,9 @@ export function SiteHeader() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-14 gap-4">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2 shrink-0">
-                        <Car className="w-6 h-6 text-primary" />
-                        <span className="text-lg font-bold hidden sm:inline">DealerSite Pro</span>
-                    </Link>
+                    <div className="shrink-0">
+                        <BrandLogo size="sm" />
+                    </div>
 
                     {/* Search Bar — Desktop */}
                     <div ref={searchRef} className="hidden md:block relative flex-1 max-w-lg">

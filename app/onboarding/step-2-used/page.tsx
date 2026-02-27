@@ -196,7 +196,8 @@ export default function Step2UsedPage() {
             ...(isHybrid ? {} : { sellsNewCars: false, brands: [] }),
             sellsUsedCars: true,
             brandColor: finalColor,
-            brandColorPreset: finalPreset + "|" + finalAccent, // encode both colors
+            brandAccentColor: finalAccent,
+            brandColorPreset: finalPreset,
             brandLogo: logoPreview || undefined,
             heroImage: heroPreview || undefined,
         });

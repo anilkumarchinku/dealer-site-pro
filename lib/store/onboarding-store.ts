@@ -50,6 +50,7 @@ const initialData: Partial<OnboardingData> = {
     dealerType: null,
     dealerCategory: undefined,
     brandColor: undefined,
+    brandAccentColor: undefined,
     brandColorPreset: undefined,
     brandLogo: undefined,
     inventorySource: undefined,

@@ -266,7 +266,7 @@ export default function Step1Page() {
                 {/* Site Name / Slug Picker */}
                 {siteSlug && (
                     <div className="space-y-2">
-                        <label className="text-sm font-medium flex items-center gap-2">
+                        <label className="text-sm font-medium text-gray-700 flex items-center gap-2">
                             <Globe className="w-4 h-4" />
                             Your Site URL
                         </label>
@@ -348,7 +348,7 @@ export default function Step1Page() {
                 {showBrandPicker && (
                     <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900 rounded-lg p-4 space-y-4">
                         <div>
-                            <label className="text-sm font-medium flex items-center gap-2">
+                            <label className="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <input
                                     type="checkbox"
                                     checked={hasMultipleBranches}
@@ -475,7 +475,7 @@ export default function Step1Page() {
 
                 <div className="space-y-4">
                     <div className="space-y-2">
-                        <label className="text-sm font-medium leading-none">
+                        <label className="text-sm font-medium leading-none text-gray-700">
                             Full Address (Optional)
                         </label>
                         <textarea

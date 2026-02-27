@@ -3,8 +3,9 @@
  */
 
 import Link from 'next/link';
-import { Car, Calculator, GitCompare, Star, Mail, Phone, MapPin } from 'lucide-react';
+import { Calculator, GitCompare, Star, Mail, Phone, MapPin } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import BrandLogo from '@/components/BrandLogo';
 
 const POPULAR_BRANDS = [
     'Maruti Suzuki', 'Hyundai', 'Tata Motors', 'Kia', 'Mahindra',
@@ -34,10 +35,9 @@ export function SiteFooter() {
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
                     {/* About */}
                     <div className="col-span-2 md:col-span-1">
-                        <Link href="/" className="flex items-center gap-2 mb-4">
-                            <Car className="w-5 h-5 text-primary" />
-                            <span className="font-bold">DealerSite Pro</span>
-                        </Link>
+                        <div className="mb-4">
+                            <BrandLogo size="sm" />
+                        </div>
                         <p className="text-sm text-muted-foreground leading-relaxed">
                             India's trusted platform for new and used cars. Browse, compare, and find your perfect car.
                         </p>

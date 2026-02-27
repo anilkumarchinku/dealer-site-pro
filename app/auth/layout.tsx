@@ -1,6 +1,6 @@
-import { Car } from "lucide-react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import BrandLogo from "@/components/BrandLogo";
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -16,12 +16,9 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
 
             <div className="relative min-h-screen flex flex-col items-center justify-center p-4">
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-3 mb-8 hover:opacity-80 transition-opacity">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center shadow-lg">
-                        <Car className="w-5 h-5 text-white" />
-                    </div>
-                    <span className="text-xl font-bold text-foreground">DealerSite Pro</span>
-                </Link>
+                <div className="mb-8">
+                    <BrandLogo size="sm" />
+                </div>
 
                 {/* Card */}
                 <div className="w-full max-w-md">

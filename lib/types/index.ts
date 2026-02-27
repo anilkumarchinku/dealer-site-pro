@@ -101,6 +101,7 @@ export interface OnboardingData {
 
     // Brand color chosen by used-car dealers (hex, e.g. "#003328")
     brandColor?: string;
+    brandAccentColor?: string; // Accent colour (hex, e.g. "#B8962E")
     brandColorPreset?: string; // Preset palette name e.g. "prestige"
 
     // Step 2: Your Brands

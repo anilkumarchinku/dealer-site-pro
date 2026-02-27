@@ -8,10 +8,15 @@ import { Car } from 'lucide-react'
 interface BrandLogoProps {
     className?: string
     showText?: boolean
+    size?: 'sm' | 'md'
 }
 
-export default function BrandLogo({ className = '', showText = true }: BrandLogoProps) {
+export default function BrandLogo({ className = '', showText = true, size = 'md' }: BrandLogoProps) {
     const [isHovered, setIsHovered] = useState(false)
+
+    const containerClass = size === 'sm' ? 'w-9 h-9' : 'w-20 h-20'
+    const imgSize = size === 'sm' ? 36 : 80
+    const cyeproSize = size === 'sm' ? 44 : 112
 
     return (
         <Link
@@ -21,7 +26,7 @@ export default function BrandLogo({ className = '', showText = true }: BrandLogo
             onMouseLeave={() => setIsHovered(false)}
         >
             {/* Logo Container with Transition */}
-            <div className="relative w-20 h-20 overflow-hidden">
+            <div className={`relative ${containerClass} overflow-hidden`}>
                 {/* Default Logo - BMW Car */}
                 <div
                     className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ease-in-out ${
@@ -33,8 +38,8 @@ export default function BrandLogo({ className = '', showText = true }: BrandLogo
                     <Image
                         src="/assets/cars/bmw/5-series.jpg"
                         alt="DealerSite Pro"
-                        width={80}
-                        height={80}
+                        width={imgSize}
+                        height={imgSize}
                         className="rounded-xl object-contain"
                         unoptimized
                     />
@@ -51,8 +56,8 @@ export default function BrandLogo({ className = '', showText = true }: BrandLogo
                     <Image
                         src="/assets/cyepro-logo.png"
                         alt="CyePro Solutions"
-                        width={112}
-                        height={112}
+                        width={cyeproSize}
+                        height={cyeproSize}
                         className="rounded-xl object-contain"
                         unoptimized
                     />
