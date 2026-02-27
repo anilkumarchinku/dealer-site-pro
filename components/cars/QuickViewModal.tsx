@@ -150,7 +150,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
             <DialogContent className="max-w-3xl max-h-[92vh] overflow-hidden flex flex-col p-0 gap-0 dark:bg-white dark:text-gray-900 dark:border-gray-200">
 
                 {/* ══ HEADER ══════════════════════════════════════════════════ */}
-                <div className="shrink-0 border-b" style={{ background: `linear-gradient(135deg, ${brandColor}10 0%, transparent 60%)` }}>
+                <div className="shrink-0 border-b border-gray-200 bg-white" style={{ background: `linear-gradient(135deg, ${brandColor}10 0%, transparent 60%)` }}>
                     <DialogHeader className="p-5 pb-4">
                         <div className="flex items-start justify-between gap-4">
                             {/* Brand + model */}
@@ -195,7 +195,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                 </div>
 
                 {/* ══ SCROLLABLE BODY ═════════════════════════════════════════ */}
-                <div className="flex-1 overflow-y-auto">
+                <div className="flex-1 overflow-y-auto bg-white">
                     <div className="p-5 space-y-5">
 
                         {/* Image gallery */}
@@ -225,9 +225,9 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
 
                         {/* Tabs */}
                         <Tabs defaultValue="variants">
-                            <TabsList className="w-full grid grid-cols-5 h-9">
+                            <TabsList className="w-full grid grid-cols-5 h-9 bg-gray-100 dark:bg-gray-100">
                                 {['variants', 'specs', 'features', 'colors', 'overview'].map(t => (
-                                    <TabsTrigger key={t} value={t} className="text-[11px] capitalize">{t}</TabsTrigger>
+                                    <TabsTrigger key={t} value={t} className="text-[11px] capitalize text-gray-600 dark:text-gray-600 dark:data-[state=active]:bg-white dark:data-[state=active]:text-gray-900">{t}</TabsTrigger>
                                 ))}
                             </TabsList>
 
@@ -623,8 +623,8 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                 </div>
 
                 {/* ══ STICKY FOOTER ═══════════════════════════════════════════ */}
-                <div className="shrink-0 border-t bg-white px-5 py-3 flex gap-3">
-                    <Button variant="outline" className="flex-1 h-10" onClick={() => onOpenChange(false)}>
+                <div className="shrink-0 border-t border-gray-200 bg-white px-5 py-3 flex gap-3">
+                    <Button variant="outline" className="flex-1 h-10 dark:bg-white dark:text-gray-900 dark:border-gray-300 dark:hover:bg-gray-50" onClick={() => onOpenChange(false)}>
                         Close
                     </Button>
                     <Button className="flex-1 h-10 gap-2" style={{ backgroundColor: brandColor, color: getContrastText(brandColor) }} onClick={enquire}>
