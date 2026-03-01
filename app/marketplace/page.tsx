@@ -87,6 +87,47 @@ const BODY_TYPE_CHIPS = [
     { label: 'Luxury',    icon: '✨' },
 ]
 
+// All 28 states + 8 UTs of India
+const INDIAN_STATES = [
+    { name: 'Andhra Pradesh',         short: 'AP'  },
+    { name: 'Arunachal Pradesh',      short: 'AR'  },
+    { name: 'Assam',                  short: 'AS'  },
+    { name: 'Bihar',                  short: 'BR'  },
+    { name: 'Chhattisgarh',           short: 'CG'  },
+    { name: 'Goa',                    short: 'GA'  },
+    { name: 'Gujarat',                short: 'GJ'  },
+    { name: 'Haryana',                short: 'HR'  },
+    { name: 'Himachal Pradesh',       short: 'HP'  },
+    { name: 'Jharkhand',              short: 'JH'  },
+    { name: 'Karnataka',              short: 'KA'  },
+    { name: 'Kerala',                 short: 'KL'  },
+    { name: 'Madhya Pradesh',         short: 'MP'  },
+    { name: 'Maharashtra',            short: 'MH'  },
+    { name: 'Manipur',                short: 'MN'  },
+    { name: 'Meghalaya',              short: 'ML'  },
+    { name: 'Mizoram',                short: 'MZ'  },
+    { name: 'Nagaland',               short: 'NL'  },
+    { name: 'Odisha',                 short: 'OD'  },
+    { name: 'Punjab',                 short: 'PB'  },
+    { name: 'Rajasthan',              short: 'RJ'  },
+    { name: 'Sikkim',                 short: 'SK'  },
+    { name: 'Tamil Nadu',             short: 'TN'  },
+    { name: 'Telangana',              short: 'TS'  },
+    { name: 'Tripura',                short: 'TR'  },
+    { name: 'Uttar Pradesh',          short: 'UP'  },
+    { name: 'Uttarakhand',            short: 'UK'  },
+    { name: 'West Bengal',            short: 'WB'  },
+    // Union Territories
+    { name: 'Delhi',                  short: 'DL'  },
+    { name: 'Jammu & Kashmir',        short: 'JK'  },
+    { name: 'Ladakh',                 short: 'LA'  },
+    { name: 'Chandigarh',             short: 'CH'  },
+    { name: 'Puducherry',             short: 'PY'  },
+    { name: 'Andaman & Nicobar',      short: 'AN'  },
+    { name: 'Lakshadweep',            short: 'LD'  },
+    { name: 'Dadra & Nagar Haveli',   short: 'DN'  },
+]
+
 const MAKES = [
     'Maruti Suzuki','Hyundai','Tata','Mahindra','Honda','Toyota',
     'Kia','MG','Volkswagen','Skoda','Renault','Nissan',
@@ -687,6 +728,7 @@ function FilterPanel({ sp, onApply }: { sp: URLSearchParams; onApply: (p: URLSea
     const [fuel,       setFuel]       = useState(sp.get('fuel_type')    ?? '')
     const [condition,  setCondition]  = useState(sp.get('condition')    ?? '')
     const [city,       setCity]       = useState(sp.get('city')         ?? '')
+    const [state,      setState]      = useState(sp.get('state')        ?? '')
     const [minPrice,   setMinPrice]   = useState(sp.get('minPrice')     ?? '')
     const [maxPrice,   setMaxPrice]   = useState(sp.get('maxPrice')     ?? '')
     const [yearFrom,   setYearFrom]   = useState(sp.get('year_from')    ?? '')
@@ -700,6 +742,7 @@ function FilterPanel({ sp, onApply }: { sp: URLSearchParams; onApply: (p: URLSea
         if (make)        p.set('make',         make)
         if (fuel)        p.set('fuel_type',    fuel)
         if (condition)   p.set('condition',    condition)
+        if (state)       p.set('state',        state)
         if (city)        p.set('city',         city)
         if (minPrice)    p.set('minPrice',     minPrice)
         if (maxPrice)    p.set('maxPrice',     maxPrice)
@@ -712,7 +755,7 @@ function FilterPanel({ sp, onApply }: { sp: URLSearchParams; onApply: (p: URLSea
     }
 
     const reset = () => {
-        setMake(''); setFuel(''); setCondition(''); setCity('')
+        setMake(''); setFuel(''); setCondition(''); setState(''); setCity('')
         setMinPrice(''); setMaxPrice(''); setYearFrom(''); setYearTo('')
         setBodyType(''); setTransmission('')
         const p = new URLSearchParams()
@@ -865,6 +908,24 @@ function FilterPanel({ sp, onApply }: { sp: URLSearchParams; onApply: (p: URLSea
                 </div>
             </div>
 
+            {/* State */}
+            <div>
+                <label className="font-semibold text-gray-800 block mb-2">
+                    <MapPin className="w-3.5 h-3.5 inline -mt-0.5 mr-1 text-gray-500" />
+                    State
+                </label>
+                <select
+                    value={state}
+                    onChange={e => setState(e.target.value)}
+                    className="w-full px-3 py-2 border border-gray-200 rounded-xl text-sm bg-white focus:outline-none focus:border-blue-400"
+                >
+                    <option value="">All States</option>
+                    {INDIAN_STATES.map(s => (
+                        <option key={s.short} value={s.name}>{s.name}</option>
+                    ))}
+                </select>
+            </div>
+
             {/* City */}
             <div>
                 <label className="font-semibold text-gray-800 block mb-2">City</label>
@@ -983,6 +1044,7 @@ function MarketplaceContent() {
     if (fuelPar === 'non-ev')                          chips.push({ label: '⛽ Non-EV', paramKey: 'fuel_type' })
     const condPar  = searchParams.get('condition');    if (condPar)     chips.push({ label: CONDITIONS.find(c=>c.value===condPar)?.label ?? condPar, paramKey: 'condition' })
     const transPar = searchParams.get('transmission'); if (transPar)    chips.push({ label: transPar, paramKey: 'transmission' })
+    const statePar = searchParams.get('state');        if (statePar)    chips.push({ label: `🗺️ ${statePar}`, paramKey: 'state' })
     const cityPar  = searchParams.get('city');         if (cityPar)     chips.push({ label: `📍 ${cityPar}`, paramKey: 'city' })
     const yfPar    = searchParams.get('year_from');    const ytPar = searchParams.get('year_to')
     if (yfPar || ytPar) chips.push({ label: `${yfPar ?? '...'} – ${ytPar ?? 'now'}`, paramKey: '__year' })

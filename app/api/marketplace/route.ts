@@ -119,8 +119,11 @@ export async function GET(req: NextRequest) {
     if (yearFrom > 0) query = query.gte('year', yearFrom)
     if (yearTo   > 0) query = query.lte('year', yearTo)
 
-    const city = sp.get('city')?.trim()
-    if (city) query = query.ilike('dealers.location', `%${city}%`)
+    const city  = sp.get('city')?.trim()
+    const state = sp.get('state')?.trim()
+    // Both city and state match against dealers.location (which stores city, state or full address)
+    if (city)  query = query.ilike('dealers.location', `%${city}%`)
+    if (state) query = query.ilike('dealers.location', `%${state}%`)
 
     const minPrice = parseFloat(sp.get('minPrice') ?? '0')
     const maxPrice = parseFloat(sp.get('maxPrice') ?? '0')
