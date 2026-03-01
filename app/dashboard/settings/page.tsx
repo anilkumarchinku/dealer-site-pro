@@ -5,6 +5,8 @@ import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { useTheme } from "@/components/theme-provider";
 import {
@@ -548,12 +550,12 @@ export default function SettingsPage() {
                                         <div className="flex items-center gap-2">
                                             <p className="text-sm font-semibold">Cyepro Inventory</p>
                                             {cyeproConnected
-                                                ? <span className="flex items-center gap-1 text-xs text-emerald-600 bg-green-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                                                ? <Badge variant="outline" className="gap-1 text-emerald-600 bg-green-500/10 border-emerald-500/20">
                                                     <CheckCircle2 className="w-3 h-3" /> Connected
-                                                  </span>
-                                                : <span className="text-xs text-muted-foreground bg-muted/60 px-2 py-0.5 rounded-full">
+                                                  </Badge>
+                                                : <Badge variant="secondary" className="text-muted-foreground">
                                                     Not connected
-                                                  </span>
+                                                  </Badge>
                                             }
                                         </div>
                                         <p className="text-xs text-muted-foreground mt-0.5">
@@ -565,7 +567,7 @@ export default function SettingsPage() {
                                 {/* Key input */}
                                 <div className="border-t border-border px-4 py-4 space-y-3 bg-muted/10">
                                     <div className="relative">
-                                        <input
+                                        <Input
                                             type={showCyeproKey ? "text" : "password"}
                                             value={cyeproKey}
                                             onChange={(e) => {
@@ -574,17 +576,19 @@ export default function SettingsPage() {
                                                 setCyeproError("");
                                             }}
                                             placeholder="Paste your Cyepro API key here"
-                                            className="w-full h-10 text-sm font-mono rounded-lg border border-input bg-background px-3 pr-10 focus:outline-none focus:ring-2 focus:ring-ring"
+                                            className="font-mono pr-10"
                                         />
-                                        <button
+                                        <Button
                                             type="button"
+                                            variant="ghost"
+                                            size="icon"
                                             onClick={() => setShowCyeproKey(v => !v)}
-                                            className="absolute right-2.5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                                            className="absolute right-1 top-1/2 -translate-y-1/2 h-8 w-8 text-muted-foreground hover:text-foreground"
                                         >
                                             {showCyeproKey
                                                 ? <EyeOff className="w-4 h-4" />
                                                 : <Eye className="w-4 h-4" />}
-                                        </button>
+                                        </Button>
                                     </div>
 
                                     {cyeproError && (
@@ -685,7 +689,7 @@ export default function SettingsPage() {
                                     </p>
 
                                     <div className="flex gap-2">
-                                        <input
+                                        <Input
                                             type="text"
                                             value={domainInput}
                                             onChange={(e) => {
@@ -693,7 +697,7 @@ export default function SettingsPage() {
                                                 setDomainError("");
                                             }}
                                             placeholder="heromotors.com"
-                                            className="flex-1 h-10 text-sm rounded-lg border border-input bg-background px-3 focus:outline-none focus:ring-2 focus:ring-ring"
+                                            className="flex-1"
                                             onKeyDown={(e) => e.key === "Enter" && handleAddDomain()}
                                         />
                                         <Button
@@ -727,9 +731,9 @@ export default function SettingsPage() {
                                             <Globe className="w-4 h-4 text-primary flex-shrink-0" />
                                             <span className="text-sm font-mono font-medium truncate">{savedDomain}</span>
                                         </div>
-                                        <span className="text-xs text-amber-600 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded-full ml-2 flex-shrink-0">
+                                        <Badge variant="outline" className="ml-2 flex-shrink-0 bg-amber-500/10 text-amber-600 border-amber-500/20">
                                             Pending DNS
-                                        </span>
+                                        </Badge>
                                     </div>
 
                                     {/* Instructions */}
@@ -741,45 +745,53 @@ export default function SettingsPage() {
 
                                         {/* DNS records table */}
                                         <div className="overflow-x-auto rounded-lg border border-border bg-background">
-                                            <table className="w-full text-xs">
-                                                <thead>
-                                                    <tr className="border-b border-border bg-muted/40">
-                                                        <th className="text-left px-3 py-2 text-muted-foreground font-medium">Type</th>
-                                                        <th className="text-left px-3 py-2 text-muted-foreground font-medium">Name</th>
-                                                        <th className="text-left px-3 py-2 text-muted-foreground font-medium">Value</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr className="border-b border-border/50">
-                                                        <td className="px-3 py-2 font-mono font-semibold text-primary">A</td>
-                                                        <td className="px-3 py-2 font-mono">@</td>
-                                                        <td className="px-3 py-2 font-mono flex items-center gap-2">
-                                                            76.76.21.21
-                                                            <button
-                                                                type="button"
-                                                                onClick={() => copyToClipboard("76.76.21.21")}
-                                                                className="text-muted-foreground hover:text-foreground"
-                                                            >
-                                                                <Copy className="w-3 h-3" />
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td className="px-3 py-2 font-mono font-semibold text-violet-600">CNAME</td>
-                                                        <td className="px-3 py-2 font-mono">www</td>
-                                                        <td className="px-3 py-2 font-mono flex items-center gap-2">
-                                                            cname.vercel-dns.com
-                                                            <button
-                                                                type="button"
-                                                                onClick={() => copyToClipboard("cname.vercel-dns.com")}
-                                                                className="text-muted-foreground hover:text-foreground"
-                                                            >
-                                                                <Copy className="w-3 h-3" />
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                            <Table>
+                                                <TableHeader>
+                                                    <TableRow className="bg-muted/40 hover:bg-muted/40">
+                                                        <TableHead className="text-xs h-8 py-2">Type</TableHead>
+                                                        <TableHead className="text-xs h-8 py-2">Name</TableHead>
+                                                        <TableHead className="text-xs h-8 py-2">Value</TableHead>
+                                                    </TableRow>
+                                                </TableHeader>
+                                                <TableBody>
+                                                    <TableRow>
+                                                        <TableCell className="py-2 font-mono font-semibold text-primary text-xs">A</TableCell>
+                                                        <TableCell className="py-2 font-mono text-xs">@</TableCell>
+                                                        <TableCell className="py-2 font-mono text-xs">
+                                                            <div className="flex items-center gap-2">
+                                                                76.76.21.21
+                                                                <Button
+                                                                    type="button"
+                                                                    variant="ghost"
+                                                                    size="icon"
+                                                                    onClick={() => copyToClipboard("76.76.21.21")}
+                                                                    className="h-6 w-6 text-muted-foreground hover:text-foreground"
+                                                                >
+                                                                    <Copy className="w-3 h-3" />
+                                                                </Button>
+                                                            </div>
+                                                        </TableCell>
+                                                    </TableRow>
+                                                    <TableRow>
+                                                        <TableCell className="py-2 font-mono font-semibold text-violet-600 text-xs">CNAME</TableCell>
+                                                        <TableCell className="py-2 font-mono text-xs">www</TableCell>
+                                                        <TableCell className="py-2 font-mono text-xs">
+                                                            <div className="flex items-center gap-2">
+                                                                cname.vercel-dns.com
+                                                                <Button
+                                                                    type="button"
+                                                                    variant="ghost"
+                                                                    size="icon"
+                                                                    onClick={() => copyToClipboard("cname.vercel-dns.com")}
+                                                                    className="h-6 w-6 text-muted-foreground hover:text-foreground"
+                                                                >
+                                                                    <Copy className="w-3 h-3" />
+                                                                </Button>
+                                                            </div>
+                                                        </TableCell>
+                                                    </TableRow>
+                                                </TableBody>
+                                            </Table>
                                         </div>
 
                                         {copied && (
@@ -840,9 +852,9 @@ export default function SettingsPage() {
                                             <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                                             <span className="text-sm font-mono font-medium truncate">{savedDomain}</span>
                                         </div>
-                                        <span className="text-xs text-emerald-600 bg-green-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full ml-2 flex-shrink-0">
+                                        <Badge variant="outline" className="ml-2 flex-shrink-0 bg-green-500/10 text-emerald-600 border-emerald-500/20">
                                             Active
-                                        </span>
+                                        </Badge>
                                     </div>
 
                                     <div className="flex items-center gap-2">
@@ -918,16 +930,18 @@ export default function SettingsPage() {
                                             }
                                         </Button>
                                         {logoPreview && !logoUploading && (
-                                            <button
+                                            <Button
+                                                variant="ghost"
+                                                size="sm"
                                                 onClick={async () => {
                                                     if (!dealerId) return;
                                                     await supabase.from("dealers").update({ logo_url: null }).eq("id", dealerId);
                                                     setLogoPreview("");
                                                 }}
-                                                className="flex items-center gap-1 text-xs text-destructive hover:text-red-700"
+                                                className="h-7 px-2 text-xs text-destructive hover:bg-destructive/10 gap-1"
                                             >
                                                 <X className="w-3 h-3" /> Remove logo
-                                            </button>
+                                            </Button>
                                         )}
                                         {logoError && <p className="text-xs text-destructive">{logoError}</p>}
                                     </div>
@@ -974,16 +988,18 @@ export default function SettingsPage() {
                                             }
                                         </Button>
                                         {heroPreview && !heroUploading && (
-                                            <button
+                                            <Button
+                                                variant="ghost"
+                                                size="sm"
                                                 onClick={async () => {
                                                     if (!dealerId) return;
                                                     await supabase.from("dealers").update({ hero_image_url: null }).eq("id", dealerId);
                                                     setHeroPreview("");
                                                 }}
-                                                className="flex items-center gap-1 text-xs text-destructive hover:text-red-700"
+                                                className="h-7 px-2 text-xs text-destructive hover:bg-destructive/10 gap-1"
                                             >
                                                 <X className="w-3 h-3" /> Remove image
-                                            </button>
+                                            </Button>
                                         )}
                                         {heroError && <p className="text-xs text-destructive">{heroError}</p>}
                                     </div>

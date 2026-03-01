@@ -1,5 +1,6 @@
 "use client"
 import { useEffect } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Button } from "@/components/ui/button";
@@ -269,10 +270,25 @@ function HybridIllustration() {
     );
 }
 
+function DealerTypeImage({ src, alt }: { src: string; alt: string }) {
+    return (
+        <div className="relative w-full h-full">
+            <Image
+                src={src}
+                alt={alt}
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 640px) 100vw, 33vw"
+                priority
+            />
+        </div>
+    );
+}
+
 const ILLUSTRATIONS: Record<string, React.ReactNode> = {
-    new:    <NewCarIllustration />,
-    used:   <UsedCarIllustration />,
-    hybrid: <HybridIllustration />,
+    new: <DealerTypeImage src="/images/dealer-type-new.png" alt="New car showroom" />,
+    used: <DealerTypeImage src="/images/dealer-type-used.png" alt="Pre-owned car lot" />,
+    hybrid: <DealerTypeImage src="/images/dealer-type-hybrid.png" alt="Hybrid dealership" />,
 };
 
 /* ─────────────────────────────────────────────
@@ -311,24 +327,24 @@ const DEALER_TYPES = [
 const accentStyles: Record<string, { border: string; bg: string; text: string; badge: string; ring: string }> = {
     blue: {
         border: "border-blue-500/40 hover:border-blue-500/80",
-        bg:     "hover:bg-blue-500/5",
-        text:   "text-blue-600 dark:text-blue-400",
-        badge:  "bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-500/20",
-        ring:   "focus-visible:ring-blue-500/50",
+        bg: "hover:bg-blue-500/5",
+        text: "text-blue-600 dark:text-blue-400",
+        badge: "bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-500/20",
+        ring: "focus-visible:ring-blue-500/50",
     },
     amber: {
         border: "border-amber-500/40 hover:border-amber-500/80",
-        bg:     "hover:bg-amber-500/5",
-        text:   "text-amber-600 dark:text-amber-400",
-        badge:  "bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/20",
-        ring:   "focus-visible:ring-amber-500/50",
+        bg: "hover:bg-amber-500/5",
+        text: "text-amber-600 dark:text-amber-400",
+        badge: "bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/20",
+        ring: "focus-visible:ring-amber-500/50",
     },
     violet: {
         border: "border-muted-foreground/20",
-        bg:     "",
-        text:   "text-muted-foreground",
-        badge:  "bg-muted text-muted-foreground border-muted-foreground/20",
-        ring:   "",
+        bg: "",
+        text: "text-muted-foreground",
+        badge: "bg-muted text-muted-foreground border-muted-foreground/20",
+        ring: "",
     },
 };
 
@@ -339,7 +355,7 @@ export default function OnboardingIndexPage() {
     useEffect(() => {
         reset();
         return;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const handleSelect = (category: "new" | "used" | "hybrid") => {
@@ -414,7 +430,7 @@ export default function OnboardingIndexPage() {
                                     )}
                                 >
                                     {/* Illustration banner */}
-                                    <div className="w-full h-[130px] overflow-hidden block">
+                                    <div className="relative w-full h-[150px] overflow-hidden block">
                                         {ILLUSTRATIONS[dt.id]}
                                     </div>
 

@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { Badge } from "@/components/ui/badge";
 import { Star, ThumbsUp, Reply, ExternalLink, MessageSquare, CheckCircle, Clock, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { fetchReviews, respondToReview, computeReviewStats, type DBReview } from "@/lib/db/reviews";
@@ -158,7 +160,9 @@ export default function ReviewsPage() {
                                         <div>
                                             <p className="font-semibold text-foreground">{review.customer_name}</p>
                                             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                                                <span className="capitalize">{review.platform}</span>
+                                                <Badge variant="secondary" className="capitalize text-xs px-1.5 py-0">
+                                                    {review.platform}
+                                                </Badge>
                                                 <span>•</span>
                                                 <span>{formatDate(review.created_at)}</span>
                                             </div>
@@ -191,12 +195,12 @@ export default function ReviewsPage() {
                                 {/* Reply inline form */}
                                 {respondingTo === review.id ? (
                                     <div className="space-y-2">
-                                        <textarea
+                                        <Textarea
                                             value={responseText}
                                             onChange={(e) => setResponseText(e.target.value)}
                                             placeholder="Write your response…"
                                             rows={3}
-                                            className="w-full p-3 rounded-xl bg-background border border-border text-sm text-foreground placeholder:text-muted-foreground resize-none focus:outline-none focus:ring-2 focus:ring-ring/50"
+                                            className="resize-none"
                                         />
                                         <div className="flex gap-2">
                                             <Button size="sm" onClick={() => handleRespond(review.id)}
@@ -211,10 +215,10 @@ export default function ReviewsPage() {
                                 ) : (
                                     <div className="flex items-center gap-2">
                                         {review.dealer_response ? (
-                                            <span className="text-sm text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
-                                                <ThumbsUp className="w-3.5 h-3.5" />
+                                            <Badge variant="outline" className="bg-green-500/10 text-emerald-600 border-emerald-500/20 gap-1">
+                                                <ThumbsUp className="w-3 h-3" />
                                                 Responded
-                                            </span>
+                                            </Badge>
                                         ) : (
                                             <Button variant="outline" size="sm" onClick={() => setRespondingTo(review.id)}>
                                                 <Reply className="w-4 h-4 mr-2" />

@@ -3,6 +3,8 @@
  * For production at scale, replace with Redis-based implementation.
  */
 
+import { NextResponse } from 'next/server'
+
 interface RateLimitEntry {
     count: number
     resetAt: number
@@ -69,7 +71,6 @@ export function rateLimitOrNull(
     const { allowed, retryAfterMs } = checkRateLimit(storeName, ip, maxRequests, windowMs)
 
     if (!allowed) {
-        const { NextResponse } = require('next/server')
         return NextResponse.json(
             { success: false, error: 'Too many requests. Please try again later.' },
             {

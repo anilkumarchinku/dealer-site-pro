@@ -11,6 +11,12 @@ import { CarGrid } from '@/components/cars/CarGrid';
 import { CarFilters } from '@/components/cars/CarFilters';
 import { Button } from '@/components/ui/button';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
+import { VerifiedBadge } from '@/components/ui/VerifiedBadge';
+import { ReviewsSection } from '@/components/ui/ReviewsSection';
+import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
+import { LanguageToggle, useLocale } from '@/components/ui/LanguageToggle';
+import { t } from '@/lib/i18n/translations';
+import { EVSection } from '@/components/ui/EVSection';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
 import { getContrastText } from '@/lib/utils/color-contrast';
@@ -48,6 +54,7 @@ interface LuxuryTemplateProps {
     sellsNewCars?: boolean;
     sellsUsedCars?: boolean;
     branches?: Array<{ city: string; address: string; phone?: string }>;
+    isVerified?: boolean;
 }
 
 export function LuxuryTemplate({
@@ -65,8 +72,10 @@ export function LuxuryTemplate({
     sellsNewCars = false,
     sellsUsedCars = false,
     branches,
+    isVerified = false,
 }: LuxuryTemplateProps) {
     const isHybrid = sellsNewCars && sellsUsedCars;
+    const [locale, setLocale] = useLocale();
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [inventoryTab, setInventoryTab] = useState<'all' | 'new' | 'used'>('all');
     const [isScrolled, setIsScrolled] = useState(false);
@@ -143,6 +152,8 @@ export function LuxuryTemplate({
                             <a href="#contact" className="text-sm tracking-wider text-gray-600 hover:text-gray-900">Contact</a>
                         </div>
                         <div className="flex items-center gap-2">
+                            <LanguageToggle locale={locale} onChange={setLocale} variant="light" />
+                            <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandAccent} />
                             <Button
                                 variant="outline"
                                 className="border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100 hidden sm:flex"
@@ -224,9 +235,12 @@ export function LuxuryTemplate({
                         </div>
                         <div className="relative z-10 max-w-7xl mx-auto px-4 py-32 text-center">
                             <p className="text-sm tracking-widest uppercase mb-4" style={{ color: brandAccent }}>{tagline}</p>
-                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 bg-gray-50 mb-6">
-                                <Crown className="w-3.5 h-3.5 text-gray-500" />
-                                <span className="text-sm font-light tracking-widest text-gray-600">{dealerName}</span>
+                            <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+                                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 bg-gray-50">
+                                    <Crown className="w-3.5 h-3.5 text-gray-500" />
+                                    <span className="text-sm font-light tracking-widest text-gray-600">{dealerName}</span>
+                                </div>
+                                {isVerified && <VerifiedBadge variant="hero" />}
                             </div>
                             <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-8 leading-tight text-gray-900">{heroTitle}</h1>
                             <p className="text-xl text-gray-500 mb-12 max-w-2xl mx-auto">{heroSubtitle}</p>
@@ -241,6 +255,9 @@ export function LuxuryTemplate({
                             </div>
                         </div>
                     </section>
+
+                    {/* EV Section */}
+                    <EVSection cars={cars} contactInfo={contactInfo} brandColor="#10b981" />
 
                     {/* Services — luxury chips */}
                     {serviceList.length > 0 && (
@@ -276,7 +293,7 @@ export function LuxuryTemplate({
                                 <span className="text-sm tracking-widest uppercase" style={{ color: brandAccent }}>Curated Selection</span>
                                 <h2 className="text-5xl font-light mt-4 text-gray-900">Featured Collection</h2>
                             </div>
-                            <CarGrid cars={featuredCars} brandColor={brandAccent} />
+                            <CarGrid cars={featuredCars} brandColor={brandAccent} dealerPhone={contactInfo.phone} dealerId={dealerId} />
                             <div className="text-center mt-10">
                                 <Button variant="outline" className="border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>
                                     View Full Collection
@@ -315,6 +332,13 @@ export function LuxuryTemplate({
                                 <p className="text-gray-500 mt-3">Plan your investment with precision</p>
                             </div>
                             <EmiCalculator brandColor={brandAccent} theme="light" />
+                        </div>
+                    </section>
+
+                    {/* Customer Reviews */}
+                    <section className="py-16 bg-white">
+                        <div className="max-w-7xl mx-auto px-4">
+                            <ReviewsSection dealerId={dealerId} brandColor={brandAccent} variant="light" />
                         </div>
                     </section>
 
@@ -465,6 +489,8 @@ export function LuxuryTemplate({
                                         : inventoryTab === 'used' ? cars.filter(c => c.condition !== 'new')
                                         : cars : cars}
                                     brandColor={brandAccent}
+                                    dealerPhone={contactInfo.phone}
+                                    dealerId={dealerId}
                                 />
                             </div>
                         </div>
@@ -501,6 +527,18 @@ export function LuxuryTemplate({
                                 <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-1" style={{ color: brandAccent }} /><span>{contactInfo.address}</span></div>
                                 {workingHours && (
                                     <div className="flex items-center gap-2"><Clock className="w-4 h-4" style={{ color: brandAccent }} /><span>{workingHours}</span></div>
+                                )}
+                                {/* Google Maps Embed */}
+                                {contactInfo.address && (
+                                    <div className="mt-4 rounded-lg overflow-hidden border border-gray-200 h-40">
+                                        <iframe
+                                            src={`https://maps.google.com/maps?q=${encodeURIComponent(contactInfo.address)}&output=embed`}
+                                            className="w-full h-full"
+                                            loading="lazy"
+                                            title={`${dealerName} location map`}
+                                            referrerPolicy="no-referrer-when-downgrade"
+                                        />
+                                    </div>
                                 )}
                             </div>
                         </div>

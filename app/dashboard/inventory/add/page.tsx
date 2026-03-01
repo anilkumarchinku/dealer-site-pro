@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Upload, Sparkles, Check, Loader2, Car, ImagePlus, X, Camera } from "lucide-react";
+import { ArrowLeft, Upload, Sparkles, Check, Loader2, Car, ImagePlus, X, Camera, Youtube } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { addVehicle } from "@/lib/db/vehicles";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
@@ -29,7 +29,15 @@ interface FormData {
     fuel_type: string;
     features: string[];
     description: string;
+    video_url: string;
     condition: "new" | "used" | "certified_pre_owned";
+}
+
+/** Convert any YouTube URL to an embed URL */
+function toYouTubeEmbed(url: string): string | null {
+    if (!url) return null
+    const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|shorts\/|embed\/))([a-zA-Z0-9_-]{11})/)
+    return match ? `https://www.youtube.com/embed/${match[1]}` : null
 }
 
 export default function AddVehiclePage() {
@@ -53,11 +61,13 @@ export default function AddVehiclePage() {
         fuel_type: "Petrol",
         features: [],
         description: "",
+        video_url: "",
         condition: "used",
     });
     const [images, setImages]         = useState<File[]>([]);
     const [imagePreviews, setImagePreviews] = useState<string[]>([]);
     const [isGenerating, setIsGenerating] = useState(false);
+    const [isAIGenerating, setIsAIGenerating] = useState(false);
     const [isSaving, setIsSaving]     = useState(false);
     const [saveError, setSaveError]   = useState<string | null>(null);
 
@@ -128,6 +138,43 @@ export default function AddVehiclePage() {
         }
     };
 
+    const generateAIDescription = async () => {
+        if (!formData.make || !formData.model) {
+            setSaveError('Please enter Make and Model before generating a description.');
+            return;
+        }
+        setIsAIGenerating(true);
+        setSaveError(null);
+        try {
+            const res = await fetch('/api/ai/generate-description', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    make:         formData.make,
+                    model:        formData.model,
+                    variant:      formData.variant || undefined,
+                    year:         parseInt(formData.year) || undefined,
+                    fuel_type:    formData.fuel_type || undefined,
+                    transmission: formData.transmission || undefined,
+                    color:        formData.color || undefined,
+                    mileage_km:   parseInt(formData.mileage_km) || undefined,
+                    condition:    formData.condition,
+                    features:     formData.features.length ? formData.features : undefined,
+                    price_lakhs:  formData.price_paise ? (parseFloat(formData.price_paise)).toFixed(2) : undefined,
+                }),
+            });
+            const data = await res.json();
+            if (!res.ok) throw new Error(data.error ?? 'AI generation failed');
+            if (data.description) {
+                setFormData(prev => ({ ...prev, description: data.description }));
+            }
+        } catch (err) {
+            setSaveError(err instanceof Error ? err.message : 'AI generation failed');
+        } finally {
+            setIsAIGenerating(false);
+        }
+    };
+
     const handleSave = async () => {
         if (!dealerId) { setSaveError("Dealer ID not found"); return; }
         if (!formData.make || !formData.model) {
@@ -150,9 +197,27 @@ export default function AddVehiclePage() {
                 fuel_type:    formData.fuel_type,
                 features:     formData.features,
                 description:  formData.description,
+                video_url:    formData.video_url || undefined,
                 condition:    formData.condition,
             });
             if (result.success) {
+                // Fire-and-forget social post (non-blocking)
+                const carName = [formData.year, formData.make, formData.model, formData.variant].filter(Boolean).join(' ')
+                const priceNum = parseFloat(formData.price_paise)
+                const priceText = priceNum > 0
+                    ? `₹${(priceNum / 100000).toFixed(1)} Lakh`
+                    : 'Price on Request'
+                fetch('/api/social/post', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        dealer_id:  dealerId,
+                        car_name:   carName,
+                        price_text: priceText,
+                        fuel_type:  formData.fuel_type || undefined,
+                        color:      formData.color || undefined,
+                    }),
+                }).catch(() => { /* social post failure is non-fatal */ })
                 router.push('/dashboard/inventory');
             } else {
                 setSaveError(result.error || 'Failed to save vehicle');
@@ -178,13 +243,10 @@ export default function AddVehiclePage() {
                 <p className="text-sm text-muted-foreground max-w-md mb-8">
                     As a new-car dealer, your brand catalog is managed automatically — no manual inventory needed.
                 </p>
-                <button
-                    onClick={() => router.back()}
-                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
-                >
+                <Button onClick={() => router.back()} className="gap-2">
                     <ArrowLeft className="w-4 h-4" />
                     Go Back
-                </button>
+                </Button>
             </div>
         );
     }
@@ -194,12 +256,9 @@ export default function AddVehiclePage() {
             <div className="max-w-2xl mx-auto space-y-6">
                 {/* Header */}
                 <div className="flex items-center gap-4">
-                    <button
-                        onClick={() => router.back()}
-                        className="p-2 hover:bg-muted rounded-xl transition-colors"
-                    >
+                    <Button variant="ghost" size="icon" onClick={() => router.back()} className="rounded-xl">
                         <ArrowLeft className="w-5 h-5" />
-                    </button>
+                    </Button>
                     <div>
                         <h1 className="text-2xl font-bold">Add Vehicle</h1>
                         <p className="text-muted-foreground text-sm">Add a new vehicle to your inventory</p>
@@ -489,18 +548,69 @@ export default function AddVehiclePage() {
                 {/* Description */}
                 <Card>
                     <CardHeader>
-                        <CardTitle>Description</CardTitle>
-                        <CardDescription>Add a compelling description to attract buyers</CardDescription>
+                        <div className="flex items-start justify-between gap-3">
+                            <div>
+                                <CardTitle>Description</CardTitle>
+                                <CardDescription>Add a compelling description to attract buyers</CardDescription>
+                            </div>
+                            <Button
+                                type="button"
+                                variant="outline"
+                                size="sm"
+                                onClick={generateAIDescription}
+                                disabled={isAIGenerating || isSaving}
+                                className="gap-1.5 shrink-0 border-purple-200 text-purple-700 hover:bg-purple-50"
+                            >
+                                {isAIGenerating ? (
+                                    <><Loader2 className="w-3.5 h-3.5 animate-spin" />Generating...</>
+                                ) : (
+                                    <><Sparkles className="w-3.5 h-3.5" />Generate with AI</>
+                                )}
+                            </Button>
+                        </div>
                     </CardHeader>
                     <CardContent>
                         <textarea
                             value={formData.description}
                             onChange={(e) => handleChange('description', e.target.value)}
-                            placeholder="Describe the vehicle — its condition, service history, standout features, reason for selling..."
-                            disabled={isSaving}
+                            placeholder="Describe the vehicle — or click &quot;Generate with AI&quot; to auto-write a description..."
+                            disabled={isSaving || isAIGenerating}
                             className="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm min-h-[120px] resize-none bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200"
                         />
                         <p className="text-xs text-muted-foreground mt-2">{formData.description.length}/500 characters</p>
+                    </CardContent>
+                </Card>
+
+                {/* Video Walkaround */}
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="flex items-center gap-2">
+                            <Youtube className="w-5 h-5 text-red-500" />
+                            Video Walkaround
+                            <span className="ml-1 text-xs font-normal text-muted-foreground">(optional)</span>
+                        </CardTitle>
+                        <CardDescription>
+                            Listings with a video get 3× more enquiries — paste your YouTube link
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                        <Input
+                            value={formData.video_url}
+                            onChange={(e) => handleChange('video_url', e.target.value)}
+                            placeholder="https://www.youtube.com/watch?v=..."
+                            disabled={isSaving}
+                        />
+                        {toYouTubeEmbed(formData.video_url) && (
+                            <div className="rounded-xl overflow-hidden border border-gray-200 aspect-video">
+                                <iframe
+                                    src={toYouTubeEmbed(formData.video_url)!}
+                                    className="w-full h-full"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                    title="Vehicle walkaround video"
+                                />
+                            </div>
+                        )}
                     </CardContent>
                 </Card>
 

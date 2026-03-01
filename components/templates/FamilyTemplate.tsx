@@ -11,6 +11,12 @@ import { CarGrid } from '@/components/cars/CarGrid';
 import { CarFilters } from '@/components/cars/CarFilters';
 import { Button } from '@/components/ui/button';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
+import { VerifiedBadge } from '@/components/ui/VerifiedBadge';
+import { ReviewsSection } from '@/components/ui/ReviewsSection';
+import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
+import { LanguageToggle, useLocale } from '@/components/ui/LanguageToggle';
+import { t } from '@/lib/i18n/translations';
+import { EVSection } from '@/components/ui/EVSection';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
 import { getContrastText } from '@/lib/utils/color-contrast';
@@ -65,6 +71,7 @@ interface FamilyTemplateProps {
     sellsNewCars?: boolean;
     sellsUsedCars?: boolean;
     branches?: Array<{ city: string; address: string; phone?: string }>;
+    isVerified?: boolean;
 }
 
 export function FamilyTemplate({
@@ -82,8 +89,10 @@ export function FamilyTemplate({
     sellsNewCars = false,
     sellsUsedCars = false,
     branches,
+    isVerified = false,
 }: FamilyTemplateProps) {
     const isHybrid = sellsNewCars && sellsUsedCars;
+    const [locale, setLocale] = useLocale();
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [inventoryTab, setInventoryTab] = useState<'all' | 'new' | 'used'>('all');
     const [isScrolled, setIsScrolled] = useState(false);
@@ -157,6 +166,8 @@ export function FamilyTemplate({
                             <a href="#contact" className="font-medium hover:opacity-70">Contact</a>
                         </div>
                         <div className="flex items-center gap-2">
+                            <LanguageToggle locale={locale} onChange={setLocale} variant="light" />
+                            <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandColors.primary} />
                             <Button
                                 className="rounded-full hidden sm:flex bg-white"
                                 variant="outline"
@@ -243,6 +254,7 @@ export function FamilyTemplate({
                                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-semibold text-gray-700" style={{ borderColor: `${brandColors.primary}40`, backgroundColor: `${brandColors.primary}08` }}>
                                             {dealerName}
                                         </div>
+                                        {isVerified && <VerifiedBadge variant="hero" />}
                                     </div>
                                     <h1 className="text-5xl md:text-6xl font-bold leading-tight">{heroTitle}</h1>
                                     <p className="text-xl text-gray-600">{heroSubtitle}</p>
@@ -326,7 +338,7 @@ export function FamilyTemplate({
                                 </span>
                                 <h2 className="text-4xl font-bold mt-2">Family-Friendly Vehicles</h2>
                             </div>
-                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light />
+                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light dealerPhone={contactInfo.phone} dealerId={dealerId} />
                             <div className="text-center mt-8">
                                 <Button variant="outline" size="lg" className="rounded-full bg-white text-gray-700 border-gray-300 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>
                                     View All Cars
@@ -373,6 +385,16 @@ export function FamilyTemplate({
                         </div>
                     </section>
 
+                    {/* EV Section */}
+                    <EVSection cars={cars} contactInfo={contactInfo} brandColor="#10b981" />
+
+                    {/* Customer Reviews */}
+                    <section className="py-16 bg-white">
+                        <div className="max-w-7xl mx-auto px-4">
+                            <ReviewsSection dealerId={dealerId} brandColor={brandColors.primary} variant="light" />
+                        </div>
+                    </section>
+
                     {/* Talk to Our Team — Lead Form */}
                     <section id="contact" className="py-20 bg-gray-50">
                         <div className="max-w-7xl mx-auto px-4">
@@ -414,6 +436,18 @@ export function FamilyTemplate({
                                             </div>
                                         )}
                                     </div>
+                                    {/* Google Maps Embed */}
+                                    {contactInfo.address && (
+                                        <div className="mt-6 rounded-xl overflow-hidden border border-gray-200 h-48">
+                                            <iframe
+                                                src={`https://maps.google.com/maps?q=${encodeURIComponent(contactInfo.address)}&output=embed`}
+                                                className="w-full h-full"
+                                                loading="lazy"
+                                                title={`${dealerName} location map`}
+                                                referrerPolicy="no-referrer-when-downgrade"
+                                            />
+                                        </div>
+                                    )}
                                 </div>
 
                                 {/* Form */}
@@ -535,6 +569,8 @@ export function FamilyTemplate({
                                         : cars}
                                     brandColor={brandColors.primary}
                                     light
+                                    dealerPhone={contactInfo.phone}
+                                    dealerId={dealerId}
                                 />
                             </div>
                         </div>

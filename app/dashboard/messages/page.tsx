@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import {
     MessageSquare, Search, Star, Archive, Mail, MailOpen,
@@ -95,17 +96,19 @@ export default function MessagesPage() {
                 </div>
                 <div className="flex items-center gap-3">
                     {dealerId && (
-                        <button
+                        <Button
+                            variant="ghost"
+                            size="icon"
                             onClick={load}
                             disabled={loading}
-                            className="p-2 rounded-lg hover:bg-muted/50 transition-colors text-muted-foreground disabled:opacity-50"
                             title="Refresh"
+                            className="text-muted-foreground"
                         >
                             {loading
                                 ? <Loader2 className="w-4 h-4 animate-spin" />
                                 : <RefreshCw className="w-4 h-4" />
                             }
-                        </button>
+                        </Button>
                     )}
                 </div>
             </div>
@@ -202,20 +205,24 @@ export default function MessagesPage() {
 
                                             {/* Actions */}
                                             <div className="flex flex-col items-center gap-1 shrink-0">
-                                                <button
+                                                <Button
+                                                    variant="ghost"
+                                                    size="icon"
                                                     onClick={e => handleStar(e, msg)}
-                                                    className="p-1 rounded hover:bg-muted/50 transition-colors"
                                                     title={msg.is_starred ? "Unstar" : "Star"}
+                                                    className="w-7 h-7"
                                                 >
                                                     <Star className={cn("w-3.5 h-3.5", msg.is_starred ? "fill-amber-400 text-amber-400" : "text-muted-foreground")} />
-                                                </button>
-                                                <button
+                                                </Button>
+                                                <Button
+                                                    variant="ghost"
+                                                    size="icon"
                                                     onClick={e => handleArchive(e, msg.id)}
-                                                    className="p-1 rounded hover:bg-muted/50 transition-colors"
                                                     title="Archive"
+                                                    className="w-7 h-7 text-muted-foreground"
                                                 >
-                                                    <Archive className="w-3.5 h-3.5 text-muted-foreground" />
-                                                </button>
+                                                    <Archive className="w-3.5 h-3.5" />
+                                                </Button>
                                             </div>
                                         </div>
                                     ))}

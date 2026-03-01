@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { allTemplates, type TemplateStyle } from '@/lib/templates';
 import { validateCombination, type TemplateRecommendation } from '@/lib/templates/template-validation';
 import { TemplateWarning } from './TemplateWarning';
@@ -21,164 +22,30 @@ interface TemplateSelectorProps {
   showBlockedWarning?: boolean;
 }
 
-// ─── Mini browser mockup previews ────────────────────────────────────────────
+// ─── Template preview images ────────────────────────────────────────────────
 
-function LuxuryMockup() {
-  return (
-    <div className="w-full h-full bg-zinc-900 flex flex-col overflow-hidden">
-      {/* Gold accent bar */}
-      <div className="h-1 w-full bg-amber-400 flex-shrink-0" />
-      {/* Navbar */}
-      <div className="flex items-center gap-2 px-3 py-1.5 bg-zinc-800 flex-shrink-0">
-        <div className="w-3 h-3 rounded-full bg-amber-400" />
-        <div className="flex gap-1.5 ml-auto">
-          <div className="w-5 h-0.5 bg-zinc-500 rounded" />
-          <div className="w-5 h-0.5 bg-zinc-500 rounded" />
-          <div className="w-5 h-0.5 bg-zinc-500 rounded" />
-        </div>
-      </div>
-      {/* Hero */}
-      <div className="flex flex-1 gap-2 px-3 py-2 min-h-0">
-        <div className="flex flex-col justify-center gap-1.5 flex-1">
-          <div className="h-2 w-16 bg-amber-400 rounded" />
-          <div className="h-1.5 w-20 bg-zinc-600 rounded" />
-          <div className="h-1.5 w-14 bg-zinc-700 rounded" />
-          <div className="mt-1.5 h-4 w-12 bg-amber-500 rounded-sm" />
-        </div>
-        <div className="w-16 h-12 bg-zinc-700 rounded-md self-center" />
-      </div>
-      {/* Cards row */}
-      <div className="flex gap-1.5 px-3 pb-2 flex-shrink-0">
-        <div className="flex-1 h-6 bg-zinc-800 rounded border border-zinc-700" />
-        <div className="flex-1 h-6 bg-zinc-800 rounded border border-zinc-700" />
-        <div className="flex-1 h-6 bg-zinc-800 rounded border border-zinc-700" />
-      </div>
-    </div>
-  );
-}
-
-function FamilyMockup() {
-  return (
-    <div className="w-full h-full bg-slate-50 flex flex-col overflow-hidden">
-      {/* Navbar */}
-      <div className="flex items-center gap-2 px-3 py-1.5 bg-blue-600 flex-shrink-0">
-        <div className="w-3 h-3 rounded-full bg-white" />
-        <div className="flex gap-1.5 ml-auto">
-          <div className="w-5 h-0.5 bg-blue-300 rounded" />
-          <div className="w-5 h-0.5 bg-blue-300 rounded" />
-          <div className="w-5 h-0.5 bg-blue-300 rounded" />
-        </div>
-      </div>
-      {/* Hero */}
-      <div className="flex flex-1 gap-2 px-3 py-2 min-h-0">
-        <div className="flex flex-col justify-center gap-1.5 flex-1">
-          <div className="h-2.5 w-16 bg-blue-700 rounded font-bold" />
-          <div className="h-1.5 w-20 bg-gray-400 rounded" />
-          <div className="h-1.5 w-14 bg-gray-300 rounded" />
-          <div className="mt-1.5 h-4 w-12 bg-blue-500 rounded-sm" />
-        </div>
-        <div className="w-16 h-12 bg-blue-100 rounded-md self-center border border-blue-200" />
-      </div>
-      {/* Cards row */}
-      <div className="flex gap-1.5 px-3 pb-2 flex-shrink-0">
-        <div className="flex-1 h-7 bg-white rounded shadow-sm border border-gray-200 overflow-hidden">
-          <div className="h-1.5 w-full bg-blue-400" />
-        </div>
-        <div className="flex-1 h-7 bg-white rounded shadow-sm border border-gray-200 overflow-hidden">
-          <div className="h-1.5 w-full bg-green-400" />
-        </div>
-        <div className="flex-1 h-7 bg-white rounded shadow-sm border border-gray-200 overflow-hidden">
-          <div className="h-1.5 w-full bg-orange-400" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function SportyMockup() {
-  return (
-    <div className="w-full h-full bg-gray-950 flex flex-col overflow-hidden">
-      {/* Red accent bar */}
-      <div className="h-1 w-full bg-red-500 flex-shrink-0" />
-      {/* Navbar */}
-      <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-900 flex-shrink-0">
-        <div className="w-3 h-3 rounded bg-red-500" />
-        <div className="flex gap-1.5 ml-auto">
-          <div className="w-5 h-0.5 bg-gray-600 rounded" />
-          <div className="w-5 h-0.5 bg-gray-600 rounded" />
-          <div className="w-5 h-0.5 bg-gray-600 rounded" />
-        </div>
-      </div>
-      {/* Hero with skewed element */}
-      <div className="flex-1 relative px-3 py-2 flex items-center min-h-0 overflow-hidden">
-        <div
-          className="absolute inset-y-0 right-0 w-2/5 bg-gradient-to-br from-red-600 to-orange-700"
-          style={{ clipPath: 'polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)' }}
-        />
-        <div className="flex flex-col gap-1.5 z-10">
-          <div className="h-2.5 w-14 bg-white rounded" />
-          <div className="h-1.5 w-16 bg-gray-600 rounded" />
-          <div className="mt-1 h-4 w-10 bg-red-500 rounded-sm" />
-        </div>
-      </div>
-      {/* Cards row */}
-      <div className="flex gap-1.5 px-3 pb-2 flex-shrink-0">
-        <div className="flex-1 h-6 bg-gray-800 rounded border-l-2 border-red-500" />
-        <div className="flex-1 h-6 bg-gray-800 rounded border-l-2 border-red-500" />
-      </div>
-    </div>
-  );
-}
-
-function ProfessionalMockup() {
-  return (
-    <div className="w-full h-full bg-white flex flex-col overflow-hidden">
-      {/* Blue accent bar */}
-      <div className="h-1 w-full bg-blue-600 flex-shrink-0" />
-      {/* Navbar */}
-      <div className="flex items-center gap-2 px-3 py-1.5 bg-white border-b border-gray-200 flex-shrink-0">
-        <div className="w-3 h-3 rounded-full bg-blue-600" />
-        <div className="flex gap-1.5 ml-auto">
-          <div className="w-5 h-0.5 bg-gray-300 rounded" />
-          <div className="w-5 h-0.5 bg-gray-300 rounded" />
-          <div className="w-5 h-0.5 bg-gray-300 rounded" />
-        </div>
-      </div>
-      {/* Hero: split */}
-      <div className="flex flex-1 min-h-0">
-        <div className="w-2/5 bg-blue-600 flex flex-col justify-center px-2 py-2 gap-1">
-          <div className="h-2 w-10 bg-white rounded" />
-          <div className="h-1.5 w-12 bg-blue-300 rounded" />
-          <div className="mt-1 h-3 w-8 bg-white rounded-sm" />
-        </div>
-        <div className="flex-1 flex flex-col justify-center px-2 py-2 gap-1">
-          <div className="h-2 w-14 bg-gray-200 rounded" />
-          <div className="h-1.5 w-10 bg-gray-200 rounded" />
-        </div>
-      </div>
-      {/* Cards row */}
-      <div className="flex gap-1.5 px-3 pb-2 flex-shrink-0">
-        <div className="flex-1 h-6 bg-white rounded shadow-sm border border-gray-200 border-l-2 border-l-blue-600" />
-        <div className="flex-1 h-6 bg-white rounded shadow-sm border border-gray-200 border-l-2 border-l-blue-600" />
-        <div className="flex-1 h-6 bg-white rounded shadow-sm border border-gray-200 border-l-2 border-l-blue-600" />
-      </div>
-    </div>
-  );
-}
-
-const mockupComponents: Record<TemplateStyle, React.FC> = {
-  luxury: LuxuryMockup,
-  family: FamilyMockup,
-  sporty: SportyMockup,
-  professional: ProfessionalMockup,
+const mockupImages: Record<string, string> = {
+  luxury: '/images/template-luxury.png',
+  family: '/images/template-family.png',
+  sporty: '/images/template-sporty.png',
+  professional: '/images/template-professional.png',
 };
 
-const mockupWrapperClasses: Record<TemplateStyle, string> = {
-  luxury: 'bg-zinc-900',
-  family: 'bg-slate-50',
-  sporty: 'bg-gray-950',
-  professional: 'bg-white',
-};
+function TemplateMockupImage({ templateId }: { templateId: string }) {
+  const src = mockupImages[templateId];
+  return (
+    <div className="relative w-full h-full">
+      <Image
+        src={src}
+        alt={`${templateId} theme preview`}
+        fill
+        className="object-cover object-top"
+        sizes="(max-width: 768px) 100vw, 50vw"
+        priority
+      />
+    </div>
+  );
+}
 
 // ─── Main component ───────────────────────────────────────────────────────────
 
@@ -258,8 +125,6 @@ export function TemplateSelector({
               isBlocked = tempValidation.shouldBlock;
             }
 
-            const MockupComponent = mockupComponents[template.id as TemplateStyle];
-
             return (
               <button
                 key={template.id}
@@ -274,13 +139,8 @@ export function TemplateSelector({
                       : 'border-border hover:border-primary/40 hover:shadow-md hover:scale-[1.01] cursor-pointer'
                 )}
               >
-                {/* Browser mockup preview */}
-                <div
-                  className={cn(
-                    'relative h-44 w-full overflow-hidden flex-shrink-0',
-                    mockupWrapperClasses[template.id as TemplateStyle]
-                  )}
-                >
+                {/* Real website screenshot preview */}
+                <div className="relative h-48 w-full overflow-hidden flex-shrink-0">
                   {/* Fake browser chrome bar */}
                   <div className="absolute top-0 left-0 right-0 h-5 bg-gray-200 flex items-center gap-1 px-2 z-10 border-b border-gray-300">
                     <div className="w-1.5 h-1.5 rounded-full bg-red-400" />
@@ -289,9 +149,9 @@ export function TemplateSelector({
                     <div className="ml-2 flex-1 h-2.5 bg-gray-100 rounded-full border border-gray-300" />
                   </div>
 
-                  {/* Mockup content */}
+                  {/* Theme preview image */}
                   <div className="absolute inset-0 top-5">
-                    <MockupComponent />
+                    <TemplateMockupImage templateId={template.id} />
                   </div>
 
                   {/* Selection checkmark */}

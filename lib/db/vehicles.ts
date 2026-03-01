@@ -18,6 +18,7 @@ export interface DBVehicle {
     fuel_type?: string;
     features: string[];
     description?: string;
+    video_url?: string;       // YouTube video URL for walkaround/review
     condition: "new" | "used" | "certified_pre_owned";
     status: "available" | "reserved" | "sold" | "inactive";
     view_count: number;
@@ -39,25 +40,34 @@ export interface AddVehiclePayload {
     fuel_type?: string;
     features?: string[];
     description?: string;
+    video_url?: string;
     condition?: "new" | "used" | "certified_pre_owned";
 }
 
-// ── Fetch all vehicles for a dealer ──────────────────────────
-export async function fetchVehicles(dealerId: string): Promise<DBVehicle[]> {
-    if (!isSupabaseReady()) return [];
+// ── Fetch vehicles for a dealer with pagination ───────────────
+export async function fetchVehicles(
+    dealerId: string,
+    page = 1,
+    pageSize = 50
+): Promise<{ vehicles: DBVehicle[]; total: number }> {
+    if (!isSupabaseReady()) return { vehicles: [], total: 0 };
 
-    const { data, error } = await supabase
+    const from = (page - 1) * pageSize;
+    const to   = from + pageSize - 1;
+
+    const { data, error, count } = await supabase
         .from("vehicles")
-        .select("*")
+        .select("*", { count: "exact" })
         .eq("dealer_id", dealerId)
         .neq("status", "inactive")
-        .order("created_at", { ascending: false });
+        .order("created_at", { ascending: false })
+        .range(from, to);
 
     if (error) {
         console.error("[fetchVehicles]", error.message);
-        return [];
+        return { vehicles: [], total: 0 };
     }
-    return data ?? [];
+    return { vehicles: data ?? [], total: count ?? 0 };
 }
 
 // ── Add a single vehicle ─────────────────────────────────────

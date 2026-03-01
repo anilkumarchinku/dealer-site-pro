@@ -16,6 +16,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
+import { sendLeadSmsToDealer } from '@/lib/services/sms-service'
 
 // ── Simple in-memory rate limiter (3 leads per IP per hour) ──────────────────
 const ipHitMap = new Map<string, { count: number; resetAt: number }>()
@@ -46,7 +47,7 @@ function getSupabase() {
 }
 
 // Allowed lead_source values
-const VALID_SOURCES = new Set(['contact_form', 'car_enquiry', 'test_drive', 'whatsapp', 'phone'])
+const VALID_SOURCES = new Set(['contact_form', 'car_enquiry', 'test_drive', 'whatsapp', 'phone', 'price_alert'])
 
 export async function POST(request: NextRequest) {
     try {
@@ -95,7 +96,7 @@ export async function POST(request: NextRequest) {
         // ── Verify dealer_id exists and is active (prevent phantom leads) ─────
         const { data: dealer, error: dealerErr } = await supabase
             .from('dealers')
-            .select('id')
+            .select('id, dealership_name, phone')
             .eq('id', dealer_id)
             .single()
 
@@ -125,6 +126,18 @@ export async function POST(request: NextRequest) {
         if (error) {
             console.error('Lead insert error:', error)
             return NextResponse.json({ error: 'Failed to save enquiry' }, { status: 500 })
+        }
+
+        // ── SMS notification to dealer (fire-and-forget) ──────────────────────
+        if (dealer.phone) {
+            sendLeadSmsToDealer({
+                dealerPhone:   dealer.phone,
+                dealerName:    dealer.dealership_name,
+                customerName:  name.trim(),
+                customerPhone: phone.trim(),
+                carName:       car_name ?? undefined,
+                leadSource:    safeSource,
+            }).catch(() => { /* already logged inside */ })
         }
 
         return NextResponse.json({ success: true, leadId: data.id })

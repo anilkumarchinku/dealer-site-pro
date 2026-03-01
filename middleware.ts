@@ -17,6 +17,18 @@ export async function middleware(request: NextRequest) {
     const hostname = request.headers.get('host') || ''
     const pathname = request.nextUrl.pathname
 
+    // ── Handle CORS preflight for API routes ─────────────────
+    if (pathname.startsWith('/api') && request.method === 'OPTIONS') {
+        return new NextResponse(null, {
+            status: 204,
+            headers: {
+                'Access-Control-Allow-Origin':  '*',
+                'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type, Authorization, idempotency-key',
+            },
+        })
+    }
+
     // ── Skip static files, API routes, Next.js internals ─────
     if (
         pathname.startsWith('/_next') ||

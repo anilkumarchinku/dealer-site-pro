@@ -4,7 +4,7 @@
  * Uses Razorpay REST API via fetch — no npm SDK required.
  */
 
-import { createHmac } from 'crypto'
+import { createHmac, timingSafeEqual } from 'crypto'
 
 export interface CreateSubscriptionParams {
     dealerId: string
@@ -111,13 +111,32 @@ export function verifyPaymentSignature(
 ): boolean {
     const secret = process.env.RAZORPAY_KEY_SECRET
     if (!secret || secret === 'your_razorpay_secret_key_here') {
-        console.warn('RAZORPAY_KEY_SECRET not configured — skipping signature verification')
-        return true // fail-open in dev; remove this for strict prod
+        if (process.env.NODE_ENV === 'production') {
+            console.error('[Payment] RAZORPAY_KEY_SECRET not configured in production — rejecting payment')
+            return false // fail-closed in production
+        }
+        console.warn('[Payment] RAZORPAY_KEY_SECRET not configured — skipping verification in dev')
+        return true
     }
 
     const generated = createHmac('sha256', secret)
         .update(`${paymentId}|${subscriptionId}`)
         .digest('hex')
 
-    return generated === signature
+    // Use timing-safe comparison to prevent timing attacks
+    // Compare raw string buffers (not hex-decoded) to stay case-sensitive
+    try {
+        const a = Buffer.from(generated)
+        const b = Buffer.from(signature)
+        if (a.length !== b.length) return false
+        return timingSafeEqual(a, b)
+    } catch {
+        return false
+    }
+}
+
+/** Expected prices in paise for each tier */
+export const PLAN_PRICES_PAISE: Record<'pro' | 'premium', number> = {
+    pro:     49900,  // ₹499
+    premium: 99900,  // ₹999
 }

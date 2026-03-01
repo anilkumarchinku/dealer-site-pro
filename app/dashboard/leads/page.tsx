@@ -99,17 +99,19 @@ export default function LeadsPage() {
                         <span className="text-sm text-muted-foreground">{apiLeads.length} total</span>
                     </div>
                     {dealerId && (
-                        <button
+                        <Button
+                            variant="ghost"
+                            size="icon"
                             onClick={loadLeads}
                             disabled={loading}
-                            className="p-2 rounded-lg hover:bg-muted/50 transition-colors text-muted-foreground disabled:opacity-50"
                             title="Refresh leads"
+                            className="text-muted-foreground"
                         >
                             {loading
                                 ? <Loader2 className="w-4 h-4 animate-spin" />
                                 : <RefreshCw className="w-4 h-4" />
                             }
-                        </button>
+                        </Button>
                     )}
                 </div>
             </div>
@@ -174,12 +176,14 @@ export default function LeadsPage() {
                                 </SelectContent>
                             </Select>
                             {(filterPriority !== "all" || filterStatus !== "all" || searchQuery) && (
-                                <button
+                                <Button
+                                    variant="ghost"
+                                    size="sm"
                                     onClick={() => { setFilterPriority("all"); setFilterStatus("all"); setSearchQuery(""); }}
-                                    className="text-xs text-muted-foreground hover:text-foreground underline transition-colors"
+                                    className="h-8 text-xs text-muted-foreground hover:text-foreground px-2"
                                 >
                                     Clear filters
-                                </button>
+                                </Button>
                             )}
                         </div>
                     </div>

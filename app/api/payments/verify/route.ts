@@ -1,6 +1,7 @@
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { verifyPaymentSignature } from '@/lib/services/payment-service'
 import { createRouteClient } from '@/lib/supabase-server'
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 interface PaymentVerifyRequest {
     orderId: string
@@ -23,7 +24,11 @@ interface PaymentVerifyResponse {
  * Idempotency: Use the "idempotency-key" header to prevent duplicate processing
  * This header should be a unique UUID for each payment verification
  */
-export async function POST(request: Request): Promise<NextResponse<PaymentVerifyResponse>> {
+export async function POST(request: NextRequest): Promise<NextResponse<PaymentVerifyResponse>> {
+    // Rate limit: max 10 payment verifications per IP per hour
+    const rateLimit = rateLimitOrNull('payment_verify', request, 10, 60 * 60 * 1000)
+    if (rateLimit) return rateLimit as NextResponse<PaymentVerifyResponse>
+
     try {
         const body = (await request.json()) as PaymentVerifyRequest
         const { orderId, paymentId, signature, subscriptionId } = body

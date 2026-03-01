@@ -11,6 +11,12 @@ import { CarGrid } from '@/components/cars/CarGrid';
 import { CarFilters } from '@/components/cars/CarFilters';
 import { Button } from '@/components/ui/button';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
+import { VerifiedBadge } from '@/components/ui/VerifiedBadge';
+import { ReviewsSection } from '@/components/ui/ReviewsSection';
+import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
+import { LanguageToggle, useLocale } from '@/components/ui/LanguageToggle';
+import { t } from '@/lib/i18n/translations';
+import { EVSection } from '@/components/ui/EVSection';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
 import { getContrastText } from '@/lib/utils/color-contrast';
@@ -75,6 +81,7 @@ interface SportyTemplateProps {
     sellsNewCars?: boolean;
     sellsUsedCars?: boolean;
     branches?: Array<{ city: string; address: string; phone?: string }>;
+    isVerified?: boolean;
 }
 
 export function SportyTemplate({
@@ -92,8 +99,10 @@ export function SportyTemplate({
     sellsNewCars = false,
     sellsUsedCars = false,
     branches,
+    isVerified = false,
 }: SportyTemplateProps) {
     const isHybrid = sellsNewCars && sellsUsedCars;
+    const [locale, setLocale] = useLocale();
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [inventoryTab, setInventoryTab] = useState<'all' | 'new' | 'used'>('all');
     const [isScrolled, setIsScrolled] = useState(false);
@@ -185,6 +194,8 @@ export function SportyTemplate({
                             </a>
                         </div>
                         <div className="flex items-center gap-2">
+                            <LanguageToggle locale={locale} onChange={setLocale} variant="dark" />
+                            <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandAccent} />
                             <Button
                                 className="text-white font-bold hidden sm:flex"
                                 style={{ backgroundColor: `${brandAccent}cc` }}
@@ -275,6 +286,7 @@ export function SportyTemplate({
                                     <div className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-gray-100 border border-gray-200">
                                         <span className="text-xs font-bold uppercase tracking-wider text-gray-600">{dealerName}</span>
                                     </div>
+                                    {isVerified && <VerifiedBadge variant="hero" />}
                                 </div>
                                 <h1 className="text-6xl md:text-8xl font-black leading-none mb-6 tracking-tight text-gray-900">
                                     {heroTitle.split(' ').map((word, i) => (
@@ -359,9 +371,12 @@ export function SportyTemplate({
                                     <ChevronRight className="ml-1 w-4 h-4" />
                                 </Button>
                             </div>
-                            <CarGrid cars={featuredCars} brandColor={brandAccent} />
+                            <CarGrid cars={featuredCars} brandColor={brandAccent} dealerPhone={contactInfo.phone} dealerId={dealerId} />
                         </div>
                     </section>
+
+                    {/* EV Section */}
+                    <EVSection cars={cars} contactInfo={contactInfo} brandColor="#10b981" />
 
                     {/* Why Choose Us */}
                     <section className="py-20 border-t border-gray-200">
@@ -395,6 +410,13 @@ export function SportyTemplate({
                                 <p className="text-gray-500 mt-2">Know your numbers before you race to the showroom</p>
                             </div>
                             <EmiCalculator brandColor={brandAccent} theme="light" />
+                        </div>
+                    </section>
+
+                    {/* Customer Reviews */}
+                    <section className="py-16 bg-gray-950">
+                        <div className="max-w-7xl mx-auto px-4">
+                            <ReviewsSection dealerId={dealerId} brandColor={brandAccent} variant="dark" />
                         </div>
                     </section>
 
@@ -550,6 +572,8 @@ export function SportyTemplate({
                                         : inventoryTab === 'used' ? cars.filter(c => c.condition !== 'new')
                                         : cars : cars}
                                     brandColor={brandAccent}
+                                    dealerPhone={contactInfo.phone}
+                                    dealerId={dealerId}
                                 />
                             </div>
                         </div>
@@ -597,6 +621,18 @@ export function SportyTemplate({
                                     <div className="flex items-center gap-2">
                                         <Clock className="w-5 h-5" style={{ color: brandAccent }} />
                                         <span>{workingHours}</span>
+                                    </div>
+                                )}
+                                {/* Google Maps Embed */}
+                                {contactInfo.address && (
+                                    <div className="mt-4 rounded-lg overflow-hidden border border-gray-700 h-40">
+                                        <iframe
+                                            src={`https://maps.google.com/maps?q=${encodeURIComponent(contactInfo.address)}&output=embed`}
+                                            className="w-full h-full"
+                                            loading="lazy"
+                                            title={`${dealerName} location map`}
+                                            referrerPolicy="no-referrer-when-downgrade"
+                                        />
                                     </div>
                                 )}
                             </div>

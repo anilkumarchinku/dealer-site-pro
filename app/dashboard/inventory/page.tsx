@@ -10,6 +10,9 @@ import { Search, Plus, Car, CheckCircle, LayoutGrid, Building2, Loader2, Sparkle
 import { fetchVehicles, deleteVehicle, type DBVehicle } from "@/lib/db/vehicles";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import BulkUploadModal from "@/components/BulkUploadModal";
+import { RCLookupWidget } from "@/components/dashboard/RCLookupWidget";
+import { Badge } from "@/components/ui/badge";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 const STAT_CONFIG = [
     { label: "Total Stock",  icon: Car,        bg: "bg-primary/10",    text: "text-primary" },
@@ -39,8 +42,8 @@ export default function InventoryPage() {
     const load = () => {
         if (!dealerId) return;
         setLoading(true);
-        fetchVehicles(dealerId)
-            .then(setDbVehicles)
+        fetchVehicles(dealerId, 1, 50)
+            .then(({ vehicles }) => setDbVehicles(vehicles))
             .finally(() => setLoading(false));
     };
 
@@ -102,16 +105,18 @@ export default function InventoryPage() {
                 </div>
                 <div className="flex items-center gap-2">
                     {dealerId && (
-                        <button
+                        <Button
+                            variant="ghost"
+                            size="icon"
                             onClick={load}
                             disabled={loading}
-                            className="p-2 rounded-lg hover:bg-muted/50 transition-colors text-muted-foreground disabled:opacity-50"
                             title="Refresh"
+                            className="text-muted-foreground"
                         >
                             {loading
                                 ? <Loader2 className="w-4 h-4 animate-spin" />
                                 : <RefreshCw className="w-4 h-4" />}
-                        </button>
+                        </Button>
                     )}
                     {canAddVehicles ? (
                         <>
@@ -266,6 +271,9 @@ export default function InventoryPage() {
             <p className="text-xs text-muted-foreground text-center">
                 Showing {filteredDB.length} of {dbVehicles.length} vehicles
             </p>
+
+            {/* RC Lookup */}
+            {(data.sellsUsedCars || data.sellsNewCars) && <RCLookupWidget />}
         </div>
     );
 }
@@ -291,48 +299,45 @@ function DBVehicleTable({
 
     return (
         <div className="w-full overflow-auto rounded-xl border border-border bg-card shadow-sm">
-            <table className="w-full text-sm text-left">
-                <thead className="bg-muted/50 text-muted-foreground font-medium border-b border-border">
-                    <tr>
-                        <th className="px-4 py-3">Vehicle</th>
-                        <th className="px-4 py-3">Price</th>
-                        <th className="px-4 py-3">Year</th>
-                        <th className="px-4 py-3">Type</th>
-                        {showCondition && <th className="px-4 py-3">Condition</th>}
-                        <th className="px-4 py-3">Status</th>
-                        <th className="px-4 py-3 text-right">Actions</th>
-                    </tr>
-                </thead>
-                <tbody className="divide-y divide-border">
+            <Table>
+                <TableHeader>
+                    <TableRow className="bg-muted/50 hover:bg-muted/50">
+                        <TableHead>Vehicle</TableHead>
+                        <TableHead>Price</TableHead>
+                        <TableHead>Year</TableHead>
+                        <TableHead>Type</TableHead>
+                        {showCondition && <TableHead>Condition</TableHead>}
+                        <TableHead>Status</TableHead>
+                        <TableHead className="text-right">Actions</TableHead>
+                    </TableRow>
+                </TableHeader>
+                <TableBody>
                     {vehicles.map(v => {
                         const badge = conditionBadge(v.condition);
                         return (
-                            <tr key={v.id} className="hover:bg-muted/30 transition-colors">
-                                <td className="px-4 py-3">
+                            <TableRow key={v.id}>
+                                <TableCell>
                                     <div className="font-semibold text-foreground">{v.make} {v.model}</div>
                                     {v.variant && <div className="text-xs text-muted-foreground">{v.variant}</div>}
-                                </td>
-                                <td className="px-4 py-3 font-medium text-foreground">
+                                </TableCell>
+                                <TableCell className="font-medium">
                                     {formatPrice(v.price_paise)}
-                                </td>
-                                <td className="px-4 py-3 text-muted-foreground">{v.year}</td>
-                                <td className="px-4 py-3 text-muted-foreground">{v.body_type ?? "—"}</td>
+                                </TableCell>
+                                <TableCell className="text-muted-foreground">{v.year}</TableCell>
+                                <TableCell className="text-muted-foreground">{v.body_type ?? "—"}</TableCell>
                                 {showCondition && (
-                                    <td className="px-4 py-3">
-                                        <span className={cn(
-                                            "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border",
-                                            badge.cls
-                                        )}>
+                                    <TableCell>
+                                        <Badge className={cn("border text-xs", badge.cls)} variant="outline">
                                             {badge.label}
-                                        </span>
-                                    </td>
+                                        </Badge>
+                                    </TableCell>
                                 )}
-                                <td className="px-4 py-3">
-                                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 capitalize">
+                                <TableCell>
+                                    <Badge className="bg-green-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20 capitalize" variant="outline">
                                         {v.status}
-                                    </span>
-                                </td>
-                                <td className="px-4 py-3 text-right">
+                                    </Badge>
+                                </TableCell>
+                                <TableCell className="text-right">
                                     <Button
                                         variant="ghost"
                                         size="sm"
@@ -341,19 +346,19 @@ function DBVehicleTable({
                                     >
                                         Remove
                                     </Button>
-                                </td>
-                            </tr>
+                                </TableCell>
+                            </TableRow>
                         );
                     })}
                     {vehicles.length === 0 && (
-                        <tr>
-                            <td colSpan={showCondition ? 7 : 6} className="px-4 py-8 text-center text-muted-foreground">
+                        <TableRow>
+                            <TableCell colSpan={showCondition ? 7 : 6} className="py-8 text-center text-muted-foreground">
                                 No vehicles match your search.
-                            </td>
-                        </tr>
+                            </TableCell>
+                        </TableRow>
                     )}
-                </tbody>
-            </table>
+                </TableBody>
+            </Table>
         </div>
     );
 }

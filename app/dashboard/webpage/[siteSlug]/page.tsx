@@ -347,46 +347,54 @@ export default function SiteEditorPage() {
                             Preview
                         </span>
                         <div className="flex items-center gap-1">
-                            <button
+                            <Button
+                                variant="ghost"
+                                size="icon"
                                 onClick={() => setDevice("desktop")}
+                                title="Desktop view"
                                 className={cn(
-                                    "p-1.5 rounded-lg transition-colors",
+                                    "w-8 h-8",
                                     device === "desktop"
                                         ? "bg-muted text-foreground"
-                                        : "text-muted-foreground hover:text-foreground"
+                                        : "text-muted-foreground"
                                 )}
-                                title="Desktop view"
                             >
                                 <Monitor className="w-4 h-4" />
-                            </button>
-                            <button
+                            </Button>
+                            <Button
+                                variant="ghost"
+                                size="icon"
                                 onClick={() => setDevice("mobile")}
+                                title="Mobile view"
                                 className={cn(
-                                    "p-1.5 rounded-lg transition-colors",
+                                    "w-8 h-8",
                                     device === "mobile"
                                         ? "bg-muted text-foreground"
-                                        : "text-muted-foreground hover:text-foreground"
+                                        : "text-muted-foreground"
                                 )}
-                                title="Mobile view"
                             >
                                 <Smartphone className="w-4 h-4" />
-                            </button>
-                            <button
+                            </Button>
+                            <Button
+                                variant="ghost"
+                                size="icon"
                                 onClick={() => setIframeKey(k => k + 1)}
-                                className="p-1.5 rounded-lg text-muted-foreground hover:text-foreground transition-colors"
                                 title="Refresh preview"
+                                className="w-8 h-8 text-muted-foreground"
                             >
                                 <RefreshCw className="w-4 h-4" />
-                            </button>
-                            <a
-                                href={liveUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="p-1.5 rounded-lg text-muted-foreground hover:text-foreground transition-colors"
+                            </Button>
+                            <Button
+                                variant="ghost"
+                                size="icon"
+                                asChild
                                 title="Open live site"
+                                className="w-8 h-8 text-muted-foreground"
                             >
-                                <ExternalLink className="w-4 h-4" />
-                            </a>
+                                <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+                                    <ExternalLink className="w-4 h-4" />
+                                </a>
+                            </Button>
                         </div>
                     </div>
 

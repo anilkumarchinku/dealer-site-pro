@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
 import { isSupabaseReady } from "@/lib/supabase";
 import { fetchAnalyticsSummary, fetchTopVehicles, type TopVehicle } from "@/lib/db/analytics";
 import { fetchLeads, type ExternalLead } from "@/lib/db/leads";
+import { DealerScorecard } from "@/components/dashboard/DealerScorecard";
 
 const QUICK_ACTIONS = [
     { label: "Add Vehicle", href: "/dashboard/inventory/add", icon: Plus,      color: "blue"    },
@@ -315,6 +316,17 @@ export default function DashboardPage() {
                             ))}
                         </CardContent>
                     </Card>
+
+                    {/* Performance Scorecard */}
+                    <DealerScorecard
+                        dealerId={dealerId ?? ''}
+                        inventoryCount={topVehicles.length}
+                        leadsCount={leadsCount ?? 0}
+                        isVerified={false}
+                        avgRating={0}
+                        reviewCount={0}
+                        profileComplete={!!(data.dealershipName && data.phone && data.email)}
+                    />
 
                     {/* Top Vehicles */}
                     <Card>

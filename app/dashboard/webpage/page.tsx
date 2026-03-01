@@ -270,23 +270,22 @@ function SiteCard({ site, isMulti, dealerName, copied, onCopy, onEdit, onDomain 
 
                 {/* Copy / Open */}
                 <div className="flex items-center gap-2">
-                    <button
+                    <Button
+                        variant="outline"
+                        size="sm"
+                        className="gap-1.5 text-xs h-8"
                         onClick={() => onCopy(site.slug)}
-                        className="flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded-lg border border-border hover:bg-muted transition-colors"
                     >
                         {isCopied
                             ? <><Check className="w-3.5 h-3.5 text-green-500" /> Copied!</>
                             : <><Copy className="w-3.5 h-3.5" /> Copy Link</>}
-                    </button>
-                    <a
-                        href={liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded-lg border border-border hover:bg-muted transition-colors"
-                    >
-                        <ExternalLink className="w-3.5 h-3.5" />
-                        Open
-                    </a>
+                    </Button>
+                    <Button variant="outline" size="sm" className="gap-1.5 text-xs h-8" asChild>
+                        <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="w-3.5 h-3.5" />
+                            Open
+                        </a>
+                    </Button>
                 </div>
 
                 {/* Edit / Domain */}
@@ -301,14 +300,15 @@ function SiteCard({ site, isMulti, dealerName, copied, onCopy, onEdit, onDomain 
                         Edit Design
                     </Button>
                     {site.isUsed ? (
-                        <button
-                            onClick={onDomain}
-                            className="flex-1 flex items-center justify-center gap-1.5 text-xs px-2.5 py-1.5 rounded-lg font-medium transition-opacity hover:opacity-90"
+                        <Button
+                            size="sm"
+                            className="flex-1 gap-1.5 hover:opacity-90"
                             style={{ background: BENTLEY.primary, color: BENTLEY.accent }}
+                            onClick={onDomain}
                         >
                             <Globe className="w-3.5 h-3.5" />
                             Domain
-                        </button>
+                        </Button>
                     ) : (
                         <Button
                             size="sm"

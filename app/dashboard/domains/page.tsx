@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Globe, Lock, CheckCircle, ArrowRight, Zap, HelpCircle, Copy, RefreshCw, XCircle, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
 import ConnectCustomDomainModal from '@/components/ConnectCustomDomainModal'
 import DomainMonitoringWidget from '@/components/DomainMonitoringWidget'
@@ -23,32 +24,31 @@ function StatusBadge({ status }: { status: string }) {
     switch (status) {
         case 'active':
             return (
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-green-500/10 text-green-500 border border-emerald-500/20">
+                <Badge variant="outline" className="gap-1.5 bg-green-500/10 text-green-600 border-emerald-500/20">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                     Active + SSL
-                </span>
+                </Badge>
             )
         case 'verifying':
             return (
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
+                <Badge variant="outline" className="gap-1.5 bg-primary/10 text-primary border-primary/20">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
                     Verifying
-                </span>
+                </Badge>
             )
         case 'failed':
             return (
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-destructive/10 text-destructive border border-destructive/20">
+                <Badge variant="outline" className="gap-1.5 bg-destructive/10 text-destructive border-destructive/20">
                     <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
                     Failed
-                </span>
+                </Badge>
             )
         default:
-            // pending or anything else
             return (
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-amber-500/10 text-amber-500 border border-amber-500/20">
+                <Badge variant="outline" className="gap-1.5 bg-amber-500/10 text-amber-600 border-amber-500/20">
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
                     Pending DNS
-                </span>
+                </Badge>
             )
     }
 }
@@ -267,14 +267,15 @@ export default function DomainSettingsPage() {
                                                 <p className="text-muted-foreground mb-1">Points to / Value</p>
                                                 <div className="flex items-center gap-2">
                                                     <p className="font-bold">cname.vercel-dns.com</p>
-                                                    <button
+                                                    <Button
+                                                        variant="ghost"
+                                                        size="sm"
                                                         onClick={handleCopyCname}
-                                                        className="text-primary hover:text-blue-400 flex items-center gap-1"
-                                                        title="Copy to clipboard"
+                                                        className="h-6 px-1.5 text-primary hover:text-blue-400 font-normal text-xs gap-1"
                                                     >
                                                         <Copy className="w-3 h-3" />
-                                                        <span>{copiedCname ? 'Copied!' : 'Copy'}</span>
-                                                    </button>
+                                                        {copiedCname ? 'Copied!' : 'Copy'}
+                                                    </Button>
                                                 </div>
                                             </div>
                                         </div>

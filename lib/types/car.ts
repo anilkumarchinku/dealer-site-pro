@@ -213,6 +213,9 @@ export interface Car {
 
     // Hybrid: vehicle condition (for filtering in hybrid dealerships)
     condition?: 'new' | 'used' | 'certified_pre_owned';
+
+    // Video walkaround (YouTube URL)
+    video_url?: string;
 }
 
 /**

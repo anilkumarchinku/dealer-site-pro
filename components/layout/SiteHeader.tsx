@@ -26,6 +26,7 @@ import {
     Star,
     TrendingUp,
     ArrowRight,
+    Store,
 } from 'lucide-react';
 import type { Car as CarType } from '@/lib/types/car';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
@@ -57,6 +58,7 @@ const BUDGET_RANGES = [
 
 const NAV_ITEMS = [
     { label: 'New Cars', href: '/cars' },
+    { label: 'Marketplace', href: '/marketplace' },
     { label: 'Brands', href: '/brands' },
     { label: 'Compare', href: '/compare' },
     { label: 'EMI Calculator', href: '/tools/emi-calculator' },
@@ -221,6 +223,9 @@ export function SiteHeader() {
                             </button>
                         </div>
 
+                        <Link href="/marketplace" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground rounded-md transition-colors">
+                            Marketplace
+                        </Link>
                         <Link href="/brands" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground rounded-md transition-colors">
                             Brands
                         </Link>
@@ -389,6 +394,13 @@ export function SiteHeader() {
                                         onClick={() => setActiveMegaMenu(null)}
                                     >
                                         <Star className="w-4 h-4" /> All Cars
+                                    </Link>
+                                    <Link
+                                        href="/marketplace"
+                                        className="flex items-center gap-2 py-1.5 text-sm hover:text-primary transition-colors"
+                                        onClick={() => setActiveMegaMenu(null)}
+                                    >
+                                        <Store className="w-4 h-4" /> Dealer Marketplace
                                     </Link>
                                 </div>
                             </div>

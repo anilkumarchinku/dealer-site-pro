@@ -20,6 +20,10 @@ function generateTestSignature(paymentId: string, subscriptionId: string): strin
 }
 
 describe('Payment Service', () => {
+    // Set the secret so the service doesn't fall into fail-open mode
+    beforeAll(() => { process.env.RAZORPAY_KEY_SECRET = TEST_RAZORPAY_SECRET })
+    afterAll(() => { delete process.env.RAZORPAY_KEY_SECRET })
+
     describe('verifyPaymentSignature', () => {
         it('should return true for valid signature', () => {
             const paymentId = 'pay_test_12345'

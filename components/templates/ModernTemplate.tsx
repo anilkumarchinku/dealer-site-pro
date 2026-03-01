@@ -11,6 +11,12 @@ import { CarGrid } from '@/components/cars/CarGrid';
 import { CarFilters } from '@/components/cars/CarFilters';
 import { Button } from '@/components/ui/button';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
+import { VerifiedBadge } from '@/components/ui/VerifiedBadge';
+import { ReviewsSection } from '@/components/ui/ReviewsSection';
+import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
+import { LanguageToggle, useLocale } from '@/components/ui/LanguageToggle';
+import { t } from '@/lib/i18n/translations';
+import { EVSection } from '@/components/ui/EVSection';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
 import { getContrastText } from '@/lib/utils/color-contrast';
@@ -72,6 +78,7 @@ interface ModernTemplateProps {
     sellsNewCars?: boolean;
     sellsUsedCars?: boolean;
     branches?: Array<{ city: string; address: string; phone?: string }>;
+    isVerified?: boolean;
 }
 
 export function ModernTemplate({
@@ -89,8 +96,10 @@ export function ModernTemplate({
     sellsNewCars = false,
     sellsUsedCars = false,
     branches,
+    isVerified = false,
 }: ModernTemplateProps) {
     const isHybrid = sellsNewCars && sellsUsedCars;
+    const [locale, setLocale] = useLocale();
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [inventoryTab, setInventoryTab] = useState<'all' | 'new' | 'used'>('all');
     const [isScrolled, setIsScrolled] = useState(false);
@@ -191,7 +200,7 @@ export function ModernTemplate({
                                 }`}
                                 style={activeTab === 'home' ? { color: brandColors.primary } : {}}
                             >
-                                Home
+                                {t('home', locale)}
                             </button>
                             <button
                                 onClick={() => setActiveTab('inventory')}
@@ -202,7 +211,7 @@ export function ModernTemplate({
                                 }`}
                                 style={activeTab === 'inventory' ? { color: brandColors.primary } : {}}
                             >
-                                Inventory
+                                {t('inventory', locale)}
                             </button>
                             <a
                                 href="#contact"
@@ -210,19 +219,21 @@ export function ModernTemplate({
                                     isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'
                                 }`}
                             >
-                                Contact
+                                {t('contact', locale)}
                             </a>
                         </div>
 
                         {/* CTA Buttons */}
                         <div className="flex items-center gap-2">
+                            <LanguageToggle locale={locale} onChange={setLocale} variant={isScrolled ? 'light' : 'dark'} />
+                            <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandColors.primary} />
                             <Button
                                 variant="outline"
                                 className={`hidden sm:flex bg-transparent ${isScrolled ? 'text-gray-700 border-gray-300 hover:bg-gray-100' : 'text-white border-white/40 hover:bg-white/10'}`}
                                 onClick={() => setEnquireSidebarOpen(true)}
                             >
                                 <MessageSquare className="w-4 h-4 mr-2" />
-                                Enquire Now
+                                {t('enquireNow', locale)}
                             </Button>
                             <Button
                                 className="text-white shadow-lg"
@@ -231,7 +242,7 @@ export function ModernTemplate({
                             >
                                 <a href={`tel:${contactInfo.phone}`}>
                                     <Phone className="w-4 h-4 mr-2" />
-                                    Call Now
+                                    {t('callNow', locale)}
                                 </a>
                             </Button>
                             <button
@@ -312,8 +323,11 @@ export function ModernTemplate({
                             <div className="grid lg:grid-cols-2 gap-12 items-center">
                                 {/* Text */}
                                 <div className="text-gray-900 space-y-6">
-                                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 bg-gray-50">
-                                        <span className="text-sm font-medium text-gray-600">{dealerName}</span>
+                                    <div className="flex flex-wrap items-center gap-2">
+                                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 bg-gray-50">
+                                            <span className="text-sm font-medium text-gray-600">{dealerName}</span>
+                                        </div>
+                                        {isVerified && <VerifiedBadge variant="hero" />}
                                     </div>
                                     <h1 className="text-5xl md:text-6xl font-bold leading-tight text-gray-900">
                                         {heroTitle}
@@ -447,9 +461,12 @@ export function ModernTemplate({
                                     <ChevronRight className="ml-1 w-4 h-4" />
                                 </Button>
                             </div>
-                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light />
+                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light dealerPhone={contactInfo.phone} dealerId={dealerId} />
                         </div>
                     </section>
+
+                    {/* EV Section */}
+                    <EVSection cars={cars} contactInfo={contactInfo} brandColor="#10b981" />
 
                     {/* Why Choose Us */}
                     <section className="py-20 bg-white">
@@ -493,6 +510,13 @@ export function ModernTemplate({
                                 <p className="text-gray-500 mt-2">Enter your details to estimate your monthly payment</p>
                             </div>
                             <EmiCalculator brandColor={brandColors.primary} theme="light" />
+                        </div>
+                    </section>
+
+                    {/* Customer Reviews */}
+                    <section className="py-16 bg-white">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <ReviewsSection dealerId={dealerId} brandColor={brandColors.primary} variant="light" />
                         </div>
                     </section>
 
@@ -540,6 +564,18 @@ export function ModernTemplate({
                                             </div>
                                         )}
                                     </div>
+                                    {/* Google Maps Embed */}
+                                    {contactInfo.address && (
+                                        <div className="mt-6 rounded-xl overflow-hidden border border-gray-200 h-48">
+                                            <iframe
+                                                src={`https://maps.google.com/maps?q=${encodeURIComponent(contactInfo.address)}&output=embed`}
+                                                className="w-full h-full"
+                                                loading="lazy"
+                                                title={`${dealerName} location map`}
+                                                referrerPolicy="no-referrer-when-downgrade"
+                                            />
+                                        </div>
+                                    )}
                                 </div>
 
                                 {/* Right — form */}
@@ -665,6 +701,8 @@ export function ModernTemplate({
                                         : cars : cars}
                                     brandColor={brandColors.primary}
                                     light
+                                    dealerPhone={contactInfo.phone}
+                                    dealerId={dealerId}
                                 />
                             </div>
                         </div>

@@ -20,6 +20,10 @@ interface CarGridProps {
     brandColor?: string;
     /** Use white/light card styling (for light-background templates like Modern/Family) */
     light?: boolean;
+    /** Dealer phone number — enables per-car WhatsApp button */
+    dealerPhone?: string;
+    /** Dealer ID — enables test drive booking modal */
+    dealerId?: string;
 }
 
 export function CarGrid({
@@ -32,6 +36,8 @@ export function CarGrid({
     emptyMessage = 'No cars found matching your criteria.',
     brandColor,
     light,
+    dealerPhone,
+    dealerId,
 }: CarGridProps) {
     if (cars.length === 0) {
         return (
@@ -60,6 +66,8 @@ export function CarGrid({
                     onCompare={onCompare}
                     brandColor={brandColor}
                     light={light}
+                    dealerPhone={dealerPhone}
+                    dealerId={dealerId}
                 />
             ))}
         </div>

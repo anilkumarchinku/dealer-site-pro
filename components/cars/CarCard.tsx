@@ -20,6 +20,9 @@ import { Separator } from '@/components/ui/separator';
 
 import { EnquiryModal } from './EnquiryModal';
 import { QuickViewModal } from './QuickViewModal';
+import { TestDriveModal } from './TestDriveModal';
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
+import { WishlistButton } from '@/components/ui/WishlistButton';
 import {
     Fuel,
     Gauge,
@@ -85,6 +88,10 @@ interface CarCardProps {
     brandColor?: string;
     /** Light card styling for templates with a white/light background */
     light?: boolean;
+    /** Dealer phone — enables per-car WhatsApp button */
+    dealerPhone?: string;
+    /** Dealer ID — enables test drive booking */
+    dealerId?: string;
 }
 
 export function CarCard({
@@ -95,9 +102,12 @@ export function CarCard({
     className,
     brandColor = '#2563eb',
     light,
+    dealerPhone,
+    dealerId,
 }: CarCardProps) {
     const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
     const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
+    const [isTestDriveOpen, setIsTestDriveOpen] = useState(false);
     const [aggregatedSpecs, setAggregatedSpecs] = useState<ReturnType<typeof formatSpecsForDisplay>>(null);
 
     useEffect(() => {
@@ -167,6 +177,11 @@ export function CarCard({
                             <span className="text-4xl">🚗</span>
                         </div>
                     )}
+
+                    {/* Wishlist heart — top-right */}
+                    <div className="absolute top-2 right-2 z-10">
+                        <WishlistButton carId={car.id} />
+                    </div>
 
                     {/* Condition Badge — top-left */}
                     {car.condition && car.condition !== 'new' && (
@@ -287,7 +302,7 @@ export function CarCard({
                         </div>
                     )}
 
-                    {/* CTA row — Enquire + Quick View */}
+                    {/* CTA row — Enquire + WhatsApp + Info */}
                     <div className="flex gap-2 mt-1">
                         <Button
                             className="flex-1"
@@ -298,6 +313,13 @@ export function CarCard({
                             <Send className="w-3.5 h-3.5 mr-1.5" />
                             Enquire
                         </Button>
+                        {dealerPhone && (
+                            <WhatsAppButton
+                                variant="card"
+                                phone={dealerPhone}
+                                message={`Hi, I'm interested in the ${car.make} ${car.model}${car.variant ? ' ' + car.variant : ''}. Can you please share more details?`}
+                            />
+                        )}
                         <Button
                             size="sm"
                             variant="outline"
@@ -306,9 +328,21 @@ export function CarCard({
                             onClick={(e) => { e.stopPropagation(); setIsQuickViewOpen(true); }}
                         >
                             <Info className="w-3.5 h-3.5" />
-                            Quick View
                         </Button>
                     </div>
+                    {/* Test Drive CTA */}
+                    {dealerId && (
+                        <Button
+                            size="sm"
+                            variant="outline"
+                            className="w-full mt-1.5 gap-1.5 text-xs h-8 font-medium"
+                            style={{ borderColor: brandColor, color: brandColor }}
+                            onClick={(e) => { e.stopPropagation(); setIsTestDriveOpen(true); }}
+                        >
+                            <Calendar className="w-3.5 h-3.5" />
+                            Book Test Drive
+                        </Button>
+                    )}
                 </CardContent>
 
                 {/* Bottom accent */}
@@ -331,7 +365,17 @@ export function CarCard({
                 open={isEnquiryModalOpen}
                 onOpenChange={setIsEnquiryModalOpen}
                 brandColor={brandColor}
+                dealerPhone={dealerPhone}
             />
+            {dealerId && (
+                <TestDriveModal
+                    car={car}
+                    dealerId={dealerId}
+                    open={isTestDriveOpen}
+                    onOpenChange={setIsTestDriveOpen}
+                    brandColor={brandColor}
+                />
+            )}
         </>
     );
 }

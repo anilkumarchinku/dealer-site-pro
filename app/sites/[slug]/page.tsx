@@ -47,6 +47,7 @@ function dbVehiclesToCars(vehicles: DBVehicle[]): Car[] {
         meta: { viewCount: v.view_count },
         price: `₹${(v.price_paise / 100).toLocaleString('en-IN')}`,
         condition: v.condition,
+        video_url: v.video_url,
     }))
 }
 
@@ -280,6 +281,61 @@ export async function generateMetadata({ params }: SitePageProps): Promise<Metad
     }
 }
 
+// ── JSON-LD schema helpers ─────────────────────────────────────────────────────
+function buildAutoDealerSchema(dealer: NonNullable<Awaited<ReturnType<typeof fetchDealerBySlug>>>) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'AutoDealer',
+        name: dealer.dealership_name,
+        description: dealer.tagline ?? `${dealer.dealership_name} — trusted car dealership in ${dealer.location}`,
+        url: `https://${dealer.slug}.dealersitepro.com`,
+        telephone: dealer.phone,
+        email: dealer.email,
+        address: {
+            '@type': 'PostalAddress',
+            streetAddress: dealer.full_address ?? dealer.location,
+            addressLocality: dealer.location,
+            addressCountry: 'IN',
+        },
+        brand: dealer.brands.map(b => ({ '@type': 'Brand', name: b })),
+        hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            name: `${dealer.dealership_name} Vehicle Inventory`,
+        },
+    }
+}
+
+function buildCarListingSchema(cars: import('@/lib/types/car').Car[], dealerName: string, dealerSlug: string) {
+    if (cars.length === 0) return null
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: `${dealerName} — Available Vehicles`,
+        itemListElement: cars.slice(0, 20).map((car, idx) => ({
+            '@type': 'ListItem',
+            position: idx + 1,
+            item: {
+                '@type': 'Car',
+                name: `${car.make} ${car.model}${car.variant ? ' ' + car.variant : ''}`,
+                brand: { '@type': 'Brand', name: car.make },
+                model: car.model,
+                modelDate: car.year?.toString(),
+                fuelType: car.engine?.type,
+                vehicleTransmission: car.transmission?.type,
+                numberOfForwardGears: car.transmission?.gears,
+                url: `https://${dealerSlug}.dealersitepro.com`,
+                offers: car.pricing?.exShowroom?.min ? {
+                    '@type': 'Offer',
+                    priceCurrency: 'INR',
+                    price: Math.round(car.pricing.exShowroom.min),
+                    availability: 'https://schema.org/InStock',
+                    seller: { '@type': 'AutoDealer', name: dealerName },
+                } : undefined,
+            },
+        })),
+    }
+}
+
 export default async function SitePage({ params }: SitePageProps) {
     const { slug } = await params
 
@@ -407,19 +463,39 @@ export default async function SitePage({ params }: SitePageProps) {
         heroImageUrl: hero_image_url ?? undefined,
         sellsNewCars: templateSellsNew,
         sellsUsedCars: templateSellsUsed,
+        isVerified: dealer.is_verified,
     }
+
+    // ── JSON-LD structured data ───────────────────────────────────────────────
+    const autoDealerSchema = buildAutoDealerSchema(dealer)
+    const carListingSchema = buildCarListingSchema(cars, dealer.dealership_name, dealer.slug)
+
+    const jsonLdScripts = (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(autoDealerSchema) }}
+            />
+            {carListingSchema && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(carListingSchema) }}
+                />
+            )}
+        </>
+    )
 
     // ── Render the chosen template ────────────────────────────────────────────
     switch (dealer.style_template) {
         case 'luxury':
-            return <LuxuryTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} />
+            return <>{jsonLdScripts}<LuxuryTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} /></>
         case 'sporty':
-            return <SportyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} />
+            return <>{jsonLdScripts}<SportyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} /></>
         case 'family':
-            return <FamilyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} />
+            return <>{jsonLdScripts}<FamilyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} /></>
         case 'modern':
         case 'professional':
         default:
-            return <ModernTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle }} />
+            return <>{jsonLdScripts}<ModernTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle }} /></>
     }
 }

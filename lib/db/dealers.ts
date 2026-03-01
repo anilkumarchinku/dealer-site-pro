@@ -86,6 +86,8 @@ export interface DealerPublicData {
     cyepro_api_key: string | null
     logo_url: string | null
     hero_image_url: string | null
+    /** True when dealer has earned DealerSite Verified badge */
+    is_verified: boolean
 }
 
 function getServerSupabase() {
@@ -99,7 +101,7 @@ function getServerSupabase() {
 async function findDealerByExactSlug(supabase: SupabaseClient, slug: string) {
     const { data, error } = await supabase
         .from('dealers')
-        .select('id, dealership_name, tagline, phone, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars, cyepro_api_key, logo_url, hero_image_url, branches')
+        .select('id, dealership_name, tagline, phone, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars, cyepro_api_key, logo_url, hero_image_url, branches, is_verified')
         .eq('slug', slug)
         .eq('onboarding_complete', true)
         .single()
@@ -217,5 +219,6 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
         cyepro_api_key:  dealer.cyepro_api_key ?? null,
         logo_url:        dealer.logo_url       ?? null,
         hero_image_url:  dealer.hero_image_url ?? null,
+        is_verified:     dealer.is_verified    ?? false,
     }
 }

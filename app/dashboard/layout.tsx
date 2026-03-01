@@ -7,6 +7,7 @@ import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { signOut } from "@/lib/db/auth";
 import BrandLogo from "@/components/BrandLogo";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { Button } from "@/components/ui/button";
 import { supabase, isSupabaseReady } from "@/lib/supabase";
 import {
     LayoutDashboard,
@@ -246,34 +247,33 @@ export default function DashboardLayout({
                             <ThemeToggle />
 
                             {/* Notifications */}
-                            <button className="relative w-9 h-9 flex items-center justify-center rounded-lg border border-border hover:bg-muted transition-colors" title={unreadCount > 0 ? `${unreadCount} unread message${unreadCount > 1 ? 's' : ''}` : "No new notifications"}>
+                            <Button variant="outline" size="icon" className="relative w-9 h-9" title={unreadCount > 0 ? `${unreadCount} unread message${unreadCount > 1 ? 's' : ''}` : "No new notifications"}>
                                 <Bell className="w-4 h-4 text-muted-foreground" />
                                 {unreadCount > 0 && (
                                     <span className="absolute -top-1 -right-1 min-w-[16px] h-4 px-1 bg-destructive text-white text-[10px] font-bold rounded-full flex items-center justify-center">
                                         {unreadCount > 9 ? "9+" : unreadCount}
                                     </span>
                                 )}
-                            </button>
+                            </Button>
 
                             {/* Divider */}
                             <div className="w-px h-5 bg-border" />
 
-                            <a
-                                href={dealerSlug ? dealerSiteHref(dealerSlug) : '#'}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors px-2 py-1.5 rounded-lg hover:bg-muted"
-                            >
-                                <Globe className="w-4 h-4" />
-                                View Website
-                            </a>
-                            <button
+                            <Button variant="ghost" size="sm" asChild className="gap-2 text-muted-foreground hover:text-foreground">
+                                <a href={dealerSlug ? dealerSiteHref(dealerSlug) : '#'} target="_blank" rel="noopener noreferrer">
+                                    <Globe className="w-4 h-4" />
+                                    View Website
+                                </a>
+                            </Button>
+                            <Button
+                                variant="ghost"
+                                size="sm"
                                 onClick={handleSignOut}
-                                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors px-2 py-1.5 rounded-lg hover:bg-muted"
+                                className="gap-2 text-muted-foreground hover:text-foreground"
                             >
                                 <LogOut className="w-4 h-4" />
                                 Sign Out
-                            </button>
+                            </Button>
                         </div>
                     </div>
                 </header>
