@@ -43,9 +43,9 @@ export async function GET(req: NextRequest) {
         .select(`
             id, make, model, variant, year, price_paise, mileage_km,
             color, transmission, fuel_type, condition, features,
-            description, video_url, view_count, created_at,
+            description, views, created_at,
             dealers (
-                id, dealership_name, slug, location, is_verified, logo_url
+                id, dealership_name, slug, location, logo_url
             )
         `, { count: 'exact' })
         .eq('status', 'available')

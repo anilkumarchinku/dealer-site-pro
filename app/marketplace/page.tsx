@@ -26,7 +26,6 @@ interface DealerInfo {
     dealership_name: string
     slug: string
     location: string
-    is_verified: boolean
     logo_url: string | null
 }
 
@@ -44,7 +43,7 @@ interface MarketplaceVehicle {
     condition: 'new' | 'used' | 'certified_pre_owned'
     features: string[]
     description?: string
-    view_count: number
+    views: number
     created_at: string
     dealers: DealerInfo
 }
@@ -140,9 +139,6 @@ function VehicleCard({ v }: { v: MarketplaceVehicle }) {
                     <div className="min-w-0 flex-1">
                         <p className="text-xs font-medium text-gray-800 truncate flex items-center gap-1">
                             {dealer.dealership_name}
-                            {dealer.is_verified && (
-                                <BadgeCheck className="w-3.5 h-3.5 text-blue-500 shrink-0" />
-                            )}
                         </p>
                         <p className="text-xs text-gray-400 flex items-center gap-0.5 truncate">
                             <MapPin className="w-3 h-3 shrink-0" />
