@@ -1,4 +1,5 @@
 import { createBrowserClient } from '@supabase/ssr'
+import type { Database } from '@/lib/database.types'
 
 // Get Supabase credentials from environment variables
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
@@ -14,7 +15,7 @@ const isSupabaseConfigured: boolean =
 
 // createBrowserClient (from @supabase/ssr) syncs sessions to cookies
 // so the middleware can read them server-side — unlike the plain createClient
-export const supabase = createBrowserClient(
+export const supabase = createBrowserClient<Database>(
     supabaseUrl || 'https://placeholder.supabase.co',
     supabaseAnonKey || 'placeholder-key'
 )
