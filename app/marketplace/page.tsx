@@ -981,7 +981,7 @@ function MarketplaceContent() {
 
     const updateParam = (key: string, value: string) => {
         const p = new URLSearchParams(searchParams.toString())
-        if (value) p.set(key, value) else p.delete(key)
+        if (value) { p.set(key, value) } else { p.delete(key) }
         p.set('page', '1')
         navigate(p)
     }
@@ -1071,8 +1071,8 @@ function MarketplaceContent() {
                 onSearch={q => updateParam('make', q)}
                 onBudget={(min, max) => {
                     const p = new URLSearchParams(searchParams.toString())
-                    if (min > 0) p.set('minPrice', String(min)) else p.delete('minPrice')
-                    if (max > 0) p.set('maxPrice', String(max)) else p.delete('maxPrice')
+                    if (min > 0) { p.set('minPrice', String(min)) } else { p.delete('minPrice') }
+                    if (max > 0) { p.set('maxPrice', String(max)) } else { p.delete('maxPrice') }
                     p.set('page', '1')
                     navigate(p)
                 }}
