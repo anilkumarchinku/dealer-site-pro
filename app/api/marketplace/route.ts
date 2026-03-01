@@ -3,16 +3,26 @@
  * Cross-dealer inventory search — returns real vehicles for sale across all dealers.
  *
  * Query params:
- *   make        — comma-separated makes, e.g. "Maruti Suzuki,Hyundai"
- *   fuel_type   — comma-separated, e.g. "Petrol,Electric"
- *   condition   — "new" | "used" | "certified_pre_owned"
- *   city        — partial match on dealer location, e.g. "Mumbai"
- *   minPrice    — INR, e.g. 300000
- *   maxPrice    — INR, e.g. 2000000
- *   sortBy      — "newest" | "price_low" | "price_high" (default: newest)
- *   page        — 1-indexed (default: 1)
- *   pageSize    — results per page (default: 12, max: 48)
+ *   make         — comma-separated makes, e.g. "Maruti Suzuki,Hyundai"
+ *   fuel_type    — comma-separated, e.g. "Petrol,Electric"
+ *   exclude_fuel — comma-separated fuels to exclude, e.g. "Electric,CNG"
+ *   condition    — "new" | "used" | "certified_pre_owned"
+ *   category     — "four_wheeler" | "two_three_wheeler" | "fleet" | "bus"
+ *   city         — partial match on dealer location, e.g. "Mumbai"
+ *   minPrice     — INR, e.g. 300000
+ *   maxPrice     — INR, e.g. 2000000
+ *   sortBy       — "newest" | "price_low" | "price_high" (default: newest)
+ *   page         — 1-indexed (default: 1)
+ *   pageSize     — results per page (default: 12, max: 48)
  */
+
+// Body type mapping per vehicle category
+const CATEGORY_BODY_TYPES: Record<string, string[]> = {
+    two_three_wheeler: ['Motorcycle', 'Scooter', 'Moped', 'Two-Wheeler', 'Three-Wheeler', 'Auto', 'E-Rickshaw'],
+    fleet:             ['Truck', 'Tempo', 'Commercial', 'Van', 'Pickup', 'Mini Truck'],
+    bus:               ['Bus', 'Coach', 'Mini Bus', 'School Bus'],
+    four_wheeler:      [], // default — exclude 2/3 wheelers, bus, fleet
+}
 
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
@@ -63,6 +73,29 @@ export async function GET(req: NextRequest) {
         query = query.eq('fuel_type', fuels[0])
     } else if (fuels.length > 1) {
         query = query.in('fuel_type', fuels)
+    }
+
+    // Exclude certain fuel types (used for "Non-EV" toggle)
+    const excludeFuels = sp.get('exclude_fuel')?.split(',').map(f => f.trim()).filter(Boolean) ?? []
+    for (const ef of excludeFuels) {
+        query = query.neq('fuel_type', ef)
+    }
+
+    // Vehicle category filter (maps to body_type)
+    const category = sp.get('category') ?? 'four_wheeler'
+    const bodyTypes = CATEGORY_BODY_TYPES[category] ?? []
+    if (bodyTypes.length > 0) {
+        query = query.in('body_type', bodyTypes)
+    } else if (category === 'four_wheeler') {
+        // Exclude non-4-wheeler body types
+        const exclude4w = [
+            ...CATEGORY_BODY_TYPES.two_three_wheeler,
+            ...CATEGORY_BODY_TYPES.fleet,
+            ...CATEGORY_BODY_TYPES.bus,
+        ]
+        for (const bt of exclude4w) {
+            query = query.neq('body_type', bt)
+        }
     }
 
     const condition = sp.get('condition')
