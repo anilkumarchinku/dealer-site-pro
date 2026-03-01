@@ -3,14 +3,18 @@
  * Cross-dealer inventory search — returns real vehicles for sale across all dealers.
  *
  * Query params:
- *   make         — comma-separated makes, e.g. "Maruti Suzuki,Hyundai"
- *   fuel_type    — comma-separated, e.g. "Petrol,Electric"
+ *   make         — partial match on make, e.g. "Maruti"
+ *   fuel_type    — e.g. "Petrol" | "Electric" | "CNG"
  *   exclude_fuel — comma-separated fuels to exclude, e.g. "Electric,CNG"
  *   condition    — "new" | "used" | "certified_pre_owned"
  *   category     — "four_wheeler" | "two_three_wheeler" | "fleet" | "bus"
+ *   body_type    — e.g. "SUV" | "Hatchback" | "Sedan"
+ *   transmission — "Manual" | "Automatic"
+ *   year_from    — minimum year, e.g. 2020
+ *   year_to      — maximum year, e.g. 2024
  *   city         — partial match on dealer location, e.g. "Mumbai"
- *   minPrice     — INR, e.g. 300000
- *   maxPrice     — INR, e.g. 2000000
+ *   minPrice     — INR (not paise), e.g. 300000
+ *   maxPrice     — INR (not paise), e.g. 2000000
  *   sortBy       — "newest" | "price_low" | "price_high" (default: newest)
  *   page         — 1-indexed (default: 1)
  *   pageSize     — results per page (default: 12, max: 48)
@@ -52,10 +56,10 @@ export async function GET(req: NextRequest) {
         .from('vehicles')
         .select(`
             id, make, model, variant, year, price_paise, mileage_km,
-            color, transmission, fuel_type, condition, features,
+            color, transmission, fuel_type, body_type, condition, features,
             description, views, created_at,
             dealers (
-                id, dealership_name, slug, location, logo_url
+                id, dealership_name, slug, location, logo_url, phone, whatsapp
             )
         `, { count: 'exact' })
         .eq('status', 'available')
@@ -100,6 +104,20 @@ export async function GET(req: NextRequest) {
 
     const condition = sp.get('condition')
     if (condition) query = query.eq('condition', condition)
+
+    // Body type filter (within a category)
+    const bodyType = sp.get('body_type')?.trim()
+    if (bodyType) query = query.ilike('body_type', `%${bodyType}%`)
+
+    // Transmission filter
+    const transmission = sp.get('transmission')?.trim()
+    if (transmission) query = query.eq('transmission', transmission)
+
+    // Year range filter
+    const yearFrom = parseInt(sp.get('year_from') ?? '0')
+    const yearTo   = parseInt(sp.get('year_to')   ?? '0')
+    if (yearFrom > 0) query = query.gte('year', yearFrom)
+    if (yearTo   > 0) query = query.lte('year', yearTo)
 
     const city = sp.get('city')?.trim()
     if (city) query = query.ilike('dealers.location', `%${city}%`)
