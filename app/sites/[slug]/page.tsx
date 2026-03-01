@@ -44,10 +44,9 @@ function dbVehiclesToCars(vehicles: DBVehicle[]): Car[] {
         dimensions: { seatingCapacity: 5 },
         features: { keyFeatures: v.features ?? [] },
         images: { hero: '/placeholder-car.jpg', exterior: [], interior: [] },
-        meta: { viewCount: v.view_count },
+        meta: { viewCount: v.views },
         price: `₹${(v.price_paise / 100).toLocaleString('en-IN')}`,
         condition: v.condition,
-        video_url: v.video_url,
     }))
 }
 
@@ -463,7 +462,7 @@ export default async function SitePage({ params }: SitePageProps) {
         heroImageUrl: hero_image_url ?? undefined,
         sellsNewCars: templateSellsNew,
         sellsUsedCars: templateSellsUsed,
-        isVerified: dealer.is_verified,
+        isVerified: false,
     }
 
     // ── JSON-LD structured data ───────────────────────────────────────────────

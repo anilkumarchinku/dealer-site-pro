@@ -18,10 +18,9 @@ export interface DBVehicle {
     fuel_type?: string;
     features: string[];
     description?: string;
-    video_url?: string;       // YouTube video URL for walkaround/review
     condition: "new" | "used" | "certified_pre_owned";
     status: "available" | "reserved" | "sold" | "inactive";
-    view_count: number;
+    views: number;
     created_at: string;
 }
 
@@ -40,7 +39,6 @@ export interface AddVehiclePayload {
     fuel_type?: string;
     features?: string[];
     description?: string;
-    video_url?: string;
     condition?: "new" | "used" | "certified_pre_owned";
 }
 
@@ -85,7 +83,7 @@ export async function addVehicle(
             features:  payload.features ?? [],
             condition: payload.condition ?? "used",
             status:    "available",
-            view_count: 0,
+            views: 0,
         })
         .select("id")
         .single();
@@ -108,7 +106,7 @@ export async function bulkAddVehicles(
         features:   p.features  ?? [],
         condition:  p.condition ?? "used",
         status:     "available",
-        view_count: 0,
+        views: 0,
     }));
 
     const { data, error } = await supabase.from("vehicles").insert(rows).select("id");

@@ -55,7 +55,7 @@ export async function fetchLeads(
 
     const { data, error } = await supabase
         .from("leads")
-        .select("id, dealer_id, customer_name, customer_email, customer_phone, lead_source, vehicle_id, message, status, created_at, updated_at")
+        .select("id, dealer_id, name, email, phone, source, vehicle_id, message, status, created_at")
         .eq("dealer_id", dealerId)
         .order("created_at", { ascending: false })
         .limit(200);
@@ -68,28 +68,27 @@ export async function fetchLeads(
     return (data ?? []).map((row: {
         id: string;
         dealer_id: string;
-        customer_name: string;
-        customer_email: string | null;
-        customer_phone: string;
-        lead_source: string | null;
+        name: string;
+        email: string | null;
+        phone: string;
+        source: string | null;
         vehicle_id: string | null;
         message: string | null;
         status: string;
         created_at: string;
-        updated_at: string;
     }) => ({
         id:               row.id,
         dealer_id:        row.dealer_id,
-        name:             row.customer_name,
-        email:            row.customer_email   ?? "",
-        phone:            row.customer_phone,
-        type:             mapLeadSource(row.lead_source),
+        name:             row.name,
+        email:            row.email   ?? "",
+        phone:            row.phone,
+        type:             mapLeadSource(row.source),
         vehicle_interest: row.vehicle_id ?? undefined,
         message:          row.message    ?? undefined,
         priority:         derivePriority(row.created_at),
         status:           (row.status as LeadStatus) ?? "new",
         created_at:       row.created_at,
-        updated_at:       row.updated_at ?? row.created_at,
+        updated_at:       row.created_at,
     }));
 }
 

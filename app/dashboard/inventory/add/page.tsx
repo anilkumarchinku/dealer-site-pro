@@ -197,7 +197,6 @@ export default function AddVehiclePage() {
                 fuel_type:    formData.fuel_type,
                 features:     formData.features,
                 description:  formData.description,
-                video_url:    formData.video_url || undefined,
                 condition:    formData.condition,
             });
             if (result.success) {

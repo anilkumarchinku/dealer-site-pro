@@ -112,13 +112,13 @@ export async function POST(request: NextRequest) {
             .from('leads')
             .insert({
                 dealer_id,
-                customer_name:  name.trim(),
-                customer_phone: phone.trim(),
-                customer_email: email?.trim()   ?? null,
-                message:        message?.trim() ?? null,
-                vehicle_id:     car_id          ?? null,
-                lead_source:    safeSource,
-                status:         'new',
+                name:       name.trim(),
+                phone:      phone.trim(),
+                email:      email?.trim()   ?? null,
+                message:    message?.trim() ?? null,
+                vehicle_id: car_id          ?? null,
+                source:     safeSource,
+                status:     'new',
             })
             .select('id')
             .single()
