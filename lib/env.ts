@@ -23,8 +23,11 @@ const placeholders = [
     'your_razorpay_secret',
 ]
 
-// Only validate in production — dev can run with placeholders
-if (process.env.NODE_ENV === 'production') {
+// Only validate in production at runtime — skip during build phase (NEXT_PHASE=phase-production-build)
+if (
+    process.env.NODE_ENV === 'production' &&
+    process.env.NEXT_PHASE !== 'phase-production-build'
+) {
     const missing: string[] = []
     const placeholder: string[] = []
 
