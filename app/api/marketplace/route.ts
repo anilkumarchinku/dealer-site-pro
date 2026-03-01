@@ -44,7 +44,7 @@ export async function GET(req: NextRequest) {
             id, make, model, variant, year, price_paise, mileage_km,
             color, transmission, fuel_type, condition, features,
             description, video_url, view_count, created_at,
-            dealers!inner (
+            dealers (
                 id, dealership_name, slug, location, is_verified, logo_url
             )
         `, { count: 'exact' })
