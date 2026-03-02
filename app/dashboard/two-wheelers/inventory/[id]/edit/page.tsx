@@ -1,0 +1,264 @@
+"use client"
+
+import { useEffect, useState } from "react"
+import { useRouter, useParams } from "next/navigation"
+import { useOnboardingStore } from "@/lib/store/onboarding-store"
+import { Button } from "@/components/ui/button"
+import { VehicleImageUpload } from "@/components/two-wheelers/VehicleImageUpload"
+import { ArrowLeft, Sparkles } from "lucide-react"
+import Link from "next/link"
+import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler"
+
+const TYPES   = ["bike", "scooter", "moped", "electric"] as const
+const FUEL    = ["petrol", "electric"] as const
+const STOCK   = ["available", "booking_open", "out_of_stock"] as const
+
+export default function EditTwoWheelerVehiclePage() {
+    const router = useRouter()
+    const params = useParams()
+    const id = params.id as string
+    const { dealerId } = useOnboardingStore()
+
+    const [vehicle,   setVehicle]   = useState<TwoWheelerVehicle | null>(null)
+    const [saving,    setSaving]    = useState(false)
+    const [aiLoading, setAiLoading] = useState(false)
+    const [error,     setError]     = useState("")
+    const [images,    setImages]    = useState<string[]>([])
+
+    const [form, setForm] = useState({
+        type:                    "bike" as typeof TYPES[number],
+        brand:                   "",
+        model:                   "",
+        variant:                 "",
+        year:                    new Date().getFullYear(),
+        fuel_type:               "petrol" as typeof FUEL[number],
+        engine_cc:               "",
+        battery_kwh:             "",
+        mileage_kmpl:            "",
+        range_km:                "",
+        top_speed_kmph:          "",
+        ex_showroom_price_paise: "",
+        on_road_price_paise:     "",
+        emi_starting_paise:      "",
+        stock_status:            "available" as typeof STOCK[number],
+        bs6_compliant:           true,
+        fame_subsidy_eligible:   false,
+        charging_time_hours:     "",
+        battery_warranty_years:  "",
+        description:             "",
+        features:                "",
+        brochure_url:            "",
+    })
+
+    useEffect(() => {
+        if (!id) return
+        fetch(`/api/two-wheelers/${id}`)
+            .then(r => r.json())
+            .then((v: TwoWheelerVehicle) => {
+                setVehicle(v)
+                setImages(v.images)
+                setForm({
+                    type:                    v.type,
+                    brand:                   v.brand,
+                    model:                   v.model,
+                    variant:                 v.variant ?? "",
+                    year:                    v.year,
+                    fuel_type:               v.fuel_type,
+                    engine_cc:               v.engine_cc?.toString() ?? "",
+                    battery_kwh:             v.battery_kwh?.toString() ?? "",
+                    mileage_kmpl:            v.mileage_kmpl?.toString() ?? "",
+                    range_km:                v.range_km?.toString() ?? "",
+                    top_speed_kmph:          v.top_speed_kmph?.toString() ?? "",
+                    ex_showroom_price_paise: (v.ex_showroom_price_paise / 100).toString(),
+                    on_road_price_paise:     v.on_road_price_paise ? (v.on_road_price_paise / 100).toString() : "",
+                    emi_starting_paise:      v.emi_starting_paise  ? (v.emi_starting_paise  / 100).toString() : "",
+                    stock_status:            v.stock_status,
+                    bs6_compliant:           v.bs6_compliant,
+                    fame_subsidy_eligible:   v.fame_subsidy_eligible,
+                    charging_time_hours:     v.charging_time_hours?.toString() ?? "",
+                    battery_warranty_years:  v.battery_warranty_years?.toString() ?? "",
+                    description:             v.description ?? "",
+                    features:                v.features.join("\n"),
+                    brochure_url:            v.brochure_url ?? "",
+                })
+            })
+            .catch(() => setError("Failed to load vehicle"))
+    }, [id])
+
+    function set(field: string, value: string | boolean | number) {
+        setForm(f => ({ ...f, [field]: value }))
+    }
+
+    async function handleSubmit(e: React.FormEvent) {
+        e.preventDefault()
+        if (!dealerId || !vehicle) return
+        setSaving(true)
+        setError("")
+
+        const payload = {
+            type:                    form.type,
+            brand:                   form.brand.trim(),
+            model:                   form.model.trim(),
+            variant:                 form.variant.trim() || null,
+            year:                    Number(form.year),
+            fuel_type:               form.fuel_type,
+            engine_cc:               form.engine_cc ? Number(form.engine_cc) : null,
+            battery_kwh:             form.battery_kwh ? Number(form.battery_kwh) : null,
+            mileage_kmpl:            form.mileage_kmpl ? Number(form.mileage_kmpl) : null,
+            range_km:                form.range_km ? Number(form.range_km) : null,
+            top_speed_kmph:          form.top_speed_kmph ? Number(form.top_speed_kmph) : null,
+            ex_showroom_price_paise: Math.round(Number(form.ex_showroom_price_paise) * 100),
+            on_road_price_paise:     form.on_road_price_paise ? Math.round(Number(form.on_road_price_paise) * 100) : null,
+            emi_starting_paise:      form.emi_starting_paise  ? Math.round(Number(form.emi_starting_paise) * 100)  : null,
+            stock_status:            form.stock_status,
+            bs6_compliant:           form.bs6_compliant,
+            fame_subsidy_eligible:   form.fame_subsidy_eligible,
+            charging_time_hours:     form.charging_time_hours ? Number(form.charging_time_hours) : null,
+            battery_warranty_years:  form.battery_warranty_years ? Number(form.battery_warranty_years) : null,
+            description:             form.description.trim() || null,
+            features:                form.features.split("\n").map(s => s.trim()).filter(Boolean),
+            images,
+            brochure_url:            form.brochure_url.trim() || null,
+        }
+
+        try {
+            const res = await fetch(`/api/two-wheelers/${id}`, {
+                method:  "PUT",
+                headers: { "Content-Type": "application/json" },
+                body:    JSON.stringify(payload),
+            })
+            const data = await res.json()
+            if (!res.ok) throw new Error(data.error ?? "Failed to update")
+            router.push("/dashboard/two-wheelers/inventory")
+        } catch (err) {
+            setError(err instanceof Error ? err.message : "Something went wrong")
+        } finally {
+            setSaving(false)
+        }
+    }
+
+    if (!vehicle && !error) {
+        return <div className="text-center py-20 text-muted-foreground animate-pulse">Loading vehicle...</div>
+    }
+
+    return (
+        <div className="max-w-2xl space-y-6">
+            <div className="flex items-center gap-3">
+                <Button variant="ghost" size="sm" asChild>
+                    <Link href="/dashboard/two-wheelers/inventory"><ArrowLeft className="w-4 h-4" /></Link>
+                </Button>
+                <h1 className="text-2xl font-bold">Edit Vehicle</h1>
+            </div>
+
+            {error && <p className="text-sm text-destructive bg-destructive/10 rounded-lg px-4 py-2">{error}</p>}
+
+            <form onSubmit={handleSubmit} className="space-y-5">
+                <fieldset className="bg-card border border-border rounded-xl p-5 space-y-4">
+                    <legend className="text-sm font-semibold px-1">Basic Information</legend>
+                    <div className="grid grid-cols-2 gap-4">
+                        <div>
+                            <label className="text-sm font-medium">Type</label>
+                            <select value={form.type} onChange={e => set("type", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm">
+                                {TYPES.map(t => <option key={t} value={t}>{t}</option>)}
+                            </select>
+                        </div>
+                        <div>
+                            <label className="text-sm font-medium">Fuel Type</label>
+                            <select value={form.fuel_type} onChange={e => set("fuel_type", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm">
+                                {FUEL.map(f => <option key={f} value={f}>{f}</option>)}
+                            </select>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-3 gap-4">
+                        <div>
+                            <label className="text-sm font-medium">Brand</label>
+                            <input value={form.brand} onChange={e => set("brand", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                        </div>
+                        <div>
+                            <label className="text-sm font-medium">Model</label>
+                            <input value={form.model} onChange={e => set("model", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                        </div>
+                        <div>
+                            <label className="text-sm font-medium">Variant</label>
+                            <input value={form.variant} onChange={e => set("variant", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                        </div>
+                    </div>
+                    <div>
+                        <label className="text-sm font-medium">Year</label>
+                        <input type="number" value={form.year} onChange={e => set("year", Number(e.target.value))} className="mt-1 w-32 rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                    </div>
+                </fieldset>
+
+                <fieldset className="bg-card border border-border rounded-xl p-5 space-y-4">
+                    <legend className="text-sm font-semibold px-1">Pricing (₹)</legend>
+                    <div className="grid grid-cols-3 gap-4">
+                        <div>
+                            <label className="text-sm font-medium">Ex-Showroom *</label>
+                            <input type="number" value={form.ex_showroom_price_paise} onChange={e => set("ex_showroom_price_paise", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                        </div>
+                        <div>
+                            <label className="text-sm font-medium">On-Road</label>
+                            <input type="number" value={form.on_road_price_paise} onChange={e => set("on_road_price_paise", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                        </div>
+                        <div>
+                            <label className="text-sm font-medium">EMI Starting</label>
+                            <input type="number" value={form.emi_starting_paise} onChange={e => set("emi_starting_paise", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                        </div>
+                    </div>
+                    <div>
+                        <label className="text-sm font-medium">Stock Status</label>
+                        <select value={form.stock_status} onChange={e => set("stock_status", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm">
+                            {STOCK.map(s => <option key={s} value={s}>{s.replace("_", " ")}</option>)}
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset className="bg-card border border-border rounded-xl p-5 space-y-4">
+                    <legend className="text-sm font-semibold px-1">Media & Details</legend>
+                    <div>
+                        <label className="text-sm font-medium mb-2 block">Vehicle Images</label>
+                        <VehicleImageUpload value={images} onChange={setImages} maxImages={6} />
+                    </div>
+                    <div>
+                        <label className="text-sm font-medium">Features (one per line)</label>
+                        <textarea value={form.features} onChange={e => set("features", e.target.value)} rows={4} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                    </div>
+                    <div>
+                        <div className="flex items-center justify-between mb-1">
+                            <label className="text-sm font-medium">Description</label>
+                            <button
+                                type="button"
+                                onClick={async () => {
+                                    if (!form.brand || !form.model) { setError("Enter brand and model first."); return }
+                                    setAiLoading(true); setError("")
+                                    try {
+                                        const res = await fetch("/api/ai/generate-description", {
+                                            method: "POST",
+                                            headers: { "Content-Type": "application/json" },
+                                            body: JSON.stringify({ make: form.brand, model: form.model, variant: form.variant || undefined, year: form.year, fuel_type: form.fuel_type }),
+                                        })
+                                        const data = await res.json()
+                                        if (data.description) set("description", data.description)
+                                        else setError(data.error ?? "AI generation failed")
+                                    } catch { setError("AI generation failed") }
+                                    finally { setAiLoading(false) }
+                                }}
+                                disabled={aiLoading}
+                                className="inline-flex items-center gap-1.5 text-xs text-primary hover:underline disabled:opacity-50"
+                            >
+                                <Sparkles className="w-3 h-3" />
+                                {aiLoading ? "Generating..." : "Generate with AI"}
+                            </button>
+                        </div>
+                        <textarea value={form.description} onChange={e => set("description", e.target.value)} rows={3} className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                    </div>
+                </fieldset>
+
+                <div className="flex items-center gap-3">
+                    <Button type="submit" disabled={saving}>{saving ? "Saving..." : "Save Changes"}</Button>
+                    <Button type="button" variant="outline" asChild><Link href="/dashboard/two-wheelers/inventory">Cancel</Link></Button>
+                </div>
+            </form>
+        </div>
+    )
+}

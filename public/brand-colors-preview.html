@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Colors Preview — Indian 2W & 3W</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0f;
+      color: #e0e0e0;
+      min-height: 100vh
+    }
+
+    .header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      border-bottom: 1px solid rgba(255, 255, 255, .08)
+    }
+
+    .header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #6c63ff, #e91e90, #ff6f00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px
+    }
+
+    .header p {
+      color: #999;
+      font-size: .95rem
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 18px;
+      flex-wrap: wrap
+    }
+
+    .stat {
+      background: rgba(255, 255, 255, .05);
+      padding: 10px 20px;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, .08)
+    }
+
+    .stat span {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #6c63ff
+    }
+
+    .stat small {
+      display: block;
+      font-size: .75rem;
+      color: #888;
+      margin-top: 2px
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 20px;
+      flex-wrap: wrap
+    }
+
+    .tab {
+      padding: 10px 24px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .08);
+      color: #bbb;
+      cursor: pointer;
+      font-size: .9rem;
+      transition: all .3s
+    }
+
+    .tab:hover,
+    .tab.active {
+      background: linear-gradient(135deg, #6c63ff, #e91e90);
+      color: #fff;
+      border-color: transparent
+    }
+
+    .search {
+      display: flex;
+      justify-content: center;
+      padding: 0 20px 20px
+    }
+
+    .search input {
+      width: 100%;
+      max-width: 500px;
+      padding: 12px 20px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .1);
+      color: #fff;
+      font-size: .95rem;
+      outline: none
+    }
+
+    .search input:focus {
+      border-color: #6c63ff;
+      box-shadow: 0 0 20px rgba(108, 99, 255, .15)
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
+      padding: 0 24px 40px;
+      max-width: 1400px;
+      margin: 0 auto
+    }
+
+    .card {
+      background: rgba(255, 255, 255, .03);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .06);
+      transition: transform .3s, box-shadow .3s
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, .4)
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, .06)
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      object-fit: contain;
+      background: #fff;
+      padding: 3px
+    }
+
+    .logo-placeholder {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #fff
+    }
+
+    .brand-info h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff
+    }
+
+    .brand-info .meta {
+      font-size: .75rem;
+      color: #888;
+      margin-top: 2px
+    }
+
+    .brand-info .meta .tag {
+      display: inline-block;
+      padding: 1px 8px;
+      background: rgba(108, 99, 255, .15);
+      color: #9d97ff;
+      border-radius: 10px;
+      font-size: .65rem;
+      margin-left: 4px
+    }
+
+    .colors-row {
+      display: flex;
+      padding: 0 20px;
+      gap: 6px;
+      margin: 14px 0 6px
+    }
+
+    .color-swatch {
+      flex: 1;
+      height: 50px;
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+      transition: transform .2s
+    }
+
+    .color-swatch:hover {
+      transform: scale(1.08);
+      z-index: 2
+    }
+
+    .color-swatch .tooltip {
+      position: absolute;
+      bottom: -28px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #222;
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: .65rem;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity .2s;
+      pointer-events: none;
+      z-index: 10
+    }
+
+    .color-swatch:hover .tooltip {
+      opacity: 1
+    }
+
+    .label-row {
+      display: flex;
+      padding: 0 20px;
+      gap: 6px;
+      margin-bottom: 10px
+    }
+
+    .label-row span {
+      flex: 1;
+      text-align: center;
+      font-size: .6rem;
+      color: #666;
+      text-transform: uppercase
+    }
+
+    .gradient-row {
+      padding: 0 20px 14px
+    }
+
+    .gradient-bar {
+      height: 24px;
+      border-radius: 8px;
+      width: 100%
+    }
+
+    .gradient-label {
+      font-size: .6rem;
+      color: #555;
+      text-align: center;
+      margin-top: 4px
+    }
+
+    .extra-colors {
+      padding: 4px 20px 16px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    .extra-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      background: rgba(255, 255, 255, .04);
+      border-radius: 8px;
+      font-size: .7rem;
+      color: #aaa
+    }
+
+    .extra-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, .1)
+    }
+
+    .section-title {
+      text-align: center;
+      padding: 30px 20px 10px;
+      font-size: 1.5rem;
+      font-weight: 700
+    }
+
+    .section-title.trad {
+      color: #ff6f00
+    }
+
+    .section-title.ev {
+      color: #56B33B
+    }
+
+    .section-title.tw {
+      color: #00B4DC
+    }
+
+    #count {
+      color: #6c63ff
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>🏍️ Indian Two & Three Wheeler Brand Colors</h1>
+    <p>Complete brand color palette with primary, secondary, tertiary, gradients & more</p>
+    <div class="stats">
+      <div class="stat"><span id="totalCount">71</span><small>Total Brands</small></div>
+      <div class="stat"><span>25</span><small>Traditional 2W</small></div>
+      <div class="stat"><span>26</span><small>Electric 2W</small></div>
+      <div class="stat"><span>20</span><small>Three Wheeler</small></div>
+    </div>
+  </div>
+  <div class="tabs">
+    <div class="tab active" onclick="filterCards('all')">All</div>
+    <div class="tab" onclick="filterCards('traditional')">🏍️ Traditional</div>
+    <div class="tab" onclick="filterCards('electric')">⚡ Electric</div>
+    <div class="tab" onclick="filterCards('threewheeler')">🛺 Three Wheeler</div>
+  </div>
+  <div class="search"><input type="text" id="searchBox" placeholder="Search brand..."
+      oninput="searchBrands(this.value)"></div>
+  <div class="grid" id="brandGrid"></div>
+  <script>
+    let allBrands = [];
+    async function init() {
+      const res = await fetch('/data/brand-colors.json');
+      const data = await res.json();
+      data.twoWheelers.traditional.forEach(b => { b._cat = 'traditional'; allBrands.push(b) });
+      data.twoWheelers.electric.forEach(b => { b._cat = 'electric'; allBrands.push(b) });
+      data.threeWheelers.forEach(b => { b._cat = 'threewheeler'; allBrands.push(b) });
+      document.getElementById('totalCount').textContent = allBrands.length;
+      renderCards(allBrands);
+    }
+    function renderCards(brands) {
+      const grid = document.getElementById('brandGrid');
+      grid.innerHTML = '';
+      brands.forEach(b => {
+        const c = b.colors;
+        const logoExts = ['png', 'svg', 'webp'];
+        const initial = b.name.charAt(0);
+        const catLabel = b._cat === 'traditional' ? 'Traditional 2W' : b._cat === 'electric' ? 'Electric 2W' : 'Three Wheeler';
+        const catTag = b._cat === 'traditional' ? '🏍️' : b._cat === 'electric' ? '⚡' : '🛺';
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.dataset.cat = b._cat;
+        card.dataset.name = b.name.toLowerCase();
+        const gradStr = c.gradient?.primaryToSecondary || `linear-gradient(135deg,${c.primary.hex},${c.secondary.hex})`;
+        const gradLight = c.gradient?.primaryLight || `linear-gradient(135deg,${c.primary.hex},${c.tertiary?.hex || c.accent.hex})`;
+        card.innerHTML = `
+      <div class="card-header">
+        <img class="logo" src="/data/brand-logos/${b.id}.png" alt="${b.name}" onerror="this.onerror=()=>{this.onerror=()=>{this.outerHTML='<div class=\\'logo-placeholder\\' style=\\'background:${c.primary.hex}\\'>${initial}</div>'};this.src='/data/brand-logos/${b.id}.webp'};this.src='/data/brand-logos/${b.id}.svg'">
+        <div class="brand-info">
+          <h3>${b.name}</h3>
+          <div class="meta">${b.country} <span class="tag">${catTag} ${b.type}</span></div>
+        </div>
+      </div>
+      <div class="colors-row">
+        <div class="color-swatch" style="background:${c.primary.hex}" onclick="copyColor('${c.primary.hex}')"><div class="tooltip">${c.primary.name}<br>${c.primary.hex}</div></div>
+        <div class="color-swatch" style="background:${c.secondary.hex}" onclick="copyColor('${c.secondary.hex}')"><div class="tooltip">${c.secondary.name}<br>${c.secondary.hex}</div></div>
+        <div class="color-swatch" style="background:${c.accent.hex}" onclick="copyColor('${c.accent.hex}')"><div class="tooltip">${c.accent.name}<br>${c.accent.hex}</div></div>
+        ${c.tertiary ? `<div class="color-swatch" style="background:${c.tertiary.hex}" onclick="copyColor('${c.tertiary.hex}')"><div class="tooltip">Tertiary<br>${c.tertiary.hex}</div></div>` : ''}
+        <div class="color-swatch" style="background:${c.background.hex};border:1px solid rgba(255,255,255,.1)" onclick="copyColor('${c.background.hex}')"><div class="tooltip">${c.background.name}<br>${c.background.hex}</div></div>
+      </div>
+      <div class="label-row"><span>Primary</span><span>Secondary</span><span>Accent</span>${c.tertiary ? '<span>Tertiary</span>' : ''}<span>BG</span></div>
+      <div class="gradient-row">
+        <div class="gradient-bar" style="background:${gradStr}"></div>
+        <div class="gradient-label">Primary → Secondary</div>
+      </div>
+      <div class="extra-colors">
+        ${c.textOnPrimary ? `<div class="extra-pill"><div class="extra-dot" style="background:${c.textOnPrimary.hex}"></div>Text on Primary ${c.textOnPrimary.hex}</div>` : ''}
+        ${c.hover ? `<div class="extra-pill"><div class="extra-dot" style="background:${c.hover.hex}"></div>Hover ${c.hover.hex}</div>` : ''}
+        ${c.active ? `<div class="extra-pill"><div class="extra-dot" style="background:${c.active.hex}"></div>Active ${c.active.hex}</div>` : ''}
+      </div>`;
+        grid.appendChild(card);
+      });
+    }
+    function filterCards(cat) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      event.target.classList.add('active');
+      if (cat === 'all') { renderCards(allBrands); return }
+      renderCards(allBrands.filter(b => b._cat === cat));
+    }
+    function searchBrands(q) {
+      const f = allBrands.filter(b => b.name.toLowerCase().includes(q.toLowerCase()));
+      renderCards(f);
+    }
+    function copyColor(hex) {
+      navigator.clipboard.writeText(hex);
+      const toast = document.createElement('div');
+      toast.style.cssText = 'position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#6c63ff;color:#fff;padding:10px 24px;border-radius:30px;font-size:.85rem;z-index:999;animation:fadeOut 1.5s forwards';
+      toast.textContent = `Copied ${hex}`;
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 1500);
+    }
+    const style = document.createElement('style');
+    style.textContent = '@keyframes fadeOut{0%{opacity:1}70%{opacity:1}100%{opacity:0}}';
+    document.head.appendChild(style);
+    init();
+  </script>
+</body>
+
+</html>

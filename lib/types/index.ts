@@ -194,3 +194,9 @@ export interface DashboardStats {
     rating: number;
     totalReviews: number;
 }
+
+// Two-Wheeler module
+export * from './two-wheeler';
+
+// Three-Wheeler module
+export * from './three-wheeler';

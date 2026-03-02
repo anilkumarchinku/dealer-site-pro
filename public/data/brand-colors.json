@@ -1,0 +1,3715 @@
+{
+  "metadata": {
+    "description": "Brand colors for all two-wheeler and three-wheeler brands available in India",
+    "lastUpdated": "2026-03-02",
+    "sources": [
+      "brandfetch.com",
+      "schemecolor.com",
+      "brandpalettes.com",
+      "brandcolorcode.com",
+      "logotyp.us",
+      "Official brand websites"
+    ],
+    "totalBrands": 72
+  },
+  "twoWheelers": {
+    "traditional": [
+      {
+        "id": "hero-motocorp",
+        "name": "Hero MotoCorp",
+        "country": "India",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Hero Red",
+            "hex": "#D9241C",
+            "rgb": "217, 36, 28"
+          },
+          "secondary": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Light Grey",
+            "hex": "#F5F5F5",
+            "rgb": "245, 245, 245"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#f0a7a4",
+            "rgb": "240, 167, 164"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #D9241C, #000000)",
+            "primaryLight": "linear-gradient(135deg, #D9241C, #e87c77)",
+            "darkOverlay": "linear-gradient(180deg, #410b08, #000000)"
+          },
+          "hover": {
+            "hex": "#b81f18"
+          },
+          "active": {
+            "hex": "#a31b15"
+          }
+        }
+      },
+      {
+        "id": "honda-hmsi",
+        "name": "Honda Motorcycle & Scooter India",
+        "country": "Japan",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Honda Red",
+            "hex": "#CC0000",
+            "rgb": "204, 0, 0"
+          },
+          "secondary": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "accent": {
+            "name": "Dark Grey",
+            "hex": "#333333",
+            "rgb": "51, 51, 51"
+          },
+          "background": {
+            "name": "Silver",
+            "hex": "#C0C0C0",
+            "rgb": "192, 192, 192"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#eb9999",
+            "rgb": "235, 153, 153"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#000000"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #CC0000, #FFFFFF)",
+            "primaryLight": "linear-gradient(135deg, #CC0000, #e06666)",
+            "darkOverlay": "linear-gradient(180deg, #3d0000, #4d4d4d)"
+          },
+          "hover": {
+            "hex": "#ad0000"
+          },
+          "active": {
+            "hex": "#990000"
+          }
+        }
+      },
+      {
+        "id": "tvs-motor",
+        "name": "TVS Motor Company",
+        "country": "India",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Bay of Many Blue",
+            "hex": "#253C80",
+            "rgb": "37, 60, 128"
+          },
+          "secondary": {
+            "name": "Palm Fruit Red",
+            "hex": "#DC4226",
+            "rgb": "220, 66, 38"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Chathams Blue",
+            "hex": "#183883",
+            "rgb": "24, 56, 131"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#a8b1cc",
+            "rgb": "168, 177, 204"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #253C80, #DC4226)",
+            "primaryLight": "linear-gradient(135deg, #253C80, #7c8ab3)",
+            "darkOverlay": "linear-gradient(180deg, #0b1226, #42140b)"
+          },
+          "hover": {
+            "hex": "#1f336d"
+          },
+          "active": {
+            "hex": "#1c2d60"
+          }
+        }
+      },
+      {
+        "id": "bajaj-auto",
+        "name": "Bajaj Auto",
+        "country": "India",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Cobalt Blue",
+            "hex": "#004DA8",
+            "rgb": "0, 77, 168"
+          },
+          "secondary": {
+            "name": "Crimson Red",
+            "hex": "#ED1C24",
+            "rgb": "237, 28, 36"
+          },
+          "accent": {
+            "name": "Malibu Blue",
+            "hex": "#69B5FE",
+            "rgb": "105, 181, 254"
+          },
+          "background": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#99b8dc",
+            "rgb": "153, 184, 220"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #004DA8, #ED1C24)",
+            "primaryLight": "linear-gradient(135deg, #004DA8, #6694cb)",
+            "darkOverlay": "linear-gradient(180deg, #001732, #47080b)"
+          },
+          "hover": {
+            "hex": "#00418f"
+          },
+          "active": {
+            "hex": "#003a7e"
+          }
+        }
+      },
+      {
+        "id": "royal-enfield",
+        "name": "Royal Enfield",
+        "country": "India",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Alizarin Crimson",
+            "hex": "#DA291C",
+            "rgb": "218, 41, 28"
+          },
+          "secondary": {
+            "name": "Mine Shaft Black",
+            "hex": "#212121",
+            "rgb": "33, 33, 33"
+          },
+          "accent": {
+            "name": "Mustard Gold",
+            "hex": "#EBAB00",
+            "rgb": "235, 171, 0"
+          },
+          "background": {
+            "name": "Pearl Lusta",
+            "hex": "#FCF8E3",
+            "rgb": "252, 248, 227"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#f0a9a4",
+            "rgb": "240, 169, 164"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #DA291C, #212121)",
+            "primaryLight": "linear-gradient(135deg, #DA291C, #e97f77)",
+            "darkOverlay": "linear-gradient(180deg, #410c08, #0a0a0a)"
+          },
+          "hover": {
+            "hex": "#b92318"
+          },
+          "active": {
+            "hex": "#a41f15"
+          }
+        }
+      },
+      {
+        "id": "yamaha-india",
+        "name": "Yamaha Motor India",
+        "country": "Japan",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Vivid Red",
+            "hex": "#F30B16",
+            "rgb": "243, 11, 22"
+          },
+          "secondary": {
+            "name": "Denim Blue",
+            "hex": "#1A73E9",
+            "rgb": "26, 115, 233"
+          },
+          "accent": {
+            "name": "Silver Sand",
+            "hex": "#BFC1C3",
+            "rgb": "191, 193, 195"
+          },
+          "background": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#fa9da2",
+            "rgb": "250, 157, 162"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #F30B16, #1A73E9)",
+            "primaryLight": "linear-gradient(135deg, #F30B16, #f86d73)",
+            "darkOverlay": "linear-gradient(180deg, #490307, #082346)"
+          },
+          "hover": {
+            "hex": "#cf0913"
+          },
+          "active": {
+            "hex": "#b60811"
+          }
+        }
+      },
+      {
+        "id": "suzuki-motorcycle",
+        "name": "Suzuki Motorcycle India",
+        "country": "Japan",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Suzuki Blue",
+            "hex": "#003399",
+            "rgb": "0, 51, 153"
+          },
+          "secondary": {
+            "name": "Rich Red",
+            "hex": "#E20A17",
+            "rgb": "226, 10, 23"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Pickled Bluewood",
+            "hex": "#314059",
+            "rgb": "49, 64, 89"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#99add6",
+            "rgb": "153, 173, 214"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #003399, #E20A17)",
+            "primaryLight": "linear-gradient(135deg, #003399, #6685c2)",
+            "darkOverlay": "linear-gradient(180deg, #000f2e, #440307)"
+          },
+          "hover": {
+            "hex": "#002b82"
+          },
+          "active": {
+            "hex": "#002673"
+          }
+        }
+      },
+      {
+        "id": "ktm-india",
+        "name": "KTM India",
+        "country": "Austria",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "KTM Orange",
+            "hex": "#FF6400",
+            "rgb": "255, 100, 0"
+          },
+          "secondary": {
+            "name": "Classic Black",
+            "hex": "#1C1919",
+            "rgb": "28, 25, 25"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Charcoal",
+            "hex": "#221F1F",
+            "rgb": "34, 31, 31"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#ffc199",
+            "rgb": "255, 193, 153"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#000000"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #FF6400, #1C1919)",
+            "primaryLight": "linear-gradient(135deg, #FF6400, #ffa266)",
+            "darkOverlay": "linear-gradient(180deg, #4d1e00, #080808)"
+          },
+          "hover": {
+            "hex": "#d95500"
+          },
+          "active": {
+            "hex": "#bf4b00"
+          }
+        }
+      },
+      {
+        "id": "husqvarna-india",
+        "name": "Husqvarna India",
+        "country": "Sweden",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Tangaroa Blue",
+            "hex": "#021547",
+            "rgb": "2, 21, 71"
+          },
+          "secondary": {
+            "name": "Prussian Blue",
+            "hex": "#002551",
+            "rgb": "0, 37, 81"
+          },
+          "accent": {
+            "name": "Alabaster White",
+            "hex": "#F8F8F8",
+            "rgb": "248, 248, 248"
+          },
+          "background": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#9aa1b5",
+            "rgb": "154, 161, 181"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #021547, #002551)",
+            "primaryLight": "linear-gradient(135deg, #021547, #677391)",
+            "darkOverlay": "linear-gradient(180deg, #010615, #000b18)"
+          },
+          "hover": {
+            "hex": "#02123c"
+          },
+          "active": {
+            "hex": "#021035"
+          }
+        }
+      },
+      {
+        "id": "jawa-motorcycles",
+        "name": "Jawa Motorcycles",
+        "country": "India",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Spartan Crimson",
+            "hex": "#A31D1E",
+            "rgb": "163, 29, 30"
+          },
+          "secondary": {
+            "name": "Cod Gray",
+            "hex": "#0F0F0F",
+            "rgb": "15, 15, 15"
+          },
+          "accent": {
+            "name": "Christmas White",
+            "hex": "#EEEAEF",
+            "rgb": "238, 234, 239"
+          },
+          "background": {
+            "name": "Bright Gray",
+            "hex": "#EEEAEF",
+            "rgb": "238, 234, 239"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#daa5a5",
+            "rgb": "218, 165, 165"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #A31D1E, #0F0F0F)",
+            "primaryLight": "linear-gradient(135deg, #A31D1E, #c87778)",
+            "darkOverlay": "linear-gradient(180deg, #310909, #050505)"
+          },
+          "hover": {
+            "hex": "#8b191a"
+          },
+          "active": {
+            "hex": "#7a1617"
+          }
+        }
+      },
+      {
+        "id": "yezdi-motorcycles",
+        "name": "Yezdi Motorcycles",
+        "country": "India",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Old Brick Red",
+            "hex": "#8F271E",
+            "rgb": "143, 39, 30"
+          },
+          "secondary": {
+            "name": "Forest Green",
+            "hex": "#2E7D32",
+            "rgb": "46, 125, 50"
+          },
+          "accent": {
+            "name": "Dark Grey",
+            "hex": "#333333",
+            "rgb": "51, 51, 51"
+          },
+          "background": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#d2a9a5",
+            "rgb": "210, 169, 165"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #8F271E, #2E7D32)",
+            "primaryLight": "linear-gradient(135deg, #8F271E, #bc7d78)",
+            "darkOverlay": "linear-gradient(180deg, #2b0c09, #0e260f)"
+          },
+          "hover": {
+            "hex": "#7a211a"
+          },
+          "active": {
+            "hex": "#6b1d17"
+          }
+        }
+      },
+      {
+        "id": "benelli-india",
+        "name": "Benelli India",
+        "country": "Italy",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Fun Green",
+            "hex": "#019732",
+            "rgb": "1, 151, 50"
+          },
+          "secondary": {
+            "name": "Shuttle Gray",
+            "hex": "#5B6770",
+            "rgb": "91, 103, 112"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#99d5ad",
+            "rgb": "153, 213, 173"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #019732, #5B6770)",
+            "primaryLight": "linear-gradient(135deg, #019732, #67c184)",
+            "darkOverlay": "linear-gradient(180deg, #002d0f, #1b1f22)"
+          },
+          "hover": {
+            "hex": "#01802b"
+          },
+          "active": {
+            "hex": "#017126"
+          }
+        }
+      },
+      {
+        "id": "kawasaki-india",
+        "name": "Kawasaki India",
+        "country": "Japan",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Kawasaki Green",
+            "hex": "#69BE28",
+            "rgb": "105, 190, 40"
+          },
+          "secondary": {
+            "name": "Kawasaki Red",
+            "hex": "#E60012",
+            "rgb": "230, 0, 18"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#c3e5a9",
+            "rgb": "195, 229, 169"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#000000"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #69BE28, #E60012)",
+            "primaryLight": "linear-gradient(135deg, #69BE28, #a5d87e)",
+            "darkOverlay": "linear-gradient(180deg, #20390c, #450005)"
+          },
+          "hover": {
+            "hex": "#59a222"
+          },
+          "active": {
+            "hex": "#4f8f1e"
+          }
+        }
+      },
+      {
+        "id": "aprilia-india",
+        "name": "Aprilia India",
+        "country": "Italy",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Monza Red",
+            "hex": "#E20714",
+            "rgb": "226, 7, 20"
+          },
+          "secondary": {
+            "name": "Lonestar Dark Red",
+            "hex": "#6C0000",
+            "rgb": "108, 0, 0"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#f39ca1",
+            "rgb": "243, 156, 161"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #E20714, #6C0000)",
+            "primaryLight": "linear-gradient(135deg, #E20714, #ee6a72)",
+            "darkOverlay": "linear-gradient(180deg, #440206, #200000)"
+          },
+          "hover": {
+            "hex": "#c00611"
+          },
+          "active": {
+            "hex": "#aa050f"
+          }
+        }
+      },
+      {
+        "id": "vespa-india",
+        "name": "Vespa India",
+        "country": "Italy",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Bay of Many Blue",
+            "hex": "#2E3192",
+            "rgb": "46, 49, 146"
+          },
+          "secondary": {
+            "name": "Cornflower Blue",
+            "hex": "#9BC9EA",
+            "rgb": "155, 201, 234"
+          },
+          "accent": {
+            "name": "Chrome Silver",
+            "hex": "#C0C0C0",
+            "rgb": "192, 192, 192"
+          },
+          "background": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#abadd3",
+            "rgb": "171, 173, 211"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#000000"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #2E3192, #9BC9EA)",
+            "primaryLight": "linear-gradient(135deg, #2E3192, #8283be)",
+            "darkOverlay": "linear-gradient(180deg, #0e0f2c, #2f3c46)"
+          },
+          "hover": {
+            "hex": "#272a7c"
+          },
+          "active": {
+            "hex": "#23256e"
+          }
+        }
+      },
+      {
+        "id": "harley-davidson-india",
+        "name": "Harley-Davidson India",
+        "country": "USA",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Harley Orange",
+            "hex": "#FF6600",
+            "rgb": "255, 102, 0"
+          },
+          "secondary": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Dark Charcoal",
+            "hex": "#2B2E33",
+            "rgb": "43, 46, 51"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#ffc299",
+            "rgb": "255, 194, 153"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#000000"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #FF6600, #000000)",
+            "primaryLight": "linear-gradient(135deg, #FF6600, #ffa366)",
+            "darkOverlay": "linear-gradient(180deg, #4d1f00, #000000)"
+          },
+          "hover": {
+            "hex": "#d95700"
+          },
+          "active": {
+            "hex": "#bf4d00"
+          }
+        }
+      },
+      {
+        "id": "triumph-india",
+        "name": "Triumph India",
+        "country": "UK",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Cardinal Red",
+            "hex": "#CD192D",
+            "rgb": "205, 25, 45"
+          },
+          "secondary": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Off Black",
+            "hex": "#080000",
+            "rgb": "8, 0, 0"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#eba3ab",
+            "rgb": "235, 163, 171"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #CD192D, #000000)",
+            "primaryLight": "linear-gradient(135deg, #CD192D, #e17581)",
+            "darkOverlay": "linear-gradient(180deg, #3e080e, #000000)"
+          },
+          "hover": {
+            "hex": "#ae1526"
+          },
+          "active": {
+            "hex": "#9a1322"
+          }
+        }
+      },
+      {
+        "id": "ducati-india",
+        "name": "Ducati India",
+        "country": "Italy",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Ducati Red",
+            "hex": "#CC0000",
+            "rgb": "204, 0, 0"
+          },
+          "secondary": {
+            "name": "Blood Red",
+            "hex": "#B00E0A",
+            "rgb": "176, 14, 10"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Cod Gray",
+            "hex": "#0F0F0F",
+            "rgb": "15, 15, 15"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#eb9999",
+            "rgb": "235, 153, 153"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #CC0000, #B00E0A)",
+            "primaryLight": "linear-gradient(135deg, #CC0000, #e06666)",
+            "darkOverlay": "linear-gradient(180deg, #3d0000, #350403)"
+          },
+          "hover": {
+            "hex": "#ad0000"
+          },
+          "active": {
+            "hex": "#990000"
+          }
+        }
+      },
+      {
+        "id": "bmw-motorrad-india",
+        "name": "BMW Motorrad India",
+        "country": "Germany",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "BMW Blue",
+            "hex": "#0166B1",
+            "rgb": "1, 102, 177"
+          },
+          "secondary": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Grey",
+            "hex": "#6F6F6F",
+            "rgb": "111, 111, 111"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#99c2e0",
+            "rgb": "153, 194, 224"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #0166B1, #000000)",
+            "primaryLight": "linear-gradient(135deg, #0166B1, #67a3d0)",
+            "darkOverlay": "linear-gradient(180deg, #001f35, #000000)"
+          },
+          "hover": {
+            "hex": "#015796"
+          },
+          "active": {
+            "hex": "#014d85"
+          }
+        }
+      },
+      {
+        "id": "indian-motorcycle",
+        "name": "Indian Motorcycle",
+        "country": "USA",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Indian Red",
+            "hex": "#961923",
+            "rgb": "150, 25, 35"
+          },
+          "secondary": {
+            "name": "Dark Burgundy",
+            "hex": "#850E04",
+            "rgb": "133, 14, 4"
+          },
+          "accent": {
+            "name": "Gold",
+            "hex": "#C9A84C",
+            "rgb": "201, 168, 76"
+          },
+          "background": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#d5a3a7",
+            "rgb": "213, 163, 167"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #961923, #850E04)",
+            "primaryLight": "linear-gradient(135deg, #961923, #c0757b)",
+            "darkOverlay": "linear-gradient(180deg, #2d080b, #280401)"
+          },
+          "hover": {
+            "hex": "#80151e"
+          },
+          "active": {
+            "hex": "#71131a"
+          }
+        }
+      },
+      {
+        "id": "moto-guzzi",
+        "name": "Moto Guzzi",
+        "country": "Italy",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Eagle Red",
+            "hex": "#D01A1A",
+            "rgb": "208, 26, 26"
+          },
+          "secondary": {
+            "name": "Silver",
+            "hex": "#A8A9AD",
+            "rgb": "168, 169, 173"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#eca3a3",
+            "rgb": "236, 163, 163"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#000000"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #D01A1A, #A8A9AD)",
+            "primaryLight": "linear-gradient(135deg, #D01A1A, #e37676)",
+            "darkOverlay": "linear-gradient(180deg, #3e0808, #323334)"
+          },
+          "hover": {
+            "hex": "#b11616"
+          },
+          "active": {
+            "hex": "#9c1414"
+          }
+        }
+      },
+      {
+        "id": "cfmoto-india",
+        "name": "CFMoto India",
+        "country": "China",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Orange",
+            "hex": "#FF6600",
+            "rgb": "255, 102, 0"
+          },
+          "secondary": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Dark Grey",
+            "hex": "#1A1A1A",
+            "rgb": "26, 26, 26"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#ffc299",
+            "rgb": "255, 194, 153"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#000000"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #FF6600, #000000)",
+            "primaryLight": "linear-gradient(135deg, #FF6600, #ffa366)",
+            "darkOverlay": "linear-gradient(180deg, #4d1f00, #000000)"
+          },
+          "hover": {
+            "hex": "#d95700"
+          },
+          "active": {
+            "hex": "#bf4d00"
+          }
+        }
+      },
+      {
+        "id": "keeway-india",
+        "name": "Keeway India",
+        "country": "Hungary",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "secondary": {
+            "name": "Red",
+            "hex": "#C8102E",
+            "rgb": "200, 16, 46"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Dark Grey",
+            "hex": "#1A1A1A",
+            "rgb": "26, 26, 26"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#999999",
+            "rgb": "153, 153, 153"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #000000, #C8102E)",
+            "primaryLight": "linear-gradient(135deg, #000000, #666666)",
+            "darkOverlay": "linear-gradient(180deg, #000000, #3c050e)"
+          },
+          "hover": {
+            "hex": "#000000"
+          },
+          "active": {
+            "hex": "#000000"
+          }
+        }
+      },
+      {
+        "id": "zontes-india",
+        "name": "Zontes India",
+        "country": "China",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Blue",
+            "hex": "#003087",
+            "rgb": "0, 48, 135"
+          },
+          "secondary": {
+            "name": "Orange",
+            "hex": "#FF6600",
+            "rgb": "255, 102, 0"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#99accf",
+            "rgb": "153, 172, 207"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#000000"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #003087, #FF6600)",
+            "primaryLight": "linear-gradient(135deg, #003087, #6683b7)",
+            "darkOverlay": "linear-gradient(180deg, #000e29, #4d1f00)"
+          },
+          "hover": {
+            "hex": "#002973"
+          },
+          "active": {
+            "hex": "#002465"
+          }
+        }
+      },
+      {
+        "id": "mahindra-two-wheelers",
+        "name": "Mahindra Two Wheelers",
+        "country": "India",
+        "type": "ICE",
+        "colors": {
+          "primary": {
+            "name": "Mahindra Red",
+            "hex": "#ED2831",
+            "rgb": "237, 40, 49"
+          },
+          "secondary": {
+            "name": "Modern Gray",
+            "hex": "#6D6C71",
+            "rgb": "109, 108, 113"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Dark Grey",
+            "hex": "#333333",
+            "rgb": "51, 51, 51"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#f8a9ad",
+            "rgb": "248, 169, 173"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #ED2831, #6D6C71)",
+            "primaryLight": "linear-gradient(135deg, #ED2831, #f47e83)",
+            "darkOverlay": "linear-gradient(180deg, #470c0f, #212022)"
+          },
+          "hover": {
+            "hex": "#c9222a"
+          },
+          "active": {
+            "hex": "#b21e25"
+          }
+        }
+      }
+    ],
+    "electric": [
+      {
+        "id": "ola-electric",
+        "name": "Ola Electric",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Ola Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "secondary": {
+            "name": "Sporty Yellow Pear",
+            "hex": "#D6DF22",
+            "rgb": "214, 223, 34"
+          },
+          "accent": {
+            "name": "Mountain Meadow Green",
+            "hex": "#16AA51",
+            "rgb": "22, 170, 81"
+          },
+          "background": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#999999",
+            "rgb": "153, 153, 153"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#000000"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #000000, #D6DF22)",
+            "primaryLight": "linear-gradient(135deg, #000000, #666666)",
+            "darkOverlay": "linear-gradient(180deg, #000000, #40430a)"
+          },
+          "hover": {
+            "hex": "#000000"
+          },
+          "active": {
+            "hex": "#000000"
+          }
+        }
+      },
+      {
+        "id": "ather-energy",
+        "name": "Ather Energy",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Apple Green",
+            "hex": "#56B33B",
+            "rgb": "86, 179, 59"
+          },
+          "secondary": {
+            "name": "Burnt Sienna",
+            "hex": "#ED654D",
+            "rgb": "237, 101, 77"
+          },
+          "accent": {
+            "name": "Alabaster White",
+            "hex": "#F8F8F8",
+            "rgb": "248, 248, 248"
+          },
+          "background": {
+            "name": "Black Haze",
+            "hex": "#E1E3E2",
+            "rgb": "225, 227, 226"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#bbe1b1",
+            "rgb": "187, 225, 177"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#000000"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#000000"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #56B33B, #ED654D)",
+            "primaryLight": "linear-gradient(135deg, #56B33B, #9ad189)",
+            "darkOverlay": "linear-gradient(180deg, #1a3612, #471e17)"
+          },
+          "hover": {
+            "hex": "#499832"
+          },
+          "active": {
+            "hex": "#41862c"
+          }
+        }
+      },
+      {
+        "id": "bajaj-chetak-ev",
+        "name": "Bajaj Chetak Electric",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Cobalt Blue",
+            "hex": "#004DA8",
+            "rgb": "0, 77, 168"
+          },
+          "secondary": {
+            "name": "Crimson Red",
+            "hex": "#ED1C24",
+            "rgb": "237, 28, 36"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Light Grey",
+            "hex": "#F5F5F5",
+            "rgb": "245, 245, 245"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#99b8dc",
+            "rgb": "153, 184, 220"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #004DA8, #ED1C24)",
+            "primaryLight": "linear-gradient(135deg, #004DA8, #6694cb)",
+            "darkOverlay": "linear-gradient(180deg, #001732, #47080b)"
+          },
+          "hover": {
+            "hex": "#00418f"
+          },
+          "active": {
+            "hex": "#003a7e"
+          }
+        }
+      },
+      {
+        "id": "tvs-iqube",
+        "name": "TVS iQube Electric",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Bay of Many Blue",
+            "hex": "#253C80",
+            "rgb": "37, 60, 128"
+          },
+          "secondary": {
+            "name": "Palm Fruit Red",
+            "hex": "#DC4226",
+            "rgb": "220, 66, 38"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Light Blue",
+            "hex": "#E8F0FE",
+            "rgb": "232, 240, 254"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#a8b1cc",
+            "rgb": "168, 177, 204"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #253C80, #DC4226)",
+            "primaryLight": "linear-gradient(135deg, #253C80, #7c8ab3)",
+            "darkOverlay": "linear-gradient(180deg, #0b1226, #42140b)"
+          },
+          "hover": {
+            "hex": "#1f336d"
+          },
+          "active": {
+            "hex": "#1c2d60"
+          }
+        }
+      },
+      {
+        "id": "hero-electric",
+        "name": "Hero Electric",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Crimson Red",
+            "hex": "#D7182A",
+            "rgb": "215, 24, 42"
+          },
+          "secondary": {
+            "name": "Mine Shaft Dark",
+            "hex": "#212121",
+            "rgb": "33, 33, 33"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Light Grey",
+            "hex": "#F5F5F5",
+            "rgb": "245, 245, 245"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#efa3aa",
+            "rgb": "239, 163, 170"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #D7182A, #212121)",
+            "primaryLight": "linear-gradient(135deg, #D7182A, #e7747f)",
+            "darkOverlay": "linear-gradient(180deg, #41070d, #0a0a0a)"
+          },
+          "hover": {
+            "hex": "#b71424"
+          },
+          "active": {
+            "hex": "#a11220"
+          }
+        }
+      },
+      {
+        "id": "vida-hero",
+        "name": "Vida (Hero MotoCorp)",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "International Orange",
+            "hex": "#FF540F",
+            "rgb": "255, 84, 15"
+          },
+          "secondary": {
+            "name": "Ebony Black",
+            "hex": "#06050B",
+            "rgb": "6, 5, 11"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Light Grey",
+            "hex": "#F5F5F5",
+            "rgb": "245, 245, 245"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#ffbb9f",
+            "rgb": "255, 187, 159"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #FF540F, #06050B)",
+            "primaryLight": "linear-gradient(135deg, #FF540F, #ff986f)",
+            "darkOverlay": "linear-gradient(180deg, #4d1905, #020203)"
+          },
+          "hover": {
+            "hex": "#d9470d"
+          },
+          "active": {
+            "hex": "#bf3f0b"
+          }
+        }
+      },
+      {
+        "id": "revolt-motors",
+        "name": "Revolt Motors",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Neon Green",
+            "hex": "#01F52B",
+            "rgb": "1, 245, 43"
+          },
+          "secondary": {
+            "name": "Jewel Green",
+            "hex": "#157347",
+            "rgb": "21, 115, 71"
+          },
+          "accent": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "background": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#99fbaa",
+            "rgb": "153, 251, 170"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#000000"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #01F52B, #157347)",
+            "primaryLight": "linear-gradient(135deg, #01F52B, #67f980)",
+            "darkOverlay": "linear-gradient(180deg, #004a0d, #062315)"
+          },
+          "hover": {
+            "hex": "#01d025"
+          },
+          "active": {
+            "hex": "#01b820"
+          }
+        }
+      },
+      {
+        "id": "okinawa-autotech",
+        "name": "Okinawa Autotech",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Alizarin Crimson",
+            "hex": "#EC1C24",
+            "rgb": "236, 28, 36"
+          },
+          "secondary": {
+            "name": "Hit Pink",
+            "hex": "#FFAE7F",
+            "rgb": "255, 174, 127"
+          },
+          "accent": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "background": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#f7a4a7",
+            "rgb": "247, 164, 167"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#000000"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #EC1C24, #FFAE7F)",
+            "primaryLight": "linear-gradient(135deg, #EC1C24, #f4777c)",
+            "darkOverlay": "linear-gradient(180deg, #47080b, #4d3426)"
+          },
+          "hover": {
+            "hex": "#c9181f"
+          },
+          "active": {
+            "hex": "#b1151b"
+          }
+        }
+      },
+      {
+        "id": "ampere-greaves",
+        "name": "Ampere (Greaves Electric)",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Green",
+            "hex": "#4CAF50",
+            "rgb": "76, 175, 80"
+          },
+          "secondary": {
+            "name": "Grey",
+            "hex": "#607D8B",
+            "rgb": "96, 125, 139"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Light Grey",
+            "hex": "#ECEFF1",
+            "rgb": "236, 239, 241"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#b7dfb9",
+            "rgb": "183, 223, 185"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#000000"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #4CAF50, #607D8B)",
+            "primaryLight": "linear-gradient(135deg, #4CAF50, #94cf96)",
+            "darkOverlay": "linear-gradient(180deg, #173518, #1d262a)"
+          },
+          "hover": {
+            "hex": "#419544"
+          },
+          "active": {
+            "hex": "#39833c"
+          }
+        }
+      },
+      {
+        "id": "tork-motors",
+        "name": "Tork Motors",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Azure Radiance Blue",
+            "hex": "#019BFF",
+            "rgb": "1, 155, 255"
+          },
+          "secondary": {
+            "name": "Picton Blue",
+            "hex": "#46B9E7",
+            "rgb": "70, 185, 231"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Dark Blue",
+            "hex": "#0A1628",
+            "rgb": "10, 22, 40"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#99d7ff",
+            "rgb": "153, 215, 255"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#000000"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #019BFF, #46B9E7)",
+            "primaryLight": "linear-gradient(135deg, #019BFF, #67c3ff)",
+            "darkOverlay": "linear-gradient(180deg, #002f4d, #153845)"
+          },
+          "hover": {
+            "hex": "#0184d9"
+          },
+          "active": {
+            "hex": "#0174bf"
+          }
+        }
+      },
+      {
+        "id": "ultraviolette",
+        "name": "Ultraviolette Automotive",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Resolution Blue",
+            "hex": "#031098",
+            "rgb": "3, 16, 152"
+          },
+          "secondary": {
+            "name": "Hot Pink",
+            "hex": "#FF71B9",
+            "rgb": "255, 113, 185"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#9a9fd6",
+            "rgb": "154, 159, 214"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#000000"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #031098, #FF71B9)",
+            "primaryLight": "linear-gradient(135deg, #031098, #6870c1)",
+            "darkOverlay": "linear-gradient(180deg, #01052e, #4d2238)"
+          },
+          "hover": {
+            "hex": "#030e81"
+          },
+          "active": {
+            "hex": "#020c72"
+          }
+        }
+      },
+      {
+        "id": "simple-energy",
+        "name": "Simple Energy",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Klein Blue",
+            "hex": "#0537BA",
+            "rgb": "5, 55, 186"
+          },
+          "secondary": {
+            "name": "Stratos Dark Blue",
+            "hex": "#001446",
+            "rgb": "0, 20, 70"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#9bafe3",
+            "rgb": "155, 175, 227"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #0537BA, #001446)",
+            "primaryLight": "linear-gradient(135deg, #0537BA, #6987d6)",
+            "darkOverlay": "linear-gradient(180deg, #021138, #000615)"
+          },
+          "hover": {
+            "hex": "#042f9e"
+          },
+          "active": {
+            "hex": "#04298c"
+          }
+        }
+      },
+      {
+        "id": "kabira-mobility",
+        "name": "Kabira Mobility",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Blue",
+            "hex": "#003087",
+            "rgb": "0, 48, 135"
+          },
+          "secondary": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "accent": {
+            "name": "Orange",
+            "hex": "#FF5200",
+            "rgb": "255, 82, 0"
+          },
+          "background": {
+            "name": "Light Grey",
+            "hex": "#F5F5F5",
+            "rgb": "245, 245, 245"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#99accf",
+            "rgb": "153, 172, 207"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#000000"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #003087, #FFFFFF)",
+            "primaryLight": "linear-gradient(135deg, #003087, #6683b7)",
+            "darkOverlay": "linear-gradient(180deg, #000e29, #4d4d4d)"
+          },
+          "hover": {
+            "hex": "#002973"
+          },
+          "active": {
+            "hex": "#002465"
+          }
+        }
+      },
+      {
+        "id": "pure-ev",
+        "name": "Pure EV",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Blue",
+            "hex": "#0057A8",
+            "rgb": "0, 87, 168"
+          },
+          "secondary": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "accent": {
+            "name": "Dark Grey",
+            "hex": "#333333",
+            "rgb": "51, 51, 51"
+          },
+          "background": {
+            "name": "Light Grey",
+            "hex": "#F5F5F5",
+            "rgb": "245, 245, 245"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#99bcdc",
+            "rgb": "153, 188, 220"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#000000"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #0057A8, #FFFFFF)",
+            "primaryLight": "linear-gradient(135deg, #0057A8, #669acb)",
+            "darkOverlay": "linear-gradient(180deg, #001a32, #4d4d4d)"
+          },
+          "hover": {
+            "hex": "#004a8f"
+          },
+          "active": {
+            "hex": "#00417e"
+          }
+        }
+      },
+      {
+        "id": "matter-ev",
+        "name": "Matter EV",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Orange",
+            "hex": "#FF5200",
+            "rgb": "255, 82, 0"
+          },
+          "secondary": {
+            "name": "Black",
+            "hex": "#1A1A1A",
+            "rgb": "26, 26, 26"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Dark Grey",
+            "hex": "#212121",
+            "rgb": "33, 33, 33"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#ffba99",
+            "rgb": "255, 186, 153"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #FF5200, #1A1A1A)",
+            "primaryLight": "linear-gradient(135deg, #FF5200, #ff9766)",
+            "darkOverlay": "linear-gradient(180deg, #4d1900, #080808)"
+          },
+          "hover": {
+            "hex": "#d94600"
+          },
+          "active": {
+            "hex": "#bf3e00"
+          }
+        }
+      },
+      {
+        "id": "hop-electric",
+        "name": "Hop Electric",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Green",
+            "hex": "#2E7D32",
+            "rgb": "46, 125, 50"
+          },
+          "secondary": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "accent": {
+            "name": "Dark Grey",
+            "hex": "#333333",
+            "rgb": "51, 51, 51"
+          },
+          "background": {
+            "name": "Light Green",
+            "hex": "#E8F5E9",
+            "rgb": "232, 245, 233"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#abcbad",
+            "rgb": "171, 203, 173"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#000000"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #2E7D32, #FFFFFF)",
+            "primaryLight": "linear-gradient(135deg, #2E7D32, #82b184)",
+            "darkOverlay": "linear-gradient(180deg, #0e260f, #4d4d4d)"
+          },
+          "hover": {
+            "hex": "#276a2b"
+          },
+          "active": {
+            "hex": "#235e26"
+          }
+        }
+      },
+      {
+        "id": "okaya-ev",
+        "name": "Okaya EV",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Blue",
+            "hex": "#003087",
+            "rgb": "0, 48, 135"
+          },
+          "secondary": {
+            "name": "Green",
+            "hex": "#00843D",
+            "rgb": "0, 132, 61"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Light Grey",
+            "hex": "#F5F5F5",
+            "rgb": "245, 245, 245"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#99accf",
+            "rgb": "153, 172, 207"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #003087, #00843D)",
+            "primaryLight": "linear-gradient(135deg, #003087, #6683b7)",
+            "darkOverlay": "linear-gradient(180deg, #000e29, #002812)"
+          },
+          "hover": {
+            "hex": "#002973"
+          },
+          "active": {
+            "hex": "#002465"
+          }
+        }
+      },
+      {
+        "id": "oben-electric",
+        "name": "Oben Electric",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Blue",
+            "hex": "#003087",
+            "rgb": "0, 48, 135"
+          },
+          "secondary": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "accent": {
+            "name": "Silver",
+            "hex": "#A8A9AD",
+            "rgb": "168, 169, 173"
+          },
+          "background": {
+            "name": "Dark Blue",
+            "hex": "#0A1628",
+            "rgb": "10, 22, 40"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#99accf",
+            "rgb": "153, 172, 207"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#000000"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #003087, #FFFFFF)",
+            "primaryLight": "linear-gradient(135deg, #003087, #6683b7)",
+            "darkOverlay": "linear-gradient(180deg, #000e29, #4d4d4d)"
+          },
+          "hover": {
+            "hex": "#002973"
+          },
+          "active": {
+            "hex": "#002465"
+          }
+        }
+      },
+      {
+        "id": "lectrix-ev",
+        "name": "Lectrix EV",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Blue",
+            "hex": "#0057A8",
+            "rgb": "0, 87, 168"
+          },
+          "secondary": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "accent": {
+            "name": "Orange",
+            "hex": "#FF5200",
+            "rgb": "255, 82, 0"
+          },
+          "background": {
+            "name": "Light Grey",
+            "hex": "#F5F5F5",
+            "rgb": "245, 245, 245"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#99bcdc",
+            "rgb": "153, 188, 220"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#000000"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #0057A8, #FFFFFF)",
+            "primaryLight": "linear-gradient(135deg, #0057A8, #669acb)",
+            "darkOverlay": "linear-gradient(180deg, #001a32, #4d4d4d)"
+          },
+          "hover": {
+            "hex": "#004a8f"
+          },
+          "active": {
+            "hex": "#00417e"
+          }
+        }
+      },
+      {
+        "id": "river-ev",
+        "name": "River EV",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Green",
+            "hex": "#00A651",
+            "rgb": "0, 166, 81"
+          },
+          "secondary": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "accent": {
+            "name": "Dark Grey",
+            "hex": "#333333",
+            "rgb": "51, 51, 51"
+          },
+          "background": {
+            "name": "Light Grey",
+            "hex": "#F5F5F5",
+            "rgb": "245, 245, 245"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#99dbb9",
+            "rgb": "153, 219, 185"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#000000"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #00A651, #FFFFFF)",
+            "primaryLight": "linear-gradient(135deg, #00A651, #66ca97)",
+            "darkOverlay": "linear-gradient(180deg, #003218, #4d4d4d)"
+          },
+          "hover": {
+            "hex": "#008d45"
+          },
+          "active": {
+            "hex": "#007d3d"
+          }
+        }
+      },
+      {
+        "id": "odysse-electric",
+        "name": "Odysse Electric",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Blue",
+            "hex": "#003087",
+            "rgb": "0, 48, 135"
+          },
+          "secondary": {
+            "name": "Orange",
+            "hex": "#FF5200",
+            "rgb": "255, 82, 0"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#99accf",
+            "rgb": "153, 172, 207"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #003087, #FF5200)",
+            "primaryLight": "linear-gradient(135deg, #003087, #6683b7)",
+            "darkOverlay": "linear-gradient(180deg, #000e29, #4d1900)"
+          },
+          "hover": {
+            "hex": "#002973"
+          },
+          "active": {
+            "hex": "#002465"
+          }
+        }
+      },
+      {
+        "id": "joy-e-bike",
+        "name": "Joy e-bike",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Green",
+            "hex": "#00843D",
+            "rgb": "0, 132, 61"
+          },
+          "secondary": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "accent": {
+            "name": "Dark Grey",
+            "hex": "#333333",
+            "rgb": "51, 51, 51"
+          },
+          "background": {
+            "name": "Light Green",
+            "hex": "#E8F5E9",
+            "rgb": "232, 245, 233"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#99ceb1",
+            "rgb": "153, 206, 177"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#000000"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #00843D, #FFFFFF)",
+            "primaryLight": "linear-gradient(135deg, #00843D, #66b58b)",
+            "darkOverlay": "linear-gradient(180deg, #002812, #4d4d4d)"
+          },
+          "hover": {
+            "hex": "#007034"
+          },
+          "active": {
+            "hex": "#00632e"
+          }
+        }
+      },
+      {
+        "id": "komaki",
+        "name": "Komaki",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "secondary": {
+            "name": "Red",
+            "hex": "#CC0000",
+            "rgb": "204, 0, 0"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Grey",
+            "hex": "#E0E0E0",
+            "rgb": "224, 224, 224"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#999999",
+            "rgb": "153, 153, 153"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #000000, #CC0000)",
+            "primaryLight": "linear-gradient(135deg, #000000, #666666)",
+            "darkOverlay": "linear-gradient(180deg, #000000, #3d0000)"
+          },
+          "hover": {
+            "hex": "#000000"
+          },
+          "active": {
+            "hex": "#000000"
+          }
+        }
+      },
+      {
+        "id": "bounce-infinity",
+        "name": "Bounce Infinity",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Orange",
+            "hex": "#FF5C00",
+            "rgb": "255, 92, 0"
+          },
+          "secondary": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "accent": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "background": {
+            "name": "Dark Grey",
+            "hex": "#1A1A1A",
+            "rgb": "26, 26, 26"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#ffbe99",
+            "rgb": "255, 190, 153"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#000000"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #FF5C00, #000000)",
+            "primaryLight": "linear-gradient(135deg, #FF5C00, #ff9d66)",
+            "darkOverlay": "linear-gradient(180deg, #4d1c00, #000000)"
+          },
+          "hover": {
+            "hex": "#d94e00"
+          },
+          "active": {
+            "hex": "#bf4500"
+          }
+        }
+      },
+      {
+        "id": "quantum-energy",
+        "name": "Quantum Energy",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Blue",
+            "hex": "#003087",
+            "rgb": "0, 48, 135"
+          },
+          "secondary": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "accent": {
+            "name": "Light Blue",
+            "hex": "#69B5FE",
+            "rgb": "105, 181, 254"
+          },
+          "background": {
+            "name": "Light Grey",
+            "hex": "#F5F5F5",
+            "rgb": "245, 245, 245"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#99accf",
+            "rgb": "153, 172, 207"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#FFFFFF"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#000000"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #003087, #FFFFFF)",
+            "primaryLight": "linear-gradient(135deg, #003087, #6683b7)",
+            "darkOverlay": "linear-gradient(180deg, #000e29, #4d4d4d)"
+          },
+          "hover": {
+            "hex": "#002973"
+          },
+          "active": {
+            "hex": "#002465"
+          }
+        }
+      },
+      {
+        "id": "yulu",
+        "name": "Yulu",
+        "country": "India",
+        "type": "EV",
+        "colors": {
+          "primary": {
+            "name": "Yellow",
+            "hex": "#FFD700",
+            "rgb": "255, 215, 0"
+          },
+          "secondary": {
+            "name": "Green",
+            "hex": "#00843D",
+            "rgb": "0, 132, 61"
+          },
+          "accent": {
+            "name": "Black",
+            "hex": "#000000",
+            "rgb": "0, 0, 0"
+          },
+          "background": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255"
+          },
+          "tertiary": {
+            "name": "Tertiary",
+            "hex": "#ffef99",
+            "rgb": "255, 239, 153"
+          },
+          "textOnPrimary": {
+            "name": "Text on Primary",
+            "hex": "#000000"
+          },
+          "textOnSecondary": {
+            "name": "Text on Secondary",
+            "hex": "#FFFFFF"
+          },
+          "gradient": {
+            "primaryToSecondary": "linear-gradient(135deg, #FFD700, #00843D)",
+            "primaryLight": "linear-gradient(135deg, #FFD700, #ffe766)",
+            "darkOverlay": "linear-gradient(180deg, #4d4100, #002812)"
+          },
+          "hover": {
+            "hex": "#d9b700"
+          },
+          "active": {
+            "hex": "#bfa100"
+          }
+        }
+      }
+    ]
+  },
+  "threeWheelers": [
+    {
+      "id": "bajaj-auto-3w",
+      "name": "Bajaj Auto (RE / Maxima)",
+      "country": "India",
+      "type": "ICE/CNG/EV",
+      "colors": {
+        "primary": {
+          "name": "Cobalt Blue",
+          "hex": "#004DA8",
+          "rgb": "0, 77, 168"
+        },
+        "secondary": {
+          "name": "Crimson Red",
+          "hex": "#ED1C24",
+          "rgb": "237, 28, 36"
+        },
+        "accent": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "background": {
+          "name": "Navy",
+          "hex": "#041C4A",
+          "rgb": "4, 28, 74"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#99b8dc",
+          "rgb": "153, 184, 220"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#FFFFFF"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #004DA8, #ED1C24)",
+          "primaryLight": "linear-gradient(135deg, #004DA8, #6694cb)",
+          "darkOverlay": "linear-gradient(180deg, #001732, #47080b)"
+        },
+        "hover": {
+          "hex": "#00418f"
+        },
+        "active": {
+          "hex": "#003a7e"
+        }
+      }
+    },
+    {
+      "id": "piaggio-ape",
+      "name": "Piaggio Vehicles (Ape)",
+      "country": "Italy",
+      "type": "ICE/CNG/EV",
+      "colors": {
+        "primary": {
+          "name": "Lochmara Blue",
+          "hex": "#007BC3",
+          "rgb": "0, 123, 195"
+        },
+        "secondary": {
+          "name": "Cerulean Blue",
+          "hex": "#00B4DC",
+          "rgb": "0, 180, 220"
+        },
+        "accent": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "background": {
+          "name": "Cod Gray",
+          "hex": "#141414",
+          "rgb": "20, 20, 20"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#99cae7",
+          "rgb": "153, 202, 231"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#000000"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #007BC3, #00B4DC)",
+          "primaryLight": "linear-gradient(135deg, #007BC3, #66b0db)",
+          "darkOverlay": "linear-gradient(180deg, #00253b, #003642)"
+        },
+        "hover": {
+          "hex": "#0069a6"
+        },
+        "active": {
+          "hex": "#005c92"
+        }
+      }
+    },
+    {
+      "id": "tvs-king",
+      "name": "TVS Motor (King)",
+      "country": "India",
+      "type": "ICE/CNG/EV",
+      "colors": {
+        "primary": {
+          "name": "Bay of Many Blue",
+          "hex": "#253C80",
+          "rgb": "37, 60, 128"
+        },
+        "secondary": {
+          "name": "Palm Fruit Red",
+          "hex": "#DC4226",
+          "rgb": "220, 66, 38"
+        },
+        "accent": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "background": {
+          "name": "Chathams Blue",
+          "hex": "#183883",
+          "rgb": "24, 56, 131"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#a8b1cc",
+          "rgb": "168, 177, 204"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#FFFFFF"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #253C80, #DC4226)",
+          "primaryLight": "linear-gradient(135deg, #253C80, #7c8ab3)",
+          "darkOverlay": "linear-gradient(180deg, #0b1226, #42140b)"
+        },
+        "hover": {
+          "hex": "#1f336d"
+        },
+        "active": {
+          "hex": "#1c2d60"
+        }
+      }
+    },
+    {
+      "id": "mahindra-3w",
+      "name": "Mahindra (Alfa / Treo)",
+      "country": "India",
+      "type": "ICE/EV",
+      "colors": {
+        "primary": {
+          "name": "Mahindra Red",
+          "hex": "#ED2831",
+          "rgb": "237, 40, 49"
+        },
+        "secondary": {
+          "name": "Modern Gray",
+          "hex": "#6D6C71",
+          "rgb": "109, 108, 113"
+        },
+        "accent": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "background": {
+          "name": "Dark Grey",
+          "hex": "#333333",
+          "rgb": "51, 51, 51"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#f8a9ad",
+          "rgb": "248, 169, 173"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#FFFFFF"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #ED2831, #6D6C71)",
+          "primaryLight": "linear-gradient(135deg, #ED2831, #f47e83)",
+          "darkOverlay": "linear-gradient(180deg, #470c0f, #212022)"
+        },
+        "hover": {
+          "hex": "#c9222a"
+        },
+        "active": {
+          "hex": "#b21e25"
+        }
+      }
+    },
+    {
+      "id": "atul-auto",
+      "name": "Atul Auto",
+      "country": "India",
+      "type": "ICE/CNG/EV",
+      "colors": {
+        "primary": {
+          "name": "Blue",
+          "hex": "#0002F2",
+          "rgb": "0, 2, 242"
+        },
+        "secondary": {
+          "name": "Mandalay Gold",
+          "hex": "#B17C20",
+          "rgb": "177, 124, 32"
+        },
+        "accent": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "background": {
+          "name": "Light Grey",
+          "hex": "#F5F5F5",
+          "rgb": "245, 245, 245"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#999afa",
+          "rgb": "153, 154, 250"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#000000"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #0002F2, #B17C20)",
+          "primaryLight": "linear-gradient(135deg, #0002F2, #6667f7)",
+          "darkOverlay": "linear-gradient(180deg, #000149, #35250a)"
+        },
+        "hover": {
+          "hex": "#0002ce"
+        },
+        "active": {
+          "hex": "#0002b6"
+        }
+      }
+    },
+    {
+      "id": "kinetic-green",
+      "name": "Kinetic Green",
+      "country": "India",
+      "type": "EV",
+      "colors": {
+        "primary": {
+          "name": "Cerulean Blue",
+          "hex": "#00ACED",
+          "rgb": "0, 172, 237"
+        },
+        "secondary": {
+          "name": "Golden Tainoi",
+          "hex": "#FFCC66",
+          "rgb": "255, 204, 102"
+        },
+        "accent": {
+          "name": "Chestnut",
+          "hex": "#B65B4E",
+          "rgb": "182, 91, 78"
+        },
+        "background": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#99def8",
+          "rgb": "153, 222, 248"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#000000"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#000000"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #00ACED, #FFCC66)",
+          "primaryLight": "linear-gradient(135deg, #00ACED, #66cdf4)",
+          "darkOverlay": "linear-gradient(180deg, #003447, #4d3d1f)"
+        },
+        "hover": {
+          "hex": "#0092c9"
+        },
+        "active": {
+          "hex": "#0081b2"
+        }
+      }
+    },
+    {
+      "id": "lohia-auto",
+      "name": "Lohia Auto",
+      "country": "India",
+      "type": "EV",
+      "colors": {
+        "primary": {
+          "name": "Green",
+          "hex": "#2E7D32",
+          "rgb": "46, 125, 50"
+        },
+        "secondary": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "accent": {
+          "name": "Blue",
+          "hex": "#003087",
+          "rgb": "0, 48, 135"
+        },
+        "background": {
+          "name": "Light Grey",
+          "hex": "#F5F5F5",
+          "rgb": "245, 245, 245"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#abcbad",
+          "rgb": "171, 203, 173"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#000000"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #2E7D32, #FFFFFF)",
+          "primaryLight": "linear-gradient(135deg, #2E7D32, #82b184)",
+          "darkOverlay": "linear-gradient(180deg, #0e260f, #4d4d4d)"
+        },
+        "hover": {
+          "hex": "#276a2b"
+        },
+        "active": {
+          "hex": "#235e26"
+        }
+      }
+    },
+    {
+      "id": "yc-electric",
+      "name": "YC Electric",
+      "country": "India",
+      "type": "EV",
+      "colors": {
+        "primary": {
+          "name": "Blue",
+          "hex": "#003087",
+          "rgb": "0, 48, 135"
+        },
+        "secondary": {
+          "name": "Yellow",
+          "hex": "#FFD700",
+          "rgb": "255, 215, 0"
+        },
+        "accent": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "background": {
+          "name": "Light Blue",
+          "hex": "#E8F0FE",
+          "rgb": "232, 240, 254"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#99accf",
+          "rgb": "153, 172, 207"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#000000"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #003087, #FFD700)",
+          "primaryLight": "linear-gradient(135deg, #003087, #6683b7)",
+          "darkOverlay": "linear-gradient(180deg, #000e29, #4d4100)"
+        },
+        "hover": {
+          "hex": "#002973"
+        },
+        "active": {
+          "hex": "#002465"
+        }
+      }
+    },
+    {
+      "id": "saera-electric",
+      "name": "Saera Electric Auto",
+      "country": "India",
+      "type": "EV",
+      "colors": {
+        "primary": {
+          "name": "Green",
+          "hex": "#00A651",
+          "rgb": "0, 166, 81"
+        },
+        "secondary": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "accent": {
+          "name": "Dark Grey",
+          "hex": "#333333",
+          "rgb": "51, 51, 51"
+        },
+        "background": {
+          "name": "Light Green",
+          "hex": "#E8F5E9",
+          "rgb": "232, 245, 233"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#99dbb9",
+          "rgb": "153, 219, 185"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#000000"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #00A651, #FFFFFF)",
+          "primaryLight": "linear-gradient(135deg, #00A651, #66ca97)",
+          "darkOverlay": "linear-gradient(180deg, #003218, #4d4d4d)"
+        },
+        "hover": {
+          "hex": "#008d45"
+        },
+        "active": {
+          "hex": "#007d3d"
+        }
+      }
+    },
+    {
+      "id": "kal",
+      "name": "Kerala Automobiles (KAL)",
+      "country": "India",
+      "type": "ICE",
+      "colors": {
+        "primary": {
+          "name": "Red",
+          "hex": "#CC0000",
+          "rgb": "204, 0, 0"
+        },
+        "secondary": {
+          "name": "Yellow",
+          "hex": "#FFD700",
+          "rgb": "255, 215, 0"
+        },
+        "accent": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "background": {
+          "name": "Light Grey",
+          "hex": "#F5F5F5",
+          "rgb": "245, 245, 245"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#eb9999",
+          "rgb": "235, 153, 153"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#000000"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #CC0000, #FFD700)",
+          "primaryLight": "linear-gradient(135deg, #CC0000, #e06666)",
+          "darkOverlay": "linear-gradient(180deg, #3d0000, #4d4100)"
+        },
+        "hover": {
+          "hex": "#ad0000"
+        },
+        "active": {
+          "hex": "#990000"
+        }
+      }
+    },
+    {
+      "id": "force-motors",
+      "name": "Force Motors",
+      "country": "India",
+      "type": "ICE/CNG",
+      "colors": {
+        "primary": {
+          "name": "Blue",
+          "hex": "#003087",
+          "rgb": "0, 48, 135"
+        },
+        "secondary": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "accent": {
+          "name": "Red",
+          "hex": "#CC0000",
+          "rgb": "204, 0, 0"
+        },
+        "background": {
+          "name": "Light Grey",
+          "hex": "#F5F5F5",
+          "rgb": "245, 245, 245"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#99accf",
+          "rgb": "153, 172, 207"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#000000"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #003087, #FFFFFF)",
+          "primaryLight": "linear-gradient(135deg, #003087, #6683b7)",
+          "darkOverlay": "linear-gradient(180deg, #000e29, #4d4d4d)"
+        },
+        "hover": {
+          "hex": "#002973"
+        },
+        "active": {
+          "hex": "#002465"
+        }
+      }
+    },
+    {
+      "id": "euler-motors",
+      "name": "Euler Motors",
+      "country": "India",
+      "type": "EV",
+      "colors": {
+        "primary": {
+          "name": "Orange",
+          "hex": "#FF5200",
+          "rgb": "255, 82, 0"
+        },
+        "secondary": {
+          "name": "Black",
+          "hex": "#1A1A1A",
+          "rgb": "26, 26, 26"
+        },
+        "accent": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "background": {
+          "name": "Dark Grey",
+          "hex": "#212121",
+          "rgb": "33, 33, 33"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#ffba99",
+          "rgb": "255, 186, 153"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#FFFFFF"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #FF5200, #1A1A1A)",
+          "primaryLight": "linear-gradient(135deg, #FF5200, #ff9766)",
+          "darkOverlay": "linear-gradient(180deg, #4d1900, #080808)"
+        },
+        "hover": {
+          "hex": "#d94600"
+        },
+        "active": {
+          "hex": "#bf3e00"
+        }
+      }
+    },
+    {
+      "id": "greaves-electric-3w",
+      "name": "Greaves Electric",
+      "country": "India",
+      "type": "EV",
+      "colors": {
+        "primary": {
+          "name": "Green",
+          "hex": "#4CAF50",
+          "rgb": "76, 175, 80"
+        },
+        "secondary": {
+          "name": "Grey",
+          "hex": "#607D8B",
+          "rgb": "96, 125, 139"
+        },
+        "accent": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "background": {
+          "name": "Light Grey",
+          "hex": "#ECEFF1",
+          "rgb": "236, 239, 241"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#b7dfb9",
+          "rgb": "183, 223, 185"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#000000"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#FFFFFF"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #4CAF50, #607D8B)",
+          "primaryLight": "linear-gradient(135deg, #4CAF50, #94cf96)",
+          "darkOverlay": "linear-gradient(180deg, #173518, #1d262a)"
+        },
+        "hover": {
+          "hex": "#419544"
+        },
+        "active": {
+          "hex": "#39833c"
+        }
+      }
+    },
+    {
+      "id": "baxy-mobility",
+      "name": "Baxy Mobility",
+      "country": "India",
+      "type": "CNG",
+      "colors": {
+        "primary": {
+          "name": "Blue",
+          "hex": "#0057A8",
+          "rgb": "0, 87, 168"
+        },
+        "secondary": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "accent": {
+          "name": "Silver",
+          "hex": "#C0C0C0",
+          "rgb": "192, 192, 192"
+        },
+        "background": {
+          "name": "Light Blue",
+          "hex": "#E8F0FE",
+          "rgb": "232, 240, 254"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#99bcdc",
+          "rgb": "153, 188, 220"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#000000"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #0057A8, #FFFFFF)",
+          "primaryLight": "linear-gradient(135deg, #0057A8, #669acb)",
+          "darkOverlay": "linear-gradient(180deg, #001a32, #4d4d4d)"
+        },
+        "hover": {
+          "hex": "#004a8f"
+        },
+        "active": {
+          "hex": "#00417e"
+        }
+      }
+    },
+    {
+      "id": "dilli-electric",
+      "name": "Dilli Electric Auto (CityLife)",
+      "country": "India",
+      "type": "EV",
+      "colors": {
+        "primary": {
+          "name": "Green",
+          "hex": "#00843D",
+          "rgb": "0, 132, 61"
+        },
+        "secondary": {
+          "name": "Yellow",
+          "hex": "#FFD700",
+          "rgb": "255, 215, 0"
+        },
+        "accent": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "background": {
+          "name": "Light Green",
+          "hex": "#E8F5E9",
+          "rgb": "232, 245, 233"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#99ceb1",
+          "rgb": "153, 206, 177"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#000000"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #00843D, #FFD700)",
+          "primaryLight": "linear-gradient(135deg, #00843D, #66b58b)",
+          "darkOverlay": "linear-gradient(180deg, #002812, #4d4100)"
+        },
+        "hover": {
+          "hex": "#007034"
+        },
+        "active": {
+          "hex": "#00632e"
+        }
+      }
+    },
+    {
+      "id": "mini-metro-ev",
+      "name": "Mini Metro EV",
+      "country": "India",
+      "type": "EV",
+      "colors": {
+        "primary": {
+          "name": "Blue",
+          "hex": "#003087",
+          "rgb": "0, 48, 135"
+        },
+        "secondary": {
+          "name": "Green",
+          "hex": "#00843D",
+          "rgb": "0, 132, 61"
+        },
+        "accent": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "background": {
+          "name": "Light Grey",
+          "hex": "#F5F5F5",
+          "rgb": "245, 245, 245"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#99accf",
+          "rgb": "153, 172, 207"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#FFFFFF"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #003087, #00843D)",
+          "primaryLight": "linear-gradient(135deg, #003087, #6683b7)",
+          "darkOverlay": "linear-gradient(180deg, #000e29, #002812)"
+        },
+        "hover": {
+          "hex": "#002973"
+        },
+        "active": {
+          "hex": "#002465"
+        }
+      }
+    },
+    {
+      "id": "sargam-e-ride",
+      "name": "Sargam E Ride",
+      "country": "India",
+      "type": "EV",
+      "colors": {
+        "primary": {
+          "name": "Orange",
+          "hex": "#FF5200",
+          "rgb": "255, 82, 0"
+        },
+        "secondary": {
+          "name": "Green",
+          "hex": "#00843D",
+          "rgb": "0, 132, 61"
+        },
+        "accent": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "background": {
+          "name": "Light Grey",
+          "hex": "#F5F5F5",
+          "rgb": "245, 245, 245"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#ffba99",
+          "rgb": "255, 186, 153"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#FFFFFF"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #FF5200, #00843D)",
+          "primaryLight": "linear-gradient(135deg, #FF5200, #ff9766)",
+          "darkOverlay": "linear-gradient(180deg, #4d1900, #002812)"
+        },
+        "hover": {
+          "hex": "#d94600"
+        },
+        "active": {
+          "hex": "#bf3e00"
+        }
+      }
+    },
+    {
+      "id": "ronakk-auto",
+      "name": "Ronakk Auto",
+      "country": "India",
+      "type": "EV",
+      "colors": {
+        "primary": {
+          "name": "Blue",
+          "hex": "#1B4F9A",
+          "rgb": "27, 79, 154"
+        },
+        "secondary": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "accent": {
+          "name": "Silver",
+          "hex": "#C0C0C0",
+          "rgb": "192, 192, 192"
+        },
+        "background": {
+          "name": "Light Blue",
+          "hex": "#E8F0FE",
+          "rgb": "232, 240, 254"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#a4b9d7",
+          "rgb": "164, 185, 215"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#000000"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #1B4F9A, #FFFFFF)",
+          "primaryLight": "linear-gradient(135deg, #1B4F9A, #7695c2)",
+          "darkOverlay": "linear-gradient(180deg, #08182e, #4d4d4d)"
+        },
+        "hover": {
+          "hex": "#174383"
+        },
+        "active": {
+          "hex": "#143b74"
+        }
+      }
+    },
+    {
+      "id": "js-auto",
+      "name": "J.S. Auto",
+      "country": "India",
+      "type": "ICE/EV",
+      "colors": {
+        "primary": {
+          "name": "Red",
+          "hex": "#CC0000",
+          "rgb": "204, 0, 0"
+        },
+        "secondary": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "accent": {
+          "name": "Blue",
+          "hex": "#003087",
+          "rgb": "0, 48, 135"
+        },
+        "background": {
+          "name": "Light Grey",
+          "hex": "#F5F5F5",
+          "rgb": "245, 245, 245"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#eb9999",
+          "rgb": "235, 153, 153"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#000000"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #CC0000, #FFFFFF)",
+          "primaryLight": "linear-gradient(135deg, #CC0000, #e06666)",
+          "darkOverlay": "linear-gradient(180deg, #3d0000, #4d4d4d)"
+        },
+        "hover": {
+          "hex": "#ad0000"
+        },
+        "active": {
+          "hex": "#990000"
+        }
+      }
+    },
+    {
+      "id": "teja-vehicles",
+      "name": "Teja Vehicles",
+      "country": "India",
+      "type": "CNG",
+      "colors": {
+        "primary": {
+          "name": "Green",
+          "hex": "#2E7D32",
+          "rgb": "46, 125, 50"
+        },
+        "secondary": {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "rgb": "255, 255, 255"
+        },
+        "accent": {
+          "name": "Yellow",
+          "hex": "#FFD700",
+          "rgb": "255, 215, 0"
+        },
+        "background": {
+          "name": "Light Green",
+          "hex": "#E8F5E9",
+          "rgb": "232, 245, 233"
+        },
+        "tertiary": {
+          "name": "Tertiary",
+          "hex": "#abcbad",
+          "rgb": "171, 203, 173"
+        },
+        "textOnPrimary": {
+          "name": "Text on Primary",
+          "hex": "#FFFFFF"
+        },
+        "textOnSecondary": {
+          "name": "Text on Secondary",
+          "hex": "#000000"
+        },
+        "gradient": {
+          "primaryToSecondary": "linear-gradient(135deg, #2E7D32, #FFFFFF)",
+          "primaryLight": "linear-gradient(135deg, #2E7D32, #82b184)",
+          "darkOverlay": "linear-gradient(180deg, #0e260f, #4d4d4d)"
+        },
+        "hover": {
+          "hex": "#276a2b"
+        },
+        "active": {
+          "hex": "#235e26"
+        }
+      }
+    }
+  ]
+}

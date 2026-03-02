@@ -1,0 +1,197 @@
+"use client"
+
+import { useEffect, useState } from "react"
+import { useParams } from "next/navigation"
+import { supabase } from "@/lib/supabase"
+import { LeadFormModal } from "@/components/three-wheelers/LeadFormModal"
+import type { ThreeWheelerVehicle, ThreeWheelerLeadType } from "@/lib/types/three-wheeler"
+import { ChevronLeft } from "lucide-react"
+import Link from "next/link"
+
+export default function ThreeWheelerDetailPage() {
+    const params = useParams()
+    const slug   = params.slug as string
+    const id     = params.id   as string
+
+    const [vehicle,  setVehicle]  = useState<ThreeWheelerVehicle | null>(null)
+    const [dealerId, setDealerId] = useState<string | null>(null)
+    const [loading,  setLoading]  = useState(true)
+
+    const [leadType,  setLeadType]  = useState<ThreeWheelerLeadType>("demo")
+    const [leadTitle, setLeadTitle] = useState("")
+    const [leadOpen,  setLeadOpen]  = useState(false)
+
+    useEffect(() => {
+        if (!slug || !id) return
+        async function load() {
+            const [{ data: dealer }, vehicleRes] = await Promise.all([
+                supabase.from("dealers").select("id").eq("slug", slug).single(),
+                fetch(`/api/three-wheelers/${id}`),
+            ])
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            if (dealer) setDealerId((dealer as any).id)
+            if (vehicleRes.ok) setVehicle(await vehicleRes.json())
+            setLoading(false)
+        }
+        load()
+    }, [slug, id])
+
+    function openLead(type: ThreeWheelerLeadType, title: string) {
+        setLeadType(type)
+        setLeadTitle(title)
+        setLeadOpen(true)
+    }
+
+    if (loading) return <div className="min-h-screen flex items-center justify-center text-muted-foreground animate-pulse">Loading...</div>
+    if (!vehicle) return <div className="min-h-screen flex items-center justify-center">Vehicle not found</div>
+
+    const price  = (vehicle.ex_showroom_price_paise / 100)
+    const priceF = price.toLocaleString("en-IN")
+
+    return (
+        <div className="min-h-screen max-w-5xl mx-auto px-4 py-8">
+            <div className="mb-6">
+                <Link href={`/sites/${slug}/three-wheelers`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+                    <ChevronLeft className="w-4 h-4" /> Back
+                </Link>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+                {/* Gallery */}
+                <div>
+                    {vehicle.images.length > 0 ? (
+                        <div className="space-y-2">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={vehicle.images[0]} alt={`${vehicle.brand} ${vehicle.model}`} className="w-full rounded-2xl object-cover aspect-video" />
+                            {vehicle.images.length > 1 && (
+                                <div className="flex gap-2 overflow-x-auto">
+                                    {vehicle.images.slice(1).map((img, i) => (
+                                        // eslint-disable-next-line @next/next/no-img-element
+                                        <img key={i} src={img} alt="" className="h-16 w-24 object-cover rounded-lg shrink-0" />
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    ) : (
+                        <div className="aspect-video bg-muted/30 rounded-2xl flex items-center justify-center text-muted-foreground">No Image</div>
+                    )}
+                </div>
+
+                {/* Info */}
+                <div className="space-y-5">
+                    <div>
+                        <div className="flex flex-wrap gap-1.5 mb-2">
+                            {vehicle.bs6_compliant && <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded">BS6</span>}
+                            {vehicle.fame_subsidy_eligible && <span className="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded">FAME Eligible</span>}
+                            <span className="bg-muted text-muted-foreground text-xs px-2 py-0.5 rounded capitalize">{vehicle.stock_status.replace("_", " ")}</span>
+                            <span className="bg-muted text-muted-foreground text-xs px-2 py-0.5 rounded capitalize">{vehicle.fuel_type.toUpperCase()}</span>
+                        </div>
+                        <h1 className="text-3xl font-bold">{vehicle.brand} {vehicle.model}</h1>
+                        {vehicle.variant && <p className="text-muted-foreground mt-0.5">{vehicle.variant}</p>}
+                    </div>
+
+                    {/* Price */}
+                    <div className="bg-primary/5 border border-primary/20 rounded-xl p-4">
+                        <p className="text-3xl font-bold text-primary">₹{priceF}</p>
+                        <p className="text-xs text-muted-foreground">Ex-showroom</p>
+                        {vehicle.on_road_price_paise && (
+                            <p className="text-sm mt-1">On-road: <strong>₹{(vehicle.on_road_price_paise / 100).toLocaleString("en-IN")}</strong></p>
+                        )}
+                        {vehicle.emi_starting_paise && (
+                            <p className="text-sm text-muted-foreground">EMI from ₹{(vehicle.emi_starting_paise / 100).toLocaleString("en-IN")}/mo</p>
+                        )}
+                    </div>
+
+                    {/* Key specs */}
+                    <div className="grid grid-cols-2 gap-3">
+                        {vehicle.fuel_type === "cng" && vehicle.cng_mileage_km_per_kg && (
+                            <div className="bg-muted/30 rounded-xl p-3 text-center">
+                                <p className="text-lg font-bold">{vehicle.cng_mileage_km_per_kg} km/kg</p>
+                                <p className="text-xs text-muted-foreground">CNG Mileage</p>
+                            </div>
+                        )}
+                        {vehicle.fuel_type === "electric" && vehicle.range_km && (
+                            <div className="bg-muted/30 rounded-xl p-3 text-center">
+                                <p className="text-lg font-bold">{vehicle.range_km} km</p>
+                                <p className="text-xs text-muted-foreground">Range</p>
+                            </div>
+                        )}
+                        {vehicle.payload_kg && (
+                            <div className="bg-muted/30 rounded-xl p-3 text-center">
+                                <p className="text-lg font-bold">{vehicle.payload_kg} kg</p>
+                                <p className="text-xs text-muted-foreground">Payload</p>
+                            </div>
+                        )}
+                        {vehicle.passenger_capacity && (
+                            <div className="bg-muted/30 rounded-xl p-3 text-center">
+                                <p className="text-lg font-bold">{vehicle.passenger_capacity}</p>
+                                <p className="text-xs text-muted-foreground">Seats</p>
+                            </div>
+                        )}
+                        {vehicle.engine_cc && (
+                            <div className="bg-muted/30 rounded-xl p-3 text-center">
+                                <p className="text-lg font-bold">{vehicle.engine_cc}cc</p>
+                                <p className="text-xs text-muted-foreground">Engine</p>
+                            </div>
+                        )}
+                        {vehicle.gvw_kg && (
+                            <div className="bg-muted/30 rounded-xl p-3 text-center">
+                                <p className="text-lg font-bold">{vehicle.gvw_kg} kg</p>
+                                <p className="text-xs text-muted-foreground">GVW</p>
+                            </div>
+                        )}
+                        {vehicle.permit_type && (
+                            <div className="bg-muted/30 rounded-xl p-3 text-center">
+                                <p className="text-base font-bold capitalize">{vehicle.permit_type.replace("_", " ")}</p>
+                                <p className="text-xs text-muted-foreground">Permit</p>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* CTAs */}
+                    <div className="grid grid-cols-2 gap-3">
+                        <button onClick={() => openLead("demo", "Book Demo")} className="bg-primary text-primary-foreground rounded-xl py-3 font-semibold hover:opacity-90">Book Demo</button>
+                        <button onClick={() => openLead("best_price", "Get Best Price")} className="border border-border rounded-xl py-3 font-semibold hover:bg-muted/50">Get Best Price</button>
+                        <button onClick={() => openLead("finance", "Fleet Finance")} className="border border-border rounded-xl py-3 font-semibold hover:bg-muted/50">Fleet Finance</button>
+                        <button onClick={() => openLead("callback", "Request Callback")} className="border border-border rounded-xl py-3 font-semibold hover:bg-muted/50">Get Callback</button>
+                    </div>
+                </div>
+            </div>
+
+            {/* Features */}
+            {vehicle.features.length > 0 && (
+                <section className="mt-10">
+                    <h2 className="text-xl font-bold mb-4">Key Features</h2>
+                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-2">
+                        {vehicle.features.map((f, i) => (
+                            <div key={i} className="flex items-center gap-2 text-sm">
+                                <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                                {f}
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            )}
+
+            {/* Description */}
+            {vehicle.description && (
+                <section className="mt-8">
+                    <h2 className="text-xl font-bold mb-3">About this model</h2>
+                    <p className="text-muted-foreground leading-relaxed">{vehicle.description}</p>
+                </section>
+            )}
+
+            {/* Modal */}
+            {dealerId && (
+                <LeadFormModal
+                    dealerId={dealerId}
+                    vehicleId={vehicle.id}
+                    leadType={leadType}
+                    title={leadTitle}
+                    isOpen={leadOpen}
+                    onClose={() => setLeadOpen(false)}
+                />
+            )}
+        </div>
+    )
+}

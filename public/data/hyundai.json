@@ -1,3 +1,858 @@
 {
-  "hyundai": []
-}
+  "items": [
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "Alcazar",
+      "model_citation": "https://www.cardekho.com/cars/Hyundai",
+      "variant_name": "Executive",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm",
+      "ex_showroom_price": {
+        "min": 1449900,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm",
+        "max": 1449900,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm"
+      },
+      "hyderabad_on_road_price": 1802497,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/alcazar/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm",
+      "engine_displacement_cc": 1482,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm",
+      "power_bhp": 158,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm",
+      "torque_nm": 253,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm",
+      "mileage_kmpl": 17.5,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm",
+      "seating_capacity": 7,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm",
+      "boot_space_l": 180,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm",
+      "ground_clearance_mm": 200,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm",
+      "length_mm": 4560,
+      "length_mm_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm",
+      "width_mm": 1800,
+      "width_mm_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm",
+      "height_mm": 1710,
+      "height_mm_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm",
+      "key_features": [
+        {
+          "value": "Height Adjustable Driver Seat",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm"
+        },
+        {
+          "value": "LED lighting",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm"
+        },
+        {
+          "value": "17-inch alloy wheels",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm"
+        },
+        {
+          "value": "Hill Assist",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Alcazar/9246/1758802404168/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Alcazar/Hyundai_Alcazar_Executive.htm"
+    },
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "Aura",
+      "model_citation": "https://www.cardekho.com/cars/Hyundai",
+      "variant_name": "E",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm",
+      "ex_showroom_price": {
+        "min": 599990,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm",
+        "max": 599990,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm"
+      },
+      "hyderabad_on_road_price": 737724,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/aura/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm",
+      "engine_displacement_cc": 1197,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm",
+      "power_bhp": 82,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm",
+      "torque_nm": 113.8,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm",
+      "mileage_kmpl": 17,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm",
+      "boot_space_l": 402,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm",
+      "ground_clearance_mm": 165,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm",
+      "length_mm": 3995,
+      "length_mm_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm",
+      "width_mm": 1680,
+      "width_mm_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm",
+      "height_mm": 1520,
+      "height_mm_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm",
+      "key_features": [
+        {
+          "value": "Dual airbags",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm"
+        },
+        {
+          "value": "Front power windows",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm"
+        },
+        {
+          "value": "LED tail lamps",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm"
+        },
+        {
+          "value": "Central Locking",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Aura/10125/1762429751468/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_E.htm"
+    },
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "Creta N Line",
+      "model_citation": "https://www.cardekho.com/cars/Hyundai",
+      "variant_name": "N8 DCT",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm",
+      "ex_showroom_price": {
+        "min": 1783000,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm",
+        "max": 1783000,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm"
+      },
+      "hyderabad_on_road_price": 2212613,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/creta-n-line/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm",
+      "transmission": "Automatic (7-speed DCT)",
+      "transmission_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm",
+      "engine_displacement_cc": 1482,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm",
+      "power_bhp": 158,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm",
+      "torque_nm": 253,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm",
+      "mileage_kmpl": 18.2,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm",
+      "boot_space_l": 433,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm",
+      "ground_clearance_mm": 190,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm",
+      "length_mm": 4330,
+      "length_mm_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm",
+      "width_mm": 1790,
+      "width_mm_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm",
+      "height_mm": 1635,
+      "height_mm_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm",
+      "key_features": [
+        {
+          "value": "Height Adjustable Driver Seat",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta-N-Line/11593/1768815786514/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm"
+    },
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "Exter",
+      "model_citation": "https://www.cardekho.com/cars/Hyundai",
+      "variant_name": "EX",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm",
+      "ex_showroom_price": {
+        "min": 573500,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm",
+        "max": 573500,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm"
+      },
+      "hyderabad_on_road_price": 708151,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/exter/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm",
+      "engine_displacement_cc": 1197,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm",
+      "power_bhp": 82,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm",
+      "torque_nm": 113.8,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm",
+      "mileage_kmpl": 19.4,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm",
+      "boot_space_l": 391,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm",
+      "ground_clearance_mm": 185,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm",
+      "length_mm": 3815,
+      "length_mm_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm",
+      "width_mm": 1710,
+      "width_mm_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm",
+      "height_mm": 1631,
+      "height_mm_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm",
+      "key_features": [
+        {
+          "value": "LED DRLs",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm"
+        },
+        {
+          "value": "Power Windows",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm"
+        },
+        {
+          "value": "Manual AC",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Exter/10121/1762429210086/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Exter/Hyundai_Exter_EX.htm"
+    },
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "Grand i10 Nios",
+      "model_citation": "https://www.cardekho.com/cars/Hyundai",
+      "variant_name": "Era",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm",
+      "ex_showroom_price": {
+        "min": 555000,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm",
+        "max": 555000,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm"
+      },
+      "hyderabad_on_road_price": 684480,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/grand-i10-nios/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm",
+      "engine_displacement_cc": 1197,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm",
+      "power_bhp": 82,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm",
+      "torque_nm": 113.8,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm",
+      "mileage_kmpl": 20.7,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm",
+      "boot_space_l": 260,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm",
+      "ground_clearance_mm": 165,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm",
+      "length_mm": 3815,
+      "length_mm_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm",
+      "width_mm": 1680,
+      "width_mm_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm",
+      "height_mm": 1520,
+      "height_mm_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm",
+      "key_features": [
+        {
+          "value": "Power Windows",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm"
+        },
+        {
+          "value": "Central Locking",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm"
+        },
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Grand-i10-Nios/9788/1694589204095/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Grand_i10_Nios/Hyundai_Grand_i10_Nios_Era.htm"
+    },
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "i20",
+      "model_citation": "https://www.cardekho.com/cars/Hyundai",
+      "variant_name": "Era",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm",
+      "ex_showroom_price": {
+        "min": 599000,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm",
+        "max": 599000,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm"
+      },
+      "hyderabad_on_road_price": 717659,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/i20/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm",
+      "engine_displacement_cc": 1197,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm",
+      "power_bhp": 82,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm",
+      "torque_nm": 114.7,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm",
+      "mileage_kmpl": 20.35,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm",
+      "boot_space_l": 311,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm",
+      "ground_clearance_mm": 170,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm",
+      "length_mm": 3995,
+      "length_mm_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm",
+      "width_mm": 1775,
+      "width_mm_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm",
+      "height_mm": 1505,
+      "height_mm_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm",
+      "key_features": [
+        {
+          "value": "Halogen Headlamps",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm"
+        },
+        {
+          "value": "Manual AC",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm"
+        },
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/i20/10091/1762430485966/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_i20/Hyundai_i20_Era.htm"
+    },
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "Ioniq 5",
+      "model_citation": "https://www.cardekho.com/cars/Hyundai",
+      "variant_name": "Long Range RWD",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm",
+      "ex_showroom_price": {
+        "min": 4630000,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm",
+        "max": 4630000,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm"
+      },
+      "hyderabad_on_road_price": 4981886,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/ioniq-5/price-in-hyderabad",
+      "fuel_type": "Electric",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm",
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm",
+      "power_bhp": 214.56,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm",
+      "torque_nm": 350,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm",
+      "mileage_kmpl": 631,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm",
+      "boot_space_l": 584,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm",
+      "ground_clearance_mm": 160,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm",
+      "length_mm": 4635,
+      "length_mm_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm",
+      "width_mm": 1890,
+      "width_mm_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm",
+      "height_mm": 1625,
+      "height_mm_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm",
+      "key_features": [
+        {
+          "value": "Digital Instrument Cluster",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm"
+        },
+        {
+          "value": "Wireless charging",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm"
+        },
+        {
+          "value": "ADAS suite",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm"
+        },
+        {
+          "value": "360 view camera",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm"
+        },
+        {
+          "value": "ADAS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/IONIQ-5/8983/1762430808343/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_IONIQ_5/Hyundai_IONIQ_5_Long_Range_RWD.htm"
+    },
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "Tucson",
+      "model_citation": "https://www.cardekho.com/cars/Hyundai",
+      "variant_name": "Platinum AT",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm",
+      "ex_showroom_price": {
+        "min": 2731660,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm",
+        "max": 2731660,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm"
+      },
+      "hyderabad_on_road_price": 3455091,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/tucson/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm",
+      "engine_displacement_cc": 1999,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm",
+      "power_bhp": 153.81,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm",
+      "torque_nm": 192,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm",
+      "mileage_kmpl": 13,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm",
+      "boot_space_l": 540,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm",
+      "ground_clearance_mm": 192,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm",
+      "length_mm": 4630,
+      "length_mm_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm",
+      "width_mm": 1865,
+      "width_mm_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm",
+      "height_mm": 1665,
+      "height_mm_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm",
+      "key_features": [
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm"
+        },
+        {
+          "value": "Blind-spot monitor",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm"
+        },
+        {
+          "value": "Dual-zone AC",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Tucson/10133/1762431617294/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Tucson/Hyundai_Tucson_Platinum_AT.htm"
+    },
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "Venue",
+      "model_citation": "https://www.cardekho.com/cars/Hyundai",
+      "variant_name": "HX 2",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm",
+      "ex_showroom_price": {
+        "min": 799900,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm",
+        "max": 799900,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm"
+      },
+      "hyderabad_on_road_price": 984479,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/venue/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm",
+      "engine_displacement_cc": 1197,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm",
+      "power_bhp": 82,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm",
+      "torque_nm": 114.7,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm",
+      "mileage_kmpl": 17.5,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm",
+      "boot_space_l": 375,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm",
+      "ground_clearance_mm": 190,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm",
+      "length_mm": 3995,
+      "length_mm_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm",
+      "width_mm": 1800,
+      "width_mm_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm",
+      "height_mm": 1665,
+      "height_mm_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm",
+      "key_features": [
+        {
+          "value": "LED DRLs",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm"
+        },
+        {
+          "value": "Power Windows",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Venue/10123/1762429486221/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Venue/Hyundai_Venue_HX_2.htm"
+    },
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "Verna",
+      "model_citation": "https://www.cardekho.com/cars/Hyundai",
+      "variant_name": "EX",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm",
+      "ex_showroom_price": {
+        "min": 1079500,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm",
+        "max": 1079500,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm"
+      },
+      "hyderabad_on_road_price": 1347393,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/verna/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm",
+      "engine_displacement_cc": 1497,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm",
+      "power_bhp": 113.18,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm",
+      "torque_nm": 143.8,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm",
+      "mileage_kmpl": 18.6,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm",
+      "boot_space_l": 528,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm",
+      "ground_clearance_mm": 170,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm",
+      "length_mm": 4535,
+      "length_mm_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm",
+      "width_mm": 1765,
+      "width_mm_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm",
+      "height_mm": 1475,
+      "height_mm_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm",
+      "key_features": [
+        {
+          "value": "Projector Headlamps",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm"
+        },
+        {
+          "value": "Manual AC",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm"
+        },
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Verna/10129/1762431057793/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm"
+    }
+  }

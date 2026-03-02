@@ -25,6 +25,8 @@ import {
     Star,
     Layout,
     Store,
+    Bike,
+    Truck,
 } from "lucide-react";
 import { dealerSiteHref } from "@/lib/utils/domain";
 
@@ -49,6 +51,28 @@ const navGroups = [
         items: [
             { name: "Analytics", href: "/dashboard/analytics", icon: BarChart3 },
             { name: "Reviews",   href: "/dashboard/reviews",   icon: Star       },
+        ],
+    },
+    {
+        label: "2-Wheeler",
+        items: [
+            { name: "2W Overview",  href: "/dashboard/two-wheelers",            icon: Bike        },
+            { name: "2W Inventory", href: "/dashboard/two-wheelers/inventory",  icon: Bike        },
+            { name: "2W Used",      href: "/dashboard/two-wheelers/used",        icon: Bike        },
+            { name: "2W Leads",     href: "/dashboard/two-wheelers/leads",       icon: Users       },
+            { name: "2W Service",   href: "/dashboard/two-wheelers/service",     icon: Settings    },
+            { name: "2W Bookings",  href: "/dashboard/two-wheelers/bookings",    icon: BarChart3   },
+        ],
+    },
+    {
+        label: "3-Wheeler",
+        items: [
+            { name: "3W Overview",  href: "/dashboard/three-wheelers",            icon: Truck       },
+            { name: "3W Inventory", href: "/dashboard/three-wheelers/inventory",  icon: Truck       },
+            { name: "3W Used",      href: "/dashboard/three-wheelers/used",        icon: Truck       },
+            { name: "3W Leads",     href: "/dashboard/three-wheelers/leads",       icon: Users       },
+            { name: "3W Service",   href: "/dashboard/three-wheelers/service",     icon: Settings    },
+            { name: "3W Bookings",  href: "/dashboard/three-wheelers/bookings",    icon: BarChart3   },
         ],
     },
     {

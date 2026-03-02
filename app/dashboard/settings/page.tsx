@@ -71,6 +71,12 @@ export default function SettingsPage() {
     const [verifyResult,  setVerifyResult]  = useState<{ allVerified: boolean; message: string } | null>(null);
     const [copied,        setCopied]        = useState(false);
 
+    // ── Vehicle Segments state ────────────────────────────────────────────────
+    const [sellsTwoWheelers,   setSellsTwoWheelers]   = useState(false);
+    const [sellsThreeWheelers, setSellsThreeWheelers] = useState(false);
+    const [segmentSaving,      setSegmentSaving]      = useState(false);
+    const [segmentSaved,       setSegmentSaved]       = useState(false);
+
     // ── Brand Assets state ────────────────────────────────────────────────────
     const [logoPreview,    setLogoPreview]    = useState<string>("");
     const [heroPreview,    setHeroPreview]    = useState<string>("");
@@ -88,12 +94,14 @@ export default function SettingsPage() {
         if (!dealerId) return;
         supabase
             .from("dealers")
-            .select("logo_url, hero_image_url")
+            .select("logo_url, hero_image_url, sells_two_wheelers, sells_three_wheelers")
             .eq("id", dealerId)
             .single()
             .then(({ data }) => {
-                if (data?.logo_url)        setLogoPreview(data.logo_url);
-                if (data?.hero_image_url)  setHeroPreview(data.hero_image_url);
+                if (data?.logo_url)               setLogoPreview(data.logo_url);
+                if (data?.hero_image_url)          setHeroPreview(data.hero_image_url);
+                setSellsTwoWheelers(data?.sells_two_wheelers   ?? false);
+                setSellsThreeWheelers(data?.sells_three_wheelers ?? false);
             });
         return;
         return;
@@ -400,6 +408,18 @@ export default function SettingsPage() {
         setNotifications(prev => ({ ...prev, [key]: !prev[key as keyof typeof prev] }));
     };
 
+    const handleSaveSegments = async () => {
+        if (!dealerId) return;
+        setSegmentSaving(true);
+        await supabase
+            .from("dealers")
+            .update({ sells_two_wheelers: sellsTwoWheelers, sells_three_wheelers: sellsThreeWheelers })
+            .eq("id", dealerId);
+        setSegmentSaving(false);
+        setSegmentSaved(true);
+        setTimeout(() => setSegmentSaved(false), 2500);
+    };
+
     return (
         <div className="space-y-6 animate-fade-in">
             {/* Page Header */}
@@ -476,6 +496,51 @@ export default function SettingsPage() {
                                     onChange={(e) => handleChange("email", e.target.value)}
                                 />
                             </div>
+                        </CardContent>
+                    </Card>
+
+                    {/* Vehicle Segments */}
+                    <Card variant="glass">
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-2.5 text-lg">
+                                <div className="p-2 rounded-lg bg-green-500/10">
+                                    <Globe className="w-4 h-4 text-green-500" />
+                                </div>
+                                Vehicle Segments
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-3">
+                            <p className="text-sm text-muted-foreground">Enable the vehicle segments your dealership sells. This will add 2W/3W sections to your public website.</p>
+                            <div className="flex items-center justify-between px-4 py-3.5 rounded-xl bg-muted/30">
+                                <div>
+                                    <p className="font-medium text-sm">🏍️ 2-Wheelers</p>
+                                    <p className="text-xs text-muted-foreground">Bikes, Scooters & Electric 2W</p>
+                                </div>
+                                <button
+                                    type="button"
+                                    onClick={() => setSellsTwoWheelers(v => !v)}
+                                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${sellsTwoWheelers ? "bg-green-500" : "bg-muted"}`}
+                                >
+                                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform ${sellsTwoWheelers ? "translate-x-6" : "translate-x-1"}`} />
+                                </button>
+                            </div>
+                            <div className="flex items-center justify-between px-4 py-3.5 rounded-xl bg-muted/30">
+                                <div>
+                                    <p className="font-medium text-sm">🛺 3-Wheelers</p>
+                                    <p className="text-xs text-muted-foreground">Passenger Autos, Cargo & Electric 3W</p>
+                                </div>
+                                <button
+                                    type="button"
+                                    onClick={() => setSellsThreeWheelers(v => !v)}
+                                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${sellsThreeWheelers ? "bg-purple-500" : "bg-muted"}`}
+                                >
+                                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform ${sellsThreeWheelers ? "translate-x-6" : "translate-x-1"}`} />
+                                </button>
+                            </div>
+                            <Button onClick={handleSaveSegments} disabled={segmentSaving} size="sm" className="gap-2">
+                                <Save className="w-3.5 h-3.5" />
+                                {segmentSaving ? "Saving..." : segmentSaved ? "Saved ✓" : "Save Segments"}
+                            </Button>
                         </CardContent>
                     </Card>
 

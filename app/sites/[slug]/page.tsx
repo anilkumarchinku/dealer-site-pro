@@ -77,9 +77,11 @@ function ComingSoon({ slug }: { slug: string }) {
 // ── Multi-Site Portal — shown for hybrid & multi-brand dealers on their main URL
 function MultiSitePortal({
     dealerName, location, phone, email, tagline, slug, brands, isHybrid,
+    sellsTwoWheelers, sellsThreeWheelers,
 }: {
     dealerName: string; location: string; phone: string; email: string;
     tagline?: string | null; slug: string; brands: string[]; isHybrid: boolean;
+    sellsTwoWheelers: boolean; sellsThreeWheelers: boolean;
 }) {
     const attractiveLine = tagline ?? `Your Trusted Automobile Partner in ${location}`
 
@@ -117,9 +119,30 @@ function MultiSitePortal({
         })
     }
 
+    if (sellsTwoWheelers) {
+        siteCards.push({
+            label: '2-Wheelers',
+            sublabel: 'Bikes · Scooters · Electric',
+            href: `/sites/${slug}/two-wheelers`,
+            color: 'green',
+            emoji: '🏍️',
+        })
+    }
+    if (sellsThreeWheelers) {
+        siteCards.push({
+            label: '3-Wheelers',
+            sublabel: 'Passenger · Cargo · Electric',
+            href: `/sites/${slug}/three-wheelers`,
+            color: 'purple',
+            emoji: '🛺',
+        })
+    }
+
     const colorMap: Record<string, { border: string; bg: string; text: string; btn: string }> = {
-        blue: { border: 'border-blue-500/30', bg: 'bg-blue-500/5', text: 'text-blue-400', btn: 'bg-blue-500 hover:bg-blue-600' },
-        amber: { border: 'border-amber-500/30', bg: 'bg-amber-500/5', text: 'text-amber-400', btn: 'bg-amber-500 hover:bg-amber-600' },
+        blue:   { border: 'border-blue-500/30',   bg: 'bg-blue-500/5',   text: 'text-blue-400',   btn: 'bg-blue-500 hover:bg-blue-600'   },
+        amber:  { border: 'border-amber-500/30',  bg: 'bg-amber-500/5',  text: 'text-amber-400',  btn: 'bg-amber-500 hover:bg-amber-600'  },
+        green:  { border: 'border-green-500/30',  bg: 'bg-green-500/5',  text: 'text-green-400',  btn: 'bg-green-500 hover:bg-green-600'  },
+        purple: { border: 'border-purple-500/30', bg: 'bg-purple-500/5', text: 'text-purple-400', btn: 'bg-purple-500 hover:bg-purple-600' },
     }
 
     return (
@@ -280,6 +303,42 @@ export async function generateMetadata({ params }: SitePageProps): Promise<Metad
     }
 }
 
+// ── 2W / 3W discovery banner — appended below any car template ───────────────
+function VehicleSegmentsBanner({ slug, sellsTwoWheelers, sellsThreeWheelers }: {
+    slug: string; sellsTwoWheelers: boolean; sellsThreeWheelers: boolean
+}) {
+    if (!sellsTwoWheelers && !sellsThreeWheelers) return null
+    return (
+        <div className="bg-gray-950 border-t border-white/10 py-10 px-4">
+            <div className="max-w-4xl mx-auto text-center mb-6">
+                <p className="text-gray-400 text-sm uppercase tracking-widest font-semibold">Also Available At Our Dealership</p>
+            </div>
+            <div className={`max-w-2xl mx-auto grid gap-4 ${sellsTwoWheelers && sellsThreeWheelers ? 'sm:grid-cols-2' : 'grid-cols-1 max-w-sm'}`}>
+                {sellsTwoWheelers && (
+                    <a href={`/sites/${slug}/two-wheelers`} className="group flex items-center gap-4 p-5 rounded-2xl border border-green-500/30 bg-green-500/5 hover:bg-green-500/10 transition-all">
+                        <span className="text-4xl">🏍️</span>
+                        <div className="text-left">
+                            <p className="text-white font-bold">2-Wheelers</p>
+                            <p className="text-green-400 text-xs mt-0.5">Bikes · Scooters · Electric</p>
+                            <p className="text-green-400 text-xs group-hover:underline mt-1">Browse →</p>
+                        </div>
+                    </a>
+                )}
+                {sellsThreeWheelers && (
+                    <a href={`/sites/${slug}/three-wheelers`} className="group flex items-center gap-4 p-5 rounded-2xl border border-purple-500/30 bg-purple-500/5 hover:bg-purple-500/10 transition-all">
+                        <span className="text-4xl">🛺</span>
+                        <div className="text-left">
+                            <p className="text-white font-bold">3-Wheelers</p>
+                            <p className="text-purple-400 text-xs mt-0.5">Passenger · Cargo · Electric</p>
+                            <p className="text-purple-400 text-xs group-hover:underline mt-1">Browse →</p>
+                        </div>
+                    </a>
+                )}
+            </div>
+        </div>
+    )
+}
+
 // ── JSON-LD schema helpers ─────────────────────────────────────────────────────
 function buildAutoDealerSchema(dealer: NonNullable<Awaited<ReturnType<typeof fetchDealerBySlug>>>) {
     return {
@@ -344,7 +403,7 @@ export default async function SitePage({ params }: SitePageProps) {
     const dealer = await fetchDealerBySlug(slug)
     if (!dealer) return <ComingSoon slug={slug} />
 
-    const { sells_new_cars, sells_used_cars, brandFilter, brands, vehicles, usedCarSite, cyepro_api_key, logo_url, hero_image_url } = dealer
+    const { sells_new_cars, sells_used_cars, sells_two_wheelers, sells_three_wheelers, brandFilter, brands, vehicles, usedCarSite, cyepro_api_key, logo_url, hero_image_url } = dealer
 
     const isHybridDealer = sells_new_cars && sells_used_cars
     const isMultiBrandNewOnly = sells_new_cars && !sells_used_cars && brands.length > 1
@@ -363,6 +422,8 @@ export default async function SitePage({ params }: SitePageProps) {
                 slug={dealer.slug}
                 brands={brands}
                 isHybrid={isHybridDealer}
+                sellsTwoWheelers={sells_two_wheelers}
+                sellsThreeWheelers={sells_three_wheelers}
             />
         )
     }
@@ -484,17 +545,25 @@ export default async function SitePage({ params }: SitePageProps) {
         </>
     )
 
+    const segmentsBanner = (
+        <VehicleSegmentsBanner
+            slug={dealer.slug}
+            sellsTwoWheelers={sells_two_wheelers}
+            sellsThreeWheelers={sells_three_wheelers}
+        />
+    )
+
     // ── Render the chosen template ────────────────────────────────────────────
     switch (dealer.style_template) {
         case 'luxury':
-            return <>{jsonLdScripts}<LuxuryTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} /></>
+            return <>{jsonLdScripts}<LuxuryTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} />{segmentsBanner}</>
         case 'sporty':
-            return <>{jsonLdScripts}<SportyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} /></>
+            return <>{jsonLdScripts}<SportyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} />{segmentsBanner}</>
         case 'family':
-            return <>{jsonLdScripts}<FamilyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} /></>
+            return <>{jsonLdScripts}<FamilyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} />{segmentsBanner}</>
         case 'modern':
         case 'professional':
         default:
-            return <>{jsonLdScripts}<ModernTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle }} /></>
+            return <>{jsonLdScripts}<ModernTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle }} />{segmentsBanner}</>
     }
 }

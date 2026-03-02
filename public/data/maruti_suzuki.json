@@ -1,3 +1,2574 @@
 {
-  "maruti_suzuki": []
+  "maruti_suzuki_variants": [
+    {
+      "variant_name": "Maruti Grand Vitara Sigma",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1077000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 1326000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 21.11,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "key_features": [
+        {
+          "value": "Halogen projector headlights",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Push-button start/stop",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Auto AC",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Dual front airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Delta",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1210000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 1489000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 21.11,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "key_features": [
+        {
+          "value": "Push-button start/stop",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "7-inch touchscreen",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Cruise control",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Dual front airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Delta CNG",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1300000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 1599000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "CNG",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 86.63,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 121.5,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 26.6,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "key_features": [
+        {
+          "value": "CNG option",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "7-inch touchscreen",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Reversing camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Dual front airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Delta AT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1345000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 1655000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 20.58,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "key_features": [
+        {
+          "value": "Automatic option",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Paddle shifters",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "7-inch touchscreen",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Dual front airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Zeta",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1370000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 1688000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 21.11,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "key_features": [
+        {
+          "value": "Auto-LED projector headlights",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "9-inch touchscreen",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Reversing camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Zeta DT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1385000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 1707000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 21.11,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "key_features": [
+        {
+          "value": "CNG option",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "9-inch touchscreen",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Reversing camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Zeta Opt",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1428000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 1760000.0000000002,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 21.11,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Zeta Opt DT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1443000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 1779000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 21.11,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Zeta CNG",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1460000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 1797000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "CNG",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 86.63,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 121.5,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 26.6,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Zeta AT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1505000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 1854000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 20.58,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "key_features": [
+        {
+          "value": "Automatic option",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Paddle shifters",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "9-inch touchscreen",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Alpha",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1520000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 1872000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 21.11,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "key_features": [
+        {
+          "value": "Auto-LED projector headlights",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "9-inch touchscreen",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "360-degree camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Zeta AT DT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1520000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 1873000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 20.58,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "key_features": [
+        {
+          "value": "Dual-tone option",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "9-inch touchscreen",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "360-degree camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Alpha DT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1535000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 1891000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 21.11,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Zeta Opt AT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1563000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 1926000.0000000002,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 20.58,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "key_features": [
+        {
+          "value": "Automatic option",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Paddle shifters",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "360-degree camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Alpha Opt",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1578000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 1943000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 21.11,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Zeta Opt AT DT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1578000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 1945000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 20.58,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Alpha Opt DT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1593000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 1962000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 21.11,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Alpha AT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1655000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 2038000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 20.58,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Delta Plus Hybrid CVT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1663000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 2046000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1490,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 91.18,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 122,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 27.97,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 255,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "key_features": [
+        {
+          "value": "Automatic option",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Dual-tone option",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        },
+        {
+          "value": "9-inch touchscreen",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Alpha AT DT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1670000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 2057000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 20.58,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Alpha Opt AT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1713000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 2109000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 20.58,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Alpha Opt AT DT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1728000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 2128000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 20.58,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Zeta Plus Hybrid CVT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1792000.0000000002,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 2205000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1490,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 91.18,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 122,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 27.97,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 255,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Alpha AWD AT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1800000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 2217000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 19.38,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Zeta Plus Hybrid CVT DT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1807000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 2224000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1490,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 91.18,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 122,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 27.97,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 255,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Alpha AWD AT DT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1814999.9999999998,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 2236000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 19.38,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Zeta Plus Opt Hybrid CVT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1850000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 2277000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1490,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 91.18,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 122,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 27.97,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 255,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Alpha AWD Opt AT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1857999.9999999998,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 2288000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 19.38,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Alpha AWD Opt AT DT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1873000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 2307000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 101.64,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 136.8,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 19.38,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 373,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Alpha Plus Hybrid CVT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1950000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 2399000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1490,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 91.18,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 122,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 27.97,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 255,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Alpha Plus Opt Hybrid CVT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1957000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 2449000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1490,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 91.18,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 122,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 27.97,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 255,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    },
+    {
+      "variant_name": "Maruti Grand Vitara Alpha Plus Hybrid CVT DT",
+      "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "ex_showroom_price": 1966000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
+      "hyderabad_on_road_price": 2457000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/maruti/grand-vitara/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "engine_displacement_cc": 1490,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "power_bhp": 91.18,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "torque_nm": 122,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "mileage": 27.97,
+      "mileage_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+      "dimensions": {
+        "length_mm": 4345,
+        "length_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "width_mm": 1795,
+        "width_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "height_mm": 1645,
+        "height_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "ground_clearance_mm": 210,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/grand-vitara/specs",
+        "boot_space_liters": 255,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+      },
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "Hill Hold Assist",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/grand-vitara/specs"
+        }
+      ]
+    }
+  ]
 }

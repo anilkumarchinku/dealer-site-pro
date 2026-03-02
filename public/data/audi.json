@@ -1,3 +1,1639 @@
 {
-  "audi": []
+  "items": [
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/a4",
+      "model": "A4",
+      "model_citation": "https://www.cardekho.com/audi/a4",
+      "variant_name": "Premium",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm",
+      "ex_showroom_price_min": 4625000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm",
+      "ex_showroom_price_max": 4625000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm",
+      "hyderabad_on_road_price": 5711000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/a4/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm",
+      "engine_displacement_cc": 1984,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm",
+      "power_bhp": 207,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm",
+      "torque_nm": 320,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm",
+      "mileage_kmpl": 15,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm",
+      "boot_space_l": 460,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm",
+      "ground_clearance_mm": 160,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm",
+      "length_mm": 4762,
+      "length_mm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm",
+      "width_mm": 1847,
+      "width_mm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm",
+      "height_mm": 1433,
+      "height_mm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm",
+      "key_features": [
+        {
+          "value": "Height Adjustable Driver Seat",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm"
+        },
+        {
+          "value": "Wireless Android Auto / Apple CarPlay",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm"
+        },
+        {
+          "value": "Wireless Charger",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm"
+        },
+        {
+          "value": "TCS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm"
+        },
+        {
+          "value": "Rear Camera",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/A4/10548/1757137106350/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm"
+        },
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/A4/10548/1732257078935/front-view-118.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/a4",
+      "source_url": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/a4",
+      "model": "A4",
+      "model_citation": "https://www.cardekho.com/audi/a4",
+      "variant_name": "Premium Plus",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm",
+      "ex_showroom_price_min": 5117000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm",
+      "ex_showroom_price_max": 5117000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm",
+      "hyderabad_on_road_price": 6316000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/a4/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm",
+      "engine_displacement_cc": 1984,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm",
+      "power_bhp": 207,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm",
+      "torque_nm": 320,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm",
+      "mileage_kmpl": 14.1,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm",
+      "boot_space_l": 460,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm",
+      "length_mm": 4762,
+      "length_mm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm",
+      "width_mm": 1847,
+      "width_mm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm",
+      "height_mm": 1433,
+      "height_mm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm",
+      "key_features": [
+        {
+          "value": "Height Adjustable Driver Seat",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm"
+        },
+        {
+          "value": "Wireless Android Auto / Apple CarPlay",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm"
+        },
+        {
+          "value": "Wireless Charger",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm"
+        },
+        {
+          "value": "TCS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm"
+        },
+        {
+          "value": "Rear Camera",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/A4/10548/1757137106350/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/a4",
+      "source_url": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Premium_Plus.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/a4",
+      "model": "A4",
+      "model_citation": "https://www.cardekho.com/audi/a4",
+      "variant_name": "Signature Edition",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm",
+      "ex_showroom_price_min": 5400000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm",
+      "ex_showroom_price_max": 5400000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm",
+      "hyderabad_on_road_price": 6663000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/a4/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm",
+      "engine_displacement_cc": 1984,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm",
+      "power_bhp": 207,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm",
+      "torque_nm": 320,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm",
+      "mileage_kmpl": 14.1,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm",
+      "boot_space_l": 460,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm",
+      "length_mm": 4762,
+      "length_mm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm",
+      "width_mm": 1847,
+      "width_mm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm",
+      "height_mm": 1433,
+      "height_mm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm",
+      "key_features": [
+        {
+          "value": "Height Adjustable Driver Seat",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm"
+        },
+        {
+          "value": "Wireless Android Auto",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm"
+        },
+        {
+          "value": "Wireless Charger",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm"
+        },
+        {
+          "value": "Air Purifier",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm"
+        },
+        {
+          "value": "TCS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm"
+        },
+        {
+          "value": "Rear Camera",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/A4/10548/1757137106350/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/a4",
+      "source_url": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Signature_Edition.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/a4",
+      "model": "A4",
+      "model_citation": "https://www.cardekho.com/audi/a4",
+      "variant_name": "Technology",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm",
+      "ex_showroom_price_min": 5511000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm",
+      "ex_showroom_price_max": 5511000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm",
+      "hyderabad_on_road_price": 6800000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/a4/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm",
+      "engine_displacement_cc": 1984,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm",
+      "power_bhp": 207,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm",
+      "torque_nm": 320,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm",
+      "mileage_kmpl": 14.1,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm",
+      "boot_space_l": 460,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm",
+      "length_mm": 4762,
+      "length_mm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm",
+      "width_mm": 1847,
+      "width_mm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm",
+      "height_mm": 1433,
+      "height_mm_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm",
+      "key_features": [
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm"
+        },
+        {
+          "value": "Height Adjustable Driver Seat",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm"
+        },
+        {
+          "value": "Wireless Charger",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm"
+        },
+        {
+          "value": "TCS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm"
+        },
+        {
+          "value": "Rear Camera",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/A4/10548/1757137106350/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/a4",
+      "source_url": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_A4/Audi_A4_Technology.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/carmodels/Audi/Audi_A6",
+      "model": "A6",
+      "model_citation": "https://www.cardekho.com/carmodels/Audi/Audi_A6",
+      "variant_name": "45 TFSI Premium Plus",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm",
+      "ex_showroom_price_min": 6373999,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm",
+      "ex_showroom_price_max": 6373999,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm",
+      "hyderabad_on_road_price": 7860000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/a6/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm",
+      "engine_displacement_cc": 1984,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm",
+      "power_bhp": 241.3,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm",
+      "torque_nm": 370,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm",
+      "mileage_kmpl": 14.11,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm",
+      "boot_space_l": 530,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm",
+      "ground_clearance_mm": 165,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm",
+      "length_mm": 4939,
+      "length_mm_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm",
+      "width_mm": 2110,
+      "width_mm_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm",
+      "height_mm": 1470,
+      "height_mm_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm",
+      "key_features": [
+        {
+          "value": "Heads-Up Display",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm"
+        },
+        {
+          "value": "Memory Seats",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm"
+        },
+        {
+          "value": "Wireless Charging",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm"
+        },
+        {
+          "value": "TCS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm"
+        },
+        {
+          "value": "Hill Assist",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/A6/10551/1757140056684/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/carmodels/Audi/Audi_A6",
+      "source_url": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/carmodels/Audi/Audi_A6",
+      "model": "A6",
+      "model_citation": "https://www.cardekho.com/carmodels/Audi/Audi_A6",
+      "variant_name": "45 TFSI Technology",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm",
+      "ex_showroom_price_min": 6989000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm",
+      "ex_showroom_price_max": 6989000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm",
+      "hyderabad_on_road_price": 8616000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/a6/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm",
+      "engine_displacement_cc": 1984,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm",
+      "power_bhp": 241.3,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm",
+      "torque_nm": 370,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm",
+      "mileage_kmpl": 14.11,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm",
+      "boot_space_l": 530,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm",
+      "ground_clearance_mm": 165,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm",
+      "length_mm": 4939,
+      "length_mm_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm",
+      "width_mm": 2110,
+      "width_mm_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm",
+      "height_mm": 1470,
+      "height_mm_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm",
+      "key_features": [
+        {
+          "value": "Heads-Up Display",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm"
+        },
+        {
+          "value": "Memory Seats",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm"
+        },
+        {
+          "value": "Audi Sound System (21 speakers)",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm"
+        },
+        {
+          "value": "Heads-Up Display",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/A6/10551/1757140056684/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/carmodels/Audi/Audi_A6",
+      "source_url": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/q5",
+      "model": "Q5",
+      "model_citation": "https://www.cardekho.com/audi/q5",
+      "variant_name": "Premium Plus",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm",
+      "ex_showroom_price_min": 6474000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm",
+      "ex_showroom_price_max": 6474000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm",
+      "hyderabad_on_road_price": 7983000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/q5/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm",
+      "engine_displacement_cc": 1984,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm",
+      "power_bhp": 245.59,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm",
+      "torque_nm": 370,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm",
+      "mileage_kmpl": 13.47,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm",
+      "boot_space_l": 520,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm",
+      "length_mm": 4682,
+      "length_mm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm",
+      "width_mm": 1893,
+      "width_mm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm",
+      "height_mm": 1655,
+      "height_mm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm",
+      "key_features": [
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm"
+        },
+        {
+          "value": "Adjustable Headrest",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q5/10556/1757140951323/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/q5",
+      "source_url": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/q5",
+      "model": "Q5",
+      "model_citation": "https://www.cardekho.com/audi/q5",
+      "variant_name": "Technology",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm",
+      "ex_showroom_price_min": 6986000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm",
+      "ex_showroom_price_max": 6986000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm",
+      "hyderabad_on_road_price": 8612000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/q5/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm",
+      "engine_displacement_cc": 1984,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm",
+      "power_bhp": 245.59,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm",
+      "torque_nm": 370,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm",
+      "mileage_kmpl": 13.47,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm",
+      "boot_space_l": 520,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm",
+      "length_mm": 4682,
+      "length_mm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm",
+      "width_mm": 1893,
+      "width_mm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm",
+      "height_mm": 1653,
+      "height_mm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm",
+      "key_features": [
+        {
+          "value": "360 Camera",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm"
+        },
+        {
+          "value": "Memory Function for Seats",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm"
+        },
+        {
+          "value": "TCS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm"
+        },
+        {
+          "value": "Hill Assist",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q5/10556/1757140951323/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/q5",
+      "source_url": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Technology.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/q5",
+      "model": "Q5",
+      "model_citation": "https://www.cardekho.com/audi/q5",
+      "variant_name": "Bold Edition",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm",
+      "ex_showroom_price_min": 6986000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm",
+      "ex_showroom_price_max": 6986000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm",
+      "hyderabad_on_road_price": 8612000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/q5/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm",
+      "engine_displacement_cc": 1984,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm",
+      "power_bhp": 245.59,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm",
+      "torque_nm": 370,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm",
+      "mileage_kmpl": 13.47,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm",
+      "boot_space_l": 520,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm",
+      "ground_clearance_mm": 208,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm",
+      "length_mm": 4682,
+      "length_mm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm",
+      "width_mm": 1893,
+      "width_mm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm",
+      "height_mm": 1653,
+      "height_mm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm",
+      "key_features": [
+        {
+          "value": "Heads Up Display",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm"
+        },
+        {
+          "value": "Memory Seats",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm"
+        },
+        {
+          "value": "Heads-Up Display",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q5/10556/1757140951323/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/q5",
+      "source_url": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/q5",
+      "model": "Q5",
+      "model_citation": "https://www.cardekho.com/audi/q5",
+      "variant_name": "Signature Line",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm",
+      "ex_showroom_price_min": 6986000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm",
+      "ex_showroom_price_max": 6986000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm",
+      "hyderabad_on_road_price": 8612000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/q5/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm",
+      "engine_displacement_cc": 1984,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm",
+      "power_bhp": 245.59,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm",
+      "torque_nm": 370,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm",
+      "mileage_kmpl": 13.47,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm",
+      "boot_space_l": 520,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm",
+      "length_mm": 4682,
+      "length_mm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm",
+      "width_mm": 1893,
+      "width_mm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm",
+      "height_mm": 1653,
+      "height_mm_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm",
+      "key_features": [
+        {
+          "value": "360 Degree Camera",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm"
+        },
+        {
+          "value": "Memory Seats",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm"
+        },
+        {
+          "value": "TCS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q5/10556/1757140951323/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/q5",
+      "source_url": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/s5-sportback",
+      "model": "S5 Sportback",
+      "model_citation": "https://www.cardekho.com/audi/s5-sportback",
+      "variant_name": "3.0L TFSI",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm",
+      "ex_showroom_price_min": 7357001,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm",
+      "ex_showroom_price_max": 7357001,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm",
+      "hyderabad_on_road_price": 9068000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/s5-sportback/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm",
+      "engine_displacement_cc": 2994,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm",
+      "power_bhp": 348.66,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm",
+      "torque_nm": 500,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm",
+      "mileage_kmpl": 8.8,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm",
+      "boot_space_l": 480,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm",
+      "ground_clearance_mm": 117,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm",
+      "length_mm": 4765,
+      "length_mm_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm",
+      "width_mm": 1845,
+      "width_mm_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm",
+      "height_mm": 1390,
+      "height_mm_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm",
+      "key_features": [
+        {
+          "value": "Heads-Up Display",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm"
+        },
+        {
+          "value": "Memory Seats",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm"
+        },
+        {
+          "value": "Active Noise Cancellation",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm"
+        },
+        {
+          "value": "10 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm"
+        },
+        {
+          "value": "Heads-Up Display",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/S5-Sportback/10569/1757403486629/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/s5-sportback",
+      "source_url": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_3.0L_TFSI.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/s5-sportback",
+      "model": "S5 Sportback",
+      "model_citation": "https://www.cardekho.com/audi/s5-sportback",
+      "variant_name": "Platinum Edition",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm",
+      "ex_showroom_price_min": 8050001,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm",
+      "ex_showroom_price_max": 8050001,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm",
+      "hyderabad_on_road_price": 9919000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/s5-sportback/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm",
+      "engine_displacement_cc": 2994,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm",
+      "power_bhp": 348.66,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm",
+      "torque_nm": 500,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm",
+      "mileage_kmpl": 7.6,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm",
+      "boot_space_l": 480,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm",
+      "length_mm": 4765,
+      "length_mm_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm",
+      "width_mm": 1845,
+      "width_mm_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm",
+      "height_mm": 1390,
+      "height_mm_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm",
+      "key_features": [
+        {
+          "value": "Heads-Up Display",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm"
+        },
+        {
+          "value": "Memory Seats",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm"
+        },
+        {
+          "value": "Active Noise Cancellation",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm"
+        },
+        {
+          "value": "Heads-Up Display",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/S5-Sportback/10569/1757403486629/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/s5-sportback",
+      "source_url": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm",
+      "launch_year": 2023,
+      "launch_year_citation": "https://www.cardekho.com/overview/Audi_S5_Sportback/Audi_S5_Sportback_Platinum_Edition.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/q7",
+      "model": "Q7",
+      "model_citation": "https://www.cardekho.com/audi/q7",
+      "variant_name": "Premium Plus",
+      "variant_name_citation": "https://www.cardekho.com/audi/q7/specs",
+      "ex_showroom_price_min": 8613999,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/q7/specs",
+      "ex_showroom_price_max": 8613999,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/q7/specs",
+      "hyderabad_on_road_price": 10860156,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/q7/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/audi/q7/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/audi/q7/specs",
+      "engine_displacement_cc": 2995,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/q7/specs",
+      "power_bhp": 335,
+      "power_bhp_citation": "https://www.cardekho.com/audi/q7/specs",
+      "torque_nm": 500,
+      "torque_nm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "mileage_kmpl": 11,
+      "mileage_kmpl_citation": "https://www.cardekho.com/audi/q7/specs",
+      "seating_capacity": 7,
+      "seating_capacity_citation": "https://www.cardekho.com/audi/q7/specs",
+      "boot_space_l_citation": "https://www.cardekho.com/audi/q7/specs",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "length_mm": 5072,
+      "length_mm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "width_mm": 1970,
+      "width_mm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "height_mm": 1705,
+      "height_mm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "key_features": [
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        },
+        {
+          "value": "Alloy wheels (20-inch)",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        },
+        {
+          "value": "360 view camera",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q7/12198/1768206503532/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/q7",
+      "source_url": "https://www.cardekho.com/audi/q7/specs",
+      "source_url_citation": "https://www.cardekho.com/audi/q7/specs"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/q7",
+      "model": "Q7",
+      "model_citation": "https://www.cardekho.com/audi/q7",
+      "variant_name": "Bold Edition",
+      "variant_name_citation": "https://www.cardekho.com/audi/q7/specs",
+      "ex_showroom_price_min": 9315000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/q7/specs",
+      "ex_showroom_price_max": 9315000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/q7/specs",
+      "hyderabad_on_road_price": 11721982,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/q7/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/audi/q7/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/audi/q7/specs",
+      "engine_displacement_cc": 2995,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/q7/specs",
+      "power_bhp": 335,
+      "power_bhp_citation": "https://www.cardekho.com/audi/q7/specs",
+      "torque_nm": 500,
+      "torque_nm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "mileage_kmpl": 11,
+      "mileage_kmpl_citation": "https://www.cardekho.com/audi/q7/specs",
+      "seating_capacity": 7,
+      "seating_capacity_citation": "https://www.cardekho.com/audi/q7/specs",
+      "boot_space_l_citation": "https://www.cardekho.com/audi/q7/specs",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "length_mm": 5072,
+      "length_mm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "width_mm": 1970,
+      "width_mm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "height_mm": 1705,
+      "height_mm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "key_features": [
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q7/12198/1768206503532/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/q7",
+      "source_url": "https://www.cardekho.com/audi/q7/specs",
+      "source_url_citation": "https://www.cardekho.com/audi/q7/specs"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/q7",
+      "model": "Q7",
+      "model_citation": "https://www.cardekho.com/audi/q7",
+      "variant_name": "Technology",
+      "variant_name_citation": "https://www.cardekho.com/audi/q7/specs",
+      "ex_showroom_price_min": 9502999,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/q7/specs",
+      "ex_showroom_price_max": 9502999,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/q7/specs",
+      "hyderabad_on_road_price": 11953148,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/q7/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/audi/q7/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/audi/q7/specs",
+      "engine_displacement_cc": 2995,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/q7/specs",
+      "power_bhp": 335,
+      "power_bhp_citation": "https://www.cardekho.com/audi/q7/specs",
+      "torque_nm": 500,
+      "torque_nm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "mileage_kmpl": 11,
+      "mileage_kmpl_citation": "https://www.cardekho.com/audi/q7/specs",
+      "seating_capacity": 7,
+      "seating_capacity_citation": "https://www.cardekho.com/audi/q7/specs",
+      "boot_space_l_citation": "https://www.cardekho.com/audi/q7/specs",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "length_mm": 5072,
+      "length_mm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "width_mm": 1970,
+      "width_mm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "height_mm": 1705,
+      "height_mm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "key_features": [
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q7/12198/1768206503532/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/q7",
+      "source_url": "https://www.cardekho.com/audi/q7/specs",
+      "source_url_citation": "https://www.cardekho.com/audi/q7/specs"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/q7",
+      "model": "Q7",
+      "model_citation": "https://www.cardekho.com/audi/q7",
+      "variant_name": "Signature Edition",
+      "variant_name_citation": "https://www.cardekho.com/audi/q7/specs",
+      "ex_showroom_price_min": 9503000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/q7/specs",
+      "ex_showroom_price_max": 9503000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/q7/specs",
+      "hyderabad_on_road_price": 11953151,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/q7/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/audi/q7/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/audi/q7/specs",
+      "engine_displacement_cc": 2995,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/q7/specs",
+      "power_bhp": 335,
+      "power_bhp_citation": "https://www.cardekho.com/audi/q7/specs",
+      "torque_nm": 500,
+      "torque_nm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "mileage_kmpl": 11,
+      "mileage_kmpl_citation": "https://www.cardekho.com/audi/q7/specs",
+      "seating_capacity": 7,
+      "seating_capacity_citation": "https://www.cardekho.com/audi/q7/specs",
+      "boot_space_l_citation": "https://www.cardekho.com/audi/q7/specs",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "length_mm": 5072,
+      "length_mm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "width_mm": 1970,
+      "width_mm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "height_mm": 1705,
+      "height_mm_citation": "https://www.cardekho.com/audi/q7/specs",
+      "key_features": [
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q7/12198/1768206503532/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/audi/q7/specs"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/q7",
+      "source_url": "https://www.cardekho.com/audi/q7/specs",
+      "source_url_citation": "https://www.cardekho.com/audi/q7/specs"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/rs-q8",
+      "model": "RS Q8",
+      "model_citation": "https://www.cardekho.com/audi/rs-q8",
+      "variant_name": "RS Q8",
+      "variant_name_citation": "https://www.cardekho.com/audi/rs-q8/specs",
+      "ex_showroom_price_min": 23200000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/rs-q8/specs",
+      "ex_showroom_price_max": 23200000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/rs-q8/specs",
+      "hyderabad_on_road_price": 28581013,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/rs-q8/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/audi/rs-q8/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/audi/rs-q8/specs",
+      "engine_displacement_cc": 3998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/rs-q8/specs",
+      "power_bhp": 632,
+      "power_bhp_citation": "https://www.cardekho.com/audi/rs-q8/specs",
+      "torque_nm": 850,
+      "torque_nm_citation": "https://www.cardekho.com/audi/rs-q8/specs",
+      "mileage_kmpl": 9,
+      "mileage_kmpl_citation": "https://www.cardekho.com/audi/rs-q8/specs",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/audi/rs-q8/specs",
+      "boot_space_l_citation": "https://www.cardekho.com/audi/rs-q8/specs",
+      "ground_clearance_mm": 254,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/rs-q8/specs",
+      "length_mm": 5012,
+      "length_mm_citation": "https://www.cardekho.com/audi/rs-q8/specs",
+      "width_mm_citation": "https://www.cardekho.com/audi/rs-q8/specs",
+      "height_mm_citation": "https://www.cardekho.com/audi/rs-q8/specs",
+      "key_features": [
+        {
+          "value": "Customisable digital driver display",
+          "value_citation": "https://www.cardekho.com/audi/rs-q8/specs"
+        },
+        {
+          "value": "Heated front seats",
+          "value_citation": "https://www.cardekho.com/audi/rs-q8/specs"
+        },
+        {
+          "value": "Ventilated seats",
+          "value_citation": "https://www.cardekho.com/audi/rs-q8/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/audi/rs-q8/specs"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/audi/rs-q8/specs"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/audi/rs-q8/specs"
+        },
+        {
+          "value": "Traction Control",
+          "value_citation": "https://www.cardekho.com/audi/rs-q8/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/audi/rs-q8/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/RS-Q8/12377/1757402656751/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/audi/rs-q8/specs"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/rs-q8",
+      "source_url": "https://www.cardekho.com/audi/rs-q8/specs",
+      "source_url_citation": "https://www.cardekho.com/audi/rs-q8/specs"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/e-tron-gt",
+      "model": "e-tron GT",
+      "model_citation": "https://www.cardekho.com/audi/e-tron-gt",
+      "variant_name": "e-tron GT Quattro",
+      "variant_name_citation": "https://www.cardekho.com/audi/e-tron-gt/specs",
+      "ex_showroom_price_min": 17200000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/e-tron-gt/specs",
+      "ex_showroom_price_max": 17200000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/e-tron-gt/specs",
+      "hyderabad_on_road_price": 17996399,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/e-tron-gt/price-in-hyderabad",
+      "fuel_type": "Electric",
+      "fuel_type_citation": "https://www.cardekho.com/audi/e-tron-gt/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/audi/e-tron-gt/specs",
+      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/e-tron-gt/specs",
+      "power_bhp": 522.99,
+      "power_bhp_citation": "https://www.cardekho.com/audi/e-tron-gt/specs",
+      "torque_nm": 630,
+      "torque_nm_citation": "https://www.cardekho.com/audi/e-tron-gt/specs",
+      "mileage_kmpl_citation": "https://www.cardekho.com/audi/e-tron-gt/specs",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/audi/e-tron-gt/specs",
+      "boot_space_l": 405,
+      "boot_space_l_citation": "https://www.cardekho.com/audi/e-tron-gt/specs",
+      "ground_clearance_mm": 165,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/e-tron-gt/specs",
+      "length_mm": 4989,
+      "length_mm_citation": "https://www.cardekho.com/audi/e-tron-gt/specs",
+      "width_mm": 1964,
+      "width_mm_citation": "https://www.cardekho.com/audi/e-tron-gt/specs",
+      "height_mm": 1418,
+      "height_mm_citation": "https://www.cardekho.com/audi/e-tron-gt/specs",
+      "key_features": [
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/audi/e-tron-gt/specs"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/audi/e-tron-gt/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/audi/e-tron-gt/specs"
+        },
+        {
+          "value": "7 Airbags",
+          "value_citation": "https://www.cardekho.com/audi/e-tron-gt/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/audi/e-tron-gt/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/audi/e-tron-gt/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/audi/e-tron-gt/specs"
+        },
+        {
+          "value": "360 View Camera",
+          "value_citation": "https://www.cardekho.com/audi/e-tron-gt/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/e-tron-GT/8340/1769504486883/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/audi/e-tron-gt/specs"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/e-tron-gt",
+      "source_url": "https://www.cardekho.com/audi/e-tron-gt/specs",
+      "source_url_citation": "https://www.cardekho.com/audi/e-tron-gt/specs"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/rs-e-tron-gt",
+      "model": "RS e-tron GT",
+      "model_citation": "https://www.cardekho.com/audi/rs-e-tron-gt",
+      "variant_name": "RS e-tron GT Quattro",
+      "variant_name_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs",
+      "ex_showroom_price_min": 19500000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs",
+      "ex_showroom_price_max": 19500000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs",
+      "hyderabad_on_road_price": 20481010,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/price-in-hyderabad",
+      "fuel_type": "Electric",
+      "fuel_type_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs",
+      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs",
+      "power_bhp": 637,
+      "power_bhp_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs",
+      "torque_nm": 830,
+      "torque_nm_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs",
+      "mileage_kmpl_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs",
+      "boot_space_l": 350,
+      "boot_space_l_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs",
+      "length_mm": 4989,
+      "length_mm_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs",
+      "width_mm": 1964,
+      "width_mm_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs",
+      "height_mm": 1413,
+      "height_mm_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs",
+      "key_features": [
+        {
+          "value": "Premium Sound System",
+          "value_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs"
+        },
+        {
+          "value": "Digital Cockpit",
+          "value_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/e-tron-GT/8340/1769504486883/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/rs-e-tron-gt",
+      "source_url": "https://www.cardekho.com/audi/rs-e-tron-gt/specs",
+      "source_url_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs"
+    }
+  ]
 }

@@ -70,6 +70,8 @@ export interface DealerPublicData {
     style_template: string
     sells_new_cars: boolean
     sells_used_cars: boolean
+    sells_two_wheelers: boolean
+    sells_three_wheelers: boolean
     brands: string[]
     vehicles: DBVehicle[]
     branches?: Array<{ city: string; address: string; phone?: string }> | null
@@ -99,7 +101,7 @@ function getServerSupabase() {
 async function findDealerByExactSlug(supabase: SupabaseClient, slug: string) {
     const { data, error } = await supabase
         .from('dealers')
-        .select('id, dealership_name, tagline, phone, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars, cyepro_api_key, logo_url, hero_image_url, branches')
+        .select('id, dealership_name, tagline, phone, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars, sells_two_wheelers, sells_three_wheelers, cyepro_api_key, logo_url, hero_image_url, branches')
         .eq('slug', slug)
         .eq('onboarding_complete', true)
         .single()
@@ -202,8 +204,10 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
         full_address:    dealer.full_address ?? null,
         slug:            dealer.slug,
         style_template:  siteConfigResult.data?.style_template ?? dealer.style_template ?? 'family',
-        sells_new_cars:  dealer.sells_new_cars ?? false,
-        sells_used_cars: dealer.sells_used_cars ?? false,
+        sells_new_cars:       dealer.sells_new_cars       ?? false,
+        sells_used_cars:      dealer.sells_used_cars      ?? false,
+        sells_two_wheelers:   dealer.sells_two_wheelers   ?? false,
+        sells_three_wheelers: dealer.sells_three_wheelers ?? false,
         brands:          brandsResult.data?.map(b => b.brand_name) ?? [],
         vehicles:        (vehiclesResult.data ?? []) as DBVehicle[],
         branches:        dealer.branches ?? null,
