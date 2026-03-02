@@ -55,6 +55,9 @@ export async function POST(request: NextRequest) {
         email:                email           ?? null,
         booking_amount_paise,
         idempotency_key:      idempotencyKey,
+        status:               'pending',
+        razorpay_order_id:    null,
+        razorpay_payment_id:  null,
     })
 
     if (!bookingResult.success) {
