@@ -6,13 +6,18 @@
  *   import '@/lib/env'
  */
 
+// These must be present — without them the site cannot function at all
 const required = {
     NEXT_PUBLIC_SUPABASE_URL:      process.env.NEXT_PUBLIC_SUPABASE_URL,
     NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
     SUPABASE_SERVICE_ROLE_KEY:     process.env.SUPABASE_SERVICE_ROLE_KEY,
     RAZORPAY_KEY_ID:               process.env.RAZORPAY_KEY_ID,
     RAZORPAY_KEY_SECRET:           process.env.RAZORPAY_KEY_SECRET,
-    RESEND_API_KEY:                process.env.RESEND_API_KEY,
+}
+
+// These are optional — missing values degrade a feature but don't crash the site
+const optional = {
+    RESEND_API_KEY: process.env.RESEND_API_KEY,
 }
 
 const placeholders = [
@@ -51,6 +56,13 @@ if (
             `[ENV] Placeholder values detected in production for:\n  ${placeholder.join('\n  ')}\n` +
             'Replace with real credentials before deploying.'
         )
+    }
+
+    // Warn (don't throw) for optional vars — missing these degrades a feature but won't crash the site
+    for (const [key, value] of Object.entries(optional)) {
+        if (!value) {
+            console.warn(`[ENV] Optional env var ${key} is not set — related features will be disabled.`)
+        }
     }
 }
 
