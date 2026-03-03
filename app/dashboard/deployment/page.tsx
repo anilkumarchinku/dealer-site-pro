@@ -147,6 +147,17 @@ export default function DeploymentPage() {
                 return
             }
 
+            // Multi-tenant: site is already live — no async build needed
+            if (data.deploymentMode === 'multi-tenant') {
+                setState(prev => ({
+                    ...prev,
+                    siteUrl:  data.siteUrl,
+                    status:   "ready",
+                    progress: 100,
+                }))
+                return
+            }
+
             setState(prev => ({
                 ...prev,
                 deployId:   data.deployId,
