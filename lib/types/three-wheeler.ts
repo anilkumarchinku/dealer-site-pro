@@ -209,3 +209,12 @@ export interface ThreeWheelerUsedFilters {
     page?:           number
     pageSize?:       number
 }
+
+// ── Compare state (used client-side) ─────────────────────────
+
+export interface ThreeWheelerCompareItem {
+    id:    string
+    brand: string
+    model: string
+    image: string | null
+}
