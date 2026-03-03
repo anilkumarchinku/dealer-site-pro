@@ -1,5 +1,5 @@
 "use client"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
@@ -8,6 +8,19 @@ import { Badge } from "@/components/ui/badge";
 import { Sparkles, Car, ArrowRight, Building2, RefreshCw } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { cn } from "@/lib/utils";
+
+// ── Vehicle category selector ─────────────────────────────────────────────
+const VEHICLE_CATEGORIES = [
+    { id: "car" as const,           emoji: "🚗", label: "Four-Wheeler",  sublabel: "Cars & SUVs",       description: "Sell new or pre-owned cars, SUVs, and MUVs.",                           color: "blue"   },
+    { id: "two-wheeler" as const,   emoji: "🏍️", label: "Two-Wheeler",   sublabel: "Bikes & Scooters",  description: "Sell bikes, scooters, mopeds, and electric 2-wheelers.",                color: "orange" },
+    { id: "three-wheeler" as const, emoji: "🛺",  label: "Three-Wheeler", sublabel: "Autos & Cargo",     description: "Sell passenger autos, cargo 3-wheelers, and electric vehicles.",        color: "green"  },
+] as const;
+
+const categoryStyles: Record<string, { border: string; bg: string; text: string }> = {
+    blue:   { border: "border-blue-500/40 hover:border-blue-500/80",   bg: "hover:bg-blue-500/5",   text: "text-blue-600"   },
+    orange: { border: "border-orange-500/40 hover:border-orange-500/80", bg: "hover:bg-orange-500/5", text: "text-orange-600" },
+    green:  { border: "border-green-500/40 hover:border-green-500/80",  bg: "hover:bg-green-500/5",  text: "text-green-600"  },
+};
 
 /* ─────────────────────────────────────────────
    SVG Illustrations — one per dealer type
@@ -350,7 +363,8 @@ const accentStyles: Record<string, { border: string; bg: string; text: string; b
 
 export default function OnboardingIndexPage() {
     const router = useRouter();
-    const { updateData, reset } = useOnboardingStore();
+    const { updateData, reset, setVehicleType } = useOnboardingStore();
+    const [vehicleCategory, setVehicleCategory] = useState<'car' | 'two-wheeler' | 'three-wheeler' | null>(null);
 
     useEffect(() => {
         reset();
@@ -358,14 +372,19 @@ export default function OnboardingIndexPage() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    const handleVehicleCategory = (cat: 'car' | 'two-wheeler' | 'three-wheeler') => {
+        reset();
+        setVehicleType(cat);
+        if (cat === 'two-wheeler') { router.push('/onboarding/two-wheelers'); return; }
+        if (cat === 'three-wheeler') { router.push('/onboarding/three-wheelers'); return; }
+        setVehicleCategory(cat); // cars: show dealer-type cards
+    };
+
     const handleSelect = (category: "new" | "used" | "hybrid") => {
         reset();
+        setVehicleType('car');
         if (category === "hybrid") {
-            updateData({
-                dealerCategory: "both",
-                sellsNewCars: true,
-                sellsUsedCars: true,
-            });
+            updateData({ dealerCategory: "both", sellsNewCars: true, sellsUsedCars: true });
         } else {
             updateData({ dealerCategory: category });
         }
@@ -405,14 +424,47 @@ export default function OnboardingIndexPage() {
                             Setup in under 5 minutes
                         </div>
                         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
-                            What type of dealer are you?
+                            {vehicleCategory ? "What type of dealer are you?" : "What do you sell?"}
                         </h1>
                         <p className="text-muted-foreground text-base max-w-md mx-auto">
-                            Choose the option that best describes your dealership — we&apos;ll tailor your website setup accordingly.
+                            {vehicleCategory
+                                ? "Choose the option that best describes your dealership — we'll tailor your website setup accordingly."
+                                : "Choose your vehicle category to get started."}
                         </p>
                     </div>
 
-                    {/* Cards */}
+                    {/* Vehicle category picker (first screen) */}
+                    {!vehicleCategory && (
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            {VEHICLE_CATEGORIES.map((vc) => {
+                                const s = categoryStyles[vc.color];
+                                return (
+                                    <button
+                                        key={vc.id}
+                                        onClick={() => handleVehicleCategory(vc.id)}
+                                        className={cn(
+                                            "group relative w-full rounded-2xl border-2 overflow-hidden transition-all duration-200 text-left",
+                                            "focus:outline-none active:scale-[0.98] bg-card shadow-sm hover:shadow-md",
+                                            s.border, s.bg,
+                                        )}
+                                    >
+                                        <div className="p-8 flex flex-col items-center gap-4 text-center">
+                                            <span className="text-5xl">{vc.emoji}</span>
+                                            <div>
+                                                <p className={cn("text-xl font-bold", s.text)}>{vc.label}</p>
+                                                <p className="text-sm text-muted-foreground">{vc.sublabel}</p>
+                                            </div>
+                                            <p className="text-xs text-muted-foreground leading-relaxed">{vc.description}</p>
+                                            <ArrowRight className={cn("w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity", s.text)} />
+                                        </div>
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    )}
+
+                    {/* Car dealer-type cards (second screen, only for cars) */}
+                    {vehicleCategory === 'car' && (
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         {DEALER_TYPES.map((dt) => {
                             const styles = accentStyles[dt.accentColor];
@@ -513,6 +565,7 @@ export default function OnboardingIndexPage() {
                             );
                         })}
                     </div>
+                    )} {/* end vehicleCategory === 'car' */}
 
                     {/* Trust line */}
                     <div className="flex items-center justify-center gap-6 text-xs text-muted-foreground">

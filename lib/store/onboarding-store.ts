@@ -9,6 +9,9 @@ interface OnboardingStore {
     // Form data
     data: Partial<OnboardingData>;
 
+    // Which vehicle category this dealer sells
+    vehicleType: 'car' | 'two-wheeler' | 'three-wheeler';
+
     // Supabase: dealer row ID after onboarding is saved
     dealerId: string | null;
 
@@ -20,6 +23,7 @@ interface OnboardingStore {
     nextStep: () => void;
     prevStep: () => void;
     updateData: (data: Partial<OnboardingData>) => void;
+    setVehicleType: (type: 'car' | 'two-wheeler' | 'three-wheeler') => void;
     setDealerId: (id: string) => void;
     setDealerSlug: (slug: string) => void;
     reset: () => void;
@@ -75,6 +79,7 @@ export const useOnboardingStore = create<OnboardingStore>()(
         (set, get) => ({
             currentStep: 1,
             data: initialData,
+            vehicleType: 'car',
             dealerId: null,
             dealerSlug: null,
 
@@ -92,11 +97,13 @@ export const useOnboardingStore = create<OnboardingStore>()(
                 data: { ...state.data, ...newData }
             })),
 
+            setVehicleType: (type) => set({ vehicleType: type }),
+
             setDealerId: (id) => set({ dealerId: id }),
 
             setDealerSlug: (slug) => set({ dealerSlug: slug }),
 
-            reset: () => set({ currentStep: 1, data: initialData, dealerId: null, dealerSlug: null }),
+            reset: () => set({ currentStep: 1, data: initialData, vehicleType: 'car', dealerId: null, dealerSlug: null }),
 
             isComplete: () => {
                 const { data } = get();
