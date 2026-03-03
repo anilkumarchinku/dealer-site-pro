@@ -11,7 +11,7 @@ const required = {
     NEXT_PUBLIC_SUPABASE_URL:      process.env.NEXT_PUBLIC_SUPABASE_URL,
     NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
     SUPABASE_SERVICE_ROLE_KEY:     process.env.SUPABASE_SERVICE_ROLE_KEY,
-    RAZORPAY_KEY_ID:               process.env.RAZORPAY_KEY_ID,
+    NEXT_PUBLIC_RAZORPAY_KEY_ID:   process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
     RAZORPAY_KEY_SECRET:           process.env.RAZORPAY_KEY_SECRET,
 }
 
@@ -70,7 +70,7 @@ export const env = {
     supabaseUrl:      process.env.NEXT_PUBLIC_SUPABASE_URL    ?? '',
     supabaseAnonKey:  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? '',
     supabaseServiceKey: process.env.SUPABASE_SERVICE_ROLE_KEY ?? '',
-    razorpayKeyId:    process.env.RAZORPAY_KEY_ID             ?? '',
+    razorpayKeyId:    process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID  ?? '',
     razorpaySecret:   process.env.RAZORPAY_KEY_SECRET         ?? '',
     resendApiKey:     process.env.RESEND_API_KEY              ?? '',
     baseDomain:       process.env.NEXT_PUBLIC_BASE_DOMAIN     ?? 'localhost:3000',

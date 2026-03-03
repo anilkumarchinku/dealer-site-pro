@@ -13,7 +13,7 @@ export async function GET() {
     const checks: Record<string, 'ok' | 'missing'> = {
         supabase_url:      process.env.NEXT_PUBLIC_SUPABASE_URL ? 'ok' : 'missing',
         supabase_anon_key: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? 'ok' : 'missing',
-        razorpay_key:      process.env.RAZORPAY_KEY_ID ? 'ok' : 'missing',
+        razorpay_key:      process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID ? 'ok' : 'missing',
     }
 
     const allOk = Object.values(checks).every(v => v === 'ok')
