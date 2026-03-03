@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import type { TwoWheelerServiceType } from "@/lib/types/two-wheeler"
 
 interface Props {
@@ -33,6 +33,9 @@ export function ServiceBookingForm({ dealerId }: Props) {
     const [submitting, setSubmitting] = useState(false)
     const [submitted,  setSubmitted]  = useState(false)
     const [error,      setError]      = useState("")
+    const [minDate,    setMinDate]    = useState("")
+
+    useEffect(() => { setMinDate(new Date().toISOString().split("T")[0]) }, [])
 
     function set(field: string, value: string) {
         setForm(f => ({ ...f, [field]: value }))
@@ -149,7 +152,7 @@ export function ServiceBookingForm({ dealerId }: Props) {
                         onChange={e => set("preferred_date", e.target.value)}
                         type="date"
                         required
-                        min={new Date().toISOString().split("T")[0]}
+                        min={minDate}
                         className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm"
                     />
                 </div>

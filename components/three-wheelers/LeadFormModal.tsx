@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import type { ThreeWheelerLeadType } from "@/lib/types/three-wheeler"
 import { X } from "lucide-react"
 
@@ -26,6 +26,9 @@ export function LeadFormModal({
     const [submitting,    setSubmitting]    = useState(false)
     const [submitted,     setSubmitted]     = useState(false)
     const [error,         setError]         = useState("")
+    const [minDate,       setMinDate]       = useState("")
+
+    useEffect(() => { setMinDate(new Date().toISOString().split("T")[0]) }, [])
 
     if (!isOpen) return null
 
@@ -98,7 +101,7 @@ export function LeadFormModal({
                         {leadType === "demo" && (
                             <div>
                                 <label className="text-sm font-medium">Preferred Date</label>
-                                <input value={preferredDate} onChange={e => setPreferredDate(e.target.value)} type="date" min={new Date().toISOString().split("T")[0]} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                                <input value={preferredDate} onChange={e => setPreferredDate(e.target.value)} type="date" min={minDate} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
                             </div>
                         )}
                         {leadType === "finance" && (

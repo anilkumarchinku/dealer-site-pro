@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import type { ThreeWheelerServiceType } from "@/lib/types/three-wheeler"
 
 interface Props {
@@ -37,6 +37,9 @@ export function ServiceBookingForm({ dealerId }: Props) {
     const [submitting, setSubmitting] = useState(false)
     const [submitted,  setSubmitted]  = useState(false)
     const [error,      setError]      = useState("")
+    const [minDate,    setMinDate]    = useState("")
+
+    useEffect(() => { setMinDate(new Date().toISOString().split("T")[0]) }, [])
 
     function set(field: string, value: string) {
         setForm(f => ({ ...f, [field]: value }))
@@ -151,7 +154,7 @@ export function ServiceBookingForm({ dealerId }: Props) {
             <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                     <label className="text-sm font-medium">Preferred Date *</label>
-                    <input value={form.preferred_date} onChange={e => set("preferred_date", e.target.value)} type="date" required min={new Date().toISOString().split("T")[0]} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                    <input value={form.preferred_date} onChange={e => set("preferred_date", e.target.value)} type="date" required min={minDate} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
                 </div>
                 <div>
                     <label className="text-sm font-medium">Time Slot *</label>
