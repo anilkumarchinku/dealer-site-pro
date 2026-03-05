@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import type { ThreeWheelerUsedVehicle } from "@/lib/types/three-wheeler"
+import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 interface Props {
     vehicle: ThreeWheelerUsedVehicle
@@ -16,6 +17,7 @@ const GRADE_COLORS = {
 }
 
 export function UsedVehicleCard({ vehicle, slug, onLead }: Props) {
+    const prefix = useSitePrefix(slug)
     const price = (vehicle.price_paise / 100).toLocaleString("en-IN")
 
     return (
@@ -74,7 +76,7 @@ export function UsedVehicleCard({ vehicle, slug, onLead }: Props) {
                         Make an Offer
                     </button>
                     <Link
-                        href={`/sites/${slug}/three-wheelers/used/${vehicle.id}`}
+                        href={`${prefix}/three-wheelers/used/${vehicle.id}`}
                         className="flex-1 border border-border text-sm font-medium rounded-lg px-3 py-2 text-center hover:bg-muted/50 transition-colors"
                     >
                         View Details

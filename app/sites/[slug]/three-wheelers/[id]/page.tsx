@@ -10,6 +10,7 @@ import { EMICalculator } from "@/components/shared/EMICalculator"
 import type { ThreeWheelerVehicle, ThreeWheelerLeadType } from "@/lib/types/three-wheeler"
 import { ChevronLeft } from "lucide-react"
 import Link from "next/link"
+import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 const BOOKING_AMOUNT = 50000 // ₹500 booking token
 
@@ -17,6 +18,7 @@ export default function ThreeWheelerDetailPage() {
     const params = useParams()
     const slug   = params.slug as string
     const id     = params.id   as string
+    const prefix = useSitePrefix(slug)
 
     const [vehicle,  setVehicle]  = useState<ThreeWheelerVehicle | null>(null)
     const [dealerId, setDealerId] = useState<string | null>(null)
@@ -57,7 +59,7 @@ export default function ThreeWheelerDetailPage() {
     return (
         <div className="min-h-screen max-w-5xl mx-auto px-4 py-8">
             <div className="mb-6">
-                <Link href={`/sites/${slug}/three-wheelers`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${prefix}/three-wheelers`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
                     <ChevronLeft className="w-4 h-4" /> Back
                 </Link>
             </div>

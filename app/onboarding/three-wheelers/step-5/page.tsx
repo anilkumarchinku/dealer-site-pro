@@ -49,9 +49,9 @@ export default function ThreeWheelerStep5Page() {
         });
     };
 
-    if (showSuccess && liveSiteSlug) {
-        const liveUrl  = dealerSiteUrl(liveSiteSlug);
-        const liveHref = dealerSiteHref(liveSiteSlug);
+    if (showSuccess) {
+        const liveUrl  = liveSiteSlug ? dealerSiteUrl(liveSiteSlug) : null;
+        const liveHref = liveSiteSlug ? dealerSiteHref(liveSiteSlug) : null;
         return (
             <div className="space-y-6 animate-fade-in flex flex-col items-center justify-center min-h-[60vh]">
                 <Card className="w-full max-w-lg">
@@ -72,17 +72,19 @@ export default function ThreeWheelerStep5Page() {
                             </p>
                         </div>
 
-                        <div className="space-y-2">
-                            <p className="text-sm text-muted-foreground text-left">Your live site URL</p>
-                            <div className="flex items-center gap-2 rounded-xl border border-border bg-muted px-4 py-3">
-                                <span className="flex-1 font-mono text-sm text-foreground break-all text-left">
-                                    {liveUrl}
-                                </span>
-                                <Button variant="ghost" size="sm" className="shrink-0" onClick={handleCopyUrl}>
-                                    {copied ? "Copied!" : "Copy"}
-                                </Button>
+                        {liveUrl && (
+                            <div className="space-y-2">
+                                <p className="text-sm text-muted-foreground text-left">Your live site URL</p>
+                                <div className="flex items-center gap-2 rounded-xl border border-border bg-muted px-4 py-3">
+                                    <span className="flex-1 font-mono text-sm text-foreground break-all text-left">
+                                        {liveUrl}
+                                    </span>
+                                    <Button variant="ghost" size="sm" className="shrink-0" onClick={handleCopyUrl}>
+                                        {copied ? "Copied!" : "Copy"}
+                                    </Button>
+                                </div>
                             </div>
-                        </div>
+                        )}
 
                         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
                             {["Free SSL included", "Live in seconds", "No setup required"].map((item) => (
@@ -94,11 +96,13 @@ export default function ThreeWheelerStep5Page() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                            <Button variant="outline" className="flex-1 gap-2 rounded-xl" onClick={() => window.open(liveHref, "_blank")}>
-                                <ExternalLink className="w-4 h-4" />
-                                Preview Your Site
-                            </Button>
-                            <Button className="flex-1 gap-2 rounded-xl" onClick={() => router.push("/dashboard")}>
+                            {liveHref && (
+                                <Button variant="outline" className="flex-1 gap-2 rounded-xl" onClick={() => window.open(liveHref, "_blank")}>
+                                    <ExternalLink className="w-4 h-4" />
+                                    Preview Your Site
+                                </Button>
+                            )}
+                            <Button className="flex-1 gap-2 rounded-xl" onClick={() => router.push("/dashboard/three-wheelers")}>
                                 Go to Dashboard
                                 <ArrowRight className="w-4 h-4" />
                             </Button>

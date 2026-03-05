@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { X } from "lucide-react"
 import type { TwoWheelerCompareItem } from "@/lib/types/two-wheeler"
+import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 interface Props {
     items:     TwoWheelerCompareItem[]
@@ -12,6 +13,7 @@ interface Props {
 }
 
 export function CompareBar({ items, slug, onRemove, onClear }: Props) {
+    const prefix = useSitePrefix(slug)
     if (items.length === 0) return null
 
     return (
@@ -45,7 +47,7 @@ export function CompareBar({ items, slug, onRemove, onClear }: Props) {
                     <button onClick={onClear} className="text-sm text-muted-foreground hover:text-foreground">Clear</button>
                     {items.length >= 2 && (
                         <Link
-                            href={`/sites/${slug}/two-wheelers/compare?ids=${items.map(i => i.id).join(",")}`}
+                            href={`${prefix}/two-wheelers/compare?ids=${items.map(i => i.id).join(",")}`}
                             className="bg-primary text-primary-foreground text-sm font-medium rounded-lg px-4 py-2"
                         >
                             Compare Now

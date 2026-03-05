@@ -7,6 +7,7 @@ import { supabase } from "@/lib/supabase"
 import { LeadFormModal } from "@/components/three-wheelers/LeadFormModal"
 import type { ThreeWheelerUsedVehicle } from "@/lib/types/three-wheeler"
 import { ChevronLeft } from "lucide-react"
+import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 const GRADE_COLORS: Record<string, string> = {
     A: "bg-green-100 text-green-700",
@@ -17,6 +18,7 @@ const GRADE_COLORS: Record<string, string> = {
 export default function UsedThreeWheelersPublicPage() {
     const params = useParams()
     const slug   = params.slug as string
+    const prefix = useSitePrefix(slug)
 
     const [dealer, setDealer]   = useState<{ id: string; dealership_name: string } | null>(null)
     const [vehicles, setVehicles] = useState<ThreeWheelerUsedVehicle[]>([])
@@ -52,7 +54,7 @@ export default function UsedThreeWheelersPublicPage() {
     return (
         <div className="min-h-screen max-w-5xl mx-auto px-4 py-8">
             <div className="mb-6">
-                <Link href={`/sites/${slug}/three-wheelers`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${prefix}/three-wheelers`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
                     <ChevronLeft className="w-4 h-4" /> Back to 3-Wheelers
                 </Link>
             </div>
@@ -105,7 +107,7 @@ export default function UsedThreeWheelersPublicPage() {
                                         Make Offer
                                     </button>
                                     <Link
-                                        href={`/sites/${slug}/three-wheelers/used/${v.id}`}
+                                        href={`${prefix}/three-wheelers/used/${v.id}`}
                                         className="flex-1 border border-border text-sm font-medium rounded-lg px-3 py-2 text-center hover:bg-muted/50"
                                     >
                                         View Details

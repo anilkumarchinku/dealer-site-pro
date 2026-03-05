@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import { getScrapedImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
+import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 interface Props {
     vehicle:    ThreeWheelerVehicle
@@ -12,6 +13,7 @@ interface Props {
 }
 
 export function VehicleCard({ vehicle, slug, onLead }: Props) {
+    const prefix = useSitePrefix(slug)
     const price = (vehicle.ex_showroom_price_paise / 100).toLocaleString("en-IN")
 
     const [jpgUrl, pngUrl] = getScrapedImageUrls("3w", brandNameToId(vehicle.brand), vehicle.model)
@@ -84,7 +86,7 @@ export function VehicleCard({ vehicle, slug, onLead }: Props) {
                         Get Price
                     </button>
                     <Link
-                        href={`/sites/${slug}/three-wheelers/${vehicle.id}`}
+                        href={`${prefix}/three-wheelers/${vehicle.id}`}
                         className="flex-1 border border-border text-sm font-medium rounded-lg px-3 py-2 text-center hover:bg-muted/50 transition-colors"
                     >
                         View Details

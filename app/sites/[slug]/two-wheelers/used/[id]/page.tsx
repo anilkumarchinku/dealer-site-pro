@@ -9,11 +9,13 @@ import { LeadFormModal } from "@/components/two-wheelers/LeadFormModal"
 import type { TwoWheelerUsedVehicle } from "@/lib/types/two-wheeler"
 import { ChevronLeft, CheckCircle, AlertCircle } from "lucide-react"
 import Link from "next/link"
+import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 export default function UsedVehicleDetailPage() {
     const params = useParams()
     const slug   = params.slug as string
     const id     = params.id   as string
+    const prefix = useSitePrefix(slug)
 
     const [vehicle,  setVehicle]  = useState<TwoWheelerUsedVehicle | null>(null)
     const [dealerId, setDealerId] = useState<string | null>(null)
@@ -51,7 +53,7 @@ export default function UsedVehicleDetailPage() {
     return (
         <div className="min-h-screen max-w-5xl mx-auto px-4 py-8">
             <div className="mb-6">
-                <Link href={`/sites/${slug}/two-wheelers/used`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${prefix}/two-wheelers/used`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
                     <ChevronLeft className="w-4 h-4" /> Back to Used Vehicles
                 </Link>
             </div>

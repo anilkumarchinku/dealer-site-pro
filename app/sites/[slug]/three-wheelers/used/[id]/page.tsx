@@ -7,6 +7,7 @@ import { LeadFormModal } from "@/components/three-wheelers/LeadFormModal"
 import type { ThreeWheelerUsedVehicle } from "@/lib/types/three-wheeler"
 import { ChevronLeft, CheckCircle, AlertCircle } from "lucide-react"
 import Link from "next/link"
+import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 const GRADE_LABELS: Record<string, { label: string; color: string; bg: string }> = {
     A: { label: "Grade A — Excellent",  color: "text-green-700",  bg: "bg-green-100 border-green-300"  },
@@ -18,6 +19,7 @@ export default function UsedThreeWheelerDetailPage() {
     const params = useParams()
     const slug   = params.slug as string
     const id     = params.id   as string
+    const prefix = useSitePrefix(slug)
 
     const [vehicle,  setVehicle]  = useState<ThreeWheelerUsedVehicle | null>(null)
     const [dealerId, setDealerId] = useState<string | null>(null)
@@ -56,7 +58,7 @@ export default function UsedThreeWheelerDetailPage() {
     return (
         <div className="min-h-screen max-w-5xl mx-auto px-4 py-8">
             <div className="mb-6">
-                <Link href={`/sites/${slug}/three-wheelers/used`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${prefix}/three-wheelers/used`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
                     <ChevronLeft className="w-4 h-4" /> Back to Used Vehicles
                 </Link>
             </div>

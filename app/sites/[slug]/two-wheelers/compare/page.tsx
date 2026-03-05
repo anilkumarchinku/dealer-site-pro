@@ -6,12 +6,14 @@ import { VehicleDetailGallery } from "@/components/two-wheelers/VehicleDetailGal
 import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler"
 import Link from "next/link"
 import { ChevronLeft } from "lucide-react"
+import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 export default function ComparePage() {
     const params       = useParams()
     const searchParams = useSearchParams()
     const slug         = params.slug as string
     const ids          = searchParams.get("ids")?.split(",").filter(Boolean) ?? []
+    const prefix       = useSitePrefix(slug)
 
     const [vehicles, setVehicles] = useState<TwoWheelerVehicle[]>([])
     const [loading,  setLoading]  = useState(true)
@@ -32,7 +34,7 @@ export default function ComparePage() {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center gap-4 text-center px-4">
                 <p className="text-lg font-medium">Select at least 2 vehicles to compare</p>
-                <Link href={`/sites/${slug}/two-wheelers/bikes`} className="bg-primary text-primary-foreground rounded-lg px-5 py-2.5 text-sm font-medium">Browse Vehicles</Link>
+                <Link href={`${prefix}/two-wheelers/bikes`} className="bg-primary text-primary-foreground rounded-lg px-5 py-2.5 text-sm font-medium">Browse Vehicles</Link>
             </div>
         )
     }
@@ -58,7 +60,7 @@ export default function ComparePage() {
     return (
         <div className="min-h-screen max-w-5xl mx-auto px-4 py-8">
             <div className="mb-6">
-                <Link href={`/sites/${slug}/two-wheelers`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${prefix}/two-wheelers`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
                     <ChevronLeft className="w-4 h-4" /> Back
                 </Link>
                 <h1 className="text-2xl font-bold mt-4">Compare Models</h1>
@@ -99,7 +101,7 @@ export default function ComparePage() {
                             {vehicles.map(v => (
                                 <td key={v.id} className="py-4 px-3 text-center">
                                     <Link
-                                        href={`/sites/${slug}/two-wheelers/${v.id}`}
+                                        href={`${prefix}/two-wheelers/${v.id}`}
                                         className="inline-block bg-primary text-primary-foreground rounded-lg px-4 py-2 text-sm font-medium hover:opacity-90"
                                     >
                                         View Details

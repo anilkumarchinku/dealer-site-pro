@@ -4,15 +4,17 @@ import { useParams } from "next/navigation"
 import Link from "next/link"
 import { EMICalculator } from "@/components/shared/EMICalculator"
 import { ChevronLeft } from "lucide-react"
+import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 export default function ThreeWheelerEMICalculatorPage() {
     const params = useParams()
     const slug   = params.slug as string
+    const prefix = useSitePrefix(slug)
 
     return (
         <div className="min-h-screen max-w-2xl mx-auto px-4 py-10">
             <div className="mb-8">
-                <Link href={`/sites/${slug}/three-wheelers`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${prefix}/three-wheelers`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
                     <ChevronLeft className="w-4 h-4" /> Back
                 </Link>
                 <h1 className="text-3xl font-bold mt-4">3-Wheeler EMI Calculator</h1>
@@ -31,7 +33,7 @@ export default function ThreeWheelerEMICalculatorPage() {
                     <li>Compare rates from HDFC, ICICI, UCO Bank, and regional co-op banks</li>
                 </ul>
                 <div className="pt-2">
-                    <Link href={`/sites/${slug}/three-wheelers`} className="text-primary hover:underline">Browse available models →</Link>
+                    <Link href={`${prefix}/three-wheelers`} className="text-primary hover:underline">Browse available models →</Link>
                 </div>
             </div>
         </div>

@@ -6,10 +6,12 @@ import { supabase } from "@/lib/supabase"
 import { ServiceBookingForm } from "@/components/three-wheelers/ServiceBookingForm"
 import Link from "next/link"
 import { ChevronLeft } from "lucide-react"
+import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 export default function ThreeWheelerServicePage() {
     const params = useParams()
     const slug   = params.slug as string
+    const prefix = useSitePrefix(slug)
     const [dealerId, setDealerId] = useState<string | null>(null)
 
     useEffect(() => {
@@ -34,7 +36,7 @@ export default function ThreeWheelerServicePage() {
         <div className="min-h-screen">
             <div className="max-w-4xl mx-auto px-4 py-10">
                 <div className="mb-8">
-                    <Link href={`/sites/${slug}/three-wheelers`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+                    <Link href={`${prefix}/three-wheelers`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
                         <ChevronLeft className="w-4 h-4" /> Back
                     </Link>
                     <h1 className="text-3xl font-bold mt-4">Book 3W Service</h1>
