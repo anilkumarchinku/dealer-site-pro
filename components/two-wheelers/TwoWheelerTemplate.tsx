@@ -14,57 +14,178 @@ import { WhatsAppButton } from "@/components/ui/WhatsAppButton"
 import { getScrapedImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
-// ── Brand color themes (same palette as ModernTemplate for cars) ──────────────
-const BRAND_THEMES: Record<string, { heroGradient: string; accent: string; accentText: string; btnPrimary: string }> = {
+// ── Brand color themes — keyed by EXACT brand name stored in DB ───────────────
+// Brand names must match brand-models.json exactly (e.g. "Hero MotoCorp" not "Hero")
+type BrandTheme = { heroGradient: string; accent: string; accentText: string; btnPrimary: string }
+
+const BRAND_THEMES: Record<string, BrandTheme> = {
+    // ── High-volume Indian brands ──────────────────────────────────────────
     "Royal Enfield": {
         heroGradient: "from-[#3D0000] via-[#1A0000] to-black",
         accent: "#D4A017", accentText: "text-[#D4A017]", btnPrimary: "bg-[#D4A017] text-black hover:bg-[#B8861A]",
     },
-    "Hero": {
+    "Hero MotoCorp": {
         heroGradient: "from-[#003087] via-[#001A4D] to-black",
         accent: "#E31E24", accentText: "text-[#E31E24]", btnPrimary: "bg-[#E31E24] text-white hover:bg-[#C41920]",
     },
-    "Honda": {
+    "Honda Motorcycle & Scooter India": {
         heroGradient: "from-[#CC0000] via-[#880000] to-black",
         accent: "#ffffff", accentText: "text-red-300", btnPrimary: "bg-white text-[#CC0000] hover:bg-gray-100",
     },
-    "TVS": {
+    "TVS Motor Company": {
         heroGradient: "from-[#1B1B8F] via-[#0D0D5C] to-black",
         accent: "#F7B500", accentText: "text-[#F7B500]", btnPrimary: "bg-[#F7B500] text-black hover:bg-[#D4980A]",
     },
-    "Bajaj": {
+    "Bajaj Auto": {
         heroGradient: "from-[#002FA7] via-[#001A6B] to-black",
         accent: "#FF6600", accentText: "text-orange-400", btnPrimary: "bg-[#FF6600] text-white hover:bg-[#E05500]",
     },
-    "Yamaha": {
-        heroGradient: "from-[#003087] via-[#001A4D] to-black",
-        accent: "#E31E24", accentText: "text-red-300", btnPrimary: "bg-[#E31E24] text-white hover:bg-[#C41920]",
+    "Yamaha India": {
+        heroGradient: "from-[#003087] via-[#001E5E] to-black",
+        accent: "#E31E24", accentText: "text-red-400", btnPrimary: "bg-[#E31E24] text-white hover:bg-[#C41920]",
     },
-    "Suzuki": {
+    "Suzuki Motorcycle India": {
         heroGradient: "from-[#003087] via-[#001A4D] to-black",
         accent: "#4FC3F7", accentText: "text-sky-300", btnPrimary: "bg-[#4FC3F7] text-black hover:bg-[#3AACDE]",
     },
-    "KTM": {
+    "KTM India": {
         heroGradient: "from-[#CC5200] via-[#882200] to-black",
         accent: "#FF6600", accentText: "text-orange-400", btnPrimary: "bg-[#FF6600] text-white hover:bg-[#E05500]",
     },
-    "Kawasaki": {
+    "Kawasaki India": {
         heroGradient: "from-[#005500] via-[#003300] to-black",
         accent: "#66CC00", accentText: "text-green-400", btnPrimary: "bg-[#66CC00] text-black hover:bg-[#55AA00]",
     },
-    "Ather": {
+    "Husqvarna India": {
+        heroGradient: "from-[#0057A8] via-[#003570] to-black",
+        accent: "#FF6600", accentText: "text-orange-400", btnPrimary: "bg-[#FF6600] text-white hover:bg-[#E05500]",
+    },
+    "Mahindra Two Wheelers": {
+        heroGradient: "from-[#CC0000] via-[#880000] to-black",
+        accent: "#003087", accentText: "text-blue-400", btnPrimary: "bg-[#003087] text-white hover:bg-[#002060]",
+    },
+    // ── Classic / Heritage brands ──────────────────────────────────────────
+    "Jawa Motorcycles": {
+        heroGradient: "from-[#1A3D1A] via-[#0D200D] to-black",
+        accent: "#C8A96E", accentText: "text-[#C8A96E]", btnPrimary: "bg-[#C8A96E] text-black hover:bg-[#A8894E]",
+    },
+    "Yezdi Motorcycles": {
+        heroGradient: "from-[#1A3D1A] via-[#0D200D] to-black",
+        accent: "#FFFFFF", accentText: "text-white", btnPrimary: "bg-white text-gray-900 hover:bg-gray-100",
+    },
+    "Benelli India": {
+        heroGradient: "from-[#8B0000] via-[#500000] to-black",
+        accent: "#C0C0C0", accentText: "text-gray-300", btnPrimary: "bg-[#8B0000] text-white hover:bg-[#6B0000]",
+    },
+    // ── European premium brands ────────────────────────────────────────────
+    "Aprilia India": {
+        heroGradient: "from-[#990000] via-[#660000] to-black",
+        accent: "#FFD700", accentText: "text-yellow-400", btnPrimary: "bg-[#990000] text-white hover:bg-[#770000]",
+    },
+    "Vespa India": {
+        heroGradient: "from-[#2E8B57] via-[#1A5C35] to-black",
+        accent: "#FFFFFF", accentText: "text-white", btnPrimary: "bg-white text-[#2E8B57] hover:bg-gray-100",
+    },
+    "Ducati India": {
+        heroGradient: "from-[#CC0000] via-[#800000] to-black",
+        accent: "#FFFFFF", accentText: "text-red-200", btnPrimary: "bg-[#CC0000] text-white hover:bg-[#AA0000]",
+    },
+    "BMW Motorrad India": {
+        heroGradient: "from-[#1C69D4] via-[#0D4A9E] to-black",
+        accent: "#FFFFFF", accentText: "text-white", btnPrimary: "bg-[#1C69D4] text-white hover:bg-[#155BBF]",
+    },
+    "Triumph India": {
+        heroGradient: "from-[#1A1A1A] via-[#0D0D0D] to-black",
+        accent: "#C8A96E", accentText: "text-[#C8A96E]", btnPrimary: "bg-[#C8A96E] text-black hover:bg-[#A8894E]",
+    },
+    "Harley-Davidson India": {
+        heroGradient: "from-[#CC5500] via-[#882200] to-black",
+        accent: "#FF6600", accentText: "text-orange-400", btnPrimary: "bg-[#FF6600] text-black hover:bg-[#E05500]",
+    },
+    "Moto Guzzi": {
+        heroGradient: "from-[#8B0000] via-[#500000] to-black",
+        accent: "#C0C0C0", accentText: "text-gray-300", btnPrimary: "bg-[#8B0000] text-white hover:bg-[#6B0000]",
+    },
+    "Indian Motorcycle": {
+        heroGradient: "from-[#8B0000] via-[#500000] to-black",
+        accent: "#C8A96E", accentText: "text-[#C8A96E]", btnPrimary: "bg-[#C8A96E] text-black hover:bg-[#A8894E]",
+    },
+    // ── Budget / value international brands ───────────────────────────────
+    "CFMoto India": {
+        heroGradient: "from-[#003087] via-[#001A4D] to-black",
+        accent: "#FFD700", accentText: "text-yellow-400", btnPrimary: "bg-[#003087] text-white hover:bg-[#002060]",
+    },
+    "Keeway India": {
+        heroGradient: "from-[#003087] via-[#001A4D] to-black",
+        accent: "#FF6600", accentText: "text-orange-400", btnPrimary: "bg-[#FF6600] text-white hover:bg-[#E05500]",
+    },
+    "Zontes India": {
+        heroGradient: "from-[#003087] via-[#001A4D] to-black",
+        accent: "#4FC3F7", accentText: "text-sky-300", btnPrimary: "bg-[#4FC3F7] text-black hover:bg-[#3AACDE]",
+    },
+    // ── EV brands ──────────────────────────────────────────────────────────
+    "Ola Electric": {
+        heroGradient: "from-[#CC0000] via-[#880000] to-black",
+        accent: "#FFFFFF", accentText: "text-red-300", btnPrimary: "bg-black text-white hover:bg-gray-900",
+    },
+    "Ather Energy": {
         heroGradient: "from-[#0A0A2E] via-[#05050F] to-black",
         accent: "#00D4FF", accentText: "text-cyan-400", btnPrimary: "bg-[#00D4FF] text-black hover:bg-[#00B8DC]",
     },
-    "Ola Electric": {
-        heroGradient: "from-[#CC0000] via-[#880000] to-black",
-        accent: "#ffffff", accentText: "text-red-300", btnPrimary: "bg-black text-white hover:bg-gray-900",
+    "Bajaj Chetak": {
+        heroGradient: "from-[#002FA7] via-[#001A6B] to-black",
+        accent: "#00CED1", accentText: "text-teal-400", btnPrimary: "bg-[#00CED1] text-black hover:bg-[#00AEB8]",
+    },
+    "TVS iQube": {
+        heroGradient: "from-[#1B1B8F] via-[#0D0D5C] to-black",
+        accent: "#00CED1", accentText: "text-teal-400", btnPrimary: "bg-[#00CED1] text-black hover:bg-[#00AEB8]",
+    },
+    "Hero Electric": {
+        heroGradient: "from-[#003087] via-[#001A4D] to-black",
+        accent: "#00FF7F", accentText: "text-green-400", btnPrimary: "bg-[#00CC66] text-white hover:bg-[#00AA55]",
+    },
+    "Vida (Hero MotoCorp)": {
+        heroGradient: "from-[#004D2E] via-[#002D1A] to-black",
+        accent: "#00CED1", accentText: "text-teal-400", btnPrimary: "bg-[#00CED1] text-black hover:bg-[#00AEB8]",
+    },
+    "Revolt Motors": {
+        heroGradient: "from-[#CC5200] via-[#882200] to-black",
+        accent: "#FF6600", accentText: "text-orange-400", btnPrimary: "bg-[#FF6600] text-white hover:bg-[#E05500]",
+    },
+    "Ultraviolette Automotive": {
+        heroGradient: "from-[#050520] via-[#020210] to-black",
+        accent: "#4169E1", accentText: "text-blue-400", btnPrimary: "bg-[#4169E1] text-white hover:bg-[#3050CC]",
+    },
+    "Simple Energy": {
+        heroGradient: "from-[#0A2E2E] via-[#051818] to-black",
+        accent: "#00CED1", accentText: "text-teal-400", btnPrimary: "bg-[#00CED1] text-black hover:bg-[#00AEB8]",
+    },
+    "Tork Motors": {
+        heroGradient: "from-[#CC5200] via-[#882200] to-black",
+        accent: "#FF6600", accentText: "text-orange-400", btnPrimary: "bg-[#FF6600] text-white hover:bg-[#E05500]",
     },
 }
 
-const DEFAULT_THEME = {
+const DEFAULT_THEME: BrandTheme = {
     heroGradient: "from-gray-900 via-gray-800 to-black",
     accent: "#3B82F6", accentText: "text-blue-400", btnPrimary: "bg-blue-600 text-white hover:bg-blue-700",
+}
+
+/**
+ * Resolve brand theme with fuzzy fallback.
+ * DB stores full names like "Hero MotoCorp" — we try exact match first,
+ * then substring match so partial names still resolve.
+ */
+function getBrandTheme(brand: string | null): BrandTheme {
+    if (!brand) return DEFAULT_THEME
+    if (BRAND_THEMES[brand]) return BRAND_THEMES[brand]
+    const lower = brand.toLowerCase()
+    for (const [key, theme] of Object.entries(BRAND_THEMES)) {
+        if (lower.includes(key.toLowerCase()) || key.toLowerCase().includes(lower)) {
+            return theme
+        }
+    }
+    return DEFAULT_THEME
 }
 
 // ── Types ────────────────────────────────────────────────────────────────────
@@ -96,7 +217,7 @@ export function TwoWheelerTemplate({
     dealerId, dealerName, phone, email, location, fullAddress,
     primaryBrand, vehicles, slug,
 }: Props) {
-    const theme = (primaryBrand && BRAND_THEMES[primaryBrand]) ? BRAND_THEMES[primaryBrand] : DEFAULT_THEME
+    const theme = getBrandTheme(primaryBrand)
     const prefix = useSitePrefix(slug)
 
     const [isScrolled,      setIsScrolled]      = useState(false)

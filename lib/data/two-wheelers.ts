@@ -10,7 +10,7 @@ const NOW = new Date().toISOString()
 
 type CatalogEntry = Omit<TwoWheelerVehicle, 'id' | 'dealer_id' | 'created_at' | 'updated_at' | 'views'>
 
-// ── Royal Enfield ─────────────────────────────────────────────────────────────
+// ── Royal Enfield — brand name in DB: "Royal Enfield" ────────────────────────
 const ROYAL_ENFIELD: CatalogEntry[] = [
     {
         brand: 'Royal Enfield', model: 'Hunter 350', variant: 'Dapper',
@@ -370,31 +370,75 @@ const KAWASAKI: CatalogEntry[] = [
     },
 ]
 
-// ── Master lookup ─────────────────────────────────────────────────────────────
+// ── Ola Electric — brand name in DB: "Ola Electric" ─────────────────────────
+const OLA_ELECTRIC: CatalogEntry[] = [
+    {
+        brand: 'Ola Electric', model: 'S1 X', variant: '2 kWh',
+        type: 'electric', fuel_type: 'electric', year: 2024,
+        engine_cc: null, mileage_kmpl: null, range_km: 91, top_speed_kmph: 90,
+        battery_kwh: 2.0, charging_time_hours: 4.5, battery_warranty_years: 3,
+        ex_showroom_price_paise: 7999900, on_road_price_paise: 9200000, emi_starting_paise: 218000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
+        colors: [{ name: 'Jet Black', hex: '#1A1A1A' }, { name: 'Coral Glam', hex: '#FF6B6B' }],
+        images: [], brochure_url: null, description: "Ola's most affordable electric scooter.", features: ['MoveOS', 'Fast Charging', 'FAME Subsidy Eligible', 'App Connected'], status: 'active',
+    },
+    {
+        brand: 'Ola Electric', model: 'S1 Air', variant: 'Standard',
+        type: 'electric', fuel_type: 'electric', year: 2024,
+        engine_cc: null, mileage_kmpl: null, range_km: 101, top_speed_kmph: 90,
+        battery_kwh: 2.5, charging_time_hours: 5, battery_warranty_years: 3,
+        ex_showroom_price_paise: 10999900, on_road_price_paise: 12500000, emi_starting_paise: 299000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
+        colors: [{ name: 'Jet Black', hex: '#1A1A1A' }, { name: 'Porcelain White', hex: '#F5F5F5' }],
+        images: [], brochure_url: null, description: 'Stylish performance at an accessible price.', features: ['MoveOS 4', 'Fast Charging', 'Hill Hold', 'Cruise Control'], status: 'active',
+    },
+    {
+        brand: 'Ola Electric', model: 'S1 Pro', variant: 'Gen 2',
+        type: 'electric', fuel_type: 'electric', year: 2024,
+        engine_cc: null, mileage_kmpl: null, range_km: 195, top_speed_kmph: 120,
+        battery_kwh: 4.0, charging_time_hours: 6.5, battery_warranty_years: 3,
+        ex_showroom_price_paise: 14999900, on_road_price_paise: 17000000, emi_starting_paise: 408000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
+        colors: [{ name: 'Jet Black', hex: '#1A1A1A' }, { name: 'Neo Mint', hex: '#98FF98' }, { name: 'Liquid Silver', hex: '#C0C0C0' }],
+        images: [], brochure_url: null, description: "The flagship Ola S1 Pro — fast, smart, and connected.", features: ['MoveOS 4', 'Hyper Mode', 'Cabin Boot Storage', 'Voice Assistant', '7" Touchscreen'], status: 'active',
+    },
+]
+
+// ── Master lookup — keys must match EXACT brand names stored in DB ─────────────
+// (from brand-models.json)
 const CATALOG_BY_BRAND: Record<string, CatalogEntry[]> = {
-    'Royal Enfield': ROYAL_ENFIELD,
-    'Hero':          HERO,
-    'Honda':         HONDA,
-    'TVS':           TVS,
-    'Bajaj':         BAJAJ,
-    'Yamaha':        YAMAHA,
-    'Suzuki':        SUZUKI,
-    'KTM':           KTM,
-    'Ather':         ATHER,
-    'Kawasaki':      KAWASAKI,
+    'Royal Enfield':                     ROYAL_ENFIELD,
+    'Hero MotoCorp':                     HERO,
+    'Honda Motorcycle & Scooter India':  HONDA,
+    'TVS Motor Company':                 TVS,
+    'Bajaj Auto':                        BAJAJ,
+    'Yamaha India':                      YAMAHA,
+    'Suzuki Motorcycle India':           SUZUKI,
+    'KTM India':                         KTM,
+    'Ather Energy':                      ATHER,
+    'Kawasaki India':                    KAWASAKI,
+    'Ola Electric':                      OLA_ELECTRIC,
 }
 
 /**
  * Returns a catalog of TwoWheelerVehicle objects for the given brand.
- * The `dealerId` is substituted in so the vehicles are compatible with
- * the rest of the system. `id` is set to `catalog-{index}` (not DB rows).
+ * Tries exact match first, then fuzzy substring match so full DB names
+ * like "Hero MotoCorp" still resolve to the "Hero" catalog key if needed.
+ * The `dealerId` is substituted in so vehicles are compatible with the system.
  */
 export function getTwoWheelerCatalog(brand: string, dealerId: string): TwoWheelerVehicle[] {
-    // Normalize brand name for lookup
-    const key = Object.keys(CATALOG_BY_BRAND).find(
-        k => k.toLowerCase() === brand.toLowerCase()
-    )
-    const entries = key ? CATALOG_BY_BRAND[key] : []
+    const lower = brand.toLowerCase()
+
+    // 1. Exact match
+    let entries = CATALOG_BY_BRAND[brand]
+
+    // 2. Fuzzy match — brand contains key or key contains brand
+    if (!entries) {
+        const key = Object.keys(CATALOG_BY_BRAND).find(k =>
+            lower.includes(k.toLowerCase()) || k.toLowerCase().includes(lower)
+        )
+        entries = key ? CATALOG_BY_BRAND[key] : []
+    }
 
     return entries.map((entry, idx) => ({
         ...entry,
