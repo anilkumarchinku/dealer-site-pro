@@ -1,0 +1,1039 @@
+{
+    "meta": {
+        "title": "Indian Two-Wheeler & Three-Wheeler Brand Models",
+        "description": "Comprehensive list of all currently sold 2W and 3W models in India (2025)",
+        "totalBrands": 71,
+        "generatedAt": "2026-03-02"
+    },
+    "twoWheelers": {
+        "traditional": [
+            {
+                "brandId": "hero-motocorp",
+                "brand": "Hero MotoCorp",
+                "models": {
+                    "motorcycles": [
+                        "HF 100",
+                        "HF Deluxe",
+                        "Splendor Plus",
+                        "Splendor Plus Xtec",
+                        "Splendor Plus Xtec 2.0",
+                        "Super Splendor Xtec",
+                        "Passion Plus",
+                        "Glamour",
+                        "Glamour Xtec",
+                        "Glamour X 125",
+                        "Xtreme 125R",
+                        "Xtreme 160R",
+                        "Xtreme 160R 4V",
+                        "Xtreme 250R",
+                        "XPulse 200 4V",
+                        "XPulse 210",
+                        "Karizma XMR",
+                        "Mavrick 440"
+                    ],
+                    "scooters": [
+                        "Pleasure Plus",
+                        "Pleasure Plus Xtec",
+                        "Destini 110",
+                        "Destini 125",
+                        "Destini Prime",
+                        "Xoom 110",
+                        "Xoom 125",
+                        "Xoom 160"
+                    ]
+                }
+            },
+            {
+                "brandId": "honda-hmsi",
+                "brand": "Honda Motorcycle & Scooter India",
+                "models": {
+                    "motorcycles": [
+                        "CD 110 Dream",
+                        "Livo",
+                        "SP 125",
+                        "Shine 125",
+                        "Unicorn",
+                        "CB125 Hornet",
+                        "Hornet 2.0",
+                        "SP160",
+                        "NX200",
+                        "CB300F",
+                        "Hness CB350",
+                        "CB350RS",
+                        "CB500X",
+                        "NX500",
+                        "CB650R",
+                        "CBR650R",
+                        "CB750 Hornet",
+                        "Transalp XL750",
+                        "CB1000 Hornet",
+                        "CBR1000RR-R Fireblade",
+                        "Africa Twin",
+                        "Goldwing Tour"
+                    ],
+                    "scooters": [
+                        "Activa 6G",
+                        "Activa 125",
+                        "Activa e",
+                        "Dio",
+                        "Dio 125",
+                        "QC1",
+                        "X-ADV 750"
+                    ]
+                }
+            },
+            {
+                "brandId": "tvs-motor",
+                "brand": "TVS Motor Company",
+                "models": {
+                    "motorcycles": [
+                        "Sport",
+                        "Radeon",
+                        "Star City Plus",
+                        "Raider 125",
+                        "Apache RTR 160",
+                        "Apache RTR 160 4V",
+                        "Apache RTR 180",
+                        "Apache RTR 200 4V",
+                        "Apache RTX 300",
+                        "Apache RTR 310",
+                        "Apache RR 310",
+                        "Ronin"
+                    ],
+                    "scooters": [
+                        "XL100",
+                        "Scooty Pep Plus",
+                        "Zest 110",
+                        "Jupiter",
+                        "Jupiter 125",
+                        "Ntorq 125",
+                        "Ntorq 150"
+                    ],
+                    "mopeds": [
+                        "XL100 Heavy Duty",
+                        "XL100 Comfort"
+                    ]
+                }
+            },
+            {
+                "brandId": "bajaj-auto",
+                "brand": "Bajaj Auto",
+                "models": {
+                    "motorcycles": [
+                        "CT 110X",
+                        "Platina 100",
+                        "Platina 110",
+                        "Pulsar 125",
+                        "Pulsar N125",
+                        "Pulsar NS125",
+                        "Pulsar 150",
+                        "Pulsar N160",
+                        "Pulsar NS160",
+                        "Pulsar NS200",
+                        "Pulsar 220F",
+                        "Pulsar N250",
+                        "Pulsar RS200",
+                        "Pulsar NS400Z",
+                        "Dominar 250",
+                        "Dominar 400",
+                        "Avenger Street 160",
+                        "Avenger Cruise 220"
+                    ]
+                }
+            },
+            {
+                "brandId": "royal-enfield",
+                "brand": "Royal Enfield",
+                "models": {
+                    "motorcycles": [
+                        "Bullet 350",
+                        "Classic 350",
+                        "Meteor 350",
+                        "Hunter 350",
+                        "Goan Classic 350",
+                        "Scram 440",
+                        "Himalayan 450",
+                        "Guerrilla 450",
+                        "Interceptor 650",
+                        "Continental GT 650",
+                        "Super Meteor 650",
+                        "Shotgun 650",
+                        "Bear 650",
+                        "Classic 650"
+                    ]
+                }
+            },
+            {
+                "brandId": "yamaha-india",
+                "brand": "Yamaha India",
+                "models": {
+                    "motorcycles": [
+                        "FZ-Fi",
+                        "FZ Rave",
+                        "FZ-S Fi",
+                        "FZ-S Fi Hybrid",
+                        "FZ-S Fi V4.0 DLX",
+                        "FZ-X",
+                        "FZ25",
+                        "MT-15 V2.0",
+                        "MT-03",
+                        "MT-09",
+                        "R15 V4",
+                        "R15S",
+                        "R3",
+                        "XSR155"
+                    ],
+                    "scooters": [
+                        "Ray ZR 125 Fi",
+                        "Ray ZR 125 Fi Street Rally",
+                        "Fascino 125 Fi",
+                        "Aerox 155",
+                        "Aerox 155 Version S"
+                    ]
+                }
+            },
+            {
+                "brandId": "suzuki-motorcycle",
+                "brand": "Suzuki Motorcycle India",
+                "models": {
+                    "motorcycles": [
+                        "Gixxer",
+                        "Gixxer SF",
+                        "Gixxer 250",
+                        "Gixxer SF 250",
+                        "Gixxer SF 250 Flex Fuel",
+                        "V-Strom SX",
+                        "GSX-8R",
+                        "V-Strom 800 DE",
+                        "Hayabusa"
+                    ],
+                    "scooters": [
+                        "Access 125",
+                        "Avenis 125",
+                        "Burgman Street 125"
+                    ]
+                }
+            },
+            {
+                "brandId": "ktm-india",
+                "brand": "KTM India",
+                "models": {
+                    "motorcycles": [
+                        "RC 160",
+                        "160 Duke",
+                        "RC 200",
+                        "200 Duke",
+                        "250 Duke",
+                        "250 Adventure",
+                        "RC 390",
+                        "390 Duke",
+                        "390 Adventure",
+                        "390 Adventure R",
+                        "390 Adventure X",
+                        "390 Enduro R",
+                        "890 Duke R",
+                        "1390 Super Duke R"
+                    ]
+                }
+            },
+            {
+                "brandId": "husqvarna-india",
+                "brand": "Husqvarna India",
+                "models": {
+                    "motorcycles": [
+                        "Vitpilen 125",
+                        "Vitpilen 250",
+                        "Svartpilen 401"
+                    ]
+                }
+            },
+            {
+                "brandId": "jawa-motorcycles",
+                "brand": "Jawa Motorcycles",
+                "models": {
+                    "motorcycles": [
+                        "Jawa 42",
+                        "Jawa 42 FJ",
+                        "Jawa 42 Bobber",
+                        "Jawa 350",
+                        "Jawa Perak"
+                    ]
+                }
+            },
+            {
+                "brandId": "yezdi-motorcycles",
+                "brand": "Yezdi Motorcycles",
+                "models": {
+                    "motorcycles": [
+                        "Roadster",
+                        "Scrambler",
+                        "Adventure"
+                    ]
+                }
+            },
+            {
+                "brandId": "benelli-india",
+                "brand": "Benelli India",
+                "models": {
+                    "motorcycles": [
+                        "TRK 502",
+                        "TRK 502X",
+                        "502C",
+                        "Leoncino 500"
+                    ]
+                }
+            },
+            {
+                "brandId": "kawasaki-india",
+                "brand": "Kawasaki India",
+                "models": {
+                    "motorcycles": [
+                        "W175",
+                        "Eliminator",
+                        "Ninja 300",
+                        "Z400",
+                        "Ninja 500",
+                        "Z650",
+                        "Z650RS",
+                        "Ninja 650",
+                        "Versys 650",
+                        "Versys-X 300",
+                        "Z900",
+                        "Ninja 1100SX",
+                        "Z1100",
+                        "Vulcan S",
+                        "KLX230",
+                        "KLX230RS",
+                        "KLX450R",
+                        "Ninja ZX-10R",
+                        "Z H2",
+                        "Ninja H2 SX SE",
+                        "Versys 1100"
+                    ]
+                }
+            },
+            {
+                "brandId": "aprilia-india",
+                "brand": "Aprilia India",
+                "models": {
+                    "motorcycles": [
+                        "RS 457",
+                        "Tuono 457",
+                        "RS 660",
+                        "Tuono 660",
+                        "RSV4 1100 Factory"
+                    ],
+                    "scooters": [
+                        "SR 125",
+                        "SR 175",
+                        "SXR 125",
+                        "SXR 160",
+                        "Storm 125"
+                    ]
+                }
+            },
+            {
+                "brandId": "vespa-india",
+                "brand": "Vespa India",
+                "models": {
+                    "scooters": [
+                        "Vespa 125",
+                        "Vespa S 125",
+                        "Vespa Tech 125",
+                        "Vespa S Tech 125",
+                        "Vespa 150",
+                        "Vespa S 150",
+                        "Vespa Qala"
+                    ]
+                }
+            },
+            {
+                "brandId": "harley-davidson-india",
+                "brand": "Harley-Davidson India",
+                "models": {
+                    "motorcycles": [
+                        "Nightster",
+                        "Nightster Special",
+                        "Sportster S",
+                        "Street Bob",
+                        "Fat Boy",
+                        "Heritage Classic",
+                        "Breakout",
+                        "Street Glide",
+                        "Road Glide",
+                        "CVO Street Glide",
+                        "CVO Road Glide",
+                        "Pan America 1250 Special"
+                    ]
+                }
+            },
+            {
+                "brandId": "triumph-india",
+                "brand": "Triumph India",
+                "models": {
+                    "motorcycles": [
+                        "Speed 400",
+                        "Scrambler 400 X",
+                        "Trident 660",
+                        "Tiger 660",
+                        "Tiger 850 Sport",
+                        "Speed Twin 900",
+                        "Scrambler 900",
+                        "Bonneville T100",
+                        "Bonneville T120",
+                        "Bonneville Bobber",
+                        "Bonneville Speedmaster",
+                        "Street Triple 765 R",
+                        "Speed Triple 1200 RS",
+                        "Tiger 900",
+                        "Tiger 1200",
+                        "Rocket 3"
+                    ]
+                }
+            },
+            {
+                "brandId": "ducati-india",
+                "brand": "Ducati India",
+                "models": {
+                    "motorcycles": [
+                        "Scrambler 800",
+                        "Monster",
+                        "Panigale V2",
+                        "Streetfighter V2",
+                        "Panigale V4",
+                        "Streetfighter V4",
+                        "Multistrada V2",
+                        "Multistrada V4",
+                        "DesertX",
+                        "DesertX Discovery",
+                        "Diavel V4",
+                        "XDiavel",
+                        "Hypermotard 950"
+                    ]
+                }
+            },
+            {
+                "brandId": "bmw-motorrad-india",
+                "brand": "BMW Motorrad India",
+                "models": {
+                    "motorcycles": [
+                        "G 310 R",
+                        "G 310 GS",
+                        "G 310 RR",
+                        "CE 02",
+                        "F 900 GS",
+                        "F 900 GS Adventure",
+                        "R 1300 GS",
+                        "S 1000 R",
+                        "S 1000 RR",
+                        "S 1000 XR",
+                        "M 1000 XR",
+                        "R 12",
+                        "R 12 nineT",
+                        "R18",
+                        "C 400 GT",
+                        "CE 04",
+                        "K 1600"
+                    ]
+                }
+            },
+            {
+                "brandId": "indian-motorcycle",
+                "brand": "Indian Motorcycle",
+                "models": {
+                    "motorcycles": [
+                        "Chief Dark Horse",
+                        "Chief Bobber Dark Horse",
+                        "Sport Chief",
+                        "Super Chief Limited",
+                        "Super Chief Dark Horse",
+                        "Springfield",
+                        "Springfield Dark Horse",
+                        "Chieftain Dark Horse",
+                        "Chieftain Limited",
+                        "Challenger Limited",
+                        "Challenger Dark Horse",
+                        "Pursuit Limited",
+                        "Pursuit Dark Horse",
+                        "Roadmaster",
+                        "Roadmaster Limited",
+                        "Roadmaster Dark Horse"
+                    ]
+                }
+            },
+            {
+                "brandId": "moto-guzzi",
+                "brand": "Moto Guzzi",
+                "models": {
+                    "motorcycles": [
+                        "V7",
+                        "V7 Sport",
+                        "V85 TT",
+                        "V100 Mandello"
+                    ]
+                }
+            },
+            {
+                "brandId": "cfmoto-india",
+                "brand": "CFMoto India",
+                "models": {
+                    "motorcycles": [
+                        "300NK",
+                        "450MT",
+                        "675SR-R",
+                        "650NK",
+                        "650MT",
+                        "650GT"
+                    ]
+                }
+            },
+            {
+                "brandId": "keeway-india",
+                "brand": "Keeway India",
+                "models": {
+                    "motorcycles": [
+                        "SR125",
+                        "K-Light 250V",
+                        "RS 250",
+                        "V302C",
+                        "K300 SF",
+                        "RR300"
+                    ],
+                    "scooters": [
+                        "Vieste 300",
+                        "Sixties 300i"
+                    ]
+                }
+            },
+            {
+                "brandId": "zontes-india",
+                "brand": "Zontes India",
+                "models": {
+                    "motorcycles": [
+                        "350X",
+                        "350R",
+                        "350T",
+                        "GK350"
+                    ]
+                }
+            },
+            {
+                "brandId": "mahindra-two-wheelers",
+                "brand": "Mahindra Two Wheelers",
+                "models": {
+                    "motorcycles": [
+                        "Mojo 300",
+                        "Centuro 125"
+                    ],
+                    "scooters": [
+                        "Gusto 110",
+                        "Gusto 125"
+                    ]
+                }
+            }
+        ],
+        "electric": [
+            {
+                "brandId": "ola-electric",
+                "brand": "Ola Electric",
+                "models": {
+                    "scooters": [
+                        "S1 Pro",
+                        "S1 Air",
+                        "S1 X",
+                        "S1 Z",
+                        "Gig"
+                    ],
+                    "motorcycles": [
+                        "Roadster"
+                    ]
+                }
+            },
+            {
+                "brandId": "ather-energy",
+                "brand": "Ather Energy",
+                "models": {
+                    "scooters": [
+                        "450X",
+                        "450 Apex",
+                        "450S",
+                        "Rizta"
+                    ]
+                }
+            },
+            {
+                "brandId": "bajaj-chetak-ev",
+                "brand": "Bajaj Chetak",
+                "models": {
+                    "scooters": [
+                        "Chetak 3501",
+                        "Chetak 3502",
+                        "Chetak 3503"
+                    ]
+                }
+            },
+            {
+                "brandId": "tvs-iqube",
+                "brand": "TVS iQube",
+                "models": {
+                    "scooters": [
+                        "iQube",
+                        "iQube S",
+                        "iQube ST",
+                        "iQube ST 5.3 kWh",
+                        "TVS X",
+                        "TVS Orbiter"
+                    ]
+                }
+            },
+            {
+                "brandId": "hero-electric",
+                "brand": "Hero Electric",
+                "models": {
+                    "scooters": [
+                        "Optima",
+                        "Flash",
+                        "Photon",
+                        "Atria"
+                    ]
+                }
+            },
+            {
+                "brandId": "vida-hero",
+                "brand": "Vida (Hero MotoCorp)",
+                "models": {
+                    "scooters": [
+                        "V2",
+                        "VX2 Go",
+                        "VX2 Plus"
+                    ]
+                }
+            },
+            {
+                "brandId": "revolt-motors",
+                "brand": "Revolt Motors",
+                "models": {
+                    "motorcycles": [
+                        "RV1",
+                        "RV1+",
+                        "RV BlazeX",
+                        "RV400",
+                        "RV400 BRZ"
+                    ]
+                }
+            },
+            {
+                "brandId": "okinawa-autotech",
+                "brand": "Okinawa Autotech",
+                "models": {
+                    "scooters": [
+                        "i-Praise",
+                        "PraisePro",
+                        "Okhi-90",
+                        "Ridge 100",
+                        "Dual 100",
+                        "R30",
+                        "Lite"
+                    ]
+                }
+            },
+            {
+                "brandId": "ampere-greaves",
+                "brand": "Ampere (Greaves Electric)",
+                "models": {
+                    "scooters": [
+                        "Nexus",
+                        "Magnus",
+                        "Magnus Grand",
+                        "Reo"
+                    ]
+                }
+            },
+            {
+                "brandId": "tork-motors",
+                "brand": "Tork Motors",
+                "models": {
+                    "motorcycles": [
+                        "Kratos R",
+                        "Kratos X"
+                    ]
+                }
+            },
+            {
+                "brandId": "ultraviolette",
+                "brand": "Ultraviolette Automotive",
+                "models": {
+                    "motorcycles": [
+                        "F77 Mach 2",
+                        "F77 SuperStreet",
+                        "Shockwave"
+                    ],
+                    "scooters": [
+                        "Tesseract"
+                    ]
+                }
+            },
+            {
+                "brandId": "simple-energy",
+                "brand": "Simple Energy",
+                "models": {
+                    "scooters": [
+                        "One",
+                        "One Gen 1.5",
+                        "OneS"
+                    ]
+                }
+            },
+            {
+                "brandId": "kabira-mobility",
+                "brand": "Kabira Mobility",
+                "models": {
+                    "motorcycles": [
+                        "KM 3000",
+                        "KM 4000"
+                    ],
+                    "scooters": [
+                        "Aetos 100",
+                        "Hermes 75"
+                    ]
+                }
+            },
+            {
+                "brandId": "pure-ev",
+                "brand": "Pure EV",
+                "models": {
+                    "scooters": [
+                        "EPluto 7G",
+                        "Etryst 350",
+                        "EcoDryft",
+                        "ETrance Neo"
+                    ]
+                }
+            },
+            {
+                "brandId": "matter-ev",
+                "brand": "Matter",
+                "models": {
+                    "motorcycles": [
+                        "Aera 5000",
+                        "Aera 5000+"
+                    ]
+                }
+            },
+            {
+                "brandId": "hop-electric",
+                "brand": "Hop Electric",
+                "models": {
+                    "scooters": [
+                        "Lyf",
+                        "Leo",
+                        "OXO"
+                    ]
+                }
+            },
+            {
+                "brandId": "okaya-ev",
+                "brand": "Okaya EV (OPG Mobility)",
+                "models": {
+                    "scooters": [
+                        "Faast F2T",
+                        "Faast F2F",
+                        "Faast F2B",
+                        "Faast F3",
+                        "Faast F4",
+                        "Freedum",
+                        "ClassIQ+",
+                        "Motofaast",
+                        "Defy 22"
+                    ]
+                }
+            },
+            {
+                "brandId": "oben-electric",
+                "brand": "Oben Electric",
+                "models": {
+                    "motorcycles": [
+                        "Rorr",
+                        "Rorr EZ"
+                    ]
+                }
+            },
+            {
+                "brandId": "lectrix-ev",
+                "brand": "Lectrix EV",
+                "models": {
+                    "scooters": [
+                        "SX25",
+                        "LXS 2.0",
+                        "LXS 3.0",
+                        "NDuro",
+                        "ZYRO"
+                    ]
+                }
+            },
+            {
+                "brandId": "river-ev",
+                "brand": "River",
+                "models": {
+                    "scooters": [
+                        "Indie Gen 3"
+                    ]
+                }
+            },
+            {
+                "brandId": "odysse-electric",
+                "brand": "Odysse Electric",
+                "models": {
+                    "scooters": [
+                        "Racer",
+                        "Racer Neo",
+                        "HyFy",
+                        "V2",
+                        "Snap",
+                        "E2Go",
+                        "Hawk",
+                        "Trot",
+                        "Vader"
+                    ],
+                    "motorcycles": [
+                        "Evoqis",
+                        "Evoqis Lite"
+                    ]
+                }
+            },
+            {
+                "brandId": "joy-e-bike",
+                "brand": "Joy e-bike",
+                "models": {
+                    "scooters": [
+                        "Beast",
+                        "Thunderbolt",
+                        "Hurricane",
+                        "Gen Next Nanu",
+                        "Wolf",
+                        "Glob",
+                        "Mihos"
+                    ]
+                }
+            },
+            {
+                "brandId": "komaki",
+                "brand": "Komaki",
+                "models": {
+                    "scooters": [
+                        "SE Pro",
+                        "SE Ultra",
+                        "SE Max"
+                    ],
+                    "motorcycles": [
+                        "Ranger"
+                    ]
+                }
+            },
+            {
+                "brandId": "bounce-infinity",
+                "brand": "Bounce Infinity",
+                "models": {
+                    "scooters": [
+                        "E1",
+                        "E1 Plus",
+                        "E1LE",
+                        "E1X"
+                    ]
+                }
+            },
+            {
+                "brandId": "quantum-energy",
+                "brand": "Quantum Energy",
+                "models": {
+                    "scooters": [
+                        "Plasma",
+                        "Bziness"
+                    ]
+                }
+            },
+            {
+                "brandId": "yulu",
+                "brand": "Yulu",
+                "models": {
+                    "scooters": [
+                        "Wynn"
+                    ]
+                }
+            }
+        ]
+    },
+    "threeWheelers": [
+        {
+            "brandId": "bajaj-auto-3w",
+            "brand": "Bajaj Auto (3W)",
+            "models": {
+                "passenger": [
+                    "RE CNG",
+                    "RE LPG",
+                    "RE Diesel",
+                    "RE Electric",
+                    "Maxima Z CNG",
+                    "Compact RE CNG"
+                ],
+                "cargo": [
+                    "Maxima XL Electric",
+                    "Maxima X Wide Diesel",
+                    "Maxima C CNG"
+                ],
+                "electric": [
+                    "GoGo",
+                    "Riki P40"
+                ]
+            }
+        },
+        {
+            "brandId": "piaggio-ape",
+            "brand": "Piaggio Ape",
+            "models": {
+                "passenger": [
+                    "Auto Classic",
+                    "Auto DX",
+                    "NXT+",
+                    "Metro"
+                ],
+                "cargo": [
+                    "Xtra LDX Diesel",
+                    "Xtra LDX CNG"
+                ],
+                "electric": [
+                    "E-City",
+                    "E-Xtra FX",
+                    "E-Xtra FX Max"
+                ]
+            }
+        },
+        {
+            "brandId": "tvs-king",
+            "brand": "TVS King",
+            "models": {
+                "passenger": [
+                    "King Deluxe",
+                    "King Duramax",
+                    "King Duramax Plus"
+                ],
+                "cargo": [
+                    "King Kargo"
+                ],
+                "electric": [
+                    "King EV Max",
+                    "King Kargo HD EV"
+                ]
+            }
+        },
+        {
+            "brandId": "mahindra-3w",
+            "brand": "Mahindra (3W)",
+            "models": {
+                "passenger": [
+                    "Alfa Passenger",
+                    "E-Alfa Plus",
+                    "E-Alfa Mini"
+                ],
+                "cargo": [
+                    "Alfa Load",
+                    "Zor Grand"
+                ],
+                "electric": [
+                    "Treo",
+                    "Treo Plus",
+                    "Treo Zor",
+                    "Treo Yaari HRT",
+                    "Treo Yaari SFT",
+                    "UDO"
+                ]
+            }
+        },
+        {
+            "brandId": "atul-auto",
+            "brand": "Atul Auto",
+            "models": {
+                "passenger": [
+                    "Gem Paxx",
+                    "Elite Plus",
+                    "Rik Auto"
+                ],
+                "cargo": [
+                    "Gem Cargo",
+                    "Shakti Cargo"
+                ],
+                "electric": [
+                    "Rik Electric"
+                ]
+            }
+        },
+        {
+            "brandId": "kinetic-green",
+            "brand": "Kinetic Green",
+            "models": {
+                "passenger": [
+                    "Safar Smart",
+                    "Super DX"
+                ],
+                "cargo": [
+                    "Safar Shakti",
+                    "Safar Jumbo Ranger"
+                ]
+            }
+        },
+        {
+            "brandId": "lohia-auto",
+            "brand": "Lohia Auto",
+            "models": {
+                "passenger": [
+                    "Humsafar L5 Passenger",
+                    "Narain ICE L3",
+                    "Narain DX"
+                ],
+                "cargo": [
+                    "Humsafar L5 Cargo",
+                    "Comfort F2F+"
+                ],
+                "electric": [
+                    "Youdha E5 Passenger",
+                    "Youdha E5 Cargo"
+                ]
+            }
+        },
+        {
+            "brandId": "euler-motors",
+            "brand": "Euler Motors",
+            "models": {
+                "passenger": [
+                    "NEO HiCITY",
+                    "NEO HiRange"
+                ],
+                "cargo": [
+                    "HiLoad DV EV",
+                    "HiLoad EV 120",
+                    "HiLoad EV 170"
+                ]
+            }
+        },
+        {
+            "brandId": "greaves-electric-3w",
+            "brand": "Greaves Electric Mobility",
+            "models": {
+                "cargo": [
+                    "Eltra City XTRA",
+                    "Xargo"
+                ],
+                "passenger": [
+                    "Eltra City"
+                ]
+            }
+        },
+        {
+            "brandId": "force-motors",
+            "brand": "Force Motors",
+            "models": {
+                "note": "Force Motors has shifted focus to LCVs (Urbania, Gurkha, Trax). No current 3W production."
+            }
+        }
+    ]
+}

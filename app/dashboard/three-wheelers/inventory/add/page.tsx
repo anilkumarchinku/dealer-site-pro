@@ -1,11 +1,14 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import { useRouter } from "next/navigation"
 import { useOnboardingStore } from "@/lib/store/onboarding-store"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, Sparkles } from "lucide-react"
+import { ArrowLeft, Sparkles, ChevronDown } from "lucide-react"
 import Link from "next/link"
+import brandData from "@/lib/data/brand-models.json"
+
+const ALL_3W_BRANDS = brandData.threeWheelers as { brandId: string; brand: string; models: Record<string, string[]> }[]
 
 const TYPES  = ["passenger", "cargo", "electric", "school_van"] as const
 const FUEL   = ["petrol", "diesel", "cng", "electric", "lpg"] as const
@@ -16,10 +19,25 @@ const STOCK  = ["available", "booking_open", "out_of_stock"] as const
 export default function AddThreeWheelerVehiclePage() {
     const router = useRouter()
     const { dealerId } = useOnboardingStore()
-    const [saving,    setSaving]    = useState(false)
-    const [aiLoading, setAiLoading] = useState(false)
-    const [error,     setError]     = useState("")
-    const [images,    setImages]    = useState<string[]>([])
+    const [saving,      setSaving]      = useState(false)
+    const [aiLoading,   setAiLoading]   = useState(false)
+    const [error,       setError]       = useState("")
+    const [images,      setImages]      = useState<string[]>([])
+    const [brandOpen,   setBrandOpen]   = useState(false)
+    const [brandSearch, setBrandSearch] = useState("")
+
+    const selectedBrandData = useMemo(
+        () => ALL_3W_BRANDS.find(b => b.brand === form.brand),
+        [form.brand]
+    )
+    const modelOptions = useMemo(() => {
+        if (!selectedBrandData) return []
+        return Object.values(selectedBrandData.models).flat() as string[]
+    }, [selectedBrandData])
+    const filteredBrands = useMemo(
+        () => ALL_3W_BRANDS.filter(b => b.brand.toLowerCase().includes(brandSearch.toLowerCase())),
+        [brandSearch]
+    )
 
     const [form, setForm] = useState({
         type:                    "passenger" as typeof TYPES[number],
@@ -187,14 +205,67 @@ export default function AddThreeWheelerVehiclePage() {
                     )}
 
                     <div className="grid grid-cols-3 gap-4">
-                        <div>
+                        {/* Brand picker */}
+                        <div className="relative">
                             <label className="text-sm font-medium">Brand *</label>
-                            <input value={form.brand} onChange={e => set("brand", e.target.value)} placeholder="e.g. Bajaj" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                            <button type="button" onClick={() => setBrandOpen(o => !o)}
+                                className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm flex items-center gap-2 text-left">
+                                {selectedBrandData ? (
+                                    <>
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        <img src={`/data/brand-logos/${selectedBrandData.brandId}.png`}
+                                            alt="" className="w-5 h-5 object-contain"
+                                            onError={e => { e.currentTarget.style.display = "none" }} />
+                                        <span className="truncate">{selectedBrandData.brand}</span>
+                                    </>
+                                ) : <span className="text-muted-foreground">Select brand</span>}
+                                <ChevronDown className="w-4 h-4 ml-auto shrink-0 text-muted-foreground" />
+                            </button>
+                            {brandOpen && (
+                                <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-popover border border-border rounded-lg shadow-lg max-h-64 overflow-hidden flex flex-col">
+                                    <div className="p-2 border-b border-border">
+                                        <input autoFocus type="text" placeholder="Search..." value={brandSearch}
+                                            onChange={e => setBrandSearch(e.target.value)}
+                                            className="w-full px-2 py-1.5 text-sm rounded-md border border-input bg-background focus:outline-none" />
+                                    </div>
+                                    <div className="overflow-y-auto">
+                                        {filteredBrands.map(b => (
+                                            <button key={b.brandId} type="button"
+                                                onClick={() => { set("brand", b.brand); set("model", ""); setBrandOpen(false); setBrandSearch(""); }}
+                                                className="w-full flex items-center gap-2 px-3 py-2 text-sm hover:bg-accent text-left">
+                                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                <img src={`/data/brand-logos/${b.brandId}.png`}
+                                                    alt="" className="w-5 h-5 object-contain shrink-0"
+                                                    onError={e => { e.currentTarget.style.display = "none" }} />
+                                                <span>{b.brand}</span>
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
                         </div>
+
+                        {/* Model dropdown */}
                         <div>
                             <label className="text-sm font-medium">Model *</label>
-                            <input value={form.model} onChange={e => set("model", e.target.value)} placeholder="e.g. RE Compact" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                            {modelOptions.length > 0 ? (
+                                <select value={form.model} onChange={e => set("model", e.target.value)}
+                                    className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm">
+                                    <option value="">Select model</option>
+                                    {modelOptions.map(m => <option key={m} value={m}>{m}</option>)}
+                                    <option value="__other__">Other (type below)</option>
+                                </select>
+                            ) : (
+                                <input value={form.model} onChange={e => set("model", e.target.value)}
+                                    placeholder="e.g. RE Compact"
+                                    className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                            )}
+                            {form.model === "__other__" && (
+                                <input placeholder="Type model name" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm"
+                                    onChange={e => set("model", e.target.value)} />
+                            )}
                         </div>
+
                         <div>
                             <label className="text-sm font-medium">Variant</label>
                             <input value={form.variant} onChange={e => set("variant", e.target.value)} placeholder="Optional" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />

@@ -5,9 +5,10 @@ import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ArrowLeft, Loader2, CheckCircle, XCircle, Globe, Check } from "lucide-react";
+import { ArrowRight, ArrowLeft, Loader2, CheckCircle, XCircle, Globe, Check, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BASE_DOMAIN, USE_SUBDOMAIN } from "@/lib/utils/domain";
+import brandData from "@/lib/data/brand-models.json";
 
 function toSlug(value: string) {
     return value.toLowerCase().trim()
@@ -15,18 +16,11 @@ function toSlug(value: string) {
         .replace(/-+/g, '-').replace(/^-+|-+$/g, '').substring(0, 63);
 }
 
-const THREE_WHEELER_BRANDS = [
-    { name: "Bajaj Auto",    logo: "https://logo.clearbit.com/bajajauto.com" },
-    { name: "TVS King",      logo: "https://logo.clearbit.com/tvsmotor.com" },
-    { name: "Piaggio Ape",   logo: "https://logo.clearbit.com/piaggio.com" },
-    { name: "Mahindra Treo", logo: "https://logo.clearbit.com/mahindra.com" },
-    { name: "Atul Auto",     logo: "https://logo.clearbit.com/atulauto.co.in" },
-    { name: "Force Motors",  logo: "https://logo.clearbit.com/forcemotors.com" },
-    { name: "Saarthi",       logo: "https://logo.clearbit.com/saarthi.co.in" },
-    { name: "Omega Seiki",   logo: "https://logo.clearbit.com/omegaseiki.com" },
-    { name: "Altigreen",     logo: "https://logo.clearbit.com/altigreen.com" },
-    { name: "Euler Motors",  logo: "https://logo.clearbit.com/eulermotors.com" },
-];
+function logoSrc(brandId: string) {
+    return `/data/brand-logos/${brandId}.png`;
+}
+
+const THREE_WHEELER_BRANDS = (brandData.threeWheelers as { brandId: string; brand: string }[]);
 
 export default function ThreeWheelerStep1Page() {
     const router = useRouter();
@@ -61,7 +55,8 @@ export default function ThreeWheelerStep1Page() {
     const [selectedBrands, setSelectedBrands] = useState<string[]>(
         (data.brands as string[]) || []
     );
-    const [brandError, setBrandError] = useState("");
+    const [brandError,  setBrandError]  = useState("");
+    const [brandSearch, setBrandSearch] = useState("");
 
     useEffect(() => {
         if (!slugEdited && formData.dealershipName) {
@@ -333,48 +328,38 @@ export default function ThreeWheelerStep1Page() {
                             </p>
                         </div>
 
+                        {/* Search */}
+                        <div className="relative">
+                            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                            <input
+                                type="text"
+                                placeholder="Search brands..."
+                                value={brandSearch}
+                                onChange={e => setBrandSearch(e.target.value)}
+                                className="w-full pl-9 pr-3 py-2 text-sm rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring"
+                            />
+                        </div>
+
                         <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
-                            {THREE_WHEELER_BRANDS.map((brand) => {
-                                const selected = selectedBrands.includes(brand.name);
-                                const initials = brand.name.split(" ").map(w => w[0]).join("").substring(0, 2).toUpperCase();
-                                return (
-                                    <button
-                                        key={brand.name}
-                                        type="button"
-                                        onClick={() => toggleBrand(brand.name)}
-                                        className={cn(
-                                            "p-3 rounded-xl border-2 flex flex-col items-center gap-2 transition-all hover:bg-accent relative",
-                                            selected
-                                                ? "border-green-500 bg-green-500/5"
-                                                : "border-input"
-                                        )}
-                                    >
-                                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                                        <img
-                                            src={brand.logo}
-                                            alt={brand.name}
-                                            className="w-10 h-10 object-contain"
-                                            onError={(e) => {
-                                                const target = e.currentTarget;
-                                                target.style.display = "none";
-                                                const fallback = target.nextElementSibling as HTMLElement | null;
-                                                if (fallback) fallback.style.display = "flex";
-                                            }}
-                                        />
-                                        <span
-                                            className="w-10 h-10 rounded-full bg-muted text-muted-foreground text-xs font-bold items-center justify-center hidden"
-                                        >
-                                            {initials}
-                                        </span>
-                                        <span className="text-xs font-medium text-center leading-tight">{brand.name}</span>
-                                        {selected && (
-                                            <div className="absolute top-1 right-1 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center">
-                                                <Check className="w-2.5 h-2.5 text-white" />
-                                            </div>
-                                        )}
-                                    </button>
-                                );
-                            })}
+                            {THREE_WHEELER_BRANDS
+                                .filter(b => b.brand.toLowerCase().includes(brandSearch.toLowerCase()))
+                                .map(brand => {
+                                    const selected = selectedBrands.includes(brand.brand);
+                                    const initials = brand.brand.split(" ").map((w: string) => w[0]).join("").substring(0, 2).toUpperCase();
+                                    return (
+                                        <button key={brand.brandId} type="button" onClick={() => toggleBrand(brand.brand)}
+                                            className={cn("p-3 rounded-xl border-2 flex flex-col items-center gap-2 transition-all hover:bg-accent relative",
+                                                selected ? "border-green-500 bg-green-500/5" : "border-input"
+                                            )}>
+                                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                                            <img src={logoSrc(brand.brandId)} alt={brand.brand} className="w-10 h-10 object-contain"
+                                                onError={e => { e.currentTarget.style.display = "none"; (e.currentTarget.nextElementSibling as HTMLElement | null)?.style && ((e.currentTarget.nextElementSibling as HTMLElement).style.display = "flex"); }} />
+                                            <span className="w-10 h-10 rounded-full bg-muted text-muted-foreground text-xs font-bold items-center justify-center hidden">{initials}</span>
+                                            <span className="text-xs font-medium text-center leading-tight">{brand.brand}</span>
+                                            {selected && <div className="absolute top-1 right-1 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center"><Check className="w-2.5 h-2.5 text-white" /></div>}
+                                        </button>
+                                    );
+                                })}
                         </div>
 
                         {selectedBrands.length > 0 && (
