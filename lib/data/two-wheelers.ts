@@ -13,14 +13,14 @@ type CatalogEntry = Omit<TwoWheelerVehicle, 'id' | 'dealer_id' | 'created_at' | 
 // ── Royal Enfield — brand name in DB: "Royal Enfield" ────────────────────────
 const ROYAL_ENFIELD: CatalogEntry[] = [
     {
-        brand: 'Royal Enfield', model: 'Hunter 350', variant: 'Dapper',
+        brand: 'Royal Enfield', model: 'Scram 440', variant: 'Standard',
         type: 'bike', fuel_type: 'petrol', year: 2024,
-        engine_cc: 349, mileage_kmpl: 36, range_km: null, top_speed_kmph: 114,
+        engine_cc: 443, mileage_kmpl: 38, range_km: null, top_speed_kmph: 150,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
-        ex_showroom_price_paise: 14990000, on_road_price_paise: 17000000, emi_starting_paise: 410000,
+        ex_showroom_price_paise: 21900000, on_road_price_paise: 24500000, emi_starting_paise: 595000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
-        colors: [{ name: 'Rebel Red', hex: '#8B0000' }, { name: 'Rebel Black', hex: '#1A1A1A' }],
-        images: [], brochure_url: null, description: 'The all-new Hunter 350 — nimble, light and fun to ride.', features: ['LED Headlamp', 'Tripper Navigation', 'Dual Channel ABS'], status: 'active',
+        colors: [{ name: 'Muted Madras', hex: '#8B6914' }, { name: 'Ash', hex: '#808080' }],
+        images: [], brochure_url: null, description: 'The urban scrambler — built for all roads.', features: ['Dual Channel ABS', 'Tripper Navigation', 'IMU', 'LED Headlamp'], status: 'active',
     },
     {
         brand: 'Royal Enfield', model: 'Bullet 350', variant: 'Standard',
@@ -97,7 +97,7 @@ const ROYAL_ENFIELD: CatalogEntry[] = [
 // ── Hero MotoCorp ─────────────────────────────────────────────────────────────
 const HERO: CatalogEntry[] = [
     {
-        brand: 'Hero', model: 'Splendor Plus', variant: 'XTEC',
+        brand: 'Hero MotoCorp', model: 'Splendor Plus', variant: 'XTEC',
         type: 'bike', fuel_type: 'petrol', year: 2024,
         engine_cc: 97, mileage_kmpl: 80, range_km: null, top_speed_kmph: 90,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
@@ -107,7 +107,7 @@ const HERO: CatalogEntry[] = [
         images: [], brochure_url: null, description: "India's most-loved commuter bike.", features: ['LED DRLs', 'USB Charging', 'i3S Technology'], status: 'active',
     },
     {
-        brand: 'Hero', model: 'Xtreme 160R', variant: '4V',
+        brand: 'Hero MotoCorp', model: 'Xtreme 160R', variant: '4V',
         type: 'bike', fuel_type: 'petrol', year: 2024,
         engine_cc: 163, mileage_kmpl: 45, range_km: null, top_speed_kmph: 109,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
@@ -117,7 +117,7 @@ const HERO: CatalogEntry[] = [
         images: [], brochure_url: null, description: 'Sporty performance for the urban rider.', features: ['Dual Channel ABS', 'LED Headlamp', 'Turn-by-Turn Navigation'], status: 'active',
     },
     {
-        brand: 'Hero', model: 'Destini 125', variant: 'Prime',
+        brand: 'Hero MotoCorp', model: 'Destini 125', variant: 'Prime',
         type: 'scooter', fuel_type: 'petrol', year: 2024,
         engine_cc: 124, mileage_kmpl: 51, range_km: null, top_speed_kmph: 90,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
@@ -127,7 +127,7 @@ const HERO: CatalogEntry[] = [
         images: [], brochure_url: null, description: 'Feature-rich family scooter.', features: ['CBS', 'LED Headlamp', 'Under-Seat Storage'], status: 'active',
     },
     {
-        brand: 'Hero', model: 'Xpulse 200 4V', variant: 'Pro',
+        brand: 'Hero MotoCorp', model: 'Xpulse 200 4V', variant: 'Pro',
         type: 'bike', fuel_type: 'petrol', year: 2024,
         engine_cc: 199, mileage_kmpl: 40, range_km: null, top_speed_kmph: 114,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
@@ -141,7 +141,7 @@ const HERO: CatalogEntry[] = [
 // ── Honda ─────────────────────────────────────────────────────────────────────
 const HONDA: CatalogEntry[] = [
     {
-        brand: 'Honda', model: 'Activa 6G', variant: 'Standard',
+        brand: 'Honda Motorcycle & Scooter India', model: 'Activa 6G', variant: 'Standard',
         type: 'scooter', fuel_type: 'petrol', year: 2024,
         engine_cc: 109, mileage_kmpl: 60, range_km: null, top_speed_kmph: 90,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
@@ -151,7 +151,7 @@ const HONDA: CatalogEntry[] = [
         images: [], brochure_url: null, description: "India's bestselling scooter.", features: ['CBS', 'LED Headlamp', 'External Fuel Lid'], status: 'active',
     },
     {
-        brand: 'Honda', model: 'SP 125', variant: 'Disc',
+        brand: 'Honda Motorcycle & Scooter India', model: 'SP 125', variant: 'Disc',
         type: 'bike', fuel_type: 'petrol', year: 2024,
         engine_cc: 124, mileage_kmpl: 65, range_km: null, top_speed_kmph: 94,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
@@ -161,7 +161,7 @@ const HONDA: CatalogEntry[] = [
         images: [], brochure_url: null, description: 'Premium commuter with refined performance.', features: ['CBS', 'LED Headlamp', 'USB Charger'], status: 'active',
     },
     {
-        brand: 'Honda', model: 'CB350RS', variant: 'DLX Pro',
+        brand: 'Honda Motorcycle & Scooter India', model: 'CB350RS', variant: 'DLX Pro',
         type: 'bike', fuel_type: 'petrol', year: 2024,
         engine_cc: 348, mileage_kmpl: 42, range_km: null, top_speed_kmph: 147,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
@@ -175,7 +175,7 @@ const HONDA: CatalogEntry[] = [
 // ── TVS ───────────────────────────────────────────────────────────────────────
 const TVS: CatalogEntry[] = [
     {
-        brand: 'TVS', model: 'Apache RTR 160 4V', variant: 'Race Edition',
+        brand: 'TVS Motor Company', model: 'Apache RTR 160 4V', variant: 'Race Edition',
         type: 'bike', fuel_type: 'petrol', year: 2024,
         engine_cc: 159, mileage_kmpl: 45, range_km: null, top_speed_kmph: 114,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
@@ -185,7 +185,7 @@ const TVS: CatalogEntry[] = [
         images: [], brochure_url: null, description: 'Race DNA. Street power.', features: ['Dual Channel ABS', 'SmartXonnect', 'Pirelli Tyres'], status: 'active',
     },
     {
-        brand: 'TVS', model: 'Jupiter 125', variant: 'SmartXonnect',
+        brand: 'TVS Motor Company', model: 'Jupiter 125', variant: 'SmartXonnect',
         type: 'scooter', fuel_type: 'petrol', year: 2024,
         engine_cc: 124, mileage_kmpl: 52, range_km: null, top_speed_kmph: 85,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
@@ -195,7 +195,7 @@ const TVS: CatalogEntry[] = [
         images: [], brochure_url: null, description: 'Smart, connected and efficient.', features: ['SmartXonnect', 'External Fuel Lid', 'LED Headlamp'], status: 'active',
     },
     {
-        brand: 'TVS', model: 'iQube Electric', variant: 'S',
+        brand: 'TVS Motor Company', model: 'iQube Electric', variant: 'S',
         type: 'electric', fuel_type: 'electric', year: 2024,
         engine_cc: null, mileage_kmpl: null, range_km: 100, top_speed_kmph: 78,
         battery_kwh: 3.04, charging_time_hours: 5, battery_warranty_years: 3,
@@ -209,7 +209,7 @@ const TVS: CatalogEntry[] = [
 // ── Bajaj ─────────────────────────────────────────────────────────────────────
 const BAJAJ: CatalogEntry[] = [
     {
-        brand: 'Bajaj', model: 'Pulsar NS160', variant: 'ABS',
+        brand: 'Bajaj Auto', model: 'Pulsar NS160', variant: 'ABS',
         type: 'bike', fuel_type: 'petrol', year: 2024,
         engine_cc: 160, mileage_kmpl: 44, range_km: null, top_speed_kmph: 113,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
@@ -219,7 +219,7 @@ const BAJAJ: CatalogEntry[] = [
         images: [], brochure_url: null, description: 'Born to perform. Built to win.', features: ['Single Channel ABS', 'Perimeter Frame', 'LED Headlamp'], status: 'active',
     },
     {
-        brand: 'Bajaj', model: 'Pulsar NS200', variant: 'ABS',
+        brand: 'Bajaj Auto', model: 'Pulsar NS200', variant: 'ABS',
         type: 'bike', fuel_type: 'petrol', year: 2024,
         engine_cc: 199, mileage_kmpl: 35, range_km: null, top_speed_kmph: 134,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
@@ -229,7 +229,7 @@ const BAJAJ: CatalogEntry[] = [
         images: [], brochure_url: null, description: '200cc naked street fighter.', features: ['Dual Channel ABS', 'Liquid Cooling', 'Perimeter Frame'], status: 'active',
     },
     {
-        brand: 'Bajaj', model: 'Dominar 400', variant: 'Standard',
+        brand: 'Bajaj Auto', model: 'Dominar 400', variant: 'Standard',
         type: 'bike', fuel_type: 'petrol', year: 2024,
         engine_cc: 373, mileage_kmpl: 30, range_km: null, top_speed_kmph: 148,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
@@ -243,41 +243,41 @@ const BAJAJ: CatalogEntry[] = [
 // ── Yamaha ────────────────────────────────────────────────────────────────────
 const YAMAHA: CatalogEntry[] = [
     {
-        brand: 'Yamaha', model: 'FZ-S V3', variant: 'Fi Hybrid',
+        brand: 'Yamaha India', model: 'FZ-X', variant: 'Standard',
         type: 'bike', fuel_type: 'petrol', year: 2024,
         engine_cc: 149, mileage_kmpl: 45, range_km: null, top_speed_kmph: 100,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 12270000, on_road_price_paise: 14000000, emi_starting_paise: 334000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
-        colors: [{ name: 'Matte Black', hex: '#2C2C2C' }, { name: 'Cyan Storm', hex: '#00CED1' }],
+        colors: [{ name: 'Metallic Black', hex: '#2C2C2C' }, { name: 'Cyan Storm', hex: '#00CED1' }],
         images: [], brochure_url: null, description: 'Street style meets fuel efficiency.', features: ['Single Channel ABS', 'Side Stand Engine Cut-off', 'Bluetooth Connectivity'], status: 'active',
     },
     {
-        brand: 'Yamaha', model: 'MT-15 V2', variant: 'Standard',
+        brand: 'Yamaha India', model: 'MT-09', variant: 'Standard',
         type: 'bike', fuel_type: 'petrol', year: 2024,
-        engine_cc: 155, mileage_kmpl: 43, range_km: null, top_speed_kmph: 130,
+        engine_cc: 889, mileage_kmpl: 20, range_km: null, top_speed_kmph: 180,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
-        ex_showroom_price_paise: 16360000, on_road_price_paise: 18500000, emi_starting_paise: 447000,
+        ex_showroom_price_paise: 132000000, on_road_price_paise: 148000000, emi_starting_paise: 3580000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
-        colors: [{ name: 'Ice Fluo', hex: '#00CED1' }, { name: 'Metallic Black', hex: '#2C2C2C' }],
-        images: [], brochure_url: null, description: 'The dark side of Japan.', features: ['Dual Channel ABS', 'Traction Control', 'Quick Shift System'], status: 'active',
+        colors: [{ name: 'Midnight Black', hex: '#2C2C2C' }, { name: 'Icon Blue', hex: '#003087' }],
+        images: [], brochure_url: null, description: 'The dark side of Japan. Pure hyper naked.', features: ['Dual Channel ABS', 'Traction Control', 'Quick Shift System', 'Slide Control'], status: 'active',
     },
     {
-        brand: 'Yamaha', model: 'Ray ZR 125', variant: 'Street Rally',
+        brand: 'Yamaha India', model: 'Aerox 155', variant: 'Standard',
         type: 'scooter', fuel_type: 'petrol', year: 2024,
-        engine_cc: 125, mileage_kmpl: 55, range_km: null, top_speed_kmph: 85,
+        engine_cc: 155, mileage_kmpl: 43, range_km: null, top_speed_kmph: 120,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
-        ex_showroom_price_paise: 8350000, on_road_price_paise: 9700000, emi_starting_paise: 228000,
+        ex_showroom_price_paise: 14150000, on_road_price_paise: 16500000, emi_starting_paise: 399000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
-        colors: [{ name: 'Racing Blue', hex: '#003087' }, { name: 'Vivid Yellow', hex: '#FFD700' }],
-        images: [], brochure_url: null, description: 'Stylish sporty scooter for city riders.', features: ['CBS', 'USB Charger', 'Blue Core Engine'], status: 'active',
+        colors: [{ name: 'Racing Blue', hex: '#003087' }, { name: 'Midnight Black', hex: '#2C2C2C' }],
+        images: [], brochure_url: null, description: 'The fastest Yamaha scooter — a maxi-scooter experience.', features: ['Single Channel ABS', 'Smart Motor Generator', 'Y-Connect App'], status: 'active',
     },
 ]
 
 // ── Suzuki ────────────────────────────────────────────────────────────────────
 const SUZUKI: CatalogEntry[] = [
     {
-        brand: 'Suzuki', model: 'Access 125', variant: 'CBS Disc',
+        brand: 'Suzuki Motorcycle India', model: 'Access 125', variant: 'CBS Disc',
         type: 'scooter', fuel_type: 'petrol', year: 2024,
         engine_cc: 124, mileage_kmpl: 48, range_km: null, top_speed_kmph: 84,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
@@ -287,7 +287,7 @@ const SUZUKI: CatalogEntry[] = [
         images: [], brochure_url: null, description: 'Premium scooter with superior comfort.', features: ['CBS', 'External Fuel Lid', 'USB Charger'], status: 'active',
     },
     {
-        brand: 'Suzuki', model: 'Gixxer SF 250', variant: 'Standard',
+        brand: 'Suzuki Motorcycle India', model: 'Gixxer SF 250', variant: 'Standard',
         type: 'bike', fuel_type: 'petrol', year: 2024,
         engine_cc: 249, mileage_kmpl: 35, range_km: null, top_speed_kmph: 140,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
@@ -301,17 +301,17 @@ const SUZUKI: CatalogEntry[] = [
 // ── KTM ───────────────────────────────────────────────────────────────────────
 const KTM: CatalogEntry[] = [
     {
-        brand: 'KTM', model: '125 Duke', variant: 'Standard',
+        brand: 'KTM India', model: '160 Duke', variant: 'Standard',
         type: 'bike', fuel_type: 'petrol', year: 2024,
-        engine_cc: 125, mileage_kmpl: 45, range_km: null, top_speed_kmph: 107,
+        engine_cc: 160, mileage_kmpl: 40, range_km: null, top_speed_kmph: 115,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 19800000, on_road_price_paise: 22500000, emi_starting_paise: 540000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
         colors: [{ name: 'Orange', hex: '#FF6600' }, { name: 'Black', hex: '#1A1A1A' }],
-        images: [], brochure_url: null, description: 'The smallest Duke with the biggest attitude.', features: ['Single Channel ABS', 'WP Suspension', 'TFT Display'], status: 'active',
+        images: [], brochure_url: null, description: 'The sharpest Duke in class — sporty, light and addictive.', features: ['Single Channel ABS', 'WP Suspension', 'TFT Display'], status: 'active',
     },
     {
-        brand: 'KTM', model: '390 Duke', variant: 'Standard',
+        brand: 'KTM India', model: '390 Duke', variant: 'Standard',
         type: 'bike', fuel_type: 'petrol', year: 2024,
         engine_cc: 399, mileage_kmpl: 28, range_km: null, top_speed_kmph: 167,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
@@ -325,7 +325,7 @@ const KTM: CatalogEntry[] = [
 // ── Ather ─────────────────────────────────────────────────────────────────────
 const ATHER: CatalogEntry[] = [
     {
-        brand: 'Ather', model: '450S', variant: 'Standard',
+        brand: 'Ather Energy', model: '450S', variant: 'Standard',
         type: 'electric', fuel_type: 'electric', year: 2024,
         engine_cc: null, mileage_kmpl: null, range_km: 115, top_speed_kmph: 90,
         battery_kwh: 2.9, charging_time_hours: 4.5, battery_warranty_years: 3,
@@ -335,7 +335,7 @@ const ATHER: CatalogEntry[] = [
         images: [], brochure_url: null, description: 'Smart, fast and efficient electric scooter.', features: ['OTA Updates', 'Warp Mode', 'Google Maps Navigation', 'FAME Subsidy'], status: 'active',
     },
     {
-        brand: 'Ather', model: '450X', variant: 'Pro',
+        brand: 'Ather Energy', model: '450X', variant: 'Pro',
         type: 'electric', fuel_type: 'electric', year: 2024,
         engine_cc: null, mileage_kmpl: null, range_km: 150, top_speed_kmph: 90,
         battery_kwh: 3.7, charging_time_hours: 5, battery_warranty_years: 3,
@@ -349,7 +349,7 @@ const ATHER: CatalogEntry[] = [
 // ── Kawasaki ──────────────────────────────────────────────────────────────────
 const KAWASAKI: CatalogEntry[] = [
     {
-        brand: 'Kawasaki', model: 'Z650RS', variant: 'Standard',
+        brand: 'Kawasaki India', model: 'Z650RS', variant: 'Standard',
         type: 'bike', fuel_type: 'petrol', year: 2024,
         engine_cc: 649, mileage_kmpl: 18, range_km: null, top_speed_kmph: 180,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
@@ -359,7 +359,7 @@ const KAWASAKI: CatalogEntry[] = [
         images: [], brochure_url: null, description: 'Retro style with modern performance.', features: ['Dual Channel ABS', 'Traction Control', 'Assist & Slipper Clutch'], status: 'active',
     },
     {
-        brand: 'Kawasaki', model: 'Ninja 300', variant: 'Standard',
+        brand: 'Kawasaki India', model: 'Ninja 300', variant: 'Standard',
         type: 'bike', fuel_type: 'petrol', year: 2024,
         engine_cc: 296, mileage_kmpl: 23, range_km: null, top_speed_kmph: 168,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
@@ -373,14 +373,14 @@ const KAWASAKI: CatalogEntry[] = [
 // ── Ola Electric — brand name in DB: "Ola Electric" ─────────────────────────
 const OLA_ELECTRIC: CatalogEntry[] = [
     {
-        brand: 'Ola Electric', model: 'S1 X', variant: '2 kWh',
+        brand: 'Ola Electric', model: 'S1 Z', variant: 'Standard',
         type: 'electric', fuel_type: 'electric', year: 2024,
-        engine_cc: null, mileage_kmpl: null, range_km: 91, top_speed_kmph: 90,
-        battery_kwh: 2.0, charging_time_hours: 4.5, battery_warranty_years: 3,
-        ex_showroom_price_paise: 7999900, on_road_price_paise: 9200000, emi_starting_paise: 218000,
+        engine_cc: null, mileage_kmpl: null, range_km: 85, top_speed_kmph: 80,
+        battery_kwh: 1.5, charging_time_hours: 3.5, battery_warranty_years: 3,
+        ex_showroom_price_paise: 5999900, on_road_price_paise: 7000000, emi_starting_paise: 168000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
         colors: [{ name: 'Jet Black', hex: '#1A1A1A' }, { name: 'Coral Glam', hex: '#FF6B6B' }],
-        images: [], brochure_url: null, description: "Ola's most affordable electric scooter.", features: ['MoveOS', 'Fast Charging', 'FAME Subsidy Eligible', 'App Connected'], status: 'active',
+        images: [], brochure_url: null, description: "Ola's entry-level electric scooter — affordable and smart.", features: ['MoveOS', 'Fast Charging', 'FAME Subsidy Eligible', 'App Connected'], status: 'active',
     },
     {
         brand: 'Ola Electric', model: 'S1 Air', variant: 'Standard',

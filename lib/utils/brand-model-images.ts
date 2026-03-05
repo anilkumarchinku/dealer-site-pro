@@ -46,12 +46,41 @@ export function getScrapedImageFallback(
 }
 
 /**
- * Resolves the brandId from a brand display name by normalising to kebab-case.
+ * Explicit map from lowercase brand name variants → actual image folder ID.
+ * Image folders don't always match simple kebab-case of the DB brand name
+ * (e.g. "Honda Motorcycle & Scooter India" → folder "honda-hmsi").
+ */
+const BRAND_FOLDER_MAP: Record<string, string> = {
+    "royal enfield":                        "royal-enfield",
+    "hero motocorp":                        "hero-motocorp",
+    "honda motorcycle & scooter india":     "honda-hmsi",
+    "honda":                                "honda-hmsi",
+    "tvs motor company":                    "tvs-motor",
+    "tvs":                                  "tvs-motor",
+    "bajaj auto":                           "bajaj-auto",
+    "bajaj":                                "bajaj-auto",
+    "yamaha india":                         "yamaha-india",
+    "yamaha":                               "yamaha-india",
+    "suzuki motorcycle india":              "suzuki-motorcycle",
+    "suzuki":                               "suzuki-motorcycle",
+    "ktm india":                            "ktm-india",
+    "ktm":                                  "ktm-india",
+    "kawasaki india":                       "kawasaki-india",
+    "kawasaki":                             "kawasaki-india",
+    "ather energy":                         "ather-energy",
+    "ather":                                "ather-energy",
+    "ola electric":                         "ola-electric",
+}
+
+/**
+ * Resolves the brandId from a brand display name.
+ * Checks explicit folder map first, then falls back to kebab-case conversion.
  * Used when the DB only stores the display name (e.g. "Hero MotoCorp").
  */
 export function brandNameToId(brandName: string): string {
-    return brandName
-        .toLowerCase()
+    const lower = brandName.toLowerCase().trim();
+    if (BRAND_FOLDER_MAP[lower]) return BRAND_FOLDER_MAP[lower];
+    return lower
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/^-|-$/g, "");
 }

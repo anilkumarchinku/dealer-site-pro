@@ -28,9 +28,9 @@ export function VehicleCard({ vehicle, slug, onLead, onCompare }: Props) {
     }
 
     return (
-        <div className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-md transition-shadow group">
+        <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-md transition-shadow group">
             {/* Image */}
-            <div className="relative h-44 bg-muted/30 overflow-hidden">
+            <div className="relative h-44 bg-gray-50 overflow-hidden">
                 {!imgFailed ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
@@ -40,7 +40,7 @@ export function VehicleCard({ vehicle, slug, onLead, onCompare }: Props) {
                         onError={handleImgError}
                     />
                 ) : (
-                    <div className="flex items-center justify-center h-full text-muted-foreground text-sm">No Image</div>
+                    <div className="flex items-center justify-center h-full text-gray-400 text-sm">No Image</div>
                 )}
                 {/* Badges */}
                 <div className="absolute top-3 left-3 flex flex-wrap gap-1">
@@ -63,10 +63,10 @@ export function VehicleCard({ vehicle, slug, onLead, onCompare }: Props) {
 
             {/* Info */}
             <div className="p-4">
-                <h3 className="font-semibold text-base leading-tight">{vehicle.brand} {vehicle.model}</h3>
-                {vehicle.variant && <p className="text-xs text-muted-foreground mt-0.5">{vehicle.variant}</p>}
+                <h3 className="font-semibold text-base text-gray-900 leading-tight">{vehicle.brand} {vehicle.model}</h3>
+                {vehicle.variant && <p className="text-xs text-gray-500 mt-0.5">{vehicle.variant}</p>}
 
-                <div className="flex items-center gap-3 mt-2 text-xs text-muted-foreground">
+                <div className="flex items-center gap-3 mt-2 text-xs text-gray-500">
                     {vehicle.fuel_type === "petrol" && vehicle.mileage_kmpl && (
                         <span>{vehicle.mileage_kmpl} kmpl</span>
                     )}
@@ -77,19 +77,19 @@ export function VehicleCard({ vehicle, slug, onLead, onCompare }: Props) {
                     <span className="capitalize">{vehicle.type}</span>
                 </div>
 
-                <p className="text-lg font-bold text-primary mt-3">₹{price}</p>
-                <p className="text-xs text-muted-foreground">Ex-showroom</p>
+                <p className="text-lg font-bold text-gray-900 mt-3">₹{price}</p>
+                <p className="text-xs text-gray-500">Ex-showroom</p>
 
                 <div className="flex gap-2 mt-4">
                     <button
                         onClick={() => onLead?.(vehicle.id)}
-                        className="flex-1 bg-primary text-primary-foreground text-sm font-medium rounded-lg px-3 py-2 hover:opacity-90 transition-opacity"
+                        className="flex-1 bg-gray-900 text-white text-sm font-medium rounded-lg px-3 py-2 hover:bg-gray-700 transition-colors"
                     >
                         Get Price
                     </button>
                     <Link
                         href={`${prefix}/two-wheelers/${vehicle.id}`}
-                        className="flex-1 border border-border text-sm font-medium rounded-lg px-3 py-2 text-center hover:bg-muted/50 transition-colors"
+                        className="flex-1 border border-gray-200 text-gray-700 text-sm font-medium rounded-lg px-3 py-2 text-center hover:bg-gray-50 transition-colors"
                     >
                         View Details
                     </Link>
@@ -97,7 +97,7 @@ export function VehicleCard({ vehicle, slug, onLead, onCompare }: Props) {
                 {onCompare && (
                     <button
                         onClick={() => onCompare(vehicle)}
-                        className="w-full mt-2 text-xs text-muted-foreground hover:text-foreground transition-colors"
+                        className="w-full mt-2 text-xs text-gray-400 hover:text-gray-700 transition-colors"
                     >
                         + Add to Compare
                     </button>
