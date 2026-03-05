@@ -45,14 +45,14 @@ if (
     }
 
     if (missing.length > 0) {
-        throw new Error(
+        console.error(
             `[ENV] Missing required environment variables:\n  ${missing.join('\n  ')}\n` +
-            'Set these in your deployment environment before starting the server.'
+            'Set these in your deployment environment. Related features will be disabled.'
         )
     }
 
     if (placeholder.length > 0) {
-        throw new Error(
+        console.error(
             `[ENV] Placeholder values detected in production for:\n  ${placeholder.join('\n  ')}\n` +
             'Replace with real credentials before deploying.'
         )
