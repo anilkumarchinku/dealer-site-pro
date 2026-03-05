@@ -88,6 +88,8 @@ export interface DealerPublicData {
     cyepro_api_key: string | null
     logo_url: string | null
     hero_image_url: string | null
+    /** Primary vehicle category: car | two-wheeler | three-wheeler */
+    vehicle_type: string | null
 }
 
 function getServerSupabase() {
@@ -101,7 +103,7 @@ function getServerSupabase() {
 async function findDealerByExactSlug(supabase: SupabaseClient, slug: string) {
     const { data, error } = await supabase
         .from('dealers')
-        .select('id, dealership_name, tagline, phone, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars, sells_two_wheelers, sells_three_wheelers, cyepro_api_key, logo_url, hero_image_url, branches')
+        .select('id, dealership_name, tagline, phone, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars, sells_two_wheelers, sells_three_wheelers, vehicle_type, cyepro_api_key, logo_url, hero_image_url, branches')
         .eq('slug', slug)
         .eq('onboarding_complete', true)
         .single()
@@ -221,5 +223,7 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
         cyepro_api_key:  dealer.cyepro_api_key ?? null,
         logo_url:        dealer.logo_url       ?? null,
         hero_image_url:  dealer.hero_image_url ?? null,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        vehicle_type:    (dealer as any).vehicle_type    ?? null,
     }
 }

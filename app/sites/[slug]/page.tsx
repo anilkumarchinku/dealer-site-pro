@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { redirect } from 'next/navigation'
 import { ModernTemplate } from '@/components/templates/ModernTemplate'
 import { LuxuryTemplate } from '@/components/templates/LuxuryTemplate'
 import { SportyTemplate } from '@/components/templates/SportyTemplate'
@@ -402,6 +403,15 @@ export default async function SitePage({ params }: SitePageProps) {
     // ── Fetch real dealer data ────────────────────────────────────────────────
     const dealer = await fetchDealerBySlug(slug)
     if (!dealer) return <ComingSoon slug={slug} />
+
+    // ── Pure 2W/3W dealers → redirect to their vehicle hub ───────────────────
+    // These dealers went through the 2W/3W onboarding; they have no car inventory.
+    if (dealer.vehicle_type === 'two-wheeler') {
+        redirect(`/sites/${slug}/two-wheelers`)
+    }
+    if (dealer.vehicle_type === 'three-wheeler') {
+        redirect(`/sites/${slug}/three-wheelers`)
+    }
 
     const { sells_new_cars, sells_used_cars, sells_two_wheelers, sells_three_wheelers, brandFilter, brands, vehicles, usedCarSite, cyepro_api_key, logo_url, hero_image_url } = dealer
 

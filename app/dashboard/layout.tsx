@@ -120,7 +120,7 @@ export default function DashboardLayout({
 
                 const { data: dealer } = await supabase
                     .from('dealers')
-                    .select('id, dealership_name, tagline, location, full_address, phone, whatsapp, email, gstin, sells_new_cars, sells_used_cars, style_template, slug, onboarding_complete')
+                    .select('id, dealership_name, tagline, location, full_address, phone, whatsapp, email, gstin, sells_new_cars, sells_used_cars, style_template, slug, onboarding_complete, vehicle_type')
                     .eq('user_id', user.id)
                     .maybeSingle();
 
@@ -132,6 +132,14 @@ export default function DashboardLayout({
 
                 setDealerId(dealer.id);
                 if (dealer.slug) setDealerSlug(dealer.slug);
+
+                // Redirect 2W/3W dealers to their module dashboard when landing on /dashboard
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                const vType = (dealer as any).vehicle_type as string | null;
+                if (pathname === '/dashboard' || pathname === '/dashboard/') {
+                    if (vType === 'two-wheeler')   { router.replace('/dashboard/two-wheelers');   return; }
+                    if (vType === 'three-wheeler')  { router.replace('/dashboard/three-wheelers'); return; }
+                }
 
                 // Fetch unread message count for notification bell
                 const { count } = await supabase

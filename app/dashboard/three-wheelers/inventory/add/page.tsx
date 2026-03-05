@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { useOnboardingStore } from "@/lib/store/onboarding-store"
 import { Button } from "@/components/ui/button"
@@ -8,6 +8,7 @@ import { ArrowLeft, Sparkles, ChevronDown } from "lucide-react"
 import Link from "next/link"
 import brandData from "@/lib/data/brand-models.json"
 import { VehicleImageUpload } from "@/components/three-wheelers/VehicleImageUpload"
+import { getScrapedImageUrls } from "@/lib/utils/brand-model-images"
 
 const ALL_3W_BRANDS = brandData.threeWheelers as { brandId: string; brand: string; models: Record<string, string[]> }[]
 
@@ -70,6 +71,15 @@ export default function AddThreeWheelerVehiclePage() {
         () => ALL_3W_BRANDS.filter(b => b.brand.toLowerCase().includes(brandSearch.toLowerCase())),
         [brandSearch]
     )
+
+    // Auto-fill scraped image when brand+model selected and no images uploaded yet
+    useEffect(() => {
+        if (!form.brand || !form.model || images.length > 0) return
+        const brandEntry = ALL_3W_BRANDS.find(b => b.brand === form.brand)
+        if (!brandEntry) return
+        const [jpgUrl] = getScrapedImageUrls("3w", brandEntry.brandId, form.model)
+        setImages([jpgUrl])
+    }, [form.brand, form.model]) // eslint-disable-line react-hooks/exhaustive-deps
 
     function set(field: string, value: string | boolean | number) {
         setForm(f => ({ ...f, [field]: value }))

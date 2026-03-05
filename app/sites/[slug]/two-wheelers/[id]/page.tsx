@@ -65,7 +65,7 @@ export default function VehicleDetailPage() {
             <div className="grid md:grid-cols-2 gap-8">
                 {/* Gallery */}
                 <div>
-                    <VehicleDetailGallery images={vehicle.images} alt={`${vehicle.brand} ${vehicle.model}`} />
+                    <VehicleDetailGallery images={vehicle.images} alt={`${vehicle.brand} ${vehicle.model}`} brand={vehicle.brand} model={vehicle.model} />
                 </div>
 
                 {/* Info */}

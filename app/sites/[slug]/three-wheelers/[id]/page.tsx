@@ -3,10 +3,15 @@
 import { useEffect, useState } from "react"
 import { useParams } from "next/navigation"
 import { supabase } from "@/lib/supabase"
+import { VehicleDetailGallery } from "@/components/three-wheelers/VehicleDetailGallery"
 import { LeadFormModal } from "@/components/three-wheelers/LeadFormModal"
+import { BookingModal } from "@/components/three-wheelers/BookingModal"
+import { EMICalculator } from "@/components/shared/EMICalculator"
 import type { ThreeWheelerVehicle, ThreeWheelerLeadType } from "@/lib/types/three-wheeler"
 import { ChevronLeft } from "lucide-react"
 import Link from "next/link"
+
+const BOOKING_AMOUNT = 50000 // ₹500 booking token
 
 export default function ThreeWheelerDetailPage() {
     const params = useParams()
@@ -17,9 +22,10 @@ export default function ThreeWheelerDetailPage() {
     const [dealerId, setDealerId] = useState<string | null>(null)
     const [loading,  setLoading]  = useState(true)
 
-    const [leadType,  setLeadType]  = useState<ThreeWheelerLeadType>("demo")
-    const [leadTitle, setLeadTitle] = useState("")
-    const [leadOpen,  setLeadOpen]  = useState(false)
+    const [leadType,    setLeadType]    = useState<ThreeWheelerLeadType>("demo")
+    const [leadTitle,   setLeadTitle]   = useState("")
+    const [leadOpen,    setLeadOpen]    = useState(false)
+    const [bookingOpen, setBookingOpen] = useState(false)
 
     useEffect(() => {
         if (!slug || !id) return
@@ -59,22 +65,7 @@ export default function ThreeWheelerDetailPage() {
             <div className="grid md:grid-cols-2 gap-8">
                 {/* Gallery */}
                 <div>
-                    {vehicle.images.length > 0 ? (
-                        <div className="space-y-2">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={vehicle.images[0]} alt={`${vehicle.brand} ${vehicle.model}`} className="w-full rounded-2xl object-cover aspect-video" />
-                            {vehicle.images.length > 1 && (
-                                <div className="flex gap-2 overflow-x-auto">
-                                    {vehicle.images.slice(1).map((img, i) => (
-                                        // eslint-disable-next-line @next/next/no-img-element
-                                        <img key={i} src={img} alt="" className="h-16 w-24 object-cover rounded-lg shrink-0" />
-                                    ))}
-                                </div>
-                            )}
-                        </div>
-                    ) : (
-                        <div className="aspect-video bg-muted/30 rounded-2xl flex items-center justify-center text-muted-foreground">No Image</div>
-                    )}
+                    <VehicleDetailGallery images={vehicle.images} alt={`${vehicle.brand} ${vehicle.model}`} brand={vehicle.brand} model={vehicle.model} />
                 </div>
 
                 {/* Info */}
@@ -154,6 +145,9 @@ export default function ThreeWheelerDetailPage() {
                         <button onClick={() => openLead("best_price", "Get Best Price")} className="border border-border rounded-xl py-3 font-semibold hover:bg-muted/50">Get Best Price</button>
                         <button onClick={() => openLead("finance", "Fleet Finance")} className="border border-border rounded-xl py-3 font-semibold hover:bg-muted/50">Fleet Finance</button>
                         <button onClick={() => openLead("callback", "Request Callback")} className="border border-border rounded-xl py-3 font-semibold hover:bg-muted/50">Get Callback</button>
+                        {vehicle.stock_status === "booking_open" && (
+                            <button onClick={() => setBookingOpen(true)} className="col-span-2 bg-green-600 text-white rounded-xl py-3 font-semibold hover:opacity-90">Book Now ₹500</button>
+                        )}
                     </div>
                 </div>
             </div>
@@ -181,16 +175,34 @@ export default function ThreeWheelerDetailPage() {
                 </section>
             )}
 
-            {/* Modal */}
+            {/* EMI Calculator */}
+            <section className="mt-10">
+                <h2 className="text-xl font-bold mb-4">Calculate EMI</h2>
+                <div className="max-w-lg">
+                    <EMICalculator defaultPrice={price} />
+                </div>
+            </section>
+
+            {/* Modals */}
             {dealerId && (
-                <LeadFormModal
-                    dealerId={dealerId}
-                    vehicleId={vehicle.id}
-                    leadType={leadType}
-                    title={leadTitle}
-                    isOpen={leadOpen}
-                    onClose={() => setLeadOpen(false)}
-                />
+                <>
+                    <LeadFormModal
+                        dealerId={dealerId}
+                        vehicleId={vehicle.id}
+                        leadType={leadType}
+                        title={leadTitle}
+                        isOpen={leadOpen}
+                        onClose={() => setLeadOpen(false)}
+                    />
+                    <BookingModal
+                        dealerId={dealerId}
+                        vehicleId={vehicle.id}
+                        vehicleName={`${vehicle.brand} ${vehicle.model}`}
+                        bookingAmountPaise={BOOKING_AMOUNT}
+                        isOpen={bookingOpen}
+                        onClose={() => setBookingOpen(false)}
+                    />
+                </>
             )}
         </div>
     )
