@@ -405,12 +405,15 @@ export default async function SitePage({ params }: SitePageProps) {
     if (!dealer) return <ComingSoon slug={slug} />
 
     // ── Pure 2W/3W dealers → redirect to their vehicle hub ───────────────────
-    // These dealers went through the 2W/3W onboarding; they have no car inventory.
+    // Use a relative path (/two-wheelers) so it works correctly for both:
+    //   - Subdomain access: bhai-bhaii.indrav.in/ → bhai-bhaii.indrav.in/two-wheelers
+    //     (middleware rewrites /two-wheelers → /sites/bhai-bhaii/two-wheelers ✓)
+    //   - Direct access: /sites/bhai-bhaii → /sites/bhai-bhaii/two-wheelers ✓
     if (dealer.vehicle_type === 'two-wheeler') {
-        redirect(`/sites/${slug}/two-wheelers`)
+        redirect(`/two-wheelers`)
     }
     if (dealer.vehicle_type === 'three-wheeler') {
-        redirect(`/sites/${slug}/three-wheelers`)
+        redirect(`/three-wheelers`)
     }
 
     const { sells_new_cars, sells_used_cars, sells_two_wheelers, sells_three_wheelers, brandFilter, brands, vehicles, usedCarSite, cyepro_api_key, logo_url, hero_image_url } = dealer
