@@ -1,5 +1,6 @@
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { getTwoWheelerVehicles } from '@/lib/db/two-wheelers'
+import { getTwoWheelerCatalog } from '@/lib/data/two-wheelers'
 import { notFound } from 'next/navigation'
 import { TwoWheelerTemplate } from '@/components/two-wheelers/TwoWheelerTemplate'
 
@@ -13,7 +14,13 @@ export default async function TwoWheelersPage({ params }: Props) {
     const dealer = await fetchDealerBySlug(slug)
     if (!dealer) notFound()
 
-    const { vehicles } = await getTwoWheelerVehicles(dealer.id, { pageSize: 24, sortBy: 'newest' })
+    const { vehicles: dbVehicles } = await getTwoWheelerVehicles(dealer.id, { pageSize: 24, sortBy: 'newest' })
+
+    // If no inventory in DB yet, fall back to static brand catalog
+    const primaryBrand = dealer.brands[0] ?? null
+    const vehicles = dbVehicles.length > 0
+        ? dbVehicles
+        : (primaryBrand ? getTwoWheelerCatalog(primaryBrand, dealer.id) : [])
 
     return (
         <TwoWheelerTemplate
@@ -23,7 +30,7 @@ export default async function TwoWheelersPage({ params }: Props) {
             email={dealer.email}
             location={dealer.location}
             fullAddress={dealer.full_address}
-            primaryBrand={dealer.brands[0] ?? null}
+            primaryBrand={primaryBrand}
             vehicles={vehicles}
             slug={slug}
         />

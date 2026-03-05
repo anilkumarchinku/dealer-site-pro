@@ -12,6 +12,7 @@ import { VehicleCard } from "@/components/two-wheelers/VehicleCard"
 import { LeadFormModal } from "@/components/two-wheelers/LeadFormModal"
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton"
 import { getScrapedImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
+import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 // ── Brand color themes (same palette as ModernTemplate for cars) ──────────────
 const BRAND_THEMES: Record<string, { heroGradient: string; accent: string; accentText: string; btnPrimary: string }> = {
@@ -96,6 +97,7 @@ export function TwoWheelerTemplate({
     primaryBrand, vehicles, slug,
 }: Props) {
     const theme = (primaryBrand && BRAND_THEMES[primaryBrand]) ? BRAND_THEMES[primaryBrand] : DEFAULT_THEME
+    const prefix = useSitePrefix(slug)
 
     const [isScrolled,      setIsScrolled]      = useState(false)
     const [mobileMenuOpen,  setMobileMenuOpen]   = useState(false)
@@ -133,12 +135,12 @@ export function TwoWheelerTemplate({
     }
 
     const navLinks: { label: string; href: string }[] = [
-        { label: "Bikes",       href: `/sites/${slug}/two-wheelers/bikes`         },
-        { label: "Scooters",    href: `/sites/${slug}/two-wheelers/scooters`      },
-        { label: "Electric",    href: `/sites/${slug}/two-wheelers/electric`      },
-        { label: "Used",        href: `/sites/${slug}/two-wheelers/used`          },
-        { label: "Service",     href: `/sites/${slug}/two-wheelers/service`       },
-        { label: "EMI Calc",    href: `/sites/${slug}/two-wheelers/emi-calculator`},
+        { label: "Bikes",       href: `${prefix}/two-wheelers/bikes`         },
+        { label: "Scooters",    href: `${prefix}/two-wheelers/scooters`      },
+        { label: "Electric",    href: `${prefix}/two-wheelers/electric`      },
+        { label: "Used",        href: `${prefix}/two-wheelers/used`          },
+        { label: "Service",     href: `${prefix}/two-wheelers/service`       },
+        { label: "EMI Calc",    href: `${prefix}/two-wheelers/emi-calculator`},
     ]
 
     const heroVehicle = vehicles[heroVehicleIdx]
@@ -283,7 +285,7 @@ export function TwoWheelerTemplate({
                                     Book Test Ride
                                 </button>
                                 <Link
-                                    href={`/sites/${slug}/two-wheelers/emi-calculator`}
+                                    href={`${prefix}/two-wheelers/emi-calculator`}
                                     className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm border border-white/30 text-white hover:bg-white/10 transition-all"
                                 >
                                     EMI Calculator
@@ -357,10 +359,10 @@ export function TwoWheelerTemplate({
                 <h2 className="text-2xl font-bold text-gray-900 mb-8">Shop by Category</h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {[
-                        { label: "Bikes",    emoji: "🏍️", href: `/sites/${slug}/two-wheelers/bikes`,    count: tabCounts.bike     },
-                        { label: "Scooters", emoji: "🛵", href: `/sites/${slug}/two-wheelers/scooters`, count: tabCounts.scooter  },
-                        { label: "Electric", emoji: "⚡", href: `/sites/${slug}/two-wheelers/electric`, count: tabCounts.electric },
-                        { label: "Used",     emoji: "🔄", href: `/sites/${slug}/two-wheelers/used`,     count: null               },
+                        { label: "Bikes",    emoji: "🏍️", href: `${prefix}/two-wheelers/bikes`,    count: tabCounts.bike     },
+                        { label: "Scooters", emoji: "🛵", href: `${prefix}/two-wheelers/scooters`, count: tabCounts.scooter  },
+                        { label: "Electric", emoji: "⚡", href: `${prefix}/two-wheelers/electric`, count: tabCounts.electric },
+                        { label: "Used",     emoji: "🔄", href: `${prefix}/two-wheelers/used`,     count: null               },
                     ].map(c => (
                         <Link
                             key={c.label}
@@ -507,14 +509,14 @@ export function TwoWheelerTemplate({
                             <Bike className="w-4 h-4" />
                         </button>
                         <Link
-                            href={`/sites/${slug}/two-wheelers/service`}
+                            href={`${prefix}/two-wheelers/service`}
                             className="w-full flex items-center justify-between px-6 py-4 rounded-2xl font-semibold text-sm border-2 border-gray-200 text-gray-700 hover:border-gray-400 transition-all"
                         >
                             Book Service Appointment
                             <Wrench className="w-4 h-4" />
                         </Link>
                         <Link
-                            href={`/sites/${slug}/two-wheelers/emi-calculator`}
+                            href={`${prefix}/two-wheelers/emi-calculator`}
                             className="w-full flex items-center justify-between px-6 py-4 rounded-2xl font-semibold text-sm border-2 border-gray-200 text-gray-700 hover:border-gray-400 transition-all"
                         >
                             Calculate EMI
