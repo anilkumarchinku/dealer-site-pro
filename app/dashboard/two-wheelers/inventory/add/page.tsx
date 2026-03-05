@@ -32,19 +32,6 @@ export default function AddTwoWheelerVehiclePage() {
     const [brandOpen,    setBrandOpen]    = useState(false)
     const [brandSearch,  setBrandSearch]  = useState("")
 
-    const selectedBrandData = useMemo(
-        () => ALL_2W_BRANDS.find(b => b.brand === form.brand),
-        [form.brand]
-    )
-    const modelOptions = useMemo(() => {
-        if (!selectedBrandData) return []
-        return Object.values(selectedBrandData.models).flat() as string[]
-    }, [selectedBrandData])
-    const filteredBrands = useMemo(
-        () => ALL_2W_BRANDS.filter(b => b.brand.toLowerCase().includes(brandSearch.toLowerCase())),
-        [brandSearch]
-    )
-
     const [form, setForm] = useState({
         type:                    "bike" as typeof TYPES[number],
         brand:                   "",
@@ -69,6 +56,19 @@ export default function AddTwoWheelerVehiclePage() {
         features:                "",
         brochure_url:            "",
     })
+
+    const selectedBrandData = useMemo(
+        () => ALL_2W_BRANDS.find(b => b.brand === form.brand),
+        [form.brand]
+    )
+    const modelOptions = useMemo(() => {
+        if (!selectedBrandData) return []
+        return Object.values(selectedBrandData.models).flat() as string[]
+    }, [selectedBrandData])
+    const filteredBrands = useMemo(
+        () => ALL_2W_BRANDS.filter(b => b.brand.toLowerCase().includes(brandSearch.toLowerCase())),
+        [brandSearch]
+    )
 
     function set(field: string, value: string | boolean | number) {
         setForm(f => ({ ...f, [field]: value }))
