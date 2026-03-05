@@ -171,6 +171,36 @@ const DEFAULT_THEME: BrandTheme = {
     accent: "#3B82F6", accentText: "text-blue-400", btnPrimary: "bg-blue-600 text-white hover:bg-blue-700",
 }
 
+// ── Brand logo filenames — keys are lowercase DB brand names ─────────────────
+// Files live at /public/assets/logos/2w/{id}.svg (or .png for a few)
+const BRAND_LOGO_MAP: Record<string, string> = {
+    "royal enfield":                        "royal-enfield.svg",
+    "hero motocorp":                        "hero-motocorp.svg",
+    "honda motorcycle & scooter india":     "honda-motorcycles.svg",
+    "tvs motor company":                    "tvs-motor.svg",
+    "bajaj auto":                           "bajaj-auto.svg",
+    "yamaha india":                         "yamaha.svg",
+    "suzuki motorcycle india":              "suzuki-motorcycle.svg",
+    "ktm india":                            "ktm.svg",
+    "kawasaki india":                       "kawasaki.svg",
+    "ather energy":                         "ather-energy.svg",
+    "ola electric":                         "ola-electric.svg",
+    "husqvarna india":                      "husqvarna.svg",
+    "aprilia india":                        "aprilia.svg",
+    "vespa india":                          "vespa.svg",
+    "ducati india":                         "ducati.svg",
+    "bmw motorrad india":                   "bmw-motorrad.svg",
+    "triumph india":                        "triumph.svg",
+    "harley-davidson india":                "harley-davidson.svg",
+    "cfmoto india":                         "cfmoto.png",
+}
+
+function getBrandLogoSrc(brand: string | null): string {
+    if (!brand) return "/favicon.svg"
+    const file = BRAND_LOGO_MAP[brand.toLowerCase().trim()]
+    return file ? `/assets/logos/2w/${file}` : "/favicon.svg"
+}
+
 /**
  * Resolve brand theme with fuzzy fallback.
  * DB stores full names like "Hero MotoCorp" — we try exact match first,
@@ -280,9 +310,7 @@ export function TwoWheelerTemplate({
                         <div className="flex items-center gap-3">
                             <div className="relative w-9 h-9 shrink-0">
                                 <Image
-                                    src={primaryBrand
-                                        ? `/assets/logos/2w/${brandNameToId(primaryBrand)}.png`
-                                        : "/favicon.svg"}
+                                    src={getBrandLogoSrc(primaryBrand)}
                                     alt={primaryBrand ?? dealerName}
                                     fill
                                     className="object-contain"
