@@ -16,16 +16,16 @@ function toSlug(value: string) {
 }
 
 const THREE_WHEELER_BRANDS = [
-    { name: "Bajaj Auto",      emoji: "🛺" },
-    { name: "TVS King",        emoji: "🛺" },
-    { name: "Piaggio Ape",     emoji: "🛺" },
-    { name: "Mahindra Treo",   emoji: "⚡" },
-    { name: "Atul Auto",       emoji: "🛺" },
-    { name: "Force Motors",    emoji: "🛺" },
-    { name: "Saarthi",         emoji: "🛺" },
-    { name: "Omega Seiki",     emoji: "⚡" },
-    { name: "Altigreen",       emoji: "⚡" },
-    { name: "Euler Motors",    emoji: "⚡" },
+    { name: "Bajaj Auto",    logo: "https://logo.clearbit.com/bajajauto.com" },
+    { name: "TVS King",      logo: "https://logo.clearbit.com/tvsmotor.com" },
+    { name: "Piaggio Ape",   logo: "https://logo.clearbit.com/piaggio.com" },
+    { name: "Mahindra Treo", logo: "https://logo.clearbit.com/mahindra.com" },
+    { name: "Atul Auto",     logo: "https://logo.clearbit.com/atulauto.co.in" },
+    { name: "Force Motors",  logo: "https://logo.clearbit.com/forcemotors.com" },
+    { name: "Saarthi",       logo: "https://logo.clearbit.com/saarthi.co.in" },
+    { name: "Omega Seiki",   logo: "https://logo.clearbit.com/omegaseiki.com" },
+    { name: "Altigreen",     logo: "https://logo.clearbit.com/altigreen.com" },
+    { name: "Euler Motors",  logo: "https://logo.clearbit.com/eulermotors.com" },
 ];
 
 export default function ThreeWheelerStep1Page() {
@@ -333,28 +333,48 @@ export default function ThreeWheelerStep1Page() {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                            {THREE_WHEELER_BRANDS.map((brand) => (
-                                <button
-                                    key={brand.name}
-                                    type="button"
-                                    onClick={() => toggleBrand(brand.name)}
-                                    className={cn(
-                                        "p-3 rounded-xl border-2 flex items-center gap-2 transition-all hover:bg-accent relative text-left",
-                                        selectedBrands.includes(brand.name)
-                                            ? "border-green-500 bg-green-500/5"
-                                            : "border-input"
-                                    )}
-                                >
-                                    <span className="text-lg">{brand.emoji}</span>
-                                    <span className="text-sm font-medium leading-tight">{brand.name}</span>
-                                    {selectedBrands.includes(brand.name) && (
-                                        <div className="absolute top-1 right-1 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center">
-                                            <Check className="w-2.5 h-2.5 text-white" />
-                                        </div>
-                                    )}
-                                </button>
-                            ))}
+                        <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
+                            {THREE_WHEELER_BRANDS.map((brand) => {
+                                const selected = selectedBrands.includes(brand.name);
+                                const initials = brand.name.split(" ").map(w => w[0]).join("").substring(0, 2).toUpperCase();
+                                return (
+                                    <button
+                                        key={brand.name}
+                                        type="button"
+                                        onClick={() => toggleBrand(brand.name)}
+                                        className={cn(
+                                            "p-3 rounded-xl border-2 flex flex-col items-center gap-2 transition-all hover:bg-accent relative",
+                                            selected
+                                                ? "border-green-500 bg-green-500/5"
+                                                : "border-input"
+                                        )}
+                                    >
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        <img
+                                            src={brand.logo}
+                                            alt={brand.name}
+                                            className="w-10 h-10 object-contain"
+                                            onError={(e) => {
+                                                const target = e.currentTarget;
+                                                target.style.display = "none";
+                                                const fallback = target.nextElementSibling as HTMLElement | null;
+                                                if (fallback) fallback.style.display = "flex";
+                                            }}
+                                        />
+                                        <span
+                                            className="w-10 h-10 rounded-full bg-muted text-muted-foreground text-xs font-bold items-center justify-center hidden"
+                                        >
+                                            {initials}
+                                        </span>
+                                        <span className="text-xs font-medium text-center leading-tight">{brand.name}</span>
+                                        {selected && (
+                                            <div className="absolute top-1 right-1 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center">
+                                                <Check className="w-2.5 h-2.5 text-white" />
+                                            </div>
+                                        )}
+                                    </button>
+                                );
+                            })}
                         </div>
 
                         {selectedBrands.length > 0 && (

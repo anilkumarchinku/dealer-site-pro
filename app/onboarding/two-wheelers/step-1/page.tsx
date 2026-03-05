@@ -16,21 +16,21 @@ function toSlug(value: string) {
 }
 
 const TWO_WHEELER_BRANDS = [
-    { name: "Hero MotoCorp",    emoji: "🏍️" },
-    { name: "Honda Motorcycles", emoji: "🏍️" },
-    { name: "Bajaj Auto",       emoji: "🏍️" },
-    { name: "TVS Motor",        emoji: "🏍️" },
-    { name: "Yamaha",           emoji: "🏍️" },
-    { name: "Suzuki",           emoji: "🏍️" },
-    { name: "Royal Enfield",    emoji: "🏍️" },
-    { name: "KTM",              emoji: "🏍️" },
-    { name: "Jawa",             emoji: "🏍️" },
-    { name: "Ola Electric",     emoji: "⚡" },
-    { name: "Ather Energy",     emoji: "⚡" },
-    { name: "Revolt Motors",    emoji: "⚡" },
-    { name: "Husqvarna",        emoji: "🏍️" },
-    { name: "Triumph",          emoji: "🏍️" },
-    { name: "Harley-Davidson",  emoji: "🏍️" },
+    { name: "Hero MotoCorp",     logo: "https://logo.clearbit.com/heromotocorp.com" },
+    { name: "Honda Motorcycles", logo: "https://logo.clearbit.com/honda.com" },
+    { name: "Bajaj Auto",        logo: "https://logo.clearbit.com/bajajauto.com" },
+    { name: "TVS Motor",         logo: "https://logo.clearbit.com/tvsmotor.com" },
+    { name: "Yamaha",            logo: "https://logo.clearbit.com/yamaha-motor.com" },
+    { name: "Suzuki",            logo: "https://logo.clearbit.com/suzuki.com" },
+    { name: "Royal Enfield",     logo: "https://logo.clearbit.com/royalenfield.com" },
+    { name: "KTM",               logo: "https://logo.clearbit.com/ktm.com" },
+    { name: "Jawa",              logo: "https://logo.clearbit.com/jawamotorcycles.com" },
+    { name: "Ola Electric",      logo: "https://logo.clearbit.com/olaelectric.com" },
+    { name: "Ather Energy",      logo: "https://logo.clearbit.com/atherenergy.com" },
+    { name: "Revolt Motors",     logo: "https://logo.clearbit.com/revoltmotors.in" },
+    { name: "Husqvarna",         logo: "https://logo.clearbit.com/husqvarna.com" },
+    { name: "Triumph",           logo: "https://logo.clearbit.com/triumphmotorcycles.co.uk" },
+    { name: "Harley-Davidson",   logo: "https://logo.clearbit.com/harley-davidson.com" },
 ];
 
 export default function TwoWheelerStep1Page() {
@@ -340,28 +340,48 @@ export default function TwoWheelerStep1Page() {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                            {TWO_WHEELER_BRANDS.map((brand) => (
-                                <button
-                                    key={brand.name}
-                                    type="button"
-                                    onClick={() => toggleBrand(brand.name)}
-                                    className={cn(
-                                        "p-3 rounded-xl border-2 flex items-center gap-2 transition-all hover:bg-accent relative text-left",
-                                        selectedBrands.includes(brand.name)
-                                            ? "border-orange-500 bg-orange-500/5"
-                                            : "border-input"
-                                    )}
-                                >
-                                    <span className="text-lg">{brand.emoji}</span>
-                                    <span className="text-sm font-medium leading-tight">{brand.name}</span>
-                                    {selectedBrands.includes(brand.name) && (
-                                        <div className="absolute top-1 right-1 w-4 h-4 rounded-full bg-orange-500 flex items-center justify-center">
-                                            <Check className="w-2.5 h-2.5 text-white" />
-                                        </div>
-                                    )}
-                                </button>
-                            ))}
+                        <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
+                            {TWO_WHEELER_BRANDS.map((brand) => {
+                                const selected = selectedBrands.includes(brand.name);
+                                const initials = brand.name.split(" ").map(w => w[0]).join("").substring(0, 2).toUpperCase();
+                                return (
+                                    <button
+                                        key={brand.name}
+                                        type="button"
+                                        onClick={() => toggleBrand(brand.name)}
+                                        className={cn(
+                                            "p-3 rounded-xl border-2 flex flex-col items-center gap-2 transition-all hover:bg-accent relative",
+                                            selected
+                                                ? "border-orange-500 bg-orange-500/5"
+                                                : "border-input"
+                                        )}
+                                    >
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        <img
+                                            src={brand.logo}
+                                            alt={brand.name}
+                                            className="w-10 h-10 object-contain"
+                                            onError={(e) => {
+                                                const target = e.currentTarget;
+                                                target.style.display = "none";
+                                                const fallback = target.nextElementSibling as HTMLElement | null;
+                                                if (fallback) fallback.style.display = "flex";
+                                            }}
+                                        />
+                                        <span
+                                            className="w-10 h-10 rounded-full bg-muted text-muted-foreground text-xs font-bold items-center justify-center hidden"
+                                        >
+                                            {initials}
+                                        </span>
+                                        <span className="text-xs font-medium text-center leading-tight">{brand.name}</span>
+                                        {selected && (
+                                            <div className="absolute top-1 right-1 w-4 h-4 rounded-full bg-orange-500 flex items-center justify-center">
+                                                <Check className="w-2.5 h-2.5 text-white" />
+                                            </div>
+                                        )}
+                                    </button>
+                                );
+                            })}
                         </div>
 
                         {selectedBrands.length > 0 && (

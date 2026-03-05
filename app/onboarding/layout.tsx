@@ -33,6 +33,14 @@ export default function OnboardingLayout({
         return <>{children}</>;
     }
 
+    // ── Two/three-wheeler routes: they have their own child layout ──────────
+    if (
+        pathname.startsWith("/onboarding/two-wheelers") ||
+        pathname.startsWith("/onboarding/three-wheelers")
+    ) {
+        return <>{children}</>;
+    }
+
     // ── Step 4 (template selector): own dark theme ─────────────────────────
     const stepMatch = pathname.match(/step-(\d+)/);
     const stepNum = stepMatch ? parseInt(stepMatch[1]) : 1;
