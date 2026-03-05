@@ -1,7 +1,9 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
+import { getScrapedImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
 
 interface Props {
     vehicle:    ThreeWheelerVehicle
@@ -12,16 +14,27 @@ interface Props {
 export function VehicleCard({ vehicle, slug, onLead }: Props) {
     const price = (vehicle.ex_showroom_price_paise / 100).toLocaleString("en-IN")
 
+    const [jpgUrl, pngUrl] = getScrapedImageUrls("3w", brandNameToId(vehicle.brand), vehicle.model)
+    const primarySrc = vehicle.images[0] || jpgUrl
+    const [imgSrc, setImgSrc]   = useState(primarySrc)
+    const [imgFailed, setFailed] = useState(false)
+
+    function handleImgError() {
+        if (imgSrc === jpgUrl) { setImgSrc(pngUrl); return; }
+        setFailed(true);
+    }
+
     return (
         <div className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-md transition-shadow group">
             {/* Image */}
             <div className="relative h-44 bg-muted/30 overflow-hidden">
-                {vehicle.images[0] ? (
+                {!imgFailed ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                        src={vehicle.images[0]}
+                        src={imgSrc}
                         alt={`${vehicle.brand} ${vehicle.model}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        onError={handleImgError}
                     />
                 ) : (
                     <div className="flex items-center justify-center h-full text-muted-foreground text-sm">No Image</div>

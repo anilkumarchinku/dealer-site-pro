@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, Sparkles, ChevronDown } from "lucide-react"
 import Link from "next/link"
 import brandData from "@/lib/data/brand-models.json"
+import { VehicleImageUpload } from "@/components/three-wheelers/VehicleImageUpload"
 
 const ALL_3W_BRANDS = brandData.threeWheelers as { brandId: string; brand: string; models: Record<string, string[]> }[]
 
@@ -395,11 +396,7 @@ export default function AddThreeWheelerVehiclePage() {
 
                     <div>
                         <label className="text-sm font-medium mb-2 block">Vehicle Images</label>
-                        <div className="border-2 border-dashed border-border rounded-xl p-4 text-center text-sm text-muted-foreground">
-                            <p>Upload via <strong>/api/three-wheelers/upload-image</strong></p>
-                            <p className="text-xs mt-1">Use VehicleImageUpload component (reuse from 2W)</p>
-                            {images.length > 0 && <p className="mt-2 text-xs">{images.length} image(s) selected</p>}
-                        </div>
+                        <VehicleImageUpload value={images} onChange={setImages} maxImages={6} />
                     </div>
 
                     <div>

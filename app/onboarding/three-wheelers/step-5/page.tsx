@@ -13,7 +13,7 @@ import {
 
 export default function ThreeWheelerStep5Page() {
     const router = useRouter();
-    const { data, setStep, dealerId, setDealerId } = useOnboardingStore();
+    const { data, setStep, dealerId, setDealerId, vehicleType, setVehicleType } = useOnboardingStore();
     const [saving,       setSaving]       = useState(false);
     const [saveError,    setSaveError]    = useState<string | null>(null);
     const [showSuccess,  setShowSuccess]  = useState(false);
@@ -22,12 +22,13 @@ export default function ThreeWheelerStep5Page() {
     const [showUpgrade,  setShowUpgrade]  = useState(true);
 
     useEffect(() => { setStep(5); }, [setStep]);
+    useEffect(() => { setVehicleType('three-wheeler'); }, [setVehicleType]);
 
     const handleFinish = async () => {
         setSaving(true);
         setSaveError(null);
         try {
-            const result = await saveDealer(data, dealerId ?? undefined);
+            const result = await saveDealer(data, dealerId ?? undefined, vehicleType as 'three-wheeler');
             if (result.success) {
                 if (result.dealerId) setDealerId(result.dealerId);
                 if (result.slug)     setLiveSiteSlug(result.slug);

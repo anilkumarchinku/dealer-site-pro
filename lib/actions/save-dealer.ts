@@ -52,7 +52,8 @@ export interface SaveDealerResult {
  */
 export async function saveDealer(
     data: Partial<OnboardingData>,
-    existingDealerId?: string
+    existingDealerId?: string,
+    vehicleType?: 'car' | 'two-wheeler' | 'three-wheeler'
 ): Promise<SaveDealerResult> {
     // Graceful no-op when Supabase isn't set up yet
     if (!isSupabaseReady()) {
@@ -105,6 +106,7 @@ export async function saveDealer(
             return VALID.includes(raw) ? raw : 'family';
         })(),
             dealer_type:         data.dealerType ?? null,
+            vehicle_type:        vehicleType ?? 'car',
             slug,
             subdomain:           slug,
             onboarding_step:     5,
