@@ -1,0 +1,3422 @@
+[
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "HF Deluxe",
+    "modelId": "hf-deluxe"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "HF Deluxe Pro",
+    "modelId": "hf-deluxe-pro"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Splendor Plus",
+    "modelId": "splendor-plus"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Splendor Plus XTEC",
+    "modelId": "splendor-plus-xtec"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Splendor Plus XTEC 2.0",
+    "modelId": "splendor-plus-xtec-2-0"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Passion Pro",
+    "modelId": "passion-pro"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Passion XTEC",
+    "modelId": "passion-xtec"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Glamour",
+    "modelId": "glamour"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Glamour XTEC",
+    "modelId": "glamour-xtec"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Super Splendor",
+    "modelId": "super-splendor"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "HF 100",
+    "modelId": "hf-100"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Xtreme 125R",
+    "modelId": "xtreme-125r"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Xtreme 160R",
+    "modelId": "xtreme-160r"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Xtreme 160R 4V",
+    "modelId": "xtreme-160r-4v"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Xtreme 160R 4V Combat Edition",
+    "modelId": "xtreme-160r-4v-combat-edition"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Xtreme 250R",
+    "modelId": "xtreme-250r"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "XPulse 200",
+    "modelId": "xpulse-200"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "XPulse 200T",
+    "modelId": "xpulse-200t"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "XPulse 200 4V",
+    "modelId": "xpulse-200-4v"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "XPulse 210",
+    "modelId": "xpulse-210"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Karizma XMR",
+    "modelId": "karizma-xmr"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Karizma XMR 250",
+    "modelId": "karizma-xmr-250"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Mavrick 440",
+    "modelId": "mavrick-440"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Destini 125",
+    "modelId": "destini-125"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Destini Prime",
+    "modelId": "destini-prime"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Maestro Edge 110",
+    "modelId": "maestro-edge-110"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Maestro Edge 125",
+    "modelId": "maestro-edge-125"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Pleasure Plus 110",
+    "modelId": "pleasure-plus-110"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Xoom 110",
+    "modelId": "xoom-110"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Xoom 125",
+    "modelId": "xoom-125"
+  },
+  {
+    "brandName": "HERO MOTOCORP",
+    "brandId": "hero-motocorp",
+    "modelName": "Xoom 160",
+    "modelId": "xoom-160"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "CT 100",
+    "modelId": "ct-100"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "CT 110",
+    "modelId": "ct-110"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "CT 110X",
+    "modelId": "ct-110x"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Platina 100",
+    "modelId": "platina-100"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Platina 110 H-Gear",
+    "modelId": "platina-110-h-gear"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Discover 125",
+    "modelId": "discover-125"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Discover 125 ST",
+    "modelId": "discover-125-st"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Pulsar 125",
+    "modelId": "pulsar-125"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Pulsar 150",
+    "modelId": "pulsar-150"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Pulsar N150",
+    "modelId": "pulsar-n150"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Pulsar N160",
+    "modelId": "pulsar-n160"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Pulsar N250",
+    "modelId": "pulsar-n250"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Pulsar F250",
+    "modelId": "pulsar-f250"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Pulsar NS160",
+    "modelId": "pulsar-ns160"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Pulsar NS200",
+    "modelId": "pulsar-ns200"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Pulsar RS200",
+    "modelId": "pulsar-rs200"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Pulsar 220F",
+    "modelId": "pulsar-220f"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Avenger Street 160",
+    "modelId": "avenger-street-160"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Avenger Street 220",
+    "modelId": "avenger-street-220"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Dominar 250",
+    "modelId": "dominar-250"
+  },
+  {
+    "brandName": "BAJAJ AUTO",
+    "brandId": "bajaj-auto",
+    "modelName": "Dominar 400",
+    "modelId": "dominar-400"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "Sport",
+    "modelId": "sport"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "Star City Plus",
+    "modelId": "star-city-plus"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "Radeon",
+    "modelId": "radeon"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "Raider 125",
+    "modelId": "raider-125"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "Metro 100",
+    "modelId": "metro-100"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "Apache RTR 160",
+    "modelId": "apache-rtr-160"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "Apache RTR 160 2V",
+    "modelId": "apache-rtr-160-2v"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "Apache RTR 160 4V",
+    "modelId": "apache-rtr-160-4v"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "Apache RTR 200 4V",
+    "modelId": "apache-rtr-200-4v"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "Apache RR 310",
+    "modelId": "apache-rr-310"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "Jupiter 110",
+    "modelId": "jupiter-110"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "Jupiter 125",
+    "modelId": "jupiter-125"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "Ntorq 125",
+    "modelId": "ntorq-125"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "Ntorq 125 Race Edition",
+    "modelId": "ntorq-125-race-edition"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "Scooty Pep+",
+    "modelId": "scooty-pep"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "Scooty Zest 110",
+    "modelId": "scooty-zest-110"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "XL100",
+    "modelId": "xl100"
+  },
+  {
+    "brandName": "TVS MOTOR COMPANY",
+    "brandId": "tvs-motor",
+    "modelName": "TVS Ronin 225",
+    "modelId": "tvs-ronin-225"
+  },
+  {
+    "brandName": "ROYAL ENFIELD",
+    "brandId": "royal-enfield",
+    "modelName": "Bullet 350",
+    "modelId": "bullet-350"
+  },
+  {
+    "brandName": "ROYAL ENFIELD",
+    "brandId": "royal-enfield",
+    "modelName": "Classic 350",
+    "modelId": "classic-350"
+  },
+  {
+    "brandName": "ROYAL ENFIELD",
+    "brandId": "royal-enfield",
+    "modelName": "Hunter 350",
+    "modelId": "hunter-350"
+  },
+  {
+    "brandName": "ROYAL ENFIELD",
+    "brandId": "royal-enfield",
+    "modelName": "Meteor 350",
+    "modelId": "meteor-350"
+  },
+  {
+    "brandName": "ROYAL ENFIELD",
+    "brandId": "royal-enfield",
+    "modelName": "Thunderbird 350",
+    "modelId": "thunderbird-350"
+  },
+  {
+    "brandName": "ROYAL ENFIELD",
+    "brandId": "royal-enfield",
+    "modelName": "Himalayan 450",
+    "modelId": "himalayan-450"
+  },
+  {
+    "brandName": "ROYAL ENFIELD",
+    "brandId": "royal-enfield",
+    "modelName": "Guerrilla 450",
+    "modelId": "guerrilla-450"
+  },
+  {
+    "brandName": "ROYAL ENFIELD",
+    "brandId": "royal-enfield",
+    "modelName": "Continental GT 650",
+    "modelId": "continental-gt-650"
+  },
+  {
+    "brandName": "ROYAL ENFIELD",
+    "brandId": "royal-enfield",
+    "modelName": "Interceptor 650",
+    "modelId": "interceptor-650"
+  },
+  {
+    "brandName": "ROYAL ENFIELD",
+    "brandId": "royal-enfield",
+    "modelName": "Shotgun 650",
+    "modelId": "shotgun-650"
+  },
+  {
+    "brandName": "ROYAL ENFIELD",
+    "brandId": "royal-enfield",
+    "modelName": "Bear 650",
+    "modelId": "bear-650"
+  },
+  {
+    "brandName": "ROYAL ENFIELD",
+    "brandId": "royal-enfield",
+    "modelName": "Goan Classic 350",
+    "modelId": "goan-classic-350"
+  },
+  {
+    "brandName": "MAHINDRA TWO WHEELERS",
+    "brandId": "mahindra-two-wheelers",
+    "modelName": "Mojo 300 BS6",
+    "modelId": "mojo-300-bs6"
+  },
+  {
+    "brandName": "MAHINDRA TWO WHEELERS",
+    "brandId": "mahindra-two-wheelers",
+    "modelName": "Mojo XT 300",
+    "modelId": "mojo-xt-300"
+  },
+  {
+    "brandName": "JAWA (Classic Legends)",
+    "brandId": "jawa-motorcycles",
+    "modelName": "Jawa 42",
+    "modelId": "jawa-42"
+  },
+  {
+    "brandName": "JAWA (Classic Legends)",
+    "brandId": "jawa-motorcycles",
+    "modelName": "Jawa 42 Bobber",
+    "modelId": "jawa-42-bobber"
+  },
+  {
+    "brandName": "JAWA (Classic Legends)",
+    "brandId": "jawa-motorcycles",
+    "modelName": "Jawa 42 FJ",
+    "modelId": "jawa-42-fj"
+  },
+  {
+    "brandName": "JAWA (Classic Legends)",
+    "brandId": "jawa-motorcycles",
+    "modelName": "Jawa Perak",
+    "modelId": "jawa-perak"
+  },
+  {
+    "brandName": "YEZDI (Classic Legends)",
+    "brandId": "yezdi-motorcycles",
+    "modelName": "Yezdi Adventure",
+    "modelId": "yezdi-adventure"
+  },
+  {
+    "brandName": "YEZDI (Classic Legends)",
+    "brandId": "yezdi-motorcycles",
+    "modelName": "Yezdi Scrambler",
+    "modelId": "yezdi-scrambler"
+  },
+  {
+    "brandName": "YEZDI (Classic Legends)",
+    "brandId": "yezdi-motorcycles",
+    "modelName": "Yezdi Roadster",
+    "modelId": "yezdi-roadster"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "CD 110 Dream",
+    "modelId": "cd-110-dream"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "Shine 100",
+    "modelId": "shine-100"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "Shine SP 125",
+    "modelId": "shine-sp-125"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "CB200X",
+    "modelId": "cb200x"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "SP 160",
+    "modelId": "sp-160"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "Unicorn 160",
+    "modelId": "unicorn-160"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "Hornet 2.0",
+    "modelId": "hornet-2-0"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "CB350",
+    "modelId": "cb350"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "CB350 RS",
+    "modelId": "cb350-rs"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "CB350DLX",
+    "modelId": "cb350dlx"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "CB350 H'Ness",
+    "modelId": "cb350-h-ness"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "CBR 150R",
+    "modelId": "cbr-150r"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "CBR 250R",
+    "modelId": "cbr-250r"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "CB650R",
+    "modelId": "cb650r"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "CB750 Hornet",
+    "modelId": "cb750-hornet"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "X-ADV",
+    "modelId": "x-adv"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "Rebel 500",
+    "modelId": "rebel-500"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "Activa 6G",
+    "modelId": "activa-6g"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "Activa 125",
+    "modelId": "activa-125"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "Activa 125 Premium",
+    "modelId": "activa-125-premium"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "Dio",
+    "modelId": "dio"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "Dio 125",
+    "modelId": "dio-125"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "Grazia 125",
+    "modelId": "grazia-125"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "Aviator",
+    "modelId": "aviator"
+  },
+  {
+    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
+    "brandId": "honda-hmsi",
+    "modelName": "Cliq",
+    "modelId": "cliq"
+  },
+  {
+    "brandName": "YAMAHA (India Yamaha Motor)",
+    "brandId": "yamaha",
+    "modelName": "Saluto 125",
+    "modelId": "saluto-125"
+  },
+  {
+    "brandName": "YAMAHA (India Yamaha Motor)",
+    "brandId": "yamaha",
+    "modelName": "YBR 125",
+    "modelId": "ybr-125"
+  },
+  {
+    "brandName": "YAMAHA (India Yamaha Motor)",
+    "brandId": "yamaha",
+    "modelName": "FZ-S FI V3",
+    "modelId": "fz-s-fi-v3"
+  },
+  {
+    "brandName": "YAMAHA (India Yamaha Motor)",
+    "brandId": "yamaha",
+    "modelName": "FZ FI V3",
+    "modelId": "fz-fi-v3"
+  },
+  {
+    "brandName": "YAMAHA (India Yamaha Motor)",
+    "brandId": "yamaha",
+    "modelName": "FZ-X",
+    "modelId": "fz-x"
+  },
+  {
+    "brandName": "YAMAHA (India Yamaha Motor)",
+    "brandId": "yamaha",
+    "modelName": "FZ25",
+    "modelId": "fz25"
+  },
+  {
+    "brandName": "YAMAHA (India Yamaha Motor)",
+    "brandId": "yamaha",
+    "modelName": "Fazer 25",
+    "modelId": "fazer-25"
+  },
+  {
+    "brandName": "YAMAHA (India Yamaha Motor)",
+    "brandId": "yamaha",
+    "modelName": "MT-15 V2",
+    "modelId": "mt-15-v2"
+  },
+  {
+    "brandName": "YAMAHA (India Yamaha Motor)",
+    "brandId": "yamaha",
+    "modelName": "R15 V4",
+    "modelId": "r15-v4"
+  },
+  {
+    "brandName": "YAMAHA (India Yamaha Motor)",
+    "brandId": "yamaha",
+    "modelName": "R15 S",
+    "modelId": "r15-s"
+  },
+  {
+    "brandName": "YAMAHA (India Yamaha Motor)",
+    "brandId": "yamaha",
+    "modelName": "R15M",
+    "modelId": "r15m"
+  },
+  {
+    "brandName": "YAMAHA (India Yamaha Motor)",
+    "brandId": "yamaha",
+    "modelName": "R7",
+    "modelId": "r7"
+  },
+  {
+    "brandName": "YAMAHA (India Yamaha Motor)",
+    "brandId": "yamaha",
+    "modelName": "Fascino 125 Fi",
+    "modelId": "fascino-125-fi"
+  },
+  {
+    "brandName": "YAMAHA (India Yamaha Motor)",
+    "brandId": "yamaha",
+    "modelName": "RayZR 125 Fi",
+    "modelId": "rayzr-125-fi"
+  },
+  {
+    "brandName": "YAMAHA (India Yamaha Motor)",
+    "brandId": "yamaha",
+    "modelName": "RayZR Street Rally",
+    "modelId": "rayzr-street-rally"
+  },
+  {
+    "brandName": "YAMAHA (India Yamaha Motor)",
+    "brandId": "yamaha",
+    "modelName": "Aerox 155",
+    "modelId": "aerox-155"
+  },
+  {
+    "brandName": "YAMAHA (India Yamaha Motor)",
+    "brandId": "yamaha",
+    "modelName": "NMAX 155",
+    "modelId": "nmax-155"
+  },
+  {
+    "brandName": "SUZUKI MOTORCYCLE INDIA",
+    "brandId": "suzuki-motorcycle",
+    "modelName": "Access 125",
+    "modelId": "access-125"
+  },
+  {
+    "brandName": "SUZUKI MOTORCYCLE INDIA",
+    "brandId": "suzuki-motorcycle",
+    "modelName": "Access 125 SE",
+    "modelId": "access-125-se"
+  },
+  {
+    "brandName": "SUZUKI MOTORCYCLE INDIA",
+    "brandId": "suzuki-motorcycle",
+    "modelName": "Gixxer 150",
+    "modelId": "gixxer-150"
+  },
+  {
+    "brandName": "SUZUKI MOTORCYCLE INDIA",
+    "brandId": "suzuki-motorcycle",
+    "modelName": "Gixxer SF 150",
+    "modelId": "gixxer-sf-150"
+  },
+  {
+    "brandName": "SUZUKI MOTORCYCLE INDIA",
+    "brandId": "suzuki-motorcycle",
+    "modelName": "Gixxer 250",
+    "modelId": "gixxer-250"
+  },
+  {
+    "brandName": "SUZUKI MOTORCYCLE INDIA",
+    "brandId": "suzuki-motorcycle",
+    "modelName": "Gixxer SF 250",
+    "modelId": "gixxer-sf-250"
+  },
+  {
+    "brandName": "SUZUKI MOTORCYCLE INDIA",
+    "brandId": "suzuki-motorcycle",
+    "modelName": "Burgman Street 125",
+    "modelId": "burgman-street-125"
+  },
+  {
+    "brandName": "SUZUKI MOTORCYCLE INDIA",
+    "brandId": "suzuki-motorcycle",
+    "modelName": "Burgman Street EX",
+    "modelId": "burgman-street-ex"
+  },
+  {
+    "brandName": "SUZUKI MOTORCYCLE INDIA",
+    "brandId": "suzuki-motorcycle",
+    "modelName": "Avenis 125",
+    "modelId": "avenis-125"
+  },
+  {
+    "brandName": "SUZUKI MOTORCYCLE INDIA",
+    "brandId": "suzuki-motorcycle",
+    "modelName": "V-Strom 650 XT",
+    "modelId": "v-strom-650-xt"
+  },
+  {
+    "brandName": "SUZUKI MOTORCYCLE INDIA",
+    "brandId": "suzuki-motorcycle",
+    "modelName": "Hayabusa",
+    "modelId": "hayabusa"
+  },
+  {
+    "brandName": "KAWASAKI INDIA",
+    "brandId": "kawasaki",
+    "modelName": "Z650",
+    "modelId": "z650"
+  },
+  {
+    "brandName": "KAWASAKI INDIA",
+    "brandId": "kawasaki",
+    "modelName": "Z900",
+    "modelId": "z900"
+  },
+  {
+    "brandName": "KAWASAKI INDIA",
+    "brandId": "kawasaki",
+    "modelName": "Ninja 300",
+    "modelId": "ninja-300"
+  },
+  {
+    "brandName": "KAWASAKI INDIA",
+    "brandId": "kawasaki",
+    "modelName": "Ninja 400",
+    "modelId": "ninja-400"
+  },
+  {
+    "brandName": "KAWASAKI INDIA",
+    "brandId": "kawasaki",
+    "modelName": "Ninja 650",
+    "modelId": "ninja-650"
+  },
+  {
+    "brandName": "KAWASAKI INDIA",
+    "brandId": "kawasaki",
+    "modelName": "Ninja 1000SX",
+    "modelId": "ninja-1000sx"
+  },
+  {
+    "brandName": "KAWASAKI INDIA",
+    "brandId": "kawasaki",
+    "modelName": "Ninja ZX-4R",
+    "modelId": "ninja-zx-4r"
+  },
+  {
+    "brandName": "KAWASAKI INDIA",
+    "brandId": "kawasaki",
+    "modelName": "Ninja ZX-6R",
+    "modelId": "ninja-zx-6r"
+  },
+  {
+    "brandName": "KAWASAKI INDIA",
+    "brandId": "kawasaki",
+    "modelName": "Ninja ZX-10R",
+    "modelId": "ninja-zx-10r"
+  },
+  {
+    "brandName": "KAWASAKI INDIA",
+    "brandId": "kawasaki",
+    "modelName": "Ninja H2",
+    "modelId": "ninja-h2"
+  },
+  {
+    "brandName": "KAWASAKI INDIA",
+    "brandId": "kawasaki",
+    "modelName": "Ninja H2 Carbon",
+    "modelId": "ninja-h2-carbon"
+  },
+  {
+    "brandName": "KAWASAKI INDIA",
+    "brandId": "kawasaki",
+    "modelName": "Ninja H2 SX",
+    "modelId": "ninja-h2-sx"
+  },
+  {
+    "brandName": "KAWASAKI INDIA",
+    "brandId": "kawasaki",
+    "modelName": "Versys 650",
+    "modelId": "versys-650"
+  },
+  {
+    "brandName": "KAWASAKI INDIA",
+    "brandId": "kawasaki",
+    "modelName": "Versys 1000",
+    "modelId": "versys-1000"
+  },
+  {
+    "brandName": "KAWASAKI INDIA",
+    "brandId": "kawasaki",
+    "modelName": "W800",
+    "modelId": "w800"
+  },
+  {
+    "brandName": "KAWASAKI INDIA",
+    "brandId": "kawasaki",
+    "modelName": "Z H2",
+    "modelId": "z-h2"
+  },
+  {
+    "brandName": "KAWASAKI INDIA",
+    "brandId": "kawasaki",
+    "modelName": "Z H2 SE",
+    "modelId": "z-h2-se"
+  },
+  {
+    "brandName": "KTM INDIA",
+    "brandId": "ktm-india",
+    "modelName": "Duke 125",
+    "modelId": "duke-125"
+  },
+  {
+    "brandName": "KTM INDIA",
+    "brandId": "ktm-india",
+    "modelName": "Duke 200",
+    "modelId": "duke-200"
+  },
+  {
+    "brandName": "KTM INDIA",
+    "brandId": "ktm-india",
+    "modelName": "Duke 250",
+    "modelId": "duke-250"
+  },
+  {
+    "brandName": "KTM INDIA",
+    "brandId": "ktm-india",
+    "modelName": "Duke 390",
+    "modelId": "duke-390"
+  },
+  {
+    "brandName": "KTM INDIA",
+    "brandId": "ktm-india",
+    "modelName": "RC 200",
+    "modelId": "rc-200"
+  },
+  {
+    "brandName": "KTM INDIA",
+    "brandId": "ktm-india",
+    "modelName": "RC 390",
+    "modelId": "rc-390"
+  },
+  {
+    "brandName": "KTM INDIA",
+    "brandId": "ktm-india",
+    "modelName": "Adventure 250",
+    "modelId": "adventure-250"
+  },
+  {
+    "brandName": "KTM INDIA",
+    "brandId": "ktm-india",
+    "modelName": "Adventure 390",
+    "modelId": "adventure-390"
+  },
+  {
+    "brandName": "KTM INDIA",
+    "brandId": "ktm-india",
+    "modelName": "390 SMC R",
+    "modelId": "390-smc-r"
+  },
+  {
+    "brandName": "KTM INDIA",
+    "brandId": "ktm-india",
+    "modelName": "Duke 790",
+    "modelId": "duke-790"
+  },
+  {
+    "brandName": "HUSQVARNA MOTORCYCLES",
+    "brandId": "husqvarna",
+    "modelName": "Svartpilen 250",
+    "modelId": "svartpilen-250"
+  },
+  {
+    "brandName": "HUSQVARNA MOTORCYCLES",
+    "brandId": "husqvarna",
+    "modelName": "Svartpilen 401",
+    "modelId": "svartpilen-401"
+  },
+  {
+    "brandName": "HUSQVARNA MOTORCYCLES",
+    "brandId": "husqvarna",
+    "modelName": "Vitpilen 250",
+    "modelId": "vitpilen-250"
+  },
+  {
+    "brandName": "HUSQVARNA MOTORCYCLES",
+    "brandId": "husqvarna",
+    "modelName": "Vitpilen 401",
+    "modelId": "vitpilen-401"
+  },
+  {
+    "brandName": "BMW MOTORRAD",
+    "brandId": "bmw-motorrad",
+    "modelName": "G 310 R",
+    "modelId": "g-310-r"
+  },
+  {
+    "brandName": "BMW MOTORRAD",
+    "brandId": "bmw-motorrad",
+    "modelName": "G 310 GS",
+    "modelId": "g-310-gs"
+  },
+  {
+    "brandName": "BMW MOTORRAD",
+    "brandId": "bmw-motorrad",
+    "modelName": "S 1000 RR",
+    "modelId": "s-1000-rr"
+  },
+  {
+    "brandName": "BMW MOTORRAD",
+    "brandId": "bmw-motorrad",
+    "modelName": "S 1000 R",
+    "modelId": "s-1000-r"
+  },
+  {
+    "brandName": "BMW MOTORRAD",
+    "brandId": "bmw-motorrad",
+    "modelName": "S 1000 XR",
+    "modelId": "s-1000-xr"
+  },
+  {
+    "brandName": "BMW MOTORRAD",
+    "brandId": "bmw-motorrad",
+    "modelName": "R 1250 GS",
+    "modelId": "r-1250-gs"
+  },
+  {
+    "brandName": "BMW MOTORRAD",
+    "brandId": "bmw-motorrad",
+    "modelName": "R 1250 GS Adventure",
+    "modelId": "r-1250-gs-adventure"
+  },
+  {
+    "brandName": "BMW MOTORRAD",
+    "brandId": "bmw-motorrad",
+    "modelName": "R 1250 RT",
+    "modelId": "r-1250-rt"
+  },
+  {
+    "brandName": "BMW MOTORRAD",
+    "brandId": "bmw-motorrad",
+    "modelName": "R 18",
+    "modelId": "r-18"
+  },
+  {
+    "brandName": "BMW MOTORRAD",
+    "brandId": "bmw-motorrad",
+    "modelName": "F 850 GS",
+    "modelId": "f-850-gs"
+  },
+  {
+    "brandName": "BMW MOTORRAD",
+    "brandId": "bmw-motorrad",
+    "modelName": "F 900 R",
+    "modelId": "f-900-r"
+  },
+  {
+    "brandName": "BMW MOTORRAD",
+    "brandId": "bmw-motorrad",
+    "modelName": "F 900 XR",
+    "modelId": "f-900-xr"
+  },
+  {
+    "brandName": "BMW MOTORRAD",
+    "brandId": "bmw-motorrad",
+    "modelName": "M 1000 RR",
+    "modelId": "m-1000-rr"
+  },
+  {
+    "brandName": "TRIUMPH MOTORCYCLES",
+    "brandId": "triumph",
+    "modelName": "Speed 400",
+    "modelId": "speed-400"
+  },
+  {
+    "brandName": "TRIUMPH MOTORCYCLES",
+    "brandId": "triumph",
+    "modelName": "Scrambler 400 X",
+    "modelId": "scrambler-400-x"
+  },
+  {
+    "brandName": "TRIUMPH MOTORCYCLES",
+    "brandId": "triumph",
+    "modelName": "Trident 660",
+    "modelId": "trident-660"
+  },
+  {
+    "brandName": "TRIUMPH MOTORCYCLES",
+    "brandId": "triumph",
+    "modelName": "Tiger Sport 660",
+    "modelId": "tiger-sport-660"
+  },
+  {
+    "brandName": "TRIUMPH MOTORCYCLES",
+    "brandId": "triumph",
+    "modelName": "Street Twin",
+    "modelId": "street-twin"
+  },
+  {
+    "brandName": "TRIUMPH MOTORCYCLES",
+    "brandId": "triumph",
+    "modelName": "Bonneville T120",
+    "modelId": "bonneville-t120"
+  },
+  {
+    "brandName": "TRIUMPH MOTORCYCLES",
+    "brandId": "triumph",
+    "modelName": "Thruxton RS",
+    "modelId": "thruxton-rs"
+  },
+  {
+    "brandName": "TRIUMPH MOTORCYCLES",
+    "brandId": "triumph",
+    "modelName": "Tiger 900",
+    "modelId": "tiger-900"
+  },
+  {
+    "brandName": "TRIUMPH MOTORCYCLES",
+    "brandId": "triumph",
+    "modelName": "Tiger 1200",
+    "modelId": "tiger-1200"
+  },
+  {
+    "brandName": "TRIUMPH MOTORCYCLES",
+    "brandId": "triumph",
+    "modelName": "Rocket 3 R",
+    "modelId": "rocket-3-r"
+  },
+  {
+    "brandName": "TRIUMPH MOTORCYCLES",
+    "brandId": "triumph",
+    "modelName": "Speed Triple 1200 RS",
+    "modelId": "speed-triple-1200-rs"
+  },
+  {
+    "brandName": "TRIUMPH MOTORCYCLES",
+    "brandId": "triumph",
+    "modelName": "Daytona Moto2 765",
+    "modelId": "daytona-moto2-765"
+  },
+  {
+    "brandName": "HARLEY-DAVIDSON",
+    "brandId": "harley-davidson",
+    "modelName": "X440",
+    "modelId": "x440"
+  },
+  {
+    "brandName": "HARLEY-DAVIDSON",
+    "brandId": "harley-davidson",
+    "modelName": "Mavrick 440",
+    "modelId": "mavrick-440"
+  },
+  {
+    "brandName": "HARLEY-DAVIDSON",
+    "brandId": "harley-davidson",
+    "modelName": "Sportster S",
+    "modelId": "sportster-s"
+  },
+  {
+    "brandName": "HARLEY-DAVIDSON",
+    "brandId": "harley-davidson",
+    "modelName": "Nightster",
+    "modelId": "nightster"
+  },
+  {
+    "brandName": "HARLEY-DAVIDSON",
+    "brandId": "harley-davidson",
+    "modelName": "Iron 883",
+    "modelId": "iron-883"
+  },
+  {
+    "brandName": "HARLEY-DAVIDSON",
+    "brandId": "harley-davidson",
+    "modelName": "Forty-Eight",
+    "modelId": "forty-eight"
+  },
+  {
+    "brandName": "HARLEY-DAVIDSON",
+    "brandId": "harley-davidson",
+    "modelName": "Fat Bob 114",
+    "modelId": "fat-bob-114"
+  },
+  {
+    "brandName": "HARLEY-DAVIDSON",
+    "brandId": "harley-davidson",
+    "modelName": "Fat Boy 114",
+    "modelId": "fat-boy-114"
+  },
+  {
+    "brandName": "HARLEY-DAVIDSON",
+    "brandId": "harley-davidson",
+    "modelName": "Street Bob 114",
+    "modelId": "street-bob-114"
+  },
+  {
+    "brandName": "HARLEY-DAVIDSON",
+    "brandId": "harley-davidson",
+    "modelName": "Low Rider S",
+    "modelId": "low-rider-s"
+  },
+  {
+    "brandName": "HARLEY-DAVIDSON",
+    "brandId": "harley-davidson",
+    "modelName": "Road Glide Special",
+    "modelId": "road-glide-special"
+  },
+  {
+    "brandName": "HARLEY-DAVIDSON",
+    "brandId": "harley-davidson",
+    "modelName": "Road King Special",
+    "modelId": "road-king-special"
+  },
+  {
+    "brandName": "HARLEY-DAVIDSON",
+    "brandId": "harley-davidson",
+    "modelName": "Ultra Limited",
+    "modelId": "ultra-limited"
+  },
+  {
+    "brandName": "HARLEY-DAVIDSON",
+    "brandId": "harley-davidson",
+    "modelName": "CVO Road Glide",
+    "modelId": "cvo-road-glide"
+  },
+  {
+    "brandName": "DUCATI",
+    "brandId": "ducati",
+    "modelName": "Monster",
+    "modelId": "monster"
+  },
+  {
+    "brandName": "DUCATI",
+    "brandId": "ducati",
+    "modelName": "Monster SP",
+    "modelId": "monster-sp"
+  },
+  {
+    "brandName": "DUCATI",
+    "brandId": "ducati",
+    "modelName": "Panigale V2",
+    "modelId": "panigale-v2"
+  },
+  {
+    "brandName": "DUCATI",
+    "brandId": "ducati",
+    "modelName": "Panigale V4",
+    "modelId": "panigale-v4"
+  },
+  {
+    "brandName": "DUCATI",
+    "brandId": "ducati",
+    "modelName": "Panigale V4 SP2",
+    "modelId": "panigale-v4-sp2"
+  },
+  {
+    "brandName": "DUCATI",
+    "brandId": "ducati",
+    "modelName": "Panigale V4 R",
+    "modelId": "panigale-v4-r"
+  },
+  {
+    "brandName": "DUCATI",
+    "brandId": "ducati",
+    "modelName": "Streetfighter V2",
+    "modelId": "streetfighter-v2"
+  },
+  {
+    "brandName": "DUCATI",
+    "brandId": "ducati",
+    "modelName": "Streetfighter V4",
+    "modelId": "streetfighter-v4"
+  },
+  {
+    "brandName": "DUCATI",
+    "brandId": "ducati",
+    "modelName": "Multistrada V2",
+    "modelId": "multistrada-v2"
+  },
+  {
+    "brandName": "DUCATI",
+    "brandId": "ducati",
+    "modelName": "Multistrada V4",
+    "modelId": "multistrada-v4"
+  },
+  {
+    "brandName": "DUCATI",
+    "brandId": "ducati",
+    "modelName": "Diavel V4",
+    "modelId": "diavel-v4"
+  },
+  {
+    "brandName": "DUCATI",
+    "brandId": "ducati",
+    "modelName": "XDiavel V4",
+    "modelId": "xdiavel-v4"
+  },
+  {
+    "brandName": "DUCATI",
+    "brandId": "ducati",
+    "modelName": "Scrambler Icon",
+    "modelId": "scrambler-icon"
+  },
+  {
+    "brandName": "DUCATI",
+    "brandId": "ducati",
+    "modelName": "Scrambler Full Throttle",
+    "modelId": "scrambler-full-throttle"
+  },
+  {
+    "brandName": "DUCATI",
+    "brandId": "ducati",
+    "modelName": "Scrambler Desert Sled",
+    "modelId": "scrambler-desert-sled"
+  },
+  {
+    "brandName": "DUCATI",
+    "brandId": "ducati",
+    "modelName": "Hypermotard 950",
+    "modelId": "hypermotard-950"
+  },
+  {
+    "brandName": "DUCATI",
+    "brandId": "ducati",
+    "modelName": "SuperSport 950",
+    "modelId": "supersport-950"
+  },
+  {
+    "brandName": "APRILIA (PIAGGIO GROUP)",
+    "brandId": "aprilia",
+    "modelName": "SR 125",
+    "modelId": "sr-125"
+  },
+  {
+    "brandName": "APRILIA (PIAGGIO GROUP)",
+    "brandId": "aprilia",
+    "modelName": "SR 160",
+    "modelId": "sr-160"
+  },
+  {
+    "brandName": "APRILIA (PIAGGIO GROUP)",
+    "brandId": "aprilia",
+    "modelName": "RS 457",
+    "modelId": "rs-457"
+  },
+  {
+    "brandName": "APRILIA (PIAGGIO GROUP)",
+    "brandId": "aprilia",
+    "modelName": "Tuono 457",
+    "modelId": "tuono-457"
+  },
+  {
+    "brandName": "APRILIA (PIAGGIO GROUP)",
+    "brandId": "aprilia",
+    "modelName": "Storm 125",
+    "modelId": "storm-125"
+  },
+  {
+    "brandName": "APRILIA (PIAGGIO GROUP)",
+    "brandId": "aprilia",
+    "modelName": "SX 125",
+    "modelId": "sx-125"
+  },
+  {
+    "brandName": "APRILIA (PIAGGIO GROUP)",
+    "brandId": "aprilia",
+    "modelName": "RX 125",
+    "modelId": "rx-125"
+  },
+  {
+    "brandName": "APRILIA (PIAGGIO GROUP)",
+    "brandId": "aprilia",
+    "modelName": "Tuono 660",
+    "modelId": "tuono-660"
+  },
+  {
+    "brandName": "APRILIA (PIAGGIO GROUP)",
+    "brandId": "aprilia",
+    "modelName": "RSV4",
+    "modelId": "rsv4"
+  },
+  {
+    "brandName": "APRILIA (PIAGGIO GROUP)",
+    "brandId": "aprilia",
+    "modelName": "Tuono V4",
+    "modelId": "tuono-v4"
+  },
+  {
+    "brandName": "VESPA (PIAGGIO GROUP)",
+    "brandId": "vespa",
+    "modelName": "Vespa VXL 125",
+    "modelId": "vespa-vxl-125"
+  },
+  {
+    "brandName": "VESPA (PIAGGIO GROUP)",
+    "brandId": "vespa",
+    "modelName": "Vespa VXL 150",
+    "modelId": "vespa-vxl-150"
+  },
+  {
+    "brandName": "VESPA (PIAGGIO GROUP)",
+    "brandId": "vespa",
+    "modelName": "Vespa ZX 125",
+    "modelId": "vespa-zx-125"
+  },
+  {
+    "brandName": "VESPA (PIAGGIO GROUP)",
+    "brandId": "vespa",
+    "modelName": "Vespa SXL 125",
+    "modelId": "vespa-sxl-125"
+  },
+  {
+    "brandName": "VESPA (PIAGGIO GROUP)",
+    "brandId": "vespa",
+    "modelName": "Vespa SXL 150",
+    "modelId": "vespa-sxl-150"
+  },
+  {
+    "brandName": "VESPA (PIAGGIO GROUP)",
+    "brandId": "vespa",
+    "modelName": "Vespa Elettrica",
+    "modelId": "vespa-elettrica"
+  },
+  {
+    "brandName": "VESPA (PIAGGIO GROUP)",
+    "brandId": "vespa",
+    "modelName": "Vespa Racing Sixties",
+    "modelId": "vespa-racing-sixties"
+  },
+  {
+    "brandName": "BENELLI",
+    "brandId": "benelli",
+    "modelName": "Imperiale 400",
+    "modelId": "imperiale-400"
+  },
+  {
+    "brandName": "BENELLI",
+    "brandId": "benelli",
+    "modelName": "TNT 300",
+    "modelId": "tnt-300"
+  },
+  {
+    "brandName": "BENELLI",
+    "brandId": "benelli",
+    "modelName": "TNT 600i",
+    "modelId": "tnt-600i"
+  },
+  {
+    "brandName": "BENELLI",
+    "brandId": "benelli",
+    "modelName": "TRK 502",
+    "modelId": "trk-502"
+  },
+  {
+    "brandName": "BENELLI",
+    "brandId": "benelli",
+    "modelName": "TRK 502X",
+    "modelId": "trk-502x"
+  },
+  {
+    "brandName": "BENELLI",
+    "brandId": "benelli",
+    "modelName": "Leoncino 250",
+    "modelId": "leoncino-250"
+  },
+  {
+    "brandName": "BENELLI",
+    "brandId": "benelli",
+    "modelName": "Leoncino 500",
+    "modelId": "leoncino-500"
+  },
+  {
+    "brandName": "BENELLI",
+    "brandId": "benelli",
+    "modelName": "502C",
+    "modelId": "502c"
+  },
+  {
+    "brandName": "BENELLI",
+    "brandId": "benelli",
+    "modelName": "Pepe 125",
+    "modelId": "pepe-125"
+  },
+  {
+    "brandName": "BENELLI",
+    "brandId": "benelli",
+    "modelName": "302R",
+    "modelId": "302r"
+  },
+  {
+    "brandName": "BENELLI",
+    "brandId": "benelli",
+    "modelName": "752S",
+    "modelId": "752s"
+  },
+  {
+    "brandName": "BENELLI",
+    "brandId": "benelli",
+    "modelName": "Imperiale 400 Milano",
+    "modelId": "imperiale-400-milano"
+  },
+  {
+    "brandName": "MOTO GUZZI",
+    "brandId": "moto-guzzi",
+    "modelName": "V7 Stone",
+    "modelId": "v7-stone"
+  },
+  {
+    "brandName": "MOTO GUZZI",
+    "brandId": "moto-guzzi",
+    "modelName": "V7 Special",
+    "modelId": "v7-special"
+  },
+  {
+    "brandName": "MOTO GUZZI",
+    "brandId": "moto-guzzi",
+    "modelName": "V9 Bobber",
+    "modelId": "v9-bobber"
+  },
+  {
+    "brandName": "MOTO GUZZI",
+    "brandId": "moto-guzzi",
+    "modelName": "V9 Roamer",
+    "modelId": "v9-roamer"
+  },
+  {
+    "brandName": "MOTO GUZZI",
+    "brandId": "moto-guzzi",
+    "modelName": "V85 TT",
+    "modelId": "v85-tt"
+  },
+  {
+    "brandName": "MOTO GUZZI",
+    "brandId": "moto-guzzi",
+    "modelName": "V100 Mandello",
+    "modelId": "v100-mandello"
+  },
+  {
+    "brandName": "MOTO MORINI",
+    "brandId": "moto-morini",
+    "modelName": "X-Cape 650",
+    "modelId": "x-cape-650"
+  },
+  {
+    "brandName": "MOTO MORINI",
+    "brandId": "moto-morini",
+    "modelName": "Seiemmezzo 650",
+    "modelId": "seiemmezzo-650"
+  },
+  {
+    "brandName": "BSA MOTORCYCLES",
+    "brandId": "bsa",
+    "modelName": "BSA Gold Star 650",
+    "modelId": "bsa-gold-star-650"
+  },
+  {
+    "brandName": "BRIXTON MOTORCYCLES",
+    "brandId": "brixton",
+    "modelName": "Crossfire 500",
+    "modelId": "crossfire-500"
+  },
+  {
+    "brandName": "BRIXTON MOTORCYCLES",
+    "brandId": "brixton",
+    "modelName": "Cromwell 1200",
+    "modelId": "cromwell-1200"
+  },
+  {
+    "brandName": "FB MONDIAL",
+    "brandId": "fb-mondial",
+    "modelName": "HPS 300",
+    "modelId": "hps-300"
+  },
+  {
+    "brandName": "FB MONDIAL",
+    "brandId": "fb-mondial",
+    "modelName": "HPS 125",
+    "modelId": "hps-125"
+  },
+  {
+    "brandName": "INDIAN MOTORCYCLE",
+    "brandId": "n",
+    "modelName": "Scout",
+    "modelId": "scout"
+  },
+  {
+    "brandName": "INDIAN MOTORCYCLE",
+    "brandId": "n",
+    "modelName": "Scout Bobber",
+    "modelId": "scout-bobber"
+  },
+  {
+    "brandName": "INDIAN MOTORCYCLE",
+    "brandId": "n",
+    "modelName": "Scout Classic",
+    "modelId": "scout-classic"
+  },
+  {
+    "brandName": "INDIAN MOTORCYCLE",
+    "brandId": "n",
+    "modelName": "Chief",
+    "modelId": "chief"
+  },
+  {
+    "brandName": "INDIAN MOTORCYCLE",
+    "brandId": "n",
+    "modelName": "Chief Bobber",
+    "modelId": "chief-bobber"
+  },
+  {
+    "brandName": "INDIAN MOTORCYCLE",
+    "brandId": "n",
+    "modelName": "Chief Dark Horse",
+    "modelId": "chief-dark-horse"
+  },
+  {
+    "brandName": "INDIAN MOTORCYCLE",
+    "brandId": "n",
+    "modelName": "Super Chief Limited",
+    "modelId": "super-chief-limited"
+  },
+  {
+    "brandName": "INDIAN MOTORCYCLE",
+    "brandId": "n",
+    "modelName": "Challenger",
+    "modelId": "challenger"
+  },
+  {
+    "brandName": "INDIAN MOTORCYCLE",
+    "brandId": "n",
+    "modelName": "Challenger Dark Horse",
+    "modelId": "challenger-dark-horse"
+  },
+  {
+    "brandName": "INDIAN MOTORCYCLE",
+    "brandId": "n",
+    "modelName": "Pursuit Dark Horse",
+    "modelId": "pursuit-dark-horse"
+  },
+  {
+    "brandName": "INDIAN MOTORCYCLE",
+    "brandId": "n",
+    "modelName": "Pursuit Limited",
+    "modelId": "pursuit-limited"
+  },
+  {
+    "brandName": "INDIAN MOTORCYCLE",
+    "brandId": "n",
+    "modelName": "FTR 1200",
+    "modelId": "ftr-1200"
+  },
+  {
+    "brandName": "INDIAN MOTORCYCLE",
+    "brandId": "n",
+    "modelName": "FTR Sport",
+    "modelId": "ftr-sport"
+  },
+  {
+    "brandName": "CFMOTO",
+    "brandId": "cfmoto",
+    "modelName": "300NK",
+    "modelId": "300nk"
+  },
+  {
+    "brandName": "CFMOTO",
+    "brandId": "cfmoto",
+    "modelName": "300SR",
+    "modelId": "300sr"
+  },
+  {
+    "brandName": "CFMOTO",
+    "brandId": "cfmoto",
+    "modelName": "400NK",
+    "modelId": "400nk"
+  },
+  {
+    "brandName": "CFMOTO",
+    "brandId": "cfmoto",
+    "modelName": "450NK",
+    "modelId": "450nk"
+  },
+  {
+    "brandName": "CFMOTO",
+    "brandId": "cfmoto",
+    "modelName": "450MT",
+    "modelId": "450mt"
+  },
+  {
+    "brandName": "CFMOTO",
+    "brandId": "cfmoto",
+    "modelName": "650NK",
+    "modelId": "650nk"
+  },
+  {
+    "brandName": "CFMOTO",
+    "brandId": "cfmoto",
+    "modelName": "650GT",
+    "modelId": "650gt"
+  },
+  {
+    "brandName": "CFMOTO",
+    "brandId": "cfmoto",
+    "modelName": "650MT",
+    "modelId": "650mt"
+  },
+  {
+    "brandName": "CFMOTO",
+    "brandId": "cfmoto",
+    "modelName": "800MT Explorer",
+    "modelId": "800mt-explorer"
+  },
+  {
+    "brandName": "CFMOTO",
+    "brandId": "cfmoto",
+    "modelName": "800MT Sport",
+    "modelId": "800mt-sport"
+  },
+  {
+    "brandName": "CFMOTO",
+    "brandId": "cfmoto",
+    "modelName": "800MT Touring",
+    "modelId": "800mt-touring"
+  },
+  {
+    "brandName": "KEEWAY",
+    "brandId": "keeway",
+    "modelName": "K-Light 250V",
+    "modelId": "k-light-250v"
+  },
+  {
+    "brandName": "KEEWAY",
+    "brandId": "keeway",
+    "modelName": "Vieste 300",
+    "modelId": "vieste-300"
+  },
+  {
+    "brandName": "KEEWAY",
+    "brandId": "keeway",
+    "modelName": "SR 125",
+    "modelId": "sr-125"
+  },
+  {
+    "brandName": "KEEWAY",
+    "brandId": "keeway",
+    "modelName": "Zahara 250",
+    "modelId": "zahara-250"
+  },
+  {
+    "brandName": "KEEWAY",
+    "brandId": "keeway",
+    "modelName": "TX 125",
+    "modelId": "tx-125"
+  },
+  {
+    "brandName": "KEEWAY",
+    "brandId": "keeway",
+    "modelName": "RKF 125",
+    "modelId": "rkf-125"
+  },
+  {
+    "brandName": "SYM",
+    "brandId": "sym",
+    "modelName": "Jet 14",
+    "modelId": "jet-14"
+  },
+  {
+    "brandName": "SYM",
+    "brandId": "sym",
+    "modelName": "Wolf Classic 150",
+    "modelId": "wolf-classic-150"
+  },
+  {
+    "brandName": "SYM",
+    "brandId": "sym",
+    "modelName": "Cruisym 300",
+    "modelId": "cruisym-300"
+  },
+  {
+    "brandName": "SUPER SOCO",
+    "brandId": "super-soco",
+    "modelName": "TC Series",
+    "modelId": "tc-series"
+  },
+  {
+    "brandName": "SUPER SOCO",
+    "brandId": "super-soco",
+    "modelName": "TC Max",
+    "modelId": "tc-max"
+  },
+  {
+    "brandName": "SUPER SOCO",
+    "brandId": "super-soco",
+    "modelName": "CPx",
+    "modelId": "cpx"
+  },
+  {
+    "brandName": "SUPER SOCO",
+    "brandId": "super-soco",
+    "modelName": "TS Street Hunter",
+    "modelId": "ts-street-hunter"
+  },
+  {
+    "brandName": "SUPER SOCO",
+    "brandId": "super-soco",
+    "modelName": "VS1",
+    "modelId": "vs1"
+  },
+  {
+    "brandName": "SEGWAY",
+    "brandId": "segway",
+    "modelName": "E110S",
+    "modelId": "e110s"
+  },
+  {
+    "brandName": "SEGWAY",
+    "brandId": "segway",
+    "modelName": "E125S",
+    "modelId": "e125s"
+  },
+  {
+    "brandName": "SEGWAY",
+    "brandId": "segway",
+    "modelName": "E300SE",
+    "modelId": "e300se"
+  },
+  {
+    "brandName": "SEGWAY",
+    "brandId": "segway",
+    "modelName": "Apex H2",
+    "modelId": "apex-h2"
+  },
+  {
+    "brandName": "VINFAST",
+    "brandId": "vinfast",
+    "modelName": "Feliz S",
+    "modelId": "feliz-s"
+  },
+  {
+    "brandName": "VINFAST",
+    "brandId": "vinfast",
+    "modelName": "Evo200",
+    "modelId": "evo200"
+  },
+  {
+    "brandName": "LAMBRETTA",
+    "brandId": "lambretta",
+    "modelName": "G-Special 125",
+    "modelId": "g-special-125"
+  },
+  {
+    "brandName": "LAMBRETTA",
+    "brandId": "lambretta",
+    "modelName": "V-Special 125",
+    "modelId": "v-special-125"
+  },
+  {
+    "brandName": "LAMBRETTA",
+    "brandId": "lambretta",
+    "modelName": "V200 Special",
+    "modelId": "v200-special"
+  },
+  {
+    "brandName": "OLA ELECTRIC",
+    "brandId": "ola-ev",
+    "modelName": "S1 X",
+    "modelId": "s1-x"
+  },
+  {
+    "brandName": "OLA ELECTRIC",
+    "brandId": "ola-ev",
+    "modelName": "S1 X",
+    "modelId": "s1-x"
+  },
+  {
+    "brandName": "OLA ELECTRIC",
+    "brandId": "ola-ev",
+    "modelName": "S1 X",
+    "modelId": "s1-x"
+  },
+  {
+    "brandName": "OLA ELECTRIC",
+    "brandId": "ola-ev",
+    "modelName": "S1 Air",
+    "modelId": "s1-air"
+  },
+  {
+    "brandName": "OLA ELECTRIC",
+    "brandId": "ola-ev",
+    "modelName": "S1 Pro Gen 2",
+    "modelId": "s1-pro-gen-2"
+  },
+  {
+    "brandName": "OLA ELECTRIC",
+    "brandId": "ola-ev",
+    "modelName": "S1 Pro",
+    "modelId": "s1-pro"
+  },
+  {
+    "brandName": "OLA ELECTRIC",
+    "brandId": "ola-ev",
+    "modelName": "Roadster X",
+    "modelId": "roadster-x"
+  },
+  {
+    "brandName": "OLA ELECTRIC",
+    "brandId": "ola-ev",
+    "modelName": "Roadster Pro",
+    "modelId": "roadster-pro"
+  },
+  {
+    "brandName": "OLA ELECTRIC",
+    "brandId": "ola-ev",
+    "modelName": "Roadster",
+    "modelId": "roadster"
+  },
+  {
+    "brandName": "OLA ELECTRIC",
+    "brandId": "ola-ev",
+    "modelName": "Gig",
+    "modelId": "gig"
+  },
+  {
+    "brandName": "OLA ELECTRIC",
+    "brandId": "ola-ev",
+    "modelName": "Gig+",
+    "modelId": "gig"
+  },
+  {
+    "brandName": "ATHER ENERGY",
+    "brandId": "ather-energy",
+    "modelName": "450 Plus",
+    "modelId": "450-plus"
+  },
+  {
+    "brandName": "ATHER ENERGY",
+    "brandId": "ather-energy",
+    "modelName": "450X Gen 3",
+    "modelId": "450x-gen-3"
+  },
+  {
+    "brandName": "ATHER ENERGY",
+    "brandId": "ather-energy",
+    "modelName": "450S",
+    "modelId": "450s"
+  },
+  {
+    "brandName": "ATHER ENERGY",
+    "brandId": "ather-energy",
+    "modelName": "450 Apex",
+    "modelId": "450-apex"
+  },
+  {
+    "brandName": "ATHER ENERGY",
+    "brandId": "ather-energy",
+    "modelName": "RIZTA S",
+    "modelId": "rizta-s"
+  },
+  {
+    "brandName": "ATHER ENERGY",
+    "brandId": "ather-energy",
+    "modelName": "RIZTA Z",
+    "modelId": "rizta-z"
+  },
+  {
+    "brandName": "VIDA (HERO MOTOCORP EV)",
+    "brandId": "vida-hero",
+    "modelName": "Vida VX1",
+    "modelId": "vida-vx1"
+  },
+  {
+    "brandName": "VIDA (HERO MOTOCORP EV)",
+    "brandId": "vida-hero",
+    "modelName": "Vida VX2",
+    "modelId": "vida-vx2"
+  },
+  {
+    "brandName": "VIDA (HERO MOTOCORP EV)",
+    "brandId": "vida-hero",
+    "modelName": "Vida Z",
+    "modelId": "vida-z"
+  },
+  {
+    "brandName": "VIDA (HERO MOTOCORP EV)",
+    "brandId": "vida-hero",
+    "modelName": "Vida Ubex",
+    "modelId": "vida-ubex"
+  },
+  {
+    "brandName": "CHETAK (BAJAJ)",
+    "brandId": "bajaj-chetak-ev",
+    "modelName": "Chetak Premium",
+    "modelId": "chetak-premium"
+  },
+  {
+    "brandName": "CHETAK (BAJAJ)",
+    "brandId": "bajaj-chetak-ev",
+    "modelName": "Chetak Urbane",
+    "modelId": "chetak-urbane"
+  },
+  {
+    "brandName": "CHETAK (BAJAJ)",
+    "brandId": "bajaj-chetak-ev",
+    "modelName": "Chetak 35 Series",
+    "modelId": "chetak-35-series"
+  },
+  {
+    "brandName": "OKINAWA AUTOTECH",
+    "brandId": "okinawa-autotech",
+    "modelName": "iPraise+",
+    "modelId": "ipraise"
+  },
+  {
+    "brandName": "OKINAWA AUTOTECH",
+    "brandId": "okinawa-autotech",
+    "modelName": "Praise Pro",
+    "modelId": "praise-pro"
+  },
+  {
+    "brandName": "OKINAWA AUTOTECH",
+    "brandId": "okinawa-autotech",
+    "modelName": "OKHI-90",
+    "modelId": "okhi-90"
+  },
+  {
+    "brandName": "OKINAWA AUTOTECH",
+    "brandId": "okinawa-autotech",
+    "modelName": "Dual 100",
+    "modelId": "dual-100"
+  },
+  {
+    "brandName": "OKINAWA AUTOTECH",
+    "brandId": "okinawa-autotech",
+    "modelName": "Ridge 100",
+    "modelId": "ridge-100"
+  },
+  {
+    "brandName": "OKINAWA AUTOTECH",
+    "brandId": "okinawa-autotech",
+    "modelName": "Ridge+",
+    "modelId": "ridge"
+  },
+  {
+    "brandName": "OKINAWA AUTOTECH",
+    "brandId": "okinawa-autotech",
+    "modelName": "Lite",
+    "modelId": "lite"
+  },
+  {
+    "brandName": "OKINAWA AUTOTECH",
+    "brandId": "okinawa-autotech",
+    "modelName": "R30",
+    "modelId": "r30"
+  },
+  {
+    "brandName": "OKINAWA AUTOTECH",
+    "brandId": "okinawa-autotech",
+    "modelName": "PraisePro",
+    "modelId": "praisepro"
+  },
+  {
+    "brandName": "OKINAWA AUTOTECH",
+    "brandId": "okinawa-autotech",
+    "modelName": "Cruiser",
+    "modelId": "cruiser"
+  },
+  {
+    "brandName": "HERO ELECTRIC",
+    "brandId": "hero-ev",
+    "modelName": "Optima CX",
+    "modelId": "optima-cx"
+  },
+  {
+    "brandName": "HERO ELECTRIC",
+    "brandId": "hero-ev",
+    "modelName": "Optima ER",
+    "modelId": "optima-er"
+  },
+  {
+    "brandName": "HERO ELECTRIC",
+    "brandId": "hero-ev",
+    "modelName": "Photon LP",
+    "modelId": "photon-lp"
+  },
+  {
+    "brandName": "HERO ELECTRIC",
+    "brandId": "hero-ev",
+    "modelName": "NYX HS500 ER",
+    "modelId": "nyx-hs500-er"
+  },
+  {
+    "brandName": "HERO ELECTRIC",
+    "brandId": "hero-ev",
+    "modelName": "NYX E5",
+    "modelId": "nyx-e5"
+  },
+  {
+    "brandName": "HERO ELECTRIC",
+    "brandId": "hero-ev",
+    "modelName": "Eddy",
+    "modelId": "eddy"
+  },
+  {
+    "brandName": "HERO ELECTRIC",
+    "brandId": "hero-ev",
+    "modelName": "Atria LX",
+    "modelId": "atria-lx"
+  },
+  {
+    "brandName": "HERO ELECTRIC",
+    "brandId": "hero-ev",
+    "modelName": "Nyx HX",
+    "modelId": "nyx-hx"
+  },
+  {
+    "brandName": "HERO ELECTRIC",
+    "brandId": "hero-ev",
+    "modelName": "Flash",
+    "modelId": "flash"
+  },
+  {
+    "brandName": "SIMPLE ENERGY",
+    "brandId": "simple-energy",
+    "modelName": "Simple One",
+    "modelId": "simple-one"
+  },
+  {
+    "brandName": "SIMPLE ENERGY",
+    "brandId": "simple-energy",
+    "modelName": "Simple Dot One",
+    "modelId": "simple-dot-one"
+  },
+  {
+    "brandName": "SIMPLE ENERGY",
+    "brandId": "simple-energy",
+    "modelName": "Simple Ultra",
+    "modelId": "simple-ultra"
+  },
+  {
+    "brandName": "TORK MOTORS",
+    "brandId": "tork-motors",
+    "modelName": "Kratos",
+    "modelId": "kratos"
+  },
+  {
+    "brandName": "TORK MOTORS",
+    "brandId": "tork-motors",
+    "modelName": "Kratos R",
+    "modelId": "kratos-r"
+  },
+  {
+    "brandName": "RAPTEE ENERGY",
+    "brandId": "raptee-energy",
+    "modelName": "T30",
+    "modelId": "t30"
+  },
+  {
+    "brandName": "RIVER MOBILITY",
+    "brandId": "river-mobility",
+    "modelName": "River Indie",
+    "modelId": "river-indie"
+  },
+  {
+    "brandName": "BOUNCE INFINITY",
+    "brandId": "bounce-infinity",
+    "modelName": "Bounce Infinity E1",
+    "modelId": "bounce-infinity-e1"
+  },
+  {
+    "brandName": "GRAVTON MOTORS",
+    "brandId": "gravton-motors",
+    "modelName": "Quanta",
+    "modelId": "quanta"
+  },
+  {
+    "brandName": "JITENDRA EV (JEV TECH)",
+    "brandId": "jitendra-ev",
+    "modelName": "JMT 1000",
+    "modelId": "jmt-1000"
+  },
+  {
+    "brandName": "JITENDRA EV (JEV TECH)",
+    "brandId": "jitendra-ev",
+    "modelName": "City EV",
+    "modelId": "city-ev"
+  },
+  {
+    "brandName": "JITENDRA EV (JEV TECH)",
+    "brandId": "jitendra-ev",
+    "modelName": "Metro Neo",
+    "modelId": "metro-neo"
+  },
+  {
+    "brandName": "JITENDRA EV (JEV TECH)",
+    "brandId": "jitendra-ev",
+    "modelName": "Mono",
+    "modelId": "mono"
+  },
+  {
+    "brandName": "OKAYA ELECTRIC",
+    "brandId": "okaya-ev",
+    "modelName": "Faast F2",
+    "modelId": "faast-f2"
+  },
+  {
+    "brandName": "OKAYA ELECTRIC",
+    "brandId": "okaya-ev",
+    "modelName": "Faast F4",
+    "modelId": "faast-f4"
+  },
+  {
+    "brandName": "OKAYA ELECTRIC",
+    "brandId": "okaya-ev",
+    "modelName": "Faast F4i",
+    "modelId": "faast-f4i"
+  },
+  {
+    "brandName": "OKAYA ELECTRIC",
+    "brandId": "okaya-ev",
+    "modelName": "Classiq+",
+    "modelId": "classiq"
+  },
+  {
+    "brandName": "OKAYA ELECTRIC",
+    "brandId": "okaya-ev",
+    "modelName": "Hunk EV",
+    "modelId": "hunk-ev"
+  },
+  {
+    "brandName": "OKAYA ELECTRIC",
+    "brandId": "okaya-ev",
+    "modelName": "Freedom Plus",
+    "modelId": "freedom-plus"
+  },
+  {
+    "brandName": "iVOOMi ENERGY",
+    "brandId": "ivoomi-energy",
+    "modelName": "S1",
+    "modelId": "s1"
+  },
+  {
+    "brandName": "iVOOMi ENERGY",
+    "brandId": "ivoomi-energy",
+    "modelName": "S1 Pro",
+    "modelId": "s1-pro"
+  },
+  {
+    "brandName": "iVOOMi ENERGY",
+    "brandId": "ivoomi-energy",
+    "modelName": "JeetX",
+    "modelId": "jeetx"
+  },
+  {
+    "brandName": "iVOOMi ENERGY",
+    "brandId": "ivoomi-energy",
+    "modelName": "i1",
+    "modelId": "i1"
+  },
+  {
+    "brandName": "iVOOMi ENERGY",
+    "brandId": "ivoomi-energy",
+    "modelName": "Eco",
+    "modelId": "eco"
+  },
+  {
+    "brandName": "iVOOMi ENERGY",
+    "brandId": "ivoomi-energy",
+    "modelName": "Jeet",
+    "modelId": "jeet"
+  },
+  {
+    "brandName": "LECTRIX EV",
+    "brandId": "lectrix-ev",
+    "modelName": "SX25",
+    "modelId": "sx25"
+  },
+  {
+    "brandName": "LECTRIX EV",
+    "brandId": "lectrix-ev",
+    "modelName": "LXS 02",
+    "modelId": "lxs-02"
+  },
+  {
+    "brandName": "LECTRIX EV",
+    "brandId": "lectrix-ev",
+    "modelName": "EV6",
+    "modelId": "ev6"
+  },
+  {
+    "brandName": "LECTRIX EV",
+    "brandId": "lectrix-ev",
+    "modelName": "ECO+",
+    "modelId": "eco"
+  },
+  {
+    "brandName": "ODYSSE ELECTRIC",
+    "brandId": "odysse-ev",
+    "modelName": "Hawk+",
+    "modelId": "hawk"
+  },
+  {
+    "brandName": "ODYSSE ELECTRIC",
+    "brandId": "odysse-ev",
+    "modelName": "Vader",
+    "modelId": "vader"
+  },
+  {
+    "brandName": "ODYSSE ELECTRIC",
+    "brandId": "odysse-ev",
+    "modelName": "Evoqis",
+    "modelId": "evoqis"
+  },
+  {
+    "brandName": "ODYSSE ELECTRIC",
+    "brandId": "odysse-ev",
+    "modelName": "E2",
+    "modelId": "e2"
+  },
+  {
+    "brandName": "ODYSSE ELECTRIC",
+    "brandId": "odysse-ev",
+    "modelName": "Racer",
+    "modelId": "racer"
+  },
+  {
+    "brandName": "GEMOPAI",
+    "brandId": "gemopai",
+    "modelName": "Astrid Lite",
+    "modelId": "astrid-lite"
+  },
+  {
+    "brandName": "GEMOPAI",
+    "brandId": "gemopai",
+    "modelName": "Ryder",
+    "modelId": "ryder"
+  },
+  {
+    "brandName": "GEMOPAI",
+    "brandId": "gemopai",
+    "modelName": "Miso",
+    "modelId": "miso"
+  },
+  {
+    "brandName": "GEMOPAI",
+    "brandId": "gemopai",
+    "modelName": "Miso Lite",
+    "modelId": "miso-lite"
+  },
+  {
+    "brandName": "BENLING INDIA",
+    "brandId": "benling",
+    "modelName": "Aura",
+    "modelId": "aura"
+  },
+  {
+    "brandName": "BENLING INDIA",
+    "brandId": "benling",
+    "modelName": "Kriti",
+    "modelId": "kriti"
+  },
+  {
+    "brandName": "BENLING INDIA",
+    "brandId": "benling",
+    "modelName": "Icon",
+    "modelId": "icon"
+  },
+  {
+    "brandName": "BENLING INDIA",
+    "brandId": "benling",
+    "modelName": "Believe",
+    "modelId": "believe"
+  },
+  {
+    "brandName": "AMO ELECTRIC",
+    "brandId": "amo-ev",
+    "modelName": "Jaunty+",
+    "modelId": "jaunty"
+  },
+  {
+    "brandName": "AMO ELECTRIC",
+    "brandId": "amo-ev",
+    "modelName": "Feisty",
+    "modelId": "feisty"
+  },
+  {
+    "brandName": "AMO ELECTRIC",
+    "brandId": "amo-ev",
+    "modelName": "Inspirer",
+    "modelId": "inspirer"
+  },
+  {
+    "brandName": "AMO ELECTRIC",
+    "brandId": "amo-ev",
+    "modelName": "Bravo",
+    "modelId": "bravo"
+  },
+  {
+    "brandName": "EVOLET INDIA",
+    "brandId": "evolet",
+    "modelName": "Polo",
+    "modelId": "polo"
+  },
+  {
+    "brandName": "EVOLET INDIA",
+    "brandId": "evolet",
+    "modelName": "Derby",
+    "modelId": "derby"
+  },
+  {
+    "brandName": "EVOLET INDIA",
+    "brandId": "evolet",
+    "modelName": "Falcon",
+    "modelId": "falcon"
+  },
+  {
+    "brandName": "EVOLET INDIA",
+    "brandId": "evolet",
+    "modelName": "Pony+",
+    "modelId": "pony"
+  },
+  {
+    "brandName": "EVOLET INDIA",
+    "brandId": "evolet",
+    "modelName": "Trooper",
+    "modelId": "trooper"
+  },
+  {
+    "brandName": "BATTRE ELECTRIC",
+    "brandId": "battre-ev",
+    "modelName": "BattRE One",
+    "modelId": "battre-one"
+  },
+  {
+    "brandName": "BATTRE ELECTRIC",
+    "brandId": "battre-ev",
+    "modelName": "Loev 6",
+    "modelId": "loev-6"
+  },
+  {
+    "brandName": "BATTRE ELECTRIC",
+    "brandId": "battre-ev",
+    "modelName": "Loev Plus",
+    "modelId": "loev-plus"
+  },
+  {
+    "brandName": "BATTRE ELECTRIC",
+    "brandId": "battre-ev",
+    "modelName": "Speed",
+    "modelId": "speed"
+  },
+  {
+    "brandName": "TUNWAL E-MOTORS",
+    "brandId": "tunwal-e-motors",
+    "modelName": "E-Tug",
+    "modelId": "e-tug"
+  },
+  {
+    "brandName": "TUNWAL E-MOTORS",
+    "brandId": "tunwal-e-motors",
+    "modelName": "Romeo",
+    "modelId": "romeo"
+  },
+  {
+    "brandName": "TUNWAL E-MOTORS",
+    "brandId": "tunwal-e-motors",
+    "modelName": "Romeo Lite",
+    "modelId": "romeo-lite"
+  },
+  {
+    "brandName": "TUNWAL E-MOTORS",
+    "brandId": "tunwal-e-motors",
+    "modelName": "Storm 60",
+    "modelId": "storm-60"
+  },
+  {
+    "brandName": "TUNWAL E-MOTORS",
+    "brandId": "tunwal-e-motors",
+    "modelName": "Storm ZX",
+    "modelId": "storm-zx"
+  },
+  {
+    "brandName": "TUNWAL E-MOTORS",
+    "brandId": "tunwal-e-motors",
+    "modelName": "Milano",
+    "modelId": "milano"
+  },
+  {
+    "brandName": "DETEL EV",
+    "brandId": "detel-ev",
+    "modelName": "Easy",
+    "modelId": "easy"
+  },
+  {
+    "brandName": "DETEL EV",
+    "brandId": "detel-ev",
+    "modelName": "Easy Plus",
+    "modelId": "easy-plus"
+  },
+  {
+    "brandName": "DETEL EV",
+    "brandId": "detel-ev",
+    "modelName": "Cool",
+    "modelId": "cool"
+  },
+  {
+    "brandName": "DETEL EV",
+    "brandId": "detel-ev",
+    "modelName": "Cool Plus",
+    "modelId": "cool-plus"
+  },
+  {
+    "brandName": "DETEL EV",
+    "brandId": "detel-ev",
+    "modelName": "EV Max",
+    "modelId": "ev-max"
+  },
+  {
+    "brandName": "DAO ELECTRIC",
+    "brandId": "dao-ev",
+    "modelName": "YObykes Zest",
+    "modelId": "yobykes-zest"
+  },
+  {
+    "brandName": "DAO ELECTRIC",
+    "brandId": "dao-ev",
+    "modelName": "YObykes Edge",
+    "modelId": "yobykes-edge"
+  },
+  {
+    "brandName": "DAO ELECTRIC",
+    "brandId": "dao-ev",
+    "modelName": "YObykes Hawk",
+    "modelId": "yobykes-hawk"
+  },
+  {
+    "brandName": "DAO ELECTRIC",
+    "brandId": "dao-ev",
+    "modelName": "DAO 1",
+    "modelId": "dao-1"
+  },
+  {
+    "brandName": "E-SPRINTO",
+    "brandId": "e-sprinto",
+    "modelName": "Rapter",
+    "modelId": "rapter"
+  },
+  {
+    "brandName": "E-SPRINTO",
+    "brandId": "e-sprinto",
+    "modelName": "Max",
+    "modelId": "max"
+  },
+  {
+    "brandName": "E-SPRINTO",
+    "brandId": "e-sprinto",
+    "modelName": "Amo",
+    "modelId": "amo"
+  },
+  {
+    "brandName": "E-SPRINTO",
+    "brandId": "e-sprinto",
+    "modelName": "Aeroo Pro",
+    "modelId": "aeroo-pro"
+  },
+  {
+    "brandName": "WARIVO MOTORS",
+    "brandId": "warivo-motors",
+    "modelName": "Wolf",
+    "modelId": "wolf"
+  },
+  {
+    "brandName": "WARIVO MOTORS",
+    "brandId": "warivo-motors",
+    "modelName": "Eagle",
+    "modelId": "eagle"
+  },
+  {
+    "brandName": "WARIVO MOTORS",
+    "brandId": "warivo-motors",
+    "modelName": "Panther EV",
+    "modelId": "panther-ev"
+  },
+  {
+    "brandName": "NUMEROS MOTORS",
+    "brandId": "numeros-motors",
+    "modelName": "Diplos",
+    "modelId": "diplos"
+  },
+  {
+    "brandName": "NUMEROS MOTORS",
+    "brandId": "numeros-motors",
+    "modelName": "Diplos Max",
+    "modelId": "diplos-max"
+  },
+  {
+    "brandName": "NUMEROS MOTORS",
+    "brandId": "numeros-motors",
+    "modelName": "Diplos Plus",
+    "modelId": "diplos-plus"
+  },
+  {
+    "brandName": "EARTH ENERGY EV",
+    "brandId": "earth-energy-ev",
+    "modelName": "Evolve R",
+    "modelId": "evolve-r"
+  },
+  {
+    "brandName": "EARTH ENERGY EV",
+    "brandId": "earth-energy-ev",
+    "modelName": "Evolve ST",
+    "modelId": "evolve-st"
+  },
+  {
+    "brandName": "EARTH ENERGY EV",
+    "brandId": "earth-energy-ev",
+    "modelName": "Glyde",
+    "modelId": "glyde"
+  },
+  {
+    "brandName": "AVON E-VEHICLES",
+    "brandId": "avon-e-vehicles",
+    "modelName": "E-Scoot 60",
+    "modelId": "e-scoot-60"
+  },
+  {
+    "brandName": "AVON E-VEHICLES",
+    "brandId": "avon-e-vehicles",
+    "modelName": "E-Scoot Plus",
+    "modelId": "e-scoot-plus"
+  },
+  {
+    "brandName": "AVON E-VEHICLES",
+    "brandId": "avon-e-vehicles",
+    "modelName": "E-Bike 48V",
+    "modelId": "e-bike-48v"
+  },
+  {
+    "brandName": "AVAN MOTORS",
+    "brandId": "avan-motors",
+    "modelName": "Trend E",
+    "modelId": "trend-e"
+  },
+  {
+    "brandName": "AVAN MOTORS",
+    "brandId": "avan-motors",
+    "modelName": "Xero+",
+    "modelId": "xero"
+  },
+  {
+    "brandName": "AVAN MOTORS",
+    "brandId": "avan-motors",
+    "modelName": "Xero Neo",
+    "modelId": "xero-neo"
+  },
+  {
+    "brandName": "AVAN MOTORS",
+    "brandId": "avan-motors",
+    "modelName": "Scarlet",
+    "modelId": "scarlet"
+  },
+  {
+    "brandName": "MOTOVOLT",
+    "brandId": "motovolt",
+    "modelName": "URBN",
+    "modelId": "urbn"
+  },
+  {
+    "brandName": "MOTOVOLT",
+    "brandId": "motovolt",
+    "modelName": "Versus",
+    "modelId": "versus"
+  },
+  {
+    "brandName": "SVITCH",
+    "brandId": "svitch",
+    "modelName": "CSR 762",
+    "modelId": "csr-762"
+  },
+  {
+    "brandName": "SVITCH",
+    "brandId": "svitch",
+    "modelName": "Svitch Classic",
+    "modelId": "svitch-classic"
+  },
+  {
+    "brandName": "KINETIC GREEN",
+    "brandId": "kinetic-green",
+    "modelName": "E-Luna",
+    "modelId": "e-luna"
+  },
+  {
+    "brandName": "KINETIC GREEN",
+    "brandId": "kinetic-green",
+    "modelName": "E-Luna X1",
+    "modelId": "e-luna-x1"
+  },
+  {
+    "brandName": "KINETIC GREEN",
+    "brandId": "kinetic-green",
+    "modelName": "Zing HS",
+    "modelId": "zing-hs"
+  },
+  {
+    "brandName": "KINETIC GREEN",
+    "brandId": "kinetic-green",
+    "modelName": "5S",
+    "modelId": "5s"
+  },
+  {
+    "brandName": "KINETIC GREEN",
+    "brandId": "kinetic-green",
+    "modelName": "E-Bike",
+    "modelId": "e-bike"
+  },
+  {
+    "brandName": "OREVA",
+    "brandId": "oreva",
+    "modelName": "Oreva E-Bike",
+    "modelId": "oreva-e-bike"
+  },
+  {
+    "brandName": "OREVA",
+    "brandId": "oreva",
+    "modelName": "Oreva Joy",
+    "modelId": "oreva-joy"
+  },
+  {
+    "brandName": "OREVA",
+    "brandId": "oreva",
+    "modelName": "Oreva Electron",
+    "modelId": "oreva-electron"
+  },
+  {
+    "brandName": "REVOLT MOTORS (RATTANINDIA)",
+    "brandId": "revolt-motors",
+    "modelName": "RV400",
+    "modelId": "rv400"
+  },
+  {
+    "brandName": "REVOLT MOTORS (RATTANINDIA)",
+    "brandId": "revolt-motors",
+    "modelName": "RV400 BRZ",
+    "modelId": "rv400-brz"
+  },
+  {
+    "brandName": "REVOLT MOTORS (RATTANINDIA)",
+    "brandId": "revolt-motors",
+    "modelName": "RV1",
+    "modelId": "rv1"
+  },
+  {
+    "brandName": "ULTRAVIOLETTE",
+    "brandId": "ultraviolette",
+    "modelName": "F77 Mach 2",
+    "modelId": "f77-mach-2"
+  },
+  {
+    "brandName": "ULTRAVIOLETTE",
+    "brandId": "ultraviolette",
+    "modelName": "F77 Recon",
+    "modelId": "f77-recon"
+  },
+  {
+    "brandName": "OBEN ELECTRIC",
+    "brandId": "oben-ev",
+    "modelName": "Rorr",
+    "modelId": "rorr"
+  },
+  {
+    "brandName": "OBEN ELECTRIC",
+    "brandId": "oben-ev",
+    "modelName": "Rorr EZ",
+    "modelId": "rorr-ez"
+  },
+  {
+    "brandName": "MATTER",
+    "brandId": "matter",
+    "modelName": "Matter Aera 5000",
+    "modelId": "matter-aera-5000"
+  },
+  {
+    "brandName": "MATTER",
+    "brandId": "matter",
+    "modelName": "Matter Aera 5000+",
+    "modelId": "matter-aera-5000"
+  },
+  {
+    "brandName": "MATTER",
+    "brandId": "matter",
+    "modelName": "Matter Aera 6000",
+    "modelId": "matter-aera-6000"
+  },
+  {
+    "brandName": "GREAVES ELECTRIC (AMPERE)",
+    "brandId": "ampere-greaves",
+    "modelName": "Magnus EX",
+    "modelId": "magnus-ex"
+  },
+  {
+    "brandName": "GREAVES ELECTRIC (AMPERE)",
+    "brandId": "ampere-greaves",
+    "modelName": "Magnus Neo",
+    "modelId": "magnus-neo"
+  },
+  {
+    "brandName": "GREAVES ELECTRIC (AMPERE)",
+    "brandId": "ampere-greaves",
+    "modelName": "Magnus Grand",
+    "modelId": "magnus-grand"
+  },
+  {
+    "brandName": "GREAVES ELECTRIC (AMPERE)",
+    "brandId": "ampere-greaves",
+    "modelName": "Magnus G Max",
+    "modelId": "magnus-g-max"
+  },
+  {
+    "brandName": "GREAVES ELECTRIC (AMPERE)",
+    "brandId": "ampere-greaves",
+    "modelName": "Primus",
+    "modelId": "primus"
+  },
+  {
+    "brandName": "GREAVES ELECTRIC (AMPERE)",
+    "brandId": "ampere-greaves",
+    "modelName": "Zeal",
+    "modelId": "zeal"
+  },
+  {
+    "brandName": "GREAVES ELECTRIC (AMPERE)",
+    "brandId": "ampere-greaves",
+    "modelName": "Reo 80",
+    "modelId": "reo-80"
+  },
+  {
+    "brandName": "KABIRA MOBILITY",
+    "brandId": "kabira-mobility",
+    "modelName": "KM3000",
+    "modelId": "km3000"
+  },
+  {
+    "brandName": "KABIRA MOBILITY",
+    "brandId": "kabira-mobility",
+    "modelName": "KM4000",
+    "modelId": "km4000"
+  },
+  {
+    "brandName": "KABIRA MOBILITY",
+    "brandId": "kabira-mobility",
+    "modelName": "Intercity NEO",
+    "modelId": "intercity-neo"
+  },
+  {
+    "brandName": "KABIRA MOBILITY",
+    "brandId": "kabira-mobility",
+    "modelName": "Intercity FS",
+    "modelId": "intercity-fs"
+  },
+  {
+    "brandName": "JOY E-BIKE (WARDWIZARD)",
+    "brandId": "joy-e-bike",
+    "modelName": "Wolf",
+    "modelId": "wolf"
+  },
+  {
+    "brandName": "JOY E-BIKE (WARDWIZARD)",
+    "brandId": "joy-e-bike",
+    "modelName": "Wolf Plus",
+    "modelId": "wolf-plus"
+  },
+  {
+    "brandName": "JOY E-BIKE (WARDWIZARD)",
+    "brandId": "joy-e-bike",
+    "modelName": "Beast",
+    "modelId": "beast"
+  },
+  {
+    "brandName": "JOY E-BIKE (WARDWIZARD)",
+    "brandId": "joy-e-bike",
+    "modelName": "Monster",
+    "modelId": "monster"
+  },
+  {
+    "brandName": "JOY E-BIKE (WARDWIZARD)",
+    "brandId": "joy-e-bike",
+    "modelName": "E-Glob Plus",
+    "modelId": "e-glob-plus"
+  },
+  {
+    "brandName": "JOY E-BIKE (WARDWIZARD)",
+    "brandId": "joy-e-bike",
+    "modelName": "Nanu",
+    "modelId": "nanu"
+  },
+  {
+    "brandName": "JOY E-BIKE (WARDWIZARD)",
+    "brandId": "joy-e-bike",
+    "modelName": "Thunder",
+    "modelId": "thunder"
+  },
+  {
+    "brandName": "PURE EV",
+    "brandId": "pure-ev",
+    "modelName": "ETrance Neo",
+    "modelId": "etrance-neo"
+  },
+  {
+    "brandName": "PURE EV",
+    "brandId": "pure-ev",
+    "modelName": "EPluto 7G",
+    "modelId": "epluto-7g"
+  },
+  {
+    "brandName": "PURE EV",
+    "brandId": "pure-ev",
+    "modelName": "EPluto 7G Plus",
+    "modelId": "epluto-7g-plus"
+  },
+  {
+    "brandName": "PURE EV",
+    "brandId": "pure-ev",
+    "modelName": "Etron Plus",
+    "modelId": "etron-plus"
+  },
+  {
+    "brandName": "PURE EV",
+    "brandId": "pure-ev",
+    "modelName": "Tork",
+    "modelId": "tork"
+  },
+  {
+    "brandName": "BGAUSS (RR GLOBAL)",
+    "brandId": "bgauss",
+    "modelName": "B8",
+    "modelId": "b8"
+  },
+  {
+    "brandName": "BGAUSS (RR GLOBAL)",
+    "brandId": "bgauss",
+    "modelName": "B8i",
+    "modelId": "b8i"
+  },
+  {
+    "brandName": "BGAUSS (RR GLOBAL)",
+    "brandId": "bgauss",
+    "modelName": "C12",
+    "modelId": "c12"
+  },
+  {
+    "brandName": "BGAUSS (RR GLOBAL)",
+    "brandId": "bgauss",
+    "modelName": "C12i",
+    "modelId": "c12i"
+  },
+  {
+    "brandName": "BGAUSS (RR GLOBAL)",
+    "brandId": "bgauss",
+    "modelName": "RUV3i",
+    "modelId": "ruv3i"
+  },
+  {
+    "brandName": "HOP ELECTRIC",
+    "brandId": "hop-ev",
+    "modelName": "Hop Leo",
+    "modelId": "hop-leo"
+  },
+  {
+    "brandName": "HOP ELECTRIC",
+    "brandId": "hop-ev",
+    "modelName": "Hop Oxo",
+    "modelId": "hop-oxo"
+  },
+  {
+    "brandName": "HOP ELECTRIC",
+    "brandId": "hop-ev",
+    "modelName": "Hop LYF",
+    "modelId": "hop-lyf"
+  },
+  {
+    "brandName": "GT FORCE",
+    "brandId": "gt-force",
+    "modelName": "GT Rage",
+    "modelId": "gt-rage"
+  },
+  {
+    "brandName": "GT FORCE",
+    "brandId": "gt-force",
+    "modelName": "GT Hunt",
+    "modelId": "gt-hunt"
+  },
+  {
+    "brandName": "GT FORCE",
+    "brandId": "gt-force",
+    "modelName": "GT Cruise",
+    "modelId": "gt-cruise"
+  },
+  {
+    "brandName": "KOMAKI ELECTRIC",
+    "brandId": "komaki-ev",
+    "modelName": "X One",
+    "modelId": "x-one"
+  },
+  {
+    "brandName": "KOMAKI ELECTRIC",
+    "brandId": "komaki-ev",
+    "modelName": "Venice",
+    "modelId": "venice"
+  },
+  {
+    "brandName": "KOMAKI ELECTRIC",
+    "brandId": "komaki-ev",
+    "modelName": "Ranger",
+    "modelId": "ranger"
+  },
+  {
+    "brandName": "KOMAKI ELECTRIC",
+    "brandId": "komaki-ev",
+    "modelName": "Flora",
+    "modelId": "flora"
+  },
+  {
+    "brandName": "KOMAKI ELECTRIC",
+    "brandId": "komaki-ev",
+    "modelName": "MX3",
+    "modelId": "mx3"
+  },
+  {
+    "brandName": "YULU BIKES",
+    "brandId": "yulu-bikes",
+    "modelName": "Yulu Miracle",
+    "modelId": "yulu-miracle"
+  },
+  {
+    "brandName": "YULU BIKES",
+    "brandId": "yulu-bikes",
+    "modelName": "Yulu Move",
+    "modelId": "yulu-move"
+  },
+  {
+    "brandName": "YULU BIKES",
+    "brandId": "yulu-bikes",
+    "modelName": "Yulu Wynn",
+    "modelId": "yulu-wynn"
+  },
+  {
+    "brandName": "iGOWISE MOBILITY",
+    "brandId": "igowise-mobility",
+    "modelName": "Abso i2",
+    "modelId": "abso-i2"
+  },
+  {
+    "brandName": "POISE",
+    "brandId": "poise",
+    "modelName": "Poise M1",
+    "modelId": "poise-m1"
+  },
+  {
+    "brandName": "POISE",
+    "brandId": "poise",
+    "modelName": "Poise Electric Scooter",
+    "modelId": "poise-electric-scooter"
+  },
+  {
+    "brandName": "GRETA ELECTRIC",
+    "brandId": "greta-ev",
+    "modelName": "Greta S1",
+    "modelId": "greta-s1"
+  },
+  {
+    "brandName": "GRETA ELECTRIC",
+    "brandId": "greta-ev",
+    "modelName": "Greta Pro",
+    "modelId": "greta-pro"
+  },
+  {
+    "brandName": "PREVAIL ELECTRIC",
+    "brandId": "prevail-ev",
+    "modelName": "Prevail X1",
+    "modelId": "prevail-x1"
+  },
+  {
+    "brandName": "PREVAIL ELECTRIC",
+    "brandId": "prevail-ev",
+    "modelName": "Prevail Stormer",
+    "modelId": "prevail-stormer"
+  },
+  {
+    "brandName": "EEVE INDIA",
+    "brandId": "eeve",
+    "modelName": "Soul",
+    "modelId": "soul"
+  },
+  {
+    "brandName": "EEVE INDIA",
+    "brandId": "eeve",
+    "modelName": "Xeniaa",
+    "modelId": "xeniaa"
+  },
+  {
+    "brandName": "EEVE INDIA",
+    "brandId": "eeve",
+    "modelName": "Tourer",
+    "modelId": "tourer"
+  },
+  {
+    "brandName": "PUR ENERGY",
+    "brandId": "pur-energy",
+    "modelName": "Pur S1",
+    "modelId": "pur-s1"
+  },
+  {
+    "brandName": "PUR ENERGY",
+    "brandId": "pur-energy",
+    "modelName": "Pur Neo",
+    "modelId": "pur-neo"
+  },
+  {
+    "brandName": "VEGH MOTORS",
+    "brandId": "vegh-motors",
+    "modelName": "Vegh S60",
+    "modelId": "vegh-s60"
+  },
+  {
+    "brandName": "VEGH MOTORS",
+    "brandId": "vegh-motors",
+    "modelName": "Vegh L25",
+    "modelId": "vegh-l25"
+  },
+  {
+    "brandName": "VEGH MOTORS",
+    "brandId": "vegh-motors",
+    "modelName": "Vegh S25",
+    "modelId": "vegh-s25"
+  },
+  {
+    "brandName": "ONE MOTO INDIA",
+    "brandId": "one-moto",
+    "modelName": "Commuta",
+    "modelId": "commuta"
+  },
+  {
+    "brandName": "ONE MOTO INDIA",
+    "brandId": "one-moto",
+    "modelName": "Electa",
+    "modelId": "electa"
+  },
+  {
+    "brandName": "ONE MOTO INDIA",
+    "brandId": "one-moto",
+    "modelName": "Cargo EV",
+    "modelId": "cargo-ev"
+  },
+  {
+    "brandName": "YAKUZA ELECTRIC",
+    "brandId": "yakuza-ev",
+    "modelName": "Yakuza Rubie",
+    "modelId": "yakuza-rubie"
+  },
+  {
+    "brandName": "YAKUZA ELECTRIC",
+    "brandId": "yakuza-ev",
+    "modelName": "Yakuza Beast",
+    "modelId": "yakuza-beast"
+  },
+  {
+    "brandName": "YOBYKES",
+    "brandId": "yobykes",
+    "modelName": "YObykes Zest",
+    "modelId": "yobykes-zest"
+  },
+  {
+    "brandName": "YOBYKES",
+    "brandId": "yobykes",
+    "modelName": "YObykes Edge",
+    "modelId": "yobykes-edge"
+  },
+  {
+    "brandName": "AVERA ELECTRIC",
+    "brandId": "avera-ev",
+    "modelName": "Avera EV Scooter",
+    "modelId": "avera-ev-scooter"
+  },
+  {
+    "brandName": "CORRIT ELECTRIC",
+    "brandId": "corrit-ev",
+    "modelName": "Corrit EC-1",
+    "modelId": "corrit-ec-1"
+  },
+  {
+    "brandName": "GAURA ELECTRIC",
+    "brandId": "gaura-ev",
+    "modelName": "Gaura G1",
+    "modelId": "gaura-g1"
+  },
+  {
+    "brandName": "GAURA ELECTRIC",
+    "brandId": "gaura-ev",
+    "modelName": "Gaura Pro",
+    "modelId": "gaura-pro"
+  },
+  {
+    "brandName": "FIDATO EVTECH",
+    "brandId": "fidato-evtech",
+    "modelName": "Fidato One",
+    "modelId": "fidato-one"
+  },
+  {
+    "brandName": "FIDATO EVTECH",
+    "brandId": "fidato-evtech",
+    "modelName": "Fidato Scooter",
+    "modelId": "fidato-scooter"
+  },
+  {
+    "brandName": "LI-IONS ELEKTRIK",
+    "brandId": "li-ions-elektrik",
+    "modelName": "Li-ions Scooter",
+    "modelId": "li-ions-scooter"
+  },
+  {
+    "brandName": "LI-IONS ELEKTRIK",
+    "brandId": "li-ions-elektrik",
+    "modelName": "Li-ions Commuter",
+    "modelId": "li-ions-commuter"
+  },
+  {
+    "brandName": "NDS ECO MOTORS",
+    "brandId": "nds-eco-motors",
+    "modelName": "NDS EV Scooter",
+    "modelId": "nds-ev-scooter"
+  },
+  {
+    "brandName": "NDS ECO MOTORS",
+    "brandId": "nds-eco-motors",
+    "modelName": "Urban EV",
+    "modelId": "urban-ev"
+  },
+  {
+    "brandName": "iSCOOT",
+    "brandId": "iscoot",
+    "modelName": "iScoot Uno",
+    "modelId": "iscoot-uno"
+  },
+  {
+    "brandName": "iSCOOT",
+    "brandId": "iscoot",
+    "modelName": "iScoot Duo",
+    "modelId": "iscoot-duo"
+  },
+  {
+    "brandName": "HAYASA E-MOBILITY",
+    "brandId": "hayasa-e-mobility",
+    "modelName": "Hayasa HS1",
+    "modelId": "hayasa-hs1"
+  },
+  {
+    "brandName": "HAYASA E-MOBILITY",
+    "brandId": "hayasa-e-mobility",
+    "modelName": "Hayasa Urban",
+    "modelId": "hayasa-urban"
+  },
+  {
+    "brandName": "HCD INDIA",
+    "brandId": "hcd",
+    "modelName": "HCD EV Scooter",
+    "modelId": "hcd-ev-scooter"
+  },
+  {
+    "brandName": "HCD INDIA",
+    "brandId": "hcd",
+    "modelName": "HCD Urban",
+    "modelId": "hcd-urban"
+  },
+  {
+    "brandName": "RUNR",
+    "brandId": "runr",
+    "modelName": "Runr EV",
+    "modelId": "runr-ev"
+  },
+  {
+    "brandName": "RUNR",
+    "brandId": "runr",
+    "modelName": "Runr Sport",
+    "modelId": "runr-sport"
+  },
+  {
+    "brandName": "ENIGMA AUTOMOBILE",
+    "brandId": "enigma-automobile",
+    "modelName": "Crux R",
+    "modelId": "crux-r"
+  },
+  {
+    "brandName": "ENIGMA AUTOMOBILE",
+    "brandId": "enigma-automobile",
+    "modelName": "X1",
+    "modelId": "x1"
+  },
+  {
+    "brandName": "BNC MOTOR",
+    "brandId": "bnc-motor",
+    "modelName": "BNC Challenger",
+    "modelId": "bnc-challenger"
+  },
+  {
+    "brandName": "BNC MOTOR",
+    "brandId": "bnc-motor",
+    "modelName": "BNC Urban",
+    "modelId": "bnc-urban"
+  },
+  {
+    "brandName": "AERORIDE",
+    "brandId": "aeroride",
+    "modelName": "E-Spark",
+    "modelId": "e-spark"
+  },
+  {
+    "brandName": "AERORIDE",
+    "brandId": "aeroride",
+    "modelName": "Aeroride Pro",
+    "modelId": "aeroride-pro"
+  },
+  {
+    "brandName": "BOOM MOTORS",
+    "brandId": "boom-motors",
+    "modelName": "Boom Zoro",
+    "modelId": "boom-zoro"
+  },
+  {
+    "brandName": "BOOM MOTORS",
+    "brandId": "boom-motors",
+    "modelName": "Boom Pro",
+    "modelId": "boom-pro"
+  },
+  {
+    "brandName": "STELLA AUTOMOBILI",
+    "brandId": "stella-automobili",
+    "modelName": "Stella S1",
+    "modelId": "stella-s1"
+  },
+  {
+    "brandName": "STELLA AUTOMOBILI",
+    "brandId": "stella-automobili",
+    "modelName": "Stella Urban",
+    "modelId": "stella-urban"
+  },
+  {
+    "brandName": "CRAYON MOTORS",
+    "brandId": "crayon-motors",
+    "modelName": "Crayon C1",
+    "modelId": "crayon-c1"
+  },
+  {
+    "brandName": "CRAYON MOTORS",
+    "brandId": "crayon-motors",
+    "modelName": "Crayon Pro",
+    "modelId": "crayon-pro"
+  },
+  {
+    "brandName": "RIVER MOBILITY",
+    "brandId": "river-mobility",
+    "modelName": "River Indie",
+    "modelId": "river-indie"
+  }
+]

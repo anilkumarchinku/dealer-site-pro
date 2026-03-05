@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2W & 3W Model Image Viewer</title>
+    <style>
+        :root {
+            --bg-color: #0f1115;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --success: #10b981;
+            --danger: #ef4444;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--card-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2rem;
+            background: linear-gradient(to right, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            margin: 0;
+            color: var(--text-muted);
+        }
+
+        .stats {
+            display: flex;
+            gap: 1.5rem;
+            background: var(--card-bg);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-val {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            position: sticky;
+            top: 1rem;
+            z-index: 10;
+            background: rgba(15, 17, 21, 0.8);
+            backdrop-filter: blur(12px);
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
+        }
+
+        select,
+        input {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input {
+            flex: 1;
+        }
+
+        select:focus,
+        input:focus {
+            border-color: var(--accent);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-container {
+            width: 100%;
+            height: 200px;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s;
+        }
+
+        .card:hover .image-container img {
+            transform: scale(1.05);
+        }
+
+        .placeholder {
+            color: #ccc;
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .placeholder svg {
+            width: 32px;
+            height: 32px;
+            opacity: 0.5;
+        }
+
+        .card-body {
+            padding: 1.25rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-badge {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cat-badge {
+            background: rgba(255, 255, 255, 0.1);
+            color: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .cat-badge.electric {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+        }
+
+        .cat-badge.three-wheeler {
+            background: rgba(245, 158, 11, 0.2);
+            color: #fbbf24;
+        }
+
+        .model-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0 0 0.5rem 0;
+            color: white;
+        }
+
+        .meta-info {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid var(--card-border);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Loading state */
+        .loading {
+            text-align: center;
+            padding: 4rem;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div>
+                <h1>2W & 3W Model Gallery</h1>
+                <p>Browsing local downloaded images from <code
+                        style="color:var(--accent)">/public/data/brand-model-images/</code></p>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-val" id="totalModels">0</span>
+                    <span class="stat-label">Total Models</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-val" id="totalBrands">0</span>
+                    <span class="stat-label">Brands</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <input type="text" id="searchInput"
+                placeholder="Search models or brands (e.g., 'Splendor', 'Hero', 'Electric')...">
+
+            <select id="brandFilter">
+                <option value="all">All Brands</option>
+                <!-- Populated via JS -->
+            </select>
+
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="2w">Two Wheelers (ICE)</option>
+                <option value="ev">Electric Two Wheelers</option>
+                <option value="3w">Three Wheelers</option>
+            </select>
+        </div>
+
+        <div id="loading" class="loading">Loading models data...</div>
+        <div class="grid" id="modelsGrid">
+            <!-- Cards generated via JS -->
+        </div>
+    </div>
+
+    <script>
+        // Helper to generate slug based on exactly what node scraper used
+        function slugify(str) {
+            return str.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').trim();
+        }
+
+        let allModels = [];
+
+        // Try to handle image load errors by testing different extensions
+        function handleImageError(img, folder, brandId, slug) {
+            const currentSrc = img.src;
+
+            // The scraper primarily downloaded .jpg files, but occasionally might have saved .webp or .png
+            // If it fails, try the next one in sequence
+            if (currentSrc.endsWith('.jpg')) {
+                img.src = `data/brand-model-images/${folder}/${brandId}/${slug}.webp`;
+            } else if (currentSrc.endsWith('.webp')) {
+                img.src = `data/brand-model-images/${folder}/${brandId}/${slug}.png`;
+            } else if (currentSrc.endsWith('.png')) {
+                // All failed, show placeholder
+                img.style.display = 'none';
+                img.nextElementSibling.style.display = 'flex';
+            }
+        }
+
+        async function loadData() {
+            try {
+                const res = await fetch('data/brand-models.json');
+                const data = await res.json();
+
+                const brands = new Set();
+
+                // Process Traditional 2W
+                data.twoWheelers.traditional.forEach(b => {
+                    brands.add(b.brand);
+                    Object.entries(b.models).forEach(([type, list]) => {
+                        if (Array.isArray(list)) {
+                            list.forEach(model => {
+                                allModels.push({
+                                    brandId: b.brandId,
+                                    brand: b.brand,
+                                    model: model,
+                                    type: type,
+                                    category: '2w',
+                                    folder: '2w',
+                                    slug: slugify(model)
+                                });
+                            });
+                        }
+                    });
+                });
+
+                // Process Electric 2W
+                data.twoWheelers.electric.forEach(b => {
+                    brands.add(b.brand);
+                    Object.entries(b.models).forEach(([type, list]) => {
+                        if (Array.isArray(list)) {
+                            list.forEach(model => {
+                                allModels.push({
+                                    brandId: b.brandId,
+                                    brand: b.brand,
+                                    model: model,
+                                    type: type,
+                                    category: 'ev',
+                                    folder: '2w', // Saved in 2w folder as per the unified scraper
+                                    slug: slugify(model)
+                                });
+                            });
+                        }
+                    });
+                });
+
+                // Process 3W
+                data.threeWheelers.forEach(b => {
+                    if (b.models && !b.models.note) {
+                        brands.add(b.brand);
+                        Object.entries(b.models).forEach(([type, list]) => {
+                            if (Array.isArray(list)) {
+                                list.forEach(model => {
+                                    allModels.push({
+                                        brandId: b.brandId,
+                                        brand: b.brand,
+                                        model: model,
+                                        type: type,
+                                        category: '3w',
+                                        folder: '3w',
+                                        slug: slugify(model)
+                                    });
+                                });
+                            }
+                        });
+                    }
+                });
+
+                // Update stats
+                document.getElementById('totalModels').innerText = allModels.length;
+                document.getElementById('totalBrands').innerText = brands.size;
+
+                // Populate Brand filter
+                const brandSelect = document.getElementById('brandFilter');
+                Array.from(brands).sort().forEach(brand => {
+                    const opt = document.createElement('option');
+                    opt.value = brand;
+                    opt.textContent = brand;
+                    brandSelect.appendChild(opt);
+                });
+
+                document.getElementById('loading').style.display = 'none';
+                renderGrid(allModels);
+
+                // Setup Search/Filter
+                document.getElementById('searchInput').addEventListener('input', filterModels);
+                document.getElementById('brandFilter').addEventListener('change', filterModels);
+                document.getElementById('categoryFilter').addEventListener('change', filterModels);
+
+            } catch (err) {
+                document.getElementById('loading').innerText = 'Error loading data: ' + err.message;
+                console.error(err);
+            }
+        }
+
+        function renderGrid(models) {
+            const grid = document.getElementById('modelsGrid');
+            grid.innerHTML = '';
+
+            // Sort models by brand, then name
+            const sorted = [...models].sort((a, b) => {
+                if (a.brand !== b.brand) return a.brand.localeCompare(b.brand);
+                return a.model.localeCompare(b.model);
+            });
+
+            const fragment = document.createDocumentFragment();
+
+            sorted.forEach(m => {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                let badgeClass = 'cat-badge';
+                let badgeText = 'ICE';
+                if (m.category === 'ev') { badgeClass += ' electric'; badgeText = 'EV'; }
+                else if (m.category === '3w') { badgeClass += ' three-wheeler'; badgeText = '3W'; }
+
+                // Start with .jpg default assumption from scraper
+                const initialImgSrc = `data/brand-model-images/${m.folder}/${m.brandId}/${m.slug}.jpg`;
+
+                card.innerHTML = `
+            <div class="image-container">
+                <img src="${initialImgSrc}" 
+                     alt="${m.brand} ${m.model}" 
+                     onerror="handleImageError(this, '${m.folder}', '${m.brandId}', '${m.slug}')"
+                     loading="lazy">
+                
+                <div class="placeholder" style="display: none;">
+                    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/></svg>
+                    <span>No Image</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="brand-badge">
+                    <span>${m.brand}</span>
+                    <span class="${badgeClass}">${badgeText}</span>
+                </div>
+                <h3 class="model-name">${m.model}</h3>
+                <div class="meta-info">
+                    <span>Type: ${m.type}</span>
+                    <span style="font-family: monospace; font-size: 0.7rem;">${m.slug}</span>
+                </div>
+            </div>
+        `;
+                fragment.appendChild(card);
+            });
+
+            grid.appendChild(fragment);
+        }
+
+        function filterModels() {
+            const q = document.getElementById('searchInput').value.toLowerCase();
+            const brand = document.getElementById('brandFilter').value;
+            const cat = document.getElementById('categoryFilter').value;
+
+            const filtered = allModels.filter(m => {
+                const matchQ = m.model.toLowerCase().includes(q) || m.brand.toLowerCase().includes(q);
+                const matchBrand = (brand === 'all' || m.brand === brand);
+                const matchCat = (cat === 'all' || m.category === cat);
+                return matchQ && matchBrand && matchCat;
+            });
+
+            renderGrid(filtered);
+        }
+
+        window.addEventListener('DOMContentLoaded', loadData);
+    </script>
+
+</body>
+
+</html>
