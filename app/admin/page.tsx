@@ -102,15 +102,15 @@ const BRAND_CATEGORIES = [
     },
     {
         name: "Two Wheelers (ICE)",
-        brands: ["Hero MotoCorp", "Honda", "TVS", "Bajaj Auto", "Yamaha", "Suzuki", "Royal Enfield", "KTM", "Kawasaki"]
+        brands: ["Hero MotoCorp", "Honda Motorcycle & Scooter India", "TVS Motor Company", "Bajaj Auto", "Royal Enfield", "Yamaha India", "Suzuki Motorcycle India", "KTM India", "Husqvarna India", "Jawa Motorcycles", "Yezdi Motorcycles", "Benelli India", "Kawasaki India", "Aprilia India", "Vespa India", "Harley-Davidson India", "Triumph India", "Ducati India", "BMW Motorrad India", "Indian Motorcycle", "Moto Guzzi", "CFMoto India", "Keeway India", "Zontes India", "Mahindra Two Wheelers"]
     },
     {
         name: "Two Wheelers (EV)",
-        brands: ["Ola Electric", "Ather Energy", "TVS", "Bajaj Auto"]
+        brands: ["Ola Electric", "Ather Energy", "Bajaj Chetak", "TVS iQube", "Hero Electric", "Vida (Hero MotoCorp)", "Revolt Motors", "Okinawa Autotech", "Ampere (Greaves Electric)", "Tork Motors", "Ultraviolette Automotive", "Simple Energy", "Kabira Mobility", "Pure EV", "Matter", "Hop Electric", "Okaya EV (OPG Mobility)", "Oben Electric", "Lectrix EV", "River", "Odysse Electric", "Joy e-bike", "Komaki", "Bounce Infinity", "Quantum Energy", "Yulu"]
     },
     {
         name: "Three Wheelers",
-        brands: ["Mahindra", "Bajaj", "TVS", "Piaggio", "Greaves Electric", "Kinetic Green"]
+        brands: ["Bajaj Auto (3W)", "Piaggio Ape", "TVS King", "Mahindra (3W)", "Atul Auto", "Kinetic Green", "Lohia Auto", "Euler Motors", "Greaves Electric Mobility", "Force Motors"]
     }
 ];
 
@@ -119,21 +119,32 @@ const ALL_BRANDS = BRAND_CATEGORIES.flatMap(cat => cat.brands);
 
 const KNOWN_LOGOS: Record<string, string> = {
     "Hero MotoCorp": "/assets/logos/2w/hero-motocorp.svg",
-    "Honda": "/assets/logos/honda.png",
-    "TVS": "/assets/logos/2w/tvs-motor.svg",
+    "Honda Motorcycle & Scooter India": "/assets/logos/2w/honda-motorcycles.svg",
+    "TVS Motor Company": "/assets/logos/2w/tvs-motor.svg",
     "Bajaj Auto": "/assets/logos/2w/bajaj-auto.svg",
-    "Bajaj": "/assets/logos/2w/bajaj-auto.svg",
-    "Yamaha": "/assets/logos/2w/yamaha.svg",
-    "Suzuki": "/assets/logos/suzuki.png",
+    "Bajaj Auto (3W)": "/assets/logos/2w/bajaj-auto.svg",
+    "Yamaha India": "/assets/logos/2w/yamaha.svg",
+    "Suzuki Motorcycle India": "/assets/logos/2w/suzuki-motorcycle.svg",
     "Royal Enfield": "/assets/logos/2w/royal-enfield.svg",
-    "KTM": "/assets/logos/2w/ktm.svg",
-    "Kawasaki": "/assets/logos/2w/kawasaki.svg",
+    "KTM India": "/assets/logos/2w/ktm.svg",
+    "Kawasaki India": "/assets/logos/2w/kawasaki.svg",
     "Ola Electric": "/assets/logos/2w/ola-electric.svg",
     "Ather Energy": "/assets/logos/2w/ather-energy.svg",
-    "Mahindra": "/assets/logos/mahindra.png",
-    "Piaggio": "/assets/logos/piaggio.png",
-    "Greaves Electric": "/assets/logos/greaves.png",
-    "Kinetic Green": "/assets/logos/kinetic.png"
+    "Aprilia India": "/assets/logos/2w/aprilia.svg",
+    "BMW Motorrad India": "/assets/logos/2w/bmw-motorrad.svg",
+    "Ducati India": "/assets/logos/2w/ducati.svg",
+    "Harley-Davidson India": "/assets/logos/2w/harley-davidson.svg",
+    "Husqvarna India": "/assets/logos/2w/husqvarna.svg",
+    "Triumph India": "/assets/logos/2w/triumph.svg",
+    "Vespa India": "/assets/logos/2w/vespa.svg",
+    "CFMoto India": "/assets/logos/2w/cfmoto.png",
+    "Mahindra (3W)": "/assets/logos/mahindra.png",
+    "Mahindra Two Wheelers": "/assets/logos/mahindra.png",
+    "Piaggio Ape": "/assets/logos/piaggio.png",
+    "Greaves Electric Mobility": "/assets/logos/greaves.png",
+    "Kinetic Green": "/assets/logos/kinetic.png",
+    "TVS King": "/assets/logos/2w/tvs-motor.svg",
+    "Vida (Hero MotoCorp)": "/assets/logos/2w/hero-motocorp.svg"
 };
 
 function BrandLogo({ brandName }: { brandName: string }) {
@@ -180,7 +191,7 @@ export default function AdminDashboard() {
         return () => { isMounted = false; };
     }, []);
 
-    
+
     const handleLaunch = async () => {
         setIsLaunching(true);
 
@@ -217,7 +228,7 @@ export default function AdminDashboard() {
             setTimeout(() => {
                 router.push(`/preview?brand=${encodeURIComponent(selectedBrand)}&template=${selectedTemplate}`);
             }, 600);
-            
+
         } catch (e) {
             console.error("Deploy error", e);
             setIsLaunching(false);
