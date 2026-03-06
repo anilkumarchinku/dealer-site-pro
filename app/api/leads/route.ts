@@ -20,11 +20,11 @@ import { sendLeadSmsToDealer } from '@/lib/services/sms-service'
 
 // ── Simple in-memory rate limiter (3 leads per IP per hour) ──────────────────
 const ipHitMap = new Map<string, { count: number; resetAt: number }>()
-const RATE_LIMIT   = 3
-const WINDOW_MS    = 60 * 60 * 1000 // 1 hour
+const RATE_LIMIT = 3
+const WINDOW_MS = 60 * 60 * 1000 // 1 hour
 
 function checkRateLimit(ip: string): boolean {
-    const now  = Date.now()
+    const now = Date.now()
     const entry = ipHitMap.get(ip)
 
     if (!entry || now > entry.resetAt) {
@@ -38,11 +38,11 @@ function checkRateLimit(ip: string): boolean {
     return true // allowed
 }
 
-// ── Supabase client with anon key (public API — no user session available) ───
+// ── Supabase client with SERVICE ROLE key (server-side only — bypasses RLS) ──
 function getSupabase() {
     return createClient(
         process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+        process.env.SUPABASE_SERVICE_ROLE_KEY!
     )
 }
 
@@ -53,8 +53,8 @@ export async function POST(request: NextRequest) {
     try {
         // ── Rate limiting ─────────────────────────────────────────────────────
         const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
-                ?? request.headers.get('x-real-ip')
-                ?? 'unknown'
+            ?? request.headers.get('x-real-ip')
+            ?? 'unknown'
 
         if (!checkRateLimit(ip)) {
             return NextResponse.json(
@@ -112,31 +112,31 @@ export async function POST(request: NextRequest) {
             .from('leads')
             .insert({
                 dealer_id,
-                name:       name.trim(),
-                phone:      phone.trim(),
-                email:      email?.trim()   ?? null,
-                message:    message?.trim() ?? null,
-                vehicle_id: car_id          ?? null,
-                source:     safeSource,
-                status:     'new',
+                name: name.trim(),
+                phone: phone.trim(),
+                email: email?.trim() ?? null,
+                message: message?.trim() ?? null,
+                vehicle_id: car_id ?? null,
+                source: safeSource,
+                status: 'new',
             })
             .select('id')
             .single()
 
         if (error) {
-            console.error('Lead insert error:', error)
+            console.error('Lead insert error:', error.message, error.details, error.hint)
             return NextResponse.json({ error: 'Failed to save enquiry' }, { status: 500 })
         }
 
         // ── SMS notification to dealer (fire-and-forget) ──────────────────────
         if (dealer.phone) {
             sendLeadSmsToDealer({
-                dealerPhone:   dealer.phone,
-                dealerName:    dealer.dealership_name,
-                customerName:  name.trim(),
+                dealerPhone: dealer.phone,
+                dealerName: dealer.dealership_name,
+                customerName: name.trim(),
                 customerPhone: phone.trim(),
-                carName:       car_name ?? undefined,
-                leadSource:    safeSource,
+                carName: car_name ?? undefined,
+                leadSource: safeSource,
             }).catch(() => { /* already logged inside */ })
         }
 

@@ -33,7 +33,7 @@ function checkRate(ip: string): boolean {
 function getSupabase() {
     return createClient(
         process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+        process.env.SUPABASE_SERVICE_ROLE_KEY!
     )
 }
 
@@ -68,8 +68,8 @@ export async function GET(request: NextRequest) {
 // ── POST: submit a new review ────────────────────────────────────────────────
 export async function POST(request: NextRequest) {
     const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
-            ?? request.headers.get('x-real-ip')
-            ?? 'unknown'
+        ?? request.headers.get('x-real-ip')
+        ?? 'unknown'
 
     if (!checkRate(ip)) {
         return NextResponse.json(
@@ -119,11 +119,11 @@ export async function POST(request: NextRequest) {
         .from('dealer_reviews')
         .insert({
             dealer_id,
-            reviewer_name:  reviewer_name.trim(),
+            reviewer_name: reviewer_name.trim(),
             rating,
-            review_text:    review_text?.trim() ?? null,
-            car_purchased:  car_purchased?.trim() ?? null,
-            is_approved:    autoApprove,
+            review_text: review_text?.trim() ?? null,
+            car_purchased: car_purchased?.trim() ?? null,
+            is_approved: autoApprove,
         })
 
     if (error) {
