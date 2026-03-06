@@ -66,6 +66,9 @@ export async function POST(request: NextRequest) {
         const body = await request.json()
         const { dealer_id, name, phone, email, message, car_id, car_name, lead_source } = body
 
+        // Extract referer to know which exact website this lead came from
+        const referer = request.headers.get('referer') || 'Direct/Unknown'
+
         // ── Validate required fields ──────────────────────────────────────────
         if (!dealer_id || !name || !phone) {
             return NextResponse.json(
@@ -127,8 +130,9 @@ export async function POST(request: NextRequest) {
                 customer_email: email?.trim() ?? null,
                 message: message?.trim() ?? null,
                 vehicle_id: car_id ?? null,
+                vehicle_interest: car_name?.trim() ?? null,
                 lead_type: leadTypeMap[safeSource] ?? 'inquiry',
-                source: 'website',
+                source: referer,
                 status: 'new',
             })
             .select('id')

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
-import { Search, Filter, Mail, Phone, CheckCircle, Loader2, RefreshCw, Users, Clock, TrendingUp } from "lucide-react";
+import { Search, Filter, Mail, Phone, CheckCircle, Loader2, RefreshCw, Users, Clock, TrendingUp, Globe } from "lucide-react";
 import { fetchLeads, updateLeadStatus, type ExternalLead } from "@/lib/db/leads";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 
@@ -26,27 +26,36 @@ function formatLeadType(type: string): string {
     return type.split("_").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 }
 
+function formatSourceUrl(url: string): string {
+    if (!url) return "";
+    try {
+        return new URL(url).hostname.replace("www.", "");
+    } catch {
+        return url;
+    }
+}
+
 const priorityConfig = {
-    hot:  { bg: "bg-red-50",    text: "text-red-600",    border: "border-red-200",    dot: "bg-red-500",    label: "HOT"  },
-    warm: { bg: "bg-amber-50",  text: "text-amber-600",  border: "border-amber-200",  dot: "bg-amber-500",  label: "WARM" },
-    cold: { bg: "bg-blue-50",   text: "text-blue-600",   border: "border-blue-200",   dot: "bg-blue-500",   label: "COLD" },
+    hot: { bg: "bg-red-50", text: "text-red-600", border: "border-red-200", dot: "bg-red-500", label: "HOT" },
+    warm: { bg: "bg-amber-50", text: "text-amber-600", border: "border-amber-200", dot: "bg-amber-500", label: "WARM" },
+    cold: { bg: "bg-blue-50", text: "text-blue-600", border: "border-blue-200", dot: "bg-blue-500", label: "COLD" },
 };
 
 const statusConfig: Record<string, { bg: string; text: string; label: string }> = {
-    new:       { bg: "bg-green-50",   text: "text-green-700",   label: "New"       },
-    contacted: { bg: "bg-blue-50",    text: "text-blue-700",    label: "Contacted"  },
-    qualified: { bg: "bg-purple-50",  text: "text-purple-700",  label: "Qualified"  },
-    converted: { bg: "bg-emerald-50", text: "text-emerald-700", label: "Converted"  },
-    lost:      { bg: "bg-gray-100",   text: "text-gray-600",    label: "Lost"       },
+    new: { bg: "bg-green-50", text: "text-green-700", label: "New" },
+    contacted: { bg: "bg-blue-50", text: "text-blue-700", label: "Contacted" },
+    qualified: { bg: "bg-purple-50", text: "text-purple-700", label: "Qualified" },
+    converted: { bg: "bg-emerald-50", text: "text-emerald-700", label: "Converted" },
+    lost: { bg: "bg-gray-100", text: "text-gray-600", label: "Lost" },
 };
 
 export default function LeadsPage() {
     const { dealerId } = useOnboardingStore();
-    const [searchQuery, setSearchQuery]   = useState("");
+    const [searchQuery, setSearchQuery] = useState("");
     const [filterPriority, setFilterPriority] = useState<string>("all");
     const [filterStatus, setFilterStatus] = useState<string>("all");
-    const [apiLeads, setApiLeads]         = useState<ExternalLead[]>([]);
-    const [loading, setLoading]           = useState(false);
+    const [apiLeads, setApiLeads] = useState<ExternalLead[]>([]);
+    const [loading, setLoading] = useState(false);
 
     const loadLeads = () => {
         if (!dealerId) return;
@@ -69,7 +78,7 @@ export default function LeadsPage() {
             lead.email.toLowerCase().includes(searchQuery.toLowerCase()) ||
             (lead.vehicle_interest ?? "").toLowerCase().includes(searchQuery.toLowerCase());
         const matchesPriority = filterPriority === "all" || lead.priority === filterPriority;
-        const matchesStatus   = filterStatus === "all"   || lead.status === filterStatus;
+        const matchesStatus = filterStatus === "all" || lead.status === filterStatus;
         return matchesSearch && matchesPriority && matchesStatus;
     });
 
@@ -120,11 +129,11 @@ export default function LeadsPage() {
             {apiLeads.length > 0 && (
                 <div className="flex flex-wrap gap-3">
                     {[
-                        { label: "Total",     value: apiLeads.length,                                     color: "bg-muted/50 text-muted-foreground border-border"         },
-                        { label: "Hot",       value: apiLeads.filter(l => l.priority === "hot").length,   color: "bg-red-50 text-red-600 border-red-200"                   },
-                        { label: "Warm",      value: apiLeads.filter(l => l.priority === "warm").length,  color: "bg-amber-50 text-amber-600 border-amber-200"             },
-                        { label: "New",       value: apiLeads.filter(l => l.status === "new").length,     color: "bg-green-50 text-green-700 border-green-200"             },
-                        { label: "Converted", value: apiLeads.filter(l => l.status === "converted").length, color: "bg-emerald-50 text-emerald-700 border-emerald-200"    },
+                        { label: "Total", value: apiLeads.length, color: "bg-muted/50 text-muted-foreground border-border" },
+                        { label: "Hot", value: apiLeads.filter(l => l.priority === "hot").length, color: "bg-red-50 text-red-600 border-red-200" },
+                        { label: "Warm", value: apiLeads.filter(l => l.priority === "warm").length, color: "bg-amber-50 text-amber-600 border-amber-200" },
+                        { label: "New", value: apiLeads.filter(l => l.status === "new").length, color: "bg-green-50 text-green-700 border-green-200" },
+                        { label: "Converted", value: apiLeads.filter(l => l.status === "converted").length, color: "bg-emerald-50 text-emerald-700 border-emerald-200" },
                     ].map((chip) => (
                         <div key={chip.label} className={cn("flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-medium", chip.color)}>
                             <TrendingUp className="w-3 h-3" />
@@ -262,6 +271,18 @@ export default function LeadsPage() {
                                                     <span className="flex items-center gap-1">
                                                         <Phone className="w-3 h-3" />{lead.phone}
                                                     </span>
+                                                )}
+                                                {lead.source && lead.source !== 'website' && lead.source !== 'Website' && (
+                                                    <a
+                                                        href={lead.source.startsWith('http') ? lead.source : `https://${lead.source}`}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="flex items-center gap-1 text-blue-500 hover:underline max-w-[200px] truncate"
+                                                        title={lead.source}
+                                                    >
+                                                        <Globe className="w-3 h-3 shrink-0" />
+                                                        <span className="truncate">{formatSourceUrl(lead.source)}</span>
+                                                    </a>
                                                 )}
                                             </div>
                                         </div>
