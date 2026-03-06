@@ -61,12 +61,12 @@ export function TestDriveModal({ car, dealerId, open, onOpenChange, brandColor =
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    dealer_id:   dealerId,
-                    name:        form.name,
-                    phone:       form.phone,
+                    dealer_id: dealerId,
+                    name: form.name,
+                    phone: form.phone,
                     message,
-                    car_id:      car.id,
-                    car_name:    carLabel,
+                    car_id: car.id,
+                    car_name: carLabel,
                     lead_source: 'test_drive',
                 }),
             });
@@ -99,9 +99,9 @@ export function TestDriveModal({ car, dealerId, open, onOpenChange, brandColor =
                 onClick={e => e.stopPropagation()}
             >
                 {/* Header */}
-                <div className="px-5 py-4 flex items-center justify-between" style={{ background: `linear-gradient(135deg, ${brandColor}15, transparent)` }}>
+                <div className="px-5 py-4 flex items-center justify-between bg-white border-b border-gray-100">
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${brandColor}20` }}>
+                        <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-white border border-gray-100 shadow-sm">
                             <CarIcon className="w-5 h-5" style={{ color: brandColor }} />
                         </div>
                         <div>

@@ -499,8 +499,7 @@ function VariantAccordionButton({
                     >
                         {/* ── Header ── */}
                         <div
-                            className="px-4 py-3 flex items-center justify-between shrink-0"
-                            style={{ background: `linear-gradient(135deg, ${brandColor}20, transparent)` }}
+                            className="px-4 py-3 flex items-center justify-between shrink-0 bg-white border-b border-gray-200"
                         >
                             <div className="flex items-center gap-2">
                                 {logoSrc && <Image src={logoSrc} alt={make} width={20} height={20} className="object-contain" />}

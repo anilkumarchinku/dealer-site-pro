@@ -53,7 +53,7 @@ const ALL_SERVICES: ServiceInfo[] = [
         description: 'Experience the car at your doorstep',
         icon: Car,
         color: 'text-blue-600',
-        bg: 'bg-blue-50 border-blue-200',
+        bg: 'bg-white border-gray-200',
     },
     {
         id: 'financing',
@@ -61,7 +61,7 @@ const ALL_SERVICES: ServiceInfo[] = [
         description: 'Easy EMI options & loan assistance',
         icon: CreditCard,
         color: 'text-emerald-600',
-        bg: 'bg-emerald-50 border-emerald-200',
+        bg: 'bg-white border-gray-200',
     },
     {
         id: 'parts_accessories',
@@ -69,7 +69,7 @@ const ALL_SERVICES: ServiceInfo[] = [
         description: 'Genuine parts & custom accessories',
         icon: Package,
         color: 'text-violet-600',
-        bg: 'bg-violet-50 border-violet-200',
+        bg: 'bg-white border-gray-200',
     },
     {
         id: 'trade_in',
@@ -77,7 +77,7 @@ const ALL_SERVICES: ServiceInfo[] = [
         description: 'Get the best value for your old car',
         icon: ArrowLeftRight,
         color: 'text-amber-600',
-        bg: 'bg-amber-50 border-amber-200',
+        bg: 'bg-white border-gray-200',
     },
     {
         id: 'insurance',
@@ -85,7 +85,7 @@ const ALL_SERVICES: ServiceInfo[] = [
         description: 'Comprehensive coverage at best rates',
         icon: Shield,
         color: 'text-red-600',
-        bg: 'bg-red-50 border-red-200',
+        bg: 'bg-white border-gray-200',
     },
     {
         id: 'service_maintenance',
@@ -93,7 +93,7 @@ const ALL_SERVICES: ServiceInfo[] = [
         description: 'Authorized service centre',
         icon: Wrench,
         color: 'text-orange-600',
-        bg: 'bg-orange-50 border-orange-200',
+        bg: 'bg-white border-gray-200',
     },
     {
         id: 'express_service',
@@ -101,7 +101,7 @@ const ALL_SERVICES: ServiceInfo[] = [
         description: 'Quick turnaround service',
         icon: Zap,
         color: 'text-yellow-600',
-        bg: 'bg-yellow-50 border-yellow-200',
+        bg: 'bg-white border-gray-200',
     },
     {
         id: 'extended_warranties',
@@ -109,7 +109,7 @@ const ALL_SERVICES: ServiceInfo[] = [
         description: 'Extra protection for your vehicle',
         icon: FileText,
         color: 'text-teal-600',
-        bg: 'bg-teal-50 border-teal-200',
+        bg: 'bg-white border-gray-200',
     },
     {
         id: 'fleet_sales',
@@ -117,7 +117,7 @@ const ALL_SERVICES: ServiceInfo[] = [
         description: 'Corporate & bulk vehicle solutions',
         icon: Users,
         color: 'text-indigo-600',
-        bg: 'bg-indigo-50 border-indigo-200',
+        bg: 'bg-white border-gray-200',
     },
     {
         id: 'buy_accessories',
@@ -125,7 +125,7 @@ const ALL_SERVICES: ServiceInfo[] = [
         description: 'Shop our accessories catalogue',
         icon: Sparkles,
         color: 'text-pink-600',
-        bg: 'bg-pink-50 border-pink-200',
+        bg: 'bg-white border-gray-200',
     },
     {
         id: 'new_car_sales',
@@ -133,7 +133,7 @@ const ALL_SERVICES: ServiceInfo[] = [
         description: 'Browse our latest new car models',
         icon: Car,
         color: 'text-blue-700',
-        bg: 'bg-blue-50 border-blue-200',
+        bg: 'bg-white border-gray-200',
     },
     {
         id: 'used_car_sales',
@@ -141,7 +141,7 @@ const ALL_SERVICES: ServiceInfo[] = [
         description: 'Certified pre-owned vehicles',
         icon: Car,
         color: 'text-gray-600',
-        bg: 'bg-gray-50 border-gray-200',
+        bg: 'bg-white border-gray-200',
     },
 ];
 
@@ -233,7 +233,7 @@ export function EnquireSidebar({
                 className="w-full sm:max-w-[420px] p-0 flex flex-col overflow-hidden"
             >
                 {/* Header */}
-                <div className="p-5 border-b" style={{ borderColor: `${brandColor}20` }}>
+                <div className="p-5 border-b border-gray-200 bg-white">
                     <SheetHeader>
                         <SheetTitle className="text-lg font-bold text-gray-900">
                             How Can We Help You?
@@ -247,8 +247,7 @@ export function EnquireSidebar({
                 {submitted ? (
                     /* ── Success state ── */
                     <div className="flex-1 flex flex-col items-center justify-center p-8 text-center">
-                        <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4"
-                            style={{ backgroundColor: `${brandColor}15` }}>
+                        <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 bg-gray-50 border border-gray-100">
                             <CheckCircle2 className="w-8 h-8" style={{ color: brandColor }} />
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 mb-2">

@@ -191,7 +191,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                             <h3 className="text-lg font-bold text-gray-900 mb-4">Specifications</h3>
                             <div className="grid grid-cols-2 gap-4">
                                 {/* Engine */}
-                                <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
+                                <div className="flex items-start gap-3 p-3 bg-white border border-gray-100 rounded-lg">
                                     <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0">
                                         <Fuel className="w-5 h-5 text-emerald-600" />
                                     </div>
@@ -209,7 +209,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                 </div>
 
                                 {/* Transmission */}
-                                <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
+                                <div className="flex items-start gap-3 p-3 bg-white border border-gray-100 rounded-lg">
                                     <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0">
                                         <Gauge className="w-5 h-5 text-blue-600" />
                                     </div>
@@ -222,7 +222,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                 </div>
 
                                 {/* Seating */}
-                                <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
+                                <div className="flex items-start gap-3 p-3 bg-white border border-gray-100 rounded-lg">
                                     <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0">
                                         <Users className="w-5 h-5 text-purple-600" />
                                     </div>
@@ -236,7 +236,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
 
                                 {/* Mileage */}
                                 {(aggregatedSpecs?.mileages || detailedVariant?.mileage_kmpl_or_ev_range || (detailedVariant as any)?.mileage_kmpl || car.performance?.fuelEfficiency) && (
-                                    <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
+                                    <div className="flex items-start gap-3 p-3 bg-white border border-gray-100 rounded-lg">
                                         <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0">
                                             <Zap className="w-5 h-5 text-amber-600" />
                                         </div>
