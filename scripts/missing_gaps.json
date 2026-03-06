@@ -9,31 +9,9 @@
       ]
     },
     {
-      "brand": "Zontes India",
-      "brandId": "zontes-india",
-      "models": [
-        "350X",
-        "350R",
-        "350T",
-        "GK350"
-      ]
-    },
-    {
-      "brand": "Mahindra Two Wheelers",
-      "brandId": "mahindra-two-wheelers",
-      "models": [
-        "Mojo 300",
-        "Centuro 125",
-        "Gusto 110",
-        "Gusto 125"
-      ]
-    },
-    {
       "brand": "Bajaj Chetak",
       "brandId": "bajaj-chetak-ev",
       "models": [
-        "Chetak 3501",
-        "Chetak 3502",
         "Chetak 3503"
       ]
     },
@@ -41,12 +19,8 @@
       "brand": "TVS iQube",
       "brandId": "tvs-iqube",
       "models": [
-        "iQube",
-        "iQube S",
         "iQube ST",
-        "iQube ST 5.3 kWh",
-        "TVS X",
-        "TVS Orbiter"
+        "iQube ST 5.3 kWh"
       ]
     },
     {
@@ -62,10 +36,6 @@
       "brand": "Revolt Motors",
       "brandId": "revolt-motors",
       "models": [
-        "RV1",
-        "RV1+",
-        "RV BlazeX",
-        "RV400",
         "RV400 BRZ"
       ]
     },
@@ -73,250 +43,39 @@
       "brand": "Okinawa Autotech",
       "brandId": "okinawa-autotech",
       "models": [
-        "i-Praise",
-        "PraisePro",
-        "Okhi-90",
-        "Ridge 100",
         "Dual 100",
-        "R30",
-        "Lite"
-      ]
-    },
-    {
-      "brand": "Ampere (Greaves Electric)",
-      "brandId": "ampere-greaves",
-      "models": [
-        "Nexus",
-        "Magnus",
-        "Magnus Grand",
-        "Reo"
-      ]
-    },
-    {
-      "brand": "Tork Motors",
-      "brandId": "tork-motors",
-      "models": [
-        "Kratos R",
-        "Kratos X"
-      ]
-    },
-    {
-      "brand": "Ultraviolette Automotive",
-      "brandId": "ultraviolette",
-      "models": [
-        "F77 Mach 2",
-        "F77 SuperStreet",
-        "Shockwave",
-        "Tesseract"
-      ]
-    },
-    {
-      "brand": "Simple Energy",
-      "brandId": "simple-energy",
-      "models": [
-        "One",
-        "One Gen 1.5",
-        "OneS"
-      ]
-    },
-    {
-      "brand": "Kabira Mobility",
-      "brandId": "kabira-mobility",
-      "models": [
-        "KM 3000",
-        "KM 4000",
-        "Aetos 100",
-        "Hermes 75"
-      ]
-    },
-    {
-      "brand": "Pure EV",
-      "brandId": "pure-ev",
-      "models": [
-        "EPluto 7G",
-        "Etryst 350",
-        "EcoDryft",
-        "ETrance Neo"
-      ]
-    },
-    {
-      "brand": "Matter",
-      "brandId": "matter-ev",
-      "models": [
-        "Aera 5000",
-        "Aera 5000+"
-      ]
-    },
-    {
-      "brand": "Hop Electric",
-      "brandId": "hop-electric",
-      "models": [
-        "Lyf",
-        "Leo",
-        "OXO"
+        "R30"
       ]
     },
     {
       "brand": "Okaya EV (OPG Mobility)",
       "brandId": "okaya-ev",
       "models": [
-        "Faast F2T",
-        "Faast F2F",
         "Faast F2B",
-        "Faast F3",
-        "Faast F4",
-        "Freedum",
-        "ClassIQ+",
-        "Motofaast",
-        "Defy 22"
-      ]
-    },
-    {
-      "brand": "Oben Electric",
-      "brandId": "oben-electric",
-      "models": [
-        "Rorr",
-        "Rorr EZ"
-      ]
-    },
-    {
-      "brand": "Lectrix EV",
-      "brandId": "lectrix-ev",
-      "models": [
-        "SX25",
-        "LXS 2.0",
-        "LXS 3.0",
-        "NDuro",
-        "ZYRO"
-      ]
-    },
-    {
-      "brand": "River",
-      "brandId": "river-ev",
-      "models": [
-        "Indie Gen 3"
+        "Faast F3"
       ]
     },
     {
       "brand": "Odysse Electric",
       "brandId": "odysse-electric",
       "models": [
-        "Racer",
-        "Racer Neo",
-        "HyFy",
-        "V2",
-        "Snap",
-        "E2Go",
-        "Hawk",
-        "Trot",
-        "Vader",
-        "Evoqis",
-        "Evoqis Lite"
-      ]
-    },
-    {
-      "brand": "Joy e-bike",
-      "brandId": "joy-e-bike",
-      "models": [
-        "Beast",
-        "Thunderbolt",
-        "Hurricane",
-        "Gen Next Nanu",
-        "Wolf",
-        "Glob",
-        "Mihos"
-      ]
-    },
-    {
-      "brand": "Komaki",
-      "brandId": "komaki",
-      "models": [
-        "SE Pro",
-        "SE Ultra",
-        "SE Max",
-        "Ranger"
+        "Racer"
       ]
     },
     {
       "brand": "Bounce Infinity",
       "brandId": "bounce-infinity",
       "models": [
-        "E1",
-        "E1 Plus",
-        "E1LE",
-        "E1X"
-      ]
-    },
-    {
-      "brand": "Quantum Energy",
-      "brandId": "quantum-energy",
-      "models": [
-        "Plasma",
-        "Bziness"
-      ]
-    },
-    {
-      "brand": "Yulu",
-      "brandId": "yulu",
-      "models": [
-        "Wynn"
+        "E1 Plus"
       ]
     }
   ],
   "threeWheelers": [
     {
-      "brand": "Atul Auto",
-      "brandId": "atul-auto",
-      "models": [
-        "Gem Paxx",
-        "Elite Plus",
-        "Rik Auto",
-        "Gem Cargo",
-        "Shakti Cargo",
-        "Rik Electric"
-      ]
-    },
-    {
-      "brand": "Kinetic Green",
-      "brandId": "kinetic-green",
-      "models": [
-        "Safar Smart",
-        "Super DX",
-        "Safar Shakti",
-        "Safar Jumbo Ranger"
-      ]
-    },
-    {
       "brand": "Lohia Auto",
       "brandId": "lohia-auto",
       "models": [
-        "Humsafar L5 Passenger",
-        "Narain ICE L3",
-        "Narain DX",
-        "Humsafar L5 Cargo",
-        "Comfort F2F+",
-        "Youdha E5 Passenger",
-        "Youdha E5 Cargo"
-      ]
-    },
-    {
-      "brand": "Euler Motors",
-      "brandId": "euler-motors",
-      "models": [
-        "NEO HiCITY",
-        "NEO HiRange",
-        "HiLoad DV EV",
-        "HiLoad EV 120",
-        "HiLoad EV 170"
-      ]
-    },
-    {
-      "brand": "Greaves Electric Mobility",
-      "brandId": "greaves-electric-3w",
-      "models": [
-        "Eltra City XTRA",
-        "Xargo",
-        "Eltra City"
+        "Youdha E5 Passenger"
       ]
     },
     {
