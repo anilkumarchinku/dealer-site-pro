@@ -1,5 +1,7 @@
 "use client"
 
+import brandModelsData from "@/lib/data/brand-models.json"
+
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -252,34 +254,47 @@ const DEFAULT_THEME: BrandTheme = {
     accent: "#3B82F6", accentText: "text-blue-400", btnPrimary: "bg-blue-600 text-white hover:bg-blue-700",
 }
 
-// ── Brand logo filenames — keys are lowercase DB brand names ─────────────────
-// Files live at /public/assets/logos/2w/{id}.svg (or .png for a few)
-const BRAND_LOGO_MAP: Record<string, string> = {
-    "royal enfield": "royal-enfield.svg",
-    "hero motocorp": "hero-motocorp.svg",
-    "honda motorcycle & scooter india": "honda-motorcycles.svg",
-    "tvs motor company": "tvs-motor.svg",
-    "bajaj auto": "bajaj-auto.svg",
-    "yamaha india": "yamaha.svg",
-    "suzuki motorcycle india": "suzuki-motorcycle.svg",
-    "ktm india": "ktm.svg",
-    "kawasaki india": "kawasaki.svg",
-    "ather energy": "ather-energy.svg",
-    "ola electric": "ola-electric.svg",
-    "husqvarna india": "husqvarna.svg",
-    "aprilia india": "aprilia.svg",
-    "vespa india": "vespa.svg",
-    "ducati india": "ducati.svg",
-    "bmw motorrad india": "bmw-motorrad.svg",
-    "triumph india": "triumph.svg",
-    "harley-davidson india": "harley-davidson.svg",
-    "cfmoto india": "cfmoto.png",
+// ── Brand logo resolution ──────────────────────────────────────────────
+const BRAND_NAME_TO_ID: Record<string, string> = {}
+    ;[
+        ...(brandModelsData.twoWheelers.traditional as { brand: string; brandId: string }[]),
+        ...(brandModelsData.twoWheelers.electric as { brand: string; brandId: string }[]),
+    ].forEach(b => { BRAND_NAME_TO_ID[b.brand.toLowerCase().trim()] = b.brandId })
+
+// Fallback map for known SVG logos in /assets/logos/2w/
+const KNOWN_SVG_LOGOS: Record<string, string> = {
+    "royal enfield": "/assets/logos/2w/royal-enfield.svg",
+    "hero motocorp": "/assets/logos/2w/hero-motocorp.svg",
+    "honda motorcycle & scooter india": "/assets/logos/2w/honda-motorcycles.svg",
+    "tvs motor company": "/assets/logos/2w/tvs-motor.svg",
+    "bajaj auto": "/assets/logos/2w/bajaj-auto.svg",
+    "yamaha india": "/assets/logos/2w/yamaha.svg",
+    "suzuki motorcycle india": "/assets/logos/2w/suzuki-motorcycle.svg",
+    "ktm india": "/assets/logos/2w/ktm.svg",
+    "kawasaki india": "/assets/logos/2w/kawasaki.svg",
+    "ather energy": "/assets/logos/2w/ather-energy.svg",
+    "ola electric": "/assets/logos/2w/ola-electric.svg",
+    "husqvarna india": "/assets/logos/2w/husqvarna.svg",
+    "aprilia india": "/assets/logos/2w/aprilia.svg",
+    "vespa india": "/assets/logos/2w/vespa.svg",
+    "ducati india": "/assets/logos/2w/ducati.svg",
+    "bmw motorrad india": "/assets/logos/2w/bmw-motorrad.svg",
+    "triumph india": "/assets/logos/2w/triumph.svg",
+    "harley-davidson india": "/assets/logos/2w/harley-davidson.svg",
+    "cfmoto india": "/assets/logos/2w/cfmoto.png",
 }
 
 function getBrandLogoSrc(brand: string | null): string {
     if (!brand) return "/favicon.svg"
-    const file = BRAND_LOGO_MAP[brand.toLowerCase().trim()]
-    return file ? `/assets/logos/2w/${file}` : "/favicon.svg"
+    const lower = brand.toLowerCase().trim()
+    // 1. Try known high-quality SVG logos first
+    if (KNOWN_SVG_LOGOS[lower]) return KNOWN_SVG_LOGOS[lower]
+    // 2. Try to resolve from /data/brand-logos/{brandId}.png
+    const brandId = BRAND_NAME_TO_ID[lower]
+    if (brandId) return `/data/brand-logos/${brandId}.png`
+    // 3. Generic slugify fallback
+    const slug = lower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    return `/data/brand-logos/${slug}.png`
 }
 
 /**
@@ -624,8 +639,8 @@ export function TwoWheelerTemplate({
                                 key={tab.key}
                                 onClick={() => setActiveTab(tab.key)}
                                 className={`px-3 py-1.5 text-sm font-medium rounded-lg transition-all ${activeTab === tab.key
-                                        ? "bg-white text-gray-900 shadow-sm"
-                                        : "text-gray-600 hover:text-gray-900"
+                                    ? "bg-white text-gray-900 shadow-sm"
+                                    : "text-gray-600 hover:text-gray-900"
                                     }`}
                             >
                                 {tab.label}

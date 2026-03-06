@@ -6,18 +6,19 @@ import { useOnboardingStore } from "@/lib/store/onboarding-store"
 import { Plus, Pencil, Trash2, Eye } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
+import { getScrapedImageFallback, brandNameToId } from "@/lib/utils/brand-model-images"
 
 export default function ThreeWheelerInventoryPage() {
     const { dealerId } = useOnboardingStore()
     const [vehicles, setVehicles] = useState<ThreeWheelerVehicle[]>([])
-    const [total, setTotal]       = useState(0)
-    const [loading, setLoading]   = useState(true)
+    const [total, setTotal] = useState(0)
+    const [loading, setLoading] = useState(true)
 
     const load = useCallback(async () => {
         if (!dealerId) return
         setLoading(true)
         try {
-            const res  = await fetch(`/api/three-wheelers?dealerId=${dealerId}&pageSize=50`)
+            const res = await fetch(`/api/three-wheelers?dealerId=${dealerId}&pageSize=50`)
             const data = await res.json()
             setVehicles(data.vehicles ?? [])
             setTotal(data.total ?? 0)
@@ -64,12 +65,12 @@ export default function ThreeWheelerInventoryPage() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {vehicles.map((v) => (
                         <div key={v.id} className="bg-card border border-border rounded-xl overflow-hidden">
-                            {v.images[0] ? (
-                                // eslint-disable-next-line @next/next/no-img-element
-                                <img src={v.images[0]} alt={`${v.brand} ${v.model}`} className="w-full h-40 object-cover" />
-                            ) : (
-                                <div className="w-full h-40 bg-muted/30 flex items-center justify-center text-muted-foreground text-sm">No Image</div>
-                            )}
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                                src={v.images[0] || getScrapedImageFallback("3w", brandNameToId(v.brand, "3w"), v.model)}
+                                alt={`${v.brand} ${v.model}`}
+                                className="w-full h-40 object-cover bg-muted/30"
+                            />
                             <div className="p-4">
                                 <div className="flex items-start justify-between">
                                     <div>
@@ -79,11 +80,10 @@ export default function ThreeWheelerInventoryPage() {
                                             ₹{(v.ex_showroom_price_paise / 100).toLocaleString("en-IN")}
                                         </p>
                                     </div>
-                                    <span className={`text-xs px-2 py-0.5 rounded-full ${
-                                        v.stock_status === "available"    ? "bg-green-100 text-green-700" :
-                                        v.stock_status === "booking_open" ? "bg-blue-100 text-blue-700" :
-                                                                            "bg-gray-100 text-gray-700"
-                                    }`}>
+                                    <span className={`text-xs px-2 py-0.5 rounded-full ${v.stock_status === "available" ? "bg-green-100 text-green-700" :
+                                            v.stock_status === "booking_open" ? "bg-blue-100 text-blue-700" :
+                                                "bg-gray-100 text-gray-700"
+                                        }`}>
                                         {v.stock_status.replace("_", " ")}
                                     </span>
                                 </div>

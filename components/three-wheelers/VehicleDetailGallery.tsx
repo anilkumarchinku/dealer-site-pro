@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import { getScrapedImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
+import { getScrapedImageFallback, brandNameToId } from "@/lib/utils/brand-model-images"
 
 interface Props {
     images: string[]
@@ -15,8 +15,7 @@ export function VehicleDetailGallery({ images, alt, brand, model }: Props) {
     // Build fallback scraped images when no uploaded images exist
     const scraped: string[] = (() => {
         if (!brand || !model) return [];
-        const [jpg, png] = getScrapedImageUrls("3w", brandNameToId(brand, "3w"), model);
-        return [jpg, png];
+        return [getScrapedImageFallback("3w", brandNameToId(brand, "3w"), model)];
     })();
 
     const displayImages = images.length > 0 ? images : scraped;

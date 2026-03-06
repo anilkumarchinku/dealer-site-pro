@@ -10,53 +10,53 @@ import brandData from "@/lib/data/brand-models.json"
 import { VehicleImageUpload } from "@/components/three-wheelers/VehicleImageUpload"
 import { getScrapedImageUrls } from "@/lib/utils/brand-model-images"
 
-const ALL_3W_BRANDS = brandData.threeWheelers as { brandId: string; brand: string; models: Record<string, string[]> }[]
+const ALL_3W_BRANDS = (brandData.threeWheelers as unknown as { brandId: string; brand: string; models: Record<string, string[]> }[])
 
-const TYPES  = ["passenger", "cargo", "electric", "school_van"] as const
-const FUEL   = ["petrol", "diesel", "cng", "electric", "lpg"] as const
-const BODY   = ["flatbed", "closed_body", "tipper", "container", "tanker", "pickup"] as const
+const TYPES = ["passenger", "cargo", "electric", "school_van"] as const
+const FUEL = ["petrol", "diesel", "cng", "electric", "lpg"] as const
+const BODY = ["flatbed", "closed_body", "tipper", "container", "tanker", "pickup"] as const
 const PERMIT = ["all_india", "state", "city", "none"] as const
-const STOCK  = ["available", "booking_open", "out_of_stock"] as const
+const STOCK = ["available", "booking_open", "out_of_stock"] as const
 
 export default function AddThreeWheelerVehiclePage() {
     const router = useRouter()
     const { dealerId } = useOnboardingStore()
-    const [saving,      setSaving]      = useState(false)
-    const [aiLoading,   setAiLoading]   = useState(false)
-    const [error,       setError]       = useState("")
-    const [images,      setImages]      = useState<string[]>([])
-    const [brandOpen,   setBrandOpen]   = useState(false)
+    const [saving, setSaving] = useState(false)
+    const [aiLoading, setAiLoading] = useState(false)
+    const [error, setError] = useState("")
+    const [images, setImages] = useState<string[]>([])
+    const [brandOpen, setBrandOpen] = useState(false)
     const [brandSearch, setBrandSearch] = useState("")
 
     const [form, setForm] = useState({
-        type:                    "passenger" as typeof TYPES[number],
-        brand:                   "",
-        model:                   "",
-        variant:                 "",
-        year:                    new Date().getFullYear(),
-        fuel_type:               "cng" as typeof FUEL[number],
-        body_type:               "" as typeof BODY[number] | "",
-        engine_cc:               "",
-        battery_kwh:             "",
-        payload_kg:              "",
-        passenger_capacity:      "",
-        permit_type:             "city" as typeof PERMIT[number],
-        gvw_kg:                  "",
-        mileage_kmpl:            "",
-        cng_mileage_km_per_kg:   "",
-        range_km:                "",
-        max_speed_kmph:          "",
+        type: "passenger" as typeof TYPES[number],
+        brand: "",
+        model: "",
+        variant: "",
+        year: new Date().getFullYear(),
+        fuel_type: "cng" as typeof FUEL[number],
+        body_type: "" as typeof BODY[number] | "",
+        engine_cc: "",
+        battery_kwh: "",
+        payload_kg: "",
+        passenger_capacity: "",
+        permit_type: "city" as typeof PERMIT[number],
+        gvw_kg: "",
+        mileage_kmpl: "",
+        cng_mileage_km_per_kg: "",
+        range_km: "",
+        max_speed_kmph: "",
         ex_showroom_price_paise: "",
-        on_road_price_paise:     "",
-        emi_starting_paise:      "",
-        stock_status:            "available" as typeof STOCK[number],
-        bs6_compliant:           true,
-        fame_subsidy_eligible:   false,
-        charging_time_hours:     "",
-        battery_warranty_years:  "",
-        description:             "",
-        features:                "",
-        brochure_url:            "",
+        on_road_price_paise: "",
+        emi_starting_paise: "",
+        stock_status: "available" as typeof STOCK[number],
+        bs6_compliant: true,
+        fame_subsidy_eligible: false,
+        charging_time_hours: "",
+        battery_warranty_years: "",
+        description: "",
+        features: "",
+        brochure_url: "",
     })
 
     const selectedBrandData = useMemo(
@@ -99,45 +99,45 @@ export default function AddThreeWheelerVehiclePage() {
         const isCNG = form.fuel_type === "cng"
 
         const payload = {
-            dealer_id:               dealerId,
-            type:                    form.type,
-            brand:                   form.brand.trim(),
-            model:                   form.model.trim(),
-            variant:                 form.variant.trim() || null,
-            year:                    Number(form.year),
-            fuel_type:               form.fuel_type,
-            body_type:               form.body_type || null,
-            engine_cc:               form.engine_cc               ? Number(form.engine_cc)             : null,
-            battery_kwh:             form.battery_kwh             ? Number(form.battery_kwh)           : null,
-            payload_kg:              form.payload_kg              ? Number(form.payload_kg)            : null,
-            passenger_capacity:      form.passenger_capacity      ? Number(form.passenger_capacity)    : null,
-            permit_type:             form.permit_type,
-            gvw_kg:                  form.gvw_kg                  ? Number(form.gvw_kg)                : null,
-            mileage_kmpl:            (!isCNG && !isEV && form.mileage_kmpl) ? Number(form.mileage_kmpl) : null,
-            cng_mileage_km_per_kg:   (isCNG && form.cng_mileage_km_per_kg) ? Number(form.cng_mileage_km_per_kg) : null,
-            range_km:                (isEV && form.range_km)      ? Number(form.range_km)              : null,
-            max_speed_kmph:          form.max_speed_kmph          ? Number(form.max_speed_kmph)        : null,
+            dealer_id: dealerId,
+            type: form.type,
+            brand: form.brand.trim(),
+            model: form.model.trim(),
+            variant: form.variant.trim() || null,
+            year: Number(form.year),
+            fuel_type: form.fuel_type,
+            body_type: form.body_type || null,
+            engine_cc: form.engine_cc ? Number(form.engine_cc) : null,
+            battery_kwh: form.battery_kwh ? Number(form.battery_kwh) : null,
+            payload_kg: form.payload_kg ? Number(form.payload_kg) : null,
+            passenger_capacity: form.passenger_capacity ? Number(form.passenger_capacity) : null,
+            permit_type: form.permit_type,
+            gvw_kg: form.gvw_kg ? Number(form.gvw_kg) : null,
+            mileage_kmpl: (!isCNG && !isEV && form.mileage_kmpl) ? Number(form.mileage_kmpl) : null,
+            cng_mileage_km_per_kg: (isCNG && form.cng_mileage_km_per_kg) ? Number(form.cng_mileage_km_per_kg) : null,
+            range_km: (isEV && form.range_km) ? Number(form.range_km) : null,
+            max_speed_kmph: form.max_speed_kmph ? Number(form.max_speed_kmph) : null,
             ex_showroom_price_paise: Math.round(Number(form.ex_showroom_price_paise) * 100),
-            on_road_price_paise:     form.on_road_price_paise     ? Math.round(Number(form.on_road_price_paise) * 100)     : null,
-            emi_starting_paise:      form.emi_starting_paise      ? Math.round(Number(form.emi_starting_paise) * 100)      : null,
-            stock_status:            form.stock_status,
-            bs6_compliant:           form.bs6_compliant,
-            fame_subsidy_eligible:   form.fame_subsidy_eligible,
-            charging_time_hours:     form.charging_time_hours     ? Number(form.charging_time_hours)   : null,
-            battery_warranty_years:  form.battery_warranty_years  ? Number(form.battery_warranty_years): null,
-            description:             form.description.trim() || null,
-            features:                form.features.split("\n").map(s => s.trim()).filter(Boolean),
+            on_road_price_paise: form.on_road_price_paise ? Math.round(Number(form.on_road_price_paise) * 100) : null,
+            emi_starting_paise: form.emi_starting_paise ? Math.round(Number(form.emi_starting_paise) * 100) : null,
+            stock_status: form.stock_status,
+            bs6_compliant: form.bs6_compliant,
+            fame_subsidy_eligible: form.fame_subsidy_eligible,
+            charging_time_hours: form.charging_time_hours ? Number(form.charging_time_hours) : null,
+            battery_warranty_years: form.battery_warranty_years ? Number(form.battery_warranty_years) : null,
+            description: form.description.trim() || null,
+            features: form.features.split("\n").map(s => s.trim()).filter(Boolean),
             images,
-            brochure_url:            form.brochure_url.trim() || null,
-            colors:                  [],
-            status:                  "active",
+            brochure_url: form.brochure_url.trim() || null,
+            colors: [],
+            status: "active",
         }
 
         try {
             const res = await fetch("/api/three-wheelers", {
-                method:  "POST",
+                method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body:    JSON.stringify(payload),
+                body: JSON.stringify(payload),
             })
             const data = await res.json()
             if (!res.ok) throw new Error(data.error ?? "Failed to add vehicle")
@@ -157,12 +157,12 @@ export default function AddThreeWheelerVehiclePage() {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    make:      form.brand,
-                    model:     form.model,
-                    variant:   form.variant || undefined,
-                    year:      form.year,
+                    make: form.brand,
+                    model: form.model,
+                    variant: form.variant || undefined,
+                    year: form.year,
                     fuel_type: form.fuel_type,
-                    features:  form.features.split("\n").map(s => s.trim()).filter(Boolean),
+                    features: form.features.split("\n").map(s => s.trim()).filter(Boolean),
                 }),
             })
             const data = await res.json()
@@ -173,8 +173,8 @@ export default function AddThreeWheelerVehiclePage() {
     }
 
     const isElectric = form.type === "electric" || form.fuel_type === "electric"
-    const isCNG      = form.fuel_type === "cng"
-    const isCargo    = form.type === "cargo"
+    const isCNG = form.fuel_type === "cng"
+    const isCargo = form.type === "cargo"
 
     return (
         <div className="max-w-2xl space-y-6">

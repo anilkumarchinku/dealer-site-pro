@@ -33,6 +33,7 @@ import { automotiveBrands } from "@/lib/colors/automotive-brands";
 import { getAllCars } from "@/lib/services/car-service";
 import type { Car as CarType } from "@/lib/types/car";
 import { CarGrid } from "@/components/cars/CarGrid";
+import brandModelsData from "@/lib/data/brand-models.json";
 
 const TEMPLATES = [
     {
@@ -83,6 +84,11 @@ const TEMPLATES = [
     },
 ];
 
+// ── Dynamic brand lists from brand-models.json (always up-to-date) ────────────
+const ALL_2W_TRADITIONAL = (brandModelsData.twoWheelers.traditional as { brand: string }[]).map(b => b.brand);
+const ALL_2W_ELECTRIC = (brandModelsData.twoWheelers.electric as { brand: string }[]).map(b => b.brand);
+const ALL_3W = (brandModelsData.threeWheelers as { brand: string }[]).map(b => b.brand);
+
 const BRAND_CATEGORIES = [
     {
         name: "Mass Market",
@@ -102,20 +108,28 @@ const BRAND_CATEGORIES = [
     },
     {
         name: "Two Wheelers (ICE)",
-        brands: ["Hero MotoCorp", "Honda Motorcycle & Scooter India", "TVS Motor Company", "Bajaj Auto", "Royal Enfield", "Yamaha India", "Suzuki Motorcycle India", "KTM India", "Husqvarna India", "Jawa Motorcycles", "Yezdi Motorcycles", "Benelli India", "Kawasaki India", "Aprilia India", "Vespa India", "Harley-Davidson India", "Triumph India", "Ducati India", "BMW Motorrad India", "Indian Motorcycle", "Moto Guzzi", "CFMoto India", "Keeway India", "Zontes India", "Mahindra Two Wheelers"]
+        brands: ALL_2W_TRADITIONAL,
     },
     {
         name: "Two Wheelers (EV)",
-        brands: ["Ola Electric", "Ather Energy", "Bajaj Chetak", "TVS iQube", "Hero Electric", "Vida (Hero MotoCorp)", "Revolt Motors", "Okinawa Autotech", "Ampere (Greaves Electric)", "Tork Motors", "Ultraviolette Automotive", "Simple Energy", "Kabira Mobility", "Pure EV", "Matter", "Hop Electric", "Okaya EV (OPG Mobility)", "Oben Electric", "Lectrix EV", "River", "Odysse Electric", "Joy e-bike", "Komaki", "Bounce Infinity", "Quantum Energy", "Yulu"]
+        brands: ALL_2W_ELECTRIC,
     },
     {
         name: "Three Wheelers",
-        brands: ["Bajaj Auto (3W)", "Piaggio Ape", "TVS King", "Mahindra (3W)", "Atul Auto", "Kinetic Green", "Lohia Auto", "Euler Motors", "Greaves Electric Mobility", "Force Motors"]
+        brands: ALL_3W,
     }
 ];
 
 const ALL_BRANDS = BRAND_CATEGORIES.flatMap(cat => cat.brands);
 
+
+// Map of brand name -> brandId for all 2W/3W brands (from brand-models.json)
+const BRAND_ID_MAP: Record<string, string> = {};
+[
+    ...(brandModelsData.twoWheelers.traditional as { brand: string; brandId: string }[]),
+    ...(brandModelsData.twoWheelers.electric as { brand: string; brandId: string }[]),
+    ...(brandModelsData.threeWheelers as { brand: string; brandId: string }[]),
+].forEach(b => { BRAND_ID_MAP[b.brand] = b.brandId; });
 
 const KNOWN_LOGOS: Record<string, string> = {
     "Hero MotoCorp": "/assets/logos/2w/hero-motocorp.svg",
@@ -149,10 +163,26 @@ const KNOWN_LOGOS: Record<string, string> = {
 
 function BrandLogo({ brandName }: { brandName: string }) {
     const [error, setError] = useState(false);
-    const defaultSrc = `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`;
-    const src = KNOWN_LOGOS[brandName] || defaultSrc;
+    // Priority: KNOWN_LOGOS → /data/brand-logos/{brandId}.png → initials
+    const brandId = BRAND_ID_MAP[brandName];
+    const knownSrc = KNOWN_LOGOS[brandName];
+    const brandLogoSrc = brandId ? `/data/brand-logos/${brandId}.png` : null;
+    const src = knownSrc || brandLogoSrc || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`;
 
     if (error) {
+        // If KNOWN_LOGOS path failed, try brand-logos path as a second chance
+        if (knownSrc && brandLogoSrc) {
+            return (
+                <div className="w-12 h-12 relative flex items-center justify-center">
+                    <img
+                        src={brandLogoSrc}
+                        alt={brandName}
+                        onError={() => { }}
+                        className="max-w-full max-h-full object-contain"
+                    />
+                </div>
+            );
+        }
         return (
             <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center border border-gray-200">
                 <span className="text-gray-500 font-bold text-lg">{brandName.charAt(0)}</span>
