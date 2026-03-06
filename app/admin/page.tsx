@@ -99,6 +99,18 @@ const BRAND_CATEGORIES = [
     {
         name: "Electric",
         brands: ["BYD", "Tesla", "Ola Electric", "Ather Energy"]
+    },
+    {
+        name: "Two Wheelers (ICE)",
+        brands: ["Hero MotoCorp", "Honda", "TVS", "Bajaj Auto", "Yamaha", "Suzuki", "Royal Enfield", "KTM", "Kawasaki"]
+    },
+    {
+        name: "Two Wheelers (EV)",
+        brands: ["Ola Electric", "Ather Energy", "TVS", "Bajaj Auto"]
+    },
+    {
+        name: "Three Wheelers",
+        brands: ["Mahindra", "Bajaj", "TVS", "Piaggio", "Greaves Electric", "Kinetic Green"]
     }
 ];
 

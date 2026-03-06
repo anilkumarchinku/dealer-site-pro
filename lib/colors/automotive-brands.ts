@@ -3,6 +3,21 @@
 // Updated from dealer_site_pro_brand_colors.json
 
 export const automotiveBrands = {
+        'Hero MotoCorp': { primary: '#E31837', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Two Wheelers', },
+        'Honda': { primary: '#CC0000', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Two Wheelers', },
+        'TVS': { primary: '#0033A0', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Two Wheelers', },
+        'Bajaj Auto': { primary: '#0033A0', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Two Wheelers', },
+        'Yamaha': { primary: '#002C5F', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Two Wheelers', },
+        'Suzuki': { primary: '#0033A0', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Two Wheelers', },
+        'Royal Enfield': { primary: '#D32F2F', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Two Wheelers', },
+        'KTM': { primary: '#FF6600', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Two Wheelers', },
+        'Kawasaki': { primary: '#66FF00', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Two Wheelers', },
+        'Ola Electric': { primary: '#000000', secondary: '#333333', background: '#FFFFFF', accent: '#666666', category: 'Electric', },
+        'Ather Energy': { primary: '#00C853', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Electric', },
+        'Piaggio': { primary: '#005BBB', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Three Wheelers', },
+        'Greaves Electric': { primary: '#009688', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Three Wheelers', },
+        'Kinetic Green': { primary: '#4CAF50', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Three Wheelers', },
+
         'Maruti Suzuki': {
                 primary: '#01458E',
                 secondary: '#DA241C',

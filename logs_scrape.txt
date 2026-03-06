@@ -150,3 +150,357 @@ Starting fetch for 125 missing images...
    ✅ Saved rs-250
 
 [39/125] 2W: Mahindra Two Wheelers Centuro 125 side view studio shot white background
+   --> Found image...
+   ✅ Saved centuro-125
+
+[40/125] 2W: Mahindra Two Wheelers Gusto 110 side view studio shot white background
+   --> Found image...
+   ✅ Saved gusto-110
+
+[41/125] 2W: Ola Electric S1 X side view studio shot white background
+--- Restarting browser container ---
+   --> Found image...
+   ✅ Saved s1-x
+
+[42/125] 2W: Ola Electric Roadster side view studio shot white background
+   --> Found image...
+   ✅ Saved roadster
+
+[43/125] 2W: TVS iQube iQube ST 5.3 kWh side view studio shot white background
+   --> Found image...
+   ✅ Saved iqube-st-53-kwh
+
+[44/125] 2W: TVS iQube TVS X side view studio shot white background
+   --> Found image...
+   ✅ Saved tvs-x
+
+[45/125] 2W: TVS iQube TVS Orbiter side view studio shot white background
+   --> Found image...
+   ✅ Saved tvs-orbiter
+
+[46/125] 2W: Vida (Hero MotoCorp) VX2 Go side view studio shot white background
+   --> Found image...
+   ✅ Saved vx2-go
+
+[47/125] 2W: Vida (Hero MotoCorp) VX2 Plus side view studio shot white background
+   --> Found image...
+   ✅ Saved vx2-plus
+
+[48/125] 2W: Simple Energy One Gen 1.5 side view studio shot white background
+   --> Found image...
+   ✅ Saved one-gen-15
+
+[49/125] 2W: Simple Energy OneS side view studio shot white background
+   --> Found image...
+   ✅ Saved ones
+
+[50/125] 2W: Matter Aera 5000 side view studio shot white background
+   --> Found image...
+   ✅ Saved aera-5000
+
+[52/125] 2W: Okaya EV (OPG Mobility) Faast F4 side view studio shot white background
+   --> Found image...
+   ✅ Saved faast-f4
+
+[53/125] 2W: Odysse Electric HyFy side view studio shot white background
+   --> Found image...
+   ✅ Saved hyfy
+
+[54/125] 2W: Odysse Electric V2 side view studio shot white background
+   --> Found image...
+   ✅ Saved v2
+
+[55/125] 2W: Odysse Electric Evoqis Lite side view studio shot white background
+   --> Found image...
+   ✅ Saved evoqis-lite
+
+[56/125] 2W: Joy e-bike Gen Next Nanu side view studio shot white background
+   --> Found image...
+   ✅ Saved gen-next-nanu
+
+[57/125] 2W: Komaki SE Pro side view studio shot white background
+   --> Found image...
+   ✅ Saved se-pro
+
+[58/125] 2W: Komaki SE Ultra side view studio shot white background
+   --> Found image...
+   ✅ Saved se-ultra
+
+[59/125] 2W: Komaki SE Max side view studio shot white background
+   --> Found image...
+   ✅ Saved se-max
+
+[60/125] 2W: Bounce Infinity E1 side view studio shot white background
+   --> Found image...
+   ✅ Saved e1
+
+[61/125] 2W: Bounce Infinity E1 Plus side view studio shot white background
+--- Restarting browser container ---
+   --> Found image...
+   ✅ Saved e1-plus
+
+[62/125] 2W: Bounce Infinity E1LE side view studio shot white background
+   --> Found image...
+   ✅ Saved e1le
+
+[63/125] 2W: Bounce Infinity E1X side view studio shot white background
+   --> Found image...
+   ✅ Saved e1x
+
+[64/125] 3W: Bajaj Auto (3W) RE CNG auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved re-cng
+
+[65/125] 3W: Bajaj Auto (3W) RE LPG auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved re-lpg
+
+[66/125] 3W: Bajaj Auto (3W) RE Diesel auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved re-diesel
+
+[67/125] 3W: Bajaj Auto (3W) RE Electric auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved re-electric
+
+[68/125] 3W: Bajaj Auto (3W) Maxima Z CNG auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved maxima-z-cng
+
+[69/125] 3W: Bajaj Auto (3W) Compact RE CNG auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved compact-re-cng
+
+[70/125] 3W: Bajaj Auto (3W) Maxima XL Electric auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved maxima-xl-electric
+
+[71/125] 3W: Bajaj Auto (3W) Maxima X Wide Diesel auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved maxima-x-wide-diesel
+
+[72/125] 3W: Bajaj Auto (3W) Maxima C CNG auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved maxima-c-cng
+
+[73/125] 3W: Bajaj Auto (3W) GoGo auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved gogo
+
+[74/125] 3W: Bajaj Auto (3W) Riki P40 auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved riki-p40
+
+[75/125] 3W: Piaggio Ape Auto Classic auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved auto-classic
+
+[76/125] 3W: Piaggio Ape Auto DX auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved auto-dx
+
+[77/125] 3W: Piaggio Ape NXT+ auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved nxt
+
+[78/125] 3W: Piaggio Ape Metro auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved metro
+
+[79/125] 3W: Piaggio Ape Xtra LDX Diesel auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved xtra-ldx-diesel
+
+[80/125] 3W: Piaggio Ape Xtra LDX CNG auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved xtra-ldx-cng
+
+[81/125] 3W: Piaggio Ape E-City auto rickshaw side view white background
+--- Restarting browser container ---
+   --> Found image...
+   ✅ Saved e-city
+
+[82/125] 3W: Piaggio Ape E-Xtra FX auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved e-xtra-fx
+
+[83/125] 3W: Piaggio Ape E-Xtra FX Max auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved e-xtra-fx-max
+
+[84/125] 3W: TVS King King Deluxe auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved king-deluxe
+
+[85/125] 3W: TVS King King Duramax auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved king-duramax
+
+[86/125] 3W: TVS King King Duramax Plus auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved king-duramax-plus
+
+[87/125] 3W: TVS King King Kargo auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved king-kargo
+
+[88/125] 3W: TVS King King EV Max auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved king-ev-max
+
+[89/125] 3W: TVS King King Kargo HD EV auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved king-kargo-hd-ev
+
+[90/125] 3W: Mahindra (3W) Alfa Passenger auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved alfa-passenger
+
+[91/125] 3W: Mahindra (3W) E-Alfa Plus auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved e-alfa-plus
+
+[92/125] 3W: Mahindra (3W) E-Alfa Mini auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved e-alfa-mini
+
+[93/125] 3W: Mahindra (3W) Alfa Load auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved alfa-load
+
+[94/125] 3W: Mahindra (3W) Zor Grand auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved zor-grand
+
+[95/125] 3W: Mahindra (3W) Treo auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved treo
+
+[96/125] 3W: Mahindra (3W) Treo Plus auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved treo-plus
+
+[97/125] 3W: Mahindra (3W) Treo Zor auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved treo-zor
+
+[98/125] 3W: Mahindra (3W) Treo Yaari HRT auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved treo-yaari-hrt
+
+[99/125] 3W: Mahindra (3W) Treo Yaari SFT auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved treo-yaari-sft
+
+[100/125] 3W: Mahindra (3W) UDO auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved udo
+
+[101/125] 3W: Atul Auto Gem Paxx auto rickshaw side view white background
+--- Restarting browser container ---
+   --> Found image...
+   ✅ Saved gem-paxx
+
+[102/125] 3W: Atul Auto Elite Plus auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved elite-plus
+
+[103/125] 3W: Atul Auto Rik Auto auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved rik-auto
+
+[104/125] 3W: Atul Auto Gem Cargo auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved gem-cargo
+
+[105/125] 3W: Atul Auto Shakti Cargo auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved shakti-cargo
+
+[106/125] 3W: Atul Auto Rik Electric auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved rik-electric
+
+[107/125] 3W: Kinetic Green Safar Smart auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved safar-smart
+
+[108/125] 3W: Kinetic Green Super DX auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved super-dx
+
+[109/125] 3W: Kinetic Green Safar Shakti auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved safar-shakti
+
+[110/125] 3W: Kinetic Green Safar Jumbo Ranger auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved safar-jumbo-ranger
+
+[111/125] 3W: Lohia Auto Humsafar L5 Passenger auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved humsafar-l5-passenger
+
+[112/125] 3W: Lohia Auto Narain ICE L3 auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved narain-ice-l3
+
+[113/125] 3W: Lohia Auto Narain DX auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved narain-dx
+
+[114/125] 3W: Lohia Auto Humsafar L5 Cargo auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved humsafar-l5-cargo
+
+[115/125] 3W: Lohia Auto Comfort F2F+ auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved comfort-f2f
+
+[116/125] 3W: Lohia Auto Youdha E5 Passenger auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved youdha-e5-passenger
+
+[117/125] 3W: Lohia Auto Youdha E5 Cargo auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved youdha-e5-cargo
+
+[118/125] 3W: Euler Motors NEO HiCITY auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved neo-hicity
+
+[119/125] 3W: Euler Motors NEO HiRange auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved neo-hirange
+
+[120/125] 3W: Euler Motors HiLoad DV EV auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved hiload-dv-ev
+
+[121/125] 3W: Euler Motors HiLoad EV 120 auto rickshaw side view white background
+--- Restarting browser container ---
+   --> Found image...
+   ✅ Saved hiload-ev-120
+
+[122/125] 3W: Euler Motors HiLoad EV 170 auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved hiload-ev-170
+
+[123/125] 3W: Greaves Electric Mobility Eltra City XTRA auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved eltra-city-xtra
+
+[124/125] 3W: Greaves Electric Mobility Xargo auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved xargo
+
+[125/125] 3W: Greaves Electric Mobility Eltra City auto rickshaw side view white background
+   --> Found image...
+   ✅ Saved eltra-city
+
+================================
+Scraping Complete.
+Successfully Downloaded: 123
+Failed/Missing: 0
+================================
+
