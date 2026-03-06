@@ -1,0 +1,877 @@
+[
+  {
+    "type": "2w",
+    "brandId": "tvs-motor",
+    "originalBrand": "TVS Motor Company",
+    "model": "XL100",
+    "slug": "xl100"
+  },
+  {
+    "type": "2w",
+    "brandId": "tvs-motor",
+    "originalBrand": "TVS Motor Company",
+    "model": "XL100 Heavy Duty",
+    "slug": "xl100-heavy-duty"
+  },
+  {
+    "type": "2w",
+    "brandId": "tvs-motor",
+    "originalBrand": "TVS Motor Company",
+    "model": "XL100 Comfort",
+    "slug": "xl100-comfort"
+  },
+  {
+    "type": "2w",
+    "brandId": "bajaj-auto",
+    "originalBrand": "Bajaj Auto",
+    "model": "CT 110X",
+    "slug": "ct-110x"
+  },
+  {
+    "type": "2w",
+    "brandId": "bajaj-auto",
+    "originalBrand": "Bajaj Auto",
+    "model": "Pulsar 220F",
+    "slug": "pulsar-220f"
+  },
+  {
+    "type": "2w",
+    "brandId": "royal-enfield",
+    "originalBrand": "Royal Enfield",
+    "model": "Hunter 350",
+    "slug": "hunter-350"
+  },
+  {
+    "type": "2w",
+    "brandId": "royal-enfield",
+    "originalBrand": "Royal Enfield",
+    "model": "Shotgun 650",
+    "slug": "shotgun-650"
+  },
+  {
+    "type": "2w",
+    "brandId": "yamaha-india",
+    "originalBrand": "Yamaha India",
+    "model": "FZ-S Fi",
+    "slug": "fz-s-fi"
+  },
+  {
+    "type": "2w",
+    "brandId": "yamaha-india",
+    "originalBrand": "Yamaha India",
+    "model": "FZ-S Fi Hybrid",
+    "slug": "fz-s-fi-hybrid"
+  },
+  {
+    "type": "2w",
+    "brandId": "yamaha-india",
+    "originalBrand": "Yamaha India",
+    "model": "FZ-S Fi V4.0 DLX",
+    "slug": "fz-s-fi-v40-dlx"
+  },
+  {
+    "type": "2w",
+    "brandId": "yamaha-india",
+    "originalBrand": "Yamaha India",
+    "model": "MT-15 V2.0",
+    "slug": "mt-15-v20"
+  },
+  {
+    "type": "2w",
+    "brandId": "yamaha-india",
+    "originalBrand": "Yamaha India",
+    "model": "Ray ZR 125 Fi",
+    "slug": "ray-zr-125-fi"
+  },
+  {
+    "type": "2w",
+    "brandId": "yamaha-india",
+    "originalBrand": "Yamaha India",
+    "model": "Ray ZR 125 Fi Street Rally",
+    "slug": "ray-zr-125-fi-street-rally"
+  },
+  {
+    "type": "2w",
+    "brandId": "yamaha-india",
+    "originalBrand": "Yamaha India",
+    "model": "Fascino 125 Fi",
+    "slug": "fascino-125-fi"
+  },
+  {
+    "type": "2w",
+    "brandId": "yamaha-india",
+    "originalBrand": "Yamaha India",
+    "model": "Aerox 155 Version S",
+    "slug": "aerox-155-version-s"
+  },
+  {
+    "type": "2w",
+    "brandId": "jawa-motorcycles",
+    "originalBrand": "Jawa Motorcycles",
+    "model": "Jawa 42 FJ",
+    "slug": "jawa-42-fj"
+  },
+  {
+    "type": "2w",
+    "brandId": "jawa-motorcycles",
+    "originalBrand": "Jawa Motorcycles",
+    "model": "Jawa 42 Bobber",
+    "slug": "jawa-42-bobber"
+  },
+  {
+    "type": "2w",
+    "brandId": "benelli-india",
+    "originalBrand": "Benelli India",
+    "model": "Leoncino 500",
+    "slug": "leoncino-500"
+  },
+  {
+    "type": "2w",
+    "brandId": "vespa-india",
+    "originalBrand": "Vespa India",
+    "model": "Vespa S 125",
+    "slug": "vespa-s-125"
+  },
+  {
+    "type": "2w",
+    "brandId": "vespa-india",
+    "originalBrand": "Vespa India",
+    "model": "Vespa Tech 125",
+    "slug": "vespa-tech-125"
+  },
+  {
+    "type": "2w",
+    "brandId": "vespa-india",
+    "originalBrand": "Vespa India",
+    "model": "Vespa S Tech 125",
+    "slug": "vespa-s-tech-125"
+  },
+  {
+    "type": "2w",
+    "brandId": "vespa-india",
+    "originalBrand": "Vespa India",
+    "model": "Vespa 150",
+    "slug": "vespa-150"
+  },
+  {
+    "type": "2w",
+    "brandId": "vespa-india",
+    "originalBrand": "Vespa India",
+    "model": "Vespa S 150",
+    "slug": "vespa-s-150"
+  },
+  {
+    "type": "2w",
+    "brandId": "vespa-india",
+    "originalBrand": "Vespa India",
+    "model": "Vespa Qala",
+    "slug": "vespa-qala"
+  },
+  {
+    "type": "2w",
+    "brandId": "harley-davidson-india",
+    "originalBrand": "Harley-Davidson India",
+    "model": "Nightster Special",
+    "slug": "nightster-special"
+  },
+  {
+    "type": "2w",
+    "brandId": "harley-davidson-india",
+    "originalBrand": "Harley-Davidson India",
+    "model": "Pan America 1250 Special",
+    "slug": "pan-america-1250-special"
+  },
+  {
+    "type": "2w",
+    "brandId": "triumph-india",
+    "originalBrand": "Triumph India",
+    "model": "Scrambler 400 X",
+    "slug": "scrambler-400-x"
+  },
+  {
+    "type": "2w",
+    "brandId": "triumph-india",
+    "originalBrand": "Triumph India",
+    "model": "Tiger 660",
+    "slug": "tiger-660"
+  },
+  {
+    "type": "2w",
+    "brandId": "triumph-india",
+    "originalBrand": "Triumph India",
+    "model": "Street Triple 765 R",
+    "slug": "street-triple-765-r"
+  },
+  {
+    "type": "2w",
+    "brandId": "ducati-india",
+    "originalBrand": "Ducati India",
+    "model": "Scrambler 800",
+    "slug": "scrambler-800"
+  },
+  {
+    "type": "2w",
+    "brandId": "ducati-india",
+    "originalBrand": "Ducati India",
+    "model": "DesertX Discovery",
+    "slug": "desertx-discovery"
+  },
+  {
+    "type": "2w",
+    "brandId": "indian-motorcycle",
+    "originalBrand": "Indian Motorcycle",
+    "model": "Sport Chief",
+    "slug": "sport-chief"
+  },
+  {
+    "type": "2w",
+    "brandId": "moto-guzzi",
+    "originalBrand": "Moto Guzzi",
+    "model": "V7",
+    "slug": "v7"
+  },
+  {
+    "type": "2w",
+    "brandId": "moto-guzzi",
+    "originalBrand": "Moto Guzzi",
+    "model": "V7 Sport",
+    "slug": "v7-sport"
+  },
+  {
+    "type": "2w",
+    "brandId": "moto-guzzi",
+    "originalBrand": "Moto Guzzi",
+    "model": "V100 Mandello",
+    "slug": "v100-mandello"
+  },
+  {
+    "type": "2w",
+    "brandId": "cfmoto-india",
+    "originalBrand": "CFMoto India",
+    "model": "450MT",
+    "slug": "450mt"
+  },
+  {
+    "type": "2w",
+    "brandId": "cfmoto-india",
+    "originalBrand": "CFMoto India",
+    "model": "675SR-R",
+    "slug": "675sr-r"
+  },
+  {
+    "type": "2w",
+    "brandId": "keeway-india",
+    "originalBrand": "Keeway India",
+    "model": "RS 250",
+    "slug": "rs-250"
+  },
+  {
+    "type": "2w",
+    "brandId": "mahindra-two-wheelers",
+    "originalBrand": "Mahindra Two Wheelers",
+    "model": "Centuro 125",
+    "slug": "centuro-125"
+  },
+  {
+    "type": "2w",
+    "brandId": "mahindra-two-wheelers",
+    "originalBrand": "Mahindra Two Wheelers",
+    "model": "Gusto 110",
+    "slug": "gusto-110"
+  },
+  {
+    "type": "2w",
+    "brandId": "ola-electric",
+    "originalBrand": "Ola Electric",
+    "model": "S1 X",
+    "slug": "s1-x"
+  },
+  {
+    "type": "2w",
+    "brandId": "ola-electric",
+    "originalBrand": "Ola Electric",
+    "model": "Roadster",
+    "slug": "roadster"
+  },
+  {
+    "type": "2w",
+    "brandId": "tvs-iqube",
+    "originalBrand": "TVS iQube",
+    "model": "iQube ST 5.3 kWh",
+    "slug": "iqube-st-53-kwh"
+  },
+  {
+    "type": "2w",
+    "brandId": "tvs-iqube",
+    "originalBrand": "TVS iQube",
+    "model": "TVS X",
+    "slug": "tvs-x"
+  },
+  {
+    "type": "2w",
+    "brandId": "tvs-iqube",
+    "originalBrand": "TVS iQube",
+    "model": "TVS Orbiter",
+    "slug": "tvs-orbiter"
+  },
+  {
+    "type": "2w",
+    "brandId": "vida-hero",
+    "originalBrand": "Vida (Hero MotoCorp)",
+    "model": "VX2 Go",
+    "slug": "vx2-go"
+  },
+  {
+    "type": "2w",
+    "brandId": "vida-hero",
+    "originalBrand": "Vida (Hero MotoCorp)",
+    "model": "VX2 Plus",
+    "slug": "vx2-plus"
+  },
+  {
+    "type": "2w",
+    "brandId": "simple-energy",
+    "originalBrand": "Simple Energy",
+    "model": "One Gen 1.5",
+    "slug": "one-gen-15"
+  },
+  {
+    "type": "2w",
+    "brandId": "simple-energy",
+    "originalBrand": "Simple Energy",
+    "model": "OneS",
+    "slug": "ones"
+  },
+  {
+    "type": "2w",
+    "brandId": "matter-ev",
+    "originalBrand": "Matter",
+    "model": "Aera 5000",
+    "slug": "aera-5000"
+  },
+  {
+    "type": "2w",
+    "brandId": "matter-ev",
+    "originalBrand": "Matter",
+    "model": "Aera 5000+",
+    "slug": "aera-5000"
+  },
+  {
+    "type": "2w",
+    "brandId": "okaya-ev",
+    "originalBrand": "Okaya EV (OPG Mobility)",
+    "model": "Faast F4",
+    "slug": "faast-f4"
+  },
+  {
+    "type": "2w",
+    "brandId": "odysse-electric",
+    "originalBrand": "Odysse Electric",
+    "model": "HyFy",
+    "slug": "hyfy"
+  },
+  {
+    "type": "2w",
+    "brandId": "odysse-electric",
+    "originalBrand": "Odysse Electric",
+    "model": "V2",
+    "slug": "v2"
+  },
+  {
+    "type": "2w",
+    "brandId": "odysse-electric",
+    "originalBrand": "Odysse Electric",
+    "model": "Evoqis Lite",
+    "slug": "evoqis-lite"
+  },
+  {
+    "type": "2w",
+    "brandId": "joy-e-bike",
+    "originalBrand": "Joy e-bike",
+    "model": "Gen Next Nanu",
+    "slug": "gen-next-nanu"
+  },
+  {
+    "type": "2w",
+    "brandId": "komaki",
+    "originalBrand": "Komaki",
+    "model": "SE Pro",
+    "slug": "se-pro"
+  },
+  {
+    "type": "2w",
+    "brandId": "komaki",
+    "originalBrand": "Komaki",
+    "model": "SE Ultra",
+    "slug": "se-ultra"
+  },
+  {
+    "type": "2w",
+    "brandId": "komaki",
+    "originalBrand": "Komaki",
+    "model": "SE Max",
+    "slug": "se-max"
+  },
+  {
+    "type": "2w",
+    "brandId": "bounce-infinity",
+    "originalBrand": "Bounce Infinity",
+    "model": "E1",
+    "slug": "e1"
+  },
+  {
+    "type": "2w",
+    "brandId": "bounce-infinity",
+    "originalBrand": "Bounce Infinity",
+    "model": "E1 Plus",
+    "slug": "e1-plus"
+  },
+  {
+    "type": "2w",
+    "brandId": "bounce-infinity",
+    "originalBrand": "Bounce Infinity",
+    "model": "E1LE",
+    "slug": "e1le"
+  },
+  {
+    "type": "2w",
+    "brandId": "bounce-infinity",
+    "originalBrand": "Bounce Infinity",
+    "model": "E1X",
+    "slug": "e1x"
+  },
+  {
+    "type": "3w",
+    "brandId": "bajaj-auto-3w",
+    "originalBrand": "Bajaj Auto (3W)",
+    "model": "RE CNG",
+    "slug": "re-cng"
+  },
+  {
+    "type": "3w",
+    "brandId": "bajaj-auto-3w",
+    "originalBrand": "Bajaj Auto (3W)",
+    "model": "RE LPG",
+    "slug": "re-lpg"
+  },
+  {
+    "type": "3w",
+    "brandId": "bajaj-auto-3w",
+    "originalBrand": "Bajaj Auto (3W)",
+    "model": "RE Diesel",
+    "slug": "re-diesel"
+  },
+  {
+    "type": "3w",
+    "brandId": "bajaj-auto-3w",
+    "originalBrand": "Bajaj Auto (3W)",
+    "model": "RE Electric",
+    "slug": "re-electric"
+  },
+  {
+    "type": "3w",
+    "brandId": "bajaj-auto-3w",
+    "originalBrand": "Bajaj Auto (3W)",
+    "model": "Maxima Z CNG",
+    "slug": "maxima-z-cng"
+  },
+  {
+    "type": "3w",
+    "brandId": "bajaj-auto-3w",
+    "originalBrand": "Bajaj Auto (3W)",
+    "model": "Compact RE CNG",
+    "slug": "compact-re-cng"
+  },
+  {
+    "type": "3w",
+    "brandId": "bajaj-auto-3w",
+    "originalBrand": "Bajaj Auto (3W)",
+    "model": "Maxima XL Electric",
+    "slug": "maxima-xl-electric"
+  },
+  {
+    "type": "3w",
+    "brandId": "bajaj-auto-3w",
+    "originalBrand": "Bajaj Auto (3W)",
+    "model": "Maxima X Wide Diesel",
+    "slug": "maxima-x-wide-diesel"
+  },
+  {
+    "type": "3w",
+    "brandId": "bajaj-auto-3w",
+    "originalBrand": "Bajaj Auto (3W)",
+    "model": "Maxima C CNG",
+    "slug": "maxima-c-cng"
+  },
+  {
+    "type": "3w",
+    "brandId": "bajaj-auto-3w",
+    "originalBrand": "Bajaj Auto (3W)",
+    "model": "GoGo",
+    "slug": "gogo"
+  },
+  {
+    "type": "3w",
+    "brandId": "bajaj-auto-3w",
+    "originalBrand": "Bajaj Auto (3W)",
+    "model": "Riki P40",
+    "slug": "riki-p40"
+  },
+  {
+    "type": "3w",
+    "brandId": "piaggio-ape",
+    "originalBrand": "Piaggio Ape",
+    "model": "Auto Classic",
+    "slug": "auto-classic"
+  },
+  {
+    "type": "3w",
+    "brandId": "piaggio-ape",
+    "originalBrand": "Piaggio Ape",
+    "model": "Auto DX",
+    "slug": "auto-dx"
+  },
+  {
+    "type": "3w",
+    "brandId": "piaggio-ape",
+    "originalBrand": "Piaggio Ape",
+    "model": "NXT+",
+    "slug": "nxt"
+  },
+  {
+    "type": "3w",
+    "brandId": "piaggio-ape",
+    "originalBrand": "Piaggio Ape",
+    "model": "Metro",
+    "slug": "metro"
+  },
+  {
+    "type": "3w",
+    "brandId": "piaggio-ape",
+    "originalBrand": "Piaggio Ape",
+    "model": "Xtra LDX Diesel",
+    "slug": "xtra-ldx-diesel"
+  },
+  {
+    "type": "3w",
+    "brandId": "piaggio-ape",
+    "originalBrand": "Piaggio Ape",
+    "model": "Xtra LDX CNG",
+    "slug": "xtra-ldx-cng"
+  },
+  {
+    "type": "3w",
+    "brandId": "piaggio-ape",
+    "originalBrand": "Piaggio Ape",
+    "model": "E-City",
+    "slug": "e-city"
+  },
+  {
+    "type": "3w",
+    "brandId": "piaggio-ape",
+    "originalBrand": "Piaggio Ape",
+    "model": "E-Xtra FX",
+    "slug": "e-xtra-fx"
+  },
+  {
+    "type": "3w",
+    "brandId": "piaggio-ape",
+    "originalBrand": "Piaggio Ape",
+    "model": "E-Xtra FX Max",
+    "slug": "e-xtra-fx-max"
+  },
+  {
+    "type": "3w",
+    "brandId": "tvs-king",
+    "originalBrand": "TVS King",
+    "model": "King Deluxe",
+    "slug": "king-deluxe"
+  },
+  {
+    "type": "3w",
+    "brandId": "tvs-king",
+    "originalBrand": "TVS King",
+    "model": "King Duramax",
+    "slug": "king-duramax"
+  },
+  {
+    "type": "3w",
+    "brandId": "tvs-king",
+    "originalBrand": "TVS King",
+    "model": "King Duramax Plus",
+    "slug": "king-duramax-plus"
+  },
+  {
+    "type": "3w",
+    "brandId": "tvs-king",
+    "originalBrand": "TVS King",
+    "model": "King Kargo",
+    "slug": "king-kargo"
+  },
+  {
+    "type": "3w",
+    "brandId": "tvs-king",
+    "originalBrand": "TVS King",
+    "model": "King EV Max",
+    "slug": "king-ev-max"
+  },
+  {
+    "type": "3w",
+    "brandId": "tvs-king",
+    "originalBrand": "TVS King",
+    "model": "King Kargo HD EV",
+    "slug": "king-kargo-hd-ev"
+  },
+  {
+    "type": "3w",
+    "brandId": "mahindra-3w",
+    "originalBrand": "Mahindra (3W)",
+    "model": "Alfa Passenger",
+    "slug": "alfa-passenger"
+  },
+  {
+    "type": "3w",
+    "brandId": "mahindra-3w",
+    "originalBrand": "Mahindra (3W)",
+    "model": "E-Alfa Plus",
+    "slug": "e-alfa-plus"
+  },
+  {
+    "type": "3w",
+    "brandId": "mahindra-3w",
+    "originalBrand": "Mahindra (3W)",
+    "model": "E-Alfa Mini",
+    "slug": "e-alfa-mini"
+  },
+  {
+    "type": "3w",
+    "brandId": "mahindra-3w",
+    "originalBrand": "Mahindra (3W)",
+    "model": "Alfa Load",
+    "slug": "alfa-load"
+  },
+  {
+    "type": "3w",
+    "brandId": "mahindra-3w",
+    "originalBrand": "Mahindra (3W)",
+    "model": "Zor Grand",
+    "slug": "zor-grand"
+  },
+  {
+    "type": "3w",
+    "brandId": "mahindra-3w",
+    "originalBrand": "Mahindra (3W)",
+    "model": "Treo",
+    "slug": "treo"
+  },
+  {
+    "type": "3w",
+    "brandId": "mahindra-3w",
+    "originalBrand": "Mahindra (3W)",
+    "model": "Treo Plus",
+    "slug": "treo-plus"
+  },
+  {
+    "type": "3w",
+    "brandId": "mahindra-3w",
+    "originalBrand": "Mahindra (3W)",
+    "model": "Treo Zor",
+    "slug": "treo-zor"
+  },
+  {
+    "type": "3w",
+    "brandId": "mahindra-3w",
+    "originalBrand": "Mahindra (3W)",
+    "model": "Treo Yaari HRT",
+    "slug": "treo-yaari-hrt"
+  },
+  {
+    "type": "3w",
+    "brandId": "mahindra-3w",
+    "originalBrand": "Mahindra (3W)",
+    "model": "Treo Yaari SFT",
+    "slug": "treo-yaari-sft"
+  },
+  {
+    "type": "3w",
+    "brandId": "mahindra-3w",
+    "originalBrand": "Mahindra (3W)",
+    "model": "UDO",
+    "slug": "udo"
+  },
+  {
+    "type": "3w",
+    "brandId": "atul-auto",
+    "originalBrand": "Atul Auto",
+    "model": "Gem Paxx",
+    "slug": "gem-paxx"
+  },
+  {
+    "type": "3w",
+    "brandId": "atul-auto",
+    "originalBrand": "Atul Auto",
+    "model": "Elite Plus",
+    "slug": "elite-plus"
+  },
+  {
+    "type": "3w",
+    "brandId": "atul-auto",
+    "originalBrand": "Atul Auto",
+    "model": "Rik Auto",
+    "slug": "rik-auto"
+  },
+  {
+    "type": "3w",
+    "brandId": "atul-auto",
+    "originalBrand": "Atul Auto",
+    "model": "Gem Cargo",
+    "slug": "gem-cargo"
+  },
+  {
+    "type": "3w",
+    "brandId": "atul-auto",
+    "originalBrand": "Atul Auto",
+    "model": "Shakti Cargo",
+    "slug": "shakti-cargo"
+  },
+  {
+    "type": "3w",
+    "brandId": "atul-auto",
+    "originalBrand": "Atul Auto",
+    "model": "Rik Electric",
+    "slug": "rik-electric"
+  },
+  {
+    "type": "3w",
+    "brandId": "kinetic-green",
+    "originalBrand": "Kinetic Green",
+    "model": "Safar Smart",
+    "slug": "safar-smart"
+  },
+  {
+    "type": "3w",
+    "brandId": "kinetic-green",
+    "originalBrand": "Kinetic Green",
+    "model": "Super DX",
+    "slug": "super-dx"
+  },
+  {
+    "type": "3w",
+    "brandId": "kinetic-green",
+    "originalBrand": "Kinetic Green",
+    "model": "Safar Shakti",
+    "slug": "safar-shakti"
+  },
+  {
+    "type": "3w",
+    "brandId": "kinetic-green",
+    "originalBrand": "Kinetic Green",
+    "model": "Safar Jumbo Ranger",
+    "slug": "safar-jumbo-ranger"
+  },
+  {
+    "type": "3w",
+    "brandId": "lohia-auto",
+    "originalBrand": "Lohia Auto",
+    "model": "Humsafar L5 Passenger",
+    "slug": "humsafar-l5-passenger"
+  },
+  {
+    "type": "3w",
+    "brandId": "lohia-auto",
+    "originalBrand": "Lohia Auto",
+    "model": "Narain ICE L3",
+    "slug": "narain-ice-l3"
+  },
+  {
+    "type": "3w",
+    "brandId": "lohia-auto",
+    "originalBrand": "Lohia Auto",
+    "model": "Narain DX",
+    "slug": "narain-dx"
+  },
+  {
+    "type": "3w",
+    "brandId": "lohia-auto",
+    "originalBrand": "Lohia Auto",
+    "model": "Humsafar L5 Cargo",
+    "slug": "humsafar-l5-cargo"
+  },
+  {
+    "type": "3w",
+    "brandId": "lohia-auto",
+    "originalBrand": "Lohia Auto",
+    "model": "Comfort F2F+",
+    "slug": "comfort-f2f"
+  },
+  {
+    "type": "3w",
+    "brandId": "lohia-auto",
+    "originalBrand": "Lohia Auto",
+    "model": "Youdha E5 Passenger",
+    "slug": "youdha-e5-passenger"
+  },
+  {
+    "type": "3w",
+    "brandId": "lohia-auto",
+    "originalBrand": "Lohia Auto",
+    "model": "Youdha E5 Cargo",
+    "slug": "youdha-e5-cargo"
+  },
+  {
+    "type": "3w",
+    "brandId": "euler-motors",
+    "originalBrand": "Euler Motors",
+    "model": "NEO HiCITY",
+    "slug": "neo-hicity"
+  },
+  {
+    "type": "3w",
+    "brandId": "euler-motors",
+    "originalBrand": "Euler Motors",
+    "model": "NEO HiRange",
+    "slug": "neo-hirange"
+  },
+  {
+    "type": "3w",
+    "brandId": "euler-motors",
+    "originalBrand": "Euler Motors",
+    "model": "HiLoad DV EV",
+    "slug": "hiload-dv-ev"
+  },
+  {
+    "type": "3w",
+    "brandId": "euler-motors",
+    "originalBrand": "Euler Motors",
+    "model": "HiLoad EV 120",
+    "slug": "hiload-ev-120"
+  },
+  {
+    "type": "3w",
+    "brandId": "euler-motors",
+    "originalBrand": "Euler Motors",
+    "model": "HiLoad EV 170",
+    "slug": "hiload-ev-170"
+  },
+  {
+    "type": "3w",
+    "brandId": "greaves-electric-3w",
+    "originalBrand": "Greaves Electric Mobility",
+    "model": "Eltra City XTRA",
+    "slug": "eltra-city-xtra"
+  },
+  {
+    "type": "3w",
+    "brandId": "greaves-electric-3w",
+    "originalBrand": "Greaves Electric Mobility",
+    "model": "Xargo",
+    "slug": "xargo"
+  },
+  {
+    "type": "3w",
+    "brandId": "greaves-electric-3w",
+    "originalBrand": "Greaves Electric Mobility",
+    "model": "Eltra City",
+    "slug": "eltra-city"
+  }
+]

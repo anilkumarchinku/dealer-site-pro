@@ -122,25 +122,50 @@ export default function AdminDashboard() {
         return () => { isMounted = false; };
     }, []);
 
-    const handleLaunch = () => {
+    
+    const handleLaunch = async () => {
         setIsLaunching(true);
 
-        updateData({
-            styleTemplate: selectedTemplate as any,
-            brands: [selectedBrand as any],
-            dealershipName: data.dealershipName || "Demo Motors",
-            location: data.location || "123 Auto Park, City Center",
-            phone: data.phone || "+91 98765 43210",
-            email: data.email || "sales@demo-motors.com",
-            sellsNewCars: true,
-            sellsUsedCars: true,
-            services: ["new_car_sales", "service_maintenance", "parts_accessories"],
-        });
+        try {
+            // Wait for store update first
+            updateData({
+                styleTemplate: selectedTemplate as any,
+                brands: [selectedBrand as any],
+            });
 
-        setTimeout(() => {
-            router.push(`/preview?brand=${encodeURIComponent(selectedBrand)}&template=${selectedTemplate}`);
-        }, 500);
+            // Persist to actual Supabase Database via our secure server route if dealerId is known
+            const { dealerId } = useOnboardingStore.getState();
+            if (dealerId) {
+                const res = await fetch("/api/admin/deploy-template", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        dealerId,
+                        template: selectedTemplate,
+                        brands: [selectedBrand]
+                    })
+                });
+                const responseData = await res.json();
+                if (!res.ok) {
+                    console.error("Failed to deploy to Supabase:", responseData.error);
+                }
+            } else {
+                console.warn("No active Dealer ID found. Previewing locally only.");
+            }
+
+            // Redirect user to preview
+            setTimeout(() => {
+                router.push(`/preview?brand=${encodeURIComponent(selectedBrand)}&template=${selectedTemplate}`);
+            }, 600);
+            
+        } catch (e) {
+            console.error("Deploy error", e);
+            setIsLaunching(false);
+        }
     };
+
 
     const filteredBrands = activeCategory === "all"
         ? ALL_BRANDS
@@ -167,6 +192,14 @@ export default function AdminDashboard() {
 
                         {/* Current Selection */}
                         <div className="hidden md:flex items-center gap-6">
+                            <Button
+                                variant="outline"
+                                onClick={() => router.push("/admin/inventory-audit")}
+                                className="border-gray-200 text-gray-700 bg-white"
+                            >
+                                <Eye className="w-4 h-4 mr-2" />
+                                Inventory Audit
+                            </Button>
                             <div className="flex items-center gap-4 px-4 py-2 bg-gray-50 rounded-xl">
                                 <div className="flex items-center gap-2">
                                     <Palette className="w-4 h-4 text-gray-400" />

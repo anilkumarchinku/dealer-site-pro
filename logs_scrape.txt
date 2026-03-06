@@ -1,0 +1,152 @@
+Starting fetch for 125 missing images...
+
+[2/125] 2W: TVS Motor Company XL100 Heavy Duty side view studio shot white background
+   --> Found image...
+   ✅ Saved xl100-heavy-duty
+
+[3/125] 2W: TVS Motor Company XL100 Comfort side view studio shot white background
+   --> Found image...
+   ✅ Saved xl100-comfort
+
+[4/125] 2W: Bajaj Auto CT 110X side view studio shot white background
+   --> Found image...
+   ✅ Saved ct-110x
+
+[5/125] 2W: Bajaj Auto Pulsar 220F side view studio shot white background
+   --> Found image...
+   ✅ Saved pulsar-220f
+
+[6/125] 2W: Royal Enfield Hunter 350 side view studio shot white background
+   --> Found image...
+   ✅ Saved hunter-350
+
+[7/125] 2W: Royal Enfield Shotgun 650 side view studio shot white background
+   --> Found image...
+   ✅ Saved shotgun-650
+
+[8/125] 2W: Yamaha India FZ-S Fi side view studio shot white background
+   --> Found image...
+   ✅ Saved fz-s-fi
+
+[9/125] 2W: Yamaha India FZ-S Fi Hybrid side view studio shot white background
+   --> Found image...
+   ✅ Saved fz-s-fi-hybrid
+
+[10/125] 2W: Yamaha India FZ-S Fi V4.0 DLX side view studio shot white background
+   --> Found image...
+   ✅ Saved fz-s-fi-v40-dlx
+
+[11/125] 2W: Yamaha India MT-15 V2.0 side view studio shot white background
+   --> Found image...
+   ✅ Saved mt-15-v20
+
+[12/125] 2W: Yamaha India Ray ZR 125 Fi side view studio shot white background
+   --> Found image...
+   ✅ Saved ray-zr-125-fi
+
+[13/125] 2W: Yamaha India Ray ZR 125 Fi Street Rally side view studio shot white background
+   --> Found image...
+   ✅ Saved ray-zr-125-fi-street-rally
+
+[14/125] 2W: Yamaha India Fascino 125 Fi side view studio shot white background
+   --> Found image...
+   ✅ Saved fascino-125-fi
+
+[15/125] 2W: Yamaha India Aerox 155 Version S side view studio shot white background
+   --> Found image...
+   ✅ Saved aerox-155-version-s
+
+[16/125] 2W: Jawa Motorcycles Jawa 42 FJ side view studio shot white background
+   --> Found image...
+   ✅ Saved jawa-42-fj
+
+[17/125] 2W: Jawa Motorcycles Jawa 42 Bobber side view studio shot white background
+   --> Found image...
+   ✅ Saved jawa-42-bobber
+
+[18/125] 2W: Benelli India Leoncino 500 side view studio shot white background
+   --> Found image...
+   ✅ Saved leoncino-500
+
+[19/125] 2W: Vespa India Vespa S 125 side view studio shot white background
+   --> Found image...
+   ✅ Saved vespa-s-125
+
+[20/125] 2W: Vespa India Vespa Tech 125 side view studio shot white background
+   --> Found image...
+   ✅ Saved vespa-tech-125
+
+[21/125] 2W: Vespa India Vespa S Tech 125 side view studio shot white background
+--- Restarting browser container ---
+   --> Found image...
+   ✅ Saved vespa-s-tech-125
+
+[22/125] 2W: Vespa India Vespa 150 side view studio shot white background
+   --> Found image...
+   ✅ Saved vespa-150
+
+[23/125] 2W: Vespa India Vespa S 150 side view studio shot white background
+   --> Found image...
+   ✅ Saved vespa-s-150
+
+[24/125] 2W: Vespa India Vespa Qala side view studio shot white background
+   --> Found image...
+   ✅ Saved vespa-qala
+
+[25/125] 2W: Harley-Davidson India Nightster Special side view studio shot white background
+   --> Found image...
+   ✅ Saved nightster-special
+
+[26/125] 2W: Harley-Davidson India Pan America 1250 Special side view studio shot white background
+   --> Found image...
+   ✅ Saved pan-america-1250-special
+
+[27/125] 2W: Triumph India Scrambler 400 X side view studio shot white background
+   --> Found image...
+   ✅ Saved scrambler-400-x
+
+[28/125] 2W: Triumph India Tiger 660 side view studio shot white background
+   --> Found image...
+   ✅ Saved tiger-660
+
+[29/125] 2W: Triumph India Street Triple 765 R side view studio shot white background
+   --> Found image...
+   ✅ Saved street-triple-765-r
+
+[30/125] 2W: Ducati India Scrambler 800 side view studio shot white background
+   --> Found image...
+   ✅ Saved scrambler-800
+
+[31/125] 2W: Ducati India DesertX Discovery side view studio shot white background
+   --> Found image...
+   ✅ Saved desertx-discovery
+
+[32/125] 2W: Indian Motorcycle Sport Chief side view studio shot white background
+   --> Found image...
+   ✅ Saved sport-chief
+
+[33/125] 2W: Moto Guzzi V7 side view studio shot white background
+   --> Found image...
+   ✅ Saved v7
+
+[34/125] 2W: Moto Guzzi V7 Sport side view studio shot white background
+   --> Found image...
+   ✅ Saved v7-sport
+
+[35/125] 2W: Moto Guzzi V100 Mandello side view studio shot white background
+   --> Found image...
+   ✅ Saved v100-mandello
+
+[36/125] 2W: CFMoto India 450MT side view studio shot white background
+   --> Found image...
+   ✅ Saved 450mt
+
+[37/125] 2W: CFMoto India 675SR-R side view studio shot white background
+   --> Found image...
+   ✅ Saved 675sr-r
+
+[38/125] 2W: Keeway India RS 250 side view studio shot white background
+   --> Found image...
+   ✅ Saved rs-250
+
+[39/125] 2W: Mahindra Two Wheelers Centuro 125 side view studio shot white background
