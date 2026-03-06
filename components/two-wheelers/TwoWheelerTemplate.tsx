@@ -164,6 +164,87 @@ const BRAND_THEMES: Record<string, BrandTheme> = {
         heroGradient: "from-[#CC5200] via-[#882200] to-black",
         accent: "#FF6600", accentText: "text-orange-400", btnPrimary: "bg-[#FF6600] text-white hover:bg-[#E05500]",
     },
+    // ── Additional 2W brands (auto-generated from brand-colors.json) ──────
+    "Husqvarna Motorcycles": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Triumph Motorcycles": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Moto Morini": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "BSA Motorcycles": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Brixton Motorcycles": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "FB Mondial": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "SYM": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Super Soco": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Segway": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "VinFast": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Lambretta": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Gravton Motors": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Gemopai": { heroGradient: "from-[#003F52] via-[#001B23] to-black", accent: "#00B4EB", accentText: "text-[#00B4EB]", btnPrimary: "bg-[#00B4EB] text-black hover:bg-[#0099C7]" },
+    "Benling India": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Tunwal E-Motors": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "e-Sprinto": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Warivo Motors": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Numeros Motors": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Avon E-Vehicles": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Avan Motors": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Motovolt": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Svitch": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Kinetic Green": { heroGradient: "from-[#2B3E17] via-[#121B0A] to-black", accent: "#7BB343", accentText: "text-[#7BB343]", btnPrimary: "bg-[#7BB343] text-black hover:bg-[#689839]" },
+    "BGauss": { heroGradient: "from-[#003C53] via-[#001A24] to-black", accent: "#00AEEF", accentText: "text-[#00AEEF]", btnPrimary: "bg-[#00AEEF] text-black hover:bg-[#0094CA]" },
+    "GT Force": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Poise": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Vegh Motors": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "One Moto India": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "YObykes": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Li-ions Elektrik": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "NDS Eco Motors": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "iScoot": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "HCD India": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Runr": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Enigma Automobile": { heroGradient: "from-[#594900] via-[#261F00] to-black", accent: "#FFD100", accentText: "text-[#FFD100]", btnPrimary: "bg-[#FFD100] text-black hover:bg-[#D8B100]" },
+    "BNC Motor": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Aeroride": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Boom Motors": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Stella Automobili": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Crayon Motors": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Bajaj Chetak Electric": { heroGradient: "from-[#001A3A] via-[#000B19] to-black", accent: "#004DA8", accentText: "text-[#004DA8]", btnPrimary: "bg-[#004DA8] text-white hover:bg-[#00418E]" },
+    "TVS iQube Electric": { heroGradient: "from-[#0C152C] via-[#050913] to-black", accent: "#253C80", accentText: "text-[#253C80]", btnPrimary: "bg-[#253C80] text-white hover:bg-[#1F336C]" },
+    "Okinawa Autotech": { heroGradient: "from-[#52090C] via-[#230405] to-black", accent: "#EC1C24", accentText: "text-[#EC1C24]", btnPrimary: "bg-[#EC1C24] text-white hover:bg-[#C8171E]" },
+    "Ampere (Greaves Electric)": { heroGradient: "from-[#1A3D1C] via-[#0B1A0C] to-black", accent: "#4CAF50", accentText: "text-[#4CAF50]", btnPrimary: "bg-[#4CAF50] text-black hover:bg-[#409444]" },
+    "Kabira Mobility": { heroGradient: "from-[#00102F] via-[#000714] to-black", accent: "#003087", accentText: "text-[#003087]", btnPrimary: "bg-[#003087] text-white hover:bg-[#002872]" },
+    "Pure EV": { heroGradient: "from-[#001E3A] via-[#000D19] to-black", accent: "#0057A8", accentText: "text-[#0057A8]", btnPrimary: "bg-[#0057A8] text-white hover:bg-[#00498E]" },
+    "Matter EV": { heroGradient: "from-[#591C00] via-[#260C00] to-black", accent: "#FF5200", accentText: "text-[#FF5200]", btnPrimary: "bg-[#FF5200] text-white hover:bg-[#D84500]" },
+    "Hop Electric": { heroGradient: "from-[#102B11] via-[#061207] to-black", accent: "#2E7D32", accentText: "text-[#2E7D32]", btnPrimary: "bg-[#2E7D32] text-white hover:bg-[#276A2A]" },
+    "Okaya EV": { heroGradient: "from-[#00102F] via-[#000714] to-black", accent: "#003087", accentText: "text-[#003087]", btnPrimary: "bg-[#003087] text-white hover:bg-[#002872]" },
+    "Oben Electric": { heroGradient: "from-[#00102F] via-[#000714] to-black", accent: "#003087", accentText: "text-[#003087]", btnPrimary: "bg-[#003087] text-white hover:bg-[#002872]" },
+    "Lectrix EV": { heroGradient: "from-[#001E3A] via-[#000D19] to-black", accent: "#0057A8", accentText: "text-[#0057A8]", btnPrimary: "bg-[#0057A8] text-white hover:bg-[#00498E]" },
+    "River EV": { heroGradient: "from-[#003A1C] via-[#00180C] to-black", accent: "#00A651", accentText: "text-[#00A651]", btnPrimary: "bg-[#00A651] text-white hover:bg-[#008D44]" },
+    "Odysse Electric": { heroGradient: "from-[#00102F] via-[#000714] to-black", accent: "#003087", accentText: "text-[#003087]", btnPrimary: "bg-[#003087] text-white hover:bg-[#002872]" },
+    "Joy e-bike": { heroGradient: "from-[#002E15] via-[#001309] to-black", accent: "#00843D", accentText: "text-[#00843D]", btnPrimary: "bg-[#00843D] text-white hover:bg-[#007033]" },
+    "Komaki": { heroGradient: "from-[#1A1A2E] via-[#0D0D17] to-black", accent: "#FFFFFF", accentText: "text-white", btnPrimary: "bg-white text-black hover:bg-gray-200" },
+    "Bounce Infinity": { heroGradient: "from-[#592000] via-[#260D00] to-black", accent: "#FF5C00", accentText: "text-[#FF5C00]", btnPrimary: "bg-[#FF5C00] text-black hover:bg-[#D84E00]" },
+    "Quantum Energy": { heroGradient: "from-[#00102F] via-[#000714] to-black", accent: "#003087", accentText: "text-[#003087]", btnPrimary: "bg-[#003087] text-white hover:bg-[#002872]" },
+    "Yulu": { heroGradient: "from-[#594B00] via-[#262000] to-black", accent: "#FFD700", accentText: "text-[#FFD700]", btnPrimary: "bg-[#FFD700] text-black hover:bg-[#D8B600]" },
+    "Raptee Energy": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "River Mobility": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Jitendra EV": { heroGradient: "from-[#00203B] via-[#000D19] to-black", accent: "#005CAB", accentText: "text-[#005CAB]", btnPrimary: "bg-[#005CAB] text-white hover:bg-[#004E91]" },
+    "iVOOMi Energy": { heroGradient: "from-[#00344C] via-[#001620] to-black", accent: "#0097DA", accentText: "text-[#0097DA]", btnPrimary: "bg-[#0097DA] text-white hover:bg-[#0080B9]" },
+    "AMO Electric": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Evolet India": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "BattRE Electric": { heroGradient: "from-[#520B0D] via-[#230505] to-black", accent: "#EB2226", accentText: "text-[#EB2226]", btnPrimary: "bg-[#EB2226] text-white hover:bg-[#C71C20]" },
+    "Detel EV": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "DAO Electric": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Earth Energy EV": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Oreva": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "iGowise Mobility": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Greta Electric": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Prevail Electric": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "EeVe India": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Pur Energy": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Yakuza Electric": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Avera Electric": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Corrit Electric": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Gaura Electric": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Fidato Evtech": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
+    "Hayasa E-Mobility": { heroGradient: "from-[#002755] via-[#001024] to-black", accent: "#0070F3", accentText: "text-[#0070F3]", btnPrimary: "bg-[#0070F3] text-white hover:bg-[#005FCE]" },
 }
 
 const DEFAULT_THEME: BrandTheme = {
@@ -174,25 +255,25 @@ const DEFAULT_THEME: BrandTheme = {
 // ── Brand logo filenames — keys are lowercase DB brand names ─────────────────
 // Files live at /public/assets/logos/2w/{id}.svg (or .png for a few)
 const BRAND_LOGO_MAP: Record<string, string> = {
-    "royal enfield":                        "royal-enfield.svg",
-    "hero motocorp":                        "hero-motocorp.svg",
-    "honda motorcycle & scooter india":     "honda-motorcycles.svg",
-    "tvs motor company":                    "tvs-motor.svg",
-    "bajaj auto":                           "bajaj-auto.svg",
-    "yamaha india":                         "yamaha.svg",
-    "suzuki motorcycle india":              "suzuki-motorcycle.svg",
-    "ktm india":                            "ktm.svg",
-    "kawasaki india":                       "kawasaki.svg",
-    "ather energy":                         "ather-energy.svg",
-    "ola electric":                         "ola-electric.svg",
-    "husqvarna india":                      "husqvarna.svg",
-    "aprilia india":                        "aprilia.svg",
-    "vespa india":                          "vespa.svg",
-    "ducati india":                         "ducati.svg",
-    "bmw motorrad india":                   "bmw-motorrad.svg",
-    "triumph india":                        "triumph.svg",
-    "harley-davidson india":                "harley-davidson.svg",
-    "cfmoto india":                         "cfmoto.png",
+    "royal enfield": "royal-enfield.svg",
+    "hero motocorp": "hero-motocorp.svg",
+    "honda motorcycle & scooter india": "honda-motorcycles.svg",
+    "tvs motor company": "tvs-motor.svg",
+    "bajaj auto": "bajaj-auto.svg",
+    "yamaha india": "yamaha.svg",
+    "suzuki motorcycle india": "suzuki-motorcycle.svg",
+    "ktm india": "ktm.svg",
+    "kawasaki india": "kawasaki.svg",
+    "ather energy": "ather-energy.svg",
+    "ola electric": "ola-electric.svg",
+    "husqvarna india": "husqvarna.svg",
+    "aprilia india": "aprilia.svg",
+    "vespa india": "vespa.svg",
+    "ducati india": "ducati.svg",
+    "bmw motorrad india": "bmw-motorrad.svg",
+    "triumph india": "triumph.svg",
+    "harley-davidson india": "harley-davidson.svg",
+    "cfmoto india": "cfmoto.png",
 }
 
 function getBrandLogoSrc(brand: string | null): string {
@@ -221,15 +302,15 @@ function getBrandTheme(brand: string | null): BrandTheme {
 // ── Types ────────────────────────────────────────────────────────────────────
 
 interface Props {
-    dealerId:    string
-    dealerName:  string
-    phone:       string
-    email:       string
-    location:    string
+    dealerId: string
+    dealerName: string
+    phone: string
+    email: string
+    location: string
     fullAddress: string | null
     primaryBrand: string | null
-    vehicles:    TwoWheelerVehicle[]
-    slug:        string
+    vehicles: TwoWheelerVehicle[]
+    slug: string
 }
 
 type FilterTab = "all" | "bike" | "scooter" | "electric"
@@ -250,12 +331,12 @@ export function TwoWheelerTemplate({
     const theme = getBrandTheme(primaryBrand)
     const prefix = useSitePrefix(slug)
 
-    const [isScrolled,      setIsScrolled]      = useState(false)
-    const [mobileMenuOpen,  setMobileMenuOpen]   = useState(false)
-    const [activeTab,       setActiveTab]        = useState<FilterTab>("all")
-    const [leadVehicleId,   setLeadVehicleId]    = useState<string | null>(null)
-    const [leadType,        setLeadType]         = useState<"best_price" | "test_ride">("best_price")
-    const [heroVehicleIdx,  setHeroVehicleIdx]   = useState(0)
+    const [isScrolled, setIsScrolled] = useState(false)
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const [activeTab, setActiveTab] = useState<FilterTab>("all")
+    const [leadVehicleId, setLeadVehicleId] = useState<string | null>(null)
+    const [leadType, setLeadType] = useState<"best_price" | "test_ride">("best_price")
+    const [heroVehicleIdx, setHeroVehicleIdx] = useState(0)
 
     // Scroll handler — nav goes solid like ModernTemplate
     useEffect(() => {
@@ -279,19 +360,19 @@ export function TwoWheelerTemplate({
             : vehicles.filter(v => v.type === activeTab)
 
     const tabCounts = {
-        all:      vehicles.length,
-        bike:     vehicles.filter(v => v.type === "bike").length,
-        scooter:  vehicles.filter(v => v.type === "scooter").length,
+        all: vehicles.length,
+        bike: vehicles.filter(v => v.type === "bike").length,
+        scooter: vehicles.filter(v => v.type === "scooter").length,
         electric: vehicles.filter(v => v.fuel_type === "electric" || v.type === "electric").length,
     }
 
     const navLinks: { label: string; href: string }[] = [
-        { label: "Bikes",       href: `${prefix}/two-wheelers/bikes`         },
-        { label: "Scooters",    href: `${prefix}/two-wheelers/scooters`      },
-        { label: "Electric",    href: `${prefix}/two-wheelers/electric`      },
-        { label: "Used",        href: `${prefix}/two-wheelers/used`          },
-        { label: "Service",     href: `${prefix}/two-wheelers/service`       },
-        { label: "EMI Calc",    href: `${prefix}/two-wheelers/emi-calculator`},
+        { label: "Bikes", href: `${prefix}/two-wheelers/bikes` },
+        { label: "Scooters", href: `${prefix}/two-wheelers/scooters` },
+        { label: "Electric", href: `${prefix}/two-wheelers/electric` },
+        { label: "Used", href: `${prefix}/two-wheelers/used` },
+        { label: "Service", href: `${prefix}/two-wheelers/service` },
+        { label: "EMI Calc", href: `${prefix}/two-wheelers/emi-calculator` },
     ]
 
     const heroVehicle = vehicles[heroVehicleIdx]
@@ -300,9 +381,8 @@ export function TwoWheelerTemplate({
         <div className="min-h-screen bg-white font-sans text-gray-900">
 
             {/* ── Fixed Navigation (ModernTemplate-style) ─────────────────── */}
-            <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-                isScrolled ? "bg-white shadow-lg" : "bg-transparent"
-            }`}>
+            <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-lg" : "bg-transparent"
+                }`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
 
@@ -329,9 +409,8 @@ export function TwoWheelerTemplate({
                                 <Link
                                     key={l.label}
                                     href={l.href}
-                                    className={`text-sm font-medium transition-colors ${
-                                        isScrolled ? "text-gray-600 hover:text-gray-900" : "text-white/80 hover:text-white"
-                                    }`}
+                                    className={`text-sm font-medium transition-colors ${isScrolled ? "text-gray-600 hover:text-gray-900" : "text-white/80 hover:text-white"
+                                        }`}
                                 >
                                     {l.label}
                                 </Link>
@@ -342,17 +421,15 @@ export function TwoWheelerTemplate({
                         <div className="flex items-center gap-3">
                             <a
                                 href={`tel:${phone}`}
-                                className={`hidden md:flex items-center gap-1.5 text-sm font-semibold transition-colors ${
-                                    isScrolled ? "text-gray-900" : "text-white"
-                                }`}
+                                className={`hidden md:flex items-center gap-1.5 text-sm font-semibold transition-colors ${isScrolled ? "text-gray-900" : "text-white"
+                                    }`}
                             >
                                 <Phone className="w-4 h-4" />
                                 {phone}
                             </a>
                             <button
-                                className={`md:hidden p-2 rounded-lg transition-colors ${
-                                    isScrolled ? "text-gray-700 hover:bg-gray-100" : "text-white hover:bg-white/10"
-                                }`}
+                                className={`md:hidden p-2 rounded-lg transition-colors ${isScrolled ? "text-gray-700 hover:bg-gray-100" : "text-white hover:bg-white/10"
+                                    }`}
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Menu"
                             >
@@ -444,9 +521,9 @@ export function TwoWheelerTemplate({
                             {/* Quick stats */}
                             <div className="flex flex-wrap gap-6 pt-4 border-t border-white/10">
                                 {[
-                                    { label: "Models",    value: `${vehicles.length}+`   },
-                                    { label: "Brands",    value: `${new Set(vehicles.map(v => v.brand)).size}+` },
-                                    { label: "Service",   value: "Expert"                },
+                                    { label: "Models", value: `${vehicles.length}+` },
+                                    { label: "Brands", value: `${new Set(vehicles.map(v => v.brand)).size}+` },
+                                    { label: "Service", value: "Expert" },
                                 ].map(s => (
                                     <div key={s.label} className="text-center">
                                         <p className={`text-2xl font-extrabold ${theme.accentText}`}>{s.value}</p>
@@ -483,9 +560,8 @@ export function TwoWheelerTemplate({
                                             <button
                                                 key={v.id}
                                                 onClick={() => setHeroVehicleIdx(i)}
-                                                className={`w-3 h-3 rounded-full transition-all ${
-                                                    i === heroVehicleIdx ? "scale-125" : "bg-white/30 hover:bg-white/50"
-                                                }`}
+                                                className={`w-3 h-3 rounded-full transition-all ${i === heroVehicleIdx ? "scale-125" : "bg-white/30 hover:bg-white/50"
+                                                    }`}
                                                 style={i === heroVehicleIdx ? { backgroundColor: theme.accent } : {}}
                                                 aria-label={`View ${v.brand} ${v.model}`}
                                             />
@@ -508,10 +584,10 @@ export function TwoWheelerTemplate({
                 <h2 className="text-2xl font-bold text-gray-900 mb-8">Shop by Category</h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {[
-                        { label: "Bikes",    emoji: "🏍️", href: `${prefix}/two-wheelers/bikes`,    count: tabCounts.bike     },
-                        { label: "Scooters", emoji: "🛵", href: `${prefix}/two-wheelers/scooters`, count: tabCounts.scooter  },
+                        { label: "Bikes", emoji: "🏍️", href: `${prefix}/two-wheelers/bikes`, count: tabCounts.bike },
+                        { label: "Scooters", emoji: "🛵", href: `${prefix}/two-wheelers/scooters`, count: tabCounts.scooter },
                         { label: "Electric", emoji: "⚡", href: `${prefix}/two-wheelers/electric`, count: tabCounts.electric },
-                        { label: "Used",     emoji: "🔄", href: `${prefix}/two-wheelers/used`,     count: null               },
+                        { label: "Used", emoji: "🔄", href: `${prefix}/two-wheelers/used`, count: null },
                     ].map(c => (
                         <Link
                             key={c.label}
@@ -539,19 +615,18 @@ export function TwoWheelerTemplate({
                     {/* Filter tabs */}
                     <div className="flex gap-1 bg-gray-100 rounded-xl p-1 w-fit">
                         {([
-                            { key: "all",      label: `All (${tabCounts.all})`           },
-                            { key: "bike",     label: `Bikes (${tabCounts.bike})`        },
-                            { key: "scooter",  label: `Scooters (${tabCounts.scooter})`  },
+                            { key: "all", label: `All (${tabCounts.all})` },
+                            { key: "bike", label: `Bikes (${tabCounts.bike})` },
+                            { key: "scooter", label: `Scooters (${tabCounts.scooter})` },
                             { key: "electric", label: `Electric (${tabCounts.electric})` },
                         ] as { key: FilterTab; label: string }[]).map(tab => (
                             <button
                                 key={tab.key}
                                 onClick={() => setActiveTab(tab.key)}
-                                className={`px-3 py-1.5 text-sm font-medium rounded-lg transition-all ${
-                                    activeTab === tab.key
+                                className={`px-3 py-1.5 text-sm font-medium rounded-lg transition-all ${activeTab === tab.key
                                         ? "bg-white text-gray-900 shadow-sm"
                                         : "text-gray-600 hover:text-gray-900"
-                                }`}
+                                    }`}
                             >
                                 {tab.label}
                             </button>
@@ -585,10 +660,10 @@ export function TwoWheelerTemplate({
                     <h2 className="text-2xl font-bold text-white text-center mb-10">Why Buy From Us</h2>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
-                            { Icon: Wrench,    title: "Expert Service",    text: "Factory-trained technicians for all 2W brands"         },
-                            { Icon: CreditCard, title: "Easy Finance",      text: "EMI starting ₹999/month — HDFC, Bajaj & more"          },
-                            { Icon: RotateCcw, title: "Exchange Offer",    text: "Best exchange value for your old bike or scooter"      },
-                            { Icon: Zap,       title: "EV Specialists",    text: "Test rides & charging demos for electric models"       },
+                            { Icon: Wrench, title: "Expert Service", text: "Factory-trained technicians for all 2W brands" },
+                            { Icon: CreditCard, title: "Easy Finance", text: "EMI starting ₹999/month — HDFC, Bajaj & more" },
+                            { Icon: RotateCcw, title: "Exchange Offer", text: "Best exchange value for your old bike or scooter" },
+                            { Icon: Zap, title: "EV Specialists", text: "Test rides & charging demos for electric models" },
                         ].map(s => (
                             <div key={s.title} className="flex flex-col items-center text-center gap-4 p-6 rounded-2xl bg-white/5 border border-white/10">
                                 <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: theme.accent + "22" }}>
