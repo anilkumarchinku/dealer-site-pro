@@ -44,16 +44,16 @@ import { EmiCalculator } from '@/components/ui/EmiCalculator';
 import type { Service } from '@/lib/types';
 
 const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
-    new_car_sales:       { label: 'New Cars',           icon: '🚗' },
-    used_car_sales:      { label: 'Used Cars',           icon: '🔄' },
-    financing:           { label: 'Finance & EMI',       icon: '💰' },
-    service_maintenance: { label: 'Service & Repairs',   icon: '🔧' },
-    parts_accessories:   { label: 'Parts & Accessories', icon: '⚙️' },
-    test_drive:          { label: 'Test Drive',          icon: '🏎️' },
-    insurance:           { label: 'Insurance',           icon: '🛡️' },
-    extended_warranty:   { label: 'Extended Warranty',   icon: '✅' },
-    roadside_assistance: { label: 'Roadside Assist',     icon: '🆘' },
-    car_exchange:        { label: 'Car Exchange',        icon: '🔃' },
+    new_car_sales: { label: 'New Cars', icon: '🚗' },
+    used_car_sales: { label: 'Used Cars', icon: '🔄' },
+    financing: { label: 'Finance & EMI', icon: '💰' },
+    service_maintenance: { label: 'Service & Repairs', icon: '🔧' },
+    parts_accessories: { label: 'Parts & Accessories', icon: '⚙️' },
+    test_drive: { label: 'Test Drive', icon: '🏎️' },
+    insurance: { label: 'Insurance', icon: '🛡️' },
+    extended_warranty: { label: 'Extended Warranty', icon: '✅' },
+    roadside_assistance: { label: 'Roadside Assist', icon: '🆘' },
+    car_exchange: { label: 'Car Exchange', icon: '🔃' },
 }
 
 interface ModernTemplateProps {
@@ -166,9 +166,8 @@ export function ModernTemplate({
         <div className="min-h-screen bg-white font-sans text-gray-900">
             {/* Navigation */}
             <nav
-                className={`fixed ${previewMode ? 'top-12' : 'top-0'} left-0 right-0 z-50 transition-all duration-300 ${
-                    isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-                }`}
+                className={`fixed ${previewMode ? 'top-12' : 'top-0'} left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+                    }`}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
@@ -193,31 +192,28 @@ export function ModernTemplate({
                         <div className="hidden md:flex items-center gap-6">
                             <button
                                 onClick={() => setActiveTab('home')}
-                                className={`font-medium transition-colors ${
-                                    activeTab === 'home'
+                                className={`font-medium transition-colors ${activeTab === 'home'
                                         ? isScrolled ? 'text-gray-900' : 'text-white'
                                         : isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'
-                                }`}
+                                    }`}
                                 style={activeTab === 'home' ? { color: brandColors.primary } : {}}
                             >
                                 {t('home', locale)}
                             </button>
                             <button
                                 onClick={() => setActiveTab('inventory')}
-                                className={`font-medium transition-colors ${
-                                    activeTab === 'inventory'
+                                className={`font-medium transition-colors ${activeTab === 'inventory'
                                         ? isScrolled ? 'text-gray-900' : 'text-white'
                                         : isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'
-                                }`}
+                                    }`}
                                 style={activeTab === 'inventory' ? { color: brandColors.primary } : {}}
                             >
                                 {t('inventory', locale)}
                             </button>
                             <a
                                 href="#contact"
-                                className={`font-medium transition-colors ${
-                                    isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'
-                                }`}
+                                className={`font-medium transition-colors ${isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'
+                                    }`}
                             >
                                 {t('contact', locale)}
                             </a>
@@ -298,6 +294,7 @@ export function ModernTemplate({
                 open={enquireSidebarOpen}
                 onOpenChange={setEnquireSidebarOpen}
                 dealerName={dealerName}
+                dealerId={dealerId}
                 brandColor={brandColors.primary}
                 services={services}
                 contactPhone={contactInfo.phone}
@@ -671,8 +668,8 @@ export function ModernTemplate({
                             {isHybrid && (
                                 <div className="flex items-center gap-1 p-1 bg-white rounded-xl border border-gray-200 shadow-sm w-fit">
                                     {([
-                                        { id: 'all',  label: `All (${cars.length})` },
-                                        { id: 'new',  label: `New (${cars.filter(c => c.condition === 'new').length})` },
+                                        { id: 'all', label: `All (${cars.length})` },
+                                        { id: 'new', label: `New (${cars.filter(c => c.condition === 'new').length})` },
                                         { id: 'used', label: `Pre-Owned (${cars.filter(c => c.condition !== 'new').length})` },
                                     ] as const).map(t => (
                                         <button
@@ -697,8 +694,8 @@ export function ModernTemplate({
                                 <CarGrid
                                     cars={isHybrid
                                         ? inventoryTab === 'new' ? cars.filter(c => c.condition === 'new')
-                                        : inventoryTab === 'used' ? cars.filter(c => c.condition !== 'new')
-                                        : cars : cars}
+                                            : inventoryTab === 'used' ? cars.filter(c => c.condition !== 'new')
+                                                : cars : cars}
                                     brandColor={brandColors.primary}
                                     light
                                     dealerPhone={contactInfo.phone}

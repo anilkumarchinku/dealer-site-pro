@@ -12,6 +12,7 @@ interface LeadCaptureModalProps {
     isOpen: boolean;
     onClose: () => void;
     car: CarModel | null;
+    dealerId: string;
     brandColors: {
         primary: string;
         secondary: string;
@@ -28,7 +29,7 @@ interface FormData {
     testDriveInterest: boolean;
 }
 
-export default function LeadCaptureModal({ isOpen, onClose, car, brandColors }: LeadCaptureModalProps) {
+export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brandColors }: LeadCaptureModalProps) {
     const [formData, setFormData] = useState<FormData>({
         fullName: '',
         phone: '',
@@ -121,23 +122,35 @@ export default function LeadCaptureModal({ isOpen, onClose, car, brandColors }: 
 
         setIsSubmitting(true);
 
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        try {
+            const res = await fetch('/api/leads', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    dealer_id: dealerId,
+                    name: formData.fullName.trim(),
+                    phone: formData.phone.trim(),
+                    email: formData.email.trim() || undefined,
+                    message: formData.message.trim() || undefined,
+                    car_id: car?.id ?? undefined,
+                    car_name: car ? `${car.brand} ${car.name}` : undefined,
+                    lead_source: formData.testDriveInterest ? 'test_drive' : 'car_enquiry',
+                }),
+            });
 
-        // Log the lead data (in production, this would send to backend)
-        console.log('📝 New Lead Captured:', {
-            ...formData,
-            car: {
-                id: car?.id,
-                brand: car?.brand,
-                name: car?.name,
-                price: car?.price,
-            },
-            timestamp: new Date().toISOString(),
-        });
-
-        setIsSubmitting(false);
-        setIsSuccess(true);
+            if (res.ok) {
+                setIsSuccess(true);
+            } else {
+                const body = await res.json().catch(() => ({}));
+                console.error('Lead submission failed:', body.error || res.statusText);
+                alert('Something went wrong. Please try again or call us directly.');
+            }
+        } catch (err) {
+            console.error('Lead submission error:', err);
+            alert('Network error. Please check your connection and try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const handleChange = (field: keyof FormData, value: string | boolean) => {
@@ -190,7 +203,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, brandColors }: 
                                 <h2 className="text-4xl font-bold mb-2">{car.name}</h2>
                                 <div className="flex items-center gap-3 text-sm">
                                     <span className="px-3 py-1 bg-white/20 backdrop-blur-md rounded-md border border-white/10">
-                                    {/* @ts-expect-error Legacy component */}
+                                        {/* @ts-expect-error Legacy component */}
                                         {(car as any).body_type || car.model}
                                     </span>
                                     {(car as any).variant && (

@@ -151,6 +151,7 @@ interface EnquireSidebarProps {
     open: boolean;
     onOpenChange: (open: boolean) => void;
     dealerName: string;
+    dealerId?: string;
     brandColor?: string;
     /** Services the dealer offers — if omitted, all are shown */
     services?: Service[];
@@ -163,6 +164,7 @@ export function EnquireSidebar({
     open,
     onOpenChange,
     dealerName,
+    dealerId = '',
     brandColor = '#2563eb',
     services,
     contactPhone,
@@ -185,11 +187,33 @@ export function EnquireSidebar({
         setForm(prev => ({ ...prev, [field]: value }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // TODO: wire up to Supabase leads table
-        console.log('Enquiry submitted:', { selectedService, ...form });
-        setSubmitted(true);
+        if (!form.name || !form.phone) return;
+
+        try {
+            const res = await fetch('/api/leads', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    dealer_id: dealerId,
+                    name: form.name.trim(),
+                    phone: form.phone.trim(),
+                    message: form.message.trim() || undefined,
+                    lead_source: selectedService || 'contact_form',
+                }),
+            });
+
+            if (res.ok) {
+                setSubmitted(true);
+            } else {
+                console.error('Enquiry submission failed');
+                alert('Something went wrong. Please try again or call us directly.');
+            }
+        } catch (err) {
+            console.error('Enquiry submission error:', err);
+            alert('Network error. Please check your connection and try again.');
+        }
     };
 
     const handleClose = () => {

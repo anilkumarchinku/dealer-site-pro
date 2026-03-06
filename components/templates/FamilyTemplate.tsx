@@ -44,16 +44,16 @@ import { EmiCalculator } from '@/components/ui/EmiCalculator';
 import type { Service } from '@/lib/types';
 
 const SERVICE_LABELS: Record<string, { label: string; icon: string; desc: string }> = {
-    new_car_sales:       { label: 'New Cars',           icon: '🚗', desc: 'Brand new vehicles direct from manufacturer' },
-    used_car_sales:      { label: 'Used Cars',           icon: '🔄', desc: 'Certified pre-owned at great prices' },
-    financing:           { label: 'Finance & EMI',       icon: '💰', desc: 'Easy monthly plans for every budget' },
-    service_maintenance: { label: 'Service & Repairs',   icon: '🔧', desc: 'Expert care for your family vehicle' },
-    parts_accessories:   { label: 'Parts & Accessories', icon: '⚙️', desc: 'Genuine parts for all makes' },
-    test_drive:          { label: 'Test Drive',          icon: '🏎️', desc: 'Take your dream car for a spin' },
-    insurance:           { label: 'Insurance',           icon: '🛡️', desc: 'Complete vehicle protection plans' },
-    extended_warranty:   { label: 'Extended Warranty',   icon: '✅', desc: 'Peace of mind, guaranteed' },
-    roadside_assistance: { label: 'Roadside Assist',     icon: '🆘', desc: '24/7 support wherever you are' },
-    car_exchange:        { label: 'Car Exchange',        icon: '🔃', desc: 'Trade in your old car easily' },
+    new_car_sales: { label: 'New Cars', icon: '🚗', desc: 'Brand new vehicles direct from manufacturer' },
+    used_car_sales: { label: 'Used Cars', icon: '🔄', desc: 'Certified pre-owned at great prices' },
+    financing: { label: 'Finance & EMI', icon: '💰', desc: 'Easy monthly plans for every budget' },
+    service_maintenance: { label: 'Service & Repairs', icon: '🔧', desc: 'Expert care for your family vehicle' },
+    parts_accessories: { label: 'Parts & Accessories', icon: '⚙️', desc: 'Genuine parts for all makes' },
+    test_drive: { label: 'Test Drive', icon: '🏎️', desc: 'Take your dream car for a spin' },
+    insurance: { label: 'Insurance', icon: '🛡️', desc: 'Complete vehicle protection plans' },
+    extended_warranty: { label: 'Extended Warranty', icon: '✅', desc: 'Peace of mind, guaranteed' },
+    roadside_assistance: { label: 'Roadside Assist', icon: '🆘', desc: '24/7 support wherever you are' },
+    car_exchange: { label: 'Car Exchange', icon: '🔃', desc: 'Trade in your old car easily' },
 }
 
 interface FamilyTemplateProps {
@@ -235,6 +235,7 @@ export function FamilyTemplate({
                 open={enquireSidebarOpen}
                 onOpenChange={setEnquireSidebarOpen}
                 dealerName={dealerName}
+                dealerId={dealerId}
                 brandColor={brandColors.primary}
                 services={services}
                 contactPhone={contactInfo.phone}
@@ -538,8 +539,8 @@ export function FamilyTemplate({
                             {isHybrid && (
                                 <div className="flex items-center gap-1 p-1 bg-white rounded-xl border border-gray-200 shadow-sm w-fit">
                                     {([
-                                        { id: 'all',  label: `All (${cars.length})` },
-                                        { id: 'new',  label: `New (${cars.filter(c => c.condition === 'new').length})` },
+                                        { id: 'all', label: `All (${cars.length})` },
+                                        { id: 'new', label: `New (${cars.filter(c => c.condition === 'new').length})` },
                                         { id: 'used', label: `Pre-Owned (${cars.filter(c => c.condition !== 'new').length})` },
                                     ] as const).map(t => (
                                         <button

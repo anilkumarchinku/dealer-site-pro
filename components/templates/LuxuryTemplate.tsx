@@ -27,16 +27,16 @@ import { EmiCalculator } from '@/components/ui/EmiCalculator';
 import type { Service } from '@/lib/types';
 
 const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
-    new_car_sales:       { label: 'New Cars',           icon: '🚗' },
-    used_car_sales:      { label: 'Used Cars',           icon: '🔄' },
-    financing:           { label: 'Finance & EMI',       icon: '💰' },
-    service_maintenance: { label: 'Service & Repairs',   icon: '🔧' },
-    parts_accessories:   { label: 'Parts & Accessories', icon: '⚙️' },
-    test_drive:          { label: 'Test Drive',          icon: '🏎️' },
-    insurance:           { label: 'Insurance',           icon: '🛡️' },
-    extended_warranty:   { label: 'Extended Warranty',   icon: '✅' },
-    roadside_assistance: { label: 'Roadside Assist',     icon: '🆘' },
-    car_exchange:        { label: 'Car Exchange',        icon: '🔃' },
+    new_car_sales: { label: 'New Cars', icon: '🚗' },
+    used_car_sales: { label: 'Used Cars', icon: '🔄' },
+    financing: { label: 'Finance & EMI', icon: '💰' },
+    service_maintenance: { label: 'Service & Repairs', icon: '🔧' },
+    parts_accessories: { label: 'Parts & Accessories', icon: '⚙️' },
+    test_drive: { label: 'Test Drive', icon: '🏎️' },
+    insurance: { label: 'Insurance', icon: '🛡️' },
+    extended_warranty: { label: 'Extended Warranty', icon: '✅' },
+    roadside_assistance: { label: 'Roadside Assist', icon: '🆘' },
+    car_exchange: { label: 'Car Exchange', icon: '🔃' },
 }
 
 interface LuxuryTemplateProps {
@@ -220,6 +220,7 @@ export function LuxuryTemplate({
                 open={enquireSidebarOpen}
                 onOpenChange={setEnquireSidebarOpen}
                 dealerName={dealerName}
+                dealerId={dealerId}
                 brandColor={brandAccent}
                 services={services}
                 contactPhone={contactInfo.phone}
@@ -462,8 +463,8 @@ export function LuxuryTemplate({
                             {isHybrid && (
                                 <div className="flex items-center gap-1 p-1 rounded-lg border border-gray-200 w-fit">
                                     {([
-                                        { id: 'all',  label: `All (${cars.length})` },
-                                        { id: 'new',  label: `New (${cars.filter(c => c.condition === 'new').length})` },
+                                        { id: 'all', label: `All (${cars.length})` },
+                                        { id: 'new', label: `New (${cars.filter(c => c.condition === 'new').length})` },
                                         { id: 'used', label: `Pre-Owned (${cars.filter(c => c.condition !== 'new').length})` },
                                     ] as const).map(t => (
                                         <button
@@ -486,8 +487,8 @@ export function LuxuryTemplate({
                                 <CarGrid
                                     cars={isHybrid
                                         ? inventoryTab === 'new' ? cars.filter(c => c.condition === 'new')
-                                        : inventoryTab === 'used' ? cars.filter(c => c.condition !== 'new')
-                                        : cars : cars}
+                                            : inventoryTab === 'used' ? cars.filter(c => c.condition !== 'new')
+                                                : cars : cars}
                                     brandColor={brandAccent}
                                     dealerPhone={contactInfo.phone}
                                     dealerId={dealerId}
