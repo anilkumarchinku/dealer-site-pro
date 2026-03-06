@@ -56,7 +56,7 @@ export async function fetchLeads(
 
     const { data, error } = await supabase
         .from("leads")
-        .select("id, dealer_id, customer_name, customer_email, customer_phone, lead_type, vehicle_id, vehicle_interest, source, message, status, created_at")
+        .select("id, dealer_id, customer_name, customer_email, customer_phone, lead_type, vehicle_id, vehicle_interest, source, utm_source, message, status, created_at")
         .eq("dealer_id", dealerId)
         .order("created_at", { ascending: false })
         .limit(200);
@@ -76,6 +76,7 @@ export async function fetchLeads(
         vehicle_id: string | null;
         vehicle_interest: string | null;
         source: string | null;
+        utm_source: string | null;
         message: string | null;
         status: string;
         created_at: string;
@@ -89,7 +90,7 @@ export async function fetchLeads(
         vehicle_interest: row.vehicle_interest ?? row.vehicle_id ?? undefined,
         message: row.message ?? undefined,
         priority: derivePriority(row.created_at),
-        source: row.source ?? "Website",
+        source: row.utm_source ?? row.source ?? "Website",
         status: (row.status as LeadStatus) ?? "new",
         created_at: row.created_at,
         updated_at: row.created_at,

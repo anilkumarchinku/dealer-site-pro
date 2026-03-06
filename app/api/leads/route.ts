@@ -132,7 +132,8 @@ export async function POST(request: NextRequest) {
                 vehicle_id: car_id ?? null,
                 vehicle_interest: car_name?.trim() ?? null,
                 lead_type: leadTypeMap[safeSource] ?? 'inquiry',
-                source: referer,
+                source: 'website',
+                utm_source: referer,
                 status: 'new',
             })
             .select('id')
