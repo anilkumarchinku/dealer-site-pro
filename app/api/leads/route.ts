@@ -107,17 +107,28 @@ export async function POST(request: NextRequest) {
             )
         }
 
+        // Map lead_source to lead_type
+        const leadTypeMap: Record<string, string> = {
+            'contact_form': 'inquiry',
+            'car_enquiry': 'inquiry',
+            'test_drive': 'test_drive',
+            'whatsapp': 'inquiry',
+            'phone': 'inquiry',
+            'price_alert': 'inquiry',
+        }
+
         // ── Insert lead ───────────────────────────────────────────────────────
         const { data, error } = await supabase
             .from('leads')
             .insert({
                 dealer_id,
-                name: name.trim(),
-                phone: phone.trim(),
-                email: email?.trim() ?? null,
+                customer_name: name.trim(),
+                customer_phone: phone.trim(),
+                customer_email: email?.trim() ?? null,
                 message: message?.trim() ?? null,
                 vehicle_id: car_id ?? null,
-                source: safeSource,
+                lead_type: leadTypeMap[safeSource] ?? 'inquiry',
+                source: 'website',
                 status: 'new',
             })
             .select('id')
