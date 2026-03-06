@@ -116,7 +116,53 @@ const BRAND_CATEGORIES = [
 
 const ALL_BRANDS = BRAND_CATEGORIES.flatMap(cat => cat.brands);
 
+
+const KNOWN_LOGOS: Record<string, string> = {
+    "Hero MotoCorp": "/assets/logos/2w/hero-motocorp.svg",
+    "Honda": "/assets/logos/honda.png",
+    "TVS": "/assets/logos/2w/tvs-motor.svg",
+    "Bajaj Auto": "/assets/logos/2w/bajaj-auto.svg",
+    "Bajaj": "/assets/logos/2w/bajaj-auto.svg",
+    "Yamaha": "/assets/logos/2w/yamaha.svg",
+    "Suzuki": "/assets/logos/suzuki.png",
+    "Royal Enfield": "/assets/logos/2w/royal-enfield.svg",
+    "KTM": "/assets/logos/2w/ktm.svg",
+    "Kawasaki": "/assets/logos/2w/kawasaki.svg",
+    "Ola Electric": "/assets/logos/2w/ola-electric.svg",
+    "Ather Energy": "/assets/logos/2w/ather-energy.svg",
+    "Mahindra": "/assets/logos/mahindra.png",
+    "Piaggio": "/assets/logos/piaggio.png",
+    "Greaves Electric": "/assets/logos/greaves.png",
+    "Kinetic Green": "/assets/logos/kinetic.png"
+};
+
+function BrandLogo({ brandName }: { brandName: string }) {
+    const [error, setError] = useState(false);
+    const defaultSrc = `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`;
+    const src = KNOWN_LOGOS[brandName] || defaultSrc;
+
+    if (error) {
+        return (
+            <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center border border-gray-200">
+                <span className="text-gray-500 font-bold text-lg">{brandName.charAt(0)}</span>
+            </div>
+        );
+    }
+
+    return (
+        <div className="w-12 h-12 relative flex items-center justify-center">
+            <img
+                src={src}
+                alt={brandName}
+                onError={() => setError(true)}
+                className="max-w-full max-h-full object-contain"
+            />
+        </div>
+    );
+}
+
 export default function AdminDashboard() {
+
     const router = useRouter();
     const { data, updateData } = useOnboardingStore();
 
@@ -418,15 +464,7 @@ export default function AdminDashboard() {
                                     style={isSelected ? { borderColor: brandColor } : {}}
                                     onClick={() => setSelectedBrand(brandName)}
                                 >
-                                    <div className="w-12 h-12 relative">
-                                        <Image
-                                            src={`/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                            alt={brandName}
-                                            fill
-                                            className="object-contain"
-                                            sizes="48px"
-                                        />
-                                    </div>
+                                    <BrandLogo brandName={brandName} />
                                     <span className={cn(
                                         "text-xs font-medium text-center line-clamp-1",
                                         isSelected ? "font-bold" : "text-gray-600"
