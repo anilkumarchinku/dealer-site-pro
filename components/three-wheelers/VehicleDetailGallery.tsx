@@ -5,17 +5,17 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import { getScrapedImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
 
 interface Props {
-    images:  string[]
-    alt:     string
-    brand?:  string
-    model?:  string
+    images: string[]
+    alt: string
+    brand?: string
+    model?: string
 }
 
 export function VehicleDetailGallery({ images, alt, brand, model }: Props) {
     // Build fallback scraped images when no uploaded images exist
     const scraped: string[] = (() => {
         if (!brand || !model) return [];
-        const [jpg, png] = getScrapedImageUrls("3w", brandNameToId(brand), model);
+        const [jpg, png] = getScrapedImageUrls("3w", brandNameToId(brand, "3w"), model);
         return [jpg, png];
     })();
 
@@ -73,9 +73,8 @@ export function VehicleDetailGallery({ images, alt, brand, model }: Props) {
                         <button
                             key={i}
                             onClick={() => setActive(i)}
-                            className={`shrink-0 w-16 h-14 rounded-lg overflow-hidden border-2 transition-colors ${
-                                i === active ? "border-primary" : "border-border"
-                            }`}
+                            className={`shrink-0 w-16 h-14 rounded-lg overflow-hidden border-2 transition-colors ${i === active ? "border-primary" : "border-border"
+                                }`}
                         >
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src={img} alt={`${alt} ${i + 1}`} className="w-full h-full object-cover" />

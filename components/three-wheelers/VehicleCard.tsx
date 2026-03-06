@@ -7,18 +7,18 @@ import { getScrapedImageUrls, brandNameToId } from "@/lib/utils/brand-model-imag
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 interface Props {
-    vehicle:    ThreeWheelerVehicle
-    slug:       string
-    onLead?:    (vehicleId: string) => void
+    vehicle: ThreeWheelerVehicle
+    slug: string
+    onLead?: (vehicleId: string) => void
 }
 
 export function VehicleCard({ vehicle, slug, onLead }: Props) {
     const prefix = useSitePrefix(slug)
     const price = (vehicle.ex_showroom_price_paise / 100).toLocaleString("en-IN")
 
-    const [jpgUrl, pngUrl] = getScrapedImageUrls("3w", brandNameToId(vehicle.brand), vehicle.model)
+    const [jpgUrl, pngUrl] = getScrapedImageUrls("3w", brandNameToId(vehicle.brand, "3w"), vehicle.model)
     const primarySrc = vehicle.images[0] || jpgUrl
-    const [imgSrc, setImgSrc]   = useState(primarySrc)
+    const [imgSrc, setImgSrc] = useState(primarySrc)
     const [imgFailed, setFailed] = useState(false)
 
     function handleImgError() {
@@ -50,9 +50,8 @@ export function VehicleCard({ vehicle, slug, onLead }: Props) {
                     )}
                 </div>
                 {vehicle.stock_status !== "available" && (
-                    <div className={`absolute bottom-0 left-0 right-0 text-center text-xs font-medium py-1 ${
-                        vehicle.stock_status === "booking_open" ? "bg-blue-600 text-white" : "bg-gray-800 text-white"
-                    }`}>
+                    <div className={`absolute bottom-0 left-0 right-0 text-center text-xs font-medium py-1 ${vehicle.stock_status === "booking_open" ? "bg-blue-600 text-white" : "bg-gray-800 text-white"
+                        }`}>
                         {vehicle.stock_status === "booking_open" ? "Booking Open" : "Out of Stock"}
                     </div>
                 )}

@@ -50,26 +50,45 @@ export function getScrapedImageFallback(
  * Image folders don't always match simple kebab-case of the DB brand name
  * (e.g. "Honda Motorcycle & Scooter India" → folder "honda-hmsi").
  */
-const BRAND_FOLDER_MAP: Record<string, string> = {
-    "royal enfield":                        "royal-enfield",
-    "hero motocorp":                        "hero-motocorp",
-    "honda motorcycle & scooter india":     "honda-hmsi",
-    "honda":                                "honda-hmsi",
-    "tvs motor company":                    "tvs-motor",
-    "tvs":                                  "tvs-motor",
-    "bajaj auto":                           "bajaj-auto",
-    "bajaj":                                "bajaj-auto",
-    "yamaha india":                         "yamaha-india",
-    "yamaha":                               "yamaha-india",
-    "suzuki motorcycle india":              "suzuki-motorcycle",
-    "suzuki":                               "suzuki-motorcycle",
-    "ktm india":                            "ktm-india",
-    "ktm":                                  "ktm-india",
-    "kawasaki india":                       "kawasaki-india",
-    "kawasaki":                             "kawasaki-india",
-    "ather energy":                         "ather-energy",
-    "ather":                                "ather-energy",
-    "ola electric":                         "ola-electric",
+const BRAND_FOLDER_MAP_2W: Record<string, string> = {
+    "royal enfield": "royal-enfield",
+    "hero motocorp": "hero-motocorp",
+    "honda motorcycle & scooter india": "honda-hmsi",
+    "honda": "honda-hmsi",
+    "tvs motor company": "tvs-motor",
+    "tvs": "tvs-motor",
+    "bajaj auto": "bajaj-auto",
+    "bajaj": "bajaj-auto",
+    "yamaha india": "yamaha-india",
+    "yamaha": "yamaha-india",
+    "suzuki motorcycle india": "suzuki-motorcycle",
+    "suzuki": "suzuki-motorcycle",
+    "ktm india": "ktm-india",
+    "ktm": "ktm-india",
+    "kawasaki india": "kawasaki-india",
+    "kawasaki": "kawasaki-india",
+    "ather energy": "ather-energy",
+    "ather": "ather-energy",
+    "ola electric": "ola-electric",
+}
+
+const BRAND_FOLDER_MAP_3W: Record<string, string> = {
+    "mahindra": "mahindra-3w",
+    "bajaj": "bajaj-auto-3w",
+    "bajaj auto": "bajaj-auto-3w",
+    "tvs": "tvs-king",
+    "tvs motor company": "tvs-king",
+    "piaggio": "piaggio-ape",
+    "greaves": "greaves-electric-3w",
+    "greaves electric": "greaves-electric-3w",
+    "kinetic": "kinetic-green",
+    "kinetic green": "kinetic-green",
+    "euler": "euler-motors",
+    "euler motors": "euler-motors",
+    "atul": "atul-auto",
+    "atul auto": "atul-auto",
+    "lohia": "lohia-auto",
+    "lohia auto": "lohia-auto",
 }
 
 /**
@@ -77,9 +96,12 @@ const BRAND_FOLDER_MAP: Record<string, string> = {
  * Checks explicit folder map first, then falls back to kebab-case conversion.
  * Used when the DB only stores the display name (e.g. "Hero MotoCorp").
  */
-export function brandNameToId(brandName: string): string {
+export function brandNameToId(brandName: string, category: "2w" | "3w" = "2w"): string {
     const lower = brandName.toLowerCase().trim();
-    if (BRAND_FOLDER_MAP[lower]) return BRAND_FOLDER_MAP[lower];
+    const map = category === "3w" ? BRAND_FOLDER_MAP_3W : BRAND_FOLDER_MAP_2W;
+
+    if (map[lower]) return map[lower];
+
     return lower
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/^-|-$/g, "");
