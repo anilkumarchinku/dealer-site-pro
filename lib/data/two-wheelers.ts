@@ -4,9 +4,67 @@
  * Models and prices are approximate India ex-showroom (2024–25).
  */
 
-import type { TwoWheelerVehicle } from '@/lib/types/two-wheeler'
+import type { TwoWheelerVehicle, TwoWheelerType, TwoWheelerFuelType } from '@/lib/types/two-wheeler'
+import brandData from '@/lib/data/brand-models.json'
+import { brandNameToId, modelToSlug } from '@/lib/utils/brand-model-images'
 
 const NOW = new Date().toISOString()
+
+// ── Brands in the "electric" group in brand-models.json ──────────────────────
+const ELECTRIC_GROUP_BRANDS = new Set(
+    (brandData.twoWheelers.electric as { brand: string }[]).map(b => b.brand)
+)
+
+function subCatToType(subCat: string, isElectricBrand: boolean): TwoWheelerType {
+    if (isElectricBrand || subCat === 'electric') return 'electric'
+    if (subCat === 'scooters') return 'scooter'
+    return 'bike'
+}
+
+function buildTwoWheelerEntry(
+    model: string,
+    type: TwoWheelerType,
+    brand: string,
+    brandId: string,
+    idx: number,
+    dealerId: string
+): TwoWheelerVehicle {
+    const fuelType: TwoWheelerFuelType = type === 'electric' ? 'electric' : 'petrol'
+    const slug = modelToSlug(model)
+    const imageUrl = `/data/brand-model-images/2w/${brandId}/${slug}.jpg`
+    return {
+        id:                      `catalog-2w-${brandId}-${idx}`,
+        dealer_id:               dealerId,
+        type,
+        brand,
+        model,
+        variant:                 null,
+        year:                    2024,
+        fuel_type:               fuelType,
+        engine_cc:               null,
+        battery_kwh:             null,
+        range_km:                null,
+        charging_time_hours:     null,
+        battery_warranty_years:  null,
+        top_speed_kmph:          null,
+        mileage_kmpl:            null,
+        ex_showroom_price_paise: 0,
+        on_road_price_paise:     null,
+        emi_starting_paise:      null,
+        stock_status:            'available',
+        colors:                  [],
+        images:                  [imageUrl],
+        brochure_url:            null,
+        bs6_compliant:           true,
+        fame_subsidy_eligible:   false,
+        description:             null,
+        features:                [],
+        status:                  'active',
+        views:                   0,
+        created_at:              NOW,
+        updated_at:              NOW,
+    }
+}
 
 type CatalogEntry = Omit<TwoWheelerVehicle, 'id' | 'dealer_id' | 'created_at' | 'updated_at' | 'views'>
 
@@ -2945,33 +3003,50 @@ const CATALOG_BY_BRAND: Record<string, CatalogEntry[]> = {
 
 /**
  * Returns a catalog of TwoWheelerVehicle objects for the given brand.
- * Tries exact match first, then fuzzy substring match so full DB names
- * like "Hero MotoCorp" still resolve to the "Hero" catalog key if needed.
- * The `dealerId` is substituted in so vehicles are compatible with the system.
+ * Reads all models from brand-models.json so every model shows on the website.
  */
 export function getTwoWheelerCatalog(brand: string, dealerId: string): TwoWheelerVehicle[] {
+    const allBrands = [
+        ...(brandData.twoWheelers.traditional as { brandId: string; brand: string; models: unknown }[]),
+        ...(brandData.twoWheelers.electric   as { brandId: string; brand: string; models: unknown }[]),
+    ]
+
     const lower = brand.toLowerCase()
-
-    // 1. Exact match
-    let entries = CATALOG_BY_BRAND[brand]
-
-    // 2. Fuzzy match — brand contains key or key contains brand
-    if (!entries) {
-        const key = Object.keys(CATALOG_BY_BRAND).find(k =>
-            lower.includes(k.toLowerCase()) || k.toLowerCase().includes(lower)
+    let brandGroup = allBrands.find(b => b.brand === brand)
+    if (!brandGroup) {
+        brandGroup = allBrands.find(b =>
+            b.brand.toLowerCase().includes(lower) || lower.includes(b.brand.toLowerCase())
         )
-        entries = key ? CATALOG_BY_BRAND[key] : []
+    }
+    if (!brandGroup) return []
+
+    const brandId      = brandNameToId(brandGroup.brand, '2w')
+    const isElectric   = ELECTRIC_GROUP_BRANDS.has(brandGroup.brand)
+    const models       = brandGroup.models
+
+    const entries: TwoWheelerVehicle[] = []
+    let idx = 0
+
+    if (Array.isArray(models)) {
+        for (const model of models as string[]) {
+            const type = isElectric ? 'electric' : 'bike'
+            entries.push(buildTwoWheelerEntry(model, type, brandGroup.brand, brandId, idx++, dealerId))
+        }
+    } else {
+        for (const [subCat, modelList] of Object.entries(models as Record<string, string[]>)) {
+            if (!Array.isArray(modelList)) continue
+            const type = subCatToType(subCat, isElectric)
+            for (const model of modelList) {
+                entries.push(buildTwoWheelerEntry(model, type, brandGroup.brand, brandId, idx++, dealerId))
+            }
+        }
     }
 
-    return entries.map((entry, idx) => ({
-        ...entry,
-        id:         `catalog-${idx}`,
-        dealer_id:  dealerId,
-        created_at: NOW,
-        updated_at: NOW,
-        views:      0,
-    }))
+    return entries
 }
 
-/** All brand names that have a catalog. */
-export const TWO_WHEELER_BRANDS = Object.keys(CATALOG_BY_BRAND)
+/** All brand names that have a catalog — derived from brand-models.json. */
+export const TWO_WHEELER_BRANDS = [
+    ...(brandData.twoWheelers.traditional as { brand: string }[]).map(b => b.brand),
+    ...(brandData.twoWheelers.electric   as { brand: string }[]).map(b => b.brand),
+]

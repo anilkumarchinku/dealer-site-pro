@@ -4,9 +4,75 @@
  * Models and prices are approximate India ex-showroom (2024–25).
  */
 
-import type { ThreeWheelerVehicle } from '@/lib/types/three-wheeler'
+import type { ThreeWheelerVehicle, ThreeWheelerType, ThreeWheelerFuelType } from '@/lib/types/three-wheeler'
+import brandData from '@/lib/data/brand-models.json'
+import { brandNameToId, modelToSlug } from '@/lib/utils/brand-model-images'
 
 const NOW = new Date().toISOString()
+
+function subCatToType3W(subCat: string): ThreeWheelerType {
+    if (subCat === 'electric') return 'electric'
+    if (subCat === 'cargo')    return 'cargo'
+    if (subCat === 'school_van') return 'school_van'
+    return 'passenger'
+}
+
+function subCatToFuel3W(subCat: string): ThreeWheelerFuelType {
+    if (subCat === 'electric') return 'electric'
+    if (subCat === 'cargo')    return 'diesel'
+    return 'cng'
+}
+
+function buildThreeWheelerEntry(
+    model: string,
+    type: ThreeWheelerType,
+    fuelType: ThreeWheelerFuelType,
+    brand: string,
+    brandId: string,
+    idx: number,
+    dealerId: string
+): ThreeWheelerVehicle {
+    const slug = modelToSlug(model)
+    const imageUrl = `/data/brand-model-images/3w/${brandId}/${slug}.jpg`
+    return {
+        id:                     `catalog-3w-${brandId}-${idx}`,
+        dealer_id:              dealerId,
+        type,
+        brand,
+        model,
+        variant:                null,
+        year:                   2024,
+        fuel_type:              fuelType,
+        engine_cc:              null,
+        battery_kwh:            null,
+        range_km:               null,
+        charging_time_hours:    null,
+        battery_warranty_years: null,
+        payload_kg:             null,
+        body_type:              null,
+        passenger_capacity:     null,
+        max_speed_kmph:         null,
+        mileage_kmpl:           null,
+        cng_mileage_km_per_kg:  null,
+        permit_type:            null,
+        gvw_kg:                 null,
+        fame_subsidy_eligible:  false,
+        bs6_compliant:          true,
+        ex_showroom_price_paise: 0,
+        on_road_price_paise:    null,
+        emi_starting_paise:     null,
+        stock_status:           'available',
+        colors:                 [],
+        images:                 [imageUrl],
+        brochure_url:           null,
+        description:            null,
+        features:               [],
+        status:                 'active',
+        views:                  0,
+        created_at:             NOW,
+        updated_at:             NOW,
+    }
+}
 type CatalogEntry = Omit<ThreeWheelerVehicle,
     'id' | 'dealer_id' | 'created_at' | 'updated_at' | 'views' |
     'payload_kg' | 'body_type' | 'passenger_capacity' | 'cng_mileage_km_per_kg' |
@@ -691,33 +757,43 @@ const CATALOG_BY_BRAND: Record<string, CatalogEntry[]> = {
 
 /**
  * Returns a catalog of ThreeWheelerVehicle objects for the given brand.
+ * Reads all models from brand-models.json so every model shows on the website.
  */
 export function getThreeWheelerCatalog(brand: string, dealerId: string): ThreeWheelerVehicle[] {
-    const lower = brand.toLowerCase()
-    let entries = CATALOG_BY_BRAND[brand]
+    const brands3W = brandData.threeWheelers as { brandId: string; brand: string; models: unknown }[]
 
-    if (!entries) {
-        const key = Object.keys(CATALOG_BY_BRAND).find(k =>
-            lower.includes(k.toLowerCase()) || k.toLowerCase().includes(lower)
+    const lower = brand.toLowerCase()
+    let brandGroup = brands3W.find(b => b.brand === brand)
+    if (!brandGroup) {
+        brandGroup = brands3W.find(b =>
+            b.brand.toLowerCase().includes(lower) || lower.includes(b.brand.toLowerCase())
         )
-        entries = key ? CATALOG_BY_BRAND[key] : []
+    }
+    if (!brandGroup) return []
+
+    const brandId = brandNameToId(brandGroup.brand, '3w')
+    const models  = brandGroup.models
+
+    const entries: ThreeWheelerVehicle[] = []
+    let idx = 0
+
+    if (Array.isArray(models)) {
+        for (const model of models as string[]) {
+            entries.push(buildThreeWheelerEntry(model, 'passenger', 'cng', brandGroup.brand, brandId, idx++, dealerId))
+        }
+    } else {
+        for (const [subCat, modelList] of Object.entries(models as Record<string, string[]>)) {
+            if (!Array.isArray(modelList)) continue
+            const type     = subCatToType3W(subCat)
+            const fuelType = subCatToFuel3W(subCat)
+            for (const model of modelList) {
+                entries.push(buildThreeWheelerEntry(model, type, fuelType, brandGroup.brand, brandId, idx++, dealerId))
+            }
+        }
     }
 
-    return entries.map((entry, idx) => ({
-        payload_kg:            null,
-        body_type:             null,
-        passenger_capacity:    null,
-        cng_mileage_km_per_kg: null,
-        permit_type:           null,
-        gvw_kg:                null,
-        brochure_url:          null,
-        ...entry,
-        id: `catalog-3w-${idx}`,
-        dealer_id: dealerId,
-        created_at: NOW,
-        updated_at: NOW,
-        views: 0,
-    })) as ThreeWheelerVehicle[]
+    return entries
 }
 
-export const THREE_WHEELER_BRANDS = Object.keys(CATALOG_BY_BRAND)
+/** All brand names that have a catalog — derived from brand-models.json. */
+export const THREE_WHEELER_BRANDS = (brandData.threeWheelers as { brand: string }[]).map(b => b.brand)
