@@ -657,6 +657,7 @@ export function TwoWheelerTemplate({
                                 key={v.id}
                                 vehicle={v}
                                 slug={slug}
+                                brandColor={theme.accent}
                                 onLead={vid => { setLeadType("best_price"); setLeadVehicleId(vid) }}
                                 onCompare={undefined}
                             />

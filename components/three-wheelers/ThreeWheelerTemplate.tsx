@@ -501,6 +501,7 @@ export function ThreeWheelerTemplate({
                                         key={v.id}
                                         vehicle={v}
                                         slug={slug}
+                                        brandColor={accent}
                                         onLead={vid => setLeadVehicleId(vid)}
                                     />
                                 ))}
@@ -750,6 +751,7 @@ export function ThreeWheelerTemplate({
                                         key={v.id}
                                         vehicle={v}
                                         slug={slug}
+                                        brandColor={accent}
                                         onLead={vid => setLeadVehicleId(vid)}
                                     />
                                 ))}
