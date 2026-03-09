@@ -1,7 +1,17 @@
 import { NextResponse } from 'next/server'
-import { isValidDomain } from '@/lib/services/dns-verification-service'
+import { isValidDomain, verifyCustomDomain } from '@/lib/services/dns-verification-service'
 import { addDomainToProject, registerDomainOnMainProject } from '@/lib/services/vercel-service'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
+
+// Correct DNS records for Vercel custom domains.
+// A record on root (@) is required — CNAME on root is not supported by most registrars.
+const DNS_INSTRUCTIONS = {
+    records: [
+        { type: 'A',     host: '@',   value: '76.76.21.21',          ttl: 3600 },
+        { type: 'CNAME', host: 'www', value: 'cname.vercel-dns.com',  ttl: 3600 },
+    ],
+    note: 'Add an A record for the root domain (@) and a CNAME for www. Both are required.',
+}
 
 /**
  * POST /api/domains/connect-custom
@@ -59,13 +69,7 @@ export async function POST(request: Request) {
             return NextResponse.json({
                 success: true,
                 domain: existingDomain,
-                dns: {
-                    type:  'CNAME',
-                    host:  '@',
-                    value: 'cname.vercel-dns.com',
-                    ttl:   600,
-                    note:  'For www: add CNAME with host "www" pointing to cname.vercel-dns.com',
-                },
+                dns: DNS_INSTRUCTIONS,
                 vercelRegistered: false,
             })
         }
@@ -139,16 +143,33 @@ export async function POST(request: Request) {
             console.error('Vercel domain registration failed (non-fatal):', vercelError)
         }
 
+        // Auto-verify DNS immediately — if the dealer had DNS already pointing to us
+        // (e.g. set up before connecting), we activate the domain right away instead of
+        // leaving it stuck in 'pending' indefinitely.
+        if (vercelRegistered && newDomain) {
+            try {
+                const verification = await verifyCustomDomain(customDomain)
+                if (verification.allVerified) {
+                    await supabase
+                        .from('dealer_domains')
+                        .update({
+                            status: 'active',
+                            dns_verified: true,
+                            dns_verified_at: new Date().toISOString(),
+                            last_checked_at: new Date().toISOString(),
+                        })
+                        .eq('id', newDomain.id)
+                    newDomain.status = 'active'
+                }
+            } catch {
+                // Non-fatal — DNS hasn't propagated yet. User can verify later.
+            }
+        }
+
         return NextResponse.json({
             success: true,
             domain: newDomain,
-            dns: {
-                type:  'CNAME',
-                host:  '@',
-                value: 'cname.vercel-dns.com',
-                ttl:   600,
-                note:  'For www: add CNAME with host "www" pointing to cname.vercel-dns.com',
-            },
+            dns: DNS_INSTRUCTIONS,
             vercelRegistered,
         })
     } catch (error) {

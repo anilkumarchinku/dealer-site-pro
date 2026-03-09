@@ -36,7 +36,7 @@ export async function GET(request: Request) {
         .from('dealer_domains')
         .select('dealer_id, subdomain, custom_domain, status, site_slug, dealers(slug, id)')
         .or(`custom_domain.eq.${domain},subdomain_url.eq.${domain}`)
-        .eq('status', 'active')
+        .in('status', ['active', 'pending'])
         .limit(1)
         .single()
 
