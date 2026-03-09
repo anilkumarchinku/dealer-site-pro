@@ -14,8 +14,8 @@ type CatalogEntry = Omit<ThreeWheelerVehicle, 'id' | 'dealer_id' | 'created_at' 
 const BAJAJ_AUTO_3W: CatalogEntry[] = [
     {
         brand: 'Bajaj Auto (3W)', model: 'RE CNG', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -24,8 +24,8 @@ const BAJAJ_AUTO_3W: CatalogEntry[] = [
     },
     {
         brand: 'Bajaj Auto (3W)', model: 'RE LPG', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -34,8 +34,8 @@ const BAJAJ_AUTO_3W: CatalogEntry[] = [
     },
     {
         brand: 'Bajaj Auto (3W)', model: 'RE Diesel', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -44,8 +44,8 @@ const BAJAJ_AUTO_3W: CatalogEntry[] = [
     },
     {
         brand: 'Bajaj Auto (3W)', model: 'RE Electric', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -54,8 +54,8 @@ const BAJAJ_AUTO_3W: CatalogEntry[] = [
     },
     {
         brand: 'Bajaj Auto (3W)', model: 'Maxima Z CNG', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -64,8 +64,8 @@ const BAJAJ_AUTO_3W: CatalogEntry[] = [
     },
     {
         brand: 'Bajaj Auto (3W)', model: 'Compact RE CNG', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -75,7 +75,7 @@ const BAJAJ_AUTO_3W: CatalogEntry[] = [
     {
         brand: 'Bajaj Auto (3W)', model: 'Maxima XL Electric', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -85,7 +85,7 @@ const BAJAJ_AUTO_3W: CatalogEntry[] = [
     {
         brand: 'Bajaj Auto (3W)', model: 'Maxima X Wide Diesel', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -95,7 +95,7 @@ const BAJAJ_AUTO_3W: CatalogEntry[] = [
     {
         brand: 'Bajaj Auto (3W)', model: 'Maxima C CNG', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -105,7 +105,7 @@ const BAJAJ_AUTO_3W: CatalogEntry[] = [
     {
         brand: 'Bajaj Auto (3W)', model: 'GoGo', variant: 'Standard',
         type: 'passenger', fuel_type: 'electric', year: 2024,
-        engine_cc: null, mileage_kmpl: null, range_km: 120, top_speed_kmph: 55,
+        engine_cc: null, mileage_kmpl: null, range_km: 120, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -115,7 +115,7 @@ const BAJAJ_AUTO_3W: CatalogEntry[] = [
     {
         brand: 'Bajaj Auto (3W)', model: 'Riki P40', variant: 'Standard',
         type: 'passenger', fuel_type: 'electric', year: 2024,
-        engine_cc: null, mileage_kmpl: null, range_km: 120, top_speed_kmph: 55,
+        engine_cc: null, mileage_kmpl: null, range_km: 120, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -128,8 +128,8 @@ const BAJAJ_AUTO_3W: CatalogEntry[] = [
 const PIAGGIO_APE: CatalogEntry[] = [
     {
         brand: 'Piaggio Ape', model: 'Auto Classic', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -138,8 +138,8 @@ const PIAGGIO_APE: CatalogEntry[] = [
     },
     {
         brand: 'Piaggio Ape', model: 'Auto DX', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -148,8 +148,8 @@ const PIAGGIO_APE: CatalogEntry[] = [
     },
     {
         brand: 'Piaggio Ape', model: 'NXT+', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -158,8 +158,8 @@ const PIAGGIO_APE: CatalogEntry[] = [
     },
     {
         brand: 'Piaggio Ape', model: 'Metro', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -169,7 +169,7 @@ const PIAGGIO_APE: CatalogEntry[] = [
     {
         brand: 'Piaggio Ape', model: 'Xtra LDX Diesel', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -179,7 +179,7 @@ const PIAGGIO_APE: CatalogEntry[] = [
     {
         brand: 'Piaggio Ape', model: 'Xtra LDX CNG', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -189,7 +189,7 @@ const PIAGGIO_APE: CatalogEntry[] = [
     {
         brand: 'Piaggio Ape', model: 'E-City', variant: 'Standard',
         type: 'passenger', fuel_type: 'electric', year: 2024,
-        engine_cc: null, mileage_kmpl: null, range_km: 120, top_speed_kmph: 55,
+        engine_cc: null, mileage_kmpl: null, range_km: 120, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -199,7 +199,7 @@ const PIAGGIO_APE: CatalogEntry[] = [
     {
         brand: 'Piaggio Ape', model: 'E-Xtra FX', variant: 'Standard',
         type: 'passenger', fuel_type: 'electric', year: 2024,
-        engine_cc: null, mileage_kmpl: null, range_km: 120, top_speed_kmph: 55,
+        engine_cc: null, mileage_kmpl: null, range_km: 120, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -209,7 +209,7 @@ const PIAGGIO_APE: CatalogEntry[] = [
     {
         brand: 'Piaggio Ape', model: 'E-Xtra FX Max', variant: 'Standard',
         type: 'passenger', fuel_type: 'electric', year: 2024,
-        engine_cc: null, mileage_kmpl: null, range_km: 120, top_speed_kmph: 55,
+        engine_cc: null, mileage_kmpl: null, range_km: 120, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -222,8 +222,8 @@ const PIAGGIO_APE: CatalogEntry[] = [
 const TVS_KING: CatalogEntry[] = [
     {
         brand: 'TVS King', model: 'King Deluxe', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -232,8 +232,8 @@ const TVS_KING: CatalogEntry[] = [
     },
     {
         brand: 'TVS King', model: 'King Duramax', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -242,8 +242,8 @@ const TVS_KING: CatalogEntry[] = [
     },
     {
         brand: 'TVS King', model: 'King Duramax Plus', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -253,7 +253,7 @@ const TVS_KING: CatalogEntry[] = [
     {
         brand: 'TVS King', model: 'King Kargo', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -263,7 +263,7 @@ const TVS_KING: CatalogEntry[] = [
     {
         brand: 'TVS King', model: 'King EV Max', variant: 'Standard',
         type: 'passenger', fuel_type: 'electric', year: 2024,
-        engine_cc: null, mileage_kmpl: null, range_km: 120, top_speed_kmph: 55,
+        engine_cc: null, mileage_kmpl: null, range_km: 120, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -273,7 +273,7 @@ const TVS_KING: CatalogEntry[] = [
     {
         brand: 'TVS King', model: 'King Kargo HD EV', variant: 'Standard',
         type: 'passenger', fuel_type: 'electric', year: 2024,
-        engine_cc: null, mileage_kmpl: null, range_km: 120, top_speed_kmph: 55,
+        engine_cc: null, mileage_kmpl: null, range_km: 120, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -286,8 +286,8 @@ const TVS_KING: CatalogEntry[] = [
 const MAHINDRA_3W: CatalogEntry[] = [
     {
         brand: 'Mahindra (3W)', model: 'Alfa Passenger', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -296,8 +296,8 @@ const MAHINDRA_3W: CatalogEntry[] = [
     },
     {
         brand: 'Mahindra (3W)', model: 'E-Alfa Plus', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -306,8 +306,8 @@ const MAHINDRA_3W: CatalogEntry[] = [
     },
     {
         brand: 'Mahindra (3W)', model: 'E-Alfa Mini', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -317,7 +317,7 @@ const MAHINDRA_3W: CatalogEntry[] = [
     {
         brand: 'Mahindra (3W)', model: 'Alfa Load', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -327,7 +327,7 @@ const MAHINDRA_3W: CatalogEntry[] = [
     {
         brand: 'Mahindra (3W)', model: 'Zor Grand', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -337,7 +337,7 @@ const MAHINDRA_3W: CatalogEntry[] = [
     {
         brand: 'Mahindra (3W)', model: 'Treo', variant: 'Standard',
         type: 'passenger', fuel_type: 'electric', year: 2024,
-        engine_cc: null, mileage_kmpl: null, range_km: 120, top_speed_kmph: 55,
+        engine_cc: null, mileage_kmpl: null, range_km: 120, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -347,7 +347,7 @@ const MAHINDRA_3W: CatalogEntry[] = [
     {
         brand: 'Mahindra (3W)', model: 'Treo Plus', variant: 'Standard',
         type: 'passenger', fuel_type: 'electric', year: 2024,
-        engine_cc: null, mileage_kmpl: null, range_km: 120, top_speed_kmph: 55,
+        engine_cc: null, mileage_kmpl: null, range_km: 120, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -357,7 +357,7 @@ const MAHINDRA_3W: CatalogEntry[] = [
     {
         brand: 'Mahindra (3W)', model: 'Treo Zor', variant: 'Standard',
         type: 'passenger', fuel_type: 'electric', year: 2024,
-        engine_cc: null, mileage_kmpl: null, range_km: 120, top_speed_kmph: 55,
+        engine_cc: null, mileage_kmpl: null, range_km: 120, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -367,7 +367,7 @@ const MAHINDRA_3W: CatalogEntry[] = [
     {
         brand: 'Mahindra (3W)', model: 'Treo Yaari HRT', variant: 'Standard',
         type: 'passenger', fuel_type: 'electric', year: 2024,
-        engine_cc: null, mileage_kmpl: null, range_km: 120, top_speed_kmph: 55,
+        engine_cc: null, mileage_kmpl: null, range_km: 120, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -377,7 +377,7 @@ const MAHINDRA_3W: CatalogEntry[] = [
     {
         brand: 'Mahindra (3W)', model: 'Treo Yaari SFT', variant: 'Standard',
         type: 'passenger', fuel_type: 'electric', year: 2024,
-        engine_cc: null, mileage_kmpl: null, range_km: 120, top_speed_kmph: 55,
+        engine_cc: null, mileage_kmpl: null, range_km: 120, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -387,7 +387,7 @@ const MAHINDRA_3W: CatalogEntry[] = [
     {
         brand: 'Mahindra (3W)', model: 'UDO', variant: 'Standard',
         type: 'passenger', fuel_type: 'electric', year: 2024,
-        engine_cc: null, mileage_kmpl: null, range_km: 120, top_speed_kmph: 55,
+        engine_cc: null, mileage_kmpl: null, range_km: 120, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -400,8 +400,8 @@ const MAHINDRA_3W: CatalogEntry[] = [
 const ATUL_AUTO: CatalogEntry[] = [
     {
         brand: 'Atul Auto', model: 'Gem Paxx', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -410,8 +410,8 @@ const ATUL_AUTO: CatalogEntry[] = [
     },
     {
         brand: 'Atul Auto', model: 'Elite Plus', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -420,8 +420,8 @@ const ATUL_AUTO: CatalogEntry[] = [
     },
     {
         brand: 'Atul Auto', model: 'Rik Auto', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -431,7 +431,7 @@ const ATUL_AUTO: CatalogEntry[] = [
     {
         brand: 'Atul Auto', model: 'Gem Cargo', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -441,7 +441,7 @@ const ATUL_AUTO: CatalogEntry[] = [
     {
         brand: 'Atul Auto', model: 'Shakti Cargo', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -451,7 +451,7 @@ const ATUL_AUTO: CatalogEntry[] = [
     {
         brand: 'Atul Auto', model: 'Rik Electric', variant: 'Standard',
         type: 'passenger', fuel_type: 'electric', year: 2024,
-        engine_cc: null, mileage_kmpl: null, range_km: 120, top_speed_kmph: 55,
+        engine_cc: null, mileage_kmpl: null, range_km: 120, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -464,8 +464,8 @@ const ATUL_AUTO: CatalogEntry[] = [
 const KINETIC_GREEN: CatalogEntry[] = [
     {
         brand: 'Kinetic Green', model: 'Safar Smart', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -474,8 +474,8 @@ const KINETIC_GREEN: CatalogEntry[] = [
     },
     {
         brand: 'Kinetic Green', model: 'Super DX', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -485,7 +485,7 @@ const KINETIC_GREEN: CatalogEntry[] = [
     {
         brand: 'Kinetic Green', model: 'Safar Shakti', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -495,7 +495,7 @@ const KINETIC_GREEN: CatalogEntry[] = [
     {
         brand: 'Kinetic Green', model: 'Safar Jumbo Ranger', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -508,8 +508,8 @@ const KINETIC_GREEN: CatalogEntry[] = [
 const LOHIA_AUTO: CatalogEntry[] = [
     {
         brand: 'Lohia Auto', model: 'Humsafar L5 Passenger', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -518,8 +518,8 @@ const LOHIA_AUTO: CatalogEntry[] = [
     },
     {
         brand: 'Lohia Auto', model: 'Narain ICE L3', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -528,8 +528,8 @@ const LOHIA_AUTO: CatalogEntry[] = [
     },
     {
         brand: 'Lohia Auto', model: 'Narain DX', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -539,7 +539,7 @@ const LOHIA_AUTO: CatalogEntry[] = [
     {
         brand: 'Lohia Auto', model: 'Humsafar L5 Cargo', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -549,7 +549,7 @@ const LOHIA_AUTO: CatalogEntry[] = [
     {
         brand: 'Lohia Auto', model: 'Comfort F2F+', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -559,7 +559,7 @@ const LOHIA_AUTO: CatalogEntry[] = [
     {
         brand: 'Lohia Auto', model: 'Youdha E5 Passenger', variant: 'Standard',
         type: 'passenger', fuel_type: 'electric', year: 2024,
-        engine_cc: null, mileage_kmpl: null, range_km: 120, top_speed_kmph: 55,
+        engine_cc: null, mileage_kmpl: null, range_km: 120, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -569,7 +569,7 @@ const LOHIA_AUTO: CatalogEntry[] = [
     {
         brand: 'Lohia Auto', model: 'Youdha E5 Cargo', variant: 'Standard',
         type: 'passenger', fuel_type: 'electric', year: 2024,
-        engine_cc: null, mileage_kmpl: null, range_km: 120, top_speed_kmph: 55,
+        engine_cc: null, mileage_kmpl: null, range_km: 120, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -582,8 +582,8 @@ const LOHIA_AUTO: CatalogEntry[] = [
 const EULER_MOTORS: CatalogEntry[] = [
     {
         brand: 'Euler Motors', model: 'NEO HiCITY', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -592,8 +592,8 @@ const EULER_MOTORS: CatalogEntry[] = [
     },
     {
         brand: 'Euler Motors', model: 'NEO HiRange', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -603,7 +603,7 @@ const EULER_MOTORS: CatalogEntry[] = [
     {
         brand: 'Euler Motors', model: 'HiLoad DV EV', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -613,7 +613,7 @@ const EULER_MOTORS: CatalogEntry[] = [
     {
         brand: 'Euler Motors', model: 'HiLoad EV 120', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -623,7 +623,7 @@ const EULER_MOTORS: CatalogEntry[] = [
     {
         brand: 'Euler Motors', model: 'HiLoad EV 170', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -636,8 +636,8 @@ const EULER_MOTORS: CatalogEntry[] = [
 const GREAVES_ELECTRIC_MOBILITY: CatalogEntry[] = [
     {
         brand: 'Greaves Electric Mobility', model: 'Eltra City', variant: 'Standard',
-        type: 'passenger', fuel_type: 'auto', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        type: 'passenger', fuel_type: 'cng', year: 2024,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -647,7 +647,7 @@ const GREAVES_ELECTRIC_MOBILITY: CatalogEntry[] = [
     {
         brand: 'Greaves Electric Mobility', model: 'Eltra City XTRA', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
@@ -657,7 +657,7 @@ const GREAVES_ELECTRIC_MOBILITY: CatalogEntry[] = [
     {
         brand: 'Greaves Electric Mobility', model: 'Xargo', variant: 'Standard',
         type: 'cargo', fuel_type: 'diesel', year: 2024,
-        engine_cc: 400, mileage_kmpl: 30, range_km: null, top_speed_kmph: 55,
+        engine_cc: 400, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: 28000000, emi_starting_paise: 650000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
