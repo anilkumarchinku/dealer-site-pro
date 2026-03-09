@@ -36,6 +36,11 @@ import { LuxuryTemplate } from "@/components/templates/LuxuryTemplate";
 import { SportyTemplate } from "@/components/templates/SportyTemplate";
 import { FamilyTemplate } from "@/components/templates/FamilyTemplate";
 
+import { TwoWheelerTemplate } from "@/components/two-wheelers/TwoWheelerTemplate";
+import { ThreeWheelerTemplate } from "@/components/three-wheelers/ThreeWheelerTemplate";
+import { getTwoWheelerCatalog, TWO_WHEELER_BRANDS } from "@/lib/data/two-wheelers";
+import { getThreeWheelerCatalog, THREE_WHEELER_BRANDS } from "@/lib/data/three-wheelers";
+
 
 function PreviewContent() {
     const { data, dealerSlug, dealerId } = useOnboardingStore();
@@ -57,11 +62,13 @@ function PreviewContent() {
         hover: brandConfig.hover || brandConfig.primary,
     };
 
-    // State for cars
+    // Detect vehicle category from brand name
+    const is2W = TWO_WHEELER_BRANDS.includes(primaryBrand)
+    const is3W = THREE_WHEELER_BRANDS.includes(primaryBrand)
+    const vehicleCategory = is3W ? "3w" : is2W ? "2w" : "cars"
+
     const [displayCars, setDisplayCars] = useState<any[]>([]);
     const [isLoading, setIsLoading] = useState(true);
-    // Preview always uses 4W template switcher — 2W/3W dedicated templates are on the live site
-    const vehicleCategory = "cars";
 
     useEffect(() => {
         let isMounted = true;
@@ -69,19 +76,22 @@ function PreviewContent() {
         async function fetchData() {
             setIsLoading(true);
             try {
-                // Try fetching by brand first
-                let cars = await getCarsByMake(primaryBrand);
-
-                // If no cars for this brand, fallback to all cars (or latest)
-                if (cars.length === 0) {
-                    const result = await getAllCars({ limit: 8 });
-                    cars = result.cars;
+                if (is2W) {
+                    // Use catalog directly — no async needed
+                    const vehicles = getTwoWheelerCatalog(primaryBrand, dealerId || "preview-dealer")
+                    if (isMounted) setDisplayCars(vehicles)
+                } else if (is3W) {
+                    const vehicles = getThreeWheelerCatalog(primaryBrand, dealerId || "preview-dealer")
+                    if (isMounted) setDisplayCars(vehicles)
+                } else {
+                    let cars = await getCarsByMake(primaryBrand);
+                    if (cars.length === 0) {
+                        const result = await getAllCars({ limit: 8 });
+                        cars = result.cars;
+                    }
+                    if (isMounted) setDisplayCars(cars);
                 }
-                if (isMounted) setDisplayCars(cars);
-
-                if (isMounted) {
-                    setIsLoading(false);
-                }
+                if (isMounted) setIsLoading(false);
             } catch (error) {
                 console.error("Failed to fetch vehicles for preview", error);
                 if (isMounted) setIsLoading(false);
@@ -91,7 +101,7 @@ function PreviewContent() {
         fetchData();
 
         return () => { isMounted = false; };
-    }, [primaryBrand, dealerId]);
+    }, [primaryBrand, dealerId, is2W, is3W]);
 
     // Page load animation
     const { showAnimation, isReady } = useTemplatePageAnimation(primaryBrand as any, templateId);
@@ -141,6 +151,45 @@ function PreviewContent() {
 
     // Render the appropriate template with brand-specific data
     const renderTemplate = () => {
+        if (vehicleCategory === "2w") {
+            return (
+                <TwoWheelerTemplate
+                    dealerId={dealerId || "preview-dealer"}
+                    dealerName={dealerName}
+                    phone={contactInfo.phone}
+                    email={contactInfo.email}
+                    location={contactInfo.address}
+                    fullAddress={contactInfo.address}
+                    primaryBrand={primaryBrand}
+                    logoUrl={null}
+                    vehicles={displayCars}
+                    slug={dealerSlug || "preview"}
+                />
+            );
+        }
+
+        if (vehicleCategory === "3w") {
+            return (
+                <ThreeWheelerTemplate
+                    dealerId={dealerId || "preview-dealer"}
+                    dealerName={dealerName}
+                    phone={contactInfo.phone}
+                    email={contactInfo.email ?? null}
+                    location={contactInfo.address}
+                    fullAddress={contactInfo.address}
+                    primaryBrand={primaryBrand}
+                    vehicles={displayCars}
+                    slug={dealerSlug || "preview"}
+                    tagline={null}
+                    heroTitle={null}
+                    heroSubtitle={null}
+                    logoUrl={null}
+                    workingHours={null}
+                    services={null}
+                />
+            );
+        }
+
         const config = templateConfigs[templateId as keyof typeof templateConfigs] || templateConfigs.modern;
 
         const props = {
