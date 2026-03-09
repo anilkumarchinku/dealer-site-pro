@@ -192,9 +192,16 @@ export function ThreeWheelerTemplate({
                         {/* Logo + Name */}
                         <button onClick={() => setActiveTab("home")} className="flex items-center gap-3">
                             {logoUrl ? (
-                                <div className="relative w-10 h-10 shrink-0">
-                                    <Image src={logoUrl} alt={dealerName} fill className="object-contain" sizes="40px"
-                                        onError={e => { (e.target as HTMLImageElement).style.display = "none" }} />
+                                <div className="relative w-10 h-10 shrink-0 rounded-lg overflow-hidden bg-white/10">
+                                    <Image src={logoUrl} alt={dealerName} fill className="object-contain p-0.5" sizes="40px"
+                                        onError={e => { (e.target as HTMLImageElement).parentElement!.style.display = "none" }} />
+                                </div>
+                            ) : primaryBrand ? (
+                                <div
+                                    className="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center text-sm font-bold text-white"
+                                    style={{ backgroundColor: `${accent}90` }}
+                                >
+                                    {primaryBrand.slice(0, 2).toUpperCase()}
                                 </div>
                             ) : null}
                             <span className={`text-lg font-semibold tracking-wide ${isScrolled ? "text-gray-900" : "text-white"}`}>
@@ -289,15 +296,35 @@ export function ThreeWheelerTemplate({
                         />
 
                         <div className="relative z-10 max-w-7xl mx-auto px-4 py-32 text-center">
+                            {/* Dealer / Brand logo — prominent in hero */}
+                            {logoUrl ? (
+                                <div className="flex justify-center mb-6">
+                                    <div className="relative w-24 h-24 bg-white/10 rounded-2xl p-2 border border-white/20 backdrop-blur-sm">
+                                        <Image
+                                            src={logoUrl}
+                                            alt={dealerName}
+                                            fill
+                                            className="object-contain p-1"
+                                            sizes="96px"
+                                            onError={e => { (e.target as HTMLImageElement).parentElement!.style.display = "none" }}
+                                        />
+                                    </div>
+                                </div>
+                            ) : primaryBrand ? (
+                                /* Brand initials fallback when no logo uploaded */
+                                <div className="flex justify-center mb-6">
+                                    <div
+                                        className="w-20 h-20 rounded-2xl flex items-center justify-center text-2xl font-bold text-white border border-white/20"
+                                        style={{ backgroundColor: `${accent}40` }}
+                                    >
+                                        {primaryBrand.slice(0, 2).toUpperCase()}
+                                    </div>
+                                </div>
+                            ) : null}
+
                             {/* Brand badge */}
                             {primaryBrand && (
                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/10 mb-6">
-                                    {logoUrl && (
-                                        <div className="relative w-5 h-5">
-                                            <Image src={logoUrl} alt={primaryBrand} fill className="object-contain" sizes="20px"
-                                                onError={e => { (e.target as HTMLImageElement).style.display = "none" }} />
-                                        </div>
-                                    )}
                                     <span className="text-xs font-semibold uppercase tracking-widest text-white/80">
                                         Authorised {primaryBrand} Dealer
                                     </span>
@@ -725,12 +752,19 @@ export function ThreeWheelerTemplate({
                 <div className="max-w-7xl mx-auto px-4">
                     {/* Brand row */}
                     <div className="flex items-center gap-4 mb-8 pb-6 border-b border-gray-200">
-                        {logoUrl && (
-                            <div className="relative w-12 h-12 shrink-0">
-                                <Image src={logoUrl} alt={dealerName} fill className="object-contain" sizes="48px"
-                                    onError={e => { (e.target as HTMLImageElement).style.display = "none" }} />
+                        {logoUrl ? (
+                            <div className="relative w-12 h-12 shrink-0 rounded-xl overflow-hidden border border-gray-200">
+                                <Image src={logoUrl} alt={dealerName} fill className="object-contain p-1" sizes="48px"
+                                    onError={e => { (e.target as HTMLImageElement).parentElement!.style.display = "none" }} />
                             </div>
-                        )}
+                        ) : primaryBrand ? (
+                            <div
+                                className="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center text-base font-bold text-white"
+                                style={{ backgroundColor: accent }}
+                            >
+                                {primaryBrand.slice(0, 2).toUpperCase()}
+                            </div>
+                        ) : null}
                         <div>
                             <p className="text-xl font-bold text-gray-900">{dealerName}</p>
                             {tagline && <p className="text-sm text-gray-500">{tagline}</p>}
