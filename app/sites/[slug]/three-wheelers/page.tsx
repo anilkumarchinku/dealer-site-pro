@@ -2,9 +2,15 @@ import { fetchDealerBySlug } from "@/lib/db/dealers"
 import { getThreeWheelerVehicles } from "@/lib/db/three-wheelers"
 import { getThreeWheelerCatalog, THREE_WHEELER_BRANDS } from "@/lib/data/three-wheelers"
 import { notFound } from "next/navigation"
-import { ThreeWheelerTemplate } from "@/components/three-wheelers/ThreeWheelerTemplate"
 import { createClient } from "@supabase/supabase-js"
 import { brandNameToId } from "@/lib/utils/brand-model-images"
+import { ModernTemplate } from "@/components/templates/ModernTemplate"
+import { LuxuryTemplate } from "@/components/templates/LuxuryTemplate"
+import { SportyTemplate } from "@/components/templates/SportyTemplate"
+import { FamilyTemplate } from "@/components/templates/FamilyTemplate"
+import type { Car } from "@/lib/types/car"
+import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
+import type { Service } from "@/lib/types"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -13,6 +19,48 @@ interface Props {
 // All 3W brands shown when dealer hasn't picked a brand yet —
 // there are only 10 so we show all of them as a complete catalog
 const ALL_3W_BRANDS = THREE_WHEELER_BRANDS
+
+function threeWheelersToCars(vehicles: ThreeWheelerVehicle[]): Car[] {
+  return vehicles.map(v => ({
+    id: v.id,
+    make: v.brand,
+    model: v.model,
+    variant: v.variant ?? '',
+    year: v.year,
+    bodyType: v.body_type ?? 'Auto',
+    segment: 'B' as Car['segment'],
+    pricing: {
+      exShowroom: {
+        min: v.ex_showroom_price_paise > 0 ? Math.round(v.ex_showroom_price_paise / 100) : null,
+        max: v.ex_showroom_price_paise > 0 ? Math.round(v.ex_showroom_price_paise / 100) : null,
+        currency: 'INR' as const,
+      },
+    },
+    engine: {
+      type: v.fuel_type === 'electric' ? 'Electric' : v.fuel_type === 'cng' ? 'CNG' : 'Petrol',
+      power: '—',
+      torque: '—',
+    },
+    transmission: { type: 'Manual' },
+    performance: {
+      fuelEfficiency: v.mileage_kmpl ?? undefined,
+      topSpeed: v.max_speed_kmph ?? undefined,
+      range: v.range_km ?? undefined,
+    },
+    dimensions: { seatingCapacity: v.passenger_capacity ?? 3 },
+    features: { keyFeatures: v.features ?? [] },
+    images: {
+      hero: v.images?.[0] ?? '/placeholder-car.jpg',
+      exterior: v.images ?? [],
+      interior: [],
+    },
+    meta: { viewCount: v.views ?? 0 },
+    price: v.ex_showroom_price_paise > 0
+      ? `₹${(v.ex_showroom_price_paise / 100).toLocaleString('en-IN')}`
+      : 'Price on request',
+    condition: 'new' as const,
+  }))
+}
 
 export default async function ThreeWheelersPage({ params }: Props) {
   const { slug } = await params
@@ -60,28 +108,62 @@ export default async function ThreeWheelersPage({ params }: Props) {
   const catalogExtra = catalogVehicles.filter(v => !dbKeys.has(`${v.brand}__${v.model}`))
   const vehicles = [...dbVehicles, ...catalogExtra]
 
-  // Brand logo: use dealer's uploaded logo first, then fall back to brand logo from catalog
-  const brandId = primaryBrand ? brandNameToId(primaryBrand, '3w') : null
-  const brandLogoUrl = dealer.logo_url
-    ?? (brandId ? `/data/brand-logos/${brandId}.png` : null)
+  // Map to Car shape expected by 4W templates
+  const cars = threeWheelersToCars(vehicles)
 
-  return (
-    <ThreeWheelerTemplate
-      dealerId={dealer.id}
-      dealerName={dealer.dealership_name}
-      phone={dealer.phone}
-      email={dealer.email ?? null}
-      location={dealer.location}
-      fullAddress={dealer.full_address ?? null}
-      tagline={dealer.tagline ?? null}
-      primaryBrand={primaryBrand}
-      heroTitle={dealer.hero_title ?? null}
-      heroSubtitle={dealer.hero_subtitle ?? null}
-      logoUrl={brandLogoUrl}
-      vehicles={vehicles}
-      slug={slug}
-      workingHours={dealer.working_hours ?? null}
-      services={dealer.services ?? null}
-    />
-  )
+  // Brand logo: use dealer's uploaded logo first, then fall back to brand logo
+  const brandId = primaryBrand ? brandNameToId(primaryBrand, '3w') : null
+  const brandLogoUrl = dealer.logo_url ?? (brandId ? `/data/brand-logos/${brandId}.png` : undefined)
+
+  const contactInfo = {
+    phone: dealer.phone,
+    email: dealer.email ?? '',
+    address: dealer.full_address ?? dealer.location,
+  }
+
+  // Hero text defaults per template style
+  const heroDefaults: Record<string, { title: string; subtitle: string }> = {
+    luxury:  { title: 'THE POWER OF THREE WHEELS',          subtitle: 'Premium three-wheelers for every commercial need' },
+    sporty:  { title: 'BUILT FOR THE ROAD',                 subtitle: 'Performance-ready 3W vehicles that get the job done' },
+    family:  { title: 'Your Trusted 3-Wheeler Partner',     subtitle: 'Reliable passenger and cargo vehicles at great prices' },
+    modern:  { title: 'Explore Our 3-Wheeler Range',        subtitle: 'Passenger autos, cargo carriers, and electric three-wheelers' },
+  }
+  const defaults = heroDefaults[dealer.style_template] ?? heroDefaults.modern
+  const heroTitle    = dealer.hero_title    || defaults.title
+  const heroSubtitle = dealer.hero_subtitle || defaults.subtitle
+
+  const taglines: Record<string, string> = {
+    luxury: 'Excellence in Motion',
+    sporty: 'Built for Performance',
+    family: 'Trusted by Operators',
+  }
+
+  const sharedProps = {
+    brandName:    primaryBrand ?? dealer.dealership_name,
+    dealerName:   dealer.dealership_name,
+    dealerId:     dealer.id,
+    cars,
+    contactInfo,
+    branches:     dealer.branches ?? undefined,
+    services:     (dealer.services ?? []) as Service[],
+    workingHours: dealer.working_hours ?? null,
+    logoUrl:      brandLogoUrl ?? undefined,
+    heroImageUrl: undefined,
+    sellsNewCars: true,
+    sellsUsedCars: false,
+    isVerified:   false,
+  }
+
+  switch (dealer.style_template) {
+    case 'luxury':
+      return <LuxuryTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} />
+    case 'sporty':
+      return <SportyTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} />
+    case 'family':
+      return <FamilyTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} />
+    case 'modern':
+    case 'professional':
+    default:
+      return <ModernTemplate {...sharedProps} config={{ heroTitle, heroSubtitle }} />
+  }
 }

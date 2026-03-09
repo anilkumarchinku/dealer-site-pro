@@ -2,9 +2,15 @@ import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { getTwoWheelerVehicles } from '@/lib/db/two-wheelers'
 import { getTwoWheelerCatalog, TWO_WHEELER_BRANDS } from '@/lib/data/two-wheelers'
 import { notFound } from 'next/navigation'
-import { TwoWheelerTemplate } from '@/components/two-wheelers/TwoWheelerTemplate'
 import { createClient } from '@supabase/supabase-js'
 import { brandNameToId } from '@/lib/utils/brand-model-images'
+import { ModernTemplate } from '@/components/templates/ModernTemplate'
+import { LuxuryTemplate } from '@/components/templates/LuxuryTemplate'
+import { SportyTemplate } from '@/components/templates/SportyTemplate'
+import { FamilyTemplate } from '@/components/templates/FamilyTemplate'
+import type { Car } from '@/lib/types/car'
+import type { TwoWheelerVehicle } from '@/lib/types/two-wheeler'
+import type { Service } from '@/lib/types'
 
 interface Props {
     params: Promise<{ slug: string }>
@@ -23,6 +29,48 @@ const POPULAR_2W_BRANDS = [
     'Ather Energy',
     'Ola Electric',
 ]
+
+function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): Car[] {
+    return vehicles.map(v => ({
+        id: v.id,
+        make: v.brand,
+        model: v.model,
+        variant: v.variant ?? '',
+        year: v.year,
+        bodyType: v.type === 'scooter' ? 'Scooter' : v.type === 'electric' ? 'Electric' : 'Bike',
+        segment: 'B' as Car['segment'],
+        pricing: {
+            exShowroom: {
+                min: v.ex_showroom_price_paise > 0 ? Math.round(v.ex_showroom_price_paise / 100) : null,
+                max: v.ex_showroom_price_paise > 0 ? Math.round(v.ex_showroom_price_paise / 100) : null,
+                currency: 'INR' as const,
+            },
+        },
+        engine: {
+            type: v.fuel_type === 'electric' ? 'Electric' : 'Petrol',
+            power: '—',
+            torque: '—',
+        },
+        transmission: { type: 'Manual' },
+        performance: {
+            fuelEfficiency: v.mileage_kmpl ?? undefined,
+            topSpeed: v.top_speed_kmph ?? undefined,
+            range: v.range_km ?? undefined,
+        },
+        dimensions: { seatingCapacity: 2 },
+        features: { keyFeatures: v.features ?? [] },
+        images: {
+            hero: v.images?.[0] ?? '/placeholder-car.jpg',
+            exterior: v.images ?? [],
+            interior: [],
+        },
+        meta: { viewCount: v.views ?? 0 },
+        price: v.ex_showroom_price_paise > 0
+            ? `₹${(v.ex_showroom_price_paise / 100).toLocaleString('en-IN')}`
+            : 'Price on request',
+        condition: 'new' as const,
+    }))
+}
 
 export default async function TwoWheelersPage({ params }: Props) {
     const { slug } = await params
@@ -68,23 +116,62 @@ export default async function TwoWheelersPage({ params }: Props) {
     const catalogExtra = catalogVehicles.filter(v => !dbKeys.has(`${v.brand}__${v.model}`))
     const vehicles = [...dbVehicles, ...catalogExtra]
 
-    // Brand logo: use dealer's uploaded logo first, then fall back to brand logo from catalog
-    const brandId = primaryBrand ? brandNameToId(primaryBrand, '2w') : null
-    const brandLogoUrl = dealer.logo_url
-        ?? (brandId ? `/data/brand-logos/${brandId}.png` : null)
+    // Map to Car shape expected by 4W templates
+    const cars = twoWheelersToCars(vehicles)
 
-    return (
-        <TwoWheelerTemplate
-            dealerId={dealer.id}
-            dealerName={dealer.dealership_name}
-            phone={dealer.phone}
-            email={dealer.email}
-            location={dealer.location}
-            fullAddress={dealer.full_address}
-            primaryBrand={primaryBrand}
-            logoUrl={brandLogoUrl}
-            vehicles={vehicles}
-            slug={slug}
-        />
-    )
+    // Brand logo: use dealer's uploaded logo first, then fall back to brand logo
+    const brandId = primaryBrand ? brandNameToId(primaryBrand, '2w') : null
+    const brandLogoUrl = dealer.logo_url ?? (brandId ? `/data/brand-logos/${brandId}.png` : undefined)
+
+    const contactInfo = {
+        phone: dealer.phone,
+        email: dealer.email,
+        address: dealer.full_address ?? dealer.location,
+    }
+
+    // Hero text defaults per template style
+    const heroDefaults: Record<string, { title: string; subtitle: string }> = {
+        luxury:  { title: 'THE RIDE OF YOUR LIFE',            subtitle: 'Experience premium two-wheelers from top brands' },
+        sporty:  { title: 'RIDE LIKE A LEGEND',               subtitle: 'Where performance meets passion on two wheels' },
+        family:  { title: 'Your Perfect Two-Wheeler Awaits',   subtitle: 'Safe, reliable bikes and scooters for every rider' },
+        modern:  { title: 'Discover Your Ride',               subtitle: 'Explore our bikes, scooters, and electric two-wheelers' },
+    }
+    const defaults = heroDefaults[dealer.style_template] ?? heroDefaults.modern
+    const heroTitle    = dealer.hero_title    || defaults.title
+    const heroSubtitle = dealer.hero_subtitle || defaults.subtitle
+
+    const taglines: Record<string, string> = {
+        luxury: 'Excellence in Motion',
+        sporty: 'Built for Speed',
+        family: 'Trusted by Families',
+    }
+
+    const sharedProps = {
+        brandName:    primaryBrand ?? dealer.dealership_name,
+        dealerName:   dealer.dealership_name,
+        dealerId:     dealer.id,
+        cars,
+        contactInfo,
+        branches:     dealer.branches ?? undefined,
+        services:     (dealer.services ?? []) as Service[],
+        workingHours: dealer.working_hours ?? null,
+        logoUrl:      brandLogoUrl ?? undefined,
+        heroImageUrl: undefined,
+        sellsNewCars: true,
+        sellsUsedCars: false,
+        isVerified:   false,
+    }
+
+    switch (dealer.style_template) {
+        case 'luxury':
+            return <LuxuryTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} />
+        case 'sporty':
+            return <SportyTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} />
+        case 'family':
+            return <FamilyTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} />
+        case 'modern':
+        case 'professional':
+        default:
+            return <ModernTemplate {...sharedProps} config={{ heroTitle, heroSubtitle }} />
+    }
 }

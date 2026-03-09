@@ -36,10 +36,84 @@ import { LuxuryTemplate } from "@/components/templates/LuxuryTemplate";
 import { SportyTemplate } from "@/components/templates/SportyTemplate";
 import { FamilyTemplate } from "@/components/templates/FamilyTemplate";
 
-import { TwoWheelerTemplate } from "@/components/two-wheelers/TwoWheelerTemplate";
-import { ThreeWheelerTemplate } from "@/components/three-wheelers/ThreeWheelerTemplate";
 import { getTwoWheelerCatalog, TWO_WHEELER_BRANDS } from "@/lib/data/two-wheelers";
 import { getThreeWheelerCatalog, THREE_WHEELER_BRANDS } from "@/lib/data/three-wheelers";
+import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler";
+import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler";
+
+// Map 2W vehicles to the Car shape expected by 4W templates
+function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): import("@/lib/types/car").Car[] {
+    return vehicles.map(v => ({
+        id: v.id,
+        make: v.brand,
+        model: v.model,
+        variant: v.variant ?? '',
+        year: v.year,
+        bodyType: v.type === 'scooter' ? 'Scooter' : v.type === 'electric' ? 'Electric' : 'Bike',
+        segment: 'B' as const,
+        pricing: {
+            exShowroom: {
+                min: v.ex_showroom_price_paise > 0 ? Math.round(v.ex_showroom_price_paise / 100) : null,
+                max: v.ex_showroom_price_paise > 0 ? Math.round(v.ex_showroom_price_paise / 100) : null,
+                currency: 'INR' as const,
+            },
+        },
+        engine: { type: v.fuel_type === 'electric' ? 'Electric' : 'Petrol', power: '—', torque: '—' },
+        transmission: { type: 'Manual' },
+        performance: {
+            fuelEfficiency: v.mileage_kmpl ?? undefined,
+            topSpeed: v.top_speed_kmph ?? undefined,
+            range: v.range_km ?? undefined,
+        },
+        dimensions: { seatingCapacity: 2 },
+        features: { keyFeatures: v.features ?? [] },
+        images: { hero: v.images?.[0] ?? '/placeholder-car.jpg', exterior: v.images ?? [], interior: [] },
+        meta: { viewCount: v.views ?? 0 },
+        price: v.ex_showroom_price_paise > 0
+            ? `₹${(v.ex_showroom_price_paise / 100).toLocaleString('en-IN')}`
+            : 'Price on request',
+        condition: 'new' as const,
+    }))
+}
+
+// Map 3W vehicles to the Car shape expected by 4W templates
+function threeWheelersToCars(vehicles: ThreeWheelerVehicle[]): import("@/lib/types/car").Car[] {
+    return vehicles.map(v => ({
+        id: v.id,
+        make: v.brand,
+        model: v.model,
+        variant: v.variant ?? '',
+        year: v.year,
+        bodyType: v.body_type ?? 'Auto',
+        segment: 'B' as const,
+        pricing: {
+            exShowroom: {
+                min: v.ex_showroom_price_paise > 0 ? Math.round(v.ex_showroom_price_paise / 100) : null,
+                max: v.ex_showroom_price_paise > 0 ? Math.round(v.ex_showroom_price_paise / 100) : null,
+                currency: 'INR' as const,
+            },
+        },
+        engine: {
+            type: v.fuel_type === 'electric' ? 'Electric' : v.fuel_type === 'cng' ? 'CNG' : 'Petrol',
+            power: '—',
+            torque: '—',
+        },
+        transmission: { type: 'Manual' },
+        performance: {
+            fuelEfficiency: v.mileage_kmpl ?? undefined,
+            topSpeed: v.max_speed_kmph ?? undefined,
+            range: v.range_km ?? undefined,
+        },
+        dimensions: { seatingCapacity: v.passenger_capacity ?? 3 },
+        features: { keyFeatures: v.features ?? [] },
+        images: { hero: v.images?.[0] ?? '/placeholder-car.jpg', exterior: v.images ?? [], interior: [] },
+        meta: { viewCount: v.views ?? 0 },
+        price: v.ex_showroom_price_paise > 0
+            ? `₹${(v.ex_showroom_price_paise / 100).toLocaleString('en-IN')}`
+            : 'Price on request',
+        condition: 'new' as const,
+    }))
+}
 
 
 function PreviewContent() {
@@ -77,12 +151,11 @@ function PreviewContent() {
             setIsLoading(true);
             try {
                 if (is2W) {
-                    // Use catalog directly — no async needed
                     const vehicles = getTwoWheelerCatalog(primaryBrand, dealerId || "preview-dealer")
-                    if (isMounted) setDisplayCars(vehicles)
+                    if (isMounted) setDisplayCars(twoWheelersToCars(vehicles))
                 } else if (is3W) {
                     const vehicles = getThreeWheelerCatalog(primaryBrand, dealerId || "preview-dealer")
-                    if (isMounted) setDisplayCars(vehicles)
+                    if (isMounted) setDisplayCars(threeWheelersToCars(vehicles))
                 } else {
                     let cars = await getCarsByMake(primaryBrand);
                     if (cars.length === 0) {
@@ -150,46 +223,8 @@ function PreviewContent() {
     const dealerServices = data.services || [];
 
     // Render the appropriate template with brand-specific data
+    // All vehicle categories (2W, 3W, cars) now use the same 4W template switcher
     const renderTemplate = () => {
-        if (vehicleCategory === "2w") {
-            return (
-                <TwoWheelerTemplate
-                    dealerId={dealerId || "preview-dealer"}
-                    dealerName={dealerName}
-                    phone={contactInfo.phone}
-                    email={contactInfo.email}
-                    location={contactInfo.address}
-                    fullAddress={contactInfo.address}
-                    primaryBrand={primaryBrand}
-                    logoUrl={null}
-                    vehicles={displayCars}
-                    slug={dealerSlug || "preview"}
-                />
-            );
-        }
-
-        if (vehicleCategory === "3w") {
-            return (
-                <ThreeWheelerTemplate
-                    dealerId={dealerId || "preview-dealer"}
-                    dealerName={dealerName}
-                    phone={contactInfo.phone}
-                    email={contactInfo.email ?? null}
-                    location={contactInfo.address}
-                    fullAddress={contactInfo.address}
-                    primaryBrand={primaryBrand}
-                    vehicles={displayCars}
-                    slug={dealerSlug || "preview"}
-                    tagline={null}
-                    heroTitle={null}
-                    heroSubtitle={null}
-                    logoUrl={null}
-                    workingHours={null}
-                    services={null}
-                />
-            );
-        }
-
         const config = templateConfigs[templateId as keyof typeof templateConfigs] || templateConfigs.modern;
 
         const props = {
@@ -199,7 +234,9 @@ function PreviewContent() {
             contactInfo: contactInfo,
             config: config,
             services: dealerServices,
-            previewMode: true
+            previewMode: true,
+            sellsNewCars: true,
+            sellsUsedCars: false,
         };
 
         switch (templateId) {
