@@ -31,6 +31,7 @@ export default async function TwoWheelersPage({ params }: Props) {
             location={dealer.location}
             fullAddress={dealer.full_address}
             primaryBrand={primaryBrand}
+            logoUrl={dealer.logo_url ?? null}
             vehicles={vehicles}
             slug={slug}
         />

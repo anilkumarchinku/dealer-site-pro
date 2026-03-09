@@ -324,6 +324,7 @@ interface Props {
     location: string
     fullAddress: string | null
     primaryBrand: string | null
+    logoUrl: string | null
     vehicles: TwoWheelerVehicle[]
     slug: string
 }
@@ -341,7 +342,7 @@ function getVehicleHeroImage(v: TwoWheelerVehicle): string {
 
 export function TwoWheelerTemplate({
     dealerId, dealerName, phone, email, location, fullAddress,
-    primaryBrand, vehicles, slug,
+    primaryBrand, logoUrl, vehicles, slug,
 }: Props) {
     const theme = getBrandTheme(primaryBrand)
     const prefix = useSitePrefix(slug)
@@ -405,7 +406,7 @@ export function TwoWheelerTemplate({
                         <div className="flex items-center gap-3">
                             <div className="relative w-9 h-9 shrink-0">
                                 <Image
-                                    src={getBrandLogoSrc(primaryBrand)}
+                                    src={logoUrl || getBrandLogoSrc(primaryBrand)}
                                     alt={primaryBrand ?? dealerName}
                                     fill
                                     className="object-contain"

@@ -31,6 +31,28 @@ const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
     car_exchange:         { label: "Vehicle Exchange",    icon: "🔃" },
 }
 
+// ── Brand logo map — reuses existing 2W/4W assets where available ─────────────
+const BRAND_LOGO_MAP: Record<string, string> = {
+    "Bajaj":                        "/assets/logos/2w/bajaj-auto.svg",
+    "Bajaj Auto":                   "/assets/logos/2w/bajaj-auto.svg",
+    "Mahindra":                     "/assets/logos/mahindra.png",
+    "Mahindra Last Mile Mobility":  "/assets/logos/mahindra.png",
+    "TVS":                          "/assets/logos/2w/tvs-motor.svg",
+    "TVS Motor Company":            "/assets/logos/2w/tvs-motor.svg",
+}
+
+function getBrandLogoSrc3W(brand: string | null, dealerLogo: string | null): string | null {
+    if (dealerLogo) return dealerLogo
+    if (!brand) return null
+    if (BRAND_LOGO_MAP[brand]) return BRAND_LOGO_MAP[brand]
+    // Fuzzy match
+    const lower = brand.toLowerCase()
+    for (const [key, src] of Object.entries(BRAND_LOGO_MAP)) {
+        if (lower.includes(key.toLowerCase()) || key.toLowerCase().includes(lower)) return src
+    }
+    return null
+}
+
 // ── Brand accent colors for inline styling ────────────────────────────────────
 const BRAND_ACCENT: Record<string, string> = {
     "Piaggio":                      "#E31E24",
@@ -130,6 +152,8 @@ export function ThreeWheelerTemplate({
     const prefix = useSitePrefix(slug)
     const accent = resolveBrandAccent(primaryBrand)
     const heroGradient = resolveBrandHero(primaryBrand)
+    // Resolved logo: dealer's own upload → brand asset → null (initials shown)
+    const resolvedLogo = getBrandLogoSrc3W(primaryBrand, logoUrl ?? null)
 
     const [isScrolled, setIsScrolled] = useState(false)
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -191,9 +215,9 @@ export function ThreeWheelerTemplate({
                     <div className="flex items-center justify-between">
                         {/* Logo + Name */}
                         <button onClick={() => setActiveTab("home")} className="flex items-center gap-3">
-                            {logoUrl ? (
+                            {resolvedLogo ? (
                                 <div className="relative w-10 h-10 shrink-0 rounded-lg overflow-hidden bg-white/10">
-                                    <Image src={logoUrl} alt={dealerName} fill className="object-contain p-0.5" sizes="40px"
+                                    <Image src={resolvedLogo} alt={primaryBrand ?? dealerName} fill className="object-contain p-0.5" sizes="40px"
                                         onError={e => { (e.target as HTMLImageElement).parentElement!.style.display = "none" }} />
                                 </div>
                             ) : primaryBrand ? (
@@ -297,12 +321,12 @@ export function ThreeWheelerTemplate({
 
                         <div className="relative z-10 max-w-7xl mx-auto px-4 py-32 text-center">
                             {/* Dealer / Brand logo — prominent in hero */}
-                            {logoUrl ? (
+                            {resolvedLogo ? (
                                 <div className="flex justify-center mb-6">
                                     <div className="relative w-24 h-24 bg-white/10 rounded-2xl p-2 border border-white/20 backdrop-blur-sm">
                                         <Image
-                                            src={logoUrl}
-                                            alt={dealerName}
+                                            src={resolvedLogo}
+                                            alt={primaryBrand ?? dealerName}
                                             fill
                                             className="object-contain p-1"
                                             sizes="96px"
@@ -752,9 +776,9 @@ export function ThreeWheelerTemplate({
                 <div className="max-w-7xl mx-auto px-4">
                     {/* Brand row */}
                     <div className="flex items-center gap-4 mb-8 pb-6 border-b border-gray-200">
-                        {logoUrl ? (
+                        {resolvedLogo ? (
                             <div className="relative w-12 h-12 shrink-0 rounded-xl overflow-hidden border border-gray-200">
-                                <Image src={logoUrl} alt={dealerName} fill className="object-contain p-1" sizes="48px"
+                                <Image src={resolvedLogo} alt={primaryBrand ?? dealerName} fill className="object-contain p-1" sizes="48px"
                                     onError={e => { (e.target as HTMLImageElement).parentElement!.style.display = "none" }} />
                             </div>
                         ) : primaryBrand ? (
