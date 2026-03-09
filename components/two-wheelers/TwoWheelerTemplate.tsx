@@ -608,7 +608,7 @@ export function TwoWheelerTemplate({
                         <Link
                             key={c.label}
                             href={c.href}
-                            className="group flex flex-col items-center gap-3 p-6 bg-gray-50 border border-gray-200 rounded-2xl hover:border-gray-400 hover:shadow-md hover:-translate-y-0.5 transition-all"
+                            className="group flex flex-col items-center gap-3 p-6 bg-white border border-gray-200 rounded-2xl hover:shadow-md hover:-translate-y-0.5 transition-all"
                         >
                             <span className="text-4xl">{c.emoji}</span>
                             <span className="font-semibold text-gray-900">{c.label}</span>
@@ -629,7 +629,7 @@ export function TwoWheelerTemplate({
                     </div>
 
                     {/* Filter tabs */}
-                    <div className="flex gap-1 bg-gray-100 rounded-xl p-1 w-fit">
+                    <div className="flex gap-1 bg-white border border-gray-200 rounded-xl p-1 w-fit">
                         {([
                             { key: "all", label: `All (${tabCounts.all})` },
                             { key: "bike", label: `Bikes (${tabCounts.bike})` },
@@ -671,10 +671,10 @@ export function TwoWheelerTemplate({
                 )}
             </section>
 
-            {/* ── Services strip (ModernTemplate-style) ───────────────────── */}
-            <section className="bg-gray-950 py-16 px-4">
+            {/* ── Services strip ───────────────────────────────────────────── */}
+            <section className="bg-white py-16 px-4 border-t border-gray-100">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-2xl font-bold text-white text-center mb-10">Why Buy From Us</h2>
+                    <h2 className="text-2xl font-bold text-gray-900 text-center mb-10">Why Buy From Us</h2>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
                             { Icon: Wrench, title: "Expert Service", text: "Factory-trained technicians for all 2W brands" },
@@ -682,13 +682,13 @@ export function TwoWheelerTemplate({
                             { Icon: RotateCcw, title: "Exchange Offer", text: "Best exchange value for your old bike or scooter" },
                             { Icon: Zap, title: "EV Specialists", text: "Test rides & charging demos for electric models" },
                         ].map(s => (
-                            <div key={s.title} className="flex flex-col items-center text-center gap-4 p-6 rounded-2xl bg-white/5 border border-white/10">
-                                <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: theme.accent + "22" }}>
+                            <div key={s.title} className="flex flex-col items-center text-center gap-4 p-6 rounded-2xl bg-white border border-gray-100 shadow-sm">
+                                <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: theme.accent + "15" }}>
                                     <s.Icon className="w-6 h-6" style={{ color: theme.accent }} />
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-white">{s.title}</h3>
-                                    <p className="text-sm text-white/50 mt-1">{s.text}</p>
+                                    <h3 className="font-semibold text-gray-900">{s.title}</h3>
+                                    <p className="text-sm text-gray-500 mt-1">{s.text}</p>
                                 </div>
                             </div>
                         ))}
@@ -704,8 +704,8 @@ export function TwoWheelerTemplate({
                         <p className="text-gray-500 mb-8">Our team is here to help you find the perfect ride.</p>
                         <div className="space-y-4">
                             <a href={`tel:${phone}`} className="flex items-center gap-3 text-gray-700 hover:text-gray-900 group">
-                                <div className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center group-hover:bg-gray-200 transition-colors">
-                                    <Phone className="w-5 h-5 text-gray-600" />
+                                <div className="w-10 h-10 rounded-xl flex items-center justify-center group-hover:opacity-80 transition-opacity" style={{ backgroundColor: theme.accent + "15" }}>
+                                    <Phone className="w-5 h-5" style={{ color: theme.accent }} />
                                 </div>
                                 <div>
                                     <p className="text-xs text-gray-400">Call Us</p>
@@ -713,8 +713,8 @@ export function TwoWheelerTemplate({
                                 </div>
                             </a>
                             <a href={`mailto:${email}`} className="flex items-center gap-3 text-gray-700 hover:text-gray-900 group">
-                                <div className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center group-hover:bg-gray-200 transition-colors">
-                                    <Mail className="w-5 h-5 text-gray-600" />
+                                <div className="w-10 h-10 rounded-xl flex items-center justify-center group-hover:opacity-80 transition-opacity" style={{ backgroundColor: theme.accent + "15" }}>
+                                    <Mail className="w-5 h-5" style={{ color: theme.accent }} />
                                 </div>
                                 <div>
                                     <p className="text-xs text-gray-400">Email</p>
@@ -722,8 +722,8 @@ export function TwoWheelerTemplate({
                                 </div>
                             </a>
                             <div className="flex items-start gap-3">
-                                <div className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center shrink-0">
-                                    <MapPin className="w-5 h-5 text-gray-600" />
+                                <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ backgroundColor: theme.accent + "15" }}>
+                                    <MapPin className="w-5 h-5" style={{ color: theme.accent }} />
                                 </div>
                                 <div>
                                     <p className="text-xs text-gray-400">Address</p>
@@ -744,7 +744,8 @@ export function TwoWheelerTemplate({
                         </button>
                         <button
                             onClick={() => { setLeadType("test_ride"); setLeadVehicleId("") }}
-                            className="w-full flex items-center justify-between px-6 py-4 rounded-2xl font-semibold text-sm bg-gray-900 text-white hover:bg-gray-800 transition-all"
+                            className="w-full flex items-center justify-between px-6 py-4 rounded-2xl font-semibold text-sm bg-white border-2 text-gray-900 hover:opacity-90 transition-all"
+                            style={{ borderColor: theme.accent, color: theme.accent }}
                         >
                             Book a Test Ride
                             <Bike className="w-4 h-4" />
@@ -768,10 +769,10 @@ export function TwoWheelerTemplate({
             </section>
 
             {/* ── Footer ───────────────────────────────────────────────────── */}
-            <footer className="bg-gray-950 text-gray-400 text-sm py-8 px-4 text-center">
-                <p className="font-semibold text-white">{dealerName}</p>
+            <footer className="bg-white border-t border-gray-200 text-gray-500 text-sm py-8 px-4 text-center">
+                <p className="font-semibold text-gray-900">{dealerName}</p>
                 <p className="mt-1">{location}</p>
-                <p className="mt-4 text-gray-600 text-xs">Powered by <span className="text-blue-400 font-semibold">DealerSite Pro</span></p>
+                <p className="mt-4 text-gray-400 text-xs">Powered by <span className="font-semibold" style={{ color: theme.accent }}>DealerSite Pro</span></p>
             </footer>
 
             {/* ── WhatsApp floating button ──────────────────────────────────── */}

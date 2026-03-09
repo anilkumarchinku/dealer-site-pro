@@ -450,7 +450,7 @@ export function ThreeWheelerTemplate({
 
                     {/* Services */}
                     {serviceList.length > 0 && (
-                        <section className="bg-gray-50 py-12">
+                        <section className="bg-white py-12 border-t border-gray-100">
                             <div className="max-w-7xl mx-auto px-4">
                                 <div className="text-center mb-8">
                                     <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accent }}>
@@ -520,7 +520,7 @@ export function ThreeWheelerTemplate({
                     )}
 
                     {/* Why Choose Us */}
-                    <section className="bg-gray-50 py-16">
+                    <section className="bg-white py-16 border-t border-gray-100">
                         <div className="max-w-7xl mx-auto px-4">
                             <div className="text-center mb-12">
                                 <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accent }}>
@@ -559,7 +559,7 @@ export function ThreeWheelerTemplate({
                     </section>
 
                     {/* Trust Badges */}
-                    <section className="bg-gray-50 py-12">
+                    <section className="bg-white py-12 border-t border-gray-100">
                         <div className="max-w-7xl mx-auto px-4">
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                                 {[
@@ -584,7 +584,7 @@ export function ThreeWheelerTemplate({
                     </section>
 
                     {/* Contact Section */}
-                    <section id="contact" className="bg-gray-50 py-20">
+                    <section id="contact" className="bg-white py-20 border-t border-gray-100">
                         <div className="max-w-7xl mx-auto px-4">
                             <div className="grid lg:grid-cols-2 gap-16 items-start">
                                 {/* Info column */}
@@ -666,7 +666,7 @@ export function ThreeWheelerTemplate({
                                                         value={(formData as Record<string, string>)[key]}
                                                         onChange={e => setFormData({ ...formData, [key]: e.target.value })}
                                                         placeholder={placeholder}
-                                                        className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 transition-all"
+                                                        className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 transition-all"
                                                         style={{ "--tw-ring-color": `${accent}40` } as React.CSSProperties}
                                                     />
                                                 </div>
@@ -678,7 +678,7 @@ export function ThreeWheelerTemplate({
                                                     value={formData.message}
                                                     onChange={e => setFormData({ ...formData, message: e.target.value })}
                                                     placeholder="Which vehicle are you interested in?"
-                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 focus:outline-none resize-none"
+                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none resize-none"
                                                 />
                                             </div>
                                             {formStatus === "error" && (
@@ -771,7 +771,7 @@ export function ThreeWheelerTemplate({
             )}
 
             {/* ── Footer ────────────────────────────────────────────────────── */}
-            <footer className="border-t border-gray-200 bg-gray-50 py-14">
+            <footer className="border-t border-gray-200 bg-white py-14">
                 <div className="max-w-7xl mx-auto px-4">
                     {/* Brand row */}
                     <div className="flex items-center gap-4 mb-8 pb-6 border-b border-gray-200">
