@@ -769,10 +769,29 @@ export function TwoWheelerTemplate({
             </section>
 
             {/* ── Footer ───────────────────────────────────────────────────── */}
-            <footer className="bg-white border-t border-gray-200 text-gray-500 text-sm py-8 px-4 text-center">
-                <p className="font-semibold text-gray-900">{dealerName}</p>
-                <p className="mt-1">{location}</p>
-                <p className="mt-4 text-gray-400 text-xs">Powered by <span className="font-semibold" style={{ color: theme.accent }}>DealerSite Pro</span></p>
+            <footer className="bg-white border-t border-gray-200 py-10 px-4">
+                <div className="max-w-7xl mx-auto">
+                    {/* Brand row */}
+                    <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-100">
+                        <div className="relative w-12 h-12 shrink-0 rounded-xl overflow-hidden border border-gray-200 bg-white">
+                            <Image
+                                src={logoUrl || getBrandLogoSrc(primaryBrand)}
+                                alt={primaryBrand ?? dealerName}
+                                fill
+                                className="object-contain p-1"
+                                sizes="48px"
+                                onError={e => { (e.target as HTMLImageElement).parentElement!.style.display = "none" }}
+                            />
+                        </div>
+                        <div>
+                            <p className="font-bold text-gray-900 text-lg">{dealerName}</p>
+                            <p className="text-sm text-gray-500">{location}</p>
+                        </div>
+                    </div>
+                    <p className="text-gray-400 text-xs text-center">
+                        Powered by <span className="font-semibold" style={{ color: theme.accent }}>DealerSite Pro</span>
+                    </p>
+                </div>
             </footer>
 
             {/* ── WhatsApp floating button ──────────────────────────────────── */}
