@@ -14,13 +14,16 @@ export default async function TwoWheelersPage({ params }: Props) {
     const dealer = await fetchDealerBySlug(slug)
     if (!dealer) notFound()
 
-    const { vehicles: dbVehicles } = await getTwoWheelerVehicles(dealer.id, { pageSize: 24, sortBy: 'newest' })
+    const { vehicles: dbVehicles } = await getTwoWheelerVehicles(dealer.id, { pageSize: 100, sortBy: 'newest' })
 
-    // If no inventory in DB yet, fall back to static brand catalog
+    // Always show full catalog for every selected brand, supplemented by DB inventory
     const primaryBrand = dealer.brands[0] ?? null
-    const vehicles = dbVehicles.length > 0
-        ? dbVehicles
-        : (primaryBrand ? getTwoWheelerCatalog(primaryBrand, dealer.id) : [])
+    const catalogVehicles = dealer.brands.flatMap((brand, bi) =>
+        getTwoWheelerCatalog(brand, dealer.id).map(v => ({ ...v, id: `cat-2w-${bi}-${v.id}` }))
+    )
+    const dbKeys = new Set(dbVehicles.map(v => `${v.brand}__${v.model}`))
+    const catalogExtra = catalogVehicles.filter(v => !dbKeys.has(`${v.brand}__${v.model}`))
+    const vehicles = [...dbVehicles, ...catalogExtra]
 
     return (
         <TwoWheelerTemplate
