@@ -57,15 +57,14 @@ export default function ThreeWheelersDashboardPage() {
     const [saving, setSaving]           = useState(false)
     const [brandSearch, setBrandSearch] = useState("")
 
-    // Load 3W brands from DB on mount (filter to only 3W brands)
+    // Load 3W brands from DB on mount — scoped by vehicle_type to prevent collision with 2W
     useEffect(() => {
         if (!dealerId) return
-        const all3wNames = ALL_3W_BRANDS.map(b => b.brand)
         supabase
             .from("dealer_brands")
             .select("brand_name")
             .eq("dealer_id", dealerId)
-            .in("brand_name", all3wNames)
+            .eq("vehicle_type", "3w")
             .order("is_primary", { ascending: false })
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             .then(({ data: rows }: { data: any[] | null }) => {
@@ -121,18 +120,18 @@ export default function ThreeWheelersDashboardPage() {
         if (!dealerId) return
         setSaving(true)
         try {
-            // Only delete 3W brands — do NOT touch 2W brands stored in the same table
-            const all3wBrandNames = ALL_3W_BRANDS.map(b => b.brand)
+            // Delete only 3W rows — vehicle_type column prevents touching 2W brands
             await supabase.from("dealer_brands").delete()
                 .eq("dealer_id", dealerId)
-                .in("brand_name", all3wBrandNames)
+                .eq("vehicle_type", "3w")
             if (selected.length > 0) {
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 await (supabase.from("dealer_brands") as any).insert(
                     selected.map((name, i) => ({
-                        dealer_id:  dealerId,
-                        brand_name: name,
-                        is_primary: i === 0,
+                        dealer_id:    dealerId,
+                        brand_name:   name,
+                        is_primary:   i === 0,
+                        vehicle_type: "3w",
                     }))
                 )
             }

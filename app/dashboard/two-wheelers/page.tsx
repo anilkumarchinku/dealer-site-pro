@@ -61,15 +61,14 @@ export default function TwoWheelersDashboardPage() {
     const [brandSearch, setBrandSearch] = useState("")
     const [categoryFilter, setCategoryFilter] = useState<"all" | "traditional" | "electric">("all")
 
-    // Load 2W brands from DB on mount (filter to only 2W brands)
+    // Load 2W brands from DB on mount — scoped by vehicle_type to prevent collision with 3W
     useEffect(() => {
         if (!dealerId) return
-        const all2wNames = ALL_2W_BRANDS.map(b => b.brand)
         supabase
             .from("dealer_brands")
             .select("brand_name")
             .eq("dealer_id", dealerId)
-            .in("brand_name", all2wNames)
+            .eq("vehicle_type", "2w")
             .order("is_primary", { ascending: false })
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             .then(({ data: rows }: { data: any[] | null }) => {
@@ -126,18 +125,18 @@ export default function TwoWheelersDashboardPage() {
         if (!dealerId) return
         setSaving(true)
         try {
-            // Only delete 2W brands — do NOT touch 3W brands stored in the same table
-            const all2wBrandNames = ALL_2W_BRANDS.map(b => b.brand)
+            // Delete only 2W rows — vehicle_type column prevents touching 3W brands
             await supabase.from("dealer_brands").delete()
                 .eq("dealer_id", dealerId)
-                .in("brand_name", all2wBrandNames)
+                .eq("vehicle_type", "2w")
             if (selected.length > 0) {
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 await (supabase.from("dealer_brands") as any).insert(
                     selected.map((name, i) => ({
-                        dealer_id:  dealerId,
-                        brand_name: name,
-                        is_primary: i === 0,
+                        dealer_id:    dealerId,
+                        brand_name:   name,
+                        is_primary:   i === 0,
+                        vehicle_type: "2w",
                     }))
                 )
             }
