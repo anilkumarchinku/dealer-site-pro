@@ -16,6 +16,25 @@ import { VehicleCard } from "@/components/three-wheelers/VehicleCard"
 import { LeadFormModal } from "@/components/three-wheelers/LeadFormModal"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
+import brandModelsData from "@/lib/data/brand-models.json"
+
+// ── Build brandName → brandId map from brand-models.json (same as onboarding) ─
+const BRAND_NAME_TO_ID_3W: Record<string, string> = {}
+;(brandModelsData.threeWheelers as { brandId: string; brand: string }[])
+    .forEach(b => { BRAND_NAME_TO_ID_3W[b.brand.toLowerCase().trim()] = b.brandId })
+
+function getBrandLogoSrc3W(brand: string | null, dealerLogo: string | null): string | null {
+    if (dealerLogo) return dealerLogo
+    if (!brand) return null
+    const lower = brand.toLowerCase().trim()
+    if (BRAND_NAME_TO_ID_3W[lower]) return `/data/brand-logos/${BRAND_NAME_TO_ID_3W[lower]}.png`
+    // Fuzzy match (e.g. "Piaggio" matches "Piaggio Ape")
+    for (const [key, id] of Object.entries(BRAND_NAME_TO_ID_3W)) {
+        if (lower.includes(key) || key.includes(lower)) return `/data/brand-logos/${id}.png`
+    }
+    // Slug fallback
+    return `/data/brand-logos/${lower.replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}.png`
+}
 
 // ── Service label map (reuses the same keys as 4W) ───────────────────────────
 const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
@@ -29,28 +48,6 @@ const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
     extended_warranty:    { label: "Extended Warranty",   icon: "✅" },
     roadside_assistance:  { label: "Roadside Assist",     icon: "🆘" },
     car_exchange:         { label: "Vehicle Exchange",    icon: "🔃" },
-}
-
-// ── Brand logo map — reuses existing 2W/4W assets where available ─────────────
-const BRAND_LOGO_MAP: Record<string, string> = {
-    "Bajaj":                        "/assets/logos/2w/bajaj-auto.svg",
-    "Bajaj Auto":                   "/assets/logos/2w/bajaj-auto.svg",
-    "Mahindra":                     "/assets/logos/mahindra.png",
-    "Mahindra Last Mile Mobility":  "/assets/logos/mahindra.png",
-    "TVS":                          "/assets/logos/2w/tvs-motor.svg",
-    "TVS Motor Company":            "/assets/logos/2w/tvs-motor.svg",
-}
-
-function getBrandLogoSrc3W(brand: string | null, dealerLogo: string | null): string | null {
-    if (dealerLogo) return dealerLogo
-    if (!brand) return null
-    if (BRAND_LOGO_MAP[brand]) return BRAND_LOGO_MAP[brand]
-    // Fuzzy match
-    const lower = brand.toLowerCase()
-    for (const [key, src] of Object.entries(BRAND_LOGO_MAP)) {
-        if (lower.includes(key.toLowerCase()) || key.toLowerCase().includes(lower)) return src
-    }
-    return null
 }
 
 // ── Brand accent colors for inline styling ────────────────────────────────────
