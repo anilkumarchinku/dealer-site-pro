@@ -7,7 +7,11 @@
 import type { ThreeWheelerVehicle } from '@/lib/types/three-wheeler'
 
 const NOW = new Date().toISOString()
-type CatalogEntry = Omit<ThreeWheelerVehicle, 'id' | 'dealer_id' | 'created_at' | 'updated_at' | 'views'>
+type CatalogEntry = Omit<ThreeWheelerVehicle,
+    'id' | 'dealer_id' | 'created_at' | 'updated_at' | 'views' |
+    'payload_kg' | 'body_type' | 'passenger_capacity' | 'cng_mileage_km_per_kg' |
+    'permit_type' | 'gvw_kg' | 'brochure_url'
+>
 
 
 // ── Bajaj Auto (3W) ─────────────────────────────────────────────────────────────
@@ -700,13 +704,20 @@ export function getThreeWheelerCatalog(brand: string, dealerId: string): ThreeWh
     }
 
     return entries.map((entry, idx) => ({
+        payload_kg:            null,
+        body_type:             null,
+        passenger_capacity:    null,
+        cng_mileage_km_per_kg: null,
+        permit_type:           null,
+        gvw_kg:                null,
+        brochure_url:          null,
         ...entry,
         id: `catalog-3w-${idx}`,
         dealer_id: dealerId,
         created_at: NOW,
         updated_at: NOW,
         views: 0,
-    }))
+    })) as ThreeWheelerVehicle[]
 }
 
 export const THREE_WHEELER_BRANDS = Object.keys(CATALOG_BY_BRAND)

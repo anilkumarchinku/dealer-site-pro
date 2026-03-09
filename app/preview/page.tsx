@@ -36,8 +36,6 @@ import { LuxuryTemplate } from "@/components/templates/LuxuryTemplate";
 import { SportyTemplate } from "@/components/templates/SportyTemplate";
 import { FamilyTemplate } from "@/components/templates/FamilyTemplate";
 
-import { TwoWheelerTemplate } from "@/components/two-wheelers/TwoWheelerTemplate";
-import { getTwoWheelerCatalog, TWO_WHEELER_BRANDS } from "@/lib/data/two-wheelers";
 
 function PreviewContent() {
     const { data, dealerSlug, dealerId } = useOnboardingStore();
@@ -62,7 +60,8 @@ function PreviewContent() {
     // State for cars
     const [displayCars, setDisplayCars] = useState<any[]>([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [vehicleCategory, setVehicleCategory] = useState<"cars" | "2w" | "3w">("cars");
+    // Preview always uses 4W template switcher — 2W/3W dedicated templates are on the live site
+    const vehicleCategory = "cars";
 
     useEffect(() => {
         let isMounted = true;
@@ -70,42 +69,15 @@ function PreviewContent() {
         async function fetchData() {
             setIsLoading(true);
             try {
-                // Determine category based on brand configuration
-                const config = automotiveBrands[primaryBrand as keyof typeof automotiveBrands];
-                const cat = config?.category || "";
+                // Try fetching by brand first
+                let cars = await getCarsByMake(primaryBrand);
 
-                // If it's a 2W brand (we know from the category or it's in the catalog)
-                const is2W = cat === "Two Wheelers" || TWO_WHEELER_BRANDS.includes(primaryBrand) ||
-                    ["Hero MotoCorp", "Honda Motorcycle & Scooter India", "TVS Motor Company", "Bajaj Auto", "Yamaha India", "Suzuki Motorcycle India", "KTM India", "Kawasaki India", "Ather Energy", "Ola Electric", "Husqvarna India", "Aprilia India", "Vespa India", "Ducati India", "BMW Motorrad India", "Triumph India", "Harley-Davidson India", "Ola Electric", "Bajaj Chetak", "TVS iQube", "Matter", "Simple Energy", "Ultraviolette Automotive", "Revolt Motors", "Okinawa Autotech", "Ampere (Greaves Electric)", "Tork Motors", "Komaki", "Bounce Infinity", "Pure EV", "Odysse Electric", "Joy e-bike", "Royal Enfield", "Indian Motorcycle", "Moto Guzzi", "CFMoto India"].some(b => primaryBrand.includes(b));
-
-                const is3W = cat === "Three Wheelers" ||
-                    ["Bajaj Auto (3W)", "Piaggio Ape", "TVS King", "Mahindra (3W)", "Atul Auto", "Kinetic Green", "Lohia Auto", "Euler Motors", "Greaves Electric Mobility", "Force Motors"].some(b => primaryBrand.includes(b));
-
-                if (is3W) {
-                    setVehicleCategory("3w");
-                    // Just return empty array for preview right now, 3W template will format gracefully
-                    if (isMounted) setDisplayCars([]);
-                } else if (is2W) {
-                    setVehicleCategory("2w");
-                    // get 2W mock catalog
-                    let twoWheelers = getTwoWheelerCatalog(primaryBrand, dealerId || "preview-dealer");
-                    // fallback to generic if empty
-                    if (twoWheelers.length === 0) {
-                        twoWheelers = getTwoWheelerCatalog("Honda Motorcycle & Scooter India", dealerId || "preview-dealer");
-                    }
-                    if (isMounted) setDisplayCars(twoWheelers);
-                } else {
-                    setVehicleCategory("cars");
-                    // Try fetching by brand first
-                    let cars = await getCarsByMake(primaryBrand);
-
-                    // If no cars for this brand, fallback to all cars (or latest)
-                    if (cars.length === 0) {
-                        const result = await getAllCars({ limit: 8 });
-                        cars = result.cars;
-                    }
-                    if (isMounted) setDisplayCars(cars);
+                // If no cars for this brand, fallback to all cars (or latest)
+                if (cars.length === 0) {
+                    const result = await getAllCars({ limit: 8 });
+                    cars = result.cars;
                 }
+                if (isMounted) setDisplayCars(cars);
 
                 if (isMounted) {
                     setIsLoading(false);
@@ -169,40 +141,6 @@ function PreviewContent() {
 
     // Render the appropriate template with brand-specific data
     const renderTemplate = () => {
-        if (vehicleCategory === "2w") {
-            return (
-                <TwoWheelerTemplate
-                    dealerId={dealerId || "preview-dealer"}
-                    dealerName={dealerName}
-                    phone={contactInfo.phone}
-                    email={contactInfo.email}
-                    location={contactInfo.address}
-                    fullAddress={contactInfo.address}
-                    primaryBrand={primaryBrand}
-                    vehicles={displayCars}
-                    slug={dealerSlug || "preview"}
-                />
-            );
-        }
-
-        if (vehicleCategory === "3w") {
-            return (
-                <div className="min-h-screen flex items-center justify-center bg-gray-50 flex-col py-20 px-4">
-                    <div className="text-center max-w-lg">
-                        <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <span className="text-4xl">🛺</span>
-                        </div>
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">{primaryBrand} Three-Wheelers</h2>
-                        <p className="text-gray-600 mb-8">
-                            Your full 3-Wheeler digital showroom is integrated and ready for customers.
-                            <br /><br />
-                            When deployed, your live site will display the specialized 3-Wheeler Layout featuring cargo specs, payload capacity, and battery ranges.
-                        </p>
-                    </div>
-                </div>
-            );
-        }
-
         const config = templateConfigs[templateId as keyof typeof templateConfigs] || templateConfigs.modern;
 
         const props = {

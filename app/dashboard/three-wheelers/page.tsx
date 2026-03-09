@@ -57,13 +57,15 @@ export default function ThreeWheelersDashboardPage() {
     const [saving, setSaving]           = useState(false)
     const [brandSearch, setBrandSearch] = useState("")
 
-    // Load brands from DB on mount
+    // Load 3W brands from DB on mount (filter to only 3W brands)
     useEffect(() => {
         if (!dealerId) return
+        const all3wNames = ALL_3W_BRANDS.map(b => b.brand)
         supabase
             .from("dealer_brands")
             .select("brand_name")
             .eq("dealer_id", dealerId)
+            .in("brand_name", all3wNames)
             .order("is_primary", { ascending: false })
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             .then(({ data: rows }: { data: any[] | null }) => {
@@ -119,7 +121,11 @@ export default function ThreeWheelersDashboardPage() {
         if (!dealerId) return
         setSaving(true)
         try {
-            await supabase.from("dealer_brands").delete().eq("dealer_id", dealerId)
+            // Only delete 3W brands — do NOT touch 2W brands stored in the same table
+            const all3wBrandNames = ALL_3W_BRANDS.map(b => b.brand)
+            await supabase.from("dealer_brands").delete()
+                .eq("dealer_id", dealerId)
+                .in("brand_name", all3wBrandNames)
             if (selected.length > 0) {
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 await (supabase.from("dealer_brands") as any).insert(
