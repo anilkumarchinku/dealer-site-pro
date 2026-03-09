@@ -13,7 +13,10 @@ import { createClient }  from '@supabase/supabase-js'
 
 function getSupabase() {
     const url = process.env.NEXT_PUBLIC_SUPABASE_URL!
-    const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+    // Must use service role key — this endpoint has no user session so the anon
+    // key is blocked by RLS on dealer_domains. Service role bypasses RLS safely
+    // because this is a server-side edge function (key is never sent to browser).
+    const key = process.env.SUPABASE_SERVICE_ROLE_KEY ?? process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
     return createClient(url, key)
 }
 
