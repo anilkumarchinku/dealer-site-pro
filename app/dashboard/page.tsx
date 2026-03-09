@@ -8,12 +8,45 @@ import Link from "next/link";
 import {
     Users, Car, Calendar, Plus, ArrowRight, Eye,
     Mail, Phone, Clock, Target, Zap, BarChart3, Loader2, ChevronDown,
+    Check, Pencil, X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { isSupabaseReady } from "@/lib/supabase";
+import { isSupabaseReady, supabase } from "@/lib/supabase";
+import type { Brand } from "@/lib/types";
 import { fetchAnalyticsSummary, fetchTopVehicles, type TopVehicle } from "@/lib/db/analytics";
 import { fetchLeads, type ExternalLead } from "@/lib/db/leads";
 import { DealerScorecard } from "@/components/dashboard/DealerScorecard";
+
+const CAR_BRANDS: { name: Brand; logo: string }[] = [
+    { name: "Maruti Suzuki",  logo: "/assets/logos/maruti-suzuki.png" },
+    { name: "Tata Motors",    logo: "/assets/logos/tata-motors.png" },
+    { name: "Mahindra",       logo: "/assets/logos/mahindra.png" },
+    { name: "Hyundai",        logo: "/assets/logos/hyundai.png" },
+    { name: "Honda",          logo: "/assets/logos/honda.png" },
+    { name: "Toyota",         logo: "/assets/logos/toyota.png" },
+    { name: "Kia",            logo: "/assets/logos/kia.png" },
+    { name: "Renault",        logo: "/assets/logos/renault.png" },
+    { name: "Nissan",         logo: "/assets/logos/nissan.png" },
+    { name: "Volkswagen",     logo: "/assets/logos/volkswagen.png" },
+    { name: "Skoda",          logo: "/assets/logos/skoda.png" },
+    { name: "MG",             logo: "/assets/logos/mg.png" },
+    { name: "Jeep",           logo: "/assets/logos/jeep.png" },
+    { name: "Citroen",        logo: "/assets/logos/citroen.png" },
+    { name: "Force Motors",   logo: "/assets/logos/force-motors.png" },
+    { name: "Isuzu",          logo: "/assets/logos/isuzu.png" },
+    { name: "Mercedes-Benz",  logo: "/assets/logos/mercedes-benz.png" },
+    { name: "BMW",            logo: "/assets/logos/bmw.png" },
+    { name: "Audi",           logo: "/assets/logos/audi.png" },
+    { name: "Jaguar",         logo: "/assets/logos/jaguar.png" },
+    { name: "Land Rover",     logo: "/assets/logos/land-rover.png" },
+    { name: "Volvo",          logo: "/assets/logos/volvo.png" },
+    { name: "Lexus",          logo: "/assets/logos/lexus.png" },
+    { name: "Porsche",        logo: "/assets/logos/porsche.png" },
+    { name: "Bentley",        logo: "/assets/logos/bentley.png" },
+    { name: "Lamborghini",    logo: "/assets/logos/lamborghini.png" },
+    { name: "BYD",            logo: "/assets/logos/byd.png" },
+    { name: "Tesla",          logo: "/assets/logos/tesla.png" },
+]
 
 const QUICK_ACTIONS = [
     { label: "Add Vehicle", href: "/dashboard/inventory/add", icon: Plus,      color: "blue"    },
@@ -36,12 +69,19 @@ const priorityColors = {
 };
 
 export default function DashboardPage() {
-    const { data, dealerId } = useOnboardingStore();
+    const { data, dealerId, updateData } = useOnboardingStore();
     const primaryBrand = data.brands?.[0] ?? "Maruti Suzuki";
     const isMultiBrand  = (data.brands?.length ?? 0) > 1;
     const isFirstHand   = data.sellsNewCars && !data.sellsUsedCars;
 
     const [showBrandPicker, setShowBrandPicker] = useState(false);
+
+    // Info & Brands editing
+    const [editingBrands, setEditingBrands] = useState(false);
+    const [selectedBrands, setSelectedBrands] = useState<Brand[]>([]);
+    const [savingBrands, setSavingBrands] = useState(false);
+    const [brandSearch, setBrandSearch] = useState("");
+
     const [statsLoading, setStatsLoading] = useState(false);
     const [leadsLoading, setLeadsLoading] = useState(false);
     const [visitors, setVisitors]         = useState<number | null>(null);
@@ -75,6 +115,28 @@ export default function DashboardPage() {
         }).catch(() => {}).finally(() => setLeadsLoading(false));
         return;
     }, [dealerId]);
+
+    async function saveCarBrands() {
+        if (!dealerId) return;
+        setSavingBrands(true);
+        try {
+            await supabase.from("dealer_brands").delete().eq("dealer_id", dealerId);
+            if (selectedBrands.length > 0) {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                await (supabase.from("dealer_brands") as any).insert(
+                    selectedBrands.map((name, i) => ({
+                        dealer_id:  dealerId,
+                        brand_name: name,
+                        is_primary: i === 0,
+                    }))
+                );
+            }
+            updateData({ brands: selectedBrands });
+            setEditingBrands(false);
+        } finally {
+            setSavingBrands(false);
+        }
+    }
 
     const fmt = (n: number) => n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n);
 
@@ -184,6 +246,87 @@ export default function DashboardPage() {
                         </Link>
                     )}
                 </div>
+            </div>
+
+            {/* ── Info & Brands ─────────────────────────────────────────── */}
+            <div className="bg-card border border-border rounded-xl p-5">
+                <div className="flex items-center justify-between mb-4">
+                    <div>
+                        <h2 className="font-semibold text-base">Info &amp; Brands</h2>
+                        <p className="text-xs text-muted-foreground mt-0.5">
+                            {data.dealershipName || "Your dealership"} · {data.location || ""}
+                        </p>
+                    </div>
+                    {!editingBrands && (
+                        <Button size="sm" variant="outline" onClick={() => { setSelectedBrands(data.brands ?? []); setBrandSearch(""); setEditingBrands(true); }}>
+                            <Pencil className="w-3.5 h-3.5 mr-1.5" />
+                            {(data.brands?.length ?? 0) === 0 ? "Select Brands" : "Edit Brands"}
+                        </Button>
+                    )}
+                </div>
+
+                {!editingBrands && (
+                    (data.brands?.length ?? 0) > 0 ? (
+                        <div className="flex flex-wrap gap-2">
+                            {data.brands!.map((brand, i) => {
+                                const match = CAR_BRANDS.find(b => b.name === brand)
+                                return (
+                                    <div key={brand} className="flex items-center gap-2 px-3 py-1.5 bg-muted/50 rounded-full border border-border">
+                                        {match && (
+                                            // eslint-disable-next-line @next/next/no-img-element
+                                            <img src={match.logo} alt={brand} className="w-6 h-6 rounded-full object-contain" onError={e => (e.currentTarget.style.display = "none")} />
+                                        )}
+                                        <span className="text-sm font-medium">{brand}</span>
+                                        {i === 0 && <span className="text-[10px] text-muted-foreground">(Primary)</span>}
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    ) : (
+                        <p className="text-sm text-muted-foreground italic">No brands selected yet. Click &quot;Select Brands&quot; to choose your car brands.</p>
+                    )
+                )}
+
+                {editingBrands && (
+                    <div className="space-y-3">
+                        <input
+                            type="text"
+                            placeholder="Search brands..."
+                            value={brandSearch}
+                            onChange={e => setBrandSearch(e.target.value)}
+                            className="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
+                        />
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+                            {CAR_BRANDS.filter(b => !brandSearch.trim() || b.name.toLowerCase().includes(brandSearch.toLowerCase())).map(b => {
+                                const isSel = selectedBrands.includes(b.name)
+                                return (
+                                    <button
+                                        key={b.name}
+                                        onClick={() => setSelectedBrands(prev => isSel ? prev.filter(x => x !== b.name) : [...prev, b.name])}
+                                        className={`flex items-center gap-2 px-3 py-2 rounded-lg border text-sm font-medium transition-all text-left ${isSel ? "border-primary bg-primary/10 text-primary" : "border-border bg-muted/30 text-foreground hover:border-primary/40"}`}
+                                    >
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        <img src={b.logo} alt={b.name} className="w-6 h-6 object-contain" onError={e => (e.currentTarget.style.display = "none")} />
+                                        <span className="flex-1 truncate text-xs">{b.name}</span>
+                                        {isSel && <Check className="w-3 h-3 shrink-0" />}
+                                    </button>
+                                )
+                            })}
+                        </div>
+                        {selectedBrands.length > 0 && (
+                            <p className="text-xs text-muted-foreground">{selectedBrands.length} brand{selectedBrands.length > 1 ? "s" : ""} selected · First is primary</p>
+                        )}
+                        <div className="flex items-center gap-2 pt-1">
+                            <Button size="sm" onClick={saveCarBrands} disabled={savingBrands || selectedBrands.length === 0}>
+                                {savingBrands ? <Loader2 className="w-3.5 h-3.5 mr-1.5 animate-spin" /> : <Check className="w-3.5 h-3.5 mr-1.5" />}
+                                Save Brands
+                            </Button>
+                            <Button size="sm" variant="ghost" onClick={() => setEditingBrands(false)} disabled={savingBrands}>
+                                <X className="w-3.5 h-3.5 mr-1.5" />Cancel
+                            </Button>
+                        </div>
+                    </div>
+                )}
             </div>
 
             {/* Go Live Banner */}
