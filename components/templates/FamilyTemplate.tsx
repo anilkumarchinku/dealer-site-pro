@@ -156,6 +156,7 @@ export function FamilyTemplate({
     };
 
     const serviceList = services && services.length > 0 ? services : [];
+    const showInventoryTab = vehicleType !== '2w' && vehicleType !== '3w';
 
     return (
         <div className="min-h-screen bg-white text-gray-900 font-sans">
@@ -177,7 +178,9 @@ export function FamilyTemplate({
                         </div>
                         <div className="hidden md:flex items-center gap-6">
                             <button onClick={() => setActiveTab('home')} className="font-medium hover:opacity-70" style={activeTab === 'home' ? { color: brandColors.primary } : {}}>Home</button>
-                            <button onClick={() => setActiveTab('inventory')} className="font-medium hover:opacity-70" style={activeTab === 'inventory' ? { color: brandColors.primary } : {}}>Inventory</button>
+                            {showInventoryTab && (
+                                <button onClick={() => setActiveTab('inventory')} className="font-medium hover:opacity-70" style={activeTab === 'inventory' ? { color: brandColors.primary } : {}}>Inventory</button>
+                            )}
                             <a href="#contact" className="font-medium hover:opacity-70">Contact</a>
                             <button onClick={() => setNavEMIOpen(true)} className="font-medium hover:opacity-70">EMI Calc</button>
                             <a href="#exchange-section" className="font-medium hover:opacity-70">Exchange</a>
@@ -222,12 +225,14 @@ export function FamilyTemplate({
                                 >
                                     Home
                                 </button>
-                                <button
-                                    onClick={() => { setActiveTab('inventory'); setMobileMenuOpen(false); }}
-                                    className="block w-full text-left px-3 py-2.5 rounded-xl font-medium text-gray-900 hover:bg-gray-50 transition-colors"
-                                >
-                                    Inventory
-                                </button>
+                                {showInventoryTab && (
+                                    <button
+                                        onClick={() => { setActiveTab('inventory'); setMobileMenuOpen(false); }}
+                                        className="block w-full text-left px-3 py-2.5 rounded-xl font-medium text-gray-900 hover:bg-gray-50 transition-colors"
+                                    >
+                                        Inventory
+                                    </button>
+                                )}
                                 <a
                                     href="#contact"
                                     onClick={() => setMobileMenuOpen(false)}
@@ -290,10 +295,12 @@ export function FamilyTemplate({
                                     <h1 className="text-5xl md:text-6xl font-bold leading-tight">{heroTitle}</h1>
                                     <p className="text-xl text-gray-600">{heroSubtitle}</p>
                                     <div className="flex flex-wrap gap-4">
-                                        <Button size="lg" className="rounded-full text-white" style={{ backgroundColor: brandColors.primary }} onClick={() => setActiveTab('inventory')}>
-                                            {vl.browseCTA}
-                                            <ArrowRight className="ml-2 w-5 h-5" />
-                                        </Button>
+                                        {showInventoryTab && (
+                                            <Button size="lg" className="rounded-full text-white" style={{ backgroundColor: brandColors.primary }} onClick={() => setActiveTab('inventory')}>
+                                                {vl.browseCTA}
+                                                <ArrowRight className="ml-2 w-5 h-5" />
+                                            </Button>
+                                        )}
                                         <Button size="lg" variant="outline" className="rounded-full bg-white" style={{ borderColor: brandColors.primary, color: brandColors.primary }} asChild>
                                             <a href="#contact">Talk to Our Team</a>
                                         </Button>
@@ -370,12 +377,14 @@ export function FamilyTemplate({
                                 <h2 className="text-4xl font-bold mt-2">Family-Friendly Vehicles</h2>
                             </div>
                             <CarGrid cars={featuredCars} brandColor={brandColors.primary} light dealerPhone={contactInfo.phone} dealerId={dealerId} />
-                            <div className="text-center mt-8">
-                                <Button variant="outline" size="lg" className="rounded-full bg-white text-gray-700 border-gray-300 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>
-                                    View All Cars
-                                    <ChevronRight className="ml-1 w-4 h-4" />
-                                </Button>
-                            </div>
+                            {showInventoryTab && (
+                                <div className="text-center mt-8">
+                                    <Button variant="outline" size="lg" className="rounded-full bg-white text-gray-700 border-gray-300 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>
+                                        View All Cars
+                                        <ChevronRight className="ml-1 w-4 h-4" />
+                                    </Button>
+                                </div>
+                            )}
                         </div>
                     </section>
 
@@ -589,7 +598,7 @@ export function FamilyTemplate({
             )}
 
             {/* Inventory Tab */}
-            {activeTab === 'inventory' && (
+            {showInventoryTab && activeTab === 'inventory' && (
                 <div className="pt-24 pb-12 bg-gray-50 min-h-screen">
                     <div className="max-w-7xl mx-auto px-4">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
@@ -709,7 +718,9 @@ export function FamilyTemplate({
                             <h4 className="font-bold text-lg mb-4">Quick Links</h4>
                             <div className="space-y-2 text-gray-600">
                                 <button onClick={() => setActiveTab('home')} className="block hover:text-gray-900">Home</button>
-                                <button onClick={() => setActiveTab('inventory')} className="block hover:text-gray-900">Inventory</button>
+                                {showInventoryTab && (
+                                    <button onClick={() => setActiveTab('inventory')} className="block hover:text-gray-900">Inventory</button>
+                                )}
                                 <a href="#contact" className="block hover:text-gray-900">Contact</a>
                                 <button onClick={() => setNavEMIOpen(true)} className="block hover:text-gray-900">EMI Calculator</button>
                                 <a href="#exchange-section" className="block hover:text-gray-900">Exchange</a>

@@ -176,6 +176,7 @@ export function ModernTemplate({
     };
 
     const serviceList = services && services.length > 0 ? services : [];
+    const showInventoryTab = vehicleType !== '2w' && vehicleType !== '3w';
 
     return (
         <div className="min-h-screen bg-white font-sans text-gray-900">
@@ -211,13 +212,15 @@ export function ModernTemplate({
                             >
                                 {t('home', locale)}
                             </button>
-                            <button
-                                onClick={() => setActiveTab('inventory')}
-                                className="font-medium transition-colors text-gray-600 hover:text-gray-900"
-                                style={activeTab === 'inventory' ? { color: brandColors.primary } : {}}
-                            >
-                                {t('inventory', locale)}
-                            </button>
+                            {showInventoryTab && (
+                                <button
+                                    onClick={() => setActiveTab('inventory')}
+                                    className="font-medium transition-colors text-gray-600 hover:text-gray-900"
+                                    style={activeTab === 'inventory' ? { color: brandColors.primary } : {}}
+                                >
+                                    {t('inventory', locale)}
+                                </button>
+                            )}
                             <a href="#contact" className="font-medium transition-colors text-gray-600 hover:text-gray-900">
                                 {t('contact', locale)}
                             </a>
@@ -274,12 +277,14 @@ export function ModernTemplate({
                                 >
                                     Home
                                 </button>
-                                <button
-                                    onClick={() => { setActiveTab('inventory'); setMobileMenuOpen(false); }}
-                                    className="block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100"
-                                >
-                                    Inventory
-                                </button>
+                                {showInventoryTab && (
+                                    <button
+                                        onClick={() => { setActiveTab('inventory'); setMobileMenuOpen(false); }}
+                                        className="block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100"
+                                    >
+                                        Inventory
+                                    </button>
+                                )}
                                 <a
                                     href="#contact"
                                     onClick={() => setMobileMenuOpen(false)}
@@ -476,10 +481,12 @@ export function ModernTemplate({
                                     </span>
                                     <h2 className="text-4xl font-bold text-gray-900 mt-2">Featured Vehicles</h2>
                                 </div>
-                                <Button variant="outline" className="text-gray-700 border-gray-300 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>
-                                    View All
-                                    <ChevronRight className="ml-1 w-4 h-4" />
-                                </Button>
+                                {showInventoryTab && (
+                                    <Button variant="outline" className="text-gray-700 border-gray-300 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>
+                                        View All
+                                        <ChevronRight className="ml-1 w-4 h-4" />
+                                    </Button>
+                                )}
                             </div>
                             <CarGrid cars={featuredCars} brandColor={brandColors.primary} light dealerPhone={contactInfo.phone} dealerId={dealerId} />
                         </div>
@@ -709,7 +716,7 @@ export function ModernTemplate({
             )}
 
             {/* Inventory Tab */}
-            {activeTab === 'inventory' && (
+            {showInventoryTab && activeTab === 'inventory' && (
                 <div className="pt-20 pb-12 bg-gray-50 min-h-screen">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
@@ -832,9 +839,11 @@ export function ModernTemplate({
                                 <button onClick={() => setActiveTab('home')} className="block text-gray-500 hover:text-gray-900">
                                     Home
                                 </button>
-                                <button onClick={() => setActiveTab('inventory')} className="block text-gray-500 hover:text-gray-900">
-                                    Inventory
-                                </button>
+                                {showInventoryTab && (
+                                    <button onClick={() => setActiveTab('inventory')} className="block text-gray-500 hover:text-gray-900">
+                                        Inventory
+                                    </button>
+                                )}
                                 <a href="#contact" className="block text-gray-500 hover:text-gray-900">Contact</a>
                                 <button onClick={() => setNavEMIOpen(true)} className="block text-gray-500 hover:text-gray-900">EMI Calculator</button>
                                 <a href="#exchange-section" className="block text-gray-500 hover:text-gray-900">Exchange</a>

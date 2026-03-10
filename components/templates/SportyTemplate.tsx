@@ -169,6 +169,7 @@ export function SportyTemplate({
     };
 
     const serviceList = services && services.length > 0 ? services : [];
+    const showInventoryTab = vehicleType !== '2w' && vehicleType !== '3w';
 
     return (
         <div className="min-h-screen bg-white text-gray-900 font-sans">
@@ -197,13 +198,15 @@ export function SportyTemplate({
                             >
                                 Home
                             </button>
-                            <button
-                                onClick={() => setActiveTab('inventory')}
-                                className="font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900"
-                                style={activeTab === 'inventory' ? { color: brandAccent } : {}}
-                            >
-                                Inventory
-                            </button>
+                            {showInventoryTab && (
+                                <button
+                                    onClick={() => setActiveTab('inventory')}
+                                    className="font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900"
+                                    style={activeTab === 'inventory' ? { color: brandAccent } : {}}
+                                >
+                                    Inventory
+                                </button>
+                            )}
                             <a href="#contact" className="font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">
                                 Contact
                             </a>
@@ -249,12 +252,14 @@ export function SportyTemplate({
                                 >
                                     Home
                                 </button>
-                                <button
-                                    onClick={() => { setActiveTab('inventory'); setMobileMenuOpen(false); }}
-                                    className="block w-full text-left px-3 py-2.5 rounded-lg font-bold uppercase text-sm tracking-wider text-gray-900 hover:bg-gray-100 transition-colors"
-                                >
-                                    Inventory
-                                </button>
+                                {showInventoryTab && (
+                                    <button
+                                        onClick={() => { setActiveTab('inventory'); setMobileMenuOpen(false); }}
+                                        className="block w-full text-left px-3 py-2.5 rounded-lg font-bold uppercase text-sm tracking-wider text-gray-900 hover:bg-gray-100 transition-colors"
+                                    >
+                                        Inventory
+                                    </button>
+                                )}
                                 <a
                                     href="#contact"
                                     onClick={() => setMobileMenuOpen(false)}
@@ -397,10 +402,12 @@ export function SportyTemplate({
                                     </span>
                                     <h2 className="text-5xl font-black mt-2">FEATURED BEASTS</h2>
                                 </div>
-                                <Button variant="outline" className="border-2 font-bold uppercase bg-transparent" style={{ borderColor: brandAccent, color: brandAccent }} onClick={() => setActiveTab('inventory')}>
-                                    VIEW ALL
-                                    <ChevronRight className="ml-1 w-4 h-4" />
-                                </Button>
+                                {showInventoryTab && (
+                                    <Button variant="outline" className="border-2 font-bold uppercase bg-transparent" style={{ borderColor: brandAccent, color: brandAccent }} onClick={() => setActiveTab('inventory')}>
+                                        VIEW ALL
+                                        <ChevronRight className="ml-1 w-4 h-4" />
+                                    </Button>
+                                )}
                             </div>
                             <CarGrid cars={featuredCars} brandColor={brandAccent} dealerPhone={contactInfo.phone} dealerId={dealerId} />
                         </div>
@@ -592,7 +599,7 @@ export function SportyTemplate({
             )}
 
             {/* Inventory Tab */}
-            {activeTab === 'inventory' && (
+            {showInventoryTab && activeTab === 'inventory' && (
                 <div className="pt-20 pb-12 min-h-screen">
                     <div className="max-w-7xl mx-auto px-4">
                         <div className="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
@@ -723,7 +730,9 @@ export function SportyTemplate({
                             <h4 className="text-lg font-black uppercase mb-4 text-gray-900">QUICK LINKS</h4>
                             <div className="space-y-2 text-gray-500">
                                 <button onClick={() => setActiveTab('home')} className="block hover:text-gray-900">Home</button>
-                                <button onClick={() => setActiveTab('inventory')} className="block hover:text-gray-900">Inventory</button>
+                                {showInventoryTab && (
+                                    <button onClick={() => setActiveTab('inventory')} className="block hover:text-gray-900">Inventory</button>
+                                )}
                                 <a href="#contact" className="block hover:text-gray-900">Contact</a>
                                 <button onClick={() => setNavEMIOpen(true)} className="block hover:text-gray-900">EMI Calculator</button>
                                 <a href="#exchange-section" className="block hover:text-gray-900">Exchange</a>

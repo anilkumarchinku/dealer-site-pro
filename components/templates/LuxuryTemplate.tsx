@@ -142,6 +142,7 @@ export function LuxuryTemplate({
     };
 
     const serviceList = services && services.length > 0 ? services : [];
+    const showInventoryTab = vehicleType !== '2w' && vehicleType !== '3w';
 
     return (
         <div className="min-h-screen bg-white text-gray-900 font-serif">
@@ -163,7 +164,9 @@ export function LuxuryTemplate({
                         </div>
                         <div className="hidden md:flex items-center gap-8">
                             <button onClick={() => setActiveTab('home')} className="text-sm tracking-wider text-gray-600 hover:text-gray-900" style={activeTab === 'home' ? { color: brandAccent } : {}}>Home</button>
-                            <button onClick={() => setActiveTab('inventory')} className="text-sm tracking-wider text-gray-600 hover:text-gray-900" style={activeTab === 'inventory' ? { color: brandAccent } : {}}>Collection</button>
+                            {showInventoryTab && (
+                                <button onClick={() => setActiveTab('inventory')} className="text-sm tracking-wider text-gray-600 hover:text-gray-900" style={activeTab === 'inventory' ? { color: brandAccent } : {}}>Collection</button>
+                            )}
                             <a href="#contact" className="text-sm tracking-wider text-gray-600 hover:text-gray-900">Contact</a>
                             <button onClick={() => setNavEMIOpen(true)} className="text-sm tracking-wider text-gray-600 hover:text-gray-900">EMI Calc</button>
                             <a href="#exchange-section" className="text-sm tracking-wider text-gray-600 hover:text-gray-900">Exchange</a>
@@ -207,12 +210,14 @@ export function LuxuryTemplate({
                                 >
                                     Home
                                 </button>
-                                <button
-                                    onClick={() => { setActiveTab('inventory'); setMobileMenuOpen(false); }}
-                                    className="block w-full text-left px-3 py-2.5 rounded-lg text-sm tracking-wider text-gray-900 hover:bg-gray-100 transition-colors"
-                                >
-                                    Collection
-                                </button>
+                                {showInventoryTab && (
+                                    <button
+                                        onClick={() => { setActiveTab('inventory'); setMobileMenuOpen(false); }}
+                                        className="block w-full text-left px-3 py-2.5 rounded-lg text-sm tracking-wider text-gray-900 hover:bg-gray-100 transition-colors"
+                                    >
+                                        Collection
+                                    </button>
+                                )}
                                 <a
                                     href="#contact"
                                     onClick={() => setMobileMenuOpen(false)}
@@ -325,12 +330,14 @@ export function LuxuryTemplate({
                                 <h2 className="text-5xl font-light mt-4 text-gray-900">Featured Collection</h2>
                             </div>
                             <CarGrid cars={featuredCars} brandColor={brandAccent} dealerPhone={contactInfo.phone} dealerId={dealerId} />
-                            <div className="text-center mt-10">
-                                <Button variant="outline" className="border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>
-                                    View Full Collection
-                                    <ChevronRight className="ml-1 w-4 h-4" />
-                                </Button>
-                            </div>
+                            {showInventoryTab && (
+                                <div className="text-center mt-10">
+                                    <Button variant="outline" className="border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>
+                                        View Full Collection
+                                        <ChevronRight className="ml-1 w-4 h-4" />
+                                    </Button>
+                                </div>
+                            )}
                         </div>
                     </section>
 
@@ -514,7 +521,7 @@ export function LuxuryTemplate({
             )}
 
             {/* Inventory Tab */}
-            {activeTab === 'inventory' && (
+            {showInventoryTab && activeTab === 'inventory' && (
                 <div className="pt-24 pb-12 min-h-screen">
                     <div className="max-w-7xl mx-auto px-4">
                         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
@@ -628,7 +635,9 @@ export function LuxuryTemplate({
                             <h4 className="text-gray-900 font-light text-lg mb-4">Links</h4>
                             <div className="space-y-2 text-gray-500">
                                 <button onClick={() => setActiveTab('home')} className="block hover:text-gray-900">Home</button>
-                                <button onClick={() => setActiveTab('inventory')} className="block hover:text-gray-900">Collection</button>
+                                {showInventoryTab && (
+                                    <button onClick={() => setActiveTab('inventory')} className="block hover:text-gray-900">Collection</button>
+                                )}
                                 <a href="#contact" className="block hover:text-gray-900">Contact</a>
                                 <button onClick={() => setNavEMIOpen(true)} className="block hover:text-gray-900">EMI Calculator</button>
                                 <a href="#exchange-section" className="block hover:text-gray-900">Exchange</a>
