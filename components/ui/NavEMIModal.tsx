@@ -31,12 +31,13 @@ function fmt(n: number) {
 
 export function NavEMIModal({ open, onOpenChange, brandColor, cars }: NavEMIModalProps) {
     // ── Unique models from cars prop ────────────────────────────────────────
+    // Use \0 as separator so multi-word makes (e.g. "Maruti Suzuki") are handled correctly
     const models = useMemo(() => {
         const seen = new Set<string>();
-        const out: string[] = [];
+        const out: Array<{ key: string; label: string }> = [];
         cars.forEach(c => {
-            const key = `${c.make} ${c.model}`;
-            if (!seen.has(key)) { seen.add(key); out.push(key); }
+            const key = `${c.make}\0${c.model}`;
+            if (!seen.has(key)) { seen.add(key); out.push({ key, label: `${c.make} ${c.model}` }); }
         });
         return out;
     }, [cars]);
@@ -51,8 +52,7 @@ export function NavEMIModal({ open, onOpenChange, brandColor, cars }: NavEMIModa
     // ── Variants for selected model ─────────────────────────────────────────
     const variants = useMemo(() => {
         if (!selectedModel) return [];
-        const [make, ...modelParts] = selectedModel.split(' ');
-        const model = modelParts.join(' ');
+        const [make, model] = selectedModel.split('\0');
         return cars.filter(c => c.make === make && c.model === model);
     }, [selectedModel, cars]);
 
@@ -124,7 +124,7 @@ export function NavEMIModal({ open, onOpenChange, brandColor, cars }: NavEMIModa
                                     className="w-full appearance-none px-3 py-2.5 pr-8 border border-gray-200 rounded-xl text-sm text-gray-900 bg-gray-50 focus:outline-none focus:border-blue-400 cursor-pointer"
                                 >
                                     <option value="">-- Choose Model --</option>
-                                    {models.map(m => <option key={m} value={m}>{m}</option>)}
+                                    {models.map(m => <option key={m.key} value={m.key}>{m.label}</option>)}
                                 </select>
                                 <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
                             </div>
