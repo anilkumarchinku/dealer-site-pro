@@ -16,7 +16,7 @@ import { ReviewsSection } from '@/components/ui/ReviewsSection';
 import { OffersSection } from '@/components/templates/sections/OffersSection';
 import { FAQSection } from '@/components/templates/sections/FAQSection';
 import { ExchangeSection } from '@/components/templates/sections/ExchangeSection';
-import { OnRoadPriceSection } from '@/components/templates/sections/OnRoadPriceSection';
+import { NavEMIModal } from '@/components/ui/NavEMIModal';
 import { FinanceSection } from '@/components/templates/sections/FinanceSection';
 import { TrustBadgesSection } from '@/components/templates/sections/TrustBadgesSection';
 import { ServiceBookingSection } from '@/components/templates/sections/ServiceBookingSection';
@@ -120,6 +120,7 @@ export function ModernTemplate({
     const [activeCarIndex, setActiveCarIndex] = useState(0);
     const [enquireSidebarOpen, setEnquireSidebarOpen] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [navEMIOpen, setNavEMIOpen] = useState(false);
 
     // Lead form state
     const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
@@ -231,6 +232,16 @@ export function ModernTemplate({
                             >
                                 {t('contact', locale)}
                             </a>
+                            <button
+                                onClick={() => setNavEMIOpen(true)}
+                                className={`font-medium transition-colors text-sm ${isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}
+                            >
+                                EMI Calc
+                            </button>
+                            <a href="#exchange-section" className={`font-medium transition-colors text-sm ${isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}>Exchange</a>
+                            <a href="#finance-section" className={`font-medium transition-colors text-sm ${isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}>Finance</a>
+                            <a href="#service-section" className={`font-medium transition-colors text-sm ${isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}>Service</a>
+                            <a href="#trust-section" className={`font-medium transition-colors text-sm ${isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}>Trust Us</a>
                         </div>
 
                         {/* CTA Buttons */}
@@ -288,6 +299,16 @@ export function ModernTemplate({
                                 >
                                     Contact
                                 </a>
+                                <button
+                                    onClick={() => { setNavEMIOpen(true); setMobileMenuOpen(false); }}
+                                    className="block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100"
+                                >
+                                    EMI Calc
+                                </button>
+                                <a href="#exchange-section" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100">Exchange</a>
+                                <a href="#finance-section" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100">Finance</a>
+                                <a href="#service-section" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100">Service</a>
+                                <a href="#trust-section" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100">Trust Us</a>
                                 <div className="pt-2 border-t border-gray-200">
                                     <Button
                                         className="w-full text-white"
@@ -531,23 +552,28 @@ export function ModernTemplate({
                         </div>
                     </section>
 
-                    {/* On-Road Price Calculator */}
-                    <OnRoadPriceSection brandColor={brandColors.primary} vehicleType={vehicleType} dealerPhone={contactInfo.phone} />
-
                     {/* Offers Section */}
                     <OffersSection brandColor={brandColors.primary} dealerName={dealerName} vehicleType={vehicleType} dealerPhone={contactInfo.phone} />
 
                     {/* Exchange Section */}
-                    <ExchangeSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} />
+                    <div id="exchange-section">
+                        <ExchangeSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} />
+                    </div>
 
                     {/* Trust Badges */}
-                    <TrustBadgesSection brandColor={brandColors.primary} dealerName={dealerName} vehicleType={vehicleType} />
+                    <div id="trust-section">
+                        <TrustBadgesSection brandColor={brandColors.primary} dealerName={dealerName} vehicleType={vehicleType} />
+                    </div>
 
                     {/* Finance Section */}
-                    <FinanceSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} />
+                    <div id="finance-section">
+                        <FinanceSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} />
+                    </div>
 
                     {/* Service Booking */}
-                    <ServiceBookingSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} />
+                    <div id="service-section">
+                        <ServiceBookingSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} />
+                    </div>
 
                     {/* FAQ Section */}
                     <FAQSection brandColor={brandColors.primary} vehicleType={vehicleType} dealerName={dealerName} />
@@ -868,6 +894,7 @@ export function ModernTemplate({
             </footer>
 
             {/* Compare Bar */}
+            <NavEMIModal open={navEMIOpen} onOpenChange={setNavEMIOpen} brandColor={brandColors.primary} cars={cars} />
             <CompareBar brandColor={brandColors.primary} />
 
             {/* Sticky Mobile Bar */}

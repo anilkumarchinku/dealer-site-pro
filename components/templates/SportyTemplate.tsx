@@ -18,7 +18,7 @@ import { FAQSection } from '@/components/templates/sections/FAQSection';
 import { ExchangeSection } from '@/components/templates/sections/ExchangeSection';
 import { StickyEnquiryBar } from '@/components/ui/StickyEnquiryBar';
 import { DealerChatbot } from '@/components/chatbot/DealerChatbot';
-import { OnRoadPriceSection } from '@/components/templates/sections/OnRoadPriceSection';
+import { NavEMIModal } from '@/components/ui/NavEMIModal';
 import { FinanceSection } from '@/components/templates/sections/FinanceSection';
 import { TrustBadgesSection } from '@/components/templates/sections/TrustBadgesSection';
 import { ServiceBookingSection } from '@/components/templates/sections/ServiceBookingSection';
@@ -122,6 +122,7 @@ export function SportyTemplate({
     const [isScrolled, setIsScrolled] = useState(false);
     const [enquireSidebarOpen, setEnquireSidebarOpen] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [navEMIOpen, setNavEMIOpen] = useState(false);
 
     // Lead form state
     const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
@@ -206,6 +207,11 @@ export function SportyTemplate({
                             <a href="#contact" className="font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">
                                 Contact
                             </a>
+                            <button onClick={() => setNavEMIOpen(true)} className="font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">EMI Calc</button>
+                            <a href="#exchange-section" className="font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">Exchange</a>
+                            <a href="#finance-section" className="font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">Finance</a>
+                            <a href="#service-section" className="font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">Service</a>
+                            <a href="#trust-section" className="font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">Trust Us</a>
                         </div>
                         <div className="flex items-center gap-2">
                             <LanguageToggle locale={locale} onChange={setLocale} variant="dark" />
@@ -256,6 +262,16 @@ export function SportyTemplate({
                                 >
                                     Contact
                                 </a>
+                                <button
+                                    onClick={() => { setNavEMIOpen(true); setMobileMenuOpen(false); }}
+                                    className="block w-full text-left px-3 py-2.5 rounded-lg font-bold uppercase text-sm tracking-wider text-gray-900 hover:bg-gray-100 transition-colors"
+                                >
+                                    EMI Calc
+                                </button>
+                                <a href="#exchange-section" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 rounded-lg font-bold uppercase text-sm tracking-wider text-gray-900 hover:bg-gray-100 transition-colors">Exchange</a>
+                                <a href="#finance-section" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 rounded-lg font-bold uppercase text-sm tracking-wider text-gray-900 hover:bg-gray-100 transition-colors">Finance</a>
+                                <a href="#service-section" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 rounded-lg font-bold uppercase text-sm tracking-wider text-gray-900 hover:bg-gray-100 transition-colors">Service</a>
+                                <a href="#trust-section" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 rounded-lg font-bold uppercase text-sm tracking-wider text-gray-900 hover:bg-gray-100 transition-colors">Trust Us</a>
                                 <div className="pt-2 border-t border-gray-200">
                                     <Button
                                         className="w-full text-white font-bold uppercase"
@@ -435,23 +451,28 @@ export function SportyTemplate({
                         </div>
                     </section>
 
-                    {/* On-Road Price Calculator */}
-                    <OnRoadPriceSection brandColor={brandAccent} vehicleType={vehicleType} dealerPhone={contactInfo.phone} />
-
                     {/* Offers Section */}
                     <OffersSection brandColor={brandAccent} dealerName={dealerName} vehicleType={vehicleType} dealerPhone={contactInfo.phone} />
 
                     {/* Exchange Section */}
-                    <ExchangeSection brandColor={brandAccent} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} />
+                    <div id="exchange-section">
+                        <ExchangeSection brandColor={brandAccent} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} />
+                    </div>
 
                     {/* Trust Badges */}
-                    <TrustBadgesSection brandColor={brandAccent} dealerName={dealerName} vehicleType={vehicleType} />
+                    <div id="trust-section">
+                        <TrustBadgesSection brandColor={brandAccent} dealerName={dealerName} vehicleType={vehicleType} />
+                    </div>
 
                     {/* Finance Section */}
-                    <FinanceSection brandColor={brandAccent} dealerId={dealerId} dealerName={dealerName} />
+                    <div id="finance-section">
+                        <FinanceSection brandColor={brandAccent} dealerId={dealerId} dealerName={dealerName} />
+                    </div>
 
                     {/* Service Booking */}
-                    <ServiceBookingSection brandColor={brandAccent} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} />
+                    <div id="service-section">
+                        <ServiceBookingSection brandColor={brandAccent} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} />
+                    </div>
 
                     {/* FAQ Section */}
                     <FAQSection brandColor={brandAccent} vehicleType={vehicleType} dealerName={dealerName} />
@@ -745,6 +766,8 @@ export function SportyTemplate({
                     </div>
                 </div>
             </footer>
+
+            <NavEMIModal open={navEMIOpen} onOpenChange={setNavEMIOpen} brandColor={brandAccent} cars={cars} />
 
             <CompareBar brandColor={brandAccent} />
 
