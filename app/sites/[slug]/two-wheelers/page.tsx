@@ -64,7 +64,7 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): Car[] {
         vehicleCategory: '2w' as const,
         features: { keyFeatures: v.features ?? [] },
         images: {
-            hero: v.images?.[0] ?? '/placeholder-car.jpg',
+            hero: v.images?.[0] ?? '',
             exterior: v.images ?? [],
             interior: [],
         },
@@ -103,7 +103,7 @@ function usedTwoWheelersToCars(vehicles: TwoWheelerUsedVehicle[]): Car[] {
         dimensions: { seatingCapacity: 2 },
         features: { keyFeatures: [] },
         images: {
-            hero: v.images?.[0] ?? '/placeholder-car.jpg',
+            hero: v.images?.[0] ?? '',
             exterior: v.images ?? [],
             interior: [],
         },

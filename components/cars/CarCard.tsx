@@ -110,6 +110,7 @@ export function CarCard({
     const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
     const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
     const [isTestDriveOpen, setIsTestDriveOpen] = useState(false);
+    const [imgError, setImgError] = useState(false);
     const [aggregatedSpecs, setAggregatedSpecs] = useState<ReturnType<typeof formatSpecsForDisplay>>(null);
     const { addCar, removeCar, isSelected } = useCompareStore();
     const inCompare = isSelected(car.id);
@@ -198,17 +199,20 @@ export function CarCard({
             >
                 {/* ── Image ── */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-white">
-                    {car.images.hero ? (
+                    {car.images.hero && !imgError ? (
                         <Image
                             src={car.images.hero}
                             alt={`${car.make} ${car.model}`}
                             fill
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            onError={() => setImgError(true)}
                         />
                     ) : (
                         <div className="flex items-center justify-center h-full bg-white border-b border-gray-100">
-                            <span className="text-4xl">🚗</span>
+                            <span className="text-4xl">
+                                {car.vehicleCategory === '2w' ? '🏍️' : car.vehicleCategory === '3w' ? '🛺' : '🚗'}
+                            </span>
                         </div>
                     )}
 

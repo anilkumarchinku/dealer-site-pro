@@ -47,7 +47,7 @@ export async function GET(request: NextRequest) {
     const supabase = getSupabase()
     const { data, error } = await supabase
         .from('dealer_reviews')
-        .select('id, reviewer_name, rating, review_text, car_purchased, created_at')
+        .select('id, reviewer_name, rating, review_text, car_purchased, created_at, source')
         .eq('dealer_id', dealerId)
         .eq('is_approved', true)
         .order('created_at', { ascending: false })

@@ -15,6 +15,7 @@ import {
     ExternalLink, Sun, Moon, Info,
     Plug, Eye, EyeOff, CheckCircle2, XCircle, Loader2,
     Link2, Copy, RefreshCw, Trash2, Upload, ImageIcon, X,
+    Star, RefreshCcw,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -77,6 +78,13 @@ export default function SettingsPage() {
     const [segmentSaving,      setSegmentSaving]      = useState(false);
     const [segmentSaved,       setSegmentSaved]       = useState(false);
 
+    // ── Google Reviews state ──────────────────────────────────────────────────
+    const [googleMapsUrl,     setGoogleMapsUrl]     = useState("");
+    const [googleUrlSaved,    setGoogleUrlSaved]    = useState(false);
+    const [googleSyncing,     setGoogleSyncing]     = useState(false);
+    const [googleSyncResult,  setGoogleSyncResult]  = useState<{ success: boolean; message: string } | null>(null);
+    const [googlePlaceId,     setGooglePlaceId]     = useState<string | null>(null);
+
     // ── Brand Assets state ────────────────────────────────────────────────────
     const [logoPreview,    setLogoPreview]    = useState<string>("");
     const [heroPreview,    setHeroPreview]    = useState<string>("");
@@ -94,7 +102,7 @@ export default function SettingsPage() {
         if (!dealerId) return;
         supabase
             .from("dealers")
-            .select("logo_url, hero_image_url, sells_two_wheelers, sells_three_wheelers")
+            .select("logo_url, hero_image_url, sells_two_wheelers, sells_three_wheelers, google_maps_url, google_place_id")
             .eq("id", dealerId)
             .single()
             .then(({ data }) => {
@@ -102,6 +110,8 @@ export default function SettingsPage() {
                 if (data?.hero_image_url)          setHeroPreview(data.hero_image_url);
                 setSellsTwoWheelers(data?.sells_two_wheelers   ?? false);
                 setSellsThreeWheelers(data?.sells_three_wheelers ?? false);
+                if (data?.google_maps_url)         setGoogleMapsUrl(data.google_maps_url);
+                if (data?.google_place_id)         setGooglePlaceId(data.google_place_id);
             });
         return;
         return;
@@ -418,6 +428,32 @@ export default function SettingsPage() {
         setSegmentSaving(false);
         setSegmentSaved(true);
         setTimeout(() => setSegmentSaved(false), 2500);
+    };
+
+    const handleSyncGoogleReviews = async () => {
+        if (!dealerId) return;
+        setGoogleSyncing(true);
+        setGoogleSyncResult(null);
+        try {
+            const res = await fetch("/api/reviews/google-sync", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ dealer_id: dealerId, maps_url: googleMapsUrl }),
+            });
+            const data = await res.json();
+            if (!res.ok) throw new Error(data.error ?? "Sync failed");
+            setGoogleSyncResult({ success: true, message: data.message });
+            if (data.place_id) setGooglePlaceId(data.place_id);
+            // Persist URL to DB if entered
+            if (googleMapsUrl && !googleUrlSaved) {
+                await supabase.from("dealers").update({ google_maps_url: googleMapsUrl }).eq("id", dealerId);
+                setGoogleUrlSaved(true);
+            }
+        } catch (err) {
+            setGoogleSyncResult({ success: false, message: err instanceof Error ? err.message : "Sync failed" });
+        } finally {
+            setGoogleSyncing(false);
+        }
     };
 
     return (
@@ -1106,6 +1142,86 @@ export default function SettingsPage() {
                                     </Button>
                                 </Link>
                             </div>
+                        </CardContent>
+                    </Card>
+
+                    {/* ── Google Reviews ── */}
+                    <Card variant="glass">
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-2.5 text-lg">
+                                <div className="p-2 rounded-lg bg-amber-500/10">
+                                    <Star className="w-4 h-4 text-amber-500" />
+                                </div>
+                                Google Reviews
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+                            <p className="text-sm text-muted-foreground">
+                                Paste your Google Maps business link and we'll automatically import your existing reviews onto your website.
+                            </p>
+
+                            {/* URL input */}
+                            <div className="space-y-2">
+                                <label className="text-xs font-semibold text-foreground">Google Maps Business URL</label>
+                                <div className="flex gap-2">
+                                    <Input
+                                        type="url"
+                                        value={googleMapsUrl}
+                                        onChange={(e) => {
+                                            setGoogleMapsUrl(e.target.value);
+                                            setGoogleUrlSaved(false);
+                                            setGoogleSyncResult(null);
+                                        }}
+                                        placeholder="https://maps.google.com/maps?cid=... or google.com/maps/place/..."
+                                        className="flex-1 text-xs"
+                                    />
+                                </div>
+                                <p className="text-xs text-muted-foreground">
+                                    Find this by searching your dealership on Google Maps → Share → Copy Link
+                                </p>
+                            </div>
+
+                            {/* Status badges */}
+                            {googlePlaceId && (
+                                <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                                    <p className="text-xs text-emerald-600 dark:text-emerald-400">
+                                        Connected — Place ID: <span className="font-mono">{googlePlaceId.slice(0, 20)}…</span>
+                                    </p>
+                                </div>
+                            )}
+
+                            {googleSyncResult && (
+                                <div className={cn(
+                                    "flex items-start gap-2 px-3 py-2 rounded-lg border text-xs",
+                                    googleSyncResult.success
+                                        ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-600 dark:text-emerald-400"
+                                        : "bg-destructive/10 border-destructive/20 text-destructive"
+                                )}>
+                                    {googleSyncResult.success
+                                        ? <CheckCircle2 className="w-3.5 h-3.5 shrink-0 mt-0.5" />
+                                        : <XCircle className="w-3.5 h-3.5 shrink-0 mt-0.5" />
+                                    }
+                                    {googleSyncResult.message}
+                                </div>
+                            )}
+
+                            {/* Sync button */}
+                            <Button
+                                onClick={handleSyncGoogleReviews}
+                                disabled={googleSyncing || (!googleMapsUrl && !googlePlaceId)}
+                                className="gap-2 bg-amber-500 hover:bg-amber-600 text-white"
+                                size="sm"
+                            >
+                                {googleSyncing
+                                    ? <><Loader2 className="w-3.5 h-3.5 animate-spin" /> Syncing...</>
+                                    : <><RefreshCcw className="w-3.5 h-3.5" /> Sync Google Reviews</>
+                                }
+                            </Button>
+
+                            <p className="text-[11px] text-muted-foreground">
+                                Google provides up to 5 most recent reviews. Synced reviews appear instantly in the Reviews section of your website.
+                            </p>
                         </CardContent>
                     </Card>
 
