@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { getUsedTwoWheelers } from '@/lib/db/two-wheelers'
 import { TWO_WHEELER_BRANDS } from '@/lib/data/two-wheelers'
@@ -53,6 +54,54 @@ function usedTwoWheelersToCars(vehicles: TwoWheelerUsedVehicle[]): Car[] {
     }))
 }
 
+// ── No Stock page ─────────────────────────────────────────────────────────────
+function NoStockPage({ dealerName, phone, email }: { dealerName: string; phone: string; email: string }) {
+    return (
+        <div className="min-h-screen bg-gray-950 flex items-center justify-center">
+            <div className="text-center px-6 max-w-md">
+                <div className="w-20 h-20 rounded-2xl bg-amber-500/10 flex items-center justify-center mx-auto mb-6 border border-amber-500/20">
+                    <span className="text-4xl">🏍️</span>
+                </div>
+                <h1 className="text-3xl font-bold text-white mb-2">{dealerName}</h1>
+                <p className="text-amber-400 font-semibold mb-3">Pre-Owned Stock Coming Soon</p>
+                <p className="text-gray-400 text-sm mb-6">
+                    Our used two-wheeler inventory is being updated. Contact us directly for available bikes and scooters.
+                </p>
+                <div className="space-y-2">
+                    <a href={`tel:${phone}`} className="flex items-center justify-center gap-2 text-blue-400 hover:text-blue-300 text-sm">
+                        📞 {phone}
+                    </a>
+                    <a href={`mailto:${email}`} className="flex items-center justify-center gap-2 text-blue-400 hover:text-blue-300 text-sm">
+                        ✉️ {email}
+                    </a>
+                </div>
+                <div className="mt-10 text-xs text-gray-600">
+                    Powered by <span className="text-blue-500 font-semibold">DealerSite Pro</span>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+// ── Metadata ──────────────────────────────────────────────────────────────────
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { slug } = await params
+    const dealer = await fetchDealerBySlug(slug)
+    if (!dealer) return { title: 'Used Bikes & Scooters | DealerSite Pro' }
+
+    const title = `Used Bikes & Scooters — ${dealer.dealership_name} | ${dealer.location}`
+    const description = `Browse certified pre-owned bikes and scooters at ${dealer.dealership_name} in ${dealer.location}. Best prices, all verified.`
+
+    return {
+        title,
+        description,
+        openGraph: { title, description, type: 'website', siteName: dealer.dealership_name, locale: 'en_IN' },
+        robots: { index: true, follow: true },
+        alternates: { canonical: `https://${dealer.slug}.dealersitepro.com/two-wheelers/used` },
+    }
+}
+
+// ── Page ──────────────────────────────────────────────────────────────────────
 export default async function UsedTwoWheelersPage({ params }: Props) {
     const { slug } = await params
 
@@ -62,7 +111,17 @@ export default async function UsedTwoWheelersPage({ params }: Props) {
     const { vehicles: usedVehicles } = await getUsedTwoWheelers(dealer.id, { pageSize: 100, sortBy: 'newest' })
     const cars = usedTwoWheelersToCars(usedVehicles)
 
-    // Filter to 2W brands only — dealer.brands contains all vehicle types unfiltered
+    // ── No stock yet ──────────────────────────────────────────────────────────
+    if (cars.length === 0) {
+        return (
+            <NoStockPage
+                dealerName={dealer.dealership_name}
+                phone={dealer.phone}
+                email={dealer.email ?? ''}
+            />
+        )
+    }
+
     const brands2w = dealer.brands.filter(b => TWO_WHEELER_BRANDS.includes(b))
     const primaryBrand = brands2w[0] ?? dealer.brands[0] ?? null
     const brandId = primaryBrand ? brandNameToId(primaryBrand, '2w') : null
@@ -70,7 +129,7 @@ export default async function UsedTwoWheelersPage({ params }: Props) {
 
     const contactInfo = {
         phone: dealer.phone,
-        email: dealer.email,
+        email: dealer.email ?? '',
         address: dealer.full_address ?? dealer.location,
     }
 
@@ -107,16 +166,34 @@ export default async function UsedTwoWheelersPage({ params }: Props) {
         vehicleType:   '2w' as const,
     }
 
+    const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'AutoDealer',
+        name: dealer.dealership_name,
+        description: `${dealer.dealership_name} — certified pre-owned two-wheelers in ${dealer.location}`,
+        telephone: dealer.phone,
+        email: dealer.email,
+        address: {
+            '@type': 'PostalAddress',
+            streetAddress: dealer.full_address ?? dealer.location,
+            addressLocality: dealer.location,
+            addressCountry: 'IN',
+        },
+    }
+    const jsonLd = (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+    )
+
     switch (dealer.style_template) {
         case 'luxury':
-            return <LuxuryTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} />
+            return <>{jsonLd}<LuxuryTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} /></>
         case 'sporty':
-            return <SportyTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} />
+            return <>{jsonLd}<SportyTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} /></>
         case 'family':
-            return <FamilyTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} />
+            return <>{jsonLd}<FamilyTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} /></>
         case 'modern':
         case 'professional':
         default:
-            return <ModernTemplate {...sharedProps} config={{ heroTitle, heroSubtitle }} />
+            return <>{jsonLd}<ModernTemplate {...sharedProps} config={{ heroTitle, heroSubtitle }} /></>
     }
 }
