@@ -242,8 +242,8 @@ export async function saveDealer(
             if (error) throw error;
         }
 
-        // ── Save Cyepro API key if dealer chose Cyepro integration ─
-        if (data.inventorySource === 'cyepro' && data.cyeproApiKey) {
+        // ── Save Cyepro API key if provided (4W: inventorySource=cyepro; 2W/3W: key entered directly) ─
+        if (data.cyeproApiKey) {
             const { error: keyErr } = await supabase
                 .from('dealers')
                 .update({ cyepro_api_key: data.cyeproApiKey })

@@ -210,8 +210,48 @@ const HONDA: CatalogEntry[] = [
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 8000000, on_road_price_paise: 9200000, emi_starting_paise: 218000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
-        colors: [{ name: 'Pearl Igneous Black', hex: '#1A1A1A' }, { name: 'Dazzle Yellow', hex: '#FFD700' }],
+        colors: [{ name: 'Pearl Igneous Black', hex: '#1A1A1A' }, { name: 'Dazzle Yellow', hex: '#FFD700' }, { name: 'Pearl Siren Blue', hex: '#1E90FF' }, { name: 'Rebel Red', hex: '#CC0000' }],
         images: [], brochure_url: null, description: "India's bestselling scooter.", features: ['CBS', 'LED Headlamp', 'External Fuel Lid'], status: 'active',
+    },
+    {
+        brand: 'Honda Motorcycle & Scooter India', model: 'Activa 125', variant: 'H-Smart',
+        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        engine_cc: 124, mileage_kmpl: 60, range_km: null, top_speed_kmph: 92,
+        battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
+        ex_showroom_price_paise: 8490000, on_road_price_paise: 9700000, emi_starting_paise: 231000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
+        colors: [{ name: 'Pearl Nightstar Black', hex: '#1A1A1A' }, { name: 'Athletic Blue', hex: '#003087' }, { name: 'Matte Axis Grey', hex: '#808080' }],
+        images: [], brochure_url: null, description: 'Premium scooter with OBD2 and smart features.', features: ['OBD2 Compliant', 'LED Headlamp', 'USB Charger', 'External Fuel Lid', 'CBS'], status: 'active',
+    },
+    {
+        brand: 'Honda Motorcycle & Scooter India', model: 'Activa e', variant: 'Standard',
+        type: 'electric', fuel_type: 'electric', year: 2024,
+        engine_cc: null, mileage_kmpl: null, range_km: 102, top_speed_kmph: 80,
+        battery_kwh: 1.5, charging_time_hours: 5, battery_warranty_years: 3,
+        ex_showroom_price_paise: 11000000, on_road_price_paise: 12500000, emi_starting_paise: 300000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
+        colors: [{ name: 'Pearl Nightstar Black', hex: '#1A1A1A' }, { name: 'Pearl Uyuni White', hex: '#F5F5F5' }, { name: 'Techno Blue', hex: '#1E90FF' }],
+        images: [], brochure_url: null, description: "Honda's first electric scooter for India.", features: ['Fast Charging', 'Swap Battery', 'LED Headlamp', 'Digital Console', 'FAME Subsidy'], status: 'active',
+    },
+    {
+        brand: 'Honda Motorcycle & Scooter India', model: 'Dio', variant: 'Standard',
+        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        engine_cc: 109, mileage_kmpl: 55, range_km: null, top_speed_kmph: 86,
+        battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
+        ex_showroom_price_paise: 7390000, on_road_price_paise: 8500000, emi_starting_paise: 201000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
+        colors: [{ name: 'Pearl Igneous Black', hex: '#1A1A1A' }, { name: 'Lime Green', hex: '#32CD32' }, { name: 'Matte Majestic Red', hex: '#8B0000' }],
+        images: [], brochure_url: null, description: 'Stylish youth scooter with sporty design.', features: ['CBS', 'LED Headlamp', 'USB Charger', 'Digital Console'], status: 'active',
+    },
+    {
+        brand: 'Honda Motorcycle & Scooter India', model: 'Dio 125', variant: 'H-Smart',
+        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        engine_cc: 123, mileage_kmpl: 55, range_km: null, top_speed_kmph: 88,
+        battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
+        ex_showroom_price_paise: 8390000, on_road_price_paise: 9600000, emi_starting_paise: 229000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
+        colors: [{ name: 'Pearl Nightstar Black', hex: '#1A1A1A' }, { name: 'Pearl Siren Blue', hex: '#1E90FF' }, { name: 'Matte Majestic Red', hex: '#8B0000' }],
+        images: [], brochure_url: null, description: 'Sporty 125cc scooter with smart connectivity.', features: ['OBD2 Compliant', 'CBS', 'LED Headlamp', 'USB Charger', 'Smart Key'], status: 'active',
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'SP 125', variant: 'Disc',
@@ -220,8 +260,18 @@ const HONDA: CatalogEntry[] = [
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 8500000, on_road_price_paise: 9700000, emi_starting_paise: 231000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
-        colors: [{ name: 'Midnight Blue', hex: '#003087' }, { name: 'Sports Red', hex: '#CC0000' }],
+        colors: [{ name: 'Midnight Blue', hex: '#003087' }, { name: 'Sports Red', hex: '#CC0000' }, { name: 'Pearl Igneous Black', hex: '#1A1A1A' }],
         images: [], brochure_url: null, description: 'Premium commuter with refined performance.', features: ['CBS', 'LED Headlamp', 'USB Charger'], status: 'active',
+    },
+    {
+        brand: 'Honda Motorcycle & Scooter India', model: 'QC1', variant: 'Standard',
+        type: 'electric', fuel_type: 'electric', year: 2024,
+        engine_cc: null, mileage_kmpl: null, range_km: 80, top_speed_kmph: 50,
+        battery_kwh: 1.0, charging_time_hours: 4, battery_warranty_years: 3,
+        ex_showroom_price_paise: 9500000, on_road_price_paise: 10800000, emi_starting_paise: 259000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
+        colors: [{ name: 'Pearl Nightstar Black', hex: '#1A1A1A' }, { name: 'Pearl Uyuni White', hex: '#F5F5F5' }],
+        images: [], brochure_url: null, description: 'Compact electric scooter for urban commuting.', features: ['FAME Subsidy', 'Swap Battery', 'LED Headlamp', 'Digital Console'], status: 'active',
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'CB350RS', variant: 'DLX Pro',
@@ -230,8 +280,128 @@ const HONDA: CatalogEntry[] = [
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 20500000, on_road_price_paise: 23000000, emi_starting_paise: 558000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
-        colors: [{ name: 'Repsol Red', hex: '#CC0000' }, { name: 'Pearl Deep Mud', hex: '#5C4033' }],
+        colors: [{ name: 'Repsol Red', hex: '#CC0000' }, { name: 'Pearl Deep Mud', hex: '#5C4033' }, { name: 'Pearl Nightstar Black', hex: '#1A1A1A' }],
         images: [], brochure_url: null, description: 'Café racer meets modernity.', features: ['Dual Channel ABS', 'Assist & Slipper Clutch', 'Honda Smartphone Voice Control'], status: 'active',
+    },
+    {
+        brand: 'Honda Motorcycle & Scooter India', model: 'Transalp XL750', variant: 'Standard',
+        type: 'bike', fuel_type: 'petrol', year: 2024,
+        engine_cc: 755, mileage_kmpl: 22, range_km: null, top_speed_kmph: 185,
+        battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
+        ex_showroom_price_paise: 108900000, on_road_price_paise: 122000000, emi_starting_paise: 2967000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
+        colors: [{ name: 'Pearl Glare White', hex: '#F5F5F5' }, { name: 'Mat Gunpowder Black', hex: '#2C2C2C' }],
+        images: [], brochure_url: null, description: 'Mid-size adventure tourer for every terrain.', features: ['Dual Channel ABS', 'Ride Modes', 'TFT Display', 'Cornering ABS', 'HSTC'], status: 'active',
+    },
+    {
+        brand: 'Honda Motorcycle & Scooter India', model: 'X-ADV 750', variant: 'Standard',
+        type: 'bike', fuel_type: 'petrol', year: 2024,
+        engine_cc: 745, mileage_kmpl: 20, range_km: null, top_speed_kmph: 175,
+        battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
+        ex_showroom_price_paise: 138000000, on_road_price_paise: 155000000, emi_starting_paise: 3760000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
+        colors: [{ name: 'Mat Gunpowder Black', hex: '#2C2C2C' }, { name: 'Mat Iridium Grey', hex: '#808080' }],
+        images: [], brochure_url: null, description: 'Adventure scooter with DCT and off-road capability.', features: ['DCT Gearbox', 'Dual Channel ABS', 'HSTC', 'Ride Modes', 'TFT Display'], status: 'active',
+    },
+    {
+        brand: 'Honda Motorcycle & Scooter India', model: 'CB125 Hornet', variant: 'Standard',
+        type: 'bike', fuel_type: 'petrol', year: 2024,
+        engine_cc: 123, mileage_kmpl: 55, range_km: null, top_speed_kmph: 107,
+        battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
+        ex_showroom_price_paise: 9500000, on_road_price_paise: 10800000, emi_starting_paise: 259000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
+        colors: [{ name: 'Pearl Igneous Black', hex: '#1A1A1A' }, { name: 'Sports Red', hex: '#CC0000' }],
+        images: [], brochure_url: null, description: 'Sporty 125cc street fighter with aggressive styling.', features: ['CBS', 'LED Headlamp', 'Digital Console', 'USB Charger'], status: 'active',
+    },
+    {
+        brand: 'Honda Motorcycle & Scooter India', model: 'Hornet 2.0', variant: 'Standard',
+        type: 'bike', fuel_type: 'petrol', year: 2024,
+        engine_cc: 184, mileage_kmpl: 45, range_km: null, top_speed_kmph: 132,
+        battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
+        ex_showroom_price_paise: 13600000, on_road_price_paise: 15500000, emi_starting_paise: 370000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
+        colors: [{ name: 'Mat Sangria Red', hex: '#8B0000' }, { name: 'Mat Marvel Blue', hex: '#003087' }, { name: 'Pearl Igneous Black', hex: '#1A1A1A' }],
+        images: [], brochure_url: null, description: 'Aggressive 184cc naked street fighter.', features: ['Dual Channel ABS', 'LED Headlamp', 'Digital Console', 'USB Charger'], status: 'active',
+    },
+    {
+        brand: 'Honda Motorcycle & Scooter India', model: 'CB300F', variant: 'Standard',
+        type: 'bike', fuel_type: 'petrol', year: 2024,
+        engine_cc: 293, mileage_kmpl: 38, range_km: null, top_speed_kmph: 143,
+        battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
+        ex_showroom_price_paise: 29600000, on_road_price_paise: 33500000, emi_starting_paise: 806000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
+        colors: [{ name: 'Pearl Spartan Red', hex: '#CC0000' }, { name: 'Mat Axis Gray', hex: '#808080' }],
+        images: [], brochure_url: null, description: 'Premium 300cc naked with sporty character.', features: ['Dual Channel ABS', 'LED Headlamp', 'Digital Console', 'Assist & Slipper Clutch'], status: 'active',
+    },
+    {
+        brand: 'Honda Motorcycle & Scooter India', model: 'CB500X', variant: 'Standard',
+        type: 'bike', fuel_type: 'petrol', year: 2024,
+        engine_cc: 471, mileage_kmpl: 28, range_km: null, top_speed_kmph: 162,
+        battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
+        ex_showroom_price_paise: 58900000, on_road_price_paise: 66000000, emi_starting_paise: 1606000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
+        colors: [{ name: 'Pearl Glare White', hex: '#F5F5F5' }, { name: 'Mat Gunpowder Black', hex: '#2C2C2C' }],
+        images: [], brochure_url: null, description: 'Versatile middleweight adventure tourer.', features: ['Dual Channel ABS', 'Assist & Slipper Clutch', 'LED Headlamp', 'Windscreen'], status: 'active',
+    },
+    {
+        brand: 'Honda Motorcycle & Scooter India', model: 'CB650R', variant: 'Standard',
+        type: 'bike', fuel_type: 'petrol', year: 2024,
+        engine_cc: 648, mileage_kmpl: 22, range_km: null, top_speed_kmph: 188,
+        battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
+        ex_showroom_price_paise: 96800000, on_road_price_paise: 109000000, emi_starting_paise: 2637000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
+        colors: [{ name: 'Gunpowder Black', hex: '#2C2C2C' }, { name: 'Pearl Horizon White', hex: '#F5F5F5' }],
+        images: [], brochure_url: null, description: 'Neo Sports Café middleweight naked.', features: ['Dual Channel ABS', 'Assist & Slipper Clutch', 'TFT Display', 'LED Headlamp'], status: 'active',
+    },
+    {
+        brand: 'Honda Motorcycle & Scooter India', model: 'CBR650R', variant: 'Standard',
+        type: 'bike', fuel_type: 'petrol', year: 2024,
+        engine_cc: 648, mileage_kmpl: 20, range_km: null, top_speed_kmph: 193,
+        battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
+        ex_showroom_price_paise: 101800000, on_road_price_paise: 115000000, emi_starting_paise: 2774000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
+        colors: [{ name: 'Victory Red', hex: '#CC0000' }, { name: 'Mat Gunpowder Black', hex: '#2C2C2C' }],
+        images: [], brochure_url: null, description: 'Four-cylinder 650cc full-fairing supersport.', features: ['Dual Channel ABS', 'Assist & Slipper Clutch', 'Quick Shifter', 'TFT Display'], status: 'active',
+    },
+    {
+        brand: 'Honda Motorcycle & Scooter India', model: 'CB750 Hornet', variant: 'Standard',
+        type: 'bike', fuel_type: 'petrol', year: 2024,
+        engine_cc: 755, mileage_kmpl: 20, range_km: null, top_speed_kmph: 193,
+        battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
+        ex_showroom_price_paise: 99900000, on_road_price_paise: 112000000, emi_starting_paise: 2722000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
+        colors: [{ name: 'Mat Gunpowder Black', hex: '#2C2C2C' }, { name: 'Pearl Glare White', hex: '#F5F5F5' }],
+        images: [], brochure_url: null, description: 'Neo Sports Café 750cc parallel twin naked.', features: ['Dual Channel ABS', 'Assist & Slipper Clutch', 'TFT Display', 'Ride Modes'], status: 'active',
+    },
+    {
+        brand: 'Honda Motorcycle & Scooter India', model: 'Africa Twin', variant: 'Standard',
+        type: 'bike', fuel_type: 'petrol', year: 2024,
+        engine_cc: 1084, mileage_kmpl: 16, range_km: null, top_speed_kmph: 206,
+        battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
+        ex_showroom_price_paise: 150800000, on_road_price_paise: 170000000, emi_starting_paise: 4109000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
+        colors: [{ name: 'Pearl Glare White', hex: '#F5F5F5' }, { name: 'Mat Ballistic Black', hex: '#1A1A1A' }],
+        images: [], brochure_url: null, description: 'Flagship adventure tourer — built for the world.', features: ['Dual Channel ABS', 'DCT Option', 'HSTC', 'Ride Modes', 'TFT Display', 'Cornering ABS'], status: 'active',
+    },
+    {
+        brand: 'Honda Motorcycle & Scooter India', model: 'CBR1000RR-R Fireblade', variant: 'Standard',
+        type: 'bike', fuel_type: 'petrol', year: 2024,
+        engine_cc: 999, mileage_kmpl: 14, range_km: null, top_speed_kmph: 299,
+        battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
+        ex_showroom_price_paise: 350000000, on_road_price_paise: 395000000, emi_starting_paise: 9540000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
+        colors: [{ name: 'Grand Prix Red', hex: '#CC0000' }, { name: 'Mat Gunpowder Black', hex: '#2C2C2C' }],
+        images: [], brochure_url: null, description: 'Honda\'s flagship litre-class superbike.', features: ['Öhlins Suspension', 'Brembo Brakes', 'Quick Shifter', 'Cornering ABS', 'IMU'], status: 'active',
+    },
+    {
+        brand: 'Honda Motorcycle & Scooter India', model: 'Goldwing Tour', variant: 'Standard',
+        type: 'bike', fuel_type: 'petrol', year: 2024,
+        engine_cc: 1833, mileage_kmpl: 14, range_km: null, top_speed_kmph: 188,
+        battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
+        ex_showroom_price_paise: 330000000, on_road_price_paise: 370000000, emi_starting_paise: 8990000,
+        stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: false,
+        colors: [{ name: 'Candy Ardent Red', hex: '#CC0000' }, { name: 'Pearl Glare White', hex: '#F5F5F5' }],
+        images: [], brochure_url: null, description: 'The ultimate touring motorcycle with every luxury feature.', features: ['Apple CarPlay', 'Airbag', 'DCT Gearbox', 'Android Auto', 'Heated Grips', 'Reverse Gear'], status: 'active',
     },
 ]
 
@@ -3044,6 +3214,34 @@ export function getTwoWheelerCatalog(brand: string, dealerId: string): TwoWheele
             for (const model of modelList) {
                 entries.push(buildTwoWheelerEntry(model, type, brandGroup.brand, brandId, idx++, dealerId))
             }
+        }
+    }
+
+    // Fallback: for entries missing price or specs, fill in from static catalog where available.
+    // Uses partial updates — only overwrites fields that are still missing.
+    const staticCatalog = CATALOG_BY_BRAND[brandGroup.brand as keyof typeof CATALOG_BY_BRAND] as CatalogEntry[] | undefined
+    if (staticCatalog) {
+        for (const entry of entries) {
+            // Skip if price is already set — nothing more to fill in
+            if (entry.ex_showroom_price_paise !== 0) continue
+            const mNorm = entry.model.toLowerCase().trim()
+            const match = staticCatalog.find(s => {
+                const sNorm = s.model.toLowerCase().trim()
+                return sNorm === mNorm || sNorm.includes(mNorm) || mNorm.includes(sNorm)
+            })
+            if (!match) continue
+            // Only fill in fields that are still missing
+            entry.ex_showroom_price_paise = match.ex_showroom_price_paise
+            entry.on_road_price_paise     = match.on_road_price_paise
+            entry.emi_starting_paise      = match.emi_starting_paise
+            if (entry.engine_cc === null)     entry.engine_cc     = match.engine_cc
+            if (entry.mileage_kmpl === null)  entry.mileage_kmpl  = match.mileage_kmpl
+            if (entry.top_speed_kmph === null) entry.top_speed_kmph = match.top_speed_kmph
+            if (entry.range_km === null)      entry.range_km      = match.range_km
+            if (entry.battery_kwh === null)   entry.battery_kwh   = match.battery_kwh
+            if (!entry.colors?.length)        entry.colors        = match.colors ?? []
+            if (!entry.features?.length)      entry.features      = match.features ?? []
+            if (!entry.variant && match.variant) entry.variant    = match.variant
         }
     }
 

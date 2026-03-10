@@ -132,7 +132,9 @@ export function CarCard({
     const isUsed = car.condition === 'used' || car.condition === 'certified_pre_owned';
 
     const exShowroom = car.pricing?.exShowroom ?? { min: null, max: null };
-    const priceRange = formatPriceInLakhs(exShowroom.min);
+    const priceRange = exShowroom.min != null
+        ? formatPriceInLakhs(exShowroom.min)
+        : (car.price || 'Price on request');
     const maxPrice = formatPriceInLakhs(exShowroom.max);
     const hasPriceRange = exShowroom.min !== exShowroom.max && exShowroom.max;
 

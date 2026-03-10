@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ArrowLeft, Check } from "lucide-react";
+import { ArrowRight, ArrowLeft, Check, Eye, EyeOff } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Service } from "@/lib/types";
 
@@ -40,6 +40,8 @@ export default function ThreeWheelerStep2Page() {
         data.services?.length ? data.services : getDefaultServices()
     );
     const [error, setError] = useState("");
+    const [cyeproKey, setCyeproKey] = useState(data.cyeproApiKey ?? "");
+    const [showKey, setShowKey] = useState(false);
 
     const toggleService = (service: Service) => {
         setSelectedServices(prev =>
@@ -50,7 +52,7 @@ export default function ThreeWheelerStep2Page() {
 
     const handleNext = () => {
         if (selectedServices.length === 0) { setError("Please select at least one service"); return; }
-        updateData({ services: selectedServices });
+        updateData({ services: selectedServices, cyeproApiKey: cyeproKey.trim() || undefined });
         setStep(3);
         router.push("/onboarding/three-wheelers/step-3");
     };
@@ -109,6 +111,32 @@ export default function ThreeWheelerStep2Page() {
                 </p>
 
                 {error && <p className="text-sm text-destructive">{error}</p>}
+
+                {/* ── Optional Cyepro DMS integration ── */}
+                <div className="border rounded-lg p-4 space-y-3 bg-muted/30">
+                    <div>
+                        <p className="text-sm font-semibold">Cyepro DMS — Used Stock Sync <span className="text-muted-foreground font-normal">(optional)</span></p>
+                        <p className="text-xs text-muted-foreground mt-0.5">
+                            If you manage used three-wheelers in Cyepro, paste your API key below to sync inventory automatically.
+                        </p>
+                    </div>
+                    <div className="relative">
+                        <input
+                            type={showKey ? "text" : "password"}
+                            value={cyeproKey}
+                            onChange={e => setCyeproKey(e.target.value)}
+                            placeholder="Paste your Cyepro API key here"
+                            className="w-full px-3 py-2 pr-10 text-sm border rounded-md bg-background focus:outline-none focus:ring-1 focus:ring-ring"
+                        />
+                        <button
+                            type="button"
+                            onClick={() => setShowKey(s => !s)}
+                            className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                        >
+                            {showKey ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                        </button>
+                    </div>
+                </div>
             </CardContent>
 
             <CardFooter className="justify-between">

@@ -578,12 +578,6 @@
   {
     "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
     "brandId": "honda-hmsi",
-    "modelName": "Unicorn 160",
-    "modelId": "unicorn-160"
-  },
-  {
-    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
-    "brandId": "honda-hmsi",
     "modelName": "Hornet 2.0",
     "modelId": "hornet-2-0"
   },
@@ -614,18 +608,6 @@
   {
     "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
     "brandId": "honda-hmsi",
-    "modelName": "CBR 150R",
-    "modelId": "cbr-150r"
-  },
-  {
-    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
-    "brandId": "honda-hmsi",
-    "modelName": "CBR 250R",
-    "modelId": "cbr-250r"
-  },
-  {
-    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
-    "brandId": "honda-hmsi",
     "modelName": "CB650R",
     "modelId": "cb650r"
   },
@@ -640,12 +622,6 @@
     "brandId": "honda-hmsi",
     "modelName": "X-ADV",
     "modelId": "x-adv"
-  },
-  {
-    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
-    "brandId": "honda-hmsi",
-    "modelName": "Rebel 500",
-    "modelId": "rebel-500"
   },
   {
     "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
@@ -676,24 +652,6 @@
     "brandId": "honda-hmsi",
     "modelName": "Dio 125",
     "modelId": "dio-125"
-  },
-  {
-    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
-    "brandId": "honda-hmsi",
-    "modelName": "Grazia 125",
-    "modelId": "grazia-125"
-  },
-  {
-    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
-    "brandId": "honda-hmsi",
-    "modelName": "Aviator",
-    "modelId": "aviator"
-  },
-  {
-    "brandName": "HONDA MOTORCYCLE & SCOOTER INDIA (HMSI)",
-    "brandId": "honda-hmsi",
-    "modelName": "Cliq",
-    "modelId": "cliq"
   },
   {
     "brandName": "YAMAHA (India Yamaha Motor)",

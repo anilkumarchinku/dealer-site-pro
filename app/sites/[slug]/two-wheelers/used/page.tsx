@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { getUsedTwoWheelers } from '@/lib/db/two-wheelers'
 import { TWO_WHEELER_BRANDS } from '@/lib/data/two-wheelers'
+import { fetchCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
 import { notFound } from 'next/navigation'
 import { brandNameToId } from '@/lib/utils/brand-model-images'
 import { ModernTemplate } from '@/components/templates/ModernTemplate'
@@ -109,7 +110,13 @@ export default async function UsedTwoWheelersPage({ params }: Props) {
     if (!dealer) notFound()
 
     const { vehicles: usedVehicles } = await getUsedTwoWheelers(dealer.id, { pageSize: 100, sortBy: 'newest' })
-    const cars = usedTwoWheelersToCars(usedVehicles)
+
+    // Merge Cyepro used inventory if dealer has API key
+    const cyeproCars = dealer.cyepro_api_key
+        ? (await fetchCyeproInventoryAsCars(dealer.cyepro_api_key)).map(c => ({ ...c, vehicleCategory: '2w' as const }))
+        : []
+
+    const cars = [...usedTwoWheelersToCars(usedVehicles), ...cyeproCars]
 
     // ── No stock yet ──────────────────────────────────────────────────────────
     if (cars.length === 0) {

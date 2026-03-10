@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { getTwoWheelerVehicles, getUsedTwoWheelers } from '@/lib/db/two-wheelers'
 import { getTwoWheelerCatalog, TWO_WHEELER_BRANDS } from '@/lib/data/two-wheelers'
+import { fetchCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
 import { notFound } from 'next/navigation'
 import { createClient } from '@supabase/supabase-js'
 import { brandNameToId } from '@/lib/utils/brand-model-images'
@@ -296,8 +297,13 @@ export default async function TwoWheelersPage({ params }: Props) {
     const catalogExtra = catalogVehicles.filter(v => !dbKeys.has(`${v.brand}__${v.model}`))
     const vehicles = [...dbVehicles, ...catalogExtra]
 
+    // Merge Cyepro used inventory if dealer has API key
+    const cyeproCars = dealer.cyepro_api_key
+        ? (await fetchCyeproInventoryAsCars(dealer.cyepro_api_key)).map(c => ({ ...c, vehicleCategory: '2w' as const }))
+        : []
+
     const newCars  = twoWheelersToCars(vehicles)
-    const usedCars = usedTwoWheelersToCars(usedVehicles)
+    const usedCars = [...usedTwoWheelersToCars(usedVehicles), ...cyeproCars]
 
     const isUsedSite = dealer.usedCarSite === true
     const hasNew  = !isUsedSite && newCars.length > 0

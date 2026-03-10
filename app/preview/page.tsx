@@ -52,6 +52,7 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): import("@/lib/types/c
         year: v.year,
         bodyType: v.type === 'scooter' ? 'Scooter' : v.type === 'electric' ? 'Electric' : 'Bike',
         segment: 'B' as const,
+        vehicleCategory: '2w' as const,
         pricing: {
             exShowroom: {
                 min: v.ex_showroom_price_paise > 0 ? Math.round(v.ex_showroom_price_paise / 100) : null,
@@ -59,7 +60,13 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): import("@/lib/types/c
                 currency: 'INR' as const,
             },
         },
-        engine: { type: v.fuel_type === 'electric' ? 'Electric' : 'Petrol', power: '—', torque: '—' },
+        engine: {
+            type: v.fuel_type === 'electric' ? 'Electric' : 'Petrol',
+            power: '—',
+            torque: '—',
+            displacement: v.engine_cc ?? undefined,
+            batteryCapacity: v.battery_kwh ?? undefined,
+        },
         transmission: { type: 'Manual' },
         performance: {
             fuelEfficiency: v.mileage_kmpl ?? undefined,
@@ -69,6 +76,7 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): import("@/lib/types/c
         dimensions: { seatingCapacity: 2 },
         features: { keyFeatures: v.features ?? [] },
         images: { hero: v.images?.[0] ?? '/placeholder-car.jpg', exterior: v.images ?? [], interior: [] },
+        colors: (v.colors ?? []).map(c => ({ name: c.name, type: 'Solid' as const, hex: c.hex, extraCost: 0 })),
         meta: { viewCount: v.views ?? 0 },
         price: v.ex_showroom_price_paise > 0
             ? `₹${(v.ex_showroom_price_paise / 100).toLocaleString('en-IN')}`
@@ -87,6 +95,7 @@ function threeWheelersToCars(vehicles: ThreeWheelerVehicle[]): import("@/lib/typ
         year: v.year,
         bodyType: v.body_type ?? 'Auto',
         segment: 'B' as const,
+        vehicleCategory: '3w' as const,
         pricing: {
             exShowroom: {
                 min: v.ex_showroom_price_paise > 0 ? Math.round(v.ex_showroom_price_paise / 100) : null,
@@ -98,6 +107,8 @@ function threeWheelersToCars(vehicles: ThreeWheelerVehicle[]): import("@/lib/typ
             type: v.fuel_type === 'electric' ? 'Electric' : v.fuel_type === 'cng' ? 'CNG' : 'Petrol',
             power: '—',
             torque: '—',
+            displacement: v.engine_cc ?? undefined,
+            batteryCapacity: v.battery_kwh ?? undefined,
         },
         transmission: { type: 'Manual' },
         performance: {
@@ -108,6 +119,7 @@ function threeWheelersToCars(vehicles: ThreeWheelerVehicle[]): import("@/lib/typ
         dimensions: { seatingCapacity: v.passenger_capacity ?? 3 },
         features: { keyFeatures: v.features ?? [] },
         images: { hero: v.images?.[0] ?? '/placeholder-car.jpg', exterior: v.images ?? [], interior: [] },
+        colors: (v.colors ?? []).map(c => ({ name: c.name, type: 'Solid' as const, hex: c.hex, extraCost: 0 })),
         meta: { viewCount: v.views ?? 0 },
         price: v.ex_showroom_price_paise > 0
             ? `₹${(v.ex_showroom_price_paise / 100).toLocaleString('en-IN')}`
