@@ -711,6 +711,11 @@ export function FamilyTemplate({
                                 <button onClick={() => setActiveTab('home')} className="block hover:text-gray-900">Home</button>
                                 <button onClick={() => setActiveTab('inventory')} className="block hover:text-gray-900">Inventory</button>
                                 <a href="#contact" className="block hover:text-gray-900">Contact</a>
+                                <button onClick={() => setNavEMIOpen(true)} className="block hover:text-gray-900">EMI Calculator</button>
+                                <a href="#exchange-section" className="block hover:text-gray-900">Exchange</a>
+                                <a href="#finance-section" className="block hover:text-gray-900">Finance</a>
+                                <a href="#service-section" className="block hover:text-gray-900">Service Booking</a>
+                                <a href="#trust-section" className="block hover:text-gray-900">Why Trust Us</a>
                             </div>
                         </div>
                         <div>

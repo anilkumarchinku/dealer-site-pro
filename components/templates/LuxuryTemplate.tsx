@@ -626,8 +626,16 @@ export function LuxuryTemplate({
                         )}
                         <div>
                             <h4 className="text-gray-900 font-light text-lg mb-4">Links</h4>
-                            <button onClick={() => setActiveTab('home')} className="block mb-2 hover:text-gray-900">Home</button>
-                            <button onClick={() => setActiveTab('inventory')} className="block hover:text-gray-900">Collection</button>
+                            <div className="space-y-2 text-gray-500">
+                                <button onClick={() => setActiveTab('home')} className="block hover:text-gray-900">Home</button>
+                                <button onClick={() => setActiveTab('inventory')} className="block hover:text-gray-900">Collection</button>
+                                <a href="#contact" className="block hover:text-gray-900">Contact</a>
+                                <button onClick={() => setNavEMIOpen(true)} className="block hover:text-gray-900">EMI Calculator</button>
+                                <a href="#exchange-section" className="block hover:text-gray-900">Exchange</a>
+                                <a href="#finance-section" className="block hover:text-gray-900">Finance</a>
+                                <a href="#service-section" className="block hover:text-gray-900">Service Booking</a>
+                                <a href="#trust-section" className="block hover:text-gray-900">Why Trust Us</a>
+                            </div>
                         </div>
                         <div>
                             <h4 className="text-gray-900 font-light text-lg mb-4">{dealerName}</h4>
