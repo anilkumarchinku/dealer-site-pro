@@ -1,132 +1,120 @@
-"use client"
+import { fetchDealerBySlug } from '@/lib/db/dealers'
+import { getUsedThreeWheelers } from '@/lib/db/three-wheelers'
+import { notFound } from 'next/navigation'
+import { brandNameToId } from '@/lib/utils/brand-model-images'
+import { ModernTemplate } from '@/components/templates/ModernTemplate'
+import { LuxuryTemplate } from '@/components/templates/LuxuryTemplate'
+import { SportyTemplate } from '@/components/templates/SportyTemplate'
+import { FamilyTemplate } from '@/components/templates/FamilyTemplate'
+import type { Car } from '@/lib/types/car'
+import type { ThreeWheelerUsedVehicle } from '@/lib/types/three-wheeler'
+import type { Service } from '@/lib/types'
 
-import { useEffect, useState } from "react"
-import { useParams } from "next/navigation"
-import Link from "next/link"
-import { supabase } from "@/lib/supabase"
-import { LeadFormModal } from "@/components/three-wheelers/LeadFormModal"
-import type { ThreeWheelerUsedVehicle } from "@/lib/types/three-wheeler"
-import { ChevronLeft } from "lucide-react"
-import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
-
-const GRADE_COLORS: Record<string, string> = {
-    A: "bg-green-100 text-green-700",
-    B: "bg-yellow-100 text-yellow-700",
-    C: "bg-orange-100 text-orange-700",
+interface Props {
+    params: Promise<{ slug: string }>
 }
 
-export default function UsedThreeWheelersPublicPage() {
-    const params = useParams()
-    const slug   = params.slug as string
-    const prefix = useSitePrefix(slug)
+function usedThreeWheelersToCars(vehicles: ThreeWheelerUsedVehicle[]): Car[] {
+    return vehicles.map(v => ({
+        id: v.id,
+        make: v.brand,
+        model: v.model,
+        variant: `${v.km_driven.toLocaleString('en-IN')} km · ${v.no_of_owners} owner${v.no_of_owners > 1 ? 's' : ''}`,
+        year: v.year,
+        bodyType: v.body_type ?? 'Auto',
+        segment: 'B' as Car['segment'],
+        pricing: {
+            exShowroom: {
+                min: Math.round(v.price_paise / 100),
+                max: Math.round(v.price_paise / 100),
+                currency: 'INR' as const,
+            },
+        },
+        engine: {
+            type: v.fuel_type === 'electric' ? 'Electric' : v.fuel_type === 'cng' ? 'CNG' : 'Petrol',
+            power: '—',
+            torque: '—',
+        },
+        transmission: { type: 'Manual' },
+        performance: {},
+        dimensions: {
+            seatingCapacity: v.passenger_capacity ?? null,
+            bootSpace: v.payload_kg ?? undefined,
+        },
+        features: { keyFeatures: [] },
+        images: {
+            hero: v.images?.[0] ?? '/placeholder-car.jpg',
+            exterior: v.images ?? [],
+            interior: [],
+        },
+        meta: { viewCount: 0 },
+        price: `₹${(v.price_paise / 100).toLocaleString('en-IN')}`,
+        condition: v.certified_pre_owned ? 'certified_pre_owned' as const : 'used' as const,
+        vehicleCategory: '3w' as const,
+    }))
+}
 
-    const [dealer, setDealer]   = useState<{ id: string; dealership_name: string } | null>(null)
-    const [vehicles, setVehicles] = useState<ThreeWheelerUsedVehicle[]>([])
-    const [total, setTotal]     = useState(0)
-    const [loading, setLoading] = useState(true)
-    const [leadVehicleId, setLeadVehicleId] = useState<string | null>(null)
+export default async function UsedThreeWheelersPage({ params }: Props) {
+    const { slug } = await params
 
-    useEffect(() => {
-        if (!slug) return
-        async function load() {
-            const { data: d } = await supabase
-                .from("dealers")
-                .select("id, dealership_name")
-                .eq("slug", slug)
-                .single()
-            if (!d) { setLoading(false); return }
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            const dealer = d as any
-            setDealer(dealer)
+    const dealer = await fetchDealerBySlug(slug)
+    if (!dealer) notFound()
 
-            const res  = await fetch(`/api/three-wheelers/used?dealerId=${dealer.id}&pageSize=20&sortBy=newest`)
-            const data = await res.json()
-            setVehicles(data.vehicles ?? [])
-            setTotal(data.total ?? 0)
-            setLoading(false)
-        }
-        load()
-    }, [slug])
+    const { vehicles: usedVehicles } = await getUsedThreeWheelers(dealer.id, { pageSize: 100, sortBy: 'newest' })
+    const cars = usedThreeWheelersToCars(usedVehicles)
 
-    if (loading) return <div className="min-h-screen flex items-center justify-center text-muted-foreground">Loading...</div>
-    if (!dealer) return <div className="min-h-screen flex items-center justify-center">Dealer not found</div>
+    const primaryBrand = dealer.brands[0] ?? null
+    const brandId = primaryBrand ? brandNameToId(primaryBrand, '3w') : null
+    const brandLogoUrl = dealer.logo_url ?? (brandId ? `/data/brand-logos/${brandId}.png` : undefined)
 
-    return (
-        <div className="min-h-screen max-w-5xl mx-auto px-4 py-8">
-            <div className="mb-6">
-                <Link href={`${prefix}/three-wheelers`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-                    <ChevronLeft className="w-4 h-4" /> Back to 3-Wheelers
-                </Link>
-            </div>
+    const contactInfo = {
+        phone: dealer.phone,
+        email: dealer.email ?? '',
+        address: dealer.full_address ?? dealer.location,
+    }
 
-            <div className="mb-8">
-                <h1 className="text-3xl font-bold">Used 3-Wheelers</h1>
-                <p className="text-muted-foreground mt-1">{total} vehicle{total !== 1 ? "s" : ""} available</p>
-            </div>
+    const heroDefaults: Record<string, { title: string; subtitle: string }> = {
+        luxury: { title: 'PRE-OWNED THREE-WHEELERS',        subtitle: 'Certified used autos and cargo vehicles — inspected and ready' },
+        sporty: { title: 'USED 3W, READY TO WORK',          subtitle: 'Hand-picked pre-owned three-wheelers for every job' },
+        family: { title: 'Trusted Used Three-Wheelers',     subtitle: 'Affordable second-hand autos and cargo carriers, all verified' },
+        modern: { title: 'Browse Pre-Owned Three-Wheelers', subtitle: 'Explore our certified used passenger and cargo three-wheelers' },
+    }
+    const defaults = heroDefaults[dealer.style_template] ?? heroDefaults.modern
+    const heroTitle    = dealer.hero_title    || defaults.title
+    const heroSubtitle = dealer.hero_subtitle || defaults.subtitle
 
-            {vehicles.length === 0 ? (
-                <div className="text-center py-20 text-muted-foreground">
-                    <p className="text-2xl">🛺</p>
-                    <p className="text-lg font-medium mt-4">No used vehicles currently available</p>
-                    <p className="text-sm mt-1">Check back soon or contact us directly.</p>
-                </div>
-            ) : (
-                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
-                    {vehicles.map(v => (
-                        <div key={v.id} className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-md transition-shadow">
-                            {v.images[0] ? (
-                                // eslint-disable-next-line @next/next/no-img-element
-                                <img src={v.images[0]} alt={`${v.brand} ${v.model}`} className="w-full h-40 object-cover" />
-                            ) : (
-                                <div className="h-40 bg-muted/30 flex items-center justify-center text-muted-foreground text-sm">No Image</div>
-                            )}
-                            <div className="p-4 space-y-3">
-                                <div>
-                                    <h3 className="font-semibold">{v.brand} {v.model}</h3>
-                                    <p className="text-xs text-muted-foreground">{v.year} · {v.fuel_type.toUpperCase()} · {v.km_driven.toLocaleString("en-IN")} km</p>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    {v.condition_grade && (
-                                        <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${GRADE_COLORS[v.condition_grade]}`}>
-                                            Grade {v.condition_grade}
-                                        </span>
-                                    )}
-                                    {v.certified_pre_owned && (
-                                        <span className="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full">Certified</span>
-                                    )}
-                                </div>
-                                <p className="text-xl font-bold text-primary">
-                                    ₹{(v.price_paise / 100).toLocaleString("en-IN")}
-                                    {v.negotiable && <span className="text-xs font-normal text-muted-foreground ml-1">Negotiable</span>}
-                                </p>
-                                <div className="flex gap-2">
-                                    <button
-                                        onClick={() => setLeadVehicleId(v.id)}
-                                        className="flex-1 bg-primary text-primary-foreground text-sm font-medium rounded-lg px-3 py-2 hover:opacity-90"
-                                    >
-                                        Make Offer
-                                    </button>
-                                    <Link
-                                        href={`${prefix}/three-wheelers/used/${v.id}`}
-                                        className="flex-1 border border-border text-sm font-medium rounded-lg px-3 py-2 text-center hover:bg-muted/50"
-                                    >
-                                        View Details
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            )}
+    const taglines: Record<string, string> = {
+        luxury: 'Quality You Can Trust',
+        sporty: 'Work More, Pay Less',
+        family: 'Trusted Pre-Owned',
+    }
 
-            <LeadFormModal
-                dealerId={dealer.id}
-                usedVehicleId={leadVehicleId ?? undefined}
-                leadType="best_price"
-                title="Make an Offer"
-                isOpen={!!leadVehicleId}
-                onClose={() => setLeadVehicleId(null)}
-            />
-        </div>
-    )
+    const sharedProps = {
+        brandName:    primaryBrand ?? dealer.dealership_name,
+        dealerName:   dealer.dealership_name,
+        dealerId:     dealer.id,
+        cars,
+        contactInfo,
+        branches:     dealer.branches ?? undefined,
+        services:     (dealer.services ?? []) as Service[],
+        workingHours: dealer.working_hours ?? null,
+        logoUrl:      brandLogoUrl ?? undefined,
+        heroImageUrl: undefined,
+        sellsNewCars:  false,
+        sellsUsedCars: true,
+        isVerified:    false,
+    }
+
+    switch (dealer.style_template) {
+        case 'luxury':
+            return <LuxuryTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} />
+        case 'sporty':
+            return <SportyTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} />
+        case 'family':
+            return <FamilyTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} />
+        case 'modern':
+        case 'professional':
+        default:
+            return <ModernTemplate {...sharedProps} config={{ heroTitle, heroSubtitle }} />
+    }
 }

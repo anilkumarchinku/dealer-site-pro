@@ -216,6 +216,9 @@ export interface Car {
 
     // Video walkaround (YouTube URL)
     video_url?: string;
+
+    // Vehicle category — used to show category-specific specs in cards
+    vehicleCategory?: '2w' | '3w' | '4w';
 }
 
 /**

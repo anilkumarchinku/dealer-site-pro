@@ -143,6 +143,36 @@ export function CarCard({
         (car.performance?.fuelEfficiency && car.performance.fuelEfficiency > 0
             ? `${car.performance.fuelEfficiency} km/l` : '—');
 
+    // Category-specific specs
+    const isEV = car.engine?.type === 'Electric';
+    const spec2 = car.vehicleCategory === '2w'
+        ? {
+            icon: <Settings className="w-3.5 h-3.5 text-orange-500" />,
+            label: isEV ? 'Battery' : 'Engine',
+            value: isEV
+                ? (car.engine?.batteryCapacity ? `${car.engine.batteryCapacity} kWh` : '—')
+                : (car.engine?.displacement ? `${car.engine.displacement} cc` : '—'),
+          }
+        : car.vehicleCategory === '3w'
+        ? {
+            icon: car.dimensions?.bootSpace
+                ? <Box className="w-3.5 h-3.5 text-amber-600" />
+                : <Users className="w-3.5 h-3.5 text-purple-600" />,
+            label: car.dimensions?.bootSpace ? 'Payload' : 'Seating',
+            value: car.dimensions?.bootSpace
+                ? `${car.dimensions.bootSpace} kg`
+                : seatingDisplay,
+          }
+        : { icon: <Gauge className="w-3.5 h-3.5 text-blue-600" />, label: 'Trans', value: transDisplay };
+
+    const spec3 = car.vehicleCategory === '2w' || car.vehicleCategory === '3w'
+        ? { icon: <Zap className="w-3.5 h-3.5 text-amber-600" />, label: isEV ? 'Range' : 'Mileage', value: isEV ? (car.performance?.range ? `${car.performance.range} km` : '—') : mileageDisplay }
+        : { icon: <Users className="w-3.5 h-3.5 text-purple-600" />, label: 'Seats', value: seatingDisplay };
+
+    const spec4 = car.vehicleCategory === '2w' || car.vehicleCategory === '3w'
+        ? { icon: <Fuel className="w-3.5 h-3.5 text-emerald-600" />, label: 'Type', value: car.bodyType || '—' }
+        : { icon: <Zap className="w-3.5 h-3.5 text-amber-600" />, label: 'Mileage', value: mileageDisplay };
+
     const handleEnquireNow = () => setIsEnquiryModalOpen(true);
 
     const handleQuickView = (e: React.MouseEvent) => {
@@ -277,12 +307,12 @@ export function CarCard({
 
                     <Separator className="mb-2" />
 
-                    {/* Specs Grid — always 4 items */}
+                    {/* Specs Grid — always 4 items, adapts per vehicle category */}
                     <div className="grid grid-cols-2 gap-1.5 mb-2">
                         <SpecItem icon={<Fuel className="w-3.5 h-3.5 text-emerald-600" />} label="Fuel" value={fuelDisplay} light={light} />
-                        <SpecItem icon={<Gauge className="w-3.5 h-3.5 text-blue-600" />} label="Trans" value={transDisplay} light={light} />
-                        <SpecItem icon={<Users className="w-3.5 h-3.5 text-purple-600" />} label="Seats" value={seatingDisplay} light={light} />
-                        <SpecItem icon={<Zap className="w-3.5 h-3.5 text-amber-600" />} label="Mileage" value={mileageDisplay} light={light} />
+                        <SpecItem icon={spec2.icon} label={spec2.label} value={spec2.value} light={light} />
+                        <SpecItem icon={spec3.icon} label={spec3.label} value={spec3.value} light={light} />
+                        <SpecItem icon={spec4.icon} label={spec4.label} value={spec4.value} light={light} />
                     </div>
 
                     {/* Trust Badges for Used Cars */}

@@ -1,5 +1,5 @@
 import { fetchDealerBySlug } from "@/lib/db/dealers"
-import { getThreeWheelerVehicles } from "@/lib/db/three-wheelers"
+import { getThreeWheelerVehicles, getUsedThreeWheelers } from "@/lib/db/three-wheelers"
 import { getThreeWheelerCatalog, THREE_WHEELER_BRANDS } from "@/lib/data/three-wheelers"
 import { notFound } from "next/navigation"
 import { createClient } from "@supabase/supabase-js"
@@ -9,7 +9,7 @@ import { LuxuryTemplate } from "@/components/templates/LuxuryTemplate"
 import { SportyTemplate } from "@/components/templates/SportyTemplate"
 import { FamilyTemplate } from "@/components/templates/FamilyTemplate"
 import type { Car } from "@/lib/types/car"
-import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
+import type { ThreeWheelerVehicle, ThreeWheelerUsedVehicle } from "@/lib/types/three-wheeler"
 import type { Service } from "@/lib/types"
 
 interface Props {
@@ -47,7 +47,8 @@ function threeWheelersToCars(vehicles: ThreeWheelerVehicle[]): Car[] {
       topSpeed: v.max_speed_kmph ?? undefined,
       range: v.range_km ?? undefined,
     },
-    dimensions: { seatingCapacity: v.passenger_capacity ?? 3 },
+    dimensions: { seatingCapacity: v.passenger_capacity ?? null, bootSpace: v.payload_kg ?? undefined },
+    vehicleCategory: '3w' as const,
     features: { keyFeatures: v.features ?? [] },
     images: {
       hero: v.images?.[0] ?? '/placeholder-car.jpg',
@@ -62,16 +63,56 @@ function threeWheelersToCars(vehicles: ThreeWheelerVehicle[]): Car[] {
   }))
 }
 
+function usedThreeWheelersToCars(vehicles: ThreeWheelerUsedVehicle[]): Car[] {
+  return vehicles.map(v => ({
+    id: v.id,
+    make: v.brand,
+    model: v.model,
+    variant: `${v.km_driven.toLocaleString('en-IN')} km · ${v.no_of_owners} owner${v.no_of_owners > 1 ? 's' : ''}`,
+    year: v.year,
+    bodyType: v.body_type ?? 'Auto',
+    segment: 'B' as Car['segment'],
+    pricing: {
+      exShowroom: {
+        min: Math.round(v.price_paise / 100),
+        max: Math.round(v.price_paise / 100),
+        currency: 'INR' as const,
+      },
+    },
+    engine: {
+      type: v.fuel_type === 'electric' ? 'Electric' : v.fuel_type === 'cng' ? 'CNG' : 'Petrol',
+      power: '—',
+      torque: '—',
+    },
+    transmission: { type: 'Manual' },
+    performance: {},
+    dimensions: {
+      seatingCapacity: v.passenger_capacity ?? null,
+      bootSpace: v.payload_kg ?? undefined,
+    },
+    features: { keyFeatures: [] },
+    images: {
+      hero: v.images?.[0] ?? '/placeholder-car.jpg',
+      exterior: v.images ?? [],
+      interior: [],
+    },
+    meta: { viewCount: 0 },
+    price: `₹${(v.price_paise / 100).toLocaleString('en-IN')}`,
+    condition: v.certified_pre_owned ? 'certified_pre_owned' as const : 'used' as const,
+    vehicleCategory: '3w' as const,
+  }))
+}
+
 export default async function ThreeWheelersPage({ params }: Props) {
   const { slug } = await params
   const dealer = await fetchDealerBySlug(slug)
   if (!dealer) notFound()
 
-  // Fetch DB inventory (empty array if table doesn't exist yet)
-  const { vehicles: dbVehicles } = await getThreeWheelerVehicles(dealer.id, {
-    pageSize: 100,
-    sortBy: "views",
-  })
+  // Fetch new + used inventory in parallel
+  const [{ vehicles: dbVehicles }, { vehicles: usedVehicles }] = await Promise.all([
+    getThreeWheelerVehicles(dealer.id, { pageSize: 100, sortBy: 'views' }),
+    getUsedThreeWheelers(dealer.id, { pageSize: 100, sortBy: 'newest' }),
+  ])
 
   // Fetch 3W brands directly — scoped by vehicle_type so 2W brands never bleed in
   let dealer3wBrands: string[] = []
@@ -108,8 +149,16 @@ export default async function ThreeWheelersPage({ params }: Props) {
   const catalogExtra = catalogVehicles.filter(v => !dbKeys.has(`${v.brand}__${v.model}`))
   const vehicles = [...dbVehicles, ...catalogExtra]
 
-  // Map to Car shape expected by 4W templates
-  const cars = threeWheelersToCars(vehicles)
+  // Map to Car shape — mode depends on URL suffix, matching 4W hybrid flow:
+  //   normal URL  → merge new + used (template shows All/New/Used tabs)
+  //   -used URL   → used-only (sellsNewCars: false)
+  const newCars  = threeWheelersToCars(vehicles)
+  const usedCars = usedThreeWheelersToCars(usedVehicles)
+
+  const isUsedSite = dealer.usedCarSite === true
+  const cars  = isUsedSite ? usedCars : [...newCars, ...usedCars]
+  const hasNew  = !isUsedSite && newCars.length > 0
+  const hasUsed = usedCars.length > 0
 
   // Brand logo: use dealer's uploaded logo first, then fall back to brand logo
   const brandId = primaryBrand ? brandNameToId(primaryBrand, '3w') : null
@@ -149,9 +198,9 @@ export default async function ThreeWheelersPage({ params }: Props) {
     workingHours: dealer.working_hours ?? null,
     logoUrl:      brandLogoUrl ?? undefined,
     heroImageUrl: undefined,
-    sellsNewCars: true,
-    sellsUsedCars: false,
-    isVerified:   false,
+    sellsNewCars:  hasNew,
+    sellsUsedCars: hasUsed,
+    isVerified:    false,
   }
 
   switch (dealer.style_template) {

@@ -155,6 +155,30 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
         }
     }
 
+    // ── 4. Dynamic fallback for 2W / 3W brand-suffix URLs ────────────────
+    // e.g. "3wv2-lohia-auto" → parent "3wv2" (three-wheeler) + brand "Lohia Auto"
+    // Tries shortest possible suffix first so it finds the longest valid parent.
+    if (!dealer) {
+        const segments = slug.split('-')
+        for (let i = segments.length - 1; i >= 1; i--) {
+            const parentSlug = segments.slice(0, i).join('-')
+            const parentDealer = await findDealerByExactSlug(supabase, parentSlug)
+            if (parentDealer) {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                const vtype = (parentDealer as any).vehicle_type
+                if (vtype === 'two-wheeler' || vtype === 'three-wheeler') {
+                    dealer = parentDealer
+                    const brandSuffix = segments.slice(i).join('-')
+                    brandFilter = brandSuffix
+                        .split('-')
+                        .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+                        .join(' ')
+                    break
+                }
+            }
+        }
+    }
+
     if (!dealer) return null
 
     // ── 3. Fetch brands, template config, vehicles, and services in parallel

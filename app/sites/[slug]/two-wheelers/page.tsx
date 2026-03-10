@@ -1,5 +1,5 @@
 import { fetchDealerBySlug } from '@/lib/db/dealers'
-import { getTwoWheelerVehicles } from '@/lib/db/two-wheelers'
+import { getTwoWheelerVehicles, getUsedTwoWheelers } from '@/lib/db/two-wheelers'
 import { getTwoWheelerCatalog, TWO_WHEELER_BRANDS } from '@/lib/data/two-wheelers'
 import { notFound } from 'next/navigation'
 import { createClient } from '@supabase/supabase-js'
@@ -9,7 +9,7 @@ import { LuxuryTemplate } from '@/components/templates/LuxuryTemplate'
 import { SportyTemplate } from '@/components/templates/SportyTemplate'
 import { FamilyTemplate } from '@/components/templates/FamilyTemplate'
 import type { Car } from '@/lib/types/car'
-import type { TwoWheelerVehicle } from '@/lib/types/two-wheeler'
+import type { TwoWheelerVehicle, TwoWheelerUsedVehicle } from '@/lib/types/two-wheeler'
 import type { Service } from '@/lib/types'
 
 interface Props {
@@ -48,6 +48,8 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): Car[] {
         },
         engine: {
             type: v.fuel_type === 'electric' ? 'Electric' : 'Petrol',
+            displacement: v.engine_cc,
+            batteryCapacity: v.battery_kwh,
             power: '—',
             torque: '—',
         },
@@ -58,6 +60,7 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): Car[] {
             range: v.range_km ?? undefined,
         },
         dimensions: { seatingCapacity: 2 },
+        vehicleCategory: '2w' as const,
         features: { keyFeatures: v.features ?? [] },
         images: {
             hero: v.images?.[0] ?? '/placeholder-car.jpg',
@@ -72,14 +75,55 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): Car[] {
     }))
 }
 
+function usedTwoWheelersToCars(vehicles: TwoWheelerUsedVehicle[]): Car[] {
+    return vehicles.map(v => ({
+        id: v.id,
+        make: v.brand,
+        model: v.model,
+        variant: `${v.km_driven.toLocaleString('en-IN')} km · ${v.no_of_owners} owner${v.no_of_owners > 1 ? 's' : ''}`,
+        year: v.year,
+        bodyType: v.type === 'scooter' ? 'Scooter' : v.type === 'electric' ? 'Electric' : 'Bike',
+        segment: 'B' as Car['segment'],
+        pricing: {
+            exShowroom: {
+                min: Math.round(v.price_paise / 100),
+                max: Math.round(v.price_paise / 100),
+                currency: 'INR' as const,
+            },
+        },
+        engine: {
+            type: v.fuel_type === 'electric' ? 'Electric' : 'Petrol',
+            displacement: null,
+            power: '—',
+            torque: '—',
+        },
+        transmission: { type: 'Manual' },
+        performance: {},
+        dimensions: { seatingCapacity: 2 },
+        features: { keyFeatures: [] },
+        images: {
+            hero: v.images?.[0] ?? '/placeholder-car.jpg',
+            exterior: v.images ?? [],
+            interior: [],
+        },
+        meta: { viewCount: 0 },
+        price: `₹${(v.price_paise / 100).toLocaleString('en-IN')}`,
+        condition: v.certified_pre_owned ? 'certified_pre_owned' as const : 'used' as const,
+        vehicleCategory: '2w' as const,
+    }))
+}
+
 export default async function TwoWheelersPage({ params }: Props) {
     const { slug } = await params
 
     const dealer = await fetchDealerBySlug(slug)
     if (!dealer) notFound()
 
-    // Fetch DB inventory (empty array if table doesn't exist yet)
-    const { vehicles: dbVehicles } = await getTwoWheelerVehicles(dealer.id, { pageSize: 100, sortBy: 'newest' })
+    // Fetch new + used inventory in parallel
+    const [{ vehicles: dbVehicles }, { vehicles: usedVehicles }] = await Promise.all([
+        getTwoWheelerVehicles(dealer.id, { pageSize: 100, sortBy: 'newest' }),
+        getUsedTwoWheelers(dealer.id, { pageSize: 100, sortBy: 'newest' }),
+    ])
 
     // Fetch 2W brands directly — scoped by vehicle_type so 3W brands never bleed in
     let dealer2wBrands: string[] = []
@@ -116,8 +160,16 @@ export default async function TwoWheelersPage({ params }: Props) {
     const catalogExtra = catalogVehicles.filter(v => !dbKeys.has(`${v.brand}__${v.model}`))
     const vehicles = [...dbVehicles, ...catalogExtra]
 
-    // Map to Car shape expected by 4W templates
-    const cars = twoWheelersToCars(vehicles)
+    // Map to Car shape — mode depends on URL suffix, matching 4W hybrid flow:
+    //   normal URL  → merge new + used (template shows All/New/Used tabs)
+    //   -used URL   → used-only (sellsNewCars: false)
+    const newCars  = twoWheelersToCars(vehicles)
+    const usedCars = usedTwoWheelersToCars(usedVehicles)
+
+    const isUsedSite = dealer.usedCarSite === true
+    const cars  = isUsedSite ? usedCars : [...newCars, ...usedCars]
+    const hasNew  = !isUsedSite && newCars.length > 0
+    const hasUsed = usedCars.length > 0
 
     // Brand logo: use dealer's uploaded logo first, then fall back to brand logo
     const brandId = primaryBrand ? brandNameToId(primaryBrand, '2w') : null
@@ -157,9 +209,9 @@ export default async function TwoWheelersPage({ params }: Props) {
         workingHours: dealer.working_hours ?? null,
         logoUrl:      brandLogoUrl ?? undefined,
         heroImageUrl: undefined,
-        sellsNewCars: true,
-        sellsUsedCars: false,
-        isVerified:   false,
+        sellsNewCars:  hasNew,
+        sellsUsedCars: hasUsed,
+        isVerified:    false,
     }
 
     switch (dealer.style_template) {

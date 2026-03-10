@@ -1,87 +1,118 @@
-"use client"
+import { fetchDealerBySlug } from '@/lib/db/dealers'
+import { getUsedTwoWheelers } from '@/lib/db/two-wheelers'
+import { notFound } from 'next/navigation'
+import { brandNameToId } from '@/lib/utils/brand-model-images'
+import { ModernTemplate } from '@/components/templates/ModernTemplate'
+import { LuxuryTemplate } from '@/components/templates/LuxuryTemplate'
+import { SportyTemplate } from '@/components/templates/SportyTemplate'
+import { FamilyTemplate } from '@/components/templates/FamilyTemplate'
+import type { Car } from '@/lib/types/car'
+import type { TwoWheelerUsedVehicle } from '@/lib/types/two-wheeler'
+import type { Service } from '@/lib/types'
 
-import { useEffect, useState, useCallback } from "react"
-import { useParams } from "next/navigation"
-import { supabase } from "@/lib/supabase"
-import { UsedVehicleCard } from "@/components/two-wheelers/UsedVehicleCard"
-import { LeadFormModal } from "@/components/two-wheelers/LeadFormModal"
-import type { TwoWheelerUsedVehicle, TwoWheelerUsedFilters } from "@/lib/types/two-wheeler"
+interface Props {
+    params: Promise<{ slug: string }>
+}
 
-const GRADES = ["A", "B", "C"] as const
+function usedTwoWheelersToCars(vehicles: TwoWheelerUsedVehicle[]): Car[] {
+    return vehicles.map(v => ({
+        id: v.id,
+        make: v.brand,
+        model: v.model,
+        variant: `${v.km_driven.toLocaleString('en-IN')} km · ${v.no_of_owners} owner${v.no_of_owners > 1 ? 's' : ''}`,
+        year: v.year,
+        bodyType: v.type === 'scooter' ? 'Scooter' : v.type === 'electric' ? 'Electric' : 'Bike',
+        segment: 'B' as Car['segment'],
+        pricing: {
+            exShowroom: {
+                min: Math.round(v.price_paise / 100),
+                max: Math.round(v.price_paise / 100),
+                currency: 'INR' as const,
+            },
+        },
+        engine: {
+            type: v.fuel_type === 'electric' ? 'Electric' : 'Petrol',
+            displacement: null,
+            power: '—',
+            torque: '—',
+        },
+        transmission: { type: 'Manual' },
+        performance: {},
+        dimensions: { seatingCapacity: 2 },
+        features: { keyFeatures: [] },
+        images: {
+            hero: v.images?.[0] ?? '/placeholder-car.jpg',
+            exterior: v.images ?? [],
+            interior: [],
+        },
+        meta: { viewCount: 0 },
+        price: `₹${(v.price_paise / 100).toLocaleString('en-IN')}`,
+        condition: v.certified_pre_owned ? 'certified_pre_owned' as const : 'used' as const,
+        vehicleCategory: '2w' as const,
+    }))
+}
 
-export default function UsedTwoWheelersPublicPage() {
-    const params = useParams()
-    const slug   = params.slug as string
-    const [dealerId, setDealerId]  = useState<string | null>(null)
-    const [vehicles, setVehicles]  = useState<TwoWheelerUsedVehicle[]>([])
-    const [total,    setTotal]     = useState(0)
-    const [loading,  setLoading]   = useState(true)
-    const [filters,  setFilters]   = useState<TwoWheelerUsedFilters>({ sortBy: "newest", page: 1, pageSize: 12 })
-    const [leadVehicleId, setLeadVehicleId] = useState<string | null>(null)
+export default async function UsedTwoWheelersPage({ params }: Props) {
+    const { slug } = await params
 
-    useEffect(() => {
-        if (!slug) return
-        supabase.from("dealers").select("id").eq("slug", slug).single()
-            .then(({ data }) => { // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            if (data) setDealerId((data as any).id) })
-    }, [slug])
+    const dealer = await fetchDealerBySlug(slug)
+    if (!dealer) notFound()
 
-    const load = useCallback(async () => {
-        if (!dealerId) return
-        setLoading(true)
-        const p = new URLSearchParams({ dealerId, ...Object.fromEntries(
-            Object.entries(filters).filter(([, v]) => v != null).map(([k, v]) => [k, String(v)])
-        )})
-        const res  = await fetch(`/api/two-wheelers/used?${p}`)
-        const data = await res.json()
-        setVehicles(data.vehicles ?? [])
-        setTotal(data.total ?? 0)
-        setLoading(false)
-    }, [dealerId, filters])
+    const { vehicles: usedVehicles } = await getUsedTwoWheelers(dealer.id, { pageSize: 100, sortBy: 'newest' })
+    const cars = usedTwoWheelersToCars(usedVehicles)
 
-    useEffect(() => { load() }, [load])
+    const primaryBrand = dealer.brands[0] ?? null
+    const brandId = primaryBrand ? brandNameToId(primaryBrand, '2w') : null
+    const brandLogoUrl = dealer.logo_url ?? (brandId ? `/data/brand-logos/${brandId}.png` : undefined)
 
-    return (
-        <div className="min-h-screen max-w-6xl mx-auto px-4 py-8">
-            <div className="mb-6 flex items-start justify-between flex-wrap gap-3">
-                <div>
-                    <h1 className="text-3xl font-bold">Used 2-Wheelers</h1>
-                    <p className="text-muted-foreground mt-1">{total} vehicle{total !== 1 ? "s" : ""} available</p>
-                </div>
-                {/* Grade filter */}
-                <div className="flex items-center gap-2">
-                    <span className="text-sm text-muted-foreground">Grade:</span>
-                    <button onClick={() => setFilters(f => ({ ...f, conditionGrade: undefined, page: 1 }))} className={`px-3 py-1.5 text-sm rounded-lg border ${!filters.conditionGrade ? "border-primary bg-primary/10 text-primary" : "border-border"}`}>All</button>
-                    {GRADES.map(g => (
-                        <button key={g} onClick={() => setFilters(f => ({ ...f, conditionGrade: g, page: 1 }))} className={`px-3 py-1.5 text-sm rounded-lg border ${filters.conditionGrade === g ? "border-primary bg-primary/10 text-primary" : "border-border"}`}>Grade {g}</button>
-                    ))}
-                </div>
-            </div>
+    const contactInfo = {
+        phone: dealer.phone,
+        email: dealer.email,
+        address: dealer.full_address ?? dealer.location,
+    }
 
-            {loading ? (
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {[...Array(6)].map((_, i) => <div key={i} className="h-64 rounded-2xl bg-muted/30 animate-pulse" />)}
-                </div>
-            ) : vehicles.length === 0 ? (
-                <div className="text-center py-20 text-muted-foreground">No used vehicles available.</div>
-            ) : (
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {vehicles.map(v => (
-                        <UsedVehicleCard key={v.id} vehicle={v} slug={slug} onLead={vid => setLeadVehicleId(vid)} />
-                    ))}
-                </div>
-            )}
+    const heroDefaults: Record<string, { title: string; subtitle: string }> = {
+        luxury: { title: 'PRE-OWNED RIDES, PREMIUM QUALITY',    subtitle: 'Certified used two-wheelers — inspected and guaranteed' },
+        sporty: { title: 'USED BIKES, PURE PERFORMANCE',        subtitle: 'Hand-picked pre-owned bikes ready to ride' },
+        family: { title: 'Quality Used Two-Wheelers',           subtitle: 'Affordable second-hand bikes and scooters, all verified' },
+        modern: { title: 'Explore Pre-Owned Two-Wheelers',      subtitle: 'Browse our certified used bikes and scooters' },
+    }
+    const defaults = heroDefaults[dealer.style_template] ?? heroDefaults.modern
+    const heroTitle    = dealer.hero_title    || defaults.title
+    const heroSubtitle = dealer.hero_subtitle || defaults.subtitle
 
-            {dealerId && (
-                <LeadFormModal
-                    dealerId={dealerId}
-                    usedVehicleId={leadVehicleId ?? undefined}
-                    leadType="best_price"
-                    title="Make an Offer"
-                    isOpen={!!leadVehicleId}
-                    onClose={() => setLeadVehicleId(null)}
-                />
-            )}
-        </div>
-    )
+    const taglines: Record<string, string> = {
+        luxury: 'Quality You Can Trust',
+        sporty: 'Ride More, Pay Less',
+        family: 'Trusted Pre-Owned',
+    }
+
+    const sharedProps = {
+        brandName:    primaryBrand ?? dealer.dealership_name,
+        dealerName:   dealer.dealership_name,
+        dealerId:     dealer.id,
+        cars,
+        contactInfo,
+        branches:     dealer.branches ?? undefined,
+        services:     (dealer.services ?? []) as Service[],
+        workingHours: dealer.working_hours ?? null,
+        logoUrl:      brandLogoUrl ?? undefined,
+        heroImageUrl: undefined,
+        sellsNewCars:  false,
+        sellsUsedCars: true,
+        isVerified:    false,
+    }
+
+    switch (dealer.style_template) {
+        case 'luxury':
+            return <LuxuryTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} />
+        case 'sporty':
+            return <SportyTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} />
+        case 'family':
+            return <FamilyTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} />
+        case 'modern':
+        case 'professional':
+        default:
+            return <ModernTemplate {...sharedProps} config={{ heroTitle, heroSubtitle }} />
+    }
 }
