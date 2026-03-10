@@ -1,0 +1,445 @@
+{
+  "brand": "Aprilia India",
+  "brandId": "aprilia-india",
+  "type": "2w",
+  "vehicles": [
+    {
+      "make": "Aprilia India",
+      "model": "Aprilia RS 457",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "457 cc, Liquid-Cooled, 2 Parallel Twin cylinders (4 valves per cylinder)",
+        "torque": "43.5 Nm @ 6700 rpm",
+        "mileage": "30 kmpl (overall/ARAI claimed)",
+        "features": [
+          "ABS Dual Channel / Switchable ABS",
+          "DRLs (twin-DRL)",
+          "Riding Modes",
+          "Traction Control",
+          "Navigation (built-in)",
+          "Service Due Indicator",
+          "LED Tail Light & LED Headlight",
+          "Digital Speedometer & Odometer (TFT 5-inch display)",
+          "Call/SMS Alerts & Roadside Assistance",
+          "Clock & Distance-to-Empty Indicator",
+          "Engine Maps (AEM) & Dual-Channel ABS with Anti-Roll-Over System",
+          "Metal-Braided Brake Hoses",
+          "Backlit Handlebar Controls",
+          "Passenger Footrest",
+          "Split Seat",
+          "Hazard Warning Lights",
+          "Shift Light",
+          "Engine Temperature Indicator"
+        ],
+        "description": "The Aprilia RS 457 is a sport-bike powered by a 457 cc liquid-cooled parallel-twin engine delivering 48 PS and 44 Nm of torque, mated to a 6-speed gearbox. It features a host of electronics – dual-channel ABS (switchable), traction control, multiple riding maps, built-in navigation and a 5-inch TFT instrument panel with digital speedometer/odometer, call-SMS alerts, service-due and distance-to-empty indicators. Metal-braided brake hoses, backlit handlebar controls and a split seat add to its premium feel. Overall mileage is quoted at 30 kmpl and the bike weighs about 175 kg kerb."
+      }
+    },
+    {
+      "make": "Aprilia India",
+      "model": "Aprilia SR 160",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "160.03 cc displacement, Air-cooled, Single cylinder (1 cylinder), 4-stroke, SOHC 3-valve",
+        "torque": "13.44 Nm @ 5300 rpm",
+        "mileage": "Overall 35 kmpl (ARAI claimed)",
+        "features": [
+          "ABS Single Channel",
+          "LED Headlight & LED Taillight",
+          "Digital Instrument Console",
+          "USB Charging Port",
+          "Boot Light",
+          "Service Due Indicator",
+          "Clock",
+          "Under-seat storage 11 L",
+          "Carry Hook",
+          "Passenger Backrest & Footrest",
+          "Body Graphics",
+          "Low Fuel Indicator",
+          "Distance-to-Empty Indicator",
+          "Hazard Warning Indicator",
+          "High Beam Indicator",
+          "Engine Temperature Indicator",
+          "Malfunction Indicator",
+          "LED Turn Signal (bulb)",
+          "Kick & Self Start",
+          "Fuel Injection",
+          "CVT automatic transmission"
+        ],
+        "description": "The Aprilia SR 160 is a performance-oriented 160 cc scooter featuring an air-cooled single-cylinder engine that produces 13.44 Nm of torque. It offers a sporty, aggressive design with LED lighting, a fully digital LCD console, and a suite of convenience and safety features including single-channel ABS, USB charging, under-seat storage, and various indicator lights. Fuel-injected and CVT-driven, the scooter claims an overall mileage of 35 kmpl and carries a kerb weight of 118 kg."
+      }
+    },
+    {
+      "make": "Aprilia India",
+      "model": "Aprilia SR 125",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "124.45 cc, Air-cooled, Single cylinder (4-stroke, SOHC 3-valve)",
+        "torque": "10.33 Nm @ 5500 rpm",
+        "mileage": "Overall 40 kmpl",
+        "features": [
+          "Digital instrument console",
+          "USB charging port",
+          "LED headlamp & LED taillight",
+          "Boot light",
+          "Service due indicator",
+          "Pass switch",
+          "Real-time mileage indicator",
+          "Combi Brake System (single-channel ABS)",
+          "Disc front brake, drum rear brake",
+          "14-inch alloy wheels",
+          "Under-seat storage & Carry hook",
+          "Passenger footrest, backrest",
+          "Clock",
+          "Body graphics",
+          "Single seat",
+          "Fuel tank capacity 6 L"
+        ],
+        "description": "The Aprilia SR 125 is a performance-oriented 125 cc scooter featuring an air-cooled single-cylinder engine that delivers 10.11 PS and 10.33 Nm torque, paired with a CVT automatic transmission. It sports a sharp, aggressive design with LED headlamp, 14-inch wheels, disc front brake with ABS, and a fully digital instrument cluster offering speed, fuel level, mileage, trip and tachometer readouts. Additional conveniences include a USB charging port, under-seat storage, boot light, and service-due indicator. The scooter carries a 6-litre fuel tank and offers an official mileage of 40 kmpl."
+      }
+    },
+    {
+      "make": "Aprilia India",
+      "model": "Aprilia Tuono 457",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "457 cc displacement, liquid-cooled, parallel-twin (2 cylinders) with 4 valves per cylinder",
+        "torque": "43.5 Nm @ 6700 rpm",
+        "mileage": "Overall 25.5 kmpl (ARAI-claimed)",
+        "features": [
+          "Dual-Channel ABS",
+          "DRLs (day-time running lights)",
+          "Mobile-Connectivity Bluetooth (call/SMS alerts)",
+          "5-inch TFT digital display",
+          "Riding modes (Eco, Rain, Sport)",
+          "Traction control (multiple levels)",
+          "Navigation assist",
+          "Service-due indicator",
+          "Backlit switchgear & engine maps (AEM)",
+          "Anti-roll-over system (2 maps)",
+          "Metal-braided brake hoses",
+          "LED headlight & taillight",
+          "Hazard warning lights",
+          "Adjustable levers",
+          "Split seat",
+          "Passenger footrest",
+          "Grab rail"
+        ],
+        "description": "The Aprilia Tuono 457 is a naked-streetfighter positioned as a powerful middle-weight bike for Indian riders. It houses a 457 cc liquid-cooled parallel-twin that delivers 47.6 PS and 43.5 Nm of torque, paired with a six-speed gearbox and slipper clutch. The bike is feature-rich, offering a 5-inch TFT display with navigation, Bluetooth connectivity, three ride-mode settings, dual-channel ABS, traction control, and a host of comfort and safety aids. Its aggressive styling, lightweight chassis (175 kg) and balanced dynamics make it suitable for both city commuting and spirited weekend rides."
+      }
+    },
+    {
+      "make": "Aprilia India",
+      "model": "Aprilia RSV4",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "1099 cc, Liquid-cooled, 4 V-configuration (V4)",
+        "torque": "127 Nm @ 10 800 rpm",
+        "mileage": "15.4 kmpl (ARAI claimed)",
+        "features": [
+          "ABS Dual Channel",
+          "DRLs (Day-time Running Lights)",
+          "Mobile Connectivity Bluetooth",
+          "Riding Modes (6)",
+          "Traction Control",
+          "Cruise Control",
+          "Launch Control",
+          "Quick Shifter (bidirectional)",
+          "Navigation (turn-by-turn)",
+          "Service Due Indicator",
+          "Digital Instrument Console (5-inch TFT)",
+          "Call/SMS Alerts",
+          "USB Charging Port",
+          "Digital Speedometer, Odometer, Tripmeter, Techometer",
+          "Wheelie Control, Ride Control, Engine Brake Control, Speed Limiter",
+          "Engine Kill Switch",
+          "Hazard Warning Lights",
+          "Shift Light",
+          "High-Beam Indicator",
+          "Engine Temperature Indicator",
+          "Malfunction Indicator"
+        ],
+        "description": "The Aprilia RSV4 is Aprilia’s flagship liter-class superbike, powered by a 1099 cc liquid-cooled V4 engine delivering 220 PS at 13 000 rpm and 127 Nm of torque. It features a six-speed gearbox with slipper clutch and a bidirectional quick-shifter. The bike is equipped with fully-adjustable, electronically-controlled Öhlins front fork and rear monoshock, wing-let aerodynamics, and twin-spar aluminium frame. Electronics include a 5-inch TFT console, 3-level cornering ABS, traction-control, wheelie & stoppie control, launch control, cruise control, navigation, Bluetooth connectivity, and a suite of rider-aid modes. Overall weight is 204 kg and fuel capacity is 18 L, giving an ARAI mileage of 15.4 kmpl."
+      }
+    },
+    {
+      "make": "Aprilia India",
+      "model": "Aprilia SXR 125",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "125 cc displacement, Air-cooled, Single cylinder (1 cylinder)",
+        "torque": "10.19 Nm @ 5400 rpm",
+        "mileage": "Overall 40 kmpl (ARAI claimed)",
+        "features": [
+          "Digital instrument console",
+          "USB charging port",
+          "LED headlight, LED taillight, LED turn-signal lamps",
+          "Combi Brake System (CBS)",
+          "Service Due Indicator",
+          "Real-time mileage indicator",
+          "Clock",
+          "Body graphics",
+          "Passenger backrest & footrest",
+          "Carry hook",
+          "Under-seat storage",
+          "Single seat type",
+          "Pass switch",
+          "LED lighting throughout",
+          "Kick & self start",
+          "CVT automatic transmission"
+        ],
+        "description": "The Aprilia SXR 125 is a maxi-style scooter built on the same chassis as the SXR 160, featuring a 124.4 cc air-cooled, single-cylinder, 4-stroke engine that produces 9.61 PS at 7500 rpm and 10.19 Nm torque. It offers a fully digital instrument cluster, USB charging, full LED lighting, and a combi-brake system. With a 7-litre fuel tank and claimed mileage of 40 kmpl, it targets riders seeking sporty styling, comfortable seating, and adequate city-commuting performance."
+      }
+    },
+    {
+      "make": "Aprilia India",
+      "model": "Aprilia Tuareg 660",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "659 cc, liquid-cooled, 2-cylinder parallel-twin, 4 valve per cylinder, semi-dry sump",
+        "torque": "70 Nm @ 6500 rpm",
+        "mileage": "Overall 20 kmpl (ARAI claimed 20 kmpl)",
+        "features": [
+          "Dual-Channel ABS",
+          "DRLs (Day-time Running Lights)",
+          "Bluetooth connectivity & Mobile connectivity",
+          "Navigation (built-in & assist)",
+          "Riding modes (4 modes)",
+          "Traction control",
+          "Cruise control",
+          "Quick shifter (bidirectional)",
+          "5-inch TFT digital instrument console",
+          "Call/SMS alerts & USB charging port",
+          "Service-due indicator",
+          "Engine kill switch",
+          "Hazard warning lights & shift light",
+          "Engine brake & engine maps",
+          "4-piston front disc, single-piston rear disc",
+          "21-inch front & 18-inch rear spoked wheels"
+        ],
+        "description": "Aprilia Tuareg 660 is an off-road adventure tourer priced from ₹18.85 Lakh (ex-showroom) in India. It is powered by a BS6-2.0 659 cc liquid-cooled parallel-twin engine delivering 80.21 PS and 70 Nm of torque. The bike features a 5-inch full-colour TFT console, Aprilia Performance Ride Control electronics (throttle-by-wire, four ride modes, traction control, cruise control, engine-brake control, rear-wheel lift-off control, switchable ABS), Bluetooth-enabled smartphone connectivity, navigation, quick-shifter, and dual-channel ABS. It weighs 204 kg, has an 18 L fuel tank, and offers an ARAI-claimed mileage of 20 kmpl."
+      }
+    },
+    {
+      "make": "Aprilia India",
+      "model": "Aprilia SR 125 hp.e",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "124.45 cc, Air Cooled, Single cylinder (1 cylinder)",
+        "torque": "10.4 Nm @ 6200 rpm",
+        "mileage": "Overall mileage 40 kmpl",
+        "features": [
+          "Combi Brake System (disc front, drum rear)",
+          "5.5-inch colour TFT console",
+          "Bluetooth connectivity",
+          "Navigation support",
+          "USB charging port",
+          "Digital speedometer, odometer, tripmeter",
+          "LED headlight & LED tail light with DRLs",
+          "Service Due Indicator",
+          "Clock",
+          "Carry hook",
+          "Passenger footrest",
+          "Under-seat storage",
+          "14-inch alloy wheels",
+          "Boot light",
+          "Single seat type",
+          "Body graphics",
+          "Engine kill switch, pass switch, saree guard, hazard warning indicator, high-beam indicator, engine temperature indicator, malfunction indicator"
+        ],
+        "description": "The Aprilia SR 125 hp.e is a sporty 125 cc scooter that carries the same sleek design as the SR 125 but adds premium features such as a 5.5-inch coloured TFT display, Bluetooth navigation, a combi-brake system, and extensive digital instrumentation. It is positioned as one of the most powerful 125 cc scooters in India with a claimed 40 kmpl mileage and a top speed of 90 km/h."
+      }
+    },
+    {
+      "make": "Aprilia India",
+      "model": "Aprilia SR 175 hp.e",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "174.7 cc, Air-cooled, Single-cylinder (1 cylinder), 4-stroke, SOHC 3-valve",
+        "torque": "14.14 Nm @ 6000 rpm",
+        "mileage": "47 kmpl (overall)",
+        "features": [
+          "Single-Channel ABS",
+          "Combi Brake System",
+          "DRLs",
+          "Service Due Indicator",
+          "Mobile Connectivity – Bluetooth",
+          "5.5-inch coloured TFT console",
+          "Apron-mounted LED headlight",
+          "LED tail-light",
+          "Digital speedometer, odometer, tripmeter",
+          "Clock",
+          "Navigation (via app)",
+          "Call/SMS alerts",
+          "Roadside assistance",
+          "USB charging port",
+          "Under-seat storage",
+          "Passenger footrest",
+          "Body graphics",
+          "Engine kill switch",
+          "Pass switch",
+          "Saree guard",
+          "Tubeless tyres",
+          "Alloy 14-inch wheels"
+        ],
+        "description": "The Aprilia SR 175 hp.e is a performance-oriented scooter that steps up from the SR 160 with a larger 174.7 cc air-cooled single-cylinder engine delivering 13.26 PS at 7200 rpm and 14.14 Nm of torque. It sports a sporty design, 5.5-inch coloured TFT display, Bluetooth connectivity, navigation, call/SMS alerts, and a suite of safety aids such as single-channel ABS and a combi-brake system. While its fuel economy is modest (≈47 kmpl), the scooter focuses on sharp acceleration, a top speed near 95 kmph, and a premium look with LED lighting and alloy wheels."
+      }
+    },
+    {
+      "make": "Aprilia India",
+      "model": "Aprilia RS 660",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "659 cc, liquid-cooled, parallel-twin (2 forward-facing cylinders), 4 valves per cylinder, Ride-By-Wire, 6-speed manual gearbox",
+        "torque": "67 Nm @ 8500 rpm",
+        "mileage": "20.4 kmpl (overall/ARAI claimed)",
+        "features": [
+          "ABS Dual Channel",
+          "DRLs (Daytime Running Lights)",
+          "Mobile Connectivity Bluetooth",
+          "Navigation (Yes)",
+          "Riding Modes (5 modes)",
+          "Traction Control",
+          "Cruise Control",
+          "Quick Shifter (bidirectional)",
+          "Service Due Indicator",
+          "Digital Speedometer (4.3-inch TFT)",
+          "Call/SMS Alerts",
+          "USB Charging Port",
+          "Wheelie control, Engine braking, Engine maps",
+          "Pass Switch, Clock, Hazard Warning Lights, Shift Light, Engine Kill Switch",
+          "Low Battery Alert, Low Fuel Indicator"
+        ],
+        "description": "The Aprilia RS 660 is an Italian middleweight supersport bike built on the 660 platform. It is powered by a 659 cc liquid-cooled parallel-twin engine delivering 100 PS and 67 Nm of torque, coupled to a 6-speed slipper-clutch gearbox. The bike packs advanced electronics including cornering ABS, traction control, multiple riding modes, launch control, cruise control, a bidirectional quick-shifter and a 4.3-inch TFT display with Bluetooth and navigation. Its lightweight aluminium twin-spar frame, premium design cues from the RSV4, and premium components (Brembo brakes, Kayaba suspension) position it as a premium supersport offering in the Indian market."
+      }
+    },
+    {
+      "make": "Aprilia India",
+      "model": "Aprilia SXR 160",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "160.03 cc displacement, Air-Cooled, Single cylinder (1 cylinder)",
+        "torque": "12.13 Nm @ 5400 rpm",
+        "mileage": "35 kmpl (overall ARAI claimed mileage)",
+        "features": [
+          "ABS (Single Channel)",
+          "Combi Brake System (disc front, drum rear)",
+          "Boot Light",
+          "Service Due Indicator",
+          "Clock",
+          "Digital Speedometer, Odometer, Tripmeter, Tachometer",
+          "USB Charging Port",
+          "LED Headlight, LED DRLs, LED Taillight, LED Turn Signals",
+          "LCD digital instrument console (optional Bluetooth)",
+          "Under-seat storage & front apron storage (glovebox)",
+          "Carry hook, Passenger backrest, Passenger footrest",
+          "Low Battery Indicator, Low Fuel Indicator, Distance-to-Empty Indicator, Real-time mileage indicator",
+          "Adjustable front telescopic fork, rear hydraulic shock absorber",
+          "Alloy 12-inch wheels, tubeless tyres"
+        ],
+        "description": "The Aprilia SXR 160 is Aprilia’s flagship 160 cc maxi-style scooter for the Indian market. It is powered by a BS6-compliant, air-cooled, single-cylinder 160 cc engine delivering 11.09 PS at 7200 rpm and 12.13 Nm of torque. The scooter features a fully digital LCD console with Bluetooth-enabled readouts, LED headlamp with DRLs, and a single-channel ABS. It offers a blend of sporty design—split LED lights, Y-shaped alloy wheels—and practical storage (under-seat, front apron, USB port). With a claimed fuel efficiency of 35 kmpl and a 7 L fuel tank, the SXR 160 aims to combine premium styling with decent performance for city and highway riding."
+      }
+    },
+    {
+      "make": "Aprilia India",
+      "model": "Aprilia Tuono 660",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "659 cc, liquid-cooled, 2 parallel-twin cylinders (4 valves per cylinder)",
+        "torque": "67 Nm @ 8500 rpm",
+        "mileage": "20.4 kmpl (overall/ARAI claimed)",
+        "features": [
+          "ABS Dual Channel",
+          "DRLs",
+          "Mobile Connectivity Bluetooth",
+          "Riding Modes",
+          "Traction Control",
+          "Cruise Control",
+          "Quick Shifter (bidirectional)",
+          "Navigation (on-board)",
+          "Service Due Indicator",
+          "Digital Speedometer (4.3-inch TFT)",
+          "Call/SMS Alerts",
+          "Wheelie Control, Engine Braking, Engine Maps",
+          "Hazard Warning Lights, Shift Light, Engine Kill Switch",
+          "Fuel Gauge, Distance-to-Empty Indicator",
+          "LED Headlight & Taillight, Turn-Signal LEDs"
+        ],
+        "description": "The Aprilia Tuono 660 is a sports-bike with a semi-fairing, powered by a 659 cc BS6-2.0 liquid-cooled parallel-twin engine delivering 95.17 PS and 67 Nm of torque. It features a 6-speed slipper clutch, bidirectional quick-shifter, multiple riding modes, traction & wheelie control, cruise control, cornering ABS, a 4.3-inch TFT display with Bluetooth-enabled navigation, and LED lighting. The bike weighs 183 kg (kerb), has a 15 L fuel tank, and offers an ARAI-claimed mileage of 20.4 kmpl."
+      }
+    },
+    {
+      "make": "Aprilia India",
+      "model": "Aprilia SR Storm",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "124.49 cc air-cooled single-cylinder (3-valve) engine",
+        "torque": "9.7 Nm @ 6000 rpm",
+        "mileage": "Overall 38.5 kmpl (ARAI claimed)",
+        "features": [
+          "Combi Brake System (CBS)",
+          "Service Due Indicator",
+          "Clock",
+          "LED headlamp, LED taillight & LED turn-signal lamps",
+          "Analogue speedometer (with digital trip-meter, odometer & fuel gauge)",
+          "USB charging port",
+          "Under-seat storage 11 L",
+          "Passenger foot-rest",
+          "Carry hook",
+          "Kick-start + self-start",
+          "Fuel-injection system",
+          "CVT automatic transmission",
+          "Disc front brake, drum rear brake"
+        ],
+        "description": "The Aprilia SR Storm 125 is Aprilia’s entry-level, budget-friendly scooter for the Indian market. Powered by a 124.49 cc air-cooled, 3-valve single-cylinder engine delivering 9.92 PS and 9.7 Nm of torque, it uses a CVT for smooth automatic shifting. The scooter combines sporty styling—block-pattern tyres, bold graphics, and an LED headlamp—with practical features such as a semi-digital console, USB charging, under-seat storage and a combined braking system. While it lacks advanced connectivity options like Bluetooth or smartphone navigation, it offers solid ride comfort, a claimed 38.5 kmpl fuel economy, and a kerb weight of 118 kg."
+      }
+    },
+    {
+      "make": "Aprilia India",
+      "model": "Aprilia SR GT 400",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "features": [],
+        "description": "The Aprilia SR GT 400 is an upcoming model with launch date not yet confirmed. It is expected to be equipped with fuel injection and meet BS6-2.0 emission standards. Pricing, engine specifications, torque, mileage and detailed features are currently unavailable."
+      }
+    },
+    {
+      "make": "Aprilia India",
+      "model": "Aprilia Tuareg 457",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "features": [],
+        "description": "Upcoming adventure-type motorcycle expected to launch by mid-2026 with an expected ex-showroom price of Rs 4.5 – 5.0 lakh."
+      }
+    }
+  ]
+}

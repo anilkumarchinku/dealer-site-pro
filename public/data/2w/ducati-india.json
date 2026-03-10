@@ -1,0 +1,339 @@
+{
+  "brand": "Ducati India",
+  "brandId": "ducati-india",
+  "type": "2w",
+  "vehicles": [
+    {
+      "make": "Ducati India",
+      "model": "Ducati Panigale V4",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "Desmosedici Stradale 90° V4, Counter-rotating Crankshaft, Desmodromic Timing, 4 Valves per Cylinder, Liquid Cooled. 1103 cc. Max Power: 218.99 PS @ 13500 rpm.",
+        "torque": "120.9 Nm @ 11250 rpm",
+        "mileage": "15.38 kmpl",
+        "features": [
+          "Combi Brake System (ABS/CBSC)",
+          "Riding Modes",
+          "Traction Control",
+          "Cruise Control",
+          "Launch Control",
+          "Power Modes",
+          "Quick Shifter",
+          "TFT 6.9-inch Console",
+          "Ducati Wheelie Control (DWC)",
+          "Ducati Slide Control (DSC)"
+        ],
+        "description": "The Ducati Panigale V4 is a 2025 super-sport motorcycle powered by a 1103 cc liquid-cooled Desmosedici Stradale 90° V-4 engine."
+      }
+    },
+    {
+      "make": "Ducati India",
+      "model": "Ducati Streetfighter V4",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "Desmosedici Stradale 90° V4, rearward-rotating crankshaft, 4 desmodromically actuated valves per cylinder, liquid cooled. 1103 cc. Max Power: 214 PS @ 13500 rpm.",
+        "torque": "120 Nm @ 11200 rpm",
+        "mileage": "13.15 kmpl",
+        "features": [
+          "Dual Channel ABS",
+          "DRLs",
+          "Riding Modes",
+          "Traction Control",
+          "Launch Control",
+          "Power Modes",
+          "Quick Shifter",
+          "Wheelie Control",
+          "Slide Control",
+          "Engine Brake Control"
+        ],
+        "description": "The Ducati Streetfighter V4 is powered by a 1103 cc liquid-cooled Desmosedici Stradale V4 engine delivering 214 PS."
+      }
+    },
+    {
+      "make": "Ducati India",
+      "model": "Ducati Monster",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "Testastretta 11°, V2 - 90°, 4 valves per cylinder, desmodromic valvetrain, liquid cooled. 937 cc. Max Power: 111.4 PS @ 9250 rpm.",
+        "torque": "93 Nm @ 6500 rpm",
+        "mileage": "18.9 kmpl",
+        "features": [
+          "Dual Channel ABS",
+          "Charging Point",
+          "DRLs",
+          "Riding Modes",
+          "Traction Control",
+          "Power Modes",
+          "Quick Shifter",
+          "Cornering ABS",
+          "Wheelie Control",
+          "4.3-inch TFT display"
+        ],
+        "description": "The Ducati Monster is a super-naked sports bike powered by a 937 cc liquid-cooled Testastretta 11° V-twin engine."
+      }
+    },
+    {
+      "make": "Ducati India",
+      "model": "Ducati Scrambler 800",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "L-Twin, Desmodromic Distribution, 2 Valves per Cylinder, Air Cooled. 803 cc. Max Power: 74.01 PS @ 8250 rpm.",
+        "torque": "65.2 Nm @ 7000 rpm",
+        "mileage": "19.2 kmpl",
+        "features": [
+          "Single Channel ABS",
+          "Switchable ABS",
+          "Riding Modes",
+          "Traction Control",
+          "Power Modes",
+          "Quick Shifter",
+          "LED Tail Light",
+          "Digital Console"
+        ],
+        "description": "The Ducati Scrambler 800 is powered by an 803 cc air-cooled L-Twin desmodromic engine."
+      }
+    },
+    {
+      "make": "Ducati India",
+      "model": "Ducati Panigale V2",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "90° V2, 4 Valves per Cylinder, Intake Variable Valves Timing System, Liquid Cooled. 890 cc. Max Power: 119.6 PS @ 10,750 rpm.",
+        "torque": "93.3 Nm @ 8,250 rpm",
+        "mileage": "16.6 kmpl",
+        "features": [
+          "Dual Channel ABS",
+          "DRLs",
+          "Bluetooth Connectivity",
+          "Riding Modes",
+          "Traction Control",
+          "Cruise Control",
+          "Power Modes",
+          "Quick Shifter",
+          "Navigation"
+        ],
+        "description": "The Ducati Panigale V2 is powered by a 890 cc liquid-cooled 90° V-twin engine."
+      }
+    },
+    {
+      "make": "Ducati India",
+      "model": "Ducati Diavel V4",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "V4 Granturismo, 4 valves per cylinder, counter-rotating crankshaft, Twin Pulse firing order, liquid cooled. 1158 cc. Max Power: 170.33 PS @ 10,750 rpm.",
+        "torque": "126 Nm @ 7,500 rpm",
+        "mileage": "18.2 kmpl",
+        "features": [
+          "Rear cylinder deactivation",
+          "5\" TFT colour display",
+          "Dual Channel ABS",
+          "Riding Modes",
+          "Traction Control",
+          "Cruise Control",
+          "Launch Control",
+          "Power Modes"
+        ],
+        "description": "The Ducati Diavel V4 is a super-bike/ sports-naked offering a 1158 cc liquid-cooled V4 Granturismo engine."
+      }
+    },
+    {
+      "make": "Ducati India",
+      "model": "Ducati Multistrada V4",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "V4 Granturismo, 90°, 4 valves per cylinder, counter-rotating crankshaft, liquid cooled. 1158 cc. Max Power: 169.9 PS @ 10500 rpm.",
+        "torque": "125 Nm @ 8750 rpm",
+        "mileage": "15.4 kmpl",
+        "features": [
+          "Adaptive Cruise Control",
+          "Blind Spot Detection",
+          "Skyhook Suspension",
+          "Dual Channel ABS",
+          "Riding Modes",
+          "Traction Control",
+          "Power Modes",
+          "Wheelie Control"
+        ],
+        "description": "The Ducati Multistrada V4 is a sports-tourer adventure bike powered by a 1158 cc V4 Granturismo engine."
+      }
+    },
+    {
+      "make": "Ducati India",
+      "model": "Ducati Streetfighter V2",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "90° V2, 4 valves per cylinder, intake variable valve timing system, liquid cooled. 890 cc. Max Power: 155.12 PS @ 10,750 rpm.",
+        "torque": "93.3 Nm @ 8,250 rpm",
+        "mileage": "17 kmpl",
+        "features": [
+          "Dual Channel ABS",
+          "DRLs",
+          "Riding Modes",
+          "Traction Control",
+          "Cruise Control",
+          "Power Modes",
+          "Quick Shifter",
+          "Wheelie Control EVO",
+          "Engine Brake Control"
+        ],
+        "description": "The Ducati Streetfighter V2 is a sports-naked motorcycle powered by a 890 cc liquid-cooled 90° V-twin."
+      }
+    },
+    {
+      "make": "Ducati India",
+      "model": "Ducati XDiavel V4",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "V4 Granturismo, 90°, 4 Valves per Cylinder, Counter-Rotating Crankshaft, Liquid Cooled. 1158 cc. Max Power: 168.59 PS @ 10750 rpm.",
+        "torque": "126 Nm @ 7500 rpm",
+        "features": [
+          "Dual Channel ABS",
+          "DRLs",
+          "Bluetooth Connectivity",
+          "Riding Modes",
+          "Traction Control",
+          "Cruise Control",
+          "Launch Control",
+          "Power Modes",
+          "Quick Shifter"
+        ],
+        "description": "The Ducati XDiavel V4 is a super/naked sport bike powered by a 1158 cc liquid-cooled V4 Granturismo engine."
+      }
+    },
+    {
+      "make": "Ducati India",
+      "model": "Ducati Multistrada V2",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "90° V2, 4 valves per cylinder, Intake Variable Valve Timing System, Liquid Cooled. 890 cc. Max Power: 115.56 PS @ 10,750 rpm.",
+        "torque": "92 Nm @ 8,250 rpm",
+        "features": [
+          "Dual Channel ABS",
+          "DRLs",
+          "Riding Modes: Sports, Touring, Urban, Enduro",
+          "Traction Control",
+          "Cruise Control",
+          "Power Modes",
+          "Quick Shifter",
+          "Wheelie Control"
+        ],
+        "description": "The Ducati Multistrada V2 is powered by a 890 cc liquid-cooled V-twin engine."
+      }
+    },
+    {
+      "make": "Ducati India",
+      "model": "Ducati SuperSport 950",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "Testastretta 11°, L-Twin cylinder, 4 valve per cylinder, Desmodromic, liquid cooled. 937 cc. Max Power: 110.1 PS @ 9000 rpm.",
+        "torque": "93 Nm @ 6500 rpm",
+        "mileage": "17 kmpl",
+        "features": [
+          "Dual Channel ABS",
+          "DRLs",
+          "Riding Modes",
+          "Traction Control",
+          "Power Modes",
+          "Adjustable Windshield",
+          "Wheelie Control",
+          "LED Tail Light"
+        ],
+        "description": "The Ducati SuperSport 950 is a sports bike powered by a 937 cc liquid-cooled Testastretta 11° L-Twin engine."
+      }
+    },
+    {
+      "make": "Ducati India",
+      "model": "Ducati Hypermotard 950",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "Testastretta 11°, L-Twin cylinder, 4 valve per cylinder, Desmodromic, liquid cooled. 937 cc. Max Power: 114.2 PS @ 9000 rpm.",
+        "torque": "96 Nm @ 7250 rpm",
+        "mileage": "19.6 kmpl",
+        "features": [
+          "Dual Channel ABS",
+          "DRLs",
+          "Bluetooth Connectivity",
+          "Riding Modes",
+          "Traction Control",
+          "Power Modes",
+          "Quick Shifter",
+          "Ducati Wheelie Control",
+          "Ducati Slide-by-Brake"
+        ],
+        "description": "The Ducati Hypermotard 950 is powered by a 937 cc liquid-cooled Testastretta 11° L-twin engine."
+      }
+    },
+    {
+      "make": "Ducati India",
+      "model": "Ducati DesertX",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "11° Twin-Cylinder, Desmodromic Valvetrain, 4 Valves Per Cylinder, Liquid Cooled. 937 cc. Max Power: 111.52 PS @ 9250 rpm.",
+        "torque": "92 Nm @ 6500 rpm",
+        "mileage": "17.8 kmpl",
+        "features": [
+          "Dual Channel ABS",
+          "DRLs",
+          "Riding Modes",
+          "Traction Control",
+          "Power Modes",
+          "Quick Shifter",
+          "Adjustable Windshield",
+          "5-inch TFT Colour Display",
+          "Engine Brake Control"
+        ],
+        "description": "The Ducati DesertX is an adventure-tourer/off-road motorcycle powered by a 937 cc liquid-cooled 11° twin-cylinder engine."
+      }
+    },
+    {
+      "make": "Ducati India",
+      "model": "Ducati Hypermotard 698 Mono",
+      "status": "Available",
+      "price": null,
+      "colors": [],
+      "specifications": {
+        "engine_details": "Superquadro Mono, single-cylinder, 4 valves per cylinder, Desmodromic timing, liquid cooled. 659 cc. Max Power: 77.4 PS @ 9750 rpm.",
+        "torque": "63 Nm @ 8000 rpm",
+        "mileage": "20.8 kmpl",
+        "features": [
+          "Dual Channel ABS",
+          "DRLs",
+          "Riding Modes",
+          "Traction Control",
+          "Launch Control",
+          "Power Modes",
+          "Quick Shifter",
+          "Ducati Wheelie Control",
+          "Engine Brake Control"
+        ],
+        "description": "The Ducati Hypermotard 698 Mono is powered by a 659 cc liquid-cooled single-cylinder Superquadro Mono engine."
+      }
+    }
+  ]
+}

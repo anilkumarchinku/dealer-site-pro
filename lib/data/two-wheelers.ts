@@ -7,6 +7,7 @@
 import type { TwoWheelerVehicle, TwoWheelerType, TwoWheelerFuelType } from '@/lib/types/two-wheeler'
 import brandData from '@/lib/data/brand-models.json'
 import { brandNameToId, modelToSlug } from '@/lib/utils/brand-model-images'
+import { getModelEnrichment } from '@/lib/data/2w-brand-data'
 
 const NOW = new Date().toISOString()
 
@@ -32,33 +33,37 @@ function buildTwoWheelerEntry(
     const fuelType: TwoWheelerFuelType = type === 'electric' ? 'electric' : 'petrol'
     const slug = modelToSlug(model)
     const imageUrl = `/data/brand-model-images/2w/${brandId}/${slug}.jpg`
+
+    // Try to enrich from public/data/2w/*.json files
+    const enrichment = getModelEnrichment(brandId, model)
+
     return {
         id:                      `catalog-2w-${brandId}-${idx}`,
         dealer_id:               dealerId,
         type,
         brand,
         model,
-        variant:                 null,
+        variant:                 enrichment?.variant ?? null,
         year:                    2024,
         fuel_type:               fuelType,
-        engine_cc:               null,
-        battery_kwh:             null,
-        range_km:                null,
+        engine_cc:               enrichment?.engine_cc ?? null,
+        battery_kwh:             enrichment?.battery_kwh ?? null,
+        range_km:                enrichment?.range_km ?? null,
         charging_time_hours:     null,
         battery_warranty_years:  null,
-        top_speed_kmph:          null,
-        mileage_kmpl:            null,
-        ex_showroom_price_paise: 0,
+        top_speed_kmph:          enrichment?.top_speed_kmph ?? null,
+        mileage_kmpl:            enrichment?.mileage_kmpl ?? null,
+        ex_showroom_price_paise: enrichment?.ex_showroom_price_paise ?? 0,
         on_road_price_paise:     null,
         emi_starting_paise:      null,
         stock_status:            'available',
-        colors:                  [],
+        colors:                  enrichment?.colors ?? [],
         images:                  [imageUrl],
         brochure_url:            null,
         bs6_compliant:           true,
-        fame_subsidy_eligible:   false,
-        description:             null,
-        features:                [],
+        fame_subsidy_eligible:   fuelType === 'electric',
+        description:             enrichment?.description ?? null,
+        features:                enrichment?.features ?? [],
         status:                  'active',
         views:                   0,
         created_at:              NOW,
