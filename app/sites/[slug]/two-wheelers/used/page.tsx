@@ -1,5 +1,6 @@
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { getUsedTwoWheelers } from '@/lib/db/two-wheelers'
+import { TWO_WHEELER_BRANDS } from '@/lib/data/two-wheelers'
 import { notFound } from 'next/navigation'
 import { brandNameToId } from '@/lib/utils/brand-model-images'
 import { ModernTemplate } from '@/components/templates/ModernTemplate'
@@ -61,7 +62,9 @@ export default async function UsedTwoWheelersPage({ params }: Props) {
     const { vehicles: usedVehicles } = await getUsedTwoWheelers(dealer.id, { pageSize: 100, sortBy: 'newest' })
     const cars = usedTwoWheelersToCars(usedVehicles)
 
-    const primaryBrand = dealer.brands[0] ?? null
+    // Filter to 2W brands only — dealer.brands contains all vehicle types unfiltered
+    const brands2w = dealer.brands.filter(b => TWO_WHEELER_BRANDS.includes(b))
+    const primaryBrand = brands2w[0] ?? dealer.brands[0] ?? null
     const brandId = primaryBrand ? brandNameToId(primaryBrand, '2w') : null
     const brandLogoUrl = dealer.logo_url ?? (brandId ? `/data/brand-logos/${brandId}.png` : undefined)
 

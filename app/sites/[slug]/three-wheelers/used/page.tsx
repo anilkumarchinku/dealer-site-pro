@@ -1,5 +1,6 @@
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { getUsedThreeWheelers } from '@/lib/db/three-wheelers'
+import { THREE_WHEELER_BRANDS } from '@/lib/data/three-wheelers'
 import { notFound } from 'next/navigation'
 import { brandNameToId } from '@/lib/utils/brand-model-images'
 import { ModernTemplate } from '@/components/templates/ModernTemplate'
@@ -63,7 +64,9 @@ export default async function UsedThreeWheelersPage({ params }: Props) {
     const { vehicles: usedVehicles } = await getUsedThreeWheelers(dealer.id, { pageSize: 100, sortBy: 'newest' })
     const cars = usedThreeWheelersToCars(usedVehicles)
 
-    const primaryBrand = dealer.brands[0] ?? null
+    // Filter to 3W brands only — dealer.brands contains all vehicle types unfiltered
+    const brands3w = dealer.brands.filter(b => THREE_WHEELER_BRANDS.includes(b))
+    const primaryBrand = brands3w[0] ?? dealer.brands[0] ?? null
     const brandId = primaryBrand ? brandNameToId(primaryBrand, '3w') : null
     const brandLogoUrl = dealer.logo_url ?? (brandId ? `/data/brand-logos/${brandId}.png` : undefined)
 

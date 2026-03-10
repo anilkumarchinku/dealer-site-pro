@@ -494,11 +494,12 @@ export default async function SitePage({ params }: SitePageProps) {
     }
 
     // ── Brand name & logo ─────────────────────────────────────────────────────
-    // New-car sites use OEM brand name + brand logo (no uploaded logo)
-    // Used-car sites use Bentley colour palette + uploaded dealer logo
+    // Dealer's uploaded logo always takes priority.
+    // Fallback: brand logo from /data/brand-logos/<brand-id>.png
     const isUsedSite = templateSellsUsed && !templateSellsNew
     const brandName = isUsedSite ? 'Bentley' : (brandFilter ?? brands[0] ?? dealer.dealership_name)
-    const logoUrl = isUsedSite ? (logo_url ?? undefined) : undefined
+    const _brandLogoId = brandName.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+    const logoUrl = logo_url ?? `/data/brand-logos/${_brandLogoId}.png`
 
     const contactInfo = {
         phone: dealer.phone,
