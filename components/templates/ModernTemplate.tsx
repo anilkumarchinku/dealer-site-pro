@@ -181,8 +181,7 @@ export function ModernTemplate({
         <div className="min-h-screen bg-white font-sans text-gray-900">
             {/* Navigation */}
             <nav
-                className={`fixed ${previewMode ? 'top-12' : 'top-0'} left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-                    }`}
+                className={`fixed ${previewMode ? 'top-12' : 'top-0'} left-0 right-0 z-50 transition-all duration-300 bg-white ${isScrolled ? 'shadow-lg' : 'shadow-sm border-b border-gray-100'}`}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
@@ -198,7 +197,7 @@ export function ModernTemplate({
                                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                                 />
                             </div>
-                            <span className={`text-xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+                            <span className="text-xl font-bold text-gray-900">
                                 {dealerName}
                             </span>
                         </div>
@@ -207,50 +206,40 @@ export function ModernTemplate({
                         <div className="hidden md:flex items-center gap-6">
                             <button
                                 onClick={() => setActiveTab('home')}
-                                className={`font-medium transition-colors ${activeTab === 'home'
-                                        ? isScrolled ? 'text-gray-900' : 'text-white'
-                                        : isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'
-                                    }`}
+                                className="font-medium transition-colors text-gray-600 hover:text-gray-900"
                                 style={activeTab === 'home' ? { color: brandColors.primary } : {}}
                             >
                                 {t('home', locale)}
                             </button>
                             <button
                                 onClick={() => setActiveTab('inventory')}
-                                className={`font-medium transition-colors ${activeTab === 'inventory'
-                                        ? isScrolled ? 'text-gray-900' : 'text-white'
-                                        : isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'
-                                    }`}
+                                className="font-medium transition-colors text-gray-600 hover:text-gray-900"
                                 style={activeTab === 'inventory' ? { color: brandColors.primary } : {}}
                             >
                                 {t('inventory', locale)}
                             </button>
-                            <a
-                                href="#contact"
-                                className={`font-medium transition-colors ${isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'
-                                    }`}
-                            >
+                            <a href="#contact" className="font-medium transition-colors text-gray-600 hover:text-gray-900">
                                 {t('contact', locale)}
                             </a>
                             <button
                                 onClick={() => setNavEMIOpen(true)}
-                                className={`font-medium transition-colors text-sm ${isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}
+                                className="font-medium transition-colors text-sm text-gray-600 hover:text-gray-900"
                             >
                                 EMI Calc
                             </button>
-                            <a href="#exchange-section" className={`font-medium transition-colors text-sm ${isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}>Exchange</a>
-                            <a href="#finance-section" className={`font-medium transition-colors text-sm ${isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}>Finance</a>
-                            <a href="#service-section" className={`font-medium transition-colors text-sm ${isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}>Service</a>
-                            <a href="#trust-section" className={`font-medium transition-colors text-sm ${isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}>Trust Us</a>
+                            <a href="#exchange-section" className="font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Exchange</a>
+                            <a href="#finance-section" className="font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Finance</a>
+                            <a href="#service-section" className="font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Service</a>
+                            <a href="#trust-section" className="font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Trust Us</a>
                         </div>
 
                         {/* CTA Buttons */}
                         <div className="flex items-center gap-2">
-                            <LanguageToggle locale={locale} onChange={setLocale} variant={isScrolled ? 'light' : 'dark'} />
+                            <LanguageToggle locale={locale} onChange={setLocale} variant="light" />
                             <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandColors.primary} />
                             <Button
                                 variant="outline"
-                                className={`hidden sm:flex bg-transparent ${isScrolled ? 'text-gray-700 border-gray-300 hover:bg-gray-100' : 'text-white border-white/40 hover:bg-white/10'}`}
+                                className="hidden sm:flex bg-transparent text-gray-700 border-gray-300 hover:bg-gray-100"
                                 onClick={() => setEnquireSidebarOpen(true)}
                             >
                                 <MessageSquare className="w-4 h-4 mr-2" />
@@ -267,8 +256,7 @@ export function ModernTemplate({
                                 </a>
                             </Button>
                             <button
-                                className="md:hidden p-2 rounded-lg transition-colors"
-                                style={{ color: isScrolled ? '#111827' : '#ffffff' }}
+                                className="md:hidden p-2 rounded-lg transition-colors text-gray-900"
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Toggle navigation menu"
                             >
