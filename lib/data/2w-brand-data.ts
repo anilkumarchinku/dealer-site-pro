@@ -74,6 +74,10 @@ let apriliaData: any = null
 let bmwData: any = null
 let benelliData: any = null
 let ducatiData: any = null
+let heroData: any = null
+let indianData: any = null
+let kawasakiData: any = null
+let okinawaData: any = null
 
 try { hondaData = require('@/../public/data/2w/honda.json') } catch { /* empty */ }
 try { revoltData = require('@/../public/data/2w/revolt-motors.json') } catch { /* empty */ }
@@ -81,9 +85,14 @@ try { apriliaData = require('@/../public/data/2w/aprilia-india.json') } catch { 
 try { bmwData = require('@/../public/data/2w/bmw-motorrad-india.json') } catch { /* empty */ }
 try { benelliData = require('@/../public/data/2w/benelli-india.json') } catch { /* empty */ }
 try { ducatiData = require('@/../public/data/2w/ducati-india.json') } catch { /* empty */ }
+try { heroData = require('@/../public/data/2w/hero-motocorp.json') } catch { /* empty */ }
+try { indianData = require('@/../public/data/2w/indian-motorcycle.json') } catch { /* empty */ }
+try { kawasakiData = require('@/../public/data/2w/kawasaki-india.json') } catch { /* empty */ }
+try { okinawaData = require('@/../public/data/2w/okinawa-autotech.json') } catch { /* empty */ }
 
 const ALL_BRAND_FILES: any[] = [
-    hondaData, revoltData, apriliaData, bmwData, benelliData, ducatiData
+    hondaData, revoltData, apriliaData, bmwData, benelliData, ducatiData,
+    heroData, indianData, kawasakiData, okinawaData
 ].filter(Boolean)
 /* eslint-enable @typescript-eslint/no-explicit-any */
 

@@ -2,5 +2,188 @@
   "brand": "Kawasaki India",
   "brandId": "kawasaki-india",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 500",
+      "model_citation": "https://www.bikedekho.com/kawasaki/ninja-500",
+      "status": "Available",
+      "status_citation": "https://www.bikedekho.com/kawasaki/ninja-500",
+      "variants": [
+        {
+          "variant_name": "Kawasaki Ninja 500 ABS",
+          "variant_name_citation": "https://www.bikedekho.com/kawasaki/ninja-500/variants",
+          "price": "₹5,24,000",
+          "price_citation": "https://www.bikedekho.com/kawasaki/ninja-500/variants",
+          "colors": [
+            {
+              "value": "Lime Green / Ebony",
+              "value_citation": "https://www.bikedekho.com/kawasaki/ninja-500/colors"
+            },
+            {
+              "value": "Metallic Flat Spark Black / Metallic Matte Carbon Gray",
+              "value_citation": "https://www.bikedekho.com/kawasaki/ninja-500/colors"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Liquid-cooled, 4-stroke, parallel-twin",
+              "Displacement": "451 cc",
+              "Max Torque": "42.6 Nm @ 6000 rpm",
+              "No. of Cylinders": "2",
+              "Cooling System": "Liquid-cooled",
+              "Valve Per Cylinder": "4",
+              "Starting": "Electric",
+              "Fuel Supply": "Fuel Injection",
+              "Clutch": "Wet, Multi-plate, Assist & Slipper",
+              "Gear Box": "6 Speed",
+              "Bore": "70 mm",
+              "Stroke": "58.6 mm",
+              "Compression Ratio": "11.3:1",
+              "Emission Type": "BS6",
+              "Gear Shifting Pattern": "1 Down 5 Up",
+              "Spark Plugs": "2 Per Cylinder"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Sports Bikes",
+              "Body Graphics": "Yes"
+            },
+            "dimensions_and_capacity": {
+              "Width": "725 mm",
+              "Length": "1995 mm",
+              "Height": "1120 mm",
+              "Fuel Capacity": "14 L",
+              "Fuel Reserve": "2.5 L",
+              "Saddle Height": "785 mm",
+              "Ground Clearance": "145 mm",
+              "Wheelbase": "1370 mm",
+              "Kerb Weight": "171 kg",
+              "Pillion Seat": "Yes",
+              "Pillion Grab Rail": "Yes"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED",
+              "Turn Signal Lamp": "LED",
+              "Low Oil Indicator": "Yes",
+              "Low Fuel Indicator": "Yes",
+              "Distance to Empty Indicator": "Yes",
+              "Average Fuel economy Indicator": "Yes"
+            },
+            "tyres_and_brakes": {
+              "Front Brake Diameter": "290 mm",
+              "Rear Brake Diameter": "220 mm",
+              "Radial Tyre": "Yes",
+              "Front Tyre Pressure (Rider)": "29 psi",
+              "Front Tyre Pressure (Rider & Pillion)": "29 psi",
+              "Rear Tyre Pressure (Rider)": "32 psi",
+              "Rear Tyre Pressure (Rider & Pillion)": "32 psi"
+            },
+            "performance_and_features": {
+              "Instrument Console": "Digital",
+              "Speedometer": "Digital",
+              "Tripmeter": "Digital",
+              "Odometer": "Digital",
+              "Additional Features Of Variant": "ABS",
+              "Seat Type": "Split",
+              "Body Graphics": "Yes",
+              "Clock": "Yes",
+              "Passenger Footrest": "Yes",
+              "Average Fuel economy Indicator": "Yes",
+              "Distance to Empty Indicator": "Yes"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-4R",
+      "model_citation": "https://www.bikedekho.com/kawasaki/ninja-zx-4r",
+      "status": "Available",
+      "status_citation": "https://www.bikedekho.com/kawasaki/ninja-zx-4r",
+      "variants": [
+        {
+          "variant_name": "Kawasaki Ninja ZX-4R ABS",
+          "variant_name_citation": "https://www.bikedekho.com/kawasaki/ninja-zx-4r/variants",
+          "price": "₹9,10,000",
+          "price_citation": "https://www.bikedekho.com/kawasaki/ninja-zx-4r/variants",
+          "colors": [
+            {
+              "value": "Lime Green",
+              "value_citation": "https://www.bikedekho.com/kawasaki/ninja-zx-4r/colors"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Liquid-cooled, 4-stroke, inline-four",
+              "Displacement": "399 cc",
+              "Max Torque": "37.8 Nm @ 9000 rpm",
+              "No. of Cylinders": "4",
+              "Cooling System": "Liquid-cooled",
+              "Valve Per Cylinder": "4",
+              "Starting": "Electric",
+              "Fuel Supply": "Fuel Injection",
+              "Clutch": "Wet, Multi-plate, Assist & Slipper",
+              "Gear Box": "6 Speed",
+              "Bore": "57 mm",
+              "Stroke": "39.2 mm",
+              "Compression Ratio": "12.3:1",
+              "Emission Type": "BS6",
+              "Gear Shifting Pattern": "1 Down 5 Up",
+              "Spark Plugs": "2 Per Cylinder"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Sports Bikes",
+              "Body Graphics": "Yes"
+            },
+            "dimensions_and_capacity": {
+              "Width": "765 mm",
+              "Length": "2020 mm",
+              "Height": "1110 mm",
+              "Fuel Capacity": "15 L",
+              "Fuel Reserve": "3.5 L",
+              "Saddle Height": "800 mm",
+              "Ground Clearance": "130 mm",
+              "Wheelbase": "1385 mm",
+              "Kerb Weight": "188 kg",
+              "Pillion Seat": "Yes",
+              "Pillion Grab Rail": "Yes"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED",
+              "Turn Signal Lamp": "LED",
+              "Low Oil Indicator": "Yes",
+              "Low Fuel Indicator": "Yes",
+              "Distance to Empty Indicator": "Yes",
+              "Average Fuel economy Indicator": "Yes"
+            },
+            "tyres_and_brakes": {
+              "Front Brake Diameter": "290 mm",
+              "Rear Brake Diameter": "220 mm",
+              "Radial Tyre": "Yes",
+              "Front Tyre Pressure (Rider)": "29 psi",
+              "Front Tyre Pressure (Rider & Pillion)": "29 psi",
+              "Rear Tyre Pressure (Rider)": "32 psi",
+              "Rear Tyre Pressure (Rider & Pillion)": "32 psi"
+            },
+            "performance_and_features": {
+              "Instrument Console": "Digital",
+              "Speedometer": "Digital",
+              "Tripmeter": "Digital",
+              "Odometer": "Digital",
+              "Additional Features Of Variant": "ABS",
+              "Seat Type": "Split",
+              "Body Graphics": "Yes",
+              "Clock": "Yes",
+              "Passenger Footrest": "Yes",
+              "Average Fuel economy Indicator": "Yes",
+              "Distance to Empty Indicator": "Yes"
+            }
+          }
+        }
+      ]
+    }
+  ]
 }

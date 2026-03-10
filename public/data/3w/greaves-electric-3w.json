@@ -1,23 +1,28 @@
-[
-  {
-    "make": "Greaves Electric Mobility",
-    "model": "Eltra City XTRA",
-    "category": "cargo",
-    "status": "Available",
-    "variants": []
-  },
-  {
-    "make": "Greaves Electric Mobility",
-    "model": "Xargo",
-    "category": "cargo",
-    "status": "Available",
-    "variants": []
-  },
-  {
-    "make": "Greaves Electric Mobility",
-    "model": "Eltra City",
-    "category": "passenger",
-    "status": "Available",
-    "variants": []
-  }
-]
+{
+  "brand": "Greaves Electric Mobility",
+  "brandId": "greaves-electric-3w",
+  "type": "3w",
+  "vehicles": [
+    {
+      "make": "Greaves Electric Mobility",
+      "model": "Eltra City XTRA",
+      "category": "cargo",
+      "status": "Available",
+      "variants": []
+    },
+    {
+      "make": "Greaves Electric Mobility",
+      "model": "Xargo",
+      "category": "cargo",
+      "status": "Available",
+      "variants": []
+    },
+    {
+      "make": "Greaves Electric Mobility",
+      "model": "Eltra City",
+      "category": "passenger",
+      "status": "Available",
+      "variants": []
+    }
+  ]
+}

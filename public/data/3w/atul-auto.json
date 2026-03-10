@@ -1,4 +1,7 @@
 {
+  "brand": "Atul Auto",
+  "brandId": "atul-auto",
+  "type": "3w",
   "vehicles": [
     {
       "model_name": "Atul Shakti Cargo",

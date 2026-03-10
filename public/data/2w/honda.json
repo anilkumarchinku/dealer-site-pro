@@ -1,4 +1,7 @@
 {
+  "brand": "Honda Motorcycle & Scooter India",
+  "brandId": "honda-hmsi",
+  "type": "2w",
   "vehicles": [
     {
       "make": "Honda",

@@ -1,192 +1,197 @@
-[
-  {
-    "make": "Okinawa",
-    "model": "PraisePro",
-    "model_citation": "https://www.bikedekho.com/okinawa/praisepro",
-    "status": "Available",
-    "status_citation": "https://www.bikedekho.com/okinawa/praisepro",
-    "variants": [
-      {
-        "variant_name": "Okinawa PraisePro",
-        "variant_name_citation": "https://www.bikedekho.com/okinawa/praisepro/variants",
-        "price": "₹1,06,456",
-        "price_citation": "https://www.bikedekho.com/okinawa/praisepro/variants",
-        "colors": [
-          {
-            "value": "Gloss Black",
-            "value_citation": "https://www.bikedekho.com/okinawa/praisepro/colors"
-          },
-          {
-            "value": "Sparkle Blue",
-            "value_citation": "https://www.bikedekho.com/okinawa/praisepro/colors"
-          },
-          {
-            "value": "Gloss Red",
-            "value_citation": "https://www.bikedekho.com/okinawa/praisepro/colors"
-          }
-        ],
-        "technical_specifications": {
-          "engine_and_transmission": {
-            "Engine Type": "BLDC",
-            "Displacement": "Not Applicable",
-            "Max Torque": "Not Applicable",
-            "No. of Cylinders": "Not Applicable",
-            "Cooling System": "Not Applicable",
-            "Valve Per Cylinder": "Not Applicable",
-            "Starting": "Electric",
-            "Fuel Supply": "Not Applicable",
-            "Clutch": "Not Applicable",
-            "Gear Box": "Not Applicable",
-            "Bore": "Not Applicable",
-            "Stroke": "Not Applicable",
-            "Compression Ratio": "Not Applicable",
-            "Emission Type": "Not Applicable",
-            "Gear Shifting Pattern": "Not Applicable",
-            "Spark Plugs": "Not Applicable"
-          },
-          "chassis_and_suspension": {
-            "Body Type": "Scooter",
-            "Body Graphics": "Yes"
-          },
-          "dimensions_and_capacity": {
-            "Width": "690 mm",
-            "Length": "1970 mm",
-            "Height": "1160 mm",
-            "Fuel Capacity": "Not Applicable",
-            "Fuel Reserve": "Not Applicable",
-            "Saddle Height": "770 mm",
-            "Ground Clearance": "150 mm",
-            "Wheelbase": "1340 mm",
-            "Kerb Weight": "118 kg",
-            "Pillion Seat": "Yes",
-            "Pillion Grab Rail": "Yes"
-          },
-          "electricals": {
-            "Headlight": "LED",
-            "Taillight": "LED",
-            "Turn Signal Lamp": "LED",
-            "Low Oil Indicator": "No",
-            "Low Fuel Indicator": "No",
-            "Distance to Empty Indicator": "Yes",
-            "Average Fuel economy Indicator": "Yes"
-          },
-          "tyres_and_brakes": {
-            "Front Brake Diameter": "240 mm",
-            "Rear Brake Diameter": "220 mm",
-            "Radial Tyre": "No",
-            "Front Tyre Pressure (Rider)": "Not Applicable",
-            "Front Tyre Pressure (Rider & Pillion)": "Not Applicable",
-            "Rear Tyre Pressure (Rider)": "Not Applicable",
-            "Rear Tyre Pressure (Rider & Pillion)": "Not Applicable"
-          },
-          "performance_and_features": {
-            "Instrument Console": "Digital",
-            "Speedometer": "Digital",
-            "Tripmeter": "Digital",
-            "Odometer": "Digital",
-            "Additional Features Of Variant": "ABS",
-            "Seat Type": "Split",
-            "Body Graphics": "Yes",
-            "Clock": "Yes",
-            "Passenger Footrest": "Yes",
-            "Average Fuel economy Indicator": "Yes",
-            "Distance to Empty Indicator": "Yes"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "make": "Okinawa",
-    "model": "Okhi-90",
-    "model_citation": "https://www.bikedekho.com/okinawa/okhi-90",
-    "status": "Available",
-    "status_citation": "https://www.bikedekho.com/okinawa/okhi-90",
-    "variants": [
-      {
-        "variant_name": "Okinawa Okhi-90",
-        "variant_name_citation": "https://www.bikedekho.com/okinawa/okhi-90/variants",
-        "price": "₹1,21,866",
-        "price_citation": "https://www.bikedekho.com/okinawa/okhi-90/variants",
-        "colors": [
-          {
-            "value": "Gloss Black",
-            "value_citation": "https://www.bikedekho.com/okinawa/okhi-90/colors"
-          },
-          {
-            "value": "Pearl White",
-            "value_citation": "https://www.bikedekho.com/okinawa/okhi-90/colors"
-          }
-        ],
-        "technical_specifications": {
-          "engine_and_transmission": {
-            "Engine Type": "BLDC",
-            "Displacement": "Not Applicable",
-            "Max Torque": "Not Applicable",
-            "No. of Cylinders": "Not Applicable",
-            "Cooling System": "Not Applicable",
-            "Valve Per Cylinder": "Not Applicable",
-            "Starting": "Electric",
-            "Fuel Supply": "Not Applicable",
-            "Clutch": "Not Applicable",
-            "Gear Box": "Not Applicable",
-            "Bore": "Not Applicable",
-            "Stroke": "Not Applicable",
-            "Compression Ratio": "Not Applicable",
-            "Emission Type": "Not Applicable",
-            "Gear Shifting Pattern": "Not Applicable",
-            "Spark Plugs": "Not Applicable"
-          },
-          "chassis_and_suspension": {
-            "Body Type": "Scooter",
-            "Body Graphics": "Yes"
-          },
-          "dimensions_and_capacity": {
-            "Width": "735 mm",
-            "Length": "2015 mm",
-            "Height": "1150 mm",
-            "Fuel Capacity": "Not Applicable",
-            "Fuel Reserve": "Not Applicable",
-            "Saddle Height": "790 mm",
-            "Ground Clearance": "160 mm",
-            "Wheelbase": "1385 mm",
-            "Kerb Weight": "150 kg",
-            "Pillion Seat": "Yes",
-            "Pillion Grab Rail": "Yes"
-          },
-          "electricals": {
-            "Headlight": "LED",
-            "Taillight": "LED",
-            "Turn Signal Lamp": "LED",
-            "Low Oil Indicator": "No",
-            "Low Fuel Indicator": "No",
-            "Distance to Empty Indicator": "Yes",
-            "Average Fuel economy Indicator": "Yes"
-          },
-          "tyres_and_brakes": {
-            "Front Brake Diameter": "240 mm",
-            "Rear Brake Diameter": "220 mm",
-            "Radial Tyre": "No",
-            "Front Tyre Pressure (Rider)": "Not Applicable",
-            "Front Tyre Pressure (Rider & Pillion)": "Not Applicable",
-            "Rear Tyre Pressure (Rider)": "Not Applicable",
-            "Rear Tyre Pressure (Rider & Pillion)": "Not Applicable"
-          },
-          "performance_and_features": {
-            "Instrument Console": "Digital",
-            "Speedometer": "Digital",
-            "Tripmeter": "Digital",
-            "Odometer": "Digital",
-            "Additional Features Of Variant": "ABS",
-            "Seat Type": "Split",
-            "Body Graphics": "Yes",
-            "Clock": "Yes",
-            "Passenger Footrest": "Yes",
-            "Average Fuel economy Indicator": "Yes",
-            "Distance to Empty Indicator": "Yes"
+{
+  "brand": "Okinawa Autotech",
+  "brandId": "okinawa-autotech",
+  "type": "2w",
+  "vehicles": [
+    {
+      "make": "Okinawa",
+      "model": "PraisePro",
+      "model_citation": "https://www.bikedekho.com/okinawa/praisepro",
+      "status": "Available",
+      "status_citation": "https://www.bikedekho.com/okinawa/praisepro",
+      "variants": [
+        {
+          "variant_name": "Okinawa PraisePro",
+          "variant_name_citation": "https://www.bikedekho.com/okinawa/praisepro/variants",
+          "price": "₹1,06,456",
+          "price_citation": "https://www.bikedekho.com/okinawa/praisepro/variants",
+          "colors": [
+            {
+              "value": "Gloss Black",
+              "value_citation": "https://www.bikedekho.com/okinawa/praisepro/colors"
+            },
+            {
+              "value": "Sparkle Blue",
+              "value_citation": "https://www.bikedekho.com/okinawa/praisepro/colors"
+            },
+            {
+              "value": "Gloss Red",
+              "value_citation": "https://www.bikedekho.com/okinawa/praisepro/colors"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "BLDC",
+              "Displacement": "Not Applicable",
+              "Max Torque": "Not Applicable",
+              "No. of Cylinders": "Not Applicable",
+              "Cooling System": "Not Applicable",
+              "Valve Per Cylinder": "Not Applicable",
+              "Starting": "Electric",
+              "Fuel Supply": "Not Applicable",
+              "Clutch": "Not Applicable",
+              "Gear Box": "Not Applicable",
+              "Bore": "Not Applicable",
+              "Stroke": "Not Applicable",
+              "Compression Ratio": "Not Applicable",
+              "Emission Type": "Not Applicable",
+              "Gear Shifting Pattern": "Not Applicable",
+              "Spark Plugs": "Not Applicable"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Scooter",
+              "Body Graphics": "Yes"
+            },
+            "dimensions_and_capacity": {
+              "Width": "690 mm",
+              "Length": "1970 mm",
+              "Height": "1160 mm",
+              "Fuel Capacity": "Not Applicable",
+              "Fuel Reserve": "Not Applicable",
+              "Saddle Height": "770 mm",
+              "Ground Clearance": "150 mm",
+              "Wheelbase": "1340 mm",
+              "Kerb Weight": "118 kg",
+              "Pillion Seat": "Yes",
+              "Pillion Grab Rail": "Yes"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED",
+              "Turn Signal Lamp": "LED",
+              "Low Oil Indicator": "No",
+              "Low Fuel Indicator": "No",
+              "Distance to Empty Indicator": "Yes",
+              "Average Fuel economy Indicator": "Yes"
+            },
+            "tyres_and_brakes": {
+              "Front Brake Diameter": "240 mm",
+              "Rear Brake Diameter": "220 mm",
+              "Radial Tyre": "No",
+              "Front Tyre Pressure (Rider)": "Not Applicable",
+              "Front Tyre Pressure (Rider & Pillion)": "Not Applicable",
+              "Rear Tyre Pressure (Rider)": "Not Applicable",
+              "Rear Tyre Pressure (Rider & Pillion)": "Not Applicable"
+            },
+            "performance_and_features": {
+              "Instrument Console": "Digital",
+              "Speedometer": "Digital",
+              "Tripmeter": "Digital",
+              "Odometer": "Digital",
+              "Additional Features Of Variant": "ABS",
+              "Seat Type": "Split",
+              "Body Graphics": "Yes",
+              "Clock": "Yes",
+              "Passenger Footrest": "Yes",
+              "Average Fuel economy Indicator": "Yes",
+              "Distance to Empty Indicator": "Yes"
+            }
           }
         }
-      }
-    ]
-  }
-]
+      ]
+    },
+    {
+      "make": "Okinawa",
+      "model": "Okhi-90",
+      "model_citation": "https://www.bikedekho.com/okinawa/okhi-90",
+      "status": "Available",
+      "status_citation": "https://www.bikedekho.com/okinawa/okhi-90",
+      "variants": [
+        {
+          "variant_name": "Okinawa Okhi-90",
+          "variant_name_citation": "https://www.bikedekho.com/okinawa/okhi-90/variants",
+          "price": "₹1,21,866",
+          "price_citation": "https://www.bikedekho.com/okinawa/okhi-90/variants",
+          "colors": [
+            {
+              "value": "Gloss Black",
+              "value_citation": "https://www.bikedekho.com/okinawa/okhi-90/colors"
+            },
+            {
+              "value": "Pearl White",
+              "value_citation": "https://www.bikedekho.com/okinawa/okhi-90/colors"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "BLDC",
+              "Displacement": "Not Applicable",
+              "Max Torque": "Not Applicable",
+              "No. of Cylinders": "Not Applicable",
+              "Cooling System": "Not Applicable",
+              "Valve Per Cylinder": "Not Applicable",
+              "Starting": "Electric",
+              "Fuel Supply": "Not Applicable",
+              "Clutch": "Not Applicable",
+              "Gear Box": "Not Applicable",
+              "Bore": "Not Applicable",
+              "Stroke": "Not Applicable",
+              "Compression Ratio": "Not Applicable",
+              "Emission Type": "Not Applicable",
+              "Gear Shifting Pattern": "Not Applicable",
+              "Spark Plugs": "Not Applicable"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Scooter",
+              "Body Graphics": "Yes"
+            },
+            "dimensions_and_capacity": {
+              "Width": "735 mm",
+              "Length": "2015 mm",
+              "Height": "1150 mm",
+              "Fuel Capacity": "Not Applicable",
+              "Fuel Reserve": "Not Applicable",
+              "Saddle Height": "790 mm",
+              "Ground Clearance": "160 mm",
+              "Wheelbase": "1385 mm",
+              "Kerb Weight": "150 kg",
+              "Pillion Seat": "Yes",
+              "Pillion Grab Rail": "Yes"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED",
+              "Turn Signal Lamp": "LED",
+              "Low Oil Indicator": "No",
+              "Low Fuel Indicator": "No",
+              "Distance to Empty Indicator": "Yes",
+              "Average Fuel economy Indicator": "Yes"
+            },
+            "tyres_and_brakes": {
+              "Front Brake Diameter": "240 mm",
+              "Rear Brake Diameter": "220 mm",
+              "Radial Tyre": "No",
+              "Front Tyre Pressure (Rider)": "Not Applicable",
+              "Front Tyre Pressure (Rider & Pillion)": "Not Applicable",
+              "Rear Tyre Pressure (Rider)": "Not Applicable",
+              "Rear Tyre Pressure (Rider & Pillion)": "Not Applicable"
+            },
+            "performance_and_features": {
+              "Instrument Console": "Digital",
+              "Speedometer": "Digital",
+              "Tripmeter": "Digital",
+              "Odometer": "Digital",
+              "Additional Features Of Variant": "ABS",
+              "Seat Type": "Split",
+              "Body Graphics": "Yes",
+              "Clock": "Yes",
+              "Passenger Footrest": "Yes",
+              "Average Fuel economy Indicator": "Yes",
+              "Distance to Empty Indicator": "Yes"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

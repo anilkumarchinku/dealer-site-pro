@@ -1,5 +1,8 @@
 {
-  "bajaj_compact_4s_variants": [
+  "brand": "Bajaj Auto (3W)",
+  "brandId": "bajaj-auto-3w",
+  "type": "3w",
+  "vehicles": [
     {
       "variant_name": "RE 3-Seater/CNG",
       "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",

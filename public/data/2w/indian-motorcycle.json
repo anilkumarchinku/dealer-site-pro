@@ -2,5 +2,215 @@
   "brand": "Indian Motorcycle",
   "brandId": "indian-motorcycle",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "make": "Indian",
+      "model": "Indian Scout Bobber",
+      "model_citation": "https://www.bikedekho.com/indian/scout-bobber",
+      "status": "Available",
+      "status_citation": "https://www.bikedekho.com/indian/scout-bobber",
+      "variants": [
+        {
+          "variant_name": "Indian Scout Bobber ABS",
+          "variant_name_citation": "https://www.bikedekho.com/indian/scout-bobber/variants",
+          "price": "₹18,20,000",
+          "price_citation": "https://www.bikedekho.com/indian/scout-bobber/variants",
+          "colors": [
+            {
+              "value": "Black Metallic",
+              "value_citation": "https://www.bikedekho.com/indian/scout-bobber/colors"
+            },
+            {
+              "value": "Ruby Metallic",
+              "value_citation": "https://www.bikedekho.com/indian/scout-bobber/colors"
+            },
+            {
+              "value": "Titanium Metallic",
+              "value_citation": "https://www.bikedekho.com/indian/scout-bobber/colors"
+            },
+            {
+              "value": "Black Smoke",
+              "value_citation": "https://www.bikedekho.com/indian/scout-bobber/colors"
+            },
+            {
+              "value": "Red Smoke",
+              "value_citation": "https://www.bikedekho.com/indian/scout-bobber/colors"
+            },
+            {
+              "value": "Stealth Gray",
+              "value_citation": "https://www.bikedekho.com/indian/scout-bobber/colors"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Liquid-cooled V-twin",
+              "Displacement": "1133 cc",
+              "Max Torque": "97 Nm @ 5600 rpm",
+              "No. of Cylinders": "2",
+              "Cooling System": "Liquid-cooled",
+              "Valve Per Cylinder": "4",
+              "Starting": "Electric",
+              "Fuel Supply": "Fuel Injection",
+              "Clutch": "Wet, Multi-plate",
+              "Gear Box": "6 Speed",
+              "Bore": "99 mm",
+              "Stroke": "73.6 mm",
+              "Compression Ratio": "10.7:1",
+              "Emission Type": "BS6",
+              "Gear Shifting Pattern": "1 Down 5 Up",
+              "Spark Plugs": "2 Per Cylinder"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Cruiser Bikes",
+              "Body Graphics": "Yes"
+            },
+            "dimensions_and_capacity": {
+              "Width": "808 mm",
+              "Length": "2289 mm",
+              "Height": "719 mm",
+              "Fuel Capacity": "12.5 L",
+              "Fuel Reserve": "2.5 L",
+              "Saddle Height": "649 mm",
+              "Ground Clearance": "129 mm",
+              "Wheelbase": "1562 mm",
+              "Kerb Weight": "252 kg",
+              "Pillion Seat": "Yes",
+              "Pillion Grab Rail": "Yes"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED",
+              "Turn Signal Lamp": "Halogen",
+              "Low Oil Indicator": "Yes",
+              "Low Fuel Indicator": "Yes",
+              "Distance to Empty Indicator": "Yes",
+              "Average Fuel economy Indicator": "Yes"
+            },
+            "tyres_and_brakes": {
+              "Front Brake Diameter": "298 mm",
+              "Rear Brake Diameter": "298 mm",
+              "Radial Tyre": "No",
+              "Front Tyre Pressure (Rider)": "29 psi",
+              "Front Tyre Pressure (Rider & Pillion)": "29 psi",
+              "Rear Tyre Pressure (Rider)": "32 psi",
+              "Rear Tyre Pressure (Rider & Pillion)": "32 psi"
+            },
+            "performance_and_features": {
+              "Instrument Console": "Digital",
+              "Speedometer": "Digital",
+              "Tripmeter": "Digital",
+              "Odometer": "Digital",
+              "Additional Features Of Variant": "ABS",
+              "Seat Type": "Single",
+              "Body Graphics": "Yes",
+              "Clock": "Yes",
+              "Passenger Footrest": "Yes",
+              "Average Fuel economy Indicator": "Yes",
+              "Distance to Empty Indicator": "Yes"
+            }
+          }
+        },
+        {
+          "variant_name": "Indian Scout Bobber Twenty",
+          "variant_name_citation": "https://www.bikedekho.com/indian/scout-bobber/variants",
+          "price": "₹18,20,000",
+          "price_citation": "https://www.bikedekho.com/indian/scout-bobber/variants",
+          "colors": [
+            {
+              "value": "Black Metallic",
+              "value_citation": "https://www.bikedekho.com/indian/scout-bobber/colors"
+            },
+            {
+              "value": "Ruby Metallic",
+              "value_citation": "https://www.bikedekho.com/indian/scout-bobber/colors"
+            },
+            {
+              "value": "Titanium Metallic",
+              "value_citation": "https://www.bikedekho.com/indian/scout-bobber/colors"
+            },
+            {
+              "value": "Black Smoke",
+              "value_citation": "https://www.bikedekho.com/indian/scout-bobber/colors"
+            },
+            {
+              "value": "Red Smoke",
+              "value_citation": "https://www.bikedekho.com/indian/scout-bobber/colors"
+            },
+            {
+              "value": "Stealth Gray",
+              "value_citation": "https://www.bikedekho.com/indian/scout-bobber/colors"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Liquid-cooled V-twin",
+              "Displacement": "1133 cc",
+              "Max Torque": "97 Nm @ 5600 rpm",
+              "No. of Cylinders": "2",
+              "Cooling System": "Liquid-cooled",
+              "Valve Per Cylinder": "4",
+              "Starting": "Electric",
+              "Fuel Supply": "Fuel Injection",
+              "Clutch": "Wet, Multi-plate",
+              "Gear Box": "6 Speed",
+              "Bore": "99 mm",
+              "Stroke": "73.6 mm",
+              "Compression Ratio": "10.7:1",
+              "Emission Type": "BS6",
+              "Gear Shifting Pattern": "1 Down 5 Up",
+              "Spark Plugs": "2 Per Cylinder"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Cruiser Bikes",
+              "Body Graphics": "Yes"
+            },
+            "dimensions_and_capacity": {
+              "Width": "808 mm",
+              "Length": "2289 mm",
+              "Height": "719 mm",
+              "Fuel Capacity": "12.5 L",
+              "Fuel Reserve": "2.5 L",
+              "Saddle Height": "649 mm",
+              "Ground Clearance": "129 mm",
+              "Wheelbase": "1562 mm",
+              "Kerb Weight": "252 kg",
+              "Pillion Seat": "Yes",
+              "Pillion Grab Rail": "Yes"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED",
+              "Turn Signal Lamp": "Halogen",
+              "Low Oil Indicator": "Yes",
+              "Low Fuel Indicator": "Yes",
+              "Distance to Empty Indicator": "Yes",
+              "Average Fuel economy Indicator": "Yes"
+            },
+            "tyres_and_brakes": {
+              "Front Brake Diameter": "298 mm",
+              "Rear Brake Diameter": "298 mm",
+              "Radial Tyre": "No",
+              "Front Tyre Pressure (Rider)": "29 psi",
+              "Front Tyre Pressure (Rider & Pillion)": "29 psi",
+              "Rear Tyre Pressure (Rider)": "32 psi",
+              "Rear Tyre Pressure (Rider & Pillion)": "32 psi"
+            },
+            "performance_and_features": {
+              "Instrument Console": "Digital",
+              "Speedometer": "Digital",
+              "Tripmeter": "Digital",
+              "Odometer": "Digital",
+              "Additional Features Of Variant": "ABS",
+              "Seat Type": "Single",
+              "Body Graphics": "Yes",
+              "Clock": "Yes",
+              "Passenger Footrest": "Yes",
+              "Average Fuel economy Indicator": "Yes",
+              "Distance to Empty Indicator": "Yes"
+            }
+          }
+        }
+      ]
+    }
+  ]
 }

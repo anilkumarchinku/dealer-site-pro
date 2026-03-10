@@ -1,44 +1,49 @@
-[
-  {
-    "make": "TVS King",
-    "model": "King Deluxe",
-    "category": "passenger",
-    "status": "Available",
-    "variants": []
-  },
-  {
-    "make": "TVS King",
-    "model": "King Duramax",
-    "category": "passenger",
-    "status": "Available",
-    "variants": []
-  },
-  {
-    "make": "TVS King",
-    "model": "King Duramax Plus",
-    "category": "passenger",
-    "status": "Available",
-    "variants": []
-  },
-  {
-    "make": "TVS King",
-    "model": "King Kargo",
-    "category": "cargo",
-    "status": "Available",
-    "variants": []
-  },
-  {
-    "make": "TVS King",
-    "model": "King EV Max",
-    "category": "electric",
-    "status": "Available",
-    "variants": []
-  },
-  {
-    "make": "TVS King",
-    "model": "King Kargo HD EV",
-    "category": "electric",
-    "status": "Available",
-    "variants": []
-  }
-]
+{
+  "brand": "TVS King",
+  "brandId": "tvs-king",
+  "type": "3w",
+  "vehicles": [
+    {
+      "make": "TVS King",
+      "model": "King Deluxe",
+      "category": "passenger",
+      "status": "Available",
+      "variants": []
+    },
+    {
+      "make": "TVS King",
+      "model": "King Duramax",
+      "category": "passenger",
+      "status": "Available",
+      "variants": []
+    },
+    {
+      "make": "TVS King",
+      "model": "King Duramax Plus",
+      "category": "passenger",
+      "status": "Available",
+      "variants": []
+    },
+    {
+      "make": "TVS King",
+      "model": "King Kargo",
+      "category": "cargo",
+      "status": "Available",
+      "variants": []
+    },
+    {
+      "make": "TVS King",
+      "model": "King EV Max",
+      "category": "electric",
+      "status": "Available",
+      "variants": []
+    },
+    {
+      "make": "TVS King",
+      "model": "King Kargo HD EV",
+      "category": "electric",
+      "status": "Available",
+      "variants": []
+    }
+  ]
+}

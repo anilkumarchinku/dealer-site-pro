@@ -2,5 +2,4060 @@
   "brand": "Hero MotoCorp",
   "brandId": "hero-motocorp",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "make": "Hero",
+      "model": "Splendor Plus",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Splendor Plus Standard",
+          "price": "₹74,902",
+          "colors": [
+            {
+              "value": "Sports Red Black"
+            },
+            {
+              "value": "Black Heavy Grey"
+            },
+            {
+              "value": "Blue Black"
+            },
+            {
+              "value": "Black Red Purple"
+            },
+            {
+              "value": "Force Silver"
+            },
+            {
+              "value": "Industrial Dark Grey"
+            },
+            {
+              "value": "Black And Accent"
+            },
+            {
+              "value": "Matt Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Multiplate Wet Type",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "2000 mm",
+              "Height": "1052 mm",
+              "Wheelbase": "1236 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        },
+        {
+          "variant_name": "Splendor Plus I3S",
+          "price": "₹76,055",
+          "colors": [
+            {
+              "value": "Sports Red Black"
+            },
+            {
+              "value": "Black Heavy Grey"
+            },
+            {
+              "value": "Blue Black"
+            },
+            {
+              "value": "Black Red Purple"
+            },
+            {
+              "value": "Force Silver"
+            },
+            {
+              "value": "Industrial Dark Grey"
+            },
+            {
+              "value": "Black And Accent"
+            },
+            {
+              "value": "Matt Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Multiplate Wet Type",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "2000 mm",
+              "Height": "1052 mm",
+              "Wheelbase": "1236 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        },
+        {
+          "variant_name": "Splendor Plus Black and Accent",
+          "price": "₹76,055",
+          "colors": [
+            {
+              "value": "Black And Accent"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Multiplate Wet Type",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "2000 mm",
+              "Height": "1052 mm",
+              "Wheelbase": "1236 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        },
+        {
+          "variant_name": "Splendor Plus Million Edition",
+          "price": "₹77,437",
+          "colors": [
+            {
+              "value": "Sports Red Black"
+            },
+            {
+              "value": "Black Heavy Grey"
+            },
+            {
+              "value": "Blue Black"
+            },
+            {
+              "value": "Black Red Purple"
+            },
+            {
+              "value": "Force Silver"
+            },
+            {
+              "value": "Industrial Dark Grey"
+            },
+            {
+              "value": "Black And Accent"
+            },
+            {
+              "value": "Matt Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Multiplate Wet Type",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "2000 mm",
+              "Height": "1052 mm",
+              "Wheelbase": "1236 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme 125R",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Xtreme 125R IBS",
+          "price": "₹89,300",
+          "colors": [
+            {
+              "value": "Stallion Black"
+            },
+            {
+              "value": "Abrax Orange"
+            },
+            {
+              "value": "Firestorm Red"
+            },
+            {
+              "value": "Black Pearl Red"
+            },
+            {
+              "value": "Cobalt Blue"
+            },
+            {
+              "value": "Black Leaf Green"
+            },
+            {
+              "value": "Black Matshdow Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.7 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet Multi Plate",
+              "Bore": "52.4 mm",
+              "Stroke": "57.8 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "793 mm",
+              "Length": "2009 mm",
+              "Height": "1051 mm",
+              "Wheelbase": "1319 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "Xtreme 125R ABS",
+          "price": "₹93,500",
+          "colors": [
+            {
+              "value": "Stallion Black"
+            },
+            {
+              "value": "Abrax Orange"
+            },
+            {
+              "value": "Firestorm Red"
+            },
+            {
+              "value": "Black Pearl Red"
+            },
+            {
+              "value": "Cobalt Blue"
+            },
+            {
+              "value": "Black Leaf Green"
+            },
+            {
+              "value": "Black Matshdow Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.7 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet Multi Plate",
+              "Bore": "52.4 mm",
+              "Stroke": "57.8 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "793 mm",
+              "Length": "2009 mm",
+              "Height": "1051 mm",
+              "Wheelbase": "1319 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "Xtreme 125R Single Seat",
+          "price": "₹93,500",
+          "colors": [
+            {
+              "value": "Stallion Black"
+            },
+            {
+              "value": "Abrax Orange"
+            },
+            {
+              "value": "Firestorm Red"
+            },
+            {
+              "value": "Black Pearl Red"
+            },
+            {
+              "value": "Cobalt Blue"
+            },
+            {
+              "value": "Black Leaf Green"
+            },
+            {
+              "value": "Black Matshdow Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.7 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet Multi Plate",
+              "Bore": "52.4 mm",
+              "Stroke": "57.8 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "793 mm",
+              "Length": "2009 mm",
+              "Height": "1051 mm",
+              "Wheelbase": "1319 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "Xtreme 125R Dual Channel ABS",
+          "price": "₹1,05,500",
+          "colors": [
+            {
+              "value": "Stallion Black"
+            },
+            {
+              "value": "Abrax Orange"
+            },
+            {
+              "value": "Firestorm Red"
+            },
+            {
+              "value": "Black Pearl Red"
+            },
+            {
+              "value": "Cobalt Blue"
+            },
+            {
+              "value": "Black Leaf Green"
+            },
+            {
+              "value": "Black Matshdow Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.7 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet Multi Plate",
+              "Bore": "52.4 mm",
+              "Stroke": "57.8 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "793 mm",
+              "Length": "2009 mm",
+              "Height": "1051 mm",
+              "Wheelbase": "1319 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Splendor Plus XTEC",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Splendor Plus XTEC Drum",
+          "price": "₹78,428",
+          "colors": [
+            {
+              "value": "Red Black"
+            },
+            {
+              "value": "Nobel Red"
+            },
+            {
+              "value": "Black Tornado Grey"
+            },
+            {
+              "value": "Black Sparking Blue"
+            },
+            {
+              "value": "Matte Grey"
+            },
+            {
+              "value": "Black With Greenish Yellow"
+            },
+            {
+              "value": "Black Heavy Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Multiplate Wet Type",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "2000 mm",
+              "Height": "1052 mm",
+              "Wheelbase": "1236 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        },
+        {
+          "variant_name": "Splendor Plus XTEC 2.0",
+          "price": "₹80,964",
+          "colors": [
+            {
+              "value": "Red Black"
+            },
+            {
+              "value": "Nobel Red"
+            },
+            {
+              "value": "Black Tornado Grey"
+            },
+            {
+              "value": "Black Sparking Blue"
+            },
+            {
+              "value": "Matte Grey"
+            },
+            {
+              "value": "Black With Greenish Yellow"
+            },
+            {
+              "value": "Black Heavy Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Multiplate Wet Type",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "2000 mm",
+              "Height": "1052 mm",
+              "Wheelbase": "1236 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        },
+        {
+          "variant_name": "Splendor Plus XTEC Disc",
+          "price": "₹81,471",
+          "colors": [
+            {
+              "value": "Red Black"
+            },
+            {
+              "value": "Nobel Red"
+            },
+            {
+              "value": "Black Tornado Grey"
+            },
+            {
+              "value": "Black Sparking Blue"
+            },
+            {
+              "value": "Matte Grey"
+            },
+            {
+              "value": "Black With Greenish Yellow"
+            },
+            {
+              "value": "Black Heavy Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Multiplate Wet Type",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "2000 mm",
+              "Height": "1052 mm",
+              "Wheelbase": "1236 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "HF Deluxe",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "HF Deluxe All Black OBD2B",
+          "price": "₹57,657",
+          "colors": [
+            {
+              "value": "Black"
+            },
+            {
+              "value": "Black Grey Stripe"
+            },
+            {
+              "value": "Candy Blazing Red"
+            },
+            {
+              "value": "Black Nexus Blue"
+            },
+            {
+              "value": "Sports Red Black"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Multiplate Wet Type",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "1965 mm",
+              "Height": "1045 mm",
+              "Wheelbase": "1235 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        },
+        {
+          "variant_name": "HF Deluxe Kick Cast OBD2B",
+          "price": "₹61,457",
+          "colors": [
+            {
+              "value": "Black"
+            },
+            {
+              "value": "Black Grey Stripe"
+            },
+            {
+              "value": "Candy Blazing Red"
+            },
+            {
+              "value": "Black Nexus Blue"
+            },
+            {
+              "value": "Sports Red Black"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Multiplate Wet Type",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "1965 mm",
+              "Height": "1045 mm",
+              "Wheelbase": "1235 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        },
+        {
+          "variant_name": "HF Deluxe Self Cast OBD2B",
+          "price": "₹66,664",
+          "colors": [
+            {
+              "value": "Black"
+            },
+            {
+              "value": "Black Grey Stripe"
+            },
+            {
+              "value": "Candy Blazing Red"
+            },
+            {
+              "value": "Black Nexus Blue"
+            },
+            {
+              "value": "Sports Red Black"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Multiplate Wet Type",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "1965 mm",
+              "Height": "1045 mm",
+              "Wheelbase": "1235 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        },
+        {
+          "variant_name": "HF Deluxe I3S Cast OBD2B",
+          "price": "₹68,047",
+          "colors": [
+            {
+              "value": "Black"
+            },
+            {
+              "value": "Black Grey Stripe"
+            },
+            {
+              "value": "Candy Blazing Red"
+            },
+            {
+              "value": "Black Nexus Blue"
+            },
+            {
+              "value": "Sports Red Black"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Multiplate Wet Type",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "1965 mm",
+              "Height": "1045 mm",
+              "Wheelbase": "1235 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "XPulse 200 4V",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "XPulse 200 4V STD",
+          "price": "₹1,40,047",
+          "colors": [
+            {
+              "value": "Black Industrial Grey"
+            },
+            {
+              "value": "Techno Blue"
+            },
+            {
+              "value": "Black Sports Red"
+            },
+            {
+              "value": "Nexus Blue White"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "199.6 cc",
+              "Starting": "Kick and Self Start",
+              "Bore": "66.5 mm",
+              "Stroke": "57.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {},
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "XPulse 200 4V Pro",
+          "price": "₹1,52,031",
+          "colors": [
+            {
+              "value": "red and white colour scheme"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "199.6 cc",
+              "Starting": "Kick and Self Start",
+              "Bore": "66.5 mm",
+              "Stroke": "57.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {},
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "XPulse 200 4V Pro Dakar Edition",
+          "price": "₹1,54,797",
+          "colors": [
+            {
+              "value": "Dakar Rally colour scheme"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "199.6 cc",
+              "Starting": "Kick and Self Start",
+              "Bore": "66.5 mm",
+              "Stroke": "57.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {},
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Glamour X 125",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Glamour X 125 Drum",
+          "price": "₹84,467",
+          "colors": [
+            {
+              "value": "Black Pearl Red"
+            },
+            {
+              "value": "Black Teal Red"
+            },
+            {
+              "value": "Candy Blazing Red"
+            },
+            {
+              "value": "Matt Metallic Silver"
+            },
+            {
+              "value": "Metallic Nexus Blue"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.7 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet Type, Multiplate",
+              "Bore": "52.4 mm",
+              "Stroke": "57.8 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "796 mm",
+              "Length": "2045 mm",
+              "Height": "1126 mm",
+              "Wheelbase": "1267 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "Bulb"
+            }
+          }
+        },
+        {
+          "variant_name": "Glamour X 125 Disc",
+          "price": "₹93,686",
+          "colors": [
+            {
+              "value": "Black Pearl Red"
+            },
+            {
+              "value": "Black Teal Red"
+            },
+            {
+              "value": "Candy Blazing Red"
+            },
+            {
+              "value": "Matt Metallic Silver"
+            },
+            {
+              "value": "Metallic Nexus Blue"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.7 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet Type, Multiplate",
+              "Bore": "52.4 mm",
+              "Stroke": "57.8 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "796 mm",
+              "Length": "2045 mm",
+              "Height": "1126 mm",
+              "Wheelbase": "1267 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Glamour",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Glamour Drum",
+          "price": "₹82,813",
+          "colors": [
+            {
+              "value": "Candy Blazing Red"
+            },
+            {
+              "value": "Black Sports Red"
+            },
+            {
+              "value": "Black Metalic Silver"
+            },
+            {
+              "value": "Techno Blue Matte Black"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.7 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet Multiplate",
+              "Bore": "52.4 mm",
+              "Stroke": "57.8 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "2042 mm",
+              "Height": "1090 mm",
+              "Wheelbase": "1267 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "Glamour Disc",
+          "price": "₹86,501",
+          "colors": [
+            {
+              "value": "Candy Blazing Red"
+            },
+            {
+              "value": "Black Sports Red"
+            },
+            {
+              "value": "Black Metalic Silver"
+            },
+            {
+              "value": "Techno Blue Matte Black"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.7 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet Multiplate",
+              "Bore": "52.4 mm",
+              "Stroke": "57.8 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "2042 mm",
+              "Height": "1090 mm",
+              "Wheelbase": "1267 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme 250R",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Xtreme 250R STD",
+          "price": "₹1,65,844",
+          "colors": [
+            {
+              "value": "Stealth Black"
+            },
+            {
+              "value": "Firestorm Red"
+            },
+            {
+              "value": "Neon Shooting Star"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "249.03 cc",
+              "Starting": "Self Start Only",
+              "Clutch": "Wet Type Assist And Slip",
+              "Bore": "73 mm",
+              "Stroke": "59.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "828 mm",
+              "Length": "2023 mm",
+              "Height": "1062 mm",
+              "Wheelbase": "1357 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme 160R 4V",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Xtreme 160R 4V Standard",
+          "price": "₹1,29,615",
+          "colors": [
+            {
+              "value": "Stealth Black"
+            },
+            {
+              "value": "Matt Slate Black"
+            },
+            {
+              "value": "Matt Shadow Grey"
+            },
+            {
+              "value": "Neon Shooting Star"
+            },
+            {
+              "value": "Kevlar Brown"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "163.2 cc",
+              "Starting": "Self Start Only",
+              "Clutch": "Multiplate Wet",
+              "Bore": "66.5 mm",
+              "Stroke": "47.0 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "793 mm",
+              "Length": "2029 mm",
+              "Height": "1052 mm",
+              "Wheelbase": "1333 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "Xtreme 160R 4V Combat Edition",
+          "price": "₹1,34,100",
+          "colors": [
+            {
+              "value": "Grey"
+            },
+            {
+              "value": "Stealth Black"
+            },
+            {
+              "value": "Matt Slate Black"
+            },
+            {
+              "value": "Matt Shadow Grey"
+            },
+            {
+              "value": "Neon Shooting Star"
+            },
+            {
+              "value": "Kevlar Brown"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "163.2 cc",
+              "Starting": "Self Start Only",
+              "Clutch": "Multiplate Wet",
+              "Bore": "66.5 mm",
+              "Stroke": "47.0 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "793 mm",
+              "Length": "2029 mm",
+              "Height": "1052 mm",
+              "Wheelbase": "1333 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Passion Plus",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Passion Plus Standard",
+          "price": "₹77,691",
+          "colors": [
+            {
+              "value": "Black Heavy Grey"
+            },
+            {
+              "value": "Sports Red Black"
+            },
+            {
+              "value": "Industrial Dark Grey"
+            },
+            {
+              "value": "Black Nexus Blue"
+            },
+            {
+              "value": "Black Brown Stripes"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet multi plate",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "770 mm",
+              "Length": "1982 mm",
+              "Height": "1087 mm",
+              "Wheelbase": "1235 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "Bulb"
+            }
+          }
+        },
+        {
+          "variant_name": "Passion Plus Million Edition",
+          "price": "₹79,074",
+          "colors": [
+            {
+              "value": "Black Heavy Grey"
+            },
+            {
+              "value": "Sports Red Black"
+            },
+            {
+              "value": "Industrial Dark Grey"
+            },
+            {
+              "value": "Black Nexus Blue"
+            },
+            {
+              "value": "Black Brown Stripes"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet multi plate",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "770 mm",
+              "Length": "1982 mm",
+              "Height": "1087 mm",
+              "Wheelbase": "1235 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Destini 125",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "VX",
+          "price": "₹75,838",
+          "colors": [
+            {
+              "value": "Groovy Red"
+            },
+            {
+              "value": "Regal Black"
+            },
+            {
+              "value": "Mystique Magenta"
+            },
+            {
+              "value": "Cosmic Blue"
+            },
+            {
+              "value": "Eternal White"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.6 cc",
+              "Starting": "Kick and Self Start"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "697 mm",
+              "Length": "1862 mm",
+              "Height": "1125 mm",
+              "Wheelbase": "1302 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "Bulb"
+            }
+          }
+        },
+        {
+          "variant_name": "ZX",
+          "price": "₹83,997",
+          "colors": [
+            {
+              "value": "Groovy Red"
+            },
+            {
+              "value": "Regal Black"
+            },
+            {
+              "value": "Mystique Magenta"
+            },
+            {
+              "value": "Cosmic Blue"
+            },
+            {
+              "value": "Eternal White"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.6 cc",
+              "Starting": "Kick and Self Start"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "697 mm",
+              "Length": "1862 mm",
+              "Height": "1125 mm",
+              "Wheelbase": "1302 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "Bulb"
+            }
+          }
+        },
+        {
+          "variant_name": "ZX+",
+          "price": "₹85,769",
+          "colors": [
+            {
+              "value": "Groovy Red"
+            },
+            {
+              "value": "Regal Black"
+            },
+            {
+              "value": "Mystique Magenta"
+            },
+            {
+              "value": "Cosmic Blue"
+            },
+            {
+              "value": "Eternal White"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.6 cc",
+              "Starting": "Kick and Self Start"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "697 mm",
+              "Length": "1862 mm",
+              "Height": "1125 mm",
+              "Wheelbase": "1302 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Super Splendor XTEC",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Drum",
+          "price": "₹83,448",
+          "colors": [
+            {
+              "value": "Matt Nexus Blue"
+            },
+            {
+              "value": "Matte Axis Grey"
+            },
+            {
+              "value": "Gloss Black"
+            },
+            {
+              "value": "Candy Blazing Red"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.7 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet Multiplate",
+              "Bore": "52.4 mm",
+              "Stroke": "57.8 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "729 mm",
+              "Length": "2042 mm",
+              "Height": "1092 mm",
+              "Wheelbase": "1267 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "Disc",
+          "price": "₹87,044",
+          "colors": [
+            {
+              "value": "Matt Nexus Blue"
+            },
+            {
+              "value": "Matte Axis Grey"
+            },
+            {
+              "value": "Gloss Black"
+            },
+            {
+              "value": "Candy Blazing Red"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.7 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet Multiplate",
+              "Bore": "52.4 mm",
+              "Stroke": "57.8 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "729 mm",
+              "Length": "2042 mm",
+              "Height": "1092 mm",
+              "Wheelbase": "1267 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "XPulse 210",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Base",
+          "price": "₹1,62,065",
+          "colors": [
+            {
+              "value": "Wild"
+            },
+            {
+              "value": "Glacier White"
+            },
+            {
+              "value": "Alpine Silver"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "210 cc",
+              "Starting": "Self Start Only",
+              "Clutch": "Wet type Assist and Slip",
+              "Bore": "73 mm",
+              "Stroke": "50 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "872 mm",
+              "Length": "2254 mm",
+              "Height": "1230 mm",
+              "Wheelbase": "1446 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "Top",
+          "price": "₹1,71,284",
+          "colors": [
+            {
+              "value": "Azure Blue"
+            },
+            {
+              "value": "Wild"
+            },
+            {
+              "value": "Glacier White"
+            },
+            {
+              "value": "Alpine Silver"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "210 cc",
+              "Starting": "Self Start Only",
+              "Clutch": "Wet type Assist and Slip",
+              "Bore": "73 mm",
+              "Stroke": "50 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "872 mm",
+              "Length": "2254 mm",
+              "Height": "1230 mm",
+              "Wheelbase": "1446 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "Dakar Edition",
+          "price": "NA",
+          "colors": [
+            {
+              "value": "Exclusive Dakar livery with Ross Branch signature"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "210 cc",
+              "Starting": "Self Start Only",
+              "Clutch": "Wet type Assist and Slip",
+              "Bore": "73 mm",
+              "Stroke": "50 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "872 mm",
+              "Length": "2254 mm",
+              "Height": "1230 mm",
+              "Wheelbase": "1446 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme 160R",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Single Disc",
+          "price": "₹1,04,749",
+          "colors": [
+            {
+              "value": "Stealth Black"
+            },
+            {
+              "value": "Matt Pearl White"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "163.2 cc",
+              "Starting": "Self Start Only",
+              "Clutch": "Multiplate Wet"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "793 mm",
+              "Length": "2029 mm",
+              "Height": "1052 mm",
+              "Wheelbase": "1327 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "Single Disc OBD2B",
+          "price": "₹1,13,211",
+          "colors": [
+            {
+              "value": "Stealth Black"
+            },
+            {
+              "value": "Matt Pearl White"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "163.2 cc",
+              "Starting": "Self Start Only",
+              "Clutch": "Multiplate Wet"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "793 mm",
+              "Length": "2029 mm",
+              "Height": "1052 mm",
+              "Wheelbase": "1327 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "HF Deluxe Pro",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "STD",
+          "price": "₹70,150",
+          "colors": [
+            {
+              "value": "Silver"
+            },
+            {
+              "value": "Red"
+            },
+            {
+              "value": "Blue"
+            },
+            {
+              "value": "Yellow"
+            },
+            {
+              "value": "Black Grey Stripe"
+            },
+            {
+              "value": "Black Red Stripe"
+            },
+            {
+              "value": "Black Nexus Blue"
+            },
+            {
+              "value": "BLK Funk Lime Yellow"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Multiplate Wet Type",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "1965 mm",
+              "Height": "1045 mm",
+              "Wheelbase": "1235 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Pleasure Plus",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "LX",
+          "price": "₹69,766",
+          "colors": [
+            {
+              "value": "Sport Red"
+            },
+            {
+              "value": "Pearl Silver White"
+            },
+            {
+              "value": "Matte Vernier Grey"
+            },
+            {
+              "value": "Teal Blue"
+            },
+            {
+              "value": "Copper Brown"
+            },
+            {
+              "value": "Matte Black"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "110.9 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Dry Automatic Centrifugal Clutch"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "704 mm",
+              "Length": "1769 mm",
+              "Height": "1161 mm",
+              "Wheelbase": "1238 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        },
+        {
+          "variant_name": "VX",
+          "price": "₹71,379",
+          "colors": [
+            {
+              "value": "Sport Red"
+            },
+            {
+              "value": "Pearl Silver White"
+            },
+            {
+              "value": "Matte Vernier Grey"
+            },
+            {
+              "value": "Teal Blue"
+            },
+            {
+              "value": "Copper Brown"
+            },
+            {
+              "value": "Matte Black"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "110.9 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Dry Automatic Centrifugal Clutch"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "704 mm",
+              "Length": "1769 mm",
+              "Height": "1161 mm",
+              "Wheelbase": "1238 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        },
+        {
+          "variant_name": "XTEC ZX",
+          "price": "₹75,712",
+          "colors": [
+            {
+              "value": "Sport Red"
+            },
+            {
+              "value": "Pearl Silver White"
+            },
+            {
+              "value": "Matte Vernier Grey"
+            },
+            {
+              "value": "Teal Blue"
+            },
+            {
+              "value": "Copper Brown"
+            },
+            {
+              "value": "Matte Black"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "110.9 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Dry Automatic Centrifugal Clutch"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "704 mm",
+              "Length": "1769 mm",
+              "Height": "1161 mm",
+              "Wheelbase": "1238 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Xoom 125",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "VX",
+          "price": "₹81,194",
+          "colors": [
+            {
+              "value": "Vibrant Blue Metallic"
+            },
+            {
+              "value": "Matte Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.6 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Dry, Centrifugal"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "739 mm",
+              "Length": "1978 mm",
+              "Height": "1131 mm",
+              "Wheelbase": "1327 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "Bulb"
+            }
+          }
+        },
+        {
+          "variant_name": "ZX",
+          "price": "₹86,025",
+          "colors": [
+            {
+              "value": "Vibrant Blue Metallic"
+            },
+            {
+              "value": "Matte Grey"
+            },
+            {
+              "value": "Matt Giallo Lime"
+            },
+            {
+              "value": "Candy Blazing Red"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.6 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Dry, Centrifugal"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "739 mm",
+              "Length": "1978 mm",
+              "Height": "1131 mm",
+              "Wheelbase": "1327 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Xoom 110",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "VX",
+          "price": "₹72,701",
+          "colors": [
+            {
+              "value": "Black"
+            },
+            {
+              "value": "Sport Red"
+            },
+            {
+              "value": "Matt Shadow Grey"
+            },
+            {
+              "value": "Polestar Blue"
+            },
+            {
+              "value": "Moon Yellow"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "110.9 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Dry, Centrifugal"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "717 mm",
+              "Length": "1881 mm",
+              "Height": "1118 mm",
+              "Wheelbase": "1300 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "ZX",
+          "price": "₹78,233",
+          "colors": [
+            {
+              "value": "Black"
+            },
+            {
+              "value": "Sport Red"
+            },
+            {
+              "value": "Matt Shadow Grey"
+            },
+            {
+              "value": "Polestar Blue"
+            },
+            {
+              "value": "Moon Yellow"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "110.9 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Dry, Centrifugal"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "717 mm",
+              "Length": "1881 mm",
+              "Height": "1118 mm",
+              "Wheelbase": "1300 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "Combat Edition",
+          "price": "₹78,786",
+          "colors": [
+            {
+              "value": "Black"
+            },
+            {
+              "value": "Sport Red"
+            },
+            {
+              "value": "Matt Shadow Grey"
+            },
+            {
+              "value": "Polestar Blue"
+            },
+            {
+              "value": "Moon Yellow"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "110.9 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Dry, Centrifugal"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "717 mm",
+              "Length": "1881 mm",
+              "Height": "1118 mm",
+              "Wheelbase": "1300 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Karizma XMR",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Top",
+          "price": "₹1,84,144",
+          "colors": [
+            {
+              "value": "Phantom Black"
+            },
+            {
+              "value": "Turbo Red"
+            },
+            {
+              "value": "Combat Grey"
+            },
+            {
+              "value": "Iconic Yellow"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "210 cc",
+              "Starting": "Self Start Only",
+              "Clutch": "Wet type Slip & Assist",
+              "Bore": "73 mm",
+              "Stroke": "50 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "760 mm",
+              "Length": "2068 mm",
+              "Height": "1110 mm",
+              "Wheelbase": "1351 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "Combat Edition",
+          "price": "₹1,85,757",
+          "colors": [
+            {
+              "value": "Phantom Black"
+            },
+            {
+              "value": "Turbo Red"
+            },
+            {
+              "value": "Combat Grey"
+            },
+            {
+              "value": "Iconic Yellow"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "210 cc",
+              "Starting": "Self Start Only",
+              "Clutch": "Wet type Slip & Assist",
+              "Bore": "73 mm",
+              "Stroke": "50 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "760 mm",
+              "Length": "2068 mm",
+              "Height": "1110 mm",
+              "Wheelbase": "1351 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Xoom 160",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "ZX",
+          "price": "₹1,36,898",
+          "colors": [
+            {
+              "value": "Summit White"
+            },
+            {
+              "value": "Canyon Red"
+            },
+            {
+              "value": "Matte Volcanic Grey"
+            },
+            {
+              "value": "Matte RainForest Green"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "156 cc",
+              "Starting": "Remote Start",
+              "Clutch": "Dry, Centrifugal"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "839 mm",
+              "Length": "1983 mm",
+              "Height": "1214 mm",
+              "Wheelbase": "1348 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "HF 100",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Standard",
+          "price": "₹59,839",
+          "colors": [
+            {
+              "value": "Red Black"
+            },
+            {
+              "value": "Blue Black"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc",
+              "Starting": "Kick Start Only",
+              "Clutch": "Multiplate Wet Type",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "1965 mm",
+              "Height": "1045 mm",
+              "Wheelbase": "1235 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Mavrick 440",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Base",
+          "price": "₹2,13,207",
+          "colors": [
+            {
+              "value": "Arctic White"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "440 cc",
+              "Starting": "Self Start Only",
+              "Clutch": "Multi Plate, Wet Type, Assist & Slipper",
+              "Bore": "79.6 mm",
+              "Stroke": "88.4 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "868 mm",
+              "Length": "2100 mm",
+              "Height": "1112 mm",
+              "Wheelbase": "1388 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "Mid",
+          "price": "₹2,29,238",
+          "colors": [
+            {
+              "value": "Celestial Blue"
+            },
+            {
+              "value": "Fearless Red"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "440 cc",
+              "Starting": "Self Start Only",
+              "Clutch": "Multi Plate, Wet Type, Assist & Slipper",
+              "Bore": "79.6 mm",
+              "Stroke": "88.4 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "868 mm",
+              "Length": "2100 mm",
+              "Height": "1112 mm",
+              "Wheelbase": "1388 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "Top",
+          "price": "₹2,39,924",
+          "colors": [
+            {
+              "value": "Phantom Black"
+            },
+            {
+              "value": "Enigma Black"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "440 cc",
+              "Starting": "Self Start Only",
+              "Clutch": "Multi Plate, Wet Type, Assist & Slipper",
+              "Bore": "79.6 mm",
+              "Stroke": "88.4 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "868 mm",
+              "Length": "2100 mm",
+              "Height": "1112 mm",
+              "Wheelbase": "1388 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Glamour XTEC",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Drum",
+          "price": "₹84,106",
+          "colors": [
+            {
+              "value": "Black"
+            },
+            {
+              "value": "Metallic Nexus Blue"
+            },
+            {
+              "value": "Candy Blazing Red"
+            },
+            {
+              "value": "Grey Blue Stripe"
+            },
+            {
+              "value": "Black-Sports Red"
+            },
+            {
+              "value": "Techno Blue Met BLK"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.7 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet Multiplate",
+              "Bore": "52.4 mm",
+              "Stroke": "57.8 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "2051 mm",
+              "Height": "1074 mm",
+              "Wheelbase": "1273 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "Disc",
+          "price": "₹88,346",
+          "colors": [
+            {
+              "value": "Black"
+            },
+            {
+              "value": "Metallic Nexus Blue"
+            },
+            {
+              "value": "Candy Blazing Red"
+            },
+            {
+              "value": "Grey Blue Stripe"
+            },
+            {
+              "value": "Black-Sports Red"
+            },
+            {
+              "value": "Techno Blue Met BLK"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.7 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet Multiplate",
+              "Bore": "52.4 mm",
+              "Stroke": "57.8 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "2051 mm",
+              "Height": "1074 mm",
+              "Wheelbase": "1273 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Destini Prime",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Standard",
+          "price": "₹71,630",
+          "colors": [
+            {
+              "value": "Pearl Silver White"
+            },
+            {
+              "value": "Metallic Nexus Blue"
+            },
+            {
+              "value": "Nobel Red"
+            },
+            {
+              "value": "Panther Black"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.6 cc",
+              "Starting": "Self Start Only",
+              "Clutch": "Dry, Centrifugal"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "729 mm",
+              "Length": "1809 mm",
+              "Height": "1154 mm",
+              "Wheelbase": "1245 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Destini 110",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "VX",
+          "price": "₹72,000",
+          "colors": [
+            {
+              "value": "Eternal White"
+            },
+            {
+              "value": "Groovy Red"
+            },
+            {
+              "value": "Nexus Blue"
+            },
+            {
+              "value": "Aqua Grey"
+            },
+            {
+              "value": "Matt Steel Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "110.9 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Dry, Centrifugal"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "697 mm",
+              "Length": "1859 mm",
+              "Height": "1125 mm",
+              "Wheelbase": "1302 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        },
+        {
+          "variant_name": "ZX",
+          "price": "₹79,750",
+          "colors": [
+            {
+              "value": "Eternal White"
+            },
+            {
+              "value": "Groovy Red"
+            },
+            {
+              "value": "Nexus Blue"
+            },
+            {
+              "value": "Aqua Grey"
+            },
+            {
+              "value": "Matt Steel Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "110.9 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Dry, Centrifugal"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "697 mm",
+              "Length": "1859 mm",
+              "Height": "1125 mm",
+              "Wheelbase": "1302 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme 200S 4V",
+      "source_section": "Discontinued",
+      "status": "Discontinued on Dec, 2024",
+      "variants": [
+        {
+          "variant_name": "Xtreme 200S 4V",
+          "price": "Rs. 1,32,962",
+          "colors": [
+            {
+              "value": "Sports Red"
+            },
+            {
+              "value": "Panther Black"
+            },
+            {
+              "value": "Matt Gray"
+            },
+            {
+              "value": "Moon Yellow"
+            },
+            {
+              "value": "Pearl Silver White"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "199.6 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Multi-plate, wet type",
+              "Bore": "66.5 mm",
+              "Stroke": "57.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "778 mm",
+              "Length": "2062 mm",
+              "Height": "1106 mm",
+              "Wheelbase": "1338 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme 200R 2018-2022",
+      "source_section": "Discontinued",
+      "status": "Discontinued on Mar, 2022",
+      "variants": [
+        {
+          "variant_name": "Xtreme 200R 2018-2022",
+          "price": "Rs. 82,000",
+          "colors": [
+            {
+              "value": "Techno Blue"
+            },
+            {
+              "value": "Sports Red"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "199.6 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet Multi Plate",
+              "Bore": "66.5 mm",
+              "Stroke": "57.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "778 mm",
+              "Length": "2062 mm",
+              "Height": "1072 mm",
+              "Wheelbase": "1338 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "HX 250R",
+      "source_section": "Discontinued",
+      "status": "Discontinued on Jan, 2018",
+      "variants": [
+        {
+          "variant_name": "HX 250R",
+          "price": "Rs. 1,32,962",
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "249 cc",
+              "Starting": "Self Start Only",
+              "Clutch": "Multi-Plate Wet",
+              "Bore": "81 mm",
+              "Stroke": "48.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "735 mm",
+              "Length": "2085 mm",
+              "Height": "1145 mm",
+              "Wheelbase": "1370 mm"
+            },
+            "electricals": {
+              "Headlight": "Twin 12V 35W/35W/ Halogen Bulb, DC-Multi-Reflector Type",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Passion Pro BS4",
+      "source_section": "Discontinued",
+      "status": "Discontinued on Mar, 2020",
+      "variants": [
+        {
+          "variant_name": "Passion Pro BS4",
+          "price": "Rs. 55,500",
+          "colors": [
+            {
+              "value": "Mystic White"
+            },
+            {
+              "value": "Sports Red"
+            },
+            {
+              "value": "Matte Brown"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "100 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet, Multi-Plate",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "765 mm",
+              "Length": "1980 mm",
+              "Height": "1075 mm",
+              "Wheelbase": "1235 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Splendor iSmart BS3",
+      "source_section": "Discontinued",
+      "status": "Discontinued on Aug, 2017",
+      "variants": [
+        {
+          "variant_name": "Splendor iSmart BS3",
+          "price": "Rs. 55,500",
+          "colors": [
+            {
+              "value": "Sports Red"
+            },
+            {
+              "value": "Leaf Green"
+            },
+            {
+              "value": "Excellent Blue"
+            },
+            {
+              "value": "Heavy Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet, Multi-Plate",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "770 mm",
+              "Length": "1965 mm",
+              "Height": "1095 mm",
+              "Wheelbase": "1235 mm"
+            },
+            "electricals": {
+              "Headlight": "12 V - 35 W/ 35 W - Halogen Bulb, Trapezoidal, MFR",
+              "Taillight": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "MotoCorp Karizma 2003-2013",
+      "source_section": "Discontinued",
+      "variants": [
+        {
+          "variant_name": "MotoCorp Karizma 2003-2013",
+          "price": "Price not available",
+          "technical_specifications": {}
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Karizma ZMR",
+      "source_section": "Discontinued",
+      "status": "Discontinued on Sep, 2019",
+      "variants": [
+        {
+          "variant_name": "Karizma ZMR",
+          "price": "Rs. 1,32,962",
+          "colors": [
+            {
+              "value": "Blazing Red"
+            },
+            {
+              "value": "Panther Black"
+            },
+            {
+              "value": "Spotlight White"
+            },
+            {
+              "value": "Vibrant Orange"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "223 cc",
+              "Starting": "Self Start Only",
+              "Clutch": "Multiplate Wet",
+              "Bore": "65.5 mm",
+              "Stroke": "66.2 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "805 mm",
+              "Length": "2100 mm",
+              "Height": "1190 mm",
+              "Wheelbase": "1360 mm"
+            },
+            "electricals": {
+              "Headlight": "12 V -35 W / 35W - Halogen Bulb (Dual Head Light)",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Super Splendor",
+      "source_section": "Discontinued",
+      "status": "Discontinued on Sep, 2025",
+      "variants": [
+        {
+          "variant_name": "Super Splendor",
+          "price": "Rs. 55,500",
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.7 cc",
+              "Starting": "Kick and self Start",
+              "Clutch": "Multi Plate Wet",
+              "Bore": "52.4 mm",
+              "Stroke": "57.8 mm"
+            },
+            "dimensions_and_capacity": {
+              "Width": "735 mm",
+              "Length": "1995 mm",
+              "Height": "1095 mm",
+              "Wheelbase": "1265 mm"
+            },
+            "electricals": {
+              "Headlight": "35W / 35W – Halogen bulb ( Multifocal Reflector )"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme Sports",
+      "source_section": "Discontinued",
+      "status": "Discontinued on Apr, 2020",
+      "variants": [
+        {
+          "variant_name": "Xtreme Sports",
+          "price": "Rs. 92,760",
+          "colors": [
+            {
+              "value": "Mercuric Silver"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "149.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Multiplate wet",
+              "Bore": "57.3 mm",
+              "Stroke": "57.8 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "780 mm",
+              "Length": "2100 mm",
+              "Height": "1080 mm",
+              "Wheelbase": "1325 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "HF Dawn (2012-2017)",
+      "source_section": "Discontinued",
+      "status": "Discontinued on Jan, 2018",
+      "variants": [
+        {
+          "variant_name": "HF Dawn (2012-2017)",
+          "price": "Price not available",
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc",
+              "Starting": "Kick Start Only",
+              "Clutch": "Wet, Multi-Plate",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "1965 mm",
+              "Height": "1045 mm",
+              "Wheelbase": "1235 mm"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "XPulse 200T BS4",
+      "source_section": "Discontinued",
+      "status": "Discontinued on May, 2020",
+      "variants": [
+        {
+          "variant_name": "XPulse 200T BS4",
+          "price": "Price not available",
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "199.6 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Multi Plate Wet Clutch"
+            },
+            "chassis_and_suspension": {},
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme 200R BS4",
+      "source_section": "Discontinued",
+      "status": "Discontinued on May, 2020",
+      "variants": [
+        {
+          "variant_name": "Xtreme 200R BS4",
+          "price": "Rs. 82,000",
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "199.6 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Multi Plate Wet Clutch",
+              "Bore": "66.5 mm",
+              "Stroke": "57.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "778 mm",
+              "Length": "2062 mm",
+              "Height": "1106 mm",
+              "Wheelbase": "1337 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme 200S BS4",
+      "source_section": "Discontinued",
+      "status": "Discontinued on Mar, 2020",
+      "variants": [
+        {
+          "variant_name": "Xtreme 200S BS4",
+          "price": "Rs. 1,32,962",
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "199.6 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Multi Plate Wet Clutch",
+              "Bore": "66.5 mm",
+              "Stroke": "57.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "778 mm",
+              "Length": "2062 mm",
+              "Height": "1106 mm",
+              "Wheelbase": "1337 mm"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Splendor Pro Classic",
+      "source_section": "Discontinued",
+      "status": "Discontinued on May, 2017",
+      "variants": [
+        {
+          "variant_name": "Splendor Pro Classic",
+          "price": "Rs. 55,500",
+          "colors": [
+            {
+              "value": "Carbon Black"
+            },
+            {
+              "value": "Solid Maroon"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.2 cc"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Passion XTEC",
+      "source_section": "Discontinued",
+      "status": "Discontinued on Dec, 2024",
+      "variants": [
+        {
+          "variant_name": "Passion XTEC",
+          "price": "Rs. 55,500",
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "109.15 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet, Multi-Plate",
+              "Bore": "53 mm",
+              "Stroke": "49.5 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "1962 mm",
+              "Height": "1087 mm",
+              "Wheelbase": "1235 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "CBZ",
+      "source_section": "Discontinued",
+      "status": "Discontinued on Oct, 2017",
+      "variants": [
+        {
+          "variant_name": "CBZ",
+          "price": "Rs. 82,000",
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "149 cc",
+              "Clutch": "Wet-Multiplate",
+              "Bore": "57 mm",
+              "Stroke": "58 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "765 mm",
+              "Length": "2080 mm",
+              "Height": "1145 mm",
+              "Wheelbase": "1325 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Splendor iSmart",
+      "source_section": "Discontinued",
+      "status": "Discontinued on Sep, 2022",
+      "variants": [
+        {
+          "variant_name": "Splendor iSmart",
+          "price": "Rs. 82,000",
+          "colors": [
+            {
+              "value": "Red"
+            },
+            {
+              "value": "Blue"
+            },
+            {
+              "value": "Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "113.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet Multi Plate",
+              "Bore": "50 mm",
+              "Stroke": "57.8 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "726 mm",
+              "Length": "2048 mm",
+              "Height": "1110 mm",
+              "Wheelbase": "1270 mm"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Impulse",
+      "source_section": "Discontinued",
+      "status": "Discontinued on Jun, 2017",
+      "variants": [
+        {
+          "variant_name": "Impulse",
+          "price": "Rs. 69,990",
+          "colors": [
+            {
+              "value": "Tar Black"
+            },
+            {
+              "value": "Terra Rossa"
+            },
+            {
+              "value": "Grassland Green"
+            },
+            {
+              "value": "Deep Sea Blue"
+            },
+            {
+              "value": "Canyon Orange"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "149.2 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet, Multi-Plate",
+              "Bore": "57.3 mm",
+              "Stroke": "57.8 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "820 mm",
+              "Length": "2100 mm",
+              "Height": "1160 mm",
+              "Wheelbase": "1360 mm"
+            },
+            "electricals": {
+              "Headlight": "12 V - 35 W / 35 W - Halogen Bulb (MFR)",
+              "Taillight": "LED"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Ignitor",
+      "source_section": "Discontinued",
+      "status": "Discontinued on Nov, 2017",
+      "variants": [
+        {
+          "variant_name": "Ignitor",
+          "price": "Rs. 55,500",
+          "colors": [
+            {
+              "value": "Sports Red"
+            },
+            {
+              "value": "Moon Yellow"
+            },
+            {
+              "value": "Panther Black Metallic"
+            },
+            {
+              "value": "Matt Axis Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "124.7 cc",
+              "Starting": "Kick and Self Start",
+              "Clutch": "Wet, Multi-Plate",
+              "Bore": "52.4 mm",
+              "Stroke": "57.8 mm"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "710 mm",
+              "Length": "2010 mm",
+              "Height": "1095 mm",
+              "Wheelbase": "1270 mm"
+            },
+            "electricals": {
+              "Headlight": "35 W / 35 W - Halogen Bulb ( Multi-Reflector )",
+              "Taillight": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "MotoCorp Passion",
+      "source_section": "Discontinued",
+      "status": "Discontinued on Sep, 2012",
+      "variants": [
+        {
+          "variant_name": "MotoCorp Passion",
+          "price": "Price not available",
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.20 cc"
+            },
+            "chassis_and_suspension": {}
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Passion XTEC",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Passion XTEC",
+          "price": "Rs.55,500*Onwards",
+          "colors": [
+            {
+              "value": "Black with Force Silver"
+            },
+            {
+              "value": "100 Million Limited Edition"
+            },
+            {
+              "value": "Sports Red"
+            },
+            {
+              "value": "Candy Blazing Red"
+            },
+            {
+              "value": "Heavy Grey Metallic"
+            },
+            {
+              "value": "Black with Polestar Blue"
+            },
+            {
+              "value": "Black With Heavy Grey"
+            },
+            {
+              "value": "Force Silver Metallic"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Air Cooled, 4 - stroke single cylinder OHC",
+              "Displacement": "109.15 cc",
+              "Max Torque": "9 Nm @ 5500 rpm",
+              "No. of Cylinders": "1",
+              "Cooling System": "Air Cooled",
+              "Valve Per Cylinder": "2",
+              "Starting": "Kick and Self Start",
+              "Fuel Supply": "Carburetor",
+              "Clutch": "Wet, Multi-Plate",
+              "Gear Box": "4 Speed",
+              "Bore": "53 mm",
+              "Stroke": "49.5 mm",
+              "Compression Ratio": "10:01",
+              "Emission Type": "bs4"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Commuter Bikes",
+              "Body Graphics": "Yes"
+            },
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "1962 mm",
+              "Height": "1087 mm",
+              "Fuel Capacity": "11 L",
+              "Saddle Height": "780 mm",
+              "Ground Clearance": "165 mm",
+              "Wheelbase": "1235 mm",
+              "Kerb Weight": "116 Kg"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb",
+              "Turn Signal Lamp": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "CBZ",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "CBZ",
+          "price": "Rs.82,000*Onwards",
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Single Cylinder, 2-Valve, Air Cooled",
+              "Displacement": "149 cc",
+              "Max Torque": "13 Nm @ 6500 rpm",
+              "No. of Cylinders": "1",
+              "Cooling System": "Air Cooled",
+              "Valve Per Cylinder": "2",
+              "Fuel Supply": "Carburetor",
+              "Clutch": "Wet-Multiplate",
+              "Gear Box": "5-Speed",
+              "Bore": "57 mm",
+              "Stroke": "58 mm"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Commuter Bikes"
+            },
+            "dimensions_and_capacity": {
+              "Width": "765 mm",
+              "Length": "2080 mm",
+              "Height": "1145 mm",
+              "Saddle Height": "795 mm",
+              "Ground Clearance": "145 mm",
+              "Wheelbase": "1325 mm",
+              "Kerb Weight": "148 kg"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb",
+              "Turn Signal Lamp": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Splendor iSmart",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Splendor iSmart",
+          "price": "Rs.82,000*Onwards",
+          "colors": [
+            {
+              "value": "Red"
+            },
+            {
+              "value": "Blue"
+            },
+            {
+              "value": "Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Air cooled, 4-stroke, Single cylinder, OHC",
+              "Displacement": "113.2 cc",
+              "Max Torque": "9.89 Nm @ 5500 rpm",
+              "No. of Cylinders": "1",
+              "Cooling System": "Air Cooled",
+              "Valve Per Cylinder": "2",
+              "Starting": "Kick and Self Start",
+              "Fuel Supply": "Fuel Injection",
+              "Clutch": "Wet Multi Plate",
+              "Gear Box": "4 Speed",
+              "Bore": "50 mm",
+              "Stroke": "57.8 mm",
+              "Emission Type": "bs6"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Commuter Bikes",
+              "Body Graphics": "Yes"
+            },
+            "dimensions_and_capacity": {
+              "Width": "726 mm",
+              "Length": "2048 mm",
+              "Height": "1110 mm",
+              "Fuel Capacity": "9.5 L",
+              "Saddle Height": "799 mm",
+              "Ground Clearance": "180 mm",
+              "Wheelbase": "1270 mm",
+              "Kerb Weight": "116 kg"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb",
+              "Turn Signal Lamp": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Impulse",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Impulse",
+          "price": "Rs.69,990*Onwards",
+          "colors": [
+            {
+              "value": "Tar Black"
+            },
+            {
+              "value": "Terra Rossa"
+            },
+            {
+              "value": "Grassland Green"
+            },
+            {
+              "value": "Deep Sea Blue"
+            },
+            {
+              "value": "Canyon Orange"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Air Cooled, 4- Stroke Single Cylinder OHC",
+              "Displacement": "149.2 cc",
+              "Max Torque": "13.4 Nm @ 5000 rpm",
+              "No. of Cylinders": "1",
+              "Cooling System": "Air Cooled",
+              "Valve Per Cylinder": "2",
+              "Starting": "Kick and Self Start",
+              "Fuel Supply": "Carburetor",
+              "Clutch": "Wet, Multi-Plate",
+              "Gear Box": "5 Speed",
+              "Bore": "57.3 mm",
+              "Stroke": "57.8 mm",
+              "Compression Ratio": "9.1:1"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Dirt Bikes",
+              "Body Graphics": "Yes"
+            },
+            "dimensions_and_capacity": {
+              "Width": "820 mm",
+              "Length": "2100 mm",
+              "Height": "1160 mm",
+              "Fuel Capacity": "11.1 Ltrs",
+              "Saddle Height": "835 mm",
+              "Ground Clearance": "245 mm",
+              "Wheelbase": "1360 mm",
+              "Kerb Weight": "134 Kgs"
+            },
+            "electricals": {
+              "Headlight": "12 V - 35 W / 35 W - Halogen Bulb (MFR)",
+              "Taillight": "LED",
+              "Turn Signal Lamp": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Ignitor",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Ignitor",
+          "price": "Rs.55,500*Onwards",
+          "colors": [
+            {
+              "value": "Sports Red"
+            },
+            {
+              "value": "Pearl Fadeless white"
+            },
+            {
+              "value": "Moon Yellow"
+            },
+            {
+              "value": "Panther Black Metallic"
+            },
+            {
+              "value": "Matt Axis Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Air Cooled, 4 - Stroke Single Cylinder OHC",
+              "Displacement": "124.7 cc",
+              "Max Torque": "11 Nm @ 5000 rpm",
+              "No. of Cylinders": "1",
+              "Cooling System": "Air Cooled",
+              "Valve Per Cylinder": "2",
+              "Starting": "Kick and Self Start",
+              "Fuel Supply": "Carburetor",
+              "Clutch": "Wet, Multi-Plate",
+              "Gear Box": "5 Speed",
+              "Bore": "52.4 mm",
+              "Stroke": "57.8 mm",
+              "Compression Ratio": "9.2 :1"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Commuter Bikes",
+              "Body Graphics": "Yes"
+            },
+            "dimensions_and_capacity": {
+              "Width": "710 mm",
+              "Length": "2010 mm",
+              "Height": "1095 mm",
+              "Fuel Capacity": "9 Ltrs",
+              "Saddle Height": "795 mm",
+              "Ground Clearance": "175 mm",
+              "Wheelbase": "1270 mm",
+              "Kerb Weight": "129 Kgs"
+            },
+            "electricals": {
+              "Headlight": "35 W / 35 W - Halogen Bulb ( Multi-Reflector )",
+              "Taillight": "Bulb",
+              "Turn Signal Lamp": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "MotoCorp Passion",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "MotoCorp Passion",
+          "price": "Rs74,902*Onwards",
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Displacement": "97.20 cc"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Sports Bikes"
+            },
+            "dimensions_and_capacity": {},
+            "electricals": {}
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "HF Dawn (2018-2019)",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "HF Dawn (2018-2019)",
+          "price": "Rs.55,500*Onwards",
+          "colors": [
+            {
+              "value": "Black"
+            },
+            {
+              "value": "Red"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Single Cylinder, 4-Stroke, OHC",
+              "Displacement": "97.2 cc",
+              "Max Torque": "8.05 Nm @ 5000 rpm",
+              "No. of Cylinders": "1",
+              "Cooling System": "Air Cooled",
+              "Valve Per Cylinder": "2",
+              "Starting": "Kick Start Only",
+              "Fuel Supply": "Carburetor",
+              "Clutch": "Wet, Multi-Plate",
+              "Gear Box": "4 Speed",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm",
+              "Compression Ratio": "9.0:1"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Commuter Bikes",
+              "Body Graphics": "Yes"
+            },
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "1965 mm",
+              "Height": "1045 mm",
+              "Fuel Capacity": "9.5 L",
+              "Saddle Height": "805 mm",
+              "Ground Clearance": "165 mm",
+              "Wheelbase": "1235 mm",
+              "Kerb Weight": "105 Kg"
+            },
+            "electricals": {
+              "Headlight": "(AHO) Halogen",
+              "Taillight": "Bulb",
+              "Turn Signal Lamp": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "HF Deluxe BS4",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "HF Deluxe BS4",
+          "price": "Rs.55,500*Onwards",
+          "colors": [
+            {
+              "value": "Leaf Green"
+            },
+            {
+              "value": "Black With Red"
+            },
+            {
+              "value": "Black With Purple"
+            },
+            {
+              "value": "Candy Blazing Red"
+            },
+            {
+              "value": "Heavy Grey With Black"
+            },
+            {
+              "value": "Heavy Grey With Green"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Air-cooled, 4 - stroke single cylinder OHC",
+              "Displacement": "97.2 cc",
+              "Max Torque": "8.05 Nm @ 5000 rpm",
+              "No. of Cylinders": "1",
+              "Cooling System": "Air Cooled",
+              "Starting": "Kick Start Only",
+              "Fuel Supply": "Carburetor",
+              "Clutch": "Multi-plate, wet",
+              "Gear Box": "4 Speed",
+              "Compression Ratio": "9.9:1",
+              "Emission Type": "bs4"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Commuter Bikes",
+              "Body Graphics": "Yes"
+            },
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "1965 mm",
+              "Height": "1045 mm",
+              "Fuel Capacity": "9.5 L",
+              "Saddle Height": "805 mm",
+              "Ground Clearance": "165 mm",
+              "Wheelbase": "1235 mm",
+              "Kerb Weight": "109 kg"
+            },
+            "electricals": {
+              "Headlight": "Halogen",
+              "Taillight": "Bulb",
+              "Turn Signal Lamp": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Splendor Pro",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Splendor Pro",
+          "price": "Rs.55,500*Onwards",
+          "colors": [
+            {
+              "value": "Heavy Grey"
+            },
+            {
+              "value": "Black with Red"
+            },
+            {
+              "value": "Black Purple"
+            },
+            {
+              "value": "Candy Blazing Red"
+            },
+            {
+              "value": "Black monotone"
+            },
+            {
+              "value": "Palace Maroon"
+            },
+            {
+              "value": "Shield Gold"
+            },
+            {
+              "value": "Cloud Silver"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Air-Cooled, 4-Stroke Single Cylinder OHC",
+              "Displacement": "97.2 cc",
+              "Max Torque": "8.05 Nm @ 5000 rpm",
+              "No. of Cylinders": "1",
+              "Cooling System": "Air Cooled",
+              "Valve Per Cylinder": "2",
+              "Starting": "Kick Start Only",
+              "Fuel Supply": "Carburetor",
+              "Clutch": "Wet, Multi-Plate",
+              "Gear Box": "4 Speed",
+              "Bore": "50 mm",
+              "Stroke": "49.5 mm",
+              "Compression Ratio": "9.9:1"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Commuter Bikes",
+              "Body Graphics": "Yes"
+            },
+            "dimensions_and_capacity": {
+              "Width": "720 mm",
+              "Length": "1970 mm",
+              "Height": "1040 mm",
+              "Fuel Capacity": "11 Ltrs",
+              "Saddle Height": "785 mm",
+              "Ground Clearance": "159 mm",
+              "Wheelbase": "1230 mm",
+              "Kerb Weight": "109 Kg"
+            },
+            "electricals": {
+              "Headlight": "12V - 35W / 35W - Halogen bulb (Multi Reflector Type)",
+              "Taillight": "Bulb",
+              "Turn Signal Lamp": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Glamour (2012-2016)",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Glamour (2012-2016)",
+          "price": "Rs.55,500*Onwards",
+          "colors": [
+            {
+              "value": "Candy Blazing Red"
+            },
+            {
+              "value": "Black with Tornado Grey Metallic"
+            },
+            {
+              "value": "Digital Silver"
+            },
+            {
+              "value": "Techno Blue"
+            },
+            {
+              "value": "Black with Sports Red"
+            },
+            {
+              "value": "Black with Techno Blue"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Air Cooled, 4 - Stroke Single Cylinder OHC",
+              "Displacement": "124.7 cc",
+              "Max Torque": "10.35 Nm @ 4000 rpm",
+              "No. of Cylinders": "1",
+              "Cooling System": "Air Cooled",
+              "Valve Per Cylinder": "2",
+              "Starting": "Kick and Self Start",
+              "Fuel Supply": "Carburetor",
+              "Clutch": "Wet, Multi-Plate",
+              "Gear Box": "4 Speed",
+              "Bore": "52.4 mm",
+              "Stroke": "57.8 mm",
+              "Compression Ratio": "9.1:1"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Commuter Bikes",
+              "Body Graphics": "Scintillating New Graphics & Aerodynamic Scoops"
+            },
+            "dimensions_and_capacity": {
+              "Width": "735 mm",
+              "Length": "2005 mm",
+              "Height": "1070 mm",
+              "Fuel Capacity": "13.6 Ltrs",
+              "Saddle Height": "790 mm",
+              "Ground Clearance": "150 mm",
+              "Wheelbase": "1265 mm",
+              "Kerb Weight": "129 Kgs"
+            },
+            "electricals": {
+              "Headlight": "12V-35W / 35W-Halogen Bulb MFR",
+              "Taillight": "Bulb",
+              "Turn Signal Lamp": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Achiever",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Achiever",
+          "price": "Rs.55,500*Onwards",
+          "colors": [
+            {
+              "value": "Panther Black"
+            },
+            {
+              "value": "Valor Grey"
+            },
+            {
+              "value": "Candy Blazing Red"
+            },
+            {
+              "value": "Metalic Matt Grey"
+            },
+            {
+              "value": "Force Silver"
+            },
+            {
+              "value": "Fiery Red"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Air-Cooled, 4-Stroke Single Cylinder OHC",
+              "Displacement": "149.2 cc",
+              "Max Torque": "12.80 Nm @ 5000 rpm",
+              "Cooling System": "Air Cooled",
+              "Starting": "Kick and Self Start",
+              "Fuel Supply": "Carburetor",
+              "Clutch": "Wet, Multi-Plate",
+              "Gear Box": "5 Speed",
+              "Bore": "57.3 mm",
+              "Stroke": "57.8 mm",
+              "Compression Ratio": "9.1:1"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Commuter Bikes"
+            },
+            "dimensions_and_capacity": {
+              "Width": "760 mm",
+              "Length": "2040 mm",
+              "Height": "1120 mm",
+              "Fuel Capacity": "12.5 Ltrs",
+              "Saddle Height": "800 mm",
+              "Ground Clearance": "160 mm",
+              "Wheelbase": "1290 mm",
+              "Kerb Weight": "138 Kgs"
+            },
+            "electricals": {
+              "Headlight": "12 V - 35 W / 35 W - Halogen Bulb (Multi-Reflector Type)",
+              "Taillight": "Bulb",
+              "Turn Signal Lamp": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Hunk",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Hunk",
+          "price": "Rs.82,000*Onwards",
+          "colors": [
+            {
+              "value": "Bold Brown"
+            },
+            {
+              "value": "Ebony Grey"
+            },
+            {
+              "value": "Force Silver"
+            },
+            {
+              "value": "Sports Red"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Air Cooled, 4 - Stroke Single Cylinder OHC",
+              "Displacement": "149.2 cc",
+              "Max Torque": "13.50 Nm @ 7000 rpm",
+              "Cooling System": "Air Cooled",
+              "Starting": "Kick and self Start",
+              "Clutch": "Wet, Multi-Plate",
+              "Gear Box": "5 Speed",
+              "Bore": "57.3 mm",
+              "Stroke": "57.8 mm",
+              "Compression Ratio": "10:1"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "765 mm",
+              "Length": "2080 mm",
+              "Height": "1095 mm",
+              "Fuel Capacity": "12.4 Ltrs",
+              "Saddle Height": "795 mm",
+              "Ground Clearance": "163 mm",
+              "Wheelbase": "1325 mm",
+              "Kerb Weight": "147 Kgs"
+            },
+            "electricals": {
+              "Headlight": "12 V - 35 W / 35W - Halogen Bulb Trapezoidal MFR",
+              "Taillight": "LED",
+              "Turn Signal Lamp": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Xtreme",
+          "price": "Rs.82,000*Onwards",
+          "colors": [
+            {
+              "value": "Panther Black"
+            },
+            {
+              "value": "Jazz Blue"
+            },
+            {
+              "value": "Magma Orange"
+            },
+            {
+              "value": "Fiery Red"
+            },
+            {
+              "value": "Mercuric Silver"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Air Cooled, 4-Stroke Single Cylinder OHC",
+              "Displacement": "149.2 cc",
+              "Max Torque": "12.8 Nm @ 6500 rpm",
+              "Gear Box": "5 Speed Constant Mesh"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {
+              "Width": "780 mm",
+              "Length": "2100 mm",
+              "Height": "1080 mm",
+              "Fuel Capacity": "12.1 Ltrs",
+              "Ground Clearance": "160 mm",
+              "Kerb Weight": "149 Kgs"
+            },
+            "electricals": {}
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Karizma (2012-2017)",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Karizma (2012-2017)",
+          "price": "Rs.82,000*Onwards",
+          "colors": [
+            {
+              "value": "Power Black"
+            },
+            {
+              "value": "Ebony Grey"
+            },
+            {
+              "value": "Sports Red"
+            },
+            {
+              "value": "Daring Yellow"
+            },
+            {
+              "value": "Spotlight White"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Four-Stroke, Single-Cylinder",
+              "Displacement": "250 cc",
+              "Gear Box": "5-Speed"
+            },
+            "chassis_and_suspension": {},
+            "dimensions_and_capacity": {},
+            "electricals": {}
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "Passion XPro",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "Passion XPro",
+          "price": "Rs.55,500*Onwards",
+          "colors": [
+            {
+              "value": "Sports Red"
+            },
+            {
+              "value": "Black with Heavy Grey"
+            },
+            {
+              "value": "Black with Sports Red"
+            },
+            {
+              "value": "Vibrant Blue Metallic"
+            },
+            {
+              "value": "Leaf Green Metallic"
+            },
+            {
+              "value": "Force Silver Metallic"
+            },
+            {
+              "value": "Black with Forest Blue"
+            },
+            {
+              "value": "Electric Yellow Metallic"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Air Cooled, 4-Stroke Single Cylinder OHC",
+              "Displacement": "109.1 cc",
+              "Max Torque": "9.36 Nm @ 5500 rpm",
+              "No. of Cylinders": "1",
+              "Cooling System": "Air Cooled",
+              "Valve Per Cylinder": "2",
+              "Starting": "Kick Start Only",
+              "Fuel Supply": "Carburetor",
+              "Clutch": "Wet, Multi-Plate",
+              "Gear Box": "4 Speed",
+              "Bore": "50 mm",
+              "Stroke": "55.6 mm",
+              "Compression Ratio": "9.0:1"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Commuter Bikes",
+              "Body Graphics": "Stylish Graphics"
+            },
+            "dimensions_and_capacity": {
+              "Width": "765 mm",
+              "Length": "2005 mm",
+              "Height": "1115 mm",
+              "Fuel Capacity": "9.5 Ltrs",
+              "Saddle Height": "785 mm",
+              "Ground Clearance": "170 mm",
+              "Wheelbase": "1265 mm",
+              "Kerb Weight": "113 Kgs"
+            },
+            "electricals": {
+              "Headlight": "12 V - 35 W / 35 W - Halogen Bulb (MFR)",
+              "Taillight": "Bulb",
+              "Turn Signal Lamp": "Bulb"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "make": "Hero",
+      "model": "XPulse 200T 4V",
+      "source_section": "Available",
+      "variants": [
+        {
+          "variant_name": "XPulse 200T 4V",
+          "price": "Rs.1,11,569*Onwards",
+          "colors": [
+            {
+              "value": "Sports Red"
+            },
+            {
+              "value": "Matte Shield Gold"
+            },
+            {
+              "value": "Funk Lime Yellow"
+            },
+            {
+              "value": "Funk Lime Yel Grey"
+            },
+            {
+              "value": "Shield Gold Grey"
+            }
+          ],
+          "technical_specifications": {
+            "engine_and_transmission": {
+              "Engine Type": "Oil cooled, 4 Stroke 2 Valve Single cylinder OHC",
+              "Displacement": "199.6 cc",
+              "Max Torque": "16.15 Nm @ 6500 rpm",
+              "No. of Cylinders": "1",
+              "Cooling System": "Oil Cooled",
+              "Valve Per Cylinder": "2",
+              "Starting": "Kick and Self Start",
+              "Fuel Supply": "Fuel Injection",
+              "Clutch": "Multi Plate Wet Clutch",
+              "Gear Box": "5 Speed",
+              "Bore": "66.5 mm",
+              "Stroke": "57.5 mm",
+              "Compression Ratio": "10:01",
+              "Emission Type": "bs6"
+            },
+            "chassis_and_suspension": {
+              "Body Type": "Street Bikes"
+            },
+            "dimensions_and_capacity": {
+              "Width": "806 mm",
+              "Length": "2118 mm",
+              "Height": "1089 mm",
+              "Fuel Capacity": "13 L",
+              "Saddle Height": "800 mm",
+              "Ground Clearance": "178 mm",
+              "Wheelbase": "1393 mm",
+              "Kerb Weight": "154 kg"
+            },
+            "electricals": {
+              "Headlight": "LED",
+              "Taillight": "LED",
+              "Turn Signal Lamp": "Bulb"
+            }
+          }
+        }
+      ]
+    }
+  ]
 }
