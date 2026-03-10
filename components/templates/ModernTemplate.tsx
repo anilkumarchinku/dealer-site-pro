@@ -25,8 +25,6 @@ import { StickyEnquiryBar } from '@/components/ui/StickyEnquiryBar';
 import { DealerChatbot } from '@/components/chatbot/DealerChatbot';
 import CompareBar from '@/components/cars/CompareBar';
 import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
-import { LanguageToggle, useLocale } from '@/components/ui/LanguageToggle';
-import { t } from '@/lib/i18n/translations';
 import { EVSection } from '@/components/ui/EVSection';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
@@ -113,7 +111,6 @@ export function ModernTemplate({
         car_exchange: { label: vl.exchange, icon: '🔃' },
     };
     const isHybrid = sellsNewCars && sellsUsedCars;
-    const [locale, setLocale] = useLocale();
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [inventoryTab, setInventoryTab] = useState<'all' | 'new' | 'used'>('all');
     const [isScrolled, setIsScrolled] = useState(false);
@@ -210,7 +207,7 @@ export function ModernTemplate({
                                 className="font-medium transition-colors text-gray-600 hover:text-gray-900"
                                 style={activeTab === 'home' ? { color: brandColors.primary } : {}}
                             >
-                                {t('home', locale)}
+                                Home
                             </button>
                             {showInventoryTab && (
                                 <button
@@ -218,11 +215,11 @@ export function ModernTemplate({
                                     className="font-medium transition-colors text-gray-600 hover:text-gray-900"
                                     style={activeTab === 'inventory' ? { color: brandColors.primary } : {}}
                                 >
-                                    {t('inventory', locale)}
+                                    Inventory
                                 </button>
                             )}
                             <a href="#contact" className="font-medium transition-colors text-gray-600 hover:text-gray-900">
-                                {t('contact', locale)}
+                                Contact
                             </a>
                             <button
                                 onClick={() => setNavEMIOpen(true)}
@@ -238,7 +235,6 @@ export function ModernTemplate({
 
                         {/* CTA Buttons */}
                         <div className="flex items-center gap-2">
-                            <LanguageToggle locale={locale} onChange={setLocale} variant="light" />
                             <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandColors.primary} />
                             <Button
                                 variant="outline"
@@ -246,7 +242,7 @@ export function ModernTemplate({
                                 onClick={() => setEnquireSidebarOpen(true)}
                             >
                                 <MessageSquare className="w-4 h-4 mr-2" />
-                                {t('enquireNow', locale)}
+                                Enquire Now
                             </Button>
                             <Button
                                 className="text-white shadow-lg"
@@ -255,7 +251,7 @@ export function ModernTemplate({
                             >
                                 <a href={`tel:${contactInfo.phone}`}>
                                     <Phone className="w-4 h-4 mr-2" />
-                                    {t('callNow', locale)}
+                                    Call Now
                                 </a>
                             </Button>
                             <button

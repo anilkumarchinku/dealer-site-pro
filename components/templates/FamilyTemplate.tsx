@@ -25,8 +25,6 @@ import { ServiceBookingSection } from '@/components/templates/sections/ServiceBo
 import { VideoSection } from '@/components/templates/sections/VideoSection';
 import CompareBar from '@/components/cars/CompareBar';
 import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
-import { LanguageToggle, useLocale } from '@/components/ui/LanguageToggle';
-import { t } from '@/lib/i18n/translations';
 import { EVSection } from '@/components/ui/EVSection';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
@@ -106,7 +104,6 @@ export function FamilyTemplate({
         car_exchange: { label: vl.exchange, icon: '🔃', desc: vl.exchangeDesc },
     };
     const isHybrid = sellsNewCars && sellsUsedCars;
-    const [locale, setLocale] = useLocale();
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [inventoryTab, setInventoryTab] = useState<'all' | 'new' | 'used'>('all');
     const [isScrolled, setIsScrolled] = useState(false);
@@ -189,7 +186,6 @@ export function FamilyTemplate({
                             <a href="#trust-section" className="font-medium hover:opacity-70">Trust Us</a>
                         </div>
                         <div className="flex items-center gap-2">
-                            <LanguageToggle locale={locale} onChange={setLocale} variant="light" />
                             <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandColors.primary} />
                             <Button
                                 className="rounded-full hidden sm:flex bg-white"

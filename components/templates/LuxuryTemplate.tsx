@@ -25,8 +25,6 @@ import { ServiceBookingSection } from '@/components/templates/sections/ServiceBo
 import { VideoSection } from '@/components/templates/sections/VideoSection';
 import CompareBar from '@/components/cars/CompareBar';
 import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
-import { LanguageToggle, useLocale } from '@/components/ui/LanguageToggle';
-import { t } from '@/lib/i18n/translations';
 import { EVSection } from '@/components/ui/EVSection';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
@@ -89,7 +87,6 @@ export function LuxuryTemplate({
         car_exchange: { label: vl.exchange, icon: '🔃' },
     };
     const isHybrid = sellsNewCars && sellsUsedCars;
-    const [locale, setLocale] = useLocale();
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [inventoryTab, setInventoryTab] = useState<'all' | 'new' | 'used'>('all');
     const [isScrolled, setIsScrolled] = useState(false);
@@ -175,7 +172,6 @@ export function LuxuryTemplate({
                             <a href="#trust-section" className="text-sm tracking-wider text-gray-600 hover:text-gray-900">Trust Us</a>
                         </div>
                         <div className="flex items-center gap-2">
-                            <LanguageToggle locale={locale} onChange={setLocale} variant="light" />
                             <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandAccent} />
                             <Button
                                 variant="outline"
