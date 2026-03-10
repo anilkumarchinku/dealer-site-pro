@@ -498,8 +498,9 @@ export default async function SitePage({ params }: SitePageProps) {
     // Fallback: brand logo from /data/brand-logos/<brand-id>.png
     const isUsedSite = templateSellsUsed && !templateSellsNew
     const brandName = isUsedSite ? 'Bentley' : (brandFilter ?? brands[0] ?? dealer.dealership_name)
-    const _brandLogoId = brandName.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
-    const logoUrl = logo_url ?? `/data/brand-logos/${_brandLogoId}.png`
+    // Pass dealer's uploaded logo if available; otherwise undefined so each template
+    // falls back to its own correct path (/assets/logos/<brand>.png for 4W).
+    const logoUrl = logo_url ?? undefined
 
     const contactInfo = {
         phone: dealer.phone,
