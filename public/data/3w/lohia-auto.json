@@ -1,0 +1,51 @@
+[
+  {
+    "make": "Lohia Auto",
+    "model": "Humsafar L5 Passenger",
+    "category": "passenger",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Lohia Auto",
+    "model": "Narain ICE L3",
+    "category": "passenger",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Lohia Auto",
+    "model": "Narain DX",
+    "category": "passenger",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Lohia Auto",
+    "model": "Humsafar L5 Cargo",
+    "category": "cargo",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Lohia Auto",
+    "model": "Comfort F2F+",
+    "category": "cargo",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Lohia Auto",
+    "model": "Youdha E5 Passenger",
+    "category": "electric",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Lohia Auto",
+    "model": "Youdha E5 Cargo",
+    "category": "electric",
+    "status": "Available",
+    "variants": []
+  }
+]

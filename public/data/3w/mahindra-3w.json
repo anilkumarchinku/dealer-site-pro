@@ -1,0 +1,79 @@
+[
+  {
+    "make": "Mahindra (3W)",
+    "model": "Alfa Passenger",
+    "category": "passenger",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Mahindra (3W)",
+    "model": "E-Alfa Plus",
+    "category": "passenger",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Mahindra (3W)",
+    "model": "E-Alfa Mini",
+    "category": "passenger",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Mahindra (3W)",
+    "model": "Alfa Load",
+    "category": "cargo",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Mahindra (3W)",
+    "model": "Zor Grand",
+    "category": "cargo",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Mahindra (3W)",
+    "model": "Treo",
+    "category": "electric",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Mahindra (3W)",
+    "model": "Treo Plus",
+    "category": "electric",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Mahindra (3W)",
+    "model": "Treo Zor",
+    "category": "electric",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Mahindra (3W)",
+    "model": "Treo Yaari HRT",
+    "category": "electric",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Mahindra (3W)",
+    "model": "Treo Yaari SFT",
+    "category": "electric",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Mahindra (3W)",
+    "model": "UDO",
+    "category": "electric",
+    "status": "Available",
+    "variants": []
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "make": "Euler Motors",
+    "model": "NEO HiCITY",
+    "category": "passenger",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Euler Motors",
+    "model": "NEO HiRange",
+    "category": "passenger",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Euler Motors",
+    "model": "HiLoad DV EV",
+    "category": "cargo",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Euler Motors",
+    "model": "HiLoad EV 120",
+    "category": "cargo",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Euler Motors",
+    "model": "HiLoad EV 170",
+    "category": "cargo",
+    "status": "Available",
+    "variants": []
+  }
+]

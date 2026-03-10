@@ -1,0 +1,65 @@
+[
+  {
+    "make": "Piaggio Ape",
+    "model": "Auto Classic",
+    "category": "passenger",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Piaggio Ape",
+    "model": "Auto DX",
+    "category": "passenger",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Piaggio Ape",
+    "model": "NXT+",
+    "category": "passenger",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Piaggio Ape",
+    "model": "Metro",
+    "category": "passenger",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Piaggio Ape",
+    "model": "Xtra LDX Diesel",
+    "category": "cargo",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Piaggio Ape",
+    "model": "Xtra LDX CNG",
+    "category": "cargo",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Piaggio Ape",
+    "model": "E-City",
+    "category": "electric",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Piaggio Ape",
+    "model": "E-Xtra FX",
+    "category": "electric",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Piaggio Ape",
+    "model": "E-Xtra FX Max",
+    "category": "electric",
+    "status": "Available",
+    "variants": []
+  }
+]

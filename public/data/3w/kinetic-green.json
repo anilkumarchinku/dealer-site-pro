@@ -1,0 +1,30 @@
+[
+  {
+    "make": "Kinetic Green",
+    "model": "Safar Smart",
+    "category": "passenger",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Kinetic Green",
+    "model": "Super DX",
+    "category": "passenger",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Kinetic Green",
+    "model": "Safar Shakti",
+    "category": "cargo",
+    "status": "Available",
+    "variants": []
+  },
+  {
+    "make": "Kinetic Green",
+    "model": "Safar Jumbo Ranger",
+    "category": "cargo",
+    "status": "Available",
+    "variants": []
+  }
+]

@@ -157,7 +157,7 @@ function ThreeWheelerPortal({
 
         <div className="grid gap-4 mb-10 sm:grid-cols-2">
           <a
-            href={`/sites/${slug}/three-wheelers/new`}
+            href="/three-wheelers/new"
             className="group flex flex-col gap-4 p-6 rounded-2xl border-2 border-purple-500/30 bg-purple-500/5 hover:scale-[1.02] transition-all duration-200"
           >
             <div className="flex items-center gap-3">
@@ -172,7 +172,7 @@ function ThreeWheelerPortal({
             </span>
           </a>
           <a
-            href={`/sites/${slug}/three-wheelers/used`}
+            href="/three-wheelers/used"
             className="group flex flex-col gap-4 p-6 rounded-2xl border-2 border-amber-500/30 bg-amber-500/5 hover:scale-[1.02] transition-all duration-200"
           >
             <div className="flex items-center gap-3">

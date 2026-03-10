@@ -102,6 +102,7 @@ export default function DashboardLayout({
     const { data, updateData, setDealerId, setDealerSlug, dealerSlug } = useOnboardingStore();
     const isFirstHand = data.sellsNewCars && !data.sellsUsedCars;
     const [unreadCount, setUnreadCount] = useState(0);
+    const [vehicleType, setVehicleType] = useState<string | null>(null);
 
     // On every mount: verify the user has completed onboarding.
     // The early-exit on data.dealershipName was intentionally removed —
@@ -134,6 +135,7 @@ export default function DashboardLayout({
                 // Redirect 2W/3W dealers to their module dashboard when landing on /dashboard
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 const vType = (dealer as any).vehicle_type as string | null;
+                setVehicleType(vType);
                 if (pathname === '/dashboard' || pathname === '/dashboard/') {
                     if (vType === 'two-wheeler')   { router.replace('/dashboard/two-wheelers');   return; }
                     if (vType === 'three-wheeler')  { router.replace('/dashboard/three-wheelers'); return; }
@@ -198,7 +200,12 @@ export default function DashboardLayout({
 
                 {/* Navigation */}
                 <nav className="flex-1 p-4 overflow-y-auto space-y-4">
-                    {navGroups.map((group) => (
+                    {navGroups.filter(group => {
+                        if (vehicleType === 'two-wheeler')  return !['Manage', '3-Wheeler'].includes(group.label);
+                        if (vehicleType === 'three-wheeler') return !['Manage', '2-Wheeler'].includes(group.label);
+                        // 4W / null: hide 2W and 3W sections
+                        return !['2-Wheeler', '3-Wheeler'].includes(group.label);
+                    }).map((group) => (
                         <div key={group.label}>
                             <p className="px-4 mb-1 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground/50">
                                 {group.label}

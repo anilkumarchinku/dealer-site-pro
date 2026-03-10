@@ -1,0 +1,156 @@
+{
+  "bajaj_compact_4s_variants": [
+    {
+      "variant_name": "RE 3-Seater/CNG",
+      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
+      "engine_details": {
+        "engine_type": "4 Stroke Air-cooled",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
+        "displacement": "236.2 cc",
+        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
+        "max_power": "7.3 kW",
+        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
+        "torque": "16.3 Nm",
+        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng"
+      },
+      "dimensions": {
+        "length": "2635 mm",
+        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
+        "width": "1300 mm",
+        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
+        "height": "1700 mm",
+        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
+        "wheelbase": "2000 mm",
+        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "713 kg",
+        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
+        "transmission_type": "Manual",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
+        "brakes": "RH Foot Operated Hydraulic Drum Brakes",
+        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
+        "suspension": "Front – Parabolic Leaf Spring; Rear – Shock absorbers with coil springs dampen",
+        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng"
+      }
+    },
+    {
+      "variant_name": "RE 3-Seater/Diesel",
+      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
+      "engine_details": {
+        "engine_type": "4 Stroke Air-cooled",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
+        "displacement": "470.5 cc",
+        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
+        "max_power": "6.27 kW",
+        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
+        "torque": "23.8 Nm",
+        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel"
+      },
+      "dimensions": {
+        "length": "2635 mm",
+        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
+        "width": "1300 mm",
+        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
+        "height": "1700 mm",
+        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
+        "wheelbase": "2000 mm",
+        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "709 kg",
+        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
+        "transmission_type": "Manual",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
+        "brakes": "RH Foot Operated Hydraulic Drum Brakes",
+        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
+        "suspension": "Front – Parabolic Leaf Spring; Rear – Shock absorbers with coil springs dampen",
+        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel"
+      }
+    },
+    {
+      "variant_name": "RE 3-Seater/LPG",
+      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
+      "engine_details": {
+        "engine_type": "4 Stroke Air-cooled",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
+        "displacement": "236.2 cc",
+        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
+        "max_power": "7.7 kW",
+        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
+        "torque": "17.8 Nm",
+        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg"
+      },
+      "dimensions": {
+        "length": "2658 mm",
+        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
+        "width": "1300 mm",
+        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
+        "height": "1700 mm",
+        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
+        "wheelbase": "2000 mm",
+        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "694 kg",
+        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg"
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
+        "transmission_type": "Manual",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
+        "brakes": "RH Foot Operated Hydraulic Drum Brakes",
+        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
+        "suspension": "Front – Parabolic Leaf Spring; Rear – Shock absorbers with coil springs dampen",
+        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg"
+      }
+    },
+    {
+      "variant_name": "RE 3-Seater/Petrol",
+      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
+      "engine_details": {
+        "engine_type": "4 Stroke Air-cooled",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
+        "displacement": "236.2 cc",
+        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
+        "max_power": "8 kW",
+        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
+        "torque": "19.2 Nm",
+        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol"
+      },
+      "dimensions": {
+        "length": "2658 mm",
+        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
+        "width": "1300 mm",
+        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
+        "height": "1700 mm",
+        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
+        "wheelbase": "2000 mm",
+        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg",
+        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
+        "transmission_type": "Manual",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
+        "brakes": "RH Foot Operated Hydraulic Drum Brakes",
+        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
+        "suspension": "Front – Parabolic Leaf Spring; Rear – Shock absorbers with coil springs dampen",
+        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol"
+      }
+    }
+  ]
+}

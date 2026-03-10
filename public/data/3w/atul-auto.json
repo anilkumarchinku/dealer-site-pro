@@ -1,0 +1,300 @@
+{
+  "vehicles": [
+    {
+      "model_name": "Atul Shakti Cargo",
+      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/shakti",
+      "cardekho_technical_specifications": {
+        "engine_type": "598 cc, four-stroke, single-cylinder engine",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/shakti.html",
+        "fuel_type": "Diesel",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/shakti.html",
+        "mileage": "36 kmpl",
+        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/shakti/specifications",
+        "transmission_type": "Manual",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/shakti.html"
+      },
+      "cardekho_pricing": {
+        "ex_showroom_price": "₹ 2.50 Lakh - ₹ 2.85 Lakh",
+        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/shakti/price-in-new-delhi"
+      },
+      "cardekho_variants": [
+        {
+          "value": "Shakti Cargo 2110/Cargo",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/shakti/2110cargo"
+        },
+        {
+          "value": "Shakti Cargo 2110/Cargo XD",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/shakti/2110cargo-xd"
+        }
+      ]
+    },
+    {
+      "model_name": "Atul Elite Plus",
+      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/elite",
+      "cardekho_technical_specifications": {
+        "engine_type": "Electric motor (850 W / 1000 W power motor with 48 V DC 40 A controller)",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite",
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite",
+        "seating_capacity": 4,
+        "seating_capacity_citation": "https://trucks.cardekho.com/en/trucks/atul/elite",
+        "mileage": "80 km range per charge",
+        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/elite/specifications",
+        "transmission_type": "Automatic",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite"
+      },
+      "cardekho_pricing": {
+        "ex_showroom_price": "₹1.12 lakh",
+        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/elite"
+      },
+      "cardekho_variants": [
+        {
+          "value": "Elite Plus 4-Seater/Electric",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/elite/4-seaterelectric"
+        }
+      ]
+    },
+    {
+      "model_name": "Atul GEM Cargo",
+      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo",
+      "cardekho_technical_specifications": {
+        "engine_type": "395 cc four-stroke water-cooled diesel engine",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/specifications",
+        "fuel_type": "Diesel, CNG",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/specifications",
+        "mileage": "30.4 kmpl",
+        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/specifications",
+        "transmission_type": "4-speed manual",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/specifications"
+      },
+      "cardekho_pricing": {
+        "ex_showroom_price": "₹ 2.66 Lakh",
+        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo.html"
+      },
+      "cardekho_variants": [
+        {
+          "value": "GEM Cargo 2260/CNG Aqua 6F",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/2260-cng-aqua-6f"
+        },
+        {
+          "value": "GEM Cargo 2260/CNG",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/2260cng"
+        },
+        {
+          "value": "GEM Cargo 1925/Delivery Van",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/1925-delivery-van"
+        },
+        {
+          "value": "GEM Cargo 2105/Diesel",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/2105diesel"
+        },
+        {
+          "value": "GEM Cargo 1925/Petrol",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/1925-petrol"
+        }
+      ]
+    },
+    {
+      "model_name": "Atul Gem Paxx",
+      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx",
+      "cardekho_technical_specifications": {
+        "engine_type": "Four-stroke, water-cooled, BS6 engine, 598 cc (or 395 cc)",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx",
+        "fuel_type": "CNG, Diesel, Petrol, LPG",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx",
+        "seating_capacity": 3,
+        "seating_capacity_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx",
+        "mileage": "36 kmpl",
+        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx",
+        "transmission_type": "4-speed constant-mesh gearbox (wet type)",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+      },
+      "cardekho_pricing": {
+        "ex_showroom_price": "From ₹ 2.66 Lakh",
+        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+      },
+      "cardekho_variants": [
+        {
+          "value": "Gem Paxx 3-Seater/1925/CNG/AQUA 3P",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx/3-seater1925cngaqua-3p"
+        },
+        {
+          "value": "Gem Paxx 3-Seater/1925/CNG",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx/3-seater1925cng"
+        },
+        {
+          "value": "Gem Paxx 3-Seater/1925/Diesel",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx/3-seater1925diesel"
+        },
+        {
+          "value": "Gem Paxx 3-Seater/1925/LPG",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx/3-seater-1925-lpg"
+        },
+        {
+          "value": "Gem Paxx 3-Seater/1925/Petrol",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx/3-seater1925petrol"
+        }
+      ]
+    },
+    {
+      "model_name": "Atul Elite Cargo",
+      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo",
+      "cardekho_technical_specifications": {
+        "engine_type": "BLDC Electric Motor",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo",
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo",
+        "transmission_type": "Automatic",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo"
+      },
+      "cardekho_pricing": {
+        "ex_showroom_price": "₹ 1.04 Lakh",
+        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo"
+      },
+      "cardekho_variants": [
+        {
+          "value": "Elite Cargo Electric",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo/electric"
+        },
+        {
+          "value": "Elite Cargo Elite Paxx with Li-ion Battery",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo/elite-paxx-with-li-ion-battery"
+        }
+      ]
+    },
+    {
+      "model_name": "Atul Rik",
+      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/rik",
+      "cardekho_technical_specifications": {
+        "engine_type": "200 cc 4-stroke single-cylinder air-cooled engine",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/rik/specifications",
+        "fuel_type": "LPG, CNG and Petrol",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/rik/specifications",
+        "seating_capacity": 3,
+        "seating_capacity_citation": "https://trucks.cardekho.com/en/trucks/atul/rik/specifications",
+        "mileage": "25 kmpl",
+        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/rik/specifications",
+        "transmission_type": "Constant-mesh manual (4 forward gears + 1 reverse)",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/rik/specifications"
+      },
+      "cardekho_pricing": {
+        "ex_showroom_price": "₹ 1.94 – ₹ 2.00 Lakh",
+        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/rik"
+      },
+      "cardekho_variants": [
+        {
+          "value": "Rik 3-Seater/1950/CNG",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/rik/3-seater-1950-cng"
+        },
+        {
+          "value": "Rik 3-Seater/1950/LPG",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/rik/3-seater-1950-lpg"
+        },
+        {
+          "value": "Rik 3-Seater/1950/Petrol",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/rik/3-seater-1950-petrol"
+        }
+      ]
+    },
+    {
+      "model_name": "Atul RIK PLUS",
+      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/rik-plus",
+      "cardekho_technical_specifications": {
+        "engine_type": "198.6 cc (CNG)",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/rik-plus/specifications",
+        "fuel_type": "CNG",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/rik-plus/specifications",
+        "seating_capacity": 3,
+        "seating_capacity_citation": "https://trucks.cardekho.com/en/trucks/atul/rik-plus/3-seater-1950-cng",
+        "mileage": "45 kmpl",
+        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/rik-plus/specifications",
+        "transmission_type": "Manual",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/rik-plus/specifications"
+      },
+      "cardekho_pricing": {
+        "ex_showroom_price": "₹ 2.71 Lakh",
+        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/rik-plus/price-in-new-delhi"
+      },
+      "cardekho_variants": [
+        {
+          "value": "RIK PLUS 3-Seater/1950/CNG",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/rik-plus/3-seater-1950-cng"
+        }
+      ]
+    },
+    {
+      "model_name": "Atul Elite Plus Cargo",
+      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-plus-cargo",
+      "cardekho_technical_specifications": {
+        "engine_type": "BLDC Motor",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-plus-cargo/specifications",
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-plus-cargo",
+        "transmission_type": "Automatic",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-plus-cargo"
+      },
+      "cardekho_pricing": {
+        "ex_showroom_price": "1.55 Lakh INR",
+        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-plus-cargo/price-in-new-delhi"
+      },
+      "cardekho_variants": [
+        {
+          "value": "Elite Plus Cargo 2140/Cargo",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-plus-cargo/2140-cargo"
+        }
+      ]
+    },
+    {
+      "model_name": "Atul Elite Paxx",
+      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx",
+      "cardekho_technical_specifications": {
+        "engine_type": "BLDC Motor",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx/specifications",
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx",
+        "seating_capacity": 4,
+        "seating_capacity_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx",
+        "transmission_type": "Direct Drive Multi Torque",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx"
+      },
+      "cardekho_pricing": {
+        "ex_showroom_price": "₹ 1.12 Lakh",
+        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx"
+      },
+      "cardekho_variants": [
+        {
+          "value": "Elite Paxx 4-Seater/Electric",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx"
+        }
+      ]
+    },
+    {
+      "model_name": "Atul Gemini Passenger",
+      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-passenger",
+      "cardekho_technical_specifications": {
+        "engine_type": "198.6 cc",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-passenger/specifications",
+        "fuel_type": "CNG, Petrol",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-passenger/specifications",
+        "mileage": "25 kmpl",
+        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-passenger/specifications",
+        "transmission_type": "Manual",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-passenger/specifications"
+      },
+      "cardekho_pricing": {
+        "ex_showroom_price": "₹ 2.15 Lakh",
+        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-passenger/1918-petrol"
+      },
+      "cardekho_variants": [
+        {
+          "value": "Gemini Passenger 1918/CNG",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-passenger/1918-cng"
+        },
+        {
+          "value": "Gemini Passenger 1918/Petrol",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-passenger/1918-petrol"
+        }
+      ]
+    }
+  ]
+}

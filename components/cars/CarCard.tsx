@@ -41,9 +41,11 @@ import {
     MoveVertical,
     BadgeCheck,
     Info,
+    GitCompare,
 } from 'lucide-react';
 import { getBrandLogo } from '@/lib/data/brand-logos';
 import { getContrastText } from '@/lib/utils/color-contrast';
+import { useCompareStore } from '@/lib/store/compare-store';
 
 // ── Variant types for the accordion ──────────────────────────────────────────
 interface CarVariantInfo {
@@ -109,6 +111,8 @@ export function CarCard({
     const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
     const [isTestDriveOpen, setIsTestDriveOpen] = useState(false);
     const [aggregatedSpecs, setAggregatedSpecs] = useState<ReturnType<typeof formatSpecsForDisplay>>(null);
+    const { addCar, removeCar, isSelected } = useCompareStore();
+    const inCompare = isSelected(car.id);
 
     useEffect(() => {
         const fetchSpecs = async () => {
@@ -332,7 +336,7 @@ export function CarCard({
                         </div>
                     )}
 
-                    {/* CTA row — Enquire + WhatsApp + Info */}
+                    {/* CTA row — Enquire + Test Drive + Quick View */}
                     <div className="flex gap-2 mt-1">
                         <Button
                             className="flex-1"
@@ -343,12 +347,18 @@ export function CarCard({
                             <Send className="w-3.5 h-3.5 mr-1.5" />
                             Enquire
                         </Button>
-                        {dealerPhone && (
-                            <WhatsAppButton
-                                variant="card"
-                                phone={dealerPhone}
-                                message={`Hi, I'm interested in the ${car.make} ${car.model}${car.variant ? ' ' + car.variant : ''}. Can you please share more details?`}
-                            />
+                        {dealerId && (
+                            <Button
+                                size="sm"
+                                variant="outline"
+                                className="shrink-0 gap-1.5 text-xs h-8 px-2.5 font-semibold bg-white"
+                                style={{ borderColor: brandColor, color: brandColor }}
+                                onClick={(e) => { e.stopPropagation(); setIsTestDriveOpen(true); }}
+                                title="Book Test Drive"
+                            >
+                                <Calendar className="w-3.5 h-3.5" />
+                                <span className="hidden sm:inline">Test Drive</span>
+                            </Button>
                         )}
                         <Button
                             size="sm"
@@ -356,23 +366,23 @@ export function CarCard({
                             className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-white"
                             style={{ borderColor: brandColor, color: brandColor }}
                             onClick={(e) => { e.stopPropagation(); setIsQuickViewOpen(true); }}
+                            title="Quick View"
                         >
                             <Info className="w-3.5 h-3.5" />
                         </Button>
-                    </div>
-                    {/* Test Drive CTA */}
-                    {dealerId && (
                         <Button
                             size="sm"
                             variant="outline"
-                            className="w-full mt-1.5 gap-1.5 text-xs h-8 font-medium"
-                            style={{ borderColor: brandColor, color: brandColor }}
-                            onClick={(e) => { e.stopPropagation(); setIsTestDriveOpen(true); }}
+                            className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium"
+                            style={inCompare
+                                ? { backgroundColor: brandColor, color: getContrastText(brandColor), borderColor: brandColor }
+                                : { borderColor: brandColor, color: brandColor, background: 'white' }}
+                            onClick={(e) => { e.stopPropagation(); inCompare ? removeCar(car.id) : addCar(car); }}
+                            title={inCompare ? 'Remove from compare' : 'Add to compare'}
                         >
-                            <Calendar className="w-3.5 h-3.5" />
-                            Book Test Drive
+                            <GitCompare className="w-3.5 h-3.5" />
                         </Button>
-                    )}
+                    </div>
                 </CardContent>
 
                 {/* Bottom accent */}

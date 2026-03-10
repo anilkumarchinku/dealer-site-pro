@@ -40,6 +40,7 @@ import { getTwoWheelerCatalog, TWO_WHEELER_BRANDS } from "@/lib/data/two-wheeler
 import { getThreeWheelerCatalog, THREE_WHEELER_BRANDS } from "@/lib/data/three-wheelers";
 import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler";
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler";
+import { brandNameToId } from "@/lib/utils/brand-model-images";
 
 // Map 2W vehicles to the Car shape expected by 4W templates
 function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): import("@/lib/types/car").Car[] {
@@ -222,6 +223,20 @@ function PreviewContent() {
     // Services selected by dealer during onboarding
     const dealerServices = data.services || [];
 
+    // Compute logo URL based on vehicle category
+    const logoUrl = (() => {
+        if (is2W) {
+            const brandId = brandNameToId(primaryBrand, '2w');
+            return brandId ? `/data/brand-logos/${brandId}.png` : undefined;
+        }
+        if (is3W) {
+            const brandId = brandNameToId(primaryBrand, '3w');
+            return brandId ? `/data/brand-logos/${brandId}.png` : undefined;
+        }
+        // 4W — use existing assets/logos path
+        return `/assets/logos/${primaryBrand.toLowerCase().replace(/\s+/g, '-')}.png`;
+    })();
+
     // Render the appropriate template with brand-specific data
     // All vehicle categories (2W, 3W, cars) now use the same 4W template switcher
     const renderTemplate = () => {
@@ -237,6 +252,8 @@ function PreviewContent() {
             previewMode: true,
             sellsNewCars: true,
             sellsUsedCars: false,
+            logoUrl: logoUrl,
+            vehicleType: is3W ? '3w' as const : is2W ? '2w' as const : '4w' as const,
         };
 
         switch (templateId) {
