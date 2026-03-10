@@ -50,7 +50,7 @@ function threeWheelersToCars(vehicles: ThreeWheelerVehicle[]): Car[] {
     vehicleCategory: '3w' as const,
     features: { keyFeatures: v.features ?? [] },
     images: {
-      hero: v.images?.[0] ?? '/placeholder-car.jpg',
+      hero: v.images?.[0] ?? '',
       exterior: v.images ?? [],
       interior: [],
     },

@@ -63,7 +63,7 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): Car[] {
         vehicleCategory: '2w' as const,
         features: { keyFeatures: v.features ?? [] },
         images: {
-            hero: v.images?.[0] ?? '/placeholder-car.jpg',
+            hero: v.images?.[0] ?? '',
             exterior: v.images ?? [],
             interior: [],
         },

@@ -45,7 +45,7 @@ function usedThreeWheelersToCars(vehicles: ThreeWheelerUsedVehicle[]): Car[] {
         },
         features: { keyFeatures: [] },
         images: {
-            hero: v.images?.[0] ?? '/placeholder-car.jpg',
+            hero: v.images?.[0] ?? '',
             exterior: v.images ?? [],
             interior: [],
         },
