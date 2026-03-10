@@ -201,6 +201,7 @@ export default async function ThreeWheelersPage({ params }: Props) {
     sellsNewCars:  hasNew,
     sellsUsedCars: hasUsed,
     isVerified:    false,
+    vehicleType:   '3w' as const,
   }
 
   switch (dealer.style_template) {

@@ -104,6 +104,7 @@ export default async function UsedTwoWheelersPage({ params }: Props) {
         sellsNewCars:  false,
         sellsUsedCars: true,
         isVerified:    false,
+        vehicleType:   '2w' as const,
     }
 
     switch (dealer.style_template) {

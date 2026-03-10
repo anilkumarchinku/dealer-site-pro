@@ -42,19 +42,7 @@ import { useState, useEffect } from 'react';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
 import { EmiCalculator } from '@/components/ui/EmiCalculator';
 import type { Service } from '@/lib/types';
-
-const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
-    new_car_sales: { label: 'New Cars', icon: '🚗' },
-    used_car_sales: { label: 'Used Cars', icon: '🔄' },
-    financing: { label: 'Finance & EMI', icon: '💰' },
-    service_maintenance: { label: 'Service & Repairs', icon: '🔧' },
-    parts_accessories: { label: 'Parts & Accessories', icon: '⚙️' },
-    test_drive: { label: 'Test Drive', icon: '🏎️' },
-    insurance: { label: 'Insurance', icon: '🛡️' },
-    extended_warranty: { label: 'Extended Warranty', icon: '✅' },
-    roadside_assistance: { label: 'Roadside Assist', icon: '🆘' },
-    car_exchange: { label: 'Car Exchange', icon: '🔃' },
-}
+import { getVehicleLabels } from '@/lib/utils/vehicle-labels';
 
 interface ModernTemplateProps {
     brandName: string;
@@ -79,6 +67,7 @@ interface ModernTemplateProps {
     sellsUsedCars?: boolean;
     branches?: Array<{ city: string; address: string; phone?: string }>;
     isVerified?: boolean;
+    vehicleType?: '2w' | '3w' | '4w';
 }
 
 export function ModernTemplate({
@@ -97,7 +86,21 @@ export function ModernTemplate({
     sellsUsedCars = false,
     branches,
     isVerified = false,
+    vehicleType,
 }: ModernTemplateProps) {
+    const vl = getVehicleLabels(vehicleType);
+    const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
+        new_car_sales: { label: vl.newVehicle, icon: '🚗' },
+        used_car_sales: { label: vl.usedVehicle, icon: '🔄' },
+        financing: { label: 'Finance & EMI', icon: '💰' },
+        service_maintenance: { label: 'Service & Repairs', icon: '🔧' },
+        parts_accessories: { label: 'Parts & Accessories', icon: '⚙️' },
+        test_drive: { label: vl.testDrive, icon: '🏎️' },
+        insurance: { label: 'Insurance', icon: '🛡️' },
+        extended_warranty: { label: 'Extended Warranty', icon: '✅' },
+        roadside_assistance: { label: 'Roadside Assist', icon: '🆘' },
+        car_exchange: { label: vl.exchange, icon: '🔃' },
+    };
     const isHybrid = sellsNewCars && sellsUsedCars;
     const [locale, setLocale] = useLocale();
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');

@@ -44,19 +44,7 @@ import { useState, useEffect } from 'react';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
 import { EmiCalculator } from '@/components/ui/EmiCalculator';
 import type { Service } from '@/lib/types';
-
-const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
-    new_car_sales: { label: 'New Cars', icon: '🚗' },
-    used_car_sales: { label: 'Used Cars', icon: '🔄' },
-    financing: { label: 'Finance & EMI', icon: '💰' },
-    service_maintenance: { label: 'Service & Repairs', icon: '🔧' },
-    parts_accessories: { label: 'Parts & Accessories', icon: '⚙️' },
-    test_drive: { label: 'Test Drive', icon: '🏎️' },
-    insurance: { label: 'Insurance', icon: '🛡️' },
-    extended_warranty: { label: 'Extended Warranty', icon: '✅' },
-    roadside_assistance: { label: 'Roadside Assist', icon: '🆘' },
-    car_exchange: { label: 'Car Exchange', icon: '🔃' },
-}
+import { getVehicleLabels } from '@/lib/utils/vehicle-labels';
 
 interface SportyTemplateProps {
     brandName: string;
@@ -82,6 +70,7 @@ interface SportyTemplateProps {
     sellsUsedCars?: boolean;
     branches?: Array<{ city: string; address: string; phone?: string }>;
     isVerified?: boolean;
+    vehicleType?: '2w' | '3w' | '4w';
 }
 
 export function SportyTemplate({
@@ -100,7 +89,21 @@ export function SportyTemplate({
     sellsUsedCars = false,
     branches,
     isVerified = false,
+    vehicleType,
 }: SportyTemplateProps) {
+    const vl = getVehicleLabels(vehicleType);
+    const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
+        new_car_sales: { label: vl.newVehicle, icon: '🚗' },
+        used_car_sales: { label: vl.usedVehicle, icon: '🔄' },
+        financing: { label: 'Finance & EMI', icon: '💰' },
+        service_maintenance: { label: 'Service & Repairs', icon: '🔧' },
+        parts_accessories: { label: 'Parts & Accessories', icon: '⚙️' },
+        test_drive: { label: vl.testDrive, icon: '🏎️' },
+        insurance: { label: 'Insurance', icon: '🛡️' },
+        extended_warranty: { label: 'Extended Warranty', icon: '✅' },
+        roadside_assistance: { label: 'Roadside Assist', icon: '🆘' },
+        car_exchange: { label: vl.exchange, icon: '🔃' },
+    };
     const isHybrid = sellsNewCars && sellsUsedCars;
     const [locale, setLocale] = useLocale();
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
@@ -303,7 +306,7 @@ export function SportyTemplate({
                                         <ArrowRight className="ml-2 w-5 h-5" />
                                     </Button>
                                     <Button size="lg" variant="outline" className="font-bold uppercase border-2 bg-transparent hover:bg-white/10" style={{ borderColor: brandAccent, color: brandAccent }} asChild>
-                                        <a href="#contact">BOOK TEST DRIVE</a>
+                                        <a href="#contact">BOOK {vl.testDrive.toUpperCase()}</a>
                                     </Button>
                                 </div>
                             </div>
@@ -421,16 +424,16 @@ export function SportyTemplate({
                         </div>
                     </section>
 
-                    {/* Book a Test Drive — Lead Form */}
+                    {/* Book a Test Drive / Test Ride — Lead Form */}
                     <section id="contact" className="py-20 border-t border-gray-200">
                         <div className="max-w-7xl mx-auto px-4">
                             <div className="grid lg:grid-cols-2 gap-12 items-start">
                                 {/* Info */}
                                 <div>
                                     <span className="font-black text-sm uppercase tracking-widest" style={{ color: brandAccent }}>GET IN TOUCH</span>
-                                    <h2 className="text-5xl font-black mt-2 mb-6 uppercase text-gray-900">Book a Test Drive</h2>
+                                    <h2 className="text-5xl font-black mt-2 mb-6 uppercase text-gray-900">Book a {vl.testDrive}</h2>
                                     <p className="text-gray-500 mb-8 text-lg">
-                                        Feel the power firsthand. Book your test drive today and experience performance like never before.
+                                        Feel the power firsthand. Book your {vl.testDrive.toLowerCase()} today and experience performance like never before.
                                     </p>
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-3">
@@ -460,11 +463,11 @@ export function SportyTemplate({
                                         <div className="text-center py-10">
                                             <CheckCircle2 className="w-16 h-16 mx-auto mb-4" style={{ color: brandAccent }} />
                                             <h3 className="text-2xl font-black uppercase mb-2 text-gray-900">Request Received!</h3>
-                                            <p className="text-gray-500">Our team will confirm your test drive shortly.</p>
+                                            <p className="text-gray-500">Our team will confirm your {vl.testDrive.toLowerCase()} shortly.</p>
                                         </div>
                                     ) : (
                                         <form onSubmit={handleSubmit} className="space-y-4">
-                                            <h3 className="text-xl font-black uppercase mb-6 text-gray-900">Test Drive Request</h3>
+                                            <h3 className="text-xl font-black uppercase mb-6 text-gray-900">{vl.testDrive} Request</h3>
                                             <div>
                                                 <label className="block text-xs font-black uppercase tracking-widest text-gray-500 mb-2">Name *</label>
                                                 <input
@@ -498,13 +501,13 @@ export function SportyTemplate({
                                                 />
                                             </div>
                                             <div>
-                                                <label className="block text-xs font-black uppercase tracking-widest text-gray-500 mb-2">Which car? / Message</label>
+                                                <label className="block text-xs font-black uppercase tracking-widest text-gray-500 mb-2">{vl.whichVehicle}</label>
                                                 <textarea
                                                     rows={4}
                                                     value={formData.message}
                                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400 resize-none"
-                                                    placeholder="Tell us which vehicle you want to test drive"
+                                                    placeholder={vl.testDrivePlaceholder}
                                                 />
                                             </div>
                                             {formStatus === 'error' && (
@@ -519,7 +522,7 @@ export function SportyTemplate({
                                                 {formStatus === 'sending' ? 'SUBMITTING...' : (
                                                     <>
                                                         <Send className="w-4 h-4 mr-2" />
-                                                        BOOK TEST DRIVE
+                                                        BOOK {vl.testDrive.toUpperCase()}
                                                     </>
                                                 )}
                                             </Button>

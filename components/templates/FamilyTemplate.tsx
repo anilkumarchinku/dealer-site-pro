@@ -42,19 +42,7 @@ import { useState, useEffect } from 'react';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
 import { EmiCalculator } from '@/components/ui/EmiCalculator';
 import type { Service } from '@/lib/types';
-
-const SERVICE_LABELS: Record<string, { label: string; icon: string; desc: string }> = {
-    new_car_sales: { label: 'New Cars', icon: '🚗', desc: 'Brand new vehicles direct from manufacturer' },
-    used_car_sales: { label: 'Used Cars', icon: '🔄', desc: 'Certified pre-owned at great prices' },
-    financing: { label: 'Finance & EMI', icon: '💰', desc: 'Easy monthly plans for every budget' },
-    service_maintenance: { label: 'Service & Repairs', icon: '🔧', desc: 'Expert care for your family vehicle' },
-    parts_accessories: { label: 'Parts & Accessories', icon: '⚙️', desc: 'Genuine parts for all makes' },
-    test_drive: { label: 'Test Drive', icon: '🏎️', desc: 'Take your dream car for a spin' },
-    insurance: { label: 'Insurance', icon: '🛡️', desc: 'Complete vehicle protection plans' },
-    extended_warranty: { label: 'Extended Warranty', icon: '✅', desc: 'Peace of mind, guaranteed' },
-    roadside_assistance: { label: 'Roadside Assist', icon: '🆘', desc: '24/7 support wherever you are' },
-    car_exchange: { label: 'Car Exchange', icon: '🔃', desc: 'Trade in your old car easily' },
-}
+import { getVehicleLabels } from '@/lib/utils/vehicle-labels';
 
 interface FamilyTemplateProps {
     brandName: string;
@@ -72,6 +60,7 @@ interface FamilyTemplateProps {
     sellsUsedCars?: boolean;
     branches?: Array<{ city: string; address: string; phone?: string }>;
     isVerified?: boolean;
+    vehicleType?: '2w' | '3w' | '4w';
 }
 
 export function FamilyTemplate({
@@ -90,7 +79,21 @@ export function FamilyTemplate({
     sellsUsedCars = false,
     branches,
     isVerified = false,
+    vehicleType,
 }: FamilyTemplateProps) {
+    const vl = getVehicleLabels(vehicleType);
+    const SERVICE_LABELS: Record<string, { label: string; icon: string; desc: string }> = {
+        new_car_sales: { label: vl.newVehicle, icon: '🚗', desc: vl.newVehicleDesc },
+        used_car_sales: { label: vl.usedVehicle, icon: '🔄', desc: 'Certified pre-owned at great prices' },
+        financing: { label: 'Finance & EMI', icon: '💰', desc: 'Easy monthly plans for every budget' },
+        service_maintenance: { label: 'Service & Repairs', icon: '🔧', desc: 'Expert care for your vehicle' },
+        parts_accessories: { label: 'Parts & Accessories', icon: '⚙️', desc: 'Genuine parts for all makes' },
+        test_drive: { label: vl.testDrive, icon: '🏎️', desc: vl.testDriveDesc },
+        insurance: { label: 'Insurance', icon: '🛡️', desc: 'Complete vehicle protection plans' },
+        extended_warranty: { label: 'Extended Warranty', icon: '✅', desc: 'Peace of mind, guaranteed' },
+        roadside_assistance: { label: 'Roadside Assist', icon: '🆘', desc: '24/7 support wherever you are' },
+        car_exchange: { label: vl.exchange, icon: '🔃', desc: vl.exchangeDesc },
+    };
     const isHybrid = sellsNewCars && sellsUsedCars;
     const [locale, setLocale] = useLocale();
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
@@ -113,7 +116,7 @@ export function FamilyTemplate({
     }, []);
 
     const featuredCars = cars;
-    const heroTitle = customConfig?.heroTitle || "Your Family's Perfect Car Awaits";
+    const heroTitle = customConfig?.heroTitle || `Your Family's ${vl.perfectVehicle} Awaits`;
     const heroSubtitle = customConfig?.heroSubtitle || 'Safe, reliable, and affordable vehicles';
     const tagline = customConfig?.tagline || 'Trusted by Families';
 
@@ -261,7 +264,7 @@ export function FamilyTemplate({
                                     <p className="text-xl text-gray-600">{heroSubtitle}</p>
                                     <div className="flex flex-wrap gap-4">
                                         <Button size="lg" className="rounded-full text-white" style={{ backgroundColor: brandColors.primary }} onClick={() => setActiveTab('inventory')}>
-                                            Browse Cars
+                                            {vl.browseCTA}
                                             <ArrowRight className="ml-2 w-5 h-5" />
                                         </Button>
                                         <Button size="lg" variant="outline" className="rounded-full bg-white" style={{ borderColor: brandColors.primary, color: brandColors.primary }} asChild>
@@ -407,7 +410,7 @@ export function FamilyTemplate({
                                     </span>
                                     <h2 className="text-4xl font-bold mt-2 mb-4">Talk to Our Team</h2>
                                     <p className="text-gray-600 mb-8 text-lg">
-                                        Have questions? Our friendly team is ready to help you find the perfect car for your family.
+                                        Have questions? Our friendly team is ready to help you find the perfect {vl.familyVehicle} for your family.
                                     </p>
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-3">
@@ -457,7 +460,7 @@ export function FamilyTemplate({
                                         <div className="text-center py-10">
                                             <Heart className="w-16 h-16 mx-auto mb-4" style={{ color: brandColors.primary }} />
                                             <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
-                                            <p className="text-gray-600">Our team will get back to you soon. We can&apos;t wait to help your family find the perfect car!</p>
+                                            <p className="text-gray-600">Our team will get back to you soon. We can&apos;t wait to help your family find the perfect {vl.familyVehicle}!</p>
                                         </div>
                                     ) : (
                                         <form onSubmit={handleSubmit} className="space-y-4">
@@ -501,7 +504,7 @@ export function FamilyTemplate({
                                                     value={formData.message}
                                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                                     className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200 text-gray-900 bg-gray-50 resize-none placeholder:text-gray-400"
-                                                    placeholder="Which car are you looking for? Any specific requirements?"
+                                                    placeholder={`Which ${vl.familyVehicle} are you looking for? Any specific requirements?`}
                                                 />
                                             </div>
                                             {formStatus === 'error' && (
@@ -656,7 +659,7 @@ export function FamilyTemplate({
                         </div>
                         <div>
                             <h4 className="font-bold text-lg mb-4">{dealerName}</h4>
-                            <p className="text-gray-600">Your trusted partner for family-friendly vehicles. We&apos;re here to help you find the perfect car.</p>
+                            <p className="text-gray-600">Your trusted partner for family-friendly vehicles. We&apos;re here to help you find the perfect {vl.familyVehicle}.</p>
                         </div>
                     </div>
                     <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-500">
