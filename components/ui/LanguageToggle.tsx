@@ -19,15 +19,18 @@ interface LanguageToggleProps {
 }
 
 export function LanguageToggle({ locale, onChange, variant = 'light' }: LanguageToggleProps) {
+    const containerClass = variant === 'dark'
+        ? 'bg-white/15 backdrop-blur-sm'
+        : 'bg-gray-100 border border-gray-200';
     const activeClass = variant === 'dark'
         ? 'bg-white text-gray-900 shadow-sm'
-        : 'bg-gray-900 text-white shadow-sm';
+        : 'bg-white text-gray-900 shadow-sm border border-gray-200';
     const inactiveClass = variant === 'dark'
         ? 'text-white/70 hover:text-white'
-        : 'text-gray-500 hover:text-gray-900';
+        : 'text-gray-500 hover:text-gray-800';
 
     return (
-        <div className="flex items-center gap-0.5 rounded-lg p-0.5 bg-black/10 backdrop-blur-sm text-xs font-semibold">
+        <div className={`flex items-center gap-0.5 rounded-lg p-0.5 text-xs font-semibold ${containerClass}`}>
             <button
                 onClick={() => onChange('en')}
                 className={`px-2.5 py-1 rounded-md transition-all ${locale === 'en' ? activeClass : inactiveClass}`}
