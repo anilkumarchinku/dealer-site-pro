@@ -30,7 +30,8 @@ import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import { ArrowRight, Phone, MapPin, Mail, Award, ShieldCheck, Star, ChevronRight, Crown, Clock, MessageSquare, CheckCircle2, Send, Menu, X } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
+import { usePathname } from 'next/navigation';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
 import { EmiCalculator } from '@/components/ui/EmiCalculator';
 import type { Service } from '@/lib/types';
@@ -74,6 +75,15 @@ export function LuxuryTemplate({
     vehicleType,
 }: LuxuryTemplateProps) {
     const vl = getVehicleLabels(vehicleType);
+    const pathname = usePathname();
+    const siteBase = useMemo(() => {
+        const typeSuffix = vehicleType === '2w' ? '/two-wheelers' : vehicleType === '3w' ? '/three-wheelers' : '';
+        if (pathname.startsWith('/sites/')) {
+            const slugPart = pathname.split('/')[2] ?? '';
+            return `/sites/${slugPart}${typeSuffix}`;
+        }
+        return typeSuffix;
+    }, [pathname, vehicleType]);
     const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
         new_car_sales: { label: vl.newVehicle, icon: '🚗' },
         used_car_sales: { label: vl.usedVehicle, icon: '🔄' },
@@ -255,6 +265,7 @@ export function LuxuryTemplate({
                 brandColor={brandAccent}
                 services={services}
                 contactPhone={contactInfo.phone}
+                vehicleType={vehicleType}
             />
 
             {activeTab === 'home' && (
@@ -640,6 +651,12 @@ export function LuxuryTemplate({
                                 <a href="#finance-section" className="block hover:text-gray-900">Finance</a>
                                 <a href="#service-section" className="block hover:text-gray-900">Service Booking</a>
                                 <a href="#trust-section" className="block hover:text-gray-900">Why Trust Us</a>
+                                <div className="border-t border-gray-100 mt-3 pt-3 space-y-2">
+                                    <a href={`${siteBase}/about`} className="block hover:text-gray-900">About Us</a>
+                                    <a href={`${siteBase}/contact`} className="block hover:text-gray-900">Contact Us</a>
+                                    <a href={`${siteBase}/terms`} className="block hover:text-gray-900">Terms &amp; Conditions</a>
+                                    <a href={`${siteBase}/privacy`} className="block hover:text-gray-900">Privacy Policy</a>
+                                </div>
                             </div>
                         </div>
                         <div>

@@ -47,7 +47,8 @@ import {
     X,
     Send,
 } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
+import { usePathname } from 'next/navigation';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
 import { EmiCalculator } from '@/components/ui/EmiCalculator';
 import type { Service } from '@/lib/types';
@@ -98,6 +99,15 @@ export function ModernTemplate({
     vehicleType,
 }: ModernTemplateProps) {
     const vl = getVehicleLabels(vehicleType);
+    const pathname = usePathname();
+    const siteBase = useMemo(() => {
+        const typeSuffix = vehicleType === '2w' ? '/two-wheelers' : vehicleType === '3w' ? '/three-wheelers' : '';
+        if (pathname.startsWith('/sites/')) {
+            const slugPart = pathname.split('/')[2] ?? '';
+            return `/sites/${slugPart}${typeSuffix}`;
+        }
+        return typeSuffix;
+    }, [pathname, vehicleType]);
     const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
         new_car_sales: { label: vl.newVehicle, icon: '🚗' },
         used_car_sales: { label: vl.usedVehicle, icon: '🔄' },
@@ -322,6 +332,7 @@ export function ModernTemplate({
                 brandColor={brandColors.primary}
                 services={services}
                 contactPhone={contactInfo.phone}
+                vehicleType={vehicleType}
             />
 
             {/* Home Tab */}
@@ -779,7 +790,7 @@ export function ModernTemplate({
                         </div>
                         <div>
                             <span className="text-2xl font-bold block text-gray-900">{dealerName}</span>
-                            <span className="text-sm text-gray-500">Your trusted automotive partner</span>
+                            <span className="text-sm text-gray-500">{vl.familyVehicle === 'bike' ? 'Your trusted two-wheeler partner' : vl.familyVehicle === 'auto' ? 'Your trusted three-wheeler partner' : 'Your trusted automotive partner'}</span>
                         </div>
                     </div>
 
@@ -846,6 +857,12 @@ export function ModernTemplate({
                                 <a href="#finance-section" className="block text-gray-500 hover:text-gray-900">Finance</a>
                                 <a href="#service-section" className="block text-gray-500 hover:text-gray-900">Service Booking</a>
                                 <a href="#trust-section" className="block text-gray-500 hover:text-gray-900">Why Trust Us</a>
+                                <div className="border-t border-gray-100 mt-3 pt-3 space-y-2">
+                                    <a href={`${siteBase}/about`} className="block text-gray-500 hover:text-gray-900">About Us</a>
+                                    <a href={`${siteBase}/contact`} className="block text-gray-500 hover:text-gray-900">Contact Us</a>
+                                    <a href={`${siteBase}/terms`} className="block text-gray-500 hover:text-gray-900">Terms &amp; Conditions</a>
+                                    <a href={`${siteBase}/privacy`} className="block text-gray-500 hover:text-gray-900">Privacy Policy</a>
+                                </div>
                             </div>
                         </div>
                         <div>

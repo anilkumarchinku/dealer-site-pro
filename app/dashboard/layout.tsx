@@ -99,10 +99,13 @@ export default function DashboardLayout({
 }) {
     const pathname = usePathname();
     const router   = useRouter();
-    const { data, updateData, setDealerId, setDealerSlug, dealerSlug } = useOnboardingStore();
+    const { data, updateData, setDealerId, setDealerSlug, dealerSlug, setSellsTwoWheelers, setSellsThreeWheelers, setSellsFourWheelers } = useOnboardingStore();
     const isFirstHand = data.sellsNewCars && !data.sellsUsedCars;
-    const [unreadCount, setUnreadCount] = useState(0);
-    const [vehicleType, setVehicleType] = useState<string | null>(null);
+    const [unreadCount,        setUnreadCount]         = useState(0);
+    const [vehicleType,        setVehicleType]         = useState<string | null>(null);
+    const [sellsTwoWheelers,   setSellsTwoWheelersL]   = useState(false);
+    const [sellsThreeWheelers, setSellsThreeWheelersL] = useState(false);
+    const [sellsFourWheelers,  setSellsFourWheelersL]  = useState(false);
 
     // On every mount: verify the user has completed onboarding.
     // The early-exit on data.dealershipName was intentionally removed —
@@ -119,7 +122,7 @@ export default function DashboardLayout({
 
                 const { data: dealer } = await supabase
                     .from('dealers')
-                    .select('id, dealership_name, tagline, location, full_address, phone, whatsapp, email, gstin, sells_new_cars, sells_used_cars, style_template, slug, onboarding_complete, vehicle_type')
+                    .select('id, dealership_name, tagline, location, full_address, phone, whatsapp, email, gstin, sells_new_cars, sells_used_cars, style_template, slug, onboarding_complete, vehicle_type, sells_two_wheelers, sells_three_wheelers, sells_four_wheelers')
                     .eq('user_id', user.id)
                     .maybeSingle();
 
@@ -132,13 +135,28 @@ export default function DashboardLayout({
                 setDealerId(dealer.id);
                 if (dealer.slug) setDealerSlug(dealer.slug);
 
-                // Redirect 2W/3W dealers to their module dashboard when landing on /dashboard
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                const vType = (dealer as any).vehicle_type as string | null;
+                const d = dealer as any;
+                const vType   = d.vehicle_type         as string | null;
+                const sells2w = d.sells_two_wheelers   ?? false;
+                const sells3w = d.sells_three_wheelers ?? false;
+                const sells4w = d.sells_four_wheelers  ?? false;
                 setVehicleType(vType);
+                setSellsTwoWheelersL(sells2w);
+                setSellsThreeWheelersL(sells3w);
+                setSellsFourWheelersL(sells4w);
+                // Sync to Zustand store for use in other pages
+                setSellsTwoWheelers(sells2w);
+                setSellsThreeWheelers(sells3w);
+                setSellsFourWheelers(sells4w);
+                // Compute effective segment flags
+                const hasCars = vType === 'car'           || sells4w;
+                const has2W   = vType === 'two-wheeler'   || sells2w;
+                const has3W   = vType === 'three-wheeler' || sells3w;
                 if (pathname === '/dashboard' || pathname === '/dashboard/') {
-                    if (vType === 'two-wheeler')   { router.replace('/dashboard/two-wheelers');   return; }
-                    if (vType === 'three-wheeler')  { router.replace('/dashboard/three-wheelers'); return; }
+                    // Only auto-redirect pure single-type dealers
+                    if (has2W && !hasCars && !has3W) { router.replace('/dashboard/two-wheelers');   return; }
+                    if (has3W && !hasCars && !has2W) { router.replace('/dashboard/three-wheelers'); return; }
                 }
 
                 // Fetch unread message count for notification bell
@@ -162,11 +180,11 @@ export default function DashboardLayout({
                 updateData({
                     dealershipName: dealer.dealership_name,
                     tagline:        dealer.tagline        ?? '',
-                    location:       dealer.location,
+                    location:       dealer.location       ?? '',
                     fullAddress:    dealer.full_address   ?? '',
-                    phone:          dealer.phone,
+                    phone:          dealer.phone          ?? '',
                     whatsapp:       dealer.whatsapp       ?? '',
-                    email:          dealer.email,
+                    email:          dealer.email          ?? '',
                     gstin:          dealer.gstin          ?? '',
                     sellsNewCars:   dealer.sells_new_cars,
                     sellsUsedCars:  dealer.sells_used_cars,
@@ -201,10 +219,13 @@ export default function DashboardLayout({
                 {/* Navigation */}
                 <nav className="flex-1 p-4 overflow-y-auto space-y-4">
                     {navGroups.filter(group => {
-                        if (vehicleType === 'two-wheeler')  return !['Manage', '3-Wheeler'].includes(group.label);
-                        if (vehicleType === 'three-wheeler') return !['Manage', '2-Wheeler'].includes(group.label);
-                        // 4W / null: hide 2W and 3W sections
-                        return !['2-Wheeler', '3-Wheeler'].includes(group.label);
+                        const hasCars = vehicleType === 'car'           || sellsFourWheelers;
+                        const has2W   = vehicleType === 'two-wheeler'   || sellsTwoWheelers;
+                        const has3W   = vehicleType === 'three-wheeler' || sellsThreeWheelers;
+                        if (group.label === 'Manage')     return hasCars;
+                        if (group.label === '2-Wheeler')  return has2W;
+                        if (group.label === '3-Wheeler')  return has3W;
+                        return true; // Main, Insights, My Website, Configure always visible
                     }).map((group) => (
                         <div key={group.label}>
                             <p className="px-4 mb-1 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground/50">

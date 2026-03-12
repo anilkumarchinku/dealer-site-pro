@@ -19,6 +19,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import type { Service } from '@/lib/types';
+import { getVehicleLabels } from '@/lib/utils/vehicle-labels';
 import {
     Car,
     CreditCard,
@@ -33,6 +34,7 @@ import {
     CheckCircle2,
     ChevronRight,
     Sparkles,
+    Bike,
 } from 'lucide-react';
 
 // ── Service catalogue ─────────────────────────────────────────────────────────
@@ -156,6 +158,8 @@ interface EnquireSidebarProps {
     /** Services the dealer offers — if omitted, all are shown */
     services?: Service[];
     contactPhone?: string;
+    /** Controls vehicle-aware label overrides */
+    vehicleType?: '2w' | '3w' | '4w';
 }
 
 // ── Component ─────────────────────────────────────────────────────────────────
@@ -168,6 +172,7 @@ export function EnquireSidebar({
     brandColor = '#2563eb',
     services,
     contactPhone,
+    vehicleType,
 }: EnquireSidebarProps) {
     const [selectedService, setSelectedService] = useState<Service | null>(null);
     const [submitted, setSubmitted] = useState(false);
@@ -178,10 +183,49 @@ export function EnquireSidebar({
         message: '',
     });
 
+    // Build vehicle-type-aware overrides for labels & descriptions
+    const vl = getVehicleLabels(vehicleType);
+    const is2W = vehicleType === '2w';
+    const is3W = vehicleType === '3w';
+
+    // Override car-specific labels when showing a 2W/3W site
+    const LABEL_OVERRIDES: Partial<Record<Service, { label: string; description: string; icon?: React.ElementType }>> = (is2W || is3W) ? {
+        home_test_drives: {
+            label:       `Book ${vl.testDriveVerb}`,
+            description: is2W ? 'Experience the bike at your doorstep' : 'Experience the auto at your dealership',
+            icon:        is2W ? Bike : Car,
+        },
+        new_car_sales: {
+            label:       vl.newVehicle + ' Enquiry',
+            description: is2W ? 'Browse our latest bikes & scooters' : 'Browse our three-wheeler range',
+            icon:        is2W ? Bike : Car,
+        },
+        used_car_sales: {
+            label:       vl.usedVehicle + ' Enquiry',
+            description: is2W ? 'Certified pre-owned two-wheelers' : 'Certified pre-owned autos',
+            icon:        is2W ? Bike : Car,
+        },
+        trade_in: {
+            label:       vl.exchange,
+            description: vl.exchangeDesc,
+        },
+        parts_accessories: {
+            label:       'Parts & Accessories',
+            description: is2W ? 'Genuine parts, helmets & riding gear' : 'Genuine parts & accessories',
+        },
+    } : {};
+
+    // Apply overrides to the service catalogue
+    const resolvedServices = ALL_SERVICES.map(s => {
+        const ov = LABEL_OVERRIDES[s.id];
+        if (!ov) return s;
+        return { ...s, ...ov, icon: ov.icon ?? s.icon };
+    });
+
     // Filter to only services the dealer offers; fallback to all
     const visibleServices = services && services.length > 0
-        ? ALL_SERVICES.filter(s => services.includes(s.id))
-        : ALL_SERVICES;
+        ? resolvedServices.filter(s => services.includes(s.id))
+        : resolvedServices;
 
     const handleChange = (field: keyof typeof form, value: string) => {
         setForm(prev => ({ ...prev, [field]: value }));

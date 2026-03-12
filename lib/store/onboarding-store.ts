@@ -12,6 +12,11 @@ interface OnboardingStore {
     // Which vehicle category this dealer sells
     vehicleType: 'car' | 'two-wheeler' | 'three-wheeler';
 
+    // Additional segment flags (true when dealer adds a secondary vehicle type)
+    sellsTwoWheelers:   boolean;
+    sellsThreeWheelers: boolean;
+    sellsFourWheelers:  boolean;
+
     // Supabase: dealer row ID after onboarding is saved
     dealerId: string | null;
 
@@ -24,6 +29,9 @@ interface OnboardingStore {
     prevStep: () => void;
     updateData: (data: Partial<OnboardingData>) => void;
     setVehicleType: (type: 'car' | 'two-wheeler' | 'three-wheeler') => void;
+    setSellsTwoWheelers:   (v: boolean) => void;
+    setSellsThreeWheelers: (v: boolean) => void;
+    setSellsFourWheelers:  (v: boolean) => void;
     setDealerId: (id: string) => void;
     setDealerSlug: (slug: string) => void;
     reset: () => void;
@@ -80,6 +88,9 @@ export const useOnboardingStore = create<OnboardingStore>()(
             currentStep: 1,
             data: initialData,
             vehicleType: 'car',
+            sellsTwoWheelers:   false,
+            sellsThreeWheelers: false,
+            sellsFourWheelers:  false,
             dealerId: null,
             dealerSlug: null,
 
@@ -99,11 +110,15 @@ export const useOnboardingStore = create<OnboardingStore>()(
 
             setVehicleType: (type) => set({ vehicleType: type }),
 
+            setSellsTwoWheelers:   (v) => set({ sellsTwoWheelers:   v }),
+            setSellsThreeWheelers: (v) => set({ sellsThreeWheelers: v }),
+            setSellsFourWheelers:  (v) => set({ sellsFourWheelers:  v }),
+
             setDealerId: (id) => set({ dealerId: id }),
 
             setDealerSlug: (slug) => set({ dealerSlug: slug }),
 
-            reset: () => set({ currentStep: 1, data: initialData, vehicleType: 'car', dealerId: null, dealerSlug: null }),
+            reset: () => set({ currentStep: 1, data: initialData, vehicleType: 'car', sellsTwoWheelers: false, sellsThreeWheelers: false, sellsFourWheelers: false, dealerId: null, dealerSlug: null }),
 
             isComplete: () => {
                 const { data } = get();

@@ -15,7 +15,7 @@ import {
     ExternalLink, Sun, Moon, Info,
     Plug, Eye, EyeOff, CheckCircle2, XCircle, Loader2,
     Link2, Copy, RefreshCw, Trash2, Upload, ImageIcon, X,
-    Star, RefreshCcw,
+    Star, RefreshCcw, Plus,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -75,8 +75,10 @@ export default function SettingsPage() {
     // ── Vehicle Segments state ────────────────────────────────────────────────
     const [sellsTwoWheelers,   setSellsTwoWheelers]   = useState(false);
     const [sellsThreeWheelers, setSellsThreeWheelers] = useState(false);
+    const [sellsFourWheelers,  setSellsFourWheelers]  = useState(false);
     const [segmentSaving,      setSegmentSaving]      = useState(false);
     const [segmentSaved,       setSegmentSaved]       = useState(false);
+    const [vehicleType,        setVehicleType]        = useState<string | null>(null);
 
     // ── Google Reviews state ──────────────────────────────────────────────────
     const [googleMapsUrl,     setGoogleMapsUrl]     = useState("");
@@ -102,7 +104,7 @@ export default function SettingsPage() {
         if (!dealerId) return;
         supabase
             .from("dealers")
-            .select("logo_url, hero_image_url, sells_two_wheelers, sells_three_wheelers, google_maps_url, google_place_id")
+            .select("logo_url, hero_image_url, sells_two_wheelers, sells_three_wheelers, sells_four_wheelers, google_maps_url, google_place_id, vehicle_type")
             .eq("id", dealerId)
             .single()
             .then(({ data }) => {
@@ -110,6 +112,8 @@ export default function SettingsPage() {
                 if (data?.hero_image_url)          setHeroPreview(data.hero_image_url);
                 setSellsTwoWheelers(data?.sells_two_wheelers   ?? false);
                 setSellsThreeWheelers(data?.sells_three_wheelers ?? false);
+                setSellsFourWheelers(data?.sells_four_wheelers  ?? false);
+                if (data?.vehicle_type)            setVehicleType(data.vehicle_type);
                 if (data?.google_maps_url)         setGoogleMapsUrl(data.google_maps_url);
                 if (data?.google_place_id)         setGooglePlaceId(data.google_place_id);
             });
@@ -421,9 +425,14 @@ export default function SettingsPage() {
     const handleSaveSegments = async () => {
         if (!dealerId) return;
         setSegmentSaving(true);
-        await supabase
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        await (supabase as any)
             .from("dealers")
-            .update({ sells_two_wheelers: sellsTwoWheelers, sells_three_wheelers: sellsThreeWheelers })
+            .update({
+                sells_two_wheelers:   sellsTwoWheelers,
+                sells_three_wheelers: sellsThreeWheelers,
+                sells_four_wheelers:  sellsFourWheelers,
+            })
             .eq("id", dealerId);
         setSegmentSaving(false);
         setSegmentSaved(true);
@@ -535,50 +544,133 @@ export default function SettingsPage() {
                         </CardContent>
                     </Card>
 
-                    {/* Vehicle Segments */}
-                    <Card variant="glass">
-                        <CardHeader>
-                            <CardTitle className="flex items-center gap-2.5 text-lg">
-                                <div className="p-2 rounded-lg bg-green-500/10">
-                                    <Globe className="w-4 h-4 text-green-500" />
-                                </div>
-                                Vehicle Segments
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-3">
-                            <p className="text-sm text-muted-foreground">Enable the vehicle segments your dealership sells. This will add 2W/3W sections to your public website.</p>
-                            <div className="flex items-center justify-between px-4 py-3.5 rounded-xl bg-muted/30">
-                                <div>
-                                    <p className="font-medium text-sm">🏍️ 2-Wheelers</p>
-                                    <p className="text-xs text-muted-foreground">Bikes, Scooters & Electric 2W</p>
-                                </div>
-                                <button
-                                    type="button"
-                                    onClick={() => setSellsTwoWheelers(v => !v)}
-                                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${sellsTwoWheelers ? "bg-green-500" : "bg-muted"}`}
-                                >
-                                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform ${sellsTwoWheelers ? "translate-x-6" : "translate-x-1"}`} />
-                                </button>
-                            </div>
-                            <div className="flex items-center justify-between px-4 py-3.5 rounded-xl bg-muted/30">
-                                <div>
-                                    <p className="font-medium text-sm">🛺 3-Wheelers</p>
-                                    <p className="text-xs text-muted-foreground">Passenger Autos, Cargo & Electric 3W</p>
-                                </div>
-                                <button
-                                    type="button"
-                                    onClick={() => setSellsThreeWheelers(v => !v)}
-                                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${sellsThreeWheelers ? "bg-purple-500" : "bg-muted"}`}
-                                >
-                                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform ${sellsThreeWheelers ? "translate-x-6" : "translate-x-1"}`} />
-                                </button>
-                            </div>
-                            <Button onClick={handleSaveSegments} disabled={segmentSaving} size="sm" className="gap-2">
-                                <Save className="w-3.5 h-3.5" />
-                                {segmentSaving ? "Saving..." : segmentSaved ? "Saved ✓" : "Save Segments"}
-                            </Button>
-                        </CardContent>
-                    </Card>
+                    {/* ── Vehicle Segments ── */}
+                    {(() => {
+                        // Which segment is the primary type (can't be removed)
+                        const primary2W = vehicleType === 'two-wheeler';
+                        const primary3W = vehicleType === 'three-wheeler';
+                        const primary4W = vehicleType === 'car';
+
+                        // Effective "active" state for each segment
+                        const active2W = primary2W || sellsTwoWheelers;
+                        const active3W = primary3W || sellsThreeWheelers;
+                        const active4W = primary4W || sellsFourWheelers;
+
+                        const SEGMENTS = [
+                            {
+                                key:       '2w',
+                                emoji:     '🏍️',
+                                label:     '2-Wheelers',
+                                desc:      'Bikes, Scooters & Electric 2W',
+                                isPrimary: primary2W,
+                                isActive:  active2W,
+                                color:     'text-orange-600',
+                                bg:        'bg-orange-500/10',
+                                badge:     'bg-orange-500/10 text-orange-700 border-orange-500/20',
+                                toggle:    () => !primary2W && setSellsTwoWheelers(v => !v),
+                                addHref:   '/dashboard/add-vehicle-type?type=2w',
+                            },
+                            {
+                                key:       '3w',
+                                emoji:     '🛺',
+                                label:     '3-Wheelers',
+                                desc:      'Passenger Autos, Cargo & Electric 3W',
+                                isPrimary: primary3W,
+                                isActive:  active3W,
+                                color:     'text-purple-600',
+                                bg:        'bg-purple-500/10',
+                                badge:     'bg-purple-500/10 text-purple-700 border-purple-500/20',
+                                toggle:    () => !primary3W && setSellsThreeWheelers(v => !v),
+                                addHref:   '/dashboard/add-vehicle-type?type=3w',
+                            },
+                            {
+                                key:       '4w',
+                                emoji:     '🚗',
+                                label:     '4-Wheelers',
+                                desc:      'Cars, SUVs & Premium Vehicles',
+                                isPrimary: primary4W,
+                                isActive:  active4W,
+                                color:     'text-blue-600',
+                                bg:        'bg-blue-500/10',
+                                badge:     'bg-blue-500/10 text-blue-700 border-blue-500/20',
+                                toggle:    () => !primary4W && setSellsFourWheelers(v => !v),
+                                addHref:   '/dashboard/add-vehicle-type?type=4w',
+                            },
+                        ];
+
+                        return (
+                            <Card variant="glass">
+                                <CardHeader>
+                                    <CardTitle className="flex items-center gap-2.5 text-lg">
+                                        <div className="p-2 rounded-lg bg-blue-500/10">
+                                            <Plus className="w-4 h-4 text-blue-500" />
+                                        </div>
+                                        Vehicle Segments
+                                    </CardTitle>
+                                    <p className="text-sm text-muted-foreground mt-1">
+                                        Add any vehicle type to expand your dealership. Each segment unlocks its own leads, inventory, and website section.
+                                    </p>
+                                </CardHeader>
+                                <CardContent className="space-y-3">
+                                    {SEGMENTS.map(seg => (
+                                        <div key={seg.key} className="flex items-center justify-between px-4 py-3.5 rounded-xl bg-muted/30">
+                                            <div className="flex items-center gap-3">
+                                                <div className={`w-9 h-9 rounded-lg flex items-center justify-center text-lg ${seg.bg}`}>
+                                                    {seg.emoji}
+                                                </div>
+                                                <div>
+                                                    <div className="flex items-center gap-2">
+                                                        <p className="font-medium text-sm">{seg.label}</p>
+                                                        {seg.isPrimary && (
+                                                            <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded border ${seg.badge}`}>
+                                                                Primary
+                                                            </span>
+                                                        )}
+                                                    </div>
+                                                    <p className="text-xs text-muted-foreground">{seg.desc}</p>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                {seg.isActive && !seg.isPrimary && (
+                                                    /* Toggle to enable/disable secondary segment */
+                                                    <button
+                                                        type="button"
+                                                        onClick={seg.toggle}
+                                                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${seg.isActive ? 'bg-green-500' : 'bg-muted'}`}
+                                                    >
+                                                        <span className={`inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform ${seg.isActive ? 'translate-x-6' : 'translate-x-1'}`} />
+                                                    </button>
+                                                )}
+                                                {seg.isPrimary && (
+                                                    <span className="text-xs font-medium text-emerald-600 flex items-center gap-1">
+                                                        <CheckCircle2 className="w-3.5 h-3.5" /> Active
+                                                    </span>
+                                                )}
+                                                {!seg.isActive && (
+                                                    <Link
+                                                        href={seg.addHref}
+                                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-primary/30 bg-primary/5 text-primary text-xs font-semibold hover:bg-primary/10 transition-colors"
+                                                    >
+                                                        <Plus className="w-3 h-3" /> Add
+                                                    </Link>
+                                                )}
+                                            </div>
+                                        </div>
+                                    ))}
+
+                                    {/* Save button — only needed when secondary segments are toggled */}
+                                    {(sellsTwoWheelers !== (vehicleType !== 'two-wheeler' && sellsTwoWheelers) ||
+                                      sellsThreeWheelers !== (vehicleType !== 'three-wheeler' && sellsThreeWheelers) ||
+                                      true) && (
+                                        <Button onClick={handleSaveSegments} disabled={segmentSaving} size="sm" className="gap-2 mt-1">
+                                            <Save className="w-3.5 h-3.5" />
+                                            {segmentSaving ? "Saving..." : segmentSaved ? "Saved ✓" : "Save Changes"}
+                                        </Button>
+                                    )}
+                                </CardContent>
+                            </Card>
+                        );
+                    })()}
 
                     {/* Notification Preferences */}
                     <Card variant="glass">
@@ -878,12 +970,12 @@ export default function SettingsPage() {
                                                         <TableCell className="py-2 font-mono text-xs">www</TableCell>
                                                         <TableCell className="py-2 font-mono text-xs">
                                                             <div className="flex items-center gap-2">
-                                                                cname.vercel-dns.com
+                                                                {process.env.NEXT_PUBLIC_CNAME_TARGET ?? 'cname.vercel-dns.com'}
                                                                 <Button
                                                                     type="button"
                                                                     variant="ghost"
                                                                     size="icon"
-                                                                    onClick={() => copyToClipboard("cname.vercel-dns.com")}
+                                                                    onClick={() => copyToClipboard(process.env.NEXT_PUBLIC_CNAME_TARGET ?? 'cname.vercel-dns.com')}
                                                                     className="h-6 w-6 text-muted-foreground hover:text-foreground"
                                                                 >
                                                                     <Copy className="w-3 h-3" />
