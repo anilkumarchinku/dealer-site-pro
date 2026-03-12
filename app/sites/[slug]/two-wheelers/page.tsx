@@ -272,20 +272,27 @@ export default async function TwoWheelersPage({ params }: Props) {
             process.env.NEXT_PUBLIC_SUPABASE_URL!,
             process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
         )
-        const { data } = await supabase
+        const { data, error } = await supabase
             .from('dealer_brands')
             .select('brand_name')
             .eq('dealer_id', dealer.id)
             .eq('vehicle_type', '2w')
             .order('is_primary', { ascending: false })
+        if (error) throw error  // surface Supabase errors so the catch block fires
         dealer2wBrands = data?.map((r: { brand_name: string }) => r.brand_name) ?? []
     } catch {
         dealer2wBrands = dealer.brands.filter(b => TWO_WHEELER_BRANDS.includes(b))
     }
 
+    // Prefer brands tagged vehicle_type='2w'; fall back to dealer's own brands
+    // (handles dealers onboarded before the vehicle_type migration) before
+    // resorting to the generic popular-brands list.
+    const dealerOwnBrands = dealer.brands.filter(b => TWO_WHEELER_BRANDS.includes(b))
     const allBrands = dealer2wBrands.length > 0
         ? dealer2wBrands
-        : POPULAR_2W_BRANDS.filter(b => TWO_WHEELER_BRANDS.includes(b))
+        : dealerOwnBrands.length > 0
+            ? dealerOwnBrands
+            : POPULAR_2W_BRANDS.filter(b => TWO_WHEELER_BRANDS.includes(b))
 
     // If accessed via a brand-specific slug (e.g. varun-group-royal-enfield),
     // restrict to that brand only; otherwise show all dealer brands.

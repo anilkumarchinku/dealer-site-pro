@@ -44,7 +44,9 @@ export default function WebpagePage() {
 
     // ── Bootstrap: if store not yet populated, load from DB ──────────────────
     useEffect(() => {
-        if (dealerSlug) return
+        // Always fetch fresh data from DB if vehicleType is missing — guards against
+        // stale Zustand state where dealerSlug is cached but vehicleType wasn't saved.
+        if (dealerSlug && vehicleType) return
 
         async function selfInit() {
             try {

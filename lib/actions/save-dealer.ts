@@ -194,10 +194,16 @@ export async function saveDealer(
             // Delete existing brands first (clean upsert)
             await supabase.from("dealer_brands").delete().eq("dealer_id", dealerId);
 
+            // Map vehicleType to the DB column value expected by dealer_brands
+            const brandVehicleType = vehicleType === 'two-wheeler' ? '2w'
+                : vehicleType === 'three-wheeler' ? '3w'
+                : 'cars'
+
             const brandRows = data.brands.map((brand, i) => ({
-                dealer_id:  dealerId,
-                brand_name: brand,
-                is_primary: i === 0,
+                dealer_id:    dealerId,
+                brand_name:   brand,
+                is_primary:   i === 0,
+                vehicle_type: brandVehicleType,
             }));
 
             const { error } = await supabase.from("dealer_brands").insert(brandRows);
