@@ -48,17 +48,14 @@
         "brand": "Honda Motorcycle & Scooter India",
         "models": {
           "motorcycles": [
-            "CD 110 Dream",
             "SP 125",
             "Shine 125",
             "Unicorn",
             "CB125 Hornet",
-            "Hornet 2.0",
             "SP160",
             "CB300F",
             "Hness CB350",
             "CB350RS",
-            "CB500X",
             "NX500",
             "CB650R",
             "CBR650R",
@@ -66,11 +63,10 @@
             "Transalp XL750",
             "CB1000 Hornet",
             "CBR1000RR-R Fireblade",
-            "Africa Twin",
             "Goldwing Tour"
           ],
           "scooters": [
-            "Activa 6G",
+            "Activa 110",
             "Activa 125",
             "Activa e",
             "Dio",
