@@ -283,19 +283,34 @@ export default async function TwoWheelersPage({ params }: Props) {
         dealer2wBrands = dealer.brands.filter(b => TWO_WHEELER_BRANDS.includes(b))
     }
 
-    const brandsToShow = dealer2wBrands.length > 0
+    const allBrands = dealer2wBrands.length > 0
         ? dealer2wBrands
         : POPULAR_2W_BRANDS.filter(b => TWO_WHEELER_BRANDS.includes(b))
 
-    const primaryBrand = dealer2wBrands[0] ?? brandsToShow[0] ?? null
+    // If accessed via a brand-specific slug (e.g. varun-group-royal-enfield),
+    // restrict to that brand only; otherwise show all dealer brands.
+    const brandsToShow = dealer.brandFilter
+        ? allBrands.filter(b => b.toLowerCase() === dealer.brandFilter!.toLowerCase())
+            .concat(
+                allBrands.filter(b => b.toLowerCase() === dealer.brandFilter!.toLowerCase()).length === 0
+                    ? [dealer.brandFilter]
+                    : []
+            )
+        : allBrands
+
+    const primaryBrand = brandsToShow[0] ?? null
 
     const catalogVehicles = brandsToShow.flatMap((brand, bi) =>
         getTwoWheelerCatalog(brand, dealer.id).map(v => ({ ...v, id: `cat-2w-${bi}-${v.id}` }))
     )
 
-    const dbKeys = new Set(dbVehicles.map(v => `${v.brand}__${v.model}`))
+    const filteredDbVehicles = dealer.brandFilter
+        ? dbVehicles.filter(v => v.brand.toLowerCase() === dealer.brandFilter!.toLowerCase())
+        : dbVehicles
+
+    const dbKeys = new Set(filteredDbVehicles.map(v => `${v.brand}__${v.model}`))
     const catalogExtra = catalogVehicles.filter(v => !dbKeys.has(`${v.brand}__${v.model}`))
-    const vehicles = [...dbVehicles, ...catalogExtra]
+    const vehicles = [...filteredDbVehicles, ...catalogExtra]
 
     // Merge Cyepro used inventory if dealer has API key
     const cyeproCars = dealer.cyepro_api_key

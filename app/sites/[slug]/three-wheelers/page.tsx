@@ -269,16 +269,32 @@ export default async function ThreeWheelersPage({ params }: Props) {
     dealer3wBrands = dealer.brands.filter(b => THREE_WHEELER_BRANDS.includes(b))
   }
 
-  const brandsToShow = dealer3wBrands.length > 0 ? dealer3wBrands : ALL_3W_BRANDS
-  const primaryBrand = dealer3wBrands[0] ?? brandsToShow[0] ?? null
+  const allBrands = dealer3wBrands.length > 0 ? dealer3wBrands : ALL_3W_BRANDS
+
+  // If accessed via a brand-specific slug (e.g. varun-group-bajaj-auto-3w),
+  // restrict to that brand only; otherwise show all dealer brands.
+  const brandsToShow = dealer.brandFilter
+    ? allBrands.filter(b => b.toLowerCase() === dealer.brandFilter!.toLowerCase())
+        .concat(
+          allBrands.filter(b => b.toLowerCase() === dealer.brandFilter!.toLowerCase()).length === 0
+            ? [dealer.brandFilter]
+            : []
+        )
+    : allBrands
+
+  const primaryBrand = brandsToShow[0] ?? null
 
   const catalogVehicles = brandsToShow.flatMap((brand, bi) =>
     getThreeWheelerCatalog(brand, dealer.id).map(v => ({ ...v, id: `cat-3w-${bi}-${v.id}` }))
   )
 
-  const dbKeys = new Set(dbVehicles.map(v => `${v.brand}__${v.model}`))
+  const filteredDbVehicles = dealer.brandFilter
+    ? dbVehicles.filter(v => v.brand.toLowerCase() === dealer.brandFilter!.toLowerCase())
+    : dbVehicles
+
+  const dbKeys = new Set(filteredDbVehicles.map(v => `${v.brand}__${v.model}`))
   const catalogExtra = catalogVehicles.filter(v => !dbKeys.has(`${v.brand}__${v.model}`))
-  const vehicles = [...dbVehicles, ...catalogExtra]
+  const vehicles = [...filteredDbVehicles, ...catalogExtra]
 
   // Merge Cyepro used inventory if dealer has API key
   const cyeproCars = dealer.cyepro_api_key
