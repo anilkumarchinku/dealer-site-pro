@@ -736,7 +736,6 @@ export function FamilyTemplate({
                                 <a href="#trust-section" className="block hover:text-gray-900">Why Trust Us</a>
                                 <div className="border-t border-gray-100 mt-3 pt-3 space-y-2">
                                     <a href={`${siteBase}/about`} className="block hover:text-gray-900">About Us</a>
-                                    <a href={`${siteBase}/contact`} className="block hover:text-gray-900">Contact Us</a>
                                     <a href={`${siteBase}/terms`} className="block hover:text-gray-900">Terms &amp; Conditions</a>
                                     <a href={`${siteBase}/privacy`} className="block hover:text-gray-900">Privacy Policy</a>
                                 </div>
