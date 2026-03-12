@@ -892,7 +892,9 @@
           "Metro"
         ],
         "cargo": [
-          "Xtra LDX Diesel",
+          "Xtra LDX Diesel"
+        ],
+        "cargo_cng": [
           "Xtra LDX CNG"
         ],
         "electric": [
