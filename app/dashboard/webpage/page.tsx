@@ -240,6 +240,7 @@ function SiteCard({ site, isMulti, dealerName, copied, onCopy, onEdit, onDomain 
     const displayUrl  = dealerSiteUrl(site.slug)
     const previewPath = site.previewPath ?? `/sites/${site.slug}`
     const isCopied    = copied === site.slug
+    const [iframeLoaded, setIframeLoaded] = useState(false)
 
     return (
         <Card variant="glass" className="overflow-hidden flex flex-col">
@@ -259,17 +260,28 @@ function SiteCard({ site, isMulti, dealerName, copied, onCopy, onEdit, onDomain 
             )}
 
             {/* Preview thumbnail — scaled-down iframe */}
-            <div className="relative mx-4 mt-3 rounded-xl overflow-hidden border border-border bg-muted/20" style={{ height: 200 }}>
+            <div className="relative mx-4 mt-3 rounded-xl overflow-hidden border border-border bg-gray-900" style={{ height: 200 }}>
+                {/* Loading shimmer shown until iframe fires onLoad */}
+                {!iframeLoaded && (
+                    <div className="absolute inset-0 flex flex-col gap-3 p-4 animate-pulse">
+                        <div className="h-5 w-1/2 rounded bg-gray-700" />
+                        <div className="h-3 w-3/4 rounded bg-gray-700" />
+                        <div className="flex-1 rounded bg-gray-800" />
+                    </div>
+                )}
                 <iframe
                     src={previewPath}
                     title={`Preview: ${site.label}`}
                     scrolling="no"
+                    onLoad={() => setIframeLoaded(true)}
                     style={{
                         width:           "200%",
                         height:          "200%",
                         transform:       "scale(0.5)",
                         transformOrigin: "top left",
                         pointerEvents:   "none",
+                        opacity:         iframeLoaded ? 1 : 0,
+                        transition:      "opacity 0.3s ease",
                     }}
                 />
                 {/* Transparent overlay prevents pointer interaction in card view */}
