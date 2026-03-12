@@ -22,6 +22,14 @@ const USE_SUBDOMAIN = process.env.NEXT_PUBLIC_USE_SUBDOMAIN === 'true'
  */
 export function dealerSiteUrl(slug: string): string {
     if (USE_SUBDOMAIN) {
+        // slug may contain a path suffix, e.g. "varun-motors/two-wheelers"
+        // Split so the subdomain is just "varun-motors" and path is "/two-wheelers"
+        const slashIdx = slug.indexOf('/')
+        if (slashIdx !== -1) {
+            const subdomain = slug.slice(0, slashIdx)
+            const path      = slug.slice(slashIdx) // already starts with /
+            return `${subdomain}.${BASE_DOMAIN}${path}`
+        }
         return `${slug}.${BASE_DOMAIN}`
     }
     return `${BASE_DOMAIN}/sites/${slug}`
