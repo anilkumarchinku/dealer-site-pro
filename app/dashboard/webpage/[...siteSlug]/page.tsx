@@ -41,7 +41,11 @@ const TEMPLATES = [
 export default function SiteEditorPage() {
     const params    = useParams()
     const router    = useRouter()
-    const siteSlug  = params.siteSlug as string
+    // [...siteSlug] catch-all gives an array — join into a path string
+    // e.g. ["varun-motors", "two-wheelers"] → "varun-motors/two-wheelers"
+    const siteSlug  = Array.isArray(params.siteSlug)
+        ? (params.siteSlug as string[]).join('/')
+        : (params.siteSlug as string)
 
     const { dealerId, dealerSlug, setDealerId, setDealerSlug } = useOnboardingStore()
 

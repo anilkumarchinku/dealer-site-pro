@@ -1,0 +1,255 @@
+{
+  "keeway-india": [
+    "public/data/brand-model-images/2w/keeway-india/tx-125e.jpg"
+  ],
+  "bajaj-chetak-ev": [
+    "public/data/brand-model-images/2w/bajaj-chetak-ev/chetak-3502.jpg"
+  ],
+  "oben-electric": [
+    "public/data/brand-model-images/2w/oben-electric/rorr-ez.jpg"
+  ],
+  "tvs-motor": [
+    "public/data/brand-model-images/2w/tvs-motor/xl100.jpg",
+    "public/data/brand-model-images/2w/tvs-motor/jupiter.jpg",
+    "public/data/brand-model-images/2w/tvs-motor/xl100-comfort.jpg",
+    "public/data/brand-model-images/2w/tvs-motor/raider-125.png",
+    "public/data/brand-model-images/2w/tvs-motor/zest-110.png",
+    "public/data/brand-model-images/2w/tvs-motor/scooty-pep-plus.jpg",
+    "public/data/brand-model-images/2w/tvs-motor/xl100-heavy-duty.jpg"
+  ],
+  "jawa-motorcycles": [
+    "public/data/brand-model-images/2w/jawa-motorcycles/jawa-42-fj.jpg",
+    "public/data/brand-model-images/2w/jawa-motorcycles/jawa-42-bobber.jpg",
+    "public/data/brand-model-images/2w/jawa-motorcycles/yezdi-roadster.jpg"
+  ],
+  "suzuki-motorcycle": [
+    "public/data/brand-model-images/2w/suzuki-motorcycle/gsx-8r.jpg",
+    "public/data/brand-model-images/2w/suzuki-motorcycle/avenis-125.png",
+    "public/data/brand-model-images/2w/suzuki-motorcycle/burgman-street-125.png"
+  ],
+  "joy-e-bike": [
+    "public/data/brand-model-images/2w/joy-e-bike/hurricane.jpg"
+  ],
+  "aprilia-india": [
+    "public/data/brand-model-images/2w/aprilia-india/rsv4-1100-factory.png",
+    "public/data/brand-model-images/2w/aprilia-india/rs-457.jpg",
+    "public/data/brand-model-images/2w/aprilia-india/sxr-160.png"
+  ],
+  "ampere-greaves": [
+    "public/data/brand-model-images/2w/ampere-greaves/reo.jpg",
+    "public/data/brand-model-images/2w/ampere-greaves/magnus.jpg",
+    "public/data/brand-model-images/2w/ampere-greaves/magnus-grand.jpg"
+  ],
+  "ktm-india": [
+    "public/data/brand-model-images/2w/ktm-india/390-adventure-r.png",
+    "public/data/brand-model-images/2w/ktm-india/390-duke.png",
+    "public/data/brand-model-images/2w/ktm-india/200-duke.jpg",
+    "public/data/brand-model-images/2w/ktm-india/250-duke.png"
+  ],
+  "bmw-motorrad-india": [
+    "public/data/brand-model-images/2w/bmw-motorrad-india/s-1000-xr.png",
+    "public/data/brand-model-images/2w/bmw-motorrad-india/s-1000-rr.png",
+    "public/data/brand-model-images/2w/bmw-motorrad-india/f-900-gs-adventure.png",
+    "public/data/brand-model-images/2w/bmw-motorrad-india/r18.jpg"
+  ],
+  "kawasaki-india": [
+    "public/data/brand-model-images/2w/kawasaki-india/klx450r.png",
+    "public/data/brand-model-images/2w/kawasaki-india/klx230.png",
+    "public/data/brand-model-images/2w/kawasaki-india/ninja-h2-sx-se.png",
+    "public/data/brand-model-images/2w/kawasaki-india/ninja-zx-10r.png",
+    "public/data/brand-model-images/2w/kawasaki-india/ninja-300.png",
+    "public/data/brand-model-images/2w/kawasaki-india/z-h2.png",
+    "public/data/brand-model-images/2w/kawasaki-india/z650.jpg"
+  ],
+  "pure-ev": [
+    "public/data/brand-model-images/2w/pure-ev/etrance-neo.jpg",
+    "public/data/brand-model-images/2w/pure-ev/ecodryft.jpg",
+    "public/data/brand-model-images/2w/pure-ev/epluto-7g.jpg"
+  ],
+  "okaya-ev": [
+    "public/data/brand-model-images/2w/okaya-ev/classiq.jpg",
+    "public/data/brand-model-images/2w/okaya-ev/faast-f4.jpg",
+    "public/data/brand-model-images/2w/okaya-ev/freedum.jpg",
+    "public/data/brand-model-images/2w/okaya-ev/faast-f2t.jpg"
+  ],
+  "yezdi-motorcycles": [
+    "public/data/brand-model-images/2w/yezdi-motorcycles/roadster.png"
+  ],
+  "yamaha-india": [
+    "public/data/brand-model-images/2w/yamaha-india/fz25.png",
+    "public/data/brand-model-images/2w/yamaha-india/fascino-125-fi.jpg",
+    "public/data/brand-model-images/2w/yamaha-india/ray-zr-125-fi-street-rally.jpg",
+    "public/data/brand-model-images/2w/yamaha-india/aerox-155-version-s.jpg",
+    "public/data/brand-model-images/2w/yamaha-india/fz-s-fi-hybrid.jpg",
+    "public/data/brand-model-images/2w/yamaha-india/fz-s-fi.jpg",
+    "public/data/brand-model-images/2w/yamaha-india/ray-zr-125-fi.jpg",
+    "public/data/brand-model-images/2w/yamaha-india/fz-s-fi-v40-dlx.jpg",
+    "public/data/brand-model-images/2w/yamaha-india/mt-15-v20.jpg",
+    "public/data/brand-model-images/2w/yamaha-india/r15s.png"
+  ],
+  "vespa-india": [
+    "public/data/brand-model-images/2w/vespa-india/vespa-s-125.jpg",
+    "public/data/brand-model-images/2w/vespa-india/vespa-qala.jpg"
+  ],
+  "yulu": [
+    "public/data/brand-model-images/2w/yulu/wynn.jpg"
+  ],
+  "quantum-energy": [
+    "public/data/brand-model-images/2w/quantum-energy/bziness.jpg",
+    "public/data/brand-model-images/2w/quantum-energy/plasma.jpg"
+  ],
+  "triumph-india": [
+    "public/data/brand-model-images/2w/triumph-india/bonneville-speedmaster.png",
+    "public/data/brand-model-images/2w/triumph-india/tiger-850-sport.png",
+    "public/data/brand-model-images/2w/triumph-india/street-triple-765-r.jpg",
+    "public/data/brand-model-images/2w/triumph-india/bonneville-t120.png",
+    "public/data/brand-model-images/2w/triumph-india/tiger-660.jpg",
+    "public/data/brand-model-images/2w/triumph-india/speed-400.png",
+    "public/data/brand-model-images/2w/triumph-india/scrambler-900.png",
+    "public/data/brand-model-images/2w/triumph-india/tiger-sport-660.png",
+    "public/data/brand-model-images/2w/triumph-india/scrambler-400-x.jpg",
+    "public/data/brand-model-images/2w/triumph-india/speed-triple-1200-rs.png"
+  ],
+  "bounce-infinity": [
+    "public/data/brand-model-images/2w/bounce-infinity/e1.jpg",
+    "public/data/brand-model-images/2w/bounce-infinity/e1le.jpg"
+  ],
+  "odysse-electric": [
+    "public/data/brand-model-images/2w/odysse-electric/hyfy.jpg",
+    "public/data/brand-model-images/2w/odysse-electric/v2.jpg"
+  ],
+  "ducati-india": [
+    "public/data/brand-model-images/2w/ducati-india/scrambler-800.jpg",
+    "public/data/brand-model-images/2w/ducati-india/desertx-discovery.jpg",
+    "public/data/brand-model-images/2w/ducati-india/panigale-v4.png",
+    "public/data/brand-model-images/2w/ducati-india/xdiavel.jpg"
+  ],
+  "kabira-mobility": [
+    "public/data/brand-model-images/2w/kabira-mobility/aetos-100.jpg"
+  ],
+  "mahindra-two-wheelers": [
+    "public/data/brand-model-images/2w/mahindra-two-wheelers/gusto-110.png",
+    "public/data/brand-model-images/2w/mahindra-two-wheelers/mojo-300.jpg"
+  ],
+  "cfmoto-india": [
+    "public/data/brand-model-images/2w/cfmoto-india/650gt.jpg"
+  ],
+  "okinawa-autotech": [
+    "public/data/brand-model-images/2w/okinawa-autotech/lite.jpg",
+    "public/data/brand-model-images/2w/okinawa-autotech/i-praise.png"
+  ],
+  "honda-hmsi": [
+    "public/data/brand-model-images/2w/honda-hmsi/cb1000-hornet.png",
+    "public/data/brand-model-images/2w/honda-hmsi/unicorn.jpg",
+    "public/data/brand-model-images/2w/honda-hmsi/cb750-hornet.png",
+    "public/data/brand-model-images/2w/honda-hmsi/goldwing-tour.png",
+    "public/data/brand-model-images/2w/honda-hmsi/activa-e.png",
+    "public/data/brand-model-images/2w/honda-hmsi/activa-6g.png",
+    "public/data/brand-model-images/2w/honda-hmsi/transalp-xl750.png",
+    "public/data/brand-model-images/2w/honda-hmsi/africa-twin.png",
+    "public/data/brand-model-images/2w/honda-hmsi/sp-125.png",
+    "public/data/brand-model-images/2w/honda-hmsi/cb500x.jpg",
+    "public/data/brand-model-images/2w/honda-hmsi/cbr1000rr-r-fireblade.jpg"
+  ],
+  "royal-enfield": [
+    "public/data/brand-model-images/2w/royal-enfield/shotgun-650.jpg",
+    "public/data/brand-model-images/2w/royal-enfield/hunter-350.jpg"
+  ],
+  "harley-davidson-india": [
+    "public/data/brand-model-images/2w/harley-davidson-india/pan-america-1250-special.jpg",
+    "public/data/brand-model-images/2w/harley-davidson-india/nightster-special.jpg"
+  ],
+  "ola-electric": [
+    "public/data/brand-model-images/2w/ola-electric/roadster.jpg",
+    "public/data/brand-model-images/2w/ola-electric/s1-x.jpg"
+  ],
+  "bajaj-auto": [
+    "public/data/brand-model-images/2w/bajaj-auto/pulsar-ns125.png",
+    "public/data/brand-model-images/2w/bajaj-auto/ct-110x.jpg",
+    "public/data/brand-model-images/2w/bajaj-auto/platina-110.png",
+    "public/data/brand-model-images/2w/bajaj-auto/pulsar-220f.jpg",
+    "public/data/brand-model-images/2w/bajaj-auto/avenger-street-160.png",
+    "public/data/brand-model-images/2w/bajaj-auto/pulsar-ns160.png",
+    "public/data/brand-model-images/2w/bajaj-auto/pulsar-rs200.png",
+    "public/data/brand-model-images/2w/bajaj-auto/pulsar-125.png"
+  ],
+  "lectrix-ev": [
+    "public/data/brand-model-images/2w/lectrix-ev/sx25.jpg"
+  ],
+  "komaki": [
+    "public/data/brand-model-images/2w/komaki/ranger.png",
+    "public/data/brand-model-images/2w/komaki/se-pro.jpg"
+  ],
+  "simple-energy": [
+    "public/data/brand-model-images/2w/simple-energy/ones.jpg",
+    "public/data/brand-model-images/2w/simple-energy/one.jpg"
+  ],
+  "hero-motocorp": [
+    "public/data/brand-model-images/2w/hero-motocorp/passion-plus.png",
+    "public/data/brand-model-images/2w/hero-motocorp/splendor-plus-xtec-20.jpg",
+    "public/data/brand-model-images/2w/hero-motocorp/xtreme-160r.jpg",
+    "public/data/brand-model-images/2w/hero-motocorp/splendor-plus.png",
+    "public/data/brand-model-images/2w/hero-motocorp/pleasure-plus-xtec.png",
+    "public/data/brand-model-images/2w/hero-motocorp/xpulse-200-4v.png",
+    "public/data/brand-model-images/2w/hero-motocorp/karizma-xmr.png"
+  ],
+  "revolt-motors": [
+    "public/data/brand-model-images/2w/revolt-motors/rv-blazex.jpg"
+  ],
+  "tvs-king": [
+    "public/data/brand-model-images/3w/tvs-king/king-ev-max.jpg",
+    "public/data/brand-model-images/3w/tvs-king/king-kargo.jpg",
+    "public/data/brand-model-images/3w/tvs-king/king-kargo-hd-ev.jpg",
+    "public/data/brand-model-images/3w/tvs-king/king-deluxe.jpg"
+  ],
+  "lohia-auto": [
+    "public/data/brand-model-images/3w/lohia-auto/comfort-f2f.jpg",
+    "public/data/brand-model-images/3w/lohia-auto/narain-dx.jpg",
+    "public/data/brand-model-images/3w/lohia-auto/humsafar-l5-passenger.png",
+    "public/data/brand-model-images/3w/lohia-auto/youdha-e5-cargo.jpg"
+  ],
+  "atul-auto": [
+    "public/data/brand-model-images/3w/atul-auto/gem-paxx.png"
+  ],
+  "piaggio-ape": [
+    "public/data/brand-model-images/3w/piaggio-ape/e-xtra-fx-max.jpg",
+    "public/data/brand-model-images/3w/piaggio-ape/nxt.jpg",
+    "public/data/brand-model-images/3w/piaggio-ape/e-xtra-fx.jpg",
+    "public/data/brand-model-images/3w/piaggio-ape/xtra-ldx-diesel.jpg",
+    "public/data/brand-model-images/3w/piaggio-ape/auto-dx.jpg",
+    "public/data/brand-model-images/3w/piaggio-ape/xtra-ldx-cng.jpg"
+  ],
+  "mahindra-3w": [
+    "public/data/brand-model-images/3w/mahindra-3w/e-alfa-mini.jpg",
+    "public/data/brand-model-images/3w/mahindra-3w/zor-grand.jpg",
+    "public/data/brand-model-images/3w/mahindra-3w/udo.jpg",
+    "public/data/brand-model-images/3w/mahindra-3w/treo.jpg",
+    "public/data/brand-model-images/3w/mahindra-3w/treo-zor.jpg",
+    "public/data/brand-model-images/3w/mahindra-3w/treo-plus.jpg",
+    "public/data/brand-model-images/3w/mahindra-3w/alfa-load.jpg",
+    "public/data/brand-model-images/3w/mahindra-3w/e-alfa-plus.jpg",
+    "public/data/brand-model-images/3w/mahindra-3w/alfa-passenger.jpg"
+  ],
+  "kinetic-green": [
+    "public/data/brand-model-images/3w/kinetic-green/safar-jumbo-ranger.jpg",
+    "public/data/brand-model-images/3w/kinetic-green/safar-shakti.png"
+  ],
+  "bajaj-auto-3w": [
+    "public/data/brand-model-images/3w/bajaj-auto-3w/riki-p40.jpg",
+    "public/data/brand-model-images/3w/bajaj-auto-3w/maxima-z-cng.jpg",
+    "public/data/brand-model-images/3w/bajaj-auto-3w/re-cng.jpg",
+    "public/data/brand-model-images/3w/bajaj-auto-3w/re-electric.jpg",
+    "public/data/brand-model-images/3w/bajaj-auto-3w/maxima-x-wide-diesel.jpg",
+    "public/data/brand-model-images/3w/bajaj-auto-3w/maxima-xl-electric.jpg",
+    "public/data/brand-model-images/3w/bajaj-auto-3w/maxima-c-cng.jpg",
+    "public/data/brand-model-images/3w/bajaj-auto-3w/re-diesel.jpg",
+    "public/data/brand-model-images/3w/bajaj-auto-3w/re-lpg.jpg",
+    "public/data/brand-model-images/3w/bajaj-auto-3w/compact-re-cng.jpg"
+  ],
+  "euler-motors": [
+    "public/data/brand-model-images/3w/euler-motors/neo-hicity.jpg"
+  ],
+  "greaves-electric-3w": [
+    "public/data/brand-model-images/3w/greaves-electric-3w/xargo.jpg"
+  ]
+}
