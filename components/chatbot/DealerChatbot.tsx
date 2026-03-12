@@ -254,7 +254,7 @@ const QUICK_REPLY_INTENTS: Record<string, Intent> = {
 
 // ── Component ─────────────────────────────────────────────────────────────────
 
-interface DealerChatbotProps extends DealerInfo {}
+type DealerChatbotProps = DealerInfo
 
 export function DealerChatbot(props: DealerChatbotProps) {
     const { brandColor, phone, whatsapp } = props;
@@ -323,7 +323,7 @@ export function DealerChatbot(props: DealerChatbotProps) {
             {/* ── Chat window ── */}
             {open && (
                 <div
-                    className="fixed bottom-20 right-4 z-50 w-[340px] sm:w-[360px] flex flex-col bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden"
+                    className="fixed bottom-36 right-4 z-50 w-[340px] sm:w-[360px] flex flex-col bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden"
                     style={{ height: '500px', maxHeight: 'calc(100vh - 120px)' }}
                 >
                     {/* Header */}
@@ -488,7 +488,7 @@ export function DealerChatbot(props: DealerChatbotProps) {
             {/* ── Floating bubble ── */}
             <button
                 onClick={() => setOpen(o => !o)}
-                className="fixed bottom-4 right-4 z-50 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-all duration-200"
+                className="fixed bottom-24 right-4 z-50 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-all duration-200"
                 style={{ backgroundColor: brandColor }}
                 aria-label="Open chat"
             >
