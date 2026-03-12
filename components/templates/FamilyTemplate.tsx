@@ -212,6 +212,7 @@ export function FamilyTemplate({
                                     Call Us
                                 </a>
                             </Button>
+                            <WhatsAppButton phone={contactInfo.phone} variant="nav" />
                             <button
                                 className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
                                 onClick={() => setMobileMenuOpen(o => !o)}
@@ -800,8 +801,6 @@ export function FamilyTemplate({
                 services={services as string[]}
             />
 
-            {/* WhatsApp Float Button */}
-            <WhatsAppButton phone={contactInfo.phone} />
         </div>
     );
 }

@@ -3,8 +3,8 @@
 interface WhatsAppButtonProps {
     phone: string
     message?: string
-    /** 'float' = sticky bottom-right bubble (default). 'card' = compact inline button for car cards. */
-    variant?: 'float' | 'card'
+    /** 'float' = sticky bottom-right bubble (default). 'card' = compact inline button for car cards. 'nav' = icon-only button for header nav. */
+    variant?: 'float' | 'card' | 'nav'
 }
 
 function buildWaUrl(phone: string, message: string) {
@@ -32,6 +32,20 @@ export function WhatsAppButton({
             >
                 <WhatsAppIcon className="w-3.5 h-3.5 fill-green-600" />
                 <span className="hidden sm:inline">WhatsApp</span>
+            </a>
+        )
+    }
+
+    if (variant === 'nav') {
+        return (
+            <a
+                href={waUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat on WhatsApp"
+                className="p-2 rounded-full bg-green-500 hover:bg-green-600 text-white transition-colors flex items-center justify-center"
+            >
+                <WhatsAppIcon className="w-5 h-5 fill-white" />
             </a>
         )
     }

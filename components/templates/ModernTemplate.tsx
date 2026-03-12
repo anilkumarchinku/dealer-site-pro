@@ -264,6 +264,7 @@ export function ModernTemplate({
                                     Call Now
                                 </a>
                             </Button>
+                            <WhatsAppButton phone={contactInfo.phone} variant="nav" />
                             <button
                                 className="md:hidden p-2 rounded-lg transition-colors text-gray-900"
                                 onClick={() => setMobileMenuOpen(o => !o)}
@@ -927,8 +928,6 @@ export function ModernTemplate({
                 services={services as string[]}
             />
 
-            {/* WhatsApp Float Button */}
-            <WhatsAppButton phone={contactInfo.phone} />
         </div>
     );
 }

@@ -197,6 +197,7 @@ export function LuxuryTemplate({
                                     Call
                                 </a>
                             </Button>
+                            <WhatsAppButton phone={contactInfo.phone} variant="nav" />
                             <button
                                 className="md:hidden p-2 rounded-lg text-gray-900 transition-colors hover:bg-gray-100"
                                 onClick={() => setMobileMenuOpen(o => !o)}
@@ -717,8 +718,6 @@ export function LuxuryTemplate({
                 services={services as string[]}
             />
 
-            {/* WhatsApp Float Button */}
-            <WhatsAppButton phone={contactInfo.phone} />
         </div>
     );
 }
