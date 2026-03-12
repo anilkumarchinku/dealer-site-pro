@@ -368,20 +368,134 @@ export default async function TwoWheelersPage({ params }: Props) {
         address: dealer.full_address ?? dealer.location,
     }
 
-    const heroDefaults: Record<string, { title: string; subtitle: string }> = {
-        luxury:  { title: 'THE RIDE OF YOUR LIFE',            subtitle: 'Experience premium two-wheelers from top brands' },
-        sporty:  { title: 'RIDE LIKE A LEGEND',               subtitle: 'Where performance meets passion on two wheels' },
-        family:  { title: 'Your Perfect Two-Wheeler Awaits',   subtitle: 'Safe, reliable bikes and scooters for every rider' },
-        modern:  { title: 'Discover Your Ride',               subtitle: 'Explore our bikes, scooters, and electric two-wheelers' },
+    // ── Smart hero text: brand-aware + inventory-type-aware ───────────────────
+    const hasBikes    = newCars.some(v => v.bodyType === 'Bike')
+    const hasScooters = newCars.some(v => v.bodyType === 'Scooter')
+    const hasElectric = newCars.some(v => v.bodyType === 'Electric')
+
+    // Build a natural "what we sell" phrase from actual inventory
+    const inventoryPhrase = (() => {
+        if (hasBikes && hasScooters && hasElectric) return 'bikes, scooters & electric two-wheelers'
+        if (hasBikes && hasScooters)                return 'bikes & scooters'
+        if (hasBikes && hasElectric)                return 'motorcycles & electric bikes'
+        if (hasScooters && hasElectric)             return 'scooters & electric two-wheelers'
+        if (hasBikes)                               return 'motorcycles'
+        if (hasScooters)                            return 'scooters'
+        if (hasElectric)                            return 'electric two-wheelers'
+        return 'two-wheelers'
+    })()
+
+    // Per-brand hero lines — title + subtitle generator
+    const brandKey = (primaryBrand ?? '').toLowerCase()
+    type BrandCopy = { title: string; subtitle: (phrase: string) => string; tagline: string }
+    const BRAND_COPY: Record<string, BrandCopy> = {
+        'royal enfield': {
+            title:    'THE ROAD CALLS YOU',
+            subtitle: (p) => `Explore our Royal Enfield ${p} — crafted for the open road`,
+            tagline:  'Pure Motorcycling',
+        },
+        'hero motocorp': {
+            title:    'EVERY ROAD IS YOUR ROAD',
+            subtitle: (p) => `Discover Hero ${p} trusted by millions across India`,
+            tagline:  'Built for Every Indian',
+        },
+        'honda motorcycle & scooter india': {
+            title:    'THE POWER OF DREAMS',
+            subtitle: (p) => `Explore Honda ${p} — engineered for reliability & performance`,
+            tagline:  'Engineered for Life',
+        },
+        'tvs motor company': {
+            title:    'PERFORMANCE REDEFINED',
+            subtitle: (p) => `Discover TVS ${p} where performance meets everyday practicality`,
+            tagline:  'Inspired by Performance',
+        },
+        'bajaj auto': {
+            title:    'DISTINCTLY AHEAD',
+            subtitle: (p) => `Browse our Bajaj ${p} — bold design, powerful performance`,
+            tagline:  'Ahead of the Pack',
+        },
+        'yamaha india': {
+            title:    'REVS YOUR HEART',
+            subtitle: (p) => `Find your Yamaha ${p} — where passion meets engineering`,
+            tagline:  'Passion for Racing',
+        },
+        'ktm india': {
+            title:    'READY TO RACE',
+            subtitle: (p) => `Unleash the beast — explore KTM ${p} built for performance`,
+            tagline:  'Born to Race',
+        },
+        'husqvarna india': {
+            title:    'DESIGNED TO INSPIRE',
+            subtitle: (p) => `Explore Husqvarna ${p} — Swedish design, Austrian engineering`,
+            tagline:  'Different by Design',
+        },
+        'suzuki motorcycle india': {
+            title:    'RIDE THE WIND',
+            subtitle: (p) => `Experience Suzuki ${p} — precision engineering for every ride`,
+            tagline:  'Way of Life',
+        },
+        'ather energy': {
+            title:    'CHARGE FORWARD',
+            subtitle: (_) => 'Experience Ather electric scooters — smart, fast, zero emissions',
+            tagline:  'Future is Electric',
+        },
+        'ola electric': {
+            title:    'RIDE THE FUTURE',
+            subtitle: (_) => 'Go further, smarter — explore Ola Electric scooters',
+            tagline:  'Move with Purpose',
+        },
+        'bajaj chetak': {
+            title:    'CHETAK IS BACK',
+            subtitle: (_) => 'The icon reimagined — explore the all-new Chetak electric',
+            tagline:  'Legend Reborn',
+        },
+        'tvs iqube': {
+            title:    'INTELLIGENT MOBILITY',
+            subtitle: (_) => 'Ride smarter with TVS iQube — India\'s connected electric scooter',
+            tagline:  'Smart. Clean. Connected.',
+        },
+        'jawa motorcycles': {
+            title:    'THE LEGEND RIDES ON',
+            subtitle: (p) => `Explore Jawa ${p} — timeless style, modern soul`,
+            tagline:  'Timeless. Refined.',
+        },
+        'benelli india': {
+            title:    'ITALIAN SOUL. GLOBAL ROADS.',
+            subtitle: (p) => `Discover Benelli ${p} — Italian design engineered for India`,
+            tagline:  'La Vita è Bella',
+        },
+        'kawasaki india': {
+            title:    'LET THE GOOD TIMES ROLL',
+            subtitle: (p) => `Explore Kawasaki ${p} — legendary performance on every road`,
+            tagline:  'Ridden by Legends',
+        },
     }
-    const defaults = heroDefaults[dealer.style_template] ?? heroDefaults.modern
-    const heroTitle    = dealer.hero_title    || defaults.title
-    const heroSubtitle = dealer.hero_subtitle || defaults.subtitle
+
+    // Template-only fallbacks (when brand has no specific copy)
+    const TEMPLATE_DEFAULTS: Record<string, { title: string; tagline: string }> = {
+        luxury:  { title: 'THE RIDE OF YOUR LIFE',          tagline: 'Excellence in Motion'  },
+        sporty:  { title: 'RIDE LIKE A LEGEND',             tagline: 'Built for Speed'        },
+        family:  { title: 'Your Perfect Two-Wheeler Awaits', tagline: 'Trusted by Families'   },
+        modern:  { title: 'Discover Your Ride',             tagline: 'Freedom on Two Wheels'  },
+    }
+
+    const brandCopy  = BRAND_COPY[brandKey]
+    const tmplFallback = TEMPLATE_DEFAULTS[dealer.style_template] ?? TEMPLATE_DEFAULTS.modern
+
+    const smartTitle    = brandCopy?.title    ?? tmplFallback.title
+    const smartSubtitle = brandCopy
+        ? brandCopy.subtitle(inventoryPhrase)
+        : `Explore our ${inventoryPhrase}`
+    const smartTagline  = brandCopy?.tagline  ?? tmplFallback.tagline
+
+    // Dealer's custom overrides always win
+    const heroTitle    = dealer.hero_title    || smartTitle
+    const heroSubtitle = dealer.hero_subtitle || smartSubtitle
 
     const taglines: Record<string, string> = {
-        luxury: 'Excellence in Motion',
-        sporty: 'Built for Speed',
-        family: 'Trusted by Families',
+        luxury: smartTagline,
+        sporty: smartTagline,
+        family: smartTagline,
     }
 
     const sharedProps = {
@@ -430,6 +544,6 @@ export default async function TwoWheelersPage({ params }: Props) {
         case 'modern':
         case 'professional':
         default:
-            return <>{jsonLd}<ModernTemplate {...sharedProps} config={{ heroTitle, heroSubtitle }} /></>
+            return <>{jsonLd}<ModernTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: smartTagline }} /></>
     }
 }
