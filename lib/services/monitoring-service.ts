@@ -3,8 +3,8 @@
  * Checks SSL status and domain expiry
  */
 
-import { supabase } from '@/lib/supabase'
-import { sendDomainExpiryWarning, sendSSLRenewalNotification } from './email-service'
+import { createAdminClient } from '@/lib/supabase-server'
+import { sendDomainExpiryWarning } from './email-service'
 
 export interface SSLStatus {
     domain: string
@@ -47,6 +47,7 @@ export async function checkSSLCertificate(domain: string): Promise<SSLStatus> {
  * Should be run as a cron job (daily)
  */
 export async function monitorSSLCertificates() {
+    const supabase = createAdminClient()
     try {
         // Get all active domains
         const { data: domains, error } = await supabase
@@ -60,7 +61,7 @@ export async function monitorSSLCertificates() {
             return { success: false, error }
         }
 
-        const results: any[] = []
+        const results: { domain: string; status: string; daysUntilExpiry?: number }[] = []
 
         for (const domain of domains || []) {
             const sslStatus = await checkSSLCertificate(domain.domain)
@@ -71,7 +72,7 @@ export async function monitorSSLCertificates() {
             if (!sslStatus.isValid) {
                 newSSLStatus = 'failed'
             } else if (sslStatus.daysUntilExpiry && sslStatus.daysUntilExpiry < 30) {
-                newSSLStatus = 'renewing'
+                newSSLStatus = 'provisioning'
                 // Trigger renewal process (Vercel/Cloudflare does this automatically)
             }
 
@@ -102,13 +103,15 @@ export async function monitorSSLCertificates() {
  * Should be run as a cron job (daily)
  */
 export async function monitorDomainExpiry() {
+    const supabase = createAdminClient()
     try {
         // Get all managed and custom domains
-        const { data: domains, error } = await supabase
+        const { data: rawDomains, error } = await supabase
             .from('domains')
             .select('*, dealer:dealers(email, dealership_name)')
             .in('type', ['custom', 'managed'])
             .eq('status', 'active')
+        const domains = rawDomains as unknown as Array<{ id: string; domain: string; dealer_id: string; registration_expires_at: string | null; type: string; auto_renew: boolean; dealer: { email: string | null; dealership_name: string } }> | null
 
         if (error) {
             console.error('Error fetching domains for expiry monitoring:', error)
@@ -127,7 +130,7 @@ export async function monitorDomainExpiry() {
             // Send warnings at 30 days and 7 days before expiry
             if (daysUntilExpiry === 30 || daysUntilExpiry === 7) {
                 await sendDomainExpiryWarning({
-                    to: domain.dealer.email,
+                    to: domain.dealer.email ?? '',
                     dealerName: domain.dealer.dealership_name,
                     domain: domain.domain,
                     daysUntilExpiry
@@ -143,7 +146,7 @@ export async function monitorDomainExpiry() {
             // Auto-renew if managed domain and auto_renew is enabled
             if (domain.type === 'managed' && domain.auto_renew && daysUntilExpiry <= 30) {
                 // Trigger renewal via Cloudflare API
-                console.log(`Auto-renewing managed domain: ${domain.domain}`)
+                console.warn(`Auto-renewing managed domain: ${domain.domain}`)
 
                 // Update expiry date (add 1 year)
                 await supabase
@@ -166,6 +169,7 @@ export async function monitorDomainExpiry() {
  * Gets monitoring statistics for dashboard
  */
 export async function getMonitoringStats(dealerId: string) {
+    const supabase = createAdminClient()
     try {
         const { data: domains, error } = await supabase
             .from('domains')

@@ -8,6 +8,7 @@
  */
 
 import type { Car, FuelType, TransmissionType } from '@/lib/types/car'
+import { logger } from '@/lib/utils/logger'
 
 // ── Cyepro API types ──────────────────────────────────────────────────────────
 
@@ -184,14 +185,14 @@ export async function fetchCyeproVehicles(
     options: Partial<CyeproSearchBody> = {},
 ): Promise<CyeproSearchResponse | null> {
     if (!apiKey) {
-        console.warn('[Cyepro] No API key provided')
+        logger.warn('[Cyepro] No API key provided')
         return null
     }
 
     const body: CyeproSearchBody = { ...DEFAULT_SEARCH, ...options }
 
     try {
-        console.log('[Cyepro] Fetching vehicles...', { page: body.page, size: body.size })
+        logger.log('[Cyepro] Fetching vehicles...', { page: body.page, size: body.size })
         const res = await fetch(
             `${BASE_URL}/dynamicForms/search/vehicles/filterQueryApi`,
             {
@@ -202,24 +203,24 @@ export async function fetchCyeproVehicles(
             },
         )
 
-        console.log('[Cyepro] Response status:', res.status)
+        logger.log('[Cyepro] Response status:', res.status)
 
         if (res.status === 401) {
-            console.error('[Cyepro] ❌ Invalid API key (401)')
+            logger.error('[Cyepro] Invalid API key (401)')
             return null
         }
         if (res.status === 429) {
-            console.error('[Cyepro] ⚠️ Rate limit reached (429)')
+            logger.error('[Cyepro] Rate limit reached (429)')
             return null
         }
         if (!res.ok) {
             const errorText = await res.text()
-            console.error(`[Cyepro] ❌ Fetch failed: ${res.status}`, errorText)
+            logger.error(`[Cyepro] Fetch failed: ${res.status}`, errorText)
             return null
         }
 
         const rawData = await res.json()
-        console.log('[Cyepro] Raw response keys:', Object.keys(rawData))
+        logger.log('[Cyepro] Raw response keys:', Object.keys(rawData))
 
         // Handle different possible response formats from Cyepro API
         const vehicles = rawData.vehicles ?? rawData.data ?? rawData.results ?? rawData.content ?? []
@@ -233,10 +234,10 @@ export async function fetchCyeproVehicles(
             totalPages:  rawData.totalPages  ?? Math.ceil(totalCount / body.size) ?? 1,
         }
 
-        console.log(`[Cyepro] ✅ Fetched ${data.vehicles.length} vehicles (total: ${data.totalCount})`)
+        logger.log(`[Cyepro] Fetched ${data.vehicles.length} vehicles (total: ${data.totalCount})`)
         return data
     } catch (err) {
-        console.error('[Cyepro] ❌ Network error:', err instanceof Error ? err.message : err)
+        logger.error('[Cyepro] Network error:', err instanceof Error ? err.message : err)
         return null
     }
 }

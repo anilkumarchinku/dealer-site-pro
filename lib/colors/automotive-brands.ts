@@ -59,7 +59,6 @@ export const automotiveBrands = {
         'Greaves Electric Mobility': { primary: '#2563EB', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Other' },
 
         'Hero MotoCorp': { primary: '#E31837', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Two Wheelers', },
-        'Honda': { primary: '#CC0000', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Two Wheelers', },
         'TVS': { primary: '#0033A0', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Two Wheelers', },
         'Bajaj Auto': { primary: '#0033A0', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Two Wheelers', },
         'Yamaha': { primary: '#002C5F', secondary: '#000000', background: '#FFFFFF', accent: '#666666', category: 'Two Wheelers', },
@@ -1850,9 +1849,26 @@ export const automotiveBrands = {
 
 };
 
+export interface BrandColors {
+  primary: string
+  secondary: string
+  background: string
+  accent: string
+  category: string
+  hover?: string
+  lightGray?: string
+  gradient?: string
+  forms?: Record<string, string>
+  typography?: Record<string, unknown>
+  colors?: Record<string, string>
+  buttons?: Record<string, unknown>
+  tagline?: string
+  [key: string]: unknown
+}
+
 // Helper function to get brand colors
-export function getBrandColors(brand: string) {
-        return automotiveBrands[brand as keyof typeof automotiveBrands] || automotiveBrands['Maruti Suzuki'];
+export function getBrandColors(brand: string): BrandColors {
+        return (automotiveBrands[brand as keyof typeof automotiveBrands] || automotiveBrands['Maruti Suzuki']) as unknown as BrandColors;
 }
 
 // Helper to get primary brand for multi-brand dealers

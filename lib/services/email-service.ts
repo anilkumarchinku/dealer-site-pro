@@ -3,6 +3,8 @@
  * Sends domain-related emails using Resend
  */
 
+import { logger } from '@/lib/utils/logger'
+
 export interface EmailParams {
     to: string
     dealerName: string
@@ -101,10 +103,10 @@ export async function sendSubdomainCreatedEmail(params: EmailParams) {
         });
         */
 
-        console.log(`[Email] Subdomain created notification sent to ${to}`)
+        logger.log(`[Email] Subdomain created notification sent to ${to}`)
         return { success: true }
     } catch (error) {
-        console.error('Error sending email:', error)
+        logger.error('Error sending email:', error)
         return { success: false, error }
     }
 }
@@ -182,7 +184,7 @@ export async function sendDNSInstructionsEmail(params: EmailParams & { aRecord: 
     `
     }
 
-    console.log(`[Email] DNS instructions sent to ${to}`)
+    logger.log(`[Email] DNS instructions sent to ${to}`)
     return { success: true }
 }
 
@@ -192,7 +194,7 @@ export async function sendDNSInstructionsEmail(params: EmailParams & { aRecord: 
 export async function sendDomainVerifiedEmail(params: EmailParams) {
     const { to, dealerName, domain } = params
 
-    console.log(`[Email] Domain verified notification sent to ${to} for ${domain}`)
+    logger.log(`[Email] Domain verified notification sent to ${to} for ${domain}`)
     return { success: true }
 }
 
@@ -202,7 +204,7 @@ export async function sendDomainVerifiedEmail(params: EmailParams) {
 export async function sendDomainExpiryWarning(params: EmailParams & { daysUntilExpiry: number }) {
     const { to, dealerName, domain, daysUntilExpiry } = params
 
-    console.log(`[Email] Domain expiry warning sent to ${to}: ${domain} expires in ${daysUntilExpiry} days`)
+    logger.log(`[Email] Domain expiry warning sent to ${to}: ${domain} expires in ${daysUntilExpiry} days`)
     return { success: true }
 }
 
@@ -212,7 +214,7 @@ export async function sendDomainExpiryWarning(params: EmailParams & { daysUntilE
 export async function sendSSLRenewalNotification(params: EmailParams & { status: 'success' | 'failed' }) {
     const { to, dealerName, domain, status } = params
 
-    console.log(`[Email] SSL renewal ${status} notification sent to ${to} for ${domain}`)
+    logger.log(`[Email] SSL renewal ${status} notification sent to ${to} for ${domain}`)
     return { success: true }
 }
 
@@ -228,10 +230,10 @@ export async function sendOtpEmail(
         const resendApiKey = process.env.RESEND_API_KEY
 
         if (!resendApiKey) {
-            console.warn('[OTP Email] RESEND_API_KEY not configured, logging to console')
-            console.log(`[OTP Email] To: ${to}`)
-            console.log(`[OTP Email] Subject: ${subject}`)
-            console.log(`[OTP Email] HTML: ${html}`)
+            logger.warn('[OTP Email] RESEND_API_KEY not configured, logging to console')
+            logger.log(`[OTP Email] To: ${to}`)
+            logger.log(`[OTP Email] Subject: ${subject}`)
+            logger.log(`[OTP Email] HTML: ${html}`)
             return { success: true }
         }
 
@@ -255,11 +257,11 @@ export async function sendOtpEmail(
             throw new Error(`Resend API error: ${error}`)
         }
 
-        console.log(`[OTP Email] Sent successfully to ${to}`)
+        logger.log(`[OTP Email] Sent successfully to ${to}`)
         return { success: true }
     } catch (error) {
         const msg = error instanceof Error ? error.message : String(error)
-        console.error('[OTP Email] Failed:', msg)
+        logger.error('[OTP Email] Failed:', msg)
         return { success: false, error: msg }
     }
 }

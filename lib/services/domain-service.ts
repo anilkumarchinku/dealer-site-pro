@@ -95,7 +95,7 @@ export async function createSubdomainForDealer(
 
         return {
             success: true,
-            domain: newDomain
+            domain: newDomain as unknown as Domain
         }
     } catch (error) {
         console.error('Unexpected error in createSubdomainForDealer:', error)
@@ -122,7 +122,7 @@ export async function getDomainBySlug(slug: string): Promise<Domain | null> {
             return null
         }
 
-        return data
+        return data as unknown as Domain
     } catch (error) {
         console.error('Error getting domain by slug:', error)
         return null
@@ -145,7 +145,7 @@ export async function getDomainByName(domainName: string): Promise<Domain | null
             return null
         }
 
-        return data
+        return data as unknown as Domain
     } catch (error) {
         console.error('Error getting domain by name:', error)
         return null
@@ -169,7 +169,7 @@ export async function getDealerDomains(dealerId: string): Promise<Domain[]> {
             return []
         }
 
-        return data || []
+        return (data || []) as unknown as Domain[]
     } catch (error) {
         console.error('Unexpected error in getDealerDomains:', error)
         return []
@@ -192,7 +192,7 @@ export async function getPrimaryDomain(dealerId: string): Promise<Domain | null>
             return null
         }
 
-        return data
+        return data as unknown as Domain
     } catch (error) {
         console.error('Error getting primary domain:', error)
         return null

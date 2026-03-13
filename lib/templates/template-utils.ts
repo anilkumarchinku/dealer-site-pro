@@ -117,7 +117,7 @@ export function getPrimaryButtonClasses(brand: string, templateId: TemplateStyle
   if (template.colorUsage.primaryUsage === 'dominant') {
     return `${baseClasses} text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1`;
   } else if (template.colorUsage.primaryUsage === 'minimal') {
-    return `${baseClasses} bg-white border-2 hover:bg-[${brandColors.lightGray}]`;
+    return `${baseClasses} bg-white border-2 hover:bg-[${(brandColors as Record<string, string>).lightGray ?? '#f5f5f5'}]`;
   } else {
     return `${baseClasses} text-white hover:opacity-90`;
   }

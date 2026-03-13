@@ -65,7 +65,7 @@ export async function getThreeWheelerVehicles(
         console.error('[getThreeWheelerVehicles]', error.message)
         return { vehicles: [], total: 0 }
     }
-    return { vehicles: (data ?? []) as ThreeWheelerVehicle[], total: count ?? 0 }
+    return { vehicles: (data ?? []) as unknown as ThreeWheelerVehicle[], total: count ?? 0 }
 }
 
 export async function getThreeWheelerVehicleById(id: string): Promise<ThreeWheelerVehicle | null> {
@@ -75,7 +75,7 @@ export async function getThreeWheelerVehicleById(id: string): Promise<ThreeWheel
         .eq('id', id)
         .single()
     if (error) return null
-    return data as ThreeWheelerVehicle
+    return data as unknown as ThreeWheelerVehicle
 }
 
 export async function addThreeWheelerVehicle(
@@ -84,7 +84,8 @@ export async function addThreeWheelerVehicle(
 ): Promise<{ success: boolean; id?: string; error?: string }> {
     const { data, error } = await db()
         .from('thw_vehicles')
-        .insert({ ...payload, dealer_id: dealerId })
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .insert({ ...payload, dealer_id: dealerId } as any)
         .select('id')
         .single()
     if (error) return { success: false, error: error.message }
@@ -99,7 +100,8 @@ export async function updateThreeWheelerVehicle(
 ): Promise<{ success: boolean; error?: string }> {
     const { error } = await db()
         .from('thw_vehicles')
-        .update(payload)
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .update(payload as any)
         .eq('id', id)
         .eq('dealer_id', dealerId)
     if (error) return { success: false, error: error.message }

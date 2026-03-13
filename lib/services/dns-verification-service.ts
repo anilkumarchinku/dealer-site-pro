@@ -31,7 +31,7 @@ export async function verifyCustomDomain(
     const records: DNSRecord[] = []
 
     // Expected values (replace with your actual Vercel IP or CNAME)
-    const EXPECTED_CNAME = 'cname.vercel-dns.com'
+    const EXPECTED_CNAME = process.env.NEXT_PUBLIC_CNAME_TARGET ?? 'cname.vercel-dns.com'
     const EXPECTED_A_RECORD = '76.76.21.21' // Vercel's IP (example)
 
     // Only run DNS verification on server-side
@@ -147,7 +147,7 @@ export function getDNSInstructions(domain: string): {
             {
                 type: 'CNAME',
                 name: 'www',
-                value: 'cname.vercel-dns.com',
+                value: process.env.NEXT_PUBLIC_CNAME_TARGET ?? 'cname.vercel-dns.com',
                 ttl: 'Auto or 3600'
             }
         ],
@@ -155,7 +155,7 @@ export function getDNSInstructions(domain: string): {
             `Log in to your domain registrar (GoDaddy, Namecheap, etc.)`,
             `Navigate to DNS Management or DNS Settings`,
             `Add or update the A record for @ (root) to point to 76.76.21.21`,
-            `Add or update the CNAME record for www to point to cname.vercel-dns.com`,
+            `Add or update the CNAME record for www to point to ${process.env.NEXT_PUBLIC_CNAME_TARGET ?? 'cname.vercel-dns.com'}`,
             `Save your changes and wait 5-30 minutes for DNS to propagate`,
             `Come back here and click "Verify Domain" to complete setup`
         ]

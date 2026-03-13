@@ -29,8 +29,8 @@ export interface AnalyticsSummary {
     direct: number;
     referral: number;
     // Derived
-    avgMobilePct: number;
-    avgDesktopPct: number;
+    avgMobilePct: number | null;
+    avgDesktopPct: number | null;
     rows: AnalyticsDayRow[];   // daily rows for the bar chart
 }
 
@@ -87,8 +87,8 @@ export async function fetchAnalyticsSummary(
         social:       sum("social_traffic"),
         direct:       sum("direct_traffic"),
         referral:     sum("referral_traffic"),
-        avgMobilePct:  mobilePcts.length  ? Math.round(mobilePcts.reduce((a, b) => a + b, 0)  / mobilePcts.length)  : 65,
-        avgDesktopPct: desktopPcts.length ? Math.round(desktopPcts.reduce((a, b) => a + b, 0) / desktopPcts.length) : 28,
+        avgMobilePct:  mobilePcts.length  ? Math.round(mobilePcts.reduce((a, b) => a + b, 0)  / mobilePcts.length)  : null,
+        avgDesktopPct: desktopPcts.length ? Math.round(desktopPcts.reduce((a, b) => a + b, 0) / desktopPcts.length) : null,
         rows,
     };
 }

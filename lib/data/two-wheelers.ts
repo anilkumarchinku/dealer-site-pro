@@ -10,6 +10,7 @@ import { brandNameToId, modelToSlug } from '@/lib/utils/brand-model-images'
 import { getModelEnrichment } from '@/lib/data/2w-brand-data'
 
 const NOW = new Date().toISOString()
+const CURRENT_YEAR = new Date().getFullYear()
 
 // ── Brands in the "electric" group in brand-models.json ──────────────────────
 const ELECTRIC_GROUP_BRANDS = new Set(
@@ -44,7 +45,7 @@ function buildTwoWheelerEntry(
         brand,
         model,
         variant:                 enrichment?.variant ?? null,
-        year:                    2024,
+        year:                    CURRENT_YEAR,
         fuel_type:               fuelType,
         engine_cc:               enrichment?.engine_cc ?? null,
         battery_kwh:             enrichment?.battery_kwh ?? null,
@@ -77,7 +78,7 @@ type CatalogEntry = Omit<TwoWheelerVehicle, 'id' | 'dealer_id' | 'created_at' | 
 const ROYAL_ENFIELD: CatalogEntry[] = [
     {
         brand: 'Royal Enfield', model: 'Scram 440', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 443, mileage_kmpl: 38, range_km: null, top_speed_kmph: 150,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 21900000, on_road_price_paise: 24500000, emi_starting_paise: 595000,
@@ -87,7 +88,7 @@ const ROYAL_ENFIELD: CatalogEntry[] = [
     },
     {
         brand: 'Royal Enfield', model: 'Bullet 350', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 349, mileage_kmpl: 36, range_km: null, top_speed_kmph: 112,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 17350000, on_road_price_paise: 19500000, emi_starting_paise: 470000,
@@ -97,7 +98,7 @@ const ROYAL_ENFIELD: CatalogEntry[] = [
     },
     {
         brand: 'Royal Enfield', model: 'Classic 350', variant: 'Signals',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 349, mileage_kmpl: 35, range_km: null, top_speed_kmph: 113,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 19350000, on_road_price_paise: 21700000, emi_starting_paise: 525000,
@@ -107,7 +108,7 @@ const ROYAL_ENFIELD: CatalogEntry[] = [
     },
     {
         brand: 'Royal Enfield', model: 'Meteor 350', variant: 'Fireball',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 349, mileage_kmpl: 36, range_km: null, top_speed_kmph: 120,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 21020000, on_road_price_paise: 23500000, emi_starting_paise: 570000,
@@ -117,7 +118,7 @@ const ROYAL_ENFIELD: CatalogEntry[] = [
     },
     {
         brand: 'Royal Enfield', model: 'Himalayan 450', variant: 'Slate',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 452, mileage_kmpl: 40, range_km: null, top_speed_kmph: 140,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 28450000, on_road_price_paise: 32000000, emi_starting_paise: 770000,
@@ -127,7 +128,7 @@ const ROYAL_ENFIELD: CatalogEntry[] = [
     },
     {
         brand: 'Royal Enfield', model: 'Guerrilla 450', variant: 'Flash',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 452, mileage_kmpl: 40, range_km: null, top_speed_kmph: 160,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 23900000, on_road_price_paise: 27000000, emi_starting_paise: 650000,
@@ -137,7 +138,7 @@ const ROYAL_ENFIELD: CatalogEntry[] = [
     },
     {
         brand: 'Royal Enfield', model: 'Interceptor 650', variant: 'Orange Crush',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 648, mileage_kmpl: 25, range_km: null, top_speed_kmph: 170,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 30300000, on_road_price_paise: 34000000, emi_starting_paise: 820000,
@@ -147,7 +148,7 @@ const ROYAL_ENFIELD: CatalogEntry[] = [
     },
     {
         brand: 'Royal Enfield', model: 'Super Meteor 650', variant: 'Celestial',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 648, mileage_kmpl: 24, range_km: null, top_speed_kmph: 175,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 37900000, on_road_price_paise: 42500000, emi_starting_paise: 1030000,
@@ -161,7 +162,7 @@ const ROYAL_ENFIELD: CatalogEntry[] = [
 const HERO: CatalogEntry[] = [
     {
         brand: 'Hero MotoCorp', model: 'Splendor Plus', variant: 'XTEC',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 97, mileage_kmpl: 80, range_km: null, top_speed_kmph: 90,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 7700000, on_road_price_paise: 9000000, emi_starting_paise: 210000,
@@ -171,7 +172,7 @@ const HERO: CatalogEntry[] = [
     },
     {
         brand: 'Hero MotoCorp', model: 'Xtreme 160R', variant: '4V',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 163, mileage_kmpl: 45, range_km: null, top_speed_kmph: 109,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 12200000, on_road_price_paise: 14000000, emi_starting_paise: 330000,
@@ -181,7 +182,7 @@ const HERO: CatalogEntry[] = [
     },
     {
         brand: 'Hero MotoCorp', model: 'Destini 125', variant: 'Prime',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 124, mileage_kmpl: 51, range_km: null, top_speed_kmph: 90,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 8500000, on_road_price_paise: 9800000, emi_starting_paise: 230000,
@@ -191,7 +192,7 @@ const HERO: CatalogEntry[] = [
     },
     {
         brand: 'Hero MotoCorp', model: 'Xpulse 200 4V', variant: 'Pro',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 199, mileage_kmpl: 40, range_km: null, top_speed_kmph: 114,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 14300000, on_road_price_paise: 16200000, emi_starting_paise: 390000,
@@ -205,7 +206,7 @@ const HERO: CatalogEntry[] = [
 const HONDA: CatalogEntry[] = [
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'Activa 6G', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 109, mileage_kmpl: 60, range_km: null, top_speed_kmph: 90,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 8000000, on_road_price_paise: 9200000, emi_starting_paise: 218000,
@@ -215,7 +216,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'Activa 125', variant: 'H-Smart',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 124, mileage_kmpl: 60, range_km: null, top_speed_kmph: 92,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 8490000, on_road_price_paise: 9700000, emi_starting_paise: 231000,
@@ -225,7 +226,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'Activa e', variant: 'Standard',
-        type: 'electric', fuel_type: 'electric', year: 2024,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 102, top_speed_kmph: 80,
         battery_kwh: 1.5, charging_time_hours: 5, battery_warranty_years: 3,
         ex_showroom_price_paise: 11000000, on_road_price_paise: 12500000, emi_starting_paise: 300000,
@@ -235,7 +236,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'Dio', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 109, mileage_kmpl: 55, range_km: null, top_speed_kmph: 86,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 7390000, on_road_price_paise: 8500000, emi_starting_paise: 201000,
@@ -245,7 +246,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'Dio 125', variant: 'H-Smart',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 123, mileage_kmpl: 55, range_km: null, top_speed_kmph: 88,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 8390000, on_road_price_paise: 9600000, emi_starting_paise: 229000,
@@ -255,7 +256,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'SP 125', variant: 'Disc',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 124, mileage_kmpl: 65, range_km: null, top_speed_kmph: 94,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 8500000, on_road_price_paise: 9700000, emi_starting_paise: 231000,
@@ -265,7 +266,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'QC1', variant: 'Standard',
-        type: 'electric', fuel_type: 'electric', year: 2024,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 80, top_speed_kmph: 50,
         battery_kwh: 1.0, charging_time_hours: 4, battery_warranty_years: 3,
         ex_showroom_price_paise: 9500000, on_road_price_paise: 10800000, emi_starting_paise: 259000,
@@ -275,7 +276,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'CB350RS', variant: 'DLX Pro',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 348, mileage_kmpl: 42, range_km: null, top_speed_kmph: 147,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 20500000, on_road_price_paise: 23000000, emi_starting_paise: 558000,
@@ -285,7 +286,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'Transalp XL750', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 755, mileage_kmpl: 22, range_km: null, top_speed_kmph: 185,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 108900000, on_road_price_paise: 122000000, emi_starting_paise: 2967000,
@@ -295,7 +296,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'X-ADV 750', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 745, mileage_kmpl: 20, range_km: null, top_speed_kmph: 175,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 138000000, on_road_price_paise: 155000000, emi_starting_paise: 3760000,
@@ -305,7 +306,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'CB125 Hornet', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 123, mileage_kmpl: 55, range_km: null, top_speed_kmph: 107,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 9500000, on_road_price_paise: 10800000, emi_starting_paise: 259000,
@@ -315,7 +316,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'Hornet 2.0', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 184, mileage_kmpl: 45, range_km: null, top_speed_kmph: 132,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 13600000, on_road_price_paise: 15500000, emi_starting_paise: 370000,
@@ -325,7 +326,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'CB300F', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 293, mileage_kmpl: 38, range_km: null, top_speed_kmph: 143,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 29600000, on_road_price_paise: 33500000, emi_starting_paise: 806000,
@@ -335,7 +336,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'CB500X', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 471, mileage_kmpl: 28, range_km: null, top_speed_kmph: 162,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 58900000, on_road_price_paise: 66000000, emi_starting_paise: 1606000,
@@ -345,7 +346,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'CB650R', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 648, mileage_kmpl: 22, range_km: null, top_speed_kmph: 188,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 96800000, on_road_price_paise: 109000000, emi_starting_paise: 2637000,
@@ -355,7 +356,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'CBR650R', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 648, mileage_kmpl: 20, range_km: null, top_speed_kmph: 193,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 101800000, on_road_price_paise: 115000000, emi_starting_paise: 2774000,
@@ -365,7 +366,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'CB750 Hornet', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 755, mileage_kmpl: 20, range_km: null, top_speed_kmph: 193,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 99900000, on_road_price_paise: 112000000, emi_starting_paise: 2722000,
@@ -375,7 +376,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'Africa Twin', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 1084, mileage_kmpl: 16, range_km: null, top_speed_kmph: 206,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 150800000, on_road_price_paise: 170000000, emi_starting_paise: 4109000,
@@ -385,7 +386,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'CBR1000RR-R Fireblade', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 999, mileage_kmpl: 14, range_km: null, top_speed_kmph: 299,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 350000000, on_road_price_paise: 395000000, emi_starting_paise: 9540000,
@@ -395,7 +396,7 @@ const HONDA: CatalogEntry[] = [
     },
     {
         brand: 'Honda Motorcycle & Scooter India', model: 'Goldwing Tour', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 1833, mileage_kmpl: 14, range_km: null, top_speed_kmph: 188,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 330000000, on_road_price_paise: 370000000, emi_starting_paise: 8990000,
@@ -409,7 +410,7 @@ const HONDA: CatalogEntry[] = [
 const TVS: CatalogEntry[] = [
     {
         brand: 'TVS Motor Company', model: 'Apache RTR 160 4V', variant: 'Race Edition',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 159, mileage_kmpl: 45, range_km: null, top_speed_kmph: 114,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 11300000, on_road_price_paise: 13000000, emi_starting_paise: 308000,
@@ -419,7 +420,7 @@ const TVS: CatalogEntry[] = [
     },
     {
         brand: 'TVS Motor Company', model: 'Jupiter 125', variant: 'SmartXonnect',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 124, mileage_kmpl: 52, range_km: null, top_speed_kmph: 85,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 8200000, on_road_price_paise: 9500000, emi_starting_paise: 224000,
@@ -429,7 +430,7 @@ const TVS: CatalogEntry[] = [
     },
     {
         brand: 'TVS Motor Company', model: 'iQube Electric', variant: 'S',
-        type: 'electric', fuel_type: 'electric', year: 2024,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 100, top_speed_kmph: 78,
         battery_kwh: 3.04, charging_time_hours: 5, battery_warranty_years: 3,
         ex_showroom_price_paise: 10100000, on_road_price_paise: 11500000, emi_starting_paise: 276000,
@@ -443,7 +444,7 @@ const TVS: CatalogEntry[] = [
 const BAJAJ: CatalogEntry[] = [
     {
         brand: 'Bajaj Auto', model: 'Pulsar NS160', variant: 'ABS',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 160, mileage_kmpl: 44, range_km: null, top_speed_kmph: 113,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 12200000, on_road_price_paise: 14000000, emi_starting_paise: 333000,
@@ -453,7 +454,7 @@ const BAJAJ: CatalogEntry[] = [
     },
     {
         brand: 'Bajaj Auto', model: 'Pulsar NS200', variant: 'ABS',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 199, mileage_kmpl: 35, range_km: null, top_speed_kmph: 134,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 14200000, on_road_price_paise: 16200000, emi_starting_paise: 387000,
@@ -463,7 +464,7 @@ const BAJAJ: CatalogEntry[] = [
     },
     {
         brand: 'Bajaj Auto', model: 'Dominar 400', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 373, mileage_kmpl: 30, range_km: null, top_speed_kmph: 148,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 21900000, on_road_price_paise: 24500000, emi_starting_paise: 596000,
@@ -477,7 +478,7 @@ const BAJAJ: CatalogEntry[] = [
 const YAMAHA: CatalogEntry[] = [
     {
         brand: 'Yamaha India', model: 'FZ-X', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 149, mileage_kmpl: 45, range_km: null, top_speed_kmph: 100,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 12270000, on_road_price_paise: 14000000, emi_starting_paise: 334000,
@@ -487,7 +488,7 @@ const YAMAHA: CatalogEntry[] = [
     },
     {
         brand: 'Yamaha India', model: 'MT-09', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 889, mileage_kmpl: 20, range_km: null, top_speed_kmph: 180,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 132000000, on_road_price_paise: 148000000, emi_starting_paise: 3580000,
@@ -497,7 +498,7 @@ const YAMAHA: CatalogEntry[] = [
     },
     {
         brand: 'Yamaha India', model: 'Aerox 155', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 155, mileage_kmpl: 43, range_km: null, top_speed_kmph: 120,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 14150000, on_road_price_paise: 16500000, emi_starting_paise: 399000,
@@ -511,7 +512,7 @@ const YAMAHA: CatalogEntry[] = [
 const SUZUKI: CatalogEntry[] = [
     {
         brand: 'Suzuki Motorcycle India', model: 'Access 125', variant: 'CBS Disc',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 124, mileage_kmpl: 48, range_km: null, top_speed_kmph: 84,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 8600000, on_road_price_paise: 9900000, emi_starting_paise: 234000,
@@ -521,7 +522,7 @@ const SUZUKI: CatalogEntry[] = [
     },
     {
         brand: 'Suzuki Motorcycle India', model: 'Gixxer SF 250', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 249, mileage_kmpl: 35, range_km: null, top_speed_kmph: 140,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 18000000, on_road_price_paise: 20500000, emi_starting_paise: 490000,
@@ -535,7 +536,7 @@ const SUZUKI: CatalogEntry[] = [
 const KTM: CatalogEntry[] = [
     {
         brand: 'KTM India', model: '160 Duke', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 160, mileage_kmpl: 40, range_km: null, top_speed_kmph: 115,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 19800000, on_road_price_paise: 22500000, emi_starting_paise: 540000,
@@ -545,7 +546,7 @@ const KTM: CatalogEntry[] = [
     },
     {
         brand: 'KTM India', model: '390 Duke', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 399, mileage_kmpl: 28, range_km: null, top_speed_kmph: 167,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 31500000, on_road_price_paise: 35500000, emi_starting_paise: 858000,
@@ -559,7 +560,7 @@ const KTM: CatalogEntry[] = [
 const ATHER: CatalogEntry[] = [
     {
         brand: 'Ather Energy', model: '450S', variant: 'Standard',
-        type: 'electric', fuel_type: 'electric', year: 2024,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 115, top_speed_kmph: 90,
         battery_kwh: 2.9, charging_time_hours: 4.5, battery_warranty_years: 3,
         ex_showroom_price_paise: 14999900, on_road_price_paise: 17000000, emi_starting_paise: 408000,
@@ -569,7 +570,7 @@ const ATHER: CatalogEntry[] = [
     },
     {
         brand: 'Ather Energy', model: '450X', variant: 'Pro',
-        type: 'electric', fuel_type: 'electric', year: 2024,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 150, top_speed_kmph: 90,
         battery_kwh: 3.7, charging_time_hours: 5, battery_warranty_years: 3,
         ex_showroom_price_paise: 17999900, on_road_price_paise: 20500000, emi_starting_paise: 490000,
@@ -583,7 +584,7 @@ const ATHER: CatalogEntry[] = [
 const KAWASAKI: CatalogEntry[] = [
     {
         brand: 'Kawasaki India', model: 'Z650RS', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 649, mileage_kmpl: 18, range_km: null, top_speed_kmph: 180,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 70000000, on_road_price_paise: 79000000, emi_starting_paise: 1905000,
@@ -593,7 +594,7 @@ const KAWASAKI: CatalogEntry[] = [
     },
     {
         brand: 'Kawasaki India', model: 'Ninja 300', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 296, mileage_kmpl: 23, range_km: null, top_speed_kmph: 168,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 37900000, on_road_price_paise: 43000000, emi_starting_paise: 1031000,
@@ -607,7 +608,7 @@ const KAWASAKI: CatalogEntry[] = [
 const OLA_ELECTRIC: CatalogEntry[] = [
     {
         brand: 'Ola Electric', model: 'S1 Z', variant: 'Standard',
-        type: 'electric', fuel_type: 'electric', year: 2024,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 85, top_speed_kmph: 80,
         battery_kwh: 1.5, charging_time_hours: 3.5, battery_warranty_years: 3,
         ex_showroom_price_paise: 5999900, on_road_price_paise: 7000000, emi_starting_paise: 168000,
@@ -617,7 +618,7 @@ const OLA_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Ola Electric', model: 'S1 Air', variant: 'Standard',
-        type: 'electric', fuel_type: 'electric', year: 2024,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 101, top_speed_kmph: 90,
         battery_kwh: 2.5, charging_time_hours: 5, battery_warranty_years: 3,
         ex_showroom_price_paise: 10999900, on_road_price_paise: 12500000, emi_starting_paise: 299000,
@@ -627,7 +628,7 @@ const OLA_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Ola Electric', model: 'S1 Pro', variant: 'Gen 2',
-        type: 'electric', fuel_type: 'electric', year: 2024,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 195, top_speed_kmph: 120,
         battery_kwh: 4.0, charging_time_hours: 6.5, battery_warranty_years: 3,
         ex_showroom_price_paise: 14999900, on_road_price_paise: 17000000, emi_starting_paise: 408000,
@@ -642,7 +643,7 @@ const OLA_ELECTRIC: CatalogEntry[] = [
 const HUSQVARNA_INDIA: CatalogEntry[] = [
     {
         brand: 'Husqvarna India', model: 'Vitpilen 125', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -652,7 +653,7 @@ const HUSQVARNA_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Husqvarna India', model: 'Vitpilen 250', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -662,7 +663,7 @@ const HUSQVARNA_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Husqvarna India', model: 'Svartpilen 401', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -676,7 +677,7 @@ const HUSQVARNA_INDIA: CatalogEntry[] = [
 const JAWA_MOTORCYCLES: CatalogEntry[] = [
     {
         brand: 'Jawa Motorcycles', model: 'Jawa 42', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -686,7 +687,7 @@ const JAWA_MOTORCYCLES: CatalogEntry[] = [
     },
     {
         brand: 'Jawa Motorcycles', model: 'Jawa 42 FJ', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -696,7 +697,7 @@ const JAWA_MOTORCYCLES: CatalogEntry[] = [
     },
     {
         brand: 'Jawa Motorcycles', model: 'Jawa 42 Bobber', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -706,7 +707,7 @@ const JAWA_MOTORCYCLES: CatalogEntry[] = [
     },
     {
         brand: 'Jawa Motorcycles', model: 'Jawa 350', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -716,7 +717,7 @@ const JAWA_MOTORCYCLES: CatalogEntry[] = [
     },
     {
         brand: 'Jawa Motorcycles', model: 'Jawa Perak', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -730,7 +731,7 @@ const JAWA_MOTORCYCLES: CatalogEntry[] = [
 const YEZDI_MOTORCYCLES: CatalogEntry[] = [
     {
         brand: 'Yezdi Motorcycles', model: 'Roadster', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -740,7 +741,7 @@ const YEZDI_MOTORCYCLES: CatalogEntry[] = [
     },
     {
         brand: 'Yezdi Motorcycles', model: 'Scrambler', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -750,7 +751,7 @@ const YEZDI_MOTORCYCLES: CatalogEntry[] = [
     },
     {
         brand: 'Yezdi Motorcycles', model: 'Adventure', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -764,7 +765,7 @@ const YEZDI_MOTORCYCLES: CatalogEntry[] = [
 const BENELLI_INDIA: CatalogEntry[] = [
     {
         brand: 'Benelli India', model: 'TRK 502', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -774,7 +775,7 @@ const BENELLI_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Benelli India', model: 'TRK 502X', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -784,7 +785,7 @@ const BENELLI_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Benelli India', model: '502C', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -794,7 +795,7 @@ const BENELLI_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Benelli India', model: 'Leoncino 500', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -808,7 +809,7 @@ const BENELLI_INDIA: CatalogEntry[] = [
 const APRILIA_INDIA: CatalogEntry[] = [
     {
         brand: 'Aprilia India', model: 'RS 457', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -818,7 +819,7 @@ const APRILIA_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Aprilia India', model: 'Tuono 457', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -828,7 +829,7 @@ const APRILIA_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Aprilia India', model: 'RS 660', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -838,7 +839,7 @@ const APRILIA_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Aprilia India', model: 'Tuono 660', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -848,7 +849,7 @@ const APRILIA_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Aprilia India', model: 'RSV4 1100 Factory', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -858,7 +859,7 @@ const APRILIA_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Aprilia India', model: 'SR 125', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -868,7 +869,7 @@ const APRILIA_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Aprilia India', model: 'SR 175', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -878,7 +879,7 @@ const APRILIA_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Aprilia India', model: 'SXR 125', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -888,7 +889,7 @@ const APRILIA_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Aprilia India', model: 'SXR 160', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -898,7 +899,7 @@ const APRILIA_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Aprilia India', model: 'Storm 125', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -912,7 +913,7 @@ const APRILIA_INDIA: CatalogEntry[] = [
 const VESPA_INDIA: CatalogEntry[] = [
     {
         brand: 'Vespa India', model: 'Vespa 125', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -922,7 +923,7 @@ const VESPA_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Vespa India', model: 'Vespa S 125', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -932,7 +933,7 @@ const VESPA_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Vespa India', model: 'Vespa Tech 125', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -942,7 +943,7 @@ const VESPA_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Vespa India', model: 'Vespa S Tech 125', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -952,7 +953,7 @@ const VESPA_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Vespa India', model: 'Vespa 150', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -962,7 +963,7 @@ const VESPA_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Vespa India', model: 'Vespa S 150', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -972,7 +973,7 @@ const VESPA_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Vespa India', model: 'Vespa Qala', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -986,7 +987,7 @@ const VESPA_INDIA: CatalogEntry[] = [
 const HARLEYDAVIDSON_INDIA: CatalogEntry[] = [
     {
         brand: 'Harley-Davidson India', model: 'Nightster', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -996,7 +997,7 @@ const HARLEYDAVIDSON_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Harley-Davidson India', model: 'Nightster Special', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1006,7 +1007,7 @@ const HARLEYDAVIDSON_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Harley-Davidson India', model: 'Sportster S', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1016,7 +1017,7 @@ const HARLEYDAVIDSON_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Harley-Davidson India', model: 'Street Bob', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1026,7 +1027,7 @@ const HARLEYDAVIDSON_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Harley-Davidson India', model: 'Fat Boy', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1036,7 +1037,7 @@ const HARLEYDAVIDSON_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Harley-Davidson India', model: 'Heritage Classic', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1046,7 +1047,7 @@ const HARLEYDAVIDSON_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Harley-Davidson India', model: 'Breakout', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1056,7 +1057,7 @@ const HARLEYDAVIDSON_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Harley-Davidson India', model: 'Street Glide', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1066,7 +1067,7 @@ const HARLEYDAVIDSON_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Harley-Davidson India', model: 'Road Glide', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1076,7 +1077,7 @@ const HARLEYDAVIDSON_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Harley-Davidson India', model: 'CVO Street Glide', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1086,7 +1087,7 @@ const HARLEYDAVIDSON_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Harley-Davidson India', model: 'CVO Road Glide', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1096,7 +1097,7 @@ const HARLEYDAVIDSON_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Harley-Davidson India', model: 'Pan America 1250 Special', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1110,7 +1111,7 @@ const HARLEYDAVIDSON_INDIA: CatalogEntry[] = [
 const TRIUMPH_INDIA: CatalogEntry[] = [
     {
         brand: 'Triumph India', model: 'Speed 400', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1120,7 +1121,7 @@ const TRIUMPH_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Triumph India', model: 'Scrambler 400 X', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1130,7 +1131,7 @@ const TRIUMPH_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Triumph India', model: 'Trident 660', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1140,7 +1141,7 @@ const TRIUMPH_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Triumph India', model: 'Tiger 660', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1150,7 +1151,7 @@ const TRIUMPH_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Triumph India', model: 'Tiger 850 Sport', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1160,7 +1161,7 @@ const TRIUMPH_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Triumph India', model: 'Speed Twin 900', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1170,7 +1171,7 @@ const TRIUMPH_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Triumph India', model: 'Scrambler 900', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1180,7 +1181,7 @@ const TRIUMPH_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Triumph India', model: 'Bonneville T100', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1190,7 +1191,7 @@ const TRIUMPH_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Triumph India', model: 'Bonneville T120', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1200,7 +1201,7 @@ const TRIUMPH_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Triumph India', model: 'Bonneville Bobber', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1210,7 +1211,7 @@ const TRIUMPH_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Triumph India', model: 'Bonneville Speedmaster', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1220,7 +1221,7 @@ const TRIUMPH_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Triumph India', model: 'Street Triple 765 R', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1230,7 +1231,7 @@ const TRIUMPH_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Triumph India', model: 'Speed Triple 1200 RS', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1240,7 +1241,7 @@ const TRIUMPH_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Triumph India', model: 'Tiger 900', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1250,7 +1251,7 @@ const TRIUMPH_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Triumph India', model: 'Tiger 1200', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1260,7 +1261,7 @@ const TRIUMPH_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Triumph India', model: 'Rocket 3', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1274,7 +1275,7 @@ const TRIUMPH_INDIA: CatalogEntry[] = [
 const DUCATI_INDIA: CatalogEntry[] = [
     {
         brand: 'Ducati India', model: 'Scrambler 800', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1284,7 +1285,7 @@ const DUCATI_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Ducati India', model: 'Monster', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1294,7 +1295,7 @@ const DUCATI_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Ducati India', model: 'Panigale V2', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1304,7 +1305,7 @@ const DUCATI_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Ducati India', model: 'Streetfighter V2', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1314,7 +1315,7 @@ const DUCATI_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Ducati India', model: 'Panigale V4', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1324,7 +1325,7 @@ const DUCATI_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Ducati India', model: 'Streetfighter V4', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1334,7 +1335,7 @@ const DUCATI_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Ducati India', model: 'Multistrada V2', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1344,7 +1345,7 @@ const DUCATI_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Ducati India', model: 'Multistrada V4', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1354,7 +1355,7 @@ const DUCATI_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Ducati India', model: 'DesertX', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1364,7 +1365,7 @@ const DUCATI_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Ducati India', model: 'DesertX Discovery', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1374,7 +1375,7 @@ const DUCATI_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Ducati India', model: 'Diavel V4', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1384,7 +1385,7 @@ const DUCATI_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Ducati India', model: 'XDiavel', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1394,7 +1395,7 @@ const DUCATI_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Ducati India', model: 'Hypermotard 950', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1408,7 +1409,7 @@ const DUCATI_INDIA: CatalogEntry[] = [
 const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
     {
         brand: 'BMW Motorrad India', model: 'G 310 R', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1418,7 +1419,7 @@ const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'BMW Motorrad India', model: 'G 310 GS', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1428,7 +1429,7 @@ const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'BMW Motorrad India', model: 'G 310 RR', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1438,7 +1439,7 @@ const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'BMW Motorrad India', model: 'CE 02', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1448,7 +1449,7 @@ const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'BMW Motorrad India', model: 'F 900 GS', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1458,7 +1459,7 @@ const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'BMW Motorrad India', model: 'F 900 GS Adventure', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1468,7 +1469,7 @@ const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'BMW Motorrad India', model: 'R 1300 GS', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1478,7 +1479,7 @@ const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'BMW Motorrad India', model: 'S 1000 R', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1488,7 +1489,7 @@ const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'BMW Motorrad India', model: 'S 1000 RR', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1498,7 +1499,7 @@ const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'BMW Motorrad India', model: 'S 1000 XR', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1508,7 +1509,7 @@ const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'BMW Motorrad India', model: 'M 1000 XR', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1518,7 +1519,7 @@ const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'BMW Motorrad India', model: 'R 12', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1528,7 +1529,7 @@ const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'BMW Motorrad India', model: 'R 12 nineT', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1538,7 +1539,7 @@ const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'BMW Motorrad India', model: 'R18', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1548,7 +1549,7 @@ const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'BMW Motorrad India', model: 'C 400 GT', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1558,7 +1559,7 @@ const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'BMW Motorrad India', model: 'CE 04', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1568,7 +1569,7 @@ const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'BMW Motorrad India', model: 'K 1600', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1582,7 +1583,7 @@ const BMW_MOTORRAD_INDIA: CatalogEntry[] = [
 const INDIAN_MOTORCYCLE: CatalogEntry[] = [
     {
         brand: 'Indian Motorcycle', model: 'Chief Dark Horse', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1592,7 +1593,7 @@ const INDIAN_MOTORCYCLE: CatalogEntry[] = [
     },
     {
         brand: 'Indian Motorcycle', model: 'Chief Bobber Dark Horse', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1602,7 +1603,7 @@ const INDIAN_MOTORCYCLE: CatalogEntry[] = [
     },
     {
         brand: 'Indian Motorcycle', model: 'Sport Chief', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1612,7 +1613,7 @@ const INDIAN_MOTORCYCLE: CatalogEntry[] = [
     },
     {
         brand: 'Indian Motorcycle', model: 'Super Chief Limited', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1622,7 +1623,7 @@ const INDIAN_MOTORCYCLE: CatalogEntry[] = [
     },
     {
         brand: 'Indian Motorcycle', model: 'Super Chief Dark Horse', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1632,7 +1633,7 @@ const INDIAN_MOTORCYCLE: CatalogEntry[] = [
     },
     {
         brand: 'Indian Motorcycle', model: 'Springfield', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1642,7 +1643,7 @@ const INDIAN_MOTORCYCLE: CatalogEntry[] = [
     },
     {
         brand: 'Indian Motorcycle', model: 'Springfield Dark Horse', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1652,7 +1653,7 @@ const INDIAN_MOTORCYCLE: CatalogEntry[] = [
     },
     {
         brand: 'Indian Motorcycle', model: 'Chieftain Dark Horse', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1662,7 +1663,7 @@ const INDIAN_MOTORCYCLE: CatalogEntry[] = [
     },
     {
         brand: 'Indian Motorcycle', model: 'Chieftain Limited', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1672,7 +1673,7 @@ const INDIAN_MOTORCYCLE: CatalogEntry[] = [
     },
     {
         brand: 'Indian Motorcycle', model: 'Challenger Limited', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1682,7 +1683,7 @@ const INDIAN_MOTORCYCLE: CatalogEntry[] = [
     },
     {
         brand: 'Indian Motorcycle', model: 'Challenger Dark Horse', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1692,7 +1693,7 @@ const INDIAN_MOTORCYCLE: CatalogEntry[] = [
     },
     {
         brand: 'Indian Motorcycle', model: 'Pursuit Limited', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1702,7 +1703,7 @@ const INDIAN_MOTORCYCLE: CatalogEntry[] = [
     },
     {
         brand: 'Indian Motorcycle', model: 'Pursuit Dark Horse', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1712,7 +1713,7 @@ const INDIAN_MOTORCYCLE: CatalogEntry[] = [
     },
     {
         brand: 'Indian Motorcycle', model: 'Roadmaster', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1722,7 +1723,7 @@ const INDIAN_MOTORCYCLE: CatalogEntry[] = [
     },
     {
         brand: 'Indian Motorcycle', model: 'Roadmaster Limited', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1732,7 +1733,7 @@ const INDIAN_MOTORCYCLE: CatalogEntry[] = [
     },
     {
         brand: 'Indian Motorcycle', model: 'Roadmaster Dark Horse', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1746,7 +1747,7 @@ const INDIAN_MOTORCYCLE: CatalogEntry[] = [
 const MOTO_GUZZI: CatalogEntry[] = [
     {
         brand: 'Moto Guzzi', model: 'V7', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1756,7 +1757,7 @@ const MOTO_GUZZI: CatalogEntry[] = [
     },
     {
         brand: 'Moto Guzzi', model: 'V7 Sport', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1766,7 +1767,7 @@ const MOTO_GUZZI: CatalogEntry[] = [
     },
     {
         brand: 'Moto Guzzi', model: 'V85 TT', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1776,7 +1777,7 @@ const MOTO_GUZZI: CatalogEntry[] = [
     },
     {
         brand: 'Moto Guzzi', model: 'V100 Mandello', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1790,7 +1791,7 @@ const MOTO_GUZZI: CatalogEntry[] = [
 const CFMOTO_INDIA: CatalogEntry[] = [
     {
         brand: 'CFMoto India', model: '300NK', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1800,7 +1801,7 @@ const CFMOTO_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'CFMoto India', model: '450MT', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1810,7 +1811,7 @@ const CFMOTO_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'CFMoto India', model: '675SR-R', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1820,7 +1821,7 @@ const CFMOTO_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'CFMoto India', model: '650NK', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1830,7 +1831,7 @@ const CFMOTO_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'CFMoto India', model: '650MT', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1840,7 +1841,7 @@ const CFMOTO_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'CFMoto India', model: '650GT', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1854,7 +1855,7 @@ const CFMOTO_INDIA: CatalogEntry[] = [
 const KEEWAY_INDIA: CatalogEntry[] = [
     {
         brand: 'Keeway India', model: 'SR125', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1864,7 +1865,7 @@ const KEEWAY_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Keeway India', model: 'K-Light 250V', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1874,7 +1875,7 @@ const KEEWAY_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Keeway India', model: 'RS 250', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1884,7 +1885,7 @@ const KEEWAY_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Keeway India', model: 'V302C', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1894,7 +1895,7 @@ const KEEWAY_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Keeway India', model: 'K300 SF', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1904,7 +1905,7 @@ const KEEWAY_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Keeway India', model: 'RR300', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1914,7 +1915,7 @@ const KEEWAY_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Keeway India', model: 'Vieste 300', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1924,7 +1925,7 @@ const KEEWAY_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Keeway India', model: 'Sixties 300i', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1938,7 +1939,7 @@ const KEEWAY_INDIA: CatalogEntry[] = [
 const ZONTES_INDIA: CatalogEntry[] = [
     {
         brand: 'Zontes India', model: '350X', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1948,7 +1949,7 @@ const ZONTES_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Zontes India', model: '350R', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1958,7 +1959,7 @@ const ZONTES_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Zontes India', model: '350T', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1968,7 +1969,7 @@ const ZONTES_INDIA: CatalogEntry[] = [
     },
     {
         brand: 'Zontes India', model: 'GK350', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1982,7 +1983,7 @@ const ZONTES_INDIA: CatalogEntry[] = [
 const MAHINDRA_TWO_WHEELERS: CatalogEntry[] = [
     {
         brand: 'Mahindra Two Wheelers', model: 'Mojo 300', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -1992,7 +1993,7 @@ const MAHINDRA_TWO_WHEELERS: CatalogEntry[] = [
     },
     {
         brand: 'Mahindra Two Wheelers', model: 'Centuro 125', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2002,7 +2003,7 @@ const MAHINDRA_TWO_WHEELERS: CatalogEntry[] = [
     },
     {
         brand: 'Mahindra Two Wheelers', model: 'Gusto 110', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2012,7 +2013,7 @@ const MAHINDRA_TWO_WHEELERS: CatalogEntry[] = [
     },
     {
         brand: 'Mahindra Two Wheelers', model: 'Gusto 125', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2026,7 +2027,7 @@ const MAHINDRA_TWO_WHEELERS: CatalogEntry[] = [
 const BAJAJ_CHETAK: CatalogEntry[] = [
     {
         brand: 'Bajaj Chetak', model: 'Chetak 3501', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2036,7 +2037,7 @@ const BAJAJ_CHETAK: CatalogEntry[] = [
     },
     {
         brand: 'Bajaj Chetak', model: 'Chetak 3502', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2046,7 +2047,7 @@ const BAJAJ_CHETAK: CatalogEntry[] = [
     },
     {
         brand: 'Bajaj Chetak', model: 'Chetak 3503', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2060,7 +2061,7 @@ const BAJAJ_CHETAK: CatalogEntry[] = [
 const TVS_IQUBE: CatalogEntry[] = [
     {
         brand: 'TVS iQube', model: 'iQube', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2070,7 +2071,7 @@ const TVS_IQUBE: CatalogEntry[] = [
     },
     {
         brand: 'TVS iQube', model: 'iQube S', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2080,7 +2081,7 @@ const TVS_IQUBE: CatalogEntry[] = [
     },
     {
         brand: 'TVS iQube', model: 'iQube ST', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2090,7 +2091,7 @@ const TVS_IQUBE: CatalogEntry[] = [
     },
     {
         brand: 'TVS iQube', model: 'iQube ST 5.3 kWh', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2100,7 +2101,7 @@ const TVS_IQUBE: CatalogEntry[] = [
     },
     {
         brand: 'TVS iQube', model: 'TVS X', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2110,7 +2111,7 @@ const TVS_IQUBE: CatalogEntry[] = [
     },
     {
         brand: 'TVS iQube', model: 'TVS Orbiter', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2124,7 +2125,7 @@ const TVS_IQUBE: CatalogEntry[] = [
 const HERO_ELECTRIC: CatalogEntry[] = [
     {
         brand: 'Hero Electric', model: 'Optima', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2134,7 +2135,7 @@ const HERO_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Hero Electric', model: 'Flash', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2144,7 +2145,7 @@ const HERO_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Hero Electric', model: 'Photon', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2154,7 +2155,7 @@ const HERO_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Hero Electric', model: 'Atria', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2168,7 +2169,7 @@ const HERO_ELECTRIC: CatalogEntry[] = [
 const VIDA_HERO_MOTOCORP: CatalogEntry[] = [
     {
         brand: 'Vida (Hero MotoCorp)', model: 'V2', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2178,7 +2179,7 @@ const VIDA_HERO_MOTOCORP: CatalogEntry[] = [
     },
     {
         brand: 'Vida (Hero MotoCorp)', model: 'VX2 Go', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2188,7 +2189,7 @@ const VIDA_HERO_MOTOCORP: CatalogEntry[] = [
     },
     {
         brand: 'Vida (Hero MotoCorp)', model: 'VX2 Plus', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2202,7 +2203,7 @@ const VIDA_HERO_MOTOCORP: CatalogEntry[] = [
 const REVOLT_MOTORS: CatalogEntry[] = [
     {
         brand: 'Revolt Motors', model: 'RV1', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2212,7 +2213,7 @@ const REVOLT_MOTORS: CatalogEntry[] = [
     },
     {
         brand: 'Revolt Motors', model: 'RV1+', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2222,7 +2223,7 @@ const REVOLT_MOTORS: CatalogEntry[] = [
     },
     {
         brand: 'Revolt Motors', model: 'RV BlazeX', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2232,7 +2233,7 @@ const REVOLT_MOTORS: CatalogEntry[] = [
     },
     {
         brand: 'Revolt Motors', model: 'RV400', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2242,7 +2243,7 @@ const REVOLT_MOTORS: CatalogEntry[] = [
     },
     {
         brand: 'Revolt Motors', model: 'RV400 BRZ', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2256,7 +2257,7 @@ const REVOLT_MOTORS: CatalogEntry[] = [
 const OKINAWA_AUTOTECH: CatalogEntry[] = [
     {
         brand: 'Okinawa Autotech', model: 'i-Praise', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2266,7 +2267,7 @@ const OKINAWA_AUTOTECH: CatalogEntry[] = [
     },
     {
         brand: 'Okinawa Autotech', model: 'PraisePro', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2276,7 +2277,7 @@ const OKINAWA_AUTOTECH: CatalogEntry[] = [
     },
     {
         brand: 'Okinawa Autotech', model: 'Okhi-90', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2286,7 +2287,7 @@ const OKINAWA_AUTOTECH: CatalogEntry[] = [
     },
     {
         brand: 'Okinawa Autotech', model: 'Ridge 100', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2296,7 +2297,7 @@ const OKINAWA_AUTOTECH: CatalogEntry[] = [
     },
     {
         brand: 'Okinawa Autotech', model: 'Dual 100', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2306,7 +2307,7 @@ const OKINAWA_AUTOTECH: CatalogEntry[] = [
     },
     {
         brand: 'Okinawa Autotech', model: 'R30', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2316,7 +2317,7 @@ const OKINAWA_AUTOTECH: CatalogEntry[] = [
     },
     {
         brand: 'Okinawa Autotech', model: 'Lite', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2330,7 +2331,7 @@ const OKINAWA_AUTOTECH: CatalogEntry[] = [
 const AMPERE_GREAVES_ELECTRIC: CatalogEntry[] = [
     {
         brand: 'Ampere (Greaves Electric)', model: 'Nexus', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2340,7 +2341,7 @@ const AMPERE_GREAVES_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Ampere (Greaves Electric)', model: 'Magnus', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2350,7 +2351,7 @@ const AMPERE_GREAVES_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Ampere (Greaves Electric)', model: 'Magnus Grand', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2360,7 +2361,7 @@ const AMPERE_GREAVES_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Ampere (Greaves Electric)', model: 'Reo', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2374,7 +2375,7 @@ const AMPERE_GREAVES_ELECTRIC: CatalogEntry[] = [
 const TORK_MOTORS: CatalogEntry[] = [
     {
         brand: 'Tork Motors', model: 'Kratos R', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2384,7 +2385,7 @@ const TORK_MOTORS: CatalogEntry[] = [
     },
     {
         brand: 'Tork Motors', model: 'Kratos X', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2398,7 +2399,7 @@ const TORK_MOTORS: CatalogEntry[] = [
 const ULTRAVIOLETTE_AUTOMOTIVE: CatalogEntry[] = [
     {
         brand: 'Ultraviolette Automotive', model: 'F77 Mach 2', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2408,7 +2409,7 @@ const ULTRAVIOLETTE_AUTOMOTIVE: CatalogEntry[] = [
     },
     {
         brand: 'Ultraviolette Automotive', model: 'F77 SuperStreet', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2418,7 +2419,7 @@ const ULTRAVIOLETTE_AUTOMOTIVE: CatalogEntry[] = [
     },
     {
         brand: 'Ultraviolette Automotive', model: 'Shockwave', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2428,7 +2429,7 @@ const ULTRAVIOLETTE_AUTOMOTIVE: CatalogEntry[] = [
     },
     {
         brand: 'Ultraviolette Automotive', model: 'Tesseract', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2442,7 +2443,7 @@ const ULTRAVIOLETTE_AUTOMOTIVE: CatalogEntry[] = [
 const SIMPLE_ENERGY: CatalogEntry[] = [
     {
         brand: 'Simple Energy', model: 'One', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2452,7 +2453,7 @@ const SIMPLE_ENERGY: CatalogEntry[] = [
     },
     {
         brand: 'Simple Energy', model: 'One Gen 1.5', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2462,7 +2463,7 @@ const SIMPLE_ENERGY: CatalogEntry[] = [
     },
     {
         brand: 'Simple Energy', model: 'OneS', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2476,7 +2477,7 @@ const SIMPLE_ENERGY: CatalogEntry[] = [
 const KABIRA_MOBILITY: CatalogEntry[] = [
     {
         brand: 'Kabira Mobility', model: 'KM 3000', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2486,7 +2487,7 @@ const KABIRA_MOBILITY: CatalogEntry[] = [
     },
     {
         brand: 'Kabira Mobility', model: 'KM 4000', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2496,7 +2497,7 @@ const KABIRA_MOBILITY: CatalogEntry[] = [
     },
     {
         brand: 'Kabira Mobility', model: 'Aetos 100', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2506,7 +2507,7 @@ const KABIRA_MOBILITY: CatalogEntry[] = [
     },
     {
         brand: 'Kabira Mobility', model: 'Hermes 75', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2520,7 +2521,7 @@ const KABIRA_MOBILITY: CatalogEntry[] = [
 const PURE_EV: CatalogEntry[] = [
     {
         brand: 'Pure EV', model: 'EPluto 7G', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2530,7 +2531,7 @@ const PURE_EV: CatalogEntry[] = [
     },
     {
         brand: 'Pure EV', model: 'Etryst 350', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2540,7 +2541,7 @@ const PURE_EV: CatalogEntry[] = [
     },
     {
         brand: 'Pure EV', model: 'EcoDryft', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2550,7 +2551,7 @@ const PURE_EV: CatalogEntry[] = [
     },
     {
         brand: 'Pure EV', model: 'ETrance Neo', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2564,7 +2565,7 @@ const PURE_EV: CatalogEntry[] = [
 const MATTER: CatalogEntry[] = [
     {
         brand: 'Matter', model: 'Aera 5000', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2574,7 +2575,7 @@ const MATTER: CatalogEntry[] = [
     },
     {
         brand: 'Matter', model: 'Aera 5000+', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2588,7 +2589,7 @@ const MATTER: CatalogEntry[] = [
 const HOP_ELECTRIC: CatalogEntry[] = [
     {
         brand: 'Hop Electric', model: 'Lyf', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2598,7 +2599,7 @@ const HOP_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Hop Electric', model: 'Leo', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2608,7 +2609,7 @@ const HOP_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Hop Electric', model: 'OXO', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2622,7 +2623,7 @@ const HOP_ELECTRIC: CatalogEntry[] = [
 const OKAYA_EV_OPG_MOBILITY: CatalogEntry[] = [
     {
         brand: 'Okaya EV (OPG Mobility)', model: 'Faast F2T', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2632,7 +2633,7 @@ const OKAYA_EV_OPG_MOBILITY: CatalogEntry[] = [
     },
     {
         brand: 'Okaya EV (OPG Mobility)', model: 'Faast F2F', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2642,7 +2643,7 @@ const OKAYA_EV_OPG_MOBILITY: CatalogEntry[] = [
     },
     {
         brand: 'Okaya EV (OPG Mobility)', model: 'Faast F2B', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2652,7 +2653,7 @@ const OKAYA_EV_OPG_MOBILITY: CatalogEntry[] = [
     },
     {
         brand: 'Okaya EV (OPG Mobility)', model: 'Faast F3', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2662,7 +2663,7 @@ const OKAYA_EV_OPG_MOBILITY: CatalogEntry[] = [
     },
     {
         brand: 'Okaya EV (OPG Mobility)', model: 'Faast F4', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2672,7 +2673,7 @@ const OKAYA_EV_OPG_MOBILITY: CatalogEntry[] = [
     },
     {
         brand: 'Okaya EV (OPG Mobility)', model: 'Freedum', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2682,7 +2683,7 @@ const OKAYA_EV_OPG_MOBILITY: CatalogEntry[] = [
     },
     {
         brand: 'Okaya EV (OPG Mobility)', model: 'ClassIQ+', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2692,7 +2693,7 @@ const OKAYA_EV_OPG_MOBILITY: CatalogEntry[] = [
     },
     {
         brand: 'Okaya EV (OPG Mobility)', model: 'Motofaast', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2702,7 +2703,7 @@ const OKAYA_EV_OPG_MOBILITY: CatalogEntry[] = [
     },
     {
         brand: 'Okaya EV (OPG Mobility)', model: 'Defy 22', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2716,7 +2717,7 @@ const OKAYA_EV_OPG_MOBILITY: CatalogEntry[] = [
 const OBEN_ELECTRIC: CatalogEntry[] = [
     {
         brand: 'Oben Electric', model: 'Rorr', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2726,7 +2727,7 @@ const OBEN_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Oben Electric', model: 'Rorr EZ', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2740,7 +2741,7 @@ const OBEN_ELECTRIC: CatalogEntry[] = [
 const LECTRIX_EV: CatalogEntry[] = [
     {
         brand: 'Lectrix EV', model: 'SX25', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2750,7 +2751,7 @@ const LECTRIX_EV: CatalogEntry[] = [
     },
     {
         brand: 'Lectrix EV', model: 'LXS 2.0', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2760,7 +2761,7 @@ const LECTRIX_EV: CatalogEntry[] = [
     },
     {
         brand: 'Lectrix EV', model: 'LXS 3.0', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2770,7 +2771,7 @@ const LECTRIX_EV: CatalogEntry[] = [
     },
     {
         brand: 'Lectrix EV', model: 'NDuro', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2780,7 +2781,7 @@ const LECTRIX_EV: CatalogEntry[] = [
     },
     {
         brand: 'Lectrix EV', model: 'ZYRO', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2794,7 +2795,7 @@ const LECTRIX_EV: CatalogEntry[] = [
 const RIVER: CatalogEntry[] = [
     {
         brand: 'River', model: 'Indie Gen 3', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2808,7 +2809,7 @@ const RIVER: CatalogEntry[] = [
 const ODYSSE_ELECTRIC: CatalogEntry[] = [
     {
         brand: 'Odysse Electric', model: 'Evoqis', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2818,7 +2819,7 @@ const ODYSSE_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Odysse Electric', model: 'Evoqis Lite', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2828,7 +2829,7 @@ const ODYSSE_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Odysse Electric', model: 'Racer', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2838,7 +2839,7 @@ const ODYSSE_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Odysse Electric', model: 'Racer Neo', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2848,7 +2849,7 @@ const ODYSSE_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Odysse Electric', model: 'HyFy', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2858,7 +2859,7 @@ const ODYSSE_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Odysse Electric', model: 'V2', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2868,7 +2869,7 @@ const ODYSSE_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Odysse Electric', model: 'Snap', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2878,7 +2879,7 @@ const ODYSSE_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Odysse Electric', model: 'E2Go', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2888,7 +2889,7 @@ const ODYSSE_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Odysse Electric', model: 'Hawk', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2898,7 +2899,7 @@ const ODYSSE_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Odysse Electric', model: 'Trot', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2908,7 +2909,7 @@ const ODYSSE_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Odysse Electric', model: 'Vader', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2922,7 +2923,7 @@ const ODYSSE_ELECTRIC: CatalogEntry[] = [
 const JOY_EBIKE: CatalogEntry[] = [
     {
         brand: 'Joy e-bike', model: 'Beast', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2932,7 +2933,7 @@ const JOY_EBIKE: CatalogEntry[] = [
     },
     {
         brand: 'Joy e-bike', model: 'Thunderbolt', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2942,7 +2943,7 @@ const JOY_EBIKE: CatalogEntry[] = [
     },
     {
         brand: 'Joy e-bike', model: 'Hurricane', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2952,7 +2953,7 @@ const JOY_EBIKE: CatalogEntry[] = [
     },
     {
         brand: 'Joy e-bike', model: 'Gen Next Nanu', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2962,7 +2963,7 @@ const JOY_EBIKE: CatalogEntry[] = [
     },
     {
         brand: 'Joy e-bike', model: 'Wolf', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2972,7 +2973,7 @@ const JOY_EBIKE: CatalogEntry[] = [
     },
     {
         brand: 'Joy e-bike', model: 'Glob', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2982,7 +2983,7 @@ const JOY_EBIKE: CatalogEntry[] = [
     },
     {
         brand: 'Joy e-bike', model: 'Mihos', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -2996,7 +2997,7 @@ const JOY_EBIKE: CatalogEntry[] = [
 const KOMAKI: CatalogEntry[] = [
     {
         brand: 'Komaki', model: 'Ranger', variant: 'Standard',
-        type: 'bike', fuel_type: 'petrol', year: 2024,
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -3006,7 +3007,7 @@ const KOMAKI: CatalogEntry[] = [
     },
     {
         brand: 'Komaki', model: 'SE Pro', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -3016,7 +3017,7 @@ const KOMAKI: CatalogEntry[] = [
     },
     {
         brand: 'Komaki', model: 'SE Ultra', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -3026,7 +3027,7 @@ const KOMAKI: CatalogEntry[] = [
     },
     {
         brand: 'Komaki', model: 'SE Max', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -3040,7 +3041,7 @@ const KOMAKI: CatalogEntry[] = [
 const BOUNCE_INFINITY: CatalogEntry[] = [
     {
         brand: 'Bounce Infinity', model: 'E1', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -3050,7 +3051,7 @@ const BOUNCE_INFINITY: CatalogEntry[] = [
     },
     {
         brand: 'Bounce Infinity', model: 'E1 Plus', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -3060,7 +3061,7 @@ const BOUNCE_INFINITY: CatalogEntry[] = [
     },
     {
         brand: 'Bounce Infinity', model: 'E1LE', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -3070,7 +3071,7 @@ const BOUNCE_INFINITY: CatalogEntry[] = [
     },
     {
         brand: 'Bounce Infinity', model: 'E1X', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -3084,7 +3085,7 @@ const BOUNCE_INFINITY: CatalogEntry[] = [
 const QUANTUM_ENERGY: CatalogEntry[] = [
     {
         brand: 'Quantum Energy', model: 'Plasma', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -3094,7 +3095,7 @@ const QUANTUM_ENERGY: CatalogEntry[] = [
     },
     {
         brand: 'Quantum Energy', model: 'Bziness', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,
@@ -3108,7 +3109,7 @@ const QUANTUM_ENERGY: CatalogEntry[] = [
 const YULU: CatalogEntry[] = [
     {
         brand: 'Yulu', model: 'Wynn', variant: 'Standard',
-        type: 'scooter', fuel_type: 'petrol', year: 2024,
+        type: 'scooter', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 150, mileage_kmpl: 40, range_km: null, top_speed_kmph: 80,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 10000000, on_road_price_paise: 11500000, emi_starting_paise: 250000,

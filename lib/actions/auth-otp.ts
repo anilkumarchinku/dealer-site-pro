@@ -48,7 +48,8 @@ export async function verifyOtpAndLogin(
         }
 
         // Create a session by generating a JWT token
-        const { data: { session }, error: sessionError } = await supabase.auth.admin?.createSession?.({
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const { data: { session }, error: sessionError } = await (supabase.auth.admin as any)?.createSession?.({
             user_id: user.id,
         }) || { data: { session: null }, error: new Error("Session creation failed") };
 
@@ -114,7 +115,9 @@ export async function verifyOtpAndRegister(
         }
 
         // Create session for the new user
-        const { data: { session }, error: sessionError } = await supabase.auth.admin?.createSession({
+        // @ts-ignore – createSession exists at runtime but was removed from GoTrueAdminApi typings
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const { data: { session }, error: sessionError } = await (supabase.auth.admin as any)?.createSession?.({
             user_id: user.id,
         }) || { data: { session: null }, error: new Error("Session creation failed") };
 

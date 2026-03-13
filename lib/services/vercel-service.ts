@@ -298,7 +298,7 @@ export async function getDomainVerification(domain: string): Promise<{
     const data = await vFetch(`/v10/projects/${projectId}/domains/${encodeURIComponent(domain)}${q}`)
     return {
         verified:     (data as { verified: boolean }).verified ?? false,
-        cname:        'cname.vercel-dns.com',
+        cname:        process.env.NEXT_PUBLIC_CNAME_TARGET ?? 'cname.vercel-dns.com',
         verification: (data as { verification?: { type: string; domain: string; value: string }[] }).verification ?? [],
     }
 }

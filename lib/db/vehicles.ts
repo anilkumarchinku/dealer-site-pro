@@ -65,7 +65,7 @@ export async function fetchVehicles(
         console.error("[fetchVehicles]", error.message);
         return { vehicles: [], total: 0 };
     }
-    return { vehicles: data ?? [], total: count ?? 0 };
+    return { vehicles: (data ?? []) as unknown as DBVehicle[], total: count ?? 0 };
 }
 
 // ── Add a single vehicle ─────────────────────────────────────
@@ -109,7 +109,8 @@ export async function bulkAddVehicles(
         views: 0,
     }));
 
-    const { data, error } = await supabase.from("vehicles").insert(rows).select("id");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const { data, error } = await supabase.from("vehicles").insert(rows as any).select("id");
 
     if (error) {
         console.error("[bulkAddVehicles]", error.message);

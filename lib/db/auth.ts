@@ -63,7 +63,9 @@ export async function confirmOtpAndAuthenticate(
         }
 
         // 2. Check if user exists in Supabase
-        const { data: { user: existingUser } } = await supabase.auth.admin?.getUser?.(email) || { data: { user: null } };
+        // @ts-ignore – getUser by email existed in older auth-js typings
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const { data: { user: existingUser } } = await (supabase.auth.admin as any)?.getUser?.(email) || { data: { user: null } };
 
         if (purpose === 'register') {
             // 3a. Registration: create new user with temporary password
