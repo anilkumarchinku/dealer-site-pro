@@ -77,8 +77,8 @@ export async function saveDealer(
                 .like("slug", `${baseSlug}%`);
 
             const takenSlugs = (existingSlugs ?? [])
-                .map((r: { slug: string }) => r.slug)
-                .filter(Boolean);
+                .map((r: { slug: string | null }) => r.slug)
+                .filter((s): s is string => Boolean(s));
 
             slug = makeSlugUnique(baseSlug, data.location, takenSlugs);
         }
@@ -117,6 +117,17 @@ export async function saveDealer(
 
         // Get current auth user to link user_id
         const { data: { user } } = await supabase.auth.getUser();
+
+        // ── Ownership check — prevent one user updating another dealer's row ──
+        if (existingDealerId && user) {
+            const { data: owned } = await supabase
+                .from('dealers')
+                .select('id')
+                .eq('id', existingDealerId)
+                .eq('user_id', user.id)
+                .maybeSingle();
+            if (!owned) throw new Error('Unauthorized: dealer does not belong to current user');
+        }
 
         if (existingDealerId) {
             // Happy path: update the dealer created at registration.
@@ -164,10 +175,10 @@ export async function saveDealer(
                     dealerId = inserted.id;
                 }
             } else {
-                // No auth session — insert without user_id
+                // No auth session — insert without user_id (graceful fallback, will fail at DB level without auth)
                 const { data: inserted, error } = await supabase
                     .from("dealers")
-                    .insert(dealerPayload)
+                    .insert({ ...dealerPayload, user_id: '' })
                     .select("id")
                     .single();
 

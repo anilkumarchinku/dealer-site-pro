@@ -13,7 +13,7 @@ import {
 
 export default function ThreeWheelerStep5Page() {
     const router = useRouter();
-    const { data, setStep, dealerId, setDealerId, vehicleType, setVehicleType } = useOnboardingStore();
+    const { data, setStep, dealerId, setDealerId, vehicleType, setVehicleType, reset } = useOnboardingStore();
     const [saving,       setSaving]       = useState(false);
     const [saveError,    setSaveError]    = useState<string | null>(null);
     const [showSuccess,  setShowSuccess]  = useState(false);
@@ -102,7 +102,7 @@ export default function ThreeWheelerStep5Page() {
                                     Preview Your Site
                                 </Button>
                             )}
-                            <Button className="flex-1 gap-2 rounded-xl" onClick={() => router.push("/dashboard/three-wheelers")}>
+                            <Button className="flex-1 gap-2 rounded-xl" onClick={() => { reset(); router.push("/dashboard/three-wheelers"); }}>
                                 Go to Dashboard
                                 <ArrowRight className="w-4 h-4" />
                             </Button>

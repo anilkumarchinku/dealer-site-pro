@@ -8,6 +8,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowLeft, ArrowRight, LayoutTemplate, Type, Globe } from "lucide-react";
 
+function isValidUrl(value: string): boolean {
+    if (!value) return true; // empty is fine (optional)
+    try { new URL(value); return true; } catch { return false; }
+}
+
 export default function Step5Page() {
     const router = useRouter();
     const { data, updateData, setStep } = useOnboardingStore();
@@ -25,19 +30,27 @@ export default function Step5Page() {
         youtube: data.templateConfig?.youtube || "",
         linkedin: data.templateConfig?.linkedin || ""
     });
+    const [urlErrors, setUrlErrors] = useState<Record<string, string>>({});
 
     useEffect(() => {
         setStep(5);
         return;
     }, [setStep]);
 
+    const SOCIAL_FIELDS = ['facebook', 'instagram', 'twitter', 'youtube', 'linkedin'] as const;
+
     // Update store when config changes
     const handleChange = (field: keyof typeof config, value: string) => {
         const newConfig = { ...config, [field]: value };
         setConfig(newConfig);
-        updateData({
-            templateConfig: newConfig
-        });
+        updateData({ templateConfig: newConfig });
+        // Validate URL fields on change
+        if (SOCIAL_FIELDS.includes(field as typeof SOCIAL_FIELDS[number])) {
+            setUrlErrors(prev => ({
+                ...prev,
+                [field]: value && !isValidUrl(value) ? "Enter a valid URL (e.g. https://facebook.com/yourpage)" : ""
+            }));
+        }
     };
 
     const handleNext = () => {
@@ -120,6 +133,52 @@ export default function Step5Page() {
                                 value={config.featuresTitle}
                                 onChange={(e) => handleChange('featuresTitle', e.target.value)}
                             />
+                        </div>
+                    </div>
+
+                    {/* Business Hours */}
+                    <div className="space-y-4 pt-4">
+                        <div className="flex items-center gap-2 text-sm font-semibold text-foreground border-b border-border pb-2">
+                            <Type className="w-4 h-4" />
+                            Business Hours (Optional)
+                        </div>
+                        <div className="space-y-2">
+                            <Label htmlFor="workingHours">Working Hours</Label>
+                            <Input
+                                id="workingHours"
+                                placeholder="e.g. Mon–Sat: 9AM – 7PM, Sun: 10AM – 5PM"
+                                value={config.workingHours}
+                                onChange={(e) => handleChange('workingHours', e.target.value)}
+                            />
+                        </div>
+                    </div>
+
+                    {/* Social Links */}
+                    <div className="space-y-4 pt-4">
+                        <div className="flex items-center gap-2 text-sm font-semibold text-foreground border-b border-border pb-2">
+                            <Globe className="w-4 h-4" />
+                            Social Media Links (Optional)
+                        </div>
+                        <div className="grid gap-4 sm:grid-cols-2">
+                            {([
+                                { field: 'facebook' as const,  label: 'Facebook',  placeholder: 'https://facebook.com/yourshowroom' },
+                                { field: 'instagram' as const, label: 'Instagram', placeholder: 'https://instagram.com/yourshowroom' },
+                                { field: 'twitter' as const,   label: 'X / Twitter', placeholder: 'https://x.com/yourshowroom' },
+                                { field: 'youtube' as const,   label: 'YouTube',   placeholder: 'https://youtube.com/@yourshowroom' },
+                                { field: 'linkedin' as const,  label: 'LinkedIn',  placeholder: 'https://linkedin.com/company/yourshowroom' },
+                            ]).map(({ field, label, placeholder }) => (
+                                <div key={field} className="space-y-1">
+                                    <Label>{label}</Label>
+                                    <Input
+                                        placeholder={placeholder}
+                                        value={config[field]}
+                                        onChange={(e) => handleChange(field, e.target.value)}
+                                    />
+                                    {urlErrors[field] && (
+                                        <p className="text-xs text-destructive">{urlErrors[field]}</p>
+                                    )}
+                                </div>
+                            ))}
                         </div>
                     </div>
 

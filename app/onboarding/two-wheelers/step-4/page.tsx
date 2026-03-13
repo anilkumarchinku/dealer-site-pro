@@ -8,6 +8,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowLeft, ArrowRight, LayoutTemplate, Type, Globe } from "lucide-react";
 
+function isValidUrl(value: string): boolean {
+    if (!value) return true;
+    try { new URL(value); return true; } catch { return false; }
+}
+
 export default function TwoWheelerStep4Page() {
     const router = useRouter();
     const { data, updateData, setStep } = useOnboardingStore();
@@ -20,15 +25,26 @@ export default function TwoWheelerStep4Page() {
         workingHours:  data.templateConfig?.workingHours  || "",
         facebook:      data.templateConfig?.facebook      || "",
         instagram:     data.templateConfig?.instagram     || "",
+        twitter:       data.templateConfig?.twitter       || "",
         youtube:       data.templateConfig?.youtube       || "",
+        linkedin:      data.templateConfig?.linkedin      || "",
     });
+    const [urlErrors, setUrlErrors] = useState<Record<string, string>>({});
 
     useEffect(() => { setStep(4); }, [setStep]);
+
+    const SOCIAL_FIELDS = ['facebook', 'instagram', 'twitter', 'youtube', 'linkedin'] as const;
 
     const handleChange = (field: keyof typeof config, value: string) => {
         const newConfig = { ...config, [field]: value };
         setConfig(newConfig);
         updateData({ templateConfig: { ...data.templateConfig, ...newConfig } });
+        if (SOCIAL_FIELDS.includes(field as typeof SOCIAL_FIELDS[number])) {
+            setUrlErrors(prev => ({
+                ...prev,
+                [field]: value && !isValidUrl(value) ? "Enter a valid URL (e.g. https://...)" : ""
+            }));
+        }
     };
 
     const handleNext = () => {
@@ -129,30 +145,25 @@ export default function TwoWheelerStep4Page() {
                             Social Media Links (Optional)
                         </div>
                         <div className="grid gap-4 sm:grid-cols-2">
-                            <div className="space-y-2">
-                                <Label>Facebook</Label>
-                                <Input
-                                    placeholder="https://facebook.com/yourbikeshop"
-                                    value={config.facebook}
-                                    onChange={(e) => handleChange('facebook', e.target.value)}
-                                />
-                            </div>
-                            <div className="space-y-2">
-                                <Label>Instagram</Label>
-                                <Input
-                                    placeholder="https://instagram.com/yourbikeshop"
-                                    value={config.instagram}
-                                    onChange={(e) => handleChange('instagram', e.target.value)}
-                                />
-                            </div>
-                            <div className="space-y-2 sm:col-span-2">
-                                <Label>YouTube</Label>
-                                <Input
-                                    placeholder="https://youtube.com/@yourbikeshop"
-                                    value={config.youtube}
-                                    onChange={(e) => handleChange('youtube', e.target.value)}
-                                />
-                            </div>
+                            {([
+                                { field: 'facebook' as const,  label: 'Facebook',    placeholder: 'https://facebook.com/yourbikeshop' },
+                                { field: 'instagram' as const, label: 'Instagram',   placeholder: 'https://instagram.com/yourbikeshop' },
+                                { field: 'twitter' as const,   label: 'X / Twitter', placeholder: 'https://x.com/yourbikeshop' },
+                                { field: 'youtube' as const,   label: 'YouTube',     placeholder: 'https://youtube.com/@yourbikeshop' },
+                                { field: 'linkedin' as const,  label: 'LinkedIn',    placeholder: 'https://linkedin.com/company/yourbikeshop' },
+                            ]).map(({ field, label, placeholder }) => (
+                                <div key={field} className="space-y-1">
+                                    <Label>{label}</Label>
+                                    <Input
+                                        placeholder={placeholder}
+                                        value={config[field]}
+                                        onChange={(e) => handleChange(field, e.target.value)}
+                                    />
+                                    {urlErrors[field] && (
+                                        <p className="text-xs text-destructive">{urlErrors[field]}</p>
+                                    )}
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </CardContent>
