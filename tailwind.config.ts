@@ -10,6 +10,9 @@ export default {
     ],
     theme: {
         extend: {
+            fontFamily: {
+                sans: ['var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
             colors: {
                 // shadcn/ui colors
                 background: 'hsl(var(--background))',
