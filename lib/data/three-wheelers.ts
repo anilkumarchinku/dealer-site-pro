@@ -759,7 +759,9 @@ const CATALOG_BY_BRAND: Record<string, CatalogEntry[]> = {
 
 /**
  * Returns a catalog of ThreeWheelerVehicle objects for the given brand.
- * Reads all models from brand-models.json so every model shows on the website.
+ * Priority: static CATALOG_BY_BRAND entries (with real prices/specs) overlaid with
+ * dynamic image paths from /data/brand-model-images/. Falls back to dynamic-only
+ * for brands without a static catalog entry.
  */
 export function getThreeWheelerCatalog(brand: string, dealerId: string): ThreeWheelerVehicle[] {
     const brands3W = brandData.threeWheelers as { brandId: string; brand: string; models: unknown }[]
@@ -774,8 +776,34 @@ export function getThreeWheelerCatalog(brand: string, dealerId: string): ThreeWh
     if (!brandGroup) return []
 
     const brandId = brandNameToId(brandGroup.brand, '3w')
-    const models  = brandGroup.models
 
+    // ── Priority 1: use the static catalog (has real prices & specs) ──────────
+    const staticEntries = CATALOG_BY_BRAND[brandGroup.brand]
+    if (staticEntries && staticEntries.length > 0) {
+        return staticEntries.map((entry, idx) => {
+            const slug     = modelToSlug(entry.model)
+            const imageUrl = `/data/brand-model-images/3w/${brandId}/${slug}.jpg`
+            return {
+                ...entry,
+                id:        `catalog-3w-${brandId}-${idx}`,
+                dealer_id: dealerId,
+                images:    entry.images && entry.images.length > 0 ? entry.images : [imageUrl],
+                created_at: NOW,
+                updated_at: NOW,
+                views:      0,
+                payload_kg: null,
+                body_type:  null,
+                passenger_capacity: null,
+                cng_mileage_km_per_kg: null,
+                permit_type: null,
+                gvw_kg:     null,
+                brochure_url: null,
+            } as ThreeWheelerVehicle
+        })
+    }
+
+    // ── Priority 2: dynamic build from brand-models.json (no pricing) ─────────
+    const models  = brandGroup.models
     const entries: ThreeWheelerVehicle[] = []
     let idx = 0
 
