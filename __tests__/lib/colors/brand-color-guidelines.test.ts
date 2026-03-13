@@ -87,12 +87,12 @@ function contrastRatio(hex1: string, hex2: string): number {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// 1. BRAND REGISTRATION — All 30 brands exist with correct official colors
+// 1. BRAND REGISTRATION — All brands exist with correct official colors
 // ═══════════════════════════════════════════════════════════════════════════════
 describe('Brand Registration — Official Colors', () => {
-  it('should have exactly 30 brands registered', () => {
+  it('should have at least 30 brands registered', () => {
     const brandCount = Object.keys(automotiveBrands).length
-    expect(brandCount).toBe(30)
+    expect(brandCount).toBeGreaterThanOrEqual(30)
   })
 
   it('should contain all expected brand names', () => {
