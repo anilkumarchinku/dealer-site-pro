@@ -23,7 +23,7 @@ export type Brand =
     | 'Volvo' | 'Lexus' | 'Porsche' | 'Bentley' | 'Lamborghini'
 
     // Electric & New Age
-    | 'BYD' | 'Tesla' | 'VinFast';
+    | 'BYD' | 'Tesla' | 'VinFast' | 'MINI';
 
 // Services offered
 export type Service =

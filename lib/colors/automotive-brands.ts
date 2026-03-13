@@ -1925,7 +1925,20 @@ export interface BrandColors {
 
 // Helper function to get brand colors
 export function getBrandColors(brand: string): BrandColors {
-        return (automotiveBrands[brand as keyof typeof automotiveBrands] || automotiveBrands['Maruti Suzuki']) as unknown as BrandColors;
+        // 1. Exact match
+        if (automotiveBrands[brand as keyof typeof automotiveBrands]) {
+                return automotiveBrands[brand as keyof typeof automotiveBrands] as unknown as BrandColors;
+        }
+        // 2. Case-insensitive match
+        const lowerBrand = brand.toLowerCase();
+        const keys = Object.keys(automotiveBrands);
+        const exactCI = keys.find(k => k.toLowerCase() === lowerBrand);
+        if (exactCI) return automotiveBrands[exactCI as keyof typeof automotiveBrands] as unknown as BrandColors;
+        // 3. Partial match — handles "Honda Motorcycle & Scooter India" → "Honda"
+        const partial = keys.find(k => lowerBrand.startsWith(k.toLowerCase()) || k.toLowerCase().startsWith(lowerBrand));
+        if (partial) return automotiveBrands[partial as keyof typeof automotiveBrands] as unknown as BrandColors;
+        // 4. Fallback
+        return automotiveBrands['Maruti Suzuki'] as unknown as BrandColors;
 }
 
 // Helper to get primary brand for multi-brand dealers
