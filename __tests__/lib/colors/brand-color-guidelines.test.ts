@@ -205,7 +205,7 @@ describe('Color Structure Completeness', () => {
   it.each(ALL_BRAND_NAMES)(
     '%s — all hex colors are valid format',
     (brandName) => {
-      const brand = getBrandColors(brandName)
+      const brand = getBrandColors(brandName) as Record<string, string>
       const hexFields = [brand.primary, brand.secondary, brand.background, brand.hover]
       for (const hex of hexFields) {
         expect(isValidHex(hex), `Invalid hex: ${hex}`).toBe(true)
@@ -244,10 +244,11 @@ describe('Template × Brand Combinations (120 combos)', () => {
     '$brand + $template — form focus uses a color from brand palette',
     ({ brand, template }) => {
       const config = generateTemplateConfig(brand, template)
-      const focusColor = config.brandColors.forms.inputFocus.toUpperCase()
+      const brandColorsExt = config.brandColors as unknown as Record<string, Record<string, string>>
+      const focusColor = brandColorsExt.forms.inputFocus.toUpperCase()
       const paletteColors = [
         config.brandColors.primary, config.brandColors.secondary,
-        config.brandColors.accent, config.brandColors.hover,
+        config.brandColors.accent, (config.brandColors as Record<string, string>).hover,
       ].map(c => c.toUpperCase())
       expect(
         paletteColors.includes(focusColor),
@@ -386,7 +387,7 @@ describe('Gradient Validation', () => {
   it.each(ALL_BRAND_NAMES)(
     '%s — gradient follows from-[#HEX] to-[#HEX] pattern',
     (brandName) => {
-      const brand = getBrandColors(brandName)
+      const brand = getBrandColors(brandName) as Record<string, string>
       expect(brand.gradient).toMatch(/^from-\[#[0-9A-Fa-f]{6}\]\s+to-\[#[0-9A-Fa-f]{6}\]$/)
     }
   )
@@ -394,7 +395,7 @@ describe('Gradient Validation', () => {
   it.each(ALL_BRAND_NAMES)(
     '%s — gradient starts with brand primary color',
     (brandName) => {
-      const brand = getBrandColors(brandName)
+      const brand = getBrandColors(brandName) as Record<string, string>
       const fromColor = brand.gradient.match(/from-\[([#0-9A-Fa-f]+)\]/)
       expect(fromColor).not.toBeNull()
       expect(fromColor![1].toUpperCase()).toBe(brand.primary.toUpperCase())
