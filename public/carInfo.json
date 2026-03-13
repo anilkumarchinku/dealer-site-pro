@@ -4911,7 +4911,7 @@
         "power_bhp": 71,
         "torque_nm": 96,
         "mileage_kmpl": 19.71,
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -5034,7 +5034,7 @@
         "power_bhp": 71,
         "torque_nm": 96,
         "mileage_kmpl": 19.71,
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -5157,7 +5157,7 @@
         "power_bhp": 71,
         "torque_nm": 96,
         "mileage_kmpl": 19.83,
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -5280,7 +5280,7 @@
         "power_bhp": 71,
         "torque_nm": 96,
         "mileage_kmpl": 19.71,
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -5403,7 +5403,7 @@
         "power_bhp": 71,
         "torque_nm": 96,
         "mileage_kmpl": 19.71,
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -5526,7 +5526,7 @@
         "power_bhp": 71,
         "torque_nm": 96,
         "mileage_kmpl": 19.83,
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -5649,7 +5649,7 @@
         "power_bhp": 71,
         "torque_nm": 96,
         "mileage_kmpl": 19.83,
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -5772,7 +5772,7 @@
         "power_bhp": 71,
         "torque_nm": 96,
         "mileage_kmpl": 19.71,
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -5895,7 +5895,7 @@
         "power_bhp": 71,
         "torque_nm": 96,
         "mileage_kmpl": 19.71,
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -6018,7 +6018,7 @@
         "power_bhp": 98.63,
         "torque_nm": 152,
         "mileage_kmpl": 20.38,
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -6141,7 +6141,7 @@
         "power_bhp": 98.63,
         "torque_nm": 152,
         "mileage_kmpl": 20.38,
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -6264,7 +6264,7 @@
         "power_bhp": 98.63,
         "torque_nm": 152,
         "mileage_kmpl": 17.63,
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -6387,7 +6387,7 @@
         "power_bhp": 98.63,
         "torque_nm": 152,
         "mileage_kmpl": 17.63,
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -6510,7 +6510,7 @@
         "power_bhp": 98.63,
         "torque_nm": 152,
         "mileage_kmpl": 17.63,
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -6633,7 +6633,7 @@
         "power_bhp": 98.63,
         "torque_nm": 152,
         "mileage_kmpl": 17.63,
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -7254,7 +7254,7 @@
           }
         ],
         "last_updated": "2026-02-23",
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -7320,7 +7320,7 @@
           }
         ],
         "last_updated": "2026-02-23",
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -7386,7 +7386,7 @@
           }
         ],
         "last_updated": "2026-02-23",
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -7452,7 +7452,7 @@
           }
         ],
         "last_updated": "2026-02-23",
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -7518,7 +7518,7 @@
           }
         ],
         "last_updated": "2026-02-23",
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -7584,7 +7584,7 @@
           }
         ],
         "last_updated": "2026-02-23",
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -7650,7 +7650,7 @@
           }
         ],
         "last_updated": "2026-02-23",
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -7716,7 +7716,7 @@
           }
         ],
         "last_updated": "2026-02-23",
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -7782,7 +7782,7 @@
           }
         ],
         "last_updated": "2026-02-23",
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -7848,7 +7848,7 @@
           }
         ],
         "last_updated": "2026-02-23",
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -7914,7 +7914,7 @@
           }
         ],
         "last_updated": "2026-02-23",
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -7980,7 +7980,7 @@
           }
         ],
         "last_updated": "2026-02-23",
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -8046,7 +8046,7 @@
           }
         ],
         "last_updated": "2026-02-23",
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -8112,7 +8112,7 @@
           }
         ],
         "last_updated": "2026-02-23",
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -8178,7 +8178,7 @@
           }
         ],
         "last_updated": "2026-02-23",
-        "mileage_kmpl_or_ev_range": 20.0
+        "mileage_kmpl_or_ev_range": 20
       },
       {
         "make": "Renault",
@@ -19349,7 +19349,7 @@
         "engine_displacement_cc": 2755,
         "power_bhp": 166,
         "torque_nm": 245,
-        "mileage_kmpl_or_ev_range": 13.0,
+        "mileage_kmpl_or_ev_range": 13,
         "boot_space_l": 220,
         "ground_clearance_mm": 225
       },
@@ -19451,7 +19451,7 @@
         "engine_displacement_cc": 2755,
         "power_bhp": 166,
         "torque_nm": 245,
-        "mileage_kmpl_or_ev_range": 13.0,
+        "mileage_kmpl_or_ev_range": 13,
         "boot_space_l": 220,
         "ground_clearance_mm": 225
       },
@@ -30669,6 +30669,170 @@
       "availability_status": "on_sale",
       "source_url": "https://www.cardekho.com/overview/Porsche_Macan/Porsche_Macan_Standard.htm",
       "launch_year": 2024
+    }
+  },
+  "vinfast": {
+    "0": {
+      "make": "VinFast",
+      "model": "VF 6",
+      "variant_name": "Earth",
+      "ex_showroom_price_min_inr": "1649000",
+      "ex_showroom_price_max_inr": "1649000",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 177,
+      "torque_nm": 250,
+      "mileage_kmpl_or_ev_range": "468",
+      "seating_capacity": 5,
+      "boot_space_l": 0,
+      "ground_clearance_mm": 0,
+      "dimensions": "4241/1834/1615",
+      "key_features": "12.9-inch Touchscreen, ADAS Level 2, Vegan Leather Interior",
+      "safety_features": "6 Airbags, ABS with EBD, ESC",
+      "image_urls": [
+        {
+          "value": "/data/brand-model-images/4w/vinfast/vf-6.jpg"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "",
+      "launch_year": 2025
+    },
+    "1": {
+      "make": "VinFast",
+      "model": "VF 6",
+      "variant_name": "Wind",
+      "ex_showroom_price_min_inr": "1829000",
+      "ex_showroom_price_max_inr": "1829000",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 204,
+      "torque_nm": 310,
+      "mileage_kmpl_or_ev_range": "480",
+      "seating_capacity": 5,
+      "boot_space_l": 0,
+      "ground_clearance_mm": 0,
+      "dimensions": "4241/1834/1615",
+      "key_features": "Panoramic Sunroof, Heated Front Seats, Ambient Lighting",
+      "safety_features": "6 Airbags, 360 Degree Camera, Blind Spot Monitoring",
+      "image_urls": [
+        {
+          "value": "/data/brand-model-images/4w/vinfast/vf-6.jpg"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "",
+      "launch_year": 2025
+    },
+    "2": {
+      "make": "VinFast",
+      "model": "VF 7",
+      "variant_name": "Wind",
+      "ex_showroom_price_min_inr": "2089000",
+      "ex_showroom_price_max_inr": "2089000",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 177,
+      "torque_nm": 250,
+      "mileage_kmpl_or_ev_range": "438",
+      "seating_capacity": 5,
+      "boot_space_l": 0,
+      "ground_clearance_mm": 0,
+      "dimensions": "4545/1890/1635",
+      "key_features": "15-inch Touchscreen, Dual Zone Climate Control, Wireless Charging",
+      "safety_features": "8 Airbags, ADAS Suite, Traction Control",
+      "image_urls": [
+        {
+          "value": "/data/brand-model-images/4w/vinfast/vf-7.jpg"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "",
+      "launch_year": 2025
+    },
+    "3": {
+      "make": "VinFast",
+      "model": "VF 7",
+      "variant_name": "Plus (AWD)",
+      "ex_showroom_price_min_inr": "2679000",
+      "ex_showroom_price_max_inr": "2679000",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 349,
+      "torque_nm": 500,
+      "mileage_kmpl_or_ev_range": "510",
+      "seating_capacity": 5,
+      "boot_space_l": 0,
+      "ground_clearance_mm": 0,
+      "dimensions": "4545/1890/1635",
+      "key_features": "All-Wheel Drive (Dual Motor), Premium Audio System, Vented Front Seats",
+      "safety_features": "8 Airbags, Advanced ADAS, Park Assist",
+      "image_urls": [
+        {
+          "value": "/data/brand-model-images/4w/vinfast/vf-7.jpg"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "",
+      "launch_year": 2025
+    },
+    "4": {
+      "make": "VinFast",
+      "model": "VF 8",
+      "variant_name": "Eco",
+      "ex_showroom_price_min_inr": "5000000",
+      "ex_showroom_price_max_inr": "5000000",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 348,
+      "torque_nm": 500,
+      "mileage_kmpl_or_ev_range": "471",
+      "seating_capacity": 5,
+      "boot_space_l": 0,
+      "ground_clearance_mm": 0,
+      "dimensions": "4750/1934/1667",
+      "key_features": "15.6-inch Touchscreen, Smart Services, Heated Steering Wheel",
+      "safety_features": "11 Airbags, Auto Emergency Braking, Lane Keep Assist",
+      "image_urls": [
+        {
+          "value": "/data/brand-model-images/4w/vinfast/vf-8.jpg"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "",
+      "launch_year": 2025
+    },
+    "5": {
+      "make": "VinFast",
+      "model": "VF 9",
+      "variant_name": "Plus",
+      "ex_showroom_price_min_inr": "6500000",
+      "ex_showroom_price_max_inr": "6500000",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 402,
+      "torque_nm": 620,
+      "mileage_kmpl_or_ev_range": "531",
+      "seating_capacity": 7,
+      "boot_space_l": 0,
+      "ground_clearance_mm": 0,
+      "dimensions": "5118/2254/1696",
+      "key_features": "Matrix LED Headlights, Captain Seats with Massage, Rear Entertainment Screens",
+      "safety_features": "11 Airbags, 360 View Camera, Remote Parking Assist",
+      "image_urls": [
+        {
+          "value": "/data/brand-model-images/4w/vinfast/vf-9.jpg"
+        }
+      ],
+      "availability_status": "on_sale",
+      "source_url": "",
+      "launch_year": 2026
     }
   }
 }
