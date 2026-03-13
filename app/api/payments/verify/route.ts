@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { verifyPaymentSignature } from '@/lib/services/payment-service'
 import { createRouteClient } from '@/lib/supabase-server'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
+import { logger } from '@/lib/utils/logger'
 
 interface PaymentVerifyRequest {
     orderId: string
@@ -26,7 +27,7 @@ interface PaymentVerifyResponse {
  */
 export async function POST(request: NextRequest): Promise<NextResponse<PaymentVerifyResponse>> {
     // Rate limit: max 10 payment verifications per IP per hour
-    const rateLimit = rateLimitOrNull('payment_verify', request, 10, 60 * 60 * 1000)
+    const rateLimit = await rateLimitOrNull('payment_verify', request, 10, 60 * 60 * 1000)
     if (rateLimit) return rateLimit as NextResponse<PaymentVerifyResponse>
 
     try {
@@ -63,7 +64,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<PaymentVe
 
         if (existingRecord) {
             // Already processed — return cached result
-            console.log('[IDEMPOTENT] Payment verification already processed:', paymentId)
+            logger.log('[IDEMPOTENT] Payment verification already processed:', paymentId)
             return NextResponse.json(
                 {
                     success: true,
@@ -86,7 +87,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<PaymentVe
                 response: { success: false, error: 'Invalid signature' },
                 created_at: new Date().toISOString(),
             })
-            if (logError) console.error('Failed to log verification error:', logError)
+            if (logError) logger.error('Failed to log verification error:', logError)
 
             return NextResponse.json(
                 { success: false, error: 'Invalid payment signature' },
@@ -97,13 +98,13 @@ export async function POST(request: NextRequest): Promise<NextResponse<PaymentVe
         // ── UPDATE SUBSCRIPTION ──────────────────────────────────
         const { data: subscription, error: updateError } = await supabase
             .from('domain_subscriptions')
-            .update({ status: 'active', verified_at: new Date().toISOString() })
-            .eq('razorpay_subscription_id', subscriptionId)
+            .update({ status: 'active' })
+            .eq('razorpay_subscription_id', subscriptionId ?? '')
             .select()
             .single()
 
         if (updateError) {
-            console.error('Error updating subscription:', updateError)
+            logger.error('Error updating subscription:', updateError)
             return NextResponse.json(
                 { success: false, error: 'Failed to activate subscription' },
                 { status: 500 }
@@ -116,7 +117,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<PaymentVe
                 .from('dealer_domains')
                 .update({ status: 'active' })
                 .eq('id', subscription.domain_id)
-            if (domainError) console.error('Failed to update domain status:', domainError)
+            if (domainError) logger.error('Failed to update domain status:', domainError)
         }
 
         // ── LOG SUCCESSFUL VERIFICATION ──────────────────────────
@@ -129,7 +130,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<PaymentVe
                 response: { success: true, message: 'Payment verified' },
                 created_at: new Date().toISOString(),
             })
-        if (logError) console.error('Failed to log payment verification:', logError)
+        if (logError) logger.error('Failed to log payment verification:', logError)
 
         return NextResponse.json(
             {
@@ -139,7 +140,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<PaymentVe
             { status: 200 }
         )
     } catch (error) {
-        console.error('Error in POST /api/payments/verify:', error)
+        logger.error('Error in POST /api/payments/verify:', error)
         return NextResponse.json(
             { success: false, error: 'Internal server error' },
             { status: 500 }

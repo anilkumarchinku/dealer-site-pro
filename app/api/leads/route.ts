@@ -17,26 +17,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { sendLeadSmsToDealer } from '@/lib/services/sms-service'
-
-// ── Simple in-memory rate limiter (3 leads per IP per hour) ──────────────────
-const ipHitMap = new Map<string, { count: number; resetAt: number }>()
-const RATE_LIMIT = 3
-const WINDOW_MS = 60 * 60 * 1000 // 1 hour
-
-function checkRateLimit(ip: string): boolean {
-    const now = Date.now()
-    const entry = ipHitMap.get(ip)
-
-    if (!entry || now > entry.resetAt) {
-        ipHitMap.set(ip, { count: 1, resetAt: now + WINDOW_MS })
-        return true // allowed
-    }
-
-    if (entry.count >= RATE_LIMIT) return false // blocked
-
-    entry.count++
-    return true // allowed
-}
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
+import { logger } from '@/lib/utils/logger'
 
 // ── Supabase client with SERVICE ROLE key (server-side only — bypasses RLS) ──
 function getSupabase() {
@@ -51,17 +33,9 @@ const VALID_SOURCES = new Set(['contact_form', 'car_enquiry', 'test_drive', 'wha
 
 export async function POST(request: NextRequest) {
     try {
-        // ── Rate limiting ─────────────────────────────────────────────────────
-        const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
-            ?? request.headers.get('x-real-ip')
-            ?? 'unknown'
-
-        if (!checkRateLimit(ip)) {
-            return NextResponse.json(
-                { error: 'Too many enquiries submitted. Please try again later.' },
-                { status: 429 }
-            )
-        }
+        // ── Rate limiting (3 leads per IP per hour) ───────────────────────────
+        const rateLimitResponse = await rateLimitOrNull('leads', request, 3, 60 * 60 * 1000)
+        if (rateLimitResponse) return rateLimitResponse
 
         const body = await request.json()
         const { dealer_id, name, phone, email, message, car_id, car_name, lead_source } = body
@@ -140,7 +114,7 @@ export async function POST(request: NextRequest) {
             .single()
 
         if (error) {
-            console.error('Lead insert error:', error.message, error.details, error.hint)
+            logger.error('Lead insert error:', error.message, error.details, error.hint)
             return NextResponse.json({ error: 'Failed to save enquiry' }, { status: 500 })
         }
 
@@ -158,7 +132,7 @@ export async function POST(request: NextRequest) {
 
         return NextResponse.json({ success: true, leadId: data.id })
     } catch (err) {
-        console.error('Lead API error:', err)
+        logger.error('Lead API error:', err)
         return NextResponse.json({ error: 'Internal error' }, { status: 500 })
     }
 }

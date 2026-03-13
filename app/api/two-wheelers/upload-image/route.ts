@@ -17,7 +17,7 @@ const MAX_SIZE_BYTES = 5 * 1024 * 1024   // 5 MB
 const ALLOWED_TYPES  = ['image/jpeg', 'image/png', 'image/webp', 'image/avif']
 
 export async function POST(request: NextRequest) {
-    const rateLimit = rateLimitOrNull('tw_image_upload', request, 20, 60 * 60 * 1000)
+    const rateLimit = await rateLimitOrNull('tw_image_upload', request, 20, 60 * 60 * 1000)
     if (rateLimit) return rateLimit
 
     const { user, supabase: userClient, errorResponse } = await requireAuth()

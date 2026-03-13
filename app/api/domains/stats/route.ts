@@ -1,23 +1,26 @@
 import { NextResponse } from 'next/server'
 import { getMonitoringStats } from '@/lib/services/monitoring-service'
+import { requireAuth, getDealerForUser } from '@/lib/supabase-server'
 
 /**
- * GET /api/domains/stats?dealer_id=xxx
- * Get domain monitoring statistics for dashboard
+ * GET /api/domains/stats
+ * Get domain monitoring statistics for the authenticated dealer.
+ * Dealer ID is derived from session — never trusted from client.
  */
-export async function GET(request: Request) {
+export async function GET() {
     try {
-        const { searchParams } = new URL(request.url)
-        const dealerId = searchParams.get('dealer_id')
+        const { user, supabase, errorResponse } = await requireAuth()
+        if (errorResponse) return errorResponse
 
-        if (!dealerId) {
+        const dealer = await getDealerForUser(supabase, user.id)
+        if (!dealer) {
             return NextResponse.json(
-                { success: false, error: 'Dealer ID is required' },
-                { status: 400 }
+                { success: false, error: 'Dealer account not found' },
+                { status: 404 }
             )
         }
 
-        const result = await getMonitoringStats(dealerId)
+        const result = await getMonitoringStats(dealer.id)
 
         if (!result.success) {
             return NextResponse.json(

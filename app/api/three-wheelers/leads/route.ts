@@ -5,7 +5,7 @@ import { createThreeWheelerLead, getThreeWheelerLeads, updateThreeWheelerLeadSta
 import type { ThreeWheelerLeadStatus } from '@/lib/types/three-wheeler'
 
 export async function POST(request: NextRequest) {
-    const rateLimit = rateLimitOrNull('thw_lead_create', request, 5, 10 * 60 * 1000)
+    const rateLimit = await rateLimitOrNull('thw_lead_create', request, 5, 10 * 60 * 1000)
     if (rateLimit) return rateLimit
 
     const body = await request.json().catch(() => null)

@@ -12,23 +12,8 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
-
-// Simple in-memory rate limiter (5 reviews per IP per day)
-const ipMap = new Map<string, { count: number; resetAt: number }>()
-const RATE_LIMIT = 5
-const WINDOW_MS = 24 * 60 * 60 * 1000 // 24 hours
-
-function checkRate(ip: string): boolean {
-    const now = Date.now()
-    const entry = ipMap.get(ip)
-    if (!entry || now > entry.resetAt) {
-        ipMap.set(ip, { count: 1, resetAt: now + WINDOW_MS })
-        return true
-    }
-    if (entry.count >= RATE_LIMIT) return false
-    entry.count++
-    return true
-}
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
+import { logger } from '@/lib/utils/logger'
 
 function getSupabase() {
     return createClient(
@@ -54,7 +39,7 @@ export async function GET(request: NextRequest) {
         .limit(20)
 
     if (error) {
-        console.error('Reviews fetch error:', error)
+        logger.error('Reviews fetch error:', error)
         return NextResponse.json({ error: 'Failed to fetch reviews' }, { status: 500 })
     }
 
@@ -67,16 +52,9 @@ export async function GET(request: NextRequest) {
 
 // ── POST: submit a new review ────────────────────────────────────────────────
 export async function POST(request: NextRequest) {
-    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
-        ?? request.headers.get('x-real-ip')
-        ?? 'unknown'
-
-    if (!checkRate(ip)) {
-        return NextResponse.json(
-            { error: 'Too many reviews submitted. Please try again later.' },
-            { status: 429 }
-        )
-    }
+    // Rate limiting (5 reviews per IP per day)
+    const rateLimitResponse = await rateLimitOrNull('reviews', request, 5, 24 * 60 * 60 * 1000)
+    if (rateLimitResponse) return rateLimitResponse
 
     const body = await request.json().catch(() => null)
     if (!body) return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })
@@ -127,7 +105,7 @@ export async function POST(request: NextRequest) {
         })
 
     if (error) {
-        console.error('Review insert error:', error)
+        logger.error('Review insert error:', error)
         return NextResponse.json({ error: 'Failed to save review' }, { status: 500 })
     }
 

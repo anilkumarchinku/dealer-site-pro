@@ -5,8 +5,12 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { DomainVerificationService } from '@/lib/services/domain-verification';
+import { requireAuth } from '@/lib/supabase-server';
 
 export async function GET(request: NextRequest) {
+    const { errorResponse } = await requireAuth()
+    if (errorResponse) return errorResponse
+
     try {
         const { searchParams } = new URL(request.url);
         const token = searchParams.get('token');

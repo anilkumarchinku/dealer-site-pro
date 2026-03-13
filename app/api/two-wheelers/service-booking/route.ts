@@ -15,7 +15,7 @@ import {
 import type { ServiceBookingFilters, TwoWheelerServiceStatus } from '@/lib/types/two-wheeler'
 
 export async function POST(request: NextRequest) {
-    const rateLimit = rateLimitOrNull('tw_service_booking', request, 5, 10 * 60 * 1000)
+    const rateLimit = await rateLimitOrNull('tw_service_booking', request, 5, 10 * 60 * 1000)
     if (rateLimit) return rateLimit
 
     const body = await request.json()

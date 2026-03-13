@@ -1,13 +1,17 @@
 import { NextResponse } from 'next/server'
 import { createDomainSubscription } from '@/lib/services/payment-service'
-import { createRouteClient } from '@/lib/supabase-server'
+import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
 /**
  * POST /api/payments/create-subscription
- * Creates a Razorpay subscription for PRO or PREMIUM tier
+ * Creates a Razorpay subscription for PRO or PREMIUM tier.
+ * Requires authenticated session — dealer and domain ownership are verified server-side.
  */
 export async function POST(request: Request) {
     try {
+        const { user, supabase, errorResponse } = await requireAuth()
+        if (errorResponse) return errorResponse
+
         const body = await request.json()
         const { dealerId, tier, domainId } = body
 
@@ -25,6 +29,25 @@ export async function POST(request: Request) {
             )
         }
 
+        // Verify the authenticated user owns the dealer account
+        const { errorResponse: ownerErr } = await requireDealerOwnership(supabase, user.id, dealerId)
+        if (ownerErr) return ownerErr
+
+        // Verify the domain belongs to this dealer
+        const { data: domain } = await supabase
+            .from('domains')
+            .select('id')
+            .eq('id', domainId)
+            .eq('dealer_id', dealerId)
+            .single()
+
+        if (!domain) {
+            return NextResponse.json(
+                { success: false, error: 'Domain not found or does not belong to your account' },
+                { status: 403 }
+            )
+        }
+
         // Create Razorpay subscription
         const subscriptionResult = await createDomainSubscription({
             dealerId,
@@ -39,8 +62,7 @@ export async function POST(request: Request) {
             )
         }
 
-        // Save subscription to database
-        const supabase = await createRouteClient()
+        // Save subscription to database (reuse the authenticated supabase client)
         const { data: subscription, error: dbError } = await supabase
             .from('domain_subscriptions')
             .insert({

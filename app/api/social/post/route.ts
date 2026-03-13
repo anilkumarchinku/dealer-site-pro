@@ -26,6 +26,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
 interface PostBody {
     dealer_id: string
@@ -128,10 +129,16 @@ async function postToTwitter(text: string): Promise<void> {
 }
 
 export async function POST(request: NextRequest) {
+    const { user, supabase, errorResponse } = await requireAuth()
+    if (errorResponse) return errorResponse
+
     const body: PostBody = await request.json().catch(() => null)
     if (!body?.dealer_id || !body?.car_name || !body?.price_text) {
         return NextResponse.json({ error: 'dealer_id, car_name and price_text required' }, { status: 400 })
     }
+
+    const { errorResponse: ownershipError } = await requireDealerOwnership(supabase, user.id, body.dealer_id)
+    if (ownershipError) return ownershipError
 
     // Only post if at least one platform is configured
     const hasFB     = !!(process.env.META_PAGE_ID && process.env.META_PAGE_ACCESS_TOKEN)

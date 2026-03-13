@@ -39,7 +39,7 @@ function verifyRazorpaySignature(orderId: string, paymentId: string, signature: 
 }
 
 export async function POST(request: NextRequest) {
-    const rateLimit = rateLimitOrNull('thw_booking_verify', request, 10, 60 * 60 * 1000)
+    const rateLimit = await rateLimitOrNull('thw_booking_verify', request, 10, 60 * 60 * 1000)
     if (rateLimit) return rateLimit
 
     const idempotencyKey = request.headers.get('idempotency-key')

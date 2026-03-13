@@ -5,12 +5,16 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { DNSAnalysisService } from '@/lib/services/dns-analysis';
+import { requireAuth } from '@/lib/supabase-server';
 
 export async function GET(
     request: NextRequest,
     { params }: { params: Promise<{ id: string }> }
 ) {
     try {
+        const { user, supabase, errorResponse } = await requireAuth();
+        if (errorResponse) return errorResponse;
+
         const { id: onboardingId } = await params;
 
         if (!onboardingId) {
@@ -20,25 +24,24 @@ export async function GET(
             );
         }
 
-        // TODO: Fetch onboarding record from database
-        // const { data: onboarding, error } = await supabase
-        //     .from('domain_onboardings')
-        //     .select('*')
-        //     .eq('id', onboardingId)
-        //     .single();
+        // Fetch onboarding record from database — scoped to the authenticated user
+        const { data: onboarding, error: fetchError } = await supabase
+            .from('domain_onboardings')
+            .select('*')
+            .eq('id', onboardingId)
+            .eq('user_id', user.id)
+            .single();
 
-        // Mock data for now
-        const onboarding = {
-            id: onboardingId,
-            domain_name: 'example.com',
-            verification: {
-                status: 'verified'
-            },
-            current_state: 'verification_complete'
-        };
+        if (fetchError || !onboarding) {
+            return NextResponse.json(
+                { error: 'Onboarding record not found' },
+                { status: 404 }
+            );
+        }
 
         // Verify that domain ownership is confirmed
-        if (onboarding.verification.status !== 'verified') {
+        const verificationData = onboarding.verification as { status?: string } | null
+        if (verificationData?.status !== 'verified') {
             return NextResponse.json(
                 {
                     error: 'Domain verification required before DNS scan',
@@ -47,8 +50,6 @@ export async function GET(
                 { status: 400 }
             );
         }
-
-        console.log(`🔬 Starting DNS scan for ${onboarding.domain_name}...`);
 
         // Perform comprehensive DNS scan
         const scanResult = await DNSAnalysisService.scanDomain(onboarding.domain_name);
@@ -88,22 +89,19 @@ export async function GET(
             }
         };
 
-        // Update onboarding record with DNS analysis
-        // TODO: Save to database
-        // await supabase
-        //     .from('domain_onboardings')
-        //     .update({
-        //         dns_analysis: scanResult,
-        //         configuration: {
-        //             deployment_route: scanResult.recommended_route,
-        //             subdomain: scanResult.recommended_route === 'subdomain' ? 'shop' : null
-        //         },
-        //         current_state: 'dns_analysis',
-        //         updated_at: new Date()
-        //     })
-        //     .eq('id', onboardingId);
-
-        console.log(`✅ DNS scan complete. Recommendation: ${scanResult.recommended_route}`);
+        // Update onboarding record with DNS analysis results
+        await supabase
+            .from('domain_onboardings')
+            .update({
+                dns_analysis: scanResult as unknown as import('@/lib/database.types').Json,
+                configuration: {
+                    deployment_route: scanResult.recommended_route,
+                    subdomain: scanResult.recommended_route === 'subdomain' ? 'shop' : null
+                },
+                current_state: 'dns_analysis',
+                updated_at: new Date().toISOString()
+            })
+            .eq('id', onboardingId);
 
         return NextResponse.json({
             success: true,
@@ -135,7 +133,7 @@ export async function GET(
         });
 
     } catch (error) {
-        console.error('❌ Error performing DNS scan:', error);
+        console.error('Error performing DNS scan:', error);
         return NextResponse.json(
             { error: 'Failed to perform DNS scan', details: error instanceof Error ? error.message : 'Unknown error' },
             { status: 500 }

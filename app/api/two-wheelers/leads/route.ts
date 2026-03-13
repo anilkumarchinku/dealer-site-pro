@@ -13,7 +13,7 @@ import type { TwoWheelerLeadFilters, TwoWheelerLeadStatus } from '@/lib/types/tw
 
 export async function POST(request: NextRequest) {
     // Rate limit: 5 leads per IP per 10 minutes
-    const rateLimit = rateLimitOrNull('tw_lead_submit', request, 5, 10 * 60 * 1000)
+    const rateLimit = await rateLimitOrNull('tw_lead_submit', request, 5, 10 * 60 * 1000)
     if (rateLimit) return rateLimit
 
     const body = await request.json()

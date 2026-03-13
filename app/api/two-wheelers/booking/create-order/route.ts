@@ -23,7 +23,7 @@ function isConfigured(): boolean {
 }
 
 export async function POST(request: NextRequest) {
-    const rateLimit = rateLimitOrNull('tw_booking_create', request, 10, 60 * 60 * 1000)
+    const rateLimit = await rateLimitOrNull('tw_booking_create', request, 10, 60 * 60 * 1000)
     if (rateLimit) return rateLimit
 
     const idempotencyKey = request.headers.get('idempotency-key')
@@ -61,8 +61,12 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ error: bookingResult.error }, { status: 500 })
     }
 
-    // Create Razorpay order (or mock in dev)
+    // Reject in production if Razorpay is not configured
     if (!isConfigured()) {
+        if (process.env.NODE_ENV === 'production') {
+            return NextResponse.json({ error: 'Payment service not configured' }, { status: 503 })
+        }
+        // Development only: return a mock order so UI can be tested without real credentials
         const mockOrderId = `mock_order_${Date.now()}`
         console.warn('[MOCK] Razorpay not configured — returning mock order:', mockOrderId)
         return NextResponse.json({

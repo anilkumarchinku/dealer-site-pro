@@ -4,8 +4,12 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
+import { requireAuth } from '@/lib/supabase-server';
 
 export async function POST(request: NextRequest) {
+    const { errorResponse } = await requireAuth()
+    if (errorResponse) return errorResponse
+
     try {
         const body = await request.json();
         const { onboarding_id, deployment_route, subdomain } = body;

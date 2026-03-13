@@ -32,7 +32,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-    const rateLimit = rateLimitOrNull('thw_used_create', request, 30, 60 * 60 * 1000)
+    const rateLimit = await rateLimitOrNull('thw_used_create', request, 30, 60 * 60 * 1000)
     if (rateLimit) return rateLimit
 
     const { user, supabase, errorResponse } = await requireAuth()

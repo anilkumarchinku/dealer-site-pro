@@ -13,7 +13,7 @@ import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 export async function POST(request: NextRequest) {
     // Rate limit: max 5 OTP requests per IP per 15 minutes
-    const rateLimit = rateLimitOrNull('send_otp', request, 5, 15 * 60 * 1000)
+    const rateLimit = await rateLimitOrNull('send_otp', request, 5, 15 * 60 * 1000)
     if (rateLimit) return rateLimit
 
     try {

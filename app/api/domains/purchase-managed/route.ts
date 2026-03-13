@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { purchaseDomain } from '@/lib/services/domain-search-service'
 import { supabase } from '@/lib/supabase'
+import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
 /**
  * POST /api/domains/purchase-managed
@@ -8,6 +9,9 @@ import { supabase } from '@/lib/supabase'
  */
 export async function POST(request: Request) {
     try {
+        const { user, supabase: authSupabase, errorResponse } = await requireAuth()
+        if (errorResponse) return errorResponse
+
         const body = await request.json()
         const { dealerId, domain, contactInfo } = body
 
@@ -17,6 +21,9 @@ export async function POST(request: Request) {
                 { status: 400 }
             )
         }
+
+        const { errorResponse: ownershipError } = await requireDealerOwnership(authSupabase, user.id, dealerId)
+        if (ownershipError) return ownershipError
 
         // Purchase domain via Cloudflare
         const purchaseResult = await purchaseDomain(domain, contactInfo)

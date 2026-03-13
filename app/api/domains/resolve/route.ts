@@ -32,9 +32,15 @@ export async function GET(request: Request) {
         return NextResponse.json({ error: 'domain param required' }, { status: 400 })
     }
 
+    // Validate domain format to prevent PostgREST filter injection
+    if (!/^[a-z0-9][a-z0-9.-]*\.[a-z]{2,}$/.test(domain)) {
+        return NextResponse.json({ error: 'Invalid domain format' }, { status: 400 })
+    }
+
     const supabase = getSupabase()
 
     // Look up by custom_domain in dealer_domains table
+    // Use separate .eq() calls to avoid PostgREST filter injection via .or() string interpolation
     const { data, error } = await supabase
         .from('dealer_domains')
         .select('dealer_id, subdomain, custom_domain, status, site_slug, dealers(slug, id)')

@@ -61,10 +61,10 @@ export async function POST(request: NextRequest) {
                     .from('domain_subscriptions')
                     .update({
                         status: 'active',
-                        current_period_start: sub.current_start as string ?? new Date().toISOString(),
-                        current_period_end:   sub.current_end   as string ?? null,
+                        current_period_start: (sub.current_start as string | undefined) ?? new Date().toISOString(),
+                        current_period_end:   (sub.current_end   as string | undefined) ?? null,
                     })
-                    .eq('razorpay_subscription_id', sub.id)
+                    .eq('razorpay_subscription_id', sub.id as string)
                 console.log('[Razorpay Webhook] Subscription activated:', sub.id)
                 break
             }
@@ -76,10 +76,10 @@ export async function POST(request: NextRequest) {
                     .from('domain_subscriptions')
                     .update({
                         status: 'active',
-                        current_period_start: sub.current_start as string ?? new Date().toISOString(),
-                        current_period_end:   sub.current_end   as string ?? null,
+                        current_period_start: (sub.current_start as string | undefined) ?? new Date().toISOString(),
+                        current_period_end:   (sub.current_end   as string | undefined) ?? null,
                     })
-                    .eq('razorpay_subscription_id', sub.id)
+                    .eq('razorpay_subscription_id', sub.id as string)
                 console.log('[Razorpay Webhook] Subscription renewed:', sub.id)
                 break
             }
@@ -93,7 +93,7 @@ export async function POST(request: NextRequest) {
                         status:       'cancelled',
                         cancelled_at: new Date().toISOString(),
                     })
-                    .eq('razorpay_subscription_id', sub.id)
+                    .eq('razorpay_subscription_id', sub.id as string)
                     .select('domain_id')
                     .single()
 
@@ -101,7 +101,7 @@ export async function POST(request: NextRequest) {
                 if (dbSub?.domain_id) {
                     await supabase
                         .from('dealer_domains')
-                        .update({ status: 'inactive' })
+                        .update({ status: 'suspended' })
                         .eq('id', dbSub.domain_id)
                 }
                 console.log('[Razorpay Webhook] Subscription cancelled:', sub.id)
@@ -114,7 +114,7 @@ export async function POST(request: NextRequest) {
                 await supabase
                     .from('domain_subscriptions')
                     .update({ status: 'past_due' })
-                    .eq('razorpay_subscription_id', payment.subscription_id)
+                    .eq('razorpay_subscription_id', payment.subscription_id as string)
                 console.log('[Razorpay Webhook] Payment failed for subscription:', payment.subscription_id)
                 break
             }

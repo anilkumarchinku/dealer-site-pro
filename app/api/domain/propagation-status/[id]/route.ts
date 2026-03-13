@@ -5,11 +5,15 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import dns from 'dns/promises';
+import { requireAuth } from '@/lib/supabase-server';
 
 export async function GET(
     request: NextRequest,
     { params }: { params: Promise<{ id: string }> }
 ) {
+    const { errorResponse } = await requireAuth()
+    if (errorResponse) return errorResponse
+
     try {
         const { id: onboardingId } = await params;
 

@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { createSubdomainForDealer } from '@/lib/services/domain-service'
 import { isSupabaseReady, getSupabaseConfigError } from '@/lib/supabase'
+import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
 /**
  * POST /api/domains/create-subdomain
@@ -8,6 +9,9 @@ import { isSupabaseReady, getSupabaseConfigError } from '@/lib/supabase'
  */
 export async function POST(request: Request) {
     try {
+        const { user, supabase, errorResponse } = await requireAuth()
+        if (errorResponse) return errorResponse
+
         // Check if Supabase is configured
         if (!isSupabaseReady()) {
             const configError = getSupabaseConfigError()
@@ -31,6 +35,9 @@ export async function POST(request: Request) {
                 { status: 400 }
             )
         }
+
+        const { errorResponse: ownershipError } = await requireDealerOwnership(supabase, user.id, dealerId)
+        if (ownershipError) return ownershipError
 
         // Create subdomain
         const result = await createSubdomainForDealer({
