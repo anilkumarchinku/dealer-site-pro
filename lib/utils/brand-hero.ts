@@ -3,9 +3,20 @@
  * Returns the hero image path for a given brand
  */
 
+// Aliases: long/variant brand names → the hero image slug
+const BRAND_ALIASES: Record<string, string> = {
+    'ather-energy': 'ather',
+    'ola-electric': 'ola',
+    'bmw-motorrad-india': 'bmw',
+    'honda-motorcycle-&-scooter-india': 'honda',
+    'honda-hmsi': 'honda',
+};
+
 export function getBrandHeroImage(brandName: string): string {
     // Normalize brand name to match file naming
-    const normalizedBrand = brandName.toLowerCase().replace(/\s+/g, '-');
+    let normalizedBrand = brandName.toLowerCase().replace(/\s+/g, '-');
+    // Resolve aliases (e.g. "ather-energy" → "ather")
+    normalizedBrand = BRAND_ALIASES[normalizedBrand] ?? normalizedBrand;
 
     // Map of brand names to their hero image extensions
     const brandImageMap: Record<string, string> = {
@@ -32,7 +43,7 @@ export function getBrandHeroImage(brandName: string): string {
         'mini': 'jpg',
         'nissan': 'jpg',
         'porsche': 'jpg',
-        'renault': 'jpg',
+        'renault': 'webp',
         'skoda': 'jpg',
         'tata-motors': 'jpg',
         'tesla': 'jpg',
@@ -40,14 +51,9 @@ export function getBrandHeroImage(brandName: string): string {
         'vinfast': 'jpg',
         'volkswagen': 'jpg',
         'volvo': 'jpg',
-        // 2W brands
+        // 2W brands — keys must match the actual filename in /assets/hero/
         'ather': 'jpg',
-        'ather-energy': 'jpg',
-        'bmw-motorrad-india': 'png',
-        'honda-motorcycle-&-scooter-india': 'jpg',
-        'honda-hmsi': 'jpg',
         'ola': 'jpg',
-        'ola-electric': 'jpg',
     };
 
     // If brand not in the map, return the default hero rather than a broken path
