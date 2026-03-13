@@ -1,6 +1,9 @@
 /**
  * VinFast India — Static vehicle catalog
  * Used as preview fallback when the DB has no VinFast rows yet.
+ *
+ * Currently available in India: VF 6, VF 7
+ * Coming soon: VF 3, VF 5, VF 8, VF 9
  */
 
 import type { Car } from '@/lib/types/car';
@@ -11,13 +14,12 @@ export const VINFAST_CARS: Car[] = [
         make: 'VinFast',
         model: 'VF 3',
         variant: 'Standard Range',
-        year: 2024,
+        year: 2026,
         bodyType: 'Hatchback',
         segment: 'A',
-        price: '₹7,99,000',
+        price: 'Launching Soon',
         pricing: {
-            exShowroom: { min: 799000, max: 899000, currency: 'INR' },
-            emi: { monthly: 13800, downPayment: 160000, tenure: 60 },
+            exShowroom: { min: null, max: null, currency: 'INR' },
         },
         engine: {
             type: 'Electric',
@@ -47,9 +49,9 @@ export const VINFAST_CARS: Car[] = [
         colors: [
             { name: 'Pearl White', type: 'Pearl', hex: '#F5F5F5', extraCost: 0 },
             { name: 'Midnight Black', type: 'Solid', hex: '#1A1A1A', extraCost: 0 },
-            { name: 'Passion Red', type: 'Metallic', hex: '#C0392B', extraCost: 15000 },
+            { name: 'Passion Red', type: 'Metallic', hex: '#C0392B', extraCost: 0 },
         ],
-        meta: { isAvailable: true, popularityScore: 7, viewCount: 0 },
+        meta: { isAvailable: false, popularityScore: 7, viewCount: 0, launchDate: '2026-Q3' },
         condition: 'new',
     },
     {
@@ -57,13 +59,12 @@ export const VINFAST_CARS: Car[] = [
         make: 'VinFast',
         model: 'VF 5',
         variant: 'Plus',
-        year: 2024,
+        year: 2026,
         bodyType: 'SUV',
         segment: 'B',
-        price: '₹12,99,000',
+        price: 'Launching Soon',
         pricing: {
-            exShowroom: { min: 1299000, max: 1499000, currency: 'INR' },
-            emi: { monthly: 22500, downPayment: 260000, tenure: 60 },
+            exShowroom: { min: null, max: null, currency: 'INR' },
         },
         engine: {
             type: 'Electric',
@@ -92,18 +93,18 @@ export const VINFAST_CARS: Car[] = [
         },
         colors: [
             { name: 'Polar White', type: 'Pearl', hex: '#F0F0F0', extraCost: 0 },
-            { name: 'Navy Blue', type: 'Metallic', hex: '#001F5A', extraCost: 20000 },
-            { name: 'Granite Grey', type: 'Metallic', hex: '#6B6B6B', extraCost: 20000 },
+            { name: 'Navy Blue', type: 'Metallic', hex: '#001F5A', extraCost: 0 },
+            { name: 'Granite Grey', type: 'Metallic', hex: '#6B6B6B', extraCost: 0 },
         ],
-        meta: { isAvailable: true, popularityScore: 8, viewCount: 0 },
+        meta: { isAvailable: false, popularityScore: 8, viewCount: 0, launchDate: '2026-Q3' },
         condition: 'new',
     },
     {
         id: 'vinfast-vf6e',
         make: 'VinFast',
-        model: 'VF 6e',
+        model: 'VF 6',
         variant: 'Premium',
-        year: 2024,
+        year: 2026,
         bodyType: 'SUV',
         segment: 'C',
         price: '₹18,99,000',
@@ -149,7 +150,7 @@ export const VINFAST_CARS: Car[] = [
         make: 'VinFast',
         model: 'VF 7',
         variant: 'Eco',
-        year: 2024,
+        year: 2026,
         bodyType: 'SUV',
         segment: 'D',
         price: '₹23,99,000',
@@ -195,13 +196,12 @@ export const VINFAST_CARS: Car[] = [
         make: 'VinFast',
         model: 'VF 8',
         variant: 'Plus',
-        year: 2024,
+        year: 2026,
         bodyType: 'SUV',
         segment: 'Premium',
-        price: '₹25,99,000',
+        price: 'Launching Soon',
         pricing: {
-            exShowroom: { min: 2599000, max: 3099000, currency: 'INR' },
-            emi: { monthly: 44900, downPayment: 520000, tenure: 60 },
+            exShowroom: { min: null, max: null, currency: 'INR' },
         },
         engine: {
             type: 'Electric',
@@ -234,7 +234,7 @@ export const VINFAST_CARS: Car[] = [
             { name: 'Storm Grey', type: 'Metallic', hex: '#707070', extraCost: 35000 },
             { name: 'Cherry Red', type: 'Pearl', hex: '#C0392B', extraCost: 35000 },
         ],
-        meta: { isAvailable: true, popularityScore: 9, viewCount: 0 },
+        meta: { isAvailable: false, popularityScore: 9, viewCount: 0, launchDate: '2026-Q4' },
         condition: 'new',
     },
     {
@@ -242,13 +242,12 @@ export const VINFAST_CARS: Car[] = [
         make: 'VinFast',
         model: 'VF 9',
         variant: 'Plus',
-        year: 2024,
+        year: 2026,
         bodyType: 'SUV',
         segment: 'Luxury',
-        price: '₹43,99,000',
+        price: 'Launching Soon',
         pricing: {
-            exShowroom: { min: 4399000, max: 5199000, currency: 'INR' },
-            emi: { monthly: 75900, downPayment: 880000, tenure: 60 },
+            exShowroom: { min: null, max: null, currency: 'INR' },
         },
         engine: {
             type: 'Electric',
@@ -280,7 +279,7 @@ export const VINFAST_CARS: Car[] = [
             { name: 'Navy Blue', type: 'Metallic', hex: '#001F5A', extraCost: 50000 },
             { name: 'Phantom Black', type: 'Metallic', hex: '#1A1A1A', extraCost: 50000 },
         ],
-        meta: { isAvailable: true, popularityScore: 8, viewCount: 0 },
+        meta: { isAvailable: false, popularityScore: 8, viewCount: 0, launchDate: '2026-Q4' },
         condition: 'new',
     },
 ];
