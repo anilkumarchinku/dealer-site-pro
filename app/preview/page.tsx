@@ -38,6 +38,7 @@ import { FamilyTemplate } from "@/components/templates/FamilyTemplate";
 
 import { getTwoWheelerCatalog, TWO_WHEELER_BRANDS } from "@/lib/data/two-wheelers";
 import { getThreeWheelerCatalog, THREE_WHEELER_BRANDS } from "@/lib/data/three-wheelers";
+import { VINFAST_CARS } from "@/lib/data/vinfast-catalog";
 import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler";
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler";
 import { brandNameToId } from "@/lib/utils/brand-model-images";
@@ -172,8 +173,13 @@ function PreviewContent() {
                 } else {
                     let cars = await getCarsByMake(primaryBrand);
                     if (cars.length === 0) {
-                        const result = await getAllCars({ limit: 8 });
-                        cars = result.cars;
+                        // Use brand-specific static catalog if available, else generic fallback
+                        if (primaryBrand === 'VinFast') {
+                            cars = VINFAST_CARS;
+                        } else {
+                            const result = await getAllCars({ limit: 8 });
+                            cars = result.cars;
+                        }
                     }
                     if (isMounted) setDisplayCars(cars);
                 }
