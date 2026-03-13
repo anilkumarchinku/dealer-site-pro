@@ -52,6 +52,7 @@ const BRANDS: { name: Brand; logo: string }[] = [
     { name: "Lamborghini",    logo: "/assets/logos/lamborghini.png" },
     { name: "BYD",            logo: "/assets/logos/byd.png" },
     { name: "Tesla",          logo: "/assets/logos/tesla.png" },
+    { name: "VinFast",        logo: "/assets/logos/vinfast.png" },
 ];
 
 export default function Step1Page() {

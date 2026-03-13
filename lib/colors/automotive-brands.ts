@@ -1789,6 +1789,64 @@ export const automotiveBrands = {
                 category: "Electric/Emerging Brands",
         },
 
+        VinFast: {
+                primary: '#001F5A',
+                secondary: '#FFFFFF',
+                background: '#FFFFFF',
+                accent: '#003DA5',
+                lightGray: '#F4F6FA',
+                hover: '#003DA5',
+                gradient: 'from-[#001F5A] to-[#003DA5]',
+                typography: {
+                        "primary": "VinFast Sans",
+                        "fallback": "Helvetica Neue, Arial, sans-serif"
+                },
+                colors: {
+                        "primary": "#001F5A",
+                        "primaryHover": "#003DA5",
+                        "secondary": "#FFFFFF",
+                        "secondaryHover": "#F0F4FF",
+                        "background": "#FFFFFF",
+                        "backgroundAlt": "#F4F6FA",
+                        "backgroundCard": "#FAFBFF",
+                        "text": "#001F5A",
+                        "textSecondary": "#003DA5",
+                        "textMuted": "#6B7A99",
+                        "border": "#C8D4E8",
+                        "borderLight": "#E8EDF7",
+                        "accent": "#003DA5",
+                        "success": "#00A651",
+                        "error": "#DC3545",
+                        "warning": "#FFC107",
+                        "info": "#003DA5"
+                },
+                buttons: {
+                        "primary": {
+                                "background": "#001F5A",
+                                "text": "#FFFFFF",
+                                "hover": "#003DA5",
+                                "active": "#001240",
+                                "border": "none"
+                        },
+                        "secondary": {
+                                "background": "transparent",
+                                "text": "#001F5A",
+                                "hover": "#001F5A",
+                                "hoverText": "#FFFFFF",
+                                "border": "#001F5A"
+                        }
+                },
+                forms: {
+                        "inputBorder": "#C8D4E8",
+                        "inputFocus": "#001F5A",
+                        "inputBackground": "#FFFFFF",
+                        "placeholder": "#6B7A99",
+                        "labelColor": "#001F5A"
+                },
+                tagline: "Driving the Future",
+                category: "Electric/Emerging Brands",
+        },
+
         Lamborghini: {
                 primary: '#FFC600',
                 secondary: '#000000',
