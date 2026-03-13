@@ -1,0 +1,274 @@
+{
+    "cardekho_variants": [
+        {
+            "make": "VinFast",
+            "model": "VF 6",
+            "variant_name": "Earth",
+            "ex_showroom_price_min_inr": 1649000,
+            "ex_showroom_price_max_inr": 1649000,
+            "hyderabad_on_road_price_inr": 1850000,
+            "fuel_type": "Electric",
+            "transmission": "Automatic",
+            "battery_capacity_kwh": 59.6,
+            "range_km": 468,
+            "power_bhp": 177,
+            "torque_nm": 250,
+            "seating_capacity": 5,
+            "boot_space_l": 0,
+            "ground_clearance_mm": 0,
+            "length_mm": 4241,
+            "width_mm": 1834,
+            "height_mm": 1615,
+            "key_features": [
+                {
+                    "value": "12.9-inch Touchscreen"
+                },
+                {
+                    "value": "ADAS Level 2"
+                },
+                {
+                    "value": "Vegan Leather Interior"
+                }
+            ],
+            "safety_features": [
+                {
+                    "value": "6 Airbags"
+                },
+                {
+                    "value": "ABS with EBD"
+                },
+                {
+                    "value": "ESC"
+                }
+            ],
+            "image_urls": [],
+            "availability_status": "on_sale",
+            "launch_year": 2025
+        },
+        {
+            "make": "VinFast",
+            "model": "VF 6",
+            "variant_name": "Wind",
+            "ex_showroom_price_min_inr": 1829000,
+            "ex_showroom_price_max_inr": 1829000,
+            "hyderabad_on_road_price_inr": 2050000,
+            "fuel_type": "Electric",
+            "transmission": "Automatic",
+            "battery_capacity_kwh": 59.6,
+            "range_km": 480,
+            "power_bhp": 204,
+            "torque_nm": 310,
+            "seating_capacity": 5,
+            "boot_space_l": 0,
+            "ground_clearance_mm": 0,
+            "length_mm": 4241,
+            "width_mm": 1834,
+            "height_mm": 1615,
+            "key_features": [
+                {
+                    "value": "Panoramic Sunroof"
+                },
+                {
+                    "value": "Heated Front Seats"
+                },
+                {
+                    "value": "Ambient Lighting"
+                }
+            ],
+            "safety_features": [
+                {
+                    "value": "6 Airbags"
+                },
+                {
+                    "value": "360 Degree Camera"
+                },
+                {
+                    "value": "Blind Spot Monitoring"
+                }
+            ],
+            "image_urls": [],
+            "availability_status": "on_sale",
+            "launch_year": 2025
+        },
+        {
+            "make": "VinFast",
+            "model": "VF 7",
+            "variant_name": "Wind",
+            "ex_showroom_price_min_inr": 2089000,
+            "ex_showroom_price_max_inr": 2089000,
+            "hyderabad_on_road_price_inr": 2350000,
+            "fuel_type": "Electric",
+            "transmission": "Automatic",
+            "battery_capacity_kwh": 59.6,
+            "range_km": 438,
+            "power_bhp": 177,
+            "torque_nm": 250,
+            "seating_capacity": 5,
+            "boot_space_l": 0,
+            "ground_clearance_mm": 0,
+            "length_mm": 4545,
+            "width_mm": 1890,
+            "height_mm": 1635,
+            "key_features": [
+                {
+                    "value": "15-inch Touchscreen"
+                },
+                {
+                    "value": "Dual Zone Climate Control"
+                },
+                {
+                    "value": "Wireless Charging"
+                }
+            ],
+            "safety_features": [
+                {
+                    "value": "8 Airbags"
+                },
+                {
+                    "value": "ADAS Suite"
+                },
+                {
+                    "value": "Traction Control"
+                }
+            ],
+            "image_urls": [],
+            "availability_status": "on_sale",
+            "launch_year": 2025
+        },
+        {
+            "make": "VinFast",
+            "model": "VF 7",
+            "variant_name": "Plus (AWD)",
+            "ex_showroom_price_min_inr": 2679000,
+            "ex_showroom_price_max_inr": 2679000,
+            "hyderabad_on_road_price_inr": 2950000,
+            "fuel_type": "Electric",
+            "transmission": "Automatic",
+            "battery_capacity_kwh": 70.8,
+            "range_km": 510,
+            "power_bhp": 349,
+            "torque_nm": 500,
+            "seating_capacity": 5,
+            "boot_space_l": 0,
+            "ground_clearance_mm": 0,
+            "length_mm": 4545,
+            "width_mm": 1890,
+            "height_mm": 1635,
+            "key_features": [
+                {
+                    "value": "All-Wheel Drive (Dual Motor)"
+                },
+                {
+                    "value": "Premium Audio System"
+                },
+                {
+                    "value": "Vented Front Seats"
+                }
+            ],
+            "safety_features": [
+                {
+                    "value": "8 Airbags"
+                },
+                {
+                    "value": "Advanced ADAS"
+                },
+                {
+                    "value": "Park Assist"
+                }
+            ],
+            "image_urls": [],
+            "availability_status": "on_sale",
+            "launch_year": 2025
+        },
+        {
+            "make": "VinFast",
+            "model": "VF 8",
+            "variant_name": "Eco",
+            "ex_showroom_price_min_inr": 5000000,
+            "ex_showroom_price_max_inr": 5000000,
+            "hyderabad_on_road_price_inr": 5500000,
+            "fuel_type": "Electric",
+            "transmission": "Automatic",
+            "battery_capacity_kwh": 87.7,
+            "range_km": 471,
+            "power_bhp": 348,
+            "torque_nm": 500,
+            "seating_capacity": 5,
+            "boot_space_l": 0,
+            "ground_clearance_mm": 0,
+            "length_mm": 4750,
+            "width_mm": 1934,
+            "height_mm": 1667,
+            "key_features": [
+                {
+                    "value": "15.6-inch Touchscreen"
+                },
+                {
+                    "value": "Smart Services"
+                },
+                {
+                    "value": "Heated Steering Wheel"
+                }
+            ],
+            "safety_features": [
+                {
+                    "value": "11 Airbags"
+                },
+                {
+                    "value": "Auto Emergency Braking"
+                },
+                {
+                    "value": "Lane Keep Assist"
+                }
+            ],
+            "image_urls": [],
+            "availability_status": "upcoming",
+            "launch_year": 2025
+        },
+        {
+            "make": "VinFast",
+            "model": "VF 9",
+            "variant_name": "Plus",
+            "ex_showroom_price_min_inr": 6500000,
+            "ex_showroom_price_max_inr": 6500000,
+            "hyderabad_on_road_price_inr": 7200000,
+            "fuel_type": "Electric",
+            "transmission": "Automatic",
+            "battery_capacity_kwh": 123.0,
+            "range_km": 531,
+            "power_bhp": 402,
+            "torque_nm": 620,
+            "seating_capacity": 7,
+            "boot_space_l": 0,
+            "ground_clearance_mm": 0,
+            "length_mm": 5118,
+            "width_mm": 2254,
+            "height_mm": 1696,
+            "key_features": [
+                {
+                    "value": "Matrix LED Headlights"
+                },
+                {
+                    "value": "Captain Seats with Massage"
+                },
+                {
+                    "value": "Rear Entertainment Screens"
+                }
+            ],
+            "safety_features": [
+                {
+                    "value": "11 Airbags"
+                },
+                {
+                    "value": "360 View Camera"
+                },
+                {
+                    "value": "Remote Parking Assist"
+                }
+            ],
+            "image_urls": [],
+            "availability_status": "upcoming",
+            "launch_year": 2026
+        }
+    ]
+}

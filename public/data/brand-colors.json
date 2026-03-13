@@ -1789,14 +1789,14 @@
         "type": "ICE",
         "colors": {
           "primary": {
-            "name": "VinFast Primary",
-            "hex": "#0070F3",
-            "rgb": "0, 112, 243"
+            "name": "VinFast Blue",
+            "hex": "#1464F4",
+            "rgb": "20, 100, 244"
           },
           "secondary": {
-            "name": "VinFast Secondary",
-            "hex": "#111111",
-            "rgb": "17, 17, 17"
+            "name": "VinFast Black",
+            "hex": "#151515",
+            "rgb": "21, 21, 21"
           },
           "accent": {
             "name": "White",

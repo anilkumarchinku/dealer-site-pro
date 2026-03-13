@@ -1790,60 +1790,59 @@ export const automotiveBrands = {
         },
 
         VinFast: {
-                primary: '#001F5A',
-                secondary: '#FFFFFF',
+                primary: '#1464F4',
+                secondary: '#151515',
                 background: '#FFFFFF',
-                accent: '#003DA5',
-                lightGray: '#F4F6FA',
-                hover: '#003DA5',
-                gradient: 'from-[#001F5A] to-[#003DA5]',
+                accent: '#F2F6F7',
+                lightGray: '#F5F5F5',
+                hover: '#0A4EB2',
+                gradient: 'from-[#1464F4] to-[#151515]',
                 typography: {
                         "primary": "VinFast Sans",
                         "fallback": "Helvetica Neue, Arial, sans-serif"
                 },
                 colors: {
-                        "primary": "#001F5A",
-                        "primaryHover": "#003DA5",
-                        "secondary": "#FFFFFF",
-                        "secondaryHover": "#F0F4FF",
+                        "primary": "#1464F4",
+                        "primaryHover": "#0A4EB2",
+                        "secondary": "#151515",
+                        "secondaryHover": "#333333",
                         "background": "#FFFFFF",
-                        "backgroundAlt": "#F4F6FA",
-                        "backgroundCard": "#FAFBFF",
-                        "text": "#001F5A",
-                        "textSecondary": "#003DA5",
-                        "textMuted": "#6B7A99",
-                        "border": "#C8D4E8",
-                        "borderLight": "#E8EDF7",
-                        "accent": "#003DA5",
-                        "success": "#00A651",
+                        "backgroundAlt": "#F2F6F7",
+                        "backgroundCard": "#FAFAFA",
+                        "text": "#151515",
+                        "textSecondary": "#666666",
+                        "textMuted": "#999999",
+                        "border": "#DDDDDD",
+                        "borderLight": "#EEEEEE",
+                        "success": "#28A745",
                         "error": "#DC3545",
                         "warning": "#FFC107",
-                        "info": "#003DA5"
+                        "info": "#1464F4"
                 },
                 buttons: {
                         "primary": {
-                                "background": "#001F5A",
+                                "background": "#1464F4",
                                 "text": "#FFFFFF",
-                                "hover": "#003DA5",
-                                "active": "#001240",
+                                "hover": "#0A4EB2",
+                                "active": "#083D8C",
                                 "border": "none"
                         },
                         "secondary": {
                                 "background": "transparent",
-                                "text": "#001F5A",
-                                "hover": "#001F5A",
+                                "text": "#151515",
+                                "hover": "#151515",
                                 "hoverText": "#FFFFFF",
-                                "border": "#001F5A"
+                                "border": "#151515"
                         }
                 },
                 forms: {
-                        "inputBorder": "#C8D4E8",
-                        "inputFocus": "#001F5A",
+                        "inputBorder": "#CCCCCC",
+                        "inputFocus": "#1464F4",
                         "inputBackground": "#FFFFFF",
-                        "placeholder": "#6B7A99",
-                        "labelColor": "#001F5A"
+                        "placeholder": "#999999",
+                        "labelColor": "#151515"
                 },
-                tagline: "Driving the Future",
+                tagline: "Boundless Together",
                 category: "Electric/Emerging Brands",
         },
 
@@ -1908,20 +1907,20 @@ export const automotiveBrands = {
 };
 
 export interface BrandColors {
-  primary: string
-  secondary: string
-  background: string
-  accent: string
-  category: string
-  hover?: string
-  lightGray?: string
-  gradient?: string
-  forms?: Record<string, string>
-  typography?: Record<string, unknown>
-  colors?: Record<string, string>
-  buttons?: Record<string, unknown>
-  tagline?: string
-  [key: string]: unknown
+        primary: string
+        secondary: string
+        background: string
+        accent: string
+        category: string
+        hover?: string
+        lightGray?: string
+        gradient?: string
+        forms?: Record<string, string>
+        typography?: Record<string, unknown>
+        colors?: Record<string, string>
+        buttons?: Record<string, unknown>
+        tagline?: string
+        [key: string]: unknown
 }
 
 // Helper function to get brand colors
