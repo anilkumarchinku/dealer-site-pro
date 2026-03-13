@@ -104,7 +104,7 @@ const BRAND_CATEGORIES = [
     },
     {
         name: "Electric",
-        brands: ["BYD", "Tesla", "Ola Electric", "Ather Energy"]
+        brands: ["BYD", "Tesla", "VinFast", "Ola Electric", "Ather Energy"]
     },
     {
         name: "Two Wheelers (ICE)",
