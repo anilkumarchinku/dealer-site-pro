@@ -13,11 +13,16 @@ const required = {
     SUPABASE_SERVICE_ROLE_KEY:     process.env.SUPABASE_SERVICE_ROLE_KEY,
     NEXT_PUBLIC_RAZORPAY_KEY_ID:   process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
     RAZORPAY_KEY_SECRET:           process.env.RAZORPAY_KEY_SECRET,
+    NEXT_PUBLIC_BASE_DOMAIN:       process.env.NEXT_PUBLIC_BASE_DOMAIN,
 }
 
 // These are optional — missing values degrade a feature but don't crash the site
 const optional = {
-    RESEND_API_KEY: process.env.RESEND_API_KEY,
+    RESEND_API_KEY:            process.env.RESEND_API_KEY,
+    SENTRY_DSN:                process.env.SENTRY_DSN,
+    UPSTASH_REDIS_REST_URL:    process.env.UPSTASH_REDIS_REST_URL,
+    UPSTASH_REDIS_REST_TOKEN:  process.env.UPSTASH_REDIS_REST_TOKEN,
+    NEXT_PUBLIC_SUPPORT_WHATSAPP: process.env.NEXT_PUBLIC_SUPPORT_WHATSAPP,
 }
 
 const placeholders = [
@@ -75,4 +80,6 @@ export const env = {
     resendApiKey:     process.env.RESEND_API_KEY              ?? '',
     baseDomain:       process.env.NEXT_PUBLIC_BASE_DOMAIN     ?? 'localhost:3000',
     webhookSecret:    process.env.RAZORPAY_WEBHOOK_SECRET     ?? '',
+    cnameTarget:      process.env.NEXT_PUBLIC_CNAME_TARGET    ?? 'cname.vercel-dns.com',
+    supportWhatsapp:  process.env.NEXT_PUBLIC_SUPPORT_WHATSAPP,
 }

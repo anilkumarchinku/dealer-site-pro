@@ -7,13 +7,14 @@ import { createServerClient } from '@supabase/ssr'
 import { createClient }       from '@supabase/supabase-js'
 import { cookies }            from 'next/headers'
 import { NextResponse }       from 'next/server'
+import type { Database }      from '@/lib/database.types'
 
 /**
  * Service-role client — bypasses RLS entirely.
  * Use ONLY in trusted server-side API routes (never expose to the client).
  */
 export function createAdminClient() {
-    return createClient(
+    return createClient<Database>(
         process.env.NEXT_PUBLIC_SUPABASE_URL!,
         process.env.SUPABASE_SERVICE_ROLE_KEY!,
         { auth: { autoRefreshToken: false, persistSession: false } }
@@ -27,7 +28,7 @@ export function createAdminClient() {
 export async function createRouteClient() {
     const cookieStore = await cookies()
 
-    return createServerClient(
+    return createServerClient<Database>(
         process.env.NEXT_PUBLIC_SUPABASE_URL!,
         process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
         {
@@ -85,7 +86,7 @@ export async function requireDealerOwnership(
     userId: string,
     dealerId: string
 ): Promise<
-    | { dealer: { id: string; slug: string }; errorResponse: null }
+    | { dealer: { id: string; slug: string | null }; errorResponse: null }
     | { dealer: null; errorResponse: NextResponse }
 > {
     const { data: dealer, error } = await supabase
@@ -115,7 +116,7 @@ export async function requireDealerOwnership(
 export async function getDealerForUser(
     supabase: Awaited<ReturnType<typeof createRouteClient>>,
     userId: string
-): Promise<{ id: string; slug: string } | null> {
+): Promise<{ id: string; slug: string | null } | null> {
     const { data } = await supabase
         .from('dealers')
         .select('id, slug')
