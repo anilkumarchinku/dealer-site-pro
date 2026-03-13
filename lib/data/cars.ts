@@ -36,6 +36,7 @@ export const CAR_MAKES = [
     'Skoda',
     'Tata Motors',
     'Toyota',
+    'VinFast',
     'Volkswagen',
     'Volvo',
 ] as const

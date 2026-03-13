@@ -35,6 +35,7 @@ export function getBrandHeroImage(brandName: string): string {
         'tata-motors': 'jpg',
         'tesla': 'jpg',
         'toyota': 'jpg',
+        'vinfast': 'jpg',
         'volvo': 'jpg',
     };
 

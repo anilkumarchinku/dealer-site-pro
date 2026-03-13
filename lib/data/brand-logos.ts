@@ -31,6 +31,7 @@ export const BRAND_LOGOS: Record<string, string> = {
     'Tata Motors': '/assets/logos/tata-motors.png',
     'Toyota': '/assets/logos/toyota.png',
     'Volkswagen': '/assets/logos/volkswagen.png',
+    'VinFast': '/assets/logos/vinfast.png',
     'Volvo': '/assets/logos/volvo.png',
 };
 
