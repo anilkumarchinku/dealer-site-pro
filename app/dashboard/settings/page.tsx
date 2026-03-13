@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { logger } from "@/lib/utils/logger";
 import { useTheme } from "@/components/theme-provider";
 import {
     Save, Globe, Bell, Palette, Shield,
@@ -268,7 +269,7 @@ export default function SettingsPage() {
                 message: detailedMessage || (json.success ? "Connected!" : "Connection failed. Check your API key."),
             });
             // Log full diagnostics to console for debugging
-            console.log("[Cyepro Test] Full diagnostics:", json.diagnostics);
+            logger.log("[Cyepro Test] Full diagnostics:", json.diagnostics);
         } catch (err) {
             const errMsg = err instanceof Error ? err.message : String(err);
             setCyeproTestResult({ success: false, message: `Network error: ${errMsg}` });

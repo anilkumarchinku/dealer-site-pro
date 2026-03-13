@@ -46,6 +46,7 @@ import {
 import { getBrandLogo } from '@/lib/data/brand-logos';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import { useCompareStore } from '@/lib/store/compare-store';
+import { getScrapedImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
 
 // ── Variant types for the accordion ──────────────────────────────────────────
 interface CarVariantInfo {
@@ -111,6 +112,7 @@ export function CarCard({
     const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
     const [isTestDriveOpen, setIsTestDriveOpen] = useState(false);
     const [imgError, setImgError] = useState(false);
+    const [scrapedIdx, setScrapedIdx] = useState(0);
     const [aggregatedSpecs, setAggregatedSpecs] = useState<ReturnType<typeof formatSpecsForDisplay>>(null);
     const { addCar, removeCar, isSelected } = useCompareStore();
     const inCompare = isSelected(car.id);
@@ -159,18 +161,18 @@ export function CarCard({
             value: isEV
                 ? (car.engine?.batteryCapacity ? `${car.engine.batteryCapacity} kWh` : '—')
                 : (car.engine?.displacement ? `${car.engine.displacement} cc` : '—'),
-          }
+        }
         : car.vehicleCategory === '3w'
-        ? {
-            icon: car.dimensions?.bootSpace
-                ? <Box className="w-3.5 h-3.5 text-amber-600" />
-                : <Users className="w-3.5 h-3.5 text-purple-600" />,
-            label: car.dimensions?.bootSpace ? 'Payload' : 'Seating',
-            value: car.dimensions?.bootSpace
-                ? `${car.dimensions.bootSpace} kg`
-                : seatingDisplay,
-          }
-        : { icon: <Gauge className="w-3.5 h-3.5 text-blue-600" />, label: 'Trans', value: transDisplay };
+            ? {
+                icon: car.dimensions?.bootSpace
+                    ? <Box className="w-3.5 h-3.5 text-amber-600" />
+                    : <Users className="w-3.5 h-3.5 text-purple-600" />,
+                label: car.dimensions?.bootSpace ? 'Payload' : 'Seating',
+                value: car.dimensions?.bootSpace
+                    ? `${car.dimensions.bootSpace} kg`
+                    : seatingDisplay,
+            }
+            : { icon: <Gauge className="w-3.5 h-3.5 text-blue-600" />, label: 'Trans', value: transDisplay };
 
     const spec3 = car.vehicleCategory === '2w' || car.vehicleCategory === '3w'
         ? { icon: <Zap className="w-3.5 h-3.5 text-amber-600" />, label: isEV ? 'Range' : 'Mileage', value: isEV ? (car.performance?.range ? `${car.performance.range} km` : '—') : mileageDisplay }
@@ -201,22 +203,39 @@ export function CarCard({
             >
                 {/* ── Image ── */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-white">
-                    {car.images.hero && !imgError ? (
-                        <Image
-                            src={car.images.hero}
-                            alt={`${car.make} ${car.model}`}
-                            fill
-                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
-                            onError={() => setImgError(true)}
-                        />
-                    ) : (
-                        <div className="flex items-center justify-center h-full bg-white border-b border-gray-100">
-                            <span className="text-4xl">
-                                {car.vehicleCategory === '2w' ? '🏍️' : car.vehicleCategory === '3w' ? '🛺' : '🚗'}
-                            </span>
-                        </div>
-                    )}
+                    {(() => {
+                        const showScraped = car.vehicleCategory === '2w' || car.vehicleCategory === '3w';
+                        const scrapedUrls = showScraped ? getScrapedImageUrls(car.vehicleCategory as '2w' | '3w', brandNameToId(car.make, car.vehicleCategory as '2w' | '3w'), car.model) : [];
+                        const displayUrl = (!car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError)
+                            ? (scrapedUrls[scrapedIdx] || null)
+                            : car.images.hero;
+
+                        if (displayUrl) {
+                            return (
+                                <Image
+                                    src={displayUrl}
+                                    alt={`${car.make} ${car.model}`}
+                                    fill
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                    onError={() => {
+                                        if (showScraped && scrapedIdx < scrapedUrls.length - 1) {
+                                            setScrapedIdx(prev => prev + 1);
+                                        } else {
+                                            setImgError(true);
+                                        }
+                                    }}
+                                />
+                            );
+                        }
+                        return (
+                            <div className="flex items-center justify-center h-full bg-white border-b border-gray-100">
+                                <span className="text-4xl">
+                                    {car.vehicleCategory === '2w' ? '🏍️' : car.vehicleCategory === '3w' ? '🛺' : '🚗'}
+                                </span>
+                            </div>
+                        );
+                    })()}
 
                     {/* Wishlist heart — top-right */}
                     <div className="absolute top-2 right-2 z-10">

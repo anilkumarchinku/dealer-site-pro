@@ -19,10 +19,22 @@ export async function middleware(request: NextRequest) {
 
     // ── Handle CORS preflight for API routes ─────────────────
     if (pathname.startsWith('/api') && request.method === 'OPTIONS') {
+        // Get allowed origins from env, default to base domain patterns
+        const origin = request.headers.get('origin') ?? ''
+        const baseDomain = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'localhost:3000'
+        const allowedOrigins = [
+            `https://${baseDomain}`,
+            `http://localhost:3000`,
+            `http://localhost:3001`,
+        ]
+        const isAllowedOrigin = allowedOrigins.includes(origin) ||
+            origin.endsWith(`.${baseDomain}`)
+        const corsOrigin = isAllowedOrigin ? origin : allowedOrigins[0]
+
         return new NextResponse(null, {
             status: 204,
             headers: {
-                'Access-Control-Allow-Origin':  '*',
+                'Access-Control-Allow-Origin':  corsOrigin,
                 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization, idempotency-key',
             },

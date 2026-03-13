@@ -237,7 +237,8 @@ export default function HelpPage() {
                         </CardContent>
                     </Card>
                 </a>
-                <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">
+                {process.env.NEXT_PUBLIC_SUPPORT_WHATSAPP && (
+                <a href={`https://wa.me/${process.env.NEXT_PUBLIC_SUPPORT_WHATSAPP}`} target="_blank" rel="noopener noreferrer">
                     <Card variant="glass" className="h-full hover:bg-muted/30 transition-all hover:shadow-md cursor-pointer group">
                         <CardContent className="py-6 text-center">
                             <div className="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
@@ -249,6 +250,7 @@ export default function HelpPage() {
                         </CardContent>
                     </Card>
                 </a>
+                )}
                 <Card variant="glass" className="h-full bg-gradient-to-br from-violet-500/5 to-blue-500/5 border-violet-200/40">
                     <CardContent className="py-6 text-center">
                         <div className="w-12 h-12 rounded-2xl bg-violet-50 flex items-center justify-center mx-auto mb-3">
@@ -319,12 +321,14 @@ export default function HelpPage() {
                                 Email Us
                             </Button>
                         </a>
-                        <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">
+                        {process.env.NEXT_PUBLIC_SUPPORT_WHATSAPP && (
+                        <a href={`https://wa.me/${process.env.NEXT_PUBLIC_SUPPORT_WHATSAPP}`} target="_blank" rel="noopener noreferrer">
                             <Button variant="outline" className="gap-2">
                                 <MessageCircle className="w-4 h-4" />
                                 WhatsApp Us
                             </Button>
                         </a>
+                        )}
                     </div>
                 </CardContent>
             </Card>

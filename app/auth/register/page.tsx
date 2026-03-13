@@ -36,7 +36,7 @@ export default function RegisterPage() {
         if (!form.email.trim()) return "Email is required";
         if (!/\S+@\S+\.\S+/.test(form.email)) return "Enter a valid email address";
         if (!form.password) return "Password is required";
-        if (form.password.length < 6) return "Password must be at least 6 characters";
+        if (form.password.length < 12) return "Password must be at least 12 characters";
         if (form.password !== form.confirmPassword) return "Passwords do not match";
         return null;
     };
@@ -179,7 +179,7 @@ export default function RegisterPage() {
                             <Input
                                 id="password"
                                 type="password"
-                                placeholder="Min 6 characters"
+                                placeholder="Min 12 characters"
                                 value={form.password}
                                 onChange={e => update("password", e.target.value)}
                                 disabled={loading}

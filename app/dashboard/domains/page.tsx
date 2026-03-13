@@ -105,7 +105,7 @@ export default function DomainSettingsPage() {
     }
 
     function handleCopyCname() {
-        navigator.clipboard.writeText('cname.vercel-dns.com')
+        navigator.clipboard.writeText(process.env.NEXT_PUBLIC_CNAME_TARGET ?? 'cname.vercel-dns.com')
         setCopiedCname(true)
         setTimeout(() => setCopiedCname(false), 2000)
     }
@@ -266,7 +266,7 @@ export default function DomainSettingsPage() {
                                             <div>
                                                 <p className="text-muted-foreground mb-1">Points to / Value</p>
                                                 <div className="flex items-center gap-2">
-                                                    <p className="font-bold">cname.vercel-dns.com</p>
+                                                    <p className="font-bold">{process.env.NEXT_PUBLIC_CNAME_TARGET ?? 'cname.vercel-dns.com'}</p>
                                                     <Button
                                                         variant="ghost"
                                                         size="sm"
@@ -455,7 +455,7 @@ export default function DomainSettingsPage() {
                         },
                         {
                             q: 'What CNAME value should I use?',
-                            a: 'Set a CNAME record pointing to cname.vercel-dns.com. Use "@" or your root domain as the host. For www, add a separate CNAME with host "www" pointing to the same value.',
+                            a: `Set a CNAME record pointing to ${process.env.NEXT_PUBLIC_CNAME_TARGET ?? 'cname.vercel-dns.com'}. Use "@" or your root domain as the host. For www, add a separate CNAME with host "www" pointing to the same value.`,
                         },
                     ].map((faq, index) => (
                         <div key={index} className="p-4 rounded-xl bg-muted/30">

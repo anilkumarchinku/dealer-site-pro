@@ -24,6 +24,7 @@ export default function PurchaseManagedDomainModal({ isOpen, onClose, dealerId, 
     })
     const [error, setError] = useState('')
     const [idempotencyKey] = useState(() => generateIdempotencyKey())
+    const [isPurchasing, setIsPurchasing] = useState(false)
 
     if (!isOpen) return null
 
@@ -51,8 +52,6 @@ export default function PurchaseManagedDomainModal({ isOpen, onClose, dealerId, 
         setSelectedDomain(domain)
         setStep('contact')
     }
-
-    const [isPurchasing, setIsPurchasing] = useState(false)
 
     // Skip payment for now — go directly to domain purchase
     const handleProceedToPayment = async () => {

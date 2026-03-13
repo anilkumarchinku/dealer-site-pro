@@ -544,6 +544,6 @@ export default async function TwoWheelersPage({ params }: Props) {
         case 'modern':
         case 'professional':
         default:
-            return <>{jsonLd}<ModernTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: smartTagline }} /></>
+            return <>{jsonLd}<ModernTemplate {...sharedProps} config={{ heroTitle, heroSubtitle }} /></>
     }
 }

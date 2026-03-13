@@ -107,7 +107,9 @@ export default function AnalyticsPage() {
                             </Select>
                         </div>
                         <span className="text-sm text-muted-foreground">
-                            {data ? `${data.avgMobilePct}% mobile · ${data.avgDesktopPct}% desktop` : "—"}
+                            {data && data.avgMobilePct != null && data.avgDesktopPct != null
+                                ? `${data.avgMobilePct}% mobile · ${data.avgDesktopPct}% desktop`
+                                : data ? "No device data yet" : "—"}
                         </span>
                     </div>
                 </CardContent>

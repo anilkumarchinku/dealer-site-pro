@@ -418,7 +418,7 @@ function TemplatePreview({ brand, templateId }: { brand: string; templateId: Tem
 
       case 'sporty':
         return (
-          <div className={`rounded-lg overflow-hidden bg-gradient-to-br ${colors.gradient}`}>
+          <div className={`rounded-lg overflow-hidden bg-gradient-to-br ${(colors as Record<string, string>).gradient ?? 'from-gray-800 to-gray-900'}`}>
             {/* Header */}
             <div className="bg-black/50 backdrop-blur p-6 flex justify-between items-center text-white">
               <div className="text-2xl font-black tracking-tight">{brand}</div>

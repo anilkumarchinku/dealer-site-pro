@@ -33,6 +33,7 @@ import {
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { getBrandLogo } from '@/lib/data/brand-logos';
 import { getContrastText } from '@/lib/utils/color-contrast';
+import { getScrapedImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface Props {
@@ -129,8 +130,22 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
 
     // Derived
     const logoSrc = getBrandLogo(car.make);
-    const mainImage = activeImage ?? car.images.hero;
-    const allImages = [car.images.hero, ...car.images.exterior, ...car.images.interior].filter(Boolean);
+
+    // Scraped fallbacks for 2W/3W
+    const showScraped = car.vehicleCategory === '2w' || car.vehicleCategory === '3w';
+    const scrapedUrls = showScraped ? getScrapedImageUrls(car.vehicleCategory as '2w' | '3w', brandNameToId(car.make, car.vehicleCategory as '2w' | '3w'), car.model) : [];
+
+    const allImages = [...car.images.exterior, ...car.images.interior].filter(Boolean);
+    if (car.images.hero && car.images.hero !== '/placeholder-car.jpg') {
+        allImages.unshift(car.images.hero);
+    }
+
+    // If no real images, use scraped ones
+    if (allImages.length === 0 && showScraped) {
+        allImages.push(...scrapedUrls);
+    }
+
+    const mainImage = activeImage ?? allImages[0] ?? null;
     const priceStart = formatPriceInLakhs(car.pricing.exShowroom.min);
     const priceEnd = formatPriceInLakhs(car.pricing.exShowroom.max);
     const hasRange = car.pricing.exShowroom.min !== car.pricing.exShowroom.max;
