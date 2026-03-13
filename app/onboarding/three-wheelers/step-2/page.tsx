@@ -112,31 +112,33 @@ export default function ThreeWheelerStep2Page() {
 
                 {error && <p className="text-sm text-destructive">{error}</p>}
 
-                {/* ── Optional Cyepro DMS integration ── */}
-                <div className="border rounded-lg p-4 space-y-3 bg-muted/30">
-                    <div>
-                        <p className="text-sm font-semibold">Cyepro DMS — Used Stock Sync <span className="text-muted-foreground font-normal">(optional)</span></p>
-                        <p className="text-xs text-muted-foreground mt-0.5">
-                            If you manage used three-wheelers in Cyepro, paste your API key below to sync inventory automatically.
-                        </p>
+                {/* ── Cyepro DMS integration — only for 2nd hand / hybrid dealers ── */}
+                {(isUsed || isBoth) && (
+                    <div className="border rounded-lg p-4 space-y-3 bg-muted/30">
+                        <div>
+                            <p className="text-sm font-semibold">Cyepro DMS — Used Stock Sync <span className="text-muted-foreground font-normal">(optional)</span></p>
+                            <p className="text-xs text-muted-foreground mt-0.5">
+                                If you manage used three-wheelers in Cyepro, paste your API key below to sync inventory automatically.
+                            </p>
+                        </div>
+                        <div className="relative">
+                            <input
+                                type={showKey ? "text" : "password"}
+                                value={cyeproKey}
+                                onChange={e => setCyeproKey(e.target.value)}
+                                placeholder="Paste your Cyepro API key here"
+                                className="w-full px-3 py-2 pr-10 text-sm border rounded-md bg-background focus:outline-none focus:ring-1 focus:ring-ring"
+                            />
+                            <button
+                                type="button"
+                                onClick={() => setShowKey(s => !s)}
+                                className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                            >
+                                {showKey ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                            </button>
+                        </div>
                     </div>
-                    <div className="relative">
-                        <input
-                            type={showKey ? "text" : "password"}
-                            value={cyeproKey}
-                            onChange={e => setCyeproKey(e.target.value)}
-                            placeholder="Paste your Cyepro API key here"
-                            className="w-full px-3 py-2 pr-10 text-sm border rounded-md bg-background focus:outline-none focus:ring-1 focus:ring-ring"
-                        />
-                        <button
-                            type="button"
-                            onClick={() => setShowKey(s => !s)}
-                            className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                        >
-                            {showKey ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-                        </button>
-                    </div>
-                </div>
+                )}
             </CardContent>
 
             <CardFooter className="justify-between">
