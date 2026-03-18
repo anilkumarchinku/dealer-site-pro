@@ -83,13 +83,15 @@ export async function getTwoWheelerVehicles(
 }
 
 export async function getTwoWheelerVehicleById(
-    id: string
+    id: string,
+    dealerId?: string
 ): Promise<TwoWheelerVehicle | null> {
-    const { data, error } = await db()
+    let query = db()
         .from('tw_vehicles')
         .select('*')
         .eq('id', id)
-        .single()
+    if (dealerId) query = query.eq('dealer_id', dealerId)
+    const { data, error } = await query.single()
 
     if (error) {
         console.error('[getTwoWheelerVehicleById]', error.message)
@@ -207,13 +209,15 @@ export async function getUsedTwoWheelers(
 }
 
 export async function getUsedTwoWheelerById(
-    id: string
+    id: string,
+    dealerId?: string
 ): Promise<TwoWheelerUsedVehicle | null> {
-    const { data, error } = await db()
+    let query = db()
         .from('tw_used_vehicles')
         .select('*')
         .eq('id', id)
-        .single()
+    if (dealerId) query = query.eq('dealer_id', dealerId)
+    const { data, error } = await query.single()
 
     if (error) {
         console.error('[getUsedTwoWheelerById]', error.message)

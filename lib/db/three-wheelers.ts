@@ -68,12 +68,13 @@ export async function getThreeWheelerVehicles(
     return { vehicles: (data ?? []) as unknown as ThreeWheelerVehicle[], total: count ?? 0 }
 }
 
-export async function getThreeWheelerVehicleById(id: string): Promise<ThreeWheelerVehicle | null> {
-    const { data, error } = await db()
+export async function getThreeWheelerVehicleById(id: string, dealerId?: string): Promise<ThreeWheelerVehicle | null> {
+    let query = db()
         .from('thw_vehicles')
         .select('*')
         .eq('id', id)
-        .single()
+    if (dealerId) query = query.eq('dealer_id', dealerId)
+    const { data, error } = await query.single()
     if (error) return null
     return data as unknown as ThreeWheelerVehicle
 }
@@ -165,12 +166,13 @@ export async function getUsedThreeWheelers(
     return { vehicles: (data ?? []) as ThreeWheelerUsedVehicle[], total: count ?? 0 }
 }
 
-export async function getUsedThreeWheelerById(id: string): Promise<ThreeWheelerUsedVehicle | null> {
-    const { data, error } = await db()
+export async function getUsedThreeWheelerById(id: string, dealerId?: string): Promise<ThreeWheelerUsedVehicle | null> {
+    let query = db()
         .from('thw_used_vehicles')
         .select('*')
         .eq('id', id)
-        .single()
+    if (dealerId) query = query.eq('dealer_id', dealerId)
+    const { data, error } = await query.single()
     if (error) return null
     return data as ThreeWheelerUsedVehicle
 }
