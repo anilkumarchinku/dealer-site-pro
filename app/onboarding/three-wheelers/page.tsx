@@ -45,12 +45,13 @@ const colorStyles: Record<string, { border: string; bg: string; text: string; ba
 
 export default function ThreeWheelerIndexPage() {
     const router = useRouter();
-    const { updateData, reset } = useOnboardingStore();
+    const { updateData, reset, setVehicleType } = useOnboardingStore();
 
     useEffect(() => { reset(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     const handleSelect = (category: "new" | "used" | "both") => {
         reset();
+        setVehicleType('three-wheeler');
         if (category === "both") {
             updateData({ dealerCategory: "both", sellsNewCars: true, sellsUsedCars: true });
         } else if (category === "new") {

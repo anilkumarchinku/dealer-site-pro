@@ -102,7 +102,7 @@ export default function ThreeWheelerStep5Page() {
                                     Preview Your Site
                                 </Button>
                             )}
-                            <Button className="flex-1 gap-2 rounded-xl" onClick={() => { reset(); router.push("/dashboard/three-wheelers"); }}>
+                            <Button className="flex-1 gap-2 rounded-xl" onClick={() => { reset(); router.push("/dashboard"); }}>
                                 Go to Dashboard
                                 <ArrowRight className="w-4 h-4" />
                             </Button>

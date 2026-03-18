@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 import { extractSlugFromHostname } from './lib/utils/slug'
 
-const PROTECTED_PREFIXES = ['/dashboard', '/onboarding']
+const PROTECTED_PREFIXES = ['/dashboard', '/onboarding', '/preview']
 const AUTH_PAGES       = ['/auth/login', '/auth/register']
 
 // Base domain from env (e.g. "your-project.vercel.app" or "dealersitepro.com")
@@ -143,7 +143,13 @@ export async function middleware(request: NextRequest) {
         const { data: { session } } = await supabase.auth.getSession()
         isLoggedIn = !!session
     } catch {
-        // Supabase unreachable — skip auth guard, let the page handle it
+        // Supabase unreachable — block protected routes rather than fail-open
+        const isProtectedOnFail = PROTECTED_PREFIXES.some(p => pathname.startsWith(p))
+        if (isProtectedOnFail) {
+            const loginUrl = new URL('/auth/login', request.url)
+            loginUrl.searchParams.set('redirect', pathname)
+            return NextResponse.redirect(loginUrl)
+        }
         return response
     }
 

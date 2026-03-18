@@ -59,7 +59,7 @@ export default function VehicleDetailPage() {
     return (
         <div className="min-h-screen max-w-5xl mx-auto px-4 py-8">
             <div className="mb-6">
-                <Link href={`${prefix}/two-wheelers/${vehicle.type}s`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+                <Link href={`${prefix}/two-wheelers/${vehicle.type === 'electric' ? 'electric' : `${vehicle.type}s`}`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
                     <ChevronLeft className="w-4 h-4" /> Back
                 </Link>
             </div>
