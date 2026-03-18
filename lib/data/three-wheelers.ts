@@ -69,6 +69,8 @@ function buildThreeWheelerEntry(
         brochure_url:           null,
         description:            null,
         features:               [],
+        video_url:              null,
+        is_featured:            false,
         status:                 'active',
         views:                  0,
         created_at:             NOW,
@@ -78,7 +80,7 @@ function buildThreeWheelerEntry(
 type CatalogEntry = Omit<ThreeWheelerVehicle,
     'id' | 'dealer_id' | 'created_at' | 'updated_at' | 'views' |
     'payload_kg' | 'body_type' | 'passenger_capacity' | 'cng_mileage_km_per_kg' |
-    'permit_type' | 'gvw_kg' | 'brochure_url'
+    'permit_type' | 'gvw_kg' | 'brochure_url' | 'video_url' | 'is_featured'
 >
 
 
@@ -798,6 +800,8 @@ export function getThreeWheelerCatalog(brand: string, dealerId: string): ThreeWh
                 permit_type: null,
                 gvw_kg:     null,
                 brochure_url: null,
+                video_url:  null,
+                is_featured: false,
             } as ThreeWheelerVehicle
         })
     }

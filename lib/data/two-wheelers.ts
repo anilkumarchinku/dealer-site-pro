@@ -65,6 +65,8 @@ function buildTwoWheelerEntry(
         fame_subsidy_eligible:   fuelType === 'electric',
         description:             enrichment?.description ?? null,
         features:                enrichment?.features ?? [],
+        video_url:               null,
+        is_featured:             false,
         status:                  'active',
         views:                   0,
         created_at:              NOW,
@@ -72,7 +74,7 @@ function buildTwoWheelerEntry(
     }
 }
 
-type CatalogEntry = Omit<TwoWheelerVehicle, 'id' | 'dealer_id' | 'created_at' | 'updated_at' | 'views'>
+type CatalogEntry = Omit<TwoWheelerVehicle, 'id' | 'dealer_id' | 'created_at' | 'updated_at' | 'views' | 'video_url' | 'is_featured'>
 
 // ── Royal Enfield — brand name in DB: "Royal Enfield" ────────────────────────
 const ROYAL_ENFIELD: CatalogEntry[] = [

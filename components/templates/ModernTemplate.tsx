@@ -29,6 +29,7 @@ import { EVSection } from '@/components/ui/EVSection';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getBrandHeroImage } from '@/lib/utils/brand-hero';
 import { getContrastText } from '@/lib/utils/color-contrast';
+import { getScrapedImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
 import {
     ArrowRight,
     Phone,
@@ -388,35 +389,45 @@ export function ModernTemplate({
                                 </div>
 
                                 {/* Featured Car Card */}
-                                {featuredCars.length > 0 && (
-                                    <div className="hidden lg:block">
-                                        <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
-                                            <div className="aspect-video relative">
-                                                <Image
-                                                    src={featuredCars[activeCarIndex].images.hero}
-                                                    alt={featuredCars[activeCarIndex].model}
-                                                    fill
-                                                    className="object-cover"
-                                                />
-                                            </div>
-                                            <div className="p-6">
-                                                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                                                    {featuredCars[activeCarIndex].make}{' '}
-                                                    {featuredCars[activeCarIndex].model}
-                                                </h3>
-                                                <p
-                                                    className="text-3xl font-bold"
-                                                    style={{ color: brandColors.primary }}
-                                                >
-                                                    {(featuredCars[activeCarIndex].pricing.exShowroom.min ?? 0).toLocaleString(
-                                                        'en-IN',
-                                                        { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }
+                                {featuredCars.length > 0 && (() => {
+                                    const heroCar = featuredCars[activeCarIndex];
+                                    const cat = heroCar.vehicleCategory as '2w' | '3w' | undefined;
+                                    const scrapedSrc = (cat === '2w' || cat === '3w')
+                                        ? getScrapedImageUrls(cat, brandNameToId(heroCar.make, cat), heroCar.model)[0]
+                                        : '';
+                                    const heroSrc = heroCar.images.hero || scrapedSrc || null;
+                                    const heroPrice = heroCar.pricing.exShowroom.min != null
+                                        ? heroCar.pricing.exShowroom.min.toLocaleString('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 })
+                                        : (heroCar.price || 'Price on request');
+                                    return (
+                                        <div className="hidden lg:block">
+                                            <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
+                                                <div className="aspect-video relative bg-gray-50">
+                                                    {heroSrc ? (
+                                                        <Image
+                                                            src={heroSrc}
+                                                            alt={heroCar.model}
+                                                            fill
+                                                            className="object-cover"
+                                                        />
+                                                    ) : (
+                                                        <div className="flex items-center justify-center h-full text-5xl">
+                                                            {cat === '2w' ? '🏍️' : cat === '3w' ? '🛺' : '🚗'}
+                                                        </div>
                                                     )}
-                                                </p>
+                                                </div>
+                                                <div className="p-6">
+                                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                                                        {heroCar.make}{' '}{heroCar.model}
+                                                    </h3>
+                                                    <p className="text-3xl font-bold" style={{ color: brandColors.primary }}>
+                                                        {heroPrice}
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                )}
+                                    );
+                                })()}
                             </div>
                         </div>
                     </section>
