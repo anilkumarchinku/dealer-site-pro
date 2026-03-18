@@ -218,13 +218,13 @@ describe('Color Structure Completeness', () => {
 // ═══════════════════════════════════════════════════════════════════════════════
 // 3. TEMPLATE × BRAND — Every brand works with every template
 // ═══════════════════════════════════════════════════════════════════════════════
-describe('Template × Brand Combinations (120 combos)', () => {
+describe('Template × Brand Combinations (124 combos)', () => {
   const combinations = ALL_BRAND_NAMES.flatMap(brand =>
     ALL_TEMPLATES.map(template => ({ brand, template }))
   )
 
-  it(`should generate ${combinations.length} combinations (30 brands × 4 templates)`, () => {
-    expect(combinations.length).toBe(120)
+  it(`should generate ${combinations.length} combinations (31 brands × 4 templates)`, () => {
+    expect(combinations.length).toBe(124)
   })
 
   it.each(combinations)(
