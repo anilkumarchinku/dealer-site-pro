@@ -84,6 +84,8 @@ export interface TwoWheelerVehicle {
 
     description:             string | null
     features:                string[]
+    video_url:               string | null
+    is_featured:             boolean
 
     status:                  'active' | 'inactive'
     views:                   number
@@ -116,6 +118,8 @@ export interface TwoWheelerUsedVehicle {
 
     images:                string[]
     description:           string | null
+    video_url:             string | null
+    is_featured:           boolean
 
     status:                'available' | 'sold' | 'reserved'
 

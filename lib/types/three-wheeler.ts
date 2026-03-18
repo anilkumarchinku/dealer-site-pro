@@ -70,6 +70,8 @@ export interface ThreeWheelerVehicle {
     brochure_url:   string | null
     description:    string | null
     features:       string[]
+    video_url:      string | null
+    is_featured:    boolean
 
     status:     'active' | 'inactive'
     views:      number
@@ -115,6 +117,8 @@ export interface ThreeWheelerUsedVehicle {
     negotiable:     boolean
     images:         string[]
     description:    string | null
+    video_url:      string | null
+    is_featured:    boolean
 
     status:     'available' | 'sold' | 'reserved'
     created_at: string
