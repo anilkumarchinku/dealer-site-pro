@@ -19,99 +19,98 @@ import { NextResponse } from 'next/server'
 
 // ── Redis path ─────────────────────────────────────────────────────────────────
 
-let redisRatelimit: ((
-  storeName: string,
-  key: string,
-  maxRequests: number,
-  windowMs: number
-) => Promise<{ allowed: boolean; remaining: number; retryAfterMs: number }>) | null = null
+// Build the Redis client synchronously so it's ready on the very first request
+// (avoids the race condition where an async Promise hadn't resolved on cold start).
+function buildRedisRatelimit() {
+    const url   = process.env.UPSTASH_REDIS_REST_URL
+    const token = process.env.UPSTASH_REDIS_REST_TOKEN
+    if (!url || !token) return null
 
-if (
-  process.env.UPSTASH_REDIS_REST_URL &&
-  process.env.UPSTASH_REDIS_REST_TOKEN
-) {
-  // Dynamic import keeps the Redis SDK out of the bundle when not configured
-  Promise.all([
-    import('@upstash/redis').then(m => m.Redis),
-    import('@upstash/ratelimit').then(m => m.Ratelimit),
-  ]).then(([Redis, Ratelimit]) => {
-    const redis = new Redis({
-      url: process.env.UPSTASH_REDIS_REST_URL!,
-      token: process.env.UPSTASH_REDIS_REST_TOKEN!,
-    })
+    try {
+        // These are pure-JS ESM modules — require works in Node/Edge environments
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
+        const { Redis }     = require('@upstash/redis')
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
+        const { Ratelimit } = require('@upstash/ratelimit')
 
-    // Cache one Ratelimit instance per store name
-    const limiters = new Map<string, InstanceType<typeof Ratelimit>>()
+        const redis    = new Redis({ url, token })
+        const limiters = new Map<string, InstanceType<typeof Ratelimit>>()
 
-    redisRatelimit = async (storeName, key, maxRequests, windowMs) => {
-      if (!limiters.has(storeName)) {
-        limiters.set(
-          storeName,
-          new Ratelimit({
-            redis,
-            limiter: Ratelimit.slidingWindow(maxRequests, `${windowMs}ms`),
-            prefix: `rl:${storeName}`,
-          })
-        )
-      }
-
-      const limiter = limiters.get(storeName)!
-      const { success, remaining, reset } = await limiter.limit(key)
-      return {
-        allowed: success,
-        remaining,
-        retryAfterMs: success ? 0 : Math.max(0, reset - Date.now()),
-      }
+        return async (
+            storeName: string,
+            key: string,
+            maxRequests: number,
+            windowMs: number
+        ): Promise<{ allowed: boolean; remaining: number; retryAfterMs: number }> => {
+            if (!limiters.has(storeName)) {
+                limiters.set(
+                    storeName,
+                    new Ratelimit({
+                        redis,
+                        limiter: Ratelimit.slidingWindow(maxRequests, `${windowMs}ms`),
+                        prefix: `rl:${storeName}`,
+                    })
+                )
+            }
+            const limiter = limiters.get(storeName)!
+            const { success, remaining, reset } = await limiter.limit(key)
+            return {
+                allowed:      success,
+                remaining,
+                retryAfterMs: success ? 0 : Math.max(0, reset - Date.now()),
+            }
+        }
+    } catch {
+        // @upstash packages not installed — fall through to in-memory
+        return null
     }
-  }).catch(() => {
-    // Redis init failed — fall back silently to in-memory
-    redisRatelimit = null
-  })
 }
+
+const redisRatelimit = buildRedisRatelimit()
 
 // ── In-memory fallback ─────────────────────────────────────────────────────────
 
 interface RateLimitEntry {
-  count: number
-  resetAt: number
+    count:   number
+    resetAt: number
 }
 
 const stores = new Map<string, Map<string, RateLimitEntry>>()
 
 export function checkRateLimit(
-  storeName: string,
-  key: string,
-  maxRequests: number,
-  windowMs: number
+    storeName: string,
+    key: string,
+    maxRequests: number,
+    windowMs: number
 ): { allowed: boolean; remaining: number; retryAfterMs: number } {
-  if (!stores.has(storeName)) {
-    stores.set(storeName, new Map())
-  }
-  const store = stores.get(storeName)!
-  const now = Date.now()
-  const entry = store.get(key)
+    if (!stores.has(storeName)) {
+        stores.set(storeName, new Map())
+    }
+    const store = stores.get(storeName)!
+    const now   = Date.now()
+    const entry = store.get(key)
 
-  if (!entry || now > entry.resetAt) {
-    store.set(key, { count: 1, resetAt: now + windowMs })
-    return { allowed: true, remaining: maxRequests - 1, retryAfterMs: 0 }
-  }
+    if (!entry || now > entry.resetAt) {
+        store.set(key, { count: 1, resetAt: now + windowMs })
+        return { allowed: true, remaining: maxRequests - 1, retryAfterMs: 0 }
+    }
 
-  if (entry.count >= maxRequests) {
-    return { allowed: false, remaining: 0, retryAfterMs: entry.resetAt - now }
-  }
+    if (entry.count >= maxRequests) {
+        return { allowed: false, remaining: 0, retryAfterMs: entry.resetAt - now }
+    }
 
-  entry.count++
-  return { allowed: true, remaining: maxRequests - entry.count, retryAfterMs: 0 }
+    entry.count++
+    return { allowed: true, remaining: maxRequests - entry.count, retryAfterMs: 0 }
 }
 
 // ── Shared helpers ─────────────────────────────────────────────────────────────
 
 export function getClientIP(request: Request): string {
-  return (
-    request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-    request.headers.get('x-real-ip') ||
-    'unknown'
-  )
+    return (
+        request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+        request.headers.get('x-real-ip') ||
+        'unknown'
+    )
 }
 
 /**
@@ -119,35 +118,35 @@ export function getClientIP(request: Request): string {
  * Uses Redis when configured, in-memory Map otherwise.
  */
 export async function rateLimitOrNull(
-  storeName: string,
-  request: Request,
-  maxRequests: number,
-  windowMs: number
+    storeName: string,
+    request: Request,
+    maxRequests: number,
+    windowMs: number
 ): Promise<NextResponse | null> {
-  const ip = getClientIP(request)
+    const ip = getClientIP(request)
 
-  let allowed: boolean
-  let retryAfterMs: number
+    let allowed: boolean
+    let retryAfterMs: number
 
-  if (redisRatelimit) {
-    const result = await redisRatelimit(storeName, ip, maxRequests, windowMs)
-    allowed = result.allowed
-    retryAfterMs = result.retryAfterMs
-  } else {
-    const result = checkRateLimit(storeName, ip, maxRequests, windowMs)
-    allowed = result.allowed
-    retryAfterMs = result.retryAfterMs
-  }
+    if (redisRatelimit) {
+        const result = await redisRatelimit(storeName, ip, maxRequests, windowMs)
+        allowed      = result.allowed
+        retryAfterMs = result.retryAfterMs
+    } else {
+        const result = checkRateLimit(storeName, ip, maxRequests, windowMs)
+        allowed      = result.allowed
+        retryAfterMs = result.retryAfterMs
+    }
 
-  if (!allowed) {
-    return NextResponse.json(
-      { success: false, error: 'Too many requests. Please try again later.' },
-      {
-        status: 429,
-        headers: { 'Retry-After': String(Math.ceil(retryAfterMs / 1000)) },
-      }
-    )
-  }
+    if (!allowed) {
+        return NextResponse.json(
+            { success: false, error: 'Too many requests. Please try again later.' },
+            {
+                status:  429,
+                headers: { 'Retry-After': String(Math.ceil(retryAfterMs / 1000)) },
+            }
+        )
+    }
 
-  return null
+    return null
 }

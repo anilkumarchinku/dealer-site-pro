@@ -9,9 +9,53 @@ const AUTH_PAGES       = ['/auth/login', '/auth/register']
 const BASE_DOMAIN = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'dealersitepro.com'
 const USE_SUBDOMAIN = process.env.NEXT_PUBLIC_USE_SUBDOMAIN === 'true'
 
-// In-memory cache for domain lookups
-const domainCache = new Map<string, { slug: string; expires: number }>()
-const CACHE_TTL = 60000 // 60 seconds
+// ── Domain cache (shared across all instances via Upstash, local Map as fallback) ──
+// Local Map is still kept as L1 cache to avoid a Redis round-trip on every request
+// for the same domain within the same instance.
+const localCache = new Map<string, { slug: string; expires: number }>()
+const CACHE_TTL  = 60_000 // 60 seconds
+
+// Build Upstash Redis client once at module load (synchronous, no race condition)
+function buildRedisClient() {
+    const url   = process.env.UPSTASH_REDIS_REST_URL
+    const token = process.env.UPSTASH_REDIS_REST_TOKEN
+    if (!url || !token) return null
+    try {
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
+        const { Redis } = require('@upstash/redis')
+        return new Redis({ url, token }) as {
+            get: (key: string) => Promise<string | null>
+            set: (key: string, value: string, opts: { ex: number }) => Promise<unknown>
+        }
+    } catch { return null }
+}
+const redis = buildRedisClient()
+
+async function getCachedSlug(hostname: string): Promise<string | null> {
+    // L1: local memory
+    const local = localCache.get(hostname)
+    if (local && local.expires > Date.now()) return local.slug
+    // L2: Redis (shared across instances)
+    if (redis) {
+        try {
+            const val = await redis.get(`domain:${hostname}`)
+            if (val) {
+                localCache.set(hostname, { slug: val, expires: Date.now() + CACHE_TTL })
+                return val
+            }
+        } catch { /* Redis unavailable — fall through */ }
+    }
+    return null
+}
+
+async function setCachedSlug(hostname: string, slug: string): Promise<void> {
+    localCache.set(hostname, { slug, expires: Date.now() + CACHE_TTL })
+    if (redis) {
+        try {
+            await redis.set(`domain:${hostname}`, slug, { ex: Math.ceil(CACHE_TTL / 1000) })
+        } catch { /* Redis unavailable — local cache still set */ }
+    }
+}
 
 export async function middleware(request: NextRequest) {
     const hostname = request.headers.get('host') || ''
@@ -68,17 +112,17 @@ export async function middleware(request: NextRequest) {
         // 1. Fast path: subdomain-style slug (e.g. ganesh.indrav.in → "ganesh")
         const slug = extractSlugFromHostname(hostname, BASE_DOMAIN)
         if (slug) {
-            domainCache.set(hostname, { slug, expires: Date.now() + CACHE_TTL })
+            await setCachedSlug(hostname, slug)
             const url = request.nextUrl.clone()
             url.pathname = `/sites/${slug}${pathname}`
             return NextResponse.rewrite(url)
         }
 
-        // 2. Check in-memory cache for previously resolved custom domains
-        const cached = domainCache.get(hostname)
-        if (cached && cached.expires > Date.now()) {
+        // 2. Check cache (L1 local + L2 Redis) for previously resolved custom domains
+        const cached = await getCachedSlug(hostname)
+        if (cached) {
             const url = request.nextUrl.clone()
-            url.pathname = `/sites/${cached.slug}${pathname}`
+            url.pathname = `/sites/${cached}${pathname}`
             return NextResponse.rewrite(url)
         }
 
@@ -94,7 +138,7 @@ export async function middleware(request: NextRequest) {
 
             if (res.ok) {
                 const { slug: resolvedSlug } = await res.json() as { slug: string }
-                domainCache.set(hostname, { slug: resolvedSlug, expires: Date.now() + CACHE_TTL })
+                await setCachedSlug(hostname, resolvedSlug)
                 const url = request.nextUrl.clone()
                 url.pathname = `/sites/${resolvedSlug}${pathname}`
                 return NextResponse.rewrite(url)
