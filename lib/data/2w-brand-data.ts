@@ -78,25 +78,189 @@ let heroData: any = null
 let indianData: any = null
 let kawasakiData: any = null
 let okinawaData: any = null
+// Previously missing brands (non-standard root keys)
+let cfmotoData: any = null
+let harleyData: any = null
+let husqvarnaData: any = null
+let keewayData: any = null
+let ktmData: any = null
+let motoGuzziData: any = null
+let olaData: any = null
+let royalEnfieldData: any = null
+let suzukiData: any = null
+let triumphData: any = null
+let tvsIqubeData: any = null
+let vidaData: any = null
+let yamahaData: any = null
+let yezdiData: any = null
+let zontesData: any = null
+// Additional standard-format brands
+let ampereData: any = null
+let atherData: any = null
+let bajajData: any = null
+let bajajChetakData: any = null
+let bounceData: any = null
+let heroElectricData: any = null
+let hopData: any = null
+let jawaData: any = null
+let joyData: any = null
+let kabiraData: any = null
+let komakiData: any = null
+let lectrixData: any = null
+let mahindra2wData: any = null
+let matterData: any = null
+let obenData: any = null
+let odysseData: any = null
+let okayaData: any = null
+let pureEvData: any = null
+let quantumData: any = null
+let riverData: any = null
+let simpleData: any = null
+let torkData: any = null
+let tvsMotorData: any = null
+let ultravioletteData: any = null
+let vespaData: any = null
+let yuluData: any = null
 
 /* eslint-disable @typescript-eslint/no-require-imports */
-try { hondaData    = require('@/public/data/2w/honda.json')              } catch { /* optional file */ }
-try { revoltData   = require('@/public/data/2w/revolt-motors.json')      } catch { /* optional file */ }
-try { apriliaData  = require('@/public/data/2w/aprilia-india.json')      } catch { /* optional file */ }
-try { bmwData      = require('@/public/data/2w/bmw-motorrad-india.json') } catch { /* optional file */ }
-try { benelliData  = require('@/public/data/2w/benelli-india.json')      } catch { /* optional file */ }
-try { ducatiData   = require('@/public/data/2w/ducati-india.json')       } catch { /* optional file */ }
-try { heroData     = require('@/public/data/2w/hero-motocorp.json')      } catch { /* optional file */ }
-try { indianData   = require('@/public/data/2w/indian-motorcycle.json')  } catch { /* optional file */ }
-try { kawasakiData = require('@/public/data/2w/kawasaki-india.json')     } catch { /* optional file */ }
-try { okinawaData  = require('@/public/data/2w/okinawa-autotech.json')   } catch { /* optional file */ }
+try { hondaData         = require('@/public/data/2w/honda.json')              } catch { /* optional */ }
+try { revoltData        = require('@/public/data/2w/revolt-motors.json')      } catch { /* optional */ }
+try { apriliaData       = require('@/public/data/2w/aprilia-india.json')      } catch { /* optional */ }
+try { bmwData           = require('@/public/data/2w/bmw-motorrad-india.json') } catch { /* optional */ }
+try { benelliData       = require('@/public/data/2w/benelli-india.json')      } catch { /* optional */ }
+try { ducatiData        = require('@/public/data/2w/ducati-india.json')       } catch { /* optional */ }
+try { heroData          = require('@/public/data/2w/hero-motocorp.json')      } catch { /* optional */ }
+try { indianData        = require('@/public/data/2w/indian-motorcycle.json')  } catch { /* optional */ }
+try { kawasakiData      = require('@/public/data/2w/kawasaki-india.json')     } catch { /* optional */ }
+try { okinawaData       = require('@/public/data/2w/okinawa-autotech.json')   } catch { /* optional */ }
+try { cfmotoData        = require('@/public/data/2w/cfmoto-india.json')       } catch { /* optional */ }
+try { harleyData        = require('@/public/data/2w/harley-davidson-india.json') } catch { /* optional */ }
+try { husqvarnaData     = require('@/public/data/2w/husqvarna-india.json')    } catch { /* optional */ }
+try { keewayData        = require('@/public/data/2w/keeway-india.json')       } catch { /* optional */ }
+try { ktmData           = require('@/public/data/2w/ktm-india.json')          } catch { /* optional */ }
+try { motoGuzziData     = require('@/public/data/2w/moto-guzzi.json')         } catch { /* optional */ }
+try { olaData           = require('@/public/data/2w/ola-electric.json')       } catch { /* optional */ }
+try { royalEnfieldData  = require('@/public/data/2w/royal-enfield.json')      } catch { /* optional */ }
+try { suzukiData        = require('@/public/data/2w/suzuki-motorcycle.json')  } catch { /* optional */ }
+try { triumphData       = require('@/public/data/2w/triumph-india.json')      } catch { /* optional */ }
+try { tvsIqubeData      = require('@/public/data/2w/tvs-iqube.json')          } catch { /* optional */ }
+try { vidaData          = require('@/public/data/2w/vida-hero.json')          } catch { /* optional */ }
+try { yamahaData        = require('@/public/data/2w/yamaha-india.json')       } catch { /* optional */ }
+try { yezdiData         = require('@/public/data/2w/yezdi-motorcycles.json')  } catch { /* optional */ }
+try { zontesData        = require('@/public/data/2w/zontes-india.json')       } catch { /* optional */ }
+try { ampereData        = require('@/public/data/2w/ampere-greaves.json')     } catch { /* optional */ }
+try { atherData         = require('@/public/data/2w/ather-energy.json')       } catch { /* optional */ }
+try { bajajData         = require('@/public/data/2w/bajaj-auto.json')         } catch { /* optional */ }
+try { bajajChetakData   = require('@/public/data/2w/bajaj-chetak-ev.json')    } catch { /* optional */ }
+try { bounceData        = require('@/public/data/2w/bounce-infinity.json')    } catch { /* optional */ }
+try { heroElectricData  = require('@/public/data/2w/hero-electric.json')      } catch { /* optional */ }
+try { hopData           = require('@/public/data/2w/hop-electric.json')       } catch { /* optional */ }
+try { jawaData          = require('@/public/data/2w/jawa-motorcycles.json')   } catch { /* optional */ }
+try { joyData           = require('@/public/data/2w/joy-e-bike.json')         } catch { /* optional */ }
+try { kabiraData        = require('@/public/data/2w/kabira-mobility.json')    } catch { /* optional */ }
+try { komakiData        = require('@/public/data/2w/komaki.json')             } catch { /* optional */ }
+try { lectrixData       = require('@/public/data/2w/lectrix-ev.json')         } catch { /* optional */ }
+try { mahindra2wData    = require('@/public/data/2w/mahindra-two-wheelers.json') } catch { /* optional */ }
+try { matterData        = require('@/public/data/2w/matter-ev.json')          } catch { /* optional */ }
+try { obenData          = require('@/public/data/2w/oben-electric.json')      } catch { /* optional */ }
+try { odysseData        = require('@/public/data/2w/odysse-electric.json')    } catch { /* optional */ }
+try { okayaData         = require('@/public/data/2w/okaya-ev.json')           } catch { /* optional */ }
+try { pureEvData        = require('@/public/data/2w/pure-ev.json')            } catch { /* optional */ }
+try { quantumData       = require('@/public/data/2w/quantum-energy.json')     } catch { /* optional */ }
+try { riverData         = require('@/public/data/2w/river-ev.json')           } catch { /* optional */ }
+try { simpleData        = require('@/public/data/2w/simple-energy.json')      } catch { /* optional */ }
+try { torkData          = require('@/public/data/2w/tork-motors.json')        } catch { /* optional */ }
+try { tvsMotorData      = require('@/public/data/2w/tvs-motor.json')          } catch { /* optional */ }
+try { ultravioletteData = require('@/public/data/2w/ultraviolette.json')      } catch { /* optional */ }
+try { vespaData         = require('@/public/data/2w/vespa-india.json')        } catch { /* optional */ }
+try { yuluData          = require('@/public/data/2w/yulu.json')               } catch { /* optional */ }
 /* eslint-enable @typescript-eslint/no-require-imports */
 
-const ALL_BRAND_FILES: any[] = [
+// Standard-format files (have brand/brandId/vehicles at root)
+const STANDARD_BRAND_FILES: any[] = [
     hondaData, revoltData, apriliaData, bmwData, benelliData, ducatiData,
-    heroData, indianData, kawasakiData, okinawaData
+    heroData, indianData, kawasakiData, okinawaData,
+    ampereData, atherData, bajajData, bajajChetakData, bounceData,
+    heroElectricData, hopData, jawaData, joyData, kabiraData,
+    komakiData, lectrixData, mahindra2wData, matterData, obenData,
+    odysseData, okayaData, pureEvData, quantumData, riverData,
+    simpleData, torkData, tvsMotorData, ultravioletteData, vespaData, yuluData,
 ].filter(Boolean)
+
+// Flat-format files: non-standard root key, flat item schema
+// Each entry: { data, brandId, brand, rootKey }
+const FLAT_BRAND_FILES: { data: any; brandId: string; brand: string; rootKey: string }[] = [
+    { data: cfmotoData,       brandId: 'cfmoto-india',          brand: 'CFMoto',            rootKey: 'cfmoto_bikes' },
+    { data: harleyData,       brandId: 'harley-davidson-india',  brand: 'Harley-Davidson',   rootKey: 'harley_davidson_bikes' },
+    { data: husqvarnaData,    brandId: 'husqvarna-india',        brand: 'Husqvarna',         rootKey: 'husqvarna_bikes' },
+    { data: keewayData,       brandId: 'keeway-india',           brand: 'Keeway',            rootKey: 'keeway_bikes' },
+    { data: ktmData,          brandId: 'ktm-india',              brand: 'KTM',               rootKey: 'ktm_bikes' },
+    { data: motoGuzziData,    brandId: 'moto-guzzi',             brand: 'Moto Guzzi',        rootKey: 'moto_guzzi_bikes' },
+    { data: olaData,          brandId: 'ola-electric',           brand: 'Ola Electric',      rootKey: 'ola_electric_bikes' },
+    { data: royalEnfieldData, brandId: 'royal-enfield',          brand: 'Royal Enfield',     rootKey: 'royal_enfield_bikes' },
+    { data: suzukiData,       brandId: 'suzuki-motorcycle',      brand: 'Suzuki',            rootKey: 'suzuki_bikes' },
+    { data: triumphData,      brandId: 'triumph-india',          brand: 'Triumph',           rootKey: 'triumph_bikes' },
+    { data: tvsIqubeData,     brandId: 'tvs-iqube',              brand: 'TVS iQube',         rootKey: 'tvs_iqube_scooters' },
+    { data: vidaData,         brandId: 'vida-hero',              brand: 'Vida (Hero)',        rootKey: 'vida_models' },
+    { data: yamahaData,       brandId: 'yamaha-india',           brand: 'Yamaha',            rootKey: 'yamaha_bikes' },
+    { data: yezdiData,        brandId: 'yezdi-motorcycles',      brand: 'Yezdi',             rootKey: 'yezdi_bikes' },
+    { data: zontesData,       brandId: 'zontes-india',           brand: 'Zontes',            rootKey: 'zontes_bikes' },
+].filter(e => e.data)
+
 /* eslint-enable @typescript-eslint/no-explicit-any */
+
+// ── Flat-format item extractor ──────────────────────────────────
+// Handles items from brands like KTM, Yamaha, Royal Enfield, Ola, etc.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function extractFromFlatItem(item: any): BrandModelEnrichment {
+    const specs = item.specifications || {}
+
+    // EV detection: has range or battery_capacity at top level or in specs
+    const rangeStr = item.range || specs['Range'] || specs['Claimed Range'] || specs['Range (Claimed)'] || specs['Range (Eco Mode)'] || null
+    const batteryStr = item.battery_capacity || specs['Battery Capacity'] || null
+    const isEV = !!(rangeStr || batteryStr)
+
+    // Engine CC: engine / engine_displacement / engine_capacity_cc / engine_details
+    const engineRaw = item.engine || item.engine_displacement || item.engine_capacity_cc || item.engine_details || specs['Engine'] || null
+
+    // Price
+    const priceStr = item.price || null
+
+    // Mileage (petrol)
+    const mileageStr = item.mileage || specs['Mileage'] || null
+
+    // Torque
+    const torqueStr = item.torque || specs['Torque'] || null
+
+    // Top speed
+    const topSpeedStr = item.top_speed || specs['Top Speed'] || null
+
+    // Features from specs keys
+    const features: string[] = []
+    if (specs['Bluetooth Connectivity'] === 'Yes' || specs['Bluetooth']) features.push('Bluetooth Connectivity')
+    if (specs['USB Charging Port'] === 'Yes' || specs['USB Charging']) features.push('USB Charging Port')
+    if (specs['Navigation'] === 'Yes') features.push('Navigation')
+    if (specs['Riding Modes'] === 'Yes' || specs['Ride Modes']) features.push('Riding Modes')
+    if (specs['Keyless Ignition'] === 'Yes' || specs['Keyless Start']) features.push('Keyless Ignition')
+    if (specs['Fast Charging'] === 'Yes') features.push('Fast Charging')
+    if (specs['Swappable Battery'] === 'Yes') features.push('Swappable Battery')
+    if (specs['ABS'] === 'Yes' || specs['ABS']) features.push('ABS')
+    if (specs['TFT Display'] === 'Yes' || specs['TFT Instrument Cluster'] === 'Yes') features.push('TFT Display')
+
+    return {
+        engine_cc: parseCC(typeof engineRaw === 'number' ? `${engineRaw} cc` : engineRaw),
+        mileage_kmpl: isEV ? null : parseMileage(mileageStr),
+        top_speed_kmph: parseTopSpeed(topSpeedStr),
+        ex_showroom_price_paise: parsePrice(priceStr),
+        range_km: parseRange(rangeStr),
+        battery_kwh: parseBatteryKwh(batteryStr),
+        colors: [],
+        features,
+        description: null,
+        torque: torqueStr,
+        variant: null,
+    }
+}
 
 // ── Extract enrichment from vehicle entries ─────────────────────
 
@@ -264,7 +428,9 @@ function modelsMatch(catalogModel: string, dataModel: string, brandName: string)
 }
 
 // Build cache on module load
-for (const brandFile of ALL_BRAND_FILES) {
+
+// Standard-format brands
+for (const brandFile of STANDARD_BRAND_FILES) {
     const brandId: string = brandFile.brandId || ''
     const brandName: string = brandFile.brand || ''
     const vehicles = brandFile.vehicles || []
@@ -276,6 +442,21 @@ for (const brandFile of ALL_BRAND_FILES) {
         const modelName: string = v.model || v.model_name || ''
         if (!modelName) continue
         const enrichment = extractFromVehicle(v)
+        enrichmentCache.set(normalizeModelKey(brandId, modelName), enrichment)
+    }
+}
+
+// Flat-format brands (non-standard root key)
+for (const { data, brandId, brand, rootKey } of FLAT_BRAND_FILES) {
+    const items = data[rootKey]
+    if (!Array.isArray(items)) continue
+
+    brandNameMap.set(brandId, brand)
+
+    for (const item of items) {
+        const modelName: string = item.model_name || item.bike_name || ''
+        if (!modelName) continue
+        const enrichment = extractFromFlatItem(item)
         enrichmentCache.set(normalizeModelKey(brandId, modelName), enrichment)
     }
 }
