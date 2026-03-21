@@ -25,6 +25,7 @@ export interface DetailedCarInfo {
     availability_status?: string;
     source_url?: string;
     launch_year?: number;
+    hyderabad_on_road_price?: number;
 }
 
 let carInfoCache: any = null;

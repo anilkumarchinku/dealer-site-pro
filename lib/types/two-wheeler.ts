@@ -83,6 +83,10 @@ export interface TwoWheelerVehicle {
     battery_warranty_years:  number | null
 
     all_variants?:           { name: string; price_paise: number }[]
+    wheelbase_mm?:           number | null
+    length_mm?:              number | null
+    width_mm?:               number | null
+    height_mm?:              number | null
     description:             string | null
     features:                string[]
     video_url:               string | null

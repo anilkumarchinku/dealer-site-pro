@@ -129,6 +129,19 @@ export default function VehicleDetailPage() {
                         )}
                     </div>
 
+                    {/* Dimensions */}
+                    {(vehicle.wheelbase_mm || vehicle.length_mm || vehicle.width_mm || vehicle.height_mm) && (
+                        <div className="mt-4">
+                            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">Dimensions</h3>
+                            <div className="grid grid-cols-2 gap-2">
+                                {vehicle.length_mm && <div className="bg-muted/30 rounded-xl p-3 text-center"><p className="text-base font-bold">{vehicle.length_mm} mm</p><p className="text-xs text-muted-foreground">Length</p></div>}
+                                {vehicle.width_mm && <div className="bg-muted/30 rounded-xl p-3 text-center"><p className="text-base font-bold">{vehicle.width_mm} mm</p><p className="text-xs text-muted-foreground">Width</p></div>}
+                                {vehicle.height_mm && <div className="bg-muted/30 rounded-xl p-3 text-center"><p className="text-base font-bold">{vehicle.height_mm} mm</p><p className="text-xs text-muted-foreground">Height</p></div>}
+                                {vehicle.wheelbase_mm && <div className="bg-muted/30 rounded-xl p-3 text-center"><p className="text-base font-bold">{vehicle.wheelbase_mm} mm</p><p className="text-xs text-muted-foreground">Wheelbase</p></div>}
+                            </div>
+                        </div>
+                    )}
+
                     {/* CTAs */}
                     <div className="grid grid-cols-2 gap-3">
                         <button onClick={() => openLead("test_ride", "Book Test Ride")} className="bg-primary text-primary-foreground rounded-xl py-3 font-semibold hover:opacity-90">Book Test Ride</button>

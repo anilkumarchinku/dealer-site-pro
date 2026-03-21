@@ -7,6 +7,7 @@
 import type { ThreeWheelerVehicle, ThreeWheelerType, ThreeWheelerFuelType } from '@/lib/types/three-wheeler'
 import brandData from '@/lib/data/brand-models.json'
 import { brandNameToId, modelToSlug } from '@/lib/utils/brand-model-images'
+import { get3WModelEnrichment } from '@/lib/data/3w-brand-data'
 
 const NOW = new Date().toISOString()
 const CURRENT_YEAR = new Date().getFullYear()
@@ -36,6 +37,7 @@ function buildThreeWheelerEntry(
 ): ThreeWheelerVehicle {
     const slug = modelToSlug(model)
     const imageUrl = `/data/brand-model-images/3w/${brandId}/${slug}.jpg`
+    const enrichment = get3WModelEnrichment(brandId, model)
     return {
         id:                     `catalog-3w-${brandId}-${idx}`,
         dealer_id:              dealerId,
@@ -45,16 +47,16 @@ function buildThreeWheelerEntry(
         variant:                null,
         year:                   CURRENT_YEAR,
         fuel_type:              fuelType,
-        engine_cc:              null,
+        engine_cc:              enrichment?.engine_cc ?? null,
         battery_kwh:            null,
         range_km:               null,
         charging_time_hours:    null,
         battery_warranty_years: null,
-        payload_kg:             type === 'cargo' ? 500 : null,
+        payload_kg:             type === 'cargo' ? (enrichment?.gvw_kg ?? 500) : null,
         body_type:              null,
         passenger_capacity:     type === 'passenger' || type === 'electric' ? 3 : type === 'school_van' ? 8 : null,
         max_speed_kmph:         null,
-        mileage_kmpl:           null,
+        mileage_kmpl:           enrichment?.mileage_kmpl ?? null,
         cng_mileage_km_per_kg:  fuelType === 'cng' ? 28 : null,
         permit_type:            null,
         gvw_kg:                 null,

@@ -67,6 +67,7 @@ interface CarVariantInfo {
     safety_features?: string;
     image_urls?: { value: string }[];
     launch_year?: number;
+    hyderabad_on_road_price?: number;
 }
 
 function fmtPrice(inr?: number) {
@@ -639,6 +640,11 @@ function VariantAccordionButton({
                                                     <p className="text-xl font-bold" style={{ color: brandColor }}>
                                                         {fmtPrice(selected.ex_showroom_price_min_inr)}
                                                     </p>
+                                                    {selected.hyderabad_on_road_price && (
+                                                        <p className="text-[10px] text-gray-500 mt-0.5">
+                                                            On-Road (Hyd): <span className="font-semibold text-gray-700">{fmtPrice(selected.hyderabad_on_road_price)}</span>
+                                                        </p>
+                                                    )}
                                                 </div>
                                                 <div className="flex gap-1.5">
                                                     {selected.fuel_type && (

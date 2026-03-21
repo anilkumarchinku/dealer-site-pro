@@ -63,6 +63,7 @@ interface CarVariant {
     safety_features?: string;
     image_urls?: { value: string }[];
     launch_year?: number;
+    hyderabad_on_road_price?: number;
 }
 
 function formatPrice(inr?: number): string {
@@ -361,6 +362,11 @@ export function BrandModelAccordion({
                                         <p className="text-2xl font-bold" style={{ color: brandColor }}>
                                             {formatPrice(selectedVariant.ex_showroom_price_min_inr)}
                                         </p>
+                                        {selectedVariant.hyderabad_on_road_price && (
+                                            <p className="text-xs text-gray-500 mt-1">
+                                                On-Road (Hyderabad): <span className="font-semibold text-gray-700">{formatPrice(selectedVariant.hyderabad_on_road_price)}</span>
+                                            </p>
+                                        )}
                                     </div>
                                 )}
 

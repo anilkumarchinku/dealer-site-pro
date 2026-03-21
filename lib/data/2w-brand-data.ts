@@ -19,6 +19,11 @@ export interface BrandModelEnrichment {
     torque: string | null
     variant: string | null
     all_variants: { name: string; price_paise: number }[]
+    stock_status: 'available' | 'booking_open' | 'out_of_stock'
+    wheelbase_mm: number | null
+    length_mm: number | null
+    width_mm: number | null
+    height_mm: number | null
 }
 
 // ── Parse helpers ───────────────────────────────────────────────
@@ -56,6 +61,21 @@ function parseRange(str: string | null | undefined): number | null {
     const match = str.match(/([\d.]+)\s*km/i)
     if (!match) return null
     return Math.round(parseFloat(match[1]))
+}
+
+function parseMM(str: string | null | undefined): number | null {
+    if (!str) return null
+    const match = str.match(/([\d.]+)\s*mm/i)
+    if (!match) return null
+    return Math.round(parseFloat(match[1]))
+}
+
+function parseSourceSection(section: string | null | undefined): 'available' | 'booking_open' | 'out_of_stock' {
+    if (!section) return 'available'
+    const s = section.toLowerCase()
+    if (s.includes('upcoming') || s.includes('launch')) return 'booking_open'
+    if (s.includes('discontinu') || s.includes('stopped')) return 'out_of_stock'
+    return 'available'
 }
 
 function parseBatteryKwh(str: string | null | undefined): number | null {
@@ -261,6 +281,11 @@ function extractFromFlatItem(item: any): BrandModelEnrichment {
         torque: torqueStr,
         variant: null,
         all_variants: [],
+        stock_status: 'available' as const,
+        wheelbase_mm: null,
+        length_mm: null,
+        width_mm: null,
+        height_mm: null,
     }
 }
 
@@ -297,6 +322,8 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
             }))
             .filter((vv: { name: string; price_paise: number }) => vv.name && vv.price_paise > 0)
 
+        const dims = firstVar.technical_specifications?.dimensions_and_capacity || {}
+
         return {
             engine_cc: parseCC(engine['Displacement']),
             mileage_kmpl: null,
@@ -310,6 +337,11 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
             torque: engine['Max Torque'] || null,
             variant: firstVar.variant_name || null,
             all_variants: allVariants,
+            stock_status: parseSourceSection(v.source_section),
+            wheelbase_mm: parseMM(dims['Wheelbase']),
+            length_mm: parseMM(dims['Length']),
+            width_mm: parseMM(dims['Width']),
+            height_mm: parseMM(dims['Height']),
         }
     }
 
@@ -340,6 +372,11 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
             torque: specs['Torque (Motor)'] || null,
             variant: null,
             all_variants: [],
+            stock_status: parseSourceSection(v.source_section),
+            wheelbase_mm: null,
+            length_mm: null,
+            width_mm: null,
+            height_mm: null,
         }
     }
 
@@ -364,6 +401,11 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
         torque: specs.torque || v.torque || null,
         variant: null,
         all_variants: [],
+        stock_status: parseSourceSection(v.source_section),
+        wheelbase_mm: null,
+        length_mm: null,
+        width_mm: null,
+        height_mm: null,
     }
 }
 
