@@ -18,6 +18,7 @@ export interface BrandModelEnrichment {
     description: string | null
     torque: string | null
     variant: string | null
+    all_variants: { name: string; price_paise: number }[]
 }
 
 // ── Parse helpers ───────────────────────────────────────────────
@@ -259,6 +260,7 @@ function extractFromFlatItem(item: any): BrandModelEnrichment {
         description: null,
         torque: torqueStr,
         variant: null,
+        all_variants: [],
     }
 }
 
@@ -287,6 +289,14 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
         if (perf['USB Charging Port'] === 'Yes') features.push('USB Charging Port')
         if (perf['Navigation'] === 'Yes') features.push('Navigation')
 
+        // Extract all variants with names + prices
+        const allVariants = (v.variants || [])
+            .map((variantItem: any) => ({
+                name: variantItem.variant_name || '',
+                price_paise: parsePrice(variantItem.price),
+            }))
+            .filter((vv: { name: string; price_paise: number }) => vv.name && vv.price_paise > 0)
+
         return {
             engine_cc: parseCC(engine['Displacement']),
             mileage_kmpl: null,
@@ -299,6 +309,7 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
             description: null,
             torque: engine['Max Torque'] || null,
             variant: firstVar.variant_name || null,
+            all_variants: allVariants,
         }
     }
 
@@ -328,6 +339,7 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
             description: null,
             torque: specs['Torque (Motor)'] || null,
             variant: null,
+            all_variants: [],
         }
     }
 
@@ -351,6 +363,7 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
         description: specs.description || null,
         torque: specs.torque || v.torque || null,
         variant: null,
+        all_variants: [],
     }
 }
 

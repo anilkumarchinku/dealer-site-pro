@@ -63,6 +63,7 @@ function buildTwoWheelerEntry(
         brochure_url:            null,
         bs6_compliant:           true,
         fame_subsidy_eligible:   fuelType === 'electric',
+        all_variants:            enrichment?.all_variants ?? [],
         description:             enrichment?.description ?? null,
         features:                enrichment?.features ?? [],
         video_url:               null,

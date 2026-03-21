@@ -82,6 +82,7 @@ export interface TwoWheelerVehicle {
     charging_time_hours:     number | null
     battery_warranty_years:  number | null
 
+    all_variants?:           { name: string; price_paise: number }[]
     description:             string | null
     features:                string[]
     video_url:               string | null

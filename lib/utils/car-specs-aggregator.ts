@@ -73,7 +73,7 @@ export async function getAggregatedCarSpecs(make: string, model: string): Promis
         // Get mileage range across all variants
         const mileages = variants
             .map(v => {
-                const value = v.mileage_kmpl || parseFloat(v.mileage_kmpl_or_ev_range || '0')
+                const value = v.mileage_kmpl || (v as any).mileage || parseFloat(v.mileage_kmpl_or_ev_range || '0')
                 return value > 0 ? value : null
             })
             .filter(v => v != null)

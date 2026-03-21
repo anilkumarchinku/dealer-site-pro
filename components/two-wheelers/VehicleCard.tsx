@@ -134,6 +134,33 @@ export function VehicleCard({ vehicle, slug, brandColor = "#1f2937", onLead, onC
                     <SpecItem icon={<ChevronRight className="w-3.5 h-3.5 text-purple-600" />} label="Type" value={typeLabel} />
                 </div>
 
+                {/* Colors */}
+                {vehicle.colors && vehicle.colors.length > 0 && (
+                    <div className="flex items-center gap-1.5 mb-2">
+                        {vehicle.colors.slice(0, 6).map((color, i) => (
+                            <div
+                                key={i}
+                                title={color.name}
+                                className="w-3.5 h-3.5 rounded-full border border-gray-300 shadow-sm shrink-0"
+                                style={{ backgroundColor: color.hex }}
+                            />
+                        ))}
+                        {vehicle.colors.length > 6 && (
+                            <span className="text-[10px] text-gray-400">+{vehicle.colors.length - 6}</span>
+                        )}
+                        <span className="text-[10px] text-gray-400 ml-0.5">{vehicle.colors.length} color{vehicle.colors.length > 1 ? 's' : ''}</span>
+                    </div>
+                )}
+
+                {/* Variant count */}
+                {vehicle.all_variants && vehicle.all_variants.length > 1 && (
+                    <div className="mb-2">
+                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100 font-medium">
+                            {vehicle.all_variants.length} variants
+                        </span>
+                    </div>
+                )}
+
                 {/* CTA buttons */}
                 <div className="flex gap-2 mt-auto">
                     <Button
