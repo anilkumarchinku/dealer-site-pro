@@ -33,7 +33,8 @@ function SpecItem({ icon, label, value }: { icon: React.ReactNode; label: string
 
 export function VehicleCard({ vehicle, slug, brandColor = "#1f2937", onLead, onCompare }: Props) {
     const prefix = useSitePrefix(slug)
-    const price  = (vehicle.ex_showroom_price_paise / 100).toLocaleString("en-IN")
+    const priceRaw = vehicle.ex_showroom_price_paise
+    const price  = priceRaw > 0 ? (priceRaw / 100).toLocaleString("en-IN") : null
 
     const [jpgUrl, pngUrl] = getScrapedImageUrls("2w", brandNameToId(vehicle.brand), vehicle.model)
     const primarySrc = vehicle.images[0] || jpgUrl
@@ -120,8 +121,14 @@ export function VehicleCard({ vehicle, slug, brandColor = "#1f2937", onLead, onC
 
                 {/* Price */}
                 <div className="mb-2">
-                    <p className="text-lg font-bold text-gray-900">₹{price}</p>
-                    <p className="text-[10px] text-gray-500">Ex-showroom</p>
+                    {price ? (
+                        <>
+                            <p className="text-lg font-bold text-gray-900">₹{price}</p>
+                            <p className="text-[10px] text-gray-500">Ex-showroom</p>
+                        </>
+                    ) : (
+                        <p className="text-sm font-semibold text-gray-500 italic">Price on request</p>
+                    )}
                 </div>
 
                 <div className="border-t border-gray-100 mb-2" />
