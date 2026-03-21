@@ -11,7 +11,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
-import { fetchCarInfoData } from '@/lib/utils/car-info-fetcher';
+import { fetchCarInfoData, parseKeyFeatures, parseSafetyFeatures } from '@/lib/utils/car-info-fetcher';
 import { getBrandLogo } from '@/lib/data/brand-logos';
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { Badge } from '@/components/ui/badge';
@@ -392,7 +392,7 @@ export function BrandModelAccordion({
                                         <div>
                                             <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">Key Features</p>
                                             <div className="flex flex-wrap gap-2">
-                                                {String(selectedVariant.key_features).split(',').map((f, i) => (
+                                                {parseKeyFeatures(selectedVariant.key_features).map((f, i) => (
                                                     <span key={i} className="text-xs px-2.5 py-1 rounded-full bg-gray-100 text-gray-700 border border-gray-200">
                                                         {f.trim()}
                                                     </span>
@@ -409,7 +409,7 @@ export function BrandModelAccordion({
                                         <div>
                                             <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">Safety Features</p>
                                             <div className="flex flex-wrap gap-2">
-                                                {String(selectedVariant.safety_features).split(',').map((f, i) => (
+                                                {parseSafetyFeatures(selectedVariant.safety_features).map((f, i) => (
                                                     <span key={i} className="text-xs px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 border border-red-500/20">
                                                         {f.trim()}
                                                     </span>

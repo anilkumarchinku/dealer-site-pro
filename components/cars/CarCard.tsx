@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils';
 import type { Car } from '@/lib/types/car';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { getAggregatedCarSpecs, formatSpecsForDisplay } from '@/lib/utils/car-specs-aggregator';
-import { fetchCarInfoData } from '@/lib/utils/car-info-fetcher';
+import { fetchCarInfoData, parseKeyFeatures, parseSafetyFeatures } from '@/lib/utils/car-info-fetcher';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -681,7 +681,7 @@ function VariantAccordionButton({
                                                 <div>
                                                     <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-1.5">Key Features</p>
                                                     <div className="flex flex-wrap gap-1.5">
-                                                        {String(selected.key_features).split(',').map((f, i) => (
+                                                        {parseKeyFeatures(selected.key_features).map((f, i) => (
                                                             <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-gray-100 text-gray-700 border border-gray-200">{f.trim()}</span>
                                                         ))}
                                                     </div>
@@ -693,7 +693,7 @@ function VariantAccordionButton({
                                                 <div>
                                                     <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-1.5">Safety</p>
                                                     <div className="flex flex-wrap gap-1.5">
-                                                        {String(selected.safety_features).split(',').map((f, i) => (
+                                                        {parseSafetyFeatures(selected.safety_features).map((f, i) => (
                                                             <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-red-500/10 text-red-400 border border-red-500/20">{f.trim()}</span>
                                                         ))}
                                                     </div>

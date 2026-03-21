@@ -355,7 +355,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                     <div className="px-4 pb-3 border-t border-gray-100 pt-3 space-y-2">
                                                         <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Key Features</p>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            {String(selVariant.key_features).split(',').map((f, i) => <Pill key={i} text={f.trim()} color="blue" />)}
+                                                            {parseKeyFeatures(selVariant.key_features).map((f, i) => <Pill key={i} text={f.trim()} color="blue" />)}
                                                         </div>
                                                     </div>
                                                 )}
@@ -365,7 +365,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                     <div className="px-4 pb-3 border-t border-gray-100 pt-3 space-y-2">
                                                         <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Safety</p>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            {String(selVariant.safety_features).split(',').map((f, i) => <Pill key={i} text={f.trim()} color="red" />)}
+                                                            {parseSafetyFeatures(selVariant.safety_features).map((f, i) => <Pill key={i} text={f.trim()} color="red" />)}
                                                         </div>
                                                     </div>
                                                 )}
