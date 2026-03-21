@@ -1,6 +1,354 @@
 {
-  "brand": "Harley-Davidson India",
-  "brandId": "harley-davidson-india",
-  "type": "2w",
-  "vehicles": []
+  "harley_davidson_bikes": [
+    {
+      "model_name": "Harley-Davidson X440",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/x440/specifications",
+      "engine_capacity_cc": "440 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/x440/specifications",
+      "torque": "38 Nm @ 4000 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/x440/specifications",
+      "mileage": "35 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/harley-davidson/x440/specifications",
+      "other_performance_metrics": {
+        "power_bhp": "27.37 PS @ 6000 rpm",
+        "power_bhp_citation": "https://www.bikedekho.com/harley-davidson/x440/specifications",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/x440/specifications",
+        "gearbox": "6-speed manual",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/x440/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson X440-T",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/x440-t/specifications",
+      "engine_capacity_cc": "440 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/x440-t/specifications",
+      "torque": "38 Nm @ 4000 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/x440-t/specifications",
+      "mileage": "35 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/harley-davidson/x440-t/specifications",
+      "other_performance_metrics": {
+        "power_bhp": "27.37 PS @ 6000 rpm",
+        "power_bhp_citation": "https://www.bikedekho.com/harley-davidson/x440-t/specifications",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/x440-t/specifications",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/x440-t/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson Fat Boy",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/fat-boy/specifications",
+      "engine_capacity_cc": "1923 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/fat-boy/specifications",
+      "torque": "168 Nm @ 3000 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/fat-boy/specifications",
+      "mileage": "18.18 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/harley-davidson/fat-boy/specifications",
+      "other_performance_metrics": {
+        "power_bhp": "104.69 PS @ 5020 rpm",
+        "power_bhp_citation": "https://www.bikedekho.com/harley-davidson/fat-boy/specifications",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/fat-boy/specifications",
+        "gearbox": "6-speed manual",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/fat-boy/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson Sportster S",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/sportster-s/specifications",
+      "engine_capacity_cc": "1252 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/sportster-s/specifications",
+      "torque": "125 Nm @ 6000 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/sportster-s/specifications",
+      "mileage": "19.6 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/harley-davidson/sportster-s/specifications",
+      "other_performance_metrics": {
+        "power_bhp": "122.3 PS (~120.6 bhp) @ 7500 rpm",
+        "power_bhp_citation": "https://www.bikedekho.com/harley-davidson/sportster-s/specifications",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/sportster-s/specifications",
+        "gearbox": "6-Speed manual",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/sportster-s/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson Pan America 1250",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/pan-america-1250/specifications",
+      "engine_capacity_cc": "1252 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/pan-america-1250/specifications",
+      "torque": "125 Nm @ 6750 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/pan-america-1250/specifications",
+      "mileage": "18.33 kmpl (city)",
+      "mileage_citation": "https://www.bikedekho.com/harley-davidson/pan-america-1250/specifications",
+      "other_performance_metrics": {
+        "power_bhp": "152.2 PS @ 8750 rpm (≈150 bhp)",
+        "power_bhp_citation": "https://www.bikedekho.com/harley-davidson/pan-america-1250/specifications",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/pan-america-1250/specifications",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/pan-america-1250/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson CVO Road Glide",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/cvo-road-glide/specifications",
+      "engine_capacity_cc": "1982.83 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/cvo-road-glide/specifications",
+      "torque": "189 Nm @ 3500 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/cvo-road-glide/specifications",
+      "other_performance_metrics": {
+        "power_bhp": "116.6 PS @ 5020 rpm",
+        "power_bhp_citation": "https://www.bikedekho.com/harley-davidson/cvo-road-glide/specifications",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/cvo-road-glide/specifications",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/cvo-road-glide/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson Heritage Classic",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/heritage-classic/specifications",
+      "engine_capacity_cc": "1923 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/heritage-classic/specifications",
+      "torque": "156 Nm @ 2750 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/heritage-classic/specifications",
+      "mileage": "18.18 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/harley-davidson/heritage-classic/specifications",
+      "other_performance_metrics": {
+        "power_bhp": "92.45 PS @ 5020 rpm",
+        "power_bhp_citation": "https://www.bikedekho.com/harley-davidson/heritage-classic/specifications",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/heritage-classic/specifications",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/heritage-classic/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson Nightster",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/nightster/specifications",
+      "engine_capacity_cc": "975 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/nightster/specifications",
+      "torque": "95 Nm @ 5750 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/nightster/specifications",
+      "mileage": "18.18 kmpl (overall)",
+      "mileage_citation": "https://www.bikedekho.com/harley-davidson/nightster/specifications",
+      "other_performance_metrics": {
+        "power_bhp": "89.7 PS @ 7500 rpm",
+        "power_bhp_citation": "https://www.bikedekho.com/harley-davidson/nightster/specifications",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/nightster/specifications",
+        "gearbox": "6-speed manual",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/nightster/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson Road Glide",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/road-glide/specifications",
+      "engine_capacity_cc": "1923 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/road-glide/specifications",
+      "torque": "175 Nm @ 3500 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/road-glide/specifications",
+      "mileage": "16.66 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/harley-davidson/road-glide/specifications",
+      "other_performance_metrics": {
+        "power_bhp": "93.8 PS @ 5250 rpm",
+        "power_bhp_citation": "https://www.bikedekho.com/harley-davidson/road-glide/specifications",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/road-glide/specifications",
+        "gearbox": "6-Speed Manual",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/road-glide/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson CVO Street Glide",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/cvo-street-glide/specifications",
+      "engine_capacity_cc": "1982 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/cvo-street-glide/specifications",
+      "torque": "189 Nm @ 3500 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/cvo-street-glide/specifications",
+      "other_performance_metrics": {
+        "power_bhp": "116.6 PS @ 5020 rpm",
+        "power_bhp_citation": "https://www.bikedekho.com/harley-davidson/cvo-street-glide/specifications",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/cvo-street-glide/specifications",
+        "gearbox": "6-Speed",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/cvo-street-glide/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson Street Glide",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/street-glide/specifications",
+      "engine_capacity_cc": "1923 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/street-glide/specifications",
+      "torque": "175 Nm @ 3500 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/street-glide/specifications",
+      "mileage": "16.66 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/harley-davidson/street-glide/specifications",
+      "other_performance_metrics": {
+        "power_bhp": "108.77 PS @ 5020 rpm",
+        "power_bhp_citation": "https://www.bikedekho.com/harley-davidson/street-glide/specifications",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/street-glide/specifications",
+        "gearbox": "6-Speed manual",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/street-glide/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson Breakout",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/breakout/specifications",
+      "engine_capacity_cc": "1923 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/breakout/specifications",
+      "torque": "168 Nm @ 3000 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/breakout/specifications",
+      "mileage": "18.18 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/harley-davidson/breakout/specifications",
+      "other_performance_metrics": {
+        "power_bhp": "104.69 bhp @ 5020 rpm",
+        "power_bhp_citation": "https://www.bikedekho.com/harley-davidson/breakout/specifications",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/breakout/specifications",
+        "gearbox": "6-speed manual",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/breakout/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson Street Bob",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/street-bob/specifications",
+      "engine_capacity_cc": "1923 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/street-bob/specifications",
+      "torque": "156 Nm @ 2750 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/street-bob/specifications",
+      "mileage": "18.18 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/harley-davidson/street-bob/specifications",
+      "other_performance_metrics": {
+        "power_bhp": "92.45 PS @ 5020 rpm",
+        "power_bhp_citation": "https://www.bikedekho.com/harley-davidson/street-bob/specifications",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/street-bob/specifications",
+        "gearbox": "Manual transmission",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/street-bob/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson Street 750",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/street-750/specifications",
+      "engine_capacity_cc": "749 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/street-750/specifications",
+      "torque": "60 Nm @ 3750 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/street-750/specifications",
+      "other_performance_metrics": {
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/street-750/specifications",
+        "gearbox": "6 Speed manual",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/street-750/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson Iron 883",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/iron-883/specifications",
+      "engine_capacity_cc": "883 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/iron-883/specifications",
+      "torque": "69 Nm @ 3500 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/iron-883/specifications",
+      "mileage": "20 kmpl (ARAI)",
+      "mileage_citation": "https://www.bikedekho.com/harley-davidson/iron-883/specifications",
+      "other_performance_metrics": {
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/iron-883/specifications",
+        "gearbox": "5 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/iron-883/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson Forty Eight",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/forty-eight/specifications",
+      "engine_capacity_cc": "1202 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/forty-eight/specifications",
+      "torque": "95 Nm @ 3,000 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/forty-eight/specifications",
+      "mileage": "30 kmpl (ARAI)",
+      "mileage_citation": "https://www.bikedekho.com/harley-davidson/forty-eight/specifications",
+      "other_performance_metrics": {
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/forty-eight/specifications",
+        "gearbox": "5",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/forty-eight/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson Fat Bob",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/fat-bob/specifications",
+      "engine_capacity_cc": "1585 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/fat-bob/specifications",
+      "torque": "121 Nm @ 3500 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/fat-bob/specifications",
+      "mileage": "15 kmpl (ARAI)",
+      "mileage_citation": "https://www.bikedekho.com/harley-davidson/fat-bob/specifications",
+      "other_performance_metrics": {
+        "power_bhp": "65.9 PS ≈ 65 bhp @ 5500 rpm",
+        "power_bhp_citation": "https://www.bikedekho.com/harley-davidson/fat-bob/specifications",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/fat-bob/specifications",
+        "gearbox": "6-speed manual",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/fat-bob/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson Iron 1200",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/iron-1200/specifications",
+      "engine_capacity_cc": "1202 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/iron-1200/specifications",
+      "torque": "96 Nm @ 3500 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/iron-1200/specifications",
+      "other_performance_metrics": {
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/iron-1200/specifications",
+        "gearbox": "5-Speed Manual",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/iron-1200/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson Roadster",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/roadster/specifications",
+      "engine_capacity_cc": "883 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/roadster/specifications",
+      "torque": "96 Nm @ 4000 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/roadster/specifications",
+      "other_performance_metrics": {
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/roadster/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson X 500",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/x-500/specifications",
+      "engine_capacity_cc": "500 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/x-500/specifications",
+      "torque": "46 Nm @ 6000 rpm",
+      "torque_citation": "https://www.bikedekho.com/harley-davidson/x-500/specifications",
+      "mileage": "20.6 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/harley-davidson/x-500/specifications",
+      "other_performance_metrics": {
+        "power_bhp": "47.5 PS (≈46.8 bhp)",
+        "power_bhp_citation": "https://www.bikedekho.com/harley-davidson/x-500/specifications",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/x-500/specifications",
+        "gearbox": "6-speed manual",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/x-500/specifications"
+      }
+    },
+    {
+      "model_name": "Harley-Davidson X 350",
+      "model_name_citation": "https://www.bikedekho.com/harley-davidson/x-350/specifications",
+      "engine_capacity_cc": "353 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/x-350/specifications",
+      "other_performance_metrics": {
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/x-350/specifications",
+        "gearbox": "Manual",
+        "gearbox_citation": "https://www.bikedekho.com/harley-davidson/x-350/specifications"
+      }
+    }
+  ]
 }

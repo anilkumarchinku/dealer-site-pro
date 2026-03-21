@@ -1,6 +1,388 @@
 {
-  "brand": "Husqvarna India",
-  "brandId": "husqvarna-india",
-  "type": "2w",
-  "vehicles": []
+  "husqvarna_bikes": [
+    {
+      "model_name": "Husqvarna Svartpilen 250",
+      "model_name_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250",
+      "engine_details": "249 cc single-cylinder, 4-stroke, liquid-cooled DOHC engine with 4 valves, fuel-injection, 6-speed gearbox, bore 72 mm x stroke 61.1 mm, BS6-2.0 emission compliance, delivering 30 PS @ 9000 rpm",
+      "engine_details_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250",
+      "torque": "24 Nm @ 7500 rpm",
+      "torque_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250",
+      "mileage": "32.44 kmpl (city ARAI claim) – also quoted as 30.97 kmpl on highway",
+      "mileage_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250",
+      "features": [
+        {
+          "value": "ABS Dual Channel",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250"
+        },
+        {
+          "value": "LED headlight",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250"
+        },
+        {
+          "value": "LED taillight",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250"
+        },
+        {
+          "value": "LED turn-signal lamps",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250"
+        },
+        {
+          "value": "Digital instrument console",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250"
+        },
+        {
+          "value": "Supermoto mode",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250"
+        },
+        {
+          "value": "Tank rack for luggage",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250"
+        },
+        {
+          "value": "Dual-purpose MRF Revz FD tyres",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250"
+        },
+        {
+          "value": "17-inch alloy wheels",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250"
+        },
+        {
+          "value": "Digital fuel gauge",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250"
+        },
+        {
+          "value": "Pass switch",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250"
+        },
+        {
+          "value": "Low-profile single seat",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250"
+        }
+      ],
+      "more_details": "Suspension: 43 mm WP APEX inverted fork front and preload-adjustable WP APEX monoshock rear. Frame: Split trellis frame. Brakes: Front disc 320 mm, rear disc 230 mm. Fuel capacity: 9.5 L. Kerb weight 166 kg.",
+      "more_details_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250"
+    },
+    {
+      "model_name": "Husqvarna Vitpilen 250",
+      "model_name_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250",
+      "engine_details": "249.07 cc liquid-cooled, single-cylinder, SOHC engine with 4 valves; fuel-injection system; power output 31 PS @ 9500 rpm; 6-speed manual gearbox with assist-and-slipper clutch.",
+      "engine_details_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250",
+      "torque": "25 Nm @ 7500 rpm",
+      "torque_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250",
+      "mileage": "31 kmpl (ARAI claimed)",
+      "mileage_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250",
+      "features": [
+        {
+          "value": "Dual-Channel ABS",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250"
+        },
+        {
+          "value": "DRLs",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250"
+        },
+        {
+          "value": "Bluetooth connectivity",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250"
+        },
+        {
+          "value": "Navigation assist",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250"
+        },
+        {
+          "value": "Riding modes: Rain, Street",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250"
+        },
+        {
+          "value": "Traction control",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250"
+        },
+        {
+          "value": "Quick shifter",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250"
+        },
+        {
+          "value": "Service-due indicator",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250"
+        },
+        {
+          "value": "LED tail light & LED headlight",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250"
+        },
+        {
+          "value": "Digital instrument console",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250"
+        },
+        {
+          "value": "Call/SMS alerts",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250"
+        },
+        {
+          "value": "USB charging port",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250"
+        },
+        {
+          "value": "Music control",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250"
+        },
+        {
+          "value": "Hazard warning lights",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250"
+        }
+      ],
+      "more_details": "Front suspension: WP Apex USD fork. Rear suspension: WP Apex monoshock. Brakes: 320 mm front disc, 230 mm rear disc. Fuel capacity: 13.5 L. Kerb weight: 163.8 kg. Top speed: 150 km/h.",
+      "more_details_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250"
+    },
+    {
+      "model_name": "Husqvarna Svartpilen 401",
+      "model_name_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401",
+      "engine_details": "398.63 cc liquid-cooled single-cylinder DOHC engine, 6-speed gearbox, 46 PS @ 9000 rpm, 2 valves per cylinder, ride-by-wire throttle, assist-and-slipper clutch, BS6-2.0 emission compliant.",
+      "engine_details_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401",
+      "torque": "39 Nm @ 7000 rpm",
+      "torque_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401",
+      "mileage": "29 kmpl (ARAI claimed)",
+      "mileage_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401",
+      "features": [
+        {
+          "value": "Dual-Channel ABS",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401"
+        },
+        {
+          "value": "DRLs",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401"
+        },
+        {
+          "value": "Bluetooth & mobile connectivity",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401"
+        },
+        {
+          "value": "Riding modes: Rain, Street",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401"
+        },
+        {
+          "value": "Traction control",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401"
+        },
+        {
+          "value": "Bidirectional quick-shifter",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401"
+        },
+        {
+          "value": "Navigation assist",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401"
+        },
+        {
+          "value": "Service-due indicator",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401"
+        },
+        {
+          "value": "5-inch TFT digital console",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401"
+        },
+        {
+          "value": "Call/SMS alerts",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401"
+        },
+        {
+          "value": "USB charging port",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401"
+        },
+        {
+          "value": "Hazard-warning lights",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401"
+        },
+        {
+          "value": "Engine kill switch",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401"
+        }
+      ],
+      "more_details": "Front suspension: Adjustable WP Apex USD fork. Rear suspension: WP Apex monoshock. Brakes: Front 320 mm disc, Rear 240 mm disc. Wheels: 17-inch wire-spoked wheels. Top speed: 160 km/h.",
+      "more_details_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401"
+    },
+    {
+      "model_name": "2026 Husqvarna Vitpilen 250",
+      "model_name_citation": "https://www.bikedekho.com/husqvarna/2025-vitpilen-250",
+      "engine_details": "249.07 cc single-cylinder engine, fuel-injected, complies with BS6-2.0 emission standards, produces 31 PS @ 9500 rpm",
+      "engine_details_citation": "https://www.bikedekho.com/husqvarna/2025-vitpilen-250",
+      "torque": "25 Nm @ 7500 rpm",
+      "torque_citation": "https://www.bikedekho.com/husqvarna/2025-vitpilen-250",
+      "mileage": "31 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/husqvarna/2025-vitpilen-250",
+      "features": [
+        {
+          "value": "Fuel Injection",
+          "value_citation": "https://www.bikedekho.com/husqvarna/2025-vitpilen-250"
+        },
+        {
+          "value": "BS6-2.0 emission compliance",
+          "value_citation": "https://www.bikedekho.com/husqvarna/2025-vitpilen-250"
+        },
+        {
+          "value": "Cafe Racer body type",
+          "value_citation": "https://www.bikedekho.com/husqvarna/2025-vitpilen-250"
+        },
+        {
+          "value": "Petrol fuel type",
+          "value_citation": "https://www.bikedekho.com/husqvarna/2025-vitpilen-250"
+        }
+      ],
+      "more_details": "Weight 163.8 kg; Body Type Cafe Racer Bikes; Fuel Type Petrol; Fuel Supply Fuel Injection; Emission Type bs6-2.0",
+      "more_details_citation": "https://www.bikedekho.com/husqvarna/2025-vitpilen-250"
+    },
+    {
+      "model_name": "2026 Husqvarna Svartpilen 401",
+      "model_name_citation": "https://www.bikedekho.com/husqvarna/2025-svartpilen-401",
+      "engine_details": "398.63 cc single-cylinder petrol engine, BS6-2.0 emission standard, manual transmission, produces 46 PS @ 9000 rpm",
+      "engine_details_citation": "https://www.bikedekho.com/husqvarna/2025-svartpilen-401",
+      "torque": "39 Nm @ 7000 rpm",
+      "torque_citation": "https://www.bikedekho.com/husqvarna/2025-svartpilen-401",
+      "mileage": "29 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/husqvarna/2025-svartpilen-401",
+      "features": [
+        {
+          "value": "BS6 emission compliance",
+          "value_citation": "https://www.bikedekho.com/husqvarna/2025-svartpilen-401"
+        },
+        {
+          "value": "Manual transmission",
+          "value_citation": "https://www.bikedekho.com/husqvarna/2025-svartpilen-401"
+        },
+        {
+          "value": "Scrambler-type body",
+          "value_citation": "https://www.bikedekho.com/husqvarna/2025-svartpilen-401"
+        },
+        {
+          "value": "Petrol fuel type",
+          "value_citation": "https://www.bikedekho.com/husqvarna/2025-svartpilen-401"
+        }
+      ],
+      "more_details": "Top speed 160 km/h; Kerb weight 171.2 kg; Body Type Scrambler Bikes",
+      "more_details_citation": "https://www.bikedekho.com/husqvarna/2025-svartpilen-401"
+    },
+    {
+      "model_name": "Husqvarna Vektorr Concept",
+      "model_name_citation": "https://www.bikedekho.com/husqvarna/vektorr-concept",
+      "engine_details": "Electric motor (BLDC) delivering 4.4 kW of power with a peak torque of 140 Nm; brushless DC motor.",
+      "engine_details_citation": "https://www.bikedekho.com/husqvarna/vektorr-concept",
+      "torque": "140 Nm (Motor torque)",
+      "torque_citation": "https://www.bikedekho.com/husqvarna/vektorr-concept",
+      "mileage": "90 km/charge (ARAI range)",
+      "mileage_citation": "https://www.bikedekho.com/husqvarna/vektorr-concept",
+      "features": [
+        {
+          "value": "Electric propulsion",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vektorr-concept"
+        },
+        {
+          "value": "BLDC motor",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vektorr-concept"
+        },
+        {
+          "value": "Single-sided front monoshock suspension",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vektorr-concept"
+        },
+        {
+          "value": "12-inch wheels",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vektorr-concept"
+        },
+        {
+          "value": "LED flat round headlight",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vektorr-concept"
+        }
+      ],
+      "more_details": "Top speed 45 km/h; Body type: Electric scooter; Weight 110 kg.",
+      "more_details_citation": "https://www.bikedekho.com/husqvarna/vektorr-concept"
+    },
+    {
+      "model_name": "Husqvarna Svartpilen 201",
+      "model_name_citation": "https://www.bikedekho.com/husqvarna/svartpilen-200",
+      "engine_details": "199.5 cc liquid-cooled, 1-cylinder 4-stroke engine with fuel injection, 6-speed manual transmission, producing 25.8 PS peak power",
+      "engine_details_citation": "https://www.bikedekho.com/husqvarna/svartpilen-200",
+      "torque": "14.73 Nm @ 7500 rpm",
+      "torque_citation": "https://www.bikedekho.com/husqvarna/svartpilen-200",
+      "mileage": "47.61 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/husqvarna/svartpilen-200",
+      "features": [
+        {
+          "value": "Dual-Channel ABS",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-200"
+        },
+        {
+          "value": "LED headlight",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-200"
+        },
+        {
+          "value": "LED taillight",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-200"
+        },
+        {
+          "value": "LED turn-signal lamps",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-200"
+        },
+        {
+          "value": "Digital instrument console",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-200"
+        },
+        {
+          "value": "Low battery indicator",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-200"
+        },
+        {
+          "value": "Pass-switch",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-200"
+        },
+        {
+          "value": "Tubeless tyres",
+          "value_citation": "https://www.bikedekho.com/husqvarna/svartpilen-200"
+        }
+      ],
+      "more_details": "Kerb weight 149 kg; body type sports naked; frame: chrome-moly tubular space frame; front disc 300 mm, rear disc 230 mm.",
+      "more_details_citation": "https://www.bikedekho.com/husqvarna/svartpilen-200"
+    },
+    {
+      "model_name": "Husqvarna Vitpilen 125",
+      "model_name_citation": "https://www.bikedekho.com/husqvarna/vitpilen-125",
+      "engine_details": "124.7 cc single-cylinder, 4-valve, liquid-cooled, fuel-injection, DOHC engine delivering 14.5 PS @ 9250 rpm; 6-speed manual gearbox.",
+      "engine_details_citation": "https://www.bikedekho.com/husqvarna/vitpilen-125",
+      "torque": "12 Nm @ 8000 rpm",
+      "torque_citation": "https://www.bikedekho.com/husqvarna/vitpilen-125",
+      "mileage": "47.61 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/husqvarna/vitpilen-125",
+      "features": [
+        {
+          "value": "Digital instrument console",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-125"
+        },
+        {
+          "value": "Single-channel ABS",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-125"
+        },
+        {
+          "value": "Pass Switch",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-125"
+        },
+        {
+          "value": "Engine Kill Switch",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-125"
+        },
+        {
+          "value": "Split seat",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-125"
+        },
+        {
+          "value": "Halogen headlight",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-125"
+        },
+        {
+          "value": "LED taillight",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-125"
+        },
+        {
+          "value": "LED turn signal lamps",
+          "value_citation": "https://www.bikedekho.com/husqvarna/vitpilen-125"
+        }
+      ],
+      "more_details": "Front suspension: WP 43 mm; Rear suspension: monoshock; Front brake 320 mm disc, rear brake 230 mm disc; Fuel tank capacity 9.5 L; Kerb weight 153 kg.",
+      "more_details_citation": "https://www.bikedekho.com/husqvarna/vitpilen-125"
+    }
+  ]
 }

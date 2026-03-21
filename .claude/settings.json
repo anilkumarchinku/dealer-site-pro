@@ -18,7 +18,9 @@
       "Bash(find:*)",
       "Bash(wc:*)",
       "Bash(ls:*)",
-      "Bash(echo:*)"
+      "Bash(echo:*)",
+      "Bash(for f in public/data/2w/*.json)",
+      "Bash(do python3 -c \"import json; json.load\\(open\\(''$f''\\)\\)\")"
     ]
   }
 }

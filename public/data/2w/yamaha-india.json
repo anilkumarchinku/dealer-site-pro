@@ -1,6 +1,738 @@
 {
-  "brand": "Yamaha India",
-  "brandId": "yamaha-india",
-  "type": "2w",
-  "vehicles": []
+  "yamaha_bikes": [
+    {
+      "model_name": "Yamaha XSR 155",
+      "model_name_citation": "https://www.bikedekho.com/yamaha/xsr155",
+      "price": "Rs. 1,49,990* Onwards",
+      "price_citation": "https://www.bikedekho.com/yamaha-bikes",
+      "mileage": "45.5 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yamaha/xsr155/specifications",
+      "engine_displacement": "155 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/yamaha/xsr155/specifications",
+      "technical_specifications": {
+        "Engine and Transmission": {
+          "Engine Type": "Liquid-cooled, 4-stroke, SOHC, 4-valve",
+          "Displacement": "155 cc",
+          "Max Power": "18.4 PS @ 10,000 rpm",
+          "Max Torque": "14.2 Nm @ 7,500 rpm",
+          "Bore x Stroke": "58 mm x 58.7 mm",
+          "Compression Ratio": "11.6:1",
+          "No. of Cylinders": "1",
+          "Cooling System": "Liquid cooled",
+          "Fuel Supply": "Fuel injection",
+          "Starting Method": "Self-start only",
+          "Clutch": "Wet, multiple-disc",
+          "Transmission": "6-speed manual",
+          "Emission Standard": "BS6-2.0"
+        },
+        "Brakes": {
+          "Front Brake": "Disc, 282 mm",
+          "Rear Brake": "Disc, 220 mm",
+          "ABS": "Dual-channel"
+        },
+        "Wheels and Tyres": {
+          "Front Tyre": "100/80-17, tubeless radial",
+          "Rear Tyre": "140/70-17, tubeless radial",
+          "Wheel Type": "Alloy"
+        },
+        "Dimensions and Capacity": {
+          "Length": "2005 mm",
+          "Width": "805 mm",
+          "Height": "1080 mm",
+          "Ground Clearance": "120 mm",
+          "Seat Height": "810 mm",
+          "Fuel Tank Capacity": "10 L",
+          "Kerb Weight": "137 kg"
+        },
+        "Electricals": {
+          "Headlight": "LED",
+          "Taillight": "LED",
+          "Turn Signal": "LED",
+          "Instrument Console": "Digital LCD"
+        }
+      }
+    },
+    {
+      "model_name": "Yamaha R15 V4",
+      "model_name_citation": "https://www.bikedekho.com/yamaha/r15-v4",
+      "price": "Rs. 1,66,200* Onwards",
+      "price_citation": "https://www.bikedekho.com/yamaha-bikes",
+      "mileage": "45 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yamaha/r15-v4/specifications",
+      "engine_displacement": "155 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/yamaha/r15-v4/specifications",
+      "technical_specifications": {
+        "Engine & Transmission": {
+          "Engine Type": "Liquid-Cooled, 4-Stroke, SOHC, 4-Valves",
+          "Displacement": "155 cc",
+          "Max Power": "18.4 PS @ 10,000 rpm",
+          "Max Torque": "14.2 Nm @ 7,500 rpm",
+          "Bore x Stroke": "58.0 mm x 58.7 mm",
+          "Compression Ratio": "11.6 : 1",
+          "No. of Cylinders": "1",
+          "Transmission": "6-speed manual"
+        },
+        "Brakes & Safety": {
+          "Front Brake": "Disc, 282 mm",
+          "Rear Brake": "Disc, 220 mm",
+          "ABS": "Dual-Channel",
+          "Traction Control": "Yes"
+        },
+        "Wheels & Tyres": {
+          "Front Tyre": "100/80-17 (Tubeless)",
+          "Rear Tyre": "140/70-R17 (Tubeless)",
+          "Wheels Type": "Alloy"
+        },
+        "Dimensions": {
+          "Length": "1990 mm",
+          "Width": "725 mm",
+          "Height": "1135 mm",
+          "Wheelbase": "1325 mm",
+          "Ground Clearance": "170 mm",
+          "Seat Height": "815 mm",
+          "Kerb Weight": "141 kg"
+        },
+        "Electricals": {
+          "Headlamp": "LED (Bi-functional, projector)",
+          "Taillamp": "LED",
+          "Instrument Console": "Digital LCD"
+        }
+      }
+    },
+    {
+      "model_name": "Yamaha MT 15 Version 2.0",
+      "model_name_citation": "https://www.bikedekho.com/yamaha/mt-15-v2",
+      "price": "Rs. 1,58,200* Onwards",
+      "price_citation": "https://www.bikedekho.com/yamaha-bikes",
+      "mileage": "56.87 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yamaha/mt-15-v2/specifications",
+      "engine_displacement": "155 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/yamaha/mt-15-v2/specifications",
+      "technical_specifications": {
+        "Engine & Transmission": {
+          "Engine Type": "Liquid-cooled, 4-stroke, SOHC, 4-valve",
+          "Displacement": "155 cc",
+          "Max Power": "18.4 PS @ 10,000 rpm",
+          "Max Torque": "14.1 Nm @ 7,500 rpm",
+          "Gear Box": "6-speed manual"
+        },
+        "Brakes & Safety": {
+          "Front Brake": "Disc, 282 mm",
+          "Rear Brake": "Disc, 220 mm",
+          "ABS": "Dual-channel",
+          "Traction Control": "Yes"
+        },
+        "Wheels, Tyres & Suspension": {
+          "Front Tyre": "100/80-17, tubeless, radial",
+          "Rear Tyre": "140/70R-17, tubeless, radial",
+          "Wheel Size": "431.8 mm (17\")",
+          "Front Suspension": "Upside-down telescopic fork"
+        },
+        "Dimensions & Capacities": {
+          "Length": "2015 mm",
+          "Width": "800 mm",
+          "Height": "1070 mm",
+          "Ground Clearance": "170 mm",
+          "Seat Height": "810 mm",
+          "Fuel Tank Capacity": "10 L",
+          "Kerb Weight": "141 kg"
+        },
+        "Electricals": {
+          "Headlamp": "LED, projector",
+          "Taillight": "LED",
+          "Console": "Full-color LCD digital"
+        }
+      }
+    },
+    {
+      "model_name": "Yamaha RayZR 125 Fi Hybrid",
+      "model_name_citation": "https://www.bikedekho.com/yamaha/ray-zr-125",
+      "price": "Rs. 74,300* Onwards",
+      "price_citation": "https://www.bikedekho.com/yamaha-bikes",
+      "mileage": "71.33 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yamaha/ray-zr-125/specifications",
+      "engine_displacement": "125 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/yamaha/ray-zr-125/specifications",
+      "technical_specifications": {
+        "Engine & Transmission": {
+          "Engine Type": "Air-cooled, 4-stroke, SOHC, 2-valve",
+          "Displacement": "125 cc",
+          "Max Power": "8.2 PS @ 6500 rpm",
+          "Max Torque": "10.3 Nm @ 5000 rpm",
+          "Transmission": "Automatic (V-belt)"
+        },
+        "Brakes & Safety": {
+          "Front Brake": "Drum, 130 mm",
+          "Rear Brake": "Drum, 130 mm",
+          "Braking System": "Unified Braking System (U-BRS)"
+        },
+        "Dimensions & Capacities": {
+          "Overall Length": "1880 mm",
+          "Overall Width": "685 mm",
+          "Overall Height": "1190 mm",
+          "Ground Clearance": "145 mm",
+          "Seat Height": "785 mm",
+          "Kerb Weight": "99 kg",
+          "Fuel Tank Capacity": "5.2 L",
+          "Under-seat Storage": "21 L"
+        },
+        "Wheels & Tyres": {
+          "Front Wheel": "12 inch, 90/90-12",
+          "Rear Wheel": "10 inch, 110/90-10",
+          "Tyre Type": "Tubeless"
+        },
+        "Electricals": {
+          "Headlamp": "Halogen",
+          "Taillight": "Bulb",
+          "Console": "Analogue"
+        }
+      }
+    },
+    {
+      "model_name": "2025 Yamaha FZ-S Fi (Hybrid)",
+      "model_name_citation": "https://www.bikedekho.com/yamaha/fzs-fi-hybrid",
+      "price": "Rs. 1,25,500* Onwards",
+      "price_citation": "https://www.bikedekho.com/yamaha-bikes",
+      "mileage": "60 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yamaha/fzs-fi-hybrid/specifications",
+      "engine_displacement": "149 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/yamaha/fzs-fi-hybrid/specifications",
+      "technical_specifications": {
+        "Engine & Transmission": {
+          "Engine Type": "Air-cooled, 4-stroke, SOHC, 2-valve",
+          "Displacement": "149 cc",
+          "Max Power": "12.4 PS @ 7,250 rpm",
+          "Max Torque": "13.3 Nm @ 5,500 rpm",
+          "Gearbox": "5-speed Manual"
+        },
+        "Brakes & Safety": {
+          "Front Brake": "Disc, 282 mm",
+          "Rear Brake": "Disc, 220 mm",
+          "ABS": "Single-Channel",
+          "Traction Control": "Yes"
+        },
+        "Dimensions & Capacity": {
+          "Length": "2000 mm",
+          "Width": "780 mm",
+          "Height": "1080 mm",
+          "Ground Clearance": "165 mm",
+          "Seat Height": "790 mm",
+          "Fuel Tank Capacity": "13 L",
+          "Kerb Weight": "137 kg"
+        },
+        "Wheels & Tyres": {
+          "Front Tyre": "100/80-17, Tubeless",
+          "Rear Tyre": "140/60-17, Tubeless",
+          "Wheels Type": "Alloy"
+        },
+        "Electricals": {
+          "Headlight": "LED",
+          "Taillight": "LED",
+          "Instrument Console": "Digital LCD"
+        }
+      }
+    },
+    {
+      "model_name": "Yamaha FZS-FI V4",
+      "model_name_citation": "https://www.bikedekho.com/yamaha/fzs-fi-v4",
+      "price": "Rs. 1,19,846* Onwards",
+      "price_citation": "https://www.bikedekho.com/yamaha-bikes",
+      "mileage": "46 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yamaha/fzs-fi-v4/specifications",
+      "engine_displacement": "149 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/yamaha/fzs-fi-v4/specifications",
+      "technical_specifications": {
+        "Engine & Transmission": {
+          "Engine type": "Air-cooled, 4-stroke, SOHC, 2-valve",
+          "Displacement": "149 cc",
+          "Max power": "12.4 PS @ 7250 rpm",
+          "Max torque": "13.3 Nm @ 5500 rpm",
+          "Gearbox": "5-speed manual"
+        },
+        "Brakes": {
+          "Front": "Disc, 282 mm",
+          "Rear": "Disc, 220 mm",
+          "ABS": "Single-channel"
+        },
+        "Dimensions & Capacities": {
+          "Length": "2000 mm",
+          "Width": "780 mm",
+          "Height": "1080 mm",
+          "Wheelbase": "1330 mm",
+          "Ground clearance": "165 mm",
+          "Seat height": "790 mm",
+          "Fuel tank capacity": "13 L",
+          "Kerb weight": "136 kg"
+        },
+        "Wheels & Tyres": {
+          "Front tyre": "100/80-17, tubeless",
+          "Rear tyre": "140/60-17, tubeless",
+          "Wheel type": "Alloy"
+        },
+        "Electricals": {
+          "Headlight": "LED",
+          "Tail light": "LED",
+          "Console": "Fully digital LCD"
+        }
+      }
+    },
+    {
+      "model_name": "Yamaha Fascino 125 Fi Hybrid",
+      "model_name_citation": "https://www.bikedekho.com/yamaha/fascino",
+      "price": "Rs. 74,910* Onwards",
+      "price_citation": "https://www.bikedekho.com/yamaha-bikes",
+      "mileage": "68.75 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yamaha/fascino/specifications",
+      "engine_displacement": "125 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/yamaha/fascino/specifications",
+      "technical_specifications": {
+        "Engine & Transmission": {
+          "Engine Type": "Air-cooled, 4-stroke, SOHC, 2-valve",
+          "Displacement": "125 cc",
+          "Max Power": "8.2 PS @ 6500 rpm",
+          "Max Torque": "10.3 Nm @ 5000 rpm",
+          "Transmission": "Automatic (V-Belt CVT)"
+        },
+        "Brakes & Braking System": {
+          "Braking Type": "Unified Braking System (U-Brem)",
+          "Front Brake": "Drum, 130 mm",
+          "Rear Brake": "Drum, 130 mm"
+        },
+        "Dimensions & Capacity": {
+          "Length": "1920 mm",
+          "Width": "685 mm",
+          "Height": "1150 mm",
+          "Ground Clearance": "145 mm",
+          "Seat Height": "780 mm",
+          "Kerb Weight": "99 kg",
+          "Fuel Tank Capacity": "5.2 L",
+          "Under-seat Storage": "21 L"
+        },
+        "Wheels & Tyres": {
+          "Front Tyre": "90/90-12 (Tubeless)",
+          "Rear Tyre": "110/90-10 (Tubeless)",
+          "Wheel Type": "Alloy"
+        },
+        "Electricals": {
+          "Headlight": "Halogen",
+          "Taillight": "Bulb",
+          "Console": "Analogue"
+        }
+      }
+    },
+    {
+      "model_name": "Yamaha FZS-FI V3",
+      "model_name_citation": "https://www.bikedekho.com/yamaha/fz-s-fi-version-3",
+      "price": "Rs. 1,12,693* Onwards",
+      "price_citation": "https://www.bikedekho.com/yamaha-bikes",
+      "mileage": "49.31 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yamaha/fz-s-fi-version-3/specifications",
+      "engine_displacement": "149 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/yamaha/fz-s-fi-version-3/specifications",
+      "technical_specifications": {
+        "Engine and Transmission": {
+          "Engine Type": "Air-cooled, 4-stroke, SOHC, 2-valve",
+          "Displacement": "149 cc",
+          "Max Power": "12.4 PS @ 7250 rpm",
+          "Max Torque": "13.3 Nm @ 5500 rpm",
+          "Gearbox": "5-speed manual"
+        },
+        "Brakes": {
+          "Front Brake": "Disc, 282 mm",
+          "Rear Brake": "Disc, 220 mm",
+          "ABS": "Single-channel"
+        },
+        "Dimensions & Capacities": {
+          "Length": "1990 mm",
+          "Width": "780 mm",
+          "Height": "1080 mm",
+          "Ground Clearance": "165 mm",
+          "Seat Height": "790 mm",
+          "Fuel Tank Capacity": "13 L",
+          "Kerb Weight": "134 kg"
+        },
+        "Wheels & Tyres": {
+          "Front Tyre": "100/80-17 (tubeless)",
+          "Rear Tyre": "140/60-17 (tubeless)",
+          "Wheel Type": "Alloy"
+        },
+        "Electricals": {
+          "Headlight": "LED",
+          "Taillight": "LED",
+          "Console": "LCD digital display"
+        }
+      }
+    },
+    {
+      "model_name": "Yamaha Aerox 155",
+      "model_name_citation": "https://www.bikedekho.com/yamaha/aerox-155",
+      "price": "Rs. 1,39,700* Onwards",
+      "price_citation": "https://www.bikedekho.com/yamaha-bikes",
+      "mileage": "45 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yamaha/aerox-155/specifications",
+      "engine_displacement": "155 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/yamaha/aerox-155/specifications",
+      "technical_specifications": {
+        "Engine & Transmission": {
+          "Engine Type": "Liquid-cooled, 4-stroke, SOHC, 4-valve",
+          "Displacement": "155 cc",
+          "Max Power": "15 PS @ 8000 rpm",
+          "Max Torque": "13.9 Nm @ 6500 rpm",
+          "Transmission": "Automatic V-belt"
+        },
+        "Chassis, Suspension & Brakes": {
+          "Front Brake": "Disc, 230 mm",
+          "Rear Brake": "Drum, 130 mm",
+          "ABS": "Single channel"
+        },
+        "Dimensions & Capacity": {
+          "Length": "1980 mm",
+          "Width": "700 mm",
+          "Height": "1150 mm",
+          "Ground Clearance": "145 mm",
+          "Seat Height": "790 mm",
+          "Kerb Weight": "126 kg",
+          "Fuel Tank Capacity": "5.5 L",
+          "Under-seat Storage": "24.5 L"
+        },
+        "Wheels & Tyres": {
+          "Front Tyre": "110/80-14, tubeless",
+          "Rear Tyre": "140/70-14, tubeless",
+          "Wheel Type": "Alloy"
+        },
+        "Electricals": {
+          "Headlight": "LED",
+          "Taillight": "LED",
+          "Console": "Digital LCD"
+        }
+      }
+    },
+    {
+      "model_name": "Yamaha R15S",
+      "model_name_citation": "https://www.bikedekho.com/yamaha/yzf-r15-v3",
+      "price": "Rs. 1,50,700* Onwards",
+      "price_citation": "https://www.bikedekho.com/yamaha-bikes",
+      "mileage": "40 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yamaha/yzf-r15-v3/specifications",
+      "engine_displacement": "155 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/yamaha/yzf-r15-v3/specifications",
+      "technical_specifications": {
+        "Engine & Transmission": {
+          "Engine Type": "Liquid-cooled, 4-stroke, SOHC, 4-valve",
+          "Displacement": "155 cc",
+          "Max Power": "18.4 PS @ 10,000 rpm",
+          "Max Torque": "14.2 Nm @ 7,500 rpm",
+          "Gearbox": "6-speed manual"
+        },
+        "Brakes": {
+          "Front Brake": "Disc, 282 mm",
+          "Rear Brake": "Disc, 220 mm",
+          "ABS": "Dual-channel"
+        },
+        "Dimensions & Capacity": {
+          "Overall Length": "1990 mm",
+          "Overall Width": "725 mm",
+          "Overall Height": "1135 mm",
+          "Ground Clearance": "170 mm",
+          "Seat Height": "815 mm",
+          "Fuel Tank Capacity": "11 L",
+          "Kerb Weight": "142 kg"
+        },
+        "Wheels & Tyres": {
+          "Front Tyre": "100/80-17, tubeless",
+          "Rear Tyre": "140/70-17, tubeless",
+          "Wheel Type": "Alloy"
+        },
+        "Electricals": {
+          "Headlight": "LED",
+          "Taillight": "LED",
+          "Console": "Digital LCD"
+        }
+      }
+    },
+    {
+      "model_name": "Yamaha R3",
+      "model_name_citation": "https://www.bikedekho.com/yamaha/r3",
+      "price": "Rs. 3,39,028* Onwards",
+      "price_citation": "https://www.bikedekho.com/yamaha-bikes",
+      "mileage": "25 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yamaha/r3/specifications",
+      "engine_displacement": "321 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/yamaha/r3/specifications",
+      "technical_specifications": {
+        "Engine and Transmission": {
+          "Engine Type": "4-stroke, 2-cylinder, Liquid-cooled, DOHC, 4-valves",
+          "Displacement": "321 cc",
+          "Max Power": "42 PS @ 10,750 rpm",
+          "Max Torque": "29.5 Nm @ 9,000 rpm",
+          "Gearbox": "6-speed manual"
+        },
+        "Brakes": {
+          "Front Brake": "Disc, 298 mm",
+          "Rear Brake": "Disc, 220 mm",
+          "ABS": "Dual Channel"
+        },
+        "Dimensions and Capacity": {
+          "Length": "2090 mm",
+          "Width": "730 mm",
+          "Height": "1140 mm",
+          "Wheelbase": "1380 mm",
+          "Ground Clearance": "160 mm",
+          "Seat Height": "780 mm",
+          "Fuel Tank Capacity": "14 L",
+          "Kerb Weight": "169 kg"
+        },
+        "Wheels and Tyres": {
+          "Front Wheel": "17 inch, 110/70-17",
+          "Rear Wheel": "17 inch, 140/70-17",
+          "Tyre Type": "Tubeless"
+        },
+        "Electricals": {
+          "Headlight": "LED, Projector",
+          "Taillight": "LED",
+          "Console": "LCD digital"
+        }
+      }
+    },
+    {
+      "model_name": "Yamaha FZ-RAVE",
+      "model_name_citation": "https://www.bikedekho.com/yamaha/fz-rave",
+      "price": "Rs. 1,19,500* Onwards",
+      "price_citation": "https://www.bikedekho.com/yamaha-bikes",
+      "mileage": "56 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yamaha/fz-rave/specifications",
+      "engine_displacement": "149 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/yamaha/fz-rave/specifications",
+      "technical_specifications": {
+        "Engine & Transmission": {
+          "Engine Type": "Air-cooled, 4-stroke, SOHC, 2-valve",
+          "Displacement": "149 cc",
+          "Maximum Power": "12.4 PS @ 7,250 rpm",
+          "Maximum Torque": "13.3 Nm @ 5,500 rpm",
+          "Gearbox": "5-speed manual"
+        },
+        "Brakes": {
+          "Front Brake": "Disc, 282 mm",
+          "Rear Brake": "Disc, 220 mm",
+          "ABS": "Single-channel"
+        },
+        "Dimensions & Capacity": {
+          "Length": "1990 mm",
+          "Width": "780 mm",
+          "Height": "1080 mm",
+          "Ground Clearance": "165 mm",
+          "Seat Height": "790 mm",
+          "Fuel Tank Capacity": "13 L",
+          "Kerb Weight": "136 kg"
+        },
+        "Wheels & Tyres": {
+          "Front Tyre": "100/80-17, tubeless",
+          "Rear Tyre": "140/60-17, tubeless",
+          "Wheel Type": "Alloy"
+        },
+        "Electricals": {
+          "Headlight": "LED",
+          "Taillight": "LED",
+          "Console": "Full-colour LCD digital"
+        }
+      }
+    },
+    {
+      "model_name": "Yamaha FZ X",
+      "model_name_citation": "https://www.bikedekho.com/yamaha/fz-x",
+      "price": "Rs. 1,20,800* Onwards",
+      "price_citation": "https://www.bikedekho.com/yamaha-bikes",
+      "mileage": "55.11 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yamaha/fz-x/specifications",
+      "engine_displacement": "149 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/yamaha/fz-x/specifications",
+      "technical_specifications": {
+        "Engine & Transmission": {
+          "Engine Type": "Air-cooled, 4-stroke, SOHC, 2-valve",
+          "Displacement": "149 cc",
+          "Max Power": "12.4 PS @ 7,250 rpm",
+          "Max Torque": "13.3 Nm @ 5,500 rpm",
+          "Gearbox": "5-speed manual"
+        },
+        "Brakes": {
+          "Front Brake": "Disc, 282 mm",
+          "Rear Brake": "Disc, 220 mm",
+          "ABS": "Single-channel"
+        },
+        "Dimensions & Capacity": {
+          "Overall Length": "2020 mm",
+          "Overall Width": "785 mm",
+          "Overall Height": "1115 mm",
+          "Ground Clearance": "165 mm",
+          "Seat Height": "810 mm",
+          "Kerb Weight": "139 kg",
+          "Fuel Tank Capacity": "10 L"
+        },
+        "Wheels & Tyres": {
+          "Front Tyre": "100/80-17",
+          "Rear Tyre": "140/60-17",
+          "Tyre Type": "Tubeless, radial"
+        },
+        "Electricals": {
+          "Headlight": "LED",
+          "Taillight": "LED",
+          "Console": "Digital LCD"
+        }
+      }
+    },
+    {
+      "model_name": "Yamaha FZ X Hybrid",
+      "model_name_citation": "https://www.bikedekho.com/yamaha/fz-x-hybrid",
+      "price": "Rs. 1,39,100* Onwards",
+      "price_citation": "https://www.bikedekho.com/yamaha-bikes",
+      "mileage": "53 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yamaha/fz-x-hybrid/specifications",
+      "engine_displacement": "149 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/yamaha/fz-x-hybrid/specifications",
+      "technical_specifications": {
+        "Engine & Transmission": {
+          "Engine Type": "Air-cooled, 4-stroke, SOHC, 2-valve",
+          "Displacement": "149 cc",
+          "Max Power": "12.4 PS @ 7,250 rpm",
+          "Max Torque": "13.3 Nm @ 5,500 rpm",
+          "Gearbox": "5-speed manual"
+        },
+        "Brakes": {
+          "Front Brake": "Disc, 282 mm",
+          "Rear Brake": "Disc, 220 mm",
+          "ABS": "Single-channel"
+        },
+        "Dimensions & Capacities": {
+          "Length": "2020 mm",
+          "Width": "785 mm",
+          "Height": "1100 mm",
+          "Ground Clearance": "165 mm",
+          "Seat Height": "810 mm",
+          "Fuel Tank Capacity": "10 L",
+          "Kerb Weight": "141 kg"
+        },
+        "Electricals": {
+          "Headlamp": "LED",
+          "Taillamp": "LED",
+          "Console": "4.2-inch colour TFT"
+        }
+      }
+    },
+    {
+      "model_name": "Yamaha MT-03",
+      "model_name_citation": "https://www.bikedekho.com/yamaha/mt-03",
+      "price": "Rs. 3,29,608* Onwards",
+      "price_citation": "https://www.bikedekho.com/yamaha-bikes",
+      "mileage": "26.31 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yamaha/mt-03/specifications",
+      "engine_displacement": "321 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/yamaha/mt-03/specifications",
+      "technical_specifications": {
+        "Engine & Transmission": {
+          "Engine Type": "4-stroke, liquid-cooled, DOHC, 4-valve",
+          "Displacement": "321 cc",
+          "Maximum Power": "42 PS @ 10,750 rpm",
+          "Maximum Torque": "29.5 Nm @ 9,000 rpm",
+          "Transmission": "6-speed manual"
+        },
+        "Brakes": {
+          "Front Brake": "Disc, 298 mm",
+          "Rear Brake": "Disc, 220 mm",
+          "ABS": "Dual-channel"
+        },
+        "Dimensions & Capacity": {
+          "Overall Length": "2090 mm",
+          "Overall Width": "755 mm",
+          "Overall Height": "1070 mm",
+          "Ground Clearance": "160 mm",
+          "Seat Height": "780 mm",
+          "Kerb Weight": "167 kg",
+          "Fuel Tank Capacity": "14 L"
+        },
+        "Wheels & Tyres": {
+          "Tyre Size (Front)": "110/70-17",
+          "Tyre Size (Rear)": "140/70-17",
+          "Wheel Type": "Alloy"
+        },
+        "Electricals & Instrumentation": {
+          "Headlight": "LED, projector",
+          "Taillight": "LED",
+          "Console": "Digital LCD"
+        }
+      }
+    },
+    {
+      "model_name": "Yamaha EC-06",
+      "model_name_citation": "https://www.bikedekho.com/yamaha/ec-06",
+      "price": "Rs. 1,67,600* Onwards",
+      "price_citation": "https://www.bikedekho.com/yamaha-bikes",
+      "mileage": "169 km/charge (Range)",
+      "mileage_citation": "https://www.bikedekho.com/yamaha/ec-06/specifications",
+      "engine_displacement": "Electric (Motor: 6.7 kW)",
+      "engine_displacement_citation": "https://www.bikedekho.com/yamaha/ec-06/specifications",
+      "technical_specifications": {
+        "Engine & Transmission": {
+          "Motor Type": "IPMSM",
+          "Peak Power": "6.7 kW",
+          "Torque": "26 Nm",
+          "Transmission": "Automatic"
+        },
+        "Performance": {
+          "Top Speed": "79 km/h",
+          "Claimed Range": "169 km per charge",
+          "Battery Capacity": "4 kWh"
+        },
+        "Brakes": {
+          "Front Brake": "Disc, 200 mm",
+          "Rear Brake": "Disc, 200 mm",
+          "Braking System": "Combi Brake System (CBS)"
+        },
+        "Dimensions & Capacity": {
+          "Length": "1995 mm",
+          "Width": "765 mm",
+          "Height": "1153 mm",
+          "Kerb Weight": "132 kg",
+          "Under-seat Storage": "24.5 L"
+        }
+      }
+    },
+    {
+      "model_name": "Yamaha FZ-FI V3",
+      "model_name_citation": "https://www.bikedekho.com/yamaha/fz-fi-version-3",
+      "price": "Rs. 1,10,000* Onwards",
+      "price_citation": "https://www.bikedekho.com/yamaha-bikes",
+      "mileage": "49.3 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yamaha/fz-fi-version-3/specifications",
+      "engine_displacement": "149 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/yamaha/fz-fi-version-3/specifications",
+      "technical_specifications": {
+        "Engine and Transmission": {
+          "Engine type": "Air-cooled, 4-stroke, SOHC, 2-valve",
+          "Displacement": "149 cc",
+          "Max power": "12.4 PS @ 7,250 rpm",
+          "Max torque": "13.3 Nm @ 5,500 rpm",
+          "Transmission": "5-speed manual"
+        },
+        "Brakes": {
+          "Front brake": "Disc, 282 mm",
+          "Rear brake": "Disc, 220 mm",
+          "ABS": "Single-channel"
+        },
+        "Dimensions and Capacity": {
+          "Length": "1,990 mm",
+          "Width": "790 mm",
+          "Height": "1,080 mm",
+          "Ground clearance": "165 mm",
+          "Seat height": "790 mm",
+          "Fuel tank capacity": "13 L",
+          "Kerb weight": "135 kg"
+        },
+        "Wheels and Tyres": {
+          "Front tyre": "100/80-17, tubeless",
+          "Rear tyre": "140/60-17, tubeless",
+          "Wheel type": "Alloy"
+        }
+      }
+    }
+  ]
 }

@@ -1,6 +1,590 @@
 {
-  "brand": "Royal Enfield",
-  "brandId": "royal-enfield",
-  "type": "2w",
-  "vehicles": []
+  "royal_enfield_bikes": [
+    {
+      "model_name": "Royal Enfield Hunter 350",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/hunter/specifications",
+      "price": "Rs 1,37,640",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/hunter/specifications",
+      "mileage": "36.2 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/hunter/specifications",
+      "engine_displacement": "349 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/hunter/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Single Cylinder, 4 Stroke, Air Oil Cooled",
+          "Displacement": "349 cc",
+          "Max Power": "20.21 PS @ 6100 rpm",
+          "Max Torque": "27 Nm @ 4000 rpm"
+        },
+        "Transmission": {
+          "Gear Box": "5 Speed",
+          "Clutch": "Wet Multi Plate, Assist and Slipper Clutch"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Drum",
+          "ABS": "Single Channel"
+        },
+        "Tyres & Wheels": {
+          "Tyre Size": "Front :-100/80-17 Rear :-120/80-17",
+          "Wheels Type": "Spoke"
+        },
+        "Dimensions": {
+          "Kerb Weight": "181 kg",
+          "Fuel Capacity": "13 L",
+          "Saddle Height": "790 mm"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Bullet 350",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/bullet-350/specifications",
+      "price": "Rs 1,62,025",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/bullet-350/specifications",
+      "mileage": "37 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/bullet-350/specifications",
+      "engine_displacement": "349 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/bullet-350/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Single Cylinder, 4 Stroke, Air-oil Cooled",
+          "Displacement": "349 cc",
+          "Max Power": "20.21 PS @ 6100 rpm",
+          "Max Torque": "27 Nm @ 4000 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Drum",
+          "ABS": "Single Channel"
+        },
+        "Tyres & Wheels": {
+          "Tyre Size": "Front :-100/90-19 Rear :-120/80-18",
+          "Wheels Type": "Spoke"
+        },
+        "Dimensions": {
+          "Kerb Weight": "195 kg",
+          "Fuel Capacity": "13 L",
+          "Ground Clearance": "160 mm"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Himalayan 450",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/himalayan/specifications",
+      "price": "Rs 3,05,736",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/himalayan/specifications",
+      "mileage": "30 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/himalayan/specifications",
+      "engine_displacement": "452 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/himalayan/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Liquid Cooled, Single Cylinder, 4 Valves, DOHC",
+          "Max Power": "40.02 PS @ 8000 rpm",
+          "Max Torque": "40 Nm @ 5500 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Disc",
+          "ABS": "Dual Channel, Switchable"
+        },
+        "Suspension": {
+          "Front": "Upside Down Fork, 43 mm",
+          "Rear": "Linkage Type Monoshock"
+        },
+        "Dimensions": {
+          "Ground Clearance": "230 mm",
+          "Fuel Capacity": "17 L",
+          "Kerb Weight": "196 kg"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Classic 350",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/classic-350/specifications",
+      "price": "Rs 1,82,658",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/classic-350/specifications",
+      "mileage": "41.55 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/classic-350/specifications",
+      "engine_displacement": "349 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/classic-350/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Single Cylinder, 4 Stroke, Air‑oil Cooled",
+          "Max Power": "20.21 PS @ 6100 rpm",
+          "Max Torque": "27 Nm @ 4000 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Drum",
+          "ABS": "Single Channel"
+        },
+        "Dimensions": {
+          "Kerb Weight": "195 kg",
+          "Fuel Capacity": "13 L",
+          "Saddle Height": "805 mm"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Continental GT 650",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/continental-gt-650/specifications",
+      "price": "Rs 3,53,105",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/continental-gt-650/specifications",
+      "mileage": "27 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/continental-gt-650/specifications",
+      "engine_displacement": "647.95 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/continental-gt-650/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Inline Twin Cylinder, 4 Stroke, SOHC",
+          "Max Power": "47.4 PS @ 7250 rpm",
+          "Max Torque": "52.3 Nm @ 5150 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Disc",
+          "ABS": "Dual Channel"
+        },
+        "Transmission": {
+          "Gear Box": "6 Speed"
+        },
+        "Dimensions": {
+          "Kerb Weight": "214 kg",
+          "Fuel Capacity": "12.5 L"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Super Meteor 650",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/super-meteor-650/specifications",
+      "price": "Rs 4,02,968",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/super-meteor-650/specifications",
+      "mileage": "25 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/super-meteor-650/specifications",
+      "engine_displacement": "648 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/super-meteor-650/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Parallel Twin, 4 Stroke, SOHC, Air‑Oil Cooled",
+          "Max Power": "47 PS @ 7250 rpm",
+          "Max Torque": "52.3 Nm @ 5650 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Disc",
+          "ABS": "Dual Channel"
+        },
+        "Wheels": {
+          "Type": "Alloy",
+          "Front Size": "19 inch",
+          "Rear Size": "16 inch"
+        },
+        "Dimensions": {
+          "Kerb Weight": "241 kg",
+          "Ground Clearance": "135 mm"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Interceptor 650",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/interceptor-650/specifications",
+      "price": "Rs 3,35,394",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/interceptor-650/specifications",
+      "mileage": "25 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/interceptor-650/specifications",
+      "engine_displacement": "647.95 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/interceptor-650/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Inline Twin Cylinder, 4 Stroke / SOHC",
+          "Max Power": "47.4 PS @ 7250 rpm",
+          "Max Torque": "52.3 Nm @ 5150 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Disc",
+          "ABS": "Dual Channel"
+        },
+        "Dimensions": {
+          "Kerb Weight": "218 kg",
+          "Fuel Capacity": "13.7 L"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Guerrilla 450",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/guerrilla-450/specifications",
+      "price": "Rs 2,56,387",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/guerrilla-450/specifications",
+      "mileage": "29.5 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/guerrilla-450/specifications",
+      "engine_displacement": "452 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/guerrilla-450/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Liquid Cooled, Single Cylinder, DOHC, 4 Valves",
+          "Max Power": "40.02 PS @ 8000 rpm",
+          "Max Torque": "40 Nm @ 5500 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Disc",
+          "ABS": "Dual Channel"
+        },
+        "Wheels": {
+          "Type": "Alloy"
+        },
+        "Dimensions": {
+          "Kerb Weight": "184 kg",
+          "Fuel Capacity": "11 L"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Shotgun 650",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/shotgun/specifications",
+      "price": "Rs 3,98,017",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/shotgun/specifications",
+      "mileage": "22 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/shotgun/specifications",
+      "engine_displacement": "648 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/shotgun/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Inline Twin Cylinder, 4 Stroke, SOHC",
+          "Max Power": "47 PS @ 7250 rpm",
+          "Max Torque": "52.3 Nm @ 5650 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Disc",
+          "ABS": "Dual Channel"
+        },
+        "Dimensions": {
+          "Kerb Weight": "240 kg",
+          "Fuel Capacity": "13.8 L"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Meteor 350",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/meteor-350/specifications",
+      "price": "Rs 1,95,762",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/meteor-350/specifications",
+      "mileage": "41.88 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/meteor-350/specifications",
+      "engine_displacement": "349.34 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/meteor-350/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Single Cylinder, 4 Stroke, Air Oil Cooled Engine",
+          "Max Power": "20.21 PS @ 6100 rpm",
+          "Max Torque": "27 Nm @ 4000 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Disc",
+          "ABS": "Dual Channel"
+        },
+        "Wheels": {
+          "Type": "Alloy"
+        },
+        "Dimensions": {
+          "Kerb Weight": "191 kg",
+          "Fuel Capacity": "15 L",
+          "Saddle Height": "765 mm"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Bear 650",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/bear-650/specifications",
+      "price": "Rs 3,75,393",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/bear-650/specifications",
+      "mileage": "22 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/bear-650/specifications",
+      "engine_displacement": "648 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/bear-650/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Inline Twin Cylinder, 4 Stroke, SOHC",
+          "Max Power": "47.4 PS @ 7150 rpm",
+          "Max Torque": "56.5 Nm @ 5150 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Disc",
+          "ABS": "Dual Channel, Switchable"
+        },
+        "Dimensions": {
+          "Kerb Weight": "216 kg",
+          "Ground Clearance": "184 mm"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Classic 650",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/classic-650/specifications",
+      "price": "Rs 3,64,856",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/classic-650/specifications",
+      "mileage": "21.45 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/classic-650/specifications",
+      "engine_displacement": "647.95 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/classic-650/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Inline Twin Cylinder, 4 Stroke, SOHC",
+          "Max Power": "47.04 PS @ 7250 rpm",
+          "Max Torque": "52.3 Nm @ 5650 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Disc",
+          "ABS": "Dual Channel"
+        },
+        "Dimensions": {
+          "Kerb Weight": "243 kg",
+          "Fuel Capacity": "14.8 L"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Scram 411",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/scram-411/specifications",
+      "price": "Rs. 2,06,394",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/scram-411/specifications",
+      "mileage": "38.23 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/scram-411/specifications",
+      "engine_displacement": "411 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/scram-411/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Single Cylinder, 4 Stroke, Air Cooled, SOHC",
+          "Max Power": "24.31 PS @ 6500 rpm",
+          "Max Torque": "32 Nm @ 4250±250 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Disc",
+          "ABS": "Dual Channel"
+        },
+        "Dimensions": {
+          "Kerb Weight": "185 kg",
+          "Fuel Capacity": "15 L"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Goan Classic 350",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/goan-classic-350/specifications",
+      "price": "Rs 2,19,787",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/goan-classic-350/specifications",
+      "mileage": "36.2 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/goan-classic-350/specifications",
+      "engine_displacement": "349 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/goan-classic-350/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Single Cylinder, 4 Stroke, Air-Oil Cooled, SOHC",
+          "Max Power": "20.48 PS @ 6100 rpm",
+          "Max Torque": "27 Nm @ 4000 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Disc",
+          "ABS": "Dual Channel"
+        },
+        "Dimensions": {
+          "Kerb Weight": "197 kg",
+          "Fuel Capacity": "13 L",
+          "Saddle Height": "750 mm"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Himalayan (411)",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/himalayan-411/specifications",
+      "price": "Rs. 1,91,401",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/himalayan-411/specifications",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/himalayan-411/specifications",
+      "engine_displacement": "411 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/himalayan-411/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Single Cylinder, 4 stroke, Air cooled, SOHC",
+          "Max Power": "24.31 PS @ 6500 rpm",
+          "Max Torque": "32 Nm @ 4000 - 4500 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Disc",
+          "ABS": "Dual Channel, Switchable"
+        },
+        "Dimensions": {
+          "Kerb Weight": "199 kg",
+          "Fuel Capacity": "15 L",
+          "Ground Clearance": "220 mm"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Bullet 500",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/bullet-500/specifications",
+      "price": "Rs. 1,73,796",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/bullet-500/specifications",
+      "mileage": "30 Kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/bullet-500/specifications",
+      "engine_displacement": "499 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/bullet-500/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Single Cylinder, 4-Stroke, Spark ignition",
+          "Max Power": "27.57 PS @ 5250 rpm",
+          "Max Torque": "41.3 Nm @ 4000 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Disc",
+          "ABS": "No"
+        },
+        "Dimensions": {
+          "Kerb Weight": "196 Kg",
+          "Fuel Capacity": "13.5 L"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Classic 500",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/classic-500/specifications",
+      "price": "Rs. 1,79,000",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/classic-500/specifications",
+      "mileage": "32 Kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/classic-500/specifications",
+      "engine_displacement": "499 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/classic-500/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Single Cylinder, 4-Stroke, Spark Ignition",
+          "Max Power": "27.57 PS @ 5250 rpm",
+          "Max Torque": "41.3 Nm @ 4000 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Drum",
+          "ABS": "No"
+        },
+        "Dimensions": {
+          "Kerb Weight": "194 Kg",
+          "Fuel Capacity": "13.5 L"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Scram 440",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/scram-440/specifications",
+      "price": "Rs 2,23,131",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/scram-440/specifications",
+      "mileage": "29.5 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/scram-440/specifications",
+      "engine_displacement": "443 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/scram-440/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Single Cylinder, 4 Stroke, SOHC, Air Cooled, Fuel Injection",
+          "Max Power": "25.42 PS @ 6250 rpm",
+          "Max Torque": "34 Nm @ 4000 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Disc",
+          "ABS": "Dual Channel, Switchable"
+        },
+        "Dimensions": {
+          "Kerb Weight": "196 kg",
+          "Fuel Capacity": "15 L"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Thunderbird 350",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/thunderbird-350/specifications",
+      "price": "Rs. 90,145",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/thunderbird-350/specifications",
+      "mileage": "34 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/thunderbird-350/specifications",
+      "engine_displacement": "347 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/thunderbird-350/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "4Stroke SingleCylinder AirCooled OHV",
+          "Max Power": "18.0@5501 BHP@RPM",
+          "Max Torque": "27.46@3500 Nm@rpm"
+        },
+        "Dimensions": {
+          "Kerb Weight": "175 kg",
+          "Fuel Capacity": "14.45 litre",
+          "Ground Clearance": "140 mm"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Bullet 650",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/bullet-650/specifications",
+      "price": "Rs. 3,40,000",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/bullet-650/specifications",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/bullet-650/specifications",
+      "engine_displacement": "647.95 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/bullet-650/specifications",
+      "technical_specifications": {
+        "Engine": {
+          "Type": "Inline Twin Cylinder, 4 Stroke, SOHC",
+          "Max Power": "47.04 PS @ 7250 rpm",
+          "Max Torque": "52.3 Nm @ 5650 rpm"
+        },
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Disc",
+          "ABS": "Dual Channel"
+        },
+        "Dimensions": {
+          "Kerb Weight": "243 Kg",
+          "Fuel Capacity": "14.8 L"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield Flying Flea C6",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/royal-enfield-electric-bike/specifications",
+      "price": "Rs. 2,00,000",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/royal-enfield-electric-bike/specifications",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/royal-enfield-electric-bike/specifications",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/royal-enfield-electric-bike/specifications",
+      "technical_specifications": {
+        "Type": "Electric Bike",
+        "Brakes": {
+          "Front": "Disc",
+          "Rear": "Disc",
+          "ABS": "Dual Channel"
+        },
+        "Features": {
+          "Cruise Control": "Yes",
+          "Display": "TFT Display"
+        }
+      }
+    },
+    {
+      "model_name": "Royal Enfield 250",
+      "model_name_citation": "https://www.bikedekho.com/royal-enfield/royal-enfield-250/specifications",
+      "price": "Rs. 1,30,000",
+      "price_citation": "https://www.bikedekho.com/royal-enfield/royal-enfield-250/specifications",
+      "mileage_citation": "https://www.bikedekho.com/royal-enfield/royal-enfield-250/specifications",
+      "engine_displacement_citation": "https://www.bikedekho.com/royal-enfield/royal-enfield-250/specifications",
+      "technical_specifications": {
+        "Type": "Cruiser Bike",
+        "Emission Type": "bs6-2.0",
+        "Fuel Type": "Petrol"
+      }
+    }
+  ]
 }

@@ -1,6 +1,221 @@
 {
-  "brand": "Keeway India",
-  "brandId": "keeway-india",
-  "type": "2w",
-  "vehicles": []
+  "keeway_bikes": [
+    {
+      "bike_name": "Keeway V302C",
+      "bike_name_citation": "https://www.bikedekho.com/keeway/v302c",
+      "price": "Rs. 4,15,000*",
+      "price_citation": "https://www.bikedekho.com/keeway/v302c",
+      "engine_displacement": "298 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/keeway/v302c/specifications",
+      "mileage": "37.03 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/keeway/v302c/specifications",
+      "performance_metrics": {
+        "power": "29.9 PS",
+        "power_citation": "https://www.bikedekho.com/keeway/v302c/specifications",
+        "torque": "26.5 Nm",
+        "torque_citation": "https://www.bikedekho.com/keeway/v302c/specifications",
+        "top_speed": "155 kmph",
+        "top_speed_citation": "https://www.bikedekho.com/keeway/v302c/specifications"
+      }
+    },
+    {
+      "bike_name": "Keeway RR 300",
+      "bike_name_citation": "https://www.bikedekho.com/keeway/rr-300",
+      "price": "Rs. 1,85,000*",
+      "price_citation": "https://www.bikedekho.com/keeway/rr-300",
+      "engine_displacement": "292.4 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/keeway/rr-300/specifications",
+      "mileage": "40 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/keeway/rr-300/specifications",
+      "performance_metrics": {
+        "power": "27.88 PS",
+        "power_citation": "https://www.bikedekho.com/keeway/rr-300/specifications",
+        "torque": "25 Nm",
+        "torque_citation": "https://www.bikedekho.com/keeway/rr-300/specifications",
+        "top_speed": "139 kmph",
+        "top_speed_citation": "https://www.bikedekho.com/keeway/rr-300/specifications"
+      }
+    },
+    {
+      "bike_name": "Keeway SR125",
+      "bike_name_citation": "https://www.bikedekho.com/keeway/sr125",
+      "price": "Rs. 1,21,000*",
+      "price_citation": "https://www.bikedekho.com/keeway/sr125",
+      "engine_displacement": "125 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/keeway/sr125/specifications",
+      "mileage": "50 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/keeway/sr125/specifications",
+      "performance_metrics": {
+        "power": "9.83 PS",
+        "power_citation": "https://www.bikedekho.com/keeway/sr125/specifications",
+        "torque": "8.2 Nm",
+        "torque_citation": "https://www.bikedekho.com/keeway/sr125/specifications",
+        "top_speed": "100 kmph",
+        "top_speed_citation": "https://www.bikedekho.com/keeway/sr125/specifications"
+      }
+    },
+    {
+      "bike_name": "Keeway SR 250",
+      "bike_name_citation": "https://www.bikedekho.com/keeway/sr250",
+      "price": "Rs. 1,49,000*",
+      "price_citation": "https://www.bikedekho.com/keeway/sr250",
+      "engine_displacement": "223 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/keeway/sr250/specifications",
+      "mileage": "40 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/keeway/sr250/specifications",
+      "performance_metrics": {
+        "power": "17 PS",
+        "power_citation": "https://www.bikedekho.com/keeway/sr250/specifications",
+        "torque": "16 Nm",
+        "torque_citation": "https://www.bikedekho.com/keeway/sr250/specifications",
+        "top_speed": "120 kmph",
+        "top_speed_citation": "https://www.bikedekho.com/keeway/sr250/specifications"
+      }
+    },
+    {
+      "bike_name": "Keeway K-Light 250V",
+      "bike_name_citation": "https://www.bikedekho.com/keeway/k-light-250v",
+      "price": "Rs. 2,50,000*",
+      "price_citation": "https://www.bikedekho.com/keeway/k-light-250v",
+      "engine_displacement": "249 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/keeway/k-light-250v/specifications",
+      "mileage": "32 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/keeway/k-light-250v/specifications",
+      "performance_metrics": {
+        "power": "18.95 PS",
+        "power_citation": "https://www.bikedekho.com/keeway/k-light-250v/specifications",
+        "torque": "19 Nm",
+        "torque_citation": "https://www.bikedekho.com/keeway/k-light-250v/specifications",
+        "top_speed": "125 kmph",
+        "top_speed_citation": "https://www.bikedekho.com/keeway/k-light-250v/specifications"
+      }
+    },
+    {
+      "bike_name": "Keeway K300 SF",
+      "bike_name_citation": "https://www.bikedekho.com/keeway/k300-sf",
+      "price": "Rs. 1,57,000*",
+      "price_citation": "https://www.bikedekho.com/keeway/k300-sf",
+      "engine_displacement": "292.4 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/keeway/k300-sf/specifications",
+      "mileage": "40 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/keeway/k300-sf/specifications",
+      "performance_metrics": {
+        "power": "27.88 PS",
+        "power_citation": "https://www.bikedekho.com/keeway/k300-sf/specifications",
+        "torque": "25 Nm",
+        "torque_citation": "https://www.bikedekho.com/keeway/k300-sf/specifications",
+        "top_speed": "160 kmph",
+        "top_speed_citation": "https://www.bikedekho.com/keeway/k300-sf/specifications"
+      }
+    },
+    {
+      "bike_name": "Keeway Sixties 300i",
+      "bike_name_citation": "https://www.bikedekho.com/keeway/sixties-300i",
+      "price": "Rs. 3,13,000*",
+      "price_citation": "https://www.bikedekho.com/keeway/sixties-300i",
+      "engine_displacement": "278.2 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/keeway/sixties-300i/specifications",
+      "mileage": "27.73 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/keeway/sixties-300i/specifications",
+      "performance_metrics": {
+        "power": "18.95 PS",
+        "power_citation": "https://www.bikedekho.com/keeway/sixties-300i/specifications",
+        "torque": "23.5 Nm",
+        "torque_citation": "https://www.bikedekho.com/keeway/sixties-300i/specifications",
+        "top_speed": "120 kmph",
+        "top_speed_citation": "https://www.bikedekho.com/keeway/sixties-300i/specifications"
+      }
+    },
+    {
+      "bike_name": "Keeway Vieste 300",
+      "bike_name_citation": "https://www.bikedekho.com/keeway/vieste-300",
+      "price": "Rs. 3,02,000*",
+      "price_citation": "https://www.bikedekho.com/keeway/vieste-300",
+      "engine_displacement": "278.2 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/keeway/vieste-300/specifications",
+      "mileage": "21.56 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/keeway/vieste-300/specifications",
+      "performance_metrics": {
+        "power": "18.95 PS",
+        "power_citation": "https://www.bikedekho.com/keeway/vieste-300/specifications",
+        "torque": "22 Nm",
+        "torque_citation": "https://www.bikedekho.com/keeway/vieste-300/specifications",
+        "top_speed": "125 kmph",
+        "top_speed_citation": "https://www.bikedekho.com/keeway/vieste-300/specifications"
+      }
+    },
+    {
+      "bike_name": "Keeway LFS 700",
+      "bike_name_citation": "https://www.bikedekho.com/keeway/lfs700",
+      "price": "Rs 8,00,000*",
+      "price_citation": "https://www.bikedekho.com/keeway/lfs700",
+      "engine_displacement": "680 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/keeway/lfs700/specifications",
+      "performance_metrics": {
+        "power": "76.04 PS",
+        "power_citation": "https://www.bikedekho.com/keeway/lfs700/specifications",
+        "torque": "67 Nm",
+        "torque_citation": "https://www.bikedekho.com/keeway/lfs700/specifications"
+      }
+    },
+    {
+      "bike_name": "Keeway LFC 700",
+      "bike_name_citation": "https://www.bikedekho.com/keeway/lfc-700",
+      "price": "Rs 8,00,000*",
+      "price_citation": "https://www.bikedekho.com/keeway/lfc-700",
+      "engine_displacement": "676 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/keeway/lfc-700/specifications",
+      "performance_metrics": {}
+    },
+    {
+      "bike_name": "Keeway Darkflag",
+      "bike_name_citation": "https://www.bikedekho.com/keeway/darkflag",
+      "price": "Rs 8,00,000*",
+      "price_citation": "https://www.bikedekho.com/keeway/darkflag",
+      "engine_displacement": "496 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/keeway/darkflag/specifications",
+      "performance_metrics": {
+        "power": "54.34 PS",
+        "power_citation": "https://www.bikedekho.com/keeway/darkflag/specifications",
+        "torque": "42 Nm",
+        "torque_citation": "https://www.bikedekho.com/keeway/darkflag/specifications"
+      }
+    },
+    {
+      "bike_name": "Keeway K300 N",
+      "bike_name_citation": "https://www.bikedekho.com/keeway/k300n",
+      "price": "Price not found",
+      "price_citation": "https://www.bikedekho.com/keeway/k300n",
+      "engine_displacement": "292.4 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/keeway/k300n/specifications",
+      "mileage": "31.90 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/keeway/k300n/specifications",
+      "performance_metrics": {
+        "power": "27.88 PS",
+        "power_citation": "https://www.bikedekho.com/keeway/k300n/specifications",
+        "torque": "25 Nm",
+        "torque_citation": "https://www.bikedekho.com/keeway/k300n/specifications",
+        "top_speed": "151 kmph",
+        "top_speed_citation": "https://www.bikedekho.com/keeway/k300n/specifications"
+      }
+    },
+    {
+      "bike_name": "Keeway K300 R",
+      "bike_name_citation": "https://www.bikedekho.com/keeway/k300r",
+      "price": "Price not found",
+      "price_citation": "https://www.bikedekho.com/keeway/k300r",
+      "engine_displacement": "292.4 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/keeway/k300r/specifications",
+      "mileage": "32.30 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/keeway/k300r/specifications",
+      "performance_metrics": {
+        "power": "27.88 PS",
+        "power_citation": "https://www.bikedekho.com/keeway/k300r/specifications",
+        "torque": "25 Nm",
+        "torque_citation": "https://www.bikedekho.com/keeway/k300r/specifications",
+        "top_speed": "150 kmph",
+        "top_speed_citation": "https://www.bikedekho.com/keeway/k300r/specifications"
+      }
+    }
+  ]
 }

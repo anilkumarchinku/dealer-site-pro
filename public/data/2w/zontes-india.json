@@ -1,6 +1,116 @@
 {
-  "brand": "Zontes India",
-  "brandId": "zontes-india",
-  "type": "2w",
-  "vehicles": []
+  "zontes_bikes": [
+    {
+      "bike_name": "Zontes 350R",
+      "bike_name_citation": "https://www.bikedekho.com/zontes/350r/specifications",
+      "price": "Rs 2,57,000",
+      "price_citation": "https://www.bikedekho.com/zontes/350r/specifications",
+      "engine_displacement": "348 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/zontes/350r/specifications",
+      "mileage": "40 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/zontes/350r/specifications",
+      "performance_metrics": {
+        "power": "38.52 PS @ 9500 rpm",
+        "power_citation": "https://www.bikedekho.com/zontes/350r/specifications",
+        "torque": "32.8 Nm @ 7500 rpm",
+        "torque_citation": "https://www.bikedekho.com/zontes/350r/specifications",
+        "top_speed": "150 kmph",
+        "top_speed_citation": "https://www.bikedekho.com/zontes/350r/specifications"
+      }
+    },
+    {
+      "bike_name": "Zontes 350T",
+      "bike_name_citation": "https://www.bikedekho.com/zontes/350t/specifications",
+      "price": "Rs 2,75,000",
+      "price_citation": "https://www.bikedekho.com/zontes/350t/specifications",
+      "engine_displacement": "348 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/zontes/350t/specifications",
+      "mileage": "23 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/zontes/350t/specifications",
+      "performance_metrics": {
+        "power": "39.33 PS @ 9500 rpm",
+        "power_citation": "https://www.bikedekho.com/zontes/350t/specifications",
+        "torque": "32.8 Nm @ 7500 rpm",
+        "torque_citation": "https://www.bikedekho.com/zontes/350t/specifications",
+        "top_speed": "140 kmph",
+        "top_speed_citation": "https://www.bikedekho.com/zontes/350t/specifications"
+      }
+    },
+    {
+      "bike_name": "Zontes GK350",
+      "bike_name_citation": "https://www.bikedekho.com/zontes/gk-350/specifications",
+      "price": "Rs 3,22,000",
+      "price_citation": "https://www.bikedekho.com/zontes/gk-350/specifications",
+      "engine_displacement": "348 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/zontes/gk-350/specifications",
+      "mileage": "31.25 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/zontes/gk-350/specifications",
+      "performance_metrics": {
+        "power": "38.52 PS @ 9500 rpm",
+        "power_citation": "https://www.bikedekho.com/zontes/gk-350/specifications",
+        "torque": "32.8 Nm @ 7500 rpm",
+        "torque_citation": "https://www.bikedekho.com/zontes/gk-350/specifications",
+        "top_speed": "140 kmph",
+        "top_speed_citation": "https://www.bikedekho.com/zontes/gk-350/specifications"
+      }
+    },
+    {
+      "bike_name": "Zontes 350X",
+      "bike_name_citation": "https://www.bikedekho.com/zontes/350x/specifications",
+      "price": "Rs 2,37,000",
+      "price_citation": "https://www.bikedekho.com/zontes/350x/specifications",
+      "engine_displacement": "348 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/zontes/350x/specifications",
+      "mileage": "36 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/zontes/350x/specifications",
+      "performance_metrics": {
+        "power": "39.33 PS @ 9500 rpm",
+        "power_citation": "https://www.bikedekho.com/zontes/350x/specifications",
+        "torque": "32.8 Nm @ 7500 rpm",
+        "torque_citation": "https://www.bikedekho.com/zontes/350x/specifications",
+        "top_speed": "150 kmph",
+        "top_speed_citation": "https://www.bikedekho.com/zontes/350x/specifications"
+      }
+    },
+    {
+      "bike_name": "Zontes 350E",
+      "bike_name_citation": "https://www.bikedekho.com/zontes/350e/specifications",
+      "price": "Rs. 5,00,000*",
+      "price_citation": "https://www.bikedekho.com/zontes/350e/specifications",
+      "performance_metrics": {
+        "power": "36.70 Ps @ 7500 rpm",
+        "power_citation": "https://www.bikedekho.com/zontes/350e/specifications",
+        "torque": "38 Nm @ 6000 rpm",
+        "torque_citation": "https://www.bikedekho.com/zontes/350e/specifications"
+      }
+    },
+    {
+      "bike_name": "Zontes U1 200",
+      "bike_name_citation": "https://www.bikedekho.com/zontes/u1-200/specifications",
+      "price": "Rs. 1,80,000*",
+      "price_citation": "https://www.bikedekho.com/zontes/u1-200/specifications",
+      "engine_displacement": "198 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/zontes/u1-200/specifications",
+      "performance_metrics": {
+        "power": "21.79 Ps @ 9000 rpm",
+        "power_citation": "https://www.bikedekho.com/zontes/u1-200/specifications",
+        "torque": "19 Nm @ 7000 rpm",
+        "torque_citation": "https://www.bikedekho.com/zontes/u1-200/specifications"
+      }
+    },
+    {
+      "bike_name": "Zontes S350",
+      "bike_name_citation": "https://www.bikedekho.com/zontes/s350/specifications",
+      "price": "Rs. 3,20,000*",
+      "price_citation": "https://www.bikedekho.com/zontes/s350/specifications",
+      "engine_displacement": "348 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/zontes/s350/specifications",
+      "performance_metrics": {
+        "power": "39.33 Ps @ 9500 rpm",
+        "power_citation": "https://www.bikedekho.com/zontes/s350/specifications",
+        "torque": "32.8 Nm @ 7500 rpm",
+        "torque_citation": "https://www.bikedekho.com/zontes/s350/specifications"
+      }
+    }
+  ]
 }

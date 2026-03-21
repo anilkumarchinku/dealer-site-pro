@@ -1,6 +1,686 @@
 {
-  "brand": "Triumph India",
-  "brandId": "triumph-india",
-  "type": "2w",
-  "vehicles": []
+  "triumph_bikes": [
+    {
+      "model_name": "Triumph Speed 400",
+      "model_name_citation": "https://www.bikedekho.com/triumph/speed-400",
+      "engine_capacity_cc": "398.15 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/speed-400",
+      "torque": "37.5 Nm @ 6500 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/speed-400",
+      "mileage": "30 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/speed-400",
+      "other_performance_metrics": {
+        "power_bhp": "40 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/speed-400",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/speed-400",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/speed-400"
+      }
+    },
+    {
+      "model_name": "Triumph Street Triple 765",
+      "model_name_citation": "https://www.bikedekho.com/triumph/street-triple",
+      "engine_capacity_cc": "765 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/street-triple",
+      "torque": "80 Nm @ 9500 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/street-triple",
+      "mileage": "19.2 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/street-triple",
+      "other_performance_metrics": {
+        "power_bhp": "120 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/street-triple",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/street-triple",
+        "gearbox": "6-Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/street-triple"
+      }
+    },
+    {
+      "model_name": "Triumph Scrambler 400 X",
+      "model_name_citation": "https://www.bikedekho.com/triumph/scrambler-400x",
+      "engine_capacity_cc": "398.15 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/scrambler-400x",
+      "torque": "37.5 Nm @ 6500 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/scrambler-400x",
+      "mileage": "28.3 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/scrambler-400x",
+      "other_performance_metrics": {
+        "power_bhp": "40 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/scrambler-400x",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/scrambler-400x",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/scrambler-400x"
+      }
+    },
+    {
+      "model_name": "Triumph Rocket 3",
+      "model_name_citation": "https://www.bikedekho.com/triumph/rocket-3",
+      "engine_capacity_cc": "2458 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/rocket-3",
+      "torque": "225 Nm @ 4000 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/rocket-3",
+      "mileage": "15.15 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/rocket-3",
+      "other_performance_metrics": {
+        "power_bhp": "182 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/rocket-3",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/rocket-3",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/rocket-3"
+      }
+    },
+    {
+      "model_name": "Triumph Speed T4",
+      "model_name_citation": "https://www.bikedekho.com/triumph/speed-t4",
+      "engine_capacity_cc": "398.15 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/speed-t4",
+      "torque": "36 Nm @ 5000 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/speed-t4",
+      "mileage": "30 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/speed-t4",
+      "other_performance_metrics": {
+        "power_bhp": "31 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/speed-t4",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/speed-t4",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/speed-t4"
+      }
+    },
+    {
+      "model_name": "Triumph Scrambler 900",
+      "model_name_citation": "https://www.bikedekho.com/triumph/street-scrambler",
+      "engine_capacity_cc": "900 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/street-scrambler",
+      "torque": "80 Nm @ 3250 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/street-scrambler",
+      "mileage": "23.2 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/street-scrambler",
+      "other_performance_metrics": {
+        "power_bhp": "65 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/street-scrambler",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/street-scrambler",
+        "gearbox": "5 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/street-scrambler"
+      }
+    },
+    {
+      "model_name": "Triumph Thruxton 400",
+      "model_name_citation": "https://www.bikedekho.com/triumph/thruxton-400",
+      "engine_capacity_cc": "398 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/thruxton-400",
+      "torque": "37.5 Nm @ 7500 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/thruxton-400",
+      "mileage": "27.1 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/thruxton-400",
+      "other_performance_metrics": {
+        "power_bhp": "42 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/thruxton-400",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/thruxton-400",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/thruxton-400"
+      }
+    },
+    {
+      "model_name": "Triumph Tiger 900",
+      "model_name_citation": "https://www.bikedekho.com/triumph/tiger-900",
+      "engine_capacity_cc": "888 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/tiger-900",
+      "torque": "90 Nm @ 6850 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/tiger-900",
+      "mileage": "21.27 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/tiger-900",
+      "other_performance_metrics": {
+        "power_bhp": "108 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/tiger-900",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/tiger-900",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/tiger-900"
+      }
+    },
+    {
+      "model_name": "Triumph Bonneville T120",
+      "model_name_citation": "https://www.bikedekho.com/triumph/bonneville",
+      "engine_capacity_cc": "1200 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/bonneville",
+      "torque": "105 Nm @ 3500 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/bonneville",
+      "mileage": "21.27 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/bonneville",
+      "other_performance_metrics": {
+        "power_bhp": "80 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/bonneville",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/bonneville",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/bonneville"
+      }
+    },
+    {
+      "model_name": "Triumph Daytona 660",
+      "model_name_citation": "https://www.bikedekho.com/triumph/daytona-660",
+      "engine_capacity_cc": "660 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/daytona-660",
+      "torque": "69 Nm @ 8250 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/daytona-660",
+      "mileage": "20.4 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/daytona-660",
+      "other_performance_metrics": {
+        "power_bhp": "95 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/daytona-660",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/daytona-660",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/daytona-660"
+      }
+    },
+    {
+      "model_name": "Triumph Scrambler 400 XC",
+      "model_name_citation": "https://www.bikedekho.com/triumph/scrambler-400-xc",
+      "engine_capacity_cc": "398 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/scrambler-400-xc",
+      "torque": "37.5 Nm @ 6500 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/scrambler-400-xc",
+      "mileage": "27 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/scrambler-400-xc",
+      "other_performance_metrics": {
+        "power_bhp": "40 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/scrambler-400-xc",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/scrambler-400-xc",
+        "gearbox": "6 speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/scrambler-400-xc"
+      }
+    },
+    {
+      "model_name": "Triumph Bonneville Bobber",
+      "model_name_citation": "https://www.bikedekho.com/triumph/bonneville-bobber",
+      "engine_capacity_cc": "1200 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/bonneville-bobber",
+      "torque": "106 Nm @ 4000 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/bonneville-bobber",
+      "mileage": "22.22 Kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/bonneville-bobber",
+      "other_performance_metrics": {
+        "power_bhp": "78 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/bonneville-bobber",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/bonneville-bobber",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/bonneville-bobber"
+      }
+    },
+    {
+      "model_name": "Triumph Trident 660",
+      "model_name_citation": "https://www.bikedekho.com/triumph/trident-660",
+      "engine_capacity_cc": "660 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/trident-660",
+      "torque": "64 Nm @ 6250 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/trident-660",
+      "mileage": "20 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/trident-660",
+      "other_performance_metrics": {
+        "power_bhp": "81 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/trident-660",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/trident-660",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/trident-660"
+      }
+    },
+    {
+      "model_name": "Triumph Tiger Sport 660",
+      "model_name_citation": "https://www.bikedekho.com/triumph/tiger-sport-660",
+      "engine_capacity_cc": "660 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/tiger-sport-660",
+      "torque": "64 Nm @ 6250 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/tiger-sport-660",
+      "mileage": "22.22 Kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/tiger-sport-660",
+      "other_performance_metrics": {
+        "power_bhp": "81 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/tiger-sport-660",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/tiger-sport-660",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/tiger-sport-660"
+      }
+    },
+    {
+      "model_name": "Triumph Scrambler 1200 X",
+      "model_name_citation": "https://www.bikedekho.com/triumph/scrambler-1200x",
+      "engine_capacity_cc": "1200 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/scrambler-1200x",
+      "torque": "110 Nm @ 4250 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/scrambler-1200x",
+      "mileage": "22.72 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/scrambler-1200x",
+      "other_performance_metrics": {
+        "power_bhp": "90 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/scrambler-1200x",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/scrambler-1200x",
+        "gearbox": "6-speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/scrambler-1200x"
+      }
+    },
+    {
+      "model_name": "Triumph Speed Triple 1200",
+      "model_name_citation": "https://www.bikedekho.com/triumph/speed-triple-1200",
+      "engine_capacity_cc": "1160 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/speed-triple-1200",
+      "torque": "125 Nm @ 9000 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/speed-triple-1200",
+      "mileage": "18.18 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/speed-triple-1200",
+      "other_performance_metrics": {
+        "power_bhp": "180 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/speed-triple-1200",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/speed-triple-1200",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/speed-triple-1200"
+      }
+    },
+    {
+      "model_name": "Triumph Speed Twin 1200",
+      "model_name_citation": "https://www.bikedekho.com/triumph/speed-twin-1200",
+      "engine_capacity_cc": "1200 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/speed-twin-1200",
+      "torque": "112 Nm @ 4250 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/speed-twin-1200",
+      "mileage": "19.60 Kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/speed-twin-1200",
+      "other_performance_metrics": {
+        "power_bhp": "105 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/speed-twin-1200",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/speed-twin-1200",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/speed-twin-1200"
+      }
+    },
+    {
+      "model_name": "Triumph Speed Twin 900",
+      "model_name_citation": "https://www.bikedekho.com/triumph/speed-twin-900",
+      "engine_capacity_cc": "900 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/speed-twin-900",
+      "torque": "80 Nm @ 3800 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/speed-twin-900",
+      "mileage": "25 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/speed-twin-900",
+      "other_performance_metrics": {
+        "power_bhp": "65 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/speed-twin-900",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/speed-twin-900",
+        "gearbox": "5 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/speed-twin-900"
+      }
+    },
+    {
+      "model_name": "Triumph Bonneville T100",
+      "model_name_citation": "https://www.bikedekho.com/triumph/bonneville-t100",
+      "engine_capacity_cc": "900 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/bonneville-t100",
+      "torque": "80 Nm @ 3750 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/bonneville-t100",
+      "mileage": "24.39 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/bonneville-t100",
+      "other_performance_metrics": {
+        "power_bhp": "65 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/bonneville-t100",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/bonneville-t100",
+        "gearbox": "5 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/bonneville-t100"
+      }
+    },
+    {
+      "model_name": "Triumph Tiger 1200",
+      "model_name_citation": "https://www.bikedekho.com/triumph/tiger-1200",
+      "engine_capacity_cc": "1160 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/tiger-1200",
+      "torque": "130 Nm @ 7000 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/tiger-1200",
+      "mileage": "18.8 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/tiger-1200",
+      "other_performance_metrics": {
+        "power_bhp": "150 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/tiger-1200",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/tiger-1200",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/tiger-1200"
+      }
+    },
+    {
+      "model_name": "Triumph Bonneville Speedmaster",
+      "model_name_citation": "https://www.bikedekho.com/triumph/speedmaster",
+      "engine_capacity_cc": "1200 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/speedmaster",
+      "torque": "106 Nm @ 4000 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/speedmaster",
+      "mileage": "22.22 Kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/speedmaster",
+      "other_performance_metrics": {
+        "power_bhp": "78 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/speedmaster",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/speedmaster",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/speedmaster"
+      }
+    },
+    {
+      "model_name": "Triumph Speed 350",
+      "model_name_citation": "https://www.bikedekho.com/triumph/speed-350",
+      "other_performance_metrics": {
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/speed-350"
+      }
+    },
+    {
+      "model_name": "Triumph Trident 800",
+      "model_name_citation": "https://www.bikedekho.com/triumph/trident-800",
+      "engine_capacity_cc": "798 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/trident-800",
+      "torque": "84 Nm @ 8500 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/trident-800",
+      "mileage": "21.27 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/trident-800",
+      "other_performance_metrics": {
+        "power_bhp": "115 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/trident-800",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/trident-800",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/trident-800"
+      }
+    },
+    {
+      "model_name": "Triumph Bonneville 350",
+      "model_name_citation": "https://www.bikedekho.com/triumph/bonneville-400",
+      "engine_capacity_cc": "350 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/bonneville-400",
+      "other_performance_metrics": {
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/bonneville-400"
+      }
+    },
+    {
+      "model_name": "Triumph TE-1",
+      "model_name_citation": "https://www.bikedekho.com/triumph/triumph-electric-bike",
+      "other_performance_metrics": {
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/triumph-electric-bike"
+      }
+    },
+    {
+      "model_name": "Triumph Scrambler T4",
+      "model_name_citation": "https://www.bikedekho.com/triumph/scrambler-400",
+      "other_performance_metrics": {
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/scrambler-400"
+      }
+    },
+    {
+      "model_name": "Triumph Thruxton",
+      "model_name_citation": "https://www.bikedekho.com/triumph/thruxton-r",
+      "engine_capacity_cc": "1200 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/thruxton-r",
+      "torque": "112 Nm @ 4950 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/thruxton-r",
+      "mileage": "21 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/thruxton-r",
+      "other_performance_metrics": {
+        "power_bhp": "97 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/thruxton-r",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/thruxton-r",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/thruxton-r"
+      }
+    },
+    {
+      "model_name": "Triumph Speed Triple",
+      "model_name_citation": "https://www.bikedekho.com/triumph/speed",
+      "engine_capacity_cc": "865cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/speed",
+      "torque": "72Nm / 53 ft.lbs @ 3300rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/speed",
+      "mileage": "30 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/speed",
+      "other_performance_metrics": {
+        "power_bhp": "61PS / 60PS / 45 kW",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/speed",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/speed",
+        "gearbox": "5-speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/speed"
+      }
+    },
+    {
+      "model_name": "Triumph Triple",
+      "model_name_citation": "https://www.bikedekho.com/triumph/triple",
+      "engine_capacity_cc": "1050 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/triple",
+      "other_performance_metrics": {
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/triple"
+      }
+    },
+    {
+      "model_name": "2024 Triumph Trident 660",
+      "model_name_citation": "https://www.bikedekho.com/triumph/trident",
+      "engine_capacity_cc": "660 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/trident",
+      "torque": "64 Nm @ 6250 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/trident",
+      "mileage": "17.47 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/trident",
+      "other_performance_metrics": {
+        "power_bhp": "81 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/trident",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/trident",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/trident"
+      }
+    },
+    {
+      "model_name": "Triumph Daytona 675",
+      "model_name_citation": "https://www.bikedekho.com/triumph/daytona-350",
+      "engine_capacity_cc": "675 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/daytona-350",
+      "torque": "70.2 Nm @ 9900 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/daytona-350",
+      "mileage": "18 Kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/daytona-350",
+      "other_performance_metrics": {
+        "power_bhp": "118.5 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/daytona-350",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/daytona-350",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/daytona-350"
+      }
+    },
+    {
+      "model_name": "Triumph Tiger 800",
+      "model_name_citation": "https://www.bikedekho.com/triumph/tiger-800",
+      "engine_capacity_cc": "800 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/tiger-800",
+      "torque": "79 Nm @ 8050 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/tiger-800",
+      "mileage": "20.9 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/tiger-800",
+      "other_performance_metrics": {
+        "power_bhp": "95 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/tiger-800",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/tiger-800",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/tiger-800"
+      }
+    },
+    {
+      "model_name": "Triumph Thunderbird",
+      "model_name_citation": "https://www.bikedekho.com/triumph/thunderbird",
+      "engine_capacity_cc": "1699 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/thunderbird",
+      "torque": "156 Nm @ 2950 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/thunderbird",
+      "mileage": "16 Kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/thunderbird",
+      "other_performance_metrics": {
+        "power_bhp": "98 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/thunderbird",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/thunderbird",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/thunderbird"
+      }
+    },
+    {
+      "model_name": "Triumph Rocket III",
+      "model_name_citation": "https://www.bikedekho.com/triumph/rocket-iii",
+      "engine_capacity_cc": "2294 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/rocket-iii",
+      "torque": "221 Nm @ 2750 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/rocket-iii",
+      "mileage": "15 Kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/rocket-iii",
+      "other_performance_metrics": {
+        "power_bhp": "148 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/rocket-iii",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/rocket-iii",
+        "gearbox": "5 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/rocket-iii"
+      }
+    },
+    {
+      "model_name": "Triumph Thunderbird Storm",
+      "model_name_citation": "https://www.bikedekho.com/triumph/thunderbird-storm",
+      "engine_capacity_cc": "1699 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/thunderbird-storm",
+      "other_performance_metrics": {
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/thunderbird-storm"
+      }
+    },
+    {
+      "model_name": "Triumph Scrambler 1200",
+      "model_name_citation": "https://www.bikedekho.com/triumph/scrambler-1200",
+      "engine_capacity_cc": "1200 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/scrambler-1200",
+      "torque": "77 Nm",
+      "torque_citation": "https://www.bikedekho.com/triumph/scrambler-1200",
+      "mileage": "20 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/scrambler-1200",
+      "other_performance_metrics": {
+        "power_bhp": "80 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/scrambler-1200",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/scrambler-1200"
+      }
+    },
+    {
+      "model_name": "Triumph Tiger 850 Sport",
+      "model_name_citation": "https://www.bikedekho.com/triumph/tiger-850",
+      "engine_capacity_cc": "888 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/tiger-850",
+      "torque": "82 Nm @ 6500 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/tiger-850",
+      "mileage": "19 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/tiger-850",
+      "other_performance_metrics": {
+        "power_bhp": "85 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/tiger-850",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/tiger-850",
+        "gearbox": "6 speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/tiger-850"
+      }
+    },
+    {
+      "model_name": "Triumph Speed Twin 1200 \\[2021-2024\\]",
+      "model_name_citation": "https://www.bikedekho.com/triumph/speed-twin",
+      "engine_capacity_cc": "1200 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/speed-twin",
+      "torque": "112 Nm @ 4950rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/speed-twin",
+      "mileage": "19.60 Kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/speed-twin",
+      "other_performance_metrics": {
+        "power_bhp": "97 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/speed-twin",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/speed-twin",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/speed-twin"
+      }
+    },
+    {
+      "model_name": "Triumph Speed Twin 900 \\[2017-2024\\]",
+      "model_name_citation": "https://www.bikedekho.com/triumph/speed-twin-900-2017-2024",
+      "engine_capacity_cc": "900 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/speed-twin-900-2017-2024",
+      "torque": "80 Nm @ 3800 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/speed-twin-900-2017-2024",
+      "mileage": "24.39 Kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/speed-twin-900-2017-2024",
+      "other_performance_metrics": {
+        "power_bhp": "65 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/speed-twin-900-2017-2024",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/speed-twin-900-2017-2024",
+        "gearbox": "5 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/speed-twin-900-2017-2024"
+      }
+    },
+    {
+      "model_name": "2017 Triumph Thruxton",
+      "model_name_citation": "https://www.bikedekho.com/triumph/thruxton",
+      "engine_capacity_cc": "865 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/thruxton",
+      "torque": "61.1 Nm @ 5551 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/thruxton",
+      "mileage": "21 Kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/thruxton",
+      "other_performance_metrics": {
+        "power_bhp": "59.8 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/thruxton",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/thruxton",
+        "gearbox": "5 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/thruxton"
+      }
+    },
+    {
+      "model_name": "Triumph Tiger Explorer",
+      "model_name_citation": "https://www.bikedekho.com/triumph/tiger-explorer",
+      "engine_capacity_cc": "1215 cc",
+      "engine_capacity_cc_citation": "https://www.bikedekho.com/triumph/tiger-explorer",
+      "torque": "121 Nm @ 6400 rpm",
+      "torque_citation": "https://www.bikedekho.com/triumph/tiger-explorer",
+      "mileage": "19.34 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/triumph/tiger-explorer",
+      "other_performance_metrics": {
+        "power_bhp": "135.1 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/triumph/tiger-explorer",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/triumph/tiger-explorer",
+        "gearbox": "6 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/triumph/tiger-explorer"
+      }
+    }
+  ]
 }

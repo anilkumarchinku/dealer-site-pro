@@ -1,6 +1,628 @@
 {
-  "brand": "Yezdi Motorcycles",
-  "brandId": "yezdi-motorcycles",
-  "type": "2w",
-  "vehicles": []
+  "yezdi_bikes": [
+    {
+      "model_name": "Yezdi Roadster",
+      "model_name_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster",
+      "engine_details": "334 cc liquid-cooled, single-cylinder engine (Alpha 2), fuel-injection, 6-speed manual gearbox with assist & slipper clutch, self-start only.",
+      "engine_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster",
+      "torque": "29.62 Nm @ 6000 rpm",
+      "torque_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster",
+      "mileage": "29.06 kmpl (ARAI claimed)",
+      "mileage_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster",
+      "features": [
+        {
+          "value": "Dual-Channel ABS",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "DRLs",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "Digital Speedometer",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "Odometer",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "Tripmeter (2)",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "Tachometer",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "Removable split pillion seat",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "Twin exhaust setup",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "Gear indicator",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "High-beam indicator",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "Engine temperature indicator",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "Malfunction indicator",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "Stand alarm",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "USB charging port",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "Passenger footrest",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "Pass switch",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "Engine kill switch",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "LED headlamp",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "LED taillight",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "LED turn-signal lamps",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "Tubeless tyres",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        },
+        {
+          "value": "Assist & slipper clutch",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+        }
+      ],
+      "more_details": "The 2025 Yezdi Roadster is a major update of the retro-styled cruiser, featuring a refreshed 334 cc liquid-cooled engine, wider handlebar, revised rear suspension, and a host of modern conveniences while retaining classic aesthetics.",
+      "more_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster"
+    },
+    {
+      "model_name": "2025 Yezdi Adventure",
+      "model_name_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure",
+      "engine_details": "Single-cylinder, 4-stroke, liquid-cooled DOHC engine, 334 cc displacement, 29.6 PS @ 8000 rpm, fuel-injection, assist-and-slipper clutch, 6-speed gearbox.",
+      "engine_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure",
+      "torque": "29.6 Nm @ 5800 rpm",
+      "torque_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure",
+      "mileage": "35 kmpl (ARAI claimed)",
+      "mileage_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure",
+      "features": [
+        {
+          "value": "ABS Dual Channel & Switchable ABS (Road, Rain, Off-Road)",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "DRLs",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "Mobile Bluetooth connectivity",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "Call/SMS alerts",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "USB charging port",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "Navigation assistance (turn-by-turn)",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "Riding modes: Rain, Road, Off-Road",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "Traction Control system",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "Adjustable windscreen",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "Service-Due indicator",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "Engine-Kill switch",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "Digital instrument console",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "Split-type seat",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "Body graphics",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "Passenger footrest",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "Grab rail",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "Hazard warning lights",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "Shift light",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "Clock",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        },
+        {
+          "value": "Distance-to-empty indicator",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+        }
+      ],
+      "more_details": "The 2025 Yezdi Adventure is a 334 cc, 29.6 PS adventure-tourer that adds a traction-control system and refined electronics to the previous generation.",
+      "more_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure"
+    },
+    {
+      "model_name": "Yezdi Scrambler",
+      "model_name_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking",
+      "engine_details": "334 cc single-cylinder, 4-stroke, liquid-cooled, DOHC, fuel-injection, 6-speed manual, 29.77 PS @ 8000 rpm.",
+      "engine_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking",
+      "torque": "28.21 Nm @ 6750 rpm",
+      "torque_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking",
+      "mileage": "32.04 kmpl (ARAI claimed)",
+      "mileage_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking",
+      "features": [
+        {
+          "value": "ABS Dual Channel (3-mode: Rain, Road, Off-Road)",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "DRLs",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "Digital instrument console",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "Call/SMS alerts",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "USB charging port",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "Roadside assistance",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "LED headlight",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "LED taillight",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "LED turn-signal lamps",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "Hazard warning lights",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "Engine kill switch",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "Saree guard",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "Shift light",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "Passenger footrest",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "Pillion grab rail",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "LCD display",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "Gear indicator",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "High-beam indicator",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "Engine temperature indicator",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "Malfunction indicator",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        },
+        {
+          "value": "Stand alarm",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+        }
+      ],
+      "more_details": "The Yezdi Scrambler is a modern retro-styled scrambler with a rugged appearance featuring a raised front fender, fork gaiters, and block-pattern tyres.",
+      "more_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking"
+    },
+    {
+      "model_name": "2024 Yezdi Roadster",
+      "model_name_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser",
+      "engine_details": "334 cc single-cylinder, 4-stroke, liquid-cooled DOHC engine; fuel-injection, 6-speed manual gearbox, peak power 29 PS @ 7300 rpm.",
+      "engine_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser",
+      "torque": "29.40 Nm @ 6500 rpm",
+      "torque_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser",
+      "mileage": "28.53 kmpl (overall)",
+      "mileage_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser",
+      "features": [
+        {
+          "value": "Dual-Channel ABS",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "LED headlamp",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "LED taillight",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "LED turn-signal",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "DRLs",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "Fully digital instrument console (LCD)",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "Bluetooth connectivity",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "Mobile-app integration",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "Built-in navigation (GPS)",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "USB charging port",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "Roadside assistance",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "Service-due indicator",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "Engine-kill switch",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "Saree guard",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "Passenger footrest",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "Passenger grab rail",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "Pass-switch",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "Hazard warning lights",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        },
+        {
+          "value": "Shift light",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+        }
+      ],
+      "more_details": "The 2024 Yezdi Roadster is a modern neo-retro roadster positioned as an alternative to the Royal Enfield Meteor 350, combining cruiser aesthetics with a roadster riding posture.",
+      "more_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser"
+    },
+    {
+      "model_name": "2024 Yezdi Adventure",
+      "model_name_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure",
+      "engine_details": "334 cc single-cylinder, 4-stroke, liquid-cooled DOHC engine (alpha 2); peak power 30.1 PS @ 8000 rpm.",
+      "engine_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure",
+      "torque": "29.8 Nm @ 6500 rpm",
+      "torque_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure",
+      "mileage": "33.07 kmpl (ARAI claimed overall)",
+      "mileage_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure",
+      "features": [
+        {
+          "value": "ABS Dual Channel",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "Dual-LED headlights",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "LED tail-light",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "DRLs",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "15.5-L fuel tank",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "Mobile connectivity Bluetooth",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "Call/SMS alerts",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "USB-C charging port",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "Turn-by-turn navigation",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "Riding modes: Rain, Road, Off-Road",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "Adjustable windshield",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "Service-due indicator",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "Engine-kill switch",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "Digital LCD instrument console",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "Split seat",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "Passenger foot-rest",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "Grab-rail",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "Saddle stays",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "Hazard warning lights",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "Shift-light",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "Saree guard",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        },
+        {
+          "value": "Pass-switch",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+        }
+      ],
+      "more_details": "The 2024 Yezdi Adventure is a 334 cc adventure-tourer designed as an affordable alternative to larger ADV bikes, featuring a rugged frame and multiple utility mounts.",
+      "more_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure"
+    },
+    {
+      "model_name": "2026 Yezdi Scrambler",
+      "model_name_citation": "https://www.bikedekho.com/yezdi-motorcycles/2025-scrambler",
+      "engine_details": "443 cc, Fuel Injection, BS6-2.0",
+      "engine_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/2025-scrambler",
+      "torque": "34 Nm @ 4000 rpm",
+      "torque_citation": "https://www.bikedekho.com/yezdi-motorcycles/2025-scrambler",
+      "mileage": "29.5 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yezdi-motorcycles/2025-scrambler",
+      "features": [
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2025-scrambler"
+        },
+        {
+          "value": "Tubeless tyres",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2025-scrambler"
+        },
+        {
+          "value": "Short stubby exhaust",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2025-scrambler"
+        },
+        {
+          "value": "Updated design",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2025-scrambler"
+        },
+        {
+          "value": "Longer rear fender",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2025-scrambler"
+        },
+        {
+          "value": "Race-style side panels",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/2025-scrambler"
+        }
+      ],
+      "more_details": "The 2026 Yezdi Scrambler is an upcoming model expected to launch in June 2026, featuring styling updates and a 443 cc engine.",
+      "more_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/2025-scrambler"
+    },
+    {
+      "model_name": "Yezdi Roadking",
+      "model_name_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking",
+      "engine_details": "465 cc, Fuel Injection, BS6-2.0",
+      "engine_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking",
+      "torque": "27 Nm @ 4000 rpm",
+      "torque_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking",
+      "mileage": "37 kmpl",
+      "mileage_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking",
+      "features": [
+        {
+          "value": "Roadside Assistance",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking"
+        },
+        {
+          "value": "LED indicators",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking"
+        },
+        {
+          "value": "Round headlight",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking"
+        },
+        {
+          "value": "Wide handlebar",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking"
+        },
+        {
+          "value": "Flat single-piece seat",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking"
+        },
+        {
+          "value": "Mid-set footpegs",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking"
+        },
+        {
+          "value": "Chunky exhaust",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking"
+        },
+        {
+          "value": "Luggage hooks",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking"
+        },
+        {
+          "value": "Telescopic fork with gaiters",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking"
+        },
+        {
+          "value": "Monoshock",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking"
+        },
+        {
+          "value": "Pirelli Phantom Sportscomp tyres",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking"
+        },
+        {
+          "value": "Disc brakes",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking"
+        },
+        {
+          "value": "Dual-channel ABS",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking"
+        },
+        {
+          "value": "Dual-pod analogue instrument cluster",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking"
+        }
+      ],
+      "more_details": "The Yezdi Roadking is a retro roadster with a boxy fuel tank, round headlight, and an upright riding position provided by mid-set footpegs and a wide handlebar.",
+      "more_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking"
+    },
+    {
+      "model_name": "Yezdi 250",
+      "model_name_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-250",
+      "engine_details": "249 cc",
+      "engine_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-250",
+      "features": [
+        {
+          "value": "Engine: 249 cc",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-250"
+        },
+        {
+          "value": "Fuel Type: Petrol",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-250"
+        },
+        {
+          "value": "Body Type: Sports Bikes",
+          "value_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-250"
+        }
+      ],
+      "more_details": "Discontinued on Dec, 1996",
+      "more_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-250"
+    }
+  ]
 }
