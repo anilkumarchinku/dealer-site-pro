@@ -2,5 +2,154 @@
   "brand": "Ampere (Greaves Electric)",
   "brandId": "ampere-greaves",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "Ampere Magnus EX",
+      "model_name_citation": "https://www.zigwheels.in/ampere-bikes/magnus-ex",
+      "engine_details": "BLDC motor, 3.3 kW peak power, 1.2 kW rated power, 30 Nm torque",
+      "engine_details_citation": "https://www.zigwheels.in/ampere-bikes/magnus-ex",
+      "torque": "30 Nm",
+      "torque_citation": "https://www.zigwheels.in/ampere-bikes/magnus-ex",
+      "mileage": "100 km per charge (ARAI claimed)",
+      "mileage_citation": "https://www.zigwheels.in/ampere-bikes/magnus-ex",
+      "features": [
+        {
+          "value": "LED headlamp",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/magnus-ex"
+        },
+        {
+          "value": "Digital instrument cluster",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/magnus-ex"
+        },
+        {
+          "value": "USB charging port",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/magnus-ex"
+        },
+        {
+          "value": "LED tail lamp",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/magnus-ex"
+        },
+        {
+          "value": "Remote lock/unlock",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/magnus-ex"
+        },
+        {
+          "value": "Find my scooter function",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/magnus-ex"
+        },
+        {
+          "value": "Reverse assist",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/magnus-ex"
+        },
+        {
+          "value": "Adjustable riding modes",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/magnus-ex"
+        },
+        {
+          "value": "Tubeless tyres",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/magnus-ex"
+        },
+        {
+          "value": "Telescopic front suspension",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/magnus-ex"
+        },
+        {
+          "value": "Hydraulic rear suspension",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/magnus-ex"
+        },
+        {
+          "value": "Combi-braking system",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/magnus-ex"
+        }
+      ],
+      "more_details": "The 2025 Ampere Magnus EX is a feature-rich electric scooter with a claimed range of 100 km, 3.3 kW peak power, and modern conveniences like LED lighting, digital cluster, USB charging, and remote lock/unlock.",
+      "more_details_citation": "https://www.zigwheels.in/ampere-bikes/magnus-ex"
+    },
+    {
+      "model_name": "Ampere Zeal EX",
+      "model_name_citation": "https://www.zigwheels.in/ampere-bikes/zeal-ex",
+      "engine_details": "BLDC motor, 2.2 kW peak power, 1.8 kW rated power, 18 Nm torque",
+      "engine_details_citation": "https://www.zigwheels.in/ampere-bikes/zeal-ex",
+      "torque": "18 Nm",
+      "torque_citation": "https://www.zigwheels.in/ampere-bikes/zeal-ex",
+      "mileage": "75 km per charge (ARAI claimed)",
+      "mileage_citation": "https://www.zigwheels.in/ampere-bikes/zeal-ex",
+      "features": [
+        {
+          "value": "LED headlamp",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/zeal-ex"
+        },
+        {
+          "value": "Digital instrument cluster",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/zeal-ex"
+        },
+        {
+          "value": "USB charging port",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/zeal-ex"
+        },
+        {
+          "value": "LED tail lamp",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/zeal-ex"
+        },
+        {
+          "value": "Remote lock/unlock",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/zeal-ex"
+        },
+        {
+          "value": "Find my scooter function",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/zeal-ex"
+        },
+        {
+          "value": "Reverse assist",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/zeal-ex"
+        },
+        {
+          "value": "Adjustable riding modes",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/zeal-ex"
+        },
+        {
+          "value": "Tubeless tyres",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/zeal-ex"
+        },
+        {
+          "value": "Telescopic front suspension",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/zeal-ex"
+        },
+        {
+          "value": "Hydraulic rear suspension",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/zeal-ex"
+        },
+        {
+          "value": "Combi-braking system",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/zeal-ex"
+        }
+      ],
+      "more_details": "The 2025 Ampere Zeal EX is a compact electric scooter offering a 75 km range, 2.2 kW peak power, and practical features like LED lighting, digital cluster, USB charging, and remote lock/unlock.",
+      "more_details_citation": "https://www.zigwheels.in/ampere-bikes/zeal-ex"
+    },
+    {
+      "model_name": "Ampere Primus",
+      "model_name_citation": "https://www.zigwheels.in/ampere-bikes/primus",
+      "engine_details": "BLDC motor, 3.3 kW peak power, 1.2 kW rated power, 30 Nm torque",
+      "engine_details_citation": "https://www.zigwheels.in/ampere-bikes/primus",
+      "torque": "30 Nm",
+      "torque_citation": "https://www.zigwheels.in/ampere-bikes/primus",
+      "mileage": "100 km per charge (ARAI claimed)",
+      "mileage_citation": "https://www.zigwheels.in/ampere-bikes/primus",
+      "features": [
+        {
+          "value": "LED headlamp",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/primus"
+        },
+        {
+          "value": "Digital instrument cluster",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/primus"
+        },
+        {
+          "value": "USB charging port",
+          "value_citation": "https://www.zigwheels.in/ampere-bikes/primus"
+        }
+      ]
+    }
+  ]
 }

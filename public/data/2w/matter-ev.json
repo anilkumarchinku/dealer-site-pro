@@ -1,6 +1,63 @@
 {
-  "brand": "Matter",
+  "brand": "Matter EV",
   "brandId": "matter-ev",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "Matter Aera 5000",
+      "model_name_citation": "https://www.bikedekho.com/matter-ev/aera/variants",
+      "pricing": {
+        "ex_showroom_price": "Rs 1,83,308",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/matter-ev/matter-electric-bike-std.html"
+      },
+      "technical_specs": {
+        "motor_power": "11.5 kW",
+        "motor_power_citation": "https://www.bikedekho.com/matter-ev/aera/specifications",
+        "range": "172 km (claimed)",
+        "range_citation": "https://www.bikedekho.com/matter-ev/aera/specifications",
+        "charging_time": "6 hours (0-100%)",
+        "charging_time_citation": "https://www.bikedekho.com/matter-ev/aera/specifications"
+      },
+      "performance_data": {
+        "acceleration": "0-40 km/h in 2.3 seconds",
+        "acceleration_citation": "https://www.bikedekho.com/matter-ev/aera/specifications",
+        "top_speed": "105 km/h",
+        "top_speed_citation": "https://www.bikedekho.com/matter-ev/aera/specifications"
+      },
+      "battery_details": {
+        "battery_capacity": "5 kWh",
+        "battery_capacity_citation": "https://www.bikedekho.com/matter-ev/aera/specifications",
+        "battery_type": "Lithium-ion",
+        "battery_type_citation": "https://www.bikedekho.com/matter-ev/aera/specifications"
+      }
+    },
+    {
+      "model_name": "Matter Aera 5000+",
+      "model_name_citation": "https://www.bikedekho.com/matter-ev/aera/variants",
+      "pricing": {
+        "ex_showroom_price": "Rs 1,93,826",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/matter-ev/aera-plus.html"
+      },
+      "technical_specs": {
+        "motor_power": "11.5 kW",
+        "motor_power_citation": "https://www.bikedekho.com/matter-ev/aera/specifications",
+        "range": "172 km (claimed)",
+        "range_citation": "https://www.bikedekho.com/matter-ev/aera/specifications",
+        "charging_time": "6 hours (0-100%)",
+        "charging_time_citation": "https://www.bikedekho.com/matter-ev/aera/specifications"
+      },
+      "performance_data": {
+        "acceleration": "0-40 km/h in 2.3 seconds",
+        "acceleration_citation": "https://www.bikedekho.com/matter-ev/aera/specifications",
+        "top_speed": "105 km/h",
+        "top_speed_citation": "https://www.bikedekho.com/matter-ev/aera/specifications"
+      },
+      "battery_details": {
+        "battery_capacity": "5 kWh",
+        "battery_capacity_citation": "https://www.bikedekho.com/matter-ev/aera/specifications",
+        "battery_type": "Lithium-ion",
+        "battery_type_citation": "https://www.bikedekho.com/matter-ev/aera/specifications"
+      }
+    }
+  ]
 }

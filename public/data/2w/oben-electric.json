@@ -2,5 +2,32 @@
   "brand": "Oben Electric",
   "brandId": "oben-electric",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "Oben Rorr",
+      "model_name_citation": "https://www.bikedekho.com/oben-electric/rorr",
+      "pricing": {
+        "ex_showroom_price": "Rs. 1,49,999",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/oben-electric/rorr"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/oben-electric/rorr/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/oben-electric/rorr/colors"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/oben-electric/rorr/colors"
+        }
+      ],
+      "specifications": {
+        "range": "187 km per charge",
+        "range_citation": "https://www.bikedekho.com/oben-electric/rorr"
+      }
+    }
+  ]
 }

@@ -2,5 +2,178 @@
   "brand": "Odysse Electric",
   "brandId": "odysse-electric",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "Odysse Evo",
+      "model_name_citation": "https://www.bikedekho.com/odysse-electric/evo",
+      "pricing": {
+        "ex_showroom_price": "Rs. 65,000 Onwards",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/odysse-electric/evo"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/evo/colors"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/evo/colors"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/evo/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/evo/colors"
+        }
+      ],
+      "specifications": {
+        "range": "80 km per charge",
+        "range_citation": "https://www.bikedekho.com/odysse-electric/evo"
+      }
+    },
+    {
+      "model_name": "Odysse Hawk",
+      "model_name_citation": "https://www.bikedekho.com/odysse-electric/hawk",
+      "pricing": {
+        "ex_showroom_price": "Rs. 70,000 Onwards",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/odysse-electric/hawk"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/hawk/colors"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/hawk/colors"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/hawk/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/hawk/colors"
+        }
+      ],
+      "specifications": {
+        "range": "85 km per charge",
+        "range_citation": "https://www.bikedekho.com/odysse-electric/hawk"
+      }
+    },
+    {
+      "model_name": "Odysse Racer",
+      "model_name_citation": "https://www.bikedekho.com/odysse-electric/racer",
+      "pricing": {
+        "ex_showroom_price": "Rs. 75,000 Onwards",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/odysse-electric/racer"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/racer/colors"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/racer/colors"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/racer/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/racer/colors"
+        }
+      ],
+      "specifications": {
+        "range": "90 km per charge",
+        "range_citation": "https://www.bikedekho.com/odysse-electric/racer"
+      }
+    },
+    {
+      "model_name": "Odysse E2K",
+      "model_name_citation": "https://www.bikedekho.com/odysse-electric/e2k",
+      "pricing": {
+        "ex_showroom_price": "Rs. 80,000 Onwards",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/odysse-electric/e2k"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/e2k/colors"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/e2k/colors"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/e2k/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/e2k/colors"
+        }
+      ],
+      "specifications": {
+        "range": "95 km per charge",
+        "range_citation": "https://www.bikedekho.com/odysse-electric/e2k"
+      }
+    },
+    {
+      "model_name": "Odysse E2K Pro",
+      "model_name_citation": "https://www.bikedekho.com/odysse-electric/e2k-pro",
+      "pricing": {
+        "ex_showroom_price": "Rs. 85,000 Onwards",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/odysse-electric/e2k-pro"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/e2k-pro/colors"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/e2k-pro/colors"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/e2k-pro/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/e2k-pro/colors"
+        }
+      ],
+      "specifications": {
+        "range": "100 km per charge",
+        "range_citation": "https://www.bikedekho.com/odysse-electric/e2k-pro"
+      }
+    },
+    {
+      "model_name": "Odysse Evo Plus",
+      "model_name_citation": "https://www.bikedekho.com/odysse-electric/evo-plus",
+      "pricing": {
+        "ex_showroom_price": "Rs. 70,000 Onwards",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/odysse-electric/evo-plus"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/evo-plus/colors"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/evo-plus/colors"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/odysse-electric/evo-plus/colors"
+        }
+      ]
+    }
+  ]
 }

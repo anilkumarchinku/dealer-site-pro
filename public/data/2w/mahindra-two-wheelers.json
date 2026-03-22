@@ -2,5 +2,178 @@
   "brand": "Mahindra Two Wheelers",
   "brandId": "mahindra-two-wheelers",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "Mahindra Centuro",
+      "model_name_citation": "https://www.bikedekho.com/mahindra/centuro",
+      "pricing": {
+        "ex_showroom_price": "Rs. 45,000 Onwards",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/mahindra/centuro"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/mahindra/centuro/colors"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/mahindra/centuro/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/mahindra/centuro/colors"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/mahindra/centuro/colors"
+        }
+      ],
+      "specifications": {
+        "range": "85 km per charge",
+        "range_citation": "https://www.bikedekho.com/mahindra/centuro"
+      }
+    },
+    {
+      "model_name": "Mahindra Gusto",
+      "model_name_citation": "https://www.bikedekho.com/mahindra/gusto",
+      "pricing": {
+        "ex_showroom_price": "Rs. 50,000 Onwards",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/mahindra/gusto"
+      },
+      "available_colors": [
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/mahindra/gusto/colors"
+        },
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/mahindra/gusto/colors"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/mahindra/gusto/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/mahindra/gusto/colors"
+        }
+      ],
+      "specifications": {
+        "range": "60 km per charge",
+        "range_citation": "https://www.bikedekho.com/mahindra/gusto"
+      }
+    },
+    {
+      "model_name": "Mahindra Gusto 125",
+      "model_name_citation": "https://www.bikedekho.com/mahindra/gusto-125",
+      "pricing": {
+        "ex_showroom_price": "Rs. 55,000 Onwards",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/mahindra/gusto-125"
+      },
+      "available_colors": [
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/mahindra/gusto-125/colors"
+        },
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/mahindra/gusto-125/colors"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/mahindra/gusto-125/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/mahindra/gusto-125/colors"
+        }
+      ],
+      "specifications": {
+        "range": "65 km per charge",
+        "range_citation": "https://www.bikedekho.com/mahindra/gusto-125"
+      }
+    },
+    {
+      "model_name": "Mahindra Mojo",
+      "model_name_citation": "https://www.bikedekho.com/mahindra/mojo",
+      "pricing": {
+        "ex_showroom_price": "Rs. 1,75,000 Onwards",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/mahindra/mojo"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/mahindra/mojo/colors"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/mahindra/mojo/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/mahindra/mojo/colors"
+        }
+      ],
+      "specifications": {
+        "range": "35 km per litre",
+        "range_citation": "https://www.bikedekho.com/mahindra/mojo"
+      }
+    },
+    {
+      "model_name": "Mahindra Centuro NXT",
+      "model_name_citation": "https://www.bikedekho.com/mahindra/centuro-nxt",
+      "pricing": {
+        "ex_showroom_price": "Rs. 48,000 Onwards",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/mahindra/centuro-nxt"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/mahindra/centuro-nxt/colors"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/mahindra/centuro-nxt/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/mahindra/centuro-nxt/colors"
+        }
+      ],
+      "specifications": {
+        "range": "85 km per charge",
+        "range_citation": "https://www.bikedekho.com/mahindra/centuro-nxt"
+      }
+    },
+    {
+      "model_name": "Mahindra Centuro Rockstar",
+      "model_name_citation": "https://www.bikedekho.com/mahindra/centuro-rockstar",
+      "pricing": {
+        "ex_showroom_price": "Rs. 47,000 Onwards",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/mahindra/centuro-rockstar"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/mahindra/centuro-rockstar/colors"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/mahindra/centuro-rockstar/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/mahindra/centuro-rockstar/colors"
+        }
+      ],
+      "specifications": {
+        "range": "85 km per charge",
+        "range_citation": "https://www.bikedekho.com/mahindra/centuro-rockstar"
+      }
+    },
+    {
+      "model_name": "Mahindra Centuro Disc",
+      "model_name_citation": "https://www.bikedekho.com/mahindra/centuro-disc"
+    }
+  ]
 }

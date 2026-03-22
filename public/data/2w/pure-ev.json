@@ -2,5 +2,38 @@
   "brand": "Pure EV",
   "brandId": "pure-ev",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "Pure EV EcoDryft",
+      "model_name_citation": "https://pureev.in/ecodryft",
+      "engine_details": "3.0 kW Motor",
+      "engine_details_citation": "https://pureev.in/ecodryft",
+      "torque": "40 Nm",
+      "torque_citation": "https://pureev.in/ecodryft",
+      "mileage": "135 km per charge (Certified)",
+      "mileage_citation": "https://pureev.in/ecodryft",
+      "features": [
+        { "value": "LED display", "value_citation": "https://pureev.in/ecodryft" },
+        { "value": "3 Riding Modes", "value_citation": "https://pureev.in/ecodryft" }
+      ],
+      "more_details": "India's most reliable electric motorcycle.",
+      "more_details_citation": "https://pureev.in/ecodryft"
+    },
+    {
+      "model_name": "Pure EV ePluto 7G",
+      "model_name_citation": "https://pureev.in/epluto7g",
+      "engine_details": "2.2 kW Motor",
+      "engine_details_citation": "https://pureev.in/epluto7g",
+      "torque": "30 Nm",
+      "torque_citation": "https://pureev.in/epluto7g",
+      "mileage": "111 km per charge (Certified)",
+      "mileage_citation": "https://pureev.in/epluto7g",
+      "features": [
+        { "value": "Retro Design", "value_citation": "https://pureev.in/epluto7g" },
+        { "value": "Anti-theft Smart Lock", "value_citation": "https://pureev.in/epluto7g" }
+      ],
+      "more_details": "A premium electric scooter with a classic retro look.",
+      "more_details_citation": "https://pureev.in/epluto7g"
+    }
+  ]
 }

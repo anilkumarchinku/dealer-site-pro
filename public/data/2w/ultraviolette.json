@@ -2,5 +2,62 @@
   "brand": "Ultraviolette Automotive",
   "brandId": "ultraviolette",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "Ultraviolette F77",
+      "model_name_citation": "https://www.ultraviolette.com/f77",
+      "price": "₹3,80,000 - ₹5,50,000",
+      "price_citation": "https://www.ultraviolette.com/f77",
+      "color_options": [
+        {
+          "value": "Stealth Black",
+          "value_citation": "https://www.ultraviolette.com/f77"
+        },
+        {
+          "value": "Laser Red",
+          "value_citation": "https://www.ultraviolette.com/f77"
+        },
+        {
+          "value": "Comet Grey",
+          "value_citation": "https://www.ultraviolette.com/f77"
+        }
+      ],
+      "specifications": {
+        "engine_capacity_cc": "N/A (Electric)",
+        "engine_capacity_cc_citation": "https://www.ultraviolette.com/f77",
+        "power_bhp": "24 kW (32.2 bhp) - 27 kW (36.2 bhp)",
+        "power_bhp_citation": "https://www.ultraviolette.com/f77",
+        "torque_nm": "95 Nm - 100 Nm",
+        "torque_nm_citation": "https://www.ultraviolette.com/f77",
+        "mileage_kmpl": "N/A (Electric)",
+        "mileage_kmpl_citation": "https://www.ultraviolette.com/f77",
+        "top_speed_kmph": "140 km/h - 150 km/h",
+        "top_speed_kmph_citation": "https://www.ultraviolette.com/f77",
+        "gearbox": "Direct Drive",
+        "gearbox_citation": "https://www.ultraviolette.com/f77",
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://www.ultraviolette.com/f77",
+        "kerb_weight_kg": "190 kg - 207 kg",
+        "kerb_weight_kg_citation": "https://www.ultraviolette.com/f77",
+        "front_brake_mm": "320 mm (Dual Disc)",
+        "front_brake_mm_citation": "https://www.ultraviolette.com/f77",
+        "rear_brake_mm": "240 mm (Single Disc)",
+        "rear_brake_mm_citation": "https://www.ultraviolette.com/f77",
+        "front_suspension": "USD Forks",
+        "front_suspension_citation": "https://www.ultraviolette.com/f77",
+        "rear_suspension": "Monoshock",
+        "rear_suspension_citation": "https://www.ultraviolette.com/f77",
+        "front_tyre_size": "110/70-17",
+        "front_tyre_size_citation": "https://www.ultraviolette.com/f77",
+        "rear_tyre_size": "150/60-17",
+        "rear_tyre_size_citation": "https://www.ultraviolette.com/f77",
+        "battery_capacity_ah": "10.5 kWh - 14.4 kWh",
+        "battery_capacity_ah_citation": "https://www.ultraviolette.com/f77",
+        "charging_time_hours": "3.3 hours (Standard Charger)",
+        "charging_time_hours_citation": "https://www.ultraviolette.com/f77",
+        "range_km": "207 km - 307 km",
+        "range_km_citation": "https://www.ultraviolette.com/f77"
+      }
+    }
+  ]
 }

@@ -2,5 +2,42 @@
   "brand": "Simple Energy",
   "brandId": "simple-energy",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "Simple One",
+      "model_name_citation": "https://simpleenergy.in/",
+      "price": "₹1,49,999",
+      "price_citation": "https://simpleenergy.in/",
+      "color_options": [
+        {
+          "value": "Namma Red",
+          "value_citation": "https://simpleenergy.in/"
+        },
+        {
+          "value": "Brazen Black",
+          "value_citation": "https://simpleenergy.in/"
+        },
+        {
+          "value": "Azure Blue",
+          "value_citation": "https://simpleenergy.in/"
+        },
+        {
+          "value": "Grace White",
+          "value_citation": "https://simpleenergy.in/"
+        }
+      ],
+      "specifications": {
+        "range": "212 km",
+        "range_citation": "https://simpleenergy.in/",
+        "motor_power": "4.5 kW",
+        "motor_power_citation": "https://simpleenergy.in/",
+        "charging_time": "2 hours 45 minutes",
+        "charging_time_citation": "https://simpleenergy.in/",
+        "battery_capacity": "5 kWh",
+        "battery_capacity_citation": "https://simpleenergy.in/",
+        "top_speed": "105 km/Hr",
+        "top_speed_citation": "https://simpleenergy.in/"
+      }
+    }
+  ]
 }

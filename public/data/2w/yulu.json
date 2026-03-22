@@ -2,5 +2,34 @@
   "brand": "Yulu",
   "brandId": "yulu",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "Yulu Wynn",
+      "model_name_citation": "https://www.bikedekho.com/yulu/wynn",
+      "price": "Rs 55,555 onwards",
+      "price_citation": "https://www.bikedekho.com/yulu/wynn",
+      "color_options": [
+        {
+          "value": "Scarlet Red",
+          "value_citation": "https://www.bikedekho.com/yulu/wynn/colors"
+        },
+        {
+          "value": "Moonlight White",
+          "value_citation": "https://www.bikedekho.com/yulu/wynn/colors"
+        }
+      ],
+      "specifications": {
+        "range": "68 km/charge",
+        "range_citation": "https://www.bikedekho.com/yulu/wynn/specifications",
+        "motor_power": "250 W",
+        "motor_power_citation": "https://www.bikedekho.com/yulu/wynn/specifications",
+        "charging_time": "4 hours",
+        "charging_time_citation": "https://www.bikedekho.com/yulu/wynn",
+        "battery_capacity": "0.98 Kwh",
+        "battery_capacity_citation": "https://www.bikedekho.com/yulu/wynn/specifications",
+        "top_speed": "25 km/Hr",
+        "top_speed_citation": "https://www.bikedekho.com/yulu/wynn/specifications"
+      }
+    }
+  ]
 }

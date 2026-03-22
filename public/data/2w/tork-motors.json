@@ -2,5 +2,26 @@
   "brand": "Tork Motors",
   "brandId": "tork-motors",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "Tork Kratos R",
+      "model_name_citation": "https://www.torkmotors.com/kratos-r",
+      "price": "₹1,49,999",
+      "price_citation": "https://www.torkmotors.com/kratos-r",
+      "color_options": [
+        {
+          "value": "Jet Black",
+          "value_citation": "https://www.torkmotors.com/kratos-r"
+        },
+        {
+          "value": "Zeus Silver",
+          "value_citation": "https://www.torkmotors.com/kratos-r"
+        },
+        {
+          "value": "Fire Red",
+          "value_citation": "https://www.torkmotors.com/kratos-r"
+        }
+      ]
+    }
+  ]
 }

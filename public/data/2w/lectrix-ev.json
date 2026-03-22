@@ -2,5 +2,274 @@
   "brand": "Lectrix EV",
   "brandId": "lectrix-ev",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "Lectrix NDuro",
+      "model_name_citation": "https://www.bikedekho.com/lectrix-ev/nduro",
+      "pricing": {
+        "ex_showroom_price": "Rs. 59,999 Onwards",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/lectrix-ev/nduro",
+        "on_road_price": "Rs. 63,420 (New Delhi)",
+        "on_road_price_citation": "https://www.bikedekho.com/lectrix-ev/nduro"
+      },
+      "available_colors": [
+        {
+          "value": "Quantum Black",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/nduro/specifications"
+        },
+        {
+          "value": "Nova White",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/nduro/specifications"
+        },
+        {
+          "value": "Solar Red",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/nduro/specifications"
+        },
+        {
+          "value": "Cosmic Blue",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/nduro/specifications"
+        }
+      ],
+      "specifications": {
+        "range": "90 km per charge",
+        "range_citation": "https://www.bikedekho.com/lectrix-ev/nduro",
+        "top_speed": "65 km/Hr",
+        "top_speed_citation": "https://www.bikedekho.com/lectrix-ev/nduro/specifications"
+      }
+    },
+    {
+      "model_name": "Lectrix EV ZYRO",
+      "model_name_citation": "https://www.bikedekho.com/lectrix-ev/zyro",
+      "pricing": {
+        "ex_showroom_price": "Rs. 46,999 Onwards",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/lectrix-ev/zyro",
+        "on_road_price": "Rs. 50,288 (New Delhi)",
+        "on_road_price_citation": "https://www.bikedekho.com/lectrix-ev/zyro/price-in-new-delhi"
+      },
+      "available_colors": [
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/zyro/specifications"
+        },
+        {
+          "value": "Silver",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/zyro/specifications"
+        },
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/zyro/specifications"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/zyro/specifications"
+        }
+      ],
+      "specifications": {
+        "range": "85 km per charge",
+        "range_citation": "https://www.bikedekho.com/lectrix-ev/zyro"
+      }
+    },
+    {
+      "model_name": "Lectrix EV LXS 3.0",
+      "model_name_citation": "https://www.bikedekho.com/lectrix-ev/lxs-3",
+      "pricing": {
+        "ex_showroom_price": "Rs. 1,01,990",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/lectrix-ev/lxs-3",
+        "on_road_price": "Rs. 1,06,079 (New Delhi)",
+        "on_road_price_citation": "https://www.bikedekho.com/lectrix-ev/lxs-3/price-in-new-delhi"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxs-3/specifications"
+        }
+      ],
+      "specifications": {
+        "range": "120 km per charge",
+        "range_citation": "https://www.bikedekho.com/lectrix-ev/lxs-3/specifications",
+        "top_speed": "54 km/Hr",
+        "top_speed_citation": "https://www.bikedekho.com/lectrix-ev/lxs-3/specifications",
+        "motor_power": "1.2 kW",
+        "motor_power_citation": "https://www.bikedekho.com/lectrix-ev/lxs-3/specifications"
+      }
+    },
+    {
+      "model_name": "Lectrix EV LXS",
+      "model_name_citation": "https://www.bikedekho.com/lectrix-ev/lxs",
+      "pricing": {
+        "ex_showroom_price": "Rs. 49,999 Onwards",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/lectrix-ev/lxs",
+        "on_road_price": "Rs. 53,340 (Sahibabad)",
+        "on_road_price_citation": "https://www.bikedekho.com/lectrix-ev/lxs"
+      },
+      "available_colors": [
+        {
+          "value": "Zing Black",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxs/colors"
+        },
+        {
+          "value": "Neon Green",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxs/colors"
+        },
+        {
+          "value": "Moody Orange",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxs/colors"
+        },
+        {
+          "value": "Electric Red",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxs/colors"
+        },
+        {
+          "value": "Azure Blue",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxs/colors"
+        },
+        {
+          "value": "Zen White",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxs/colors"
+        }
+      ],
+      "specifications": {
+        "range": "89 km per charge",
+        "range_citation": "https://www.bikedekho.com/lectrix-ev/lxs",
+        "top_speed": "50 km/h",
+        "top_speed_citation": "https://www.bikedekho.com/lectrix-ev/lxs",
+        "motor_power": "1.9 kW",
+        "motor_power_citation": "https://www.bikedekho.com/lectrix-ev/lxs"
+      }
+    },
+    {
+      "model_name": "Lectrix EV SX25",
+      "model_name_citation": "https://www.bikedekho.com/lectrix-ev/sx25",
+      "pricing": {
+        "ex_showroom_price": "Rs. 54,999 - 67,999",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/lectrix-ev/sx25",
+        "on_road_price": "Rs. 58,340 (New Delhi)",
+        "on_road_price_citation": "https://www.bikedekho.com/lectrix-ev/sx25"
+      },
+      "available_colors": [
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/sx25/colors"
+        },
+        {
+          "value": "Green",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/sx25/colors"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/sx25/colors"
+        },
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/sx25/colors"
+        }
+      ],
+      "specifications": {
+        "range": "60 km per charge",
+        "range_citation": "https://www.bikedekho.com/lectrix-ev/sx25",
+        "top_speed": "25 km/h",
+        "top_speed_citation": "https://www.bikedekho.com/lectrix-ev/sx25",
+        "motor_power": "250 W",
+        "motor_power_citation": "https://www.bikedekho.com/lectrix-ev/sx25"
+      }
+    },
+    {
+      "model_name": "Lectrix LXS 2.0",
+      "model_name_citation": "https://www.bikedekho.com/lectrix-ev/lxs-2",
+      "pricing": {
+        "ex_showroom_price": "Rs. 84,990",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/lectrix-ev/lxs-2",
+        "on_road_price": "Rs. 88,809 (New Delhi)",
+        "on_road_price_citation": "https://www.bikedekho.com/lectrix-ev/lxs-2"
+      },
+      "available_colors": [
+        {
+          "value": "Electric Red",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxs-2"
+        },
+        {
+          "value": "Midnight Blue",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxs-2"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxs-2"
+        },
+        {
+          "value": "Zink Black",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxs-2"
+        },
+        {
+          "value": "Military Green",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxs-2"
+        }
+      ],
+      "specifications": {
+        "range": "98 km per charge",
+        "range_citation": "https://www.bikedekho.com/lectrix-ev/lxs-2",
+        "top_speed": "55 km/h",
+        "top_speed_citation": "https://www.bikedekho.com/lectrix-ev/lxs-2",
+        "motor_power": "1.2 kW",
+        "motor_power_citation": "https://www.bikedekho.com/lectrix-ev/lxs-2"
+      }
+    },
+    {
+      "model_name": "Lectrix EV LXS G 2.0",
+      "model_name_citation": "https://www.bikedekho.com/lectrix-ev/lxsg",
+      "pricing": {
+        "ex_showroom_price": "Rs. 99,999",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/lectrix-ev/lxsg"
+      },
+      "available_colors": [
+        {
+          "value": "Sparkle Black",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxsg/colors"
+        },
+        {
+          "value": "Pearl White",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxsg/colors"
+        },
+        {
+          "value": "Sporty Red",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxsg/colors"
+        },
+        {
+          "value": "Ash Grey",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxsg/colors"
+        },
+        {
+          "value": "Magic Blue",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxsg/colors"
+        },
+        {
+          "value": "Matt Military Green",
+          "value_citation": "https://www.bikedekho.com/lectrix-ev/lxsg/colors"
+        }
+      ],
+      "specifications": {
+        "range": "65-80 km per charge",
+        "range_citation": "https://www.bikedekho.com/lectrix-ev/lxsg/specifications",
+        "top_speed": "55 km/h",
+        "top_speed_citation": "https://www.bikedekho.com/lectrix-ev/lxsg/specifications",
+        "motor_power": "1.8 kW",
+        "motor_power_citation": "https://www.bikedekho.com/lectrix-ev/lxsg/specifications"
+      }
+    },
+    {
+      "model_name": "Lectrix EV LXS 2.0 Subscription",
+      "model_name_citation": "https://www.bikedekho.com/lectrix-ev/lxs-2-swapping",
+      "pricing": {
+        "ex_showroom_price": "Rs. 49,999 (Delhi)",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/lectrix-ev/lxs-2-swapping"
+      },
+      "specifications": {
+        "range": "98 km per charge",
+        "range_citation": "https://www.bikedekho.com/lectrix-ev/lxs-2-swapping",
+        "top_speed": "50 km/h",
+        "top_speed_citation": "https://www.bikedekho.com/lectrix-ev/lxs-2-swapping",
+        "motor_power": "1.2 kW",
+        "motor_power_citation": "https://www.bikedekho.com/lectrix-ev/lxs-2-swapping"
+      }
+    }
+  ]
 }

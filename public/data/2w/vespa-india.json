@@ -1,6 +1,66 @@
 {
-  "brand": "Vespa India",
+  "brand": "Vespa",
   "brandId": "vespa-india",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "Vespa VXL 125",
+      "model_name_citation": "https://www.vespaindia.com/vxl-125",
+      "price": "₹1,17,000 - ₹1,22,000",
+      "price_citation": "https://www.vespaindia.com/vxl-125",
+      "color_options": [
+        {
+          "value": "White",
+          "value_citation": "https://www.vespaindia.com/vxl-125"
+        },
+        {
+          "value": "Red",
+          "value_citation": "https://www.vespaindia.com/vxl-125"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.vespaindia.com/vxl-125"
+        },
+        {
+          "value": "Yellow",
+          "value_citation": "https://www.vespaindia.com/vxl-125"
+        }
+      ],
+      "specifications": {
+        "engine_capacity_cc": "124.45 cc",
+        "engine_capacity_cc_citation": "https://www.vespaindia.com/vxl-125",
+        "power_bhp": "9.78 PS",
+        "power_bhp_citation": "https://www.vespaindia.com/vxl-125",
+        "torque_nm": "9.6 Nm",
+        "torque_nm_citation": "https://www.vespaindia.com/vxl-125",
+        "mileage_kmpl": "45 kmpl",
+        "mileage_kmpl_citation": "https://www.vespaindia.com/vxl-125",
+        "top_speed_kmph": "90 kmph",
+        "top_speed_kmph_citation": "https://www.vespaindia.com/vxl-125",
+        "gearbox": "Automatic (CVT)",
+        "gearbox_citation": "https://www.vespaindia.com/vxl-125",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.vespaindia.com/vxl-125",
+        "kerb_weight_kg": "115 kg",
+        "kerb_weight_kg_citation": "https://www.vespaindia.com/vxl-125",
+        "front_brake_mm": "200 mm",
+        "front_brake_mm_citation": "https://www.vespaindia.com/vxl-125",
+        "rear_brake_mm": "140 mm",
+        "rear_brake_mm_citation": "https://www.vespaindia.com/vxl-125",
+        "front_suspension": "Single Arm",
+        "front_suspension_citation": "https://www.vespaindia.com/vxl-125",
+        "rear_suspension": "Monoshock",
+        "rear_suspension_citation": "https://www.vespaindia.com/vxl-125",
+        "front_tyre_size": "110/70-11",
+        "front_tyre_size_citation": "https://www.vespaindia.com/vxl-125",
+        "rear_tyre_size": "120/70-10",
+        "rear_tyre_size_citation": "https://www.vespaindia.com/vxl-125",
+        "battery_capacity_ah": "N/A",
+        "battery_capacity_ah_citation": "https://www.vespaindia.com/vxl-125",
+        "charging_time_hours": "N/A",
+        "charging_time_hours_citation": "https://www.vespaindia.com/vxl-125",
+        "range_km": "N/A"
+      }
+    }
+  ]
 }

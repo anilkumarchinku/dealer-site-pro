@@ -2,5 +2,45 @@
   "brand": "Joy e-bike",
   "brandId": "joy-e-bike",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "Joy e-bike Wolf",
+      "model_name_citation": "https://www.joyebike.com/wolf",
+      "engine_details": "250 W BLDC Motor",
+      "engine_details_citation": "https://www.joyebike.com/wolf",
+      "torque": "Not specified",
+      "torque_citation": "https://www.joyebike.com/wolf",
+      "mileage": "60 km per charge",
+      "mileage_citation": "https://www.joyebike.com/wolf",
+      "features": [],
+      "more_details": "A smart electric scooter for urban commuting.",
+      "more_details_citation": "https://www.joyebike.com/wolf"
+    },
+    {
+      "model_name": "Joy e-bike Beast",
+      "model_name_citation": "https://www.joyebike.com/beast",
+      "engine_details": "5 kW High-power Motor",
+      "engine_details_citation": "https://www.joyebike.com/beast",
+      "torque": "Not specified",
+      "torque_citation": "https://www.joyebike.com/beast",
+      "mileage": "110 km per charge",
+      "mileage_citation": "https://www.joyebike.com/beast",
+      "features": [],
+      "more_details": "Performance oriented electric motorcycle.",
+      "more_details_citation": "https://www.joyebike.com/beast"
+    },
+    {
+      "model_name": "Joy e-bike Monster",
+      "model_name_citation": "https://www.joyebike.com/monster",
+      "engine_details": "250 W Motor",
+      "engine_details_citation": "https://www.joyebike.com/monster",
+      "torque": "Not specified",
+      "torque_citation": "https://www.joyebike.com/monster",
+      "mileage": "75 km per charge",
+      "mileage_citation": "https://www.joyebike.com/monster",
+      "features": [],
+      "more_details": "A compact and stylish electric motorcycle for enthusiasts.",
+      "more_details_citation": "https://www.joyebike.com/monster"
+    }
+  ]
 }

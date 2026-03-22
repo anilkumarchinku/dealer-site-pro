@@ -2,5 +2,32 @@
   "brand": "Bounce Infinity",
   "brandId": "bounce-infinity",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "Bounce Infinity E1",
+      "model_name_citation": "https://bounceinfinity.com/e1",
+      "engine_details": "BLDC Motor, 1.5 kW Rated Power, 2.5 kW Peak Power",
+      "engine_details_citation": "https://bounceinfinity.com/e1",
+      "torque": "Not specified",
+      "torque_citation": "https://bounceinfinity.com/e1",
+      "mileage": "85 km per charge",
+      "mileage_citation": "https://bounceinfinity.com/e1",
+      "features": [],
+      "more_details": "The Bounce Infinity E1 is a smart electric scooter featuring swappable battery technology.",
+      "more_details_citation": "https://bounceinfinity.com/e1"
+    },
+    {
+      "model_name": "Bounce Infinity E1 Plus",
+      "model_name_citation": "https://bounceinfinity.com/e1-plus",
+      "engine_details": "BLDC Motor, 1.5 kW Rated Power, 2.5 kW Peak Power",
+      "engine_details_citation": "https://bounceinfinity.com/e1-plus",
+      "torque": "Not specified",
+      "torque_citation": "https://bounceinfinity.com/e1-plus",
+      "mileage": "85 km per charge",
+      "mileage_citation": "https://bounceinfinity.com/e1-plus",
+      "features": [],
+      "more_details": "Enhanced version of the E1 with smart connectivity.",
+      "more_details_citation": "https://bounceinfinity.com/e1-plus"
+    }
+  ]
 }

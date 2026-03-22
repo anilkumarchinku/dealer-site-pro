@@ -1,6 +1,67 @@
 {
-  "brand": "TVS Motor Company",
+  "brand": "TVS Motor",
   "brandId": "tvs-motor",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "TVS Apache RTR 160 4V",
+      "model_name_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+      "price": "₹1,24,690 - ₹1,32,450",
+      "price_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+      "color_options": [
+        {
+          "value": "Racing Red",
+          "value_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v"
+        },
+        {
+          "value": "Knight Black",
+          "value_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v"
+        },
+        {
+          "value": "Matte Black",
+          "value_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v"
+        },
+        {
+          "value": "Titanium Special Edition",
+          "value_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v"
+        }
+      ],
+      "specifications": {
+        "engine_capacity_cc": "159.7 cc",
+        "engine_capacity_cc_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+        "power_bhp": "17.5 PS",
+        "power_bhp_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+        "torque_nm": "14.73 Nm",
+        "torque_nm_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+        "mileage_kmpl": "47 kmpl",
+        "mileage_kmpl_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+        "top_speed_kmph": "114 kmph",
+        "top_speed_kmph_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+        "gearbox": "5 Speed",
+        "gearbox_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+        "fuel_type": "Petrol",
+        "fuel_type_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+        "kerb_weight_kg": "152 kg",
+        "kerb_weight_kg_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+        "front_brake_mm": "270 mm",
+        "front_brake_mm_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+        "rear_brake_mm": "220 mm",
+        "rear_brake_mm_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+        "front_suspension": "Telescopic Forks",
+        "front_suspension_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+        "rear_suspension": "Monoshock",
+        "rear_suspension_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+        "front_tyre_size": "90/90-17",
+        "front_tyre_size_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+        "rear_tyre_size": "120/80-17",
+        "rear_tyre_size_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+        "battery_capacity_ah": "2.8 kWh",
+        "battery_capacity_ah_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+        "charging_time_hours": "4.5 hours",
+        "charging_time_hours_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v",
+        "range_km": "200 km",
+        "range_km_citation": "https://www.bikedekho.com/tvs/apache-rtr-160-4v"
+      }
+    }
+  ]
 }

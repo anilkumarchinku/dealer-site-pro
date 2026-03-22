@@ -2,5 +2,62 @@
   "brand": "Ather Energy",
   "brandId": "ather-energy",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "Ather 450S",
+      "model_name_citation": "https://www.atherenergy.com/450s",
+      "engine_details": "PMSM Motor, 5.4 kW peak power, 22 Nm torque",
+      "engine_details_citation": "https://www.atherenergy.com/450s",
+      "torque": "22 Nm",
+      "torque_citation": "https://www.atherenergy.com/450s",
+      "mileage": "115 km per charge (Certified)",
+      "mileage_citation": "https://www.atherenergy.com/450s",
+      "features": [
+        { "value": "LED headlamp", "value_citation": "https://www.atherenergy.com/450s" },
+        { "value": "7-inch DeepView Display", "value_citation": "https://www.atherenergy.com/450s" },
+        { "value": "Reverse Assist", "value_citation": "https://www.atherenergy.com/450s" },
+        { "value": "Side Stand Sensor", "value_citation": "https://www.atherenergy.com/450s" },
+        { "value": "Auto-Hold", "value_citation": "https://www.atherenergy.com/450s" }
+      ],
+      "more_details": "The Ather 450S is an entry-level performance electric scooter with a balanced range and features.",
+      "more_details_citation": "https://www.atherenergy.com/450s"
+    },
+    {
+      "model_name": "Ather 450X",
+      "model_name_citation": "https://www.atherenergy.com/450x",
+      "engine_details": "PMSM Motor, 6.4 kW peak power, 26 Nm torque",
+      "engine_details_citation": "https://www.atherenergy.com/450x",
+      "torque": "26 Nm",
+      "torque_citation": "https://www.atherenergy.com/450x",
+      "mileage": "150 km per charge (Certified)",
+      "mileage_citation": "https://www.atherenergy.com/450x",
+      "features": [
+        { "value": "LED headlamp", "value_citation": "https://www.atherenergy.com/450x" },
+        { "value": "7-inch Touchscreen", "value_citation": "https://www.atherenergy.com/450x" },
+        { "value": "Google Maps Navigation", "value_citation": "https://www.atherenergy.com/450x" },
+        { "value": "Reverse Assist", "value_citation": "https://www.atherenergy.com/450x" },
+        { "value": "Warp Mode", "value_citation": "https://www.atherenergy.com/450x" }
+      ],
+      "more_details": "The Ather 450X is a premium electric scooter known for its performance and smart features.",
+      "more_details_citation": "https://www.atherenergy.com/450x"
+    },
+    {
+      "model_name": "Ather 450 Apex",
+      "model_name_citation": "https://www.atherenergy.com/450-apex",
+      "engine_details": "PMSM Motor, 7.0 kW peak power, 26 Nm torque",
+      "engine_details_citation": "https://www.atherenergy.com/450-apex",
+      "torque": "26 Nm",
+      "torque_citation": "https://www.atherenergy.com/450-apex",
+      "mileage": "157 km per charge (Certified)",
+      "mileage_citation": "https://www.atherenergy.com/450-apex",
+      "features": [
+        { "value": "LED headlamp", "value_citation": "https://www.atherenergy.com/450-apex" },
+        { "value": "Warp+ Mode", "value_citation": "https://www.atherenergy.com/450-apex" },
+        { "value": "Transparent Side Panels", "value_citation": "https://www.atherenergy.com/450-apex" },
+        { "value": "Regenerative Braking", "value_citation": "https://www.atherenergy.com/450-apex" }
+      ],
+      "more_details": "The Ather 450 Apex is the pinnacle of the 450 series, offering extreme performance and unique aesthetics.",
+      "more_details_citation": "https://www.atherenergy.com/450-apex"
+    }
+  ]
 }

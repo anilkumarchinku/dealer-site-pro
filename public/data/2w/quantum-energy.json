@@ -2,5 +2,136 @@
   "brand": "Quantum Energy",
   "brandId": "quantum-energy",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "Quantum BZiness",
+      "model_name_citation": "https://www.bikedekho.com/quantum-energy/bziness",
+      "price": "Rs. 96,499 - Rs. 1,20,454",
+      "price_citation": "https://www.bikedekho.com/quantum-energy/bziness",
+      "color_options": [
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/quantum-energy/bziness"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/quantum-energy/bziness"
+        },
+        {
+          "value": "Gray",
+          "value_citation": "https://www.bikedekho.com/quantum-energy/bziness"
+        }
+      ],
+      "specifications": {
+        "range": "80-90 km/charge",
+        "range_citation": "https://www.bikedekho.com/quantum-energy/bziness/specifications",
+        "motor_power": "1.2 kW",
+        "motor_power_citation": "https://www.bikedekho.com/quantum-energy/bziness/specifications",
+        "charging_time": "4-6 hours",
+        "charging_time_citation": "https://www.bikedekho.com/quantum-energy/bziness/specifications",
+        "battery_capacity": "3 Kwh",
+        "battery_capacity_citation": "https://www.bikedekho.com/quantum-energy/bziness/specifications",
+        "top_speed": "50 km/Hr",
+        "top_speed_citation": "https://www.bikedekho.com/quantum-energy/bziness/specifications"
+      }
+    },
+    {
+      "model_name": "Quantum Milan",
+      "model_name_citation": "https://www.bikedekho.com/quantum-energy/milan",
+      "price": "Rs. 89,000",
+      "price_citation": "https://www.bikedekho.com/quantum-energy/milan",
+      "color_options": [
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/quantum-energy/milan"
+        },
+        {
+          "value": "Grey",
+          "value_citation": "https://www.bikedekho.com/quantum-energy/milan"
+        },
+        {
+          "value": "Light Blue",
+          "value_citation": "https://www.bikedekho.com/quantum-energy/milan"
+        },
+        {
+          "value": "Sky Blue",
+          "value_citation": "https://www.bikedekho.com/quantum-energy/milan"
+        }
+      ],
+      "specifications": {
+        "range": "80-95 km/charge",
+        "range_citation": "https://www.bikedekho.com/quantum-energy/milan/specifications",
+        "motor_power": "1 kW",
+        "motor_power_citation": "https://www.bikedekho.com/quantum-energy/milan/specifications",
+        "charging_time": "4 hours",
+        "charging_time_citation": "https://www.bikedekho.com/quantum-energy/milan/colors",
+        "battery_capacity": "1.87 Kwh",
+        "battery_capacity_citation": "https://www.bikedekho.com/quantum-energy/milan/specifications",
+        "top_speed": "50 km/Hr",
+        "top_speed_citation": "https://www.bikedekho.com/quantum-energy/milan/specifications"
+      }
+    },
+    {
+      "model_name": "Quantum Plasma",
+      "model_name_citation": "https://www.bikedekho.com/quantum-energy/plasma",
+      "price": "Rs. 89,095 - Rs. 1,24,573",
+      "price_citation": "https://www.bikedekho.com/quantum-energy/plasma",
+      "color_options": [
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/quantum-energy/plasma"
+        },
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/quantum-energy/plasma"
+        },
+        {
+          "value": "Silver",
+          "value_citation": "https://www.bikedekho.com/quantum-energy/plasma"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/quantum-energy/plasma"
+        }
+      ],
+      "specifications": {
+        "range": "100 km/charge",
+        "range_citation": "https://www.bikedekho.com/quantum-energy/plasma/specifications",
+        "motor_power": "1.5 kW",
+        "motor_power_citation": "https://www.bikedekho.com/quantum-energy/plasma/specifications",
+        "battery_capacity": "2.18 Kwh",
+        "battery_capacity_citation": "https://www.bikedekho.com/quantum-energy/plasma/specifications",
+        "top_speed": "60 km/Hr",
+        "top_speed_citation": "https://www.bikedekho.com/quantum-energy/plasma/specifications"
+      }
+    },
+    {
+      "model_name": "Quantum Elektron",
+      "model_name_citation": "https://www.bikedekho.com/quantum-energy/elektron",
+      "price": "Rs. 91,000",
+      "price_citation": "https://www.bikedekho.com/quantum-energy/elektron",
+      "color_options": [
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/quantum-energy/elektron"
+        },
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/quantum-energy/elektron"
+        },
+        {
+          "value": "Sky Blue",
+          "value_citation": "https://www.bikedekho.com/quantum-energy/elektron"
+        }
+      ],
+      "specifications": {
+        "range": "80-85 km/charge",
+        "range_citation": "https://www.bikedekho.com/quantum-energy/elektron/specifications",
+        "motor_power": "1 kW",
+        "motor_power_citation": "https://www.bikedekho.com/quantum-energy/elektron/specifications",
+        "top_speed": "50 km/Hr",
+        "top_speed_citation": "https://www.bikedekho.com/quantum-energy/elektron/specifications"
+      }
+    }
+  ]
 }

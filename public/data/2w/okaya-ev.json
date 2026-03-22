@@ -1,6 +1,183 @@
 {
-  "brand": "Okaya EV (OPG Mobility)",
+  "brand": "Okaya EV",
   "brandId": "okaya-ev",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model_name": "Okaya Classiq",
+      "model_name_citation": "https://www.bikedekho.com/okaya-ev/classiq",
+      "pricing": {
+        "ex_showroom_price": "Rs. 99,999",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/okaya-ev/classiq"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/classiq/colors"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/classiq/colors"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/classiq/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/classiq/colors"
+        }
+      ],
+      "specifications": {
+        "range": "125 km per charge",
+        "range_citation": "https://www.bikedekho.com/okaya-ev/classiq"
+      }
+    },
+    {
+      "model_name": "Okaya Freedum",
+      "model_name_citation": "https://www.bikedekho.com/okaya-ev/freedum",
+      "pricing": {
+        "ex_showroom_price": "Rs. 74,999",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/okaya-ev/freedum"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/freedum/colors"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/freedum/colors"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/freedum/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/freedum/colors"
+        }
+      ],
+      "specifications": {
+        "range": "100 km per charge",
+        "range_citation": "https://www.bikedekho.com/okaya-ev/freedum"
+      }
+    },
+    {
+      "model_name": "Okaya Freedum Li",
+      "model_name_citation": "https://www.bikedekho.com/okaya-ev/freedum-li",
+      "pricing": {
+        "ex_showroom_price": "Rs. 84,999",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/okaya-ev/freedum-li"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/freedum-li/colors"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/freedum-li/colors"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/freedum-li/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/freedum-li/colors"
+        }
+      ],
+      "specifications": {
+        "range": "110 km per charge",
+        "range_citation": "https://www.bikedekho.com/okaya-ev/freedum-li"
+      }
+    },
+    {
+      "model_name": "Okaya Avion",
+      "model_name_citation": "https://www.bikedekho.com/okaya-ev/avion",
+      "pricing": {
+        "ex_showroom_price": "Rs. 79,999",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/okaya-ev/avion"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/avion/colors"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/avion/colors"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/avion/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/avion/colors"
+        }
+      ],
+      "specifications": {
+        "range": "90 km per charge",
+        "range_citation": "https://www.bikedekho.com/okaya-ev/avion"
+      }
+    },
+    {
+      "model_name": "Okaya Avioniq",
+      "model_name_citation": "https://www.bikedekho.com/okaya-ev/avioniq",
+      "pricing": {
+        "ex_showroom_price": "Rs. 89,999",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/okaya-ev/avioniq"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/avioniq/colors"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/avioniq/colors"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/avioniq/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/avioniq/colors"
+        }
+      ],
+      "specifications": {
+        "range": "100 km per charge",
+        "range_citation": "https://www.bikedekho.com/okaya-ev/avioniq"
+      }
+    },
+    {
+      "model_name": "Okaya Faast",
+      "model_name_citation": "https://www.bikedekho.com/okaya-ev/faast",
+      "pricing": {
+        "ex_showroom_price": "Rs. 99,999",
+        "ex_showroom_price_citation": "https://www.bikedekho.com/okaya-ev/faast"
+      },
+      "available_colors": [
+        {
+          "value": "Red",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/faast/colors"
+        },
+        {
+          "value": "White",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/faast/colors"
+        },
+        {
+          "value": "Blue",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/faast/colors"
+        },
+        {
+          "value": "Black",
+          "value_citation": "https://www.bikedekho.com/okaya-ev/faast/colors"
+        }
+      ]
+    }
+  ]
 }
