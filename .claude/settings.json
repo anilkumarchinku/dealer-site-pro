@@ -20,7 +20,9 @@
       "Bash(ls:*)",
       "Bash(echo:*)",
       "Bash(for f in public/data/2w/*.json)",
-      "Bash(do python3 -c \"import json; json.load\\(open\\(''$f''\\)\\)\")"
+      "Bash(do python3 -c \"import json; json.load\\(open\\(''$f''\\)\\)\")",
+      "Read(//Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/2w/**)",
+      "Read(//Users/anilkumarkolukulapalli/projects/cyepro/**)"
     ]
   }
 }

@@ -70,8 +70,8 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: `Dealer not found: ${msg}` }, { status: 404 })
         }
 
-        // Load services and template config in parallel
-        const [servicesRes, configRes] = await Promise.all([
+        // Load services and template config in parallel (reserved for future use)
+        await Promise.all([
             supabase.from('dealer_services').select('service_name').eq('dealer_id', dealerId).eq('is_active', true),
             supabase.from('dealer_template_configs')
                 .select('hero_title, hero_subtitle, hero_cta_text, working_hours, facebook_url, instagram_url, youtube_url')

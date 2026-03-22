@@ -13,6 +13,11 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
         }
 
+        const VALID_TEMPLATES = ['modern', 'luxury', 'sporty', 'family']
+        if (!VALID_TEMPLATES.includes(template)) {
+            return NextResponse.json({ error: "Invalid template value" }, { status: 400 });
+        }
+
         const { errorResponse: ownerErr } = await requireDealerOwnership(authClient, user.id, dealerId);
         if (ownerErr) return ownerErr;
 
@@ -29,7 +34,7 @@ export async function POST(req: Request) {
             .single();
 
         if (error) {
-            return NextResponse.json({ error: error.message }, { status: 500 });
+            return NextResponse.json({ error: "Failed to save template settings" }, { status: 500 });
         }
 
         // Trigger ISR revalidation so the public dealer site reflects the new

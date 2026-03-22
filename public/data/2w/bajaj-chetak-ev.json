@@ -2,5 +2,69 @@
   "brand": "Bajaj Chetak",
   "brandId": "bajaj-chetak-ev",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model": "Chetak Urbane",
+      "variant": "Urbane",
+      "type": "scooter",
+      "fuel_type": "electric",
+      "price": "₹1,15,000",
+      "range": "113 km",
+      "battery_capacity": "3.2 kWh",
+      "engine": "4 kW BLDC",
+      "top_speed": "73 kmph",
+      "torque": "16 Nm",
+      "colors": [
+        { "name": "Cyber White", "hex": "#F5F5F5" },
+        { "name": "Brooklyn Black", "hex": "#1A1A1A" },
+        { "name": "Hazel Brown", "hex": "#8B6914" }
+      ],
+      "features": ["Regenerative Braking", "Digital Instrument Cluster", "LED Headlight", "USB Charging Port", "Eco & Sport Mode", "IP67 Water Resistant Battery"],
+      "description": "Bajaj Chetak Urbane — retro-modern electric scooter with 113 km range and IP67 water resistant battery.",
+      "images": [],
+      "availability": "available"
+    },
+    {
+      "model": "Chetak Premium",
+      "variant": "Premium",
+      "type": "scooter",
+      "fuel_type": "electric",
+      "price": "₹1,20,000",
+      "range": "126 km",
+      "battery_capacity": "3.2 kWh",
+      "engine": "4 kW BLDC",
+      "top_speed": "73 kmph",
+      "torque": "16 Nm",
+      "colors": [
+        { "name": "Cyber White", "hex": "#F5F5F5" },
+        { "name": "Brooklyn Black", "hex": "#1A1A1A" },
+        { "name": "Hazel Brown", "hex": "#8B6914" },
+        { "name": "Chrome Silver", "hex": "#C0C0C0" }
+      ],
+      "features": ["Regenerative Braking", "Digital Instrument Cluster", "LED Headlight", "LED DRL", "USB Charging Port", "Eco & Sport Mode", "IP67 Water Resistant Battery", "Connected Features via App", "Find My Scooter", "Geo-Fencing"],
+      "description": "Bajaj Chetak Premium — top-spec electric scooter with connected features, LED DRL and extended 126 km range.",
+      "images": [],
+      "availability": "available"
+    },
+    {
+      "model": "Chetak 35 Series",
+      "variant": "35 Series",
+      "type": "scooter",
+      "fuel_type": "electric",
+      "price": "₹1,08,000",
+      "range": "113 km",
+      "battery_capacity": "3.2 kWh",
+      "engine": "4 kW BLDC",
+      "top_speed": "73 kmph",
+      "torque": "16 Nm",
+      "colors": [
+        { "name": "Cyber White", "hex": "#F5F5F5" },
+        { "name": "Brooklyn Black", "hex": "#1A1A1A" }
+      ],
+      "features": ["Regenerative Braking", "Digital Instrument Cluster", "LED Headlight", "USB Charging Port", "Eco & Sport Mode", "IP67 Water Resistant Battery"],
+      "description": "Bajaj Chetak 35 Series — affordable entry into Bajaj's electric scooter lineup at a competitive price.",
+      "images": [],
+      "availability": "available"
+    }
+  ]
 }

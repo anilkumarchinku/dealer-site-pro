@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { verifyCustomDomain } from '@/lib/services/dns-verification-service'
-import { createRouteClient } from '@/lib/supabase-server'
+import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
 /**
  * POST /api/domains/verify-dns
@@ -8,17 +8,23 @@ import { createRouteClient } from '@/lib/supabase-server'
  */
 export async function POST(request: Request) {
     try {
-        const body = await request.json()
-        const { domainId, domain } = body
+        // Auth guard — only the domain owner can trigger verification
+        const { user, supabase, errorResponse } = await requireAuth()
+        if (errorResponse) return errorResponse
 
-        if (!domainId || !domain) {
+        const body = await request.json()
+        const { domainId, domain, dealerId } = body
+
+        if (!domainId || !domain || !dealerId) {
             return NextResponse.json(
-                { success: false, error: 'Domain ID and domain name are required' },
+                { success: false, error: 'Domain ID, domain name and dealer ID are required' },
                 { status: 400 }
             )
         }
 
-        const supabase = await createRouteClient()
+        // Verify the user owns this dealer before touching their domain
+        const { errorResponse: ownerErr } = await requireDealerOwnership(supabase, user.id, dealerId)
+        if (ownerErr) return ownerErr
 
         // Verify DNS
         const verification = await verifyCustomDomain(domain)

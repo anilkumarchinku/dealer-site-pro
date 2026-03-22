@@ -13,7 +13,7 @@ const USE_SUBDOMAIN = process.env.NEXT_PUBLIC_USE_SUBDOMAIN === 'true'
 // Local Map is still kept as L1 cache to avoid a Redis round-trip on every request
 // for the same domain within the same instance.
 const localCache = new Map<string, { slug: string; expires: number }>()
-const CACHE_TTL  = 60_000 // 60 seconds
+const CACHE_TTL  = 300_000 // 5 minutes
 
 // Build Upstash Redis client once at module load (synchronous, no race condition)
 function buildRedisClient() {

@@ -2,5 +2,28 @@
   "brand": "River",
   "brandId": "river-ev",
   "type": "2w",
-  "vehicles": []
+  "vehicles": [
+    {
+      "model": "Indie",
+      "variant": "Standard",
+      "type": "scooter",
+      "fuel_type": "electric",
+      "price": "₹1,24,900",
+      "range": "161 km",
+      "battery_capacity": "4 kWh",
+      "engine": "4.3 kW PMSM",
+      "top_speed": "90 kmph",
+      "torque": "89 Nm",
+      "colors": [
+        { "name": "Cosmic Black", "hex": "#1A1A1A" },
+        { "name": "Stellar White", "hex": "#F0F0F0" },
+        { "name": "Neptune Blue", "hex": "#1B4F72" },
+        { "name": "Sunset Red", "hex": "#C0392B" }
+      ],
+      "features": ["161 km ARAI Range", "90 kmph Top Speed", "Large Frunk (Front Trunk)", "Multi-mode Riding", "LED Lighting", "Digital Cluster", "USB Type-C Charging", "Reverse Mode", "Hill Hold", "Waterproof IP67 Battery"],
+      "description": "River Indie — India's first electric scooter with a frunk (front trunk), offering 161 km ARAI range and a top speed of 90 kmph.",
+      "images": [],
+      "availability": "available"
+    }
+  ]
 }

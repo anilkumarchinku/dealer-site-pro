@@ -1,14 +1,19 @@
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { createDomainSubscription } from '@/lib/services/payment-service'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 /**
  * POST /api/payments/create-subscription
  * Creates a Razorpay subscription for PRO or PREMIUM tier.
  * Requires authenticated session — dealer and domain ownership are verified server-side.
  */
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
     try {
+        // Rate limit: max 5 subscription attempts per IP per hour
+        const rateLimit = await rateLimitOrNull('create_subscription', request, 5, 60 * 60 * 1000)
+        if (rateLimit) return rateLimit
+
         const { user, supabase, errorResponse } = await requireAuth()
         if (errorResponse) return errorResponse
 
