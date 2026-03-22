@@ -11,6 +11,9 @@ export interface ThreeWheelerEnrichment {
     max_power: string | null
     torque: string | null
     gvw_kg: number | null
+    ex_showroom_price_paise: number | null
+    range_km: number | null
+    passenger_capacity: number | null
 }
 
 // ── Parse helpers ────────────────────────────────────────────────
@@ -35,6 +38,30 @@ function parseKg(str: string | null | undefined): number | null {
     const match = str.match(/([\d.]+)\s*kg/i)
     if (!match) return null
     return Math.round(parseFloat(match[1]))
+}
+
+function parsePrice(str: string | null | undefined): number | null {
+    if (!str) return null
+    // Extract first number (handles "₹ 2.50 Lakh", "₹1.12 lakh", "₹ 2.50 Lakh - ₹ 2.85 Lakh")
+    const cleaned = str.replace(/[₹,Rs.\s]/gi, '')
+    const match = cleaned.match(/([\d.]+)\s*(?:lakh|l)/i)
+    if (!match) return null
+    const lakhs = parseFloat(match[1])
+    return Math.round(lakhs * 100000 * 100) // convert to paise
+}
+
+function parseRange(str: string | null | undefined): number | null {
+    if (!str) return null
+    const match = str.match(/([\d.]+)\s*km/i)
+    if (!match) return null
+    return Math.round(parseFloat(match[1]))
+}
+
+function parseSeating(str: string | null | undefined): number | null {
+    if (!str) return null
+    const match = str.match(/(\d+)/)
+    if (!match) return null
+    return parseInt(match[1])
 }
 
 // ── Static imports ───────────────────────────────────────────────
@@ -66,13 +93,20 @@ try { tvsKingData = require('@/public/data/3w/tvs-king.json')             } catc
 // Format A: Atul — { model_name, cardekho_technical_specifications: { engine_type (cc embedded), fuel_type, mileage } }
 function extractAtulFormat(v: any): ThreeWheelerEnrichment {
     const specs = v.cardekho_technical_specifications || {}
+    const pricing = v.cardekho_pricing || {}
+    // mileage can be "36 kmpl" or "80 km range per charge"
+    const mileageRaw: string = specs.mileage || ''
+    const isEV = mileageRaw.toLowerCase().includes('range') || (specs.fuel_type || '').toLowerCase().includes('electric')
     return {
-        engine_cc:   parseCC(specs.engine_type),
+        engine_cc:   isEV ? null : parseCC(specs.engine_type),
         fuel_type:   specs.fuel_type || null,
-        mileage_kmpl: parseMileage(specs.mileage),
+        mileage_kmpl: isEV ? null : parseMileage(mileageRaw),
+        range_km:    isEV ? parseRange(mileageRaw) : null,
         max_power:   specs.max_power || null,
         torque:      specs.torque || null,
         gvw_kg:      parseKg(specs.gross_vehicle_weight),
+        ex_showroom_price_paise: parsePrice(pricing.ex_showroom_price),
+        passenger_capacity: parseSeating(specs.seating_capacity),
     }
 }
 
@@ -84,9 +118,12 @@ function extractBajajFormat(v: any): ThreeWheelerEnrichment {
         engine_cc:   parseCC(eng.displacement),
         fuel_type:   tech.fuel_type || null,
         mileage_kmpl: null,
+        range_km:    null,
         max_power:   eng.max_power || null,
         torque:      eng.torque || null,
         gvw_kg:      parseKg(v.payload_features?.gross_vehicle_weight),
+        ex_showroom_price_paise: null,
+        passenger_capacity: null,
     }
 }
 
@@ -96,9 +133,12 @@ function extractMakeModelFormat(v: any): ThreeWheelerEnrichment {
         engine_cc:   null,
         fuel_type:   v.category?.toLowerCase().includes('electric') ? 'Electric' : null,
         mileage_kmpl: null,
+        range_km:    null,
         max_power:   null,
         torque:      null,
         gvw_kg:      null,
+        ex_showroom_price_paise: null,
+        passenger_capacity: null,
     }
 }
 

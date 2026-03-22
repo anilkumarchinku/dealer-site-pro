@@ -781,12 +781,30 @@ export function getThreeWheelerCatalog(brand: string, dealerId: string): ThreeWh
 
     const brandId = brandNameToId(brandGroup.brand, '3w')
 
-    // ── Priority 1: use the static catalog (has real prices & specs) ──────────
+    // ── Priority 1: static catalog + JSON enrichment merged ──────────────────
     const staticEntries = CATALOG_BY_BRAND[brandGroup.brand]
     if (staticEntries && staticEntries.length > 0) {
         return staticEntries.map((entry, idx) => {
-            const slug     = modelToSlug(entry.model)
-            const imageUrl = `/data/brand-model-images/3w/${brandId}/${slug}.jpg`
+            const slug       = modelToSlug(entry.model)
+            const imageUrl   = `/data/brand-model-images/3w/${brandId}/${slug}.jpg`
+            const enrichment = get3WModelEnrichment(brandId, entry.model)
+
+            // Real specs from JSON override fake static defaults
+            const engine_cc    = enrichment?.engine_cc    ?? entry.engine_cc
+            const mileage_kmpl = enrichment?.mileage_kmpl ?? entry.mileage_kmpl
+            const range_km     = enrichment?.range_km     ?? entry.range_km
+            const gvw_kg_val   = enrichment?.gvw_kg       ?? null
+            // Replace fake placeholder price (₹2.5L = 25000000 paise) with JSON price
+            const staticIsFake = entry.ex_showroom_price_paise === 25000000
+            const ex_showroom  = (staticIsFake && enrichment?.ex_showroom_price_paise)
+                ? enrichment.ex_showroom_price_paise
+                : entry.ex_showroom_price_paise
+            const on_road      = (staticIsFake && enrichment?.ex_showroom_price_paise)
+                ? Math.round(enrichment.ex_showroom_price_paise * 1.12)
+                : entry.on_road_price_paise
+            const passenger_capacity = enrichment?.passenger_capacity
+                ?? (entry.type === 'passenger' || entry.type === 'electric' ? 3 : entry.type === 'school_van' ? 8 : null)
+
             return {
                 ...entry,
                 id:        `catalog-3w-${brandId}-${idx}`,
@@ -795,12 +813,17 @@ export function getThreeWheelerCatalog(brand: string, dealerId: string): ThreeWh
                 created_at: NOW,
                 updated_at: NOW,
                 views:      0,
-                payload_kg:            entry.type === 'cargo' ? 500 : null,
+                engine_cc,
+                mileage_kmpl,
+                range_km,
+                gvw_kg:                gvw_kg_val,
+                ex_showroom_price_paise: ex_showroom,
+                on_road_price_paise:   on_road,
+                payload_kg:            entry.type === 'cargo' ? (gvw_kg_val ?? 500) : null,
                 body_type:             null,
-                passenger_capacity:    entry.type === 'passenger' || entry.type === 'electric' ? 3 : entry.type === 'school_van' ? 8 : null,
+                passenger_capacity,
                 cng_mileage_km_per_kg: entry.fuel_type === 'cng' ? 28 : null,
                 permit_type: null,
-                gvw_kg:     null,
                 brochure_url: null,
                 video_url:  null,
                 is_featured: false,
