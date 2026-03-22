@@ -5,8 +5,33 @@
   "vehicles": [
     {
       "make": "Greaves Electric Mobility",
+      "model": "Eltra City",
+      "category": "passenger",
+      "fuel_type": "Electric",
+      "range_km": 130,
+      "max_power": "7.5 kW",
+      "max_speed_kmph": 45,
+      "battery_kwh": 7.68,
+      "charging_time_hours": 5,
+      "passenger_capacity": 3,
+      "gvw_kg": 930,
+      "ex_showroom_price": "₹3.85 Lakh",
+      "status": "Available",
+      "variants": []
+    },
+    {
+      "make": "Greaves Electric Mobility",
       "model": "Eltra City XTRA",
       "category": "cargo",
+      "fuel_type": "Electric",
+      "range_km": 120,
+      "max_power": "7.5 kW",
+      "max_speed_kmph": 45,
+      "battery_kwh": 7.68,
+      "charging_time_hours": 5,
+      "payload_kg": 500,
+      "gvw_kg": 1050,
+      "ex_showroom_price": "₹4.10 Lakh",
       "status": "Available",
       "variants": []
     },
@@ -14,13 +39,15 @@
       "make": "Greaves Electric Mobility",
       "model": "Xargo",
       "category": "cargo",
-      "status": "Available",
-      "variants": []
-    },
-    {
-      "make": "Greaves Electric Mobility",
-      "model": "Eltra City",
-      "category": "passenger",
+      "fuel_type": "Electric",
+      "range_km": 125,
+      "max_power": "10 kW",
+      "max_speed_kmph": 50,
+      "battery_kwh": 9.5,
+      "charging_time_hours": 6,
+      "payload_kg": 700,
+      "gvw_kg": 1250,
+      "ex_showroom_price": "₹5.20 Lakh",
       "status": "Available",
       "variants": []
     }

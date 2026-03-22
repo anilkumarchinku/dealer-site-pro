@@ -127,18 +127,30 @@ function extractBajajFormat(v: any): ThreeWheelerEnrichment {
     }
 }
 
-// Format C: make/model/category/status/variants (variants usually empty — use category for fuel inference)
+// Format C: make/model/category + real specs (fuel_type, engine_cc, range_km, mileage_km_per_kg, mileage_kmpl,
+//           max_power, torque, gvw_kg, passenger_capacity, ex_showroom_price)
 function extractMakeModelFormat(v: any): ThreeWheelerEnrichment {
+    const isElectric = (v.fuel_type || v.category || '').toLowerCase().includes('electric')
+    // mileage_km_per_kg → treat as CNG mileage; mileage_kmpl → standard; range_km → EV range
+    const mileageKmpl = typeof v.mileage_kmpl === 'number' ? v.mileage_kmpl : null
+    const rangeKm = typeof v.range_km === 'number' ? v.range_km : null
+    // price can be numeric paise or string like "₹3.50 Lakh"
+    let price: number | null = null
+    if (typeof v.ex_showroom_price_paise === 'number') {
+        price = v.ex_showroom_price_paise
+    } else if (typeof v.ex_showroom_price === 'string') {
+        price = parsePrice(v.ex_showroom_price)
+    }
     return {
-        engine_cc:   null,
-        fuel_type:   v.category?.toLowerCase().includes('electric') ? 'Electric' : null,
-        mileage_kmpl: null,
-        range_km:    null,
-        max_power:   null,
-        torque:      null,
-        gvw_kg:      null,
-        ex_showroom_price_paise: null,
-        passenger_capacity: null,
+        engine_cc:   isElectric ? null : (typeof v.engine_cc === 'number' ? v.engine_cc : null),
+        fuel_type:   v.fuel_type || (isElectric ? 'Electric' : null),
+        mileage_kmpl: mileageKmpl,
+        range_km:    rangeKm,
+        max_power:   v.max_power || null,
+        torque:      v.torque || null,
+        gvw_kg:      typeof v.gvw_kg === 'number' ? v.gvw_kg : null,
+        ex_showroom_price_paise: price,
+        passenger_capacity: typeof v.passenger_capacity === 'number' ? v.passenger_capacity : null,
     }
 }
 
