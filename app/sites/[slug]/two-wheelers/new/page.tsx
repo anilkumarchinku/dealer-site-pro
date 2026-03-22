@@ -17,19 +17,6 @@ interface Props {
     params: Promise<{ slug: string }>
 }
 
-const POPULAR_2W_BRANDS = [
-    'Hero MotoCorp',
-    'Honda Motorcycle & Scooter India',
-    'TVS Motor Company',
-    'Bajaj Auto',
-    'Royal Enfield',
-    'Yamaha India',
-    'Suzuki Motorcycle India',
-    'KTM India',
-    'Ather Energy',
-    'Ola Electric',
-]
-
 function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): Car[] {
     return vehicles.map(v => ({
         id: v.id,
@@ -118,7 +105,7 @@ export default async function NewTwoWheelersPage({ params }: Props) {
 
     const allBrands = dealer2wBrands.length > 0
         ? dealer2wBrands
-        : POPULAR_2W_BRANDS.filter(b => TWO_WHEELER_BRANDS.includes(b))
+        : TWO_WHEELER_BRANDS
 
     // If accessed via a brand-specific slug (e.g. varun-group-royal-enfield),
     // restrict to that brand only; otherwise show all dealer brands.
