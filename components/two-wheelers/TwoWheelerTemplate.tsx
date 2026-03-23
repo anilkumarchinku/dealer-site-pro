@@ -284,17 +284,11 @@ const KNOWN_SVG_LOGOS: Record<string, string> = {
     "cfmoto india": "/assets/logos/2w/cfmoto.png",
 }
 
+/** Returns a 2W-specific brand logo path, or empty string if none available.
+ *  Callers must handle empty string — never falls back to car brand logos. */
 function getBrandLogoSrc(brand: string | null): string {
-    if (!brand) return "/favicon.svg"
-    const lower = brand.toLowerCase().trim()
-    // 1. Try known high-quality SVG logos first
-    if (KNOWN_SVG_LOGOS[lower]) return KNOWN_SVG_LOGOS[lower]
-    // 2. Try to resolve from /data/brand-logos/{brandId}.png
-    const brandId = BRAND_NAME_TO_ID[lower]
-    if (brandId) return `/data/brand-logos/${brandId}.png`
-    // 3. Generic slugify fallback
-    const slug = lower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
-    return `/data/brand-logos/${slug}.png`
+    if (!brand) return ""
+    return KNOWN_SVG_LOGOS[brand.toLowerCase().trim()] ?? ""
 }
 
 /**
@@ -332,10 +326,10 @@ interface Props {
 type FilterTab = "all" | "bike" | "scooter" | "electric"
 
 // ── Helper: first available hero image for a vehicle ─────────────────────────
-function getVehicleHeroImage(v: TwoWheelerVehicle): string {
-    if (v.images[0]) return v.images[0]
-    const [jpg] = getScrapedImageUrls("2w", brandNameToId(v.brand), v.model)
-    return jpg
+// Only use dealer-uploaded images — scraped model images are car-only for now.
+// When 2W-specific scraped images are available, restore the getScrapedImageUrls fallback.
+function getVehicleHeroImage(v: TwoWheelerVehicle): string | null {
+    return v.images[0] ?? null
 }
 
 // ── Template component ────────────────────────────────────────────────────────
@@ -404,15 +398,21 @@ export function TwoWheelerTemplate({
 
                         {/* Brand logo + name */}
                         <div className="flex items-center gap-3">
-                            <div className="relative w-9 h-9 shrink-0">
-                                <Image
-                                    src={logoUrl || getBrandLogoSrc(primaryBrand)}
-                                    alt={primaryBrand ?? dealerName}
-                                    fill
-                                    className="object-contain"
-                                    sizes="36px"
-                                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }}
-                                />
+                            <div className="relative w-9 h-9 shrink-0 rounded-lg overflow-hidden flex items-center justify-center bg-white/10">
+                                {(logoUrl || getBrandLogoSrc(primaryBrand)) ? (
+                                    <Image
+                                        src={logoUrl || getBrandLogoSrc(primaryBrand)}
+                                        alt={primaryBrand ?? dealerName}
+                                        fill
+                                        className="object-contain"
+                                        sizes="36px"
+                                        onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }}
+                                    />
+                                ) : (
+                                    <span className="text-white font-bold text-sm">
+                                        {(primaryBrand ?? dealerName).charAt(0).toUpperCase()}
+                                    </span>
+                                )}
                             </div>
                             <span className={`text-lg font-bold transition-colors ${isScrolled ? "text-gray-900" : "text-white"}`}>
                                 {dealerName}
@@ -549,13 +549,13 @@ export function TwoWheelerTemplate({
                             </div>
                         </div>
 
-                        {/* Right: rotating vehicle showcase */}
-                        {heroVehicle && (
+                        {/* Right: rotating vehicle showcase — only shown when vehicle has an uploaded image */}
+                        {heroVehicle && getVehicleHeroImage(heroVehicle) && (
                             <div className="relative">
                                 <div className="relative bg-white/5 rounded-3xl border border-white/10 overflow-hidden aspect-[4/3]">
                                     {/* eslint-disable-next-line @next/next/no-img-element */}
                                     <img
-                                        src={getVehicleHeroImage(heroVehicle)}
+                                        src={getVehicleHeroImage(heroVehicle)!}
                                         alt={`${heroVehicle.brand} ${heroVehicle.model}`}
                                         className="w-full h-full object-cover transition-opacity duration-700"
                                     />
@@ -773,15 +773,21 @@ export function TwoWheelerTemplate({
                 <div className="max-w-7xl mx-auto">
                     {/* Brand row */}
                     <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-100">
-                        <div className="relative w-12 h-12 shrink-0 rounded-xl overflow-hidden border border-gray-200 bg-white">
-                            <Image
-                                src={logoUrl || getBrandLogoSrc(primaryBrand)}
-                                alt={primaryBrand ?? dealerName}
-                                fill
-                                className="object-contain p-1"
-                                sizes="48px"
-                                onError={e => { (e.target as HTMLImageElement).parentElement!.style.display = "none" }}
-                            />
+                        <div className="relative w-12 h-12 shrink-0 rounded-xl overflow-hidden border border-gray-200 bg-white flex items-center justify-center">
+                            {(logoUrl || getBrandLogoSrc(primaryBrand)) ? (
+                                <Image
+                                    src={logoUrl || getBrandLogoSrc(primaryBrand)}
+                                    alt={primaryBrand ?? dealerName}
+                                    fill
+                                    className="object-contain p-1"
+                                    sizes="48px"
+                                    onError={e => { (e.target as HTMLImageElement).parentElement!.style.display = "none" }}
+                                />
+                            ) : (
+                                <span className="text-gray-700 font-bold text-lg">
+                                    {(primaryBrand ?? dealerName).charAt(0).toUpperCase()}
+                                </span>
+                            )}
                         </div>
                         <div>
                             <p className="font-bold text-gray-900 text-lg">{dealerName}</p>

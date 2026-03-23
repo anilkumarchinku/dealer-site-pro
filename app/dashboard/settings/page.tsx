@@ -77,6 +77,7 @@ export default function SettingsPage() {
     const [sellsTwoWheelers,   setSellsTwoWheelers]   = useState(false);
     const [sellsThreeWheelers, setSellsThreeWheelers] = useState(false);
     const [sellsFourWheelers,  setSellsFourWheelers]  = useState(false);
+    const [sellsUsedCars,      setSellsUsedCars]      = useState(false);
     const [segmentSaving,      setSegmentSaving]      = useState(false);
     const [segmentSaved,       setSegmentSaved]       = useState(false);
     const [vehicleType,        setVehicleType]        = useState<string | null>(null);
@@ -105,7 +106,7 @@ export default function SettingsPage() {
         if (!dealerId) return;
         supabase
             .from("dealers")
-            .select("logo_url, hero_image_url, sells_two_wheelers, sells_three_wheelers, sells_four_wheelers, google_maps_url, google_place_id, vehicle_type")
+            .select("logo_url, hero_image_url, sells_two_wheelers, sells_three_wheelers, sells_four_wheelers, sells_used_cars, google_maps_url, google_place_id, vehicle_type")
             .eq("id", dealerId)
             .single()
             .then(({ data }) => {
@@ -114,6 +115,7 @@ export default function SettingsPage() {
                 setSellsTwoWheelers(data?.sells_two_wheelers   ?? false);
                 setSellsThreeWheelers(data?.sells_three_wheelers ?? false);
                 setSellsFourWheelers(data?.sells_four_wheelers  ?? false);
+                setSellsUsedCars(data?.sells_used_cars ?? false);
                 if (data?.vehicle_type)            setVehicleType(data.vehicle_type);
                 if (data?.google_maps_url)         setGoogleMapsUrl(data.google_maps_url);
                 if (data?.google_place_id)         setGooglePlaceId(data.google_place_id);
@@ -1081,8 +1083,8 @@ export default function SettingsPage() {
                         </CardContent>
                     </Card>
 
-                    {/* ── Brand Assets ── */}
-                    <Card variant="glass">
+                    {/* ── Brand Assets — only for 2nd hand / used car dealers ── */}
+                    {sellsUsedCars && <Card variant="glass">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2.5 text-lg">
                                 <div className="p-2 rounded-lg bg-amber-500/10">
@@ -1208,7 +1210,7 @@ export default function SettingsPage() {
                             </div>
 
                         </CardContent>
-                    </Card>
+                    </Card>}
 
                     {/* Website Style */}
                     <Card variant="glass">
