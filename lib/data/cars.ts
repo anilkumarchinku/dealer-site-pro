@@ -10,11 +10,13 @@ import type { Car } from '@/lib/types/car'
 // ── Static makes list ─────────────────────────────────────────────────────────
 
 export const CAR_MAKES = [
+    'Aston Martin',
     'Audi',
     'Bentley',
     'BMW',
     'BYD',
     'Citroen',
+    'Ferrari',
     'Force Motors',
     'Honda',
     'Hyundai',
@@ -26,6 +28,7 @@ export const CAR_MAKES = [
     'Land Rover',
     'Lexus',
     'Mahindra',
+    'Maserati',
     'Maruti Suzuki',
     'Mercedes-Benz',
     'MG',
@@ -33,6 +36,7 @@ export const CAR_MAKES = [
     'Nissan',
     'Porsche',
     'Renault',
+    'Rolls-Royce',
     'Skoda',
     'Tata Motors',
     'Toyota',

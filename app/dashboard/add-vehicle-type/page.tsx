@@ -49,6 +49,13 @@ const FOUR_WHEELER_BRANDS: BrandEntry[] = [
     { brandId: "citroen",        brand: "Citroen"          },
     { brandId: "tesla",          brand: "Tesla"            },
     { brandId: "byd",            brand: "BYD"              },
+    { brandId: "vinfast",        brand: "VinFast"          },
+    { brandId: "lamborghini",    brand: "Lamborghini"      },
+    { brandId: "mini",           brand: "MINI"             },
+    { brandId: "ferrari",        brand: "Ferrari"          },
+    { brandId: "rolls-royce",    brand: "Rolls-Royce"      },
+    { brandId: "maserati",       brand: "Maserati"         },
+    { brandId: "aston-martin",   brand: "Aston Martin"     },
 ]
 
 function logoSrc(brandId: string) {
