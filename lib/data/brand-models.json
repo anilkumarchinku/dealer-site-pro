@@ -2,7 +2,7 @@
   "meta": {
     "title": "Indian Two-Wheeler & Three-Wheeler Brand Models",
     "description": "Comprehensive list of all currently sold 2W and 3W models in India (2026) — discontinued models removed",
-    "totalBrands": 46,
+    "totalBrands": 47,
     "generatedAt": "2026-03-23"
   },
   "twoWheelers": {
@@ -166,6 +166,7 @@
             "FZ25",
             "MT-15 V2.0",
             "MT-03",
+            "MT-07",
             "MT-09",
             "R15 V4",
             "R15S",
@@ -267,6 +268,7 @@
           "motorcycles": [
             "Eliminator",
             "Ninja 500",
+            "Ninja ZX-4R",
             "Z650",
             "Z650RS",
             "Ninja 650",
@@ -326,7 +328,8 @@
             "Road Glide",
             "CVO Street Glide",
             "CVO Road Glide",
-            "Pan America 1250 Special"
+            "Pan America 1250 Special",
+            "X440"
           ]
         }
       },
@@ -388,6 +391,7 @@
             "R 1300 GS",
             "S 1000 R",
             "S 1000 RR",
+            "M 1000 RR",
             "S 1000 XR",
             "M 1000 XR",
             "R 12",
@@ -476,6 +480,16 @@
             "350R",
             "350T",
             "GK350"
+          ]
+        }
+      },
+      {
+        "brandId": "norton-motorcycles",
+        "brand": "Norton Motorcycles",
+        "models": {
+          "motorcycles": [
+            "V4CR",
+            "Commando 961"
           ]
         }
       }
