@@ -8,6 +8,7 @@ import type { TwoWheelerVehicle, TwoWheelerType, TwoWheelerFuelType } from '@/li
 import brandData from '@/lib/data/brand-models.json'
 import { brandNameToId, modelToSlug } from '@/lib/utils/brand-model-images'
 import { getModelEnrichment } from '@/lib/data/2w-brand-data'
+import { TWO_WHEELER_MODEL_MILEAGE } from '@/lib/data/2w-model-mileage'
 
 const NOW = new Date().toISOString()
 const CURRENT_YEAR = new Date().getFullYear()
@@ -53,7 +54,7 @@ function buildTwoWheelerEntry(
         charging_time_hours:     null,
         battery_warranty_years:  null,
         top_speed_kmph:          enrichment?.top_speed_kmph ?? null,
-        mileage_kmpl:            enrichment?.mileage_kmpl ?? null,
+        mileage_kmpl:            enrichment?.mileage_kmpl ?? TWO_WHEELER_MODEL_MILEAGE[`${brand} ${model}`] ?? null,
         ex_showroom_price_paise: enrichment?.ex_showroom_price_paise ?? 0,
         on_road_price_paise:     null,
         emi_starting_paise:      null,

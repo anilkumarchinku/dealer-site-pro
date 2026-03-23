@@ -249,8 +249,12 @@ function extractFromFlatItem(item: any): BrandModelEnrichment {
     // Price
     const priceStr = item.price || null
 
-    // Mileage (petrol)
-    const mileageStr = item.mileage || specs['Mileage'] || null
+    // Mileage (petrol) — try all field name variants across brands
+    const mileageStr = item.mileage
+        || specs['mileage_kmpl']   // TVS, Vespa, Ultraviolette
+        || specs['mileage']        // Aprilia, Benelli, BMW, Ducati
+        || specs['Mileage']        // older scraped formats
+        || null
 
     // Torque
     const torqueStr = item.torque || specs['Torque'] || null
