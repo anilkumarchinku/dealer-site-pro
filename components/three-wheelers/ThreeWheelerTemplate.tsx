@@ -173,10 +173,12 @@ export function ThreeWheelerTemplate({
     const serviceList = services ?? []
     const featured    = vehicles.slice(0, 6)
 
+    const electricCount = vehicles.filter(v => v.fuel_type === 'electric').length
+
     const categories = [
         { label: "Passenger Auto", href: `${prefix}/three-wheelers/passenger`, Icon: Users,   desc: "CNG & petrol autos" },
         { label: "Cargo 3W",       href: `${prefix}/three-wheelers/cargo`,     Icon: Package, desc: "Delivery & goods" },
-        { label: "Electric 3W",    href: `${prefix}/three-wheelers/electric`,  Icon: Zap,     desc: "Zero emission" },
+        ...(electricCount > 0 ? [{ label: "Electric 3W", href: `${prefix}/three-wheelers/electric`, Icon: Zap, desc: "Zero emission" }] : []),
         { label: "Used 3W",        href: `${prefix}/three-wheelers/used`,      Icon: Wrench,  desc: "Pre-owned stock" },
     ]
 
@@ -832,7 +834,7 @@ export function ThreeWheelerTemplate({
                                 <button onClick={() => setActiveTab("inventory")} className="block hover:text-gray-900">Inventory</button>
                                 <Link href={`${prefix}/three-wheelers/passenger`} className="block hover:text-gray-900">Passenger Autos</Link>
                                 <Link href={`${prefix}/three-wheelers/cargo`} className="block hover:text-gray-900">Cargo Vehicles</Link>
-                                <Link href={`${prefix}/three-wheelers/electric`} className="block hover:text-gray-900">Electric 3W</Link>
+                                {electricCount > 0 && <Link href={`${prefix}/three-wheelers/electric`} className="block hover:text-gray-900">Electric 3W</Link>}
                                 <Link href={`${prefix}/three-wheelers/service`} className="block hover:text-gray-900">Book Service</Link>
                                 <Link href={`${prefix}/three-wheelers/emi-calculator`} className="block hover:text-gray-900">EMI Calculator</Link>
                             </div>

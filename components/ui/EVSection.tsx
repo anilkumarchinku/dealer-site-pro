@@ -15,10 +15,30 @@ import { Zap, MapPin, IndianRupee, ChevronDown, ChevronUp } from 'lucide-react';
 import type { Car } from '@/lib/types/car';
 import { Button } from '@/components/ui/button';
 
+// Known electric brands — used to gate EV charging map display
+const ELECTRIC_BRAND_KEYWORDS = [
+    'electric', 'ev', 'ola', 'ather', 'tata nexon', 'tata tiago', 'tata punch',
+    'mg zs', 'hyundai creta ev', 'hyundai ioniq', 'kia ev', 'byd', 'mahindra xev',
+    'revolt', 'hero electric', 'bajaj chetak', 'tvs iqube', 'ampere', 'pure ev',
+    'matter ev', 'hop electric', 'okaya', 'oben', 'lectrix', 'river ev', 'odysse',
+    'jitendra ev', 'amo electric', 'batttre', 'detel', 'dao electric', 'earth energy',
+    'greta electric', 'prevail electric', 'yakuza electric', 'avera electric',
+    'corrit electric', 'gaura electric',
+]
+
+function hasElectricBrand(brands: string[]): boolean {
+    return brands.some(b =>
+        ELECTRIC_BRAND_KEYWORDS.some(kw => b.toLowerCase().includes(kw))
+    )
+}
+
 interface EVSectionProps {
     cars: Car[];
     contactInfo: { address?: string; city?: string };
     brandColor?: string;
+    /** Dealer's registered brand list. When provided, EV charging map is only
+     *  shown if at least one brand is an electric brand. */
+    brands?: string[];
 }
 
 // Popular EV models with range data (km)
@@ -140,7 +160,7 @@ function IncentivesAccordion({ brandColor }: { brandColor: string }) {
     );
 }
 
-export function EVSection({ cars, contactInfo, brandColor = '#10b981' }: EVSectionProps) {
+export function EVSection({ cars, contactInfo, brandColor = '#10b981', brands }: EVSectionProps) {
     const evCars = cars.filter(c =>
         c.engine?.type?.toLowerCase().includes('electric') ||
         c.make?.toLowerCase().includes('ola') ||
@@ -148,6 +168,12 @@ export function EVSection({ cars, contactInfo, brandColor = '#10b981' }: EVSecti
     );
 
     if (evCars.length === 0) return null;
+
+    // Show charging map only if dealer has electric brands registered.
+    // When brands list is not provided, fall back to checking EV inventory.
+    const showChargingMap = brands
+        ? hasElectricBrand(brands)
+        : evCars.length > 0
 
     const city = contactInfo.city ?? contactInfo.address ?? 'India';
     const mapQuery = `EV charging station near ${city}`;
@@ -170,22 +196,24 @@ export function EVSection({ cars, contactInfo, brandColor = '#10b981' }: EVSecti
                     <IncentivesAccordion brandColor={brandColor} />
                 </div>
 
-                {/* Charging Map */}
-                <div className="rounded-2xl overflow-hidden border border-emerald-200 mb-8">
-                    <div className="flex items-center gap-2 px-4 py-2.5 bg-emerald-50 border-b border-emerald-100">
-                        <MapPin className="w-4 h-4 text-emerald-600" />
-                        <span className="text-sm font-medium text-emerald-800">EV Charging Stations near {city}</span>
+                {/* Charging Map — only shown when dealer has electric brands */}
+                {showChargingMap && (
+                    <div className="rounded-2xl overflow-hidden border border-emerald-200 mb-8">
+                        <div className="flex items-center gap-2 px-4 py-2.5 bg-emerald-50 border-b border-emerald-100">
+                            <MapPin className="w-4 h-4 text-emerald-600" />
+                            <span className="text-sm font-medium text-emerald-800">EV Charging Stations near {city}</span>
+                        </div>
+                        <div className="h-56">
+                            <iframe
+                                src={`https://maps.google.com/maps?q=${encodeURIComponent(mapQuery)}&output=embed`}
+                                className="w-full h-full"
+                                loading="lazy"
+                                title="EV charging stations map"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            />
+                        </div>
                     </div>
-                    <div className="h-56">
-                        <iframe
-                            src={`https://maps.google.com/maps?q=${encodeURIComponent(mapQuery)}&output=embed`}
-                            className="w-full h-full"
-                            loading="lazy"
-                            title="EV charging stations map"
-                            referrerPolicy="no-referrer-when-downgrade"
-                        />
-                    </div>
-                </div>
+                )}
 
                 {/* EV Cars CTA */}
                 <div className="text-center">

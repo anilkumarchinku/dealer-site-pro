@@ -385,7 +385,7 @@ export function TwoWheelerTemplate({
     const navLinks: { label: string; href: string }[] = [
         { label: "Bikes", href: `${prefix}/two-wheelers/bikes` },
         { label: "Scooters", href: `${prefix}/two-wheelers/scooters` },
-        { label: "Electric", href: `${prefix}/two-wheelers/electric` },
+        ...(tabCounts.electric > 0 ? [{ label: "Electric", href: `${prefix}/two-wheelers/electric` }] : []),
         { label: "Used", href: `${prefix}/two-wheelers/used` },
         { label: "Service", href: `${prefix}/two-wheelers/service` },
         { label: "EMI Calc", href: `${prefix}/two-wheelers/emi-calculator` },
@@ -602,7 +602,7 @@ export function TwoWheelerTemplate({
                     {[
                         { label: "Bikes", emoji: "🏍️", href: `${prefix}/two-wheelers/bikes`, count: tabCounts.bike },
                         { label: "Scooters", emoji: "🛵", href: `${prefix}/two-wheelers/scooters`, count: tabCounts.scooter },
-                        { label: "Electric", emoji: "⚡", href: `${prefix}/two-wheelers/electric`, count: tabCounts.electric },
+                        ...(tabCounts.electric > 0 ? [{ label: "Electric", emoji: "⚡", href: `${prefix}/two-wheelers/electric`, count: tabCounts.electric }] : []),
                         { label: "Used", emoji: "🔄", href: `${prefix}/two-wheelers/used`, count: null },
                     ].map(c => (
                         <Link
@@ -680,7 +680,7 @@ export function TwoWheelerTemplate({
                             { Icon: Wrench, title: "Expert Service", text: "Factory-trained technicians for all 2W brands" },
                             { Icon: CreditCard, title: "Easy Finance", text: "EMI starting ₹999/month — HDFC, Bajaj & more" },
                             { Icon: RotateCcw, title: "Exchange Offer", text: "Best exchange value for your old bike or scooter" },
-                            { Icon: Zap, title: "EV Specialists", text: "Test rides & charging demos for electric models" },
+                            ...(tabCounts.electric > 0 ? [{ Icon: Zap, title: "EV Specialists", text: "Test rides & charging demos for electric models" }] : []),
                         ].map(s => (
                             <div key={s.title} className="flex flex-col items-center text-center gap-4 p-6 rounded-2xl bg-white border border-gray-100 shadow-sm">
                                 <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: theme.accent + "15" }}>
