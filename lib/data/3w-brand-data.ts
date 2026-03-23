@@ -19,47 +19,58 @@ export interface ThreeWheelerEnrichment {
 // ── Parse helpers ────────────────────────────────────────────────
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-function parseCC(str: string | null | undefined): number | null {
-    if (!str) return null
-    const match = str.match(/([\d.]+)\s*cc/i)
+function toStr(val: unknown): string {
+    if (val == null) return ''
+    return typeof val === 'string' ? val : String(val)
+}
+
+function parseCC(str: unknown): number | null {
+    const s = toStr(str)
+    if (!s) return null
+    const match = s.match(/([\d.]+)\s*cc/i)
     if (!match) return null
     return Math.round(parseFloat(match[1]))
 }
 
-function parseMileage(str: string | null | undefined): number | null {
-    if (!str) return null
-    const match = str.match(/([\d.]+)\s*kmpl/i)
+function parseMileage(str: unknown): number | null {
+    const s = toStr(str)
+    if (!s) return null
+    const match = s.match(/([\d.]+)\s*kmpl/i)
     if (!match) return null
     return parseFloat(match[1])
 }
 
-function parseKg(str: string | null | undefined): number | null {
-    if (!str) return null
-    const match = str.match(/([\d.]+)\s*kg/i)
+function parseKg(str: unknown): number | null {
+    const s = toStr(str)
+    if (!s) return null
+    const match = s.match(/([\d.]+)\s*kg/i)
     if (!match) return null
     return Math.round(parseFloat(match[1]))
 }
 
-function parsePrice(str: string | null | undefined): number | null {
-    if (!str) return null
+function parsePrice(str: unknown): number | null {
+    const s = toStr(str)
+    if (!s) return null
     // Extract first number (handles "₹ 2.50 Lakh", "₹1.12 lakh", "₹ 2.50 Lakh - ₹ 2.85 Lakh")
-    const cleaned = str.replace(/[₹,Rs.\s]/gi, '')
+    const cleaned = s.replace(/[₹,Rs.\s]/gi, '')
     const match = cleaned.match(/([\d.]+)\s*(?:lakh|l)/i)
     if (!match) return null
     const lakhs = parseFloat(match[1])
     return Math.round(lakhs * 100000 * 100) // convert to paise
 }
 
-function parseRange(str: string | null | undefined): number | null {
-    if (!str) return null
-    const match = str.match(/([\d.]+)\s*km/i)
+function parseRange(str: unknown): number | null {
+    const s = toStr(str)
+    if (!s) return null
+    const match = s.match(/([\d.]+)\s*km/i)
     if (!match) return null
     return Math.round(parseFloat(match[1]))
 }
 
-function parseSeating(str: string | null | undefined): number | null {
-    if (!str) return null
-    const match = str.match(/(\d+)/)
+function parseSeating(str: unknown): number | null {
+    const s = toStr(str)
+    if (!s) return null
+    const match = s.match(/(\d+)/)
     if (!match) return null
     return parseInt(match[1])
 }
@@ -130,7 +141,7 @@ function extractBajajFormat(v: any): ThreeWheelerEnrichment {
 // Format C: make/model/category + real specs (fuel_type, engine_cc, range_km, mileage_km_per_kg, mileage_kmpl,
 //           max_power, torque, gvw_kg, passenger_capacity, ex_showroom_price)
 function extractMakeModelFormat(v: any): ThreeWheelerEnrichment {
-    const isElectric = (v.fuel_type || v.category || '').toLowerCase().includes('electric')
+    const isElectric = (toStr(v.fuel_type) || toStr(v.category)).toLowerCase().includes('electric')
     // mileage_km_per_kg → treat as CNG mileage; mileage_kmpl → standard; range_km → EV range
     const mileageKmpl = typeof v.mileage_kmpl === 'number' ? v.mileage_kmpl : null
     const rangeKm = typeof v.range_km === 'number' ? v.range_km : null
