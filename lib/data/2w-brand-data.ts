@@ -6,6 +6,8 @@
  * Uses static imports (no fs) so it works in both server and client bundles.
  */
 
+import { resolveVehicleColorHex } from '@/lib/utils/resolve-vehicle-color'
+
 export interface BrandModelEnrichment {
     engine_cc: number | null
     mileage_kmpl: number | null
@@ -300,10 +302,10 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
         const engine = specs.engine_and_transmission || {}
         const perf = specs.performance_and_features || {}
 
-        const colors = (firstVar.colors || []).map((c: string | { value: string }) => ({
-            name: typeof c === 'string' ? c : c.value || '',
-            hex: '#808080'
-        }))
+        const colors = (firstVar.colors || []).map((c: string | { value: string }) => {
+            const name = typeof c === 'string' ? c : c.value || ''
+            return { name, hex: resolveVehicleColorHex(name) }
+        })
 
         const features: string[] = []
         if (perf['Additional Features Of Variant']) features.push(perf['Additional Features Of Variant'])
@@ -348,7 +350,7 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
     // Revolt / electric format: has specifications with Motor Power / Range
     const specs = v.specifications || {}
     if (specs['Motor Power'] || specs['Range']) {
-        const colors = (v.colors || []).map((c: string) => ({ name: c, hex: '#808080' }))
+        const colors = (v.colors || []).map((c: string) => ({ name: c, hex: resolveVehicleColorHex(c) }))
         const features: string[] = []
         if (specs['Riding Modes'] === 'Yes') features.push('Riding Modes')
         if (specs['Bluetooth Connectivity'] === 'Yes' || specs['Mobile Connectivity']) features.push('Bluetooth Connectivity')
@@ -392,10 +394,10 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
         ex_showroom_price_paise: parsePrice(v.price),
         range_km: null,
         battery_kwh: null,
-        colors: (v.colors || []).map((c: string | { name: string }) => ({
-            name: typeof c === 'string' ? c : c.name || '',
-            hex: '#808080'
-        })),
+        colors: (v.colors || []).map((c: string | { name: string }) => {
+            const name = typeof c === 'string' ? c : c.name || ''
+            return { name, hex: resolveVehicleColorHex(name) }
+        }),
         features: genFeatures,
         description: specs.description || null,
         torque: specs.torque || v.torque || null,

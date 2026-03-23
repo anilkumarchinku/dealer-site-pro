@@ -1,9 +1,9 @@
 {
   "meta": {
     "title": "Indian Two-Wheeler & Three-Wheeler Brand Models",
-    "description": "Comprehensive list of all currently sold 2W and 3W models in India (2025)",
-    "totalBrands": 71,
-    "generatedAt": "2026-03-02"
+    "description": "Comprehensive list of all currently sold 2W and 3W models in India (2026) — discontinued models removed",
+    "totalBrands": 46,
+    "generatedAt": "2026-03-23"
   },
   "twoWheelers": {
     "traditional": [
@@ -34,7 +34,6 @@
           "scooters": [
             "Pleasure Plus",
             "Pleasure Plus Xtec",
-            "Destini 110",
             "Destini 125",
             "Destini Prime",
             "Xoom 110",
@@ -115,7 +114,6 @@
         "models": {
           "motorcycles": [
             "CT 110X",
-            "Platina 100",
             "Platina 110",
             "Pulsar 125",
             "Pulsar N125",
@@ -126,11 +124,9 @@
             "Pulsar NS200",
             "Pulsar 220F",
             "Pulsar N250",
-            "Pulsar RS200",
             "Pulsar NS400Z",
             "Dominar 250",
             "Dominar 400",
-            "Avenger Street 160",
             "Avenger Cruise 220"
           ]
         }
@@ -144,7 +140,6 @@
             "Classic 350",
             "Meteor 350",
             "Hunter 350",
-            "Goan Classic 350",
             "Scram 440",
             "Himalayan 450",
             "Guerrilla 450",
@@ -249,19 +244,7 @@
             "Jawa 42",
             "Jawa 42 FJ",
             "Jawa 42 Bobber",
-            "Jawa 350",
-            "Jawa Perak"
-          ]
-        }
-      },
-      {
-        "brandId": "yezdi-motorcycles",
-        "brand": "Yezdi Motorcycles",
-        "models": {
-          "motorcycles": [
-            "Roadster",
-            "Scrambler",
-            "Adventure"
+            "Jawa 350"
           ]
         }
       },
@@ -282,27 +265,18 @@
         "brand": "Kawasaki India",
         "models": {
           "motorcycles": [
-            "W175",
             "Eliminator",
-            "Ninja 300",
-            "Z400",
             "Ninja 500",
             "Z650",
             "Z650RS",
             "Ninja 650",
             "Versys 650",
-            "Versys-X 300",
             "Z900",
             "Ninja 1100SX",
-            "Z1100",
             "Vulcan S",
-            "KLX230",
-            "KLX230RS",
-            "KLX450R",
             "Ninja ZX-10R",
             "Z H2",
-            "Ninja H2 SX SE",
-            "Versys 1100"
+            "Ninja H2 SX SE"
           ]
         }
       },
@@ -319,9 +293,6 @@
           ],
           "scooters": [
             "SR 125",
-            "SR 175",
-            "SXR 125",
-            "SXR 160",
             "Storm 125"
           ]
         }
@@ -336,8 +307,7 @@
             "Vespa Tech 125",
             "Vespa S Tech 125",
             "Vespa 150",
-            "Vespa S 150",
-            "Vespa Qala"
+            "Vespa S 150"
           ]
         }
       },
@@ -349,7 +319,6 @@
             "Nightster",
             "Nightster Special",
             "Sportster S",
-            "Street Bob",
             "Fat Boy",
             "Heritage Classic",
             "Breakout",
@@ -369,7 +338,6 @@
             "Speed 400",
             "Scrambler 400 X",
             "Trident 660",
-            "Tiger 660",
             "Tiger 850 Sport",
             "Speed Twin 900",
             "Scrambler 900",
@@ -510,20 +478,6 @@
             "GK350"
           ]
         }
-      },
-      {
-        "brandId": "mahindra-two-wheelers",
-        "brand": "Mahindra Two Wheelers",
-        "models": {
-          "motorcycles": [
-            "Mojo 300",
-            "Centuro 125"
-          ],
-          "scooters": [
-            "Gusto 110",
-            "Gusto 125"
-          ]
-        }
       }
     ],
     "electric": [
@@ -533,10 +487,7 @@
         "models": {
           "scooters": [
             "S1 Pro",
-            "S1 Air",
-            "S1 X",
-            "S1 Z",
-            "Gig"
+            "S1 X"
           ],
           "motorcycles": [
             "Roadster"
@@ -575,20 +526,7 @@
             "iQube S",
             "iQube ST",
             "iQube ST 5.3 kWh",
-            "TVS X",
-            "TVS Orbiter"
-          ]
-        }
-      },
-      {
-        "brandId": "hero-electric",
-        "brand": "Hero Electric",
-        "models": {
-          "scooters": [
-            "Optima",
-            "Flash",
-            "Photon",
-            "Atria"
+            "TVS X"
           ]
         }
       },
@@ -608,26 +546,9 @@
         "brand": "Revolt Motors",
         "models": {
           "motorcycles": [
-            "RV1",
-            "RV1+",
             "RV BlazeX",
             "RV400",
             "RV400 BRZ"
-          ]
-        }
-      },
-      {
-        "brandId": "okinawa-autotech",
-        "brand": "Okinawa Autotech",
-        "models": {
-          "scooters": [
-            "i-Praise",
-            "PraisePro",
-            "Okhi-90",
-            "Ridge 100",
-            "Dual 100",
-            "R30",
-            "Lite"
           ]
         }
       },
@@ -659,36 +580,7 @@
         "models": {
           "motorcycles": [
             "F77 Mach 2",
-            "F77 SuperStreet",
-            "Shockwave"
-          ],
-          "scooters": [
-            "Tesseract"
-          ]
-        }
-      },
-      {
-        "brandId": "simple-energy",
-        "brand": "Simple Energy",
-        "models": {
-          "scooters": [
-            "One",
-            "One Gen 1.5",
-            "OneS"
-          ]
-        }
-      },
-      {
-        "brandId": "kabira-mobility",
-        "brand": "Kabira Mobility",
-        "models": {
-          "motorcycles": [
-            "KM 3000",
-            "KM 4000"
-          ],
-          "scooters": [
-            "Aetos 100",
-            "Hermes 75"
+            "F77 SuperStreet"
           ]
         }
       },
@@ -701,27 +593,6 @@
             "Etryst 350",
             "EcoDryft",
             "ETrance Neo"
-          ]
-        }
-      },
-      {
-        "brandId": "matter-ev",
-        "brand": "Matter",
-        "models": {
-          "motorcycles": [
-            "Aera 5000",
-            "Aera 5000+"
-          ]
-        }
-      },
-      {
-        "brandId": "hop-electric",
-        "brand": "Hop Electric",
-        "models": {
-          "scooters": [
-            "Lyf",
-            "Leo",
-            "OXO"
           ]
         }
       },
@@ -775,78 +646,6 @@
         }
       },
       {
-        "brandId": "odysse-electric",
-        "brand": "Odysse Electric",
-        "models": {
-          "scooters": [
-            "Racer",
-            "Racer Neo",
-            "HyFy",
-            "V2",
-            "Snap",
-            "E2Go",
-            "Hawk",
-            "Trot",
-            "Vader"
-          ],
-          "motorcycles": [
-            "Evoqis",
-            "Evoqis Lite"
-          ]
-        }
-      },
-      {
-        "brandId": "joy-e-bike",
-        "brand": "Joy e-bike",
-        "models": {
-          "scooters": [
-            "Beast",
-            "Thunderbolt",
-            "Hurricane",
-            "Gen Next Nanu",
-            "Wolf",
-            "Glob",
-            "Mihos"
-          ]
-        }
-      },
-      {
-        "brandId": "komaki",
-        "brand": "Komaki",
-        "models": {
-          "scooters": [
-            "SE Pro",
-            "SE Ultra",
-            "SE Max"
-          ],
-          "motorcycles": [
-            "Ranger"
-          ]
-        }
-      },
-      {
-        "brandId": "bounce-infinity",
-        "brand": "Bounce Infinity",
-        "models": {
-          "scooters": [
-            "E1",
-            "E1 Plus",
-            "E1LE",
-            "E1X"
-          ]
-        }
-      },
-      {
-        "brandId": "quantum-energy",
-        "brand": "Quantum Energy",
-        "models": {
-          "scooters": [
-            "Plasma",
-            "Bziness"
-          ]
-        }
-      },
-      {
         "brandId": "yulu",
         "brand": "Yulu",
         "models": {
@@ -866,7 +665,6 @@
           "RE CNG",
           "RE LPG",
           "RE Diesel",
-          "RE Electric",
           "Maxima Z CNG",
           "Compact RE CNG"
         ],
@@ -874,10 +672,6 @@
           "Maxima XL Electric",
           "Maxima X Wide Diesel",
           "Maxima C CNG"
-        ],
-        "electric": [
-          "GoGo",
-          "Riki P40"
         ]
       }
     },
@@ -978,25 +772,6 @@
       }
     },
     {
-      "brandId": "lohia-auto",
-      "brand": "Lohia Auto",
-      "models": {
-        "passenger": [
-          "Humsafar L5 Passenger",
-          "Narain ICE L3",
-          "Narain DX"
-        ],
-        "cargo": [
-          "Humsafar L5 Cargo",
-          "Comfort F2F+"
-        ],
-        "electric": [
-          "Youdha E5 Passenger",
-          "Youdha E5 Cargo"
-        ]
-      }
-    },
-    {
       "brandId": "euler-motors",
       "brand": "Euler Motors",
       "models": {
@@ -1022,13 +797,6 @@
         "passenger": [
           "Eltra City"
         ]
-      }
-    },
-    {
-      "brandId": "force-motors",
-      "brand": "Force Motors",
-      "models": {
-        "note": "Force Motors has shifted focus to LCVs (Urbania, Gurkha, Trax). No current 3W production."
       }
     }
   ]
