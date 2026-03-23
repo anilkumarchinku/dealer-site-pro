@@ -1,0 +1,29 @@
+{
+  "brand": "Norton",
+  "vehicles": [
+    {
+      "model": "V4CR",
+      "fuel_type": "Petrol",
+      "engine_cc": 1200,
+      "max_power": "185 bhp",
+      "torque": "130 Nm",
+      "mileage_kmpl": 14,
+      "top_speed_kmph": 270,
+      "ex_showroom_price": "₹ 35.00 Lakh",
+      "colors": ["Graphite Black", "Norton Red"],
+      "features": ["Brembo brakes", "Ohlins suspension", "TFT display", "Traction control", "Ride modes"]
+    },
+    {
+      "model": "Commando 961",
+      "fuel_type": "Petrol",
+      "engine_cc": 961,
+      "max_power": "80 bhp",
+      "torque": "90 Nm",
+      "mileage_kmpl": 18,
+      "top_speed_kmph": 195,
+      "ex_showroom_price": "₹ 28.00 Lakh",
+      "colors": ["Silver Dream", "Manx Orange", "Black"],
+      "features": ["Classic styling", "Modern electronics", "Slipper clutch", "ABS"]
+    }
+  ]
+}

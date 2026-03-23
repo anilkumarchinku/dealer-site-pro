@@ -33,6 +33,10 @@ export const BRAND_LOGOS: Record<string, string> = {
     'Volkswagen': '/assets/logos/volkswagen.png',
     'VinFast': '/assets/logos/vinfast.png',
     'Volvo': '/assets/logos/volvo.png',
+    'Ferrari': '/assets/logos/ferrari.png',
+    'Rolls-Royce': '/assets/logos/rolls-royce.png',
+    'Maserati': '/assets/logos/maserati.png',
+    'Aston Martin': '/assets/logos/aston-martin.png',
 };
 
 /** Get logo path for a brand name (fallback to null) */

@@ -197,6 +197,8 @@ try { tvsMotorData      = require('@/public/data/2w/tvs-motor.json')          } 
 try { ultravioletteData = require('@/public/data/2w/ultraviolette.json')      } catch { /* optional */ }
 try { vespaData         = require('@/public/data/2w/vespa-india.json')        } catch { /* optional */ }
 try { yuluData          = require('@/public/data/2w/yulu.json')               } catch { /* optional */ }
+let nortonData:       any = null
+try { nortonData        = require('@/public/data/2w/norton-motorcycles.json') } catch { /* optional */ }
 /* eslint-enable @typescript-eslint/no-require-imports */
 
 // Standard-format files (have brand/brandId/vehicles at root)
@@ -208,6 +210,7 @@ const STANDARD_BRAND_FILES: any[] = [
     komakiData, lectrixData, mahindra2wData, matterData, obenData,
     odysseData, okayaData, pureEvData, quantumData, riverData,
     simpleData, torkData, tvsMotorData, ultravioletteData, vespaData, yuluData,
+    nortonData,
 ].filter(Boolean)
 
 // Flat-format files: non-standard root key, flat item schema
