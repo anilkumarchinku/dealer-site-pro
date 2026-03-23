@@ -6,6 +6,7 @@
 import { supabase } from '@/lib/supabase';
 import type { Car, CarFilters, CarSearchResult } from '@/lib/types/car';
 import { searchCars, sortCars, calculateEMI } from '@/lib/utils/car-utils';
+import { CAR_MODEL_COLORS } from '@/lib/data/car-colors';
 
 // Table name in Supabase
 const CAR_TABLE = 'car_catalog';
@@ -283,7 +284,13 @@ function mapDbCarToCar(dbCar: any): Car {
             exterior: dbCar.image_url ? [dbCar.image_url] : [],
             interior: [],
         },
-        colors:    dbCar.colors ?? [],
+        colors: (() => {
+            // Use DB colors if they exist and are non-empty
+            if (Array.isArray(dbCar.colors) && dbCar.colors.length > 0) return dbCar.colors;
+            // Otherwise enrich from the static model-color lookup table
+            const key = `${dbCar.make} ${dbCar.model}`;
+            return CAR_MODEL_COLORS[key] ?? [];
+        })(),
         meta:      dbCar.meta ?? {
             lastUpdated:    dbCar.scraped_at     ?? undefined,
             isAvailable:    dbCar.is_active      ?? true,

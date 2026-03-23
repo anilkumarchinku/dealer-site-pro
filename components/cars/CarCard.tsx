@@ -345,6 +345,28 @@ export function CarCard({
                         <SpecItem icon={spec4.icon} label={spec4.label} value={spec4.value} light={light} />
                     </div>
 
+                    {/* Color Swatches */}
+                    {car.colors && car.colors.length > 0 && (
+                        <div className="flex items-center gap-1.5 mb-2">
+                            {car.colors.slice(0, 7).map((c, i) => (
+                                <div
+                                    key={i}
+                                    title={`${c.name}${c.type !== 'Solid' ? ` (${c.type})` : ''}`}
+                                    className="w-4 h-4 rounded-full border border-black/10 shadow-sm shrink-0 cursor-default"
+                                    style={{ backgroundColor: c.hex }}
+                                />
+                            ))}
+                            {car.colors.length > 7 && (
+                                <span className="text-[10px] text-gray-400 font-medium">
+                                    +{car.colors.length - 7}
+                                </span>
+                            )}
+                            <span className="ml-auto text-[10px] text-gray-400">
+                                {car.colors.length} colour{car.colors.length !== 1 ? 's' : ''}
+                            </span>
+                        </div>
+                    )}
+
                     {/* Trust Badges for Used Cars */}
                     {isUsed && (
                         <div className="flex items-center gap-2 mb-1.5">
