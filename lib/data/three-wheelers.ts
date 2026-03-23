@@ -8,6 +8,11 @@ import type { ThreeWheelerVehicle, ThreeWheelerType, ThreeWheelerFuelType } from
 import brandData from '@/lib/data/brand-models.json'
 import { brandNameToId, modelToSlug } from '@/lib/utils/brand-model-images'
 import { get3WModelEnrichment } from '@/lib/data/3w-brand-data'
+import { THREE_WHEELER_MODEL_COLORS } from '@/lib/data/3w-model-colors'
+
+function lookup3WColors(brand: string, model: string) {
+    return THREE_WHEELER_MODEL_COLORS[`${brand} ${model}`] ?? []
+}
 
 const NOW = new Date().toISOString()
 const CURRENT_YEAR = new Date().getFullYear()
@@ -66,7 +71,7 @@ function buildThreeWheelerEntry(
         on_road_price_paise:    null,
         emi_starting_paise:     null,
         stock_status:           'available',
-        colors:                 [],
+        colors:                 lookup3WColors(brand, model),
         images:                 [imageUrl],
         brochure_url:           null,
         description:            null,
@@ -827,6 +832,10 @@ export function getThreeWheelerCatalog(brand: string, dealerId: string): ThreeWh
                 brochure_url: null,
                 video_url:  null,
                 is_featured: false,
+                colors: (() => {
+                    const c = lookup3WColors(entry.brand, entry.model)
+                    return c.length > 0 ? c : entry.colors
+                })(),
             } as ThreeWheelerVehicle
         })
     }
