@@ -32,7 +32,12 @@ function verifyWebhookSignature(body: string, signature: string, secret: string)
 export async function POST(request: NextRequest) {
     const rawBody = await request.text()
     const signature = request.headers.get('x-razorpay-signature') ?? ''
-    const webhookSecret = process.env.RAZORPAY_WEBHOOK_SECRET ?? ''
+    const webhookSecret = process.env.RAZORPAY_WEBHOOK_SECRET
+
+    if (!webhookSecret) {
+        console.error('[Razorpay Webhook] RAZORPAY_WEBHOOK_SECRET is not configured')
+        return NextResponse.json({ error: 'Webhook not configured' }, { status: 500 })
+    }
 
     // Validate signature
     if (!verifyWebhookSignature(rawBody, signature, webhookSecret)) {

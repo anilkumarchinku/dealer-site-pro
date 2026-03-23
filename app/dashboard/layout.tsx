@@ -27,6 +27,7 @@ import {
     Store,
     Bike,
     Truck,
+    RefreshCw,
 } from "lucide-react";
 import { dealerSiteHref } from "@/lib/utils/domain";
 
@@ -71,6 +72,14 @@ const navGroups = [
             { name: "3W Leads",     href: "/dashboard/three-wheelers/leads",     icon: Users     },
             { name: "3W Service",   href: "/dashboard/three-wheelers/service",   icon: Settings  },
             { name: "3W Bookings",  href: "/dashboard/three-wheelers/bookings",  icon: BarChart3 },
+        ],
+    },
+    {
+        label: "2nd Hand",
+        items: [
+            { name: "Used Overview", href: "/dashboard/used-vehicles",           icon: RefreshCw },
+            { name: "Used 2W",       href: "/dashboard/two-wheelers/used",       icon: Bike      },
+            { name: "Used 3W",       href: "/dashboard/three-wheelers/used",     icon: Truck     },
         ],
     },
     {
@@ -225,6 +234,7 @@ export default function DashboardLayout({
                         if (group.label === 'Manage')     return hasCars;
                         if (group.label === '2-Wheeler')  return has2W;
                         if (group.label === '3-Wheeler')  return has3W;
+                        if (group.label === '2nd Hand')   return has2W || has3W;
                         return true; // Main, Insights, My Website, Configure always visible
                     }).map((group) => (
                         <div key={group.label}>
