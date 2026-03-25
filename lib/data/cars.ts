@@ -91,7 +91,9 @@ function catalogRowToCar(row: any): Car {
         transmission: {
             type: row.transmission ?? 'Manual',
         },
-        performance: {},
+        performance: {
+            fuelEfficiency: row.fuel_efficiency ?? row.mileage ?? null,
+        },
         dimensions: {
             seatingCapacity: row.seating_capacity ?? 5,
         },
