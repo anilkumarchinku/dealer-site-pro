@@ -315,7 +315,12 @@ export function FamilyTemplate({
                                     </div>
                                 </div>
                                 <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl">
-                                    <Image src={heroImageUrl || getBrandHeroImage(brandName)} alt={`${brandName} Family`} fill className="object-cover" priority />
+                                    {(() => {
+                                        const heroSrc = heroImageUrl || getBrandHeroImage(brandName, vehicleType);
+                                        return heroSrc
+                                            ? <Image src={heroSrc} alt={`${brandName} Family`} fill className="object-cover" priority />
+                                            : <div className="w-full h-full" style={{ background: `linear-gradient(135deg, ${brandColors.primary}33, ${brandColors.primary}11)` }} />;
+                                    })()}
                                 </div>
                             </div>
                         </div>

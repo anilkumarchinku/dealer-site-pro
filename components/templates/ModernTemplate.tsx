@@ -343,13 +343,12 @@ export function ModernTemplate({
                     {/* Hero Section */}
                     <section className="relative min-h-[85vh] flex items-center bg-white overflow-hidden">
                         <div className="absolute inset-0">
-                            <Image
-                                src={heroImageUrl || getBrandHeroImage(brandName)}
-                                alt={`${brandName} Hero`}
-                                fill
-                                className="object-cover opacity-20"
-                                priority
-                            />
+                            {(() => {
+                                const heroSrc = heroImageUrl || getBrandHeroImage(brandName, vehicleType);
+                                return heroSrc
+                                    ? <Image src={heroSrc} alt={`${brandName} Hero`} fill className="object-cover opacity-20" priority />
+                                    : null;
+                            })()}
                             <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
                         </div>
 

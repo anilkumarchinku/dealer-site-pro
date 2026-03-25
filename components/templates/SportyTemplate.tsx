@@ -317,7 +317,12 @@ export function SportyTemplate({
                     {/* Hero Section */}
                     <section className="relative min-h-screen flex items-center overflow-hidden">
                         <div className="absolute inset-0">
-                            <Image src={heroImageUrl || getBrandHeroImage(brandName)} alt={`${brandName} Hero`} fill className="object-cover opacity-30" priority />
+                            {(() => {
+                                const heroSrc = heroImageUrl || getBrandHeroImage(brandName, vehicleType);
+                                return heroSrc
+                                    ? <Image src={heroSrc} alt={`${brandName} Hero`} fill className="object-cover opacity-30" priority />
+                                    : null;
+                            })()}
                             <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent" />
                             <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, rgba(255,255,255,0.9) 0%, ${brandAccent}15 100%)` }} />
                         </div>

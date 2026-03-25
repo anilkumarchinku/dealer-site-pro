@@ -274,7 +274,12 @@ export function LuxuryTemplate({
                     {/* Hero */}
                     <section className="relative min-h-screen flex items-center">
                         <div className="absolute inset-0">
-                            <Image src={heroImageUrl || getBrandHeroImage(brandName)} alt={`${brandName} Luxury`} fill className="object-cover opacity-35" priority />
+                            {(() => {
+                                const heroSrc = heroImageUrl || getBrandHeroImage(brandName, vehicleType);
+                                return heroSrc
+                                    ? <Image src={heroSrc} alt={`${brandName} Luxury`} fill className="object-cover opacity-35" priority />
+                                    : null;
+                            })()}
                             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-white/80" />
                         </div>
                         <div className="relative z-10 max-w-7xl mx-auto px-4 py-32 text-center">
