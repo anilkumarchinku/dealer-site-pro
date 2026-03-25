@@ -269,7 +269,7 @@ const KNOWN_SVG_LOGOS: Record<string, string> = {
     "tvs motor company": "/assets/logos/2w/tvs-motor.svg",
     "bajaj auto": "/assets/logos/2w/bajaj-auto.svg",
     "yamaha india": "/assets/logos/2w/yamaha.svg",
-    "suzuki motorcycle india": "/assets/logos/2w/suzuki-motorcycle.svg",
+    "suzuki motorcycle india": "/assets/logos/2w/suzuki-motorcycle.png",
     "ktm india": "/assets/logos/2w/ktm.svg",
     "kawasaki india": "/assets/logos/2w/kawasaki.svg",
     "ather energy": "/assets/logos/2w/ather-energy.svg",
@@ -344,7 +344,8 @@ export function TwoWheelerTemplate({
     const [isScrolled, setIsScrolled] = useState(false)
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [activeTab, setActiveTab] = useState<FilterTab>("all")
-    const [leadVehicleId, setLeadVehicleId] = useState<string | null>(null)
+    const [leadVehicleId,   setLeadVehicleId]   = useState<string | null>(null)
+    const [leadVehicleName, setLeadVehicleName] = useState<string | undefined>(undefined)
     const [leadType, setLeadType] = useState<"best_price" | "test_ride">("best_price")
     const [heroVehicleIdx, setHeroVehicleIdx] = useState(0)
 
@@ -658,7 +659,7 @@ export function TwoWheelerTemplate({
                                 vehicle={v}
                                 slug={slug}
                                 brandColor={theme.accent}
-                                onLead={vid => { setLeadType("best_price"); setLeadVehicleId(vid) }}
+                                onLead={vid => { setLeadType("best_price"); setLeadVehicleId(vid); setLeadVehicleName(vehicles.find(v => v.id === vid) ? `${vehicles.find(v => v.id === vid)!.brand} ${vehicles.find(v => v.id === vid)!.model}` : undefined) }}
                                 onCompare={undefined}
                             />
                         ))}
@@ -807,10 +808,11 @@ export function TwoWheelerTemplate({
             <LeadFormModal
                 dealerId={dealerId}
                 vehicleId={leadVehicleId ?? undefined}
+                vehicleName={leadVehicleName}
                 leadType={leadType}
                 title={leadType === "test_ride" ? "Book Test Ride" : "Get Best Price"}
                 isOpen={leadVehicleId !== null}
-                onClose={() => setLeadVehicleId(null)}
+                onClose={() => { setLeadVehicleId(null); setLeadVehicleName(undefined) }}
             />
         </div>
     )

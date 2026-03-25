@@ -20,7 +20,7 @@ export const BRAND_LOGOS: Record<string, string> = {
     'Land Rover': '/assets/logos/land-rover.png',
     'Lexus': '/assets/logos/lexus.png',
     'Mahindra': '/assets/logos/mahindra.png',
-    'Maruti Suzuki': '/assets/logos/maruti-suzuki.svg',
+    'Maruti Suzuki': '/assets/logos/maruti-suzuki.png',
     'Mercedes-Benz': '/assets/logos/mercedes-benz.png',
     'MG': '/assets/logos/mg.png',
     'MINI': '/assets/logos/mini.png',
