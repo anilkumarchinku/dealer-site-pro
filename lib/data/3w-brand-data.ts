@@ -14,6 +14,7 @@ export interface ThreeWheelerEnrichment {
     ex_showroom_price_paise: number | null
     range_km: number | null
     passenger_capacity: number | null
+    transmission: string | null
 }
 
 // ── Parse helpers ────────────────────────────────────────────────
@@ -51,9 +52,11 @@ function parseKg(str: unknown): number | null {
 function parsePrice(str: unknown): number | null {
     const s = toStr(str)
     if (!s) return null
-    // Extract first number (handles "₹ 2.50 Lakh", "₹1.12 lakh", "₹ 2.50 Lakh - ₹ 2.85 Lakh")
-    const cleaned = s.replace(/[₹,Rs.\s]/gi, '')
-    const match = cleaned.match(/([\d.]+)\s*(?:lakh|l)/i)
+    // Note: Don't strip '.' from character class — it removes decimal points from prices!
+    const cleaned = s.replace(/[₹,\s]/g, '').replace(/Rs\.?/gi, '')
+        .replace(/from|onwards|\*/gi, '')
+    // Match first number before Lakh/L — handles ranges like "1.94–2.00Lakh" by taking first number
+    const match = cleaned.match(/([\d.]+)[\s\S]*?(?:lakh)/i)
     if (!match) return null
     const lakhs = parseFloat(match[1])
     return Math.round(lakhs * 100000 * 100) // convert to paise
@@ -118,6 +121,7 @@ function extractAtulFormat(v: any): ThreeWheelerEnrichment {
         gvw_kg:      parseKg(specs.gross_vehicle_weight),
         ex_showroom_price_paise: parsePrice(pricing.ex_showroom_price),
         passenger_capacity: parseSeating(specs.seating_capacity),
+        transmission: specs.transmission_type || null,
     }
 }
 
@@ -125,16 +129,24 @@ function extractAtulFormat(v: any): ThreeWheelerEnrichment {
 function extractBajajFormat(v: any): ThreeWheelerEnrichment {
     const eng = v.engine_details || {}
     const tech = v.technical_specifications || {}
+    // Parse mileage from top-level "mileage" field (e.g. "32 kmpl" or "35 km/kg")
+    const mileageStr = toStr(v.mileage)
+    let mileageKmpl: number | null = null
+    if (mileageStr) {
+        const m = mileageStr.match(/([\d.]+)/)
+        if (m) mileageKmpl = parseFloat(m[1])
+    }
     return {
         engine_cc:   parseCC(eng.displacement),
         fuel_type:   tech.fuel_type || null,
-        mileage_kmpl: null,
+        mileage_kmpl: mileageKmpl,
         range_km:    null,
         max_power:   eng.max_power || null,
         torque:      eng.torque || null,
         gvw_kg:      parseKg(v.payload_features?.gross_vehicle_weight),
-        ex_showroom_price_paise: null,
+        ex_showroom_price_paise: v.ex_showroom_price ? parsePrice(v.ex_showroom_price) : null,
         passenger_capacity: null,
+        transmission: tech.transmission_type || null,
     }
 }
 
@@ -162,6 +174,7 @@ function extractMakeModelFormat(v: any): ThreeWheelerEnrichment {
         gvw_kg:      typeof v.gvw_kg === 'number' ? v.gvw_kg : null,
         ex_showroom_price_paise: price,
         passenger_capacity: typeof v.passenger_capacity === 'number' ? v.passenger_capacity : null,
+        transmission: v.transmission_type || null,
     }
 }
 

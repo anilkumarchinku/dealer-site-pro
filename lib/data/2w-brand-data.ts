@@ -22,6 +22,7 @@ export interface BrandModelEnrichment {
     variant: string | null
     all_variants: { name: string; price_paise: number }[]
     stock_status: 'available' | 'booking_open' | 'out_of_stock'
+    transmission: string | null
     wheelbase_mm: number | null
     length_mm: number | null
     width_mm: number | null
@@ -32,7 +33,19 @@ export interface BrandModelEnrichment {
 
 function parsePrice(priceStr: string | null | undefined): number {
     if (!priceStr) return 0
-    const cleaned = priceStr.replace(/[₹,Rs.*Onwards\s]/gi, '')
+    // For range prices like "Rs. 89,999 - Rs. 1,19,999", take the first price
+    const firstPart = priceStr.split(/\s*[-–]\s*(?:₹|Rs)/)[0]
+    // Strip currency symbols, commas, whitespace, and common suffixes
+    const cleaned = firstPart
+        .replace(/[₹,\s]/g, '')
+        .replace(/Rs\.?/gi, '')
+        .replace(/onwards|\*|\(expected\)|\(estimated\)/gi, '')
+    // Check for Lakh/L multiplier (e.g. "35.00Lakh" or "1.25L")
+    const lakhMatch = cleaned.match(/([\d.]+)\s*(?:lakh|l)\b/i)
+    if (lakhMatch) {
+        const lakhs = parseFloat(lakhMatch[1])
+        return isNaN(lakhs) ? 0 : Math.round(lakhs * 100000 * 100)
+    }
     const num = parseFloat(cleaned)
     return isNaN(num) ? 0 : Math.round(num * 100)
 }
@@ -63,6 +76,32 @@ function parseRange(str: string | null | undefined): number | null {
     const match = str.match(/([\d.]+)\s*km/i)
     if (!match) return null
     return Math.round(parseFloat(match[1]))
+}
+
+/** Normalize raw gearbox strings into clean display values */
+function normalizeTransmission(raw: string | null | undefined): string | null {
+    if (!raw) return null
+    const s = raw.trim()
+    // "Not Applicable", "No Gear" → Automatic (electric)
+    if (/not applicable|no gear/i.test(s)) return 'Automatic'
+    // "Direct Drive" variants
+    if (/direct drive/i.test(s)) return 'Automatic'
+    // CVT / V-Matic / V-belt variants → CVT
+    if (/cvt|v-?matic|v-?belt/i.test(s)) return 'CVT'
+    // "Automatic" standalone
+    if (/^automatic$/i.test(s)) return 'Automatic'
+    // "Manual transmission" → Manual
+    if (/^manual\s*(transmission)?$/i.test(s)) return 'Manual'
+    // Extract N-speed pattern: "5 Speed", "6-speed manual", "5-Speed Manual", "5"
+    const speedMatch = s.match(/(\d)\s*[-\s]?\s*speed/i)
+    if (speedMatch) return `${speedMatch[1]} Speed`
+    // "Constant-mesh manual (4 forward gears...)" → extract gear count
+    const gearMatch = s.match(/(\d)\s*(?:forward\s+)?gear/i)
+    if (gearMatch) return `${gearMatch[1]} Speed`
+    // Just a number like "5" → "5 Speed"
+    if (/^\d$/.test(s)) return `${s} Speed`
+    // Already clean enough
+    return s
 }
 
 function parseMM(str: string | null | undefined): number | null {
@@ -240,30 +279,45 @@ const FLAT_BRAND_FILES: { data: any; brandId: string; brand: string; rootKey: st
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function extractFromFlatItem(item: any): BrandModelEnrichment {
     const specs = item.specifications || {}
+    // Also check technical_specifications (some flat files have nested engine specs)
+    const techSpecs = item.technical_specifications || {}
+    const techEngine = techSpecs['Engine'] || techSpecs['Engine and Transmission'] || techSpecs['engine_and_transmission'] || techSpecs['Engine & Transmission'] || {}
+    const techTrans = techSpecs['Transmission'] || {}
+    const techDims = techSpecs['Dimensions'] || techSpecs['Dimensions and Capacity'] || techSpecs['dimensions_and_capacity'] || {}
 
     // EV detection: has range or battery_capacity at top level or in specs
     const rangeStr = item.range || specs['Range'] || specs['Claimed Range'] || specs['Range (Claimed)'] || specs['Range (Eco Mode)'] || null
     const batteryStr = item.battery_capacity || specs['Battery Capacity'] || null
     const isEV = !!(rangeStr || batteryStr)
 
-    // Engine CC: engine / engine_displacement / engine_capacity_cc / engine_details
-    const engineRaw = item.engine || item.engine_displacement || item.engine_capacity_cc || item.engine_details || specs['Engine'] || null
+    // Engine CC: engine / engine_displacement / engine_capacity_cc / engine_details / technical_specifications
+    const engineRaw = item.engine || item.engine_displacement || item.engine_capacity_cc || item.engine_details
+        || specs['Engine'] || techEngine['Displacement'] || null
 
-    // Price
-    const priceStr = item.price || null
+    // Price — some brands use 'price', others use 'ex_showroom_price'
+    const priceStr = item.price || item.ex_showroom_price || null
 
     // Mileage (petrol) — try all field name variants across brands
     const mileageStr = item.mileage
         || specs['mileage_kmpl']   // TVS, Vespa, Ultraviolette
         || specs['mileage']        // Aprilia, Benelli, BMW, Ducati
         || specs['Mileage']        // older scraped formats
+        || techEngine['Mileage']   // from technical_specifications
         || null
 
-    // Torque
-    const torqueStr = item.torque || specs['Torque'] || null
+    // Torque — check top-level, specs, and technical_specifications
+    const torqueStr = item.torque || specs['Torque'] || techEngine['Max Torque'] || null
 
-    // Top speed
-    const topSpeedStr = item.top_speed || specs['Top Speed'] || null
+    // Top speed — check top-level, specs, and technical_specifications
+    const topSpeedStr = item.top_speed || specs['Top Speed'] || techEngine['Top Speed'] || null
+
+    // Transmission / Gear Box — check all known field paths across brands
+    const otherPerf = item.other_performance_metrics || {}
+    const gearBoxRaw = techEngine['Gear Box'] || techEngine['Gearbox'] || techEngine['Transmission']
+        || techTrans['Gear Box'] || techTrans['Gearbox'] || techTrans['GearBox']
+        || otherPerf['gearbox']
+        || specs['Gear Box'] || specs['Gearbox'] || specs['gearbox'] || specs['Transmission']
+        || item.gear_box || null
 
     // Features from specs keys
     const features: string[] = []
@@ -291,10 +345,11 @@ function extractFromFlatItem(item: any): BrandModelEnrichment {
         variant: null,
         all_variants: [],
         stock_status: 'available' as const,
-        wheelbase_mm: null,
-        length_mm: null,
-        width_mm: null,
-        height_mm: null,
+        transmission: normalizeTransmission(gearBoxRaw),
+        wheelbase_mm: parseMM(techDims['Wheelbase']),
+        length_mm: parseMM(techDims['Length']),
+        width_mm: parseMM(techDims['Width']),
+        height_mm: parseMM(techDims['Height']),
     }
 }
 
@@ -334,10 +389,10 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
         const dims = firstVar.technical_specifications?.dimensions_and_capacity || {}
 
         return {
-            engine_cc: parseCC(engine['Displacement']),
-            mileage_kmpl: null,
-            top_speed_kmph: null,
-            ex_showroom_price_paise: parsePrice(firstVar.price),
+            engine_cc: parseCC(engine['Displacement']) || parseCC(v.engine_displacement),
+            mileage_kmpl: parseMileage(v.mileage) || parseMileage(engine['Mileage']),
+            top_speed_kmph: parseTopSpeed(v.top_speed) || parseTopSpeed(engine['Top Speed']),
+            ex_showroom_price_paise: parsePrice(firstVar.price) || parsePrice(v.price),
             range_km: null,
             battery_kwh: null,
             colors,
@@ -347,6 +402,7 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
             variant: firstVar.variant_name || null,
             all_variants: allVariants,
             stock_status: parseSourceSection(v.source_section),
+            transmission: normalizeTransmission(engine['Gear Box'] || engine['Gearbox']),
             wheelbase_mm: parseMM(dims['Wheelbase']),
             length_mm: parseMM(dims['Length']),
             width_mm: parseMM(dims['Width']),
@@ -382,6 +438,7 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
             variant: null,
             all_variants: [],
             stock_status: parseSourceSection(v.source_section),
+            transmission: 'Automatic',
             wheelbase_mm: null,
             length_mm: null,
             width_mm: null,
@@ -389,15 +446,20 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
         }
     }
 
-    // Generic format (Aprilia, BMW, Benelli, Ducati)
+    // Generic format (Aprilia, BMW, Benelli, Ducati, Bajaj top-level)
+    const techSpecs = v.technical_specifications || {}
+    const techEngine = techSpecs['Engine'] || techSpecs['engine_and_transmission'] || techSpecs['Engine & Transmission'] || {}
+    const techTrans = techSpecs['Transmission'] || {}
+    const techDims = techSpecs['Dimensions'] || techSpecs['dimensions_and_capacity'] || {}
+
     const genFeatures = Array.isArray(specs.features)
         ? specs.features.map((f: string | { value: string }) => typeof f === 'string' ? f : f.value || '')
         : []
 
     return {
-        engine_cc: parseCC(specs.engine_details || specs.engine || specs.displacement),
-        mileage_kmpl: parseMileage(specs.mileage || v.mileage),
-        top_speed_kmph: null,
+        engine_cc: parseCC(specs.engine_details || specs.engine || specs.displacement || v.engine_displacement || techEngine['Displacement']),
+        mileage_kmpl: parseMileage(specs.mileage || v.mileage || techEngine['Mileage']),
+        top_speed_kmph: parseTopSpeed(v.top_speed || specs['Top Speed'] || techEngine['Top Speed']),
         ex_showroom_price_paise: parsePrice(v.price),
         range_km: null,
         battery_kwh: null,
@@ -407,14 +469,18 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
         }),
         features: genFeatures,
         description: specs.description || null,
-        torque: specs.torque || v.torque || null,
+        torque: specs.torque || v.torque || techEngine['Max Torque'] || null,
         variant: null,
         all_variants: [],
         stock_status: parseSourceSection(v.source_section),
-        wheelbase_mm: null,
-        length_mm: null,
-        width_mm: null,
-        height_mm: null,
+        transmission: normalizeTransmission(techEngine['Gear Box'] || techEngine['Gearbox'] || techEngine['Transmission']
+            || techTrans['Gear Box'] || techTrans['Gearbox'] || techTrans['GearBox']
+            || (v.other_performance_metrics || {})['gearbox']
+            || specs.gearbox || specs['Transmission']),
+        wheelbase_mm: parseMM(techDims['Wheelbase']),
+        length_mm: parseMM(techDims['Length']),
+        width_mm: parseMM(techDims['Width']),
+        height_mm: parseMM(techDims['Height']),
     }
 }
 

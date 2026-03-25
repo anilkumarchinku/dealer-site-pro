@@ -83,9 +83,9 @@ export async function getAggregatedCarSpecs(make: string, model: string): Promis
             max: Math.max(...mileages).toFixed(1),
             unit: 'km/l'
         } : {
-            min: 'N/A',
-            max: 'N/A',
-            unit: 'km/l'
+            min: '',
+            max: '',
+            unit: ''
         }
 
         // Create human-readable summary
@@ -123,9 +123,10 @@ export function formatSpecsForDisplay(specs: AggregatedCarSpecs | null) {
         powerDisplay: specs.powerRange.min === specs.powerRange.max
             ? `${specs.powerRange.min} ${specs.powerRange.unit}`
             : `${specs.powerRange.min} - ${specs.powerRange.max} ${specs.powerRange.unit}`,
-        mileageDisplay: specs.mileageRange.min === specs.mileageRange.max
-            ? `${specs.mileageRange.min} ${specs.mileageRange.unit}`
-            : `${specs.mileageRange.min} - ${specs.mileageRange.max} ${specs.mileageRange.unit}`,
+        mileageDisplay: !specs.mileageRange.min ? ''
+            : specs.mileageRange.min === specs.mileageRange.max
+                ? `${specs.mileageRange.min} ${specs.mileageRange.unit}`
+                : `${specs.mileageRange.min} - ${specs.mileageRange.max} ${specs.mileageRange.unit}`,
         summary: specs.summary,
         variantCount: specs.variants.length
     }
@@ -143,7 +144,7 @@ export function getVariantInfo(variant: DetailedCarInfo) {
         torque: `${variant.torque_nm} Nm`,
         mileage: variant.mileage_kmpl
             ? `${variant.mileage_kmpl} km/l`
-            : (variant.mileage_kmpl_or_ev_range || 'N/A'),
+            : (variant.mileage_kmpl_or_ev_range || ''),
         seating: `${variant.seating_capacity} seater`,
         price: variant.ex_showroom_price_min_inr,
         priceRange: variant.ex_showroom_price_max_inr

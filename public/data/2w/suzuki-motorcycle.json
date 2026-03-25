@@ -18,7 +18,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/access-125/specifications",
         "fuel_capacity": "5.3 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/access-125/specifications"
-      }
+      },
+      "price": "Rs 81,000"
     },
     {
       "bike_name": "Suzuki Avenis",
@@ -38,7 +39,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/avenis/specifications",
         "fuel_capacity": "5.2 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/avenis/specifications"
-      }
+      },
+      "price": "Rs 87,000"
     },
     {
       "bike_name": "Suzuki Burgman Street",
@@ -58,7 +60,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/burgman-street/specifications",
         "fuel_capacity": "5.5 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/burgman-street/specifications"
-      }
+      },
+      "price": "Rs 95,000"
     },
     {
       "bike_name": "Suzuki Gixxer",
@@ -78,7 +81,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/gixxer/specifications",
         "fuel_capacity": "12 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/gixxer/specifications"
-      }
+      },
+      "price": "Rs 1,30,000"
     },
     {
       "bike_name": "Suzuki Gixxer SF",
@@ -98,7 +102,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/gixxer-sf/specifications",
         "fuel_capacity": "12 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/gixxer-sf/specifications"
-      }
+      },
+      "price": "Rs 1,41,000"
     },
     {
       "bike_name": "Suzuki Gixxer 250",
@@ -118,7 +123,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/gixxer-250/specifications",
         "fuel_capacity": "12 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/gixxer-250/specifications"
-      }
+      },
+      "price": "Rs 1,82,000"
     },
     {
       "bike_name": "Suzuki Gixxer SF 250",
@@ -138,7 +144,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/gixxer-sf-250/specifications",
         "fuel_capacity": "12 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/gixxer-sf-250/specifications"
-      }
+      },
+      "price": "Rs 1,88,000"
     },
     {
       "bike_name": "Suzuki Hayabusa",
@@ -158,7 +165,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/hayabusa/specifications",
         "fuel_capacity": "20 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/hayabusa/specifications"
-      }
+      },
+      "price": "Rs 16,80,000"
     },
     {
       "bike_name": "Suzuki V-Strom SX",
@@ -178,7 +186,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/v-strom-sx/specifications",
         "fuel_capacity": "12 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/v-strom-sx/specifications"
-      }
+      },
+      "price": "Rs 2,12,000"
     },
     {
       "bike_name": "Suzuki V-Strom 800 DE",
@@ -198,7 +207,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/v-strom-800-de/specifications",
         "fuel_capacity": "20 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/v-strom-800-de/specifications"
-      }
+      },
+      "price": "Rs 10,30,000"
     },
     {
       "bike_name": "Suzuki Burgman Electric",
@@ -207,7 +217,8 @@
       "engine_citation": "https://www.bikedekho.com/suzuki/burgman-electric/specifications",
       "torque": "Not available",
       "mileage": "Not available",
-      "specifications": {}
+      "specifications": {},
+      "price": "Rs 1,10,000"
     },
     {
       "bike_name": "Suzuki e Access",
@@ -220,7 +231,8 @@
       "specifications": {
         "max_power": "4.1 kW",
         "max_power_citation": "https://www.bikedekho.com/suzuki/e-access/specifications"
-      }
+      },
+      "price": "Rs 1,10,000"
     },
     {
       "bike_name": "Suzuki Gixxer SF 250 Flex Fuel",
@@ -240,7 +252,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/gixxer-sf-250-flex-fuel/specifications",
         "fuel_capacity": "12 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/gixxer-sf-250-flex-fuel/specifications"
-      }
+      },
+      "price": "Rs 1,95,000"
     },
     {
       "bike_name": "Suzuki GSX-8R",
@@ -260,7 +273,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/gsr-8r/specifications",
         "fuel_capacity": "14 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/gsr-8r/specifications"
-      }
+      },
+      "price": "Rs 8,99,000"
     },
     {
       "bike_name": "Suzuki GSX-8T",
@@ -276,7 +290,8 @@
         "displacement_citation": "https://www.bikedekho.com/suzuki/gsx-8t/specifications",
         "fuel_capacity": "16.5 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/gsx-8t/specifications"
-      }
+      },
+      "price": "Rs 9,50,000"
     },
     {
       "bike_name": "Suzuki GSX R1000R",
@@ -295,7 +310,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/gsx-r1000r/specifications",
         "fuel_capacity": "16 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/gsx-r1000r/specifications"
-      }
+      },
+      "price": "Rs 19,80,000"
     },
     {
       "bike_name": "Suzuki Hayabusa 2009-2020",
@@ -312,7 +328,8 @@
         "displacement_citation": "https://www.bikedekho.com/suzuki/hayabusa-2009-2020/specifications",
         "fuel_capacity": "21 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/hayabusa-2009-2020/specifications"
-      }
+      },
+      "price": "Discontinued"
     },
     {
       "bike_name": "Suzuki Hayate",
@@ -328,7 +345,8 @@
         "displacement_citation": "https://www.bikedekho.com/suzuki/hayate/specifications",
         "max_power": "8.4 PS",
         "max_power_citation": "https://www.bikedekho.com/suzuki/hayate/specifications"
-      }
+      },
+      "price": "Discontinued"
     },
     {
       "bike_name": "Suzuki Heat",
@@ -348,7 +366,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/suzuki-heat/specifications",
         "fuel_capacity": "12 litre",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/suzuki-heat/specifications"
-      }
+      },
+      "price": "Discontinued"
     },
     {
       "bike_name": "Suzuki Inazuma",
@@ -367,7 +386,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/suzuki-inazuma/specifications",
         "fuel_capacity": "13.3 Ltrs",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/suzuki-inazuma/specifications"
-      }
+      },
+      "price": "Discontinued"
     },
     {
       "bike_name": "Suzuki Intruder",
@@ -379,7 +399,8 @@
       "specifications": {
         "displacement": "160 cc",
         "displacement_citation": "https://www.bikedekho.com/suzuki/intruder/specifications"
-      }
+      },
+      "price": "Discontinued"
     },
     {
       "bike_name": "Suzuki Katana",
@@ -399,7 +420,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/katana/specifications",
         "fuel_capacity": "12 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/katana/specifications"
-      }
+      },
+      "price": "Rs 13,60,000"
     },
     {
       "bike_name": "Suzuki V-Strom 650XT",
@@ -415,7 +437,8 @@
         "displacement_citation": "https://www.bikedekho.com/suzuki/v-strom-650/specifications",
         "fuel_capacity": "20 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/v-strom-650/specifications"
-      }
+      },
+      "price": "Rs 8,50,000"
     },
     {
       "bike_name": "Suzuki GS 150 R",
@@ -435,7 +458,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/gs-150-r/specifications",
         "fuel_capacity": "15.5 Liters",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/gs-150-r/specifications"
-      }
+      },
+      "price": "Discontinued"
     },
     {
       "bike_name": "Suzuki Slingshot",
@@ -455,7 +479,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/slingshot/specifications",
         "fuel_capacity": "12 Ltrs",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/slingshot/specifications"
-      }
+      },
+      "price": "Discontinued"
     },
     {
       "bike_name": "Suzuki Intruder 150",
@@ -475,7 +500,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/intruder-150/specifications",
         "fuel_capacity": "11 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/intruder-150/specifications"
-      }
+      },
+      "price": "Rs 1,20,000"
     },
     {
       "bike_name": "Suzuki Intruder M1800R",
@@ -492,7 +518,8 @@
         "displacement_citation": "https://www.bikedekho.com/suzuki/intruder-m1800-r/specifications",
         "fuel_capacity": "19.5 Ltrs",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/intruder-m1800-r/specifications"
-      }
+      },
+      "price": "Rs 22,00,000"
     },
     {
       "bike_name": "Suzuki SV650",
@@ -511,7 +538,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/sv650/specifications",
         "fuel_capacity": "14.5 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/sv650/specifications"
-      }
+      },
+      "price": "Rs 8,00,000"
     },
     {
       "bike_name": "Suzuki Zeus",
@@ -528,7 +556,8 @@
         "displacement_citation": "https://www.bikedekho.com/suzuki/suzuki-zeus/specifications",
         "fuel_capacity": "12 litre",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/suzuki-zeus/specifications"
-      }
+      },
+      "price": "Discontinued"
     },
     {
       "bike_name": "Suzuki V Strom 1000",
@@ -545,7 +574,8 @@
         "displacement_citation": "https://www.bikedekho.com/suzuki/v-storm/specifications",
         "fuel_capacity": "20 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/v-storm/specifications"
-      }
+      },
+      "price": "Rs 13,50,000"
     },
     {
       "bike_name": "Suzuki Gixxer (2014-2018)",
@@ -558,7 +588,8 @@
       "specifications": {
         "displacement": "155 cc",
         "displacement_citation": "https://www.bikedekho.com/suzuki/gixxer-2014-2018/specifications"
-      }
+      },
+      "price": "Rs 85,000"
     },
     {
       "bike_name": "Suzuki Gixxer SF (2015-2018)",
@@ -578,7 +609,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/gixxer-sf-2015-2018/specifications",
         "fuel_capacity": "12 Liters",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/gixxer-sf-2015-2018/specifications"
-      }
+      },
+      "price": "Rs 1,05,000"
     },
     {
       "bike_name": "Suzuki Gixxer 150 (2019-2024)",
@@ -598,7 +630,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/gixxer-150-2019-2024/specifications",
         "fuel_capacity": "12 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/gixxer-150-2019-2024/specifications"
-      }
+      },
+      "price": "Rs 1,28,000"
     },
     {
       "bike_name": "Suzuki Gixxer 250 [2020-2024]",
@@ -618,7 +651,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/gixxer250/specifications",
         "fuel_capacity": "12 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/gixxer250/specifications"
-      }
+      },
+      "price": "Rs 1,80,000"
     },
     {
       "bike_name": "Suzuki GSX R1000",
@@ -635,7 +669,8 @@
         "displacement_citation": "https://www.bikedekho.com/suzuki/gsx-r1000/specifications",
         "fuel_capacity": "17.0 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/gsx-r1000/specifications"
-      }
+      },
+      "price": "Rs 18,00,000"
     },
     {
       "bike_name": "Suzuki GSX S1000F",
@@ -652,7 +687,8 @@
         "displacement_citation": "https://www.bikedekho.com/suzuki/gsx-s1000f/specifications",
         "fuel_capacity": "17 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/gsx-s1000f/specifications"
-      }
+      },
+      "price": "Rs 13,00,000"
     },
     {
       "bike_name": "Suzuki Bandit",
@@ -672,7 +708,8 @@
         "max_power_citation": "https://www.bikedekho.com/suzuki/bandit/specifications",
         "fuel_capacity": "19 Ltrs",
         "fuel_capacity_citation": "https://www.bikedekho.com/suzuki/bandit/specifications"
-      }
+      },
+      "price": "Rs 10,50,000"
     },
     {
       "bike_name": "Suzuki Shogun",
@@ -683,7 +720,8 @@
       "specifications": {
         "displacement": "108.2 cc",
         "displacement_citation": "https://www.bikedekho.com/suzuki/suzuki-shogun/specifications"
-      }
+      },
+      "price": "Discontinued"
     },
     {
       "bike_name": "Suzuki Supra",
@@ -694,7 +732,8 @@
       "specifications": {
         "displacement": "98.2 cc",
         "displacement_citation": "https://www.bikedekho.com/suzuki/suzuki-supra/specifications"
-      }
+      },
+      "price": "Discontinued"
     },
     {
       "bike_name": "Suzuki Shaolin",
@@ -705,7 +744,8 @@
       "specifications": {
         "displacement": "138.2 cc",
         "displacement_citation": "https://www.bikedekho.com/suzuki/suzuki-shaolin/specifications"
-      }
+      },
+      "price": "Discontinued"
     },
     {
       "bike_name": "Suzuki AX100",
@@ -716,7 +756,8 @@
       "specifications": {
         "displacement": "98.2 cc",
         "displacement_citation": "https://www.bikedekho.com/suzuki/suzuki-ax100/specifications"
-      }
+      },
+      "price": "Discontinued"
     },
     {
       "bike_name": "Suzuki MAX100",
@@ -728,7 +769,8 @@
       "specifications": {
         "displacement": "98.2 cc",
         "displacement_citation": "https://www.bikedekho.com/suzuki/suzuki-max100/specifications"
-      }
+      },
+      "price": "Discontinued"
     },
     {
       "bike_name": "2026 Suzuki GSX-R1000R",
@@ -742,7 +784,8 @@
         "engine_type_citation": "https://www.bikedekho.com/suzuki/2026-gsx-r1000r/specifications",
         "displacement": "1000 cc",
         "displacement_citation": "https://www.bikedekho.com/suzuki/2026-gsx-r1000r/specifications"
-      }
+      },
+      "price": "Rs 20,50,000"
     }
   ]
 }

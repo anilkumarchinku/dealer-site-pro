@@ -65,6 +65,7 @@ export interface TwoWheelerVehicle {
     mileage_kmpl:            number | null
     range_km:                number | null
     top_speed_kmph:          number | null
+    transmission:            string | null
 
     colors:                  TwoWheelerColor[]
 

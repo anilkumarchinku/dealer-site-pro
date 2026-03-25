@@ -7,6 +7,7 @@ import { X } from "lucide-react"
 interface Props {
     dealerId:      string
     vehicleId?:    string
+    vehicleName?:  string
     usedVehicleId?: string
     leadType:      TwoWheelerLeadType
     title:         string
@@ -15,7 +16,7 @@ interface Props {
 }
 
 export function LeadFormModal({
-    dealerId, vehicleId, usedVehicleId, leadType, title, isOpen, onClose
+    dealerId, vehicleId, vehicleName, usedVehicleId, leadType, title, isOpen, onClose
 }: Props) {
     const [name,          setName]           = useState("")
     const [phone,         setPhone]          = useState("")
@@ -45,6 +46,7 @@ export function LeadFormModal({
                 body:    JSON.stringify({
                     dealer_id:         dealerId,
                     vehicle_id:        vehicleId        ?? null,
+                    vehicle_name:      vehicleName      ?? null,
                     used_vehicle_id:   usedVehicleId    ?? null,
                     lead_type:         leadType,
                     name,

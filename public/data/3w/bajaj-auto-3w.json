@@ -6,6 +6,8 @@
     {
       "variant_name": "RE 3-Seater/CNG",
       "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
+      "ex_showroom_price": "₹2.50 Lakh",
+      "mileage": "35 km/kg",
       "engine_details": {
         "engine_type": "4 Stroke Air-cooled",
         "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
@@ -44,6 +46,8 @@
     {
       "variant_name": "RE 3-Seater/Diesel",
       "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
+      "ex_showroom_price": "₹2.65 Lakh",
+      "mileage": "32 kmpl",
       "engine_details": {
         "engine_type": "4 Stroke Air-cooled",
         "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
@@ -82,6 +86,8 @@
     {
       "variant_name": "RE 3-Seater/LPG",
       "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
+      "ex_showroom_price": "₹2.55 Lakh",
+      "mileage": "30 km/kg",
       "engine_details": {
         "engine_type": "4 Stroke Air-cooled",
         "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
@@ -120,6 +126,8 @@
     {
       "variant_name": "RE 3-Seater/Petrol",
       "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
+      "ex_showroom_price": "₹2.45 Lakh",
+      "mileage": "28 kmpl",
       "engine_details": {
         "engine_type": "4 Stroke Air-cooled",
         "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",

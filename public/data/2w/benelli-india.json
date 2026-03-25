@@ -7,7 +7,7 @@
       "make": "Benelli India",
       "model": "Benelli Leoncino 500",
       "status": "Available",
-      "price": null,
+      "price": "Rs 4,59,000",
       "colors": [],
       "specifications": {
         "engine_details": "500 cc, Inline 2-cylinder, 4-stroke, liquid-cooled, DOHC, 4 valves per cylinder",
@@ -36,7 +36,7 @@
       "make": "Benelli India",
       "model": "Benelli TRK 502",
       "status": "Available",
-      "price": null,
+      "price": "Rs 5,00,000",
       "colors": [],
       "specifications": {
         "engine_details": "500 cc, Twin Cylinder, DOHC, Liquid Cooled, 8 Valve",
@@ -64,7 +64,7 @@
       "make": "Benelli India",
       "model": "Benelli 502 C",
       "status": "Available",
-      "price": null,
+      "price": "Rs 5,20,000",
       "colors": [],
       "specifications": {
         "engine_details": "500 cc, 2 Cylinder, 4 Stroke, 8-valve, DOHC, Liquid Cooled",
@@ -89,8 +89,8 @@
     {
       "make": "Benelli India",
       "model": "Benelli TNT 300",
-      "status": "Available",
-      "price": null,
+      "status": "Discontinued",
+      "price": "Discontinued",
       "colors": [],
       "specifications": {
         "engine_details": "300 cc, In-line, 2-cylinder, 4-stroke, liquid-cooled, 8-valve, DOHC",
@@ -115,8 +115,8 @@
     {
       "make": "Benelli India",
       "model": "Benelli 302 S",
-      "status": "Available",
-      "price": null,
+      "status": "Discontinued",
+      "price": "Discontinued",
       "colors": [],
       "specifications": {
         "engine_details": "300 cc, Liquid-cooled, inline-2 cylinder, DOHC, 4-valve per cylinder",
@@ -140,8 +140,8 @@
     {
       "make": "Benelli India",
       "model": "Benelli Imperiale 400",
-      "status": "Available",
-      "price": null,
+      "status": "Discontinued",
+      "price": "Discontinued",
       "colors": [],
       "specifications": {
         "engine_details": "373.5 cc, air-cooled, fuel-injected, single-cylinder",
@@ -163,8 +163,8 @@
     {
       "make": "Benelli India",
       "model": "Benelli TRK 251",
-      "status": "Available",
-      "price": null,
+      "status": "Discontinued",
+      "price": "Discontinued",
       "colors": [],
       "specifications": {
         "engine_details": "249 cc, Single Cylinder, 4-Valve, 4-Stroke, Liquid Cooled",
@@ -190,8 +190,8 @@
     {
       "make": "Benelli India",
       "model": "Benelli 302R",
-      "status": "Available",
-      "price": null,
+      "status": "Discontinued",
+      "price": "Discontinued",
       "colors": [],
       "specifications": {
         "engine_details": "300 cc, In-line 2-cylinder, 4-stroke, 8-valve, DOHC, Liquid-cooled",
@@ -217,8 +217,8 @@
     {
       "make": "Benelli India",
       "model": "Benelli Leoncino 250",
-      "status": "Available",
-      "price": null,
+      "status": "Discontinued",
+      "price": "Discontinued",
       "colors": [],
       "specifications": {
         "engine_details": "249 cc liquid-cooled single-cylinder, 4-valve DOHC engine",

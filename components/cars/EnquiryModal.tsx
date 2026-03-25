@@ -229,7 +229,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                     <div>
                                         <p className="text-xs text-gray-500 uppercase tracking-wide">Seating</p>
                                         <p className="text-sm font-semibold text-gray-900">
-                                            {detailedVariant?.seating_capacity || car.dimensions?.seatingCapacity || 'N/A'} Seats
+                                            {detailedVariant?.seating_capacity || car.dimensions?.seatingCapacity || ''} Seats
                                         </p>
                                     </div>
                                 </div>
@@ -246,7 +246,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                                 {aggregatedSpecs?.mileages ? `${aggregatedSpecs.mileages} km/l` :
                                                     detailedVariant?.mileage_kmpl_or_ev_range ||
                                                     ((detailedVariant as any)?.mileage_kmpl ? `${(detailedVariant as any).mileage_kmpl} km/l` : null) ||
-                                                    (car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` : 'N/A')}
+                                                    (car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` : '')}
                                             </p>
                                         </div>
                                     </div>

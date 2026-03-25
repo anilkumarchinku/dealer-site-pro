@@ -147,6 +147,8 @@
         "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo",
         "fuel_type": "Electric",
         "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo",
+        "mileage": "80 km range per charge",
+        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo",
         "transmission_type": "Automatic",
         "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo"
       },
@@ -233,6 +235,8 @@
         "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-plus-cargo/specifications",
         "fuel_type": "Electric",
         "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-plus-cargo",
+        "mileage": "80 km range per charge",
+        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-plus-cargo/specifications",
         "transmission_type": "Automatic",
         "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-plus-cargo"
       },
@@ -257,6 +261,8 @@
         "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx",
         "seating_capacity": 4,
         "seating_capacity_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx",
+        "mileage": "80 km range per charge",
+        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx/specifications",
         "transmission_type": "Direct Drive Multi Torque",
         "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx"
       },

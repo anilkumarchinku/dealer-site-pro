@@ -186,13 +186,13 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
 
     // Key specs
     const keySpecs = [
-        { icon: <Fuel className="w-5 h-5 text-emerald-600" />, label: 'Fuel Type', value: car.engine?.type || '—' },
-        { icon: <Gauge className="w-5 h-5 text-blue-600" />, label: 'Transmission', value: car.transmission?.type || '—' },
-        { icon: <Zap className="w-5 h-5 text-amber-600" />, label: 'Mileage', value: car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` : '—' },
-        { icon: <Users className="w-5 h-5 text-purple-600" />, label: 'Seating', value: car.dimensions?.seatingCapacity ? `${car.dimensions.seatingCapacity} Seater` : '—' },
-        { icon: <Settings className="w-5 h-5 text-gray-600" />, label: 'Engine', value: car.engine?.displacement ? `${car.engine.displacement} cc` : '—' },
+        { icon: <Fuel className="w-5 h-5 text-emerald-600" />, label: 'Fuel Type', value: car.engine?.type || '' },
+        { icon: <Gauge className="w-5 h-5 text-blue-600" />, label: 'Transmission', value: car.transmission?.type || '' },
+        { icon: <Zap className="w-5 h-5 text-amber-600" />, label: 'Mileage', value: car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` : '' },
+        { icon: <Users className="w-5 h-5 text-purple-600" />, label: 'Seating', value: car.dimensions?.seatingCapacity ? `${car.dimensions.seatingCapacity} Seater` : '' },
+        { icon: <Settings className="w-5 h-5 text-gray-600" />, label: 'Engine', value: car.engine?.displacement ? `${car.engine.displacement} cc` : '' },
         { icon: <Shield className="w-5 h-5 text-red-600" />, label: 'Safety', value: car.safety?.ncapRating?.stars ? `${car.safety.ncapRating.stars} Star` : `${car.safety?.airbags || 0} Airbags` },
-    ];
+    ].filter(s => s.value);
 
     // Sticky tab bar detection
     useEffect(() => {
@@ -730,14 +730,14 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     Engine & Transmission
                                 </h3>
                                 <div className="space-y-0">
-                                    <SpecRow label="Engine Type" value={car.engine?.type || '—'} />
-                                    <SpecRow label="Displacement" value={car.engine?.displacement ? `${car.engine.displacement} cc` : '—'} />
-                                    <SpecRow label="Max Power" value={car.engine?.power || '—'} />
-                                    <SpecRow label="Max Torque" value={car.engine?.torque || '—'} />
-                                    <SpecRow label="Cylinders" value={car.engine?.cylinders ? `${car.engine.cylinders}` : '—'} />
-                                    <SpecRow label="Transmission" value={car.transmission?.type || '—'} />
-                                    <SpecRow label="Gears" value={car.transmission?.gears ? `${car.transmission.gears} Speed` : '—'} />
-                                    <SpecRow label="Drive Type" value={car.transmission?.driveType || '—'} last />
+                                    <SpecRow label="Engine Type" value={car.engine?.type || ''} />
+                                    <SpecRow label="Displacement" value={car.engine?.displacement ? `${car.engine.displacement} cc` : ''} />
+                                    <SpecRow label="Max Power" value={car.engine?.power || ''} />
+                                    <SpecRow label="Max Torque" value={car.engine?.torque || ''} />
+                                    <SpecRow label="Cylinders" value={car.engine?.cylinders ? `${car.engine.cylinders}` : ''} />
+                                    <SpecRow label="Transmission" value={car.transmission?.type || ''} />
+                                    <SpecRow label="Gears" value={car.transmission?.gears ? `${car.transmission.gears} Speed` : ''} />
+                                    <SpecRow label="Drive Type" value={car.transmission?.driveType || ''} last />
                                 </div>
                             </CardContent>
                         </Card>
@@ -750,10 +750,10 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     Performance & Fuel
                                 </h3>
                                 <div className="space-y-0">
-                                    <SpecRow label="Mileage (ARAI)" value={car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` : '—'} />
-                                    <SpecRow label="Top Speed" value={car.performance?.topSpeed ? `${car.performance.topSpeed} km/h` : '—'} />
-                                    <SpecRow label="0-100 km/h" value={car.performance?.acceleration0to100 ? `${car.performance.acceleration0to100} sec` : '—'} />
-                                    <SpecRow label="Fuel Tank" value={car.dimensions?.fuelTankCapacity ? `${car.dimensions.fuelTankCapacity} L` : '—'} />
+                                    <SpecRow label="Mileage (ARAI)" value={car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` : ''} />
+                                    <SpecRow label="Top Speed" value={car.performance?.topSpeed ? `${car.performance.topSpeed} km/h` : ''} />
+                                    <SpecRow label="0-100 km/h" value={car.performance?.acceleration0to100 ? `${car.performance.acceleration0to100} sec` : ''} />
+                                    <SpecRow label="Fuel Tank" value={car.dimensions?.fuelTankCapacity ? `${car.dimensions.fuelTankCapacity} L` : ''} />
                                     {car.engine?.batteryCapacity && (
                                         <SpecRow label="Battery" value={`${car.engine.batteryCapacity} kWh`} />
                                     )}
@@ -761,7 +761,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                         <SpecRow label="Range" value={`${car.engine.range} km`} last />
                                     )}
                                     {!car.engine?.batteryCapacity && !car.engine?.range && (
-                                        <SpecRow label="Fuel Type" value={car.engine?.type || '—'} last />
+                                        <SpecRow label="Fuel Type" value={car.engine?.type || ''} last />
                                     )}
                                 </div>
                             </CardContent>
@@ -775,14 +775,14 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     Dimensions & Weight
                                 </h3>
                                 <div className="space-y-0">
-                                    <SpecRow label="Length" value={car.dimensions?.length ? `${car.dimensions.length} mm` : '—'} />
-                                    <SpecRow label="Width" value={car.dimensions?.width ? `${car.dimensions.width} mm` : '—'} />
-                                    <SpecRow label="Height" value={car.dimensions?.height ? `${car.dimensions.height} mm` : '—'} />
-                                    <SpecRow label="Wheelbase" value={car.dimensions?.wheelbase ? `${car.dimensions.wheelbase} mm` : '—'} />
-                                    <SpecRow label="Ground Clearance" value={car.dimensions?.groundClearance ? `${car.dimensions.groundClearance} mm` : '—'} />
-                                    <SpecRow label="Kerb Weight" value={car.dimensions?.kerbWeight ? `${car.dimensions.kerbWeight} kg` : '—'} />
-                                    <SpecRow label="Boot Space" value={car.dimensions?.bootSpace ? `${car.dimensions.bootSpace} L` : '—'} />
-                                    <SpecRow label="Seating Capacity" value={car.dimensions?.seatingCapacity ? `${car.dimensions.seatingCapacity}` : '—'} last />
+                                    <SpecRow label="Length" value={car.dimensions?.length ? `${car.dimensions.length} mm` : ''} />
+                                    <SpecRow label="Width" value={car.dimensions?.width ? `${car.dimensions.width} mm` : ''} />
+                                    <SpecRow label="Height" value={car.dimensions?.height ? `${car.dimensions.height} mm` : ''} />
+                                    <SpecRow label="Wheelbase" value={car.dimensions?.wheelbase ? `${car.dimensions.wheelbase} mm` : ''} />
+                                    <SpecRow label="Ground Clearance" value={car.dimensions?.groundClearance ? `${car.dimensions.groundClearance} mm` : ''} />
+                                    <SpecRow label="Kerb Weight" value={car.dimensions?.kerbWeight ? `${car.dimensions.kerbWeight} kg` : ''} />
+                                    <SpecRow label="Boot Space" value={car.dimensions?.bootSpace ? `${car.dimensions.bootSpace} L` : ''} />
+                                    <SpecRow label="Seating Capacity" value={car.dimensions?.seatingCapacity ? `${car.dimensions.seatingCapacity}` : ''} last />
                                 </div>
                             </CardContent>
                         </Card>
@@ -795,9 +795,9 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     Safety
                                 </h3>
                                 <div className="space-y-0">
-                                    <SpecRow label="NCAP Rating" value={car.safety?.ncapRating?.stars ? `${car.safety.ncapRating.stars} Stars` : '—'} />
-                                    <SpecRow label="Airbags" value={car.safety?.airbags !== undefined ? `${car.safety.airbags}` : '—'} />
-                                    <SpecRow label="ABS" value={car.safety?.abs ? 'Yes' : '—'} />
+                                    <SpecRow label="NCAP Rating" value={car.safety?.ncapRating?.stars ? `${car.safety.ncapRating.stars} Stars` : ''} />
+                                    <SpecRow label="Airbags" value={car.safety?.airbags !== undefined ? `${car.safety.airbags}` : ''} />
+                                    <SpecRow label="ABS" value={car.safety?.abs ? 'Yes' : ''} />
                                     <SpecRow label="ESP" value={car.safety?.esp ? 'Yes' : 'No'} />
                                     <SpecRow label="Hill Hold Assist" value={car.safety?.hillHoldAssist ? 'Yes' : 'No'} />
                                     <SpecRow label="Traction Control" value={car.safety?.tractionControl ? 'Yes' : 'No'} />
@@ -1157,7 +1157,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     </AccordionTrigger>
                                     <AccordionContent className="text-sm text-gray-500">
                                         The {car.make} {car.model} is powered by a {car.engine?.displacement ? `${car.engine.displacement}cc` : ''} {car.engine?.type} engine
-                                        that produces {car.engine?.power || 'N/A'} of power and {car.engine?.torque || 'N/A'} of torque,
+                                        that produces {car.engine?.power || ''} of power and {car.engine?.torque || ''} of torque,
                                         mated to a {car.transmission?.type} transmission.
                                     </AccordionContent>
                                 </AccordionItem>
@@ -1227,6 +1227,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
 /* ── Helper Components ── */
 
 function SpecRow({ label, value, last }: { label: string; value: string; last?: boolean }) {
+    if (!value || value === '—' || value === 'N/A') return null;
     return (
         <div className={`flex justify-between py-2.5 ${!last ? 'border-b border-gray-200/50' : ''}`}>
             <span className="text-sm text-gray-500">{label}</span>

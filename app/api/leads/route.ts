@@ -17,6 +17,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { sendLeadSmsToDealer } from '@/lib/services/sms-service'
+import { forwardLeadToCyepro } from '@/lib/services/cyepro-service'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 import { logger } from '@/lib/utils/logger'
 
@@ -73,7 +74,7 @@ export async function POST(request: NextRequest) {
         // ── Verify dealer_id exists and is active (prevent phantom leads) ─────
         const { data: dealer, error: dealerErr } = await supabase
             .from('dealers')
-            .select('id, dealership_name, phone')
+            .select('id, dealership_name, phone, cyepro_api_key')
             .eq('id', dealer_id)
             .single()
 
@@ -127,6 +128,18 @@ export async function POST(request: NextRequest) {
                 customerPhone: phone.trim(),
                 carName: car_name ?? undefined,
                 leadSource: safeSource,
+            }).catch(() => { /* already logged inside */ })
+        }
+
+        // ── Forward to Cyepro CRM if dealer has API key (fire-and-forget) ─────
+        if (dealer.cyepro_api_key) {
+            forwardLeadToCyepro(dealer.cyepro_api_key, {
+                customerName:  name.trim(),
+                customerPhone: phone.trim(),
+                customerEmail: email?.trim(),
+                vehicleName:   car_name?.trim(),
+                message:       message?.trim(),
+                leadSource:    safeSource,
             }).catch(() => { /* already logged inside */ })
         }
 

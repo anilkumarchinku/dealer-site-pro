@@ -7,7 +7,16 @@ import { NextRequest, NextResponse } from 'next/server'
 import { requireAuth, getDealerForUser } from '@/lib/supabase-server'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 import { createTwoWheelerLead, getTwoWheelerLeads, updateTwoWheelerLeadStatus } from '@/lib/db/two-wheelers'
+import { forwardLeadToCyepro } from '@/lib/services/cyepro-service'
+import { createClient } from '@supabase/supabase-js'
 import type { TwoWheelerLeadFilters, TwoWheelerLeadStatus } from '@/lib/types/two-wheeler'
+
+function getSupabase() {
+    return createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.SUPABASE_SERVICE_ROLE_KEY!,
+    )
+}
 
 // ── POST (public / anon) ──────────────────────────────────────
 
@@ -17,7 +26,7 @@ export async function POST(request: NextRequest) {
     if (rateLimit) return rateLimit
 
     const body = await request.json()
-    const { dealer_id, lead_type, name, phone, email, vehicle_id, used_vehicle_id, preferred_date, message, offer_price_paise } = body
+    const { dealer_id, lead_type, name, phone, email, vehicle_id, vehicle_name, used_vehicle_id, preferred_date, message, offer_price_paise } = body
 
     if (!dealer_id || !lead_type || !name || !phone) {
         return NextResponse.json(
@@ -42,6 +51,26 @@ export async function POST(request: NextRequest) {
     if (!result.success) {
         return NextResponse.json({ error: result.error }, { status: 500 })
     }
+
+    // ── Forward to Cyepro CRM if dealer has API key (fire-and-forget) ─────────
+    const supabase = getSupabase()
+    const { data: dealer } = await supabase
+        .from('dealers')
+        .select('cyepro_api_key')
+        .eq('id', dealer_id)
+        .single()
+
+    if (dealer?.cyepro_api_key) {
+        forwardLeadToCyepro(dealer.cyepro_api_key, {
+            customerName:  name,
+            customerPhone: phone,
+            customerEmail: email        ?? undefined,
+            vehicleName:   vehicle_name ?? undefined,
+            message:       message      ?? undefined,
+            leadSource:    lead_type,
+        }).catch(() => { /* already logged inside */ })
+    }
+
     return NextResponse.json({ success: true, id: result.id }, { status: 201 })
 }
 

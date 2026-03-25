@@ -40,7 +40,7 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): Car[] {
             power: '—',
             torque: '—',
         },
-        transmission: { type: 'Manual' },
+        transmission: { type: v.transmission || 'Manual' },
         performance: {
             fuelEfficiency: v.mileage_kmpl ?? undefined,
             topSpeed: v.top_speed_kmph ?? undefined,

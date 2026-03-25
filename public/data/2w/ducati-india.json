@@ -6,8 +6,8 @@
     {
       "make": "Ducati India",
       "model": "Ducati Panigale V4",
+      "price": "Rs 26,50,000",
       "status": "Available",
-      "price": null,
       "colors": [],
       "specifications": {
         "engine_details": "Desmosedici Stradale 90° V4, Counter-rotating Crankshaft, Desmodromic Timing, 4 Valves per Cylinder, Liquid Cooled. 1103 cc. Max Power: 218.99 PS @ 13500 rpm.",
@@ -31,8 +31,8 @@
     {
       "make": "Ducati India",
       "model": "Ducati Streetfighter V4",
+      "price": "Rs 24,00,000",
       "status": "Available",
-      "price": null,
       "colors": [],
       "specifications": {
         "engine_details": "Desmosedici Stradale 90° V4, rearward-rotating crankshaft, 4 desmodromically actuated valves per cylinder, liquid cooled. 1103 cc. Max Power: 214 PS @ 13500 rpm.",
@@ -56,8 +56,8 @@
     {
       "make": "Ducati India",
       "model": "Ducati Monster",
+      "price": "Rs 13,49,000",
       "status": "Available",
-      "price": null,
       "colors": [],
       "specifications": {
         "engine_details": "Testastretta 11°, V2 - 90°, 4 valves per cylinder, desmodromic valvetrain, liquid cooled. 937 cc. Max Power: 111.4 PS @ 9250 rpm.",
@@ -81,8 +81,8 @@
     {
       "make": "Ducati India",
       "model": "Ducati Scrambler 800",
+      "price": "Rs 9,39,000",
       "status": "Available",
-      "price": null,
       "colors": [],
       "specifications": {
         "engine_details": "L-Twin, Desmodromic Distribution, 2 Valves per Cylinder, Air Cooled. 803 cc. Max Power: 74.01 PS @ 8250 rpm.",
@@ -104,8 +104,8 @@
     {
       "make": "Ducati India",
       "model": "Ducati Panigale V2",
+      "price": "Rs 18,09,000",
       "status": "Available",
-      "price": null,
       "colors": [],
       "specifications": {
         "engine_details": "90° V2, 4 Valves per Cylinder, Intake Variable Valves Timing System, Liquid Cooled. 890 cc. Max Power: 119.6 PS @ 10,750 rpm.",
@@ -128,8 +128,8 @@
     {
       "make": "Ducati India",
       "model": "Ducati Diavel V4",
+      "price": "Rs 25,91,000",
       "status": "Available",
-      "price": null,
       "colors": [],
       "specifications": {
         "engine_details": "V4 Granturismo, 4 valves per cylinder, counter-rotating crankshaft, Twin Pulse firing order, liquid cooled. 1158 cc. Max Power: 170.33 PS @ 10,750 rpm.",
@@ -151,8 +151,8 @@
     {
       "make": "Ducati India",
       "model": "Ducati Multistrada V4",
+      "price": "Rs 22,60,000",
       "status": "Available",
-      "price": null,
       "colors": [],
       "specifications": {
         "engine_details": "V4 Granturismo, 90°, 4 valves per cylinder, counter-rotating crankshaft, liquid cooled. 1158 cc. Max Power: 169.9 PS @ 10500 rpm.",
@@ -174,8 +174,8 @@
     {
       "make": "Ducati India",
       "model": "Ducati Streetfighter V2",
+      "price": "Rs 17,25,000",
       "status": "Available",
-      "price": null,
       "colors": [],
       "specifications": {
         "engine_details": "90° V2, 4 valves per cylinder, intake variable valve timing system, liquid cooled. 890 cc. Max Power: 155.12 PS @ 10,750 rpm.",
@@ -198,12 +198,13 @@
     {
       "make": "Ducati India",
       "model": "Ducati XDiavel V4",
+      "price": "Rs 22,00,000",
       "status": "Available",
-      "price": null,
       "colors": [],
       "specifications": {
         "engine_details": "V4 Granturismo, 90°, 4 Valves per Cylinder, Counter-Rotating Crankshaft, Liquid Cooled. 1158 cc. Max Power: 168.59 PS @ 10750 rpm.",
         "torque": "126 Nm @ 7500 rpm",
+        "mileage": "14 kmpl",
         "features": [
           "Dual Channel ABS",
           "DRLs",
@@ -221,12 +222,13 @@
     {
       "make": "Ducati India",
       "model": "Ducati Multistrada V2",
+      "price": "Rs 15,00,000",
       "status": "Available",
-      "price": null,
       "colors": [],
       "specifications": {
         "engine_details": "90° V2, 4 valves per cylinder, Intake Variable Valve Timing System, Liquid Cooled. 890 cc. Max Power: 115.56 PS @ 10,750 rpm.",
         "torque": "92 Nm @ 8,250 rpm",
+        "mileage": "18 kmpl",
         "features": [
           "Dual Channel ABS",
           "DRLs",
@@ -243,8 +245,8 @@
     {
       "make": "Ducati India",
       "model": "Ducati SuperSport 950",
+      "price": "Discontinued",
       "status": "Available",
-      "price": null,
       "colors": [],
       "specifications": {
         "engine_details": "Testastretta 11°, L-Twin cylinder, 4 valve per cylinder, Desmodromic, liquid cooled. 937 cc. Max Power: 110.1 PS @ 9000 rpm.",
@@ -266,8 +268,8 @@
     {
       "make": "Ducati India",
       "model": "Ducati Hypermotard 950",
+      "price": "Rs 13,99,000",
       "status": "Available",
-      "price": null,
       "colors": [],
       "specifications": {
         "engine_details": "Testastretta 11°, L-Twin cylinder, 4 valve per cylinder, Desmodromic, liquid cooled. 937 cc. Max Power: 114.2 PS @ 9000 rpm.",
@@ -290,8 +292,8 @@
     {
       "make": "Ducati India",
       "model": "Ducati DesertX",
+      "price": "Rs 18,72,000",
       "status": "Available",
-      "price": null,
       "colors": [],
       "specifications": {
         "engine_details": "11° Twin-Cylinder, Desmodromic Valvetrain, 4 Valves Per Cylinder, Liquid Cooled. 937 cc. Max Power: 111.52 PS @ 9250 rpm.",
@@ -314,8 +316,8 @@
     {
       "make": "Ducati India",
       "model": "Ducati Hypermotard 698 Mono",
+      "price": "Discontinued",
       "status": "Available",
-      "price": null,
       "colors": [],
       "specifications": {
         "engine_details": "Superquadro Mono, single-cylinder, 4 valves per cylinder, Desmodromic timing, liquid cooled. 659 cc. Max Power: 77.4 PS @ 9750 rpm.",

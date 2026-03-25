@@ -66,16 +66,16 @@ Last updated: 2026-03-22
 
 | # | Item | Status |
 |---|------|--------|
-| G1 | 3W: euler-motors.json — skeleton only | ❌ PENDING |
-| G2 | 3W: greaves-electric-3w.json — skeleton only | ❌ PENDING |
-| G3 | 3W: kinetic-green.json — skeleton only | ❌ PENDING |
-| G4 | 3W: lohia-auto.json — skeleton only | ❌ PENDING |
-| G5 | 3W: mahindra-3w.json — skeleton only | ❌ PENDING |
-| G6 | 3W: piaggio-ape.json — skeleton only | ❌ PENDING |
-| G7 | 3W: tvs-king.json — skeleton only | ❌ PENDING |
-| G8 | 2W: bajaj-chetak-ev.json — empty | ❌ PENDING |
-| G9 | 2W: river-ev.json — empty | ❌ PENDING |
-| G10 | 4W: hyderabad_on_road_price missing for 20 brands | ❌ PENDING |
+| G1 | 3W: euler-motors.json — skeleton only | ✅ FIXED (2026-03-22) |
+| G2 | 3W: greaves-electric-3w.json — skeleton only | ✅ FIXED (2026-03-22) |
+| G3 | 3W: kinetic-green.json — skeleton only | ✅ FIXED (2026-03-22) |
+| G4 | 3W: lohia-auto.json — skeleton only | ✅ FIXED (2026-03-22) |
+| G5 | 3W: mahindra-3w.json — skeleton only | ✅ FIXED (2026-03-22) |
+| G6 | 3W: piaggio-ape.json — skeleton only | ✅ FIXED (2026-03-22) |
+| G7 | 3W: tvs-king.json — skeleton only | ✅ FIXED (2026-03-22) |
+| G8 | 2W: bajaj-chetak-ev.json — empty | ✅ FIXED (2026-03-22) — 3 models added |
+| G9 | 2W: river-ev.json — empty | ✅ FIXED (2026-03-22) — River Indie added |
+| G10 | 4W: hyderabad_on_road_price missing for 20 brands | ❌ PENDING — needs real price data |
 
 ---
 

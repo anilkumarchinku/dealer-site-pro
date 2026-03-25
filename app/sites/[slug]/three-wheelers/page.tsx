@@ -42,7 +42,7 @@ function threeWheelersToCars(vehicles: ThreeWheelerVehicle[]): Car[] {
       power: '—',
       torque: '—',
     },
-    transmission: { type: 'Manual' },
+    transmission: { type: v.transmission || 'Automatic' },
     performance: {
       fuelEfficiency: v.mileage_kmpl ?? undefined,
       topSpeed: v.max_speed_kmph ?? undefined,
@@ -85,7 +85,7 @@ function usedThreeWheelersToCars(vehicles: ThreeWheelerUsedVehicle[]): Car[] {
       power: '—',
       torque: '—',
     },
-    transmission: { type: 'Manual' },
+    transmission: { type: 'Automatic' },
     performance: {},
     dimensions: {
       seatingCapacity: v.passenger_capacity ?? null,

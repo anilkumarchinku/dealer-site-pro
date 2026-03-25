@@ -67,7 +67,7 @@ interface CarVariant {
 }
 
 function formatPrice(inr?: number): string {
-    if (!inr) return '—';
+    if (!inr) return '';
     const lakhs = inr / 100000;
     return `₹${lakhs.toFixed(2)}L`;
 }
@@ -376,15 +376,15 @@ export function BrandModelAccordion({
                                 <div>
                                     <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">Key Specs</p>
                                     <div className="grid grid-cols-2 gap-2.5">
-                                        <SpecChip icon={<Fuel className="w-4 h-4 text-blue-400" />} label="Fuel" value={selectedVariant.fuel_type || '—'} />
-                                        <SpecChip icon={<Gauge className="w-4 h-4 text-purple-400" />} label="Transmission" value={selectedVariant.transmission || '—'} />
-                                        <SpecChip icon={<Settings className="w-4 h-4 text-orange-400" />} label="Engine" value={selectedVariant.engine_displacement_cc ? `${selectedVariant.engine_displacement_cc} cc` : (selectedVariant.fuel_type === 'Electric' ? 'Electric' : '—')} />
-                                        <SpecChip icon={<Zap className="w-4 h-4 text-yellow-400" />} label="Power" value={selectedVariant.power_bhp ? `${selectedVariant.power_bhp} bhp` : '—'} />
-                                        <SpecChip icon={<BadgeCheck className="w-4 h-4 text-emerald-400" />} label="Torque" value={selectedVariant.torque_nm ? `${selectedVariant.torque_nm} Nm` : '—'} />
-                                        <SpecChip icon={<Gauge className="w-4 h-4 text-green-400" />} label="Mileage" value={selectedVariant.mileage_kmpl_or_ev_range ? String(selectedVariant.mileage_kmpl_or_ev_range) : '—'} />
-                                        <SpecChip icon={<Users className="w-4 h-4 text-cyan-400" />} label="Seating" value={selectedVariant.seating_capacity ? `${selectedVariant.seating_capacity} Seats` : '—'} />
-                                        <SpecChip icon={<Box className="w-4 h-4 text-pink-400" />} label="Boot Space" value={selectedVariant.boot_space_l ? `${selectedVariant.boot_space_l} L` : '—'} />
-                                        <SpecChip icon={<MoveVertical className="w-4 h-4 text-indigo-400" />} label="Ground Clear." value={selectedVariant.ground_clearance_mm ? `${selectedVariant.ground_clearance_mm} mm` : '—'} />
+                                        {selectedVariant.fuel_type && <SpecChip icon={<Fuel className="w-4 h-4 text-blue-400" />} label="Fuel" value={selectedVariant.fuel_type} />}
+                                        {selectedVariant.transmission && <SpecChip icon={<Gauge className="w-4 h-4 text-purple-400" />} label="Transmission" value={selectedVariant.transmission} />}
+                                        {(selectedVariant.engine_displacement_cc || selectedVariant.fuel_type === 'Electric') && <SpecChip icon={<Settings className="w-4 h-4 text-orange-400" />} label="Engine" value={selectedVariant.engine_displacement_cc ? `${selectedVariant.engine_displacement_cc} cc` : 'Electric'} />}
+                                        {selectedVariant.power_bhp && <SpecChip icon={<Zap className="w-4 h-4 text-yellow-400" />} label="Power" value={`${selectedVariant.power_bhp} bhp`} />}
+                                        {selectedVariant.torque_nm && <SpecChip icon={<BadgeCheck className="w-4 h-4 text-emerald-400" />} label="Torque" value={`${selectedVariant.torque_nm} Nm`} />}
+                                        {selectedVariant.mileage_kmpl_or_ev_range && <SpecChip icon={<Gauge className="w-4 h-4 text-green-400" />} label="Mileage" value={String(selectedVariant.mileage_kmpl_or_ev_range)} />}
+                                        {selectedVariant.seating_capacity && <SpecChip icon={<Users className="w-4 h-4 text-cyan-400" />} label="Seating" value={`${selectedVariant.seating_capacity} Seats`} />}
+                                        {selectedVariant.boot_space_l && <SpecChip icon={<Box className="w-4 h-4 text-pink-400" />} label="Boot Space" value={`${selectedVariant.boot_space_l} L`} />}
+                                        {selectedVariant.ground_clearance_mm && <SpecChip icon={<MoveVertical className="w-4 h-4 text-indigo-400" />} label="Ground Clear." value={`${selectedVariant.ground_clearance_mm} mm`} />}
                                         {selectedVariant.launch_year && (
                                             <SpecChip icon={<BadgeCheck className="w-4 h-4 text-slate-400" />} label="Year" value={`${selectedVariant.launch_year}`} />
                                         )}

@@ -68,7 +68,7 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): import("@/lib/types/c
             displacement: v.engine_cc ?? undefined,
             batteryCapacity: v.battery_kwh ?? undefined,
         },
-        transmission: { type: 'Manual' },
+        transmission: { type: v.transmission || 'Manual' },
         performance: {
             fuelEfficiency: v.mileage_kmpl ?? undefined,
             topSpeed: v.top_speed_kmph ?? undefined,
@@ -111,7 +111,7 @@ function threeWheelersToCars(vehicles: ThreeWheelerVehicle[]): import("@/lib/typ
             displacement: v.engine_cc ?? undefined,
             batteryCapacity: v.battery_kwh ?? undefined,
         },
-        transmission: { type: 'Manual' },
+        transmission: { type: v.transmission || 'Automatic' },
         performance: {
             fuelEfficiency: v.mileage_kmpl ?? undefined,
             topSpeed: v.max_speed_kmph ?? undefined,

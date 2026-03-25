@@ -54,6 +54,7 @@ function buildTwoWheelerEntry(
         charging_time_hours:     null,
         battery_warranty_years:  null,
         top_speed_kmph:          enrichment?.top_speed_kmph ?? null,
+        transmission:            enrichment?.transmission ?? null,
         mileage_kmpl:            enrichment?.mileage_kmpl ?? TWO_WHEELER_MODEL_MILEAGE[`${brand} ${model}`] ?? null,
         ex_showroom_price_paise: enrichment?.ex_showroom_price_paise ?? 0,
         on_road_price_paise:     null,
@@ -80,7 +81,7 @@ function buildTwoWheelerEntry(
     }
 }
 
-type CatalogEntry = Omit<TwoWheelerVehicle, 'id' | 'dealer_id' | 'created_at' | 'updated_at' | 'views' | 'video_url' | 'is_featured'>
+type CatalogEntry = Omit<TwoWheelerVehicle, 'id' | 'dealer_id' | 'created_at' | 'updated_at' | 'views' | 'video_url' | 'is_featured' | 'transmission'>
 
 // ── Royal Enfield — brand name in DB: "Royal Enfield" ────────────────────────
 const ROYAL_ENFIELD: CatalogEntry[] = [

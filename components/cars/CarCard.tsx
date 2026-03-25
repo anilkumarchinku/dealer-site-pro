@@ -71,7 +71,7 @@ interface CarVariantInfo {
 }
 
 function fmtPrice(inr?: number) {
-    if (!inr) return '—';
+    if (!inr) return '';
     return `₹${(inr / 100000).toFixed(2)}L`;
 }
 
@@ -143,15 +143,15 @@ export function CarCard({
 
     // Resolved specs — always show 4 items for consistent grid
     const fuelDisplay = aggregatedSpecs?.fuelsDisplay ||
-        (car.engine?.type && car.engine.type !== 'TBD' ? car.engine.type : '—');
+        (car.engine?.type && car.engine.type !== 'TBD' ? car.engine.type : '');
     const transDisplay = aggregatedSpecs?.transmissionsDisplay ||
         (car.transmission?.type && car.transmission.type !== 'TBD' && car.transmission.type !== 'Transmission'
-            ? car.transmission.type : '—');
+            ? car.transmission.type : '');
     const seatingDisplay = aggregatedSpecs?.seatingDisplay ||
-        (car.dimensions?.seatingCapacity ? `${car.dimensions.seatingCapacity}` : '—');
+        (car.dimensions?.seatingCapacity ? `${car.dimensions.seatingCapacity}` : '');
     const mileageDisplay = aggregatedSpecs?.mileageDisplay ||
         (car.performance?.fuelEfficiency && car.performance.fuelEfficiency > 0
-            ? `${car.performance.fuelEfficiency} km/l` : '—');
+            ? `${car.performance.fuelEfficiency} km/l` : '');
 
     // Category-specific specs
     const isEV = car.engine?.type === 'Electric';
@@ -160,8 +160,8 @@ export function CarCard({
             icon: <Settings className="w-3.5 h-3.5 text-orange-500" />,
             label: isEV ? 'Battery' : 'Engine',
             value: isEV
-                ? (car.engine?.batteryCapacity ? `${car.engine.batteryCapacity} kWh` : '—')
-                : (car.engine?.displacement ? `${car.engine.displacement} cc` : '—'),
+                ? (car.engine?.batteryCapacity ? `${car.engine.batteryCapacity} kWh` : '')
+                : (car.engine?.displacement ? `${car.engine.displacement} cc` : ''),
         }
         : car.vehicleCategory === '3w'
             ? {
@@ -176,11 +176,11 @@ export function CarCard({
             : { icon: <Gauge className="w-3.5 h-3.5 text-blue-600" />, label: 'Trans', value: transDisplay };
 
     const spec3 = car.vehicleCategory === '2w' || car.vehicleCategory === '3w'
-        ? { icon: <Zap className="w-3.5 h-3.5 text-amber-600" />, label: isEV ? 'Range' : 'Mileage', value: isEV ? (car.performance?.range ? `${car.performance.range} km` : '—') : mileageDisplay }
+        ? { icon: <Zap className="w-3.5 h-3.5 text-amber-600" />, label: isEV ? 'Range' : 'Mileage', value: isEV ? (car.performance?.range ? `${car.performance.range} km` : '') : mileageDisplay }
         : { icon: <Users className="w-3.5 h-3.5 text-purple-600" />, label: 'Seats', value: seatingDisplay };
 
     const spec4 = car.vehicleCategory === '2w' || car.vehicleCategory === '3w'
-        ? { icon: <Fuel className="w-3.5 h-3.5 text-emerald-600" />, label: 'Type', value: car.bodyType || '—' }
+        ? { icon: <Gauge className="w-3.5 h-3.5 text-blue-600" />, label: 'Trans', value: transDisplay }
         : { icon: <Zap className="w-3.5 h-3.5 text-amber-600" />, label: 'Mileage', value: mileageDisplay };
 
     const handleEnquireNow = () => setIsEnquiryModalOpen(true);
@@ -447,7 +447,7 @@ export function CarCard({
     );
 }
 
-/** Small spec item used in the 2x2 grid */
+/** Small spec item used in the 2x2 grid — hidden when value is empty */
 function SpecItem({
     icon,
     label,
@@ -459,6 +459,7 @@ function SpecItem({
     value: string;
     light?: boolean;
 }) {
+    if (!value) return null;
     const isLong = value.includes('/');
     return (
         <div className="flex items-center gap-2 p-2 rounded-lg bg-white border border-gray-100">
@@ -661,18 +662,30 @@ function VariantAccordionButton({
 
                                             {/* Spec grid — 2 columns */}
                                             <div className="grid grid-cols-2 gap-2">
+                                                {(selected.engine_displacement_cc || selected.fuel_type === 'Electric') && (
                                                 <PopSpecChip icon={<Settings className="w-3.5 h-3.5 text-orange-400" />} label="Engine"
-                                                    value={selected.engine_displacement_cc ? `${selected.engine_displacement_cc} cc` : (selected.fuel_type === 'Electric' ? 'Electric' : '—')} />
+                                                    value={selected.engine_displacement_cc ? `${selected.engine_displacement_cc} cc` : 'Electric'} />
+                                                )}
+                                                {selected.power_bhp && (
                                                 <PopSpecChip icon={<Zap className="w-3.5 h-3.5 text-yellow-400" />} label="Power"
-                                                    value={selected.power_bhp ? `${selected.power_bhp} bhp` : '—'} />
+                                                    value={`${selected.power_bhp} bhp`} />
+                                                )}
+                                                {selected.torque_nm && (
                                                 <PopSpecChip icon={<BadgeCheck className="w-3.5 h-3.5 text-emerald-400" />} label="Torque"
-                                                    value={selected.torque_nm ? `${selected.torque_nm} Nm` : '—'} />
+                                                    value={`${selected.torque_nm} Nm`} />
+                                                )}
+                                                {selected.mileage_kmpl_or_ev_range && (
                                                 <PopSpecChip icon={<Gauge className="w-3.5 h-3.5 text-green-400" />} label="Mileage"
-                                                    value={selected.mileage_kmpl_or_ev_range ? String(selected.mileage_kmpl_or_ev_range) : '—'} />
+                                                    value={String(selected.mileage_kmpl_or_ev_range)} />
+                                                )}
+                                                {selected.seating_capacity && (
                                                 <PopSpecChip icon={<Users className="w-3.5 h-3.5 text-cyan-400" />} label="Seating"
-                                                    value={selected.seating_capacity ? `${selected.seating_capacity} seats` : '—'} />
+                                                    value={`${selected.seating_capacity} seats`} />
+                                                )}
+                                                {selected.boot_space_l && (
                                                 <PopSpecChip icon={<Box className="w-3.5 h-3.5 text-pink-400" />} label="Boot"
-                                                    value={selected.boot_space_l ? `${selected.boot_space_l} L` : '—'} />
+                                                    value={`${selected.boot_space_l} L`} />
+                                                )}
                                                 {selected.ground_clearance_mm && (
                                                     <PopSpecChip icon={<MoveVertical className="w-3.5 h-3.5 text-indigo-400" />} label="Ground Clr."
                                                         value={`${selected.ground_clearance_mm} mm`} />

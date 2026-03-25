@@ -33,23 +33,23 @@ const COMPARE_ROWS: CompareRow[] = [
                 return `₹${(min / 100000).toFixed(1)}L – ₹${(max / 100000).toFixed(1)}L`;
             }
             if (min) return `₹${(min / 100000).toFixed(1)} Lakh`;
-            return '—';
+            return '';
         },
     },
     {
         label: 'Fuel Type',
-        getValue: (car) => car.engine.type ?? '—',
+        getValue: (car) => car.engine.type ?? '',
     },
     {
         label: 'Transmission',
-        getValue: (car) => car.transmission.type ?? '—',
+        getValue: (car) => car.transmission.type ?? '',
     },
     {
         label: 'Mileage',
         getValue: (car) =>
             car.performance.fuelEfficiency
                 ? `${car.performance.fuelEfficiency} km/l`
-                : '—',
+                : '',
     },
     {
         label: 'Engine',
@@ -58,18 +58,18 @@ const COMPARE_ROWS: CompareRow[] = [
                 ? `${car.engine.displacement} cc`
                 : car.engine.batteryCapacity
                 ? `${car.engine.batteryCapacity} kWh`
-                : '—',
+                : '',
     },
     {
         label: 'Seating',
         getValue: (car) =>
             car.dimensions.seatingCapacity
                 ? `${car.dimensions.seatingCapacity} seats`
-                : '—',
+                : '',
     },
     {
         label: 'Body Type',
-        getValue: (car) => car.bodyType ?? '—',
+        getValue: (car) => car.bodyType ?? '',
     },
     {
         label: 'Condition',
@@ -79,7 +79,7 @@ const COMPARE_ROWS: CompareRow[] = [
                 used: 'Used',
                 certified_pre_owned: 'Certified Pre-Owned',
             };
-            return car.condition ? (map[car.condition] ?? car.condition) : '—';
+            return car.condition ? (map[car.condition] ?? car.condition) : '';
         },
     },
 ];

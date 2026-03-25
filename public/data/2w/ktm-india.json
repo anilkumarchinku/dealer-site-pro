@@ -3,6 +3,7 @@
     {
       "bike_name": "KTM Duke 390",
       "bike_name_citation": "https://www.bikedekho.com/ktm/duke-390",
+      "price": "Rs 3,11,000",
       "engine": "398.63 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/duke-390",
       "torque": "39 Nm @ 6500 rpm",
@@ -23,6 +24,7 @@
     {
       "bike_name": "KTM 250 Duke",
       "bike_name_citation": "https://www.bikedekho.com/ktm/duke-250",
+      "price": "Rs 2,41,000",
       "engine": "249.07 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/duke-250",
       "torque": "25 Nm @ 7250 rpm",
@@ -43,6 +45,7 @@
     {
       "bike_name": "KTM 200 Duke",
       "bike_name_citation": "https://www.bikedekho.com/ktm/duke-200",
+      "price": "Rs 1,96,000",
       "engine": "199.5 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/duke-200",
       "torque": "19.3 Nm @ 8000 rpm",
@@ -63,6 +66,7 @@
     {
       "bike_name": "KTM 160 Duke",
       "bike_name_citation": "https://www.bikedekho.com/ktm/160-duke",
+      "price": "Rs 1,73,811",
       "engine": "164.2 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/160-duke",
       "torque": "15.5 Nm",
@@ -83,6 +87,7 @@
     {
       "bike_name": "KTM 250 Adventure",
       "bike_name_citation": "https://www.bikedekho.com/ktm/250-adventure",
+      "price": "Rs 2,60,000",
       "engine": "249.07 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/250-adventure",
       "torque": "25 Nm @ 7250 rpm",
@@ -103,6 +108,7 @@
     {
       "bike_name": "KTM 390 Adventure",
       "bike_name_citation": "https://www.bikedekho.com/ktm/390-adventure",
+      "price": "Rs 3,55,000",
       "engine": "398.7 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/390-adventure",
       "torque": "39 Nm",
@@ -123,6 +129,7 @@
     {
       "bike_name": "KTM 1390 Super Duke R",
       "bike_name_citation": "https://www.bikedekho.com/ktm/1390-super-duke-r",
+      "price": "Rs 22,50,000",
       "engine": "1350 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/1390-super-duke-r",
       "torque": "145 Nm @ 8000 rpm",
@@ -143,6 +150,7 @@
     {
       "bike_name": "KTM RC 390",
       "bike_name_citation": "https://www.bikedekho.com/ktm/rc-390",
+      "price": "Rs 3,30,000",
       "engine": "373.27 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/rc-390",
       "torque": "37 Nm @ 7000 rpm",
@@ -163,6 +171,7 @@
     {
       "bike_name": "KTM RC 160",
       "bike_name_citation": "https://www.bikedekho.com/ktm/rc-160",
+      "price": "Rs 1,87,000",
       "engine": "164.2 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/rc-160",
       "torque": "15.5 Nm @ 7500 rpm",
@@ -183,6 +192,7 @@
     {
       "bike_name": "KTM 390 Adventure X",
       "bike_name_citation": "https://www.bikedekho.com/ktm/390-adventure-x",
+      "price": "Rs 3,00,000",
       "engine": "398.63 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/390-adventure-x",
       "torque": "39 Nm @ 6500 rpm",
@@ -203,6 +213,7 @@
     {
       "bike_name": "KTM RC 200",
       "bike_name_citation": "https://www.bikedekho.com/ktm/rc-200",
+      "price": "Rs 2,12,000",
       "engine": "199.5 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/rc-200",
       "torque": "19.2 Nm @ 8000 rpm",
@@ -223,6 +234,7 @@
     {
       "bike_name": "KTM 890 Duke",
       "bike_name_citation": "https://www.bikedekho.com/ktm/890-duke-r",
+      "price": "Rs 12,00,000",
       "engine": "889 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/890-duke-r",
       "torque": "99 Nm @ 7750 rpm",
@@ -243,6 +255,7 @@
     {
       "bike_name": "KTM 50 SX",
       "bike_name_citation": "https://www.bikedekho.com/ktm/50-sx",
+      "price": "Discontinued",
       "engine": "49.9 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/50-sx",
       "torque": "5.2 Nm @ 7500 rpm",
@@ -263,6 +276,7 @@
     {
       "bike_name": "KTM 890 Adventure R",
       "bike_name_citation": "https://www.bikedekho.com/ktm/890-adventure-r",
+      "price": "Discontinued",
       "engine": "889 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/890-adventure-r",
       "torque": "100 Nm @ 6500 rpm",
@@ -283,6 +297,7 @@
     {
       "bike_name": "KTM 65 SX",
       "bike_name_citation": "https://www.bikedekho.com/ktm/65-sx",
+      "price": "Discontinued",
       "engine": "64.9 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/65-sx",
       "torque": "10.8 Nm @ 7500 rpm",
@@ -303,6 +318,7 @@
     {
       "bike_name": "KTM 85 SX",
       "bike_name_citation": "https://www.bikedekho.com/ktm/85-sx",
+      "price": "Discontinued",
       "engine": "84.9 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/85-sx",
       "torque": "14 Nm @ 8500 rpm",
@@ -323,6 +339,7 @@
     {
       "bike_name": "KTM 390 Enduro R",
       "bike_name_citation": "https://www.bikedekho.com/ktm/390-enduro-r",
+      "price": "Rs 3,40,000",
       "engine": "399 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/390-enduro-r",
       "torque": "39 Nm @ 6500 rpm",
@@ -343,6 +360,7 @@
     {
       "bike_name": "KTM 250 SX-F",
       "bike_name_citation": "https://www.bikedekho.com/ktm/250-sx-f",
+      "price": "Discontinued",
       "engine": "249.9 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/250-sx-f",
       "torque": "26.5 Nm @ 9500 rpm",
@@ -363,6 +381,7 @@
     {
       "bike_name": "KTM 350 EXC-F",
       "bike_name_citation": "https://www.bikedekho.com/ktm/350-exc-f",
+      "price": "Discontinued",
       "engine": "349.7 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/350-exc-f",
       "torque": "36 Nm",
@@ -383,6 +402,7 @@
     {
       "bike_name": "KTM 450 SX-F",
       "bike_name_citation": "https://www.bikedekho.com/ktm/450-sx-f",
+      "price": "Discontinued",
       "engine": "449.9 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/450-sx-f",
       "torque": "74 Nm @ 9500 rpm",
@@ -403,6 +423,7 @@
     {
       "bike_name": "KTM 1290 Super Adventure S",
       "bike_name_citation": "https://www.bikedekho.com/ktm/1290-super-adventure-s",
+      "price": "Discontinued",
       "engine": "1301 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/1290-super-adventure-s",
       "torque": "138 Nm @ 6500 rpm",

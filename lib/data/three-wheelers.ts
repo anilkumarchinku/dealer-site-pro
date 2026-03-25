@@ -57,6 +57,7 @@ function buildThreeWheelerEntry(
         range_km:               null,
         charging_time_hours:    null,
         battery_warranty_years: null,
+        transmission:           enrichment?.transmission ?? 'Automatic',
         payload_kg:             type === 'cargo' ? (enrichment?.gvw_kg ?? 500) : null,
         body_type:              null,
         passenger_capacity:     type === 'passenger' || type === 'electric' ? 3 : type === 'school_van' ? 8 : null,
@@ -85,7 +86,7 @@ function buildThreeWheelerEntry(
     }
 }
 type CatalogEntry = Omit<ThreeWheelerVehicle,
-    'id' | 'dealer_id' | 'created_at' | 'updated_at' | 'views' |
+    'id' | 'dealer_id' | 'created_at' | 'updated_at' | 'views' | 'transmission' |
     'payload_kg' | 'body_type' | 'passenger_capacity' | 'cng_mileage_km_per_kg' |
     'permit_type' | 'gvw_kg' | 'brochure_url' | 'video_url' | 'is_featured'
 >

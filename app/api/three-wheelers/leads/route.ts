@@ -2,7 +2,16 @@ import { NextRequest, NextResponse } from 'next/server'
 import { requireAuth, getDealerForUser } from '@/lib/supabase-server'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 import { createThreeWheelerLead, getThreeWheelerLeads, updateThreeWheelerLeadStatus } from '@/lib/db/three-wheelers'
+import { forwardLeadToCyepro } from '@/lib/services/cyepro-service'
+import { createClient } from '@supabase/supabase-js'
 import type { ThreeWheelerLeadStatus } from '@/lib/types/three-wheeler'
+
+function getSupabase() {
+    return createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.SUPABASE_SERVICE_ROLE_KEY!,
+    )
+}
 
 export async function POST(request: NextRequest) {
     const rateLimit = await rateLimitOrNull('thw_lead_create', request, 5, 10 * 60 * 1000)
@@ -15,6 +24,26 @@ export async function POST(request: NextRequest) {
 
     const result = await createThreeWheelerLead({ status: 'new', ...body })
     if (!result.success) return NextResponse.json({ error: result.error }, { status: 400 })
+
+    // ── Forward to Cyepro CRM if dealer has API key (fire-and-forget) ─────────
+    const supabase = getSupabase()
+    const { data: dealer } = await supabase
+        .from('dealers')
+        .select('cyepro_api_key')
+        .eq('id', body.dealer_id)
+        .single()
+
+    if (dealer?.cyepro_api_key) {
+        forwardLeadToCyepro(dealer.cyepro_api_key, {
+            customerName:  body.name,
+            customerPhone: body.phone,
+            customerEmail: body.email      ?? undefined,
+            vehicleName:   body.vehicle_name ?? undefined,
+            message:       body.message    ?? undefined,
+            leadSource:    body.lead_type,
+        }).catch(() => { /* already logged inside */ })
+    }
+
     return NextResponse.json({ success: true, id: result.id }, { status: 201 })
 }
 

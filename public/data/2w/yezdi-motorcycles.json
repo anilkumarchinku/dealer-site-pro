@@ -3,6 +3,7 @@
     {
       "model_name": "Yezdi Roadster",
       "model_name_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster",
+      "price": "Rs 2,00,000",
       "engine_details": "334 cc liquid-cooled, single-cylinder engine (Alpha 2), fuel-injection, 6-speed manual gearbox with assist & slipper clutch, self-start only.",
       "engine_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadster",
       "torque": "29.62 Nm @ 6000 rpm",
@@ -109,6 +110,7 @@
     {
       "model_name": "2025 Yezdi Adventure",
       "model_name_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure",
+      "price": "Rs 2,18,000",
       "engine_details": "Single-cylinder, 4-stroke, liquid-cooled DOHC engine, 334 cc displacement, 29.6 PS @ 8000 rpm, fuel-injection, assist-and-slipper clutch, 6-speed gearbox.",
       "engine_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/adventure",
       "torque": "29.6 Nm @ 5800 rpm",
@@ -203,6 +205,7 @@
     {
       "model_name": "Yezdi Scrambler",
       "model_name_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking",
+      "price": "Rs 2,08,000",
       "engine_details": "334 cc single-cylinder, 4-stroke, liquid-cooled, DOHC, fuel-injection, 6-speed manual, 29.77 PS @ 8000 rpm.",
       "engine_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/roadking",
       "torque": "28.21 Nm @ 6750 rpm",
@@ -301,6 +304,7 @@
     {
       "model_name": "2024 Yezdi Roadster",
       "model_name_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser",
+      "price": "Rs 2,00,000",
       "engine_details": "334 cc single-cylinder, 4-stroke, liquid-cooled DOHC engine; fuel-injection, 6-speed manual gearbox, peak power 29 PS @ 7300 rpm.",
       "engine_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/cruiser",
       "torque": "29.40 Nm @ 6500 rpm",
@@ -391,6 +395,7 @@
     {
       "model_name": "2024 Yezdi Adventure",
       "model_name_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure",
+      "price": "Rs 2,18,000",
       "engine_details": "334 cc single-cylinder, 4-stroke, liquid-cooled DOHC engine (alpha 2); peak power 30.1 PS @ 8000 rpm.",
       "engine_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/2024-adventure",
       "torque": "29.8 Nm @ 6500 rpm",
@@ -493,6 +498,7 @@
     {
       "model_name": "2026 Yezdi Scrambler",
       "model_name_citation": "https://www.bikedekho.com/yezdi-motorcycles/2025-scrambler",
+      "price": "Rs 2,08,000",
       "engine_details": "443 cc, Fuel Injection, BS6-2.0",
       "engine_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/2025-scrambler",
       "torque": "34 Nm @ 4000 rpm",
@@ -531,6 +537,7 @@
     {
       "model_name": "Yezdi Roadking",
       "model_name_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking",
+      "price": "Discontinued",
       "engine_details": "465 cc, Fuel Injection, BS6-2.0",
       "engine_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-roadking",
       "torque": "27 Nm @ 4000 rpm",
@@ -605,6 +612,7 @@
     {
       "model_name": "Yezdi 250",
       "model_name_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-250",
+      "price": "Discontinued",
       "engine_details": "249 cc",
       "engine_details_citation": "https://www.bikedekho.com/yezdi-motorcycles/yezdi-250",
       "features": [

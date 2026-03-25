@@ -46,7 +46,7 @@ interface Props {
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 const fmtL = (inr?: number | null) =>
-    inr ? `₹${(inr / 1e5).toFixed(2)}L` : '—';
+    inr ? `₹${(inr / 1e5).toFixed(2)}L` : '';
 
 const fuelPill = (fuel?: string | null): string => {
     if (fuel === 'Electric') return 'bg-emerald-50 text-emerald-700 border-emerald-300';

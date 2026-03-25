@@ -40,6 +40,7 @@ export interface ThreeWheelerVehicle {
     range_km:               number | null
     charging_time_hours:    number | null
     battery_warranty_years: number | null
+    transmission:           string | null
 
     // Cargo
     payload_kg:             number | null

@@ -6,6 +6,7 @@
     {
       "model_name": "Jawa 42",
       "model_name_citation": "https://www.jawamotorcycles.com/motorcycles/jawa-42",
+      "price": "Rs 1,93,000",
       "engine_details": "294.72 cc, Single Cylinder, Liquid Cooled",
       "engine_details_citation": "https://www.jawamotorcycles.com/motorcycles/jawa-42",
       "torque": "26.84 Nm",
@@ -24,6 +25,7 @@
     {
       "model_name": "Jawa Perak",
       "model_name_citation": "https://www.jawamotorcycles.com/motorcycles/jawa-perak",
+      "price": "Rs 2,09,000",
       "engine_details": "334 cc, Single Cylinder, Liquid Cooled",
       "engine_details_citation": "https://www.jawamotorcycles.com/motorcycles/jawa-perak",
       "torque": "32.74 Nm",

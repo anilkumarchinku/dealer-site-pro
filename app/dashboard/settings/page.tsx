@@ -734,8 +734,8 @@ export default function SettingsPage() {
                         </CardHeader>
                         <CardContent className="space-y-4">
 
-                            {/* Cyepro */}
-                            <div className="rounded-xl border border-border bg-muted/20 overflow-hidden">
+                            {/* Cyepro — only for used / hybrid dealers (2W, 3W, 4W) */}
+                            {sellsUsedCars && <div className="rounded-xl border border-border bg-muted/20 overflow-hidden">
 
                                 {/* Header row */}
                                 <div className="flex items-center gap-3 px-4 py-4">
@@ -859,7 +859,7 @@ export default function SettingsPage() {
                                         Once connected, your used-car website will automatically show live inventory.
                                     </p>
                                 </div>
-                            </div>
+                            </div>}
 
                         </CardContent>
                     </Card>

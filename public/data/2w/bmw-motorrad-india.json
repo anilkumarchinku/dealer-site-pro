@@ -7,7 +7,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW S 1000 RR",
       "status": "Available",
-      "price": null,
+      "price": "Rs 20,25,000",
+      "engine_displacement": "999 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Water Oil Cooled 4 Cylinder 4 Stroke Inline Engine, Four Valves Per Cylinder",
@@ -27,7 +28,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW G 310 RR",
       "status": "Available",
-      "price": null,
+      "price": "Rs 3,15,000",
+      "engine_displacement": "312.6 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Water-cooled, single-cylinder 4-stroke engine, four valves, two overhead camshafts and cam followers, wet sump lubrication",
@@ -47,7 +49,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW R 1300 GS",
       "status": "Available",
-      "price": null,
+      "price": "Rs 21,90,000",
+      "engine_displacement": "1300 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Air-liquid Cooled two-cylinder four-stroke boxer engine with two overhead chain-driven camshafts and balancing gearwheels",
@@ -67,7 +70,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW R 1300 GS Adventure",
       "status": "Available",
-      "price": null,
+      "price": "Rs 24,50,000",
+      "engine_displacement": "1300 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Air Liquid Cooled Two Cylinder Four Stroke Boxer Engine",
@@ -87,7 +91,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW C 400 GT",
       "status": "Available",
-      "price": null,
+      "price": "Rs 9,95,000",
+      "engine_displacement": "350 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Water Cooled, Single Cylinder, Four Stroke Engine Featuring Four Valves Per Cylinder, Overhead Camshaft With Rocker And Wet-Sump Lubrication",
@@ -107,7 +112,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW R 12",
       "status": "Available",
-      "price": null,
+      "price": "Rs 20,90,000",
+      "engine_displacement": "1170 cc",
       "colors": [],
       "specifications": {
         "engine_type": "2-Cylinder 4-Stroke Boxer Engine",
@@ -127,7 +133,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW R 18 Transcontinental",
       "status": "Available",
-      "price": null,
+      "price": "Rs 31,50,000",
+      "engine_displacement": "1802 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Air/oil cooled twin-cylinder four-stroke boxer engine with two chain-driven camshafts above the crank shaft",
@@ -147,7 +154,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW F 900 GS",
       "status": "Available",
-      "price": null,
+      "price": "Rs 12,50,000",
+      "engine_displacement": "895 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Water-Cooled, 2-Cylinder, Four-Stroke Engine With Four Cam-Operated Valves Per Cylinder, Two Overhead Camshafts And Dry-Sump Lubrication",
@@ -167,7 +175,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW S 1000 R",
       "status": "Available",
-      "price": null,
+      "price": "Rs 17,90,000",
+      "engine_displacement": "999 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Oil/water-cooled, four-cylinder, four-stroke, in-line engine with four valves per cylinder",
@@ -187,7 +196,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW M 1000 XR",
       "status": "Available",
-      "price": null,
+      "price": "Rs 45,00,000",
+      "engine_displacement": "999 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Oil / water-cooled 4-cylinder 4-stroke inline engine, four valves per cylinder.",
@@ -207,7 +217,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW R 12 nineT",
       "status": "Available",
-      "price": null,
+      "price": "Rs 19,90,000",
+      "engine_displacement": "1170 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Air/oil-cooled two-cylinder, four-stroke boxer engine with two overhead camshafts, four radially arranged valves and central counterbalance shaft",
@@ -227,7 +238,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW R 1250 RT",
       "status": "Available",
-      "price": null,
+      "price": "Rs 23,50,000",
+      "engine_displacement": "1254 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Air/Liquid Cooled Four Stroke Flat Twin Engine, Double Overhead Camshaft, One Balance Shaft And Variable Engine Timing System BMW Shiftcam.",
@@ -247,7 +259,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW CE 02",
       "status": "Available",
-      "price": null,
+      "price": "Rs 4,29,000",
+      "engine_displacement": "Electric",
       "colors": [],
       "specifications": {
         "engine_type_citation": "https://www.bikedekho.com/bmw/ce-02/specifications",
@@ -264,7 +277,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW K 1600 GTL",
       "status": "Available",
-      "price": null,
+      "price": "Rs 33,50,000",
+      "engine_displacement": "1649 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Oil/Water Cooled 4-Stroke In-line 6-Cylinder Engine, Two Overhead Camshafts, Four Valves Per Cylinder",
@@ -284,7 +298,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW CE 04",
       "status": "Available",
-      "price": null,
+      "price": "Rs 14,90,000",
+      "engine_displacement": "Electric",
       "colors": [],
       "specifications": {
         "engine_type": "PMSM",
@@ -302,7 +317,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW S 1000 XR",
       "status": "Available",
-      "price": null,
+      "price": "Rs 21,50,000",
+      "engine_displacement": "999 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Oil/water Cooled 4-cylinder 4-stroke inline engine, four valves per cylinder",
@@ -322,7 +338,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW K 1600 Bagger",
       "status": "Available",
-      "price": null,
+      "price": "Rs 33,50,000",
+      "engine_displacement": "1649 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Oil/Water Cooled 4-Stroke In-line 6-Cylinder Engine, Two Overhead Camshafts, Four Valves Per Cylinder",
@@ -342,7 +359,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW G 310 GS",
       "status": "Available",
-      "price": null,
+      "price": "Rs 3,15,000",
+      "engine_displacement": "312.6 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Water-cooled, single-cylinder 4-stroke engine, four valves, two overhead camshafts and finger followers, wet sump lubrication",
@@ -362,7 +380,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW G 310 R",
       "status": "Available",
-      "price": null,
+      "price": "Rs 2,90,000",
+      "engine_displacement": "312.6 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Water-cooled, single-cylinder 4-stroke engine, four valves, two overhead camshafts, wet sump lubrication",
@@ -382,7 +401,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW R 1250 GS",
       "status": "Available",
-      "price": null,
+      "price": "Rs 20,50,000",
+      "engine_displacement": "1254 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Air-Liquid Cooled, Twin Cylinder, DOHC, Boxer Engine",
@@ -402,7 +422,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW M 1000 RR",
       "status": "Available",
-      "price": null,
+      "price": "Rs 49,00,000",
+      "engine_displacement": "999 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Water/oil Cooled 4-cylinder 4-stroke in-line engine, four titanium valves per cylinder, BMW ShiftCam",
@@ -422,7 +443,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW F 900 XR",
       "status": "Available",
-      "price": null,
+      "price": "Rs 13,50,000",
+      "engine_displacement": "895 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Water-cooled 4-stroke in-line two-cylinder engine, 4 valves DOHC engine",
@@ -442,7 +464,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW F 900 R",
       "status": "Available",
-      "price": null,
+      "price": "Rs 10,50,000",
+      "engine_displacement": "895 cc",
       "colors": [],
       "specifications": {
         "engine_type": "water-cooled 4-stroke in-line two-cylinder engine, four valves per cylinder, two overhead camshafts, dry sump lubrication",
@@ -462,7 +485,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW M 1000 R",
       "status": "Available",
-      "price": null,
+      "price": "Rs 33,00,000",
+      "engine_displacement": "999 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Water/oil-cooled in-line four-cylinder, four-stroke engine with four titanium valves per cylinder and BMW Shiftcam variable intake camshaft control",
@@ -482,7 +506,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW R 18",
       "status": "Available",
-      "price": null,
+      "price": "Rs 21,90,000",
+      "engine_displacement": "1802 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Air / Oil-cooled Two-cylinder Four-stroke Boxer Engine With Two Chain-driven Camshafts Located Above The Crankshaft",
@@ -502,7 +527,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW K 1600 Grand America",
       "status": "Available",
-      "price": null,
+      "price": "Rs 35,00,000",
+      "engine_displacement": "1649 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Oil/Water Cooled 4-Stroke In-line 6-Cylinder Engine, Two Overhead Camshafts, Four Valves Per Cylinder",
@@ -522,7 +548,8 @@
       "make": "BMW Motorrad India",
       "model": "BMW R 1250 GS Adventure",
       "status": "Available",
-      "price": null,
+      "price": "Rs 22,50,000",
+      "engine_displacement": "1254 cc",
       "colors": [],
       "specifications": {
         "engine_type": "Air/Liquid-cooled Four Stroke Flat Twin Engine, Double Overhead Camshaft, One Balance Shaft and Variable Engine Timing System BMW Shiftcam.",

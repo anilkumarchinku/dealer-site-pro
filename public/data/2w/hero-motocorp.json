@@ -6,6 +6,8 @@
     {
       "make": "Hero",
       "model": "Splendor Plus",
+      "mileage": "60 kmpl",
+      "engine_displacement": "97.2 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -192,6 +194,8 @@
     {
       "make": "Hero",
       "model": "Xtreme 125R",
+      "mileage": "50 kmpl",
+      "engine_displacement": "124.7 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -387,6 +391,8 @@
     {
       "make": "Hero",
       "model": "Splendor Plus XTEC",
+      "mileage": "65 kmpl",
+      "engine_displacement": "97.2 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -535,6 +541,8 @@
     {
       "make": "Hero",
       "model": "HF Deluxe",
+      "mileage": "65 kmpl",
+      "engine_displacement": "97.2 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -706,6 +714,8 @@
     {
       "make": "Hero",
       "model": "XPulse 200 4V",
+      "mileage": "40 kmpl",
+      "engine_displacement": "199.6 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -791,6 +801,8 @@
     {
       "make": "Hero",
       "model": "Glamour X 125",
+      "mileage": "56 kmpl",
+      "engine_displacement": "124.7 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -880,6 +892,8 @@
     {
       "make": "Hero",
       "model": "Glamour",
+      "mileage": "56 kmpl",
+      "engine_displacement": "124.7 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -963,6 +977,8 @@
     {
       "make": "Hero",
       "model": "Xtreme 250R",
+      "mileage": "35 kmpl",
+      "engine_displacement": "249.6 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -1005,6 +1021,8 @@
     {
       "make": "Hero",
       "model": "Xtreme 160R 4V",
+      "mileage": "48 kmpl",
+      "engine_displacement": "163 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -1097,6 +1115,8 @@
     {
       "make": "Hero",
       "model": "Passion Plus",
+      "mileage": "55 kmpl",
+      "engine_displacement": "110 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -1186,6 +1206,8 @@
     {
       "make": "Hero",
       "model": "Destini 125",
+      "mileage": "47 kmpl",
+      "engine_displacement": "124.6 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -1307,6 +1329,8 @@
     {
       "make": "Hero",
       "model": "Super Splendor XTEC",
+      "mileage": "60 kmpl",
+      "engine_displacement": "124.7 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -1390,6 +1414,8 @@
     {
       "make": "Hero",
       "model": "XPulse 210",
+      "mileage": "38 kmpl",
+      "engine_displacement": "210 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -1499,6 +1525,8 @@
     {
       "make": "Hero",
       "model": "Xtreme 160R",
+      "mileage": "40 kmpl",
+      "engine_displacement": "163 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -1566,6 +1594,8 @@
     {
       "make": "Hero",
       "model": "HF Deluxe Pro",
+      "mileage": "65 kmpl",
+      "engine_displacement": "97.2 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -1623,6 +1653,8 @@
     {
       "make": "Hero",
       "model": "Pleasure Plus",
+      "mileage": "51 kmpl",
+      "engine_displacement": "110.9 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -1756,6 +1788,8 @@
     {
       "make": "Hero",
       "model": "Xoom 125",
+      "mileage": "55 kmpl",
+      "engine_displacement": "124.6 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -1829,6 +1863,8 @@
     {
       "make": "Hero",
       "model": "Xoom 110",
+      "mileage": "50 kmpl",
+      "engine_displacement": "110.9 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -1953,6 +1989,8 @@
     {
       "make": "Hero",
       "model": "Karizma XMR",
+      "mileage": "35 kmpl",
+      "engine_displacement": "249.6 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -2036,6 +2074,8 @@
     {
       "make": "Hero",
       "model": "Xoom 160",
+      "mileage": "40 kmpl",
+      "engine_displacement": "156.2 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -2079,6 +2119,8 @@
     {
       "make": "Hero",
       "model": "HF 100",
+      "mileage": "65 kmpl",
+      "engine_displacement": "97.2 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -2118,6 +2160,8 @@
     {
       "make": "Hero",
       "model": "Mavrick 440",
+      "mileage": "35 kmpl",
+      "engine_displacement": "440 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -2218,6 +2262,8 @@
     {
       "make": "Hero",
       "model": "Glamour XTEC",
+      "mileage": "63 kmpl",
+      "engine_displacement": "124.7 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -2313,6 +2359,8 @@
     {
       "make": "Hero",
       "model": "Destini Prime",
+      "mileage": "56 kmpl",
+      "engine_displacement": "124.6 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -2356,6 +2404,8 @@
     {
       "make": "Hero",
       "model": "Destini 110",
+      "mileage": "55 kmpl",
+      "engine_displacement": "110.9 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -2441,8 +2491,9 @@
     {
       "make": "Hero",
       "model": "Xtreme 200S 4V",
+      "mileage": "40 kmpl",
+      "engine_displacement": "199.6 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on Dec, 2024",
       "variants": [
         {
           "variant_name": "Xtreme 200S 4V",
@@ -2485,13 +2536,15 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on Dec, 2024"
     },
     {
       "make": "Hero",
       "model": "Xtreme 200R 2018-2022",
+      "mileage": "39 kmpl",
+      "engine_displacement": "199.6 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on Mar, 2022",
       "variants": [
         {
           "variant_name": "Xtreme 200R 2018-2022",
@@ -2525,13 +2578,15 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on Mar, 2022"
     },
     {
       "make": "Hero",
       "model": "HX 250R",
+      "mileage": "30 kmpl",
+      "engine_displacement": "249 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on Jan, 2018",
       "variants": [
         {
           "variant_name": "HX 250R",
@@ -2557,13 +2612,15 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on Jan, 2018"
     },
     {
       "make": "Hero",
       "model": "Passion Pro BS4",
+      "mileage": "70 kmpl",
+      "engine_displacement": "110 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on Mar, 2020",
       "variants": [
         {
           "variant_name": "Passion Pro BS4",
@@ -2600,13 +2657,15 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on Mar, 2020"
     },
     {
       "make": "Hero",
       "model": "Splendor iSmart BS3",
+      "mileage": "65 kmpl",
+      "engine_displacement": "97.2 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on Aug, 2017",
       "variants": [
         {
           "variant_name": "Splendor iSmart BS3",
@@ -2646,11 +2705,14 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on Aug, 2017"
     },
     {
       "make": "Hero",
       "model": "MotoCorp Karizma 2003-2013",
+      "mileage": "35 kmpl",
+      "engine_displacement": "223 cc",
       "source_section": "Discontinued",
       "variants": [
         {
@@ -2663,8 +2725,9 @@
     {
       "make": "Hero",
       "model": "Karizma ZMR",
+      "mileage": "51 kmpl",
+      "engine_displacement": "223 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on Sep, 2019",
       "variants": [
         {
           "variant_name": "Karizma ZMR",
@@ -2704,13 +2767,15 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on Sep, 2019"
     },
     {
       "make": "Hero",
       "model": "Super Splendor",
+      "mileage": "60 kmpl",
+      "engine_displacement": "124.7 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on Sep, 2025",
       "variants": [
         {
           "variant_name": "Super Splendor",
@@ -2734,13 +2799,15 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on Sep, 2025"
     },
     {
       "make": "Hero",
       "model": "Xtreme Sports",
+      "mileage": "50 kmpl",
+      "engine_displacement": "149.2 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on Apr, 2020",
       "variants": [
         {
           "variant_name": "Xtreme Sports",
@@ -2771,13 +2838,15 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on Apr, 2020"
     },
     {
       "make": "Hero",
       "model": "HF Dawn (2012-2017)",
+      "mileage": "68 kmpl",
+      "engine_displacement": "97.2 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on Jan, 2018",
       "variants": [
         {
           "variant_name": "HF Dawn (2012-2017)",
@@ -2799,13 +2868,15 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on Jan, 2018"
     },
     {
       "make": "Hero",
       "model": "XPulse 200T BS4",
+      "mileage": "40 kmpl",
+      "engine_displacement": "199.6 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on May, 2020",
       "variants": [
         {
           "variant_name": "XPulse 200T BS4",
@@ -2823,13 +2894,15 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on May, 2020"
     },
     {
       "make": "Hero",
       "model": "Xtreme 200R BS4",
+      "mileage": "39 kmpl",
+      "engine_displacement": "199.6 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on May, 2020",
       "variants": [
         {
           "variant_name": "Xtreme 200R BS4",
@@ -2855,13 +2928,15 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on May, 2020"
     },
     {
       "make": "Hero",
       "model": "Xtreme 200S BS4",
+      "mileage": "38 kmpl",
+      "engine_displacement": "199.6 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on Mar, 2020",
       "variants": [
         {
           "variant_name": "Xtreme 200S BS4",
@@ -2887,13 +2962,15 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on Mar, 2020"
     },
     {
       "make": "Hero",
       "model": "Splendor Pro Classic",
+      "mileage": "70 kmpl",
+      "engine_displacement": "97.2 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on May, 2017",
       "variants": [
         {
           "variant_name": "Splendor Pro Classic",
@@ -2912,13 +2989,15 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on May, 2017"
     },
     {
       "make": "Hero",
       "model": "Passion XTEC",
+      "mileage": "60 kmpl",
+      "engine_displacement": "110 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on Dec, 2024",
       "variants": [
         {
           "variant_name": "Passion XTEC",
@@ -2944,13 +3023,15 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on Dec, 2024"
     },
     {
       "make": "Hero",
       "model": "CBZ",
+      "mileage": "45 kmpl",
+      "engine_displacement": "156.8 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on Oct, 2017",
       "variants": [
         {
           "variant_name": "CBZ",
@@ -2975,13 +3056,15 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on Oct, 2017"
     },
     {
       "make": "Hero",
       "model": "Splendor iSmart",
+      "mileage": "65 kmpl",
+      "engine_displacement": "97.2 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on Sep, 2022",
       "variants": [
         {
           "variant_name": "Splendor iSmart",
@@ -3018,13 +3101,15 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on Sep, 2022"
     },
     {
       "make": "Hero",
       "model": "Impulse",
+      "mileage": "40 kmpl",
+      "engine_displacement": "149.2 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on Jun, 2017",
       "variants": [
         {
           "variant_name": "Impulse",
@@ -3067,13 +3152,15 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on Jun, 2017"
     },
     {
       "make": "Hero",
       "model": "Ignitor",
+      "mileage": "50 kmpl",
+      "engine_displacement": "124.7 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on Nov, 2017",
       "variants": [
         {
           "variant_name": "Ignitor",
@@ -3113,13 +3200,15 @@
             }
           }
         }
-      ]
+      ],
+      "status": "Discontinued on Nov, 2017"
     },
     {
       "make": "Hero",
       "model": "MotoCorp Passion",
+      "mileage": "60 kmpl",
+      "engine_displacement": "110 cc",
       "source_section": "Discontinued",
-      "status": "Discontinued on Sep, 2012",
       "variants": [
         {
           "variant_name": "MotoCorp Passion",
@@ -3131,11 +3220,14 @@
             "chassis_and_suspension": {}
           }
         }
-      ]
+      ],
+      "status": "Discontinued on Sep, 2012"
     },
     {
       "make": "Hero",
       "model": "Passion XTEC",
+      "mileage": "60 kmpl",
+      "engine_displacement": "110 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -3210,6 +3302,8 @@
     {
       "make": "Hero",
       "model": "CBZ",
+      "mileage": "45 kmpl",
+      "engine_displacement": "156.8 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -3253,6 +3347,8 @@
     {
       "make": "Hero",
       "model": "Splendor iSmart",
+      "mileage": "65 kmpl",
+      "engine_displacement": "97.2 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -3311,6 +3407,8 @@
     {
       "make": "Hero",
       "model": "Impulse",
+      "mileage": "40 kmpl",
+      "engine_displacement": "149.2 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -3375,6 +3473,8 @@
     {
       "make": "Hero",
       "model": "Ignitor",
+      "mileage": "50 kmpl",
+      "engine_displacement": "124.7 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -3439,6 +3539,8 @@
     {
       "make": "Hero",
       "model": "MotoCorp Passion",
+      "mileage": "60 kmpl",
+      "engine_displacement": "110 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -3460,6 +3562,8 @@
     {
       "make": "Hero",
       "model": "HF Dawn (2018-2019)",
+      "mileage": "68 kmpl",
+      "engine_displacement": "97.2 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -3515,6 +3619,8 @@
     {
       "make": "Hero",
       "model": "HF Deluxe BS4",
+      "mileage": "65 kmpl",
+      "engine_displacement": "97.2 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -3580,6 +3686,8 @@
     {
       "make": "Hero",
       "model": "Splendor Pro",
+      "mileage": "70 kmpl",
+      "engine_displacement": "97.2 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -3653,6 +3761,8 @@
     {
       "make": "Hero",
       "model": "Glamour (2012-2016)",
+      "mileage": "55 kmpl",
+      "engine_displacement": "124.7 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -3720,6 +3830,8 @@
     {
       "make": "Hero",
       "model": "Achiever",
+      "mileage": "52 kmpl",
+      "engine_displacement": "149.2 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -3784,6 +3896,8 @@
     {
       "make": "Hero",
       "model": "Hunk",
+      "mileage": "53 kmpl",
+      "engine_displacement": "149.2 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -3839,6 +3953,8 @@
     {
       "make": "Hero",
       "model": "Xtreme",
+      "mileage": "45 kmpl",
+      "engine_displacement": "149.2 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -3885,6 +4001,8 @@
     {
       "make": "Hero",
       "model": "Karizma (2012-2017)",
+      "mileage": "35 kmpl",
+      "engine_displacement": "223 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -3923,6 +4041,8 @@
     {
       "make": "Hero",
       "model": "Passion XPro",
+      "mileage": "60 kmpl",
+      "engine_displacement": "110 cc",
       "source_section": "Available",
       "variants": [
         {
@@ -3996,6 +4116,8 @@
     {
       "make": "Hero",
       "model": "XPulse 200T 4V",
+      "mileage": "40 kmpl",
+      "engine_displacement": "199.6 cc",
       "source_section": "Available",
       "variants": [
         {

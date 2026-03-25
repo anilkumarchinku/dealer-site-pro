@@ -97,7 +97,103 @@ export async function getDetailedCarInfo(
         }
     }
 
-    return matchingCars;
+    return matchingCars.map(normalizeVariant);
+}
+
+/**
+ * Normalize variant field names from different scraped formats to standard DetailedCarInfo fields.
+ * Some brands use ex_showroom_min, displacement, fuel, power (string), etc.
+ */
+function normalizeVariant(car: any): DetailedCarInfo {
+    const c = { ...car };
+
+    // Price normalization
+    if (c.ex_showroom_price_min_inr == null && c.ex_showroom_min != null) {
+        c.ex_showroom_price_min_inr = c.ex_showroom_min;
+    }
+    if (c.ex_showroom_price_min_inr == null && c.ex_showroom_price_min != null) {
+        c.ex_showroom_price_min_inr = c.ex_showroom_price_min;
+    }
+    if (c.ex_showroom_price_max_inr == null && c.ex_showroom_max != null) {
+        c.ex_showroom_price_max_inr = c.ex_showroom_max;
+    }
+    if (c.ex_showroom_price_max_inr == null && c.ex_showroom_price_max != null) {
+        c.ex_showroom_price_max_inr = c.ex_showroom_price_max;
+    }
+
+    // On-road price normalization
+    if (c.hyderabad_on_road_price == null && c.hyderabad_on_road_price_inr != null) {
+        c.hyderabad_on_road_price = c.hyderabad_on_road_price_inr;
+    }
+
+    // Fuel type
+    if (!c.fuel_type && c.fuel) {
+        c.fuel_type = c.fuel;
+    }
+
+    // Engine displacement
+    if (c.engine_displacement_cc == null && typeof c.displacement === 'number') {
+        c.engine_displacement_cc = c.displacement;
+    }
+
+    // Power: parse "65.71 bhp @ 5500 rpm" → 66
+    if (c.power_bhp == null && typeof c.power === 'string') {
+        const m = c.power.match(/([\d.]+)\s*(?:bhp|ps|hp)/i);
+        if (m) c.power_bhp = Math.round(parseFloat(m[1]));
+    }
+
+    // Torque: parse "89 Nm @ 3500 rpm" → 89
+    if (c.torque_nm == null && typeof c.torque === 'string') {
+        const m = c.torque.match(/([\d.]+)\s*nm/i);
+        if (m) c.torque_nm = Math.round(parseFloat(m[1]));
+    }
+
+    // Mileage: parse from various sources
+    if (c.mileage_kmpl == null) {
+        if (typeof c.mileage === 'number' && c.mileage > 0) {
+            c.mileage_kmpl = c.mileage;
+        } else if (typeof c.mileage === 'string') {
+            const m = c.mileage.match(/([\d.]+)\s*km/i);
+            if (m) c.mileage_kmpl = parseFloat(m[1]);
+        }
+        // Fall back to mileage_kmpl_or_ev_range if it's a number or parseable string
+        if (c.mileage_kmpl == null && c.mileage_kmpl_or_ev_range != null) {
+            const val = c.mileage_kmpl_or_ev_range;
+            if (typeof val === 'number' && val > 0) {
+                c.mileage_kmpl = val;
+            } else if (typeof val === 'string') {
+                const parsed = parseFloat(val);
+                if (!isNaN(parsed) && parsed > 0) c.mileage_kmpl = parsed;
+            }
+        }
+    }
+    // Also set mileage_kmpl_or_ev_range if missing
+    if (c.mileage_kmpl_or_ev_range == null && c.mileage_kmpl != null) {
+        c.mileage_kmpl_or_ev_range = String(c.mileage_kmpl);
+    }
+
+    // Boot space: parse "214 L" → 214
+    if (c.boot_space_l == null && typeof c.boot_space === 'string') {
+        const m = c.boot_space.match(/([\d.]+)/);
+        if (m) c.boot_space_l = Math.round(parseFloat(m[1]));
+    } else if (c.boot_space_l == null && typeof c.boot_space === 'number') {
+        c.boot_space_l = c.boot_space;
+    }
+
+    // Ground clearance: parse "170 mm" → 170
+    if (c.ground_clearance_mm == null && typeof c.ground_clearance === 'string') {
+        const m = c.ground_clearance.match(/([\d.]+)/);
+        if (m) c.ground_clearance_mm = Math.round(parseFloat(m[1]));
+    } else if (c.ground_clearance_mm == null && typeof c.ground_clearance === 'number') {
+        c.ground_clearance_mm = c.ground_clearance;
+    }
+
+    // Dimensions: compose from length_mm/width_mm/height_mm if dimensions string is missing
+    if (!c.dimensions && c.length_mm && c.width_mm && c.height_mm) {
+        c.dimensions = `${c.length_mm} x ${c.width_mm} x ${c.height_mm} mm`;
+    }
+
+    return c as DetailedCarInfo;
 }
 
 /**

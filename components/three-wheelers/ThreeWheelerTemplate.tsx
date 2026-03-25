@@ -155,7 +155,8 @@ export function ThreeWheelerTemplate({
     const [isScrolled, setIsScrolled] = useState(false)
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [activeTab, setActiveTab] = useState<"home" | "inventory">("home")
-    const [leadVehicleId, setLeadVehicleId] = useState<string | null>(null)
+    const [leadVehicleId,   setLeadVehicleId]   = useState<string | null>(null)
+    const [leadVehicleName, setLeadVehicleName] = useState<string | undefined>(undefined)
 
     // Contact form state
     const [formData, setFormData] = useState({ name: "", phone: "", email: "", message: "" })
@@ -504,7 +505,7 @@ export function ThreeWheelerTemplate({
                                         vehicle={v}
                                         slug={slug}
                                         brandColor={accent}
-                                        onLead={vid => setLeadVehicleId(vid)}
+                                        onLead={vid => { setLeadVehicleId(vid); setLeadVehicleName(vehicles.find(v => v.id === vid) ? `${vehicles.find(v => v.id === vid)!.brand} ${vehicles.find(v => v.id === vid)!.model}` : undefined) }}
                                     />
                                 ))}
                             </div>
@@ -754,7 +755,7 @@ export function ThreeWheelerTemplate({
                                         vehicle={v}
                                         slug={slug}
                                         brandColor={accent}
-                                        onLead={vid => setLeadVehicleId(vid)}
+                                        onLead={vid => { setLeadVehicleId(vid); setLeadVehicleName(vehicles.find(v => v.id === vid) ? `${vehicles.find(v => v.id === vid)!.brand} ${vehicles.find(v => v.id === vid)!.model}` : undefined) }}
                                     />
                                 ))}
                             </div>
@@ -871,10 +872,11 @@ export function ThreeWheelerTemplate({
             <LeadFormModal
                 dealerId={dealerId}
                 vehicleId={leadVehicleId ?? undefined}
+                vehicleName={leadVehicleName}
                 leadType="best_price"
                 title="Get Best Price"
                 isOpen={!!leadVehicleId}
-                onClose={() => setLeadVehicleId(null)}
+                onClose={() => { setLeadVehicleId(null); setLeadVehicleName(undefined) }}
             />
         </div>
     )

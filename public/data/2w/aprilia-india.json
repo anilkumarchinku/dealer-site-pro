@@ -7,7 +7,8 @@
       "make": "Aprilia India",
       "model": "Aprilia RS 457",
       "status": "Available",
-      "price": null,
+      "price": "Rs 4,10,000",
+      "engine_displacement": "457 cc",
       "colors": [],
       "specifications": {
         "engine_details": "457 cc, Liquid-Cooled, 2 Parallel Twin cylinders (4 valves per cylinder)",
@@ -41,6 +42,7 @@
       "model": "Aprilia SR 160",
       "status": "Available",
       "price": null,
+      "engine_displacement": "160 cc",
       "colors": [],
       "specifications": {
         "engine_details": "160.03 cc displacement, Air-cooled, Single cylinder (1 cylinder), 4-stroke, SOHC 3-valve",
@@ -76,7 +78,8 @@
       "make": "Aprilia India",
       "model": "Aprilia SR 125",
       "status": "Available",
-      "price": null,
+      "price": "Rs 1,21,000",
+      "engine_displacement": "124.5 cc",
       "colors": [],
       "specifications": {
         "engine_details": "124.45 cc, Air-cooled, Single cylinder (4-stroke, SOHC 3-valve)",
@@ -107,7 +110,8 @@
       "make": "Aprilia India",
       "model": "Aprilia Tuono 457",
       "status": "Available",
-      "price": null,
+      "price": "Rs 3,95,000",
+      "engine_displacement": "457 cc",
       "colors": [],
       "specifications": {
         "engine_details": "457 cc displacement, liquid-cooled, parallel-twin (2 cylinders) with 4 valves per cylinder",
@@ -139,7 +143,8 @@
       "make": "Aprilia India",
       "model": "Aprilia RSV4",
       "status": "Available",
-      "price": null,
+      "price": "Rs 24,00,000",
+      "engine_displacement": "1099 cc",
       "colors": [],
       "specifications": {
         "engine_details": "1099 cc, Liquid-cooled, 4 V-configuration (V4)",
@@ -175,7 +180,8 @@
       "make": "Aprilia India",
       "model": "Aprilia SXR 125",
       "status": "Available",
-      "price": null,
+      "price": "Rs 1,25,000",
+      "engine_displacement": "124.5 cc",
       "colors": [],
       "specifications": {
         "engine_details": "125 cc displacement, Air-cooled, Single cylinder (1 cylinder)",
@@ -207,6 +213,7 @@
       "model": "Aprilia Tuareg 660",
       "status": "Available",
       "price": null,
+      "engine_displacement": "659 cc",
       "colors": [],
       "specifications": {
         "engine_details": "659 cc, liquid-cooled, 2-cylinder parallel-twin, 4 valve per cylinder, semi-dry sump",
@@ -237,7 +244,8 @@
       "make": "Aprilia India",
       "model": "Aprilia SR 125 hp.e",
       "status": "Available",
-      "price": null,
+      "price": "Rs 1,21,000",
+      "engine_displacement": "124.5 cc",
       "colors": [],
       "specifications": {
         "engine_details": "124.45 cc, Air Cooled, Single cylinder (1 cylinder)",
@@ -269,7 +277,8 @@
       "make": "Aprilia India",
       "model": "Aprilia SR 175 hp.e",
       "status": "Available",
-      "price": null,
+      "price": "Rs 1,45,000",
+      "engine_displacement": "174.5 cc",
       "colors": [],
       "specifications": {
         "engine_details": "174.7 cc, Air-cooled, Single-cylinder (1 cylinder), 4-stroke, SOHC 3-valve",
@@ -306,7 +315,8 @@
       "make": "Aprilia India",
       "model": "Aprilia RS 660",
       "status": "Available",
-      "price": null,
+      "price": "Rs 13,39,000",
+      "engine_displacement": "659 cc",
       "colors": [],
       "specifications": {
         "engine_details": "659 cc, liquid-cooled, parallel-twin (2 forward-facing cylinders), 4 valves per cylinder, Ride-By-Wire, 6-speed manual gearbox",
@@ -336,7 +346,8 @@
       "make": "Aprilia India",
       "model": "Aprilia SXR 160",
       "status": "Available",
-      "price": null,
+      "price": "Rs 1,35,000",
+      "engine_displacement": "160 cc",
       "colors": [],
       "specifications": {
         "engine_details": "160.03 cc displacement, Air-Cooled, Single cylinder (1 cylinder)",
@@ -365,7 +376,8 @@
       "make": "Aprilia India",
       "model": "Aprilia Tuono 660",
       "status": "Available",
-      "price": null,
+      "price": "Rs 12,80,000",
+      "engine_displacement": "659 cc",
       "colors": [],
       "specifications": {
         "engine_details": "659 cc, liquid-cooled, 2 parallel-twin cylinders (4 valves per cylinder)",
@@ -395,7 +407,8 @@
       "make": "Aprilia India",
       "model": "Aprilia SR Storm",
       "status": "Available",
-      "price": null,
+      "price": "Rs 89,000",
+      "engine_displacement": "124.5 cc",
       "colors": [],
       "specifications": {
         "engine_details": "124.49 cc air-cooled single-cylinder (3-valve) engine",
@@ -422,7 +435,7 @@
     {
       "make": "Aprilia India",
       "model": "Aprilia SR GT 400",
-      "status": "Available",
+      "status": "Upcoming",
       "price": null,
       "colors": [],
       "specifications": {
@@ -433,7 +446,7 @@
     {
       "make": "Aprilia India",
       "model": "Aprilia Tuareg 457",
-      "status": "Available",
+      "status": "Upcoming",
       "price": null,
       "colors": [],
       "specifications": {

@@ -268,6 +268,51 @@ export async function fetchCyeproAggregations(
     }
 }
 
+// ── Lead Forwarding ───────────────────────────────────────────────────────────
+
+export interface CyeproLeadPayload {
+    customerName:  string
+    customerPhone: string
+    customerEmail?: string
+    vehicleName?:  string
+    message?:      string
+    leadSource?:   string
+}
+
+/**
+ * Forward a website lead to Cyepro CRM.
+ * Fire-and-forget — call with `.catch(() => {})` to avoid blocking the response.
+ */
+export async function forwardLeadToCyepro(
+    apiKey:  string,
+    payload: CyeproLeadPayload,
+): Promise<void> {
+    if (!apiKey) return
+
+    try {
+        const res = await fetch(`${BASE_URL}/dynamicForms/leads`, {
+            method:  'POST',
+            headers: buildHeaders(apiKey),
+            body: JSON.stringify({
+                customerName:      payload.customerName,
+                customerMobile:    payload.customerPhone,
+                customerEmail:     payload.customerEmail ?? '',
+                vehicleInterest:   payload.vehicleName  ?? '',
+                remarks:           payload.message      ?? '',
+                leadSource:        payload.leadSource   ?? 'Website',
+            }),
+        })
+
+        if (!res.ok) {
+            logger.warn(`[Cyepro] Lead forward failed: ${res.status}`)
+        } else {
+            logger.log('[Cyepro] Lead forwarded successfully')
+        }
+    } catch (err) {
+        logger.warn('[Cyepro] Lead forward error:', err instanceof Error ? err.message : err)
+    }
+}
+
 /**
  * Convenience: fetch Cyepro vehicles and map them to the Car type
  * that templates already understand. Falls back to empty array on error.

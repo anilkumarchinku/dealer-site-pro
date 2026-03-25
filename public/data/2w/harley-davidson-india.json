@@ -3,6 +3,7 @@
     {
       "model_name": "Harley-Davidson X440",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/x440/specifications",
+      "price": "Discontinued",
       "engine_capacity_cc": "440 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/x440/specifications",
       "torque": "38 Nm @ 4000 rpm",
@@ -21,6 +22,7 @@
     {
       "model_name": "Harley-Davidson X440-T",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/x440-t/specifications",
+      "price": "Discontinued",
       "engine_capacity_cc": "440 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/x440-t/specifications",
       "torque": "38 Nm @ 4000 rpm",
@@ -39,6 +41,7 @@
     {
       "model_name": "Harley-Davidson Fat Boy",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/fat-boy/specifications",
+      "price": "Rs 22,00,000",
       "engine_capacity_cc": "1923 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/fat-boy/specifications",
       "torque": "168 Nm @ 3000 rpm",
@@ -57,6 +60,7 @@
     {
       "model_name": "Harley-Davidson Sportster S",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/sportster-s/specifications",
+      "price": "Rs 16,51,000",
       "engine_capacity_cc": "1252 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/sportster-s/specifications",
       "torque": "125 Nm @ 6000 rpm",
@@ -75,6 +79,7 @@
     {
       "model_name": "Harley-Davidson Pan America 1250",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/pan-america-1250/specifications",
+      "price": "Rs 21,99,000",
       "engine_capacity_cc": "1252 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/pan-america-1250/specifications",
       "torque": "125 Nm @ 6750 rpm",
@@ -93,10 +98,12 @@
     {
       "model_name": "Harley-Davidson CVO Road Glide",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/cvo-road-glide/specifications",
+      "price": "Rs 51,99,000",
       "engine_capacity_cc": "1982.83 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/cvo-road-glide/specifications",
       "torque": "189 Nm @ 3500 rpm",
       "torque_citation": "https://www.bikedekho.com/harley-davidson/cvo-road-glide/specifications",
+      "mileage": "14 kmpl",
       "other_performance_metrics": {
         "power_bhp": "116.6 PS @ 5020 rpm",
         "power_bhp_citation": "https://www.bikedekho.com/harley-davidson/cvo-road-glide/specifications",
@@ -109,6 +116,7 @@
     {
       "model_name": "Harley-Davidson Heritage Classic",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/heritage-classic/specifications",
+      "price": "Rs 21,50,000",
       "engine_capacity_cc": "1923 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/heritage-classic/specifications",
       "torque": "156 Nm @ 2750 rpm",
@@ -127,6 +135,7 @@
     {
       "model_name": "Harley-Davidson Nightster",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/nightster/specifications",
+      "price": "Rs 14,99,000",
       "engine_capacity_cc": "975 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/nightster/specifications",
       "torque": "95 Nm @ 5750 rpm",
@@ -145,6 +154,7 @@
     {
       "model_name": "Harley-Davidson Road Glide",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/road-glide/specifications",
+      "price": "Rs 34,00,000",
       "engine_capacity_cc": "1923 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/road-glide/specifications",
       "torque": "175 Nm @ 3500 rpm",
@@ -163,10 +173,12 @@
     {
       "model_name": "Harley-Davidson CVO Street Glide",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/cvo-street-glide/specifications",
+      "price": "Rs 51,99,000",
       "engine_capacity_cc": "1982 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/cvo-street-glide/specifications",
       "torque": "189 Nm @ 3500 rpm",
       "torque_citation": "https://www.bikedekho.com/harley-davidson/cvo-street-glide/specifications",
+      "mileage": "14 kmpl",
       "other_performance_metrics": {
         "power_bhp": "116.6 PS @ 5020 rpm",
         "power_bhp_citation": "https://www.bikedekho.com/harley-davidson/cvo-street-glide/specifications",
@@ -179,6 +191,7 @@
     {
       "model_name": "Harley-Davidson Street Glide",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/street-glide/specifications",
+      "price": "Rs 33,00,000",
       "engine_capacity_cc": "1923 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/street-glide/specifications",
       "torque": "175 Nm @ 3500 rpm",
@@ -197,6 +210,7 @@
     {
       "model_name": "Harley-Davidson Breakout",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/breakout/specifications",
+      "price": "Rs 21,50,000",
       "engine_capacity_cc": "1923 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/breakout/specifications",
       "torque": "168 Nm @ 3000 rpm",
@@ -215,6 +229,7 @@
     {
       "model_name": "Harley-Davidson Street Bob",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/street-bob/specifications",
+      "price": "Rs 13,69,000",
       "engine_capacity_cc": "1923 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/street-bob/specifications",
       "torque": "156 Nm @ 2750 rpm",
@@ -233,10 +248,12 @@
     {
       "model_name": "Harley-Davidson Street 750",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/street-750/specifications",
+      "price": "Discontinued",
       "engine_capacity_cc": "749 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/street-750/specifications",
       "torque": "60 Nm @ 3750 rpm",
       "torque_citation": "https://www.bikedekho.com/harley-davidson/street-750/specifications",
+      "mileage": "20 kmpl",
       "other_performance_metrics": {
         "fuel_type": "Petrol",
         "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/street-750/specifications",
@@ -247,6 +264,7 @@
     {
       "model_name": "Harley-Davidson Iron 883",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/iron-883/specifications",
+      "price": "Discontinued",
       "engine_capacity_cc": "883 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/iron-883/specifications",
       "torque": "69 Nm @ 3500 rpm",
@@ -263,6 +281,7 @@
     {
       "model_name": "Harley-Davidson Forty Eight",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/forty-eight/specifications",
+      "price": "Discontinued",
       "engine_capacity_cc": "1202 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/forty-eight/specifications",
       "torque": "95 Nm @ 3,000 rpm",
@@ -279,6 +298,7 @@
     {
       "model_name": "Harley-Davidson Fat Bob",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/fat-bob/specifications",
+      "price": "Discontinued",
       "engine_capacity_cc": "1585 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/fat-bob/specifications",
       "torque": "121 Nm @ 3500 rpm",
@@ -297,10 +317,12 @@
     {
       "model_name": "Harley-Davidson Iron 1200",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/iron-1200/specifications",
+      "price": "Discontinued",
       "engine_capacity_cc": "1202 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/iron-1200/specifications",
       "torque": "96 Nm @ 3500 rpm",
       "torque_citation": "https://www.bikedekho.com/harley-davidson/iron-1200/specifications",
+      "mileage": "20 kmpl",
       "other_performance_metrics": {
         "fuel_type": "Petrol",
         "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/iron-1200/specifications",
@@ -311,10 +333,12 @@
     {
       "model_name": "Harley-Davidson Roadster",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/roadster/specifications",
+      "price": "Discontinued",
       "engine_capacity_cc": "883 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/roadster/specifications",
       "torque": "96 Nm @ 4000 rpm",
       "torque_citation": "https://www.bikedekho.com/harley-davidson/roadster/specifications",
+      "mileage": "20 kmpl",
       "other_performance_metrics": {
         "fuel_type": "Petrol",
         "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/roadster/specifications"
@@ -323,6 +347,7 @@
     {
       "model_name": "Harley-Davidson X 500",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/x-500/specifications",
+      "price": "Discontinued",
       "engine_capacity_cc": "500 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/x-500/specifications",
       "torque": "46 Nm @ 6000 rpm",
@@ -341,8 +366,10 @@
     {
       "model_name": "Harley-Davidson X 350",
       "model_name_citation": "https://www.bikedekho.com/harley-davidson/x-350/specifications",
+      "price": "Discontinued",
       "engine_capacity_cc": "353 cc",
       "engine_capacity_cc_citation": "https://www.bikedekho.com/harley-davidson/x-350/specifications",
+      "mileage": "25 kmpl",
       "other_performance_metrics": {
         "fuel_type": "Petrol",
         "fuel_type_citation": "https://www.bikedekho.com/harley-davidson/x-350/specifications",

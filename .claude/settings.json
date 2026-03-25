@@ -22,7 +22,17 @@
       "Bash(for f in public/data/2w/*.json)",
       "Bash(do python3 -c \"import json; json.load\\(open\\(''$f''\\)\\)\")",
       "Read(//Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/2w/**)",
-      "Read(//Users/anilkumarkolukulapalli/projects/cyepro/**)"
+      "Read(//Users/anilkumarkolukulapalli/projects/cyepro/**)",
+      "Bash(__NEW_LINE_d3ed95a297d5f209__ cp \"/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-logos/suzuki-motorcycle.png\" \"/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/logos/maruti-suzuki.png\")",
+      "mcp__claude_ai_SupaBase__list_tables",
+      "Bash(while read f)",
+      "Bash(do ls \"/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/2w/$f/\")",
+      "Bash(/tmp/audit-3w-transmission.js:*)",
+      "Bash(/tmp/audit-carcard-trans.js:*)",
+      "Bash(/tmp/audit-2w-transmission.js:*)"
+    ],
+    "additionalDirectories": [
+      "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/logos/2w"
     ]
   }
 }

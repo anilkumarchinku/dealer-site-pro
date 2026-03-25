@@ -3,6 +3,7 @@
     {
       "model_name": "Husqvarna Svartpilen 250",
       "model_name_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250",
+      "price": "Rs 2,10,000",
       "engine_details": "249 cc single-cylinder, 4-stroke, liquid-cooled DOHC engine with 4 valves, fuel-injection, 6-speed gearbox, bore 72 mm x stroke 61.1 mm, BS6-2.0 emission compliance, delivering 30 PS @ 9000 rpm",
       "engine_details_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250",
       "torque": "24 Nm @ 7500 rpm",
@@ -65,6 +66,7 @@
     {
       "model_name": "Husqvarna Vitpilen 250",
       "model_name_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250",
+      "price": "Rs 2,10,000",
       "engine_details": "249.07 cc liquid-cooled, single-cylinder, SOHC engine with 4 valves; fuel-injection system; power output 31 PS @ 9500 rpm; 6-speed manual gearbox with assist-and-slipper clutch.",
       "engine_details_citation": "https://www.bikedekho.com/husqvarna/vitpilen-250",
       "torque": "25 Nm @ 7500 rpm",
@@ -135,6 +137,7 @@
     {
       "model_name": "Husqvarna Svartpilen 401",
       "model_name_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401",
+      "price": "Rs 3,00,000",
       "engine_details": "398.63 cc liquid-cooled single-cylinder DOHC engine, 6-speed gearbox, 46 PS @ 9000 rpm, 2 valves per cylinder, ride-by-wire throttle, assist-and-slipper clutch, BS6-2.0 emission compliant.",
       "engine_details_citation": "https://www.bikedekho.com/husqvarna/svartpilen-401",
       "torque": "39 Nm @ 7000 rpm",
@@ -201,6 +204,7 @@
     {
       "model_name": "2026 Husqvarna Vitpilen 250",
       "model_name_citation": "https://www.bikedekho.com/husqvarna/2025-vitpilen-250",
+      "price": "Rs 2,10,000",
       "engine_details": "249.07 cc single-cylinder engine, fuel-injected, complies with BS6-2.0 emission standards, produces 31 PS @ 9500 rpm",
       "engine_details_citation": "https://www.bikedekho.com/husqvarna/2025-vitpilen-250",
       "torque": "25 Nm @ 7500 rpm",
@@ -231,6 +235,7 @@
     {
       "model_name": "2026 Husqvarna Svartpilen 401",
       "model_name_citation": "https://www.bikedekho.com/husqvarna/2025-svartpilen-401",
+      "price": "Rs 3,00,000",
       "engine_details": "398.63 cc single-cylinder petrol engine, BS6-2.0 emission standard, manual transmission, produces 46 PS @ 9000 rpm",
       "engine_details_citation": "https://www.bikedekho.com/husqvarna/2025-svartpilen-401",
       "torque": "39 Nm @ 7000 rpm",
@@ -261,6 +266,7 @@
     {
       "model_name": "Husqvarna Vektorr Concept",
       "model_name_citation": "https://www.bikedekho.com/husqvarna/vektorr-concept",
+      "price": "Discontinued",
       "engine_details": "Electric motor (BLDC) delivering 4.4 kW of power with a peak torque of 140 Nm; brushless DC motor.",
       "engine_details_citation": "https://www.bikedekho.com/husqvarna/vektorr-concept",
       "torque": "140 Nm (Motor torque)",
@@ -295,6 +301,7 @@
     {
       "model_name": "Husqvarna Svartpilen 201",
       "model_name_citation": "https://www.bikedekho.com/husqvarna/svartpilen-200",
+      "price": "Discontinued",
       "engine_details": "199.5 cc liquid-cooled, 1-cylinder 4-stroke engine with fuel injection, 6-speed manual transmission, producing 25.8 PS peak power",
       "engine_details_citation": "https://www.bikedekho.com/husqvarna/svartpilen-200",
       "torque": "14.73 Nm @ 7500 rpm",
@@ -341,6 +348,7 @@
     {
       "model_name": "Husqvarna Vitpilen 125",
       "model_name_citation": "https://www.bikedekho.com/husqvarna/vitpilen-125",
+      "price": "Discontinued",
       "engine_details": "124.7 cc single-cylinder, 4-valve, liquid-cooled, fuel-injection, DOHC engine delivering 14.5 PS @ 9250 rpm; 6-speed manual gearbox.",
       "engine_details_citation": "https://www.bikedekho.com/husqvarna/vitpilen-125",
       "torque": "12 Nm @ 8000 rpm",
