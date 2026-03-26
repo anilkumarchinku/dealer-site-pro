@@ -36,6 +36,8 @@ export interface ThreeWheelerVehicle {
 
     fuel_type:              ThreeWheelerFuelType
     engine_cc:              number | null
+    max_power:              string | null
+    torque:                 string | null
     battery_kwh:            number | null
     range_km:               number | null
     charging_time_hours:    number | null

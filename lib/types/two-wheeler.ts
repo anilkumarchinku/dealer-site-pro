@@ -62,6 +62,8 @@ export interface TwoWheelerVehicle {
     engine_cc:               number | null
     battery_kwh:             number | null
     fuel_type:               TwoWheelerFuelType
+    max_power:               string | null
+    torque:                  string | null
     mileage_kmpl:            number | null
     range_km:                number | null
     top_speed_kmph:          number | null

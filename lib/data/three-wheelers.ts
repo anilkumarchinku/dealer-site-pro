@@ -53,8 +53,10 @@ function buildThreeWheelerEntry(
         year:                   CURRENT_YEAR,
         fuel_type:              fuelType,
         engine_cc:              enrichment?.engine_cc ?? null,
+        max_power:              enrichment?.max_power ?? null,
+        torque:                 enrichment?.torque ?? null,
         battery_kwh:            null,
-        range_km:               null,
+        range_km:               enrichment?.range_km ?? null,
         charging_time_hours:    null,
         battery_warranty_years: null,
         transmission:           enrichment?.transmission ?? 'Automatic',
@@ -65,10 +67,10 @@ function buildThreeWheelerEntry(
         mileage_kmpl:           enrichment?.mileage_kmpl ?? null,
         cng_mileage_km_per_kg:  fuelType === 'cng' ? 28 : null,
         permit_type:            null,
-        gvw_kg:                 null,
+        gvw_kg:                 enrichment?.gvw_kg ?? null,
         fame_subsidy_eligible:  false,
         bs6_compliant:          true,
-        ex_showroom_price_paise: 0,
+        ex_showroom_price_paise: enrichment?.ex_showroom_price_paise ?? 0,
         on_road_price_paise:    null,
         emi_starting_paise:     null,
         stock_status:           'available',
@@ -88,7 +90,8 @@ function buildThreeWheelerEntry(
 type CatalogEntry = Omit<ThreeWheelerVehicle,
     'id' | 'dealer_id' | 'created_at' | 'updated_at' | 'views' | 'transmission' |
     'payload_kg' | 'body_type' | 'passenger_capacity' | 'cng_mileage_km_per_kg' |
-    'permit_type' | 'gvw_kg' | 'brochure_url' | 'video_url' | 'is_featured'
+    'permit_type' | 'gvw_kg' | 'brochure_url' | 'video_url' | 'is_featured' |
+    'max_power' | 'torque'
 >
 
 
@@ -820,6 +823,8 @@ export function getThreeWheelerCatalog(brand: string, dealerId: string): ThreeWh
                 updated_at: NOW,
                 views:      0,
                 engine_cc,
+                max_power:             enrichment?.max_power ?? null,
+                torque:                enrichment?.torque ?? null,
                 mileage_kmpl,
                 range_km,
                 gvw_kg:                gvw_kg_val,

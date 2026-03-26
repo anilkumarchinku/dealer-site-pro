@@ -18,6 +18,7 @@ export interface BrandModelEnrichment {
     colors: { name: string; hex: string }[]
     features: string[]
     description: string | null
+    max_power: string | null
     torque: string | null
     variant: string | null
     all_variants: { name: string; price_paise: number }[]
@@ -305,11 +306,20 @@ function extractFromFlatItem(item: any): BrandModelEnrichment {
         || techEngine['Mileage']   // from technical_specifications
         || null
 
+    // Power — check all known field paths across brands
+    const powerStr = item.max_power || item.motor_power
+        || specs['max_power'] || specs['power_bhp'] || specs['Motor Power'] || specs['Motor Power (Peak)']
+        || techEngine['Max Power'] || techEngine['Power']
+        || (item.other_performance_metrics || {})['power_bhp']
+        || null
+
     // Torque — check top-level, specs, and technical_specifications
-    const torqueStr = item.torque || specs['Torque'] || techEngine['Max Torque'] || null
+    const torqueStr = item.torque || specs['Torque'] || specs['torque_nm'] || specs['Torque (Wheel)'] || specs['Torque (Motor)']
+        || techEngine['Max Torque'] || null
 
     // Top speed — check top-level, specs, and technical_specifications
-    const topSpeedStr = item.top_speed || specs['Top Speed'] || techEngine['Top Speed'] || null
+    const topSpeedStr = item.top_speed || specs['Top Speed'] || specs['top_speed_kmph'] || specs['top_speed']
+        || techEngine['Top Speed'] || null
 
     // Transmission / Gear Box — check all known field paths across brands
     const otherPerf = item.other_performance_metrics || {}
@@ -341,7 +351,8 @@ function extractFromFlatItem(item: any): BrandModelEnrichment {
         colors: [],
         features,
         description: null,
-        torque: torqueStr,
+        max_power: typeof powerStr === 'number' ? `${powerStr} bhp` : powerStr,
+        torque: typeof torqueStr === 'number' ? `${torqueStr} Nm` : torqueStr,
         variant: null,
         all_variants: [],
         stock_status: 'available' as const,
@@ -398,6 +409,7 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
             colors,
             features,
             description: null,
+            max_power: engine['Max Power'] || engine['Power'] || null,
             torque: engine['Max Torque'] || null,
             variant: firstVar.variant_name || null,
             all_variants: allVariants,
@@ -434,6 +446,7 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
             colors,
             features,
             description: null,
+            max_power: specs['Motor Power'] || specs['Motor Power (Peak)'] || null,
             torque: specs['Torque (Motor)'] || null,
             variant: null,
             all_variants: [],
@@ -469,6 +482,9 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
         }),
         features: genFeatures,
         description: specs.description || null,
+        max_power: techEngine['Max Power'] || techEngine['Power']
+            || specs.max_power || specs.power || (v.other_performance_metrics || {})['power_bhp']
+            || null,
         torque: specs.torque || v.torque || techEngine['Max Torque'] || null,
         variant: null,
         all_variants: [],

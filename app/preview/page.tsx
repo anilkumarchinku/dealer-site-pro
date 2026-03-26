@@ -63,8 +63,8 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): import("@/lib/types/c
         },
         engine: {
             type: v.fuel_type === 'electric' ? 'Electric' : 'Petrol',
-            power: '—',
-            torque: '—',
+            power: v.max_power || '—',
+            torque: v.torque || '—',
             displacement: v.engine_cc ?? undefined,
             batteryCapacity: v.battery_kwh ?? undefined,
         },
@@ -106,8 +106,8 @@ function threeWheelersToCars(vehicles: ThreeWheelerVehicle[]): import("@/lib/typ
         },
         engine: {
             type: v.fuel_type === 'electric' ? 'Electric' : v.fuel_type === 'cng' ? 'CNG' : 'Petrol',
-            power: '—',
-            torque: '—',
+            power: v.max_power || '—',
+            torque: v.torque || '—',
             displacement: v.engine_cc ?? undefined,
             batteryCapacity: v.battery_kwh ?? undefined,
         },

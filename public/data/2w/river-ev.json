@@ -4,26 +4,40 @@
   "type": "2w",
   "vehicles": [
     {
-      "model": "Indie",
-      "variant": "Standard",
-      "type": "scooter",
-      "fuel_type": "electric",
-      "price": "₹1,24,900",
-      "range": "161 km",
-      "battery_capacity": "4 kWh",
-      "engine": "4.3 kW PMSM",
-      "top_speed": "90 kmph",
-      "torque": "89 Nm",
-      "colors": [
-        { "name": "Cosmic Black", "hex": "#1A1A1A" },
-        { "name": "Stellar White", "hex": "#F0F0F0" },
-        { "name": "Neptune Blue", "hex": "#1B4F72" },
-        { "name": "Sunset Red", "hex": "#C0392B" }
+      "model_name": "River Indie",
+      "model_name_citation": "https://www.river.co.in/indie",
+      "price": "₹1,24,999",
+      "price_citation": "https://www.river.co.in/indie",
+      "color_options": [
+        {
+          "value": "Sparkling Blue",
+          "value_citation": "https://www.river.co.in/indie"
+        },
+        {
+          "value": "Astro Grey",
+          "value_citation": "https://www.river.co.in/indie"
+        },
+        {
+          "value": "Scuba Blue",
+          "value_citation": "https://www.river.co.in/indie"
+        },
+        {
+          "value": "Mars Orange",
+          "value_citation": "https://www.river.co.in/indie"
+        }
       ],
-      "features": ["161 km ARAI Range", "90 kmph Top Speed", "Large Frunk (Front Trunk)", "Multi-mode Riding", "LED Lighting", "Digital Cluster", "USB Type-C Charging", "Reverse Mode", "Hill Hold", "Waterproof IP67 Battery"],
-      "description": "River Indie — India's first electric scooter with a frunk (front trunk), offering 161 km ARAI range and a top speed of 90 kmph.",
-      "images": [],
-      "availability": "available"
+      "specifications": {
+        "range": "120 km",
+        "range_citation": "https://www.river.co.in/indie",
+        "motor_power": "3 kW",
+        "motor_power_citation": "https://www.river.co.in/indie",
+        "charging_time": "5 hours",
+        "charging_time_citation": "https://www.bikedekho.com/river/indie/specifications",
+        "battery_capacity": "4 kWh",
+        "battery_capacity_citation": "https://www.bikedekho.com/river/indie/specifications",
+        "top_speed": "90 km/Hr",
+        "top_speed_citation": "https://www.bikedekho.com/river/indie/specifications"
+      }
     }
   ]
 }
