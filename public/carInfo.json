@@ -11587,6 +11587,54 @@
       "torque_nm": 700,
       "mileage_kmpl": 0,
       "seating_capacity": 5
+    },
+    "53": {
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "variant_name": "Land Cruiser 200 V8 Petrol",
+      "ex_showroom_price_min_inr": 8602000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 4461,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 9
+    },
+    "54": {
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "variant_name": "Land Cruiser 200 VX Standard",
+      "ex_showroom_price_min_inr": 8602000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 4461,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 9
+    },
+    "55": {
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "variant_name": "Land Cruiser 200 VX Premium",
+      "ex_showroom_price_min_inr": 11900000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 4461,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 11
+    },
+    "56": {
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "variant_name": "(Top Model)",
+      "ex_showroom_price_min_inr": 14700000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 4461,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 11
     }
   },
   "honda": {
@@ -11916,20 +11964,6 @@
     },
     "2": {
       "make": "BMW",
-      "model": "3 Series Gran Limousine",
-      "variant_name": "330Li M Sport",
-      "ex_showroom_price_min_inr": 6050000,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Petrol",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 1998,
-      "power_bhp": 254.79,
-      "torque_nm": 400,
-      "mileage_kmpl": 15.39,
-      "seating_capacity": 0
-    },
-    "3": {
-      "make": "BMW",
       "model": "7 Series",
       "variant_name": "740i M Sport",
       "ex_showroom_price_min_inr": 18300000,
@@ -11942,7 +11976,7 @@
       "mileage_kmpl": 12.1,
       "seating_capacity": 0
     },
-    "4": {
+    "3": {
       "make": "BMW",
       "model": "7 Series",
       "variant_name": "740d M Sport",
@@ -11956,7 +11990,7 @@
       "mileage_kmpl": 12.1,
       "seating_capacity": 0
     },
-    "5": {
+    "4": {
       "make": "BMW",
       "model": "i4",
       "variant_name": "eDrive35 M Sport",
@@ -11970,7 +12004,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "6": {
+    "5": {
       "make": "BMW",
       "model": "i5",
       "variant_name": "M60 xDrive",
@@ -11984,7 +12018,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "7": {
+    "6": {
       "make": "BMW",
       "model": "M5",
       "variant_name": "xDrive",
@@ -11998,49 +12032,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "8": {
-      "make": "BMW",
-      "model": "X3",
-      "variant_name": "xDrive 20 M Sport",
-      "ex_showroom_price_min_inr": 7120000,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Petrol",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 1998,
-      "power_bhp": 187,
-      "torque_nm": 310,
-      "mileage_kmpl": 0,
-      "seating_capacity": 0
-    },
-    "9": {
-      "make": "BMW",
-      "model": "X5",
-      "variant_name": "xDrive40i xLine",
-      "ex_showroom_price_min_inr": 9370000,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Petrol",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 2998,
-      "power_bhp": 375.48,
-      "torque_nm": 520,
-      "mileage_kmpl": 0,
-      "seating_capacity": 0
-    },
-    "10": {
-      "make": "BMW",
-      "model": "X7",
-      "variant_name": "xDrive40i M Sport Signature",
-      "ex_showroom_price_min_inr": 12581000,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Petrol",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 2998,
-      "power_bhp": 375.48,
-      "torque_nm": 520,
-      "mileage_kmpl": 0,
-      "seating_capacity": 0
-    },
-    "11": {
+    "7": {
       "make": "BMW",
       "model": "XM",
       "variant_name": "xDrive",
@@ -12054,21 +12046,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "12": {
-      "make": "BMW",
-      "model": "Z4",
-      "variant_name": "M40i",
-      "ex_showroom_price_min_inr": 8790000,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Petrol",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 2998,
-      "power_bhp": 335,
-      "torque_nm": 500,
-      "mileage_kmpl": 0,
-      "seating_capacity": 0
-    },
-    "13": {
+    "8": {
       "make": "BMW",
       "model": "3 Series",
       "variant_name": "M340i xDrive",
@@ -12082,7 +12060,7 @@
       "mileage_kmpl": 13.02,
       "seating_capacity": 5
     },
-    "14": {
+    "9": {
       "make": "BMW",
       "model": "3 Series",
       "variant_name": "M340i 50 Jahre M Edition",
@@ -12096,7 +12074,7 @@
       "mileage_kmpl": 13.02,
       "seating_capacity": 5
     },
-    "15": {
+    "10": {
       "make": "BMW",
       "model": "5 Series",
       "variant_name": "530i M Sport Pro",
@@ -12110,7 +12088,7 @@
       "mileage_kmpl": 10.9,
       "seating_capacity": 5
     },
-    "16": {
+    "11": {
       "make": "BMW",
       "model": "X1",
       "variant_name": "sDrive18i M Sport",
@@ -12124,7 +12102,7 @@
       "mileage_kmpl": 20.37,
       "seating_capacity": 5
     },
-    "17": {
+    "12": {
       "make": "BMW",
       "model": "X1",
       "variant_name": "sDrive18d M Sport",
@@ -12138,35 +12116,7 @@
       "mileage_kmpl": 20.37,
       "seating_capacity": 5
     },
-    "18": {
-      "make": "BMW",
-      "model": "X6",
-      "variant_name": "xDrive40i M Sport",
-      "ex_showroom_price_min_inr": 9500000,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Petrol",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 2998,
-      "power_bhp": 335.25,
-      "torque_nm": 450,
-      "mileage_kmpl": 10.31,
-      "seating_capacity": 5
-    },
-    "19": {
-      "make": "BMW",
-      "model": "M2",
-      "variant_name": "M2 Competition",
-      "ex_showroom_price_min_inr": 10250000,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Petrol",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 2993,
-      "power_bhp": 523,
-      "torque_nm": 650,
-      "mileage_kmpl": 10.19,
-      "seating_capacity": 4
-    },
-    "20": {
+    "13": {
       "make": "BMW",
       "model": "iX",
       "variant_name": "xDrive50",
@@ -12180,7 +12130,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 5
     },
-    "21": {
+    "14": {
       "make": "BMW",
       "model": "i7",
       "variant_name": "eDrive50",
@@ -12194,7 +12144,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 5
     },
-    "22": {
+    "15": {
       "make": "BMW",
       "model": "i7",
       "variant_name": "xDrive60",
@@ -12208,7 +12158,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 5
     },
-    "23": {
+    "16": {
       "make": "BMW",
       "model": "6 Series Gran Turismo",
       "variant_name": "630i M Sport",
@@ -12222,7 +12172,7 @@
       "mileage_kmpl": 13.32,
       "seating_capacity": 5
     },
-    "24": {
+    "17": {
       "make": "BMW",
       "model": "6 Series Gran Turismo",
       "variant_name": "630i M Sport Signature",
@@ -12236,7 +12186,7 @@
       "mileage_kmpl": 13.32,
       "seating_capacity": 5
     },
-    "25": {
+    "18": {
       "make": "BMW",
       "model": "iX1",
       "variant_name": "eDrive20 M Sport",
@@ -12249,6 +12199,222 @@
       "torque_nm": 250,
       "mileage_kmpl": 0,
       "seating_capacity": 5
+    },
+    "19": {
+      "make": "BMW",
+      "model": "3 Series Gran Limousine",
+      "variant_name": "320Ld M Sport Pro",
+      "ex_showroom_price_min_inr": 6150000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1998,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 19.61
+    },
+    "20": {
+      "make": "BMW",
+      "model": "3 Series Gran Limousine",
+      "variant_name": "3 Series Long Wheelbase 330Li M Sport",
+      "ex_showroom_price_min_inr": 6150000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1998,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 15.39
+    },
+    "21": {
+      "make": "BMW",
+      "model": "3 Series Gran Limousine",
+      "variant_name": "(Top Model)",
+      "ex_showroom_price_min_inr": 6290000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1998,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 19.61
+    },
+    "22": {
+      "make": "BMW",
+      "model": "X3",
+      "variant_name": "X3 xDrive 30 M Sport Pro",
+      "ex_showroom_price_min_inr": 7450000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1998,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 14.61
+    },
+    "23": {
+      "make": "BMW",
+      "model": "X3",
+      "variant_name": "(Top Model)",
+      "ex_showroom_price_min_inr": 7450000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1995,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 17.86
+    },
+    "24": {
+      "make": "BMW",
+      "model": "X5",
+      "variant_name": "X5 xDrive30d xLine",
+      "ex_showroom_price_min_inr": 9550000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 2993,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 12
+    },
+    "25": {
+      "make": "BMW",
+      "model": "X5",
+      "variant_name": "X5 xDrive40i M Sport",
+      "ex_showroom_price_min_inr": 10300000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 2998,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 12
+    },
+    "26": {
+      "make": "BMW",
+      "model": "X5",
+      "variant_name": "(Top Model)",
+      "ex_showroom_price_min_inr": 10500000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 2993,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 12
+    },
+    "27": {
+      "make": "BMW",
+      "model": "X7",
+      "variant_name": "X7 xDrive40d Design Pure Excellence",
+      "ex_showroom_price_min_inr": 12800000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 2993,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 14.31
+    },
+    "28": {
+      "make": "BMW",
+      "model": "X7",
+      "variant_name": "X7 xDrive40i M Sport",
+      "ex_showroom_price_min_inr": 12800000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 2998,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 11.29
+    },
+    "29": {
+      "make": "BMW",
+      "model": "X7",
+      "variant_name": "(Top Model)",
+      "ex_showroom_price_min_inr": 13200000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 2993,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 14.31
+    },
+    "30": {
+      "make": "BMW",
+      "model": "Z4",
+      "variant_name": "Z4 M40i Pure Impulse AT",
+      "ex_showroom_price_min_inr": 9170000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 2998,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "31": {
+      "make": "BMW",
+      "model": "Z4",
+      "variant_name": "(Top Model)",
+      "ex_showroom_price_min_inr": 9520000,
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "engine_displacement_cc": 2998,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "32": {
+      "make": "BMW",
+      "model": "X6",
+      "variant_name": "X6 xDrive40i xLine",
+      "ex_showroom_price_min_inr": 10400000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 2998,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 10.31
+    },
+    "33": {
+      "make": "BMW",
+      "model": "X6",
+      "variant_name": "(Top Model)",
+      "ex_showroom_price_min_inr": 13900000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 2998,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 10.31
+    },
+    "34": {
+      "make": "BMW",
+      "model": "X6",
+      "variant_name": "(Top Model)",
+      "ex_showroom_price_min_inr": 14900000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 2998,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 10.31
+    },
+    "35": {
+      "make": "BMW",
+      "model": "M2",
+      "variant_name": "M2 Coupe Manual",
+      "ex_showroom_price_min_inr": 10400000,
+      "fuel_type": "Petrol",
+      "transmission": "Manual",
+      "engine_displacement_cc": 2993,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 10.19
+    },
+    "36": {
+      "make": "BMW",
+      "model": "M2",
+      "variant_name": "(Top Model)",
+      "ex_showroom_price_min_inr": 16600000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 2993,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 10.19
     }
   },
   "audi": {
