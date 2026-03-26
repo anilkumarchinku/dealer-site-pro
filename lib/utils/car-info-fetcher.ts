@@ -131,31 +131,86 @@ function normalizeVariant(car: any): DetailedCarInfo {
         c.ex_showroom_price_max_inr = c.ex_showroom_price_max;
     }
 
+    // MG uses ex_showroom_price_range as comma-formatted string "9,78,999"
+    if (c.ex_showroom_price_min_inr == null && c.ex_showroom_price_range != null) {
+        c.ex_showroom_price_min_inr = parseInt(String(c.ex_showroom_price_range).replace(/[₹,\s]/g, ''), 10) || 0;
+    }
+    // Pricing max from pricing object
+    if (c.ex_showroom_price_max_inr == null && c.pricing?.ex_showroom_max != null) {
+        c.ex_showroom_price_max_inr = c.pricing.ex_showroom_max;
+    }
+
     // On-road price normalization
     if (c.hyderabad_on_road_price == null && c.hyderabad_on_road_price_inr != null) {
         c.hyderabad_on_road_price = c.hyderabad_on_road_price_inr;
     }
+    // MG uses default_hyderabad_on_road_price as comma string
+    if (c.hyderabad_on_road_price == null && c.default_hyderabad_on_road_price != null) {
+        c.hyderabad_on_road_price = parseInt(String(c.default_hyderabad_on_road_price).replace(/[₹,\s]/g, ''), 10) || 0;
+    }
+    // Nissan/Toyota nested pricing
+    if (c.hyderabad_on_road_price == null && c.pricing?.on_road_hyderabad != null) {
+        c.hyderabad_on_road_price = c.pricing.on_road_hyderabad;
+    }
+    if (c.hyderabad_on_road_price == null && c.pricing?.hyderabad_on_road != null) {
+        c.hyderabad_on_road_price = c.pricing.hyderabad_on_road;
+    }
 
-    // Fuel type
+    // Fuel type — handle nested powertrain objects (Toyota, Nissan)
     if (!c.fuel_type && c.fuel) {
         c.fuel_type = c.fuel;
     }
+    if (!c.fuel_type && c.powertrain?.fuel_type) {
+        c.fuel_type = c.powertrain.fuel_type;
+    }
+    if (!c.fuel_type && c.powertrain_details?.fuel) {
+        c.fuel_type = c.powertrain_details.fuel;
+    }
 
-    // Engine displacement
+    // Transmission — handle nested powertrain objects (Toyota, Nissan)
+    if (!c.transmission && c.powertrain?.transmission) {
+        c.transmission = c.powertrain.transmission;
+    }
+    if (!c.transmission && c.powertrain_details?.transmission) {
+        c.transmission = c.powertrain_details.transmission;
+    }
+
+    // Engine displacement — handle nested engine_specs (Toyota, Nissan)
     if (c.engine_displacement_cc == null && typeof c.displacement === 'number') {
         c.engine_displacement_cc = c.displacement;
     }
+    if (c.engine_displacement_cc == null && c.engine_specs?.displacement != null) {
+        const disp = c.engine_specs.displacement;
+        c.engine_displacement_cc = typeof disp === 'number' ? disp : parseInt(String(disp).replace(/[^\d]/g, ''), 10) || 0;
+    }
+    // MG uses "1498 cc" string format for engine_displacement
+    if (c.engine_displacement_cc == null && typeof c.engine_displacement === 'string') {
+        const m = c.engine_displacement.match(/([\d.]+)/);
+        if (m) c.engine_displacement_cc = Math.round(parseFloat(m[1]));
+    }
 
-    // Power: parse "65.71 bhp @ 5500 rpm" → 66
+    // Power: parse "65.71 bhp @ 5500 rpm" → 66, also from nested engine_specs
     if (c.power_bhp == null && typeof c.power === 'string') {
         const m = c.power.match(/([\d.]+)\s*(?:bhp|ps|hp)/i);
         if (m) c.power_bhp = Math.round(parseFloat(m[1]));
     }
+    if (c.power_bhp == null && c.engine_specs?.power != null) {
+        const p = String(c.engine_specs.power);
+        const m = p.match(/([\d.]+)\s*(?:bhp|ps|hp)/i);
+        if (m) c.power_bhp = Math.round(parseFloat(m[1]));
+        else if (!isNaN(parseFloat(p))) c.power_bhp = Math.round(parseFloat(p));
+    }
 
-    // Torque: parse "89 Nm @ 3500 rpm" → 89
+    // Torque: parse "89 Nm @ 3500 rpm" → 89, also from nested engine_specs
     if (c.torque_nm == null && typeof c.torque === 'string') {
         const m = c.torque.match(/([\d.]+)\s*nm/i);
         if (m) c.torque_nm = Math.round(parseFloat(m[1]));
+    }
+    if (c.torque_nm == null && c.engine_specs?.torque != null) {
+        const t = String(c.engine_specs.torque);
+        const m = t.match(/([\d.]+)\s*nm/i);
+        if (m) c.torque_nm = Math.round(parseFloat(m[1]));
+        else if (!isNaN(parseFloat(t))) c.torque_nm = Math.round(parseFloat(t));
     }
 
     // Mileage: parse from various sources
@@ -164,6 +219,11 @@ function normalizeVariant(car: any): DetailedCarInfo {
             c.mileage_kmpl = c.mileage;
         } else if (typeof c.mileage === 'string') {
             const m = c.mileage.match(/([\d.]+)\s*km/i);
+            if (m) c.mileage_kmpl = parseFloat(m[1]);
+        }
+        // MG uses mileage_range as "15.43 kmpl" string
+        if (c.mileage_kmpl == null && typeof c.mileage_range === 'string') {
+            const m = c.mileage_range.match(/([\d.]+)/);
             if (m) c.mileage_kmpl = parseFloat(m[1]);
         }
         // Fall back to mileage_kmpl_or_ev_range if it's a number or parseable string
