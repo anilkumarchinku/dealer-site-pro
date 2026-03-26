@@ -2,215 +2,244 @@
   "force": {
     "variants": [
       {
-        "variant_name": "Force Trax Cruiser 9 Str",
-        "ex_showroom_price": "Rs. 13,83,208",
-        "hyderabad_on_road_price": "Rs. 16,53,000",
+        "variant_name": "Force Gurkha 3-Door 4x4",
+        "ex_showroom_price": "Rs. 15,95,358",
+        "hyderabad_on_road_price": "Rs. 19,01,474",
         "fuel_type": "Diesel",
         "transmission": "Manual",
         "engine_displacement_cc": 2596,
-        "power_bhp": 90,
-        "torque_nm": 250,
-        "mileage": "17 kmpl",
-        "seating_capacity": 9,
+        "power_bhp": 138,
+        "torque_nm": 320,
+        "mileage": "9.5 kmpl",
+        "seating_capacity": 4,
         "dimensions": {
-          "length_mm": 5120,
-          "width_mm": 1818,
-          "height_mm": 2027,
-          "ground_clearance_mm": 191
+          "length_mm": 4116,
+          "width_mm": 1865,
+          "height_mm": 2080,
+          "ground_clearance_mm": 233
         },
+        "boot_space_l": 500,
         "key_features": [
           {
-            "value": "Power Steering"
+            "value": "4x4 with Low Range Transfer Case"
           },
           {
-            "value": "Heater"
+            "value": "Mechanical Diff Lock"
           },
           {
-            "value": "Large Fuel Tank (63.5 L)"
-          },
-          {
-            "value": "Rear suspension leaf spring"
+            "value": "7-inch Touchscreen Infotainment"
           }
         ],
         "safety_features": [
           {
+            "value": "2 Airbags"
+          },
+          {
             "value": "Anti-Lock Braking System (ABS)"
           },
           {
-            "value": "Seat Belts"
-          },
-          {
-            "value": "Tubeless Tyres"
+            "value": "Parking Sensors"
           }
         ],
         "image_urls": [
           {
-            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Force-Trax-Cruiser/2915/1560919802045/front-left-side-47.jpg"
-          },
-          {
-            "value": "https://buscdn.cardekho.com/in/force/trax-cruiser/force-trax-cruiser.jpg"
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Gurkha/10267/1763466108285/front-left-side-47.jpg"
           }
         ],
         "availability_status": "on_sale"
       },
       {
-        "variant_name": "Force Trax Cruiser 9 Str AC",
-        "ex_showroom_price": "Rs. 13,98,935",
-        "hyderabad_on_road_price": "Rs. 16,71,000",
+        "variant_name": "Force Gurkha 5-Door 4x4",
+        "ex_showroom_price": "Rs. 17,26,949",
+        "hyderabad_on_road_price": "Rs. 20,55,904",
         "fuel_type": "Diesel",
         "transmission": "Manual",
         "engine_displacement_cc": 2596,
-        "power_bhp": 90,
-        "torque_nm": 250,
-        "mileage": "17 kmpl",
-        "seating_capacity": 9,
+        "power_bhp": 138.08,
+        "torque_nm": 320,
+        "mileage": "9.5 kmpl",
+        "seating_capacity": 7,
         "dimensions": {
-          "length_mm": 5120,
-          "width_mm": 1818,
-          "height_mm": 2027,
-          "ground_clearance_mm": 191
+          "length_mm": 4620,
+          "width_mm": 1865,
+          "height_mm": 2095,
+          "ground_clearance_mm": 233
         },
         "key_features": [
           {
-            "value": "Power Steering"
+            "value": "4x4 with Low Range Transfer Case"
           },
           {
-            "value": "Heater"
+            "value": "7-Seater Configuration"
           },
           {
-            "value": "Large Fuel Tank (63.5 L)"
+            "value": "7-inch Touchscreen Infotainment"
           },
           {
-            "value": "Rear suspension leaf spring"
-          },
-          {
-            "value": "Air Conditioner"
+            "value": "Mechanical Diff Lock"
           }
         ],
         "safety_features": [
           {
+            "value": "2 Airbags"
+          },
+          {
             "value": "Anti-Lock Braking System (ABS)"
           },
           {
-            "value": "Seat Belts"
-          },
-          {
-            "value": "Tubeless Tyres"
+            "value": "Parking Sensors"
           }
         ],
         "image_urls": [
           {
-            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Force-Trax-Cruiser/2915/1560919802045/front-left-side-47.jpg"
-          },
-          {
-            "value": "https://buscdn.cardekho.com/in/force/trax-cruiser/force-trax-cruiser.jpg"
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Gurkha-5-Door/10268/1763466156634/front-left-side-47.jpg"
           }
         ],
         "availability_status": "on_sale"
       },
       {
-        "variant_name": "Force Trax Cruiser 12 Str",
-        "ex_showroom_price": "Rs. 15,21,986",
-        "hyderabad_on_road_price": "Rs. 18,15,000",
+        "variant_name": "Force Urbania 10-Seater",
+        "ex_showroom_price": "Rs. 26,34,119",
+        "hyderabad_on_road_price": "Rs. 31,20,525",
         "fuel_type": "Diesel",
         "transmission": "Manual",
         "engine_displacement_cc": 2596,
-        "power_bhp": 90,
-        "torque_nm": 250,
-        "mileage": "17 kmpl",
-        "seating_capacity": 12,
+        "power_bhp": 114,
+        "torque_nm": 350,
+        "mileage": "11 kmpl",
+        "seating_capacity": 10,
         "dimensions": {
-          "length_mm": 5120,
-          "width_mm": 1818,
-          "height_mm": 2027,
-          "ground_clearance_mm": 191
+          "length_mm": 5130,
+          "width_mm": 2095,
+          "height_mm": 2550,
+          "ground_clearance_mm": 200
         },
         "key_features": [
           {
-            "value": "Power Steering"
+            "value": "Mercedes-derived Diesel Engine"
           },
           {
-            "value": "Heater"
+            "value": "Dedicated AC Vents with USB Chargers"
           },
           {
-            "value": "Large Fuel Tank (63.5 L)"
+            "value": "Tall Cabin with Large Windows"
           },
           {
-            "value": "Rear suspension leaf spring"
+            "value": "Large Fuel Tank (70 L)"
           }
         ],
         "safety_features": [
           {
+            "value": "2 Airbags"
+          },
+          {
             "value": "Anti-Lock Braking System (ABS)"
           },
           {
-            "value": "Seat Belts"
-          },
-          {
-            "value": "Tubeless Tyres"
+            "value": "Parking Sensors"
           }
         ],
         "image_urls": [
           {
-            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Force-Trax-Cruiser/2915/1560919802045/front-left-side-47.jpg"
-          },
-          {
-            "value": "https://buscdn.cardekho.com/in/force/trax-cruiser/force-trax-cruiser.jpg"
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Urbania/11849/1763466348855/front-left-side-47.jpg"
           }
         ],
         "availability_status": "on_sale"
       },
       {
-        "variant_name": "Force Trax Cruiser 12 Str AC",
-        "ex_showroom_price": "Rs. 15,23,458",
-        "hyderabad_on_road_price": "Rs. 18,17,000",
+        "variant_name": "Force Urbania 13-Seater",
+        "ex_showroom_price": "Rs. 27,50,000",
+        "hyderabad_on_road_price": "Rs. 32,50,000",
         "fuel_type": "Diesel",
         "transmission": "Manual",
         "engine_displacement_cc": 2596,
-        "power_bhp": 90,
-        "torque_nm": 250,
-        "mileage": "17 kmpl",
-        "seating_capacity": 12,
+        "power_bhp": 114,
+        "torque_nm": 350,
+        "mileage": "11 kmpl",
+        "seating_capacity": 13,
         "dimensions": {
-          "length_mm": 5120,
-          "width_mm": 1818,
-          "height_mm": 2027,
-          "ground_clearance_mm": 191
+          "length_mm": 5130,
+          "width_mm": 2095,
+          "height_mm": 2550,
+          "ground_clearance_mm": 200
         },
         "key_features": [
           {
-            "value": "Power Steering"
+            "value": "Mercedes-derived Diesel Engine"
           },
           {
-            "value": "Heater"
+            "value": "13-Seater Configuration"
           },
           {
-            "value": "Large Fuel Tank (63.5 L)"
+            "value": "Dedicated AC Vents with USB Chargers"
           },
           {
-            "value": "Rear suspension leaf spring"
-          },
-          {
-            "value": "Air Conditioner"
+            "value": "Large Fuel Tank (70 L)"
           }
         ],
         "safety_features": [
           {
+            "value": "2 Airbags"
+          },
+          {
             "value": "Anti-Lock Braking System (ABS)"
           },
           {
-            "value": "Seat Belts"
-          },
-          {
-            "value": "Tubeless Tyres"
+            "value": "Parking Sensors"
           }
         ],
         "image_urls": [
           {
-            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Force-Trax-Cruiser/2915/1560919802045/front-left-side-47.jpg"
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Urbania/11849/1763466348855/front-left-side-47.jpg"
+          }
+        ],
+        "availability_status": "on_sale"
+      },
+      {
+        "variant_name": "Force Urbania 17-Seater",
+        "ex_showroom_price": "Rs. 31,82,815",
+        "hyderabad_on_road_price": "Rs. 37,50,000",
+        "fuel_type": "Diesel",
+        "transmission": "Manual",
+        "engine_displacement_cc": 2596,
+        "power_bhp": 114,
+        "torque_nm": 350,
+        "mileage": "11 kmpl",
+        "seating_capacity": 17,
+        "dimensions": {
+          "length_mm": 5130,
+          "width_mm": 2095,
+          "height_mm": 2550,
+          "ground_clearance_mm": 200
+        },
+        "key_features": [
+          {
+            "value": "Mercedes-derived Diesel Engine"
           },
           {
-            "value": "https://buscdn.cardekho.com/in/force/trax-cruiser/force-trax-cruiser.jpg"
+            "value": "17-Seater Configuration"
+          },
+          {
+            "value": "Dedicated AC Vents with USB Chargers"
+          },
+          {
+            "value": "Large Fuel Tank (70 L)"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "2 Airbags"
+          },
+          {
+            "value": "Anti-Lock Braking System (ABS)"
+          },
+          {
+            "value": "Parking Sensors"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Urbania/11849/1763466348855/front-left-side-47.jpg"
           }
         ],
         "availability_status": "on_sale"

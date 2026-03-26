@@ -137,7 +137,7 @@
       "mileage": "16.94 kmpl",
       "mileage_citation": "https://www.bikedekho.com/ktm/1390-super-duke-r",
       "specifications": {
-        "engine_type": "2 cylinder, 4 stroke, V 75°",
+        "engine_type": "2 cylinder, 4 stroke, V 75\u00b0",
         "engine_type_citation": "https://www.bikedekho.com/ktm/1390-super-duke-r",
         "displacement": "1350 cc",
         "displacement_citation": "https://www.bikedekho.com/ktm/1390-super-duke-r",
@@ -171,7 +171,7 @@
     {
       "bike_name": "KTM RC 160",
       "bike_name_citation": "https://www.bikedekho.com/ktm/rc-160",
-      "price": "Rs 1,87,000",
+      "price": "Rs 1,85,293",
       "engine": "164.2 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/rc-160",
       "torque": "15.5 Nm @ 7500 rpm",
@@ -253,30 +253,9 @@
       }
     },
     {
-      "bike_name": "KTM 50 SX",
-      "bike_name_citation": "https://www.bikedekho.com/ktm/50-sx",
-      "price": "Discontinued",
-      "engine": "49.9 cc",
-      "engine_citation": "https://www.bikedekho.com/ktm/50-sx",
-      "torque": "5.2 Nm @ 7500 rpm",
-      "torque_citation": "https://www.bikedekho.com/ktm/50-sx",
-      "mileage": "30 kmpl",
-      "mileage_citation": "https://www.bikedekho.com/ktm/50-sx",
-      "specifications": {
-        "engine_type": "Single Cylinder, 2 Stroke",
-        "engine_type_citation": "https://www.bikedekho.com/ktm/50-sx",
-        "displacement": "49.9 cc",
-        "displacement_citation": "https://www.bikedekho.com/ktm/50-sx",
-        "max_power": "5.4 PS @ 11500 rpm",
-        "max_power_citation": "https://www.bikedekho.com/ktm/50-sx",
-        "fuel_capacity": "2.3 L",
-        "fuel_capacity_citation": "https://www.bikedekho.com/ktm/50-sx"
-      }
-    },
-    {
       "bike_name": "KTM 890 Adventure R",
       "bike_name_citation": "https://www.bikedekho.com/ktm/890-adventure-r",
-      "price": "Discontinued",
+      "price": "Rs 15,50,000",
       "engine": "889 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/890-adventure-r",
       "torque": "100 Nm @ 6500 rpm",
@@ -292,48 +271,6 @@
         "max_power_citation": "https://www.bikedekho.com/ktm/890-adventure-r",
         "fuel_capacity": "20 L",
         "fuel_capacity_citation": "https://www.bikedekho.com/ktm/890-adventure-r"
-      }
-    },
-    {
-      "bike_name": "KTM 65 SX",
-      "bike_name_citation": "https://www.bikedekho.com/ktm/65-sx",
-      "price": "Discontinued",
-      "engine": "64.9 cc",
-      "engine_citation": "https://www.bikedekho.com/ktm/65-sx",
-      "torque": "10.8 Nm @ 7500 rpm",
-      "torque_citation": "https://www.bikedekho.com/ktm/65-sx",
-      "mileage": "30 kmpl",
-      "mileage_citation": "https://www.bikedekho.com/ktm/65-sx",
-      "specifications": {
-        "engine_type": "Single Cylinder, 2 Stroke",
-        "engine_type_citation": "https://www.bikedekho.com/ktm/65-sx",
-        "displacement": "64.9 cc",
-        "displacement_citation": "https://www.bikedekho.com/ktm/65-sx",
-        "max_power": "11.35 PS @ 11500 rpm",
-        "max_power_citation": "https://www.bikedekho.com/ktm/65-sx",
-        "fuel_capacity": "4.5 L",
-        "fuel_capacity_citation": "https://www.bikedekho.com/ktm/65-sx"
-      }
-    },
-    {
-      "bike_name": "KTM 85 SX",
-      "bike_name_citation": "https://www.bikedekho.com/ktm/85-sx",
-      "price": "Discontinued",
-      "engine": "84.9 cc",
-      "engine_citation": "https://www.bikedekho.com/ktm/85-sx",
-      "torque": "14 Nm @ 8500 rpm",
-      "torque_citation": "https://www.bikedekho.com/ktm/85-sx",
-      "mileage": "null",
-      "mileage_citation": "https://www.bikedekho.com/ktm/85-sx",
-      "specifications": {
-        "engine_type": "Single Cylinder, 2 Stroke",
-        "engine_type_citation": "https://www.bikedekho.com/ktm/85-sx",
-        "displacement": "84.9 cc",
-        "displacement_citation": "https://www.bikedekho.com/ktm/85-sx",
-        "max_power": "16.4 PS @ 11500 rpm",
-        "max_power_citation": "https://www.bikedekho.com/ktm/85-sx",
-        "fuel_capacity": "5.2 L",
-        "fuel_capacity_citation": "https://www.bikedekho.com/ktm/85-sx"
       }
     },
     {
@@ -358,72 +295,9 @@
       }
     },
     {
-      "bike_name": "KTM 250 SX-F",
-      "bike_name_citation": "https://www.bikedekho.com/ktm/250-sx-f",
-      "price": "Discontinued",
-      "engine": "249.9 cc",
-      "engine_citation": "https://www.bikedekho.com/ktm/250-sx-f",
-      "torque": "26.5 Nm @ 9500 rpm",
-      "torque_citation": "https://www.bikedekho.com/ktm/250-sx-f",
-      "mileage": "25 kmpl",
-      "mileage_citation": "https://www.bikedekho.com/ktm/250-sx-f",
-      "specifications": {
-        "engine_type": "Single Cylinder, 4 Stroke",
-        "engine_type_citation": "https://www.bikedekho.com/ktm/250-sx-f",
-        "displacement": "249.9 cc",
-        "displacement_citation": "https://www.bikedekho.com/ktm/250-sx-f",
-        "max_power": "46.8 PS @ 13900 rpm",
-        "max_power_citation": "https://www.bikedekho.com/ktm/250-sx-f",
-        "fuel_capacity": "7.2 L",
-        "fuel_capacity_citation": "https://www.bikedekho.com/ktm/250-sx-f"
-      }
-    },
-    {
-      "bike_name": "KTM 350 EXC-F",
-      "bike_name_citation": "https://www.bikedekho.com/ktm/350-exc-f",
-      "price": "Discontinued",
-      "engine": "349.7 cc",
-      "engine_citation": "https://www.bikedekho.com/ktm/350-exc-f",
-      "torque": "36 Nm",
-      "torque_citation": "https://www.bikedekho.com/ktm/350-exc-f",
-      "mileage": "22 kmpl",
-      "mileage_citation": "https://www.bikedekho.com/ktm/350-exc-f",
-      "specifications": {
-        "engine_type": "Single Cylinder, 4 Stroke, 4 Valve, DOHC",
-        "engine_type_citation": "https://www.bikedekho.com/ktm/350-exc-f",
-        "displacement": "349.7 cc",
-        "displacement_citation": "https://www.bikedekho.com/ktm/350-exc-f",
-        "max_power": "45 PS @ 9500 rpm",
-        "max_power_citation": "https://www.bikedekho.com/ktm/350-exc-f",
-        "fuel_capacity": "8.5 L",
-        "fuel_capacity_citation": "https://www.bikedekho.com/ktm/350-exc-f"
-      }
-    },
-    {
-      "bike_name": "KTM 450 SX-F",
-      "bike_name_citation": "https://www.bikedekho.com/ktm/450-sx-f",
-      "price": "Discontinued",
-      "engine": "449.9 cc",
-      "engine_citation": "https://www.bikedekho.com/ktm/450-sx-f",
-      "torque": "74 Nm @ 9500 rpm",
-      "torque_citation": "https://www.bikedekho.com/ktm/450-sx-f",
-      "mileage": "30 kmpl",
-      "mileage_citation": "https://www.bikedekho.com/ktm/450-sx-f",
-      "specifications": {
-        "engine_type": "Single Cylinder, 4 Stroke, Liquid Cooled",
-        "engine_type_citation": "https://www.bikedekho.com/ktm/450-sx-f",
-        "displacement": "449.9 cc",
-        "displacement_citation": "https://www.bikedekho.com/ktm/450-sx-f",
-        "max_power": "62.96 PS @ 9500 rpm",
-        "max_power_citation": "https://www.bikedekho.com/ktm/450-sx-f",
-        "fuel_capacity": "7.2 L",
-        "fuel_capacity_citation": "https://www.bikedekho.com/ktm/450-sx-f"
-      }
-    },
-    {
       "bike_name": "KTM 1290 Super Adventure S",
       "bike_name_citation": "https://www.bikedekho.com/ktm/1290-super-adventure-s",
-      "price": "Discontinued",
+      "price": "Rs 22,99,000",
       "engine": "1301 cc",
       "engine_citation": "https://www.bikedekho.com/ktm/1290-super-adventure-s",
       "torque": "138 Nm @ 6500 rpm",
@@ -431,7 +305,7 @@
       "mileage": "17.54 kmpl",
       "mileage_citation": "https://www.bikedekho.com/ktm/1290-super-adventure-s",
       "specifications": {
-        "engine_type": "2 Cylinder, 4 Stroke, V 75°, Liquid Cooled, Fuel Injection",
+        "engine_type": "2 Cylinder, 4 Stroke, V 75\u00b0, Liquid Cooled, Fuel Injection",
         "engine_type_citation": "https://www.bikedekho.com/ktm/1290-super-adventure-s",
         "displacement": "1301 cc",
         "displacement_citation": "https://www.bikedekho.com/ktm/1290-super-adventure-s",

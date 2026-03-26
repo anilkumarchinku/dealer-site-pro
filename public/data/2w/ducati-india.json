@@ -6,7 +6,7 @@
     {
       "make": "Ducati India",
       "model": "Ducati Panigale V4",
-      "price": "Rs 26,50,000",
+      "price": "Rs 32,05,100",
       "status": "Available",
       "colors": [],
       "specifications": {
@@ -56,7 +56,7 @@
     {
       "make": "Ducati India",
       "model": "Ducati Monster",
-      "price": "Rs 13,49,000",
+      "price": "Rs 12,95,000",
       "status": "Available",
       "colors": [],
       "specifications": {
@@ -81,7 +81,7 @@
     {
       "make": "Ducati India",
       "model": "Ducati Scrambler 800",
-      "price": "Rs 9,39,000",
+      "price": "Rs 10,65,200",
       "status": "Available",
       "colors": [],
       "specifications": {
@@ -104,7 +104,7 @@
     {
       "make": "Ducati India",
       "model": "Ducati Panigale V2",
-      "price": "Rs 18,09,000",
+      "price": "Rs 19,11,900",
       "status": "Available",
       "colors": [],
       "specifications": {
@@ -245,7 +245,7 @@
     {
       "make": "Ducati India",
       "model": "Ducati SuperSport 950",
-      "price": "Discontinued",
+      "price": "Rs 15,49,000",
       "status": "Available",
       "colors": [],
       "specifications": {
@@ -292,7 +292,7 @@
     {
       "make": "Ducati India",
       "model": "Ducati DesertX",
-      "price": "Rs 18,72,000",
+      "price": "Rs 19,59,200",
       "status": "Available",
       "colors": [],
       "specifications": {
@@ -316,7 +316,7 @@
     {
       "make": "Ducati India",
       "model": "Ducati Hypermotard 698 Mono",
-      "price": "Discontinued",
+      "price": "Rs 12,49,000",
       "status": "Available",
       "colors": [],
       "specifications": {
@@ -335,6 +335,36 @@
           "Engine Brake Control"
         ],
         "description": "The Ducati Hypermotard 698 Mono is powered by a 659 cc liquid-cooled single-cylinder Superquadro Mono engine."
+      }
+    },
+    {
+      "make": "Ducati India",
+      "model": "Ducati Desmo450 MX",
+      "price": "Rs 17,24,000",
+      "price_citation": "https://blog.gaadikey.com/ducati-launches-the-all-new-desmo450-mx-in-india-priced-at-inr-1723600/",
+      "status": "Available",
+      "status_citation": "https://blog.gaadikey.com/ducati-launches-the-all-new-desmo450-mx-in-india-priced-at-inr-1723600/",
+      "colors": [],
+      "specifications": {
+        "engine_details": "Superquadro Mono, single-cylinder, 4 valves per cylinder, Desmodromic timing, liquid cooled. 449.6 cc. Max Power: 63 bhp @ 9400 rpm.",
+        "engine_details_citation": "https://www.drivespark.com/two-wheelers/2026/ducati-desmo-450-mx-launched-india-price-specs-082867.html",
+        "torque": "53.5 Nm @ 7500 rpm",
+        "torque_citation": "https://www.drivespark.com/two-wheelers/2026/ducati-desmo-450-mx-launched-india-price-specs-082867.html",
+        "mileage": "N/A (Motocross)",
+        "features": [
+          "Launch Control",
+          "Engine Brake Control",
+          "Multiple Riding Modes",
+          "Traction Control (first motocross bike with TC)",
+          "Desmodromic Valve System",
+          "Lightweight Aluminum Frame",
+          "Showa Adjustable Front Forks (310 mm travel)",
+          "Monoshock Rear (301 mm travel)",
+          "5-Speed Gearbox"
+        ],
+        "features_citation": "https://www.drivespark.com/two-wheelers/2026/ducati-desmo-450-mx-launched-india-price-specs-082867.html",
+        "description": "The Ducati Desmo450 MX is Ducati's first motocross bike, powered by a 449.6 cc liquid-cooled single-cylinder Superquadro engine with Desmodromic valve system. Weighs just 104.8 kg (without fuel). Available at 4 select dealerships in New Delhi, Bengaluru, Chennai and Pune.",
+        "description_citation": "https://blog.gaadikey.com/ducati-launches-the-all-new-desmo450-mx-in-india-priced-at-inr-1723600/"
       }
     }
   ]

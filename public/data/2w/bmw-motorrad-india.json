@@ -7,7 +7,7 @@
       "make": "BMW Motorrad India",
       "model": "BMW S 1000 RR",
       "status": "Available",
-      "price": "Rs 20,25,000",
+      "price": "Rs 23,25,000",
       "engine_displacement": "999 cc",
       "colors": [],
       "specifications": {
@@ -49,7 +49,7 @@
       "make": "BMW Motorrad India",
       "model": "BMW R 1300 GS",
       "status": "Available",
-      "price": "Rs 21,90,000",
+      "price": "Rs 23,25,000",
       "engine_displacement": "1300 cc",
       "colors": [],
       "specifications": {
@@ -169,6 +169,37 @@
         "engine": "895 cc",
         "torque": "93 Nm @ 6750 rpm",
         "mileage": "22 kmpl"
+      }
+    },
+    {
+      "make": "BMW Motorrad India",
+      "model": "BMW F 900 GS Adventure",
+      "status": "Available",
+      "status_citation": "https://www.bikewale.com/bmw-bikes/f-900-gs-adventure/",
+      "price": "Rs 16,14,000",
+      "price_citation": "https://www.bikewale.com/bmw-bikes/f-900-gs-adventure/",
+      "engine_displacement": "895 cc",
+      "colors": [
+        { "value": "Blackstorm Metallic", "value_citation": "https://www.bikewale.com/bmw-bikes/f-900-gs-adventure/" },
+        { "value": "Ride Pro", "value_citation": "https://www.bikewale.com/bmw-bikes/f-900-gs-adventure/" }
+      ],
+      "specifications": {
+        "engine_type": "Liquid-cooled, 2-Cylinder, Four-Stroke Engine, DOHC, Dry-Sump Lubrication",
+        "engine_type_citation": "https://www.bikedekho.com/bmw/f-900-gs-adventure.html",
+        "displacement": "895 cc",
+        "displacement_citation": "https://www.bikedekho.com/bmw/f-900-gs-adventure.html",
+        "max_power": "103.26 bhp @ 8500 rpm",
+        "max_power_citation": "https://www.bikewale.com/bmw-bikes/f-900-gs-adventure/",
+        "fuel_capacity": "23 L",
+        "fuel_capacity_citation": "https://www.bikewale.com/bmw-bikes/f-900-gs-adventure/",
+        "engine": "895 cc",
+        "torque": "93 Nm @ 6750 rpm",
+        "torque_citation": "https://www.bikewale.com/bmw-bikes/f-900-gs-adventure/",
+        "mileage": "22 kmpl",
+        "kerb_weight": "209 kg",
+        "kerb_weight_citation": "https://www.bikewale.com/bmw-bikes/f-900-gs-adventure/",
+        "features": "TFT instrument cluster with Bluetooth, LED lights, keyless ignition, multi-level traction control, multiple riding modes, BMW ABS Pro, heated grips",
+        "features_citation": "https://www.bikewale.com/bmw-bikes/f-900-gs-adventure/"
       }
     },
     {
@@ -358,8 +389,9 @@
     {
       "make": "BMW Motorrad India",
       "model": "BMW G 310 GS",
-      "status": "Available",
-      "price": "Rs 3,15,000",
+      "status": "Discontinued",
+      "status_citation": "https://www.bikewale.com/news/bmw-g-310-r-and-g-310-gs-discontinued-in-india/",
+      "price": "Discontinued",
       "engine_displacement": "312.6 cc",
       "colors": [],
       "specifications": {
@@ -373,14 +405,17 @@
         "fuel_capacity_citation": "https://www.bikedekho.com/bmw/g-310-gs/specifications",
         "engine": "313 cc",
         "torque": "28 Nm @ 7500 rpm",
-        "mileage": "28.57 kmpl"
+        "mileage": "28.57 kmpl",
+        "discontinued_reason": "310 platform at end of lifecycle, not upgraded to OBD-2B emission norms",
+        "discontinued_reason_citation": "https://www.bikewale.com/news/bmw-g-310-r-and-g-310-gs-discontinued-in-india/"
       }
     },
     {
       "make": "BMW Motorrad India",
       "model": "BMW G 310 R",
-      "status": "Available",
-      "price": "Rs 2,90,000",
+      "status": "Discontinued",
+      "status_citation": "https://www.bikewale.com/news/bmw-g-310-r-and-g-310-gs-discontinued-in-india/",
+      "price": "Discontinued",
       "engine_displacement": "312.6 cc",
       "colors": [],
       "specifications": {
@@ -394,14 +429,16 @@
         "fuel_capacity_citation": "https://www.bikedekho.com/bmw/g-310-r/specifications",
         "engine": "313 cc",
         "torque": "28 Nm @ 7500 rpm",
-        "mileage": "32.46 kmpl"
+        "mileage": "32.46 kmpl",
+        "discontinued_reason": "310 platform at end of lifecycle, not upgraded to OBD-2B emission norms",
+        "discontinued_reason_citation": "https://www.bikewale.com/news/bmw-g-310-r-and-g-310-gs-discontinued-in-india/"
       }
     },
     {
       "make": "BMW Motorrad India",
       "model": "BMW R 1250 GS",
-      "status": "Available",
-      "price": "Rs 20,50,000",
+      "status": "Discontinued",
+      "price": "Discontinued",
       "engine_displacement": "1254 cc",
       "colors": [],
       "specifications": {
@@ -421,8 +458,8 @@
     {
       "make": "BMW Motorrad India",
       "model": "BMW M 1000 RR",
-      "status": "Available",
-      "price": "Rs 49,00,000",
+      "status": "Discontinued",
+      "price": "Discontinued",
       "engine_displacement": "999 cc",
       "colors": [],
       "specifications": {
@@ -442,8 +479,8 @@
     {
       "make": "BMW Motorrad India",
       "model": "BMW F 900 XR",
-      "status": "Available",
-      "price": "Rs 13,50,000",
+      "status": "Discontinued",
+      "price": "Discontinued",
       "engine_displacement": "895 cc",
       "colors": [],
       "specifications": {
@@ -463,8 +500,8 @@
     {
       "make": "BMW Motorrad India",
       "model": "BMW F 900 R",
-      "status": "Available",
-      "price": "Rs 10,50,000",
+      "status": "Discontinued",
+      "price": "Discontinued",
       "engine_displacement": "895 cc",
       "colors": [],
       "specifications": {
@@ -505,8 +542,8 @@
     {
       "make": "BMW Motorrad India",
       "model": "BMW R 18",
-      "status": "Available",
-      "price": "Rs 21,90,000",
+      "status": "Discontinued",
+      "price": "Discontinued",
       "engine_displacement": "1802 cc",
       "colors": [],
       "specifications": {
@@ -526,8 +563,8 @@
     {
       "make": "BMW Motorrad India",
       "model": "BMW K 1600 Grand America",
-      "status": "Available",
-      "price": "Rs 35,00,000",
+      "status": "Discontinued",
+      "price": "Discontinued",
       "engine_displacement": "1649 cc",
       "colors": [],
       "specifications": {
@@ -547,8 +584,8 @@
     {
       "make": "BMW Motorrad India",
       "model": "BMW R 1250 GS Adventure",
-      "status": "Available",
-      "price": "Rs 22,50,000",
+      "status": "Discontinued",
+      "price": "Discontinued",
       "engine_displacement": "1254 cc",
       "colors": [],
       "specifications": {

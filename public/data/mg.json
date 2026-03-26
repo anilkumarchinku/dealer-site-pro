@@ -505,6 +505,224 @@
       "fuel_type": "Electric",
       "battery_capacity_ev": "52.9 kWh",
       "mileage_range": "449 km"
+    },
+    {
+      "make": "MG",
+      "model": "Comet EV",
+      "variant_name": "Executive",
+      "ex_showroom_price_range": "7,49,800",
+      "default_hyderabad_on_road_price": "8,30,000",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "drivetrain": "RWD",
+      "battery_capacity_ev": "17.3 kWh",
+      "power": "41.42 bhp",
+      "torque": "110 Nm",
+      "mileage_range": "230 km",
+      "dimensions": "2974 x 1505 x 1640 mm",
+      "seating_capacity": 4,
+      "ground_clearance": "165 mm",
+      "key_features": [
+        { "value": "Compact city-car design" },
+        { "value": "Rear-wheel drive" },
+        { "value": "Connected car technology" }
+      ],
+      "safety_features": [
+        { "value": "2 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Rear parking sensors" }
+      ]
+    },
+    {
+      "make": "MG",
+      "model": "Comet EV",
+      "variant_name": "Play",
+      "ex_showroom_price_range": "8,49,800",
+      "default_hyderabad_on_road_price": "9,41,000",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "drivetrain": "RWD",
+      "battery_capacity_ev": "17.3 kWh",
+      "power": "41.42 bhp",
+      "torque": "110 Nm",
+      "mileage_range": "230 km",
+      "dimensions": "2974 x 1505 x 1640 mm",
+      "seating_capacity": 4,
+      "ground_clearance": "165 mm",
+      "key_features": [
+        { "value": "10.25-inch touchscreen" },
+        { "value": "Wireless Apple CarPlay & Android Auto" },
+        { "value": "Rear-wheel drive" },
+        { "value": "Smart connectivity features" }
+      ],
+      "safety_features": [
+        { "value": "2 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Rear parking sensors" },
+        { "value": "Rear parking camera" }
+      ]
+    },
+    {
+      "make": "MG",
+      "model": "Comet EV",
+      "variant_name": "Xplore",
+      "ex_showroom_price_range": "9,56,100",
+      "default_hyderabad_on_road_price": "10,58,000",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "drivetrain": "RWD",
+      "battery_capacity_ev": "17.3 kWh",
+      "power": "41.42 bhp",
+      "torque": "110 Nm",
+      "mileage_range": "230 km",
+      "dimensions": "2974 x 1505 x 1640 mm",
+      "seating_capacity": 4,
+      "ground_clearance": "165 mm",
+      "key_features": [
+        { "value": "10.25-inch touchscreen" },
+        { "value": "Wireless Apple CarPlay & Android Auto" },
+        { "value": "Cruise control" },
+        { "value": "Premium interiors with dual-tone cabin" }
+      ],
+      "safety_features": [
+        { "value": "2 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Rear parking sensors" },
+        { "value": "Rear parking camera" },
+        { "value": "Hill start assist" }
+      ]
+    },
+    {
+      "make": "MG",
+      "model": "ZS EV",
+      "variant_name": "Standard",
+      "ex_showroom_price_range": "17,99,000",
+      "default_hyderabad_on_road_price": "19,50,000",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "drivetrain": "FWD",
+      "battery_capacity_ev": "50.3 kWh",
+      "power": "174 bhp",
+      "torque": "280 Nm",
+      "mileage_range": "461 km",
+      "dimensions": "4323 x 1809 x 1649 mm, Wheelbase: 2585 mm",
+      "seating_capacity": 5,
+      "boot_space": "470 L",
+      "ground_clearance": "177 mm",
+      "key_features": [
+        { "value": "10.1-inch touchscreen infotainment" },
+        { "value": "Digital instrument cluster" },
+        { "value": "Connected car features with iSMART" },
+        { "value": "PM 2.5 air filter" },
+        { "value": "LED headlamps with DRLs" }
+      ],
+      "safety_features": [
+        { "value": "6 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "ESC" },
+        { "value": "TPMS" },
+        { "value": "Rear parking camera" }
+      ]
+    },
+    {
+      "make": "MG",
+      "model": "ZS EV",
+      "variant_name": "Exclusive Pro",
+      "ex_showroom_price_range": "20,50,000",
+      "default_hyderabad_on_road_price": "22,25,000",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "drivetrain": "FWD",
+      "battery_capacity_ev": "50.3 kWh",
+      "power": "174 bhp",
+      "torque": "280 Nm",
+      "mileage_range": "461 km",
+      "dimensions": "4323 x 1809 x 1649 mm, Wheelbase: 2585 mm",
+      "seating_capacity": 5,
+      "boot_space": "470 L",
+      "ground_clearance": "177 mm",
+      "key_features": [
+        { "value": "10.1-inch touchscreen infotainment" },
+        { "value": "Digital instrument cluster" },
+        { "value": "Panoramic sunroof" },
+        { "value": "ADAS Level 2" },
+        { "value": "JBL premium sound system" },
+        { "value": "Wireless phone charging" }
+      ],
+      "safety_features": [
+        { "value": "6 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "ESC" },
+        { "value": "TPMS" },
+        { "value": "360-degree camera" },
+        { "value": "ADAS (Lane Keep Assist, Adaptive Cruise Control)" }
+      ]
+    },
+    {
+      "make": "MG",
+      "model": "M9",
+      "variant_name": "M9",
+      "ex_showroom_price_range": "70,90,000",
+      "default_hyderabad_on_road_price": "74,50,000",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "drivetrain": "FWD",
+      "battery_capacity_ev": "90 kWh",
+      "power": "241 bhp",
+      "torque": "350 Nm",
+      "mileage_range": "548 km",
+      "dimensions": "5100 x 1932 x 1822 mm",
+      "seating_capacity": 7,
+      "boot_space": "390 L",
+      "ground_clearance": "163 mm",
+      "key_features": [
+        { "value": "90 kWh battery pack" },
+        { "value": "Second-row captain seats with massage and 16-way adjustment" },
+        { "value": "Dual panoramic sunroof" },
+        { "value": "Entertainment screens for rear passengers" },
+        { "value": "Premium 7-seater MPV" },
+        { "value": "Over-the-air updates" }
+      ],
+      "safety_features": [
+        { "value": "7 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "ESC" },
+        { "value": "TPMS" },
+        { "value": "360-degree camera" },
+        { "value": "ADAS suite" }
+      ]
+    },
+    {
+      "make": "MG",
+      "model": "Cyberster",
+      "variant_name": "Dual Motor AWD",
+      "ex_showroom_price_range": "74,99,801",
+      "default_hyderabad_on_road_price": "78,81,000",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "drivetrain": "AWD",
+      "battery_capacity_ev": "77 kWh",
+      "power": "510 bhp",
+      "torque": "725 Nm",
+      "mileage_range": "580 km",
+      "dimensions": "4535 x 1913 x 1329 mm",
+      "seating_capacity": 2,
+      "ground_clearance": "120 mm",
+      "key_features": [
+        { "value": "Dual electric motors with AWD" },
+        { "value": "Electrically operated scissor doors" },
+        { "value": "Fighter-jet cockpit design" },
+        { "value": "77 kWh battery with 580 km range" },
+        { "value": "Convertible soft-top" },
+        { "value": "0-100 km/h in 3.2 seconds" }
+      ],
+      "safety_features": [
+        { "value": "4 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Traction control" },
+        { "value": "Rear parking camera" }
+      ]
     }
   ]
 }

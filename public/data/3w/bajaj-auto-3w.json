@@ -162,6 +162,406 @@
         "suspension": "Front – Parabolic Leaf Spring; Rear – Shock absorbers with coil springs dampen",
         "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol"
       }
+    },
+    {
+      "variant_name": "Maxima Z",
+      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
+      "ex_showroom_price": "₹2.72 Lakh",
+      "mileage": "35.4 kmpl",
+      "engine_details": {
+        "engine_type": "4 Stroke Water-cooled",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
+        "displacement": "470.5 cc",
+        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
+        "max_power": "8.76 kW",
+        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
+        "torque": "27.03 Nm",
+        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z"
+      },
+      "dimensions": {
+        "length": "3525 mm",
+        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
+        "width": "1475 mm",
+        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
+        "height": "1810 mm",
+        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
+        "wheelbase": "2200 mm",
+        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1090 kg",
+        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
+        "transmission_type": "Manual",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
+        "brakes": "Hydraulic Drum Brakes",
+        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
+        "suspension": "Front – Helical Spring; Rear – Leaf Spring with Shock Absorber",
+        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z"
+      }
+    },
+    {
+      "variant_name": "Maxima C",
+      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
+      "ex_showroom_price": "₹2.58 Lakh",
+      "mileage": "36.8 kmpl",
+      "engine_details": {
+        "engine_type": "4 Stroke Water-cooled",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
+        "displacement": "470.5 cc",
+        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
+        "max_power": "8.76 kW",
+        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
+        "torque": "27.03 Nm",
+        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+      },
+      "dimensions": {
+        "length": "3400 mm",
+        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
+        "width": "1475 mm",
+        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
+        "height": "1810 mm",
+        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
+        "wheelbase": "2200 mm",
+        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1050 kg",
+        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
+        "transmission_type": "Manual",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
+        "brakes": "Hydraulic Drum Brakes",
+        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
+        "suspension": "Front – Helical Spring; Rear – Leaf Spring with Shock Absorber",
+        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+      }
+    },
+    {
+      "variant_name": "Maxima XL Cargo E-TEC 12.0",
+      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
+      "ex_showroom_price": "₹3.10 Lakh",
+      "mileage": "110 km/charge",
+      "engine_details": {
+        "engine_type": "BLDC Electric Motor",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
+        "displacement": "N/A",
+        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
+        "max_power": "7 kW",
+        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
+        "torque": "42 Nm",
+        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12"
+      },
+      "dimensions": {
+        "length": "3680 mm",
+        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
+        "width": "1505 mm",
+        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
+        "height": "1810 mm",
+        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
+        "wheelbase": "2350 mm",
+        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1310 kg",
+        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
+        "transmission_type": "Automatic",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
+        "brakes": "Hydraulic Drum Brakes with Regenerative Braking",
+        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
+        "suspension": "Front – Helical Spring; Rear – Leaf Spring with Shock Absorber",
+        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12"
+      }
+    },
+    {
+      "variant_name": "Maxima XL Cargo E-TEC 9.0",
+      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
+      "ex_showroom_price": "₹2.85 Lakh",
+      "mileage": "85 km/charge",
+      "engine_details": {
+        "engine_type": "BLDC Electric Motor",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
+        "displacement": "N/A",
+        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
+        "max_power": "7 kW",
+        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
+        "torque": "42 Nm",
+        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9"
+      },
+      "dimensions": {
+        "length": "3680 mm",
+        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
+        "width": "1505 mm",
+        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
+        "height": "1810 mm",
+        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
+        "wheelbase": "2350 mm",
+        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1310 kg",
+        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
+        "transmission_type": "Automatic",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
+        "brakes": "Hydraulic Drum Brakes with Regenerative Braking",
+        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
+        "suspension": "Front – Helical Spring; Rear – Leaf Spring with Shock Absorber",
+        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9"
+      }
+    },
+    {
+      "variant_name": "GoGo P7012",
+      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
+      "ex_showroom_price": "₹2.15 Lakh",
+      "mileage": "120 km/charge",
+      "engine_details": {
+        "engine_type": "BLDC Electric Motor",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
+        "displacement": "N/A",
+        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
+        "max_power": "3.5 kW",
+        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
+        "torque": "20 Nm",
+        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012"
+      },
+      "dimensions": {
+        "length": "2750 mm",
+        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
+        "width": "1040 mm",
+        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
+        "height": "1700 mm",
+        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
+        "wheelbase": "2050 mm",
+        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "610 kg",
+        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
+        "transmission_type": "Automatic",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
+        "brakes": "Drum Brakes with Regenerative Braking",
+        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
+        "suspension": "Front – Telescopic; Rear – Dual Shock Absorbers",
+        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012"
+      }
+    },
+    {
+      "variant_name": "GoGo P5012",
+      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
+      "ex_showroom_price": "₹1.95 Lakh",
+      "mileage": "100 km/charge",
+      "engine_details": {
+        "engine_type": "BLDC Electric Motor",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
+        "displacement": "N/A",
+        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
+        "max_power": "3 kW",
+        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
+        "torque": "18 Nm",
+        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012"
+      },
+      "dimensions": {
+        "length": "2750 mm",
+        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
+        "width": "1040 mm",
+        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
+        "height": "1700 mm",
+        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
+        "wheelbase": "2050 mm",
+        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "600 kg",
+        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
+        "transmission_type": "Automatic",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
+        "brakes": "Drum Brakes with Regenerative Braking",
+        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
+        "suspension": "Front – Telescopic; Rear – Dual Shock Absorbers",
+        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012"
+      }
+    },
+    {
+      "variant_name": "GoGo P5009",
+      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
+      "ex_showroom_price": "₹1.85 Lakh",
+      "mileage": "90 km/charge",
+      "engine_details": {
+        "engine_type": "BLDC Electric Motor",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
+        "displacement": "N/A",
+        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
+        "max_power": "2.5 kW",
+        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
+        "torque": "16 Nm",
+        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009"
+      },
+      "dimensions": {
+        "length": "2650 mm",
+        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
+        "width": "1040 mm",
+        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
+        "height": "1700 mm",
+        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
+        "wheelbase": "2000 mm",
+        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "580 kg",
+        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
+        "transmission_type": "Automatic",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
+        "brakes": "Drum Brakes with Regenerative Braking",
+        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
+        "suspension": "Front – Telescopic; Rear – Dual Shock Absorbers",
+        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009"
+      }
+    },
+    {
+      "variant_name": "WEGO P9018",
+      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
+      "ex_showroom_price": "₹2.40 Lakh",
+      "mileage": "130 km/charge",
+      "engine_details": {
+        "engine_type": "BLDC Electric Motor",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
+        "displacement": "N/A",
+        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
+        "max_power": "5 kW",
+        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
+        "torque": "28 Nm",
+        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018"
+      },
+      "dimensions": {
+        "length": "2800 mm",
+        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
+        "width": "1100 mm",
+        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
+        "height": "1750 mm",
+        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
+        "wheelbase": "2100 mm",
+        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "720 kg",
+        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
+        "transmission_type": "Automatic",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
+        "brakes": "Drum Brakes with Regenerative Braking",
+        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
+        "suspension": "Front – Telescopic; Rear – Coil Spring with Shock Absorbers",
+        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018"
+      }
+    },
+    {
+      "variant_name": "Riki C40 05 E Cart",
+      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
+      "ex_showroom_price": "₹1.50 Lakh",
+      "mileage": "80 km/charge",
+      "engine_details": {
+        "engine_type": "BLDC Electric Motor",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
+        "displacement": "N/A",
+        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
+        "max_power": "2 kW",
+        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
+        "torque": "12 Nm",
+        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart"
+      },
+      "dimensions": {
+        "length": "2600 mm",
+        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
+        "width": "1000 mm",
+        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
+        "height": "1650 mm",
+        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
+        "wheelbase": "1900 mm",
+        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "500 kg",
+        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
+        "transmission_type": "Automatic",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
+        "brakes": "Drum Brakes with Regenerative Braking",
+        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
+        "suspension": "Front – Telescopic; Rear – Leaf Spring",
+        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart"
+      }
+    },
+    {
+      "variant_name": "Riki P40 05",
+      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
+      "ex_showroom_price": "₹1.55 Lakh",
+      "mileage": "80 km/charge",
+      "engine_details": {
+        "engine_type": "BLDC Electric Motor",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
+        "displacement": "N/A",
+        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
+        "max_power": "2 kW",
+        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
+        "torque": "12 Nm",
+        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05"
+      },
+      "dimensions": {
+        "length": "2600 mm",
+        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
+        "width": "1000 mm",
+        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
+        "height": "1700 mm",
+        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
+        "wheelbase": "1900 mm",
+        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "520 kg",
+        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
+        "transmission_type": "Automatic",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
+        "brakes": "Drum Brakes with Regenerative Braking",
+        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
+        "suspension": "Front – Telescopic; Rear – Leaf Spring",
+        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05"
+      }
     }
   ]
 }

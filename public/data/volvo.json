@@ -1,3 +1,294 @@
 {
-  "volvo": []
+  "volvo": [
+    {
+      "make": "Volvo",
+      "model": "XC90",
+      "variant_name": "XC90 B6 Ultimate",
+      "pricing": {
+        "ex_showroom_min": 9697240,
+        "ex_showroom_max": 9697240
+      },
+      "powertrain": {
+        "fuel": "Petrol (Mild Hybrid)",
+        "transmission": "Automatic (8-Speed)"
+      },
+      "engine_performance": {
+        "displacement": "1969 cc",
+        "power": "247 bhp",
+        "torque": "360 Nm",
+        "mileage": "12.35 kmpl"
+      },
+      "dimensions": {
+        "seating": 7,
+        "boot": "680 L",
+        "ground_clearance": "238 mm",
+        "length_width_height": "4953 x 2140 x 1773 mm"
+      },
+      "features": {
+        "key_features": [
+          { "value": "9-inch touchscreen infotainment" },
+          { "value": "Panoramic sunroof" },
+          { "value": "360-degree camera" },
+          { "value": "Air suspension with adjustable ride height" },
+          { "value": "Harman Kardon premium audio" },
+          { "value": "4-zone climate control" },
+          { "value": "Wireless charging" },
+          { "value": "Head-up display" }
+        ],
+        "safety_features": [
+          { "value": "7 airbags" },
+          { "value": "ABS with EBD" },
+          { "value": "ESC" },
+          { "value": "BLIS (Blind Spot Information System)" },
+          { "value": "Lane Keeping Aid" },
+          { "value": "Collision Avoidance" },
+          { "value": "Cross Traffic Alert" },
+          { "value": "Hill Start Assist" },
+          { "value": "ADAS" }
+        ]
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volvo/XC90/11096/1769685069498/front-left-side-47.jpg"
+        }
+      ],
+      "metadata": {
+        "availability": "On Sale",
+        "source_url": "https://www.cardekho.com/volvo/xc90",
+        "launch_year": 2025
+      }
+    },
+    {
+      "make": "Volvo",
+      "model": "XC60",
+      "variant_name": "XC60 B5 Ultimate",
+      "pricing": {
+        "ex_showroom_min": 6711000,
+        "ex_showroom_max": 6711000
+      },
+      "powertrain": {
+        "fuel": "Petrol (Mild Hybrid)",
+        "transmission": "Automatic (8-Speed)"
+      },
+      "engine_performance": {
+        "displacement": "1969 cc",
+        "power": "250 bhp",
+        "torque": "360 Nm",
+        "mileage": "12.5 kmpl"
+      },
+      "dimensions": {
+        "seating": 5,
+        "boot": "483 L",
+        "ground_clearance": "230 mm",
+        "length_width_height": "4708 x 1902 x 1653 mm"
+      },
+      "features": {
+        "key_features": [
+          { "value": "9-inch touchscreen with Google built-in" },
+          { "value": "Panoramic sunroof" },
+          { "value": "360-degree camera" },
+          { "value": "Harman Kardon premium audio" },
+          { "value": "Wireless charging" },
+          { "value": "2-zone climate control" },
+          { "value": "Power tailgate" },
+          { "value": "LED headlamps with Thor Hammer DRL" }
+        ],
+        "safety_features": [
+          { "value": "6 airbags" },
+          { "value": "ABS with EBD" },
+          { "value": "ESC" },
+          { "value": "BLIS (Blind Spot Information System)" },
+          { "value": "Lane Keeping Aid" },
+          { "value": "Collision Avoidance" },
+          { "value": "Cross Traffic Alert" },
+          { "value": "Hill Start Assist" }
+        ]
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volvo/XC60/11758/1769685248757/front-left-side-47.jpg"
+        }
+      ],
+      "metadata": {
+        "availability": "On Sale",
+        "source_url": "https://www.cardekho.com/volvo/xc60",
+        "launch_year": 2025
+      }
+    },
+    {
+      "make": "Volvo",
+      "model": "EX30",
+      "variant_name": "EX30 Single Motor Extended Range",
+      "pricing": {
+        "ex_showroom_min": 3999000,
+        "ex_showroom_max": 3999000
+      },
+      "powertrain": {
+        "fuel": "Electric",
+        "transmission": "Automatic (Single-Speed)"
+      },
+      "engine_performance": {
+        "displacement": "Electric Motor",
+        "power": "272 bhp",
+        "torque": "343 Nm",
+        "mileage": "480 km (range)"
+      },
+      "dimensions": {
+        "seating": 5,
+        "boot": "318 L",
+        "ground_clearance": "175 mm",
+        "length_width_height": "4233 x 1837 x 1550 mm"
+      },
+      "features": {
+        "key_features": [
+          { "value": "12.3-inch centre touchscreen" },
+          { "value": "Panoramic roof" },
+          { "value": "360-degree camera" },
+          { "value": "Harman Kardon audio" },
+          { "value": "Wireless Apple CarPlay & Android Auto" },
+          { "value": "Wireless phone charging" },
+          { "value": "One-pedal driving" },
+          { "value": "150 kW DC fast charging (26 min 10-80%)" }
+        ],
+        "safety_features": [
+          { "value": "6 airbags" },
+          { "value": "ABS with EBD" },
+          { "value": "ESC" },
+          { "value": "Lane Keeping Aid" },
+          { "value": "Collision Avoidance" },
+          { "value": "ADAS" },
+          { "value": "BLIS" },
+          { "value": "Cross Traffic Alert" }
+        ]
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volvo/EX30/12120/1769685395024/front-left-side-47.jpg"
+        }
+      ],
+      "metadata": {
+        "availability": "On Sale",
+        "source_url": "https://www.cardekho.com/volvo/ex30",
+        "launch_year": 2025,
+        "battery_capacity": "69 kWh"
+      }
+    },
+    {
+      "make": "Volvo",
+      "model": "EX40",
+      "variant_name": "EX40 Recharge Twin Motor",
+      "pricing": {
+        "ex_showroom_min": 4900000,
+        "ex_showroom_max": 4900000
+      },
+      "powertrain": {
+        "fuel": "Electric",
+        "transmission": "Automatic (Single-Speed AWD)"
+      },
+      "engine_performance": {
+        "displacement": "Electric Motor (Dual)",
+        "power": "408 bhp",
+        "torque": "670 Nm",
+        "mileage": "418 km (range)"
+      },
+      "dimensions": {
+        "seating": 5,
+        "boot": "419 L",
+        "ground_clearance": "175 mm",
+        "length_width_height": "4440 x 1873 x 1647 mm"
+      },
+      "features": {
+        "key_features": [
+          { "value": "9-inch touchscreen with Google built-in" },
+          { "value": "Panoramic sunroof" },
+          { "value": "360-degree camera" },
+          { "value": "Harman Kardon premium audio" },
+          { "value": "Wireless charging" },
+          { "value": "One-pedal driving" },
+          { "value": "150 kW DC fast charging (28 min 10-80%)" },
+          { "value": "Heated front seats" }
+        ],
+        "safety_features": [
+          { "value": "7 airbags" },
+          { "value": "ABS with EBD" },
+          { "value": "ESC" },
+          { "value": "BLIS (Blind Spot Information System)" },
+          { "value": "Lane Keeping Aid" },
+          { "value": "Collision Avoidance" },
+          { "value": "Cross Traffic Alert" },
+          { "value": "Pilot Assist (semi-autonomous driving)" }
+        ]
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volvo/XC40-Recharge/9866/1769685458200/front-left-side-47.jpg"
+        }
+      ],
+      "metadata": {
+        "availability": "On Sale",
+        "source_url": "https://www.cardekho.com/volvo/ex40",
+        "launch_year": 2024,
+        "battery_capacity": "78 kWh"
+      }
+    },
+    {
+      "make": "Volvo",
+      "model": "EC40",
+      "variant_name": "EC40 Recharge Twin Motor",
+      "pricing": {
+        "ex_showroom_min": 5900000,
+        "ex_showroom_max": 5900000
+      },
+      "powertrain": {
+        "fuel": "Electric",
+        "transmission": "Automatic (Single-Speed AWD)"
+      },
+      "engine_performance": {
+        "displacement": "Electric Motor (Dual)",
+        "power": "408 bhp",
+        "torque": "660 Nm",
+        "mileage": "530 km (range)"
+      },
+      "dimensions": {
+        "seating": 5,
+        "boot": "413 L",
+        "ground_clearance": "175 mm",
+        "length_width_height": "4440 x 1873 x 1596 mm"
+      },
+      "features": {
+        "key_features": [
+          { "value": "12.3-inch touchscreen infotainment" },
+          { "value": "Panoramic sunroof" },
+          { "value": "360-degree camera" },
+          { "value": "Harman Kardon premium audio" },
+          { "value": "Wireless Apple CarPlay & Android Auto" },
+          { "value": "Wireless phone charging" },
+          { "value": "One-pedal driving" },
+          { "value": "150 kW DC fast charging" }
+        ],
+        "safety_features": [
+          { "value": "7 airbags" },
+          { "value": "ABS with EBD" },
+          { "value": "ESC" },
+          { "value": "BLIS (Blind Spot Information System)" },
+          { "value": "Lane Keeping Aid" },
+          { "value": "Adaptive Cruise Control" },
+          { "value": "Automatic Emergency Braking" },
+          { "value": "Cross Traffic Alert" },
+          { "value": "ADAS" }
+        ]
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volvo/C40-Recharge/9867/1769685530000/front-left-side-47.jpg"
+        }
+      ],
+      "metadata": {
+        "availability": "On Sale",
+        "source_url": "https://www.cardekho.com/volvo/ec40",
+        "launch_year": 2023,
+        "battery_capacity": "78 kWh"
+      }
+    }
+  ]
 }

@@ -6,8 +6,8 @@
         "variants": [
           {
             "variant_name": "V",
-            "ex_showroom_price_min_inr": 747790,
-            "hyderabad_on_road_price_inr": 860000,
+            "ex_showroom_price_min_inr": 698000,
+            "hyderabad_on_road_price_inr": 810000,
             "fuel_type": "Petrol",
             "transmission": "Manual",
             "engine_displacement_cc": 1199,
@@ -45,8 +45,8 @@
           },
           {
             "variant_name": "VX",
-            "ex_showroom_price_min_inr": 848390,
-            "hyderabad_on_road_price_inr": 972000,
+            "ex_showroom_price_min_inr": 798000,
+            "hyderabad_on_road_price_inr": 922000,
             "fuel_type": "Petrol",
             "transmission": "Manual",
             "engine_displacement_cc": 1199,
@@ -62,11 +62,23 @@
             "key_features": [
               {
                 "value": "8-inch touchscreen with wireless Android Auto & Apple CarPlay"
+              },
+              {
+                "value": "Lane Watch camera"
+              },
+              {
+                "value": "Multi-angle rear camera"
               }
             ],
             "safety_features": [
               {
                 "value": "6 airbags"
+              },
+              {
+                "value": "ABS with EBD"
+              },
+              {
+                "value": "ADAS (Honda SENSING)"
               }
             ],
             "image_urls": [
@@ -78,8 +90,8 @@
           },
           {
             "variant_name": "V CVT",
-            "ex_showroom_price_min_inr": 862090,
-            "hyderabad_on_road_price_inr": 987000,
+            "ex_showroom_price_min_inr": 812000,
+            "hyderabad_on_road_price_inr": 937000,
             "fuel_type": "Petrol",
             "transmission": "Automatic",
             "engine_displacement_cc": 1199,
@@ -111,8 +123,8 @@
           },
           {
             "variant_name": "VX CVT",
-            "ex_showroom_price_min_inr": 921590,
-            "hyderabad_on_road_price_inr": 1053000,
+            "ex_showroom_price_min_inr": 878000,
+            "hyderabad_on_road_price_inr": 1010000,
             "fuel_type": "Petrol",
             "transmission": "Automatic",
             "engine_displacement_cc": 1199,
@@ -128,11 +140,23 @@
             "key_features": [
               {
                 "value": "8-inch touchscreen with wireless Android Auto & Apple CarPlay"
+              },
+              {
+                "value": "Lane Watch camera"
+              },
+              {
+                "value": "Wireless phone charger"
               }
             ],
             "safety_features": [
               {
                 "value": "6 airbags"
+              },
+              {
+                "value": "ABS with EBD"
+              },
+              {
+                "value": "ADAS (Honda SENSING)"
               }
             ],
             "image_urls": [
@@ -144,8 +168,8 @@
           },
           {
             "variant_name": "ZX",
-            "ex_showroom_price_min_inr": 921590,
-            "hyderabad_on_road_price_inr": 1053000,
+            "ex_showroom_price_min_inr": 878000,
+            "hyderabad_on_road_price_inr": 1010000,
             "fuel_type": "Petrol",
             "transmission": "Manual",
             "engine_displacement_cc": 1199,
@@ -177,8 +201,8 @@
           },
           {
             "variant_name": "ZX CVT",
-            "ex_showroom_price_min_inr": 999900,
-            "hyderabad_on_road_price_inr": 1140000,
+            "ex_showroom_price_min_inr": 960000,
+            "hyderabad_on_road_price_inr": 1100000,
             "fuel_type": "Petrol",
             "transmission": "Automatic",
             "engine_displacement_cc": 1199,
@@ -514,6 +538,317 @@
               }
             ],
             "launch_year": 2022
+          }
+        ]
+      },
+      {
+        "model": "Elevate",
+        "variants": [
+          {
+            "variant_name": "SV",
+            "ex_showroom_price_min_inr": 1159890,
+            "hyderabad_on_road_price_inr": 1340000,
+            "fuel_type": "Petrol",
+            "transmission": "Manual",
+            "engine_displacement_cc": 1498,
+            "power_bhp": 119,
+            "torque_nm": 145,
+            "mileage_kmpl": 16.92,
+            "seating_capacity": 5,
+            "boot_space_l": 458,
+            "ground_clearance_mm": 220,
+            "length_mm": 4312,
+            "width_mm": 1790,
+            "height_mm": 1650,
+            "key_features": [
+              {
+                "value": "7-inch semi-digital instrument cluster"
+              },
+              {
+                "value": "LED headlights"
+              },
+              {
+                "value": "Multi-function steering wheel"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              },
+              {
+                "value": "ABS with EBD"
+              },
+              {
+                "value": "ISOFIX child seat anchors"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Honda/Elevate/12099/1758802336858/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2023
+          },
+          {
+            "variant_name": "V",
+            "ex_showroom_price_min_inr": 1259890,
+            "hyderabad_on_road_price_inr": 1453000,
+            "fuel_type": "Petrol",
+            "transmission": "Manual",
+            "engine_displacement_cc": 1498,
+            "power_bhp": 119,
+            "torque_nm": 145,
+            "mileage_kmpl": 16.92,
+            "seating_capacity": 5,
+            "boot_space_l": 458,
+            "ground_clearance_mm": 220,
+            "length_mm": 4312,
+            "width_mm": 1790,
+            "height_mm": 1650,
+            "key_features": [
+              {
+                "value": "8-inch touchscreen with wireless Android Auto & Apple CarPlay"
+              },
+              {
+                "value": "LED headlights with DRLs"
+              },
+              {
+                "value": "Auto AC with rear vents"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              },
+              {
+                "value": "ABS with EBD"
+              },
+              {
+                "value": "Rear parking camera"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Honda/Elevate/12099/1758802336858/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2023
+          },
+          {
+            "variant_name": "VX",
+            "ex_showroom_price_min_inr": 1388874,
+            "hyderabad_on_road_price_inr": 1600000,
+            "fuel_type": "Petrol",
+            "transmission": "Manual",
+            "engine_displacement_cc": 1498,
+            "power_bhp": 119,
+            "torque_nm": 145,
+            "mileage_kmpl": 16.92,
+            "seating_capacity": 5,
+            "boot_space_l": 458,
+            "ground_clearance_mm": 220,
+            "length_mm": 4312,
+            "width_mm": 1790,
+            "height_mm": 1650,
+            "key_features": [
+              {
+                "value": "10.25-inch touchscreen infotainment"
+              },
+              {
+                "value": "Single-pane sunroof"
+              },
+              {
+                "value": "7-inch semi-digital instrument cluster"
+              },
+              {
+                "value": "Wireless phone charging"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              },
+              {
+                "value": "ABS with EBD"
+              },
+              {
+                "value": "Rear parking sensors with camera"
+              },
+              {
+                "value": "Hill Start Assist"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Honda/Elevate/12099/1758802336858/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2023
+          },
+          {
+            "variant_name": "VX CVT",
+            "ex_showroom_price_min_inr": 1488874,
+            "hyderabad_on_road_price_inr": 1713000,
+            "fuel_type": "Petrol",
+            "transmission": "Automatic",
+            "engine_displacement_cc": 1498,
+            "power_bhp": 119,
+            "torque_nm": 145,
+            "mileage_kmpl": 15.31,
+            "seating_capacity": 5,
+            "boot_space_l": 458,
+            "ground_clearance_mm": 220,
+            "length_mm": 4312,
+            "width_mm": 1790,
+            "height_mm": 1650,
+            "key_features": [
+              {
+                "value": "10.25-inch touchscreen infotainment"
+              },
+              {
+                "value": "Single-pane sunroof"
+              },
+              {
+                "value": "CVT automatic transmission"
+              },
+              {
+                "value": "Wireless phone charging"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              },
+              {
+                "value": "ABS with EBD"
+              },
+              {
+                "value": "Rear parking sensors with camera"
+              },
+              {
+                "value": "Hill Start Assist"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Honda/Elevate/12099/1758802336858/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2023
+          },
+          {
+            "variant_name": "ZX",
+            "ex_showroom_price_min_inr": 1566801,
+            "hyderabad_on_road_price_inr": 1803000,
+            "fuel_type": "Petrol",
+            "transmission": "Manual",
+            "engine_displacement_cc": 1498,
+            "power_bhp": 119,
+            "torque_nm": 145,
+            "mileage_kmpl": 16.92,
+            "seating_capacity": 5,
+            "boot_space_l": 458,
+            "ground_clearance_mm": 220,
+            "length_mm": 4312,
+            "width_mm": 1790,
+            "height_mm": 1650,
+            "key_features": [
+              {
+                "value": "10.25-inch touchscreen infotainment"
+              },
+              {
+                "value": "Single-pane sunroof"
+              },
+              {
+                "value": "Level 2 ADAS (Honda SENSING)"
+              },
+              {
+                "value": "LED fog lamps"
+              },
+              {
+                "value": "Dual-tone alloy wheels"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              },
+              {
+                "value": "ABS with EBD"
+              },
+              {
+                "value": "Level 2 ADAS"
+              },
+              {
+                "value": "Lane keep assist"
+              },
+              {
+                "value": "Adaptive cruise control"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Honda/Elevate/12099/1758802336858/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2023
+          },
+          {
+            "variant_name": "ZX CVT",
+            "ex_showroom_price_min_inr": 1666801,
+            "hyderabad_on_road_price_inr": 1917000,
+            "fuel_type": "Petrol",
+            "transmission": "Automatic",
+            "engine_displacement_cc": 1498,
+            "power_bhp": 119,
+            "torque_nm": 145,
+            "mileage_kmpl": 15.31,
+            "seating_capacity": 5,
+            "boot_space_l": 458,
+            "ground_clearance_mm": 220,
+            "length_mm": 4312,
+            "width_mm": 1790,
+            "height_mm": 1650,
+            "key_features": [
+              {
+                "value": "10.25-inch touchscreen infotainment"
+              },
+              {
+                "value": "Single-pane sunroof"
+              },
+              {
+                "value": "Level 2 ADAS (Honda SENSING)"
+              },
+              {
+                "value": "CVT automatic transmission"
+              },
+              {
+                "value": "Dual-tone alloy wheels"
+              }
+            ],
+            "safety_features": [
+              {
+                "value": "6 airbags"
+              },
+              {
+                "value": "ABS with EBD"
+              },
+              {
+                "value": "Level 2 ADAS"
+              },
+              {
+                "value": "Lane keep assist"
+              },
+              {
+                "value": "Adaptive cruise control"
+              }
+            ],
+            "image_urls": [
+              {
+                "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Honda/Elevate/12099/1758802336858/front-left-side-47.jpg"
+              }
+            ],
+            "launch_year": 2023
           }
         ]
       }

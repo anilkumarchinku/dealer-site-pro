@@ -103,6 +103,23 @@
         "torque": "39 Nm",
         "torque_citation": "https://www.bikedekho.com/cfmoto/450ss"
       }
+    },
+    {
+      "bike_name": "CFMoto 450MT",
+      "bike_name_citation": "https://www.bikedekho.com/cfmoto/450mt",
+      "availability": "Upcoming",
+      "price": "Rs 4,00,000 - Rs 4,50,000 (Expected)",
+      "price_citation": "https://www.bikedekho.com/cfmoto-bikes",
+      "engine_displacement": "449 cc",
+      "engine_displacement_citation": "https://www.bikedekho.com/cfmoto/450mt",
+      "performance_metrics": {
+        "power": "50 PS (Expected)",
+        "power_citation": "https://www.bikedekho.com/cfmoto/450mt",
+        "torque": "40 Nm (Expected)",
+        "torque_citation": "https://www.bikedekho.com/cfmoto/450mt",
+        "description": "Upcoming adventure-touring motorcycle from CFMoto, sharing the 449 cc twin-cylinder platform with the 450SR and 450SS. Expected to feature upright ergonomics, long-travel suspension, and touring-friendly accessories.",
+        "description_citation": "https://www.bikedekho.com/cfmoto-bikes"
+      }
     }
   ]
 }

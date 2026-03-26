@@ -375,6 +375,138 @@
           "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/D-Max/9427/1768892642798/front-left-side-47.jpg?tr=w-230"
         }
       ]
+    },
+    {
+      "variant_name": "S-CAB Standard",
+      "ex_showroom_price_min_inr": 1150240,
+      "ex_showroom_price_max_inr": 1150240,
+      "hyderabad_on_road_price_inr": 1379101,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "drivetrain": "RWD",
+      "engine_displacement_cc": 2499,
+      "power_bhp": 77.77,
+      "torque_nm": 176,
+      "mileage_kmpl": 16.56,
+      "seating_capacity": 5,
+      "boot_space_l": 1700,
+      "ground_clearance_mm": 220,
+      "length_mm": 5295,
+      "width_mm": 1860,
+      "height_mm": 1780,
+      "key_features": [
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Air Conditioner"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "2 Airbags"
+        },
+        {
+          "value": "ABS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/S-CAB/9890/1768897223625/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    {
+      "variant_name": "MU-X 4x2 AT",
+      "ex_showroom_price_min_inr": 3453240,
+      "ex_showroom_price_max_inr": 3453240,
+      "hyderabad_on_road_price_inr": 4081815,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "drivetrain": "RWD",
+      "engine_displacement_cc": 1898,
+      "power_bhp": 160.92,
+      "torque_nm": 360,
+      "mileage_kmpl": 13,
+      "seating_capacity": 7,
+      "boot_space_l": 878,
+      "ground_clearance_mm": 230,
+      "length_mm": 4850,
+      "width_mm": 1860,
+      "height_mm": 1860,
+      "key_features": [
+        {
+          "value": "9-inch Touchscreen Infotainment"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ABS + EBD"
+        },
+        {
+          "value": "Hill Descent Control"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/MU-X/8652/1768896726832/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    {
+      "variant_name": "MU-X 4x4 AT",
+      "ex_showroom_price_min_inr": 3953240,
+      "ex_showroom_price_max_inr": 3953240,
+      "hyderabad_on_road_price_inr": 4675000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "drivetrain": "4x4",
+      "engine_displacement_cc": 1898,
+      "power_bhp": 160.92,
+      "torque_nm": 360,
+      "mileage_kmpl": 12.31,
+      "seating_capacity": 7,
+      "boot_space_l": 878,
+      "ground_clearance_mm": 230,
+      "length_mm": 4850,
+      "width_mm": 1860,
+      "height_mm": 1860,
+      "key_features": [
+        {
+          "value": "9-inch Touchscreen Infotainment"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "4WD with Terrain Command"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ABS + EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/MU-X/8652/1768896726832/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
     }
   ]
 }

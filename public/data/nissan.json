@@ -4591,6 +4591,464 @@
           "value_citation": "https://www.cardekho.com/nissan/magnite/pictures"
         }
       ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Gravite",
+      "model_citation": "https://www.cardekho.com/nissan/gravite",
+      "variant_name": "Visia",
+      "variant_name_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 565000,
+          "min_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
+          "max": 565000,
+          "max_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 680000,
+          "min_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
+          "max": 680000,
+          "max_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/gravite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "power": 71.01,
+        "power_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "mileage": 19.6,
+        "mileage_citation": "https://www.cardekho.com/nissan/gravite/specs"
+      },
+      "dimensions": {
+        "seating": 7,
+        "seating_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "boot_space": 625,
+        "boot_space_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "ground_clearance": 182,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "length": 4210,
+        "length_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "width": 1734,
+        "width_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "height": 1643,
+        "height_citation": "https://www.cardekho.com/nissan/gravite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Power Steering",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          },
+          {
+            "value": "Air Conditioner",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          },
+          {
+            "value": "7-Seater Configuration",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          }
+        ]
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Gravite/11591/1763355574474/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/gravite"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Gravite",
+      "model_citation": "https://www.cardekho.com/nissan/gravite",
+      "variant_name": "Acenta",
+      "variant_name_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 699000,
+          "min_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
+          "max": 699000,
+          "max_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 840000,
+          "min_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
+          "max": 840000,
+          "max_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/gravite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "power": 71.01,
+        "power_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "mileage": 19.6,
+        "mileage_citation": "https://www.cardekho.com/nissan/gravite/specs"
+      },
+      "dimensions": {
+        "seating": 7,
+        "seating_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "boot_space": 625,
+        "boot_space_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "ground_clearance": 182,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "length": 4210,
+        "length_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "width": 1734,
+        "width_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "height": 1643,
+        "height_citation": "https://www.cardekho.com/nissan/gravite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "8-inch Touchscreen Infotainment",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          },
+          {
+            "value": "Sliding & Reclining 2nd Row",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          },
+          {
+            "value": "Wireless Android Auto & Apple CarPlay",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          },
+          {
+            "value": "ABS + EBD",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          },
+          {
+            "value": "Rear Parking Sensors",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          }
+        ]
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Gravite/11591/1763355574474/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/gravite"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Gravite",
+      "model_citation": "https://www.cardekho.com/nissan/gravite",
+      "variant_name": "N-Trek",
+      "variant_name_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 845000,
+          "min_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
+          "max": 845000,
+          "max_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 1010000,
+          "min_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
+          "max": 1010000,
+          "max_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/gravite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "power": 71.01,
+        "power_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "mileage": 19.6,
+        "mileage_citation": "https://www.cardekho.com/nissan/gravite/specs"
+      },
+      "dimensions": {
+        "seating": 7,
+        "seating_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "boot_space": 625,
+        "boot_space_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "ground_clearance": 182,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "length": 4210,
+        "length_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "width": 1734,
+        "width_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "height": 1643,
+        "height_citation": "https://www.cardekho.com/nissan/gravite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          },
+          {
+            "value": "Cruise Control",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          },
+          {
+            "value": "Rear Camera",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          },
+          {
+            "value": "ABS + EBD",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          },
+          {
+            "value": "Hill Start Assist",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          }
+        ]
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Gravite/11591/1763355574474/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/gravite"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "Gravite",
+      "model_citation": "https://www.cardekho.com/nissan/gravite",
+      "variant_name": "Tekna",
+      "variant_name_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 940000,
+          "min_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
+          "max": 940000,
+          "max_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 1120000,
+          "min_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
+          "max": 1120000,
+          "max_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "transmission": "Automatic",
+        "transmission_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/gravite/specs"
+      },
+      "engine_specs": {
+        "displacement": 999,
+        "displacement_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "power": 71.01,
+        "power_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "torque": 96,
+        "torque_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "mileage": 19.3,
+        "mileage_citation": "https://www.cardekho.com/nissan/gravite/specs"
+      },
+      "dimensions": {
+        "seating": 7,
+        "seating_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "boot_space": 625,
+        "boot_space_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "ground_clearance": 182,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "length": 4210,
+        "length_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "width": 1734,
+        "width_citation": "https://www.cardekho.com/nissan/gravite/specs",
+        "height": 1643,
+        "height_citation": "https://www.cardekho.com/nissan/gravite/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "Wireless Phone Charger",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          },
+          {
+            "value": "360-Degree Camera",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          },
+          {
+            "value": "Auto Headlamps",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "6 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          },
+          {
+            "value": "ABS + EBD",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          },
+          {
+            "value": "ISOFIX",
+            "value_citation": "https://www.cardekho.com/nissan/gravite/specs"
+          }
+        ]
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Gravite/11591/1763355574474/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/gravite"
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "make_citation": "https://www.cardekho.com/cars/Nissan",
+      "model": "X-Trail",
+      "model_citation": "https://www.cardekho.com/nissan/x-trail",
+      "variant_name": "X-Trail",
+      "variant_name_citation": "https://www.cardekho.com/nissan/x-trail/price-in-hyderabad",
+      "pricing": {
+        "ex_showroom": {
+          "min": 4819862,
+          "min_citation": "https://www.cardekho.com/nissan/x-trail/price-in-hyderabad",
+          "max": 4819862,
+          "max_citation": "https://www.cardekho.com/nissan/x-trail/price-in-hyderabad"
+        },
+        "on_road_hyderabad": {
+          "min": 5540183,
+          "min_citation": "https://www.cardekho.com/nissan/x-trail/price-in-hyderabad",
+          "max": 5540183,
+          "max_citation": "https://www.cardekho.com/nissan/x-trail/price-in-hyderabad"
+        }
+      },
+      "powertrain_details": {
+        "fuel": "Petrol",
+        "fuel_citation": "https://www.cardekho.com/nissan/x-trail/specs",
+        "transmission": "Automatic (CVT)",
+        "transmission_citation": "https://www.cardekho.com/nissan/x-trail/specs",
+        "drivetrain": "FWD",
+        "drivetrain_citation": "https://www.cardekho.com/nissan/x-trail/specs"
+      },
+      "engine_specs": {
+        "displacement": 1498,
+        "displacement_citation": "https://www.cardekho.com/nissan/x-trail/specs",
+        "power": 161,
+        "power_citation": "https://www.cardekho.com/nissan/x-trail/specs",
+        "torque": 300,
+        "torque_citation": "https://www.cardekho.com/nissan/x-trail/specs",
+        "mileage": 10,
+        "mileage_citation": "https://www.cardekho.com/nissan/x-trail/specs"
+      },
+      "dimensions": {
+        "seating": 7,
+        "seating_citation": "https://www.cardekho.com/nissan/x-trail/specs",
+        "boot_space": 177,
+        "boot_space_citation": "https://www.cardekho.com/nissan/x-trail/specs",
+        "ground_clearance": 210,
+        "ground_clearance_citation": "https://www.cardekho.com/nissan/x-trail/specs",
+        "length": 4680,
+        "length_citation": "https://www.cardekho.com/nissan/x-trail/specs",
+        "width": 1840,
+        "width_citation": "https://www.cardekho.com/nissan/x-trail/specs",
+        "height": 1725,
+        "height_citation": "https://www.cardekho.com/nissan/x-trail/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "12.3-inch Touchscreen Infotainment",
+            "value_citation": "https://www.cardekho.com/nissan/x-trail/specs"
+          },
+          {
+            "value": "Panoramic Sunroof",
+            "value_citation": "https://www.cardekho.com/nissan/x-trail/specs"
+          },
+          {
+            "value": "Leather Seats",
+            "value_citation": "https://www.cardekho.com/nissan/x-trail/specs"
+          },
+          {
+            "value": "360-Degree Camera",
+            "value_citation": "https://www.cardekho.com/nissan/x-trail/specs"
+          }
+        ],
+        "safety": [
+          {
+            "value": "7 Airbags",
+            "value_citation": "https://www.cardekho.com/nissan/x-trail/specs"
+          },
+          {
+            "value": "ABS + EBD",
+            "value_citation": "https://www.cardekho.com/nissan/x-trail/specs"
+          },
+          {
+            "value": "Electronic Stability Control",
+            "value_citation": "https://www.cardekho.com/nissan/x-trail/specs"
+          },
+          {
+            "value": "Hill Start Assist",
+            "value_citation": "https://www.cardekho.com/nissan/x-trail/specs"
+          }
+        ]
+      },
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/X-Trail/10081/1769105282099/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/nissan/x-trail"
+        }
+      ]
     }
   ]
 }

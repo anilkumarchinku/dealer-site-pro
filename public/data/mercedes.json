@@ -91,51 +91,6 @@
     },
     "2": {
       "make": "Mercedes-Benz",
-      "model_name": "AMG GT",
-      "variant_name": "63 S E Performance",
-      "ex_showroom_price_min": 32700000,
-      "ex_showroom_price_max": 32700000,
-      "fuel_type": "Petrol",
-      "transmission": "Automatic",
-      "engine_displacement": 3982,
-      "power": 630.28,
-      "torque": 900,
-      "mileage_range": 7,
-      "dimensions_seating": 5,
-      "dimensions_boot": 461,
-      "dimensions_length": 5054,
-      "dimensions_width": 1953,
-      "dimensions_height": 1447,
-      "key_features": [
-        {
-          "value": "Alloy Wheels"
-        },
-        {
-          "value": "Power Steering"
-        },
-        {
-          "value": "ABS"
-        }
-      ],
-      "safety_features": [
-        {
-          "value": "ABS"
-        },
-        {
-          "value": "Airbags"
-        },
-        {
-          "value": "TPMS"
-        }
-      ],
-      "image_urls": [
-        {
-          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-GT-4-Door-Coupe/9792/1769679914036/front-left-side-47.jpg?tr=w-230"
-        }
-      ]
-    },
-    "3": {
-      "make": "Mercedes-Benz",
       "model_name": "EQB",
       "variant_name": "250 Plus",
       "ex_showroom_price_min": 7220000,
@@ -178,7 +133,7 @@
         }
       ]
     },
-    "4": {
+    "3": {
       "make": "Mercedes-Benz",
       "model_name": "EQB",
       "variant_name": "350 4Matic",
@@ -222,7 +177,7 @@
         }
       ]
     },
-    "5": {
+    "4": {
       "make": "Mercedes-Benz",
       "model_name": "EQE SUV",
       "variant_name": "500 4MATIC",
@@ -267,12 +222,12 @@
         }
       ]
     },
-    "6": {
+    "5": {
       "make": "Mercedes-Benz",
       "model_name": "GLC",
       "variant_name": "300",
-      "ex_showroom_price_min": 73966667,
-      "ex_showroom_price_max": 73966667,
+      "ex_showroom_price_min": 7396667,
+      "ex_showroom_price_max": 7396667,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement": 1999,
@@ -311,12 +266,12 @@
         }
       ]
     },
-    "7": {
+    "6": {
       "make": "Mercedes-Benz",
       "model_name": "GLC",
       "variant_name": "220d",
-      "ex_showroom_price_min": 73966667,
-      "ex_showroom_price_max": 73966667,
+      "ex_showroom_price_min": 7396667,
+      "ex_showroom_price_max": 7396667,
       "fuel_type": "Diesel",
       "transmission": "Automatic",
       "engine_displacement": 1993,
@@ -357,7 +312,7 @@
         }
       ]
     },
-    "8": {
+    "7": {
       "make": "Mercedes-Benz",
       "model_name": "Maybach S-Class",
       "variant_name": "S580",
@@ -403,7 +358,7 @@
         }
       ]
     },
-    "9": {
+    "8": {
       "make": "Mercedes-Benz",
       "model_name": "Maybach S-Class",
       "variant_name": "S680",
@@ -449,7 +404,7 @@
         }
       ]
     },
-    "10": {
+    "9": {
       "make": "Mercedes-Benz",
       "model_name": "S-Class",
       "variant_name": "S450 4Matic",
@@ -495,7 +450,7 @@
         }
       ]
     },
-    "11": {
+    "10": {
       "make": "Mercedes-Benz",
       "model_name": "S-Class",
       "variant_name": "S 350d",
@@ -539,7 +494,7 @@
         }
       ]
     },
-    "12": {
+    "11": {
       "make": "Mercedes-Benz",
       "model_name": "C-Class",
       "variant_name": "Mercedes-Benz C-Class C 220d",
@@ -677,7 +632,7 @@
         }
       ]
     },
-    "13": {
+    "12": {
       "make": "Mercedes-Benz",
       "model_name": "C-Class",
       "variant_name": "Mercedes-Benz C-Class C 200",
@@ -815,12 +770,12 @@
         }
       ]
     },
-    "14": {
+    "13": {
       "make": "Mercedes-Benz",
       "model_name": "C-Class",
       "variant_name": "Mercedes-Benz C-Class C 300",
-      "ex_showroom_price_min": 6431999.999999999,
-      "ex_showroom_price_max": 6431999.999999999,
+      "ex_showroom_price_min": 6432000,
+      "ex_showroom_price_max": 6432000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement": 1999,
@@ -953,7 +908,7 @@
         }
       ]
     },
-    "15": {
+    "14": {
       "make": "Mercedes-Benz",
       "model_name": "CLE",
       "variant_name": "Mercedes-Benz AMG CLE 53 4Matic",
@@ -1089,12 +1044,12 @@
         }
       ]
     },
-    "16": {
+    "15": {
       "make": "Mercedes-Benz",
       "model_name": "E-Class",
       "variant_name": "Mercedes-Benz E-Class E 200",
-      "ex_showroom_price_min": 7851000.000000001,
-      "ex_showroom_price_max": 7851000.000000001,
+      "ex_showroom_price_min": 7851000,
+      "ex_showroom_price_max": 7851000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement": 1999,
@@ -1256,7 +1211,7 @@
         }
       ]
     },
-    "17": {
+    "16": {
       "make": "Mercedes-Benz",
       "model_name": "E-Class",
       "variant_name": "Mercedes-Benz E-Class E 220d",
@@ -1423,7 +1378,7 @@
         }
       ]
     },
-    "18": {
+    "17": {
       "make": "Mercedes-Benz",
       "model_name": "E-Class",
       "variant_name": "Mercedes-Benz E-Class E 450",
@@ -1590,12 +1545,12 @@
         }
       ]
     },
-    "19": {
+    "18": {
       "make": "Mercedes-Benz",
       "model_name": "GLA",
       "variant_name": "Mercedes-Benz GLA 200",
-      "ex_showroom_price_min": 4972000,
-      "ex_showroom_price_max": 4972000,
+      "ex_showroom_price_min": 5080000,
+      "ex_showroom_price_max": 5080000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement": 1332,
@@ -1728,7 +1683,7 @@
         }
       ]
     },
-    "20": {
+    "19": {
       "make": "Mercedes-Benz",
       "model_name": "GLA",
       "variant_name": "Mercedes-Benz GLA 220d 4MATIC",
@@ -1866,7 +1821,7 @@
         }
       ]
     },
-    "21": {
+    "20": {
       "make": "Mercedes-Benz",
       "model_name": "GLA",
       "variant_name": "Mercedes-Benz GLA 220d 4MATIC AMG Line",
@@ -2004,7 +1959,7 @@
         }
       ]
     },
-    "22": {
+    "21": {
       "make": "Mercedes-Benz",
       "model_name": "GLE",
       "variant_name": "Mercedes-Benz GLE 300d 4Matic AMG Line",
@@ -2160,7 +2115,7 @@
         }
       ]
     },
-    "23": {
+    "22": {
       "make": "Mercedes-Benz",
       "model_name": "GLE",
       "variant_name": "Mercedes-Benz GLE 450 4Matic",
@@ -2313,12 +2268,12 @@
         }
       ]
     },
-    "24": {
+    "23": {
       "make": "Mercedes-Benz",
       "model_name": "GLE",
       "variant_name": "Mercedes-Benz GLE 450d 4Matic",
-      "ex_showroom_price_min": 11200000.000000002,
-      "ex_showroom_price_max": 11200000.000000002,
+      "ex_showroom_price_min": 11200000,
+      "ex_showroom_price_max": 11200000,
       "fuel_type": "Diesel",
       "transmission": "Automatic",
       "engine_displacement": 2989,
@@ -2466,7 +2421,7 @@
         }
       ]
     },
-    "25": {
+    "24": {
       "make": "Mercedes-Benz",
       "model_name": "GLS",
       "variant_name": "Mercedes-Benz GLS 450 4MATIC",
@@ -2627,7 +2582,7 @@
         }
       ]
     },
-    "26": {
+    "25": {
       "make": "Mercedes-Benz",
       "model_name": "GLS",
       "variant_name": "Mercedes-Benz GLS 450 4MATIC AMG Line",
@@ -2785,7 +2740,7 @@
         }
       ]
     },
-    "27": {
+    "26": {
       "make": "Mercedes-Benz",
       "model_name": "GLS",
       "variant_name": "Mercedes-Benz GLS 450d 4MATIC AMG Line",
@@ -2946,7 +2901,7 @@
         }
       ]
     },
-    "28": {
+    "27": {
       "make": "Mercedes-Benz",
       "model_name": "GLS",
       "variant_name": "Mercedes-Benz GLS 450d 4MATIC",
@@ -3110,7 +3065,7 @@
         }
       ]
     },
-    "29": {
+    "28": {
       "make": "Mercedes-Benz",
       "model_name": "Maybach GLS",
       "variant_name": "Mercedes-Benz Maybach GLS 600 4MATIC",
@@ -3278,7 +3233,7 @@
         }
       ]
     },
-    "30": {
+    "29": {
       "make": "Mercedes-Benz",
       "model_name": "Maybach GLS",
       "variant_name": "Mercedes-Benz Maybach GLS 600 Night Series",
@@ -3443,7 +3398,7 @@
         }
       ]
     },
-    "31": {
+    "30": {
       "make": "Mercedes-Benz",
       "model_name": "Maybach GLS",
       "variant_name": "Mercedes-Benz Maybach GLS 600 Celebration Edition",
@@ -3605,6 +3560,2830 @@
       "image_urls": [
         {
           "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/Maybach-GLS/8443/1763536042881/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+        }
+      ]
+    },
+    "31": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG C 63",
+      "variant_name": "AMG C 63 S E Performance",
+      "ex_showroom_price_min": 19100000,
+      "ex_showroom_price_max": 19100000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 1991,
+      "power": 469,
+      "torque": 545,
+      "dimensions_seating": 5,
+      "dimensions_boot": 279,
+      "dimensions_width": 1900,
+      "dimensions_height": 1458,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "AMG Performance Exhaust"
+        },
+        {
+          "value": "AMG Sport Suspension"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-C-63/12197/1763467981493/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "32": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG S 63",
+      "variant_name": "AMG S 63 E Performance",
+      "ex_showroom_price_min": 32700000,
+      "ex_showroom_price_max": 32700000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3982,
+      "power": 791,
+      "torque": 1430,
+      "mileage_range": 9.5,
+      "dimensions_seating": 5,
+      "dimensions_boot": 305,
+      "dimensions_width": 2130,
+      "dimensions_height": 1515,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Massage Seats"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        },
+        {
+          "value": "Burmester Sound System"
+        },
+        {
+          "value": "Heads-Up Display (HUD)"
+        },
+        {
+          "value": "Ventilated Seats"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Blind Spot Monitoring"
+        },
+        {
+          "value": "Lane Departure Warning"
+        },
+        {
+          "value": "Adaptive Cruise Control"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-S-63/11732/1763470421736/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "33": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG S 63",
+      "variant_name": "AMG S 63 E Performance Edition 1",
+      "ex_showroom_price_min": 33500000,
+      "ex_showroom_price_max": 33500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3982,
+      "power": 791,
+      "torque": 1430,
+      "mileage_range": 9.5,
+      "dimensions_seating": 5,
+      "dimensions_boot": 305,
+      "dimensions_width": 2130,
+      "dimensions_height": 1515,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Massage Seats"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        },
+        {
+          "value": "Burmester Sound System"
+        },
+        {
+          "value": "Heads-Up Display (HUD)"
+        },
+        {
+          "value": "Ventilated Seats"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Blind Spot Monitoring"
+        },
+        {
+          "value": "Lane Departure Warning"
+        },
+        {
+          "value": "Adaptive Cruise Control"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-S-63/11732/1763470421736/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "34": {
+      "make": "Mercedes-Benz",
+      "model_name": "EQS",
+      "variant_name": "EQS 450+",
+      "ex_showroom_price_min": 13000000,
+      "ex_showroom_price_max": 13000000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "power": 333,
+      "torque": 568,
+      "mileage_range": 857,
+      "dimensions_seating": 5,
+      "dimensions_boot": 610,
+      "dimensions_width": 2125,
+      "dimensions_height": 1512,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "MBUX Hyperscreen 56 inch"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Regenerative Braking"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "Burmester 3D Sound System"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        },
+        {
+          "value": "Fingerprint Recognition"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/EQS/8423/1763472088703/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "35": {
+      "make": "Mercedes-Benz",
+      "model_name": "EQS",
+      "variant_name": "EQS 580 4MATIC",
+      "ex_showroom_price_min": 15700000,
+      "ex_showroom_price_max": 15700000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "power": 523,
+      "torque": 855,
+      "mileage_range": 770,
+      "dimensions_seating": 5,
+      "dimensions_boot": 610,
+      "dimensions_width": 2125,
+      "dimensions_height": 1512,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "MBUX Hyperscreen 56 inch"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Regenerative Braking"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "Burmester 3D Sound System"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        },
+        {
+          "value": "Fingerprint Recognition"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/EQS/8423/1763472088703/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "36": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG EQS",
+      "variant_name": "AMG EQS 53 4MATIC+",
+      "ex_showroom_price_min": 24500000,
+      "ex_showroom_price_max": 24500000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "power": 751,
+      "torque": 1020,
+      "mileage_range": 526,
+      "dimensions_seating": 5,
+      "dimensions_boot": 610,
+      "dimensions_width": 2125,
+      "dimensions_height": 1518,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "MBUX Hyperscreen"
+        },
+        {
+          "value": "AMG Performance Seats"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Regenerative Braking"
+        },
+        {
+          "value": "AMG Drive Modes"
+        },
+        {
+          "value": "Burmester 3D Sound System"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        },
+        {
+          "value": "ADAS Next Level"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Blind Spot Monitoring"
+        },
+        {
+          "value": "Lane Departure Warning"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-EQS/11028/1763468709497/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "37": {
+      "make": "Mercedes-Benz",
+      "model_name": "G-Class",
+      "variant_name": "G 400d",
+      "ex_showroom_price_min": 25500000,
+      "ex_showroom_price_max": 25500000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement": 2925,
+      "power": 325.86,
+      "torque": 700,
+      "mileage_range": 8.47,
+      "dimensions_seating": 5,
+      "dimensions_boot": 667,
+      "dimensions_width": 1931,
+      "dimensions_height": 1969,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Massage Seats"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        },
+        {
+          "value": "Burmester Sound System"
+        },
+        {
+          "value": "Heads-Up Display (HUD)"
+        },
+        {
+          "value": "Ventilated Seats"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Blind Spot Monitoring"
+        },
+        {
+          "value": "Lane Departure Warning"
+        },
+        {
+          "value": "Adaptive Cruise Control"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/G-Class/10258/1763533134182/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "38": {
+      "make": "Mercedes-Benz",
+      "model_name": "G-Class",
+      "variant_name": "G 500",
+      "ex_showroom_price_min": 27500000,
+      "ex_showroom_price_max": 27500000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement": 2989,
+      "power": 362,
+      "torque": 750,
+      "mileage_range": 8,
+      "dimensions_seating": 5,
+      "dimensions_boot": 667,
+      "dimensions_width": 1931,
+      "dimensions_height": 1969,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Massage Seats"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        },
+        {
+          "value": "Burmester Sound System"
+        },
+        {
+          "value": "Heads-Up Display (HUD)"
+        },
+        {
+          "value": "Ventilated Seats"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Blind Spot Monitoring"
+        },
+        {
+          "value": "Lane Departure Warning"
+        },
+        {
+          "value": "Adaptive Cruise Control"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/G-Class/10258/1763533134182/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "39": {
+      "make": "Mercedes-Benz",
+      "model_name": "G-Class",
+      "variant_name": "AMG G 63",
+      "ex_showroom_price_min": 43000000,
+      "ex_showroom_price_max": 43000000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3982,
+      "power": 576.63,
+      "torque": 850,
+      "mileage_range": 8,
+      "dimensions_seating": 5,
+      "dimensions_boot": 667,
+      "dimensions_width": 1931,
+      "dimensions_height": 1969,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "AMG Performance Exhaust"
+        },
+        {
+          "value": "AMG Sport Suspension"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        },
+        {
+          "value": "Burmester Sound System"
+        },
+        {
+          "value": "Ventilated Seats"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Blind Spot Monitoring"
+        },
+        {
+          "value": "Lane Departure Warning"
+        },
+        {
+          "value": "Adaptive Cruise Control"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/G-Class/10258/1763533134182/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "40": {
+      "make": "Mercedes-Benz",
+      "model_name": "G-Class Electric",
+      "variant_name": "G 580 EQ",
+      "ex_showroom_price_min": 31000000,
+      "ex_showroom_price_max": 31000000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "power": 579,
+      "torque": 1164,
+      "mileage_range": 473,
+      "dimensions_seating": 5,
+      "dimensions_boot": 620,
+      "dimensions_width": 2187,
+      "dimensions_height": 1983,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "MBUX Infotainment"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Regenerative Braking"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "Wireless Charging"
+        },
+        {
+          "value": "GPS Navigation"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/G-Class-Electric/11502/1763533365029/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "41": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG GLC 43",
+      "variant_name": "AMG GLC 43 4Matic",
+      "ex_showroom_price_min": 9985000,
+      "ex_showroom_price_max": 9985000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 1991,
+      "power": 416,
+      "torque": 500,
+      "mileage_range": 10,
+      "dimensions_seating": 5,
+      "dimensions_width": 2096,
+      "dimensions_height": 1585,
+      "dimensions_ground_clearance": 201,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "AMG Performance Exhaust"
+        },
+        {
+          "value": "AMG Sport Suspension"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-GLC-43/11890/1763469460364/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "42": {
+      "make": "Mercedes-Benz",
+      "model_name": "EQA",
+      "variant_name": "EQA 250+",
+      "ex_showroom_price_min": 6720000,
+      "ex_showroom_price_max": 6720000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "power": 188,
+      "torque": 385,
+      "mileage_range": 560,
+      "dimensions_seating": 5,
+      "dimensions_boot": 340,
+      "dimensions_width": 1834,
+      "dimensions_height": 1608,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Twin 10.25 inch Displays"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Powered Front Seats"
+        },
+        {
+          "value": "Regenerative Braking"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "Burmester 710W Sound System"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/EQA/8276/1763471333579/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "43": {
+      "make": "Mercedes-Benz",
+      "model_name": "EQS SUV",
+      "variant_name": "EQS SUV 580 4MATIC",
+      "ex_showroom_price_min": 13350000,
+      "ex_showroom_price_max": 13350000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "power": 536.4,
+      "torque": 858,
+      "mileage_range": 820,
+      "dimensions_seating": 7,
+      "dimensions_boot": 645,
+      "dimensions_width": 1965,
+      "dimensions_height": 1718,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "MBUX Hyperscreen 56 inch"
+        },
+        {
+          "value": "Dual Rear Touchscreens"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Adaptive Air Suspension"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Ventilated Seats"
+        },
+        {
+          "value": "Massage Seats"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "Burmester Sound System"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        },
+        {
+          "value": "360 Degree Camera"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "ADAS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/EQS-SUV/8970/1763532863673/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "44": {
+      "make": "Mercedes-Benz",
+      "model_name": "EQS SUV",
+      "variant_name": "EQS SUV 450 4MATIC",
+      "ex_showroom_price_min": 14800000,
+      "ex_showroom_price_max": 14800000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "power": 360,
+      "torque": 800,
+      "mileage_range": 809,
+      "dimensions_seating": 5,
+      "dimensions_boot": 645,
+      "dimensions_width": 1965,
+      "dimensions_height": 1718,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "MBUX Hyperscreen 56 inch"
+        },
+        {
+          "value": "Dual Rear Touchscreens"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Adaptive Air Suspension"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Ventilated Seats"
+        },
+        {
+          "value": "Massage Seats"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "Burmester Sound System"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        },
+        {
+          "value": "360 Degree Camera"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "ADAS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/EQS-SUV/8970/1763532863673/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "45": {
+      "make": "Mercedes-Benz",
+      "model_name": "Maybach EQS SUV",
+      "variant_name": "Maybach EQS 680 SUV",
+      "ex_showroom_price_min": 22820000,
+      "ex_showroom_price_max": 22820000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "power": 649,
+      "torque": 955,
+      "mileage_range": 611,
+      "dimensions_seating": 4,
+      "dimensions_boot": 440,
+      "dimensions_width": 2157,
+      "dimensions_height": 1721,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "MBUX Hyperscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Massage Seats"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        },
+        {
+          "value": "Burmester Sound System"
+        },
+        {
+          "value": "Rear Entertainment System"
+        },
+        {
+          "value": "Ventilated Seats"
+        },
+        {
+          "value": "Maybach Exclusive Design"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Blind Spot Monitoring"
+        },
+        {
+          "value": "Lane Departure Warning"
+        },
+        {
+          "value": "Adaptive Cruise Control"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/Maybach-EQS-SUV/9898/1763535819468/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "46": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG GT Coupe",
+      "variant_name": "AMG GT 55 4MATIC+",
+      "ex_showroom_price_min": 30500000,
+      "ex_showroom_price_max": 30500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3982,
+      "power": 476,
+      "torque": 700,
+      "dimensions_seating": 4,
+      "dimensions_width": 1984,
+      "dimensions_height": 1354,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "AMG Performance Exhaust"
+        },
+        {
+          "value": "AMG Sport Suspension"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-GT-Coupe/11053/1763470161601/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "47": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG GT Coupe",
+      "variant_name": "AMG GT 63 4MATIC+",
+      "ex_showroom_price_min": 36500000,
+      "ex_showroom_price_max": 36500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3982,
+      "power": 576,
+      "torque": 800,
+      "dimensions_seating": 4,
+      "dimensions_width": 1984,
+      "dimensions_height": 1354,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "AMG Performance Exhaust"
+        },
+        {
+          "value": "AMG Sport Suspension"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-GT-Coupe/11053/1763470161601/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "48": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG GT 4-Door Coupe",
+      "variant_name": "AMG GT 63 S E Performance",
+      "ex_showroom_price_min": 32700000,
+      "ex_showroom_price_max": 32700000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3982,
+      "power": 630.28,
+      "torque": 900,
+      "mileage_range": 7,
+      "dimensions_seating": 5,
+      "dimensions_boot": 461,
+      "dimensions_length": 5054,
+      "dimensions_width": 1953,
+      "dimensions_height": 1447,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "AMG Performance Exhaust"
+        },
+        {
+          "value": "AMG Sport Suspension"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-GT-4-Door-Coupe/9792/1769679914036/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "49": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG GLE 53",
+      "variant_name": "AMG GLE 53 4MATIC+ Coupe",
+      "ex_showroom_price_min": 18750000,
+      "ex_showroom_price_max": 18750000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 2999,
+      "power": 435,
+      "torque": 520,
+      "mileage_range": 8.9,
+      "dimensions_seating": 5,
+      "dimensions_boot": 655,
+      "dimensions_width": 2157,
+      "dimensions_height": 1716,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "Engine Start Stop Button"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "AMG Performance Exhaust"
+        },
+        {
+          "value": "AMG Sport Suspension"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "Ambient Lighting"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-GLE-53/10874/1763469756214/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "50": {
+      "make": "Mercedes-Benz",
+      "model_name": "Maybach SL 680",
+      "variant_name": "Maybach SL 680 Monogram",
+      "ex_showroom_price_min": 41150000,
+      "ex_showroom_price_max": 41150000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3982,
+      "power": 577,
+      "torque": 800,
+      "dimensions_seating": 2,
+      "dimensions_boot": 240,
+      "dimensions_width": 2100,
+      "dimensions_height": 1358,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "11.9 inch Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Leather Seats"
+        },
+        {
+          "value": "Android Auto"
+        },
+        {
+          "value": "Apple CarPlay"
+        },
+        {
+          "value": "Premium Infotainment"
+        },
+        {
+          "value": "Ambient Lighting"
+        },
+        {
+          "value": "Retractable Soft Top"
+        },
+        {
+          "value": "Maybach Exclusive Design"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Blind Spot Monitoring"
+        },
+        {
+          "value": "Lane Departure Warning"
+        },
+        {
+          "value": "Adaptive Cruise Control"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/Maybach-SL-680/12398/1763536529976/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "51": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG SL",
+      "variant_name": "AMG SL 55 4MATIC+",
+      "ex_showroom_price_min": 23385000,
+      "ex_showroom_price_max": 23385000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3982,
+      "power": 469.35,
+      "torque": 700,
+      "mileage_range": 7.3,
+      "dimensions_seating": 4,
+      "dimensions_boot": 213,
+      "dimensions_width": 1915,
+      "dimensions_height": 1359,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "AMG Performance Exhaust"
+        },
+        {
+          "value": "Retractable Soft Top"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "Ambient Lighting"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-SL/10162/1763470676406/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "52": {
+      "make": "Mercedes-Benz",
+      "model_name": "CLE Cabriolet",
+      "variant_name": "CLE 300 Cabriolet",
+      "ex_showroom_price_min": 11100000,
+      "ex_showroom_price_max": 11100000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 1999,
+      "power": 255,
+      "torque": 400,
+      "mileage_range": 12,
+      "dimensions_seating": 4,
+      "dimensions_boot": 295,
+      "dimensions_width": 2042,
+      "dimensions_height": 1424,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Ventilated Seats"
+        },
+        {
+          "value": "Retractable Soft Top"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "Ambient Lighting"
+        },
+        {
+          "value": "AIRSCARF Neck Heating"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/CLE-Cabriolet/10440/1763470894885/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "53": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG E 53 Cabriolet",
+      "variant_name": "AMG E 53 4MATIC+ Cabriolet",
+      "ex_showroom_price_min": 13025000,
+      "ex_showroom_price_max": 13025000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 2998,
+      "power": 424.71,
+      "torque": 520.63,
+      "mileage_range": 9,
+      "dimensions_seating": 4,
+      "dimensions_boot": 269,
+      "dimensions_width": 2054,
+      "dimensions_height": 1427,
+      "dimensions_ground_clearance": 114,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Dual 12.3 inch Displays"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Adjustable Seats"
+        },
+        {
+          "value": "AMG Performance Exhaust"
+        },
+        {
+          "value": "Retractable Soft Top"
+        },
+        {
+          "value": "Drive Modes"
+        },
+        {
+          "value": "Voice Control"
+        },
+        {
+          "value": "MBUX Infotainment"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "360 View Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "Speed Sensing Auto Door Lock"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-E-53-Cabriolet/10878/1763468433617/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "54": {
+      "make": "Mercedes-Benz",
+      "model_name": "V-Class",
+      "variant_name": "V-Class V 300d Extra Long",
+      "ex_showroom_price_min": 14000000,
+      "ex_showroom_price_max": 14000000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic",
+      "engine_displacement": 1951,
+      "power": 233.33,
+      "torque": 500,
+      "dimensions_seating": 6,
+      "dimensions_width": 1928,
+      "dimensions_height": 1880,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Sliding Doors"
+        },
+        {
+          "value": "Rear AC Vents"
+        },
+        {
+          "value": "Captain Seats"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Ambient Lighting"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/V-Class/10902/1772526111627/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "55": {
+      "make": "Mercedes-Benz",
+      "model_name": "V-Class",
+      "variant_name": "V-Class V 260 Extra Long",
+      "ex_showroom_price_min": 14000000,
+      "ex_showroom_price_max": 14000000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 1999,
+      "power": 228,
+      "torque": 370,
+      "dimensions_seating": 6,
+      "dimensions_width": 1928,
+      "dimensions_height": 1880,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Touchscreen"
+        },
+        {
+          "value": "Multi-function Steering Wheel"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Power Windows"
+        },
+        {
+          "value": "Electric Sliding Doors"
+        },
+        {
+          "value": "Rear AC Vents"
+        },
+        {
+          "value": "Captain Seats"
+        },
+        {
+          "value": "USB Charger"
+        },
+        {
+          "value": "Ambient Lighting"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Brake Assist"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Traction Control"
+        },
+        {
+          "value": "Airbags"
+        },
+        {
+          "value": "Tyre Pressure Monitoring System (TPMS)"
+        },
+        {
+          "value": "ISOFIX Child Seat Mounts"
+        },
+        {
+          "value": "Rear Camera"
+        },
+        {
+          "value": "Seat Belt Warning"
+        },
+        {
+          "value": "Speed Alert"
+        },
+        {
+          "value": "Hill Assist"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/V-Class/10902/1772526111627/front-left-side-47.jpg?tr=w-230"
         }
       ]
     }

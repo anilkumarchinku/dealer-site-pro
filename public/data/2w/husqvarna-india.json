@@ -3,7 +3,8 @@
     {
       "model_name": "Husqvarna Svartpilen 250",
       "model_name_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250",
-      "price": "Rs 2,10,000",
+      "availability": "Discontinued",
+      "price": "Discontinued (Last known: Rs 2,10,000)",
       "engine_details": "249 cc single-cylinder, 4-stroke, liquid-cooled DOHC engine with 4 valves, fuel-injection, 6-speed gearbox, bore 72 mm x stroke 61.1 mm, BS6-2.0 emission compliance, delivering 30 PS @ 9000 rpm",
       "engine_details_citation": "https://www.bikedekho.com/husqvarna/svartpilen-250",
       "torque": "24 Nm @ 7500 rpm",

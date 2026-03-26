@@ -4930,6 +4930,97 @@
         "source_url_citation": "https://www.cardekho.com/toyota/vellfire/specs",
         "launch_year_citation": "https://www.cardekho.com/toyota/vellfire/specs"
       }
+    },
+    {
+      "make": "Toyota",
+      "make_citation": "https://www.cardekho.com/toyota/land-cruiser-300",
+      "model": "Land Cruiser 300",
+      "model_citation": "https://www.cardekho.com/toyota/land-cruiser-300",
+      "variant_name": "Land Cruiser 300 ZX",
+      "variant_name_citation": "https://www.cardekho.com/toyota/land-cruiser-300/specs",
+      "pricing": {
+        "ex_showroom_min": 21560000,
+        "ex_showroom_min_citation": "https://www.cardekho.com/toyota/land-cruiser-300",
+        "ex_showroom_max": 21560000,
+        "ex_showroom_max_citation": "https://www.cardekho.com/toyota/land-cruiser-300",
+        "hyderabad_on_road": 25300000,
+        "hyderabad_on_road_citation": "https://www.cardekho.com/toyota/land-cruiser-300/price-in-hyderabad"
+      },
+      "powertrain": {
+        "fuel_type": "Diesel",
+        "fuel_type_citation": "https://www.cardekho.com/toyota/land-cruiser-300/specs",
+        "transmission": "10-speed Automatic",
+        "transmission_citation": "https://www.cardekho.com/toyota/land-cruiser-300/specs"
+      },
+      "engine_specs": {
+        "displacement": 3346,
+        "displacement_citation": "https://www.cardekho.com/toyota/land-cruiser-300/specs",
+        "power": 304.41,
+        "power_citation": "https://www.cardekho.com/toyota/land-cruiser-300/specs",
+        "torque": 700,
+        "torque_citation": "https://www.cardekho.com/toyota/land-cruiser-300/specs",
+        "mileage": 11,
+        "mileage_citation": "https://www.cardekho.com/toyota/land-cruiser-300/specs"
+      },
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/toyota/land-cruiser-300/specs",
+        "boot": 1131,
+        "boot_citation": "https://www.cardekho.com/toyota/land-cruiser-300/specs",
+        "ground_clearance": 200,
+        "ground_clearance_citation": "https://www.cardekho.com/toyota/land-cruiser-300/specs",
+        "length": 4985,
+        "length_citation": "https://www.cardekho.com/toyota/land-cruiser-300/specs",
+        "width": 1990,
+        "width_citation": "https://www.cardekho.com/toyota/land-cruiser-300/specs",
+        "height": 1945,
+        "height_citation": "https://www.cardekho.com/toyota/land-cruiser-300/specs"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "12.3-inch touchscreen display",
+            "value_citation": "https://www.cardekho.com/toyota/land-cruiser-300"
+          },
+          {
+            "value": "Four-zone climate control",
+            "value_citation": "https://www.cardekho.com/toyota/land-cruiser-300"
+          },
+          {
+            "value": "Power-adjustable heated & ventilated front seats",
+            "value_citation": "https://www.cardekho.com/toyota/land-cruiser-300"
+          }
+        ],
+        "safety": [
+          {
+            "value": "10 Airbags",
+            "value_citation": "https://www.cardekho.com/toyota/land-cruiser-300/specs"
+          },
+          {
+            "value": "ABS + EBD",
+            "value_citation": "https://www.cardekho.com/toyota/land-cruiser-300/specs"
+          },
+          {
+            "value": "Toyota Safety Sense",
+            "value_citation": "https://www.cardekho.com/toyota/land-cruiser-300/specs"
+          }
+        ]
+      },
+      "media": {
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Land-Cruiser-300/9607/1734425324498/front-left-side-47.jpg?tr=w-230",
+            "value_citation": "https://www.cardekho.com/toyota/land-cruiser-300"
+          }
+        ]
+      },
+      "metadata": {
+        "availability_status": "On Sale",
+        "availability_status_citation": "https://www.cardekho.com/toyota/land-cruiser-300",
+        "source_url": "https://www.cardekho.com/toyota/land-cruiser-300",
+        "source_url_citation": "https://www.cardekho.com/toyota/land-cruiser-300",
+        "launch_year_citation": "https://www.cardekho.com/toyota/land-cruiser-300"
+      }
     }
   ]
 }

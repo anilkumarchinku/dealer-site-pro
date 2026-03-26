@@ -7,7 +7,7 @@
       "model_citation": "https://www.cardekho.com/overview/BMW_2_Series_Gran_Coupe/BMW_2_Series_Gran_Coupe_218_M_Sport.htm",
       "variant_name": "218 M Sport",
       "variant_name_citation": "https://www.cardekho.com/overview/BMW_2_Series_Gran_Coupe/BMW_2_Series_Gran_Coupe_218_M_Sport.htm",
-      "ex_showroom_price_min_inr": 4530000,
+      "ex_showroom_price_min_inr": 4580000,
       "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/overview/BMW_2_Series_Gran_Coupe/BMW_2_Series_Gran_Coupe_218_M_Sport.htm",
       "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/overview/BMW_2_Series_Gran_Coupe/BMW_2_Series_Gran_Coupe_218_M_Sport.htm",
       "fuel_type": "Petrol",
@@ -424,7 +424,7 @@
       "model_citation": "https://www.cardekho.com/overview/BMW_7_Series/BMW_7_Series_740i_M_Sport.htm",
       "variant_name": "740i M Sport",
       "variant_name_citation": "https://www.cardekho.com/overview/BMW_7_Series/BMW_7_Series_740i_M_Sport.htm",
-      "ex_showroom_price_min_inr": 17900000,
+      "ex_showroom_price_min_inr": 18300000,
       "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/overview/BMW_7_Series/BMW_7_Series_740i_M_Sport.htm",
       "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/overview/BMW_7_Series/BMW_7_Series_740i_M_Sport.htm",
       "fuel_type": "Petrol",
@@ -744,95 +744,6 @@
     },
     {
       "make": "BMW",
-      "make_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "model": "M4",
-      "model_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "variant_name": "Competition xDrive",
-      "variant_name_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "ex_showroom_price_min_inr": 15200000,
-      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "fuel_type": "Petrol",
-      "fuel_type_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "transmission": "Automatic",
-      "transmission_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "engine_displacement_cc": 2993,
-      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "power_bhp": 503,
-      "power_bhp_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "torque_nm": 650,
-      "torque_nm_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "mileage_kmpl_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "seating_capacity_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "boot_space_l": 440,
-      "boot_space_l_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "length_mm": 4794,
-      "length_mm_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "width_mm": 1887,
-      "width_mm_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "height_mm": 1393,
-      "height_mm_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "key_features": [
-        {
-          "value": "Power Steering",
-          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
-        },
-        {
-          "value": "ABS",
-          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
-        },
-        {
-          "value": "Automatic Climate Control",
-          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
-        },
-        {
-          "value": "Alloy Wheels",
-          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
-        }
-      ],
-      "safety_features": [
-        {
-          "value": "ABS",
-          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
-        },
-        {
-          "value": "Brake Assist",
-          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
-        },
-        {
-          "value": "6 Airbags",
-          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
-        },
-        {
-          "value": "TPMS",
-          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
-        },
-        {
-          "value": "ESC",
-          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
-        },
-        {
-          "value": "HUD",
-          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
-        },
-        {
-          "value": "Hill Assist",
-          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
-        }
-      ],
-      "image_urls": [
-        {
-          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/M4-Competition/11702/1762778618869/front-left-side-47.jpg?tr=w-230",
-          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
-        }
-      ],
-      "availability_status": "on_sale",
-      "availability_status_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
-      "source_url": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
-    },
-    {
-      "make": "BMW",
       "make_citation": "https://www.cardekho.com/overview/BMW_M5/BMW_M5_xDrive.htm",
       "model": "M5",
       "model_citation": "https://www.cardekho.com/overview/BMW_M5/BMW_M5_xDrive.htm",
@@ -1006,87 +917,6 @@
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/overview/BMW_X3/BMW_X3_xDrive_20_M_Sport.htm",
       "source_url": "https://www.cardekho.com/overview/BMW_X3/BMW_X3_xDrive_20_M_Sport.htm"
-    },
-    {
-      "make": "BMW",
-      "make_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "model": "X4",
-      "model_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "variant_name": "M40i",
-      "variant_name_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "ex_showroom_price_min_inr": 9620000,
-      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "fuel_type": "Petrol",
-      "fuel_type_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "transmission": "Automatic",
-      "transmission_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "engine_displacement_cc": 2993,
-      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "power_bhp": 355.37,
-      "power_bhp_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "torque_nm": 500,
-      "torque_nm_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "mileage_kmpl_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "seating_capacity_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "boot_space_l": 525,
-      "boot_space_l_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "length_mm": 4754,
-      "length_mm_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "width_mm": 1927,
-      "width_mm_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "height_mm": 1620,
-      "height_mm_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "key_features": [
-        {
-          "value": "Height Adjustable Driver Seat",
-          "value_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm"
-        },
-        {
-          "value": "Automatic Climate Control",
-          "value_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm"
-        },
-        {
-          "value": "Drive Modes",
-          "value_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm"
-        },
-        {
-          "value": "Sunroof",
-          "value_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm"
-        }
-      ],
-      "safety_features": [
-        {
-          "value": "ABS",
-          "value_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm"
-        },
-        {
-          "value": "6 Airbags",
-          "value_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm"
-        },
-        {
-          "value": "TPMS",
-          "value_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm"
-        },
-        {
-          "value": "ESC",
-          "value_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm"
-        },
-        {
-          "value": "Hill Assist",
-          "value_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm"
-        }
-      ],
-      "image_urls": [
-        {
-          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/X4/11325/1698065430796/front-left-side-47.jpg?tr=w-300",
-          "value_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm"
-        }
-      ],
-      "availability_status": "on_sale",
-      "availability_status_citation": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm",
-      "source_url": "https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm"
     },
     {
       "make": "BMW",
@@ -1412,6 +1242,1417 @@
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/overview/BMW_Z4/BMW_Z4_M40i.htm",
       "source_url": "https://www.cardekho.com/overview/BMW_Z4/BMW_Z4_M40i.htm"
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/bmw/3-series",
+      "model": "3 Series",
+      "model_citation": "https://www.cardekho.com/bmw/3-series",
+      "variant_name": "M340i xDrive",
+      "variant_name_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "ex_showroom_price_min_inr": 7540000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/3-series",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "engine_displacement_cc": 2998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "power_bhp": 368.78,
+      "power_bhp_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "torque_nm": 500,
+      "torque_nm_citation": "https://www.cardekho.com/bmw/3-series",
+      "mileage_kmpl": 13.02,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/bmw/3-series",
+      "boot_space_l": 480,
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/3-series",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/3-series",
+      "length_mm": 4719,
+      "length_mm_citation": "https://www.cardekho.com/bmw/3-series",
+      "width_mm": 1827,
+      "width_mm_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "height_mm": 1442,
+      "height_mm_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "Head-Up Display",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "Ambient Lighting",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "Sport Seats",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "Engine Start-Stop Button",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "ISOFIX Child-Seat Mounts",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "Rear Camera",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/3-Series/10567/1762779166437/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/bmw/3-series",
+      "source_url": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm"
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/bmw/3-series",
+      "model": "3 Series",
+      "model_citation": "https://www.cardekho.com/bmw/3-series",
+      "variant_name": "M340i 50 Jahre M Edition",
+      "variant_name_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_M_Edition.htm",
+      "ex_showroom_price_min_inr": 7285000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_M_Edition.htm",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/3-series",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_M_Edition.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_M_Edition.htm",
+      "engine_displacement_cc": 2998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_M_Edition.htm",
+      "power_bhp": 374,
+      "power_bhp_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_M_Edition.htm",
+      "torque_nm": 500,
+      "torque_nm_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_M_Edition.htm",
+      "mileage_kmpl": 13.02,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_M_Edition.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/bmw/3-series",
+      "boot_space_l": 480,
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/3-series",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/3-series",
+      "length_mm": 4719,
+      "length_mm_citation": "https://www.cardekho.com/bmw/3-series",
+      "width_mm": 1827,
+      "width_mm_citation": "https://www.cardekho.com/bmw/3-series",
+      "height_mm": 1442,
+      "height_mm_citation": "https://www.cardekho.com/bmw/3-series",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "Sport Seats",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        },
+        {
+          "value": "ISOFIX Child-Seat Mounts",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/3-Series/10567/1762779166437/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/bmw/3-series",
+      "source_url": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_M_Edition.htm"
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/bmw/5-series",
+      "model": "5 Series",
+      "model_citation": "https://www.cardekho.com/bmw/5-series",
+      "variant_name": "530i M Sport Pro",
+      "variant_name_citation": "https://www.cardekho.com/overview/BMW_5_Series/BMW_5_Series_530i_M_Sport_Pro.htm",
+      "ex_showroom_price_min_inr": 7480000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/bmw/5-series",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/5-series",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/BMW_5_Series/BMW_5_Series_530i_M_Sport_Pro.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/BMW_5_Series/BMW_5_Series_530i_M_Sport_Pro.htm",
+      "engine_displacement_cc": 1998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/BMW_5_Series/BMW_5_Series_530i_M_Sport_Pro.htm",
+      "power_bhp": 255,
+      "power_bhp_citation": "https://www.cardekho.com/overview/BMW_5_Series/BMW_5_Series_530i_M_Sport_Pro.htm",
+      "torque_nm": 400,
+      "torque_nm_citation": "https://www.cardekho.com/overview/BMW_5_Series/BMW_5_Series_530i_M_Sport_Pro.htm",
+      "mileage_kmpl": 10.9,
+      "mileage_kmpl_citation": "https://www.cardekho.com/bmw/5-series",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/bmw/5-series",
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/5-series",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/5-series",
+      "length_mm": 5060,
+      "length_mm_citation": "https://www.cardekho.com/bmw/5-series",
+      "width_mm": 2156,
+      "width_mm_citation": "https://www.cardekho.com/overview/BMW_5_Series/BMW_5_Series_530i_M_Sport_Pro.htm",
+      "height_mm": 1518,
+      "height_mm_citation": "https://www.cardekho.com/overview/BMW_5_Series/BMW_5_Series_530i_M_Sport_Pro.htm",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/bmw/5-series"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/bmw/5-series"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/bmw/5-series"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/bmw/5-series"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/bmw/5-series"
+        },
+        {
+          "value": "Head-Up Display",
+          "value_citation": "https://www.cardekho.com/bmw/5-series"
+        },
+        {
+          "value": "Engine Start-Stop Button",
+          "value_citation": "https://www.cardekho.com/bmw/5-series"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/bmw/5-series"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/bmw/5-series"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/bmw/5-series"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/bmw/5-series"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/bmw/5-series"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/bmw/5-series"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/bmw/5-series"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/5-Series-2024/10500/1762779424697/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/bmw/5-series"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/bmw/5-series",
+      "source_url": "https://www.cardekho.com/overview/BMW_5_Series/BMW_5_Series_530i_M_Sport_Pro.htm"
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/bmw/x1",
+      "model": "X1",
+      "model_citation": "https://www.cardekho.com/bmw/x1",
+      "variant_name": "sDrive18i M Sport",
+      "variant_name_citation": "https://www.cardekho.com/overview/BMW_X1/BMW_X1_sDrive_18i_M_Sport.htm",
+      "ex_showroom_price_min_inr": 5090000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/bmw/x1",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/x1",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/BMW_X1/BMW_X1_sDrive_18i_M_Sport.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/BMW_X1/BMW_X1_sDrive_18i_M_Sport.htm",
+      "engine_displacement_cc": 1499,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/BMW_X1/BMW_X1_sDrive_18i_M_Sport.htm",
+      "power_bhp": 134.1,
+      "power_bhp_citation": "https://www.cardekho.com/overview/BMW_X1/BMW_X1_sDrive_18i_M_Sport.htm",
+      "torque_nm": 230,
+      "torque_nm_citation": "https://www.cardekho.com/overview/BMW_X1/BMW_X1_sDrive_18i_M_Sport.htm",
+      "mileage_kmpl": 20.37,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/BMW_X1/BMW_X1_sDrive_18i_M_Sport.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/bmw/x1",
+      "boot_space_l": 476,
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/x1",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/x1",
+      "length_mm": 4500,
+      "length_mm_citation": "https://www.cardekho.com/bmw/x1",
+      "width_mm": 1845,
+      "width_mm_citation": "https://www.cardekho.com/bmw/x1",
+      "height_mm": 1598,
+      "height_mm_citation": "https://www.cardekho.com/bmw/x1",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "iDrive 8 Infotainment",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "Electrically Adjustable Seats",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "Engine Start-Stop Button",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "10 Airbags",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "ISOFIX Child-Seat Mounts",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "Rear Camera",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/X1/10064/1762779713274/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/bmw/x1",
+      "source_url": "https://www.cardekho.com/overview/BMW_X1/BMW_X1_sDrive_18i_M_Sport.htm"
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/bmw/x1",
+      "model": "X1",
+      "model_citation": "https://www.cardekho.com/bmw/x1",
+      "variant_name": "sDrive18d M Sport",
+      "variant_name_citation": "https://www.cardekho.com/overview/BMW_X1/BMW_X1_sDrive_18d_M_Sport.htm",
+      "ex_showroom_price_min_inr": 5220000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/bmw/x1",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/x1",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/overview/BMW_X1/BMW_X1_sDrive_18d_M_Sport.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/BMW_X1/BMW_X1_sDrive_18d_M_Sport.htm",
+      "engine_displacement_cc": 1995,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/BMW_X1/BMW_X1_sDrive_18d_M_Sport.htm",
+      "power_bhp": 147.51,
+      "power_bhp_citation": "https://www.cardekho.com/overview/BMW_X1/BMW_X1_sDrive_18d_M_Sport.htm",
+      "torque_nm": 360,
+      "torque_nm_citation": "https://www.cardekho.com/overview/BMW_X1/BMW_X1_sDrive_18d_M_Sport.htm",
+      "mileage_kmpl": 20.37,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/BMW_X1/BMW_X1_sDrive_18d_M_Sport.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/bmw/x1",
+      "boot_space_l": 476,
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/x1",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/x1",
+      "length_mm": 4500,
+      "length_mm_citation": "https://www.cardekho.com/bmw/x1",
+      "width_mm": 1845,
+      "width_mm_citation": "https://www.cardekho.com/bmw/x1",
+      "height_mm": 1598,
+      "height_mm_citation": "https://www.cardekho.com/bmw/x1",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "iDrive 8 Infotainment",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "Electrically Adjustable Seats",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "Engine Start-Stop Button",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "10 Airbags",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "ISOFIX Child-Seat Mounts",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        },
+        {
+          "value": "Rear Camera",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/X1/10064/1762779713274/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/bmw/x1"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/bmw/x1",
+      "source_url": "https://www.cardekho.com/overview/BMW_X1/BMW_X1_sDrive_18d_M_Sport.htm"
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/bmw/x6",
+      "model": "X6",
+      "model_citation": "https://www.cardekho.com/bmw/x6",
+      "variant_name": "xDrive40i M Sport",
+      "variant_name_citation": "https://www.cardekho.com/overview/BMW_X6/BMW_X6_xDrive_40i_M_Sport.htm",
+      "ex_showroom_price_min_inr": 9500000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/bmw/x6",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/x6",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/bmw/x6",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/bmw/x6",
+      "engine_displacement_cc": 2998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/bmw/x6",
+      "power_bhp": 335.25,
+      "power_bhp_citation": "https://www.cardekho.com/bmw/x6",
+      "torque_nm": 450,
+      "torque_nm_citation": "https://www.cardekho.com/bmw/x6",
+      "mileage_kmpl": 10.31,
+      "mileage_kmpl_citation": "https://www.cardekho.com/bmw/x6",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/bmw/x6",
+      "boot_space_l": 565,
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/x6",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/x6",
+      "length_mm": 4935,
+      "length_mm_citation": "https://www.cardekho.com/bmw/x6",
+      "width_mm": 2212,
+      "width_mm_citation": "https://www.cardekho.com/bmw/x6",
+      "height_mm": 1696,
+      "height_mm_citation": "https://www.cardekho.com/bmw/x6",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/bmw/x6"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/bmw/x6"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/bmw/x6"
+        },
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/bmw/x6"
+        },
+        {
+          "value": "iDrive Infotainment",
+          "value_citation": "https://www.cardekho.com/bmw/x6"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/bmw/x6"
+        },
+        {
+          "value": "Engine Start-Stop Button",
+          "value_citation": "https://www.cardekho.com/bmw/x6"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/bmw/x6"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/bmw/x6"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/bmw/x6"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/bmw/x6"
+        },
+        {
+          "value": "Adaptive Cruise Control",
+          "value_citation": "https://www.cardekho.com/bmw/x6"
+        },
+        {
+          "value": "Lane Departure Warning",
+          "value_citation": "https://www.cardekho.com/bmw/x6"
+        },
+        {
+          "value": "Blind-Spot Monitoring",
+          "value_citation": "https://www.cardekho.com/bmw/x6"
+        },
+        {
+          "value": "Automatic Emergency Braking",
+          "value_citation": "https://www.cardekho.com/bmw/x6"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/X6/9577/1681803498498/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/bmw/x6"
+        }
+      ],
+      "availability_status": "discontinued",
+      "availability_status_citation": "https://www.cardekho.com/bmw/x6",
+      "source_url": "https://www.cardekho.com/overview/BMW_X6/BMW_X6_xDrive_40i_M_Sport.htm"
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/bmw/m2",
+      "model": "M2",
+      "model_citation": "https://www.cardekho.com/bmw/m2",
+      "variant_name": "M2 Competition",
+      "variant_name_citation": "https://www.cardekho.com/bmw/m2",
+      "ex_showroom_price_min_inr": 10250000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/bmw/m2",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/m2",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/bmw/m2",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/bmw/m2",
+      "engine_displacement_cc": 2993,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/bmw/m2",
+      "power_bhp": 523,
+      "power_bhp_citation": "https://www.cardekho.com/bmw/m2",
+      "torque_nm": 650,
+      "torque_nm_citation": "https://www.cardekho.com/bmw/m2",
+      "mileage_kmpl": 10.19,
+      "mileage_kmpl_citation": "https://www.cardekho.com/bmw/m2",
+      "seating_capacity": 4,
+      "seating_capacity_citation": "https://www.cardekho.com/bmw/m2",
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/m2",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/m2",
+      "length_mm": 4580,
+      "length_mm_citation": "https://www.cardekho.com/bmw/m2",
+      "width_mm": 1887,
+      "width_mm_citation": "https://www.cardekho.com/bmw/m2",
+      "height_mm": 1403,
+      "height_mm_citation": "https://www.cardekho.com/bmw/m2",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/bmw/m2"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/bmw/m2"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/bmw/m2"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/bmw/m2"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/bmw/m2"
+        },
+        {
+          "value": "Engine Start-Stop Button",
+          "value_citation": "https://www.cardekho.com/bmw/m2"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/bmw/m2"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/bmw/m2"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/bmw/m2"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/bmw/m2"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/bmw/m2"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/bmw/m2"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/bmw/m2"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/M2/10476/1762780367949/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/bmw/m2"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/bmw/m2",
+      "source_url": "https://www.cardekho.com/bmw/m2"
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/bmw/ix",
+      "model": "iX",
+      "model_citation": "https://www.cardekho.com/bmw/ix",
+      "variant_name": "xDrive50",
+      "variant_name_citation": "https://www.cardekho.com/overview/BMW_iX/BMW_iX_xDrive50.htm",
+      "ex_showroom_price_min_inr": 13950000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/bmw/ix",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/ix",
+      "fuel_type": "Electric",
+      "fuel_type_citation": "https://www.cardekho.com/bmw/ix",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/bmw/ix",
+      "engine_displacement_cc_citation": "https://www.cardekho.com/bmw/ix",
+      "power_bhp": 516.29,
+      "power_bhp_citation": "https://www.cardekho.com/bmw/ix",
+      "torque_nm": 765,
+      "torque_nm_citation": "https://www.cardekho.com/bmw/ix",
+      "mileage_kmpl_citation": "https://www.cardekho.com/bmw/ix",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/bmw/ix",
+      "boot_space_l": 500,
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/ix",
+      "ground_clearance_mm": 202,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/ix",
+      "length_mm": 4953,
+      "length_mm_citation": "https://www.cardekho.com/bmw/ix",
+      "width_mm": 2230,
+      "width_mm_citation": "https://www.cardekho.com/bmw/ix",
+      "height_mm": 1695,
+      "height_mm_citation": "https://www.cardekho.com/bmw/ix",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/bmw/ix"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/bmw/ix"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/bmw/ix"
+        },
+        {
+          "value": "Curved Display",
+          "value_citation": "https://www.cardekho.com/bmw/ix"
+        },
+        {
+          "value": "5G Connectivity",
+          "value_citation": "https://www.cardekho.com/bmw/ix"
+        },
+        {
+          "value": "Sustainable Interior Materials",
+          "value_citation": "https://www.cardekho.com/bmw/ix"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/bmw/ix"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/bmw/ix"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/bmw/ix"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/bmw/ix"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/bmw/ix"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/bmw/ix"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/bmw/ix"
+        },
+        {
+          "value": "ADAS",
+          "value_citation": "https://www.cardekho.com/bmw/ix"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/bmw/ix"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/iX/9955/1762779870802/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/bmw/ix"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/bmw/ix",
+      "source_url": "https://www.cardekho.com/overview/BMW_iX/BMW_iX_xDrive50.htm"
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/bmw/i7",
+      "model": "i7",
+      "model_citation": "https://www.cardekho.com/bmw/i7",
+      "variant_name": "eDrive50",
+      "variant_name_citation": "https://www.cardekho.com/overview/BMW_i7/BMW_i7_eDrive_50.htm",
+      "ex_showroom_price_min_inr": 20500000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/bmw/i7",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/i7",
+      "fuel_type": "Electric",
+      "fuel_type_citation": "https://www.cardekho.com/bmw/i7",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/bmw/i7",
+      "engine_displacement_cc_citation": "https://www.cardekho.com/bmw/i7",
+      "power_bhp": 650.39,
+      "power_bhp_citation": "https://www.cardekho.com/bmw/i7",
+      "torque_nm": 1015,
+      "torque_nm_citation": "https://www.cardekho.com/bmw/i7",
+      "mileage_kmpl_citation": "https://www.cardekho.com/bmw/i7",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/bmw/i7",
+      "boot_space_l": 500,
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/i7",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/i7",
+      "length_mm": 5391,
+      "length_mm_citation": "https://www.cardekho.com/bmw/i7",
+      "width_mm": 1950,
+      "width_mm_citation": "https://www.cardekho.com/bmw/i7",
+      "height_mm": 1544,
+      "height_mm_citation": "https://www.cardekho.com/bmw/i7",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "31.3-inch Theatre Screen",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Swarovski Crystal Headlights",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Panoramic Sky Lounge Roof",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Rear Door Touchscreens",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Massage Seats",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "10 Airbags",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/i7/10014/1762778780497/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/bmw/i7",
+      "source_url": "https://www.cardekho.com/overview/BMW_i7/BMW_i7_eDrive_50.htm"
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/bmw/i7",
+      "model": "i7",
+      "model_citation": "https://www.cardekho.com/bmw/i7",
+      "variant_name": "xDrive60",
+      "variant_name_citation": "https://www.cardekho.com/bmw/i7",
+      "ex_showroom_price_min_inr": 25800000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/bmw/i7",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/i7",
+      "fuel_type": "Electric",
+      "fuel_type_citation": "https://www.cardekho.com/bmw/i7",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/bmw/i7",
+      "engine_displacement_cc_citation": "https://www.cardekho.com/bmw/i7",
+      "power_bhp": 650.39,
+      "power_bhp_citation": "https://www.cardekho.com/bmw/i7",
+      "torque_nm": 1015,
+      "torque_nm_citation": "https://www.cardekho.com/bmw/i7",
+      "mileage_kmpl_citation": "https://www.cardekho.com/bmw/i7",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/bmw/i7",
+      "boot_space_l": 500,
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/i7",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/i7",
+      "length_mm": 5391,
+      "length_mm_citation": "https://www.cardekho.com/bmw/i7",
+      "width_mm": 1950,
+      "width_mm_citation": "https://www.cardekho.com/bmw/i7",
+      "height_mm": 1544,
+      "height_mm_citation": "https://www.cardekho.com/bmw/i7",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "31.3-inch Theatre Screen",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Swarovski Crystal Headlights",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Panoramic Sky Lounge Roof",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Rear Door Touchscreens",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Massage Seats",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "10 Airbags",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/i7/10014/1762778780497/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/bmw/i7"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/bmw/i7",
+      "source_url": "https://www.cardekho.com/bmw/i7"
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm",
+      "model": "6 Series Gran Turismo",
+      "model_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm",
+      "variant_name": "630i M Sport",
+      "variant_name_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm",
+      "ex_showroom_price_min_inr": 7350000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm",
+      "engine_displacement_cc": 1998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm",
+      "power_bhp": 254.79,
+      "power_bhp_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm",
+      "torque_nm": 400,
+      "torque_nm_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm",
+      "mileage_kmpl": 13.32,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm",
+      "boot_space_l": 650,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm",
+      "ground_clearance_mm": 138,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/6-series-gt",
+      "length_mm": 5091,
+      "length_mm_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm",
+      "width_mm": 1902,
+      "width_mm_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm",
+      "height_mm": 1538,
+      "height_mm_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm",
+      "key_features": [
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        },
+        {
+          "value": "12.3-inch Infotainment System",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        },
+        {
+          "value": "Wireless Android Auto & Apple CarPlay",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        },
+        {
+          "value": "Wireless Charging",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        },
+        {
+          "value": "Air Purifier",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        },
+        {
+          "value": "Rain Sensing Wiper",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/6-Series/8418/1677911275512/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm",
+      "source_url": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm"
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm",
+      "model": "6 Series Gran Turismo",
+      "model_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm",
+      "variant_name": "630i M Sport Signature",
+      "variant_name_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm",
+      "ex_showroom_price_min_inr": 7690000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm",
+      "engine_displacement_cc": 1998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm",
+      "power_bhp": 254.79,
+      "power_bhp_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm",
+      "torque_nm": 400,
+      "torque_nm_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm",
+      "mileage_kmpl": 13.32,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm",
+      "boot_space_l": 650,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm",
+      "ground_clearance_mm": 138,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/6-series-gt",
+      "length_mm": 5091,
+      "length_mm_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm",
+      "width_mm": 1902,
+      "width_mm_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm",
+      "height_mm": 1538,
+      "height_mm_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm",
+      "key_features": [
+        {
+          "value": "Panoramic Sunroof",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        },
+        {
+          "value": "12.3-inch Infotainment System",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        },
+        {
+          "value": "Wireless Android Auto & Apple CarPlay",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        },
+        {
+          "value": "Wireless Charging",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        },
+        {
+          "value": "Air Purifier",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        },
+        {
+          "value": "Rain Sensing Wiper",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/6-Series/8418/1677911275512/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm",
+      "source_url": "https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport_Signature.htm"
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/bmw/ix1",
+      "model": "iX1",
+      "model_citation": "https://www.cardekho.com/bmw/ix1",
+      "variant_name": "eDrive20 M Sport",
+      "variant_name_citation": "https://www.cardekho.com/bmw/ix1",
+      "ex_showroom_price_min_inr": 4990000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/bmw/ix1",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/ix1",
+      "fuel_type": "Electric",
+      "fuel_type_citation": "https://www.cardekho.com/bmw/ix1",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/bmw/ix1",
+      "engine_displacement_cc": 0,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/bmw/ix1",
+      "power_bhp": 204,
+      "power_bhp_citation": "https://www.cardekho.com/bmw/ix1",
+      "torque_nm": 250,
+      "torque_nm_citation": "https://www.cardekho.com/bmw/ix1",
+      "mileage_kmpl": 0,
+      "mileage_kmpl_citation": "https://www.cardekho.com/bmw/ix1",
+      "range_km": 531,
+      "range_km_citation": "https://www.cardekho.com/bmw/ix1",
+      "battery_capacity_kwh": 66.4,
+      "battery_capacity_kwh_citation": "https://www.cardekho.com/bmw/ix1",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/bmw/ix1",
+      "boot_space_l": 490,
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/ix1",
+      "ground_clearance_mm": 175,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/ix1",
+      "length_mm": 4616,
+      "length_mm_citation": "https://www.cardekho.com/bmw/ix1",
+      "width_mm": 1845,
+      "width_mm_citation": "https://www.cardekho.com/bmw/ix1",
+      "height_mm": 1627,
+      "height_mm_citation": "https://www.cardekho.com/bmw/ix1",
+      "key_features": [
+        {
+          "value": "Panoramic Glass Sunroof",
+          "value_citation": "https://www.cardekho.com/bmw/ix1"
+        },
+        {
+          "value": "Curved Display Dashboard",
+          "value_citation": "https://www.cardekho.com/bmw/ix1"
+        },
+        {
+          "value": "12-speaker Harman Kardon Sound System",
+          "value_citation": "https://www.cardekho.com/bmw/ix1"
+        },
+        {
+          "value": "Dual-zone Climate Control",
+          "value_citation": "https://www.cardekho.com/bmw/ix1"
+        },
+        {
+          "value": "Apple CarPlay & Android Auto",
+          "value_citation": "https://www.cardekho.com/bmw/ix1"
+        },
+        {
+          "value": "Wireless Charging",
+          "value_citation": "https://www.cardekho.com/bmw/ix1"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/bmw/ix1"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/bmw/ix1"
+        },
+        {
+          "value": "DC Fast Charging (130 kW)",
+          "value_citation": "https://www.cardekho.com/bmw/ix1"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/bmw/ix1"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/bmw/ix1"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/bmw/ix1"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/bmw/ix1"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/bmw/ix1"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/bmw/ix1"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/bmw/ix1"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/iX1/12364/1762778048040/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/bmw/ix1"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/bmw/ix1",
+      "source_url": "https://www.cardekho.com/bmw/ix1"
     }
   ]
 }

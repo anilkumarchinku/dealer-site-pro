@@ -1,6 +1,6 @@
 {
   "jeep": {
-    "model": "Compass, Grand Cherokee, Wrangler",
+    "model": "Compass, Grand Cherokee, Meridian, Wrangler",
     "variants": [
       {
         "make": "Jeep",
@@ -119,6 +119,156 @@
         "image_urls": [
           {
             "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Grand-Cherokee/10945/1767782308966/front-left-side-47.jpg?tr=w-230"
+          }
+        ]
+      },
+      {
+        "make": "Jeep",
+        "model": "Meridian",
+        "variant_name": "Limited",
+        "ex_showroom_price": 2333000,
+        "hyderabad_on_road_price": 2767000,
+        "powertrain": {
+          "fuel": "Diesel",
+          "transmission": "Manual",
+          "drivetrain": "FWD"
+        },
+        "engine_specs": {
+          "displacement": "1956 cc",
+          "power": "172.36 bhp",
+          "torque": "350 Nm @ 1750-2500 rpm",
+          "mileage": "14.1 kmpl"
+        },
+        "dimensions": {
+          "length": "4769 mm",
+          "width": "1859 mm",
+          "height": "1698 mm",
+          "ground_clearance": "214 mm",
+          "boot_space": "170 L"
+        },
+        "key_features": [
+          {
+            "value": "10.1-inch touchscreen infotainment"
+          },
+          {
+            "value": "Panoramic sunroof"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 Airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Meridian/9783/1767782333389/front-left-side-47.jpg?tr=w-230"
+          }
+        ]
+      },
+      {
+        "make": "Jeep",
+        "model": "Meridian",
+        "variant_name": "Limited (O) AT",
+        "ex_showroom_price": 2950000,
+        "hyderabad_on_road_price": 3500000,
+        "powertrain": {
+          "fuel": "Diesel",
+          "transmission": "9-speed Automatic",
+          "drivetrain": "FWD"
+        },
+        "engine_specs": {
+          "displacement": "1956 cc",
+          "power": "172.36 bhp",
+          "torque": "350 Nm @ 1750-2500 rpm",
+          "mileage": "8.2 kmpl"
+        },
+        "dimensions": {
+          "length": "4769 mm",
+          "width": "1859 mm",
+          "height": "1698 mm",
+          "ground_clearance": "214 mm",
+          "boot_space": "170 L"
+        },
+        "key_features": [
+          {
+            "value": "10.1-inch touchscreen infotainment"
+          },
+          {
+            "value": "9-speaker Alpine sound system"
+          },
+          {
+            "value": "360-degree camera"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 Airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          },
+          {
+            "value": "Electronic Stability Control"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Meridian/9783/1767782333389/front-left-side-47.jpg?tr=w-230"
+          }
+        ]
+      },
+      {
+        "make": "Jeep",
+        "model": "Meridian",
+        "variant_name": "Limited (O) 4x4 AT",
+        "ex_showroom_price": 3782000,
+        "hyderabad_on_road_price": 4490000,
+        "powertrain": {
+          "fuel": "Diesel",
+          "transmission": "9-speed Automatic",
+          "drivetrain": "AWD"
+        },
+        "engine_specs": {
+          "displacement": "1956 cc",
+          "power": "172.36 bhp",
+          "torque": "350 Nm @ 1750-2500 rpm",
+          "mileage": "8.2 kmpl"
+        },
+        "dimensions": {
+          "length": "4769 mm",
+          "width": "1859 mm",
+          "height": "1698 mm",
+          "ground_clearance": "214 mm",
+          "boot_space": "170 L"
+        },
+        "key_features": [
+          {
+            "value": "10.1-inch touchscreen infotainment"
+          },
+          {
+            "value": "Panoramic sunroof"
+          },
+          {
+            "value": "Front seat ventilation"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 Airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          },
+          {
+            "value": "Electronic Stability Control"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Meridian/9783/1767782333389/front-left-side-47.jpg?tr=w-230"
           }
         ]
       },

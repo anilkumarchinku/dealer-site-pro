@@ -99,7 +99,7 @@
         "features": {
           "key_features": [
             {
-              "value": "8.4” HMI Touchscreen"
+              "value": "8.4\" HMI Touchscreen"
             },
             {
               "value": "Carbon-ceramic brakes"
@@ -122,7 +122,7 @@
               "value": "Brake Assist"
             },
             {
-              "value": "360° camera"
+              "value": "360-degree camera"
             }
           ]
         },
@@ -245,7 +245,7 @@
               "value": "TPMS"
             },
             {
-              "value": "360° view camera"
+              "value": "360-degree view camera"
             },
             {
               "value": "HUD"
@@ -308,7 +308,7 @@
               "value": "TPMS"
             },
             {
-              "value": "360° view camera"
+              "value": "360-degree view camera"
             },
             {
               "value": "Blind-spot monitor"
@@ -318,6 +318,204 @@
         "image_urls": [
           {
             "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lamborghini/Huracan-EVO/10643/1769680298561/front-left-side-47.jpg?tr=w-300"
+          }
+        ]
+      },
+      {
+        "make": "Lamborghini",
+        "model": "Urus",
+        "variant_name": "Urus S",
+        "pricing": {
+          "ex_showroom_min": 41800000,
+          "ex_showroom_max": 41800000
+        },
+        "powertrain": {
+          "fuel": "Petrol",
+          "transmission": "Automatic (8-Speed AT)"
+        },
+        "engine_performance": {
+          "displacement": "3996 cc",
+          "power": "657 bhp @ 6000 rpm",
+          "torque": "850 Nm @ 2300-4500 rpm",
+          "mileage": "5.5 kmpl"
+        },
+        "dimensions": {
+          "seating": 5,
+          "boot": "616 L",
+          "ground_clearance": "170 mm",
+          "length_width_height": "5112 x 2181 x 1638 mm"
+        },
+        "features": {
+          "key_features": [
+            {
+              "value": "4.0L twin-turbo V8 engine"
+            },
+            {
+              "value": "All-wheel drive with torque vectoring"
+            },
+            {
+              "value": "12.3-inch touchscreen infotainment"
+            },
+            {
+              "value": "Adaptive air suspension with 6 driving modes"
+            },
+            {
+              "value": "Bang & Olufsen 3D surround sound system"
+            }
+          ],
+          "safety_features": [
+            {
+              "value": "8 airbags"
+            },
+            {
+              "value": "ABS with EBD"
+            },
+            {
+              "value": "ESC"
+            },
+            {
+              "value": "360-degree camera system"
+            },
+            {
+              "value": "TPMS"
+            }
+          ]
+        },
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Lamborghini/Urus/10636/1769059431316/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lamborghini",
+        "model": "Urus",
+        "variant_name": "Urus Performante",
+        "pricing": {
+          "ex_showroom_min": 45700001,
+          "ex_showroom_max": 45700001
+        },
+        "powertrain": {
+          "fuel": "Petrol",
+          "transmission": "Automatic (8-Speed AT)"
+        },
+        "engine_performance": {
+          "displacement": "3999 cc",
+          "power": "657 bhp @ 6000 rpm",
+          "torque": "850 Nm @ 2300-4500 rpm",
+          "mileage": "5.5 kmpl"
+        },
+        "dimensions": {
+          "seating": 5,
+          "boot": "616 L",
+          "ground_clearance": "170 mm",
+          "length_width_height": "5112 x 2181 x 1638 mm"
+        },
+        "features": {
+          "key_features": [
+            {
+              "value": "4.0L twin-turbo V8 with enhanced power delivery"
+            },
+            {
+              "value": "All-wheel drive with rear-biased torque vectoring"
+            },
+            {
+              "value": "Carbon-fiber body kit and roof"
+            },
+            {
+              "value": "Steel and aluminium brakes (carbon-ceramic optional)"
+            },
+            {
+              "value": "Akrapovic exhaust system"
+            }
+          ],
+          "safety_features": [
+            {
+              "value": "8 airbags"
+            },
+            {
+              "value": "ABS with EBD"
+            },
+            {
+              "value": "ESC"
+            },
+            {
+              "value": "360-degree camera system"
+            },
+            {
+              "value": "ADAS suite"
+            }
+          ]
+        },
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Lamborghini/Urus/10636/1769059431316/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lamborghini",
+        "model": "Temerario",
+        "variant_name": "Temerario",
+        "pricing": {
+          "ex_showroom_min": 60000000,
+          "ex_showroom_max": 60000000
+        },
+        "powertrain": {
+          "fuel": "Petrol (Plug-in Hybrid)",
+          "transmission": "Automatic (8-Speed DCT)"
+        },
+        "engine_performance": {
+          "displacement": "3995 cc",
+          "power": "907 bhp",
+          "torque": "730 Nm",
+          "acceleration_0_100": "2.7 seconds"
+        },
+        "dimensions": {
+          "seating": 2,
+          "boot": "150 L",
+          "ground_clearance": "110 mm",
+          "length_width_height": "4706 x 1994 x 1199 mm"
+        },
+        "features": {
+          "key_features": [
+            {
+              "value": "4.0L twin-turbo V8 with three electric motors"
+            },
+            {
+              "value": "All-wheel drive"
+            },
+            {
+              "value": "Three-screen cockpit display setup"
+            },
+            {
+              "value": "Ventilated and heated front seats"
+            },
+            {
+              "value": "Full suite of ADAS features"
+            }
+          ],
+          "safety_features": [
+            {
+              "value": "Adaptive Cruise Control"
+            },
+            {
+              "value": "Lane Departure Warning"
+            },
+            {
+              "value": "Lane Change Warning"
+            },
+            {
+              "value": "Rear Cross Traffic Alert"
+            },
+            {
+              "value": "Surround view camera system"
+            }
+          ]
+        },
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Lamborghini/Temerario/12475/1769059319922/front-left-side-47.jpg"
           }
         ]
       }

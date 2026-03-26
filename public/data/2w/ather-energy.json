@@ -58,6 +58,42 @@
       ],
       "more_details": "The Ather 450 Apex is the pinnacle of the 450 series, offering extreme performance and unique aesthetics.",
       "more_details_citation": "https://www.atherenergy.com/450-apex"
+    },
+    {
+      "model_name": "Ather Rizta",
+      "model_name_citation": "https://www.bikedekho.com/ather-energy/rizta",
+      "engine_details": "PMSM Motor, 4.3 kW peak power",
+      "engine_details_citation": "https://www.bikedekho.com/ather-energy/rizta",
+      "torque": "N/A",
+      "torque_citation": "https://www.bikedekho.com/ather-energy/rizta",
+      "mileage": "123 km - 159 km per charge (2.9 kWh / 3.7 kWh battery)",
+      "mileage_citation": "https://www.bikedekho.com/ather-energy/rizta",
+      "price": "Rs. 75,999 - Rs. 1,61,046",
+      "price_citation": "https://www.bikedekho.com/ather-energy/rizta",
+      "battery_capacity": "2.9 kWh / 3.7 kWh",
+      "battery_capacity_citation": "https://www.bikedekho.com/ather-energy/rizta",
+      "top_speed": "80 km/h",
+      "top_speed_citation": "https://www.bikedekho.com/ather-energy/rizta",
+      "charging_time": "4.5 - 6.5 hours (0-80%)",
+      "charging_time_citation": "https://www.bikedekho.com/ather-energy/rizta",
+      "color_options": [
+        { "value": "Siachen White", "value_citation": "https://www.bikedekho.com/ather-energy/rizta" },
+        { "value": "Terracotta Red", "value_citation": "https://www.bikedekho.com/ather-energy/rizta" },
+        { "value": "Deccan Grey", "value_citation": "https://www.bikedekho.com/ather-energy/rizta" },
+        { "value": "Pangong Blue", "value_citation": "https://www.bikedekho.com/ather-energy/rizta" },
+        { "value": "Cardamom Green", "value_citation": "https://www.bikedekho.com/ather-energy/rizta" },
+        { "value": "Alphonso Yellow", "value_citation": "https://www.bikedekho.com/ather-energy/rizta" }
+      ],
+      "features": [
+        { "value": "Well-padded seat with soft suspension", "value_citation": "https://www.bikedekho.com/ather-energy/rizta" },
+        { "value": "Large boot space and organiser", "value_citation": "https://www.bikedekho.com/ather-energy/rizta" },
+        { "value": "Disc front brakes", "value_citation": "https://www.bikedekho.com/ather-energy/rizta" },
+        { "value": "Digital display console", "value_citation": "https://www.bikedekho.com/ather-energy/rizta" },
+        { "value": "Multiple riding modes (Eco, Zip, Smart)", "value_citation": "https://www.bikedekho.com/ather-energy/rizta" },
+        { "value": "Zero emissions", "value_citation": "https://www.bikedekho.com/ather-energy/rizta" }
+      ],
+      "more_details": "The Ather Rizta is a family-focused electric scooter with well-padded seating, large boot space, and up to 159 km range. Available in Mono and Duo finishes with Battery-as-a-Service option.",
+      "more_details_citation": "https://www.bikedekho.com/ather-energy/rizta"
     }
   ]
 }

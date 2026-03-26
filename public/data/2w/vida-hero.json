@@ -74,68 +74,6 @@
         "Battery Type": "Li-ion",
         "Charging Method": "Home charging (20-80% in ~2 hrs)"
       }
-    },
-    {
-      "model_name": "Vida VXZ Concept",
-      "model_name_citation": "https://www.bikedekho.com/vida/vxz-concept/specifications",
-      "price": "Rs. 2,50,000 (Expected)",
-      "price_citation": "https://www.bikedekho.com/vida/vxz-concept/specifications",
-      "specifications": {
-        "Note": "Concept / Upcoming model",
-        "Status": "Not found / Concept stage"
-      }
-    },
-    {
-      "model_name": "Vida MX7 Racing Concept",
-      "model_name_citation": "https://www.bikedekho.com/vida/mx7-racing-concept/specifications",
-      "price": "Price to be announced",
-      "price_citation": "https://www.bikedekho.com/vida/mx7-racing-concept/specifications",
-      "specifications": {
-        "Note": "Concept / Upcoming model",
-        "Status": "Not found / Concept stage"
-      }
-    },
-    {
-      "model_name": "Vida Concept UBEX",
-      "model_name_citation": "https://www.bikedekho.com/vida/ubex-concept/specifications",
-      "price": "Price to be announced",
-      "price_citation": "https://www.bikedekho.com/vida/ubex-concept/specifications",
-      "specifications": {
-        "Battery Type": "Lithium-ion",
-        "Note": "Concept / Upcoming model",
-        "Status": "Not found / Concept stage"
-      }
-    },
-    {
-      "model_name": "Vida V1 Pro",
-      "model_name_citation": "https://www.bikedekho.com/vida/v1-pro/specifications",
-      "price": "Rs. 1,49,900 (ex-showroom)",
-      "price_citation": "https://www.bikedekho.com/vida/v1-pro/specifications",
-      "specifications": {
-        "Range (Standard)": "143 km/charge",
-        "Range (Eco Mode)": "100 km/charge",
-        "Battery Capacity (Total)": "3.44 kWh",
-        "Battery Capacity (Removable)": "1.72 kWh x 2",
-        "Top Speed": "80 km/h",
-        "Fast Charging Time": "1.05 hrs",
-        "Zero to 80% Charging Time": "5.15 hrs",
-        "Motor Peak Power": "6 kW",
-        "Motor Continuous Power": "3.9 kW",
-        "Motor Type": "PMSM",
-        "Motor Torque": "25 Nm",
-        "Drive Type": "Hub Motor",
-        "Brakes Front": "Disc",
-        "Brakes Rear": "Drum",
-        "Braking System": "Combi Brake System (EBS)",
-        "Wheel Diameter Front": "304.8 mm",
-        "Wheel Diameter Rear": "304.8 mm",
-        "Tyre Type": "Tubeless",
-        "Wheel Material": "Alloy",
-        "Saddle Height": "780 mm",
-        "Ground Clearance": "155 mm",
-        "Wheelbase": "1301 mm",
-        "Kerb Weight": "124 kg"
-      }
     }
   ]
 }

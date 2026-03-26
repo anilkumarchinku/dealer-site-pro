@@ -304,6 +304,90 @@
           "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-passenger/1918-petrol"
         }
       ]
+    },
+    {
+      "model_name": "Atul Smart Cargo",
+      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/smart-cargo",
+      "cardekho_technical_specifications": {
+        "engine_type": "395 cc four-stroke water-cooled diesel engine",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/smart-cargo/specifications",
+        "fuel_type": "Diesel, CNG",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/smart-cargo/specifications",
+        "mileage": "30 kmpl",
+        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/smart-cargo/specifications",
+        "transmission_type": "4-speed manual",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/smart-cargo/specifications"
+      },
+      "cardekho_pricing": {
+        "ex_showroom_price": "₹ 2.80 Lakh",
+        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/smart-cargo"
+      },
+      "cardekho_variants": [
+        {
+          "value": "Smart Cargo 2260/Diesel",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/smart-cargo/2260-diesel"
+        },
+        {
+          "value": "Smart Cargo 2260/CNG",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/smart-cargo/2260-cng"
+        }
+      ]
+    },
+    {
+      "model_name": "Atul Energie",
+      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/energie",
+      "cardekho_technical_specifications": {
+        "engine_type": "BLDC Electric Motor",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/energie/specifications",
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/energie/specifications",
+        "mileage": "120 km range per charge",
+        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/energie/specifications",
+        "transmission_type": "Automatic",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/energie/specifications"
+      },
+      "cardekho_pricing": {
+        "ex_showroom_price": "₹ 3.00 Lakh",
+        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/energie"
+      },
+      "cardekho_variants": [
+        {
+          "value": "Energie Cargo/Electric",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/energie/cargo-electric"
+        },
+        {
+          "value": "Energie Passenger/Electric",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/energie/passenger-electric"
+        }
+      ]
+    },
+    {
+      "model_name": "Atul Gemini Cargo",
+      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-cargo",
+      "cardekho_technical_specifications": {
+        "engine_type": "198.6 cc four-stroke single-cylinder air-cooled engine",
+        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-cargo/specifications",
+        "fuel_type": "CNG, Petrol",
+        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-cargo/specifications",
+        "mileage": "25 kmpl",
+        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-cargo/specifications",
+        "transmission_type": "Manual",
+        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-cargo/specifications"
+      },
+      "cardekho_pricing": {
+        "ex_showroom_price": "₹ 2.10 Lakh",
+        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-cargo"
+      },
+      "cardekho_variants": [
+        {
+          "value": "Gemini Cargo 1918/CNG",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-cargo/1918-cng"
+        },
+        {
+          "value": "Gemini Cargo 1918/Petrol",
+          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-cargo/1918-petrol"
+        }
+      ]
     }
   ]
 }

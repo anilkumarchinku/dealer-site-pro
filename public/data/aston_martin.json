@@ -1,3 +1,194 @@
 {
-  "aston_martin": []
+  "aston_martin": [
+    {
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "variant_name": "V8",
+      "ex_showroom_price": 37740000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed AT)",
+      "drivetrain": "RWD",
+      "engine_displacement_cc": 3998,
+      "power_bhp": 656,
+      "torque_nm": 800,
+      "mileage_kmpl": 7.0,
+      "seating_capacity": 2,
+      "boot_space_l": 350,
+      "ground_clearance_mm": 120,
+      "length_mm": 4495,
+      "width_mm": 1942,
+      "height_mm": 1274,
+      "key_features": [
+        { "value": "4.0L twin-turbo V8 (Mercedes-AMG M177)" },
+        { "value": "8-speed automatic transmission" },
+        { "value": "Rear-wheel drive" },
+        { "value": "10.25-inch touchscreen infotainment" },
+        { "value": "Adaptive damping with sport modes" }
+      ],
+      "safety_features": [
+        { "value": "4 airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Traction control" },
+        { "value": "360-degree parking camera" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Aston-Martin/Vantage/11671/1769509518605/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2025
+    },
+    {
+      "make": "Aston Martin",
+      "model": "DBX",
+      "variant_name": "DBX707",
+      "ex_showroom_price": 38200001,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (9-Speed AT)",
+      "drivetrain": "AWD",
+      "engine_displacement_cc": 3982,
+      "power_bhp": 697,
+      "torque_nm": 900,
+      "mileage_kmpl": 8.0,
+      "seating_capacity": 5,
+      "boot_space_l": 632,
+      "ground_clearance_mm": 190,
+      "length_mm": 5039,
+      "width_mm": 1998,
+      "height_mm": 1680,
+      "key_features": [
+        { "value": "4.0L quad-cam twin-turbo V8 engine" },
+        { "value": "All-wheel drive with electronic limited-slip diff" },
+        { "value": "10.25-inch touchscreen infotainment" },
+        { "value": "Panoramic glass roof" },
+        { "value": "Adaptive air suspension with multiple modes" }
+      ],
+      "safety_features": [
+        { "value": "10 airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "360-degree surround camera" },
+        { "value": "Blind spot monitoring" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Aston-Martin/DBX/6695/1769509254259/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2025
+    },
+    {
+      "make": "Aston Martin",
+      "model": "DB12",
+      "variant_name": "V8",
+      "ex_showroom_price": 43408000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed AT)",
+      "drivetrain": "RWD",
+      "engine_displacement_cc": 3982,
+      "power_bhp": 671,
+      "torque_nm": 800,
+      "mileage_kmpl": 10.0,
+      "seating_capacity": 2,
+      "boot_space_l": 78,
+      "ground_clearance_mm": 115,
+      "length_mm": 4725,
+      "width_mm": 1965,
+      "height_mm": 1295,
+      "key_features": [
+        { "value": "4.0L twin-turbo V8 engine" },
+        { "value": "8-speed automatic transmission" },
+        { "value": "10.25-inch touchscreen with Apple CarPlay/Android Auto" },
+        { "value": "Carbon-ceramic brakes optional" },
+        { "value": "Adaptive damping with GT/Sport/Sport+ modes" }
+      ],
+      "safety_features": [
+        { "value": "10 airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Cruise control" },
+        { "value": "Parking sensors with rear camera" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Aston-Martin/DB12/10185/1769509097940/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2024
+    },
+    {
+      "make": "Aston Martin",
+      "model": "DB12",
+      "variant_name": "Volante",
+      "ex_showroom_price": 48000000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed AT)",
+      "drivetrain": "RWD",
+      "engine_displacement_cc": 3982,
+      "power_bhp": 671,
+      "torque_nm": 800,
+      "mileage_kmpl": 10.0,
+      "seating_capacity": 2,
+      "boot_space_l": 78,
+      "ground_clearance_mm": 115,
+      "length_mm": 4725,
+      "width_mm": 1965,
+      "height_mm": 1295,
+      "key_features": [
+        { "value": "4.0L twin-turbo V8 with convertible soft-top" },
+        { "value": "Retractable roof in 14 seconds" },
+        { "value": "10.25-inch touchscreen infotainment" },
+        { "value": "Premium leather interior" },
+        { "value": "Adaptive damping system" }
+      ],
+      "safety_features": [
+        { "value": "10 airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Roll-over protection bars" },
+        { "value": "360-degree camera" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Aston-Martin/DB12/10185/1769509097940/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2024
+    },
+    {
+      "make": "Aston Martin",
+      "model": "Vanquish",
+      "variant_name": "V12",
+      "ex_showroom_price": 83716000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed AT)",
+      "drivetrain": "RWD",
+      "engine_displacement_cc": 5203,
+      "power_bhp": 824,
+      "torque_nm": 1000,
+      "mileage_kmpl": 6.5,
+      "seating_capacity": 2,
+      "boot_space_l": 248,
+      "ground_clearance_mm": 110,
+      "length_mm": 4555,
+      "width_mm": 2007,
+      "height_mm": 1274,
+      "key_features": [
+        { "value": "5.2L twin-turbo V12 engine" },
+        { "value": "Carbon-fiber body panels" },
+        { "value": "Adaptive suspension with multiple modes" },
+        { "value": "10.25-inch touchscreen infotainment" },
+        { "value": "Performance seats with memory" }
+      ],
+      "safety_features": [
+        { "value": "4 airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Traction control" },
+        { "value": "Advanced safety systems" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Aston-Martin/Vanquish/12432/1769509396621/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2025
+    }
+  ]
 }

@@ -15,7 +15,7 @@
       "charging_time_hours": 5,
       "passenger_capacity": 3,
       "gvw_kg": 900,
-      "ex_showroom_price": "₹3.50 Lakh",
+      "ex_showroom_price": "₹1.45 Lakh",
       "status": "Available",
       "variants": []
     },
@@ -31,7 +31,7 @@
       "charging_time_hours": 6,
       "passenger_capacity": 3,
       "gvw_kg": 940,
-      "ex_showroom_price": "₹4.20 Lakh",
+      "ex_showroom_price": "₹1.38 Lakh",
       "status": "Available",
       "variants": []
     },
@@ -47,7 +47,7 @@
       "charging_time_hours": 5,
       "payload_kg": 500,
       "gvw_kg": 1050,
-      "ex_showroom_price": "₹3.80 Lakh",
+      "ex_showroom_price": "₹1.80-2.00 Lakh",
       "status": "Available",
       "variants": []
     },
@@ -63,7 +63,7 @@
       "charging_time_hours": 6,
       "payload_kg": 700,
       "gvw_kg": 1250,
-      "ex_showroom_price": "₹4.80 Lakh",
+      "ex_showroom_price": "₹3.45 Lakh",
       "status": "Available",
       "variants": []
     }

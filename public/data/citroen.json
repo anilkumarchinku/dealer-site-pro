@@ -634,5 +634,435 @@
       }
     ],
     "launch_year": 2024
+  },
+  "16": {
+    "make": "Citroën",
+    "model": "C5 Aircross",
+    "variant_name": "Shine",
+    "ex_showroom_price_min_inr": 3732400,
+    "ex_showroom_price_max_inr": 3732400,
+    "hyderabad_on_road_price_inr": 4409427,
+    "fuel_type": "Diesel",
+    "transmission": "Automatic",
+    "engine_displacement_cc": 1997,
+    "power_bhp": 174.33,
+    "torque_nm": 400,
+    "mileage_kmpl": 17.5,
+    "seating_capacity": 5,
+    "boot_space_l": 580,
+    "ground_clearance_mm": 190,
+    "length_mm": 4500,
+    "width_mm": 1969,
+    "height_mm": 1710,
+    "key_features": [
+      {
+        "value": "10-inch Touchscreen Infotainment"
+      },
+      {
+        "value": "Wireless Phone Charging"
+      },
+      {
+        "value": "Progressive Hydraulic Cushion Suspension"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      },
+      {
+        "value": "ABS + EBD"
+      },
+      {
+        "value": "Hill Start Assist"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C5-Aircross/9268/1769080851032/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2021
+  },
+  "17": {
+    "make": "Citroën",
+    "model": "C5 Aircross",
+    "variant_name": "Shine Pack",
+    "ex_showroom_price_min_inr": 3922400,
+    "ex_showroom_price_max_inr": 3922400,
+    "hyderabad_on_road_price_inr": 4632000,
+    "fuel_type": "Diesel",
+    "transmission": "Automatic",
+    "engine_displacement_cc": 1997,
+    "power_bhp": 174.33,
+    "torque_nm": 400,
+    "mileage_kmpl": 17.5,
+    "seating_capacity": 5,
+    "boot_space_l": 580,
+    "ground_clearance_mm": 190,
+    "length_mm": 4500,
+    "width_mm": 1969,
+    "height_mm": 1710,
+    "key_features": [
+      {
+        "value": "Panoramic Sunroof"
+      },
+      {
+        "value": "10-inch Touchscreen Infotainment"
+      },
+      {
+        "value": "Individually Adjustable Rear Seats"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      },
+      {
+        "value": "ABS + EBD"
+      },
+      {
+        "value": "Blind Spot Monitoring"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C5-Aircross/9268/1769080851032/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2021
+  },
+  "18": {
+    "make": "Citroën",
+    "model": "Basalt",
+    "variant_name": "You",
+    "ex_showroom_price_min_inr": 855000,
+    "ex_showroom_price_max_inr": 855000,
+    "hyderabad_on_road_price_inr": 959071,
+    "fuel_type": "Petrol",
+    "transmission": "Manual",
+    "engine_displacement_cc": 1199,
+    "power_bhp": 109,
+    "torque_nm": 190,
+    "mileage_kmpl": 19.5,
+    "seating_capacity": 5,
+    "boot_space_l": 470,
+    "ground_clearance_mm": 180,
+    "length_mm": 4352,
+    "width_mm": 1765,
+    "height_mm": 1593,
+    "key_features": [
+      {
+        "value": "LED DRLs"
+      },
+      {
+        "value": "Power Steering"
+      },
+      {
+        "value": "Rear Wiper"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      },
+      {
+        "value": "ABS + EBD"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/Basalt/11163/1758802543938/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  },
+  "19": {
+    "make": "Citroën",
+    "model": "Basalt",
+    "variant_name": "Plus",
+    "ex_showroom_price_min_inr": 995000,
+    "ex_showroom_price_max_inr": 995000,
+    "hyderabad_on_road_price_inr": 1125000,
+    "fuel_type": "Petrol",
+    "transmission": "Manual",
+    "engine_displacement_cc": 1199,
+    "power_bhp": 109,
+    "torque_nm": 190,
+    "mileage_kmpl": 19.5,
+    "seating_capacity": 5,
+    "boot_space_l": 470,
+    "ground_clearance_mm": 180,
+    "length_mm": 4352,
+    "width_mm": 1765,
+    "height_mm": 1593,
+    "key_features": [
+      {
+        "value": "10.25-inch Touchscreen"
+      },
+      {
+        "value": "Wireless Android Auto & Apple CarPlay"
+      },
+      {
+        "value": "Alloy Wheels"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      },
+      {
+        "value": "ABS + EBD"
+      },
+      {
+        "value": "Rear Parking Sensors"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/Basalt/11163/1758802543938/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  },
+  "20": {
+    "make": "Citroën",
+    "model": "Basalt",
+    "variant_name": "Plus Turbo",
+    "ex_showroom_price_min_inr": 1085000,
+    "ex_showroom_price_max_inr": 1085000,
+    "hyderabad_on_road_price_inr": 1230000,
+    "fuel_type": "Petrol",
+    "transmission": "Manual",
+    "engine_displacement_cc": 1199,
+    "power_bhp": 109,
+    "torque_nm": 190,
+    "mileage_kmpl": 18,
+    "seating_capacity": 5,
+    "boot_space_l": 470,
+    "ground_clearance_mm": 180,
+    "length_mm": 4352,
+    "width_mm": 1765,
+    "height_mm": 1593,
+    "key_features": [
+      {
+        "value": "10.25-inch Touchscreen"
+      },
+      {
+        "value": "Wireless Android Auto & Apple CarPlay"
+      },
+      {
+        "value": "Turbo Engine"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      },
+      {
+        "value": "ABS + EBD"
+      },
+      {
+        "value": "Rear Camera"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/Basalt/11163/1758802543938/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  },
+  "21": {
+    "make": "Citroën",
+    "model": "Basalt",
+    "variant_name": "Max Turbo",
+    "ex_showroom_price_min_inr": 1200000,
+    "ex_showroom_price_max_inr": 1200000,
+    "hyderabad_on_road_price_inr": 1360000,
+    "fuel_type": "Petrol",
+    "transmission": "Manual",
+    "engine_displacement_cc": 1199,
+    "power_bhp": 109,
+    "torque_nm": 190,
+    "mileage_kmpl": 18,
+    "seating_capacity": 5,
+    "boot_space_l": 470,
+    "ground_clearance_mm": 180,
+    "length_mm": 4352,
+    "width_mm": 1765,
+    "height_mm": 1593,
+    "key_features": [
+      {
+        "value": "10.25-inch Touchscreen"
+      },
+      {
+        "value": "Sunroof"
+      },
+      {
+        "value": "Rear Underthigh Support"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      },
+      {
+        "value": "ABS + EBD"
+      },
+      {
+        "value": "Rear Camera"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/Basalt/11163/1758802543938/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  },
+  "22": {
+    "make": "Citroën",
+    "model": "Basalt",
+    "variant_name": "Max Turbo AT",
+    "ex_showroom_price_min_inr": 1310500,
+    "ex_showroom_price_max_inr": 1310500,
+    "hyderabad_on_road_price_inr": 1485000,
+    "fuel_type": "Petrol",
+    "transmission": "Automatic",
+    "engine_displacement_cc": 1199,
+    "power_bhp": 109,
+    "torque_nm": 205,
+    "mileage_kmpl": 18,
+    "seating_capacity": 5,
+    "boot_space_l": 470,
+    "ground_clearance_mm": 180,
+    "length_mm": 4352,
+    "width_mm": 1765,
+    "height_mm": 1593,
+    "key_features": [
+      {
+        "value": "10.25-inch Touchscreen"
+      },
+      {
+        "value": "Sunroof"
+      },
+      {
+        "value": "Automatic Transmission"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "6 Airbags"
+      },
+      {
+        "value": "ABS + EBD"
+      },
+      {
+        "value": "Rear Camera"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/Basalt/11163/1758802543938/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2024
+  },
+  "23": {
+    "make": "Citroën",
+    "model": "eC3",
+    "variant_name": "Live",
+    "ex_showroom_price_min_inr": 1290000,
+    "ex_showroom_price_max_inr": 1290000,
+    "hyderabad_on_road_price_inr": 1353587,
+    "fuel_type": "Electric",
+    "transmission": "Automatic",
+    "engine_displacement_cc": 0,
+    "power_bhp": 56.21,
+    "torque_nm": 143,
+    "mileage_kmpl": 0,
+    "range_km": 320,
+    "battery_kwh": 29.2,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "Fast Charging (57 min)"
+      },
+      {
+        "value": "Regenerative Braking"
+      },
+      {
+        "value": "320 km ARAI Range"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "2 Airbags"
+      },
+      {
+        "value": "ABS + EBD"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/eC3/10947/1758802328697/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2023
+  },
+  "24": {
+    "make": "Citroën",
+    "model": "eC3",
+    "variant_name": "Feel",
+    "ex_showroom_price_min_inr": 1341300,
+    "ex_showroom_price_max_inr": 1341300,
+    "hyderabad_on_road_price_inr": 1407000,
+    "fuel_type": "Electric",
+    "transmission": "Automatic",
+    "engine_displacement_cc": 0,
+    "power_bhp": 56.21,
+    "torque_nm": 143,
+    "mileage_kmpl": 0,
+    "range_km": 320,
+    "battery_kwh": 29.2,
+    "seating_capacity": 5,
+    "boot_space_l": 315,
+    "ground_clearance_mm": 180,
+    "length_mm": 3981,
+    "width_mm": 1733,
+    "height_mm": 1604,
+    "key_features": [
+      {
+        "value": "10.2-inch Touchscreen"
+      },
+      {
+        "value": "Fast Charging (57 min)"
+      },
+      {
+        "value": "Connected Car Features"
+      }
+    ],
+    "safety_features": [
+      {
+        "value": "2 Airbags"
+      },
+      {
+        "value": "ABS + EBD"
+      },
+      {
+        "value": "Rear Parking Sensors"
+      }
+    ],
+    "image_urls": [
+      {
+        "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/eC3/10947/1758802328697/front-left-side-47.jpg"
+      }
+    ],
+    "launch_year": 2023
   }
 }

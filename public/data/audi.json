@@ -1634,6 +1634,961 @@
       "availability_status_citation": "https://www.cardekho.com/audi/rs-e-tron-gt",
       "source_url": "https://www.cardekho.com/audi/rs-e-tron-gt/specs",
       "source_url_citation": "https://www.cardekho.com/audi/rs-e-tron-gt/specs"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/q3",
+      "model": "Q3",
+      "model_citation": "https://www.cardekho.com/audi/q3",
+      "variant_name": "40 TFSI Premium Plus",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_Q3/Audi_Q3_40_TFSI_Premium_Plus.htm",
+      "ex_showroom_price_min": 4323000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/q3",
+      "ex_showroom_price_max": 4323000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/q3",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/q3/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/audi/q3",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/audi/q3",
+      "engine_displacement_cc": 1984,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/q3",
+      "power_bhp": 187.74,
+      "power_bhp_citation": "https://www.cardekho.com/audi/q3",
+      "torque_nm": 320,
+      "torque_nm_citation": "https://www.cardekho.com/audi/q3",
+      "mileage_kmpl": 10.14,
+      "mileage_kmpl_citation": "https://www.cardekho.com/audi/q3",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/audi/q3",
+      "boot_space_l": 460,
+      "boot_space_l_citation": "https://www.cardekho.com/audi/q3",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/q3",
+      "length_mm": 4484,
+      "length_mm_citation": "https://www.cardekho.com/audi/q3",
+      "width_mm": 1856,
+      "width_mm_citation": "https://www.cardekho.com/audi/q3",
+      "height_mm": 1616,
+      "height_mm_citation": "https://www.cardekho.com/audi/q3",
+      "key_features": [
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "Rear AC Vents",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "Rear Camera",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q3/10552/1762776065133/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/q3",
+      "source_url": "https://www.cardekho.com/overview/Audi_Q3/Audi_Q3_40_TFSI_Premium_Plus.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_Q3/Audi_Q3_40_TFSI_Premium_Plus.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/q3",
+      "model": "Q3",
+      "model_citation": "https://www.cardekho.com/audi/q3",
+      "variant_name": "40 TFSI Technology",
+      "variant_name_citation": "https://www.cardekho.com/audi/q3",
+      "ex_showroom_price_min": 4806000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/q3",
+      "ex_showroom_price_max": 4806000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/q3",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/q3/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/audi/q3",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/audi/q3",
+      "engine_displacement_cc": 1984,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/q3",
+      "power_bhp": 187.74,
+      "power_bhp_citation": "https://www.cardekho.com/audi/q3",
+      "torque_nm": 320,
+      "torque_nm_citation": "https://www.cardekho.com/audi/q3",
+      "mileage_kmpl": 10.14,
+      "mileage_kmpl_citation": "https://www.cardekho.com/audi/q3",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/audi/q3",
+      "boot_space_l": 460,
+      "boot_space_l_citation": "https://www.cardekho.com/audi/q3",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/q3",
+      "length_mm": 4484,
+      "length_mm_citation": "https://www.cardekho.com/audi/q3",
+      "width_mm": 1856,
+      "width_mm_citation": "https://www.cardekho.com/audi/q3",
+      "height_mm": 1616,
+      "height_mm_citation": "https://www.cardekho.com/audi/q3",
+      "key_features": [
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "Rear AC Vents",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "Virtual Cockpit",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        },
+        {
+          "value": "Rear Camera",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q3/10552/1762776065133/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/audi/q3"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/q3",
+      "source_url": "https://www.cardekho.com/audi/q3",
+      "source_url_citation": "https://www.cardekho.com/audi/q3"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "model": "Q3 Sportback",
+      "model_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "variant_name": "40 TFSI Premium Plus",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_Q3_Sportback/Audi_Q3_Sportback_40_TFSI_Premium_Plus.htm",
+      "ex_showroom_price_min": 5298000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "ex_showroom_price_max": 5298000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/q3-sportback/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "engine_displacement_cc": 1984,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "power_bhp": 187.74,
+      "power_bhp_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "torque_nm": 320,
+      "torque_nm_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "mileage_kmpl": 10.14,
+      "mileage_kmpl_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "boot_space_l_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "ground_clearance_mm": 170,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "length_mm": 4500,
+      "length_mm_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "width_mm": 1856,
+      "width_mm_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "height_mm": 1568,
+      "height_mm_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "key_features": [
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        },
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        },
+        {
+          "value": "Quattro AWD",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q3-Sportback/10553/1762776249093/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "source_url": "https://www.cardekho.com/overview/Audi_Q3_Sportback/Audi_Q3_Sportback_40_TFSI_Premium_Plus.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_Q3_Sportback/Audi_Q3_Sportback_40_TFSI_Premium_Plus.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "model": "Q3 Sportback",
+      "model_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "variant_name": "40 TFSI Technology",
+      "variant_name_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "ex_showroom_price_min": 5698000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "ex_showroom_price_max": 5698000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/q3-sportback/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "engine_displacement_cc": 1984,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "power_bhp": 187.74,
+      "power_bhp_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "torque_nm": 320,
+      "torque_nm_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "mileage_kmpl": 10.14,
+      "mileage_kmpl_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "boot_space_l_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "ground_clearance_mm": 170,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "length_mm": 4500,
+      "length_mm_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "width_mm": 1856,
+      "width_mm_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "height_mm": 1568,
+      "height_mm_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "key_features": [
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        },
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        },
+        {
+          "value": "Quattro AWD",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        },
+        {
+          "value": "Virtual Cockpit",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q3-Sportback/10553/1762776249093/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/audi/q3-sportback"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/q3-sportback",
+      "source_url": "https://www.cardekho.com/audi/q3-sportback",
+      "source_url_citation": "https://www.cardekho.com/audi/q3-sportback"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/q8",
+      "model": "Q8",
+      "model_citation": "https://www.cardekho.com/audi/q8",
+      "variant_name": "55 TFSI quattro",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_Q8/Audi_Q8_55_TFSI_quattro.htm",
+      "ex_showroom_price_min": 11310000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/q8",
+      "ex_showroom_price_max": 11310000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/q8",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/q8/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/audi/q8",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/audi/q8",
+      "engine_displacement_cc": 2995,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/q8",
+      "power_bhp": 335,
+      "power_bhp_citation": "https://www.cardekho.com/audi/q8",
+      "torque_nm": 500,
+      "torque_nm_citation": "https://www.cardekho.com/audi/q8",
+      "mileage_kmpl": 10,
+      "mileage_kmpl_citation": "https://www.cardekho.com/audi/q8",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/audi/q8",
+      "boot_space_l": 605,
+      "boot_space_l_citation": "https://www.cardekho.com/audi/q8",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/q8",
+      "length_mm": 4986,
+      "length_mm_citation": "https://www.cardekho.com/audi/q8",
+      "width_mm": 2190,
+      "width_mm_citation": "https://www.cardekho.com/overview/Audi_Q8/Audi_Q8_55_TFSI_quattro.htm",
+      "height_mm": 1705,
+      "height_mm_citation": "https://www.cardekho.com/overview/Audi_Q8/Audi_Q8_55_TFSI_quattro.htm",
+      "key_features": [
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/audi/q8"
+        },
+        {
+          "value": "Virtual Cockpit",
+          "value_citation": "https://www.cardekho.com/audi/q8"
+        },
+        {
+          "value": "Quattro AWD",
+          "value_citation": "https://www.cardekho.com/audi/q8"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/audi/q8"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/audi/q8"
+        },
+        {
+          "value": "Touchscreen Interface",
+          "value_citation": "https://www.cardekho.com/audi/q8"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/audi/q8"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/audi/q8"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/audi/q8"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/audi/q8"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/audi/q8"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/audi/q8"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q8/9818/1681804100714/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/audi/q8"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/q8",
+      "source_url": "https://www.cardekho.com/overview/Audi_Q8/Audi_Q8_55_TFSI_quattro.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_Q8/Audi_Q8_55_TFSI_quattro.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/sq8",
+      "model": "SQ8",
+      "model_citation": "https://www.cardekho.com/audi/sq8",
+      "variant_name": "TFSI",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_SQ8/Audi_SQ8_TFSI.htm",
+      "ex_showroom_price_min": 17772000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/sq8",
+      "ex_showroom_price_max": 17772000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/sq8",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/sq8/price-in-hyderabad",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/audi/sq8",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/audi/sq8",
+      "engine_displacement_cc": 3996,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/sq8",
+      "power_bhp": 500,
+      "power_bhp_citation": "https://www.cardekho.com/audi/sq8",
+      "torque_nm": 770,
+      "torque_nm_citation": "https://www.cardekho.com/audi/sq8",
+      "mileage_kmpl_citation": "https://www.cardekho.com/audi/sq8",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/audi/sq8",
+      "boot_space_l": 605,
+      "boot_space_l_citation": "https://www.cardekho.com/audi/sq8",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/sq8",
+      "length_mm": 4986,
+      "length_mm_citation": "https://www.cardekho.com/audi/sq8",
+      "width_mm": 2190,
+      "width_mm_citation": "https://www.cardekho.com/audi/sq8",
+      "height_mm": 1705,
+      "height_mm_citation": "https://www.cardekho.com/audi/sq8",
+      "key_features": [
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/audi/sq8"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/audi/sq8"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/audi/sq8"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/audi/sq8"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/audi/sq8"
+        },
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/audi/sq8"
+        },
+        {
+          "value": "Rear AC Vents",
+          "value_citation": "https://www.cardekho.com/audi/sq8"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/audi/sq8"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/audi/sq8"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/audi/sq8"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/audi/sq8"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/audi/sq8"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/audi/sq8"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/SQ8/10360/1762776143099/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/audi/sq8"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/sq8",
+      "source_url": "https://www.cardekho.com/overview/Audi_SQ8/Audi_SQ8_TFSI.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_SQ8/Audi_SQ8_TFSI.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "model": "Q8 e-tron",
+      "model_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "variant_name": "50 quattro",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_Q8_e-tron/Audi_Q8_e-tron_50_quattro.htm",
+      "ex_showroom_price_min": 11473000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "ex_showroom_price_max": 11473000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/q8-e-tron/price-in-hyderabad",
+      "fuel_type": "Electric",
+      "fuel_type_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "power_bhp": 335.25,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Audi_Q8_e-tron/Audi_Q8_e-tron_50_quattro.htm",
+      "torque_nm": 664,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Audi_Q8_e-tron/Audi_Q8_e-tron_50_quattro.htm",
+      "mileage_kmpl_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "boot_space_l": 505,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_Q8_e-tron/Audi_Q8_e-tron_50_quattro.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "length_mm": 4915,
+      "length_mm_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "width_mm": 1976,
+      "width_mm_citation": "https://www.cardekho.com/overview/Audi_Q8_e-tron/Audi_Q8_e-tron_50_quattro.htm",
+      "height_mm": 1646,
+      "height_mm_citation": "https://www.cardekho.com/overview/Audi_Q8_e-tron/Audi_Q8_e-tron_50_quattro.htm",
+      "key_features": [
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "Quattro AWD",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "Air Suspension",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "Dual Motor",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q8-e-tron/10346/1762776157044/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "source_url": "https://www.cardekho.com/overview/Audi_Q8_e-tron/Audi_Q8_e-tron_50_quattro.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_Q8_e-tron/Audi_Q8_e-tron_50_quattro.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "model": "Q8 e-tron",
+      "model_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "variant_name": "55 quattro",
+      "variant_name_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "ex_showroom_price_min": 13163000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "ex_showroom_price_max": 13163000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/q8-e-tron/price-in-hyderabad",
+      "fuel_type": "Electric",
+      "fuel_type_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "power_bhp": 402,
+      "power_bhp_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "torque_nm": 664,
+      "torque_nm_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "mileage_kmpl_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "boot_space_l": 505,
+      "boot_space_l_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "length_mm": 4915,
+      "length_mm_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "width_mm": 1976,
+      "width_mm_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "height_mm": 1646,
+      "height_mm_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "key_features": [
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "Quattro AWD",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "Air Suspension",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "Dual Motor",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q8-e-tron/10346/1762776157044/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/audi/q8-e-tron"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/q8-e-tron",
+      "source_url": "https://www.cardekho.com/audi/q8-e-tron",
+      "source_url_citation": "https://www.cardekho.com/audi/q8-e-tron"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "model": "Q8 Sportback e-tron",
+      "model_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "variant_name": "50 quattro",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_Q8_Sportback_e-tron/Audi_Q8_Sportback_e-tron_50_quattro.htm",
+      "ex_showroom_price_min": 11923000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "ex_showroom_price_max": 11923000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron/price-in-hyderabad",
+      "fuel_type": "Electric",
+      "fuel_type_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "power_bhp": 335.25,
+      "power_bhp_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "torque_nm": 664,
+      "torque_nm_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "mileage_kmpl_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "boot_space_l": 535,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_Q8_Sportback_e-tron/Audi_Q8_Sportback_e-tron_50_quattro.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "length_mm": 4915,
+      "length_mm_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "width_mm": 1976,
+      "width_mm_citation": "https://www.cardekho.com/overview/Audi_Q8_Sportback_e-tron/Audi_Q8_Sportback_e-tron_50_quattro.htm",
+      "height_mm": 1632,
+      "height_mm_citation": "https://www.cardekho.com/overview/Audi_Q8_Sportback_e-tron/Audi_Q8_Sportback_e-tron_50_quattro.htm",
+      "key_features": [
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "Quattro AWD",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "Twin Touchscreen Displays",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "Leather Seats",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "ADAS",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q8-Sportback-e-tron/10347/1762776163028/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "source_url": "https://www.cardekho.com/overview/Audi_Q8_Sportback_e-tron/Audi_Q8_Sportback_e-tron_50_quattro.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_Q8_Sportback_e-tron/Audi_Q8_Sportback_e-tron_50_quattro.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "model": "Q8 Sportback e-tron",
+      "model_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "variant_name": "55 quattro",
+      "variant_name_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "ex_showroom_price_min": 13163000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "ex_showroom_price_max": 13163000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron/price-in-hyderabad",
+      "fuel_type": "Electric",
+      "fuel_type_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "power_bhp": 402,
+      "power_bhp_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "torque_nm": 664,
+      "torque_nm_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "mileage_kmpl_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "boot_space_l": 535,
+      "boot_space_l_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "length_mm": 4915,
+      "length_mm_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "width_mm": 1976,
+      "width_mm_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "height_mm": 1632,
+      "height_mm_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "key_features": [
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "Quattro AWD",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "Twin Touchscreen Displays",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "Leather Seats",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "ADAS",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q8-Sportback-e-tron/10347/1762776163028/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "source_url": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+      "source_url_citation": "https://www.cardekho.com/audi/q8-sportback-e-tron"
     }
   ]
 }

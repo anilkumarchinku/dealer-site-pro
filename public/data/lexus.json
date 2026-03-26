@@ -1,6 +1,6 @@
 {
   "lexus": {
-    "model_name": "ES, LM, LS, NX, RX",
+    "model_name": "ES, LM, LX, NX, RX",
     "variants": [
       {
         "make": "Lexus",
@@ -184,211 +184,109 @@
       },
       {
         "make": "Lexus",
-        "model": "LS",
-        "variant_name": "500h Distinct",
+        "model": "LX",
+        "variant_name": "LX 500d",
         "pricing": {
-          "ex_showroom_min": 19371000,
-          "ex_showroom_max": 19371000
+          "ex_showroom_min": 28000000,
+          "ex_showroom_max": 28000000
         },
         "powertrain": {
-          "fuel": "Petrol (Hybrid)",
-          "transmission": "Automatic 10-speed"
+          "fuel": "Diesel",
+          "transmission": "10-speed Automatic"
         },
         "engine_specs": {
-          "displacement": "3456 cc",
-          "power": "292.34 bhp",
-          "torque": "350 Nm",
-          "mileage": "15.4 kmpl"
+          "displacement": "3346 cc",
+          "power": "304.41 bhp @ 4000 rpm",
+          "torque": "700 Nm @ 1600-2600 rpm",
+          "mileage": "5 kmpl"
         },
         "dimensions": {
-          "seating": 4,
-          "boot": "480 L",
-          "ground_clearance": "147 mm",
-          "length": "5235 mm",
-          "width": "1900 mm",
-          "height": "1450 mm"
+          "seating": 5,
+          "boot": "174 L",
+          "ground_clearance": "205 mm",
+          "length": "5100 mm",
+          "width": "1990 mm",
+          "height": "1885 mm"
         },
         "key_features": [
           {
-            "value": "Power steering"
+            "value": "12.3-inch touchscreen infotainment"
+          },
+          {
+            "value": "Mark Levinson 25-speaker surround sound"
+          },
+          {
+            "value": "Four-zone climate control"
           }
         ],
         "safety_features": [
           {
-            "value": "14 airbags"
+            "value": "10 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          },
+          {
+            "value": "Lexus Safety System+"
           }
         ],
         "image_urls": [
           {
-            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LS/4924/1622802604706/front-left-side-47.jpg"
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LX/8657/1769081229491/front-left-side-47.jpg"
           }
         ]
       },
       {
         "make": "Lexus",
-        "model": "LS",
-        "variant_name": "500h Luxury",
+        "model": "LX",
+        "variant_name": "LX 500d Ultra Luxury",
         "pricing": {
-          "ex_showroom_min": 19552000,
-          "ex_showroom_max": 19552000
+          "ex_showroom_min": 29120000,
+          "ex_showroom_max": 29120000
         },
         "powertrain": {
-          "fuel": "Petrol (Hybrid)",
-          "transmission": "Automatic 10-speed"
+          "fuel": "Diesel",
+          "transmission": "10-speed Automatic"
         },
         "engine_specs": {
-          "displacement": "3456 cc",
-          "power": "292.34 bhp",
-          "torque": "350 Nm",
-          "mileage": "15.4 kmpl"
+          "displacement": "3346 cc",
+          "power": "304.41 bhp @ 4000 rpm",
+          "torque": "700 Nm @ 1600-2600 rpm",
+          "mileage": "5 kmpl"
         },
         "dimensions": {
-          "seating": 4,
-          "boot": "480 L",
-          "ground_clearance": "147 mm",
-          "length": "5235 mm",
-          "width": "1900 mm",
-          "height": "1450 mm"
+          "seating": 5,
+          "boot": "174 L",
+          "ground_clearance": "205 mm",
+          "length": "5100 mm",
+          "width": "1990 mm",
+          "height": "1885 mm"
         },
         "key_features": [
           {
-            "value": "Power steering"
+            "value": "12.3-inch touchscreen infotainment"
+          },
+          {
+            "value": "Mark Levinson 25-speaker surround sound"
+          },
+          {
+            "value": "Rear seat entertainment system"
           }
         ],
         "safety_features": [
           {
-            "value": "14 airbags"
+            "value": "10 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          },
+          {
+            "value": "Lexus Safety System+"
           }
         ],
         "image_urls": [
           {
-            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LS/4924/1622802604706/front-left-side-47.jpg"
-          }
-        ]
-      },
-      {
-        "make": "Lexus",
-        "model": "LS",
-        "variant_name": "500h Ultra Luxury",
-        "pricing": {
-          "ex_showroom_min": 20143000,
-          "ex_showroom_max": 20143000
-        },
-        "powertrain": {
-          "fuel": "Petrol (Hybrid)",
-          "transmission": "Automatic 10-speed"
-        },
-        "engine_specs": {
-          "displacement": "3456 cc",
-          "power": "292.34 bhp",
-          "torque": "350 Nm",
-          "mileage": "15.4 kmpl"
-        },
-        "dimensions": {
-          "seating": 4,
-          "boot": "480 L",
-          "ground_clearance": "147 mm",
-          "length": "5235 mm",
-          "width": "1900 mm",
-          "height": "1450 mm"
-        },
-        "key_features": [
-          {
-            "value": "Power steering"
-          }
-        ],
-        "safety_features": [
-          {
-            "value": "14 airbags"
-          }
-        ],
-        "image_urls": [
-          {
-            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LS/4924/1622802604706/front-left-side-47.jpg"
-          }
-        ]
-      },
-      {
-        "make": "Lexus",
-        "model": "LS",
-        "variant_name": "500h Kiriko",
-        "pricing": {
-          "ex_showroom_min": 22679000,
-          "ex_showroom_max": 22679000
-        },
-        "powertrain": {
-          "fuel": "Petrol (Hybrid)",
-          "transmission": "Automatic 10-speed"
-        },
-        "engine_specs": {
-          "displacement": "3456 cc",
-          "power": "292.34 bhp",
-          "torque": "350 Nm",
-          "mileage": "15.4 kmpl"
-        },
-        "dimensions": {
-          "seating": 4,
-          "boot": "480 L",
-          "ground_clearance": "147 mm",
-          "length": "5235 mm",
-          "width": "1900 mm",
-          "height": "1450 mm"
-        },
-        "key_features": [
-          {
-            "value": "Kiriko glass ornamentation"
-          }
-        ],
-        "safety_features": [
-          {
-            "value": "14 airbags"
-          }
-        ],
-        "image_urls": [
-          {
-            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LS/4924/1622802604706/front-left-side-47.jpg"
-          }
-        ]
-      },
-      {
-        "make": "Lexus",
-        "model": "LS",
-        "variant_name": "500h Nishijin",
-        "pricing": {
-          "ex_showroom_min": 22679000,
-          "ex_showroom_max": 22679000
-        },
-        "powertrain": {
-          "fuel": "Petrol (Hybrid)",
-          "transmission": "Automatic 10-speed"
-        },
-        "engine_specs": {
-          "displacement": "3456 cc",
-          "power": "292.34 bhp",
-          "torque": "350 Nm",
-          "mileage": "15.4 kmpl"
-        },
-        "dimensions": {
-          "seating": 4,
-          "boot": "480 L",
-          "ground_clearance": "147 mm",
-          "length": "5235 mm",
-          "width": "1900 mm",
-          "height": "1450 mm"
-        },
-        "key_features": [
-          {
-            "value": "Nishijin-ori interior trim"
-          }
-        ],
-        "safety_features": [
-          {
-            "value": "14 airbags"
-          }
-        ],
-        "image_urls": [
-          {
-            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LS/4924/1622802604706/front-left-side-47.jpg"
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LX/8657/1769081229491/front-left-side-47.jpg"
           }
         ]
       },

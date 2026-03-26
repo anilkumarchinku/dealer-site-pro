@@ -50,6 +50,38 @@
       "ex_showroom_price": "₹5.20 Lakh",
       "status": "Available",
       "variants": []
+    },
+    {
+      "make": "Greaves Electric Mobility",
+      "model": "Eltra",
+      "category": "cargo",
+      "fuel_type": "Electric",
+      "range_km": 110,
+      "max_power": "7.5 kW",
+      "max_speed_kmph": 45,
+      "battery_kwh": 7.68,
+      "charging_time_hours": 5,
+      "payload_kg": 450,
+      "gvw_kg": 1000,
+      "ex_showroom_price": "₹3.60 Lakh",
+      "status": "Available",
+      "variants": []
+    },
+    {
+      "make": "Greaves Electric Mobility",
+      "model": "E-Pro Cargo",
+      "category": "cargo",
+      "fuel_type": "Electric",
+      "range_km": 120,
+      "max_power": "8.5 kW",
+      "max_speed_kmph": 50,
+      "battery_kwh": 8.64,
+      "charging_time_hours": 5,
+      "payload_kg": 550,
+      "gvw_kg": 1100,
+      "ex_showroom_price": "₹3.08 Lakh",
+      "status": "Available",
+      "variants": []
     }
   ]
 }

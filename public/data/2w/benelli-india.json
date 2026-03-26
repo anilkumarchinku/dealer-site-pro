@@ -240,6 +240,43 @@
         ],
         "description": "Power: 25.8 PS @ 9250 rpm; Top Speed: 114 kmph; Fuel Capacity: 12.5 L; Kerb Weight: 162 kg"
       }
+    },
+    {
+      "make": "Benelli India",
+      "model": "Benelli Leoncino 800",
+      "status": "Upcoming",
+      "price": "Rs 8,50,000 (Expected)",
+      "colors": [],
+      "specifications": {
+        "engine_details": "754 cc, Twin Cylinder, Liquid Cooled",
+        "torque": "67 Nm",
+        "mileage": "N/A",
+        "features": [
+          "Double Disc Brakes",
+          "Tubeless Tyres",
+          "Self Start Only"
+        ],
+        "description": "Power: 81.5 PS; Kerb Weight: 220 kg; Upcoming cruiser-class motorcycle competing against Honda Rebel 500 and Kawasaki Vulcan S."
+      }
+    },
+    {
+      "make": "Benelli India",
+      "model": "Benelli 752 S",
+      "status": "Upcoming",
+      "price": "Rs 7,00,000 - Rs 8,00,000 (Expected)",
+      "colors": [],
+      "specifications": {
+        "engine_details": "754 cc, Twin Cylinder, Liquid Cooled, DOHC",
+        "torque": "67 Nm (Expected)",
+        "mileage": "N/A",
+        "features": [
+          "Dual-Channel ABS",
+          "LED Headlight",
+          "Digital Instrument Console",
+          "Disc Brakes (Front & Rear)"
+        ],
+        "description": "Upcoming naked sport motorcycle from Benelli. Expected to share the 754 cc twin-cylinder platform with the Leoncino 800."
+      }
     }
   ]
 }

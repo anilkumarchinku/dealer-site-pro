@@ -97,6 +97,616 @@
       ],
       "availability_status": "on_sale",
       "launch_year": 2025
+    },
+    {
+      "make": "BYD",
+      "model": "Atto 3",
+      "variant_name": "Dynamic",
+      "ex_showroom_price_min_inr": 2499000,
+      "ex_showroom_price_max_inr": 2499000,
+      "hyderabad_on_road_price_inr": 2750000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "battery_capacity_kwh": 49.92,
+      "range_km": 410,
+      "power_bhp": 201,
+      "torque_nm": 310,
+      "seating_capacity": 5,
+      "boot_space_l": 440,
+      "ground_clearance_mm": 175,
+      "length_mm": 4455,
+      "width_mm": 1875,
+      "height_mm": 1615,
+      "key_features": [
+        {
+          "value": "12.8-inch rotating touchscreen"
+        },
+        {
+          "value": "Panoramic sunroof"
+        },
+        {
+          "value": "Wireless Apple CarPlay & Android Auto"
+        },
+        {
+          "value": "Vehicle-to-Load (V2L)"
+        },
+        {
+          "value": "NFC digital key"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "7 Airbags"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "TPMS"
+        },
+        {
+          "value": "ISOFIX child seat anchors"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BYD/Atto-3/11837/1768891336368/front-left-side-47.jpg"
+        }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2024
+    },
+    {
+      "make": "BYD",
+      "model": "Atto 3",
+      "variant_name": "Premium",
+      "ex_showroom_price_min_inr": 2999000,
+      "ex_showroom_price_max_inr": 2999000,
+      "hyderabad_on_road_price_inr": 3300000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "battery_capacity_kwh": 60.48,
+      "range_km": 521,
+      "power_bhp": 201,
+      "torque_nm": 310,
+      "seating_capacity": 5,
+      "boot_space_l": 440,
+      "ground_clearance_mm": 175,
+      "length_mm": 4455,
+      "width_mm": 1875,
+      "height_mm": 1615,
+      "key_features": [
+        {
+          "value": "12.8-inch rotating touchscreen"
+        },
+        {
+          "value": "Panoramic sunroof"
+        },
+        {
+          "value": "ADAS (Advanced Driver Assistance Systems)"
+        },
+        {
+          "value": "360-degree camera system"
+        },
+        {
+          "value": "Automatic tailgate"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "7 Airbags"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Blind Spot Detection"
+        },
+        {
+          "value": "Rear Cross Traffic Alert"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BYD/Atto-3/11837/1768891336368/front-left-side-47.jpg"
+        }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2024
+    },
+    {
+      "make": "BYD",
+      "model": "Atto 3",
+      "variant_name": "Superior",
+      "ex_showroom_price_min_inr": 3399000,
+      "ex_showroom_price_max_inr": 3399000,
+      "hyderabad_on_road_price_inr": 3740000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "battery_capacity_kwh": 60.48,
+      "range_km": 521,
+      "power_bhp": 201,
+      "torque_nm": 310,
+      "seating_capacity": 5,
+      "boot_space_l": 440,
+      "ground_clearance_mm": 175,
+      "length_mm": 4455,
+      "width_mm": 1875,
+      "height_mm": 1615,
+      "key_features": [
+        {
+          "value": "12.8-inch rotating touchscreen"
+        },
+        {
+          "value": "Panoramic sunroof"
+        },
+        {
+          "value": "ADAS with full suite"
+        },
+        {
+          "value": "360-degree camera system"
+        },
+        {
+          "value": "Heated front seats"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "7 Airbags"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "Blind Spot Detection"
+        },
+        {
+          "value": "Lane Departure Warning"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BYD/Atto-3/11837/1768891336368/front-left-side-47.jpg"
+        }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2024
+    },
+    {
+      "make": "BYD",
+      "model": "Seal",
+      "variant_name": "Dynamic",
+      "ex_showroom_price_min_inr": 4100000,
+      "ex_showroom_price_max_inr": 4100000,
+      "hyderabad_on_road_price_inr": 4400000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "battery_capacity_kwh": 61.44,
+      "range_km": 510,
+      "power_bhp": 204,
+      "torque_nm": 310,
+      "seating_capacity": 5,
+      "boot_space_l": 400,
+      "ground_clearance_mm": 150,
+      "length_mm": 4800,
+      "width_mm": 1875,
+      "height_mm": 1460,
+      "key_features": [
+        {
+          "value": "15.6-inch rotating touchscreen"
+        },
+        {
+          "value": "8-way powered driver seat with memory"
+        },
+        {
+          "value": "Vehicle-to-Load Technology (3000W output)"
+        },
+        {
+          "value": "Heated ORVMs"
+        },
+        {
+          "value": "NFC digital key"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "9 Airbags"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Electronic Stability Program (ESP)"
+        },
+        {
+          "value": "Traction Control System"
+        },
+        {
+          "value": "LED lights with follow-me-home"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BYD/Seal/9561/1770881231451/front-left-side-47.jpg"
+        }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2024
+    },
+    {
+      "make": "BYD",
+      "model": "Seal",
+      "variant_name": "Premium",
+      "ex_showroom_price_min_inr": 4700000,
+      "ex_showroom_price_max_inr": 4700000,
+      "hyderabad_on_road_price_inr": 5050000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "battery_capacity_kwh": 82.56,
+      "range_km": 650,
+      "power_bhp": 313,
+      "torque_nm": 360,
+      "seating_capacity": 5,
+      "boot_space_l": 400,
+      "ground_clearance_mm": 150,
+      "length_mm": 4800,
+      "width_mm": 1875,
+      "height_mm": 1460,
+      "key_features": [
+        {
+          "value": "15.6-inch rotating touchscreen"
+        },
+        {
+          "value": "ADAS (Advanced Driver Assistance Systems)"
+        },
+        {
+          "value": "360-degree camera system"
+        },
+        {
+          "value": "High-efficiency heat pump system"
+        },
+        {
+          "value": "8-speaker premium audio"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "9 Airbags"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Electronic Stability Program (ESP)"
+        },
+        {
+          "value": "360-degree camera"
+        },
+        {
+          "value": "Blind Spot Monitoring"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BYD/Seal/9561/1770881231451/front-left-side-47.jpg"
+        }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2024
+    },
+    {
+      "make": "BYD",
+      "model": "Seal",
+      "variant_name": "Performance",
+      "ex_showroom_price_min_inr": 5300000,
+      "ex_showroom_price_max_inr": 5300000,
+      "hyderabad_on_road_price_inr": 5700000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "battery_capacity_kwh": 82.56,
+      "range_km": 580,
+      "power_bhp": 530,
+      "torque_nm": 670,
+      "seating_capacity": 5,
+      "boot_space_l": 400,
+      "ground_clearance_mm": 150,
+      "length_mm": 4800,
+      "width_mm": 1875,
+      "height_mm": 1460,
+      "key_features": [
+        {
+          "value": "15.6-inch rotating touchscreen"
+        },
+        {
+          "value": "Dual motor all-wheel drive"
+        },
+        {
+          "value": "0-100 km/h in 3.8 seconds"
+        },
+        {
+          "value": "ADAS full suite"
+        },
+        {
+          "value": "Active noise cancellation"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "9 Airbags"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Electronic Brakeforce Distribution (EBD)"
+        },
+        {
+          "value": "360-degree camera"
+        },
+        {
+          "value": "Lane Departure Warning"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BYD/Seal/9561/1770881231451/front-left-side-47.jpg"
+        }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2024
+    },
+    {
+      "make": "BYD",
+      "model": "eMAX 7",
+      "variant_name": "Superior 6-Seater",
+      "ex_showroom_price_min_inr": 2690000,
+      "ex_showroom_price_max_inr": 2690000,
+      "hyderabad_on_road_price_inr": 2950000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "battery_capacity_kwh": 55.4,
+      "range_km": 420,
+      "power_bhp": 201,
+      "torque_nm": 310,
+      "seating_capacity": 6,
+      "boot_space_l": 180,
+      "ground_clearance_mm": 170,
+      "length_mm": 4710,
+      "width_mm": 1810,
+      "height_mm": 1690,
+      "key_features": [
+        {
+          "value": "12.8-inch rotating touchscreen"
+        },
+        {
+          "value": "Captain seats in second row"
+        },
+        {
+          "value": "Fixed glass roof"
+        },
+        {
+          "value": "Fast DC charging support"
+        },
+        {
+          "value": "NFC digital key"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "TPMS"
+        },
+        {
+          "value": "Rear parking sensors with camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BYD/eMAX-7/12144/1768891656918/front-left-side-47.jpg"
+        }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2024
+    },
+    {
+      "make": "BYD",
+      "model": "eMAX 7",
+      "variant_name": "Superior 7-Seater",
+      "ex_showroom_price_min_inr": 2690000,
+      "ex_showroom_price_max_inr": 2690000,
+      "hyderabad_on_road_price_inr": 2950000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "battery_capacity_kwh": 55.4,
+      "range_km": 420,
+      "power_bhp": 201,
+      "torque_nm": 310,
+      "seating_capacity": 7,
+      "boot_space_l": 180,
+      "ground_clearance_mm": 170,
+      "length_mm": 4710,
+      "width_mm": 1810,
+      "height_mm": 1690,
+      "key_features": [
+        {
+          "value": "12.8-inch rotating touchscreen"
+        },
+        {
+          "value": "7-seater with foldable third row"
+        },
+        {
+          "value": "Fixed glass roof"
+        },
+        {
+          "value": "Fast DC charging support"
+        },
+        {
+          "value": "Vehicle-to-Load technology"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "TPMS"
+        },
+        {
+          "value": "Rear parking sensors with camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BYD/eMAX-7/12144/1768891656918/front-left-side-47.jpg"
+        }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2024
+    },
+    {
+      "make": "BYD",
+      "model": "eMAX 7",
+      "variant_name": "Premium 6-Seater",
+      "ex_showroom_price_min_inr": 2990000,
+      "ex_showroom_price_max_inr": 2990000,
+      "hyderabad_on_road_price_inr": 3280000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "battery_capacity_kwh": 71.8,
+      "range_km": 530,
+      "power_bhp": 201,
+      "torque_nm": 310,
+      "seating_capacity": 6,
+      "boot_space_l": 180,
+      "ground_clearance_mm": 170,
+      "length_mm": 4710,
+      "width_mm": 1810,
+      "height_mm": 1690,
+      "key_features": [
+        {
+          "value": "12.8-inch rotating touchscreen"
+        },
+        {
+          "value": "Captain seats in second row"
+        },
+        {
+          "value": "ADAS (Advanced Driver Assistance Systems)"
+        },
+        {
+          "value": "Fixed glass roof"
+        },
+        {
+          "value": "360-degree camera system"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "ADAS suite"
+        },
+        {
+          "value": "360-degree camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BYD/eMAX-7/12144/1768891656918/front-left-side-47.jpg"
+        }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2024
+    },
+    {
+      "make": "BYD",
+      "model": "eMAX 7",
+      "variant_name": "Premium 7-Seater",
+      "ex_showroom_price_min_inr": 2990000,
+      "ex_showroom_price_max_inr": 2990000,
+      "hyderabad_on_road_price_inr": 3280000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "battery_capacity_kwh": 71.8,
+      "range_km": 530,
+      "power_bhp": 201,
+      "torque_nm": 310,
+      "seating_capacity": 7,
+      "boot_space_l": 180,
+      "ground_clearance_mm": 170,
+      "length_mm": 4710,
+      "width_mm": 1810,
+      "height_mm": 1690,
+      "key_features": [
+        {
+          "value": "12.8-inch rotating touchscreen"
+        },
+        {
+          "value": "7-seater with foldable third row"
+        },
+        {
+          "value": "ADAS (Advanced Driver Assistance Systems)"
+        },
+        {
+          "value": "Fixed glass roof"
+        },
+        {
+          "value": "360-degree camera system"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "Anti-lock Braking System (ABS)"
+        },
+        {
+          "value": "Electronic Stability Control (ESC)"
+        },
+        {
+          "value": "ADAS suite"
+        },
+        {
+          "value": "360-degree camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BYD/eMAX-7/12144/1768891656918/front-left-side-47.jpg"
+        }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2024
     }
   ]
 }
