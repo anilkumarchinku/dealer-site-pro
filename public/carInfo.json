@@ -4978,18 +4978,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Smart",
-      "ex_showroom_price_min_inr": {
-        "min": 630000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 630000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 630000,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5002,18 +4992,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Pure",
-      "ex_showroom_price_min_inr": {
-        "min": 704000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 704000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 704000,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5026,18 +5006,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Smart CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 722000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 722000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 722000,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5050,18 +5020,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Pure S",
-      "ex_showroom_price_min_inr": {
-        "min": 736000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 736000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 736000,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5074,18 +5034,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Pure AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 758000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 758000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 758000,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -5098,18 +5048,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Pure S AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 791000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 791000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 791000,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -5122,18 +5062,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Creative",
-      "ex_showroom_price_min_inr": {
-        "min": 795000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 795000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 795000,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5146,18 +5076,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Pure CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 803999.9999999999,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 803999.9999999999,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 803999.9999999999,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5170,18 +5090,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Pure Diesel",
-      "ex_showroom_price_min_inr": {
-        "min": 810000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 810000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 810000,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1497,
@@ -5194,18 +5104,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Creative S",
-      "ex_showroom_price_min_inr": {
-        "min": 827999.9999999999,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 827999.9999999999,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 827999.9999999999,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5218,18 +5118,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Pure S CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 836999.9999999999,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 836999.9999999999,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 836999.9999999999,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5242,18 +5132,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Creative AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 850000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 850000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 850000,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -5266,18 +5146,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Creative S AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 883000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 883000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 883000,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -5290,18 +5160,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Creative CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 896000.0000000001,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 896000.0000000001,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 896000.0000000001,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5314,18 +5174,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Accomplished S",
-      "ex_showroom_price_min_inr": {
-        "min": 914000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 914000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 914000,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5338,18 +5188,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Creative S CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 915000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 915000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 915000,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5362,18 +5202,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Creative S Diesel",
-      "ex_showroom_price_min_inr": {
-        "min": 932000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 932000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 932000,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1497,
@@ -5386,18 +5216,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Creative S DCA",
-      "ex_showroom_price_min_inr": {
-        "min": 942000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 942000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 942000,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -5410,18 +5230,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Accomplished S CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 1015000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1015000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 1015000,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5434,18 +5244,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Accomplished S Diesel",
-      "ex_showroom_price_min_inr": {
-        "min": 1017000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1017000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 1017000,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1497,
@@ -5458,18 +5258,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Accomplished S DCA",
-      "ex_showroom_price_min_inr": {
-        "min": 1027999.9999999999,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1027999.9999999999,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 1027999.9999999999,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "Diesel",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -5482,18 +5272,8 @@
       "make": "Tata",
       "model": "Altroz",
       "variant_name": "Altroz Accomplished Plus S DCA",
-      "ex_showroom_price_min_inr": {
-        "min": 1051000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1051000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
-      "hyderabad_on_road_price": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/altroz",
-        "max": 1292000,
-        "max_citation": "https://www.cardekho.com/tata/altroz"
-      },
+      "ex_showroom_price_min_inr": 1051000,
+      "hyderabad_on_road_price": 755000,
       "fuel_type": "Diesel",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -5506,18 +5286,8 @@
       "make": "Tata",
       "model": "Curvv EV",
       "variant_name": "Curvv EV Creative 45",
-      "ex_showroom_price_min_inr": {
-        "min": 1748999.9999999998,
-        "min_citation": "https://www.cardekho.com/tata/curvv-ev",
-        "max": 1748999.9999999998,
-        "max_citation": "https://www.cardekho.com/tata/curvv-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1840000,
-        "min_citation": "https://www.cardekho.com/tata/curvv-ev",
-        "max": 2337000,
-        "max_citation": "https://www.cardekho.com/tata/curvv-ev"
-      },
+      "ex_showroom_price_min_inr": 1748999.9999999998,
+      "hyderabad_on_road_price": 1840000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -5530,18 +5300,8 @@
       "make": "Tata",
       "model": "Curvv EV",
       "variant_name": "Curvv EV Accomplished 45",
-      "ex_showroom_price_min_inr": {
-        "min": 1848999.9999999998,
-        "min_citation": "https://www.cardekho.com/tata/curvv-ev",
-        "max": 1848999.9999999998,
-        "max_citation": "https://www.cardekho.com/tata/curvv-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1840000,
-        "min_citation": "https://www.cardekho.com/tata/curvv-ev",
-        "max": 2337000,
-        "max_citation": "https://www.cardekho.com/tata/curvv-ev"
-      },
+      "ex_showroom_price_min_inr": 1848999.9999999998,
+      "hyderabad_on_road_price": 1840000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -5554,18 +5314,8 @@
       "make": "Tata",
       "model": "Curvv EV",
       "variant_name": "Curvv EV Accomplished 55",
-      "ex_showroom_price_min_inr": {
-        "min": 1925000,
-        "min_citation": "https://www.cardekho.com/tata/curvv-ev",
-        "max": 1925000,
-        "max_citation": "https://www.cardekho.com/tata/curvv-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1840000,
-        "min_citation": "https://www.cardekho.com/tata/curvv-ev",
-        "max": 2337000,
-        "max_citation": "https://www.cardekho.com/tata/curvv-ev"
-      },
+      "ex_showroom_price_min_inr": 1925000,
+      "hyderabad_on_road_price": 1840000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -5578,18 +5328,8 @@
       "make": "Tata",
       "model": "Curvv EV",
       "variant_name": "Curvv EV Accomplished Plus S 45",
-      "ex_showroom_price_min_inr": {
-        "min": 1929000,
-        "min_citation": "https://www.cardekho.com/tata/curvv-ev",
-        "max": 1929000,
-        "max_citation": "https://www.cardekho.com/tata/curvv-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1840000,
-        "min_citation": "https://www.cardekho.com/tata/curvv-ev",
-        "max": 2337000,
-        "max_citation": "https://www.cardekho.com/tata/curvv-ev"
-      },
+      "ex_showroom_price_min_inr": 1929000,
+      "hyderabad_on_road_price": 1840000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -5602,18 +5342,8 @@
       "make": "Tata",
       "model": "Curvv EV",
       "variant_name": "Curvv EV Accomplished Plus S 55",
-      "ex_showroom_price_min_inr": {
-        "min": 1998999.9999999998,
-        "min_citation": "https://www.cardekho.com/tata/curvv-ev",
-        "max": 1998999.9999999998,
-        "max_citation": "https://www.cardekho.com/tata/curvv-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1840000,
-        "min_citation": "https://www.cardekho.com/tata/curvv-ev",
-        "max": 2337000,
-        "max_citation": "https://www.cardekho.com/tata/curvv-ev"
-      },
+      "ex_showroom_price_min_inr": 1998999.9999999998,
+      "hyderabad_on_road_price": 1840000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -5626,18 +5356,8 @@
       "make": "Tata",
       "model": "Curvv EV",
       "variant_name": "Curvv EV Empowered Plus 55",
-      "ex_showroom_price_min_inr": {
-        "min": 2125000,
-        "min_citation": "https://www.cardekho.com/tata/curvv-ev",
-        "max": 2125000,
-        "max_citation": "https://www.cardekho.com/tata/curvv-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1840000,
-        "min_citation": "https://www.cardekho.com/tata/curvv-ev",
-        "max": 2337000,
-        "max_citation": "https://www.cardekho.com/tata/curvv-ev"
-      },
+      "ex_showroom_price_min_inr": 2125000,
+      "hyderabad_on_road_price": 1840000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -5650,18 +5370,8 @@
       "make": "Tata",
       "model": "Curvv EV",
       "variant_name": "Curvv EV Empowered Plus A 55",
-      "ex_showroom_price_min_inr": {
-        "min": 2199000,
-        "min_citation": "https://www.cardekho.com/tata/curvv-ev",
-        "max": 2199000,
-        "max_citation": "https://www.cardekho.com/tata/curvv-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1840000,
-        "min_citation": "https://www.cardekho.com/tata/curvv-ev",
-        "max": 2337000,
-        "max_citation": "https://www.cardekho.com/tata/curvv-ev"
-      },
+      "ex_showroom_price_min_inr": 2199000,
+      "hyderabad_on_road_price": 1840000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -5674,18 +5384,8 @@
       "make": "Tata",
       "model": "Curvv EV",
       "variant_name": "Curvv EV Empowered Plus A 55 Dark",
-      "ex_showroom_price_min_inr": {
-        "min": 2224000,
-        "min_citation": "https://www.cardekho.com/tata/curvv-ev",
-        "max": 2224000,
-        "max_citation": "https://www.cardekho.com/tata/curvv-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1840000,
-        "min_citation": "https://www.cardekho.com/tata/curvv-ev",
-        "max": 2337000,
-        "max_citation": "https://www.cardekho.com/tata/curvv-ev"
-      },
+      "ex_showroom_price_min_inr": 2224000,
+      "hyderabad_on_road_price": 1840000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -5698,18 +5398,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Smart",
-      "ex_showroom_price_min_inr": {
-        "min": 560000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 560000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 560000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5722,18 +5412,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Pure",
-      "ex_showroom_price_min_inr": {
-        "min": 650000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 650000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 650000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5746,18 +5426,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Smart CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 670000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 670000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 670000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5770,18 +5440,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Pure Plus",
-      "ex_showroom_price_min_inr": {
-        "min": 700000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 700000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 700000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5794,18 +5454,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Pure Plus S",
-      "ex_showroom_price_min_inr": {
-        "min": 735000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 735000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 735000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5818,18 +5468,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Pure CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 750000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 750000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 750000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5842,18 +5482,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Pure Plus AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 755000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 755000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 755000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -5866,18 +5496,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Adventure",
-      "ex_showroom_price_min_inr": {
-        "min": 760000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 760000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 760000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5890,18 +5510,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Pure Plus S AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 790000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 790000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 790000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -5914,18 +5524,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Adventure S",
-      "ex_showroom_price_min_inr": {
-        "min": 795000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 795000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 795000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5938,18 +5538,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Pure Plus CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 800000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 800000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 800000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -5962,18 +5552,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Adventure AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 815000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 815000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 815000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -5986,18 +5566,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Accomplished",
-      "ex_showroom_price_min_inr": {
-        "min": 830000.0000000001,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 830000.0000000001,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 830000.0000000001,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6010,18 +5580,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Adventure Turbo",
-      "ex_showroom_price_min_inr": {
-        "min": 830000.0000000001,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 830000.0000000001,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 830000.0000000001,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6034,18 +5594,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Pure Plus S CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 835000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 835000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 835000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6058,18 +5608,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Pure Plus CNG AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 855000.0000000001,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 855000.0000000001,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 855000.0000000001,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "CNG",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -6082,18 +5622,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Adventure CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 860000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 860000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 860000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6106,18 +5636,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Accomplished AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 885000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 885000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 885000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "Diesel",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -6130,18 +5650,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Adventure S CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 894999.9999999999,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 894999.9999999999,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 894999.9999999999,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6154,18 +5664,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Accomplished Plus S",
-      "ex_showroom_price_min_inr": {
-        "min": 900000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 900000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 900000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6178,18 +5678,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Adventure CNG AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 915000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 915000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 915000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "CNG",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -6202,18 +5692,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Accomplished CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 930000.0000000001,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 930000.0000000001,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 930000.0000000001,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6226,18 +5706,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Adventure S CNG AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 950000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 950000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 950000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "CNG",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -6250,18 +5720,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Accomplished Plus S AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 955000.0000000001,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 955000.0000000001,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 955000.0000000001,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "Diesel",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -6274,18 +5734,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Accomplished Plus S Turbo",
-      "ex_showroom_price_min_inr": {
-        "min": 980000.0000000001,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 980000.0000000001,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 980000.0000000001,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6298,18 +5748,8 @@
       "make": "Tata",
       "model": "Punch",
       "variant_name": "Punch Accomplished Plus S CNG AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 1055000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1055000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
-      "hyderabad_on_road_price": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/punch",
-        "max": 1296000,
-        "max_citation": "https://www.cardekho.com/tata/punch"
-      },
+      "ex_showroom_price_min_inr": 1055000,
+      "hyderabad_on_road_price": 672000,
       "fuel_type": "CNG",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -6322,18 +5762,8 @@
       "make": "Tata",
       "model": "Harrier",
       "variant_name": "Harrier Petrol Smart",
-      "ex_showroom_price_min_inr": {
-        "min": 1289000,
-        "min_citation": "https://www.cardekho.com/tata/harrier",
-        "max": 1289000,
-        "max_citation": "https://www.cardekho.com/tata/harrier"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1581000,
-        "min_citation": "https://www.cardekho.com/tata/harrier",
-        "max": 3149000,
-        "max_citation": "https://www.cardekho.com/tata/harrier"
-      },
+      "ex_showroom_price_min_inr": 1289000,
+      "hyderabad_on_road_price": 1581000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1498,
@@ -6346,18 +5776,8 @@
       "make": "Tata",
       "model": "Harrier",
       "variant_name": "Harrier Smart",
-      "ex_showroom_price_min_inr": {
-        "min": 1400000,
-        "min_citation": "https://www.cardekho.com/tata/harrier",
-        "max": 1400000,
-        "max_citation": "https://www.cardekho.com/tata/harrier"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1581000,
-        "min_citation": "https://www.cardekho.com/tata/harrier",
-        "max": 3149000,
-        "max_citation": "https://www.cardekho.com/tata/harrier"
-      },
+      "ex_showroom_price_min_inr": 1400000,
+      "hyderabad_on_road_price": 1581000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1956,
@@ -6370,18 +5790,8 @@
       "make": "Tata",
       "model": "Harrier",
       "variant_name": "Harrier Petrol Pure X",
-      "ex_showroom_price_min_inr": {
-        "min": 1600000,
-        "min_citation": "https://www.cardekho.com/tata/harrier",
-        "max": 1600000,
-        "max_citation": "https://www.cardekho.com/tata/harrier"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1581000,
-        "min_citation": "https://www.cardekho.com/tata/harrier",
-        "max": 3149000,
-        "max_citation": "https://www.cardekho.com/tata/harrier"
-      },
+      "ex_showroom_price_min_inr": 1600000,
+      "hyderabad_on_road_price": 1581000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1498,
@@ -6394,18 +5804,8 @@
       "make": "Tata",
       "model": "Harrier",
       "variant_name": "Harrier Petrol Pure X DARK",
-      "ex_showroom_price_min_inr": {
-        "min": 1663000,
-        "min_citation": "https://www.cardekho.com/tata/harrier",
-        "max": 1663000,
-        "max_citation": "https://www.cardekho.com/tata/harrier"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1581000,
-        "min_citation": "https://www.cardekho.com/tata/harrier",
-        "max": 3149000,
-        "max_citation": "https://www.cardekho.com/tata/harrier"
-      },
+      "ex_showroom_price_min_inr": 1663000,
+      "hyderabad_on_road_price": 1581000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1498,
@@ -6418,18 +5818,8 @@
       "make": "Tata",
       "model": "Harrier",
       "variant_name": "Harrier Petrol Adventure X",
-      "ex_showroom_price_min_inr": {
-        "min": 1686000,
-        "min_citation": "https://www.cardekho.com/tata/harrier",
-        "max": 1686000,
-        "max_citation": "https://www.cardekho.com/tata/harrier"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1581000,
-        "min_citation": "https://www.cardekho.com/tata/harrier",
-        "max": 3149000,
-        "max_citation": "https://www.cardekho.com/tata/harrier"
-      },
+      "ex_showroom_price_min_inr": 1686000,
+      "hyderabad_on_road_price": 1581000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1498,
@@ -6442,18 +5832,8 @@
       "make": "Tata",
       "model": "Harrier",
       "variant_name": "Harrier Pure X",
-      "ex_showroom_price_min_inr": {
-        "min": 1700000,
-        "min_citation": "https://www.cardekho.com/tata/harrier",
-        "max": 1700000,
-        "max_citation": "https://www.cardekho.com/tata/harrier"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1581000,
-        "min_citation": "https://www.cardekho.com/tata/harrier",
-        "max": 3149000,
-        "max_citation": "https://www.cardekho.com/tata/harrier"
-      },
+      "ex_showroom_price_min_inr": 1700000,
+      "hyderabad_on_road_price": 1581000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1956,
@@ -6466,18 +5846,8 @@
       "make": "Tata",
       "model": "Harrier",
       "variant_name": "Harrier Petrol Adventure X Plus",
-      "ex_showroom_price_min_inr": {
-        "min": 1714000,
-        "min_citation": "https://www.cardekho.com/tata/harrier",
-        "max": 1714000,
-        "max_citation": "https://www.cardekho.com/tata/harrier"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1581000,
-        "min_citation": "https://www.cardekho.com/tata/harrier",
-        "max": 3149000,
-        "max_citation": "https://www.cardekho.com/tata/harrier"
-      },
+      "ex_showroom_price_min_inr": 1714000,
+      "hyderabad_on_road_price": 1581000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1498,
@@ -6490,18 +5860,8 @@
       "make": "Tata",
       "model": "Harrier",
       "variant_name": "Harrier Fearless X Plus Stealth AT",
-      "ex_showroom_price_min_inr": {
-        "min": 2525000,
-        "min_citation": "https://www.cardekho.com/tata/harrier",
-        "max": 2525000,
-        "max_citation": "https://www.cardekho.com/tata/harrier"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1581000,
-        "min_citation": "https://www.cardekho.com/tata/harrier",
-        "max": 3149000,
-        "max_citation": "https://www.cardekho.com/tata/harrier"
-      },
+      "ex_showroom_price_min_inr": 2525000,
+      "hyderabad_on_road_price": 1581000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 1956,
@@ -6514,18 +5874,8 @@
       "make": "Tata",
       "model": "Tiago",
       "variant_name": "Tiago XE",
-      "ex_showroom_price_min_inr": {
-        "min": 457000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 457000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
-      "hyderabad_on_road_price": {
-        "min": 547000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 933000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
+      "ex_showroom_price_min_inr": 457000,
+      "hyderabad_on_road_price": 547000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6538,18 +5888,8 @@
       "make": "Tata",
       "model": "Tiago",
       "variant_name": "Tiago XM",
-      "ex_showroom_price_min_inr": {
-        "min": 531000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 531000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
-      "hyderabad_on_road_price": {
-        "min": 547000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 933000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
+      "ex_showroom_price_min_inr": 531000,
+      "hyderabad_on_road_price": 547000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6562,18 +5902,8 @@
       "make": "Tata",
       "model": "Tiago",
       "variant_name": "Tiago XE CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 549000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 549000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
-      "hyderabad_on_road_price": {
-        "min": 547000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 933000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
+      "ex_showroom_price_min_inr": 549000,
+      "hyderabad_on_road_price": 547000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6586,18 +5916,8 @@
       "make": "Tata",
       "model": "Tiago",
       "variant_name": "Tiago XT",
-      "ex_showroom_price_min_inr": {
-        "min": 581000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 581000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
-      "hyderabad_on_road_price": {
-        "min": 547000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 933000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
+      "ex_showroom_price_min_inr": 581000,
+      "hyderabad_on_road_price": 547000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6610,18 +5930,8 @@
       "make": "Tata",
       "model": "Tiago",
       "variant_name": "Tiago XM CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 622000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 622000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
-      "hyderabad_on_road_price": {
-        "min": 547000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 933000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
+      "ex_showroom_price_min_inr": 622000,
+      "hyderabad_on_road_price": 547000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6634,18 +5944,8 @@
       "make": "Tata",
       "model": "Tiago",
       "variant_name": "Tiago XTA AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 631000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 631000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
-      "hyderabad_on_road_price": {
-        "min": 547000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 933000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
+      "ex_showroom_price_min_inr": 631000,
+      "hyderabad_on_road_price": 547000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -6658,18 +5958,8 @@
       "make": "Tata",
       "model": "Tiago",
       "variant_name": "Tiago XZ",
-      "ex_showroom_price_min_inr": {
-        "min": 640000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 640000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
-      "hyderabad_on_road_price": {
-        "min": 547000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 933000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
+      "ex_showroom_price_min_inr": 640000,
+      "hyderabad_on_road_price": 547000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6682,18 +5972,8 @@
       "make": "Tata",
       "model": "Tiago",
       "variant_name": "Tiago XT CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 672000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
-      "hyderabad_on_road_price": {
-        "min": 547000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 933000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
+      "ex_showroom_price_min_inr": 672000,
+      "hyderabad_on_road_price": 547000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6706,18 +5986,8 @@
       "make": "Tata",
       "model": "Tiago",
       "variant_name": "Tiago XZ Plus",
-      "ex_showroom_price_min_inr": {
-        "min": 677000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 677000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
-      "hyderabad_on_road_price": {
-        "min": 547000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 933000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
+      "ex_showroom_price_min_inr": 677000,
+      "hyderabad_on_road_price": 547000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6730,18 +6000,8 @@
       "make": "Tata",
       "model": "Tiago",
       "variant_name": "Tiago XZA AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 691000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 691000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
-      "hyderabad_on_road_price": {
-        "min": 547000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 933000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
+      "ex_showroom_price_min_inr": 691000,
+      "hyderabad_on_road_price": 547000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -6754,18 +6014,8 @@
       "make": "Tata",
       "model": "Tiago",
       "variant_name": "Tiago XTA AMT CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 723000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 723000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
-      "hyderabad_on_road_price": {
-        "min": 547000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 933000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
+      "ex_showroom_price_min_inr": 723000,
+      "hyderabad_on_road_price": 547000,
       "fuel_type": "CNG",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -6778,18 +6028,8 @@
       "make": "Tata",
       "model": "Tiago",
       "variant_name": "Tiago XZ CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 732000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 732000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
-      "hyderabad_on_road_price": {
-        "min": 547000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 933000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
+      "ex_showroom_price_min_inr": 732000,
+      "hyderabad_on_road_price": 547000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6802,18 +6042,8 @@
       "make": "Tata",
       "model": "Tiago",
       "variant_name": "Tiago XZA AMT CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 782000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 782000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
-      "hyderabad_on_road_price": {
-        "min": 547000,
-        "min_citation": "https://www.cardekho.com/tata/tiago",
-        "max": 933000,
-        "max_citation": "https://www.cardekho.com/tata/tiago"
-      },
+      "ex_showroom_price_min_inr": 782000,
+      "hyderabad_on_road_price": 547000,
       "fuel_type": "CNG",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -6826,18 +6056,8 @@
       "make": "Tata",
       "model": "Tigor",
       "variant_name": "Tigor XM",
-      "ex_showroom_price_min_inr": {
-        "min": 549000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 549000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
-      "hyderabad_on_road_price": {
-        "min": 659000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 1041000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
+      "ex_showroom_price_min_inr": 549000,
+      "hyderabad_on_road_price": 659000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6850,18 +6070,8 @@
       "make": "Tata",
       "model": "Tigor",
       "variant_name": "Tigor XT",
-      "ex_showroom_price_min_inr": {
-        "min": 622000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 622000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
-      "hyderabad_on_road_price": {
-        "min": 659000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 1041000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
+      "ex_showroom_price_min_inr": 622000,
+      "hyderabad_on_road_price": 659000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6874,18 +6084,8 @@
       "make": "Tata",
       "model": "Tigor",
       "variant_name": "Tigor XTA AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 672000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 672000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
-      "hyderabad_on_road_price": {
-        "min": 659000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 1041000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
+      "ex_showroom_price_min_inr": 672000,
+      "hyderabad_on_road_price": 659000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -6898,18 +6098,8 @@
       "make": "Tata",
       "model": "Tigor",
       "variant_name": "Tigor XZ",
-      "ex_showroom_price_min_inr": {
-        "min": 677000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 677000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
-      "hyderabad_on_road_price": {
-        "min": 659000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 1041000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
+      "ex_showroom_price_min_inr": 677000,
+      "hyderabad_on_road_price": 659000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6922,18 +6112,8 @@
       "make": "Tata",
       "model": "Tigor",
       "variant_name": "Tigor XT CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 714000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 714000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
-      "hyderabad_on_road_price": {
-        "min": 659000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 1041000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
+      "ex_showroom_price_min_inr": 714000,
+      "hyderabad_on_road_price": 659000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6946,18 +6126,8 @@
       "make": "Tata",
       "model": "Tigor",
       "variant_name": "Tigor XZA AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 727000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 727000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
-      "hyderabad_on_road_price": {
-        "min": 659000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 1041000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
+      "ex_showroom_price_min_inr": 727000,
+      "hyderabad_on_road_price": 659000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -6970,18 +6140,8 @@
       "make": "Tata",
       "model": "Tigor",
       "variant_name": "Tigor XZ Plus",
-      "ex_showroom_price_min_inr": {
-        "min": 732000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 732000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
-      "hyderabad_on_road_price": {
-        "min": 659000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 1041000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
+      "ex_showroom_price_min_inr": 732000,
+      "hyderabad_on_road_price": 659000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -6994,18 +6154,8 @@
       "make": "Tata",
       "model": "Tigor",
       "variant_name": "Tigor XZ CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 768000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 768000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
-      "hyderabad_on_road_price": {
-        "min": 659000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 1041000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
+      "ex_showroom_price_min_inr": 768000,
+      "hyderabad_on_road_price": 659000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -7018,18 +6168,8 @@
       "make": "Tata",
       "model": "Tigor",
       "variant_name": "Tigor XZ Plus Lux",
-      "ex_showroom_price_min_inr": {
-        "min": 778000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 778000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
-      "hyderabad_on_road_price": {
-        "min": 659000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 1041000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
+      "ex_showroom_price_min_inr": 778000,
+      "hyderabad_on_road_price": 659000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -7042,18 +6182,8 @@
       "make": "Tata",
       "model": "Tigor",
       "variant_name": "Tigor XZA Plus AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 782000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 782000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
-      "hyderabad_on_road_price": {
-        "min": 659000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 1041000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
+      "ex_showroom_price_min_inr": 782000,
+      "hyderabad_on_road_price": 659000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -7066,18 +6196,8 @@
       "make": "Tata",
       "model": "Tigor",
       "variant_name": "Tigor XZA AMT CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 819000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 819000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
-      "hyderabad_on_road_price": {
-        "min": 659000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 1041000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
+      "ex_showroom_price_min_inr": 819000,
+      "hyderabad_on_road_price": 659000,
       "fuel_type": "CNG",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -7090,18 +6210,8 @@
       "make": "Tata",
       "model": "Tigor",
       "variant_name": "Tigor XZ Plus CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 823000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 823000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
-      "hyderabad_on_road_price": {
-        "min": 659000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 1041000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
+      "ex_showroom_price_min_inr": 823000,
+      "hyderabad_on_road_price": 659000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -7114,18 +6224,8 @@
       "make": "Tata",
       "model": "Tigor",
       "variant_name": "Tigor XZ Plus Lux CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 869000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 869000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
-      "hyderabad_on_road_price": {
-        "min": 659000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 1041000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
+      "ex_showroom_price_min_inr": 869000,
+      "hyderabad_on_road_price": 659000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -7138,18 +6238,8 @@
       "make": "Tata",
       "model": "Tigor",
       "variant_name": "Tigor XZA Plus AMT CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 874000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 874000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
-      "hyderabad_on_road_price": {
-        "min": 659000,
-        "min_citation": "https://www.cardekho.com/tata/tigor",
-        "max": 1041000,
-        "max_citation": "https://www.cardekho.com/tata/tigor"
-      },
+      "ex_showroom_price_min_inr": 874000,
+      "hyderabad_on_road_price": 659000,
       "fuel_type": "CNG",
       "transmission": "Automatic",
       "engine_displacement_cc": 1199,
@@ -7162,18 +6252,8 @@
       "make": "Tata",
       "model": "Tigor EV",
       "variant_name": "Tigor EV XE",
-      "ex_showroom_price_min_inr": {
-        "min": 1249000,
-        "min_citation": "https://www.cardekho.com/tata/tigor-ev",
-        "max": 1249000,
-        "max_citation": "https://www.cardekho.com/tata/tigor-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1311000,
-        "min_citation": "https://www.cardekho.com/tata/tigor-ev",
-        "max": 1442000,
-        "max_citation": "https://www.cardekho.com/tata/tigor-ev"
-      },
+      "ex_showroom_price_min_inr": 1249000,
+      "hyderabad_on_road_price": 1311000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -7186,18 +6266,8 @@
       "make": "Tata",
       "model": "Tigor EV",
       "variant_name": "Tigor EV XT",
-      "ex_showroom_price_min_inr": {
-        "min": 1299000,
-        "min_citation": "https://www.cardekho.com/tata/tigor-ev",
-        "max": 1299000,
-        "max_citation": "https://www.cardekho.com/tata/tigor-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1311000,
-        "min_citation": "https://www.cardekho.com/tata/tigor-ev",
-        "max": 1442000,
-        "max_citation": "https://www.cardekho.com/tata/tigor-ev"
-      },
+      "ex_showroom_price_min_inr": 1299000,
+      "hyderabad_on_road_price": 1311000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -7210,18 +6280,8 @@
       "make": "Tata",
       "model": "Tigor EV",
       "variant_name": "Tigor EV XZ Plus",
-      "ex_showroom_price_min_inr": {
-        "min": 1349000,
-        "min_citation": "https://www.cardekho.com/tata/tigor-ev",
-        "max": 1349000,
-        "max_citation": "https://www.cardekho.com/tata/tigor-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1311000,
-        "min_citation": "https://www.cardekho.com/tata/tigor-ev",
-        "max": 1442000,
-        "max_citation": "https://www.cardekho.com/tata/tigor-ev"
-      },
+      "ex_showroom_price_min_inr": 1349000,
+      "hyderabad_on_road_price": 1311000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -7234,18 +6294,8 @@
       "make": "Tata",
       "model": "Tigor EV",
       "variant_name": "Tigor EV XZ Plus LUX",
-      "ex_showroom_price_min_inr": {
-        "min": 1375000,
-        "min_citation": "https://www.cardekho.com/tata/tigor-ev",
-        "max": 1375000,
-        "max_citation": "https://www.cardekho.com/tata/tigor-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1311000,
-        "min_citation": "https://www.cardekho.com/tata/tigor-ev",
-        "max": 1442000,
-        "max_citation": "https://www.cardekho.com/tata/tigor-ev"
-      },
+      "ex_showroom_price_min_inr": 1375000,
+      "hyderabad_on_road_price": 1311000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -7258,18 +6308,8 @@
       "make": "Tata",
       "model": "Sierra",
       "variant_name": "Sierra Smart Plus",
-      "ex_showroom_price_min_inr": {
-        "min": 1149000,
-        "min_citation": "https://www.cardekho.com/tata/sierra",
-        "max": 1149000,
-        "max_citation": "https://www.cardekho.com/tata/sierra"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1411000,
-        "min_citation": "https://www.cardekho.com/tata/sierra",
-        "max": 2508000,
-        "max_citation": "https://www.cardekho.com/tata/sierra"
-      },
+      "ex_showroom_price_min_inr": 1149000,
+      "hyderabad_on_road_price": 1411000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1498,
@@ -7282,18 +6322,8 @@
       "make": "Tata",
       "model": "Sierra",
       "variant_name": "Sierra Smart Plus Diesel",
-      "ex_showroom_price_min_inr": {
-        "min": 1299000,
-        "min_citation": "https://www.cardekho.com/tata/sierra",
-        "max": 1299000,
-        "max_citation": "https://www.cardekho.com/tata/sierra"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1411000,
-        "min_citation": "https://www.cardekho.com/tata/sierra",
-        "max": 2508000,
-        "max_citation": "https://www.cardekho.com/tata/sierra"
-      },
+      "ex_showroom_price_min_inr": 1299000,
+      "hyderabad_on_road_price": 1411000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1497,
@@ -7306,18 +6336,8 @@
       "make": "Tata",
       "model": "Sierra",
       "variant_name": "Sierra Pure",
-      "ex_showroom_price_min_inr": {
-        "min": 1299000,
-        "min_citation": "https://www.cardekho.com/tata/sierra",
-        "max": 1299000,
-        "max_citation": "https://www.cardekho.com/tata/sierra"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1411000,
-        "min_citation": "https://www.cardekho.com/tata/sierra",
-        "max": 2508000,
-        "max_citation": "https://www.cardekho.com/tata/sierra"
-      },
+      "ex_showroom_price_min_inr": 1299000,
+      "hyderabad_on_road_price": 1411000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1498,
@@ -7330,18 +6350,8 @@
       "make": "Tata",
       "model": "Sierra",
       "variant_name": "Sierra Pure Plus",
-      "ex_showroom_price_min_inr": {
-        "min": 1449000,
-        "min_citation": "https://www.cardekho.com/tata/sierra",
-        "max": 1449000,
-        "max_citation": "https://www.cardekho.com/tata/sierra"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1411000,
-        "min_citation": "https://www.cardekho.com/tata/sierra",
-        "max": 2508000,
-        "max_citation": "https://www.cardekho.com/tata/sierra"
-      },
+      "ex_showroom_price_min_inr": 1449000,
+      "hyderabad_on_road_price": 1411000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1498,
@@ -7354,18 +6364,8 @@
       "make": "Tata",
       "model": "Sierra",
       "variant_name": "Sierra Pure DCA",
-      "ex_showroom_price_min_inr": {
-        "min": 1449000,
-        "min_citation": "https://www.cardekho.com/tata/sierra",
-        "max": 1449000,
-        "max_citation": "https://www.cardekho.com/tata/sierra"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1411000,
-        "min_citation": "https://www.cardekho.com/tata/sierra",
-        "max": 2508000,
-        "max_citation": "https://www.cardekho.com/tata/sierra"
-      },
+      "ex_showroom_price_min_inr": 1449000,
+      "hyderabad_on_road_price": 1411000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 1498,
@@ -7378,18 +6378,8 @@
       "make": "Tata",
       "model": "Sierra",
       "variant_name": "Sierra Pure Diesel",
-      "ex_showroom_price_min_inr": {
-        "min": 1449000,
-        "min_citation": "https://www.cardekho.com/tata/sierra",
-        "max": 1449000,
-        "max_citation": "https://www.cardekho.com/tata/sierra"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1411000,
-        "min_citation": "https://www.cardekho.com/tata/sierra",
-        "max": 2508000,
-        "max_citation": "https://www.cardekho.com/tata/sierra"
-      },
+      "ex_showroom_price_min_inr": 1449000,
+      "hyderabad_on_road_price": 1411000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1497,
@@ -7402,18 +6392,8 @@
       "make": "Tata",
       "model": "Sierra",
       "variant_name": "Sierra Adventure",
-      "ex_showroom_price_min_inr": {
-        "min": 1529000,
-        "min_citation": "https://www.cardekho.com/tata/sierra",
-        "max": 1529000,
-        "max_citation": "https://www.cardekho.com/tata/sierra"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1411000,
-        "min_citation": "https://www.cardekho.com/tata/sierra",
-        "max": 2508000,
-        "max_citation": "https://www.cardekho.com/tata/sierra"
-      },
+      "ex_showroom_price_min_inr": 1529000,
+      "hyderabad_on_road_price": 1411000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1498,
@@ -7426,18 +6406,8 @@
       "make": "Tata",
       "model": "Sierra",
       "variant_name": "Sierra Accomplished Plus Diesel AT",
-      "ex_showroom_price_min_inr": {
-        "min": 2129000,
-        "min_citation": "https://www.cardekho.com/tata/sierra",
-        "max": 2129000,
-        "max_citation": "https://www.cardekho.com/tata/sierra"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1411000,
-        "min_citation": "https://www.cardekho.com/tata/sierra",
-        "max": 2508000,
-        "max_citation": "https://www.cardekho.com/tata/sierra"
-      },
+      "ex_showroom_price_min_inr": 2129000,
+      "hyderabad_on_road_price": 1411000,
       "fuel_type": "Diesel",
       "transmission": "Automatic",
       "engine_displacement_cc": 1497,
@@ -7450,18 +6420,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Smart",
-      "ex_showroom_price_min_inr": {
-        "min": 732000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 732000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 805000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 878000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 732000,
+      "hyderabad_on_road_price": 805000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -7474,18 +6434,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Smart Plus",
-      "ex_showroom_price_min_inr": {
-        "min": 800000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 800000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 880000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 960000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 800000,
+      "hyderabad_on_road_price": 880000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -7498,18 +6448,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Smart AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 832000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 832000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 915000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 998000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 832000,
+      "hyderabad_on_road_price": 915000,
       "fuel_type": "Petrol",
       "transmission": "AMT",
       "engine_displacement_cc": 1199,
@@ -7522,18 +6462,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Smart Plus AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 890000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 890000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 979000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1068000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 890000,
+      "hyderabad_on_road_price": 979000,
       "fuel_type": "Petrol",
       "transmission": "AMT",
       "engine_displacement_cc": 1199,
@@ -7546,18 +6476,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Pure Plus",
-      "ex_showroom_price_min_inr": {
-        "min": 887000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 887000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 976000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1064000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 887000,
+      "hyderabad_on_road_price": 976000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -7570,18 +6490,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Pure Plus S",
-      "ex_showroom_price_min_inr": {
-        "min": 937000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 937000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1031000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1124000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 937000,
+      "hyderabad_on_road_price": 1031000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -7594,18 +6504,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Pure Plus AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 987000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 987000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1086000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1184000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 987000,
+      "hyderabad_on_road_price": 1086000,
       "fuel_type": "Petrol",
       "transmission": "AMT",
       "engine_displacement_cc": 1199,
@@ -7618,18 +6518,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Pure Plus S AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 1037000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1037000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1141000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1244000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1037000,
+      "hyderabad_on_road_price": 1141000,
       "fuel_type": "Petrol",
       "transmission": "AMT",
       "engine_displacement_cc": 1199,
@@ -7642,18 +6532,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Creative",
-      "ex_showroom_price_min_inr": {
-        "min": 1050000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1050000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1155000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1260000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1050000,
+      "hyderabad_on_road_price": 1155000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -7666,18 +6546,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Creative S",
-      "ex_showroom_price_min_inr": {
-        "min": 1100000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1100000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1210000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1320000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1100000,
+      "hyderabad_on_road_price": 1210000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -7690,18 +6560,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Creative AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 1130000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1130000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1243000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1356000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1130000,
+      "hyderabad_on_road_price": 1243000,
       "fuel_type": "Petrol",
       "transmission": "AMT",
       "engine_displacement_cc": 1199,
@@ -7714,18 +6574,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Creative Plus S DCT",
-      "ex_showroom_price_min_inr": {
-        "min": 1230000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1230000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1353000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1476000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1230000,
+      "hyderabad_on_road_price": 1353000,
       "fuel_type": "Petrol",
       "transmission": "DCT",
       "engine_displacement_cc": 1199,
@@ -7738,18 +6588,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Fearless DCT",
-      "ex_showroom_price_min_inr": {
-        "min": 1310000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1310000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1441000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1572000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1310000,
+      "hyderabad_on_road_price": 1441000,
       "fuel_type": "Petrol",
       "transmission": "DCT",
       "engine_displacement_cc": 1199,
@@ -7762,18 +6602,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Fearless Plus PS DCT",
-      "ex_showroom_price_min_inr": {
-        "min": 1382000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1382000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1520000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1658000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1382000,
+      "hyderabad_on_road_price": 1520000,
       "fuel_type": "Petrol",
       "transmission": "DCT",
       "engine_displacement_cc": 1199,
@@ -7786,18 +6616,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Fearless Plus PS Red Dark DCT",
-      "ex_showroom_price_min_inr": {
-        "min": 1415000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1415000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1557000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1698000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1415000,
+      "hyderabad_on_road_price": 1557000,
       "fuel_type": "Diesel",
       "transmission": "DCT",
       "engine_displacement_cc": 1199,
@@ -7810,18 +6630,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Smart Diesel",
-      "ex_showroom_price_min_inr": {
-        "min": 901000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 901000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 991000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1081000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 901000,
+      "hyderabad_on_road_price": 991000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1497,
@@ -7834,18 +6644,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Creative Diesel",
-      "ex_showroom_price_min_inr": {
-        "min": 1189000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1189000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1308000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1427000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1189000,
+      "hyderabad_on_road_price": 1308000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1497,
@@ -7858,18 +6658,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Creative Diesel AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 1269000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1269000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1396000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1523000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1269000,
+      "hyderabad_on_road_price": 1396000,
       "fuel_type": "Diesel",
       "transmission": "AMT",
       "engine_displacement_cc": 1497,
@@ -7882,18 +6672,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Fearless Diesel AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 1389000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1389000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1528000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1667000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1389000,
+      "hyderabad_on_road_price": 1528000,
       "fuel_type": "Diesel",
       "transmission": "AMT",
       "engine_displacement_cc": 1497,
@@ -7906,18 +6686,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Fearless Plus PS Diesel AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 1415000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1415000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1557000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1698000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1415000,
+      "hyderabad_on_road_price": 1557000,
       "fuel_type": "Diesel",
       "transmission": "AMT",
       "engine_displacement_cc": 1497,
@@ -7930,18 +6700,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Smart CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 823000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 823000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 905000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 988000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 823000,
+      "hyderabad_on_road_price": 905000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -7954,18 +6714,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Creative CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 1140000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1140000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1254000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1368000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1140000,
+      "hyderabad_on_road_price": 1254000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -7978,18 +6728,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Fearless CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 1300000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1300000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1430000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1560000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1300000,
+      "hyderabad_on_road_price": 1430000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -8002,18 +6742,8 @@
       "make": "Tata",
       "model": "Nexon EV",
       "variant_name": "Nexon EV Creative Plus MR",
-      "ex_showroom_price_min_inr": {
-        "min": 1249000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1249000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1374000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1499000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
+      "ex_showroom_price_min_inr": 1249000,
+      "hyderabad_on_road_price": 1374000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8026,18 +6756,8 @@
       "make": "Tata",
       "model": "Nexon EV",
       "variant_name": "Nexon EV Fearless MR",
-      "ex_showroom_price_min_inr": {
-        "min": 1349000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1349000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1484000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1619000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
+      "ex_showroom_price_min_inr": 1349000,
+      "hyderabad_on_road_price": 1484000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8050,18 +6770,8 @@
       "make": "Tata",
       "model": "Nexon EV",
       "variant_name": "Nexon EV Fearless Plus S MR",
-      "ex_showroom_price_min_inr": {
-        "min": 1449000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1449000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1594000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1739000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
+      "ex_showroom_price_min_inr": 1449000,
+      "hyderabad_on_road_price": 1594000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8074,18 +6784,8 @@
       "make": "Tata",
       "model": "Nexon EV",
       "variant_name": "Nexon EV Empowered MR",
-      "ex_showroom_price_min_inr": {
-        "min": 1499000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1499000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1649000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1799000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
+      "ex_showroom_price_min_inr": 1499000,
+      "hyderabad_on_road_price": 1649000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8098,18 +6798,8 @@
       "make": "Tata",
       "model": "Nexon EV",
       "variant_name": "Nexon EV Creative 45",
-      "ex_showroom_price_min_inr": {
-        "min": 1449000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1449000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1594000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1739000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
+      "ex_showroom_price_min_inr": 1449000,
+      "hyderabad_on_road_price": 1594000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8122,18 +6812,8 @@
       "make": "Tata",
       "model": "Nexon EV",
       "variant_name": "Nexon EV Fearless 45",
-      "ex_showroom_price_min_inr": {
-        "min": 1499000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1499000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1649000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1799000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
+      "ex_showroom_price_min_inr": 1499000,
+      "hyderabad_on_road_price": 1649000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8146,18 +6826,8 @@
       "make": "Tata",
       "model": "Nexon EV",
       "variant_name": "Nexon EV Empowered Plus 45",
-      "ex_showroom_price_min_inr": {
-        "min": 1649000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1649000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1814000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1979000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
+      "ex_showroom_price_min_inr": 1649000,
+      "hyderabad_on_road_price": 1814000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8170,18 +6840,8 @@
       "make": "Tata",
       "model": "Nexon EV",
       "variant_name": "Nexon EV Empowered Plus A 45 Red Dark",
-      "ex_showroom_price_min_inr": {
-        "min": 1749000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1749000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1924000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 2099000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
+      "ex_showroom_price_min_inr": 1749000,
+      "hyderabad_on_road_price": 1924000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8194,18 +6854,8 @@
       "make": "Tata",
       "model": "Safari",
       "variant_name": "Safari Smart Petrol MT",
-      "ex_showroom_price_min_inr": {
-        "min": 1329000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 1329000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1462000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 1595000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
+      "ex_showroom_price_min_inr": 1329000,
+      "hyderabad_on_road_price": 1462000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1498,
@@ -8218,18 +6868,8 @@
       "make": "Tata",
       "model": "Safari",
       "variant_name": "Safari Adventure X Plus Petrol AT",
-      "ex_showroom_price_min_inr": {
-        "min": 1879000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 1879000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
-      "hyderabad_on_road_price": {
-        "min": 2067000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 2255000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
+      "ex_showroom_price_min_inr": 1879000,
+      "hyderabad_on_road_price": 2067000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 1498,
@@ -8242,18 +6882,8 @@
       "make": "Tata",
       "model": "Safari",
       "variant_name": "Safari Accomplished X Plus 6S Petrol AT",
-      "ex_showroom_price_min_inr": {
-        "min": 2179000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 2179000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
-      "hyderabad_on_road_price": {
-        "min": 2397000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 2615000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
+      "ex_showroom_price_min_inr": 2179000,
+      "hyderabad_on_road_price": 2397000,
       "fuel_type": "Diesel",
       "transmission": "Automatic",
       "engine_displacement_cc": 1498,
@@ -8266,18 +6896,8 @@
       "make": "Tata",
       "model": "Safari",
       "variant_name": "Safari Smart Diesel MT",
-      "ex_showroom_price_min_inr": {
-        "min": 1529000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 1529000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1682000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 1835000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
+      "ex_showroom_price_min_inr": 1529000,
+      "hyderabad_on_road_price": 1682000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1956,
@@ -8290,18 +6910,8 @@
       "make": "Tata",
       "model": "Safari",
       "variant_name": "Safari Adventure X Plus Diesel AT",
-      "ex_showroom_price_min_inr": {
-        "min": 2079000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 2079000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
-      "hyderabad_on_road_price": {
-        "min": 2287000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 2495000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
+      "ex_showroom_price_min_inr": 2079000,
+      "hyderabad_on_road_price": 2287000,
       "fuel_type": "Diesel",
       "transmission": "Automatic",
       "engine_displacement_cc": 1956,
@@ -8314,18 +6924,8 @@
       "make": "Tata",
       "model": "Safari",
       "variant_name": "Safari Accomplished Ultra 6S Diesel AT",
-      "ex_showroom_price_min_inr": {
-        "min": 2596000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 2596000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
-      "hyderabad_on_road_price": {
-        "min": 2856000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 3115000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
+      "ex_showroom_price_min_inr": 2596000,
+      "hyderabad_on_road_price": 2856000,
       "fuel_type": "Diesel",
       "transmission": "Automatic",
       "engine_displacement_cc": 1956,
@@ -8338,18 +6938,8 @@
       "make": "Tata",
       "model": "Curvv",
       "variant_name": "Curvv Smart Petrol MT",
-      "ex_showroom_price_min_inr": {
-        "min": 966000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 966000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1063000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 1159000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
+      "ex_showroom_price_min_inr": 966000,
+      "hyderabad_on_road_price": 1063000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -8362,18 +6952,8 @@
       "make": "Tata",
       "model": "Curvv",
       "variant_name": "Curvv Creative Plus S Petrol DCT",
-      "ex_showroom_price_min_inr": {
-        "min": 1480000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 1480000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1628000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 1776000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
+      "ex_showroom_price_min_inr": 1480000,
+      "hyderabad_on_road_price": 1628000,
       "fuel_type": "Petrol",
       "transmission": "DCT",
       "engine_displacement_cc": 1199,
@@ -8386,18 +6966,8 @@
       "make": "Tata",
       "model": "Curvv",
       "variant_name": "Curvv Smart Diesel MT",
-      "ex_showroom_price_min_inr": {
-        "min": 1110000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 1110000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1221000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 1332000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
+      "ex_showroom_price_min_inr": 1110000,
+      "hyderabad_on_road_price": 1221000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1497,
@@ -8410,18 +6980,8 @@
       "make": "Tata",
       "model": "Curvv",
       "variant_name": "Curvv Accomplished Plus A Dark Diesel DCT",
-      "ex_showroom_price_min_inr": {
-        "min": 1885000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 1885000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
-      "hyderabad_on_road_price": {
-        "min": 2074000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 2262000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
+      "ex_showroom_price_min_inr": 1885000,
+      "hyderabad_on_road_price": 2074000,
       "fuel_type": "Diesel",
       "transmission": "DCT",
       "engine_displacement_cc": 1497,
@@ -8434,18 +6994,8 @@
       "make": "Tata",
       "model": "Tiago EV",
       "variant_name": "Tiago EV XE MR",
-      "ex_showroom_price_min_inr": {
-        "min": 799000,
-        "min_citation": "https://www.cardekho.com/tata/tiago-ev",
-        "max": 799000,
-        "max_citation": "https://www.cardekho.com/tata/tiago-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 879000,
-        "min_citation": "https://www.cardekho.com/tata/tiago-ev",
-        "max": 959000,
-        "max_citation": "https://www.cardekho.com/tata/tiago-ev"
-      },
+      "ex_showroom_price_min_inr": 799000,
+      "hyderabad_on_road_price": 879000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8458,18 +7008,8 @@
       "make": "Tata",
       "model": "Tiago EV",
       "variant_name": "Tiago EV XT MR",
-      "ex_showroom_price_min_inr": {
-        "min": 899000,
-        "min_citation": "https://www.cardekho.com/tata/tiago-ev",
-        "max": 899000,
-        "max_citation": "https://www.cardekho.com/tata/tiago-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 989000,
-        "min_citation": "https://www.cardekho.com/tata/tiago-ev",
-        "max": 1079000,
-        "max_citation": "https://www.cardekho.com/tata/tiago-ev"
-      },
+      "ex_showroom_price_min_inr": 899000,
+      "hyderabad_on_road_price": 989000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8482,18 +7022,8 @@
       "make": "Tata",
       "model": "Tiago EV",
       "variant_name": "Tiago EV XT LR",
-      "ex_showroom_price_min_inr": {
-        "min": 999000,
-        "min_citation": "https://www.cardekho.com/tata/tiago-ev",
-        "max": 999000,
-        "max_citation": "https://www.cardekho.com/tata/tiago-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1099000,
-        "min_citation": "https://www.cardekho.com/tata/tiago-ev",
-        "max": 1199000,
-        "max_citation": "https://www.cardekho.com/tata/tiago-ev"
-      },
+      "ex_showroom_price_min_inr": 999000,
+      "hyderabad_on_road_price": 1099000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8506,18 +7036,8 @@
       "make": "Tata",
       "model": "Tiago EV",
       "variant_name": "Tiago EV XZ Plus Tech LUX LR",
-      "ex_showroom_price_min_inr": {
-        "min": 1114000,
-        "min_citation": "https://www.cardekho.com/tata/tiago-ev",
-        "max": 1114000,
-        "max_citation": "https://www.cardekho.com/tata/tiago-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1225000,
-        "min_citation": "https://www.cardekho.com/tata/tiago-ev",
-        "max": 1337000,
-        "max_citation": "https://www.cardekho.com/tata/tiago-ev"
-      },
+      "ex_showroom_price_min_inr": 1114000,
+      "hyderabad_on_road_price": 1225000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8530,18 +7050,8 @@
       "make": "Tata",
       "model": "Punch EV",
       "variant_name": "Punch EV Smart 30",
-      "ex_showroom_price_min_inr": {
-        "min": 969000,
-        "min_citation": "https://www.cardekho.com/tata/punch-ev",
-        "max": 969000,
-        "max_citation": "https://www.cardekho.com/tata/punch-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1066000,
-        "min_citation": "https://www.cardekho.com/tata/punch-ev",
-        "max": 1163000,
-        "max_citation": "https://www.cardekho.com/tata/punch-ev"
-      },
+      "ex_showroom_price_min_inr": 969000,
+      "hyderabad_on_road_price": 1066000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8554,18 +7064,8 @@
       "make": "Tata",
       "model": "Punch EV",
       "variant_name": "Punch EV Adventure 40",
-      "ex_showroom_price_min_inr": {
-        "min": 1149000,
-        "min_citation": "https://www.cardekho.com/tata/punch-ev",
-        "max": 1149000,
-        "max_citation": "https://www.cardekho.com/tata/punch-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1264000,
-        "min_citation": "https://www.cardekho.com/tata/punch-ev",
-        "max": 1379000,
-        "max_citation": "https://www.cardekho.com/tata/punch-ev"
-      },
+      "ex_showroom_price_min_inr": 1149000,
+      "hyderabad_on_road_price": 1264000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8578,18 +7078,8 @@
       "make": "Tata",
       "model": "Punch EV",
       "variant_name": "Punch EV Empowered Plus S 40",
-      "ex_showroom_price_min_inr": {
-        "min": 1259000,
-        "min_citation": "https://www.cardekho.com/tata/punch-ev",
-        "max": 1259000,
-        "max_citation": "https://www.cardekho.com/tata/punch-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1385000,
-        "min_citation": "https://www.cardekho.com/tata/punch-ev",
-        "max": 1511000,
-        "max_citation": "https://www.cardekho.com/tata/punch-ev"
-      },
+      "ex_showroom_price_min_inr": 1259000,
+      "hyderabad_on_road_price": 1385000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8602,18 +7092,8 @@
       "make": "Tata",
       "model": "Harrier EV",
       "variant_name": "Harrier EV Adventure 65",
-      "ex_showroom_price_min_inr": {
-        "min": 2149000,
-        "min_citation": "https://www.cardekho.com/tata/harrier-ev",
-        "max": 2149000,
-        "max_citation": "https://www.cardekho.com/tata/harrier-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 2364000,
-        "min_citation": "https://www.cardekho.com/tata/harrier-ev",
-        "max": 2579000,
-        "max_citation": "https://www.cardekho.com/tata/harrier-ev"
-      },
+      "ex_showroom_price_min_inr": 2149000,
+      "hyderabad_on_road_price": 2364000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8626,18 +7106,8 @@
       "make": "Tata",
       "model": "Harrier EV",
       "variant_name": "Harrier EV Fearless Plus 75",
-      "ex_showroom_price_min_inr": {
-        "min": 2499000,
-        "min_citation": "https://www.cardekho.com/tata/harrier-ev",
-        "max": 2499000,
-        "max_citation": "https://www.cardekho.com/tata/harrier-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 2749000,
-        "min_citation": "https://www.cardekho.com/tata/harrier-ev",
-        "max": 2999000,
-        "max_citation": "https://www.cardekho.com/tata/harrier-ev"
-      },
+      "ex_showroom_price_min_inr": 2499000,
+      "hyderabad_on_road_price": 2749000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8650,18 +7120,8 @@
       "make": "Tata",
       "model": "Harrier EV",
       "variant_name": "Harrier EV Empowered QWD 75",
-      "ex_showroom_price_min_inr": {
-        "min": 2899000,
-        "min_citation": "https://www.cardekho.com/tata/harrier-ev",
-        "max": 2899000,
-        "max_citation": "https://www.cardekho.com/tata/harrier-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 3189000,
-        "min_citation": "https://www.cardekho.com/tata/harrier-ev",
-        "max": 3479000,
-        "max_citation": "https://www.cardekho.com/tata/harrier-ev"
-      },
+      "ex_showroom_price_min_inr": 2899000,
+      "hyderabad_on_road_price": 3189000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8674,18 +7134,8 @@
       "make": "Tata",
       "model": "Xpres-T EV",
       "variant_name": "Xpres-T EV XM Plus",
-      "ex_showroom_price_min_inr": {
-        "min": 1304000,
-        "min_citation": "https://www.cardekho.com/tata/xpres-t-ev",
-        "max": 1304000,
-        "max_citation": "https://www.cardekho.com/tata/xpres-t-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1434000,
-        "min_citation": "https://www.cardekho.com/tata/xpres-t-ev",
-        "max": 1565000,
-        "max_citation": "https://www.cardekho.com/tata/xpres-t-ev"
-      },
+      "ex_showroom_price_min_inr": 1304000,
+      "hyderabad_on_road_price": 1434000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8698,18 +7148,8 @@
       "make": "Tata",
       "model": "Xpres-T EV",
       "variant_name": "Xpres-T EV XT Plus",
-      "ex_showroom_price_min_inr": {
-        "min": 1404000,
-        "min_citation": "https://www.cardekho.com/tata/xpres-t-ev",
-        "max": 1404000,
-        "max_citation": "https://www.cardekho.com/tata/xpres-t-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1544000,
-        "min_citation": "https://www.cardekho.com/tata/xpres-t-ev",
-        "max": 1685000,
-        "max_citation": "https://www.cardekho.com/tata/xpres-t-ev"
-      },
+      "ex_showroom_price_min_inr": 1404000,
+      "hyderabad_on_road_price": 1544000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -8722,18 +7162,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Smart Plus S",
-      "ex_showroom_price_min_inr": {
-        "min": 843000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 843000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 927000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1012000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 843000,
+      "hyderabad_on_road_price": 927000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -8746,18 +7176,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Smart Plus S AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 933000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 933000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1026000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1120000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 933000,
+      "hyderabad_on_road_price": 1026000,
       "fuel_type": "Petrol",
       "transmission": "AMT",
       "engine_displacement_cc": 1199,
@@ -8770,18 +7190,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Creative Plus S",
-      "ex_showroom_price_min_inr": {
-        "min": 1110000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1110000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1221000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1332000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1110000,
+      "hyderabad_on_road_price": 1221000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -8794,18 +7204,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Creative Plus DCT",
-      "ex_showroom_price_min_inr": {
-        "min": 1200000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1200000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1320000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1440000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1200000,
+      "hyderabad_on_road_price": 1320000,
       "fuel_type": "Petrol",
       "transmission": "DCT",
       "engine_displacement_cc": 1199,
@@ -8818,18 +7218,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Fearless Plus DCT",
-      "ex_showroom_price_min_inr": {
-        "min": 1340000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1340000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1474000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1608000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1340000,
+      "hyderabad_on_road_price": 1474000,
       "fuel_type": "Petrol",
       "transmission": "DCT",
       "engine_displacement_cc": 1199,
@@ -8842,18 +7232,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Smart Plus Diesel",
-      "ex_showroom_price_min_inr": {
-        "min": 970000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 970000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1067000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1164000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 970000,
+      "hyderabad_on_road_price": 1067000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1497,
@@ -8866,18 +7246,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Smart Plus Diesel AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 1060000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1060000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1166000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1272000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1060000,
+      "hyderabad_on_road_price": 1166000,
       "fuel_type": "Diesel",
       "transmission": "AMT",
       "engine_displacement_cc": 1497,
@@ -8890,18 +7260,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Pure Plus Diesel",
-      "ex_showroom_price_min_inr": {
-        "min": 1057000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1057000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1163000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1268000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1057000,
+      "hyderabad_on_road_price": 1163000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1497,
@@ -8914,18 +7274,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Pure Plus S Diesel",
-      "ex_showroom_price_min_inr": {
-        "min": 1107000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1107000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1218000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1328000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1107000,
+      "hyderabad_on_road_price": 1218000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1497,
@@ -8938,18 +7288,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Pure Plus Diesel AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 1137000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1137000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1251000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1364000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1137000,
+      "hyderabad_on_road_price": 1251000,
       "fuel_type": "Diesel",
       "transmission": "AMT",
       "engine_displacement_cc": 1497,
@@ -8962,18 +7302,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Pure Plus S Diesel AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 1187000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1187000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1306000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1424000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1187000,
+      "hyderabad_on_road_price": 1306000,
       "fuel_type": "Diesel",
       "transmission": "AMT",
       "engine_displacement_cc": 1497,
@@ -8986,18 +7316,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Creative S Diesel",
-      "ex_showroom_price_min_inr": {
-        "min": 1239000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1239000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1363000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1487000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1239000,
+      "hyderabad_on_road_price": 1363000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1497,
@@ -9010,18 +7330,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Creative S Diesel AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 1319000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1319000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1451000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1583000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1319000,
+      "hyderabad_on_road_price": 1451000,
       "fuel_type": "Diesel",
       "transmission": "AMT",
       "engine_displacement_cc": 1497,
@@ -9034,18 +7344,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Creative Plus S Diesel DCT",
-      "ex_showroom_price_min_inr": {
-        "min": 1369000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1369000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1506000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1643000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1369000,
+      "hyderabad_on_road_price": 1506000,
       "fuel_type": "Diesel",
       "transmission": "DCT",
       "engine_displacement_cc": 1497,
@@ -9058,18 +7358,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Fearless Plus PS Diesel AMT Red Dark",
-      "ex_showroom_price_min_inr": {
-        "min": 1449000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1449000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1594000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1739000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1449000,
+      "hyderabad_on_road_price": 1594000,
       "fuel_type": "Diesel",
       "transmission": "AMT",
       "engine_displacement_cc": 1497,
@@ -9082,18 +7372,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Smart Plus CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 893000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 893000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 982000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1072000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 893000,
+      "hyderabad_on_road_price": 982000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -9106,18 +7386,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Pure Plus CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 1007000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1007000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1108000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1208000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1007000,
+      "hyderabad_on_road_price": 1108000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -9130,18 +7400,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Pure Plus S CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 1057000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1057000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1163000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1268000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1057000,
+      "hyderabad_on_road_price": 1163000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -9154,18 +7414,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Creative S CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 1190000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1190000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1309000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1428000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1190000,
+      "hyderabad_on_road_price": 1309000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -9178,18 +7428,8 @@
       "make": "Tata",
       "model": "Nexon",
       "variant_name": "Nexon Fearless Plus CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 1370000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1370000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1507000,
-        "min_citation": "https://www.cardekho.com/tata/nexon",
-        "max": 1644000,
-        "max_citation": "https://www.cardekho.com/tata/nexon"
-      },
+      "ex_showroom_price_min_inr": 1370000,
+      "hyderabad_on_road_price": 1507000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -9202,18 +7442,8 @@
       "make": "Tata",
       "model": "Nexon EV",
       "variant_name": "Nexon EV Creative MR",
-      "ex_showroom_price_min_inr": {
-        "min": 1199000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1199000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1319000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1439000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
+      "ex_showroom_price_min_inr": 1199000,
+      "hyderabad_on_road_price": 1319000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -9226,18 +7456,8 @@
       "make": "Tata",
       "model": "Nexon EV",
       "variant_name": "Nexon EV Creative Plus S MR",
-      "ex_showroom_price_min_inr": {
-        "min": 1299000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1299000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1429000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1559000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
+      "ex_showroom_price_min_inr": 1299000,
+      "hyderabad_on_road_price": 1429000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -9250,18 +7470,8 @@
       "make": "Tata",
       "model": "Nexon EV",
       "variant_name": "Nexon EV Empowered Plus MR",
-      "ex_showroom_price_min_inr": {
-        "min": 1549000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1549000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1704000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1859000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
+      "ex_showroom_price_min_inr": 1549000,
+      "hyderabad_on_road_price": 1704000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -9274,18 +7484,8 @@
       "make": "Tata",
       "model": "Nexon EV",
       "variant_name": "Nexon EV Creative Plus 45",
-      "ex_showroom_price_min_inr": {
-        "min": 1499000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1499000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1649000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1799000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
+      "ex_showroom_price_min_inr": 1499000,
+      "hyderabad_on_road_price": 1649000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -9298,18 +7498,8 @@
       "make": "Tata",
       "model": "Nexon EV",
       "variant_name": "Nexon EV Fearless Plus S 45",
-      "ex_showroom_price_min_inr": {
-        "min": 1549000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1549000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1704000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1859000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
+      "ex_showroom_price_min_inr": 1549000,
+      "hyderabad_on_road_price": 1704000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -9322,18 +7512,8 @@
       "make": "Tata",
       "model": "Nexon EV",
       "variant_name": "Nexon EV Empowered 45",
-      "ex_showroom_price_min_inr": {
-        "min": 1599000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1599000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1759000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1919000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
+      "ex_showroom_price_min_inr": 1599000,
+      "hyderabad_on_road_price": 1759000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -9346,18 +7526,8 @@
       "make": "Tata",
       "model": "Nexon EV",
       "variant_name": "Nexon EV Empowered Plus A 45",
-      "ex_showroom_price_min_inr": {
-        "min": 1699000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 1699000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1869000,
-        "min_citation": "https://www.cardekho.com/tata/nexon-ev",
-        "max": 2039000,
-        "max_citation": "https://www.cardekho.com/tata/nexon-ev"
-      },
+      "ex_showroom_price_min_inr": 1699000,
+      "hyderabad_on_road_price": 1869000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -9370,18 +7540,8 @@
       "make": "Tata",
       "model": "Safari",
       "variant_name": "Safari Smart Plus Petrol MT",
-      "ex_showroom_price_min_inr": {
-        "min": 1399000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 1399000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1539000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 1679000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
+      "ex_showroom_price_min_inr": 1399000,
+      "hyderabad_on_road_price": 1539000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1498,
@@ -9394,18 +7554,8 @@
       "make": "Tata",
       "model": "Safari",
       "variant_name": "Safari Adventure Petrol AT",
-      "ex_showroom_price_min_inr": {
-        "min": 1729000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 1729000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1902000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 2075000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
+      "ex_showroom_price_min_inr": 1729000,
+      "hyderabad_on_road_price": 1902000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 1498,
@@ -9418,18 +7568,8 @@
       "make": "Tata",
       "model": "Safari",
       "variant_name": "Safari Accomplished Plus Petrol AT",
-      "ex_showroom_price_min_inr": {
-        "min": 2029000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 2029000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
-      "hyderabad_on_road_price": {
-        "min": 2232000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 2435000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
+      "ex_showroom_price_min_inr": 2029000,
+      "hyderabad_on_road_price": 2232000,
       "fuel_type": "Diesel",
       "transmission": "Automatic",
       "engine_displacement_cc": 1498,
@@ -9442,18 +7582,8 @@
       "make": "Tata",
       "model": "Safari",
       "variant_name": "Safari Smart Plus Diesel MT",
-      "ex_showroom_price_min_inr": {
-        "min": 1599000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 1599000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1759000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 1919000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
+      "ex_showroom_price_min_inr": 1599000,
+      "hyderabad_on_road_price": 1759000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1956,
@@ -9466,18 +7596,8 @@
       "make": "Tata",
       "model": "Safari",
       "variant_name": "Safari Adventure Diesel AT",
-      "ex_showroom_price_min_inr": {
-        "min": 1929000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 1929000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
-      "hyderabad_on_road_price": {
-        "min": 2122000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 2315000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
+      "ex_showroom_price_min_inr": 1929000,
+      "hyderabad_on_road_price": 2122000,
       "fuel_type": "Diesel",
       "transmission": "Automatic",
       "engine_displacement_cc": 1956,
@@ -9490,18 +7610,8 @@
       "make": "Tata",
       "model": "Safari",
       "variant_name": "Safari Accomplished Plus Diesel AT",
-      "ex_showroom_price_min_inr": {
-        "min": 2229000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 2229000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
-      "hyderabad_on_road_price": {
-        "min": 2452000,
-        "min_citation": "https://www.cardekho.com/tata/safari",
-        "max": 2675000,
-        "max_citation": "https://www.cardekho.com/tata/safari"
-      },
+      "ex_showroom_price_min_inr": 2229000,
+      "hyderabad_on_road_price": 2452000,
       "fuel_type": "Diesel",
       "transmission": "Automatic",
       "engine_displacement_cc": 1956,
@@ -9514,18 +7624,8 @@
       "make": "Tata",
       "model": "Curvv",
       "variant_name": "Curvv Smart Plus Petrol MT",
-      "ex_showroom_price_min_inr": {
-        "min": 1010000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 1010000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1111000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 1212000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
+      "ex_showroom_price_min_inr": 1010000,
+      "hyderabad_on_road_price": 1111000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 1199,
@@ -9538,18 +7638,8 @@
       "make": "Tata",
       "model": "Curvv",
       "variant_name": "Curvv Creative Petrol DCT",
-      "ex_showroom_price_min_inr": {
-        "min": 1330000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 1330000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1463000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 1596000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
+      "ex_showroom_price_min_inr": 1330000,
+      "hyderabad_on_road_price": 1463000,
       "fuel_type": "Petrol",
       "transmission": "DCT",
       "engine_displacement_cc": 1199,
@@ -9562,18 +7652,8 @@
       "make": "Tata",
       "model": "Curvv",
       "variant_name": "Curvv Accomplished Plus A Petrol DCT",
-      "ex_showroom_price_min_inr": {
-        "min": 1720000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 1720000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1892000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 2064000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
+      "ex_showroom_price_min_inr": 1720000,
+      "hyderabad_on_road_price": 1892000,
       "fuel_type": "Diesel",
       "transmission": "DCT",
       "engine_displacement_cc": 1199,
@@ -9586,18 +7666,8 @@
       "make": "Tata",
       "model": "Curvv",
       "variant_name": "Curvv Smart Plus Diesel MT",
-      "ex_showroom_price_min_inr": {
-        "min": 1160000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 1160000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1276000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 1392000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
+      "ex_showroom_price_min_inr": 1160000,
+      "hyderabad_on_road_price": 1276000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 1497,
@@ -9610,18 +7680,8 @@
       "make": "Tata",
       "model": "Curvv",
       "variant_name": "Curvv Creative Diesel DCT",
-      "ex_showroom_price_min_inr": {
-        "min": 1480000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 1480000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1628000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 1776000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
+      "ex_showroom_price_min_inr": 1480000,
+      "hyderabad_on_road_price": 1628000,
       "fuel_type": "Diesel",
       "transmission": "DCT",
       "engine_displacement_cc": 1497,
@@ -9634,18 +7694,8 @@
       "make": "Tata",
       "model": "Curvv",
       "variant_name": "Curvv Accomplished Plus A Diesel DCT",
-      "ex_showroom_price_min_inr": {
-        "min": 1885000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 1885000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
-      "hyderabad_on_road_price": {
-        "min": 2074000,
-        "min_citation": "https://www.cardekho.com/tata/curvv",
-        "max": 2262000,
-        "max_citation": "https://www.cardekho.com/tata/curvv"
-      },
+      "ex_showroom_price_min_inr": 1885000,
+      "hyderabad_on_road_price": 2074000,
       "fuel_type": "Diesel",
       "transmission": "DCT",
       "engine_displacement_cc": 1497,
@@ -9658,18 +7708,8 @@
       "make": "Tata",
       "model": "Tiago EV",
       "variant_name": "Tiago EV XZ MR",
-      "ex_showroom_price_min_inr": {
-        "min": 979000,
-        "min_citation": "https://www.cardekho.com/tata/tiago-ev",
-        "max": 979000,
-        "max_citation": "https://www.cardekho.com/tata/tiago-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1077000,
-        "min_citation": "https://www.cardekho.com/tata/tiago-ev",
-        "max": 1175000,
-        "max_citation": "https://www.cardekho.com/tata/tiago-ev"
-      },
+      "ex_showroom_price_min_inr": 979000,
+      "hyderabad_on_road_price": 1077000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -9682,18 +7722,8 @@
       "make": "Tata",
       "model": "Tiago EV",
       "variant_name": "Tiago EV XZ Plus LR",
-      "ex_showroom_price_min_inr": {
-        "min": 1069000,
-        "min_citation": "https://www.cardekho.com/tata/tiago-ev",
-        "max": 1069000,
-        "max_citation": "https://www.cardekho.com/tata/tiago-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1176000,
-        "min_citation": "https://www.cardekho.com/tata/tiago-ev",
-        "max": 1283000,
-        "max_citation": "https://www.cardekho.com/tata/tiago-ev"
-      },
+      "ex_showroom_price_min_inr": 1069000,
+      "hyderabad_on_road_price": 1176000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -9706,18 +7736,8 @@
       "make": "Tata",
       "model": "Tiago EV",
       "variant_name": "Tiago EV XZ Plus Tech LUX MR",
-      "ex_showroom_price_min_inr": {
-        "min": 1079000,
-        "min_citation": "https://www.cardekho.com/tata/tiago-ev",
-        "max": 1079000,
-        "max_citation": "https://www.cardekho.com/tata/tiago-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1187000,
-        "min_citation": "https://www.cardekho.com/tata/tiago-ev",
-        "max": 1295000,
-        "max_citation": "https://www.cardekho.com/tata/tiago-ev"
-      },
+      "ex_showroom_price_min_inr": 1079000,
+      "hyderabad_on_road_price": 1187000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -9730,18 +7750,8 @@
       "make": "Tata",
       "model": "Punch EV",
       "variant_name": "Punch EV Smart Plus 30",
-      "ex_showroom_price_min_inr": {
-        "min": 999000,
-        "min_citation": "https://www.cardekho.com/tata/punch-ev",
-        "max": 999000,
-        "max_citation": "https://www.cardekho.com/tata/punch-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1099000,
-        "min_citation": "https://www.cardekho.com/tata/punch-ev",
-        "max": 1199000,
-        "max_citation": "https://www.cardekho.com/tata/punch-ev"
-      },
+      "ex_showroom_price_min_inr": 999000,
+      "hyderabad_on_road_price": 1099000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -9754,18 +7764,8 @@
       "make": "Tata",
       "model": "Punch EV",
       "variant_name": "Punch EV Adventure Plus 40",
-      "ex_showroom_price_min_inr": {
-        "min": 1179000,
-        "min_citation": "https://www.cardekho.com/tata/punch-ev",
-        "max": 1179000,
-        "max_citation": "https://www.cardekho.com/tata/punch-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1297000,
-        "min_citation": "https://www.cardekho.com/tata/punch-ev",
-        "max": 1415000,
-        "max_citation": "https://www.cardekho.com/tata/punch-ev"
-      },
+      "ex_showroom_price_min_inr": 1179000,
+      "hyderabad_on_road_price": 1297000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -9778,18 +7778,8 @@
       "make": "Tata",
       "model": "Punch EV",
       "variant_name": "Punch EV Empowered Plus 40",
-      "ex_showroom_price_min_inr": {
-        "min": 1239000,
-        "min_citation": "https://www.cardekho.com/tata/punch-ev",
-        "max": 1239000,
-        "max_citation": "https://www.cardekho.com/tata/punch-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1363000,
-        "min_citation": "https://www.cardekho.com/tata/punch-ev",
-        "max": 1487000,
-        "max_citation": "https://www.cardekho.com/tata/punch-ev"
-      },
+      "ex_showroom_price_min_inr": 1239000,
+      "hyderabad_on_road_price": 1363000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -9802,18 +7792,8 @@
       "make": "Tata",
       "model": "Harrier EV",
       "variant_name": "Harrier EV Adventure Plus 65",
-      "ex_showroom_price_min_inr": {
-        "min": 2249000,
-        "min_citation": "https://www.cardekho.com/tata/harrier-ev",
-        "max": 2249000,
-        "max_citation": "https://www.cardekho.com/tata/harrier-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 2474000,
-        "min_citation": "https://www.cardekho.com/tata/harrier-ev",
-        "max": 2699000,
-        "max_citation": "https://www.cardekho.com/tata/harrier-ev"
-      },
+      "ex_showroom_price_min_inr": 2249000,
+      "hyderabad_on_road_price": 2474000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -9826,18 +7806,8 @@
       "make": "Tata",
       "model": "Harrier EV",
       "variant_name": "Harrier EV Fearless 75",
-      "ex_showroom_price_min_inr": {
-        "min": 2549000,
-        "min_citation": "https://www.cardekho.com/tata/harrier-ev",
-        "max": 2549000,
-        "max_citation": "https://www.cardekho.com/tata/harrier-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 2804000,
-        "min_citation": "https://www.cardekho.com/tata/harrier-ev",
-        "max": 3059000,
-        "max_citation": "https://www.cardekho.com/tata/harrier-ev"
-      },
+      "ex_showroom_price_min_inr": 2549000,
+      "hyderabad_on_road_price": 2804000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -9850,18 +7820,8 @@
       "make": "Tata",
       "model": "Harrier EV",
       "variant_name": "Harrier EV Empowered 75",
-      "ex_showroom_price_min_inr": {
-        "min": 2699000,
-        "min_citation": "https://www.cardekho.com/tata/harrier-ev",
-        "max": 2699000,
-        "max_citation": "https://www.cardekho.com/tata/harrier-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 2969000,
-        "min_citation": "https://www.cardekho.com/tata/harrier-ev",
-        "max": 3239000,
-        "max_citation": "https://www.cardekho.com/tata/harrier-ev"
-      },
+      "ex_showroom_price_min_inr": 2699000,
+      "hyderabad_on_road_price": 2969000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -9874,18 +7834,8 @@
       "make": "Tata",
       "model": "Harrier EV",
       "variant_name": "Harrier EV Empowered Plus QWD 75",
-      "ex_showroom_price_min_inr": {
-        "min": 3023000,
-        "min_citation": "https://www.cardekho.com/tata/harrier-ev",
-        "max": 3023000,
-        "max_citation": "https://www.cardekho.com/tata/harrier-ev"
-      },
-      "hyderabad_on_road_price": {
-        "min": 3325000,
-        "min_citation": "https://www.cardekho.com/tata/harrier-ev",
-        "max": 3628000,
-        "max_citation": "https://www.cardekho.com/tata/harrier-ev"
-      },
+      "ex_showroom_price_min_inr": 3023000,
+      "hyderabad_on_road_price": 3325000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
@@ -16052,18 +14002,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Visia",
-      "ex_showroom_price_min_inr": {
-        "min": 561650,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 561650,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 668000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 668000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 561650,
+      "hyderabad_on_road_price": 668000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16076,18 +14016,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Visia Plus",
-      "ex_showroom_price_min_inr": {
-        "min": 616000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 616000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 732000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 732000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 616000,
+      "hyderabad_on_road_price": 732000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16100,18 +14030,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Visia AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 620600,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 620600,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 737000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 737000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 620600,
+      "hyderabad_on_road_price": 737000,
       "fuel_type": "Petrol",
       "transmission": "AMT",
       "engine_displacement_cc": 999,
@@ -16124,18 +14044,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Visia CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 633642,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 633642,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 752000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 752000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 633642,
+      "hyderabad_on_road_price": 752000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16148,18 +14058,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Acenta",
-      "ex_showroom_price_min_inr": {
-        "min": 676500,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 676500,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 803000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 803000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 676500,
+      "hyderabad_on_road_price": 803000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16172,18 +14072,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Visia Plus CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 679379,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 679379,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 806000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 806000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 679379,
+      "hyderabad_on_road_price": 806000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16196,18 +14086,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Acenta AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 732000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 732000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 868000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 868000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 732000,
+      "hyderabad_on_road_price": 868000,
       "fuel_type": "Petrol",
       "transmission": "AMT",
       "engine_displacement_cc": 999,
@@ -16220,18 +14100,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Acenta CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 738836,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 738836,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 876000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 876000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 738836,
+      "hyderabad_on_road_price": 876000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16244,18 +14114,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "N Connecta",
-      "ex_showroom_price_min_inr": {
-        "min": 739500,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 739500,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 877000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 877000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 739500,
+      "hyderabad_on_road_price": 877000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16268,18 +14128,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "KURO Edition",
-      "ex_showroom_price_min_inr": {
-        "min": 774500,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 774500,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 918000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 918000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 774500,
+      "hyderabad_on_road_price": 918000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16292,18 +14142,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "N Connecta AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 795000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 795000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 942000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 942000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 795000,
+      "hyderabad_on_road_price": 942000,
       "fuel_type": "Petrol",
       "transmission": "AMT",
       "engine_displacement_cc": 999,
@@ -16316,18 +14156,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "N Connecta CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 801038,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 801038,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 949000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 949000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 801038,
+      "hyderabad_on_road_price": 949000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16340,18 +14170,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "KURO Edition AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 830000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 830000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 983000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 983000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 830000,
+      "hyderabad_on_road_price": 983000,
       "fuel_type": "Petrol",
       "transmission": "AMT",
       "engine_displacement_cc": 999,
@@ -16364,18 +14184,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Tekna",
-      "ex_showroom_price_min_inr": {
-        "min": 832500,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 832500,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 986000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 986000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 832500,
+      "hyderabad_on_road_price": 986000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16388,18 +14198,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Tekna Plus",
-      "ex_showroom_price_min_inr": {
-        "min": 865500,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 865500,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1025000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 1025000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 865500,
+      "hyderabad_on_road_price": 1025000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16412,18 +14212,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "N Connecta Turbo",
-      "ex_showroom_price_min_inr": {
-        "min": 870500,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 870500,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1031000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 1031000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 870500,
+      "hyderabad_on_road_price": 1031000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16436,18 +14226,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Tekna CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 887937,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 887937,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1051000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 1051000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 887937,
+      "hyderabad_on_road_price": 1051000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16460,18 +14240,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Tekna AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 888000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 888000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1051000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 1051000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 888000,
+      "hyderabad_on_road_price": 1051000,
       "fuel_type": "Petrol",
       "transmission": "AMT",
       "engine_displacement_cc": 999,
@@ -16484,18 +14254,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "KURO Edition Turbo",
-      "ex_showroom_price_min_inr": {
-        "min": 905500,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 905500,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1072000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 1072000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 905500,
+      "hyderabad_on_road_price": 1072000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16508,18 +14268,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Tekna Plus CNG",
-      "ex_showroom_price_min_inr": {
-        "min": 919952,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 919952,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1089000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 1089000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 919952,
+      "hyderabad_on_road_price": 1089000,
       "fuel_type": "CNG",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16532,18 +14282,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Tekna Plus AMT",
-      "ex_showroom_price_min_inr": {
-        "min": 921000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 921000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1090000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 1090000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 921000,
+      "hyderabad_on_road_price": 1090000,
       "fuel_type": "Petrol",
       "transmission": "AMT",
       "engine_displacement_cc": 999,
@@ -16556,18 +14296,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Acenta Turbo CVT",
-      "ex_showroom_price_min_inr": {
-        "min": 925000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 925000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1120000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 1120000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 925000,
+      "hyderabad_on_road_price": 1120000,
       "fuel_type": "Petrol",
       "transmission": "CVT",
       "engine_displacement_cc": 999,
@@ -16580,18 +14310,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Tekna Turbo",
-      "ex_showroom_price_min_inr": {
-        "min": 950500,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 950500,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1125000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 1125000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 950500,
+      "hyderabad_on_road_price": 1125000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16604,18 +14324,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "N Connecta Turbo CVT",
-      "ex_showroom_price_min_inr": {
-        "min": 967400,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 967400,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1145000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 1145000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 967400,
+      "hyderabad_on_road_price": 1145000,
       "fuel_type": "Petrol",
       "transmission": "CVT",
       "engine_displacement_cc": 999,
@@ -16628,18 +14338,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Tekna Plus Turbo",
-      "ex_showroom_price_min_inr": {
-        "min": 984400,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 984400,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1165000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 1165000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 984400,
+      "hyderabad_on_road_price": 1165000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16652,18 +14352,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "KURO Edition Turbo CVT",
-      "ex_showroom_price_min_inr": {
-        "min": 999400,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 999400,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1182000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 1182000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 999400,
+      "hyderabad_on_road_price": 1182000,
       "fuel_type": "Petrol",
       "transmission": "CVT",
       "engine_displacement_cc": 999,
@@ -16676,18 +14366,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Tekna Turbo CVT",
-      "ex_showroom_price_min_inr": {
-        "min": 1062300,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 1062300,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1299000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 1299000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 1062300,
+      "hyderabad_on_road_price": 1299000,
       "fuel_type": "Petrol",
       "transmission": "CVT",
       "engine_displacement_cc": 999,
@@ -16700,18 +14380,8 @@
       "make": "Nissan",
       "model": "Magnite",
       "variant_name": "Tekna Plus Turbo CVT",
-      "ex_showroom_price_min_inr": {
-        "min": 1096000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 1096000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1340000,
-        "min_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad",
-        "max": 1340000,
-        "max_citation": "https://www.cardekho.com/nissan/magnite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 1096000,
+      "hyderabad_on_road_price": 1340000,
       "fuel_type": "Petrol",
       "transmission": "CVT",
       "engine_displacement_cc": 999,
@@ -16724,18 +14394,8 @@
       "make": "Nissan",
       "model": "Gravite",
       "variant_name": "Visia",
-      "ex_showroom_price_min_inr": {
-        "min": 565000,
-        "min_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
-        "max": 565000,
-        "max_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 680000,
-        "min_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
-        "max": 680000,
-        "max_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 565000,
+      "hyderabad_on_road_price": 680000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16748,18 +14408,8 @@
       "make": "Nissan",
       "model": "Gravite",
       "variant_name": "Acenta",
-      "ex_showroom_price_min_inr": {
-        "min": 699000,
-        "min_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
-        "max": 699000,
-        "max_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 840000,
-        "min_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
-        "max": 840000,
-        "max_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 699000,
+      "hyderabad_on_road_price": 840000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16772,18 +14422,8 @@
       "make": "Nissan",
       "model": "Gravite",
       "variant_name": "N-Trek",
-      "ex_showroom_price_min_inr": {
-        "min": 845000,
-        "min_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
-        "max": 845000,
-        "max_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1010000,
-        "min_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
-        "max": 1010000,
-        "max_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 845000,
+      "hyderabad_on_road_price": 1010000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
       "engine_displacement_cc": 999,
@@ -16796,18 +14436,8 @@
       "make": "Nissan",
       "model": "Gravite",
       "variant_name": "Tekna",
-      "ex_showroom_price_min_inr": {
-        "min": 940000,
-        "min_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
-        "max": 940000,
-        "max_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 1120000,
-        "min_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad",
-        "max": 1120000,
-        "max_citation": "https://www.cardekho.com/nissan/gravite/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 940000,
+      "hyderabad_on_road_price": 1120000,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement_cc": 999,
@@ -16820,18 +14450,8 @@
       "make": "Nissan",
       "model": "X-Trail",
       "variant_name": "X-Trail",
-      "ex_showroom_price_min_inr": {
-        "min": 4819862,
-        "min_citation": "https://www.cardekho.com/nissan/x-trail/price-in-hyderabad",
-        "max": 4819862,
-        "max_citation": "https://www.cardekho.com/nissan/x-trail/price-in-hyderabad"
-      },
-      "hyderabad_on_road_price": {
-        "min": 5540183,
-        "min_citation": "https://www.cardekho.com/nissan/x-trail/price-in-hyderabad",
-        "max": 5540183,
-        "max_citation": "https://www.cardekho.com/nissan/x-trail/price-in-hyderabad"
-      },
+      "ex_showroom_price_min_inr": 4819862,
+      "hyderabad_on_road_price": 5540183,
       "fuel_type": "Petrol",
       "transmission": "Automatic (CVT)",
       "engine_displacement_cc": 1498,
@@ -16975,8 +14595,8 @@
       "ex_showroom_price_min_inr": 3980000,
       "hyderabad_on_road_price": 4969000,
       "fuel_type": "Diesel",
-      "transmission": "",
-      "engine_displacement_cc": 0,
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1998,
       "power_bhp": 0,
       "torque_nm": 0,
       "mileage_kmpl": 0,
@@ -16989,8 +14609,8 @@
       "ex_showroom_price_min_inr": 3980000,
       "hyderabad_on_road_price": 4969000,
       "fuel_type": "Diesel",
-      "transmission": "",
-      "engine_displacement_cc": 0,
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1998,
       "power_bhp": 0,
       "torque_nm": 0,
       "mileage_kmpl": 0,
@@ -17003,8 +14623,8 @@
       "ex_showroom_price_min_inr": 4046000,
       "hyderabad_on_road_price": 5050000,
       "fuel_type": "Diesel",
-      "transmission": "",
-      "engine_displacement_cc": 0,
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1998,
       "power_bhp": 0,
       "torque_nm": 0,
       "mileage_kmpl": 0,
@@ -17017,8 +14637,8 @@
       "ex_showroom_price_min_inr": 4046000,
       "hyderabad_on_road_price": 5050000,
       "fuel_type": "Diesel",
-      "transmission": "",
-      "engine_displacement_cc": 0,
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1998,
       "power_bhp": 0,
       "torque_nm": 0,
       "mileage_kmpl": 0,
@@ -17031,8 +14651,8 @@
       "ex_showroom_price_min_inr": 4249000,
       "hyderabad_on_road_price": 5301000,
       "fuel_type": "Diesel",
-      "transmission": "",
-      "engine_displacement_cc": 0,
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1998,
       "power_bhp": 213,
       "torque_nm": 479,
       "mileage_kmpl": 0,
@@ -17045,8 +14665,8 @@
       "ex_showroom_price_min_inr": 4249000,
       "hyderabad_on_road_price": 5301000,
       "fuel_type": "Diesel",
-      "transmission": "",
-      "engine_displacement_cc": 0,
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1998,
       "power_bhp": 213,
       "torque_nm": 479,
       "mileage_kmpl": 0,
@@ -17059,8 +14679,8 @@
       "ex_showroom_price_min_inr": 4316000,
       "hyderabad_on_road_price": 5384000,
       "fuel_type": "Diesel",
-      "transmission": "",
-      "engine_displacement_cc": 0,
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1998,
       "power_bhp": 213,
       "torque_nm": 479,
       "mileage_kmpl": 0,
@@ -17073,8 +14693,8 @@
       "ex_showroom_price_min_inr": 4316000,
       "hyderabad_on_road_price": 5384000,
       "fuel_type": "Diesel",
-      "transmission": "",
-      "engine_displacement_cc": 0,
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1998,
       "power_bhp": 213,
       "torque_nm": 479,
       "mileage_kmpl": 0,
@@ -17102,7 +14722,7 @@
       "hyderabad_on_road_price": 1715061,
       "fuel_type": "Petrol",
       "transmission": "Manual",
-      "engine_displacement_cc": 0,
+      "engine_displacement_cc": 1998,
       "power_bhp": 0,
       "torque_nm": 0,
       "mileage_kmpl": 0,
@@ -17116,7 +14736,7 @@
       "hyderabad_on_road_price": 1836742,
       "fuel_type": "Petrol",
       "transmission": "Manual",
-      "engine_displacement_cc": 0,
+      "engine_displacement_cc": 1998,
       "power_bhp": 0,
       "torque_nm": 0,
       "mileage_kmpl": 0,
@@ -17130,7 +14750,7 @@
       "hyderabad_on_road_price": 1994926,
       "fuel_type": "Petrol",
       "transmission": "Automatic (CVT)",
-      "engine_displacement_cc": 0,
+      "engine_displacement_cc": 1998,
       "power_bhp": 0,
       "torque_nm": 0,
       "mileage_kmpl": 0,
@@ -17144,7 +14764,7 @@
       "hyderabad_on_road_price": 2055766,
       "fuel_type": "Petrol",
       "transmission": "Manual",
-      "engine_displacement_cc": 0,
+      "engine_displacement_cc": 1998,
       "power_bhp": 0,
       "torque_nm": 0,
       "mileage_kmpl": 0,
@@ -17158,7 +14778,7 @@
       "hyderabad_on_road_price": 2213950,
       "fuel_type": "Petrol",
       "transmission": "Automatic (CVT)",
-      "engine_displacement_cc": 0,
+      "engine_displacement_cc": 1998,
       "power_bhp": 0,
       "torque_nm": 0,
       "mileage_kmpl": 0,
@@ -17172,7 +14792,7 @@
       "hyderabad_on_road_price": 2323463,
       "fuel_type": "Petrol",
       "transmission": "Automatic (CVT)",
-      "engine_displacement_cc": 0,
+      "engine_displacement_cc": 1998,
       "power_bhp": 0,
       "torque_nm": 0,
       "mileage_kmpl": 0,
@@ -17200,7 +14820,7 @@
       "hyderabad_on_road_price": 2117000,
       "fuel_type": "Petrol",
       "transmission": "CVT",
-      "engine_displacement_cc": 0,
+      "engine_displacement_cc": 1998,
       "power_bhp": 0,
       "torque_nm": 0,
       "mileage_kmpl": 0,
@@ -17214,7 +14834,7 @@
       "hyderabad_on_road_price": 2117000,
       "fuel_type": "Petrol",
       "transmission": "CVT",
-      "engine_displacement_cc": 0,
+      "engine_displacement_cc": 1998,
       "power_bhp": 0,
       "torque_nm": 0,
       "mileage_kmpl": 0,
@@ -17241,7 +14861,7 @@
       "ex_showroom_price_min_inr": 1552900,
       "hyderabad_on_road_price": 1689449,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -17255,7 +14875,7 @@
       "ex_showroom_price_min_inr": 1652900,
       "hyderabad_on_road_price": 1798126,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -17269,7 +14889,7 @@
       "ex_showroom_price_min_inr": 1737900,
       "hyderabad_on_road_price": 1886717,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -17283,7 +14903,7 @@
       "ex_showroom_price_min_inr": 1849900,
       "hyderabad_on_road_price": 2002943,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -18587,8 +16207,8 @@
       "ex_showroom_price_min_inr": 7290000,
       "hyderabad_on_road_price": 0,
       "fuel_type": "Electric",
-      "transmission": "",
-      "engine_displacement_cc": 0,
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1999,
       "power_bhp": 0,
       "torque_nm": 0,
       "mileage_kmpl": 0,
@@ -18601,8 +16221,8 @@
       "ex_showroom_price_min_inr": 7290000,
       "hyderabad_on_road_price": 0,
       "fuel_type": "Electric",
-      "transmission": "",
-      "engine_displacement_cc": 0,
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1999,
       "power_bhp": 0,
       "torque_nm": 0,
       "mileage_kmpl": 0,
@@ -18728,7 +16348,7 @@
       "make": "Force",
       "model": "Gurkha",
       "variant_name": "Force Gurkha 3-Door 4x4",
-      "ex_showroom_price_min_inr": "Rs. 15,95,358",
+      "ex_showroom_price_min_inr": 1595000,
       "hyderabad_on_road_price": "Rs. 19,01,474",
       "fuel_type": "Diesel",
       "transmission": "Manual",
@@ -18742,7 +16362,7 @@
       "make": "Force",
       "model": "Gurkha 5-Door",
       "variant_name": "Force Gurkha 5-Door 4x4",
-      "ex_showroom_price_min_inr": "Rs. 17,26,949",
+      "ex_showroom_price_min_inr": 1727000,
       "hyderabad_on_road_price": "Rs. 20,55,904",
       "fuel_type": "Diesel",
       "transmission": "Manual",
@@ -18756,7 +16376,7 @@
       "make": "Force",
       "model": "Urbania",
       "variant_name": "Force Urbania 10-Seater",
-      "ex_showroom_price_min_inr": "Rs. 26,34,119",
+      "ex_showroom_price_min_inr": 2634000,
       "hyderabad_on_road_price": "Rs. 31,20,525",
       "fuel_type": "Diesel",
       "transmission": "Manual",
@@ -18770,7 +16390,7 @@
       "make": "Force",
       "model": "Urbania",
       "variant_name": "Force Urbania 13-Seater",
-      "ex_showroom_price_min_inr": "Rs. 27,50,000",
+      "ex_showroom_price_min_inr": 2750000,
       "hyderabad_on_road_price": "Rs. 32,50,000",
       "fuel_type": "Diesel",
       "transmission": "Manual",
@@ -18784,7 +16404,7 @@
       "make": "Force",
       "model": "Urbania",
       "variant_name": "Force Urbania 17-Seater",
-      "ex_showroom_price_min_inr": "Rs. 31,82,815",
+      "ex_showroom_price_min_inr": 3183000,
       "hyderabad_on_road_price": "Rs. 37,50,000",
       "fuel_type": "Diesel",
       "transmission": "Manual",
@@ -19073,7 +16693,7 @@
       "ex_showroom_price_min_inr": 1799000,
       "hyderabad_on_road_price": 2269117,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Manual",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -19101,7 +16721,7 @@
       "ex_showroom_price_min_inr": 6300000,
       "hyderabad_on_road_price": 7977666,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Manual",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -19115,7 +16735,7 @@
       "ex_showroom_price_min_inr": 2333000,
       "hyderabad_on_road_price": 2767000,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Manual",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -19157,7 +16777,7 @@
       "ex_showroom_price_min_inr": 6458000,
       "hyderabad_on_road_price": 8157679,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Manual",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -19171,7 +16791,7 @@
       "ex_showroom_price_min_inr": 6831000,
       "hyderabad_on_road_price": 8629233,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Manual",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -19187,7 +16807,7 @@
       "ex_showroom_price_min_inr": 6265000,
       "hyderabad_on_road_price": 0,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -19201,7 +16821,7 @@
       "ex_showroom_price_min_inr": 6823000,
       "hyderabad_on_road_price": 0,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -19215,7 +16835,7 @@
       "ex_showroom_price_min_inr": 21538000,
       "hyderabad_on_road_price": 0,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -19229,7 +16849,7 @@
       "ex_showroom_price_min_inr": 26923000,
       "hyderabad_on_road_price": 0,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -19243,7 +16863,7 @@
       "ex_showroom_price_min_inr": 28000000,
       "hyderabad_on_road_price": 0,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -19257,7 +16877,7 @@
       "ex_showroom_price_min_inr": 29120000,
       "hyderabad_on_road_price": 0,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -19271,7 +16891,7 @@
       "ex_showroom_price_min_inr": 6659000,
       "hyderabad_on_road_price": 0,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -19285,7 +16905,7 @@
       "ex_showroom_price_min_inr": 7037000,
       "hyderabad_on_road_price": 0,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -19299,7 +16919,7 @@
       "ex_showroom_price_min_inr": 7126000,
       "hyderabad_on_road_price": 0,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -19313,7 +16933,7 @@
       "ex_showroom_price_min_inr": 7340000,
       "hyderabad_on_road_price": 0,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -19327,7 +16947,7 @@
       "ex_showroom_price_min_inr": 9613000,
       "hyderabad_on_road_price": 0,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
@@ -19341,7 +16961,7 @@
       "ex_showroom_price_min_inr": 11846000,
       "hyderabad_on_road_price": 0,
       "fuel_type": "Electric",
-      "transmission": "",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
