@@ -10650,34 +10650,6 @@
     },
     "17": {
       "make": "Kia",
-      "model": "EV6",
-      "variant_name": "EV6 AWD",
-      "ex_showroom_price_min_inr": 6597000,
-      "hyderabad_on_road_price": 7200000,
-      "fuel_type": "Electric",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 0,
-      "power_bhp": 321,
-      "torque_nm": 605,
-      "mileage_kmpl": 0,
-      "seating_capacity": 5
-    },
-    "18": {
-      "make": "Kia",
-      "model": "EV9",
-      "variant_name": "EV9 GT-Line AWD",
-      "ex_showroom_price_min_inr": 12990000,
-      "hyderabad_on_road_price": 14500000,
-      "fuel_type": "Electric",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 0,
-      "power_bhp": 379,
-      "torque_nm": 700,
-      "mileage_kmpl": 0,
-      "seating_capacity": 6
-    },
-    "19": {
-      "make": "Kia",
       "model": "Carens Clavis",
       "variant_name": "HTE Petrol MT",
       "ex_showroom_price_min_inr": 1150000,
@@ -10690,7 +10662,7 @@
       "mileage_kmpl": 19.54,
       "seating_capacity": 7
     },
-    "20": {
+    "18": {
       "make": "Kia",
       "model": "Carens Clavis",
       "variant_name": "HTE (O) Petrol MT",
@@ -10704,7 +10676,7 @@
       "mileage_kmpl": 19.54,
       "seating_capacity": 7
     },
-    "21": {
+    "19": {
       "make": "Kia",
       "model": "Carens Clavis",
       "variant_name": "HTE (O) Turbo Petrol MT",
@@ -10718,7 +10690,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 7
     },
-    "22": {
+    "20": {
       "make": "Kia",
       "model": "Carens Clavis",
       "variant_name": "HTE (O) Diesel MT",
@@ -10732,7 +10704,7 @@
       "mileage_kmpl": 15.34,
       "seating_capacity": 7
     },
-    "23": {
+    "21": {
       "make": "Kia",
       "model": "Carens Clavis",
       "variant_name": "HTK Plus Turbo DCT",
@@ -10746,7 +10718,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 7
     },
-    "24": {
+    "22": {
       "make": "Kia",
       "model": "Carens Clavis",
       "variant_name": "HTK Plus Diesel AT",
@@ -10760,7 +10732,7 @@
       "mileage_kmpl": 15.34,
       "seating_capacity": 7
     },
-    "25": {
+    "23": {
       "make": "Kia",
       "model": "Carens Clavis",
       "variant_name": "HTX Turbo DCT",
@@ -10774,7 +10746,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 7
     },
-    "26": {
+    "24": {
       "make": "Kia",
       "model": "Carens Clavis",
       "variant_name": "HTX Plus Turbo DCT",
@@ -10788,7 +10760,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 7
     },
-    "27": {
+    "25": {
       "make": "Kia",
       "model": "Carens Clavis",
       "variant_name": "HTX Plus Diesel AT",
@@ -10802,7 +10774,7 @@
       "mileage_kmpl": 15.34,
       "seating_capacity": 7
     },
-    "28": {
+    "26": {
       "make": "Kia",
       "model": "Carens Clavis EV",
       "variant_name": "Carens Clavis EV HTX E",
@@ -10816,7 +10788,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 7
     },
-    "29": {
+    "27": {
       "make": "Kia",
       "model": "Carens Clavis EV",
       "variant_name": "Carens Clavis EV HTX E Plus",
@@ -10830,7 +10802,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 6
     },
-    "30": {
+    "28": {
       "make": "Kia",
       "model": "Carens Clavis EV",
       "variant_name": "Carens Clavis EV HTX E LR",
@@ -10843,6 +10815,150 @@
       "torque_nm": 255,
       "mileage_kmpl": 0,
       "seating_capacity": 7
+    },
+    "29": {
+      "make": "Kia",
+      "model": "Ev6",
+      "variant_name": "Kia EV6",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "30": {
+      "make": "Kia",
+      "model": "Ev6",
+      "variant_name": "EV6 GT Line",
+      "ex_showroom_price_min_inr": 6597000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "31": {
+      "make": "Kia",
+      "model": "Ev6",
+      "variant_name": "City Performance",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "32": {
+      "make": "Kia",
+      "model": "Ev6",
+      "variant_name": "Highway Performance",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "33": {
+      "make": "Kia",
+      "model": "Ev6",
+      "variant_name": "Verdict",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "34": {
+      "make": "Kia",
+      "model": "Ev6",
+      "variant_name": "The Best Electric Car Of Kia",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "35": {
+      "make": "Kia",
+      "model": "Ev6",
+      "variant_name": "Proud Owner Of EV6 GT",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 550
+    },
+    "36": {
+      "make": "Kia",
+      "model": "Ev6",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "37": {
+      "make": "Kia",
+      "model": "Ev9",
+      "variant_name": "Kia EV9",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "38": {
+      "make": "Kia",
+      "model": "Ev9",
+      "variant_name": "EV9 GT Line",
+      "ex_showroom_price_min_inr": 13000000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "39": {
+      "make": "Kia",
+      "model": "Ev9",
+      "variant_name": "Things We Like",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "40": {
+      "make": "Kia",
+      "model": "Ev9",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
     }
   },
   "toyota": {
@@ -11992,34 +12108,6 @@
     },
     "4": {
       "make": "BMW",
-      "model": "i4",
-      "variant_name": "eDrive35 M Sport",
-      "ex_showroom_price_min_inr": 7250000,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Electric",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 0,
-      "power_bhp": 335.25,
-      "torque_nm": 430,
-      "mileage_kmpl": 0,
-      "seating_capacity": 0
-    },
-    "5": {
-      "make": "BMW",
-      "model": "i5",
-      "variant_name": "M60 xDrive",
-      "ex_showroom_price_min_inr": 11950000,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Electric",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 0,
-      "power_bhp": 592.73,
-      "torque_nm": 795,
-      "mileage_kmpl": 0,
-      "seating_capacity": 0
-    },
-    "6": {
-      "make": "BMW",
       "model": "M5",
       "variant_name": "xDrive",
       "ex_showroom_price_min_inr": 20100000,
@@ -12032,21 +12120,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "7": {
-      "make": "BMW",
-      "model": "XM",
-      "variant_name": "xDrive",
-      "ex_showroom_price_min_inr": 25500000,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Petrol",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 4395,
-      "power_bhp": 643.69,
-      "torque_nm": 800,
-      "mileage_kmpl": 0,
-      "seating_capacity": 0
-    },
-    "8": {
+    "5": {
       "make": "BMW",
       "model": "3 Series",
       "variant_name": "M340i xDrive",
@@ -12060,7 +12134,7 @@
       "mileage_kmpl": 13.02,
       "seating_capacity": 5
     },
-    "9": {
+    "6": {
       "make": "BMW",
       "model": "3 Series",
       "variant_name": "M340i 50 Jahre M Edition",
@@ -12074,7 +12148,7 @@
       "mileage_kmpl": 13.02,
       "seating_capacity": 5
     },
-    "10": {
+    "7": {
       "make": "BMW",
       "model": "5 Series",
       "variant_name": "530i M Sport Pro",
@@ -12088,7 +12162,7 @@
       "mileage_kmpl": 10.9,
       "seating_capacity": 5
     },
-    "11": {
+    "8": {
       "make": "BMW",
       "model": "X1",
       "variant_name": "sDrive18i M Sport",
@@ -12102,7 +12176,7 @@
       "mileage_kmpl": 20.37,
       "seating_capacity": 5
     },
-    "12": {
+    "9": {
       "make": "BMW",
       "model": "X1",
       "variant_name": "sDrive18d M Sport",
@@ -12116,21 +12190,7 @@
       "mileage_kmpl": 20.37,
       "seating_capacity": 5
     },
-    "13": {
-      "make": "BMW",
-      "model": "iX",
-      "variant_name": "xDrive50",
-      "ex_showroom_price_min_inr": 13950000,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Electric",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 0,
-      "power_bhp": 516.29,
-      "torque_nm": 765,
-      "mileage_kmpl": 0,
-      "seating_capacity": 5
-    },
-    "14": {
+    "10": {
       "make": "BMW",
       "model": "i7",
       "variant_name": "eDrive50",
@@ -12144,7 +12204,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 5
     },
-    "15": {
+    "11": {
       "make": "BMW",
       "model": "i7",
       "variant_name": "xDrive60",
@@ -12158,7 +12218,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 5
     },
-    "16": {
+    "12": {
       "make": "BMW",
       "model": "6 Series Gran Turismo",
       "variant_name": "630i M Sport",
@@ -12172,7 +12232,7 @@
       "mileage_kmpl": 13.32,
       "seating_capacity": 5
     },
-    "17": {
+    "13": {
       "make": "BMW",
       "model": "6 Series Gran Turismo",
       "variant_name": "630i M Sport Signature",
@@ -12186,21 +12246,7 @@
       "mileage_kmpl": 13.32,
       "seating_capacity": 5
     },
-    "18": {
-      "make": "BMW",
-      "model": "iX1",
-      "variant_name": "eDrive20 M Sport",
-      "ex_showroom_price_min_inr": 4990000,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Electric",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 0,
-      "power_bhp": 204,
-      "torque_nm": 250,
-      "mileage_kmpl": 0,
-      "seating_capacity": 5
-    },
-    "19": {
+    "14": {
       "make": "BMW",
       "model": "3 Series Gran Limousine",
       "variant_name": "320Ld M Sport Pro",
@@ -12212,7 +12258,7 @@
       "torque_nm": 0,
       "mileage_kmpl": 19.61
     },
-    "20": {
+    "15": {
       "make": "BMW",
       "model": "3 Series Gran Limousine",
       "variant_name": "3 Series Long Wheelbase 330Li M Sport",
@@ -12224,7 +12270,7 @@
       "torque_nm": 0,
       "mileage_kmpl": 15.39
     },
-    "21": {
+    "16": {
       "make": "BMW",
       "model": "3 Series Gran Limousine",
       "variant_name": "(Top Model)",
@@ -12236,7 +12282,7 @@
       "torque_nm": 0,
       "mileage_kmpl": 19.61
     },
-    "22": {
+    "17": {
       "make": "BMW",
       "model": "X3",
       "variant_name": "X3 xDrive 30 M Sport Pro",
@@ -12248,7 +12294,7 @@
       "torque_nm": 0,
       "mileage_kmpl": 14.61
     },
-    "23": {
+    "18": {
       "make": "BMW",
       "model": "X3",
       "variant_name": "(Top Model)",
@@ -12260,7 +12306,7 @@
       "torque_nm": 0,
       "mileage_kmpl": 17.86
     },
-    "24": {
+    "19": {
       "make": "BMW",
       "model": "X5",
       "variant_name": "X5 xDrive30d xLine",
@@ -12272,7 +12318,7 @@
       "torque_nm": 0,
       "mileage_kmpl": 12
     },
-    "25": {
+    "20": {
       "make": "BMW",
       "model": "X5",
       "variant_name": "X5 xDrive40i M Sport",
@@ -12284,7 +12330,7 @@
       "torque_nm": 0,
       "mileage_kmpl": 12
     },
-    "26": {
+    "21": {
       "make": "BMW",
       "model": "X5",
       "variant_name": "(Top Model)",
@@ -12296,7 +12342,7 @@
       "torque_nm": 0,
       "mileage_kmpl": 12
     },
-    "27": {
+    "22": {
       "make": "BMW",
       "model": "X7",
       "variant_name": "X7 xDrive40d Design Pure Excellence",
@@ -12308,7 +12354,7 @@
       "torque_nm": 0,
       "mileage_kmpl": 14.31
     },
-    "28": {
+    "23": {
       "make": "BMW",
       "model": "X7",
       "variant_name": "X7 xDrive40i M Sport",
@@ -12320,7 +12366,7 @@
       "torque_nm": 0,
       "mileage_kmpl": 11.29
     },
-    "29": {
+    "24": {
       "make": "BMW",
       "model": "X7",
       "variant_name": "(Top Model)",
@@ -12332,7 +12378,7 @@
       "torque_nm": 0,
       "mileage_kmpl": 14.31
     },
-    "30": {
+    "25": {
       "make": "BMW",
       "model": "Z4",
       "variant_name": "Z4 M40i Pure Impulse AT",
@@ -12344,7 +12390,7 @@
       "torque_nm": 0,
       "mileage_kmpl": 0
     },
-    "31": {
+    "26": {
       "make": "BMW",
       "model": "Z4",
       "variant_name": "(Top Model)",
@@ -12356,7 +12402,7 @@
       "torque_nm": 0,
       "mileage_kmpl": 0
     },
-    "32": {
+    "27": {
       "make": "BMW",
       "model": "X6",
       "variant_name": "X6 xDrive40i xLine",
@@ -12368,7 +12414,7 @@
       "torque_nm": 0,
       "mileage_kmpl": 10.31
     },
-    "33": {
+    "28": {
       "make": "BMW",
       "model": "X6",
       "variant_name": "(Top Model)",
@@ -12380,7 +12426,7 @@
       "torque_nm": 0,
       "mileage_kmpl": 10.31
     },
-    "34": {
+    "29": {
       "make": "BMW",
       "model": "X6",
       "variant_name": "(Top Model)",
@@ -12392,7 +12438,7 @@
       "torque_nm": 0,
       "mileage_kmpl": 10.31
     },
-    "35": {
+    "30": {
       "make": "BMW",
       "model": "M2",
       "variant_name": "M2 Coupe Manual",
@@ -12404,7 +12450,7 @@
       "torque_nm": 0,
       "mileage_kmpl": 10.19
     },
-    "36": {
+    "31": {
       "make": "BMW",
       "model": "M2",
       "variant_name": "(Top Model)",
@@ -12415,6 +12461,246 @@
       "power_bhp": 0,
       "torque_nm": 0,
       "mileage_kmpl": 10.19
+    },
+    "32": {
+      "make": "BMW",
+      "model": "I4",
+      "variant_name": "(Top Model)",
+      "ex_showroom_price_min_inr": 7750000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "33": {
+      "make": "BMW",
+      "model": "I4",
+      "variant_name": "By SonnyMar 05, 2024",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "34": {
+      "make": "BMW",
+      "model": "I4",
+      "variant_name": "Electric BM",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "35": {
+      "make": "BMW",
+      "model": "I4",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "36": {
+      "make": "BMW",
+      "model": "I4",
+      "variant_name": "Variants: It is available in two broad trims: eDrive35, and eDrive40.",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "37": {
+      "make": "BMW",
+      "model": "I5",
+      "variant_name": "i5 M60 xDrive",
+      "ex_showroom_price_min_inr": 12000000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "38": {
+      "make": "BMW",
+      "model": "I5",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "39": {
+      "make": "BMW",
+      "model": "I5",
+      "variant_name": "Q ) What is the transmission type of BMW i5?",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "40": {
+      "make": "BMW",
+      "model": "I5",
+      "variant_name": "Variants: The global-spec BMW i5 comes in single fully loaded M60 xDrive variant.",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "41": {
+      "make": "BMW",
+      "model": "Xm",
+      "variant_name": "XM xDrive",
+      "ex_showroom_price_min_inr": 25500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 4395,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 61.9
+    },
+    "42": {
+      "make": "BMW",
+      "model": "Xm",
+      "variant_name": "V8 Hybrid Feature",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 60
+    },
+    "43": {
+      "make": "BMW",
+      "model": "Ix",
+      "variant_name": "iX xDrive50",
+      "ex_showroom_price_min_inr": 14000000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "44": {
+      "make": "BMW",
+      "model": "Ix",
+      "variant_name": "By YasheinFeb 28, 2026",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "45": {
+      "make": "BMW",
+      "model": "Ix",
+      "variant_name": "Alfas Muhammed On Feb 18, 2025",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "46": {
+      "make": "BMW",
+      "model": "Ix",
+      "variant_name": "Futuristic Electric Car My Dream",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "47": {
+      "make": "BMW",
+      "model": "Ix",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "48": {
+      "make": "BMW",
+      "model": "Ix",
+      "variant_name": "BMW iX latest updates",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "49": {
+      "make": "BMW",
+      "model": "Ix1",
+      "variant_name": "iX1 LWB",
+      "ex_showroom_price_min_inr": 5090000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "50": {
+      "make": "BMW",
+      "model": "Ix1",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "51": {
+      "make": "BMW",
+      "model": "Ix1",
+      "variant_name": "Seating Capacity: It can seat a maximum of five people.",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
     }
   },
   "audi": {
@@ -12823,6 +13109,78 @@
       "torque_nm": 664,
       "mileage_kmpl": 0,
       "seating_capacity": 5
+    },
+    "29": {
+      "make": "Audi",
+      "model": "E Tron GT",
+      "variant_name": "Audi e-tron GT",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "30": {
+      "make": "Audi",
+      "model": "E Tron GT",
+      "variant_name": "e-tron GT Quattro",
+      "ex_showroom_price_min_inr": 17200000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "31": {
+      "make": "Audi",
+      "model": "E Tron GT",
+      "variant_name": "Outstanding Range And Driving Experience Of Audi E-tron GT",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "32": {
+      "make": "Audi",
+      "model": "E Tron GT",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "33": {
+      "make": "Audi",
+      "model": "RS E Tron GT",
+      "variant_name": "TOP SELLING",
+      "ex_showroom_price_min_inr": 19500000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "34": {
+      "make": "Audi",
+      "model": "RS E Tron GT",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
     }
   },
   "mercedes_benz": {
@@ -12884,20 +13242,6 @@
     },
     "4": {
       "make": "Mercedes-Benz",
-      "model": "EQE SUV",
-      "variant_name": "500 4MATIC",
-      "ex_showroom_price_min_inr": 14100000,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Electric",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 0,
-      "power_bhp": 0,
-      "torque_nm": 0,
-      "mileage_kmpl": 0,
-      "seating_capacity": 0
-    },
-    "5": {
-      "make": "Mercedes-Benz",
       "model": "GLC",
       "variant_name": "300",
       "ex_showroom_price_min_inr": 7396667,
@@ -12910,7 +13254,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "6": {
+    "5": {
       "make": "Mercedes-Benz",
       "model": "GLC",
       "variant_name": "220d",
@@ -12924,7 +13268,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "7": {
+    "6": {
       "make": "Mercedes-Benz",
       "model": "Maybach S-Class",
       "variant_name": "S580",
@@ -12938,7 +13282,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "8": {
+    "7": {
       "make": "Mercedes-Benz",
       "model": "Maybach S-Class",
       "variant_name": "S680",
@@ -12952,7 +13296,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "9": {
+    "8": {
       "make": "Mercedes-Benz",
       "model": "S-Class",
       "variant_name": "S450 4Matic",
@@ -12966,7 +13310,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "10": {
+    "9": {
       "make": "Mercedes-Benz",
       "model": "S-Class",
       "variant_name": "S 350d",
@@ -12980,7 +13324,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "11": {
+    "10": {
       "make": "Mercedes-Benz",
       "model": "C-Class",
       "variant_name": "Mercedes-Benz C-Class C 220d",
@@ -12994,7 +13338,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "12": {
+    "11": {
       "make": "Mercedes-Benz",
       "model": "C-Class",
       "variant_name": "Mercedes-Benz C-Class C 200",
@@ -13008,7 +13352,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "13": {
+    "12": {
       "make": "Mercedes-Benz",
       "model": "C-Class",
       "variant_name": "Mercedes-Benz C-Class C 300",
@@ -13022,21 +13366,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "14": {
-      "make": "Mercedes-Benz",
-      "model": "CLE",
-      "variant_name": "Mercedes-Benz AMG CLE 53 4Matic",
-      "ex_showroom_price_min_inr": 12800000,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Petrol",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 0,
-      "power_bhp": 0,
-      "torque_nm": 0,
-      "mileage_kmpl": 0,
-      "seating_capacity": 0
-    },
-    "15": {
+    "13": {
       "make": "Mercedes-Benz",
       "model": "E-Class",
       "variant_name": "Mercedes-Benz E-Class E 200",
@@ -13050,7 +13380,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "16": {
+    "14": {
       "make": "Mercedes-Benz",
       "model": "E-Class",
       "variant_name": "Mercedes-Benz E-Class E 220d",
@@ -13064,7 +13394,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "17": {
+    "15": {
       "make": "Mercedes-Benz",
       "model": "E-Class",
       "variant_name": "Mercedes-Benz E-Class E 450",
@@ -13078,7 +13408,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "18": {
+    "16": {
       "make": "Mercedes-Benz",
       "model": "GLA",
       "variant_name": "Mercedes-Benz GLA 200",
@@ -13092,7 +13422,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "19": {
+    "17": {
       "make": "Mercedes-Benz",
       "model": "GLA",
       "variant_name": "Mercedes-Benz GLA 220d 4MATIC",
@@ -13106,7 +13436,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "20": {
+    "18": {
       "make": "Mercedes-Benz",
       "model": "GLA",
       "variant_name": "Mercedes-Benz GLA 220d 4MATIC AMG Line",
@@ -13120,7 +13450,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "21": {
+    "19": {
       "make": "Mercedes-Benz",
       "model": "GLE",
       "variant_name": "Mercedes-Benz GLE 300d 4Matic AMG Line",
@@ -13134,7 +13464,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "22": {
+    "20": {
       "make": "Mercedes-Benz",
       "model": "GLE",
       "variant_name": "Mercedes-Benz GLE 450 4Matic",
@@ -13148,7 +13478,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "23": {
+    "21": {
       "make": "Mercedes-Benz",
       "model": "GLE",
       "variant_name": "Mercedes-Benz GLE 450d 4Matic",
@@ -13162,7 +13492,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "24": {
+    "22": {
       "make": "Mercedes-Benz",
       "model": "GLS",
       "variant_name": "Mercedes-Benz GLS 450 4MATIC",
@@ -13176,7 +13506,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "25": {
+    "23": {
       "make": "Mercedes-Benz",
       "model": "GLS",
       "variant_name": "Mercedes-Benz GLS 450 4MATIC AMG Line",
@@ -13190,7 +13520,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "26": {
+    "24": {
       "make": "Mercedes-Benz",
       "model": "GLS",
       "variant_name": "Mercedes-Benz GLS 450d 4MATIC AMG Line",
@@ -13204,7 +13534,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "27": {
+    "25": {
       "make": "Mercedes-Benz",
       "model": "GLS",
       "variant_name": "Mercedes-Benz GLS 450d 4MATIC",
@@ -13218,7 +13548,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "28": {
+    "26": {
       "make": "Mercedes-Benz",
       "model": "Maybach GLS",
       "variant_name": "Mercedes-Benz Maybach GLS 600 4MATIC",
@@ -13232,7 +13562,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "29": {
+    "27": {
       "make": "Mercedes-Benz",
       "model": "Maybach GLS",
       "variant_name": "Mercedes-Benz Maybach GLS 600 Night Series",
@@ -13246,7 +13576,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "30": {
+    "28": {
       "make": "Mercedes-Benz",
       "model": "Maybach GLS",
       "variant_name": "Mercedes-Benz Maybach GLS 600 Celebration Edition",
@@ -13260,7 +13590,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "31": {
+    "29": {
       "make": "Mercedes-Benz",
       "model": "AMG C 63",
       "variant_name": "AMG C 63 S E Performance",
@@ -13274,7 +13604,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "32": {
+    "30": {
       "make": "Mercedes-Benz",
       "model": "AMG S 63",
       "variant_name": "AMG S 63 E Performance",
@@ -13288,7 +13618,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "33": {
+    "31": {
       "make": "Mercedes-Benz",
       "model": "AMG S 63",
       "variant_name": "AMG S 63 E Performance Edition 1",
@@ -13302,7 +13632,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "34": {
+    "32": {
       "make": "Mercedes-Benz",
       "model": "EQS",
       "variant_name": "EQS 450+",
@@ -13316,7 +13646,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "35": {
+    "33": {
       "make": "Mercedes-Benz",
       "model": "EQS",
       "variant_name": "EQS 580 4MATIC",
@@ -13330,21 +13660,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "36": {
-      "make": "Mercedes-Benz",
-      "model": "AMG EQS",
-      "variant_name": "AMG EQS 53 4MATIC+",
-      "ex_showroom_price_min_inr": 24500000,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Electric",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 0,
-      "power_bhp": 0,
-      "torque_nm": 0,
-      "mileage_kmpl": 0,
-      "seating_capacity": 0
-    },
-    "37": {
+    "34": {
       "make": "Mercedes-Benz",
       "model": "G-Class",
       "variant_name": "G 400d",
@@ -13358,7 +13674,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "38": {
+    "35": {
       "make": "Mercedes-Benz",
       "model": "G-Class",
       "variant_name": "G 500",
@@ -13372,7 +13688,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "39": {
+    "36": {
       "make": "Mercedes-Benz",
       "model": "G-Class",
       "variant_name": "AMG G 63",
@@ -13386,7 +13702,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "40": {
+    "37": {
       "make": "Mercedes-Benz",
       "model": "G-Class Electric",
       "variant_name": "G 580 EQ",
@@ -13400,7 +13716,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "41": {
+    "38": {
       "make": "Mercedes-Benz",
       "model": "AMG GLC 43",
       "variant_name": "AMG GLC 43 4Matic",
@@ -13414,21 +13730,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "42": {
-      "make": "Mercedes-Benz",
-      "model": "EQA",
-      "variant_name": "EQA 250+",
-      "ex_showroom_price_min_inr": 6720000,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Electric",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 0,
-      "power_bhp": 0,
-      "torque_nm": 0,
-      "mileage_kmpl": 0,
-      "seating_capacity": 0
-    },
-    "43": {
+    "39": {
       "make": "Mercedes-Benz",
       "model": "EQS SUV",
       "variant_name": "EQS SUV 580 4MATIC",
@@ -13442,7 +13744,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "44": {
+    "40": {
       "make": "Mercedes-Benz",
       "model": "EQS SUV",
       "variant_name": "EQS SUV 450 4MATIC",
@@ -13456,21 +13758,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "45": {
-      "make": "Mercedes-Benz",
-      "model": "Maybach EQS SUV",
-      "variant_name": "Maybach EQS 680 SUV",
-      "ex_showroom_price_min_inr": 22820000,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Electric",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 0,
-      "power_bhp": 0,
-      "torque_nm": 0,
-      "mileage_kmpl": 0,
-      "seating_capacity": 0
-    },
-    "46": {
+    "41": {
       "make": "Mercedes-Benz",
       "model": "AMG GT Coupe",
       "variant_name": "AMG GT 55 4MATIC+",
@@ -13484,7 +13772,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "47": {
+    "42": {
       "make": "Mercedes-Benz",
       "model": "AMG GT Coupe",
       "variant_name": "AMG GT 63 4MATIC+",
@@ -13498,7 +13786,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "48": {
+    "43": {
       "make": "Mercedes-Benz",
       "model": "AMG GT 4-Door Coupe",
       "variant_name": "AMG GT 63 S E Performance",
@@ -13512,7 +13800,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "49": {
+    "44": {
       "make": "Mercedes-Benz",
       "model": "AMG GLE 53",
       "variant_name": "AMG GLE 53 4MATIC+ Coupe",
@@ -13526,7 +13814,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "50": {
+    "45": {
       "make": "Mercedes-Benz",
       "model": "Maybach SL 680",
       "variant_name": "Maybach SL 680 Monogram",
@@ -13540,7 +13828,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "51": {
+    "46": {
       "make": "Mercedes-Benz",
       "model": "AMG SL",
       "variant_name": "AMG SL 55 4MATIC+",
@@ -13554,7 +13842,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "52": {
+    "47": {
       "make": "Mercedes-Benz",
       "model": "CLE Cabriolet",
       "variant_name": "CLE 300 Cabriolet",
@@ -13568,7 +13856,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "53": {
+    "48": {
       "make": "Mercedes-Benz",
       "model": "AMG E 53 Cabriolet",
       "variant_name": "AMG E 53 4MATIC+ Cabriolet",
@@ -13582,7 +13870,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "54": {
+    "49": {
       "make": "Mercedes-Benz",
       "model": "V-Class",
       "variant_name": "V-Class V 300d Extra Long",
@@ -13596,7 +13884,7 @@
       "mileage_kmpl": 0,
       "seating_capacity": 0
     },
-    "55": {
+    "50": {
       "make": "Mercedes-Benz",
       "model": "V-Class",
       "variant_name": "V-Class V 260 Extra Long",
@@ -13609,6 +13897,606 @@
       "torque_nm": 0,
       "mileage_kmpl": 0,
       "seating_capacity": 0
+    },
+    "51": {
+      "make": "Mercedes-Benz",
+      "model": "Eqe SUV",
+      "variant_name": "EQE SUV 500 4MATIC",
+      "ex_showroom_price_min_inr": 14100000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "52": {
+      "make": "Mercedes-Benz",
+      "model": "Eqe SUV",
+      "variant_name": "Performance",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "53": {
+      "make": "Mercedes-Benz",
+      "model": "Eqe SUV",
+      "variant_name": "By ShreyashOct 01, 2023",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "54": {
+      "make": "Mercedes-Benz",
+      "model": "Eqe SUV",
+      "variant_name": "A Solid Choice For A Luxury Family SUV",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "55": {
+      "make": "Mercedes-Benz",
+      "model": "Eqe SUV",
+      "variant_name": "Powerful And Efficient Electric SUV",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "56": {
+      "make": "Mercedes-Benz",
+      "model": "Eqe SUV",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "57": {
+      "make": "Mercedes-Benz",
+      "model": "Eqe SUV",
+      "variant_name": "Variant: It is available in India as a single, fully loaded EQE 500 4MATIC variant.",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "58": {
+      "make": "Mercedes-Benz",
+      "model": "Cle",
+      "variant_name": "Mercedes-Benz EQS SUV",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "59": {
+      "make": "Mercedes-Benz",
+      "model": "Cle",
+      "variant_name": "Mercedes-Benz EQS",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "60": {
+      "make": "Mercedes-Benz",
+      "model": "Cle",
+      "variant_name": "Mercedes-Benz G-Class Electric",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "61": {
+      "make": "Mercedes-Benz",
+      "model": "Cle",
+      "variant_name": "Mercedes-Benz EQE SUV",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "62": {
+      "make": "Mercedes-Benz",
+      "model": "Cle",
+      "variant_name": "Mercedes-Benz Maybach EQS SUV",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "63": {
+      "make": "Mercedes-Benz",
+      "model": "Cle",
+      "variant_name": "Mercedes-Benz EQB",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "64": {
+      "make": "Mercedes-Benz",
+      "model": "Cle",
+      "variant_name": "Mercedes-Benz EQA",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "65": {
+      "make": "Mercedes-Benz",
+      "model": "Cle",
+      "variant_name": "Mercedes-Benz AMG EQS",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "66": {
+      "make": "Mercedes-Benz",
+      "model": "AMG C63",
+      "variant_name": "Mercedes-Benz EQS SUV",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "67": {
+      "make": "Mercedes-Benz",
+      "model": "AMG C63",
+      "variant_name": "Mercedes-Benz EQS",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "68": {
+      "make": "Mercedes-Benz",
+      "model": "AMG C63",
+      "variant_name": "Mercedes-Benz G-Class Electric",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "69": {
+      "make": "Mercedes-Benz",
+      "model": "AMG C63",
+      "variant_name": "Mercedes-Benz EQE SUV",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "70": {
+      "make": "Mercedes-Benz",
+      "model": "AMG C63",
+      "variant_name": "Mercedes-Benz Maybach EQS SUV",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "71": {
+      "make": "Mercedes-Benz",
+      "model": "AMG C63",
+      "variant_name": "Mercedes-Benz EQB",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "72": {
+      "make": "Mercedes-Benz",
+      "model": "AMG C63",
+      "variant_name": "Mercedes-Benz EQA",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "73": {
+      "make": "Mercedes-Benz",
+      "model": "AMG C63",
+      "variant_name": "Mercedes-Benz AMG EQS",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "74": {
+      "make": "Mercedes-Benz",
+      "model": "AMG Eqs",
+      "variant_name": "AMG EQS 53 4Matic Plus",
+      "ex_showroom_price_min_inr": 24500000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "75": {
+      "make": "Mercedes-Benz",
+      "model": "AMG Eqs",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "76": {
+      "make": "Mercedes-Benz",
+      "model": "G Class Electric",
+      "variant_name": "Mercedes-Benz G-Class Electric",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "77": {
+      "make": "Mercedes-Benz",
+      "model": "G Class Electric",
+      "variant_name": "G-Class Electric G 580",
+      "ex_showroom_price_min_inr": 31000000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "78": {
+      "make": "Mercedes-Benz",
+      "model": "G Class Electric",
+      "variant_name": "Interior",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "79": {
+      "make": "Mercedes-Benz",
+      "model": "G Class Electric",
+      "variant_name": "Highway Performance",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "80": {
+      "make": "Mercedes-Benz",
+      "model": "G Class Electric",
+      "variant_name": "Mercedes-Benz G-Class Electric Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "81": {
+      "make": "Mercedes-Benz",
+      "model": "G Class Electric",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "82": {
+      "make": "Mercedes-Benz",
+      "model": "G Class Electric",
+      "variant_name": "Electric - Automatic\t473 km",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "83": {
+      "make": "Mercedes-Benz",
+      "model": "G Class Electric",
+      "variant_name": "Q ) What is the range of Mercedes-Benz G-Class Electric?",
+      "ex_showroom_price_min_inr": 619000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "84": {
+      "make": "Mercedes-Benz",
+      "model": "G Class Electric",
+      "variant_name": "What electric powertrain does the Mercedes-Benz G-Class Electric offer?",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "85": {
+      "make": "Mercedes-Benz",
+      "model": "Eqa",
+      "variant_name": "EQA 250 Plus",
+      "ex_showroom_price_min_inr": 6720000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "86": {
+      "make": "Mercedes-Benz",
+      "model": "Eqa",
+      "variant_name": "Mercedes’ most affordable electric SUV is a sensible pick for those wanting a posh city runner",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "87": {
+      "make": "Mercedes-Benz",
+      "model": "Eqa",
+      "variant_name": "Things We Like",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "88": {
+      "make": "Mercedes-Benz",
+      "model": "Eqa",
+      "variant_name": "By DipanJul 13, 2024",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "89": {
+      "make": "Mercedes-Benz",
+      "model": "Eqa",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "90": {
+      "make": "Mercedes-Benz",
+      "model": "Eqa",
+      "variant_name": "Seating Capacity: It can seat a maximum of five people.",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "91": {
+      "make": "Mercedes-Benz",
+      "model": "Maybach Eqs SUV",
+      "variant_name": "(Top Model)",
+      "ex_showroom_price_min_inr": 26300000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "92": {
+      "make": "Mercedes-Benz",
+      "model": "Maybach Eqs SUV",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "93": {
+      "make": "Mercedes-Benz",
+      "model": "AMG GT 4 Door",
+      "variant_name": "Mercedes-Benz EQS SUV",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "94": {
+      "make": "Mercedes-Benz",
+      "model": "AMG GT 4 Door",
+      "variant_name": "Mercedes-Benz EQS",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "95": {
+      "make": "Mercedes-Benz",
+      "model": "AMG GT 4 Door",
+      "variant_name": "Mercedes-Benz G-Class Electric",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "96": {
+      "make": "Mercedes-Benz",
+      "model": "AMG GT 4 Door",
+      "variant_name": "Mercedes-Benz EQE SUV",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "97": {
+      "make": "Mercedes-Benz",
+      "model": "AMG GT 4 Door",
+      "variant_name": "Mercedes-Benz Maybach EQS SUV",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "98": {
+      "make": "Mercedes-Benz",
+      "model": "AMG GT 4 Door",
+      "variant_name": "Mercedes-Benz EQB",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "99": {
+      "make": "Mercedes-Benz",
+      "model": "AMG GT 4 Door",
+      "variant_name": "Mercedes-Benz EQA",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "100": {
+      "make": "Mercedes-Benz",
+      "model": "AMG GT 4 Door",
+      "variant_name": "Mercedes-Benz AMG EQS",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
     }
   },
   "volkswagen": {
@@ -13807,6 +14695,66 @@
       "torque_nm": 400,
       "mileage_kmpl": 12.5,
       "seating_capacity": 7
+    },
+    "14": {
+      "make": "Volkswagen",
+      "model": "Tiguan",
+      "variant_name": "Tiguan 2.0 TSI Elegance BSVI",
+      "ex_showroom_price_min_inr": 3420000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1984,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 12.65
+    },
+    "15": {
+      "make": "Volkswagen",
+      "model": "Tiguan",
+      "variant_name": "Tiguan 2.0 TSI Elegance",
+      "ex_showroom_price_min_inr": 3817000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1984,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 12.65
+    },
+    "16": {
+      "make": "Volkswagen",
+      "model": "Tiguan",
+      "variant_name": "(Top Model)",
+      "ex_showroom_price_min_inr": 4000000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1984,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 12.65
+    },
+    "17": {
+      "make": "Volkswagen",
+      "model": "Tayron",
+      "variant_name": "Tayron R-Line 2.0 TSI",
+      "ex_showroom_price_min_inr": 4699000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 1984,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "18": {
+      "make": "Volkswagen",
+      "model": "Tayron",
+      "variant_name": "Front Seats",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
     }
   },
   "skoda": {
@@ -15149,30 +16097,110 @@
     "37": {
       "make": "MG",
       "model": "M9",
-      "variant_name": "M9",
-      "ex_showroom_price_min_inr": 7090000,
-      "hyderabad_on_road_price": 7450000,
+      "variant_name": "MG M9",
+      "ex_showroom_price_min_inr": 0,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
-      "power_bhp": 241,
-      "torque_nm": 350,
-      "mileage_kmpl": 548,
-      "seating_capacity": 7
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
     },
     "38": {
       "make": "MG",
-      "model": "Cyberster",
-      "variant_name": "Dual Motor AWD",
-      "ex_showroom_price_min_inr": 7499801,
-      "hyderabad_on_road_price": 7881000,
+      "model": "M9",
+      "variant_name": "M9 Presidential Limo",
+      "ex_showroom_price_min_inr": 7090000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "engine_displacement_cc": 0,
-      "power_bhp": 510,
-      "torque_nm": 725,
-      "mileage_kmpl": 580,
-      "seating_capacity": 2
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "39": {
+      "make": "MG",
+      "model": "M9",
+      "variant_name": "Performance",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "40": {
+      "make": "MG",
+      "model": "M9",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "41": {
+      "make": "MG",
+      "model": "M9",
+      "variant_name": "Q ) What is the transmission type of MG M9?",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "42": {
+      "make": "MG",
+      "model": "M9",
+      "variant_name": "MG M9 latest updates",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "43": {
+      "make": "MG",
+      "model": "Cyberster",
+      "variant_name": "Read More",
+      "ex_showroom_price_min_inr": 7500000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "44": {
+      "make": "MG",
+      "model": "Cyberster",
+      "variant_name": "I Love This Car The",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "45": {
+      "make": "MG",
+      "model": "Cyberster",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
     }
   },
   "byd": {
@@ -15376,45 +16404,183 @@
     },
     "2": {
       "make": "Volvo",
-      "model": "EX30",
-      "variant_name": "EX30 Single Motor Extended Range",
-      "ex_showroom_price_min_inr": 3999000,
-      "hyderabad_on_road_price": 0,
+      "model": "Ex30",
+      "variant_name": "EX30 RWD Ultra",
+      "ex_showroom_price_min_inr": 4100000,
       "fuel_type": "Electric",
-      "transmission": "Automatic (Single-Speed)",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
-      "mileage_kmpl": 0,
-      "seating_capacity": 5
+      "mileage_kmpl": 0
     },
     "3": {
       "make": "Volvo",
-      "model": "EX40",
-      "variant_name": "EX40 Recharge Twin Motor",
-      "ex_showroom_price_min_inr": 4900000,
-      "hyderabad_on_road_price": 0,
+      "model": "Ex30",
+      "variant_name": "Drivetrain\tRear-wheel-drive",
+      "ex_showroom_price_min_inr": 0,
       "fuel_type": "Electric",
-      "transmission": "Automatic (Single-Speed AWD)",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
-      "mileage_kmpl": 0,
-      "seating_capacity": 5
+      "mileage_kmpl": 0
     },
     "4": {
       "make": "Volvo",
-      "model": "EC40",
-      "variant_name": "EC40 Recharge Twin Motor",
-      "ex_showroom_price_min_inr": 5900000,
-      "hyderabad_on_road_price": 0,
+      "model": "Ex30",
+      "variant_name": "City Performance",
+      "ex_showroom_price_min_inr": 0,
       "fuel_type": "Electric",
-      "transmission": "Automatic (Single-Speed AWD)",
+      "transmission": "Automatic",
       "engine_displacement_cc": 0,
       "power_bhp": 0,
       "torque_nm": 0,
-      "mileage_kmpl": 0,
-      "seating_capacity": 5
+      "mileage_kmpl": 0
+    },
+    "5": {
+      "make": "Volvo",
+      "model": "Ex30",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "6": {
+      "make": "Volvo",
+      "model": "Ex40",
+      "variant_name": "Volvo EX40",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "7": {
+      "make": "Volvo",
+      "model": "Ex40",
+      "variant_name": "EX40 E60 Plus",
+      "ex_showroom_price_min_inr": 4900000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "8": {
+      "make": "Volvo",
+      "model": "Ex40",
+      "variant_name": "Impressive Ev",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "9": {
+      "make": "Volvo",
+      "model": "Ex40",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "10": {
+      "make": "Volvo",
+      "model": "Ex40",
+      "variant_name": "What battery pack and electric motor options are available with Volvo EX40?",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "11": {
+      "make": "Volvo",
+      "model": "Ec40",
+      "variant_name": "EC40 E80",
+      "ex_showroom_price_min_inr": 5900000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "12": {
+      "make": "Volvo",
+      "model": "Ec40",
+      "variant_name": "Performance",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "13": {
+      "make": "Volvo",
+      "model": "Ec40",
+      "variant_name": "6 Reasons To Bring Home The Volvo C40 Recharge This Festive Season",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "14": {
+      "make": "Volvo",
+      "model": "Ec40",
+      "variant_name": "My Dream Car",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "15": {
+      "make": "Volvo",
+      "model": "Ec40",
+      "variant_name": "Motor and Transmission\tARAI Range",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "16": {
+      "make": "Volvo",
+      "model": "Ec40",
+      "variant_name": "Seating Capacity: It’s a 5-seater electric SUV-coupe.",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
     }
   },
   "porsche": {
@@ -16123,16 +17289,50 @@
     "30": {
       "make": "Land Rover",
       "model": "Range Rover",
-      "variant_name": "3.0 l Diesel LWB HSE",
-      "ex_showroom_price_min_inr": 23100000,
-      "hyderabad_on_road_price": 30456000,
+      "variant_name": "Range Rover 3.0 I LWB Autobiography",
+      "ex_showroom_price_min_inr": 25700000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 2996,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "31": {
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "variant_name": "Range Rover 3.0 l Diesel LWB SV",
+      "ex_showroom_price_min_inr": 38300000,
       "fuel_type": "Diesel",
-      "transmission": "8-Speed Automatic",
+      "transmission": "Automatic",
       "engine_displacement_cc": 2997,
-      "power_bhp": 394,
-      "torque_nm": 700,
-      "mileage_kmpl": 8.7,
-      "seating_capacity": 5
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
+    },
+    "32": {
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "variant_name": "(Top Model)",
+      "ex_showroom_price_min_inr": 42500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 4395,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 8.7
+    },
+    "33": {
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "variant_name": "Verdict",
+      "ex_showroom_price_min_inr": 0,
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 0,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 0
     }
   },
   "aston_martin": {
@@ -16324,34 +17524,6 @@
   "bentley": {
     "0": {
       "make": "Bentley",
-      "model": "Bentayga",
-      "variant_name": "V8",
-      "ex_showroom_price_min_inr": 50032967,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Petrol",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 0,
-      "power_bhp": 0,
-      "torque_nm": 0,
-      "mileage_kmpl": 7.6,
-      "seating_capacity": 0
-    },
-    "1": {
-      "make": "Bentley",
-      "model": "Flying Spur",
-      "variant_name": "V8",
-      "ex_showroom_price_min_inr": 55018177,
-      "hyderabad_on_road_price": 0,
-      "fuel_type": "Petrol",
-      "transmission": "Automatic",
-      "engine_displacement_cc": 0,
-      "power_bhp": 0,
-      "torque_nm": 0,
-      "mileage_kmpl": 12.5,
-      "seating_capacity": 0
-    },
-    "2": {
-      "make": "Bentley",
       "model": "Continental GT",
       "variant_name": "Speed",
       "ex_showroom_price_min_inr": 64596706,
@@ -16363,6 +17535,102 @@
       "torque_nm": 0,
       "mileage_kmpl": 12.9,
       "seating_capacity": 0
+    },
+    "1": {
+      "make": "Bentley",
+      "model": "Bentayga",
+      "variant_name": "Bentayga EWB",
+      "ex_showroom_price_min_inr": 56000000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 3993,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 5.9
+    },
+    "2": {
+      "make": "Bentley",
+      "model": "Bentayga",
+      "variant_name": "Bentayga S",
+      "ex_showroom_price_min_inr": 58700000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 3993,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 5.9
+    },
+    "3": {
+      "make": "Bentley",
+      "model": "Bentayga",
+      "variant_name": "Bentayga Azure",
+      "ex_showroom_price_min_inr": 63700000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 3993,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 8.6
+    },
+    "4": {
+      "make": "Bentley",
+      "model": "Bentayga",
+      "variant_name": "(Top Model)",
+      "ex_showroom_price_min_inr": 67500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 3993,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 5.9
+    },
+    "5": {
+      "make": "Bentley",
+      "model": "Flying Spur",
+      "variant_name": "Flying Spur V8",
+      "ex_showroom_price_min_inr": 55000000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 3993,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 12.5
+    },
+    "6": {
+      "make": "Bentley",
+      "model": "Flying Spur",
+      "variant_name": "Flying Spur V8 Hybrid",
+      "ex_showroom_price_min_inr": 56700000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 3993,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 12.5
+    },
+    "7": {
+      "make": "Bentley",
+      "model": "Flying Spur",
+      "variant_name": "Flying Spur S V8",
+      "ex_showroom_price_min_inr": 63500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 3993,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 12.5
+    },
+    "8": {
+      "make": "Bentley",
+      "model": "Flying Spur",
+      "variant_name": "Flying Spur S Hybrid",
+      "ex_showroom_price_min_inr": 64000000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement_cc": 3993,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 12.5
     }
   },
   "jaguar": {
@@ -16541,44 +17809,50 @@
     "2": {
       "make": "Force",
       "model": "Urbania",
-      "variant_name": "Force Urbania 10-Seater",
+      "variant_name": "Urbania 3350WB 11Str",
       "ex_showroom_price_min_inr": 2634000,
-      "hyderabad_on_road_price": "Rs. 31,20,525",
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 2596,
-      "power_bhp": 114,
-      "torque_nm": 350,
-      "mileage_kmpl": "11 kmpl",
-      "seating_capacity": 10
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 11
     },
     "3": {
       "make": "Force",
       "model": "Urbania",
-      "variant_name": "Force Urbania 13-Seater",
-      "ex_showroom_price_min_inr": 2750000,
-      "hyderabad_on_road_price": "Rs. 32,50,000",
+      "variant_name": "Urbania 3615WB 14Str",
+      "ex_showroom_price_min_inr": 2889000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 2596,
-      "power_bhp": 114,
-      "torque_nm": 350,
-      "mileage_kmpl": "11 kmpl",
-      "seating_capacity": 13
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 11
     },
     "4": {
       "make": "Force",
       "model": "Urbania",
-      "variant_name": "Force Urbania 17-Seater",
-      "ex_showroom_price_min_inr": 3183000,
-      "hyderabad_on_road_price": "Rs. 37,50,000",
+      "variant_name": "Urbania 3615WB 10Str",
+      "ex_showroom_price_min_inr": 2901000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
       "engine_displacement_cc": 2596,
-      "power_bhp": 114,
-      "torque_nm": 350,
-      "mileage_kmpl": "11 kmpl",
-      "seating_capacity": 17
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 11
+    },
+    "5": {
+      "make": "Force",
+      "model": "Urbania",
+      "variant_name": "Urbania 3615WB 13Str",
+      "ex_showroom_price_min_inr": 2911000,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "engine_displacement_cc": 2596,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 11
     }
   },
   "isuzu": {
@@ -16763,6 +18037,30 @@
       "torque_nm": 360,
       "mileage_kmpl": 12.31,
       "seating_capacity": 7
+    },
+    "13": {
+      "make": "Isuzu",
+      "model": "S Cab",
+      "variant_name": "S-CAB EX Hi-Ride",
+      "ex_showroom_price_min_inr": 1250000,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "engine_displacement_cc": 2499,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 16.56
+    },
+    "14": {
+      "make": "Isuzu",
+      "model": "S Cab",
+      "variant_name": "(Top Model)",
+      "ex_showroom_price_min_inr": 1387000,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "engine_displacement_cc": 2499,
+      "power_bhp": 0,
+      "torque_nm": 0,
+      "mileage_kmpl": 16.56
     }
   },
   "vinfast": {
