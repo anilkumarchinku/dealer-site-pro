@@ -65,9 +65,19 @@ export async function getDetailedCarInfo(
 
     if (!carData) return [];
 
-    // Normalize brand key
-    const brandKey = make.toLowerCase().replace(/\s+/g, '_');
-    const brandData = carData[brandKey];
+    // Normalize brand key - handle hyphens, spaces, and common aliases
+    const brandKey = make.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_');
+    let brandData = carData[brandKey] || null;
+    if (!brandData) {
+        // Try common aliases
+        const aliases = [
+            brandKey.replace('_motors', ''),
+            brandKey.replace('_motor', ''),
+        ];
+        for (const alias of aliases) {
+            if (carData[alias]) { brandData = carData[alias]; break; }
+        }
+    }
 
     if (!brandData) return [];
 
