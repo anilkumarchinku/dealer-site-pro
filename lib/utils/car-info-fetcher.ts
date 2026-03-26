@@ -114,6 +114,16 @@ function normalizeVariant(car: any): DetailedCarInfo {
     if (c.ex_showroom_price_min_inr == null && c.ex_showroom_price_min != null) {
         c.ex_showroom_price_min_inr = c.ex_showroom_price_min;
     }
+    // Many brands use plain 'ex_showroom_price' (Maruti, Hyundai, Tata, Mahindra, Kia, etc.)
+    if (c.ex_showroom_price_min_inr == null && c.ex_showroom_price != null) {
+        c.ex_showroom_price_min_inr = typeof c.ex_showroom_price === 'number'
+            ? c.ex_showroom_price
+            : parseInt(String(c.ex_showroom_price).replace(/[₹,\s]/g, ''), 10) || 0;
+    }
+    // Pricing object (Tata, Volvo, Nissan use {pricing: {ex_showroom_min: ...}})
+    if (c.ex_showroom_price_min_inr == null && c.pricing != null) {
+        c.ex_showroom_price_min_inr = c.pricing.ex_showroom_min || c.pricing.ex_showroom || c.pricing.ex_showroom_price || 0;
+    }
     if (c.ex_showroom_price_max_inr == null && c.ex_showroom_max != null) {
         c.ex_showroom_price_max_inr = c.ex_showroom_max;
     }
