@@ -114,5 +114,7 @@
         "Safety & Convenience": "Anti-theft alarm, Hazard-warning lights, Crash & Fall alert, Vehicle-location tracking, Telematics"
       }
     }
-  ]
+  ],
+  "brand": "TVS",
+  "brandId": "tvs-iqube"
 }
