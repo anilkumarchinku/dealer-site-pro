@@ -3,11 +3,12 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Fuel, Zap, Gauge, ChevronRight, Send } from "lucide-react"
+import { Fuel, Zap, Gauge, ChevronRight, Send, Eye } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler"
 import { getScrapedImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
+import { QuickViewModal } from "./QuickViewModal"
 
 interface Props {
     vehicle:    TwoWheelerVehicle
@@ -40,6 +41,7 @@ export function VehicleCard({ vehicle, slug, brandColor = "#1f2937", onLead, onC
     const primarySrc = vehicle.images[0] || jpgUrl
     const [imgSrc, setImgSrc] = useState(primarySrc)
     const [imgFailed, setFailed] = useState(false)
+    const [quickView, setQuickView] = useState(false)
 
     function handleImgError() {
         if (imgSrc === jpgUrl) { setImgSrc(pngUrl); return }
@@ -99,8 +101,15 @@ export function VehicleCard({ vehicle, slug, brandColor = "#1f2937", onLead, onC
                     </div>
                 )}
 
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* Hover overlay with Quick View */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <button
+                        onClick={(e) => { e.stopPropagation(); setQuickView(true) }}
+                        className="px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-gray-800 flex items-center gap-1 shadow-lg hover:bg-white transition-colors translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
+                    >
+                        <Eye className="w-3.5 h-3.5" /> Quick View
+                    </button>
+                </div>
             </div>
 
             {/* Content */}
@@ -140,6 +149,23 @@ export function VehicleCard({ vehicle, slug, brandColor = "#1f2937", onLead, onC
                     <SpecItem icon={<Zap className="w-3.5 h-3.5 text-amber-600" />} label="Engine" value={engineValue} />
                     <SpecItem icon={<ChevronRight className="w-3.5 h-3.5 text-purple-600" />} label="Type" value={typeLabel} />
                 </div>
+
+                {/* Color swatches */}
+                {vehicle.colors.length > 0 && (
+                    <div className="flex items-center gap-1 mb-2">
+                        {vehicle.colors.slice(0, 5).map((c, i) => (
+                            <div
+                                key={i}
+                                className="w-4 h-4 rounded-full border border-gray-200 shadow-sm"
+                                style={{ backgroundColor: c.hex }}
+                                title={c.name}
+                            />
+                        ))}
+                        {vehicle.colors.length > 5 && (
+                            <span className="text-[10px] text-gray-400 ml-0.5">+{vehicle.colors.length - 5}</span>
+                        )}
+                    </div>
+                )}
 
                 {/* Variant count */}
                 {vehicle.all_variants && vehicle.all_variants.length > 1 && (
@@ -191,6 +217,15 @@ export function VehicleCard({ vehicle, slug, brandColor = "#1f2937", onLead, onC
             <div
                 className="h-0.5 w-0 group-hover:w-full transition-all duration-500"
                 style={{ backgroundColor: brandColor }}
+            />
+
+            {/* Quick View Modal */}
+            <QuickViewModal
+                vehicle={vehicle}
+                open={quickView}
+                onClose={() => setQuickView(false)}
+                brandColor={brandColor}
+                onLead={onLead}
             />
         </div>
     )
