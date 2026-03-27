@@ -1,231 +1,4423 @@
 {
-  "brand": "Mahindra (3W)",
+  "brand": "Mahindra",
   "brandId": "mahindra-3w",
   "type": "3w",
   "vehicles": [
     {
-      "make": "Mahindra (3W)",
-      "model": "Alfa Passenger",
-      "category": "passenger",
-      "fuel_type": "CNG",
-      "engine_cc": 435,
-      "mileage_km_per_kg": 30,
-      "max_power": "9.7 bhp",
-      "torque": "24 Nm",
-      "max_speed_kmph": 55,
-      "passenger_capacity": 3,
-      "gvw_kg": 980,
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
+    },
+    {
+      "variant_name": "Bajaj Maxima X Wide,",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
+    },
+    {
+      "variant_name": "Piaggio Ape DX",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
+    },
+    {
+      "variant_name": "Piaggio Ape City Plus",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
+    },
+    {
+      "variant_name": "Alfa Dx 2005/3 Seater",
+      "ex_showroom_price": "₹2.88 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
+    },
+    {
+      "variant_name": "Piaggio Ape Auto DXL",
       "ex_showroom_price": "₹2.80 Lakh",
-      "status": "Available",
-      "variants": []
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
     },
     {
-      "make": "Mahindra (3W)",
-      "model": "E-Alfa Plus",
-      "category": "passenger",
-      "fuel_type": "Electric",
-      "range_km": 120,
-      "max_power": "8 kW",
-      "max_speed_kmph": 45,
-      "battery_kwh": 7.37,
-      "charging_time_hours": 6,
-      "passenger_capacity": 3,
-      "gvw_kg": 960,
-      "ex_showroom_price": "₹3.60 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Piaggio Ape Auto DX",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
     },
     {
-      "make": "Mahindra (3W)",
-      "model": "E-Alfa Mini",
-      "category": "passenger",
-      "fuel_type": "Electric",
-      "range_km": 80,
-      "max_power": "5.4 kW",
-      "max_speed_kmph": 40,
-      "battery_kwh": 4.8,
-      "charging_time_hours": 4,
-      "passenger_capacity": 3,
-      "gvw_kg": 880,
-      "ex_showroom_price": "₹2.90 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Bajaj Maxima X Wide",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
     },
     {
-      "make": "Mahindra (3W)",
-      "model": "Alfa Load",
-      "category": "cargo",
-      "fuel_type": "CNG",
-      "engine_cc": 435,
-      "mileage_km_per_kg": 28,
-      "max_power": "9.7 bhp",
-      "torque": "24 Nm",
-      "max_speed_kmph": 50,
-      "payload_kg": 580,
-      "gvw_kg": 1120,
-      "ex_showroom_price": "₹3.00 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Mahindra Alfa Plus",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
     },
     {
-      "make": "Mahindra (3W)",
-      "model": "Zor Grand",
-      "category": "cargo",
-      "fuel_type": "Electric",
-      "range_km": 165,
-      "max_power": "11 kW",
-      "max_speed_kmph": 55,
-      "battery_kwh": 11.6,
-      "charging_time_hours": 7,
-      "payload_kg": 700,
-      "gvw_kg": 1250,
-      "ex_showroom_price": "₹3.50 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Accha performance aur capacity",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
     },
     {
-      "make": "Mahindra (3W)",
-      "model": "Treo",
-      "category": "electric",
-      "fuel_type": "Electric",
-      "range_km": 130,
-      "max_power": "8 kW",
-      "max_speed_kmph": 45,
-      "battery_kwh": 7.37,
-      "charging_time_hours": 6,
-      "passenger_capacity": 3,
-      "gvw_kg": 960,
+      "variant_name": "more load capacity",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
+    },
+    {
+      "variant_name": "Bajaj Maxima C",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
+    },
+    {
+      "variant_name": "Mahindra Supro Profit Truck Mini",
+      "ex_showroom_price": "₹6.38 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
+    },
+    {
+      "variant_name": "Alfa Dx Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
+    },
+    {
+      "variant_name": "Alfa Dx Mileage",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/alfa"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
+    },
+    {
+      "variant_name": "Piaggio Ape E-City",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
+    },
+    {
+      "variant_name": "Treo 4-Seater/Yaari SFT",
       "ex_showroom_price": "₹3.23 Lakh",
-      "status": "Available",
-      "variants": []
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
     },
     {
-      "make": "Mahindra (3W)",
-      "model": "Treo Plus",
-      "category": "electric",
-      "fuel_type": "Electric",
-      "range_km": 130,
-      "max_power": "8 kW",
-      "max_speed_kmph": 45,
-      "battery_kwh": 9.67,
-      "charging_time_hours": 7,
-      "passenger_capacity": 3,
-      "gvw_kg": 980,
-      "ex_showroom_price": "₹4.10 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Treo 4-Seater/Yaari HRT",
+      "ex_showroom_price": "₹3.33 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
     },
     {
-      "make": "Mahindra (3W)",
-      "model": "Treo Zor",
-      "category": "electric",
-      "fuel_type": "Electric",
-      "range_km": 150,
-      "max_power": "8 kW",
-      "max_speed_kmph": 45,
-      "battery_kwh": 9.67,
-      "charging_time_hours": 7,
-      "payload_kg": 550,
-      "gvw_kg": 1100,
-      "ex_showroom_price": "₹4.30 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Treo 3-Seater/SFT",
+      "ex_showroom_price": "₹3.38 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
     },
     {
-      "make": "Mahindra (3W)",
-      "model": "Treo Yaari HRT",
-      "category": "electric",
-      "fuel_type": "Electric",
-      "range_km": 130,
-      "max_power": "8 kW",
-      "max_speed_kmph": 45,
-      "battery_kwh": 7.37,
-      "charging_time_hours": 6,
-      "passenger_capacity": 3,
-      "gvw_kg": 960,
-      "ex_showroom_price": "₹4.50 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Piaggio Ape E City FX Max",
+      "ex_showroom_price": "₹3.30 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
     },
     {
-      "make": "Mahindra (3W)",
-      "model": "Treo Yaari SFT",
-      "category": "electric",
-      "fuel_type": "Electric",
-      "range_km": 130,
-      "max_power": "8 kW",
-      "max_speed_kmph": 45,
-      "battery_kwh": 7.37,
-      "charging_time_hours": 6,
-      "passenger_capacity": 3,
-      "gvw_kg": 960,
-      "ex_showroom_price": "₹4.70 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Greaves D599 Plus City-Powered by Greaves",
+      "ex_showroom_price": "₹3.25 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
     },
     {
-      "make": "Mahindra (3W)",
-      "model": "UDO",
-      "category": "electric",
-      "fuel_type": "Electric",
-      "range_km": 125,
-      "max_power": "11 kW",
-      "max_speed_kmph": 50,
-      "battery_kwh": 11.6,
-      "charging_time_hours": 8,
-      "payload_kg": 600,
-      "gvw_kg": 1200,
-      "ex_showroom_price": "₹5.50 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "OSM Stream City Qik",
+      "ex_showroom_price": "₹3.30 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
     },
     {
-      "make": "Mahindra (3W)",
-      "model": "E-Alfa Cargo",
-      "category": "cargo",
-      "fuel_type": "Electric",
-      "range_km": 80,
-      "max_power": "5.4 kW",
-      "max_speed_kmph": 25,
-      "battery_kwh": 4.8,
-      "charging_time_hours": 4,
-      "payload_kg": 410,
-      "gvw_kg": 950,
-      "ex_showroom_price": "₹1.50 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
     },
     {
-      "make": "Mahindra (3W)",
-      "model": "Zor Grand Range Plus",
-      "category": "electric",
-      "fuel_type": "Electric",
-      "range_km": 165,
-      "max_power": "11 kW",
-      "max_speed_kmph": 50,
-      "battery_kwh": 11.6,
-      "charging_time_hours": 7,
-      "payload_kg": 700,
-      "gvw_kg": 1310,
-      "ex_showroom_price": "₹4.80 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
     },
     {
-      "make": "Mahindra (3W)",
-      "model": "Treo Yaari Cargo",
-      "category": "electric",
-      "fuel_type": "Electric",
-      "range_km": 130,
-      "max_power": "8 kW",
-      "max_speed_kmph": 45,
-      "battery_kwh": 7.37,
-      "charging_time_hours": 6,
-      "payload_kg": 500,
-      "gvw_kg": 1050,
-      "ex_showroom_price": "₹3.90 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Montra Electric Super Auto",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
+    },
+    {
+      "variant_name": "Environment friendly electric auto rickshaw",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
+    },
+    {
+      "variant_name": "India ki Nayi Ummeed Electric Rickshaw Mein!",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
+    },
+    {
+      "variant_name": "Acchi profit banane ke liye sahi option",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
+    },
+    {
+      "variant_name": "Ek lajawaab e-cargo loader",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
+    },
+    {
+      "variant_name": "Overall good product",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "₹2.98 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
+    },
+    {
+      "variant_name": "Bajaj Maxima C",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
+    },
+    {
+      "variant_name": "Piaggio Ape City Plus",
+      "ex_showroom_price": "₹2.55 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
+    },
+    {
+      "variant_name": "Mahindra Alfa Dx",
+      "ex_showroom_price": "₹3.19 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
+    },
+    {
+      "variant_name": "Mahindra Supro Profit Truck Mini",
+      "ex_showroom_price": "₹6.38 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Euler Hi Load",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Lohia Narain Cargo",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "and Atul Elite Cargo",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "OSM Rage Plus",
+      "ex_showroom_price": "₹3.70 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "JSA Victory Plus Load Carrier",
+      "ex_showroom_price": "₹3.61 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Piaggio Ape Xtra LDX",
+      "ex_showroom_price": "₹2.55 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "SN Solar Energy Electric Rickshaw Loader",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Euler Motors HiLoad EV",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Bajaj Maxima XL Cargo E-TEC 12.0",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Fuel efficient cargo tricycle with descent power",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Ek Badhiya Electric Rickshaw",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "A highly utilitarian three wheeler cargo loader",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Affordable cargo carrier",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Shandaar capacity",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Badiya electric cargo vehicle",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Mahindra ka shaktishaalee electric cargo auto",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "₹2.98 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Bajaj Maxima C",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Piaggio Ape City Plus",
+      "ex_showroom_price": "₹2.55 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Mahindra Alfa Dx",
+      "ex_showroom_price": "₹3.19 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Mahindra Supro Profit Truck Mini",
+      "ex_showroom_price": "₹6.38 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-zor"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-yaari"
+    },
+    {
+      "variant_name": "Atul Elite Plus",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-yaari"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-yaari"
+    },
+    {
+      "variant_name": "Treo Yaari 4-Seater/SFT",
+      "ex_showroom_price": "₹1.96 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-yaari"
+    },
+    {
+      "variant_name": "Treo Yaari 4-Seater/HRT",
+      "ex_showroom_price": "₹2.04 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-yaari"
+    },
+    {
+      "variant_name": "EBUZZ Passenger E-Rickshaw",
+      "ex_showroom_price": "₹2.15 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-yaari"
+    },
+    {
+      "variant_name": "YC Electric Yatri Super",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-yaari"
+    },
+    {
+      "variant_name": "Mahindra e-Alfa Super",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-yaari"
+    },
+    {
+      "variant_name": "Most trusted electric rickshaw",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-yaari"
+    },
+    {
+      "variant_name": "Electric auto segment ka best option",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-yaari"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "₹2.98 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-yaari"
+    },
+    {
+      "variant_name": "Bajaj Maxima C",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-yaari"
+    },
+    {
+      "variant_name": "Piaggio Ape City Plus",
+      "ex_showroom_price": "₹2.55 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-yaari"
+    },
+    {
+      "variant_name": "Mahindra Alfa Dx",
+      "ex_showroom_price": "₹3.19 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-yaari"
+    },
+    {
+      "variant_name": "Mahindra Supro Profit Truck Mini",
+      "ex_showroom_price": "₹6.38 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-yaari"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/treo-yaari"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "Plus Petrol (Petrol)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "Strong CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "Strong Diesel (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "4-Seater/Yaari SFT (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "3-Seater/SFT (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "4-Seater/Yaari HRT (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1.5 XL SD V2 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1.6 XL SD V2 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1.5 XXL HD V2 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1.6 XXL HD V2 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1.5 XXL SD V2 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1.6 XXL SD V2 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1.5 XXL SD V4 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1.6 XXL SD V4 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1.5 XXL SD V6 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1.6 XXL SD V6 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "Mahindra Supro Profit Truck Mini",
+      "ex_showroom_price": "₹6.38 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1950/CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1950/VX (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1950/LX (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "2073/SFT (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "2073/HRT (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "2216/Pickup (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "2216/Flat Bed (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "2216/Delivery Van (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "4-Seater/SFT (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "4-Seater/HRT (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "Mahindra Alfa Plus",
+      "ex_showroom_price": "₹2.96 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "Diesel/2165 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "Duo/2165 (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "Mahindra Bolero Maxx Pik-Up HD",
+      "ex_showroom_price": "₹10.52 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1.7 LX (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1.3 LX (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1.7L  LX (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "2.0L LX (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "2.0L MXi (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1.7L MXi (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1.7 MXi (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1.7L SXi  (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "2.0L VXi (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "1.7 VXi (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "View Supro Profit Truck Mini Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "View Treo Plus Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "₹2.98 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "Maruti Suzuki Super Carry",
+      "ex_showroom_price": "₹6.12 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "Loadking Optimo Tipper",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "Alfa DX CNG",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "Bolero Maxitruck Plus",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/zor-grand"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "Plus Petrol (Petrol)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "Strong CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "Strong Diesel (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "4-Seater/Yaari SFT (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "3-Seater/SFT (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "4-Seater/Yaari HRT (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1.5 XL SD V2 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1.6 XL SD V2 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1.5 XXL HD V2 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1.6 XXL HD V2 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1.5 XXL SD V2 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1.6 XXL SD V2 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1.5 XXL SD V4 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1.6 XXL SD V4 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1.5 XXL SD V6 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1.6 XXL SD V6 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "Mahindra Supro Profit Truck Mini",
+      "ex_showroom_price": "₹6.38 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1950/CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1950/VX (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1950/LX (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "2073/SFT (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "2073/HRT (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "2216/Pickup (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "2216/Flat Bed (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "2216/Delivery Van (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "4-Seater/SFT (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "4-Seater/HRT (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "Mahindra Alfa Plus",
+      "ex_showroom_price": "₹2.96 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "Diesel/2165 (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "Duo/2165 (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "Mahindra Bolero Maxx Pik-Up HD",
+      "ex_showroom_price": "₹10.52 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1.7 LX (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1.3 LX (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1.7L  LX (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "2.0L LX (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "2.0L MXi (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1.7L MXi (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1.7 MXi (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1.7L SXi  (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "2.0L VXi (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "1.7 VXi (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "View Supro Profit Truck Mini Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "View Treo Plus Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "₹2.98 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "Maruti Suzuki Super Carry",
+      "ex_showroom_price": "₹6.12 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "Loadking Optimo Tipper",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "Alfa DX CNG",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "Bolero Maxitruck Plus",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/e-alfa"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "759 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/udo"
+    },
+    {
+      "variant_name": "TVS King EV Max.",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "759 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/udo"
+    },
+    {
+      "variant_name": "UDO 2100/Electric",
+      "ex_showroom_price": "₹3.84 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "759 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/udo"
+    },
+    {
+      "variant_name": "Mahindra Alfa Dx",
+      "ex_showroom_price": "₹3.19 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "759 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/udo"
+    },
+    {
+      "variant_name": "Piaggio Ape Auto DX",
+      "ex_showroom_price": "₹3.55 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "759 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/udo"
+    },
+    {
+      "variant_name": "Bajaj Maxima X Wide",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "759 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/udo"
+    },
+    {
+      "variant_name": "Bajaj Maxima C",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "759 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/udo"
+    },
+    {
+      "variant_name": "Piaggio Ape City Plus",
+      "ex_showroom_price": "₹2.55 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "759 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/udo"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "759 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/udo"
+    },
+    {
+      "variant_name": "Mahindra Supro Profit Truck Mini",
+      "ex_showroom_price": "₹6.38 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "759 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/udo"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "759 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/mahindra/udo"
     }
   ]
 }

@@ -4,68 +4,1016 @@
   "type": "3w",
   "vehicles": [
     {
-      "make": "Kinetic Green",
-      "model": "Safar Smart",
-      "category": "passenger",
-      "fuel_type": "Electric",
-      "range_km": 120,
-      "max_power": "6.3 kW",
-      "max_speed_kmph": 45,
-      "battery_kwh": 7.2,
-      "charging_time_hours": 5,
-      "passenger_capacity": 3,
-      "gvw_kg": 900,
-      "ex_showroom_price": "₹1.45 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
     },
     {
-      "make": "Kinetic Green",
-      "model": "Super DX",
-      "category": "passenger",
-      "fuel_type": "Electric",
-      "range_km": 140,
-      "max_power": "8 kW",
-      "max_speed_kmph": 50,
-      "battery_kwh": 9.0,
-      "charging_time_hours": 6,
-      "passenger_capacity": 3,
-      "gvw_kg": 940,
-      "ex_showroom_price": "₹1.38 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Montra Electric Super Auto",
+      "ex_showroom_price": "₹3.80 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
     },
     {
-      "make": "Kinetic Green",
-      "model": "Safar Shakti",
-      "category": "cargo",
-      "fuel_type": "Electric",
-      "range_km": 110,
-      "max_power": "6.3 kW",
-      "max_speed_kmph": 45,
-      "battery_kwh": 7.2,
-      "charging_time_hours": 5,
-      "payload_kg": 500,
-      "gvw_kg": 1050,
-      "ex_showroom_price": "₹1.80-2.00 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "TVS King Kargo CNG HD",
+      "ex_showroom_price": "₹2.71 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
     },
     {
-      "make": "Kinetic Green",
-      "model": "Safar Jumbo Ranger",
-      "category": "cargo",
-      "fuel_type": "Electric",
-      "range_km": 125,
-      "max_power": "10 kW",
-      "max_speed_kmph": 50,
-      "battery_kwh": 9.5,
-      "charging_time_hours": 6,
-      "payload_kg": 700,
-      "gvw_kg": 1250,
-      "ex_showroom_price": "₹3.45 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Euler Motors HiLoad EV",
+      "ex_showroom_price": "₹4.32 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "YOUDHA  Trevo Cargo",
+      "ex_showroom_price": "₹4.75 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Aahana ECO MAX",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Aahana ECO Sports Plus",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Eicher Pro 6028TM",
+      "ex_showroom_price": "₹40.90 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Tata Yodha CNG",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Mahindra Bolero Maxx Pik-Up HD",
+      "ex_showroom_price": "₹10.52 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Ashok Leyland DOST + XL CNG",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Tata Ace Pro Bi-Fuel",
+      "ex_showroom_price": "₹4.99 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Maruti Suzuki Super Carry",
+      "ex_showroom_price": "₹6.12 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "₹2.98 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Eicher Pro 2049",
+      "ex_showroom_price": "₹12.16 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Eicher Pro 3015",
+      "ex_showroom_price": "₹29.80 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Eicher Pro 3019",
+      "ex_showroom_price": "₹28.18 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Piaggio Ape Xtra LDX",
+      "ex_showroom_price": "₹2.55 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Bajaj Maxima C",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Mahindra Alfa Plus",
+      "ex_showroom_price": "₹2.96 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/safar"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Montra Electric Super Auto",
+      "ex_showroom_price": "₹3.80 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "TVS King Kargo CNG HD",
+      "ex_showroom_price": "₹2.71 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Euler Motors HiLoad EV",
+      "ex_showroom_price": "₹4.32 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "YOUDHA  Trevo Cargo",
+      "ex_showroom_price": "₹4.75 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Aahana ECO MAX",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Aahana ECO Sports Plus",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Eicher Pro 6028TM",
+      "ex_showroom_price": "₹40.90 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Tata Yodha CNG",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Mahindra Bolero Maxx Pik-Up HD",
+      "ex_showroom_price": "₹10.52 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Ashok Leyland DOST + XL CNG",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Tata Ace Pro Bi-Fuel",
+      "ex_showroom_price": "₹4.99 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Maruti Suzuki Super Carry",
+      "ex_showroom_price": "₹6.12 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "₹2.98 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Eicher Pro 2049",
+      "ex_showroom_price": "₹12.16 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Eicher Pro 3015",
+      "ex_showroom_price": "₹29.80 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Eicher Pro 3019",
+      "ex_showroom_price": "₹28.18 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Piaggio Ape Xtra LDX",
+      "ex_showroom_price": "₹2.55 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Bajaj Maxima C",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
+    },
+    {
+      "variant_name": "Mahindra Alfa Plus",
+      "ex_showroom_price": "₹2.96 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/kinetic-green/kinetic-safar-smart"
     }
   ]
 }

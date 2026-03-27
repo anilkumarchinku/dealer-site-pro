@@ -1,183 +1,835 @@
 {
-  "brand": "Lohia Auto",
+  "brand": "Lohia",
   "brandId": "lohia-auto",
   "type": "3w",
   "vehicles": [
     {
-      "make": "Lohia Auto",
-      "model": "Humsafar L5 Passenger",
-      "category": "passenger",
-      "fuel_type": "Electric",
-      "range_km": 100,
-      "max_power": "5 kW",
-      "max_speed_kmph": 45,
-      "battery_kwh": 6.0,
-      "charging_time_hours": 5,
-      "passenger_capacity": 3,
-      "gvw_kg": 890,
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/humsafar"
+    },
+    {
+      "variant_name": "Humsafar 3-Seater/1945",
+      "ex_showroom_price": "₹1.80 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/humsafar"
+    },
+    {
+      "variant_name": "Humsafar 3-Seater/Electric/IAQ",
+      "ex_showroom_price": "₹1.80 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/humsafar"
+    },
+    {
+      "variant_name": "Humsafar 5-Seater/Electric/IAJ",
+      "ex_showroom_price": "₹1.84 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/humsafar"
+    },
+    {
+      "variant_name": "Humsafar 5-Seater/1945/Petrol",
+      "ex_showroom_price": "₹1.80 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/humsafar"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/humsafar"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/humsafar"
+    },
+    {
+      "variant_name": "Atul Elite Cargo",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/humsafar"
+    },
+    {
+      "variant_name": "YC Electric Yatri Cart",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/humsafar"
+    },
+    {
+      "variant_name": "City Life Loader XV MAX",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/humsafar"
+    },
+    {
+      "variant_name": "Atul GEM Cargo",
+      "ex_showroom_price": "₹2.96 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/humsafar"
+    },
+    {
+      "variant_name": "Atul Shakti Cargo",
+      "ex_showroom_price": "₹2.85 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/humsafar"
+    },
+    {
+      "variant_name": "Greaves Eltra City",
+      "ex_showroom_price": "₹3.86 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/humsafar"
+    },
+    {
+      "variant_name": "Lohia Comfort F2F Plus",
+      "ex_showroom_price": "₹1.75 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/humsafar"
+    },
+    {
+      "variant_name": "Lohia Narain Plus",
+      "ex_showroom_price": "₹1.55 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/humsafar"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/narain"
+    },
+    {
+      "variant_name": "Narain Electric",
+      "ex_showroom_price": "₹0.90 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/narain"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/narain"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/narain"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "₹2.98 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/narain"
+    },
+    {
+      "variant_name": "Atul GEM Cargo",
+      "ex_showroom_price": "₹2.96 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/narain"
+    },
+    {
+      "variant_name": "Atul Shakti Cargo",
+      "ex_showroom_price": "₹2.85 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/narain"
+    },
+    {
+      "variant_name": "Greaves Eltra City",
+      "ex_showroom_price": "₹3.86 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/narain"
+    },
+    {
+      "variant_name": "Lohia Comfort F2F Plus",
+      "ex_showroom_price": "₹1.75 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/narain"
+    },
+    {
+      "variant_name": "Lohia Narain Plus",
+      "ex_showroom_price": "₹1.55 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/narain"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/comfort"
+    },
+    {
+      "variant_name": "Comfort F2F Plus 4-Seater/Electric",
+      "ex_showroom_price": "₹1.75 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/comfort"
+    },
+    {
+      "variant_name": "Lohia Narain Plus",
+      "ex_showroom_price": "₹1.55 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/comfort"
+    },
+    {
+      "variant_name": "YC Electric Yatri Deluxe",
+      "ex_showroom_price": "₹1.40 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/comfort"
+    },
+    {
+      "variant_name": "YC Electric Yatri Super",
       "ex_showroom_price": "₹1.73 Lakh",
-      "status": "Available",
-      "variants": []
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/comfort"
     },
     {
-      "make": "Lohia Auto",
-      "model": "Humsafar L5 Cargo",
-      "category": "cargo",
-      "fuel_type": "Electric",
-      "range_km": 90,
-      "max_power": "5 kW",
-      "max_speed_kmph": 40,
-      "battery_kwh": 6.0,
-      "charging_time_hours": 5,
-      "payload_kg": 450,
-      "gvw_kg": 1000,
-      "ex_showroom_price": "₹1.85 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Atul GEM Cargo",
+      "ex_showroom_price": "₹2.96 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/comfort"
     },
     {
-      "make": "Lohia Auto",
-      "model": "Comfort F2F+",
-      "category": "cargo",
-      "fuel_type": "Electric",
-      "range_km": 100,
-      "max_power": "6 kW",
-      "max_speed_kmph": 45,
-      "battery_kwh": 7.2,
-      "charging_time_hours": 5,
-      "payload_kg": 500,
-      "gvw_kg": 1050,
-      "ex_showroom_price": "₹2.03 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Atul Shakti Cargo",
+      "ex_showroom_price": "₹2.85 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/comfort"
     },
     {
-      "make": "Lohia Auto",
-      "model": "Youdha E5 Passenger",
-      "category": "electric",
-      "fuel_type": "Electric",
-      "range_km": 120,
-      "max_power": "7 kW",
-      "max_speed_kmph": 50,
-      "battery_kwh": 8.0,
-      "charging_time_hours": 5,
-      "passenger_capacity": 3,
-      "gvw_kg": 940,
-      "ex_showroom_price": "₹2.27 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Greaves Eltra City",
+      "ex_showroom_price": "₹3.86 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/comfort"
     },
     {
-      "make": "Lohia Auto",
-      "model": "Youdha E5 Cargo",
-      "category": "electric",
-      "fuel_type": "Electric",
-      "range_km": 100,
-      "max_power": "7 kW",
-      "max_speed_kmph": 45,
-      "battery_kwh": 8.0,
-      "charging_time_hours": 5,
-      "payload_kg": 550,
-      "gvw_kg": 1100,
-      "ex_showroom_price": "₹2.45 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Comfort F2F Plus Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/comfort"
     },
     {
-      "make": "Lohia Auto",
-      "model": "Humsafar IAQ",
-      "category": "passenger",
-      "fuel_type": "Electric",
-      "range_km": 110,
-      "max_power": "5 kW",
-      "max_speed_kmph": 45,
-      "battery_kwh": 6.5,
-      "charging_time_hours": 5,
-      "passenger_capacity": 3,
-      "gvw_kg": 900,
-      "ex_showroom_price": "₹1.85 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/comfort"
     },
     {
-      "make": "Lohia Auto",
-      "model": "Humsafar IB",
-      "category": "passenger",
-      "fuel_type": "Electric",
-      "range_km": 100,
-      "max_power": "5 kW",
-      "max_speed_kmph": 45,
-      "battery_kwh": 6.0,
-      "charging_time_hours": 5,
-      "passenger_capacity": 3,
-      "gvw_kg": 890,
-      "ex_showroom_price": "₹1.76 Lakh",
-      "status": "Available",
-      "variants": []
-    },
-    {
-      "make": "Lohia Auto",
-      "model": "Narain XiV",
-      "category": "passenger",
-      "fuel_type": "CNG",
-      "engine_cc": 317,
-      "mileage_km_per_kg": 26,
-      "max_power": "7.5 bhp",
-      "torque": "17 Nm",
-      "max_speed_kmph": 50,
-      "passenger_capacity": 3,
-      "gvw_kg": 870,
-      "ex_showroom_price": "₹2.11 Lakh",
-      "status": "Available",
-      "variants": []
-    },
-    {
-      "make": "Lohia Auto",
-      "model": "Narain XiU",
-      "category": "passenger",
-      "fuel_type": "CNG",
-      "engine_cc": 317,
-      "mileage_km_per_kg": 25,
-      "max_power": "7.5 bhp",
-      "torque": "17 Nm",
-      "max_speed_kmph": 50,
-      "passenger_capacity": 3,
-      "gvw_kg": 865,
-      "ex_showroom_price": "₹1.99 Lakh",
-      "status": "Available",
-      "variants": []
-    },
-    {
-      "make": "Lohia Auto",
-      "model": "Narain LC",
-      "category": "passenger",
-      "fuel_type": "CNG",
-      "engine_cc": 317,
-      "mileage_km_per_kg": 26,
-      "max_power": "7.5 bhp",
-      "torque": "17 Nm",
-      "max_speed_kmph": 50,
-      "passenger_capacity": 3,
-      "gvw_kg": 860,
-      "ex_showroom_price": "₹1.91 Lakh",
-      "status": "Available",
-      "variants": []
-    },
-    {
-      "make": "Lohia Auto",
-      "model": "Narain ICX",
-      "category": "passenger",
-      "fuel_type": "CNG",
-      "engine_cc": 317,
-      "mileage_km_per_kg": 26,
-      "max_power": "7.5 bhp",
-      "torque": "17 Nm",
-      "max_speed_kmph": 50,
-      "passenger_capacity": 3,
-      "gvw_kg": 870,
-      "ex_showroom_price": "₹2.03 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/lohia/comfort"
     }
   ]
 }

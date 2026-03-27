@@ -1,567 +1,3388 @@
 {
-  "brand": "Bajaj Auto (3W)",
+  "brand": "Bajaj",
   "brandId": "bajaj-auto-3w",
   "type": "3w",
   "vehicles": [
     {
-      "variant_name": "RE 3-Seater/CNG",
-      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
-      "ex_showroom_price": "₹2.50 Lakh",
-      "mileage": "35 km/kg",
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
       "engine_details": {
-        "engine_type": "4 Stroke Air-cooled",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
-        "displacement": "236.2 cc",
-        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
-        "max_power": "7.3 kW",
-        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
-        "torque": "16.3 Nm",
-        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng"
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
       },
       "dimensions": {
-        "length": "2635 mm",
-        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
-        "width": "1300 mm",
-        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
-        "height": "1700 mm",
-        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
-        "wheelbase": "2000 mm",
-        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng"
+        "length": "",
+        "width": "",
+        "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "713 kg",
-        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng"
+        "gross_vehicle_weight": "672 kg"
       },
       "technical_specifications": {
         "fuel_type": "CNG",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
-        "transmission_type": "Manual",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
-        "brakes": "RH Foot Operated Hydraulic Drum Brakes",
-        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng",
-        "suspension": "Front – Parabolic Leaf Spring; Rear – Shock absorbers with coil springs dampen",
-        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seatercng"
-      }
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s"
+    },
+    {
+      "variant_name": "Piaggio Ape City Plus",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s"
+    },
+    {
+      "variant_name": "RE 3-Seater/CNG",
+      "ex_showroom_price": "₹2.53 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s"
     },
     {
       "variant_name": "RE 3-Seater/Diesel",
-      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
-      "ex_showroom_price": "₹2.65 Lakh",
-      "mileage": "32 kmpl",
+      "ex_showroom_price": "₹2.41 Lakh",
+      "mileage": "",
       "engine_details": {
-        "engine_type": "4 Stroke Air-cooled",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
-        "displacement": "470.5 cc",
-        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
-        "max_power": "6.27 kW",
-        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
-        "torque": "23.8 Nm",
-        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel"
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
       },
       "dimensions": {
-        "length": "2635 mm",
-        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
-        "width": "1300 mm",
-        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
-        "height": "1700 mm",
-        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
-        "wheelbase": "2000 mm",
-        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel"
+        "length": "",
+        "width": "",
+        "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "709 kg",
-        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel"
+        "gross_vehicle_weight": "672 kg"
       },
       "technical_specifications": {
         "fuel_type": "Diesel",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
-        "transmission_type": "Manual",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
-        "brakes": "RH Foot Operated Hydraulic Drum Brakes",
-        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel",
-        "suspension": "Front – Parabolic Leaf Spring; Rear – Shock absorbers with coil springs dampen",
-        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterdiesel"
-      }
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s"
     },
     {
       "variant_name": "RE 3-Seater/LPG",
-      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
-      "ex_showroom_price": "₹2.55 Lakh",
-      "mileage": "30 km/kg",
+      "ex_showroom_price": "₹2.48 Lakh",
+      "mileage": "",
       "engine_details": {
-        "engine_type": "4 Stroke Air-cooled",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
-        "displacement": "236.2 cc",
-        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
-        "max_power": "7.7 kW",
-        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
-        "torque": "17.8 Nm",
-        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg"
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
       },
       "dimensions": {
-        "length": "2658 mm",
-        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
-        "width": "1300 mm",
-        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
-        "height": "1700 mm",
-        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
-        "wheelbase": "2000 mm",
-        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg"
+        "length": "",
+        "width": "",
+        "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "694 kg",
-        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg"
+        "gross_vehicle_weight": "672 kg"
       },
       "technical_specifications": {
         "fuel_type": "LPG",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
-        "transmission_type": "Manual",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
-        "brakes": "RH Foot Operated Hydraulic Drum Brakes",
-        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg",
-        "suspension": "Front – Parabolic Leaf Spring; Rear – Shock absorbers with coil springs dampen",
-        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seater2000lpg"
-      }
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s"
     },
     {
       "variant_name": "RE 3-Seater/Petrol",
-      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
-      "ex_showroom_price": "₹2.45 Lakh",
-      "mileage": "28 kmpl",
+      "ex_showroom_price": "₹2.22 Lakh",
+      "mileage": "",
       "engine_details": {
-        "engine_type": "4 Stroke Air-cooled",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
-        "displacement": "236.2 cc",
-        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
-        "max_power": "8 kW",
-        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
-        "torque": "19.2 Nm",
-        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol"
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
       },
       "dimensions": {
-        "length": "2658 mm",
-        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
-        "width": "1300 mm",
-        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
-        "height": "1700 mm",
-        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
-        "wheelbase": "2000 mm",
-        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol"
+        "length": "",
+        "width": "",
+        "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "672 kg",
-        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol"
+        "gross_vehicle_weight": "672 kg"
       },
       "technical_specifications": {
         "fuel_type": "Petrol",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
-        "transmission_type": "Manual",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
-        "brakes": "RH Foot Operated Hydraulic Drum Brakes",
-        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol",
-        "suspension": "Front – Parabolic Leaf Spring; Rear – Shock absorbers with coil springs dampen",
-        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s/3-seaterpetrol"
-      }
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s"
     },
     {
-      "variant_name": "Maxima Z",
-      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
-      "ex_showroom_price": "₹2.72 Lakh",
-      "mileage": "35.4 kmpl",
+      "variant_name": "TVS King Duramax",
+      "ex_showroom_price": "₹2.25 Lakh",
+      "mileage": "",
       "engine_details": {
-        "engine_type": "4 Stroke Water-cooled",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
-        "displacement": "470.5 cc",
-        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
-        "max_power": "8.76 kW",
-        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
-        "torque": "27.03 Nm",
-        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z"
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
       },
       "dimensions": {
-        "length": "3525 mm",
-        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
-        "width": "1475 mm",
-        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
-        "height": "1810 mm",
-        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
-        "wheelbase": "2200 mm",
-        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z"
+        "length": "",
+        "width": "",
+        "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "1090 kg",
-        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z"
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s"
+    },
+    {
+      "variant_name": "Super super super",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s"
+    },
+    {
+      "variant_name": "Passenger auto",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s"
+    },
+    {
+      "variant_name": "Superior engine power with high mileage",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s"
+    },
+    {
+      "variant_name": "Bajaj Maxima C",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s"
+    },
+    {
+      "variant_name": "Bajaj Maxima XL Cargo E-TEC 12.0",
+      "ex_showroom_price": "₹4.45 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/compact-4s"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "768 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima"
+    },
+    {
+      "variant_name": "Piaggio Ape City Plus",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "768 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima"
+    },
+    {
+      "variant_name": "Piaggio Ape Auto Plus",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "768 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima"
+    },
+    {
+      "variant_name": "Maxima Z 4-Seater/CNG",
+      "ex_showroom_price": "₹2.93 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "768 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima"
+    },
+    {
+      "variant_name": "Maxima Z 4-Seater/Diesel",
+      "ex_showroom_price": "₹2.98 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "768 kg"
       },
       "technical_specifications": {
         "fuel_type": "Diesel",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
-        "transmission_type": "Manual",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
-        "brakes": "Hydraulic Drum Brakes",
-        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z",
-        "suspension": "Front – Helical Spring; Rear – Leaf Spring with Shock Absorber",
-        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-z"
-      }
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima"
     },
     {
-      "variant_name": "Maxima C",
-      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
-      "ex_showroom_price": "₹2.58 Lakh",
-      "mileage": "36.8 kmpl",
+      "variant_name": "Maxima Z 4-Seater/LPG",
+      "ex_showroom_price": "₹2.83 Lakh",
+      "mileage": "",
       "engine_details": {
-        "engine_type": "4 Stroke Water-cooled",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
-        "displacement": "470.5 cc",
-        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
-        "max_power": "8.76 kW",
-        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
-        "torque": "27.03 Nm",
-        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
       },
       "dimensions": {
-        "length": "3400 mm",
-        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
-        "width": "1475 mm",
-        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
-        "height": "1810 mm",
-        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
-        "wheelbase": "2200 mm",
-        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+        "length": "",
+        "width": "",
+        "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "1050 kg",
-        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+        "gross_vehicle_weight": "768 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "768 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima"
+    },
+    {
+      "variant_name": "Bajaj Maxima X Wide",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "768 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima"
+    },
+    {
+      "variant_name": "Piaggio Ape E City FX",
+      "ex_showroom_price": "₹2.84 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "768 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima"
+    },
+    {
+      "variant_name": "Piaggio Ape Auto DX",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "768 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima"
+    },
+    {
+      "variant_name": "CNG is a better option than petorl",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "768 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima"
+    },
+    {
+      "variant_name": "Bajaj Maxima C",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "768 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima"
+    },
+    {
+      "variant_name": "Bajaj Maxima XL Cargo E-TEC 12.0",
+      "ex_showroom_price": "₹4.45 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "768 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima"
+    },
+    {
+      "variant_name": "Maxima Z Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "768 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima"
+    },
+    {
+      "variant_name": "Maxima Z Mileage",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "768 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "768 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+    },
+    {
+      "variant_name": "Mahindra Alfa Plus",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+    },
+    {
+      "variant_name": "Piaggio Ape Xtra LDX",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+    },
+    {
+      "variant_name": "Atul Gem Cargo",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+    },
+    {
+      "variant_name": "Maxima C 2125/CNG",
+      "ex_showroom_price": "₹3.01 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+    },
+    {
+      "variant_name": "Maxima C 2125/Diesel",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1250 kg"
       },
       "technical_specifications": {
         "fuel_type": "Diesel",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
-        "transmission_type": "Manual",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
-        "brakes": "Hydraulic Drum Brakes",
-        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c",
-        "suspension": "Front – Helical Spring; Rear – Leaf Spring with Shock Absorber",
-        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
-      }
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
     },
     {
-      "variant_name": "Maxima XL Cargo E-TEC 12.0",
-      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
+      "variant_name": "JSA Victory Plus CNG Loader",
+      "ex_showroom_price": "₹3.02 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+    },
+    {
+      "variant_name": "Baxy Mobility Super King Twin Cylinder",
+      "ex_showroom_price": "₹3.20 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+    },
+    {
+      "variant_name": "Baxy Mobility Super M-TEC",
       "ex_showroom_price": "₹3.10 Lakh",
-      "mileage": "110 km/charge",
+      "mileage": "",
       "engine_details": {
-        "engine_type": "BLDC Electric Motor",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
-        "displacement": "N/A",
-        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
-        "max_power": "7 kW",
-        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
-        "torque": "42 Nm",
-        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12"
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
       },
       "dimensions": {
-        "length": "3680 mm",
-        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
-        "width": "1505 mm",
-        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
-        "height": "1810 mm",
-        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
-        "wheelbase": "2350 mm",
-        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12"
+        "length": "",
+        "width": "",
+        "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "1310 kg",
-        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12"
+        "gross_vehicle_weight": "1250 kg"
       },
       "technical_specifications": {
-        "fuel_type": "Electric",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
-        "transmission_type": "Automatic",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
-        "brakes": "Hydraulic Drum Brakes with Regenerative Braking",
-        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12",
-        "suspension": "Front – Helical Spring; Rear – Leaf Spring with Shock Absorber",
-        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-12"
-      }
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
     },
     {
-      "variant_name": "Maxima XL Cargo E-TEC 9.0",
-      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
-      "ex_showroom_price": "₹2.85 Lakh",
-      "mileage": "85 km/charge",
+      "variant_name": "YC Electric E Loader",
+      "ex_showroom_price": "",
+      "mileage": "",
       "engine_details": {
-        "engine_type": "BLDC Electric Motor",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
-        "displacement": "N/A",
-        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
-        "max_power": "7 kW",
-        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
-        "torque": "42 Nm",
-        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9"
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
       },
       "dimensions": {
-        "length": "3680 mm",
-        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
-        "width": "1505 mm",
-        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
-        "height": "1810 mm",
-        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
-        "wheelbase": "2350 mm",
-        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9"
+        "length": "",
+        "width": "",
+        "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "1310 kg",
-        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9"
+        "gross_vehicle_weight": "1250 kg"
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
-        "transmission_type": "Automatic",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
-        "brakes": "Hydraulic Drum Brakes with Regenerative Braking",
-        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9",
-        "suspension": "Front – Helical Spring; Rear – Leaf Spring with Shock Absorber",
-        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec-9"
-      }
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
     },
     {
-      "variant_name": "GoGo P7012",
-      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
-      "ex_showroom_price": "₹2.15 Lakh",
-      "mileage": "120 km/charge",
+      "variant_name": "Profitable aur stylish",
+      "ex_showroom_price": "",
+      "mileage": "",
       "engine_details": {
-        "engine_type": "BLDC Electric Motor",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
-        "displacement": "N/A",
-        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
-        "max_power": "3.5 kW",
-        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
-        "torque": "20 Nm",
-        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012"
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
       },
       "dimensions": {
-        "length": "2750 mm",
-        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
-        "width": "1040 mm",
-        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
-        "height": "1700 mm",
-        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
-        "wheelbase": "2050 mm",
-        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012"
+        "length": "",
+        "width": "",
+        "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "610 kg",
-        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012"
+        "gross_vehicle_weight": "1250 kg"
       },
       "technical_specifications": {
-        "fuel_type": "Electric",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
-        "transmission_type": "Automatic",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
-        "brakes": "Drum Brakes with Regenerative Braking",
-        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012",
-        "suspension": "Front – Telescopic; Rear – Dual Shock Absorbers",
-        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p7012"
-      }
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
     },
     {
-      "variant_name": "GoGo P5012",
-      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
-      "ex_showroom_price": "₹1.95 Lakh",
-      "mileage": "100 km/charge",
+      "variant_name": "A capable three wheeler cargo carrier",
+      "ex_showroom_price": "",
+      "mileage": "",
       "engine_details": {
-        "engine_type": "BLDC Electric Motor",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
-        "displacement": "N/A",
-        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
-        "max_power": "3 kW",
-        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
-        "torque": "18 Nm",
-        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012"
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
       },
       "dimensions": {
-        "length": "2750 mm",
-        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
-        "width": "1040 mm",
-        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
-        "height": "1700 mm",
-        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
-        "wheelbase": "2050 mm",
-        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012"
+        "length": "",
+        "width": "",
+        "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "600 kg",
-        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012"
+        "gross_vehicle_weight": "1250 kg"
       },
       "technical_specifications": {
-        "fuel_type": "Electric",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
-        "transmission_type": "Automatic",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
-        "brakes": "Drum Brakes with Regenerative Braking",
-        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012",
-        "suspension": "Front – Telescopic; Rear – Dual Shock Absorbers",
-        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5012"
-      }
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
     },
     {
-      "variant_name": "GoGo P5009",
-      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
-      "ex_showroom_price": "₹1.85 Lakh",
-      "mileage": "90 km/charge",
+      "variant_name": "Useful, reliable cargo rickshaw.",
+      "ex_showroom_price": "",
+      "mileage": "",
       "engine_details": {
-        "engine_type": "BLDC Electric Motor",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
-        "displacement": "N/A",
-        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
-        "max_power": "2.5 kW",
-        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
-        "torque": "16 Nm",
-        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009"
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
       },
       "dimensions": {
-        "length": "2650 mm",
-        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
-        "width": "1040 mm",
-        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
-        "height": "1700 mm",
-        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
-        "wheelbase": "2000 mm",
-        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009"
+        "length": "",
+        "width": "",
+        "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "580 kg",
-        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009"
+        "gross_vehicle_weight": "1250 kg"
       },
       "technical_specifications": {
-        "fuel_type": "Electric",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
-        "transmission_type": "Automatic",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
-        "brakes": "Drum Brakes with Regenerative Braking",
-        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009",
-        "suspension": "Front – Telescopic; Rear – Dual Shock Absorbers",
-        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/gogo-p5009"
-      }
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
     },
     {
-      "variant_name": "WEGO P9018",
-      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
-      "ex_showroom_price": "₹2.40 Lakh",
-      "mileage": "130 km/charge",
+      "variant_name": "A very good cargo three-wheeler from Bajaj",
+      "ex_showroom_price": "",
+      "mileage": "",
       "engine_details": {
-        "engine_type": "BLDC Electric Motor",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
-        "displacement": "N/A",
-        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
-        "max_power": "5 kW",
-        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
-        "torque": "28 Nm",
-        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018"
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
       },
       "dimensions": {
-        "length": "2800 mm",
-        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
-        "width": "1100 mm",
-        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
-        "height": "1750 mm",
-        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
-        "wheelbase": "2100 mm",
-        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018"
+        "length": "",
+        "width": "",
+        "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "720 kg",
-        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018"
+        "gross_vehicle_weight": "1250 kg"
       },
       "technical_specifications": {
-        "fuel_type": "Electric",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
-        "transmission_type": "Automatic",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
-        "brakes": "Drum Brakes with Regenerative Braking",
-        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018",
-        "suspension": "Front – Telescopic; Rear – Coil Spring with Shock Absorbers",
-        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/wego-p9018"
-      }
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
     },
     {
-      "variant_name": "Riki C40 05 E Cart",
-      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
-      "ex_showroom_price": "₹1.50 Lakh",
-      "mileage": "80 km/charge",
+      "variant_name": "Bajaj Cargo auto",
+      "ex_showroom_price": "",
+      "mileage": "",
       "engine_details": {
-        "engine_type": "BLDC Electric Motor",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
-        "displacement": "N/A",
-        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
-        "max_power": "2 kW",
-        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
-        "torque": "12 Nm",
-        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart"
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
       },
       "dimensions": {
-        "length": "2600 mm",
-        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
-        "width": "1000 mm",
-        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
-        "height": "1650 mm",
-        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
-        "wheelbase": "1900 mm",
-        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart"
+        "length": "",
+        "width": "",
+        "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "500 kg",
-        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart"
+        "gross_vehicle_weight": "1250 kg"
       },
       "technical_specifications": {
-        "fuel_type": "Electric",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
-        "transmission_type": "Automatic",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
-        "brakes": "Drum Brakes with Regenerative Braking",
-        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart",
-        "suspension": "Front – Telescopic; Rear – Leaf Spring",
-        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-c40-05-e-cart"
-      }
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
     },
     {
-      "variant_name": "Riki P40 05",
-      "variant_name_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
-      "ex_showroom_price": "₹1.55 Lakh",
-      "mileage": "80 km/charge",
+      "variant_name": "Tough and durable cargo rickshaw",
+      "ex_showroom_price": "",
+      "mileage": "",
       "engine_details": {
-        "engine_type": "BLDC Electric Motor",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
-        "displacement": "N/A",
-        "displacement_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
-        "max_power": "2 kW",
-        "max_power_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
-        "torque": "12 Nm",
-        "torque_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05"
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
       },
       "dimensions": {
-        "length": "2600 mm",
-        "length_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
-        "width": "1000 mm",
-        "width_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
-        "height": "1700 mm",
-        "height_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
-        "wheelbase": "1900 mm",
-        "wheelbase_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05"
+        "length": "",
+        "width": "",
+        "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "520 kg",
-        "gross_vehicle_weight_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05"
+        "gross_vehicle_weight": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+    },
+    {
+      "variant_name": "Best cargo three-wheeler in the market.",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "₹2.98 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+    },
+    {
+      "variant_name": "Bajaj Maxima XL Cargo E-TEC 12.0",
+      "ex_showroom_price": "₹4.45 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+    },
+    {
+      "variant_name": "Maxima C Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+    },
+    {
+      "variant_name": "Maxima C Mileage",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-c"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "3-Seater/Petrol (Petrol)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "3-Seater/LPG (Lpg)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "3-Seater/CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "3-Seater/Diesel (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "Bajaj Maxima C",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "2125/Diesel (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "2125/CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "₹2.98 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "4-Seater/Diesel (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "4-Seater/CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "4-Seater/LPG (Lpg)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "12.1 Kwh/Electric (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
-        "transmission_type": "Automatic",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
-        "brakes": "Drum Brakes with Regenerative Braking",
-        "brakes_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05",
-        "suspension": "Front – Telescopic; Rear – Leaf Spring",
-        "suspension_citation": "https://trucks.cardekho.com/en/trucks/bajaj/riki-p40-05"
-      }
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "Bajaj Maxima XL Cargo E-TEC 12.0",
+      "ex_showroom_price": "₹4.45 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "2274/Cargo (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "12.2 Kwh/Electric (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "Bajaj Maxima X Wide",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "Bajaj Maxima XL Cargo E-TEC 9.0",
+      "ex_showroom_price": "₹3.94 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "3-Seater/1925/CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "View Maxima C Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "View Maxima Z Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "View Maxima XL Cargo E-TEC 12.0 Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "Maruti Suzuki Super Carry",
+      "ex_showroom_price": "₹6.12 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "Ape E-City Ultra",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "Electric 3-Wheeler",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/maxima-xl-cargo-e-tec"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/gogo"
+    },
+    {
+      "variant_name": "Piaggio Ape E City FX Max",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/gogo"
+    },
+    {
+      "variant_name": "Montra Electric Super Auto",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/gogo"
+    },
+    {
+      "variant_name": "TVS King EV MAX,",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/gogo"
+    },
+    {
+      "variant_name": "GoGo P5009 12.2 Kwh/Electric",
+      "ex_showroom_price": "₹3.11 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/gogo"
+    },
+    {
+      "variant_name": "Mahindra Alfa Dx",
+      "ex_showroom_price": "₹3.19 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/gogo"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/gogo"
+    },
+    {
+      "variant_name": "TVS King EV MAX",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/gogo"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "₹2.98 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/gogo"
+    },
+    {
+      "variant_name": "Bajaj Maxima C",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/gogo"
+    },
+    {
+      "variant_name": "Bajaj Maxima XL Cargo E-TEC 12.0",
+      "ex_showroom_price": "₹4.45 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/gogo"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/gogo"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "3-Seater/Petrol (Petrol)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "3-Seater/LPG (Lpg)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "3-Seater/CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "3-Seater/Diesel (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "Bajaj Maxima C",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "2125/Diesel (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "2125/CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "₹2.98 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "4-Seater/Diesel (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "4-Seater/CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "4-Seater/LPG (Lpg)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "12.1 Kwh/Electric (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "Bajaj Maxima XL Cargo E-TEC 12.0",
+      "ex_showroom_price": "₹4.45 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "2274/Cargo (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "12.2 Kwh/Electric (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "Bajaj Maxima X Wide",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "Bajaj Maxima XL Cargo E-TEC 9.0",
+      "ex_showroom_price": "₹3.94 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "3-Seater/1925/CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "View Maxima C Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "View Maxima Z Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "View Maxima XL Cargo E-TEC 12.0 Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "Maruti Suzuki Super Carry",
+      "ex_showroom_price": "₹6.12 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "Ape E-City Ultra",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "Electric 3-Wheeler",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/wego"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "3-Seater/Petrol (Petrol)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "3-Seater/LPG (Lpg)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "3-Seater/CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "3-Seater/Diesel (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "Bajaj Maxima C",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "2125/Diesel (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "2125/CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "₹2.98 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "4-Seater/Diesel (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "4-Seater/CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "4-Seater/LPG (Lpg)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "12.1 Kwh/Electric (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "Bajaj Maxima XL Cargo E-TEC 12.0",
+      "ex_showroom_price": "₹4.45 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "2274/Cargo (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "12.2 Kwh/Electric (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "Bajaj Maxima X Wide",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "Bajaj Maxima XL Cargo E-TEC 9.0",
+      "ex_showroom_price": "₹3.94 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "3-Seater/1925/CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "View Maxima C Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "View Maxima Z Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "View Maxima XL Cargo E-TEC 12.0 Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "Maruti Suzuki Super Carry",
+      "ex_showroom_price": "₹6.12 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "Ape E-City Ultra",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
+    },
+    {
+      "variant_name": "Electric 3-Wheeler",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "672 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/bajaj/riki"
     }
   ]
 }

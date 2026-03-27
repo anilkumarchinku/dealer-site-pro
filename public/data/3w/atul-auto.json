@@ -1,393 +1,3204 @@
 {
-  "brand": "Atul Auto",
+  "brand": "Atul",
   "brandId": "atul-auto",
   "type": "3w",
   "vehicles": [
     {
-      "model_name": "Atul Shakti Cargo",
-      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/shakti",
-      "cardekho_technical_specifications": {
-        "engine_type": "598 cc, four-stroke, single-cylinder engine",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/shakti.html",
-        "fuel_type": "Diesel",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/shakti.html",
-        "mileage": "36 kmpl",
-        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/shakti/specifications",
-        "transmission_type": "Manual",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/shakti.html"
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
       },
-      "cardekho_pricing": {
-        "ex_showroom_price": "₹ 2.50 Lakh - ₹ 2.85 Lakh",
-        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/shakti/price-in-new-delhi"
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
       },
-      "cardekho_variants": [
-        {
-          "value": "Shakti Cargo 2110/Cargo",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/shakti/2110cargo"
-        },
-        {
-          "value": "Shakti Cargo 2110/Cargo XD",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/shakti/2110cargo-xd"
-        }
-      ]
-    },
-    {
-      "model_name": "Atul Elite Plus",
-      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/elite",
-      "cardekho_technical_specifications": {
-        "engine_type": "Electric motor (850 W / 1000 W power motor with 48 V DC 40 A controller)",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite",
-        "fuel_type": "Electric",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite",
-        "seating_capacity": 4,
-        "seating_capacity_citation": "https://trucks.cardekho.com/en/trucks/atul/elite",
-        "mileage": "80 km range per charge",
-        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/elite/specifications",
-        "transmission_type": "Automatic",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite"
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
       },
-      "cardekho_pricing": {
-        "ex_showroom_price": "₹1.12 lakh",
-        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/elite"
-      },
-      "cardekho_variants": [
-        {
-          "value": "Elite Plus 4-Seater/Electric",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/elite/4-seaterelectric"
-        }
-      ]
-    },
-    {
-      "model_name": "Atul GEM Cargo",
-      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo",
-      "cardekho_technical_specifications": {
-        "engine_type": "395 cc four-stroke water-cooled diesel engine",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/specifications",
-        "fuel_type": "Diesel, CNG",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/specifications",
-        "mileage": "30.4 kmpl",
-        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/specifications",
-        "transmission_type": "4-speed manual",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/specifications"
-      },
-      "cardekho_pricing": {
-        "ex_showroom_price": "₹ 2.66 Lakh",
-        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo.html"
-      },
-      "cardekho_variants": [
-        {
-          "value": "GEM Cargo 2260/CNG Aqua 6F",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/2260-cng-aqua-6f"
-        },
-        {
-          "value": "GEM Cargo 2260/CNG",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/2260cng"
-        },
-        {
-          "value": "GEM Cargo 1925/Delivery Van",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/1925-delivery-van"
-        },
-        {
-          "value": "GEM Cargo 2105/Diesel",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/2105diesel"
-        },
-        {
-          "value": "GEM Cargo 1925/Petrol",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo/1925-petrol"
-        }
-      ]
-    },
-    {
-      "model_name": "Atul Gem Paxx",
-      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx",
-      "cardekho_technical_specifications": {
-        "engine_type": "Four-stroke, water-cooled, BS6 engine, 598 cc (or 395 cc)",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx",
-        "fuel_type": "CNG, Diesel, Petrol, LPG",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx",
-        "seating_capacity": 3,
-        "seating_capacity_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx",
-        "mileage": "36 kmpl",
-        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx",
-        "transmission_type": "4-speed constant-mesh gearbox (wet type)",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
-      },
-      "cardekho_pricing": {
-        "ex_showroom_price": "From ₹ 2.66 Lakh",
-        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
-      },
-      "cardekho_variants": [
-        {
-          "value": "Gem Paxx 3-Seater/1925/CNG/AQUA 3P",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx/3-seater1925cngaqua-3p"
-        },
-        {
-          "value": "Gem Paxx 3-Seater/1925/CNG",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx/3-seater1925cng"
-        },
-        {
-          "value": "Gem Paxx 3-Seater/1925/Diesel",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx/3-seater1925diesel"
-        },
-        {
-          "value": "Gem Paxx 3-Seater/1925/LPG",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx/3-seater-1925-lpg"
-        },
-        {
-          "value": "Gem Paxx 3-Seater/1925/Petrol",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx/3-seater1925petrol"
-        }
-      ]
-    },
-    {
-      "model_name": "Atul Elite Cargo",
-      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo",
-      "cardekho_technical_specifications": {
-        "engine_type": "BLDC Electric Motor",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo",
-        "fuel_type": "Electric",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo",
-        "mileage": "80 km range per charge",
-        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo",
-        "transmission_type": "Automatic",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo"
-      },
-      "cardekho_pricing": {
-        "ex_showroom_price": "₹ 1.04 Lakh",
-        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo"
-      },
-      "cardekho_variants": [
-        {
-          "value": "Elite Cargo Electric",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo/electric"
-        },
-        {
-          "value": "Elite Cargo Elite Paxx with Li-ion Battery",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-cargo/elite-paxx-with-li-ion-battery"
-        }
-      ]
-    },
-    {
-      "model_name": "Atul Rik",
-      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/rik",
-      "cardekho_technical_specifications": {
-        "engine_type": "200 cc 4-stroke single-cylinder air-cooled engine",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/rik/specifications",
-        "fuel_type": "LPG, CNG and Petrol",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/rik/specifications",
-        "seating_capacity": 3,
-        "seating_capacity_citation": "https://trucks.cardekho.com/en/trucks/atul/rik/specifications",
-        "mileage": "25 kmpl",
-        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/rik/specifications",
-        "transmission_type": "Constant-mesh manual (4 forward gears + 1 reverse)",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/rik/specifications"
-      },
-      "cardekho_pricing": {
-        "ex_showroom_price": "₹ 1.94 – ₹ 2.00 Lakh",
-        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/rik"
-      },
-      "cardekho_variants": [
-        {
-          "value": "Rik 3-Seater/1950/CNG",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/rik/3-seater-1950-cng"
-        },
-        {
-          "value": "Rik 3-Seater/1950/LPG",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/rik/3-seater-1950-lpg"
-        },
-        {
-          "value": "Rik 3-Seater/1950/Petrol",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/rik/3-seater-1950-petrol"
-        }
-      ]
-    },
-    {
-      "model_name": "Atul RIK PLUS",
-      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/rik-plus",
-      "cardekho_technical_specifications": {
-        "engine_type": "198.6 cc (CNG)",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/rik-plus/specifications",
+      "technical_specifications": {
         "fuel_type": "CNG",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/rik-plus/specifications",
-        "seating_capacity": 3,
-        "seating_capacity_citation": "https://trucks.cardekho.com/en/trucks/atul/rik-plus/3-seater-1950-cng",
-        "mileage": "45 kmpl",
-        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/rik-plus/specifications",
-        "transmission_type": "Manual",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/rik-plus/specifications"
+        "transmission_type": "Manual"
       },
-      "cardekho_pricing": {
-        "ex_showroom_price": "₹ 2.71 Lakh",
-        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/rik-plus/price-in-new-delhi"
-      },
-      "cardekho_variants": [
-        {
-          "value": "RIK PLUS 3-Seater/1950/CNG",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/rik-plus/3-seater-1950-cng"
-        }
-      ]
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
     },
     {
-      "model_name": "Atul Elite Plus Cargo",
-      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-plus-cargo",
-      "cardekho_technical_specifications": {
-        "engine_type": "BLDC Motor",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-plus-cargo/specifications",
+      "variant_name": "Piaggio Ape DX",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Piaggio Ape City",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Piaggio Ape City Plus",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Bajaj Maxima X Wide",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Gem Paxx 3-Seater/1925/CNG/AQUA 3P",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Gem Paxx 3-Seater/1925/CNG",
+      "ex_showroom_price": "₹2.50 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Gem Paxx 3-Seater/1925/Diesel",
+      "ex_showroom_price": "₹2.66 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Gem Paxx 3-Seater/1925/LPG",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Gem Paxx 3-Seater/1925/Petrol",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "TVS King Duramax",
+      "ex_showroom_price": "₹2.25 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Piaggio Ape Auto DX",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Mahindra Alfa Dx",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Piaggio Ape Auto HT DX",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Piaggio Ape Auto Plus",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Atul Shakti Cargo",
+      "ex_showroom_price": "₹2.85 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Atul Elite Plus",
+      "ex_showroom_price": "₹1.15 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Atul GEM Cargo",
+      "ex_showroom_price": "₹2.96 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Atul Elite Cargo",
+      "ex_showroom_price": "₹1.54 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-paxx"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "Mahindra Alfa Load",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "Bajaj Maxima C",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "Piaggio Ape Xtra LDX",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "GEM Cargo 2260/CNG Aqua 6F",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "GEM Cargo 2260/CNG",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "GEM Cargo 1925/Delivery Van",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "GEM Cargo 2105/Diesel",
+      "ex_showroom_price": "₹2.66 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "GEM Cargo 1925/Petrol",
+      "ex_showroom_price": "₹2.66 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "Mahindra Alfa Plus",
+      "ex_showroom_price": "₹2.96 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "Atul Shakti Cargo",
+      "ex_showroom_price": "₹2.85 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "Piaggio Ape Xtra LDX Plus",
+      "ex_showroom_price": "₹2.66 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "Atul Smart Cargo",
+      "ex_showroom_price": "₹2.77 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "Powerful cargo rickshaw by Atul",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "Powerful cargo auto",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "Mahindra Alfa Dx",
+      "ex_showroom_price": "₹3.19 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "Atul Elite Plus",
+      "ex_showroom_price": "₹1.15 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "Atul Elite Cargo",
+      "ex_showroom_price": "₹1.54 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "GEM Cargo Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "GEM Cargo Mileage",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gem-cargo"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "Atul Shakti Cargo",
+      "ex_showroom_price": "₹2.85 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "2110/Cargo (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "2110/Cargo XD (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "Atul Elite Plus",
+      "ex_showroom_price": "₹1.15 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "4-Seater/Electric (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
         "fuel_type": "Electric",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-plus-cargo",
-        "mileage": "80 km range per charge",
-        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-plus-cargo/specifications",
-        "transmission_type": "Automatic",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-plus-cargo"
+        "transmission_type": "Manual"
       },
-      "cardekho_pricing": {
-        "ex_showroom_price": "1.55 Lakh INR",
-        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-plus-cargo/price-in-new-delhi"
-      },
-      "cardekho_variants": [
-        {
-          "value": "Elite Plus Cargo 2140/Cargo",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-plus-cargo/2140-cargo"
-        }
-      ]
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
     },
     {
-      "model_name": "Atul Elite Paxx",
-      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx",
-      "cardekho_technical_specifications": {
-        "engine_type": "BLDC Motor",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx/specifications",
+      "variant_name": "Atul GEM Cargo",
+      "ex_showroom_price": "₹2.96 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "2260/CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "2105/Diesel (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "1925/Delivery Van (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "2260/CNG Aqua 6F (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "1925/Petrol (Petrol)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "3-Seater/1925/CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "3-Seater/1925/CNG/AQUA 3P (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "3-Seater/1925/Petrol (Petrol)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "3-Seater/1925/LPG (Lpg)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "3-Seater/1925/Diesel (Diesel)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "Atul Elite Cargo",
+      "ex_showroom_price": "₹1.54 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "Electric (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
         "fuel_type": "Electric",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx",
-        "seating_capacity": 4,
-        "seating_capacity_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx",
-        "mileage": "80 km range per charge",
-        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx/specifications",
-        "transmission_type": "Direct Drive Multi Torque",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx"
+        "transmission_type": "Manual"
       },
-      "cardekho_pricing": {
-        "ex_showroom_price": "₹ 1.12 Lakh",
-        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx"
-      },
-      "cardekho_variants": [
-        {
-          "value": "Elite Paxx 4-Seater/Electric",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/elite-paxx"
-        }
-      ]
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
     },
     {
-      "model_name": "Atul Gemini Passenger",
-      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-passenger",
-      "cardekho_technical_specifications": {
-        "engine_type": "198.6 cc",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-passenger/specifications",
-        "fuel_type": "CNG, Petrol",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-passenger/specifications",
-        "mileage": "25 kmpl",
-        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-passenger/specifications",
-        "transmission_type": "Manual",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-passenger/specifications"
+      "variant_name": "Elite Paxx with Li-ion Battery  (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
       },
-      "cardekho_pricing": {
-        "ex_showroom_price": "₹ 2.15 Lakh",
-        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-passenger/1918-petrol"
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
       },
-      "cardekho_variants": [
-        {
-          "value": "Gemini Passenger 1918/CNG",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-passenger/1918-cng"
-        },
-        {
-          "value": "Gemini Passenger 1918/Petrol",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-passenger/1918-petrol"
-        }
-      ]
-    },
-    {
-      "model_name": "Atul Smart Cargo",
-      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/smart-cargo",
-      "cardekho_technical_specifications": {
-        "engine_type": "395 cc four-stroke water-cooled diesel engine",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/smart-cargo/specifications",
-        "fuel_type": "Diesel, CNG",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/smart-cargo/specifications",
-        "mileage": "30 kmpl",
-        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/smart-cargo/specifications",
-        "transmission_type": "4-speed manual",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/smart-cargo/specifications"
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
       },
-      "cardekho_pricing": {
-        "ex_showroom_price": "₹ 2.80 Lakh",
-        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/smart-cargo"
-      },
-      "cardekho_variants": [
-        {
-          "value": "Smart Cargo 2260/Diesel",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/smart-cargo/2260-diesel"
-        },
-        {
-          "value": "Smart Cargo 2260/CNG",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/smart-cargo/2260-cng"
-        }
-      ]
-    },
-    {
-      "model_name": "Atul Energie",
-      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/energie",
-      "cardekho_technical_specifications": {
-        "engine_type": "BLDC Electric Motor",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/energie/specifications",
+      "technical_specifications": {
         "fuel_type": "Electric",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/energie/specifications",
-        "mileage": "120 km range per charge",
-        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/energie/specifications",
-        "transmission_type": "Automatic",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/energie/specifications"
+        "transmission_type": "Manual"
       },
-      "cardekho_pricing": {
-        "ex_showroom_price": "₹ 3.00 Lakh",
-        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/energie"
-      },
-      "cardekho_variants": [
-        {
-          "value": "Energie Cargo/Electric",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/energie/cargo-electric"
-        },
-        {
-          "value": "Energie Passenger/Electric",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/energie/passenger-electric"
-        }
-      ]
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
     },
     {
-      "model_name": "Atul Gemini Cargo",
-      "model_name_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-cargo",
-      "cardekho_technical_specifications": {
-        "engine_type": "198.6 cc four-stroke single-cylinder air-cooled engine",
-        "engine_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-cargo/specifications",
-        "fuel_type": "CNG, Petrol",
-        "fuel_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-cargo/specifications",
-        "mileage": "25 kmpl",
-        "mileage_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-cargo/specifications",
-        "transmission_type": "Manual",
-        "transmission_type_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-cargo/specifications"
+      "variant_name": "3-Seater/1950/CNG (Cng)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
       },
-      "cardekho_pricing": {
-        "ex_showroom_price": "₹ 2.10 Lakh",
-        "ex_showroom_price_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-cargo"
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
       },
-      "cardekho_variants": [
-        {
-          "value": "Gemini Cargo 1918/CNG",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-cargo/1918-cng"
-        },
-        {
-          "value": "Gemini Cargo 1918/Petrol",
-          "value_citation": "https://trucks.cardekho.com/en/trucks/atul/gemini-cargo/1918-petrol"
-        }
-      ]
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "3-Seater/1950/Petrol (Petrol)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "3-Seater/1950/LPG (Lpg)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "Atul Elite Plus Cargo",
+      "ex_showroom_price": "₹1.55 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "2140/Cargo (Electric)",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "Atul RIK PLUS",
+      "ex_showroom_price": "₹2.71 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "View Shakti Cargo Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "View Elite Plus Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "View GEM Cargo Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "View Elite Cargo Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "₹2.98 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "Maruti Suzuki Super Carry",
+      "ex_showroom_price": "₹6.12 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/elite-plus"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/rik"
+    },
+    {
+      "variant_name": "Piaggio Ape DX",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/rik"
+    },
+    {
+      "variant_name": "Piaggio Ape City",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/rik"
+    },
+    {
+      "variant_name": "Piaggio Ape City Plus",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/rik"
+    },
+    {
+      "variant_name": "Bajaj Maxima Z",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/rik"
+    },
+    {
+      "variant_name": "Bajaj Maxima X Wide",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/rik"
+    },
+    {
+      "variant_name": "Rik 3-Seater/1950/CNG",
+      "ex_showroom_price": "₹1.94 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/rik"
+    },
+    {
+      "variant_name": "Rik 3-Seater/1950/LPG",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/rik"
+    },
+    {
+      "variant_name": "Rik 3-Seater/1950/Petrol",
+      "ex_showroom_price": "₹2.00 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/rik"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/rik"
+    },
+    {
+      "variant_name": "TVS King Duramax",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/rik"
+    },
+    {
+      "variant_name": "Mahindra Alfa Dx",
+      "ex_showroom_price": "₹3.19 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/rik"
+    },
+    {
+      "variant_name": "Atul Shakti Cargo",
+      "ex_showroom_price": "₹2.85 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/rik"
+    },
+    {
+      "variant_name": "Atul Elite Plus",
+      "ex_showroom_price": "₹1.15 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/rik"
+    },
+    {
+      "variant_name": "Atul GEM Cargo",
+      "ex_showroom_price": "₹2.96 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/rik"
+    },
+    {
+      "variant_name": "Atul Elite Cargo",
+      "ex_showroom_price": "₹1.54 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/rik"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/rik"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/shakti"
+    },
+    {
+      "variant_name": "Gem Cargo",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/shakti"
+    },
+    {
+      "variant_name": "Mahindra Alfa Load",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/shakti"
+    },
+    {
+      "variant_name": "Bajaj Maxima C",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/shakti"
+    },
+    {
+      "variant_name": "Piaggio Ape Xtra LDX",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/shakti"
+    },
+    {
+      "variant_name": "Shakti Cargo 2110/Cargo",
+      "ex_showroom_price": "₹2.50 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/shakti"
+    },
+    {
+      "variant_name": "Shakti Cargo 2110/Cargo XD",
+      "ex_showroom_price": "₹2.85 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/shakti"
+    },
+    {
+      "variant_name": "Mahindra Alfa Plus",
+      "ex_showroom_price": "₹2.96 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/shakti"
+    },
+    {
+      "variant_name": "Atul GEM Cargo",
+      "ex_showroom_price": "₹2.96 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/shakti"
+    },
+    {
+      "variant_name": "Piaggio Ape Xtra LDX Plus",
+      "ex_showroom_price": "₹2.66 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/shakti"
+    },
+    {
+      "variant_name": "Mahindra Alfa Dx",
+      "ex_showroom_price": "₹3.19 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/shakti"
+    },
+    {
+      "variant_name": "Atul Elite Plus",
+      "ex_showroom_price": "₹1.15 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/shakti"
+    },
+    {
+      "variant_name": "Atul Elite Cargo",
+      "ex_showroom_price": "₹1.54 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/shakti"
+    },
+    {
+      "variant_name": "Shakti Cargo Images",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/shakti"
+    },
+    {
+      "variant_name": "Shakti Cargo Mileage",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/shakti"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/shakti"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/shakti"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gemini"
+    },
+    {
+      "variant_name": "NRJ Electric Motor Half Body Garbage",
+      "ex_showroom_price": "₹1.30 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gemini"
+    },
+    {
+      "variant_name": "Biliti Electric Taskman",
+      "ex_showroom_price": "₹2.46 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gemini"
+    },
+    {
+      "variant_name": "Biliti Electric Dump Star",
+      "ex_showroom_price": "₹1.60 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gemini"
+    },
+    {
+      "variant_name": "Biliti Electric Taskman OB",
+      "ex_showroom_price": "₹2.45 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gemini"
+    },
+    {
+      "variant_name": "Piaggio Ape Xtra LDX",
+      "ex_showroom_price": "₹2.55 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gemini"
+    },
+    {
+      "variant_name": "Mahindra Alfa Plus",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gemini"
+    },
+    {
+      "variant_name": "Bajaj Maxima C",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gemini"
+    },
+    {
+      "variant_name": "Atul GEM Cargo",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gemini"
+    },
+    {
+      "variant_name": "Atul Elite Cargo",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gemini"
+    },
+    {
+      "variant_name": "Mahindra Alfa Dx",
+      "ex_showroom_price": "₹3.19 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gemini"
+    },
+    {
+      "variant_name": "Atul Shakti Cargo",
+      "ex_showroom_price": "₹2.85 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gemini"
+    },
+    {
+      "variant_name": "Atul Elite Plus",
+      "ex_showroom_price": "₹1.15 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gemini"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gemini"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/gemini"
+    },
+    {
+      "variant_name": "Maruti Super Carry",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/energie"
+    },
+    {
+      "variant_name": "Energie 2125/ Loader",
+      "ex_showroom_price": "₹3.72 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/energie"
+    },
+    {
+      "variant_name": "Bajaj Maxima C",
+      "ex_showroom_price": "₹3.22 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/energie"
+    },
+    {
+      "variant_name": "Piaggio Ape Xtra LDX",
+      "ex_showroom_price": "₹2.55 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/energie"
+    },
+    {
+      "variant_name": "OSM Rage Plus",
+      "ex_showroom_price": "",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/energie"
+    },
+    {
+      "variant_name": "Atul GEM Cargo",
+      "ex_showroom_price": "₹2.96 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/energie"
+    },
+    {
+      "variant_name": "Atul Shakti Cargo",
+      "ex_showroom_price": "₹2.85 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/energie"
+    },
+    {
+      "variant_name": "Atul Elite Plus",
+      "ex_showroom_price": "₹1.15 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/energie"
+    },
+    {
+      "variant_name": "Atul Elite Cargo",
+      "ex_showroom_price": "₹1.54 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/energie"
+    },
+    {
+      "variant_name": "Piaggio Ape E City",
+      "ex_showroom_price": "₹2.89 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/energie"
+    },
+    {
+      "variant_name": "Mahindra Treo Plus",
+      "ex_showroom_price": "₹3.78 Lakh",
+      "mileage": "",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "",
+        "torque": ""
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/atul/energie"
     }
   ]
 }
