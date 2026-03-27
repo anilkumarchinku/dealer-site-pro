@@ -56,7 +56,7 @@ function buildTwoWheelerEntry(
         charging_time_hours:     null,
         battery_warranty_years:  null,
         top_speed_kmph:          enrichment?.top_speed_kmph ?? null,
-        transmission:            enrichment?.transmission ?? null,
+        transmission:            enrichment?.transmission ?? (type === 'scooter' || type === 'electric' ? 'Automatic' : 'Manual'),
         mileage_kmpl:            enrichment?.mileage_kmpl ?? TWO_WHEELER_MODEL_MILEAGE[`${brand} ${model}`] ?? null,
         ex_showroom_price_paise: enrichment?.ex_showroom_price_paise ?? 0,
         on_road_price_paise:     null,
