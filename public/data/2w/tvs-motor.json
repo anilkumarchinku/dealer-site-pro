@@ -1,3151 +1,683 @@
 {
-  "brand": "TVS Motor",
+  "brand": "TVS",
   "brandId": "tvs-motor",
   "type": "2w",
   "vehicles": [
     {
       "make": "TVS",
-      "model": "XL100",
-      "mileage": "65 kmpl",
-      "engine_displacement": "99.7 cc",
+      "model": "Apache RTR 160 4V",
+      "variant_name": "Apache RTR 160 4V Single Disc ABS",
+      "price": "₹1,16,491",
+      "engine_displacement": "160 cc",
+      "mileage": "41.4 kmpl",
+      "max_power": "17.31 bhp",
       "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "XL100 Heavy Duty",
-          "price": "₹44,550",
-          "colors": [
-            { "value": "Grey" },
-            { "value": "Blue" },
-            { "value": "Red" },
-            { "value": "Delight Blue" },
-            { "value": "Mint Blue" },
-            { "value": "Green" },
-            { "value": "Mineral Purple" },
-            { "value": "Black" },
-            { "value": "Luster Gold" },
-            { "value": "Beaver Brown" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "99.7 cc",
-              "Max Power": "4.35 PS @ 6000 rpm",
-              "Max Torque": "6.5 Nm",
-              "Transmission": "Automatic",
-              "Fuel Type": "Petrol",
-              "Engine Type": "4 Stroke, Single Cylinder"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Spring Loaded Hydraulic"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "88 kg",
-              "Fuel Tank Capacity": "4 L",
-              "Ground Clearance": "168 mm",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "Halogen",
-              "Taillight": "Bulb"
-            }
-          }
-        },
-        {
-          "variant_name": "XL100 Heavy Duty i-Touch Start",
-          "price": "₹56,150",
-          "colors": [
-            { "value": "Grey" },
-            { "value": "Blue" },
-            { "value": "Red" },
-            { "value": "Delight Blue" },
-            { "value": "Mint Blue" },
-            { "value": "Green" },
-            { "value": "Mineral Purple" },
-            { "value": "Black" },
-            { "value": "Luster Gold" },
-            { "value": "Beaver Brown" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "99.7 cc",
-              "Max Power": "4.35 PS @ 6000 rpm",
-              "Max Torque": "6.5 Nm",
-              "Transmission": "Automatic",
-              "Fuel Type": "Petrol",
-              "Engine Type": "4 Stroke, Single Cylinder",
-              "Starting": "Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Spring Loaded Hydraulic"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "89 kg",
-              "Fuel Tank Capacity": "4 L",
-              "Ground Clearance": "168 mm",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "Halogen",
-              "Taillight": "Bulb"
-            }
-          }
-        },
-        {
-          "variant_name": "XL100 Comfort i-Touch Start",
-          "price": "₹58,850",
-          "colors": [
-            { "value": "Grey" },
-            { "value": "Blue" },
-            { "value": "Red" },
-            { "value": "Delight Blue" },
-            { "value": "Mint Blue" },
-            { "value": "Green" },
-            { "value": "Mineral Purple" },
-            { "value": "Black" },
-            { "value": "Luster Gold" },
-            { "value": "Beaver Brown" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "99.7 cc",
-              "Max Power": "4.4 PS @ 6000 rpm",
-              "Max Torque": "6.5 Nm",
-              "Transmission": "Automatic",
-              "Fuel Type": "Petrol",
-              "Engine Type": "4 Stroke, Single Cylinder",
-              "Starting": "Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Spring Loaded Hydraulic"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "89 kg",
-              "Fuel Tank Capacity": "4 L",
-              "Ground Clearance": "168 mm",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "Halogen",
-              "Taillight": "Bulb"
-            }
-          }
-        },
-        {
-          "variant_name": "XL100 Heavy Duty i-Touch Start Win Edition",
-          "price": "₹59,150",
-          "colors": [
-            { "value": "Grey" },
-            { "value": "Blue" },
-            { "value": "Red" },
-            { "value": "Delight Blue" },
-            { "value": "Mint Blue" },
-            { "value": "Green" },
-            { "value": "Mineral Purple" },
-            { "value": "Black" },
-            { "value": "Luster Gold" },
-            { "value": "Beaver Brown" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "99.7 cc",
-              "Max Power": "4.35 PS @ 6000 rpm",
-              "Max Torque": "6.5 Nm",
-              "Transmission": "Automatic",
-              "Fuel Type": "Petrol",
-              "Engine Type": "4 Stroke, Single Cylinder",
-              "Starting": "Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Spring Loaded Hydraulic"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "89 kg",
-              "Fuel Tank Capacity": "4 L",
-              "Ground Clearance": "168 mm",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "Halogen",
-              "Taillight": "Bulb"
-            }
-          }
-        },
-        {
-          "variant_name": "XL100 Heavy Duty Alloy",
-          "price": "₹60,450",
-          "colors": [
-            { "value": "Grey" },
-            { "value": "Blue" },
-            { "value": "Red" },
-            { "value": "Delight Blue" },
-            { "value": "Mint Blue" },
-            { "value": "Green" },
-            { "value": "Mineral Purple" },
-            { "value": "Black" },
-            { "value": "Luster Gold" },
-            { "value": "Beaver Brown" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "99.7 cc",
-              "Max Power": "4.35 PS @ 6000 rpm",
-              "Max Torque": "6.5 Nm",
-              "Transmission": "Automatic",
-              "Fuel Type": "Petrol",
-              "Engine Type": "4 Stroke, Single Cylinder",
-              "Starting": "Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Spring Loaded Hydraulic"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "89 kg",
-              "Fuel Tank Capacity": "4 L",
-              "Ground Clearance": "168 mm",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "Halogen",
-              "Taillight": "Bulb"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "make": "TVS",
-      "model": "Sport",
-      "mileage": "70 kmpl",
-      "engine_displacement": "109.7 cc",
-      "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "Sport Self Start ES",
-          "price": "₹55,500",
-          "colors": [
-            { "value": "Black Neon" },
-            { "value": "All Black" },
-            { "value": "All Red" },
-            { "value": "All Grey" },
-            { "value": "Grey Red" },
-            { "value": "Starlight Blue" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "109.7 cc",
-              "Max Power": "8.19 PS @ 7350 rpm",
-              "Max Torque": "8.7 Nm",
-              "Transmission": "4-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4 Stroke, Fuel Injection, Air Cooled",
-              "Starting": "Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Twin Hydraulic Shock Absorbers",
-              "Front Brake": "Drum",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "112 kg",
-              "Fuel Tank Capacity": "10 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "Halogen",
-              "Taillight": "Bulb"
-            }
-          }
-        },
-        {
-          "variant_name": "Sport Self Start ES+",
-          "price": "₹57,500",
-          "colors": [
-            { "value": "Black Neon" },
-            { "value": "All Black" },
-            { "value": "All Red" },
-            { "value": "All Grey" },
-            { "value": "Grey Red" },
-            { "value": "Starlight Blue" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "109.7 cc",
-              "Max Power": "8.19 PS @ 7350 rpm",
-              "Max Torque": "8.7 Nm",
-              "Transmission": "4-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4 Stroke, Fuel Injection, Air Cooled",
-              "Starting": "Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Twin Hydraulic Shock Absorbers",
-              "Front Brake": "Drum",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "112 kg",
-              "Fuel Tank Capacity": "10 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "make": "TVS",
-      "model": "Radeon",
-      "mileage": "73.68 kmpl",
-      "engine_displacement": "109.7 cc",
-      "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "Radeon All Black Edition",
-          "price": "₹55,400",
-          "colors": [
-            { "value": "All Black" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "109.7 cc",
-              "Max Power": "8.19 PS @ 7350 rpm",
-              "Max Torque": "8.7 Nm",
-              "Transmission": "4-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "4 Stroke Duralife Engine",
-              "Starting": "Kick Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Forks",
-              "Rear Suspension": "5-Step Adjustable Shock",
-              "Front Brake": "Drum",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "113 kg",
-              "Fuel Tank Capacity": "10 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "Halogen",
-              "Taillight": "Bulb"
-            }
-          }
-        },
-        {
-          "variant_name": "Radeon Base Edition",
-          "price": "₹61,900",
-          "colors": [
-            { "value": "Metal Black" },
-            { "value": "Black" },
-            { "value": "Red Black" },
-            { "value": "Titanium Grey" },
-            { "value": "Blue Black" },
-            { "value": "Starlight Blue" },
-            { "value": "Royal Purple" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "109.7 cc",
-              "Max Power": "8.19 PS @ 7350 rpm",
-              "Max Torque": "8.7 Nm",
-              "Transmission": "4-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "4 Stroke Duralife Engine",
-              "Starting": "Kick and Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Forks",
-              "Rear Suspension": "5-Step Adjustable Shock",
-              "Front Brake": "Drum",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "113 kg",
-              "Fuel Tank Capacity": "10 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "Halogen",
-              "Taillight": "Bulb"
-            }
-          }
-        },
-        {
-          "variant_name": "Radeon Digi Cluster Edition Drum",
-          "price": "₹74,500",
-          "colors": [
-            { "value": "Metal Black" },
-            { "value": "Black" },
-            { "value": "Red Black" },
-            { "value": "Titanium Grey" },
-            { "value": "Blue Black" },
-            { "value": "Starlight Blue" },
-            { "value": "Royal Purple" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "109.7 cc",
-              "Max Power": "8.19 PS @ 7350 rpm",
-              "Max Torque": "8.7 Nm",
-              "Transmission": "4-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "4 Stroke Duralife Engine",
-              "Starting": "Kick and Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Forks",
-              "Rear Suspension": "5-Step Adjustable Shock",
-              "Front Brake": "Drum",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "113 kg",
-              "Fuel Tank Capacity": "10 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Radeon Digi Cluster Edition Disc",
-          "price": "₹78,200",
-          "colors": [
-            { "value": "Metal Black" },
-            { "value": "Black" },
-            { "value": "Red Black" },
-            { "value": "Titanium Grey" },
-            { "value": "Blue Black" },
-            { "value": "Starlight Blue" },
-            { "value": "Royal Purple" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "109.7 cc",
-              "Max Power": "8.19 PS @ 7350 rpm",
-              "Max Torque": "8.7 Nm",
-              "Transmission": "4-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "4 Stroke Duralife Engine",
-              "Starting": "Kick and Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Forks",
-              "Rear Suspension": "5-Step Adjustable Shock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "115 kg",
-              "Fuel Tank Capacity": "10 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "make": "TVS",
-      "model": "Star City Plus",
-      "mileage": "83.09 kmpl",
-      "engine_displacement": "109.7 cc",
-      "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "Star City Plus Drum",
-          "price": "₹72,500",
-          "colors": [
-            { "value": "Black Green" },
-            { "value": "Black Red" },
-            { "value": "Grey Black" },
-            { "value": "Black Blue" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "109.7 cc",
-              "Max Power": "8.19 PS @ 7350 rpm",
-              "Max Torque": "8.7 Nm",
-              "Transmission": "4-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled",
-              "Starting": "Kick and Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Twin Hydraulic Shock Absorbers",
-              "Front Brake": "Drum",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "115 kg",
-              "Fuel Tank Capacity": "10 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Star City Plus Disc",
-          "price": "₹75,200",
-          "colors": [
-            { "value": "Black Green" },
-            { "value": "Black Red" },
-            { "value": "Grey Black" },
-            { "value": "Black Blue" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "109.7 cc",
-              "Max Power": "8.19 PS @ 7350 rpm",
-              "Max Torque": "8.7 Nm",
-              "Transmission": "4-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled",
-              "Starting": "Kick and Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Twin Hydraulic Shock Absorbers",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "116 kg",
-              "Fuel Tank Capacity": "10 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "make": "TVS",
-      "model": "Raider 125",
-      "mileage": "67 kmpl",
-      "engine_displacement": "124.8 cc",
-      "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "Raider 125 Drum",
-          "price": "₹80,500",
-          "colors": [
-            { "value": "Fiery Yellow" },
-            { "value": "Wicked Black" },
-            { "value": "Blazing Blue" },
-            { "value": "Racing Red" },
-            { "value": "Striking White" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "124.8 cc",
-              "Max Power": "11.38 PS @ 7500 rpm",
-              "Max Torque": "11.2 Nm @ 6000 rpm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, 3-Valve, Air Cooled, SOHC",
-              "Starting": "Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Drum",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "123 kg",
-              "Fuel Tank Capacity": "10 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Raider 125 Disc",
-          "price": "₹85,500",
-          "colors": [
-            { "value": "Fiery Yellow" },
-            { "value": "Wicked Black" },
-            { "value": "Blazing Blue" },
-            { "value": "Racing Red" },
-            { "value": "Striking White" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "124.8 cc",
-              "Max Power": "11.38 PS @ 7500 rpm",
-              "Max Torque": "11.2 Nm @ 6000 rpm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, 3-Valve, Air Cooled, SOHC",
-              "Starting": "Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "124 kg",
-              "Fuel Tank Capacity": "10 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Raider 125 Disc Bluetooth",
-          "price": "₹89,500",
-          "colors": [
-            { "value": "Fiery Yellow" },
-            { "value": "Wicked Black" },
-            { "value": "Blazing Blue" },
-            { "value": "Racing Red" },
-            { "value": "Striking White" },
-            { "value": "Matte Red" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "124.8 cc",
-              "Max Power": "11.38 PS @ 7500 rpm",
-              "Max Torque": "11.2 Nm @ 6000 rpm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, 3-Valve, Air Cooled, SOHC",
-              "Starting": "Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "124 kg",
-              "Fuel Tank Capacity": "10 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Raider 125 Super Squad Edition",
-          "price": "₹93,800",
-          "colors": [
-            { "value": "Iron Man Edition" },
-            { "value": "Captain America Edition" },
-            { "value": "Thor Edition" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "124.8 cc",
-              "Max Power": "11.38 PS @ 7500 rpm",
-              "Max Torque": "11.2 Nm @ 6000 rpm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, 3-Valve, Air Cooled, SOHC",
-              "Starting": "Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "124 kg",
-              "Fuel Tank Capacity": "10 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "make": "TVS",
-      "model": "Apache RTR 160",
-      "mileage": "47 kmpl",
-      "engine_displacement": "159.7 cc",
-      "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "Apache RTR 160 RM Drum Black Edition",
-          "price": "₹1,12,190",
-          "colors": [
-            { "value": "Glossy Black" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "159.7 cc",
-              "Max Power": "16.04 PS @ 8750 rpm",
-              "Max Torque": "13.85 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, Air Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "137 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 160 RM Drum",
-          "price": "₹1,12,890",
-          "colors": [
-            { "value": "Pearl White" },
-            { "value": "Racing Red" },
-            { "value": "T Grey" },
-            { "value": "Matte Blue" },
-            { "value": "Matte Black" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "159.7 cc",
-              "Max Power": "16.04 PS @ 8750 rpm",
-              "Max Torque": "13.85 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, Air Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "137 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 160 RM Disc",
-          "price": "₹1,16,090",
-          "colors": [
-            { "value": "Pearl White" },
-            { "value": "Racing Red" },
-            { "value": "T Grey" },
-            { "value": "Glossy Black" },
-            { "value": "Matte Blue" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "159.7 cc",
-              "Max Power": "16.04 PS @ 8750 rpm",
-              "Max Torque": "13.85 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, Air Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "138 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 160 RM Disc BT",
-          "price": "₹1,19,190",
-          "colors": [
-            { "value": "Pearl White" },
-            { "value": "Racing Red" },
-            { "value": "T Grey" },
-            { "value": "Glossy Black" },
-            { "value": "Matte Black" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "159.7 cc",
-              "Max Power": "16.04 PS @ 8750 rpm",
-              "Max Torque": "13.85 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, Air Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "138 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 160 Racing Edition",
-          "price": "₹1,20,490",
-          "colors": [
-            { "value": "Racing Edition" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "159.7 cc",
-              "Max Power": "16.04 PS @ 8750 rpm",
-              "Max Torque": "13.85 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, Air Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "139 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 160 Dual Channel ABS",
-          "price": "₹1,23,990",
-          "colors": [
-            { "value": "Pearl White" },
-            { "value": "Racing Red" },
-            { "value": "T Grey" },
-            { "value": "Glossy Black" },
-            { "value": "Matte Black" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "159.7 cc",
-              "Max Power": "16.04 PS @ 8750 rpm",
-              "Max Torque": "13.85 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, Air Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "139 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 160 Limited Edition",
-          "price": "₹1,26,650",
-          "colors": [
-            { "value": "Anniversary Edition" },
-            { "value": "Pearl White" },
-            { "value": "Racing Red" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "159.7 cc",
-              "Max Power": "16.04 PS @ 8750 rpm",
-              "Max Torque": "13.85 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, Air Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "139 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        }
-      ]
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "TVS",
       "model": "Apache RTR 160 4V",
-      "mileage": "47.61 kmpl",
-      "engine_displacement": "159.7 cc",
+      "variant_name": "Apache RTR 160 4V Single Disc ABS - Black Edition",
+      "price": "",
+      "engine_displacement": "160 cc",
+      "mileage": "41.4 kmpl",
+      "max_power": "17.31 bhp",
       "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "Apache RTR 160 4V Front Disc Rear Drum",
-          "price": "₹1,15,852",
-          "colors": [
-            { "value": "Pearl White" },
-            { "value": "Racing Red" },
-            { "value": "Glossy Black" },
-            { "value": "Matte Black" },
-            { "value": "Granite Grey" },
-            { "value": "Marine Blue" },
-            { "value": "Anniversary Edition" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "159.7 cc",
-              "Max Power": "17.55 PS @ 9250 rpm",
-              "Max Torque": "14.73 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, 4-Valve, Air Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum",
-              "Front Tyre": "90/90-17",
-              "Rear Tyre": "130/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "143 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 160 4V Black Edition",
-          "price": "₹1,18,690",
-          "colors": [
-            { "value": "Matte Black Special Edition" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "159.7 cc",
-              "Max Power": "17.55 PS @ 9250 rpm",
-              "Max Torque": "14.73 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, 4-Valve, Air Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "90/90-17",
-              "Rear Tyre": "130/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "145 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 160 4V Front And Rear Disc",
-          "price": "₹1,19,079",
-          "colors": [
-            { "value": "Pearl White" },
-            { "value": "Racing Red" },
-            { "value": "Glossy Black" },
-            { "value": "Matte Black" },
-            { "value": "Granite Grey" },
-            { "value": "Marine Blue" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "159.7 cc",
-              "Max Power": "17.55 PS @ 9250 rpm",
-              "Max Torque": "14.73 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, 4-Valve, Air Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "90/90-17",
-              "Rear Tyre": "130/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "145 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 160 4V Disc Bluetooth",
-          "price": "₹1,22,121",
-          "colors": [
-            { "value": "Pearl White" },
-            { "value": "Racing Red" },
-            { "value": "Glossy Black" },
-            { "value": "Matte Black" },
-            { "value": "Granite Grey" },
-            { "value": "Marine Blue" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "159.7 cc",
-              "Max Power": "17.55 PS @ 9250 rpm",
-              "Max Torque": "14.73 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, 4-Valve, Air Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "90/90-17",
-              "Rear Tyre": "130/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "145 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 160 4V Special Edition",
-          "price": "₹1,24,590",
-          "colors": [
-            { "value": "Pearl White" },
-            { "value": "Racing Red" },
-            { "value": "Glossy Black" },
-            { "value": "Matte Black" },
-            { "value": "Granite Grey" },
-            { "value": "Marine Blue" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "159.7 cc",
-              "Max Power": "17.55 PS @ 9250 rpm",
-              "Max Torque": "14.73 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, 4-Valve, Air Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "90/90-17",
-              "Rear Tyre": "130/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "146 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 160 4V Dual Channel ABS",
-          "price": "₹1,25,790",
-          "colors": [
-            { "value": "Pearl White" },
-            { "value": "Racing Red" },
-            { "value": "Glossy Black" },
-            { "value": "Matte Black" },
-            { "value": "Granite Grey" },
-            { "value": "Marine Blue" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "159.7 cc",
-              "Max Power": "17.55 PS @ 9250 rpm",
-              "Max Torque": "14.73 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, 4-Valve, Air Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "90/90-17",
-              "Rear Tyre": "130/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "146 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 160 4V Dual Channel ABS with USD",
-          "price": "₹1,29,190",
-          "colors": [
-            { "value": "Pearl White" },
-            { "value": "Racing Red" },
-            { "value": "Glossy Black" },
-            { "value": "Matte Black" },
-            { "value": "Granite Grey" },
-            { "value": "Marine Blue" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "159.7 cc",
-              "Max Power": "17.55 PS @ 9250 rpm",
-              "Max Torque": "14.73 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, 4-Valve, Air Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "90/90-17",
-              "Rear Tyre": "130/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "147 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 160 4V TFT",
-          "price": "₹1,36,540",
-          "colors": [
-            { "value": "Pearl White" },
-            { "value": "Racing Red" },
-            { "value": "Glossy Black" },
-            { "value": "Matte Black" },
-            { "value": "Granite Grey" },
-            { "value": "Marine Blue" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "159.7 cc",
-              "Max Power": "17.55 PS @ 9250 rpm",
-              "Max Torque": "14.73 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, 4-Valve, Air Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "90/90-17",
-              "Rear Tyre": "130/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "147 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 160 4V Limited Edition",
-          "price": "₹1,38,590",
-          "colors": [
-            { "value": "Pearl White" },
-            { "value": "Racing Red" },
-            { "value": "Glossy Black" },
-            { "value": "Matte Black" },
-            { "value": "Granite Grey" },
-            { "value": "Marine Blue" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "159.7 cc",
-              "Max Power": "17.55 PS @ 9250 rpm",
-              "Max Torque": "14.73 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, 4-Valve, Air Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "90/90-17",
-              "Rear Tyre": "130/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "147 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT"
-            }
-          }
-        }
-      ]
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "TVS",
-      "model": "Apache RTR 180",
-      "mileage": "45 kmpl",
-      "engine_displacement": "177.4 cc",
+      "model": "Apache RTR 160 4V",
+      "variant_name": "Apache RTR 160 4V Dual Disc - ABS",
+      "price": "",
+      "engine_displacement": "160 cc",
+      "mileage": "41.4 kmpl",
+      "max_power": "17.31 bhp",
       "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "Apache RTR 180 Disc",
-          "price": "₹1,25,590",
-          "colors": [
-            { "value": "Anniversary Edition" },
-            { "value": "Gloss Black" },
-            { "value": "Pearl White" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "177.4 cc",
-              "Max Power": "17.13 PS @ 9000 rpm",
-              "Max Torque": "15.5 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, Oil Cooled, Fuel Injected"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "90/90-17",
-              "Rear Tyre": "120/80-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "140 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 180 Limited Edition",
-          "price": "₹1,28,490",
-          "colors": [
-            { "value": "Anniversary Edition" },
-            { "value": "Gloss Black" },
-            { "value": "Pearl White" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "177.4 cc",
-              "Max Power": "17.13 PS @ 9000 rpm",
-              "Max Torque": "15.5 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, Oil Cooled, Fuel Injected"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "90/90-17",
-              "Rear Tyre": "120/80-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "140 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        }
-      ]
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Apache RTR 160 4V",
+      "variant_name": "Apache RTR 160 4V Dual Disc - ABS - Bluetooth",
+      "price": "",
+      "engine_displacement": "160 cc",
+      "mileage": "41.4 kmpl",
+      "max_power": "17.31 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Apache RTR 160 4V",
+      "variant_name": "Apache RTR 160 4V Special Edition",
+      "price": "",
+      "engine_displacement": "160 cc",
+      "mileage": "41.4 kmpl",
+      "max_power": "17.31 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Apache RTR 160 4V",
+      "variant_name": "Apache RTR 160 4V Dual Channel ABS",
+      "price": "",
+      "engine_displacement": "160 cc",
+      "mileage": "41.4 kmpl",
+      "max_power": "17.31 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Apache RTR 160 4V",
+      "variant_name": "Apache RTR 160 4V Dual Channel ABS - USD Forks",
+      "price": "",
+      "engine_displacement": "160 cc",
+      "mileage": "41.4 kmpl",
+      "max_power": "17.31 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Apache RTR 160 4V",
+      "variant_name": "Apache RTR 160 4V TFT Cluster",
+      "price": "",
+      "engine_displacement": "160 cc",
+      "mileage": "41.4 kmpl",
+      "max_power": "17.31 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Apache RTR 160 4V",
+      "variant_name": "Apache RTR 160 4V Anniversary Special Edition",
+      "price": "",
+      "engine_displacement": "160 cc",
+      "mileage": "41.4 kmpl",
+      "max_power": "17.31 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "TVS",
       "model": "Apache RTR 200 4V",
-      "mileage": "37 kmpl",
-      "engine_displacement": "197.75 cc",
+      "variant_name": "Apache RTR 200 4V Dual Channel ABS with Modes",
+      "price": "₹1,38,407",
+      "engine_displacement": "200 cc",
+      "mileage": "41.9 kmpl",
+      "max_power": "20.54 bhp",
       "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "Apache RTR 200 4V USD",
-          "price": "₹1,41,990",
-          "colors": [
-            { "value": "Glossy Black" },
-            { "value": "Anniversary Edition" },
-            { "value": "Granite Grey" },
-            { "value": "Matte Black" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "197.75 cc",
-              "Max Power": "20.82 PS @ 9000 rpm",
-              "Max Torque": "17.25 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, Oil Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "37mm Inverted Forks (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "90/90-17",
-              "Rear Tyre": "130/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "151 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 200 4V TFT",
-          "price": "₹1,47,490",
-          "colors": [
-            { "value": "Glossy Black" },
-            { "value": "Anniversary Edition" },
-            { "value": "Granite Grey" },
-            { "value": "Matte Black" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "197.75 cc",
-              "Max Power": "20.82 PS @ 9000 rpm",
-              "Max Torque": "17.25 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, Oil Cooled, SOHC, Fuel Injection"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "37mm Inverted Forks (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "90/90-17",
-              "Rear Tyre": "130/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "151 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 200 4V 2Ch R Mode",
-          "price": "₹1,48,620",
-          "colors": [
-            { "value": "Glossy Black" },
-            { "value": "Anniversary Edition" },
-            { "value": "Granite Grey" },
-            { "value": "Matte Black" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "197.75 cc",
-              "Max Power": "20.82 PS @ 9000 rpm",
-              "Max Torque": "17.25 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, Oil Cooled, SOHC, Fuel Injection",
-              "Ride Modes": "Sport, Urban, Rain"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "37mm Inverted Forks (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "90/90-17",
-              "Rear Tyre": "130/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "151 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 200 4V Limited Edition",
-          "price": "₹1,49,590",
-          "colors": [
-            { "value": "Glossy Black" },
-            { "value": "Anniversary Edition" },
-            { "value": "Granite Grey" },
-            { "value": "Matte Black" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "197.75 cc",
-              "Max Power": "20.82 PS @ 9000 rpm",
-              "Max Torque": "17.25 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4-Stroke, Oil Cooled, SOHC, Fuel Injection",
-              "Ride Modes": "Sport, Urban, Rain"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "37mm Inverted Forks (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "90/90-17",
-              "Rear Tyre": "130/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "151 kg",
-              "Fuel Tank Capacity": "12 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT"
-            }
-          }
-        }
-      ]
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "TVS",
-      "model": "Ronin 225",
-      "mileage": "42.95 kmpl",
-      "engine_displacement": "225.9 cc",
+      "model": "Apache RTR 200 4V",
+      "variant_name": "Apache RTR 200 4V USD Forks - OBD - 2B",
+      "price": "",
+      "engine_displacement": "200 cc",
+      "mileage": "41.9 kmpl",
+      "max_power": "20.54 bhp",
       "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "Ronin Base - Lightning Black",
-          "price": "₹1,26,690",
-          "colors": [
-            { "value": "Lightning Black" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "225.9 cc",
-              "Max Power": "20.4 PS @ 7750 rpm",
-              "Max Torque": "19.93 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, 4-Valve, SOHC, Oil Cooled"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "140/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "159 kg",
-              "Fuel Tank Capacity": "14 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Ronin Base - Magma Red",
-          "price": "₹1,28,990",
-          "colors": [
-            { "value": "Magma Red" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "225.9 cc",
-              "Max Power": "20.4 PS @ 7750 rpm",
-              "Max Torque": "19.93 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, 4-Valve, SOHC, Oil Cooled"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "140/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "159 kg",
-              "Fuel Tank Capacity": "14 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Ronin Agonda Edition",
-          "price": "₹1,30,990",
-          "colors": [
-            { "value": "Agonda Edition" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "225.9 cc",
-              "Max Power": "20.4 PS @ 7750 rpm",
-              "Max Torque": "19.93 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, 4-Valve, SOHC, Oil Cooled"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "140/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "159 kg",
-              "Fuel Tank Capacity": "14 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Ronin Mid - Glacier Silver",
-          "price": "₹1,48,040",
-          "colors": [
-            { "value": "Glacier Silver" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "225.9 cc",
-              "Max Power": "20.4 PS @ 7750 rpm",
-              "Max Torque": "19.93 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, 4-Valve, SOHC, Oil Cooled"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "140/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "160 kg",
-              "Fuel Tank Capacity": "14 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Ronin Mid - Charcoal Ember",
-          "price": "₹1,49,340",
-          "colors": [
-            { "value": "Charcoal Ember" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "225.9 cc",
-              "Max Power": "20.4 PS @ 7750 rpm",
-              "Max Torque": "19.93 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, 4-Valve, SOHC, Oil Cooled"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "140/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "160 kg",
-              "Fuel Tank Capacity": "14 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Ronin Top",
-          "price": "₹1,60,140",
-          "colors": [
-            { "value": "Nimbus Gray" },
-            { "value": "Midnight Blue" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "225.9 cc",
-              "Max Power": "20.4 PS @ 7750 rpm",
-              "Max Torque": "19.93 Nm",
-              "Transmission": "5-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, 4-Valve, SOHC, Oil Cooled"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "140/70-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "160 kg",
-              "Fuel Tank Capacity": "14 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT"
-            }
-          }
-        }
-      ]
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "TVS",
-      "model": "Apache RTX 310",
-      "mileage": "32 kmpl",
-      "engine_displacement": "299.1 cc",
+      "model": "Apache RTR 200 4V",
+      "variant_name": "Apache RTR 200 4V TFT Cluster",
+      "price": "",
+      "engine_displacement": "200 cc",
+      "mileage": "41.9 kmpl",
+      "max_power": "20.54 bhp",
       "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "Apache RTX 310 Standard",
-          "price": "₹1,99,000",
-          "colors": [
-            { "value": "Lightning Black" },
-            { "value": "Pearl White" },
-            { "value": "Metallic Blue" },
-            { "value": "Viper Green" },
-            { "value": "Tarn Bronze" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "299.1 cc",
-              "Max Power": "36 PS @ 9000 rpm",
-              "Max Torque": "28 Nm",
-              "Transmission": "6-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, Liquid Cooled, DOHC, 4 Stroke"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "150/60-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "180 kg",
-              "Fuel Tank Capacity": "12.5 L",
-              "Ground Clearance": "200 mm",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTX 310 Mid",
-          "price": "₹2,09,000",
-          "colors": [
-            { "value": "Lightning Black" },
-            { "value": "Pearl White" },
-            { "value": "Metallic Blue" },
-            { "value": "Viper Green" },
-            { "value": "Tarn Bronze" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "299.1 cc",
-              "Max Power": "36 PS @ 9000 rpm",
-              "Max Torque": "28 Nm",
-              "Transmission": "6-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, Liquid Cooled, DOHC, 4 Stroke"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "150/60-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "180 kg",
-              "Fuel Tank Capacity": "12.5 L",
-              "Ground Clearance": "200 mm",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTX 310 Top",
-          "price": "₹2,19,000",
-          "colors": [
-            { "value": "Lightning Black" },
-            { "value": "Pearl White" },
-            { "value": "Metallic Blue" },
-            { "value": "Viper Green" },
-            { "value": "Tarn Bronze" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "299.1 cc",
-              "Max Power": "36 PS @ 9000 rpm",
-              "Max Torque": "28 Nm",
-              "Transmission": "6-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, Liquid Cooled, DOHC, 4 Stroke"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "150/60-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "180 kg",
-              "Fuel Tank Capacity": "12.5 L",
-              "Ground Clearance": "200 mm",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT",
-              "Quick Shifter": "Yes"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTX 310 Limited Edition",
-          "price": "₹2,29,000",
-          "colors": [
-            { "value": "Lightning Black" },
-            { "value": "Pearl White" },
-            { "value": "Metallic Blue" },
-            { "value": "Viper Green" },
-            { "value": "Tarn Bronze" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "299.1 cc",
-              "Max Power": "36 PS @ 9000 rpm",
-              "Max Torque": "28 Nm",
-              "Transmission": "6-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, Liquid Cooled, DOHC, 4 Stroke"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "150/60-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "180 kg",
-              "Fuel Tank Capacity": "12.5 L",
-              "Ground Clearance": "200 mm",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT",
-              "Quick Shifter": "Yes"
-            }
-          }
-        }
-      ]
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Apache RTR 200 4V",
+      "variant_name": "Apache RTR 200 4V Anniversary Special Edition",
+      "price": "",
+      "engine_displacement": "200 cc",
+      "mileage": "41.9 kmpl",
+      "max_power": "20.54 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "TVS",
       "model": "Apache RTR 310",
-      "mileage": "35 kmpl",
-      "engine_displacement": "312.12 cc",
+      "variant_name": "Apache RTR 310 Arsenal Black Base without QuickShifter",
+      "price": "₹2,22,804",
+      "engine_displacement": "312 cc",
+      "mileage": "30 kmpl",
+      "max_power": "35.08 bhp",
       "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "Apache RTR 310 Arsenal Black Base without QuickShifter",
-          "price": "₹2,22,740",
-          "colors": [
-            { "value": "Arsenal Black" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "312.12 cc",
-              "Max Power": "35.6 PS @ 9700 rpm",
-              "Max Torque": "28.7 Nm",
-              "Transmission": "6-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4 Stroke, Fuel-Injected, Liquid-Cooled, Reverse-Inclined"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "150/60-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "169 kg",
-              "Fuel Tank Capacity": "11 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 310 Fury Yellow Base",
-          "price": "₹2,38,390",
-          "colors": [
-            { "value": "Fury Yellow" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "312.12 cc",
-              "Max Power": "35.6 PS @ 9700 rpm",
-              "Max Torque": "28.7 Nm",
-              "Transmission": "6-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4 Stroke, Fuel-Injected, Liquid-Cooled, Reverse-Inclined"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "150/60-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "169 kg",
-              "Fuel Tank Capacity": "11 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT",
-              "Quick Shifter": "Yes"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 310 Arsenal Black Base",
-          "price": "₹2,38,390",
-          "colors": [
-            { "value": "Arsenal Black" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "312.12 cc",
-              "Max Power": "35.6 PS @ 9700 rpm",
-              "Max Torque": "28.7 Nm",
-              "Transmission": "6-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4 Stroke, Fuel-Injected, Liquid-Cooled, Reverse-Inclined"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "150/60-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "169 kg",
-              "Fuel Tank Capacity": "11 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT",
-              "Quick Shifter": "Yes"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 310 Fiery Red Base",
-          "price": "₹2,42,990",
-          "colors": [
-            { "value": "Fiery Red" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "312.12 cc",
-              "Max Power": "35.6 PS @ 9700 rpm",
-              "Max Torque": "28.7 Nm",
-              "Transmission": "6-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4 Stroke, Fuel-Injected, Liquid-Cooled, Reverse-Inclined"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "150/60-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "169 kg",
-              "Fuel Tank Capacity": "11 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT",
-              "Quick Shifter": "Yes"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 310 BTO 1",
-          "price": "₹2,75,000",
-          "colors": [
-            { "value": "Arsenal Black" },
-            { "value": "Fury Yellow" },
-            { "value": "Fiery Red" },
-            { "value": "Sepang Blue" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "312.12 cc",
-              "Max Power": "35.6 PS @ 9700 rpm",
-              "Max Torque": "28.7 Nm",
-              "Transmission": "6-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4 Stroke, Fuel-Injected, Liquid-Cooled, Reverse-Inclined"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "150/60-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "169 kg",
-              "Fuel Tank Capacity": "11 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT",
-              "Quick Shifter": "Yes"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 310 BTO 2",
-          "price": "₹2,85,000",
-          "colors": [
-            { "value": "Arsenal Black" },
-            { "value": "Fury Yellow" },
-            { "value": "Fiery Red" },
-            { "value": "Sepang Blue" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "312.12 cc",
-              "Max Power": "35.6 PS @ 9700 rpm",
-              "Max Torque": "28.7 Nm",
-              "Transmission": "6-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4 Stroke, Fuel-Injected, Liquid-Cooled, Reverse-Inclined"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "150/60-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "169 kg",
-              "Fuel Tank Capacity": "11 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT",
-              "Quick Shifter": "Yes"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RTR 310 Limited Edition",
-          "price": "₹2,86,690",
-          "colors": [
-            { "value": "Anniversary Edition" },
-            { "value": "Sepang Blue" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "312.12 cc",
-              "Max Power": "35.6 PS @ 9700 rpm",
-              "Max Torque": "28.7 Nm",
-              "Transmission": "6-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4 Stroke, Fuel-Injected, Liquid-Cooled, Reverse-Inclined"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "150/60-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "169 kg",
-              "Fuel Tank Capacity": "11 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT",
-              "Quick Shifter": "Yes"
-            }
-          }
-        }
-      ]
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Apache RTR 310",
+      "variant_name": "Apache RTR 310 Arsenal Black and Fury Yellow Base",
+      "price": "",
+      "engine_displacement": "312 cc",
+      "mileage": "30 kmpl",
+      "max_power": "35.08 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Apache RTR 310",
+      "variant_name": "Apache RTR 310 Fiery Red Base",
+      "price": "",
+      "engine_displacement": "312 cc",
+      "mileage": "30 kmpl",
+      "max_power": "35.08 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Apache RTR 310",
+      "variant_name": "Apache RTR 310 Anniversary Special Edition",
+      "price": "",
+      "engine_displacement": "312 cc",
+      "mileage": "30 kmpl",
+      "max_power": "35.08 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "TVS",
       "model": "Apache RR 310",
-      "mileage": "34 kmpl",
-      "engine_displacement": "312.2 cc",
+      "variant_name": "Apache RR 310 Red (Without Quickshifter) - OBD 2B",
+      "price": "₹2,59,548",
+      "engine_displacement": "312 cc",
+      "mileage": "34.7 kmpl",
+      "max_power": "37.48 bhp",
       "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "Apache RR 310 Red Without Quickshifter",
-          "price": "₹2,57,740",
-          "colors": [
-            { "value": "Racing Red" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "312.2 cc",
-              "Max Power": "38 PS @ 9900 rpm",
-              "Max Torque": "29 Nm",
-              "Transmission": "6-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4 Stroke, 4 Valve, Single Cylinder, Liquid Cooled"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc (300 mm)",
-              "Rear Brake": "Disc (240 mm)",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "150/60-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "174 kg",
-              "Fuel Tank Capacity": "11 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RR 310 Red With Quickshifter",
-          "price": "₹2,73,440",
-          "colors": [
-            { "value": "Racing Red" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "312.2 cc",
-              "Max Power": "38 PS @ 9900 rpm",
-              "Max Torque": "29 Nm",
-              "Transmission": "6-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4 Stroke, 4 Valve, Single Cylinder, Liquid Cooled",
-              "Quick Shifter": "Yes"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc (300 mm)",
-              "Rear Brake": "Disc (240 mm)",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "150/60-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "174 kg",
-              "Fuel Tank Capacity": "11 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RR 310 Bomber Grey",
-          "price": "₹2,78,040",
-          "colors": [
-            { "value": "Bomber Grey" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "312.2 cc",
-              "Max Power": "38 PS @ 9900 rpm",
-              "Max Torque": "29 Nm",
-              "Transmission": "6-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4 Stroke, 4 Valve, Single Cylinder, Liquid Cooled",
-              "Quick Shifter": "Yes"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc (300 mm)",
-              "Rear Brake": "Disc (240 mm)",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "150/60-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "174 kg",
-              "Fuel Tank Capacity": "11 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT"
-            }
-          }
-        },
-        {
-          "variant_name": "Apache RR 310 Limited Edition",
-          "price": "₹3,10,640",
-          "colors": [
-            { "value": "Anniversary Edition" },
-            { "value": "Sepang Blue Race Replica" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "312.2 cc",
-              "Max Power": "38 PS @ 9900 rpm",
-              "Max Torque": "29 Nm",
-              "Transmission": "6-Speed Manual",
-              "Fuel Type": "Petrol",
-              "Engine Type": "SI, 4 Stroke, 4 Valve, Single Cylinder, Liquid Cooled",
-              "Quick Shifter": "Yes"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc (300 mm)",
-              "Rear Brake": "Disc (240 mm)",
-              "Front Tyre": "110/70-17",
-              "Rear Tyre": "150/60-17"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "174 kg",
-              "Fuel Tank Capacity": "11 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT"
-            }
-          }
-        }
-      ]
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "TVS",
-      "model": "Zest 110",
-      "mileage": "62 kmpl",
-      "engine_displacement": "109.7 cc",
+      "model": "Apache RR 310",
+      "variant_name": "Apache RR 310 Red (With Quickshifter) - OBD 2B",
+      "price": "",
+      "engine_displacement": "312 cc",
+      "mileage": "34.7 kmpl",
+      "max_power": "37.48 bhp",
       "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "Zest 110 Drum",
-          "price": "₹72,940",
-          "colors": [
-            { "value": "Starlight Blue" },
-            { "value": "Matte Red" },
-            { "value": "Royal Wine" },
-            { "value": "Gloss Black" },
-            { "value": "Pearl White" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "109.7 cc",
-              "Max Power": "7.97 PS @ 7500 rpm",
-              "Max Torque": "8.8 Nm @ 5500 rpm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled",
-              "Starting": "Kick and Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Drum",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "103 kg",
-              "Fuel Tank Capacity": "5 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "Halogen",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Zest 110 Disc",
-          "price": "₹75,740",
-          "colors": [
-            { "value": "Starlight Blue" },
-            { "value": "Matte Red" },
-            { "value": "Royal Wine" },
-            { "value": "Gloss Black" },
-            { "value": "Pearl White" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "109.7 cc",
-              "Max Power": "7.97 PS @ 7500 rpm",
-              "Max Torque": "8.8 Nm @ 5500 rpm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled",
-              "Starting": "Kick and Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "104 kg",
-              "Fuel Tank Capacity": "5 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        }
-      ]
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "TVS",
-      "model": "Jupiter 110",
-      "mileage": "48 kmpl",
-      "engine_displacement": "113.3 cc",
+      "model": "Apache RR 310",
+      "variant_name": "Apache RR 310 Bomber Grey - OBD 2B",
+      "price": "",
+      "engine_displacement": "312 cc",
+      "mileage": "34.7 kmpl",
+      "max_power": "37.48 bhp",
       "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "Jupiter 110 Drum",
-          "price": "₹73,400",
-          "colors": [
-            { "value": "Lunar White Gloss" },
-            { "value": "Meteor Red Gloss" },
-            { "value": "Titanium Grey Matte" },
-            { "value": "Dawn Blue Matte" },
-            { "value": "Stardust Black" },
-            { "value": "Starlight Blue Gloss" },
-            { "value": "Galactic Copper Matte" },
-            { "value": "Twilight Purple Gloss" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "113.3 cc",
-              "Max Power": "8.02 PS @ 6500 rpm",
-              "Max Torque": "9.2 Nm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled",
-              "Starting": "Kick and Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Drum",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "105 kg",
-              "Fuel Tank Capacity": "5.1 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Jupiter 110 Drum Alloy",
-          "price": "₹78,000",
-          "colors": [
-            { "value": "Lunar White Gloss" },
-            { "value": "Meteor Red Gloss" },
-            { "value": "Titanium Grey Matte" },
-            { "value": "Dawn Blue Matte" },
-            { "value": "Stardust Black" },
-            { "value": "Starlight Blue Gloss" },
-            { "value": "Galactic Copper Matte" },
-            { "value": "Twilight Purple Gloss" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "113.3 cc",
-              "Max Power": "8.02 PS @ 6500 rpm",
-              "Max Torque": "9.2 Nm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled",
-              "Starting": "Kick and Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Drum",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "105 kg",
-              "Fuel Tank Capacity": "5.1 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Jupiter 110 SmartXonnect Drum",
-          "price": "₹82,100",
-          "colors": [
-            { "value": "Lunar White Gloss" },
-            { "value": "Meteor Red Gloss" },
-            { "value": "Titanium Grey Matte" },
-            { "value": "Dawn Blue Matte" },
-            { "value": "Stardust Black" },
-            { "value": "Starlight Blue Gloss" },
-            { "value": "Galactic Copper Matte" },
-            { "value": "Twilight Purple Gloss" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "113.3 cc",
-              "Max Power": "8.02 PS @ 6500 rpm",
-              "Max Torque": "9.8 Nm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled",
-              "Starting": "Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Drum",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "105 kg",
-              "Fuel Tank Capacity": "5.1 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Jupiter 110 SmartXonnect Disc",
-          "price": "₹84,750",
-          "colors": [
-            { "value": "Lunar White Gloss" },
-            { "value": "Meteor Red Gloss" },
-            { "value": "Titanium Grey Matte" },
-            { "value": "Dawn Blue Matte" },
-            { "value": "Stardust Black" },
-            { "value": "Starlight Blue Gloss" },
-            { "value": "Galactic Copper Matte" },
-            { "value": "Twilight Purple Gloss" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "113.3 cc",
-              "Max Power": "8.02 PS @ 6500 rpm",
-              "Max Torque": "9.8 Nm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled",
-              "Starting": "Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "105 kg",
-              "Fuel Tank Capacity": "5.1 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Jupiter 110 Special Edition",
-          "price": "₹86,900",
-          "colors": [
-            { "value": "Lunar White Gloss" },
-            { "value": "Meteor Red Gloss" },
-            { "value": "Titanium Grey Matte" },
-            { "value": "Dawn Blue Matte" },
-            { "value": "Stardust Black" },
-            { "value": "Starlight Blue Gloss" },
-            { "value": "Galactic Copper Matte" },
-            { "value": "Twilight Purple Gloss" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "113.3 cc",
-              "Max Power": "8.02 PS @ 6500 rpm",
-              "Max Torque": "9.8 Nm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled",
-              "Starting": "Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "105 kg",
-              "Fuel Tank Capacity": "5.1 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        }
-      ]
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Apache RR 310",
+      "variant_name": "Apache RR 310 Anniversary Special Edition",
+      "price": "",
+      "engine_displacement": "312 cc",
+      "mileage": "34.7 kmpl",
+      "max_power": "37.48 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Ronin",
+      "variant_name": "Ronin Base - Lightning Black",
+      "price": "₹1,26,751",
+      "engine_displacement": "226 cc",
+      "mileage": "42 kmpl",
+      "max_power": "20.1 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Ronin",
+      "variant_name": "Ronin Base - Magma Red",
+      "price": "",
+      "engine_displacement": "226 cc",
+      "mileage": "42 kmpl",
+      "max_power": "20.1 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Ronin",
+      "variant_name": "Ronin Agonda",
+      "price": "",
+      "engine_displacement": "226 cc",
+      "mileage": "42 kmpl",
+      "max_power": "20.1 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Ronin",
+      "variant_name": "Ronin Mid - Glacier Silver",
+      "price": "",
+      "engine_displacement": "226 cc",
+      "mileage": "42 kmpl",
+      "max_power": "20.1 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Ronin",
+      "variant_name": "Ronin Mid - Charcoal Ember",
+      "price": "",
+      "engine_displacement": "226 cc",
+      "mileage": "42 kmpl",
+      "max_power": "20.1 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Ronin",
+      "variant_name": "Ronin Top",
+      "price": "",
+      "engine_displacement": "226 cc",
+      "mileage": "42 kmpl",
+      "max_power": "20.1 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Sport",
+      "variant_name": "Sport ES",
+      "price": "₹62,143",
+      "engine_displacement": "110 cc",
+      "mileage": "80 kmpl",
+      "max_power": "8.08 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Sport",
+      "variant_name": "Sport ES+",
+      "price": "",
+      "engine_displacement": "110 cc",
+      "mileage": "80 kmpl",
+      "max_power": "8.08 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Radeon",
+      "variant_name": "Radeon All Black Edition",
+      "price": "₹70,143",
+      "engine_displacement": "110 cc",
+      "mileage": "63 kmpl",
+      "max_power": "8.08 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Radeon",
+      "variant_name": "Radeon Drum",
+      "price": "",
+      "engine_displacement": "110 cc",
+      "mileage": "63 kmpl",
+      "max_power": "8.08 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Radeon",
+      "variant_name": "Radeon Digital - Drum",
+      "price": "",
+      "engine_displacement": "110 cc",
+      "mileage": "63 kmpl",
+      "max_power": "8.08 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Radeon",
+      "variant_name": "Radeon Digital - Disc",
+      "price": "",
+      "engine_displacement": "110 cc",
+      "mileage": "63 kmpl",
+      "max_power": "8.08 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Star City Plus",
+      "variant_name": "Star City Plus Drum",
+      "price": "₹72,025",
+      "engine_displacement": "110 cc",
+      "mileage": "70 kmpl",
+      "max_power": "8.08 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Star City Plus",
+      "variant_name": "Star City Plus Disc",
+      "price": "",
+      "engine_displacement": "110 cc",
+      "mileage": "70 kmpl",
+      "max_power": "8.08 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Jupiter",
+      "variant_name": "Jupiter Drum- OBD 2B",
+      "price": "₹76,543",
+      "engine_displacement": "113 cc",
+      "mileage": "53.84 kmpl",
+      "max_power": "7.91 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Jupiter",
+      "variant_name": "Jupiter Drum Alloy- OBD 2B",
+      "price": "",
+      "engine_displacement": "113 cc",
+      "mileage": "53.84 kmpl",
+      "max_power": "7.91 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Jupiter",
+      "variant_name": "Jupiter SmartXonnect Drum- OBD 2B",
+      "price": "",
+      "engine_displacement": "113 cc",
+      "mileage": "53.84 kmpl",
+      "max_power": "7.91 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Jupiter",
+      "variant_name": "Jupiter SmartXonnect Disc - OBD 2B",
+      "price": "",
+      "engine_displacement": "113 cc",
+      "mileage": "53.84 kmpl",
+      "max_power": "7.91 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Jupiter",
+      "variant_name": "Jupiter Special Edition",
+      "price": "",
+      "engine_displacement": "113 cc",
+      "mileage": "53.84 kmpl",
+      "max_power": "7.91 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "TVS",
       "model": "Jupiter 125",
-      "mileage": "57.27 kmpl",
-      "engine_displacement": "124.8 cc",
+      "variant_name": "Jupiter 125 Drum - Alloy Wheel",
+      "price": "₹83,634",
+      "engine_displacement": "125 cc",
+      "mileage": "50 kmpl",
+      "max_power": "8.04 bhp",
       "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "Jupiter 125 Drum Alloy",
-          "price": "₹77,000",
-          "colors": [
-            { "value": "Sparkling Black" },
-            { "value": "Dawn Orange" },
-            { "value": "Elite Green" },
-            { "value": "White" },
-            { "value": "Ivory Grey" },
-            { "value": "Titanium Grey" },
-            { "value": "Indiblue" },
-            { "value": "Matte Copper Bronze" },
-            { "value": "Elegant Red" },
-            { "value": "Ivory Brown" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "124.8 cc",
-              "Max Power": "8.15 PS @ 6500 rpm",
-              "Max Torque": "10.5 Nm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled",
-              "Starting": "Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Drum",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "108 kg",
-              "Fuel Tank Capacity": "5.1 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Jupiter 125 Disc",
-          "price": "₹82,100",
-          "colors": [
-            { "value": "Sparkling Black" },
-            { "value": "Dawn Orange" },
-            { "value": "Elite Green" },
-            { "value": "White" },
-            { "value": "Ivory Grey" },
-            { "value": "Titanium Grey" },
-            { "value": "Indiblue" },
-            { "value": "Matte Copper Bronze" },
-            { "value": "Elegant Red" },
-            { "value": "Ivory Brown" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "124.8 cc",
-              "Max Power": "8.15 PS @ 6500 rpm",
-              "Max Torque": "10.5 Nm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled",
-              "Starting": "Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "108 kg",
-              "Fuel Tank Capacity": "5.1 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Jupiter 125 DT SXC",
-          "price": "₹85,850",
-          "colors": [
-            { "value": "Sparkling Black" },
-            { "value": "Dawn Orange" },
-            { "value": "Elite Green" },
-            { "value": "White" },
-            { "value": "Ivory Grey" },
-            { "value": "Titanium Grey" },
-            { "value": "Indiblue" },
-            { "value": "Matte Copper Bronze" },
-            { "value": "Elegant Red" },
-            { "value": "Ivory Brown" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "124.8 cc",
-              "Max Power": "8.56 PS @ 6500 rpm",
-              "Max Torque": "11.1 Nm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled",
-              "Starting": "Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "109 kg",
-              "Fuel Tank Capacity": "5.1 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Jupiter 125 SmartXonnect",
-          "price": "₹87,800",
-          "colors": [
-            { "value": "Sparkling Black" },
-            { "value": "Dawn Orange" },
-            { "value": "Elite Green" },
-            { "value": "White" },
-            { "value": "Ivory Grey" },
-            { "value": "Titanium Grey" },
-            { "value": "Indiblue" },
-            { "value": "Matte Copper Bronze" },
-            { "value": "Elegant Red" },
-            { "value": "Ivory Brown" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "124.8 cc",
-              "Max Power": "8.15 PS @ 6500 rpm",
-              "Max Torque": "10.5 Nm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled",
-              "Starting": "Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "108 kg",
-              "Fuel Tank Capacity": "5.1 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        }
-      ]
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Jupiter 125",
+      "variant_name": "Jupiter 125 Disc - Alloy Wheel",
+      "price": "",
+      "engine_displacement": "125 cc",
+      "mileage": "50 kmpl",
+      "max_power": "8.04 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Jupiter 125",
+      "variant_name": "Jupiter 125 DT SXC",
+      "price": "",
+      "engine_displacement": "125 cc",
+      "mileage": "50 kmpl",
+      "max_power": "8.04 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Jupiter 125",
+      "variant_name": "Jupiter 125 SmartXonnect",
+      "price": "",
+      "engine_displacement": "125 cc",
+      "mileage": "50 kmpl",
+      "max_power": "8.04 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "TVS",
       "model": "Ntorq 125",
-      "mileage": "47 kmpl",
-      "engine_displacement": "124.8 cc",
+      "variant_name": "Ntorq 125 Disc",
+      "price": "₹87,937",
+      "engine_displacement": "125 cc",
+      "mileage": "48.5 kmpl",
+      "max_power": "9.25 bhp",
       "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "Ntorq 125 Disc",
-          "price": "₹81,250",
-          "colors": [
-            { "value": "Stealth Black" },
-            { "value": "Nardo Gray" },
-            { "value": "Blaze Blue" },
-            { "value": "Neon" },
-            { "value": "Lightning Gray" },
-            { "value": "Harlequin Blue" },
-            { "value": "Turquoise Blue" },
-            { "value": "Race Red" },
-            { "value": "Dark Black" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "124.8 cc",
-              "Max Power": "9.5 PS @ 7000 rpm",
-              "Max Torque": "10.6 Nm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled, Fuel Injected",
-              "Starting": "Kick and Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "111 kg",
-              "Fuel Tank Capacity": "5.8 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Ntorq 125 Race Edition",
-          "price": "₹86,550",
-          "colors": [
-            { "value": "Race Edition Red" },
-            { "value": "Race Edition Blue" },
-            { "value": "Stealth Black" },
-            { "value": "Nardo Gray" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "124.8 cc",
-              "Max Power": "9.5 PS @ 7000 rpm",
-              "Max Torque": "10.6 Nm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled, Fuel Injected",
-              "Starting": "Kick and Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "111 kg",
-              "Fuel Tank Capacity": "5.8 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Ntorq 125 Super Squad Edition",
-          "price": "₹91,050",
-          "colors": [
-            { "value": "Super Soldier" },
-            { "value": "Amazing Red" },
-            { "value": "Stealth Black" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "124.8 cc",
-              "Max Power": "9.5 PS @ 7000 rpm",
-              "Max Torque": "10.6 Nm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled, Fuel Injected",
-              "Starting": "Kick and Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "111 kg",
-              "Fuel Tank Capacity": "5.8 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Ntorq 125 Race XP",
-          "price": "₹92,550",
-          "colors": [
-            { "value": "Stealth Black" },
-            { "value": "Nardo Gray" },
-            { "value": "Blaze Blue" },
-            { "value": "Race Red" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "124.8 cc",
-              "Max Power": "10.2 PS @ 7000 rpm",
-              "Max Torque": "10.9 Nm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled, Fuel Injected",
-              "Starting": "Kick and Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "111 kg",
-              "Fuel Tank Capacity": "5.8 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Ntorq 125 XT",
-          "price": "₹1,00,150",
-          "colors": [
-            { "value": "Stealth Black" },
-            { "value": "Nardo Gray" },
-            { "value": "Blaze Blue" },
-            { "value": "Neon" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "124.8 cc",
-              "Max Power": "9.5 PS @ 7000 rpm",
-              "Max Torque": "10.6 Nm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "Single Cylinder, 4-Stroke, Air Cooled, Fuel Injected",
-              "Starting": "Kick and Self Start"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "109 kg",
-              "Fuel Tank Capacity": "5.8 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        }
-      ]
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "TVS",
-      "model": "Ntorq 150",
-      "mileage": "40 kmpl",
-      "engine_displacement": "149.7 cc",
+      "model": "Ntorq 125",
+      "variant_name": "Ntorq 125 Race Edition",
+      "price": "",
+      "engine_displacement": "125 cc",
+      "mileage": "48.5 kmpl",
+      "max_power": "9.25 bhp",
       "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "Ntorq 150 STD",
-          "price": "₹1,09,400",
-          "colors": [
-            { "value": "Turbo Blue" },
-            { "value": "Stealth Silver" },
-            { "value": "Racing Red" },
-            { "value": "Nitro Green" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "149.7 cc",
-              "Max Power": "13.2 PS @ 7000 rpm",
-              "Max Torque": "14.2 Nm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "3V, Single Cylinder, O3C Tech"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "115 kg",
-              "Fuel Tank Capacity": "5.8 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED"
-            }
-          }
-        },
-        {
-          "variant_name": "Ntorq 150 TFT",
-          "price": "₹1,18,400",
-          "colors": [
-            { "value": "Turbo Blue" },
-            { "value": "Stealth Silver" },
-            { "value": "Racing Red" },
-            { "value": "Nitro Green" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Displacement": "149.7 cc",
-              "Max Power": "13.2 PS @ 7000 rpm",
-              "Max Torque": "14.2 Nm",
-              "Transmission": "Automatic (CVT)",
-              "Fuel Type": "Petrol",
-              "Engine Type": "3V, Single Cylinder, O3C Tech"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Telescopic Fork",
-              "Rear Suspension": "Hydraulic Shock Absorber",
-              "Front Brake": "Disc",
-              "Rear Brake": "Drum"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "115 kg",
-              "Fuel Tank Capacity": "5.8 L",
-              "Seating Capacity": "2"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "TFT"
-            }
-          }
-        }
-      ]
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "TVS",
-      "model": "X",
-      "mileage": "110 km/charge",
-      "engine_displacement": "Electric",
+      "model": "Ntorq 125",
+      "variant_name": "Ntorq 125 Super Squad Edition",
+      "price": "",
+      "engine_displacement": "125 cc",
+      "mileage": "48.5 kmpl",
+      "max_power": "9.25 bhp",
       "source_section": "Available",
-      "variants": [
-        {
-          "variant_name": "TVS X Standard",
-          "price": "₹2,49,999",
-          "colors": [
-            { "value": "Lunar Grey" },
-            { "value": "Aurora Red" },
-            { "value": "Celestial Blue" },
-            { "value": "Astral White" }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Motor Type": "Hub-mounted BLDC Motor",
-              "Motor Power": "6 kW (Peak)",
-              "Torque": "23 Nm",
-              "Transmission": "Automatic",
-              "Battery Capacity": "4.44 kWh (Lithium-Ion)",
-              "Range": "110 km/charge",
-              "Charging Time": "0-80% in 50 mins (Fast Charger), 4.5 hours (Home Charger)",
-              "Top Speed": "105 kmph"
-            },
-            "chassis_and_suspension": {
-              "Front Suspension": "Upside Down Fork (USD)",
-              "Rear Suspension": "Monoshock",
-              "Front Brake": "Disc",
-              "Rear Brake": "Disc",
-              "Front Tyre": "120/70-15",
-              "Rear Tyre": "140/70-14"
-            },
-            "dimensions_and_capacity": {
-              "Kerb Weight": "145 kg",
-              "Seating Capacity": "2",
-              "Ground Clearance": "160 mm"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Display": "10.2-inch TFT Touchscreen",
-              "Connectivity": "Bluetooth, WiFi, 4G"
-            }
-          }
-        }
-      ]
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Ntorq 125",
+      "variant_name": "Ntorq 125 Race XP",
+      "price": "",
+      "engine_displacement": "125 cc",
+      "mileage": "48.5 kmpl",
+      "max_power": "9.25 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Ntorq 125",
+      "variant_name": "Ntorq 125 XT",
+      "price": "",
+      "engine_displacement": "125 cc",
+      "mileage": "48.5 kmpl",
+      "max_power": "9.25 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Zest 110",
+      "variant_name": "Zest 110 Gloss",
+      "price": "₹69,941",
+      "engine_displacement": "110 cc",
+      "mileage": "45 kmpl",
+      "max_power": "7.71 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Zest 110",
+      "variant_name": "Zest 110 Matte",
+      "price": "",
+      "engine_displacement": "110 cc",
+      "mileage": "45 kmpl",
+      "max_power": "7.71 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "TVS",
+      "model": "Zest 110",
+      "variant_name": "Zest 110 SXC",
+      "price": "",
+      "engine_displacement": "110 cc",
+      "mileage": "45 kmpl",
+      "max_power": "7.71 bhp",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }
