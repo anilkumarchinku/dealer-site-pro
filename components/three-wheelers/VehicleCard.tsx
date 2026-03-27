@@ -2,18 +2,21 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Fuel, Zap, Users, Package, Send, ChevronRight, Eye } from "lucide-react"
+import { Fuel, Zap, Users, Package, Send, ChevronRight, Eye, Heart, TrendingUp, GitCompare, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import { getScrapedImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 import { QuickViewModal } from "./QuickViewModal"
+import { LeadFormModal } from "./LeadFormModal"
 
 interface Props {
     vehicle:    ThreeWheelerVehicle
     slug:       string
+    dealerId?:  string
     brandColor?: string
     onLead?:    (vehicleId: string) => void
+    onCompare?: (vehicle: ThreeWheelerVehicle) => void
 }
 
 function SpecItem({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
@@ -30,15 +33,23 @@ function SpecItem({ icon, label, value }: { icon: React.ReactNode; label: string
     )
 }
 
-export function VehicleCard({ vehicle, slug, brandColor = "#1f2937", onLead }: Props) {
+export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", onLead, onCompare }: Props) {
     const prefix = useSitePrefix(slug)
-    const price  = (vehicle.ex_showroom_price_paise / 100).toLocaleString("en-IN")
+    const priceRaw = vehicle.ex_showroom_price_paise
+    const price = priceRaw > 0 ? (priceRaw / 100).toLocaleString("en-IN") : null
+    const emiRaw = vehicle.emi_starting_paise
+    const emi = emiRaw && emiRaw > 0 ? (emiRaw / 100).toLocaleString("en-IN") : null
 
     const [jpgUrl, pngUrl] = getScrapedImageUrls("3w", brandNameToId(vehicle.brand, "3w"), vehicle.model)
     const primarySrc = vehicle.images[0] || jpgUrl
     const [imgSrc, setImgSrc] = useState(primarySrc)
     const [imgFailed, setFailed] = useState(false)
     const [quickView, setQuickView] = useState(false)
+    const [wishlisted, setWishlisted] = useState(false)
+    const [trialOpen, setTrialOpen] = useState(false)
+
+    const brandId = brandNameToId(vehicle.brand, "3w")
+    const brandLogoSrc = `/data/brand-logos/${brandId}.png`
 
     function handleImgError() {
         if (imgSrc === jpgUrl) { setImgSrc(pngUrl); return }
@@ -97,6 +108,14 @@ export function VehicleCard({ vehicle, slug, brandColor = "#1f2937", onLead }: P
                     )}
                 </div>
 
+                {/* Wishlist heart */}
+                <button
+                    onClick={(e) => { e.stopPropagation(); setWishlisted(w => !w) }}
+                    className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-sm hover:bg-white transition-colors"
+                >
+                    <Heart className={`w-4 h-4 transition-colors ${wishlisted ? "fill-red-500 text-red-500" : "text-gray-400"}`} />
+                </button>
+
                 {/* Stock status */}
                 {vehicle.stock_status !== "available" && (
                     <div className={`absolute bottom-0 left-0 right-0 text-center text-xs font-medium py-1 ${
@@ -120,11 +139,16 @@ export function VehicleCard({ vehicle, slug, brandColor = "#1f2937", onLead }: P
             {/* Content */}
             <div className="flex flex-col flex-1 p-3 pt-2.5">
 
-                {/* Brand + model */}
+                {/* Brand logo + name */}
                 <div className="mb-1.5">
-                    <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: brandColor }}>
-                        {vehicle.brand}
-                    </p>
+                    <div className="flex items-center gap-1.5">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={brandLogoSrc} alt="" className="w-4 h-4 object-contain rounded-sm"
+                            onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                        <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: brandColor }}>
+                            {vehicle.brand}
+                        </p>
+                    </div>
                     <h3 className="text-base font-bold leading-tight line-clamp-1 text-gray-900">
                         {vehicle.model}
                     </h3>
@@ -133,10 +157,21 @@ export function VehicleCard({ vehicle, slug, brandColor = "#1f2937", onLead }: P
                     )}
                 </div>
 
-                {/* Price */}
+                {/* Price + EMI */}
                 <div className="mb-2">
-                    <p className="text-lg font-bold text-gray-900">₹{price}</p>
-                    <p className="text-[10px] text-gray-500">Ex-showroom</p>
+                    {price ? (
+                        <>
+                            <p className="text-lg font-bold text-gray-900">₹{price}</p>
+                            <p className="text-[10px] text-gray-500">Ex-showroom</p>
+                            {emi && (
+                                <p className="text-[10px] text-emerald-600 font-medium flex items-center gap-0.5 mt-0.5">
+                                    <TrendingUp className="w-3 h-3" /> EMI from ₹{emi}/mo
+                                </p>
+                            )}
+                        </>
+                    ) : (
+                        <p className="text-sm font-semibold text-gray-500 italic">Price on request</p>
+                    )}
                 </div>
 
                 <div className="border-t border-gray-100 mb-2" />
@@ -175,23 +210,47 @@ export function VehicleCard({ vehicle, slug, brandColor = "#1f2937", onLead }: P
                         onClick={() => onLead?.(vehicle.id)}
                     >
                         <Send className="w-3.5 h-3.5 mr-1.5" />
-                        Get Price
+                        Enquire
                     </Button>
-                    <Link
-                        href={`${prefix}/three-wheelers/${vehicle.id}`}
-                        className="flex-1"
-                        onClick={e => e.stopPropagation()}
+                    <Button
+                        size="sm"
+                        variant="outline"
+                        className="bg-white"
+                        style={{ borderColor: brandColor, color: brandColor }}
+                        onClick={(e) => { e.stopPropagation(); setTrialOpen(true) }}
                     >
-                        <Button
-                            size="sm"
-                            variant="outline"
-                            className="w-full bg-white"
-                            style={{ borderColor: brandColor, color: brandColor }}
-                        >
-                            Details
-                        </Button>
+                        <Calendar className="w-3.5 h-3.5 mr-1" />
+                        Trial Run
+                    </Button>
+                </div>
+
+                {/* Compare + Info row */}
+                <div className="flex items-center gap-2 mt-2">
+                    {onCompare && (
+                        <button onClick={() => onCompare(vehicle)}
+                            className="flex items-center gap-1 text-[10px] text-gray-400 hover:text-gray-700 transition-colors">
+                            <GitCompare className="w-3 h-3" /> Compare
+                        </button>
+                    )}
+                    <Link href={`${prefix}/three-wheelers/${vehicle.id}`}
+                        className="flex items-center gap-1 text-[10px] text-gray-400 hover:text-gray-700 transition-colors ml-auto"
+                        onClick={e => e.stopPropagation()}>
+                        <ChevronRight className="w-3 h-3" /> View Details
                     </Link>
                 </div>
+
+                {/* Trial Run Modal */}
+                {trialOpen && dealerId && (
+                    <LeadFormModal
+                        dealerId={dealerId}
+                        vehicleId={vehicle.id}
+                        vehicleName={`${vehicle.brand} ${vehicle.model}`}
+                        leadType="test_drive"
+                        title={`Book a Trial Run — ${vehicle.model}`}
+                        isOpen={trialOpen}
+                        onClose={() => setTrialOpen(false)}
+                    />
+                )}
             </div>
 
             {/* Bottom accent line on hover */}
