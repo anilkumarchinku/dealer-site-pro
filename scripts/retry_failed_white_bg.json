@@ -1,0 +1,17 @@
+[
+  { "category": "4w", "brand": "aston-martin", "slug": "db12", "query": "Aston Martin DB12 2024 car studio white" },
+  { "category": "4w", "brand": "jaguar", "slug": "f-type", "query": "Jaguar F-Type car white background press photo" },
+  { "category": "4w", "brand": "land-rover", "slug": "range-rover-sport", "query": "Range Rover Sport 2024 white background" },
+  { "category": "4w", "brand": "lexus", "slug": "gx", "query": "Lexus GX 2024 SUV white background" },
+  { "category": "4w", "brand": "volkswagen", "slug": "tiguan", "query": "Volkswagen Tiguan 2024 white background India" },
+  { "category": "2w", "brand": "honda-hmsi", "slug": "gold-wing", "query": "Honda Gold Wing motorcycle white background" },
+  { "category": "2w", "brand": "honda-hmsi", "slug": "africa-twin", "query": "Honda Africa Twin CRF1100L white background" },
+  { "category": "2w", "brand": "honda", "slug": "honda-gold-wing", "query": "Honda Gold Wing GL1800 white background" },
+  { "category": "2w", "brand": "honda", "slug": "honda-nx500", "query": "Honda NX500 motorcycle white background 2024" },
+  { "category": "2w", "brand": "indian-motorcycle", "slug": "chief-dark-horse", "query": "Indian Chief Dark Horse motorcycle white background" },
+  { "category": "2w", "brand": "jawa-motorcycles", "slug": "42-fj", "query": "Jawa 42 FJ motorcycle white background India" },
+  { "category": "2w", "brand": "odysse-electric", "slug": "vader", "query": "Odysse Vader electric scooter India" },
+  { "category": "2w", "brand": "triumph-india", "slug": "tiger-sport-660", "query": "Triumph Tiger Sport 660 white background" },
+  { "category": "3w", "brand": "euler-motors", "slug": "hiload-dv-ev", "query": "Euler HiLoad DV electric three wheeler India" },
+  { "category": "3w", "brand": "mahindra-3w", "slug": "udo", "query": "Mahindra UDO electric auto rickshaw India" }
+]

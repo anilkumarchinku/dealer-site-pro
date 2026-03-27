@@ -20,6 +20,7 @@ import {
     MapPin,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { validateLeadForm } from '@/lib/validations/client';
 
 interface TestDriveModalProps {
     car: Car;
@@ -119,7 +120,11 @@ export function TestDriveModal({
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!form.name.trim() || !form.phone.trim()) return;
+        const validationErrors = validateLeadForm(form);
+        if (Object.keys(validationErrors).length > 0) {
+            setErrorMsg(Object.values(validationErrors).join('. '));
+            return;
+        }
         setStatus('loading');
         setErrorMsg('');
         try {

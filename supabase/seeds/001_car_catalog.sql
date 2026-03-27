@@ -116,7 +116,7 @@ VALUES
   ('mahindra-xuv-7xo','Mahindra','XUV 7XO','Standard',2026,'SUV','Petrol',NULL,5,NULL,136600000,249200000,'/assets/cars/mahindra/xuv-7xo.jpg','https://www.cardekho.com/mahindra/xuv-7xo','2026-02-11T06:52:28.000Z'),
   ('mahindra-xuv400','Mahindra','XUV400','Standard',2026,'SUV','Petrol',NULL,5,NULL,132000000,241700000,'/assets/cars/mahindra/xuv400.jpg','https://www.cardekho.com/mahindra/xuv400','2026-02-11T06:52:28.000Z'),
   ('mahindra-xuv700','Mahindra','XUV700','Standard',2026,'SUV','Petrol',NULL,5,NULL,136600000,237100000,'/assets/cars/mahindra/xuv700.jpg','https://www.cardekho.com/mahindra/xuv700','2026-02-11T06:52:28.000Z'),
-  ('maruti-ciaz','Maruti Suzuki','Ciaz','Standard',2025,'Sedan','Electric','Automatic',5,NULL,90900000,118900000,'/assets/cars/maruti/maruti-ciaz.jpg','https://www.cardekho.com/maruti/ciaz','2026-02-11T14:56:16.000Z'),
+  ('maruti-ciaz','Maruti Suzuki','Ciaz','Standard',2025,'Sedan','Electric','Automatic',5,NULL,90900000,118900000,'/assets/cars/maruti-suzuki/ciaz.jpg','https://www.cardekho.com/maruti/ciaz','2026-02-11T14:56:16.000Z'),
   ('maruti-suzuki-alto-k10','Maruti Suzuki','Alto K10','Standard',2026,'Hatchback','Petrol',NULL,5,NULL,37000000,54500000,'/assets/cars/maruti-suzuki/alto-k10.jpg','https://www.cardekho.com/maruti/alto-k10','2026-02-11T06:52:28.000Z'),
   ('maruti-suzuki-baleno','Maruti Suzuki','Baleno','Standard',2026,'Hatchback','Petrol',NULL,5,NULL,59900000,91000000,'/assets/cars/maruti-suzuki/baleno.jpg','https://www.cardekho.com/maruti/baleno','2026-02-11T06:52:28.000Z'),
   ('maruti-suzuki-brezza','Maruti Suzuki','Brezza','Standard',2026,'SUV','Petrol',NULL,5,NULL,82600000,130100000,'/assets/cars/maruti-suzuki/brezza.jpg','https://www.cardekho.com/maruti/brezza','2026-02-11T06:52:28.000Z'),

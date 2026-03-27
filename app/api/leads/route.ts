@@ -20,6 +20,7 @@ import { sendLeadSmsToDealer } from '@/lib/services/sms-service'
 import { forwardLeadToCyepro } from '@/lib/services/cyepro-service'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 import { logger } from '@/lib/utils/logger'
+import { leadSchema, formatZodErrors } from '@/lib/validations/schemas'
 
 // ── Supabase client with SERVICE ROLE key (server-side only — bypasses RLS) ──
 function getSupabase() {
@@ -29,8 +30,6 @@ function getSupabase() {
     )
 }
 
-// Allowed lead_source values
-const VALID_SOURCES = new Set(['contact_form', 'car_enquiry', 'test_drive', 'whatsapp', 'phone', 'price_alert'])
 
 export async function POST(request: NextRequest) {
     try {
@@ -39,35 +38,20 @@ export async function POST(request: NextRequest) {
         if (rateLimitResponse) return rateLimitResponse
 
         const body = await request.json()
-        const { dealer_id, name, phone, email, message, car_id, car_name, lead_source } = body
 
         // Extract referer to know which exact website this lead came from
         const referer = request.headers.get('referer') || 'Direct/Unknown'
 
-        // ── Validate required fields ──────────────────────────────────────────
-        if (!dealer_id || !name || !phone) {
+        // ── Validate with Zod ───────────────────────────────────────────────
+        const parsed = leadSchema.safeParse(body)
+        if (!parsed.success) {
             return NextResponse.json(
-                { error: 'dealer_id, name and phone are required' },
+                { error: formatZodErrors(parsed.error) },
                 { status: 400 }
             )
         }
-
-        // Basic type / length validation
-        if (typeof dealer_id !== 'string' || typeof name !== 'string' || typeof phone !== 'string') {
-            return NextResponse.json({ error: 'Invalid field types' }, { status: 400 })
-        }
-        if (name.length > 100 || phone.length > 20) {
-            return NextResponse.json({ error: 'Invalid field length' }, { status: 400 })
-        }
-        if (email && (typeof email !== 'string' || email.length > 254)) {
-            return NextResponse.json({ error: 'Invalid email' }, { status: 400 })
-        }
-        if (message && (typeof message !== 'string' || message.length > 1000)) {
-            return NextResponse.json({ error: 'Message too long' }, { status: 400 })
-        }
-
-        // Sanitise lead_source — never trust client values verbatim
-        const safeSource = lead_source && VALID_SOURCES.has(lead_source) ? lead_source : 'contact_form'
+        const { dealer_id, name, phone, email, message, car_id, car_name, lead_source } = parsed.data
+        const safeSource = lead_source
 
         const supabase = getSupabase()
 

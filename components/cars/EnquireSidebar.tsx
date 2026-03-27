@@ -20,6 +20,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import type { Service } from '@/lib/types';
 import { getVehicleLabels } from '@/lib/utils/vehicle-labels';
+import { validateLeadForm } from '@/lib/validations/client';
 import {
     Car,
     CreditCard,
@@ -233,7 +234,11 @@ export function EnquireSidebar({
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!form.name || !form.phone) return;
+        const validationErrors = validateLeadForm(form);
+        if (Object.keys(validationErrors).length > 0) {
+            alert(Object.values(validationErrors).join('. '));
+            return;
+        }
 
         try {
             const res = await fetch('/api/leads', {

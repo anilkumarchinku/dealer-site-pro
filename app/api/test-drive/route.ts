@@ -6,6 +6,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
+import { testDriveSchema, formatZodErrors } from '@/lib/validations/schemas';
 
 function getSupabase() {
     return createClient(
@@ -17,25 +18,19 @@ function getSupabase() {
 export async function POST(req: NextRequest) {
     try {
         const body = await req.json();
-        const {
-            dealer_id,
-            car_id,
-            car_name,
-            preferred_date,
-            preferred_time,
-            name,
-            phone,
-            email,
-            vehicle_type,
-        } = body;
 
-        // Basic validation
-        if (!dealer_id || !name || !phone) {
-            return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+        // ── Validate with Zod ───────────────────────────────────────────────
+        const parsed = testDriveSchema.safeParse(body);
+        if (!parsed.success) {
+            return NextResponse.json(
+                { error: formatZodErrors(parsed.error) },
+                { status: 400 }
+            );
         }
-        if (!preferred_date || !preferred_time) {
-            return NextResponse.json({ error: 'Please select a date and time' }, { status: 400 });
-        }
+        const {
+            dealer_id, car_id, car_name, preferred_date, preferred_time,
+            name, phone, email, vehicle_type,
+        } = parsed.data;
 
         // Format a human-readable message for the lead record
         const message = `${vehicle_type === '2w' ? 'Test Ride' : vehicle_type === '3w' ? 'Trial Run' : 'Test Drive'} request for ${car_name ?? 'vehicle'}.\nPreferred: ${preferred_date} at ${preferred_time}.`;

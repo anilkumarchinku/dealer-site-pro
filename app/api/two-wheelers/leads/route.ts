@@ -10,6 +10,7 @@ import { createTwoWheelerLead, getTwoWheelerLeads, updateTwoWheelerLeadStatus } 
 import { forwardLeadToCyepro } from '@/lib/services/cyepro-service'
 import { createClient } from '@supabase/supabase-js'
 import type { TwoWheelerLeadFilters, TwoWheelerLeadStatus } from '@/lib/types/two-wheeler'
+import { twLeadSchema, updateLeadStatusSchema, formatZodErrors } from '@/lib/validations/schemas'
 
 function getSupabase() {
     return createClient(
@@ -26,14 +27,16 @@ export async function POST(request: NextRequest) {
     if (rateLimit) return rateLimit
 
     const body = await request.json()
-    const { dealer_id, lead_type, name, phone, email, vehicle_id, vehicle_name, used_vehicle_id, preferred_date, message, offer_price_paise } = body
 
-    if (!dealer_id || !lead_type || !name || !phone) {
+    // ── Validate with Zod ───────────────────────────────────────────────
+    const parsed = twLeadSchema.safeParse(body)
+    if (!parsed.success) {
         return NextResponse.json(
-            { error: 'dealer_id, lead_type, name, and phone are required' },
+            { error: formatZodErrors(parsed.error) },
             { status: 400 }
         )
     }
+    const { dealer_id, lead_type, name, phone, email, vehicle_id, vehicle_name, used_vehicle_id, preferred_date, message, offer_price_paise } = parsed.data
 
     const result = await createTwoWheelerLead({
         dealer_id,
@@ -108,10 +111,12 @@ export async function PATCH(request: NextRequest) {
         return NextResponse.json({ error: 'Dealer account not found' }, { status: 403 })
     }
 
-    const { id, status } = await request.json()
-    if (!id || !status) {
-        return NextResponse.json({ error: 'id and status are required' }, { status: 400 })
+    const patchBody = await request.json()
+    const parsedPatch = updateLeadStatusSchema.safeParse(patchBody)
+    if (!parsedPatch.success) {
+        return NextResponse.json({ error: formatZodErrors(parsedPatch.error) }, { status: 400 })
     }
+    const { id, status } = parsedPatch.data
 
     const result = await updateTwoWheelerLeadStatus(id, dealer.id, status)
     if (!result.success) {

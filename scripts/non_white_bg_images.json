@@ -1,0 +1,5709 @@
+[
+  {
+    "category": "4w",
+    "brand": "aston-martin",
+    "file": "db12.jpg",
+    "slug": "db12",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/aston-martin/db12.jpg",
+    "reason": "non-white (avg RGB: 102,134,108, 0% white pixels)",
+    "avg_rgb": [
+      102.34411764705882,
+      133.9392156862745,
+      108.18725490196078
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "aston-martin",
+    "file": "dbx.jpg",
+    "slug": "dbx",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/aston-martin/dbx.jpg",
+    "reason": "non-white (avg RGB: 74,45,31, 0% white pixels)",
+    "avg_rgb": [
+      73.7156862745098,
+      45.46862745098039,
+      31.077450980392157
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "aston-martin",
+    "file": "vanquish.jpg",
+    "slug": "vanquish",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/aston-martin/vanquish.jpg",
+    "reason": "non-white (avg RGB: 13,60,96, 0% white pixels)",
+    "avg_rgb": [
+      13.02156862745098,
+      59.8156862745098,
+      96.31078431372549
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "aston-martin",
+    "file": "vantage.jpg",
+    "slug": "vantage",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/aston-martin/vantage.jpg",
+    "reason": "non-white (avg RGB: 64,58,44, 1% white pixels)",
+    "avg_rgb": [
+      64.47843137254903,
+      58.32450980392157,
+      43.59313725490196
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "audi",
+    "file": "a8-l.jpg",
+    "slug": "a8-l",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/audi/a8-l.jpg",
+    "reason": "non-white (avg RGB: 106,79,88, 0% white pixels)",
+    "avg_rgb": [
+      106.4343137254902,
+      79.31078431372549,
+      88.03235294117647
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "audi",
+    "file": "q3-sportback.jpg",
+    "slug": "q3-sportback",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/audi/q3-sportback.jpg",
+    "reason": "non-white (avg RGB: 152,144,143, 0% white pixels)",
+    "avg_rgb": [
+      152.3607843137255,
+      144.16176470588235,
+      142.5078431372549
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "audi",
+    "file": "q8-sportback-e-tron.jpg",
+    "slug": "q8-sportback-e-tron",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/audi/q8-sportback-e-tron.jpg",
+    "reason": "non-white (avg RGB: 127,127,124, 29% white pixels)",
+    "avg_rgb": [
+      127.45196078431373,
+      126.71372549019608,
+      123.67941176470588
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "audi",
+    "file": "rs-e-tron-gt.jpg",
+    "slug": "rs-e-tron-gt",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/audi/rs-e-tron-gt.jpg",
+    "reason": "non-white (avg RGB: 144,135,127, 0% white pixels)",
+    "avg_rgb": [
+      143.59509803921569,
+      135.32647058823528,
+      127.03039215686275
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "audi",
+    "file": "rs5.jpg",
+    "slug": "rs5",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/audi/rs5.jpg",
+    "reason": "non-white (avg RGB: 176,179,176, 34% white pixels)",
+    "avg_rgb": [
+      176.3107843137255,
+      179.05588235294118,
+      175.53627450980392
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "audi",
+    "file": "sq8.jpg",
+    "slug": "sq8",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/audi/sq8.jpg",
+    "reason": "non-white (avg RGB: 81,112,114, 0% white pixels)",
+    "avg_rgb": [
+      81.23823529411764,
+      111.77450980392157,
+      114.37647058823529
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "bmw",
+    "file": "6-series-gt.jpg",
+    "slug": "6-series-gt",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/bmw/6-series-gt.jpg",
+    "reason": "non-white (avg RGB: 162,159,147, 0% white pixels)",
+    "avg_rgb": [
+      161.92352941176472,
+      158.5392156862745,
+      146.64313725490197
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "bmw",
+    "file": "bmw-m8-coupe-competition.jpg",
+    "slug": "bmw-m8-coupe-competition",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/bmw/bmw-m8-coupe-competition.jpg",
+    "reason": "non-white (avg RGB: 113,108,97, 0% white pixels)",
+    "avg_rgb": [
+      113.03137254901961,
+      108.16176470588235,
+      97.46470588235294
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "bmw",
+    "file": "m340i.jpg",
+    "slug": "m340i",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/bmw/m340i.jpg",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "bmw",
+    "file": "m4.jpg",
+    "slug": "m4",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/bmw/m4.jpg",
+    "reason": "non-white (avg RGB: 117,125,130, 4% white pixels)",
+    "avg_rgb": [
+      117.25294117647059,
+      124.95490196078431,
+      129.60882352941175
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "bmw",
+    "file": "x4.jpg",
+    "slug": "x4",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/bmw/x4.jpg",
+    "reason": "non-white (avg RGB: 140,136,135, 20% white pixels)",
+    "avg_rgb": [
+      139.9156862745098,
+      135.94019607843137,
+      134.6921568627451
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "bmw",
+    "file": "x6.jpg",
+    "slug": "x6",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/bmw/x6.jpg",
+    "reason": "non-white (avg RGB: 161,160,158, 0% white pixels)",
+    "avg_rgb": [
+      160.72549019607843,
+      160.20490196078433,
+      158.20490196078433
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "byd",
+    "file": "e6.jpg",
+    "slug": "e6",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/byd/e6.jpg",
+    "reason": "non-white (avg RGB: 198,212,223, 47% white pixels)",
+    "avg_rgb": [
+      198.24019607843138,
+      211.59803921568627,
+      222.50980392156862
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "byd",
+    "file": "emax-7.jpg",
+    "slug": "emax-7",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/byd/emax-7.jpg",
+    "reason": "non-white (avg RGB: 136,148,150, 0% white pixels)",
+    "avg_rgb": [
+      136.12941176470588,
+      147.54901960784315,
+      150.35
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "citroen",
+    "file": "c5-aircross.jpg",
+    "slug": "c5-aircross",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/citroen/c5-aircross.jpg",
+    "reason": "non-white (avg RGB: 114,116,138, 2% white pixels)",
+    "avg_rgb": [
+      113.55686274509804,
+      116.37254901960785,
+      138.18725490196078
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "hyundai",
+    "file": "i20-n-line.jpg",
+    "slug": "i20-n-line",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/hyundai/i20-n-line.jpg",
+    "reason": "non-white (avg RGB: 36,56,67, 0% white pixels)",
+    "avg_rgb": [
+      36.06372549019608,
+      55.76960784313726,
+      67.3078431372549
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "hyundai",
+    "file": "kona.jpg",
+    "slug": "kona",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/hyundai/kona.jpg",
+    "reason": "non-white (avg RGB: 42,119,189, 0% white pixels)",
+    "avg_rgb": [
+      42.48725490196078,
+      119.49411764705883,
+      189.25882352941176
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "hyundai",
+    "file": "santro.jpg",
+    "slug": "santro",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/hyundai/santro.jpg",
+    "reason": "non-white (avg RGB: 154,156,154, 28% white pixels)",
+    "avg_rgb": [
+      154.02745098039216,
+      155.59509803921569,
+      154.09607843137255
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "isuzu",
+    "file": "s-cab.jpg",
+    "slug": "s-cab",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/isuzu/s-cab.jpg",
+    "reason": "non-white (avg RGB: 37,40,40, 0% white pixels)",
+    "avg_rgb": [
+      36.59117647058824,
+      40.44509803921569,
+      40.38333333333333
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "isuzu",
+    "file": "v-cross.jpg",
+    "slug": "v-cross",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/isuzu/v-cross.jpg",
+    "reason": "non-white (avg RGB: 182,174,152, 0% white pixels)",
+    "avg_rgb": [
+      181.90686274509804,
+      174.0578431372549,
+      152.15392156862745
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "jaguar",
+    "file": "f-type.jpg",
+    "slug": "f-type",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/jaguar/f-type.jpg",
+    "reason": "non-white (avg RGB: 0,39,31, 0% white pixels)",
+    "avg_rgb": [
+      0.13529411764705881,
+      39.14411764705882,
+      31.102941176470587
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "jaguar",
+    "file": "i-pace.jpg",
+    "slug": "i-pace",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/jaguar/i-pace.jpg",
+    "reason": "non-white (avg RGB: 136,130,131, 5% white pixels)",
+    "avg_rgb": [
+      136.45,
+      129.72156862745098,
+      131.02843137254902
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "kia",
+    "file": "carens-clavis-ev.jpg",
+    "slug": "carens-clavis-ev",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/kia/carens-clavis-ev.jpg",
+    "reason": "non-white (avg RGB: 131,142,146, 0% white pixels)",
+    "avg_rgb": [
+      131.1627450980392,
+      141.66862745098038,
+      146.14705882352942
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "kia",
+    "file": "carens-clavis.jpg",
+    "slug": "carens-clavis",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/kia/carens-clavis.jpg",
+    "reason": "non-white (avg RGB: 108,94,85, 3% white pixels)",
+    "avg_rgb": [
+      107.50588235294117,
+      93.88235294117646,
+      85.26470588235294
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "lamborghini",
+    "file": "huracan-evo.jpg",
+    "slug": "huracan-evo",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/lamborghini/huracan-evo.jpg",
+    "reason": "non-white (avg RGB: 97,98,77, 0% white pixels)",
+    "avg_rgb": [
+      96.81666666666666,
+      98.1186274509804,
+      77.19509803921568
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "lamborghini",
+    "file": "huracan.jpg",
+    "slug": "huracan",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/lamborghini/huracan.jpg",
+    "reason": "non-white (avg RGB: 103,127,130, 12% white pixels)",
+    "avg_rgb": [
+      103.19607843137256,
+      126.63333333333334,
+      130.04901960784315
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "lamborghini",
+    "file": "temerario.jpg",
+    "slug": "temerario",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/lamborghini/temerario.jpg",
+    "reason": "non-white (avg RGB: 12,76,110, 0% white pixels)",
+    "avg_rgb": [
+      12.127450980392156,
+      75.81176470588235,
+      110.42549019607843
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "land-rover",
+    "file": "range-rover-sport.jpg",
+    "slug": "range-rover-sport",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/land-rover/range-rover-sport.jpg",
+    "reason": "non-white (avg RGB: 126,122,109, 0% white pixels)",
+    "avg_rgb": [
+      126.0578431372549,
+      121.66568627450981,
+      109.06176470588235
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "land-rover",
+    "file": "range-rover.jpg",
+    "slug": "range-rover",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/land-rover/range-rover.jpg",
+    "reason": "non-white (avg RGB: 155,137,119, 22% white pixels)",
+    "avg_rgb": [
+      155.1156862745098,
+      136.5705882352941,
+      118.54117647058824
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "lexus",
+    "file": "gx.jpg",
+    "slug": "gx",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/lexus/gx.jpg",
+    "reason": "non-white (avg RGB: 154,144,129, 0% white pixels)",
+    "avg_rgb": [
+      154.15392156862745,
+      143.70392156862746,
+      129.49019607843138
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "lexus",
+    "file": "lc-500h.jpg",
+    "slug": "lc-500h",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/lexus/lc-500h.jpg",
+    "reason": "non-white (avg RGB: 127,131,129, 16% white pixels)",
+    "avg_rgb": [
+      127.32254901960785,
+      130.62941176470588,
+      129.25392156862745
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "lexus",
+    "file": "ls.jpg",
+    "slug": "ls",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/lexus/ls.jpg",
+    "reason": "non-white (avg RGB: 110,100,100, 21% white pixels)",
+    "avg_rgb": [
+      109.86764705882354,
+      100.4235294117647,
+      100.30392156862744
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mahindra",
+    "file": "scorpio-classic.jpg",
+    "slug": "scorpio-classic",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mahindra/scorpio-classic.jpg",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mahindra",
+    "file": "thar-roxx.jpg",
+    "slug": "thar-roxx",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mahindra/thar-roxx.jpg",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mahindra",
+    "file": "xev-9e.jpg",
+    "slug": "xev-9e",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mahindra/xev-9e.jpg",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mahindra",
+    "file": "xuv-3xo-ev.jpg",
+    "slug": "xuv-3xo-ev",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mahindra/xuv-3xo-ev.jpg",
+    "reason": "non-white (avg RGB: 188,189,191, 25% white pixels)",
+    "avg_rgb": [
+      188.2019607843137,
+      188.9313725490196,
+      190.8549019607843
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mahindra",
+    "file": "xuv300.jpg",
+    "slug": "xuv300",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mahindra/xuv300.jpg",
+    "reason": "non-white (avg RGB: 71,61,69, 0% white pixels)",
+    "avg_rgb": [
+      71.14117647058823,
+      61.13627450980392,
+      68.50882352941177
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mahindra",
+    "file": "xuv400-ev.jpg",
+    "slug": "xuv400-ev",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mahindra/xuv400-ev.jpg",
+    "reason": "non-white (avg RGB: 134,126,112, 0% white pixels)",
+    "avg_rgb": [
+      134.19509803921568,
+      125.57450980392157,
+      112.05882352941177
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mercedes-benz",
+    "file": "a-class.jpg",
+    "slug": "a-class",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mercedes-benz/a-class.jpg",
+    "reason": "non-white (avg RGB: 106,110,117, 1% white pixels)",
+    "avg_rgb": [
+      106.16078431372549,
+      109.67156862745098,
+      116.94803921568628
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mercedes-benz",
+    "file": "amg-e-53-cabriolet.jpg",
+    "slug": "amg-e-53-cabriolet",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mercedes-benz/amg-e-53-cabriolet.jpg",
+    "reason": "non-white (avg RGB: 96,103,85, 0% white pixels)",
+    "avg_rgb": [
+      96.37352941176471,
+      103.17450980392157,
+      85.28039215686275
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mercedes-benz",
+    "file": "amg-eqs.jpg",
+    "slug": "amg-eqs",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mercedes-benz/amg-eqs.jpg",
+    "reason": "non-white (avg RGB: 102,104,102, 3% white pixels)",
+    "avg_rgb": [
+      102.40490196078431,
+      103.78823529411764,
+      101.87647058823529
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mercedes-benz",
+    "file": "amg-glc-43.jpg",
+    "slug": "amg-glc-43",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mercedes-benz/amg-glc-43.jpg",
+    "reason": "non-white (avg RGB: 124,127,133, 1% white pixels)",
+    "avg_rgb": [
+      123.66960784313726,
+      127.18529411764706,
+      133.24019607843138
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mercedes-benz",
+    "file": "amg-gt-4-door-coupe.jpg",
+    "slug": "amg-gt-4-door-coupe",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mercedes-benz/amg-gt-4-door-coupe.jpg",
+    "reason": "non-white (avg RGB: 108,106,110, 0% white pixels)",
+    "avg_rgb": [
+      107.91176470588235,
+      106.41764705882353,
+      110.48725490196078
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mercedes-benz",
+    "file": "amg-gt-coupe.jpg",
+    "slug": "amg-gt-coupe",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mercedes-benz/amg-gt-coupe.jpg",
+    "reason": "non-white (avg RGB: 108,106,110, 0% white pixels)",
+    "avg_rgb": [
+      107.91176470588235,
+      106.41764705882353,
+      110.48725490196078
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mercedes-benz",
+    "file": "amg-gt.jpg",
+    "slug": "amg-gt",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mercedes-benz/amg-gt.jpg",
+    "reason": "non-white (avg RGB: 79,89,90, 0% white pixels)",
+    "avg_rgb": [
+      78.61960784313726,
+      88.94509803921568,
+      90.00098039215686
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mercedes-benz",
+    "file": "amg-s-63.jpg",
+    "slug": "amg-s-63",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mercedes-benz/amg-s-63.jpg",
+    "reason": "non-white (avg RGB: 107,107,109, 0% white pixels)",
+    "avg_rgb": [
+      107.38823529411765,
+      107.1343137254902,
+      108.94803921568628
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mercedes-benz",
+    "file": "amg-sl.jpg",
+    "slug": "amg-sl",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mercedes-benz/amg-sl.jpg",
+    "reason": "non-white (avg RGB: 45,45,47, 0% white pixels)",
+    "avg_rgb": [
+      45.37647058823529,
+      44.73725490196078,
+      46.753921568627455
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mercedes-benz",
+    "file": "cle-cabriolet.jpg",
+    "slug": "cle-cabriolet",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mercedes-benz/cle-cabriolet.jpg",
+    "reason": "non-white (avg RGB: 157,167,179, 0% white pixels)",
+    "avg_rgb": [
+      157.20098039215685,
+      166.56372549019608,
+      179.39019607843136
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mercedes-benz",
+    "file": "cle.jpg",
+    "slug": "cle",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mercedes-benz/cle.jpg",
+    "reason": "non-white (avg RGB: 189,189,189, 0% white pixels)",
+    "avg_rgb": [
+      188.74313725490197,
+      188.50686274509803,
+      189.42254901960786
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mercedes-benz",
+    "file": "maybach-eqs-suv.jpg",
+    "slug": "maybach-eqs-suv",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mercedes-benz/maybach-eqs-suv.jpg",
+    "reason": "non-white (avg RGB: 142,128,128, 0% white pixels)",
+    "avg_rgb": [
+      142.38333333333333,
+      127.68921568627451,
+      127.63823529411765
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mercedes-benz",
+    "file": "maybach-sl-680.jpg",
+    "slug": "maybach-sl-680",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mercedes-benz/maybach-sl-680.jpg",
+    "reason": "non-white (avg RGB: 171,48,57, 0% white pixels)",
+    "avg_rgb": [
+      170.58235294117648,
+      47.5078431372549,
+      57.39019607843137
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mercedes-benz",
+    "file": "mercedes-benz-amg-c-63.jpg",
+    "slug": "mercedes-benz-amg-c-63",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mercedes-benz/mercedes-benz-amg-c-63.jpg",
+    "reason": "non-white (avg RGB: 125,109,112, 22% white pixels)",
+    "avg_rgb": [
+      124.90490196078431,
+      108.72058823529412,
+      112.25686274509803
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mercedes-benz",
+    "file": "v-class.jpg",
+    "slug": "v-class",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mercedes-benz/v-class.jpg",
+    "reason": "non-white (avg RGB: 108,107,107, 3% white pixels)",
+    "avg_rgb": [
+      108.34509803921569,
+      106.6686274509804,
+      107.44901960784314
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mini",
+    "file": "cooper-convertible.jpg",
+    "slug": "cooper-convertible",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mini/cooper-convertible.jpg",
+    "reason": "non-white (avg RGB: 118,122,115, 3% white pixels)",
+    "avg_rgb": [
+      118.26274509803922,
+      122.2235294117647,
+      114.8156862745098
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mini",
+    "file": "cooper-s.jpg",
+    "slug": "cooper-s",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mini/cooper-s.jpg",
+    "reason": "non-white (avg RGB: 179,178,178, 47% white pixels)",
+    "avg_rgb": [
+      179.48431372549018,
+      177.74803921568628,
+      178.36176470588236
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "mini",
+    "file": "cooper-se.jpg",
+    "slug": "cooper-se",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/mini/cooper-se.jpg",
+    "reason": "non-white (avg RGB: 75,76,84, 0% white pixels)",
+    "avg_rgb": [
+      74.96960784313725,
+      76.21274509803922,
+      84.33235294117647
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "nissan",
+    "file": "gravite.jpg",
+    "slug": "gravite",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/nissan/gravite.jpg",
+    "reason": "non-white (avg RGB: 218,191,195, 56% white pixels)",
+    "avg_rgb": [
+      217.97450980392156,
+      191.00392156862745,
+      194.72941176470587
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "porsche",
+    "file": "718.jpg",
+    "slug": "718",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/porsche/718.jpg",
+    "reason": "non-white (avg RGB: 184,199,203, 6% white pixels)",
+    "avg_rgb": [
+      183.82549019607842,
+      198.7078431372549,
+      203.07254901960783
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "porsche",
+    "file": "cayenne-electric.jpg",
+    "slug": "cayenne-electric",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/porsche/cayenne-electric.jpg",
+    "reason": "non-white (avg RGB: 136,130,128, 0% white pixels)",
+    "avg_rgb": [
+      135.81764705882352,
+      130.4813725490196,
+      128.38235294117646
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "porsche",
+    "file": "macan-ev.jpg",
+    "slug": "macan-ev",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/porsche/macan-ev.jpg",
+    "reason": "non-white (avg RGB: 2,107,172, 0% white pixels)",
+    "avg_rgb": [
+      1.7107843137254901,
+      106.52549019607844,
+      171.66470588235293
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "skoda",
+    "file": "octavia-rs.jpg",
+    "slug": "octavia-rs",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/skoda/octavia-rs.jpg",
+    "reason": "non-white (avg RGB: 103,110,109, 22% white pixels)",
+    "avg_rgb": [
+      103.45588235294117,
+      109.91078431372549,
+      108.82156862745099
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "skoda",
+    "file": "octavia.jpg",
+    "slug": "octavia",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/skoda/octavia.jpg",
+    "reason": "non-white (avg RGB: 153,151,154, 1% white pixels)",
+    "avg_rgb": [
+      153.4921568627451,
+      151.44607843137254,
+      153.54901960784315
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "skoda",
+    "file": "superb.jpg",
+    "slug": "superb",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/skoda/superb.jpg",
+    "reason": "non-white (avg RGB: 121,125,124, 0% white pixels)",
+    "avg_rgb": [
+      120.64803921568627,
+      124.58333333333333,
+      123.65
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "toyota",
+    "file": "land-cruiser-300.jpg",
+    "slug": "land-cruiser-300",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/toyota/land-cruiser-300.jpg",
+    "reason": "non-white (avg RGB: 63,77,98, 0% white pixels)",
+    "avg_rgb": [
+      63.438235294117646,
+      77.08039215686274,
+      97.81078431372549
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "toyota",
+    "file": "land-cruiser.jpg",
+    "slug": "land-cruiser",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/toyota/land-cruiser.jpg",
+    "reason": "non-white (avg RGB: 66,62,30, 0% white pixels)",
+    "avg_rgb": [
+      66.44901960784314,
+      62.252941176470586,
+      29.691176470588236
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "vinfast",
+    "file": "vf3.jpg",
+    "slug": "vf3",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/vinfast/vf3.jpg",
+    "reason": "non-white (avg RGB: 102,94,95, 0% white pixels)",
+    "avg_rgb": [
+      101.65392156862745,
+      94.15392156862745,
+      94.63823529411765
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "vinfast",
+    "file": "vf5.jpg",
+    "slug": "vf5",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/vinfast/vf5.jpg",
+    "reason": "non-white (avg RGB: 99,105,95, 0% white pixels)",
+    "avg_rgb": [
+      98.64607843137254,
+      105.28039215686275,
+      95.2156862745098
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "vinfast",
+    "file": "vf6e.jpg",
+    "slug": "vf6e",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/vinfast/vf6e.jpg",
+    "reason": "non-white (avg RGB: 61,76,108, 3% white pixels)",
+    "avg_rgb": [
+      60.84607843137255,
+      75.69411764705882,
+      107.65588235294118
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "vinfast",
+    "file": "vf7.jpg",
+    "slug": "vf7",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/vinfast/vf7.jpg",
+    "reason": "non-white (avg RGB: 158,150,159, 1% white pixels)",
+    "avg_rgb": [
+      158.08039215686276,
+      149.51568627450982,
+      159.20980392156864
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "vinfast",
+    "file": "vf8.jpg",
+    "slug": "vf8",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/vinfast/vf8.jpg",
+    "reason": "non-white (avg RGB: 128,122,115, 0% white pixels)",
+    "avg_rgb": [
+      127.88235294117646,
+      121.76960784313725,
+      115.25294117647059
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "vinfast",
+    "file": "vf9.jpg",
+    "slug": "vf9",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/vinfast/vf9.jpg",
+    "reason": "non-white (avg RGB: 85,94,105, 0% white pixels)",
+    "avg_rgb": [
+      84.76176470588236,
+      94.41176470588235,
+      104.67549019607843
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "volkswagen",
+    "file": "golf-gti.jpg",
+    "slug": "golf-gti",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/volkswagen/golf-gti.jpg",
+    "reason": "non-white (avg RGB: 82,96,108, 0% white pixels)",
+    "avg_rgb": [
+      82.08921568627451,
+      96.25686274509803,
+      107.8421568627451
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "volkswagen",
+    "file": "tayron-r-line.jpg",
+    "slug": "tayron-r-line",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/volkswagen/tayron-r-line.jpg",
+    "reason": "non-white (avg RGB: 204,193,108, 0% white pixels)",
+    "avg_rgb": [
+      204.4205882352941,
+      193.00882352941176,
+      107.87941176470588
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "volkswagen",
+    "file": "tiguan.jpg",
+    "slug": "tiguan",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/volkswagen/tiguan.jpg",
+    "reason": "non-white (avg RGB: 140,102,91, 0% white pixels)",
+    "avg_rgb": [
+      140.3656862745098,
+      102.20882352941176,
+      90.58921568627451
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "volvo",
+    "file": "ec40.jpg",
+    "slug": "ec40",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/volvo/ec40.jpg",
+    "reason": "non-white (avg RGB: 96,88,82, 0% white pixels)",
+    "avg_rgb": [
+      96.4343137254902,
+      88.40490196078431,
+      81.87549019607843
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "volvo",
+    "file": "ex40.jpg",
+    "slug": "ex40",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/volvo/ex40.jpg",
+    "reason": "non-white (avg RGB: 86,91,80, 0% white pixels)",
+    "avg_rgb": [
+      86.48627450980392,
+      90.78039215686275,
+      80.2156862745098
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "volvo",
+    "file": "s90.jpg",
+    "slug": "s90",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/volvo/s90.jpg",
+    "reason": "non-white (avg RGB: 148,125,119, 0% white pixels)",
+    "avg_rgb": [
+      147.50294117647059,
+      125.07058823529412,
+      118.97058823529412
+    ]
+  },
+  {
+    "category": "4w",
+    "brand": "volvo",
+    "file": "xc40.jpg",
+    "slug": "xc40",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/volvo/xc40.jpg",
+    "reason": "non-white (avg RGB: 176,184,164, 32% white pixels)",
+    "avg_rgb": [
+      176.01960784313727,
+      183.85392156862744,
+      164.3656862745098
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "audi",
+    "file": "q3.png",
+    "slug": "q3",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/audi/q3.png",
+    "reason": "non-white (avg RGB: 69,69,69, 27% white pixels)",
+    "avg_rgb": [
+      69.25,
+      69.25,
+      69.25
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "audi",
+    "file": "q5.png",
+    "slug": "q5",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/audi/q5.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.00196078431372549,
+      0.00196078431372549,
+      0.00196078431372549
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "audi",
+    "file": "q8-e-tron.jpg",
+    "slug": "q8-e-tron",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/audi/q8-e-tron.jpg",
+    "reason": "non-white (avg RGB: 83,88,85, 0% white pixels)",
+    "avg_rgb": [
+      82.65588235294118,
+      87.51764705882353,
+      84.90196078431373
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "bentley",
+    "file": "bentayga-ewb.png",
+    "slug": "bentayga-ewb",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/bentley/bentayga-ewb.png",
+    "reason": "non-white (avg RGB: 182,182,182, 72% white pixels)",
+    "avg_rgb": [
+      181.78333333333333,
+      181.79607843137254,
+      181.79019607843136
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "bentley",
+    "file": "bentayga.jpg",
+    "slug": "bentayga",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/bentley/bentayga.jpg",
+    "reason": "non-white (avg RGB: 166,163,144, 0% white pixels)",
+    "avg_rgb": [
+      165.66666666666666,
+      162.98431372549018,
+      144.06666666666666
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "bentley",
+    "file": "continental-gt.png",
+    "slug": "continental-gt",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/bentley/continental-gt.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "bmw",
+    "file": "5-series.jpg",
+    "slug": "5-series",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/bmw/5-series.jpg",
+    "reason": "non-white (avg RGB: 166,192,206, 3% white pixels)",
+    "avg_rgb": [
+      166.18529411764706,
+      192.12745098039215,
+      205.93039215686275
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "bmw",
+    "file": "i4.jpg",
+    "slug": "i4",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/bmw/i4.jpg",
+    "reason": "non-white (avg RGB: 212,201,187, 0% white pixels)",
+    "avg_rgb": [
+      212.45392156862746,
+      201.08627450980393,
+      187.46666666666667
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "bmw",
+    "file": "x1.jpg",
+    "slug": "x1",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/bmw/x1.jpg",
+    "reason": "non-white (avg RGB: 123,108,109, 0% white pixels)",
+    "avg_rgb": [
+      122.55490196078432,
+      108.40098039215687,
+      108.72745098039216
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "bmw",
+    "file": "x3.png",
+    "slug": "x3",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/bmw/x3.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "byd",
+    "file": "atto-3.jpg",
+    "slug": "atto-3",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/byd/atto-3.jpg",
+    "reason": "non-white (avg RGB: 135,135,135, 53% white pixels)",
+    "avg_rgb": [
+      135.47058823529412,
+      135.47058823529412,
+      135.47058823529412
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "byd",
+    "file": "seal.png",
+    "slug": "seal",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/byd/seal.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "byd",
+    "file": "sealion-6.jpg",
+    "slug": "sealion-6",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/byd/sealion-6.jpg",
+    "reason": "non-white (avg RGB: 182,197,210, 22% white pixels)",
+    "avg_rgb": [
+      182.01078431372548,
+      197.1921568627451,
+      210.3470588235294
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "citroen",
+    "file": "c3-aircross.jpg",
+    "slug": "c3-aircross",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/citroen/c3-aircross.jpg",
+    "reason": "non-white (avg RGB: 194,195,196, 22% white pixels)",
+    "avg_rgb": [
+      194.25588235294117,
+      195.07745098039214,
+      195.7764705882353
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "citroen",
+    "file": "c3.jpg",
+    "slug": "c3",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/citroen/c3.jpg",
+    "reason": "non-white (avg RGB: 117,110,96, 4% white pixels)",
+    "avg_rgb": [
+      116.88333333333334,
+      109.7078431372549,
+      96.30882352941177
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "citroen",
+    "file": "citroen-aircross.jpg",
+    "slug": "citroen-aircross",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/citroen/citroen-aircross.jpg",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "honda",
+    "file": "amaze.jpg",
+    "slug": "amaze",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/honda/amaze.jpg",
+    "reason": "non-white (avg RGB: 108,82,79, 0% white pixels)",
+    "avg_rgb": [
+      108.42450980392157,
+      81.56764705882352,
+      78.89509803921568
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "honda",
+    "file": "city-hybrid.jpg",
+    "slug": "city-hybrid",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/honda/city-hybrid.jpg",
+    "reason": "non-white (avg RGB: 238,225,191, 53% white pixels)",
+    "avg_rgb": [
+      238.1705882352941,
+      225.23921568627452,
+      190.57156862745097
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "hyundai",
+    "file": "alcazar.jpg",
+    "slug": "alcazar",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/hyundai/alcazar.jpg",
+    "reason": "non-white (avg RGB: 90,85,83, 0% white pixels)",
+    "avg_rgb": [
+      90.14901960784314,
+      85.16960784313726,
+      82.56764705882352
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "hyundai",
+    "file": "exter.jpg",
+    "slug": "exter",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/hyundai/exter.jpg",
+    "reason": "non-white (avg RGB: 175,74,72, 1% white pixels)",
+    "avg_rgb": [
+      175.228431372549,
+      73.86078431372549,
+      71.57352941176471
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "hyundai",
+    "file": "tucson.jpg",
+    "slug": "tucson",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/hyundai/tucson.jpg",
+    "reason": "non-white (avg RGB: 104,125,129, 0% white pixels)",
+    "avg_rgb": [
+      104.22745098039216,
+      125.15686274509804,
+      129.2313725490196
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "isuzu",
+    "file": "d-max-v-cross.png",
+    "slug": "d-max-v-cross",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/isuzu/d-max-v-cross.png",
+    "reason": "non-white (avg RGB: 5,5,5, 0% white pixels)",
+    "avg_rgb": [
+      5.236274509803922,
+      5.202941176470588,
+      5.155882352941177
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "isuzu",
+    "file": "d-max.jpg",
+    "slug": "d-max",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/isuzu/d-max.jpg",
+    "reason": "non-white (avg RGB: 107,95,88, 0% white pixels)",
+    "avg_rgb": [
+      106.59705882352941,
+      94.99705882352941,
+      87.77058823529411
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "jaguar",
+    "file": "xe.png",
+    "slug": "xe",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/jaguar/xe.png",
+    "reason": "non-white (avg RGB: 3,3,3, 0% white pixels)",
+    "avg_rgb": [
+      3.0274509803921568,
+      2.7558823529411764,
+      2.9598039215686276
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "jeep",
+    "file": "wrangler.jpg",
+    "slug": "wrangler",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/jeep/wrangler.jpg",
+    "reason": "non-white (avg RGB: 132,139,156, 0% white pixels)",
+    "avg_rgb": [
+      132.4519607843137,
+      138.79509803921567,
+      156.0421568627451
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "kia",
+    "file": "carens.jpg",
+    "slug": "carens",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/kia/carens.jpg",
+    "reason": "non-white (avg RGB: 204,210,213, 32% white pixels)",
+    "avg_rgb": [
+      203.9392156862745,
+      210.19313725490196,
+      212.60882352941175
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "kia",
+    "file": "carnival.jpg",
+    "slug": "carnival",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/kia/carnival.jpg",
+    "reason": "non-white (avg RGB: 150,154,156, 0% white pixels)",
+    "avg_rgb": [
+      150.11470588235295,
+      154.01568627450982,
+      156.1078431372549
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "kia",
+    "file": "sonet.png",
+    "slug": "sonet",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/kia/sonet.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "lamborghini",
+    "file": "revuelto.png",
+    "slug": "revuelto",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/lamborghini/revuelto.png",
+    "reason": "non-white (avg RGB: 3,2,1, 0% white pixels)",
+    "avg_rgb": [
+      3.092156862745098,
+      1.9254901960784314,
+      1.1284313725490196
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "lamborghini",
+    "file": "urus.png",
+    "slug": "urus",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/lamborghini/urus.png",
+    "reason": "non-white (avg RGB: 107,107,107, 44% white pixels)",
+    "avg_rgb": [
+      106.87156862745098,
+      106.87058823529412,
+      106.87745098039215
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "land-rover",
+    "file": "discovery.jpg",
+    "slug": "discovery",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/land-rover/discovery.jpg",
+    "reason": "non-white (avg RGB: 154,160,165, 0% white pixels)",
+    "avg_rgb": [
+      153.72745098039215,
+      159.8892156862745,
+      164.90196078431373
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "land-rover",
+    "file": "range-rover-evoque.jpg",
+    "slug": "range-rover-evoque",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/land-rover/range-rover-evoque.jpg",
+    "reason": "non-white (avg RGB: 131,134,138, 2% white pixels)",
+    "avg_rgb": [
+      130.50588235294117,
+      133.54607843137254,
+      138.34117647058824
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "mahindra",
+    "file": "be-6.jpg",
+    "slug": "be-6",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/mahindra/be-6.jpg",
+    "reason": "non-white (avg RGB: 183,168,147, 8% white pixels)",
+    "avg_rgb": [
+      182.53823529411764,
+      168.18529411764706,
+      147.38333333333333
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "mahindra",
+    "file": "bolero.jpg",
+    "slug": "bolero",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/mahindra/bolero.jpg",
+    "reason": "non-white (avg RGB: 91,106,124, 3% white pixels)",
+    "avg_rgb": [
+      91.45,
+      106.27843137254902,
+      123.50294117647059
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "mahindra",
+    "file": "thar.jpg",
+    "slug": "thar",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/mahindra/thar.jpg",
+    "reason": "non-white (avg RGB: 48,69,81, 0% white pixels)",
+    "avg_rgb": [
+      48.06764705882353,
+      69.21078431372548,
+      80.88333333333334
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "mahindra",
+    "file": "xuv400.jpg",
+    "slug": "xuv400",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/mahindra/xuv400.jpg",
+    "reason": "non-white (avg RGB: 59,60,42, 0% white pixels)",
+    "avg_rgb": [
+      58.530392156862746,
+      60.266666666666666,
+      41.75098039215686
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "mahindra",
+    "file": "xuv700.png",
+    "slug": "xuv700",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/mahindra/xuv700.png",
+    "reason": "non-white (avg RGB: 62,65,63, 7% white pixels)",
+    "avg_rgb": [
+      61.77843137254902,
+      64.73039215686275,
+      62.60980392156863
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "maruti-suzuki",
+    "file": "alto-k10.jpg",
+    "slug": "alto-k10",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/maruti-suzuki/alto-k10.jpg",
+    "reason": "non-white (avg RGB: 118,118,118, 0% white pixels)",
+    "avg_rgb": [
+      118.47254901960784,
+      118.47254901960784,
+      118.47254901960784
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "maruti-suzuki",
+    "file": "baleno.jpg",
+    "slug": "baleno",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/maruti-suzuki/baleno.jpg",
+    "reason": "non-white (avg RGB: 206,117,80, 10% white pixels)",
+    "avg_rgb": [
+      205.96176470588236,
+      117.07156862745099,
+      80.12156862745098
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "maruti-suzuki",
+    "file": "brezza.jpg",
+    "slug": "brezza",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/maruti-suzuki/brezza.jpg",
+    "reason": "non-white (avg RGB: 127,134,153, 0% white pixels)",
+    "avg_rgb": [
+      127.13823529411765,
+      134.06470588235294,
+      153.48823529411766
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "maruti-suzuki",
+    "file": "ciaz.jpg",
+    "slug": "ciaz",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/maruti-suzuki/ciaz.jpg",
+    "reason": "non-white (avg RGB: 140,136,134, 0% white pixels)",
+    "avg_rgb": [
+      140.49117647058824,
+      135.95490196078433,
+      133.59411764705882
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "maruti-suzuki",
+    "file": "ertiga.jpg",
+    "slug": "ertiga",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/maruti-suzuki/ertiga.jpg",
+    "reason": "non-white (avg RGB: 175,178,185, 47% white pixels)",
+    "avg_rgb": [
+      174.72156862745098,
+      177.78039215686275,
+      185.4735294117647
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "maruti-suzuki",
+    "file": "grand-vitara.jpg",
+    "slug": "grand-vitara",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/maruti-suzuki/grand-vitara.jpg",
+    "reason": "non-white (avg RGB: 195,186,178, 22% white pixels)",
+    "avg_rgb": [
+      195.37058823529412,
+      186.19019607843137,
+      177.93529411764706
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "mercedes-benz",
+    "file": "e-class.jpg",
+    "slug": "e-class",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/mercedes-benz/e-class.jpg",
+    "reason": "non-white (avg RGB: 181,180,184, 74% white pixels)",
+    "avg_rgb": [
+      180.71666666666667,
+      179.6137254901961,
+      183.94901960784313
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "mercedes-benz",
+    "file": "glc.jpg",
+    "slug": "glc",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/mercedes-benz/glc.jpg",
+    "reason": "non-white (avg RGB: 197,182,166, 3% white pixels)",
+    "avg_rgb": [
+      196.8549019607843,
+      181.98333333333332,
+      165.6529411764706
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "mercedes-benz",
+    "file": "gle.jpg",
+    "slug": "gle",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/mercedes-benz/gle.jpg",
+    "reason": "non-white (avg RGB: 124,135,132, 0% white pixels)",
+    "avg_rgb": [
+      124.1186274509804,
+      135.45882352941177,
+      131.6921568627451
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "mercedes-benz",
+    "file": "gls.png",
+    "slug": "gls",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/mercedes-benz/gls.png",
+    "reason": "non-white (avg RGB: 137,137,137, 53% white pixels)",
+    "avg_rgb": [
+      137.38333333333333,
+      137.3892156862745,
+      137.3950980392157
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "mercedes-benz",
+    "file": "mercedes-benz-amg-g-class.jpg",
+    "slug": "mercedes-benz-amg-g-class",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/mercedes-benz/mercedes-benz-amg-g-class.jpg",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "mg",
+    "file": "astor.jpg",
+    "slug": "astor",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/mg/astor.jpg",
+    "reason": "non-white (avg RGB: 155,154,160, 6% white pixels)",
+    "avg_rgb": [
+      155.46764705882353,
+      154.46764705882353,
+      160.37941176470588
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "mg",
+    "file": "hector.jpg",
+    "slug": "hector",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/mg/hector.jpg",
+    "reason": "non-white (avg RGB: 188,190,198, 31% white pixels)",
+    "avg_rgb": [
+      187.9,
+      189.57450980392156,
+      198.0480392156863
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "mg",
+    "file": "windsor-ev.jpg",
+    "slug": "windsor-ev",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/mg/windsor-ev.jpg",
+    "reason": "non-white (avg RGB: 148,162,160, 1% white pixels)",
+    "avg_rgb": [
+      148.3235294117647,
+      162.03529411764706,
+      159.9313725490196
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "mini",
+    "file": "cooper.jpg",
+    "slug": "cooper",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/mini/cooper.jpg",
+    "reason": "non-white (avg RGB: 85,85,74, 0% white pixels)",
+    "avg_rgb": [
+      84.80392156862744,
+      85.49607843137255,
+      74.14803921568627
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "nissan",
+    "file": "x-trail.jpg",
+    "slug": "x-trail",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/nissan/x-trail.jpg",
+    "reason": "non-white (avg RGB: 201,194,171, 18% white pixels)",
+    "avg_rgb": [
+      201.34803921568627,
+      193.71274509803922,
+      171.4578431372549
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "porsche",
+    "file": "cayenne.jpg",
+    "slug": "cayenne",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/porsche/cayenne.jpg",
+    "reason": "non-white (avg RGB: 107,102,93, 0% white pixels)",
+    "avg_rgb": [
+      106.7156862745098,
+      102.12941176470588,
+      93.45196078431373
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "porsche",
+    "file": "macan.png",
+    "slug": "macan",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/porsche/macan.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "porsche",
+    "file": "panamera.jpg",
+    "slug": "panamera",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/porsche/panamera.jpg",
+    "reason": "non-white (avg RGB: 171,172,176, 3% white pixels)",
+    "avg_rgb": [
+      171.04705882352943,
+      172.16470588235293,
+      175.82647058823528
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "renault",
+    "file": "kiger.jpg",
+    "slug": "kiger",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/renault/kiger.jpg",
+    "reason": "non-white (avg RGB: 121,116,92, 22% white pixels)",
+    "avg_rgb": [
+      121.15490196078431,
+      115.87549019607843,
+      91.54607843137255
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "renault",
+    "file": "kwid.jpg",
+    "slug": "kwid",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/renault/kwid.jpg",
+    "reason": "non-white (avg RGB: 182,186,188, 6% white pixels)",
+    "avg_rgb": [
+      182.33137254901962,
+      185.8862745098039,
+      188.14019607843136
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "renault",
+    "file": "triber.jpg",
+    "slug": "triber",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/renault/triber.jpg",
+    "reason": "non-white (avg RGB: 189,160,166, 22% white pixels)",
+    "avg_rgb": [
+      188.978431372549,
+      159.61176470588236,
+      166.03529411764706
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "skoda",
+    "file": "kodiaq.jpg",
+    "slug": "kodiaq",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/skoda/kodiaq.jpg",
+    "reason": "non-white (avg RGB: 220,200,178, 0% white pixels)",
+    "avg_rgb": [
+      219.55098039215687,
+      199.71372549019608,
+      177.6421568627451
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "tata-motors",
+    "file": "altroz.jpg",
+    "slug": "altroz",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/tata-motors/altroz.jpg",
+    "reason": "non-white (avg RGB: 55,62,72, 0% white pixels)",
+    "avg_rgb": [
+      55.358823529411765,
+      62.00686274509804,
+      71.76274509803922
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "tata-motors",
+    "file": "harrier.jpg",
+    "slug": "harrier",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/tata-motors/harrier.jpg",
+    "reason": "non-white (avg RGB: 137,61,76, 1% white pixels)",
+    "avg_rgb": [
+      136.97745098039215,
+      60.924509803921566,
+      76.46960784313725
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "tata-motors",
+    "file": "nexon.jpg",
+    "slug": "nexon",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/tata-motors/nexon.jpg",
+    "reason": "non-white (avg RGB: 177,170,165, 28% white pixels)",
+    "avg_rgb": [
+      176.53725490196078,
+      169.64901960784314,
+      165.1627450980392
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "tata-motors",
+    "file": "tiago.jpg",
+    "slug": "tiago",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/tata-motors/tiago.jpg",
+    "reason": "non-white (avg RGB: 199,199,199, 50% white pixels)",
+    "avg_rgb": [
+      199.30588235294118,
+      199.11274509803923,
+      198.94411764705882
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "toyota",
+    "file": "camry.png",
+    "slug": "camry",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/toyota/camry.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "toyota",
+    "file": "fortuner.jpg",
+    "slug": "fortuner",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/toyota/fortuner.jpg",
+    "reason": "non-white (avg RGB: 132,136,141, 0% white pixels)",
+    "avg_rgb": [
+      131.79313725490195,
+      135.83333333333334,
+      141.26372549019607
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "toyota",
+    "file": "glanza.jpg",
+    "slug": "glanza",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/toyota/glanza.jpg",
+    "reason": "non-white (avg RGB: 186,195,201, 4% white pixels)",
+    "avg_rgb": [
+      185.98529411764707,
+      195.14705882352942,
+      200.7627450980392
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "toyota",
+    "file": "hyryder.jpg",
+    "slug": "hyryder",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/toyota/hyryder.jpg",
+    "reason": "non-white (avg RGB: 209,199,189, 0% white pixels)",
+    "avg_rgb": [
+      208.85686274509803,
+      198.90686274509804,
+      189.02549019607844
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "toyota",
+    "file": "innova-crysta.jpg",
+    "slug": "innova-crysta",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/toyota/innova-crysta.jpg",
+    "reason": "non-white (avg RGB: 130,135,123, 0% white pixels)",
+    "avg_rgb": [
+      130.44313725490196,
+      134.95392156862746,
+      123.29509803921569
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "vinfast",
+    "file": "vf-7.jpg",
+    "slug": "vf-7",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/vinfast/vf-7.jpg",
+    "reason": "non-white (avg RGB: 197,210,226, 5% white pixels)",
+    "avg_rgb": [
+      197.38529411764705,
+      210.29901960784315,
+      226.4950980392157
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "vinfast",
+    "file": "vf-9.jpg",
+    "slug": "vf-9",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/vinfast/vf-9.jpg",
+    "reason": "non-white (avg RGB: 160,160,160, 10% white pixels)",
+    "avg_rgb": [
+      160.4470588235294,
+      160.49019607843138,
+      160.4686274509804
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "volkswagen",
+    "file": "virtus.jpg",
+    "slug": "virtus",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/volkswagen/virtus.jpg",
+    "reason": "non-white (avg RGB: 158,82,76, 3% white pixels)",
+    "avg_rgb": [
+      157.82156862745097,
+      81.93333333333334,
+      76.18725490196078
+    ]
+  },
+  {
+    "category": "4w-new",
+    "brand": "volvo",
+    "file": "xc90.jpg",
+    "slug": "xc90",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w/volvo/xc90.jpg",
+    "reason": "non-white (avg RGB: 92,87,87, 0% white pixels)",
+    "avg_rgb": [
+      92.08529411764705,
+      87.26470588235294,
+      87.08235294117647
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ampere-greaves",
+    "file": "magnus-grand.jpg",
+    "slug": "magnus-grand",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ampere-greaves/magnus-grand.jpg",
+    "reason": "non-white (avg RGB: 127,121,105, 0% white pixels)",
+    "avg_rgb": [
+      126.56078431372549,
+      121.33921568627451,
+      104.9735294117647
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ampere-greaves",
+    "file": "nexus.jpg",
+    "slug": "nexus",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ampere-greaves/nexus.jpg",
+    "reason": "non-white (avg RGB: 24,26,27, 0% white pixels)",
+    "avg_rgb": [
+      24.155882352941177,
+      25.701960784313727,
+      26.83137254901961
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "aprilia-india",
+    "file": "rsv4-1100-factory.png",
+    "slug": "rsv4-1100-factory",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/aprilia-india/rsv4-1100-factory.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "aprilia-india",
+    "file": "sxr-160.png",
+    "slug": "sxr-160",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/aprilia-india/sxr-160.png",
+    "reason": "non-white (avg RGB: 180,174,171, 0% white pixels)",
+    "avg_rgb": [
+      180.28235294117647,
+      173.92156862745097,
+      170.6627450980392
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bajaj-auto",
+    "file": "avenger-street-160.png",
+    "slug": "avenger-street-160",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bajaj-auto/avenger-street-160.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bajaj-auto",
+    "file": "ct-110x.png",
+    "slug": "ct-110x",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bajaj-auto/ct-110x.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bajaj-auto",
+    "file": "dominar-400.jpg",
+    "slug": "dominar-400",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bajaj-auto/dominar-400.jpg",
+    "reason": "non-white (avg RGB: 205,190,180, 22% white pixels)",
+    "avg_rgb": [
+      204.8549019607843,
+      189.5529411764706,
+      179.95686274509805
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bajaj-auto",
+    "file": "platina-100.jpg",
+    "slug": "platina-100",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bajaj-auto/platina-100.jpg",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bajaj-auto",
+    "file": "platina-110.png",
+    "slug": "platina-110",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bajaj-auto/platina-110.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bajaj-auto",
+    "file": "pulsar-125.png",
+    "slug": "pulsar-125",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bajaj-auto/pulsar-125.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bajaj-auto",
+    "file": "pulsar-150.jpg",
+    "slug": "pulsar-150",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bajaj-auto/pulsar-150.jpg",
+    "reason": "non-white (avg RGB: 192,194,193, 49% white pixels)",
+    "avg_rgb": [
+      192.37058823529412,
+      193.72450980392156,
+      192.9735294117647
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bajaj-auto",
+    "file": "pulsar-n250.jpg",
+    "slug": "pulsar-n250",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bajaj-auto/pulsar-n250.jpg",
+    "reason": "non-white (avg RGB: 186,189,189, 0% white pixels)",
+    "avg_rgb": [
+      186.4764705882353,
+      189.3392156862745,
+      188.58235294117648
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bajaj-auto",
+    "file": "pulsar-ns125.png",
+    "slug": "pulsar-ns125",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bajaj-auto/pulsar-ns125.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bajaj-auto",
+    "file": "pulsar-ns160.png",
+    "slug": "pulsar-ns160",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bajaj-auto/pulsar-ns160.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bajaj-auto",
+    "file": "pulsar-ns200.jpg",
+    "slug": "pulsar-ns200",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bajaj-auto/pulsar-ns200.jpg",
+    "reason": "non-white (avg RGB: 89,90,89, 0% white pixels)",
+    "avg_rgb": [
+      89.16176470588235,
+      89.86176470588235,
+      89.06666666666666
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bajaj-auto",
+    "file": "pulsar-ns400z.jpg",
+    "slug": "pulsar-ns400z",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bajaj-auto/pulsar-ns400z.jpg",
+    "reason": "non-white (avg RGB: 36,59,71, 0% white pixels)",
+    "avg_rgb": [
+      35.800980392156866,
+      59.259803921568626,
+      70.92156862745098
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bajaj-auto",
+    "file": "pulsar-rs200.png",
+    "slug": "pulsar-rs200",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bajaj-auto/pulsar-rs200.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bajaj-chetak-ev",
+    "file": "chetak-3501.jpg",
+    "slug": "chetak-3501",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bajaj-chetak-ev/chetak-3501.jpg",
+    "reason": "non-white (avg RGB: 79,113,120, 0% white pixels)",
+    "avg_rgb": [
+      79.46862745098039,
+      112.84705882352941,
+      120.29019607843138
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "benelli-india",
+    "file": "leoncino-500.png",
+    "slug": "leoncino-500",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/benelli-india/leoncino-500.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "benelli-india",
+    "file": "trk-502.png",
+    "slug": "trk-502",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/benelli-india/trk-502.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "benelli-india",
+    "file": "trk-502x.png",
+    "slug": "trk-502x",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/benelli-india/trk-502x.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bmw-motorrad-india",
+    "file": "f-900-gs-adventure.png",
+    "slug": "f-900-gs-adventure",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bmw-motorrad-india/f-900-gs-adventure.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bmw-motorrad-india",
+    "file": "g-310-gs.jpg",
+    "slug": "g-310-gs",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bmw-motorrad-india/g-310-gs.jpg",
+    "reason": "non-white (avg RGB: 215,205,182, 8% white pixels)",
+    "avg_rgb": [
+      215.1313725490196,
+      205.17450980392158,
+      182.45686274509805
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bmw-motorrad-india",
+    "file": "r18.jpg",
+    "slug": "r18",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bmw-motorrad-india/r18.jpg",
+    "reason": "non-white (avg RGB: 131,131,100, 0% white pixels)",
+    "avg_rgb": [
+      130.73529411764707,
+      131.37156862745098,
+      99.93725490196078
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bmw-motorrad-india",
+    "file": "s-1000-rr.png",
+    "slug": "s-1000-rr",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bmw-motorrad-india/s-1000-rr.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bmw-motorrad-india",
+    "file": "s-1000-xr.png",
+    "slug": "s-1000-xr",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bmw-motorrad-india/s-1000-xr.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "bounce-infinity",
+    "file": "e1x.png",
+    "slug": "e1x",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/bounce-infinity/e1x.png",
+    "reason": "non-white (avg RGB: 219,220,199, 0% white pixels)",
+    "avg_rgb": [
+      218.83235294117648,
+      219.8205882352941,
+      198.60196078431372
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "cfmoto-india",
+    "file": "675sr-r.jpg",
+    "slug": "675sr-r",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/cfmoto-india/675sr-r.jpg",
+    "reason": "non-white (avg RGB: 12,122,148, 0% white pixels)",
+    "avg_rgb": [
+      12.382352941176471,
+      121.63725490196079,
+      148.25
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ducati-india",
+    "file": "desertx-discovery.jpg",
+    "slug": "desertx-discovery",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ducati-india/desertx-discovery.jpg",
+    "reason": "non-white (avg RGB: 134,128,128, 17% white pixels)",
+    "avg_rgb": [
+      133.6264705882353,
+      128.2235294117647,
+      128.28235294117647
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ducati-india",
+    "file": "hypermotard-950.jpg",
+    "slug": "hypermotard-950",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ducati-india/hypermotard-950.jpg",
+    "reason": "non-white (avg RGB: 107,114,116, 3% white pixels)",
+    "avg_rgb": [
+      107.00098039215686,
+      113.78039215686275,
+      116.2843137254902
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ducati-india",
+    "file": "monster.jpg",
+    "slug": "monster",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ducati-india/monster.jpg",
+    "reason": "non-white (avg RGB: 133,122,100, 0% white pixels)",
+    "avg_rgb": [
+      133.25588235294117,
+      121.93235294117648,
+      100.28137254901961
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ducati-india",
+    "file": "panigale-v2.jpg",
+    "slug": "panigale-v2",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ducati-india/panigale-v2.jpg",
+    "reason": "non-white (avg RGB: 134,138,138, 3% white pixels)",
+    "avg_rgb": [
+      134.25392156862745,
+      138.41862745098038,
+      138.34607843137255
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ducati-india",
+    "file": "panigale-v4.png",
+    "slug": "panigale-v4",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ducati-india/panigale-v4.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ducati-india",
+    "file": "scrambler-800.jpg",
+    "slug": "scrambler-800",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ducati-india/scrambler-800.jpg",
+    "reason": "non-white (avg RGB: 47,66,77, 0% white pixels)",
+    "avg_rgb": [
+      47.11764705882353,
+      66.01862745098039,
+      77.26176470588236
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ducati-india",
+    "file": "streetfighter-v2.jpg",
+    "slug": "streetfighter-v2",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ducati-india/streetfighter-v2.jpg",
+    "reason": "non-white (avg RGB: 211,189,186, 29% white pixels)",
+    "avg_rgb": [
+      211.3421568627451,
+      189.40588235294118,
+      186.05490196078432
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ducati-india",
+    "file": "xdiavel.jpg",
+    "slug": "xdiavel",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ducati-india/xdiavel.jpg",
+    "reason": "non-white (avg RGB: 74,81,78, 0% white pixels)",
+    "avg_rgb": [
+      74.05490196078432,
+      80.60686274509804,
+      78.43725490196078
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "harley-davidson-india",
+    "file": "nightster-special.jpg",
+    "slug": "nightster-special",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/harley-davidson-india/nightster-special.jpg",
+    "reason": "non-white (avg RGB: 52,53,54, 0% white pixels)",
+    "avg_rgb": [
+      51.65294117647059,
+      53.03235294117647,
+      54.28333333333333
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "harley-davidson-india",
+    "file": "nightster.jpg",
+    "slug": "nightster",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/harley-davidson-india/nightster.jpg",
+    "reason": "non-white (avg RGB: 136,141,147, 0% white pixels)",
+    "avg_rgb": [
+      135.96960784313725,
+      140.55,
+      147.01176470588234
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "harley-davidson-india",
+    "file": "pan-america-1250-special.jpg",
+    "slug": "pan-america-1250-special",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/harley-davidson-india/pan-america-1250-special.jpg",
+    "reason": "non-white (avg RGB: 139,127,79, 0% white pixels)",
+    "avg_rgb": [
+      139.24803921568628,
+      127.10196078431373,
+      79.13235294117646
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "harley-davidson-india",
+    "file": "sportster-s.jpg",
+    "slug": "sportster-s",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/harley-davidson-india/sportster-s.jpg",
+    "reason": "non-white (avg RGB: 121,115,117, 0% white pixels)",
+    "avg_rgb": [
+      121.03921568627452,
+      115.35490196078432,
+      116.68627450980392
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "harley-davidson-india",
+    "file": "x440.jpg",
+    "slug": "x440",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/harley-davidson-india/x440.jpg",
+    "reason": "non-white (avg RGB: 209,205,194, 53% white pixels)",
+    "avg_rgb": [
+      209.24019607843138,
+      204.66470588235293,
+      193.8764705882353
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hero-electric",
+    "file": "atria.jpg",
+    "slug": "atria",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hero-electric/atria.jpg",
+    "reason": "non-white (avg RGB: 180,192,207, 17% white pixels)",
+    "avg_rgb": [
+      180.27549019607844,
+      192.43529411764706,
+      207.43039215686275
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hero-electric",
+    "file": "flash.jpg",
+    "slug": "flash",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hero-electric/flash.jpg",
+    "reason": "non-white (avg RGB: 74,82,92, 0% white pixels)",
+    "avg_rgb": [
+      74.20588235294117,
+      81.79607843137255,
+      92.43137254901961
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hero-electric",
+    "file": "optima.jpg",
+    "slug": "optima",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hero-electric/optima.jpg",
+    "reason": "non-white (avg RGB: 54,61,82, 2% white pixels)",
+    "avg_rgb": [
+      53.72352941176471,
+      60.831372549019605,
+      81.91960784313726
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hero-motocorp",
+    "file": "destini-prime.jpg",
+    "slug": "destini-prime",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hero-motocorp/destini-prime.jpg",
+    "reason": "non-white (avg RGB: 56,73,85, 0% white pixels)",
+    "avg_rgb": [
+      56.338235294117645,
+      73.4892156862745,
+      85.32549019607843
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hero-motocorp",
+    "file": "glamour-xtec.jpg",
+    "slug": "glamour-xtec",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hero-motocorp/glamour-xtec.jpg",
+    "reason": "non-white (avg RGB: 14,14,14, 0% white pixels)",
+    "avg_rgb": [
+      14.437254901960785,
+      14.437254901960785,
+      14.437254901960785
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hero-motocorp",
+    "file": "hf-100.jpg",
+    "slug": "hf-100",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hero-motocorp/hf-100.jpg",
+    "reason": "non-white (avg RGB: 135,161,173, 6% white pixels)",
+    "avg_rgb": [
+      135.38823529411764,
+      160.50882352941176,
+      172.8637254901961
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hero-motocorp",
+    "file": "karizma-xmr.png",
+    "slug": "karizma-xmr",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hero-motocorp/karizma-xmr.png",
+    "reason": "non-white (avg RGB: 1,1,1, 0% white pixels)",
+    "avg_rgb": [
+      0.6039215686274509,
+      0.6039215686274509,
+      0.6039215686274509
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hero-motocorp",
+    "file": "passion-plus.png",
+    "slug": "passion-plus",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hero-motocorp/passion-plus.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.00392156862745098,
+      0.00392156862745098,
+      0.00392156862745098
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hero-motocorp",
+    "file": "pleasure-plus.png",
+    "slug": "pleasure-plus",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hero-motocorp/pleasure-plus.png",
+    "reason": "non-white (avg RGB: 125,127,100, 0% white pixels)",
+    "avg_rgb": [
+      124.50294117647059,
+      126.91176470588235,
+      99.68627450980392
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hero-motocorp",
+    "file": "splendor-plus-xtec-20.jpg",
+    "slug": "splendor-plus-xtec-20",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hero-motocorp/splendor-plus-xtec-20.jpg",
+    "reason": "non-white (avg RGB: 146,148,154, 8% white pixels)",
+    "avg_rgb": [
+      146.34607843137255,
+      148.49117647058824,
+      153.64901960784314
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hero-motocorp",
+    "file": "splendor-plus-xtec.jpg",
+    "slug": "splendor-plus-xtec",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hero-motocorp/splendor-plus-xtec.jpg",
+    "reason": "non-white (avg RGB: 82,130,158, 0% white pixels)",
+    "avg_rgb": [
+      81.89019607843137,
+      129.84411764705882,
+      158.3470588235294
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hero-motocorp",
+    "file": "splendor-plus.png",
+    "slug": "splendor-plus",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hero-motocorp/splendor-plus.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hero-motocorp",
+    "file": "xoom-110.jpg",
+    "slug": "xoom-110",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hero-motocorp/xoom-110.jpg",
+    "reason": "non-white (avg RGB: 132,143,154, 0% white pixels)",
+    "avg_rgb": [
+      132.34117647058824,
+      143.33627450980393,
+      154.02941176470588
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hero-motocorp",
+    "file": "xoom-125.jpg",
+    "slug": "xoom-125",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hero-motocorp/xoom-125.jpg",
+    "reason": "non-white (avg RGB: 52,38,28, 0% white pixels)",
+    "avg_rgb": [
+      51.67058823529412,
+      38.48627450980392,
+      27.75294117647059
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hero-motocorp",
+    "file": "xpulse-200-4v.png",
+    "slug": "xpulse-200-4v",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hero-motocorp/xpulse-200-4v.png",
+    "reason": "non-white (avg RGB: 190,176,159, 25% white pixels)",
+    "avg_rgb": [
+      189.62058823529412,
+      175.62254901960785,
+      159.03039215686275
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hero-motocorp",
+    "file": "xtreme-160r.jpg",
+    "slug": "xtreme-160r",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hero-motocorp/xtreme-160r.jpg",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hero-motocorp",
+    "file": "xtreme-250r.jpg",
+    "slug": "xtreme-250r",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hero-motocorp/xtreme-250r.jpg",
+    "reason": "non-white (avg RGB: 200,55,34, 0% white pixels)",
+    "avg_rgb": [
+      199.62450980392157,
+      55.1843137254902,
+      33.84705882352941
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-cb-125-f.jpg",
+    "slug": "honda-cb-125-f",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-cb-125-f.jpg",
+    "reason": "non-white (avg RGB: 73,73,78, 0% white pixels)",
+    "avg_rgb": [
+      72.83725490196079,
+      73.32254901960785,
+      77.96960784313725
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-cb1000-hornet-sp.jpg",
+    "slug": "honda-cb1000-hornet-sp",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-cb1000-hornet-sp.jpg",
+    "reason": "non-white (avg RGB: 84,73,107, 0% white pixels)",
+    "avg_rgb": [
+      84.03627450980392,
+      72.98137254901961,
+      107.18627450980392
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-cb300f-flex-fuel.jpg",
+    "slug": "honda-cb300f-flex-fuel",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-cb300f-flex-fuel.jpg",
+    "reason": "non-white (avg RGB: 168,169,146, 18% white pixels)",
+    "avg_rgb": [
+      167.95098039215685,
+      168.74803921568628,
+      145.62745098039215
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-cb300f.jpg",
+    "slug": "honda-cb300f",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-cb300f.jpg",
+    "reason": "non-white (avg RGB: 129,131,108, 28% white pixels)",
+    "avg_rgb": [
+      128.75588235294117,
+      131.0578431372549,
+      108.19411764705882
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-cb350c.jpg",
+    "slug": "honda-cb350c",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-cb350c.jpg",
+    "reason": "non-white (avg RGB: 141,142,144, 4% white pixels)",
+    "avg_rgb": [
+      140.95294117647057,
+      141.9607843137255,
+      143.7107843137255
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-cb350rs.jpg",
+    "slug": "honda-cb350rs",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-cb350rs.jpg",
+    "reason": "non-white (avg RGB: 68,69,70, 0% white pixels)",
+    "avg_rgb": [
+      68.25784313725491,
+      68.9843137254902,
+      69.78333333333333
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-cb500x.jpg",
+    "slug": "honda-cb500x",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-cb500x.jpg",
+    "reason": "non-white (avg RGB: 116,122,95, 0% white pixels)",
+    "avg_rgb": [
+      116.27254901960784,
+      121.79117647058824,
+      95.14019607843137
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-cb650r.jpg",
+    "slug": "honda-cb650r",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-cb650r.jpg",
+    "reason": "non-white (avg RGB: 134,133,141, 0% white pixels)",
+    "avg_rgb": [
+      133.76176470588234,
+      133.34901960784313,
+      140.8637254901961
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-cb750-hornet.jpg",
+    "slug": "honda-cb750-hornet",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-cb750-hornet.jpg",
+    "reason": "non-white (avg RGB: 123,123,116, 0% white pixels)",
+    "avg_rgb": [
+      122.68921568627451,
+      122.7607843137255,
+      116.0921568627451
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-cbr1000rr-r-sp.jpg",
+    "slug": "honda-cbr1000rr-r-sp",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-cbr1000rr-r-sp.jpg",
+    "reason": "non-white (avg RGB: 117,125,109, 0% white pixels)",
+    "avg_rgb": [
+      117.34607843137255,
+      125.05392156862744,
+      108.74117647058823
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-cbr650r.jpg",
+    "slug": "honda-cbr650r",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-cbr650r.jpg",
+    "reason": "non-white (avg RGB: 75,76,78, 0% white pixels)",
+    "avg_rgb": [
+      75.29901960784314,
+      76.44411764705882,
+      78.04509803921569
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-cd-110-dream.jpg",
+    "slug": "honda-cd-110-dream",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-cd-110-dream.jpg",
+    "reason": "non-white (avg RGB: 124,124,124, 0% white pixels)",
+    "avg_rgb": [
+      124.07941176470588,
+      124.07941176470588,
+      124.07941176470588
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-crf1100l-africa-twin.jpg",
+    "slug": "honda-crf1100l-africa-twin",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-crf1100l-africa-twin.jpg",
+    "reason": "non-white (avg RGB: 193,193,193, 53% white pixels)",
+    "avg_rgb": [
+      192.82745098039214,
+      192.82745098039214,
+      192.74901960784314
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-gold-wing.png",
+    "slug": "honda-gold-wing",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-gold-wing.png",
+    "reason": "non-white (avg RGB: 199,199,199, 47% white pixels)",
+    "avg_rgb": [
+      199.46274509803922,
+      199.46176470588236,
+      199.46176470588236
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-livo.png",
+    "slug": "honda-livo",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-livo.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-nx500.jpg",
+    "slug": "honda-nx500",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-nx500.jpg",
+    "reason": "non-white (avg RGB: 182,151,160, 3% white pixels)",
+    "avg_rgb": [
+      182.20980392156864,
+      151.48627450980393,
+      160.40980392156862
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-sp160.jpg",
+    "slug": "honda-sp160",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-sp160.jpg",
+    "reason": "non-white (avg RGB: 141,159,171, 2% white pixels)",
+    "avg_rgb": [
+      141.1343137254902,
+      159.37254901960785,
+      171.14411764705883
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda",
+    "file": "honda-unicorn.png",
+    "slug": "honda-unicorn",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-unicorn.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "activa-110.png",
+    "slug": "activa-110",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/activa-110.png",
+    "reason": "non-white (avg RGB: 1,1,1, 0% white pixels)",
+    "avg_rgb": [
+      0.6480392156862745,
+      0.6470588235294118,
+      0.6558823529411765
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "activa-6g.jpg",
+    "slug": "activa-6g",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/activa-6g.jpg",
+    "reason": "non-white (avg RGB: 122,143,161, 3% white pixels)",
+    "avg_rgb": [
+      122.45490196078431,
+      142.59313725490196,
+      160.50392156862745
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "activa-e.jpg",
+    "slug": "activa-e",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/activa-e.jpg",
+    "reason": "non-white (avg RGB: 96,96,96, 1% white pixels)",
+    "avg_rgb": [
+      95.69607843137256,
+      95.69607843137256,
+      95.69607843137256
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "africa-twin.png",
+    "slug": "africa-twin",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/africa-twin.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "cb-125-f.jpg",
+    "slug": "cb-125-f",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/cb-125-f.jpg",
+    "reason": "non-white (avg RGB: 73,73,78, 0% white pixels)",
+    "avg_rgb": [
+      72.83725490196079,
+      73.32254901960785,
+      77.96960784313725
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "cb1000-hornet-sp.jpg",
+    "slug": "cb1000-hornet-sp",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/cb1000-hornet-sp.jpg",
+    "reason": "non-white (avg RGB: 84,73,107, 0% white pixels)",
+    "avg_rgb": [
+      84.03627450980392,
+      72.98137254901961,
+      107.18627450980392
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "cb1000-hornet.png",
+    "slug": "cb1000-hornet",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/cb1000-hornet.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "cb300f-flex-fuel.jpg",
+    "slug": "cb300f-flex-fuel",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/cb300f-flex-fuel.jpg",
+    "reason": "non-white (avg RGB: 168,169,146, 18% white pixels)",
+    "avg_rgb": [
+      167.95098039215685,
+      168.74803921568628,
+      145.62745098039215
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "cb350rs.jpg",
+    "slug": "cb350rs",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/cb350rs.jpg",
+    "reason": "non-white (avg RGB: 80,80,80, 0% white pixels)",
+    "avg_rgb": [
+      79.55490196078432,
+      80.46862745098039,
+      80.24019607843137
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "cb500x.jpg",
+    "slug": "cb500x",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/cb500x.jpg",
+    "reason": "non-white (avg RGB: 163,203,221, 29% white pixels)",
+    "avg_rgb": [
+      163.15392156862745,
+      202.58235294117648,
+      221.1627450980392
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "cb750-hornet.png",
+    "slug": "cb750-hornet",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/cb750-hornet.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "cbr1000rr-r-sp.jpg",
+    "slug": "cbr1000rr-r-sp",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/cbr1000rr-r-sp.jpg",
+    "reason": "non-white (avg RGB: 117,125,109, 0% white pixels)",
+    "avg_rgb": [
+      117.34607843137255,
+      125.05392156862744,
+      108.74117647058823
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "cd-110-dream.jpg",
+    "slug": "cd-110-dream",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/cd-110-dream.jpg",
+    "reason": "non-white (avg RGB: 131,136,142, 28% white pixels)",
+    "avg_rgb": [
+      130.52254901960785,
+      136.4607843137255,
+      142.00882352941176
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "crf1100l-africa-twin.jpg",
+    "slug": "crf1100l-africa-twin",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/crf1100l-africa-twin.jpg",
+    "reason": "non-white (avg RGB: 193,193,193, 53% white pixels)",
+    "avg_rgb": [
+      192.82745098039214,
+      192.82745098039214,
+      192.74901960784314
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "dio.jpg",
+    "slug": "dio",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/dio.jpg",
+    "reason": "non-white (avg RGB: 97,91,88, 10% white pixels)",
+    "avg_rgb": [
+      96.77058823529411,
+      90.53137254901961,
+      87.9343137254902
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "gold-wing.png",
+    "slug": "gold-wing",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/gold-wing.png",
+    "reason": "non-white (avg RGB: 199,199,199, 47% white pixels)",
+    "avg_rgb": [
+      199.46274509803922,
+      199.46176470588236,
+      199.46176470588236
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "goldwing-tour.png",
+    "slug": "goldwing-tour",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/goldwing-tour.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "honda-cb1000-hornet-sp.jpg",
+    "slug": "honda-cb1000-hornet-sp",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/honda-cb1000-hornet-sp.jpg",
+    "reason": "non-white (avg RGB: 84,73,107, 0% white pixels)",
+    "avg_rgb": [
+      84.03627450980392,
+      72.98137254901961,
+      107.18627450980392
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "honda-cb200x.png",
+    "slug": "honda-cb200x",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/honda-cb200x.png",
+    "reason": "non-white (avg RGB: 15,15,15, 6% white pixels)",
+    "avg_rgb": [
+      15.0,
+      15.0,
+      15.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "honda-cb300f-flex-fuel.jpg",
+    "slug": "honda-cb300f-flex-fuel",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/honda-cb300f-flex-fuel.jpg",
+    "reason": "non-white (avg RGB: 171,178,184, 2% white pixels)",
+    "avg_rgb": [
+      170.7372549019608,
+      178.4029411764706,
+      184.2921568627451
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "honda-cb300f.jpg",
+    "slug": "honda-cb300f",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/honda-cb300f.jpg",
+    "reason": "non-white (avg RGB: 119,125,120, 0% white pixels)",
+    "avg_rgb": [
+      119.18333333333334,
+      124.82549019607843,
+      120.32843137254902
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "honda-cb350-h-ness.png",
+    "slug": "honda-cb350-h-ness",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/honda-cb350-h-ness.png",
+    "reason": "non-white (avg RGB: 246,200,56, 21% white pixels)",
+    "avg_rgb": [
+      245.59411764705882,
+      200.0529411764706,
+      55.96470588235294
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "honda-cb350.jpg",
+    "slug": "honda-cb350",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/honda-cb350.jpg",
+    "reason": "non-white (avg RGB: 155,156,106, 1% white pixels)",
+    "avg_rgb": [
+      155.01764705882354,
+      155.8686274509804,
+      106.06862745098039
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "honda-cb500x.jpg",
+    "slug": "honda-cb500x",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/honda-cb500x.jpg",
+    "reason": "non-white (avg RGB: 89,91,64, 0% white pixels)",
+    "avg_rgb": [
+      88.73137254901961,
+      90.60882352941177,
+      64.18529411764706
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "honda-cb750-hornet.jpg",
+    "slug": "honda-cb750-hornet",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/honda-cb750-hornet.jpg",
+    "reason": "non-white (avg RGB: 151,148,148, 0% white pixels)",
+    "avg_rgb": [
+      151.4078431372549,
+      148.49607843137255,
+      147.5
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "honda-cbr1000rr-r.jpg",
+    "slug": "honda-cbr1000rr-r",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/honda-cbr1000rr-r.jpg",
+    "reason": "non-white (avg RGB: 13,19,35, 0% white pixels)",
+    "avg_rgb": [
+      13.47156862745098,
+      18.676470588235293,
+      34.71666666666667
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "honda-cd-110-dream.jpg",
+    "slug": "honda-cd-110-dream",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/honda-cd-110-dream.jpg",
+    "reason": "non-white (avg RGB: 124,124,124, 0% white pixels)",
+    "avg_rgb": [
+      124.07941176470588,
+      124.07941176470588,
+      124.07941176470588
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "honda-hornet-20.png",
+    "slug": "honda-hornet-20",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/honda-hornet-20.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "honda-sp-125.png",
+    "slug": "honda-sp-125",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/honda-sp-125.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "honda-sp160.png",
+    "slug": "honda-sp160",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/honda-sp160.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "honda-unicorn.jpg",
+    "slug": "honda-unicorn",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/honda-unicorn.jpg",
+    "reason": "non-white (avg RGB: 37,46,39, 0% white pixels)",
+    "avg_rgb": [
+      37.09803921568628,
+      45.97549019607843,
+      38.99901960784314
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "honda-xblade.jpg",
+    "slug": "honda-xblade",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/honda-xblade.jpg",
+    "reason": "non-white (avg RGB: 60,58,53, 0% white pixels)",
+    "avg_rgb": [
+      60.48725490196078,
+      57.83529411764706,
+      52.72549019607843
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "honda-xl750-transalp.jpg",
+    "slug": "honda-xl750-transalp",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/honda-xl750-transalp.jpg",
+    "reason": "non-white (avg RGB: 163,159,156, 24% white pixels)",
+    "avg_rgb": [
+      162.54509803921567,
+      159.2980392156863,
+      155.6578431372549
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "hornet-20.jpg",
+    "slug": "hornet-20",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/hornet-20.jpg",
+    "reason": "non-white (avg RGB: 19,58,77, 0% white pixels)",
+    "avg_rgb": [
+      18.79019607843137,
+      57.95882352941177,
+      77.4235294117647
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "sp-125.png",
+    "slug": "sp-125",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/sp-125.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "transalp-xl750.png",
+    "slug": "transalp-xl750",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/transalp-xl750.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "honda-hmsi",
+    "file": "unicorn.jpg",
+    "slug": "unicorn",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/unicorn.jpg",
+    "reason": "non-white (avg RGB: 154,163,171, 0% white pixels)",
+    "avg_rgb": [
+      154.3156862745098,
+      162.99901960784314,
+      171.43529411764706
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hop-electric",
+    "file": "leo.jpg",
+    "slug": "leo",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hop-electric/leo.jpg",
+    "reason": "non-white (avg RGB: 112,115,116, 3% white pixels)",
+    "avg_rgb": [
+      111.68823529411765,
+      115.16274509803921,
+      115.88823529411765
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "hop-electric",
+    "file": "lyf.jpg",
+    "slug": "lyf",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/hop-electric/lyf.jpg",
+    "reason": "non-white (avg RGB: 203,208,211, 28% white pixels)",
+    "avg_rgb": [
+      202.84803921568627,
+      207.95490196078433,
+      211.25196078431372
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "indian-motorcycle",
+    "file": "chief-bobber-dark-horse.jpg",
+    "slug": "chief-bobber-dark-horse",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/indian-motorcycle/chief-bobber-dark-horse.jpg",
+    "reason": "non-white (avg RGB: 118,95,75, 0% white pixels)",
+    "avg_rgb": [
+      118.37352941176471,
+      94.91960784313726,
+      74.55490196078432
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "indian-motorcycle",
+    "file": "chief-dark-horse.jpg",
+    "slug": "chief-dark-horse",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/indian-motorcycle/chief-dark-horse.jpg",
+    "reason": "non-white (avg RGB: 84,61,49, 0% white pixels)",
+    "avg_rgb": [
+      84.08039215686274,
+      61.16372549019608,
+      48.6578431372549
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "indian-motorcycle",
+    "file": "chieftain-elite.jpg",
+    "slug": "chieftain-elite",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/indian-motorcycle/chieftain-elite.jpg",
+    "reason": "non-white (avg RGB: 101,80,61, 0% white pixels)",
+    "avg_rgb": [
+      100.50294117647059,
+      80.00588235294117,
+      61.25
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "indian-motorcycle",
+    "file": "chieftain-limited.jpg",
+    "slug": "chieftain-limited",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/indian-motorcycle/chieftain-limited.jpg",
+    "reason": "non-white (avg RGB: 105,98,88, 3% white pixels)",
+    "avg_rgb": [
+      105.24313725490197,
+      97.54019607843138,
+      88.4235294117647
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "indian-motorcycle",
+    "file": "roadmaster-dark-horse.jpg",
+    "slug": "roadmaster-dark-horse",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/indian-motorcycle/roadmaster-dark-horse.jpg",
+    "reason": "non-white (avg RGB: 108,100,84, 0% white pixels)",
+    "avg_rgb": [
+      107.76960784313725,
+      99.82549019607843,
+      83.89607843137254
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "indian-motorcycle",
+    "file": "roadmaster-elite.jpg",
+    "slug": "roadmaster-elite",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/indian-motorcycle/roadmaster-elite.jpg",
+    "reason": "non-white (avg RGB: 128,104,78, 0% white pixels)",
+    "avg_rgb": [
+      128.12450980392157,
+      104.0156862745098,
+      78.13333333333334
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "indian-motorcycle",
+    "file": "roadmaster.jpg",
+    "slug": "roadmaster",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/indian-motorcycle/roadmaster.jpg",
+    "reason": "non-white (avg RGB: 91,74,59, 0% white pixels)",
+    "avg_rgb": [
+      91.19411764705882,
+      73.74509803921569,
+      59.12450980392157
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "jawa-motorcycles",
+    "file": "42-bobber.jpg",
+    "slug": "42-bobber",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/jawa-motorcycles/42-bobber.jpg",
+    "reason": "non-white (avg RGB: 190,187,188, 35% white pixels)",
+    "avg_rgb": [
+      190.34803921568627,
+      187.16176470588235,
+      187.8686274509804
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "jawa-motorcycles",
+    "file": "42-fj.jpg",
+    "slug": "42-fj",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/jawa-motorcycles/42-fj.jpg",
+    "reason": "non-white (avg RGB: 92,87,100, 5% white pixels)",
+    "avg_rgb": [
+      91.67156862745098,
+      86.86274509803921,
+      100.40490196078431
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "jawa-motorcycles",
+    "file": "jawa-42-bobber.jpg",
+    "slug": "jawa-42-bobber",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/jawa-motorcycles/jawa-42-bobber.jpg",
+    "reason": "non-white (avg RGB: 190,187,188, 35% white pixels)",
+    "avg_rgb": [
+      190.34803921568627,
+      187.16176470588235,
+      187.8686274509804
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "jawa-motorcycles",
+    "file": "jawa-42-fj.png",
+    "slug": "jawa-42-fj",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/jawa-motorcycles/jawa-42-fj.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "joy-e-bike",
+    "file": "beast.jpg",
+    "slug": "beast",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/joy-e-bike/beast.jpg",
+    "reason": "non-white (avg RGB: 101,127,151, 0% white pixels)",
+    "avg_rgb": [
+      101.22549019607843,
+      127.18725490196078,
+      151.4078431372549
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "joy-e-bike",
+    "file": "gen-next-nanu.jpg",
+    "slug": "gen-next-nanu",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/joy-e-bike/gen-next-nanu.jpg",
+    "reason": "non-white (avg RGB: 199,199,198, 50% white pixels)",
+    "avg_rgb": [
+      199.35098039215686,
+      199.07450980392156,
+      197.8205882352941
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "joy-e-bike",
+    "file": "glob.jpg",
+    "slug": "glob",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/joy-e-bike/glob.jpg",
+    "reason": "non-white (avg RGB: 171,210,228, 19% white pixels)",
+    "avg_rgb": [
+      171.2921568627451,
+      209.98529411764707,
+      227.50098039215686
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "joy-e-bike",
+    "file": "mihos.jpg",
+    "slug": "mihos",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/joy-e-bike/mihos.jpg",
+    "reason": "non-white (avg RGB: 100,114,126, 0% white pixels)",
+    "avg_rgb": [
+      99.73137254901961,
+      114.20294117647059,
+      126.25
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "joy-e-bike",
+    "file": "thunderbolt.jpg",
+    "slug": "thunderbolt",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/joy-e-bike/thunderbolt.jpg",
+    "reason": "non-white (avg RGB: 149,156,163, 24% white pixels)",
+    "avg_rgb": [
+      148.74607843137255,
+      155.58333333333334,
+      163.29117647058823
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "joy-e-bike",
+    "file": "wolf.jpg",
+    "slug": "wolf",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/joy-e-bike/wolf.jpg",
+    "reason": "non-white (avg RGB: 115,133,152, 0% white pixels)",
+    "avg_rgb": [
+      114.91470588235295,
+      132.6156862745098,
+      152.19803921568626
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "kabira-mobility",
+    "file": "hermes-75.jpg",
+    "slug": "hermes-75",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/kabira-mobility/hermes-75.jpg",
+    "reason": "non-white (avg RGB: 170,167,176, 53% white pixels)",
+    "avg_rgb": [
+      169.67450980392158,
+      167.03725490196078,
+      175.62156862745098
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "kabira-mobility",
+    "file": "km-3000.jpg",
+    "slug": "km-3000",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/kabira-mobility/km-3000.jpg",
+    "reason": "non-white (avg RGB: 184,183,187, 27% white pixels)",
+    "avg_rgb": [
+      183.74411764705883,
+      182.99313725490197,
+      187.36470588235295
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "kabira-mobility",
+    "file": "km-4000.jpg",
+    "slug": "km-4000",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/kabira-mobility/km-4000.jpg",
+    "reason": "non-white (avg RGB: 45,49,55, 0% white pixels)",
+    "avg_rgb": [
+      45.40882352941176,
+      49.20882352941177,
+      54.561764705882354
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "kawasaki-india",
+    "file": "klx230.png",
+    "slug": "klx230",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/kawasaki-india/klx230.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "kawasaki-india",
+    "file": "klx450r.png",
+    "slug": "klx450r",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/kawasaki-india/klx450r.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "kawasaki-india",
+    "file": "ninja-300.png",
+    "slug": "ninja-300",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/kawasaki-india/ninja-300.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "kawasaki-india",
+    "file": "ninja-h2-sx-se.png",
+    "slug": "ninja-h2-sx-se",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/kawasaki-india/ninja-h2-sx-se.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "kawasaki-india",
+    "file": "ninja-zx-10r.png",
+    "slug": "ninja-zx-10r",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/kawasaki-india/ninja-zx-10r.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "kawasaki-india",
+    "file": "z-h2.png",
+    "slug": "z-h2",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/kawasaki-india/z-h2.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "kawasaki-india",
+    "file": "z650rs.jpg",
+    "slug": "z650rs",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/kawasaki-india/z650rs.jpg",
+    "reason": "non-white (avg RGB: 5,5,5, 2% white pixels)",
+    "avg_rgb": [
+      5.238235294117647,
+      5.238235294117647,
+      5.238235294117647
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "keeway-india",
+    "file": "rr300.png",
+    "slug": "rr300",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/keeway-india/rr300.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "keeway-india",
+    "file": "sixties-300i.jpg",
+    "slug": "sixties-300i",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/keeway-india/sixties-300i.jpg",
+    "reason": "non-white (avg RGB: 127,131,114, 0% white pixels)",
+    "avg_rgb": [
+      126.90686274509804,
+      131.23431372549018,
+      113.64803921568627
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "keeway-india",
+    "file": "sr125.jpg",
+    "slug": "sr125",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/keeway-india/sr125.jpg",
+    "reason": "non-white (avg RGB: 74,88,102, 0% white pixels)",
+    "avg_rgb": [
+      74.48137254901961,
+      87.89607843137254,
+      101.54607843137255
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "keeway-india",
+    "file": "v302c.png",
+    "slug": "v302c",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/keeway-india/v302c.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.15784313725490196,
+      0.15784313725490196,
+      0.15784313725490196
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "keeway-india",
+    "file": "vieste-300.png",
+    "slug": "vieste-300",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/keeway-india/vieste-300.png",
+    "reason": "non-white (avg RGB: 71,112,76, 0% white pixels)",
+    "avg_rgb": [
+      71.0,
+      112.0,
+      76.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "komaki",
+    "file": "ranger.png",
+    "slug": "ranger",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/komaki/ranger.png",
+    "reason": "non-white (avg RGB: 71,112,76, 0% white pixels)",
+    "avg_rgb": [
+      71.14019607843137,
+      112.10098039215686,
+      76.14019607843137
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "komaki",
+    "file": "se-pro.jpg",
+    "slug": "se-pro",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/komaki/se-pro.jpg",
+    "reason": "non-white (avg RGB: 140,140,139, 0% white pixels)",
+    "avg_rgb": [
+      139.68039215686275,
+      139.78725490196078,
+      139.33333333333334
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "komaki",
+    "file": "se-ultra.jpg",
+    "slug": "se-ultra",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/komaki/se-ultra.jpg",
+    "reason": "non-white (avg RGB: 141,150,151, 2% white pixels)",
+    "avg_rgb": [
+      140.61274509803923,
+      150.0970588235294,
+      150.84803921568627
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ktm-india",
+    "file": "250-adventure.jpg",
+    "slug": "250-adventure",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ktm-india/250-adventure.jpg",
+    "reason": "non-white (avg RGB: 64,106,135, 0% white pixels)",
+    "avg_rgb": [
+      64.05392156862744,
+      106.32745098039216,
+      134.50686274509803
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ktm-india",
+    "file": "390-adventure-r.png",
+    "slug": "390-adventure-r",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ktm-india/390-adventure-r.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ktm-india",
+    "file": "390-adventure-x.jpg",
+    "slug": "390-adventure-x",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ktm-india/390-adventure-x.jpg",
+    "reason": "non-white (avg RGB: 110,124,97, 2% white pixels)",
+    "avg_rgb": [
+      109.85882352941177,
+      124.27254901960784,
+      97.04705882352941
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ktm-india",
+    "file": "390-duke.png",
+    "slug": "390-duke",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ktm-india/390-duke.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "lectrix-ev",
+    "file": "lxs-20.jpg",
+    "slug": "lxs-20",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/lectrix-ev/lxs-20.jpg",
+    "reason": "non-white (avg RGB: 66,103,127, 0% white pixels)",
+    "avg_rgb": [
+      66.40882352941176,
+      102.80588235294118,
+      127.21176470588236
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "lectrix-ev",
+    "file": "lxs-30.jpg",
+    "slug": "lxs-30",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/lectrix-ev/lxs-30.jpg",
+    "reason": "non-white (avg RGB: 112,130,144, 0% white pixels)",
+    "avg_rgb": [
+      112.05686274509804,
+      130.04313725490195,
+      144.0186274509804
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "lectrix-ev",
+    "file": "nduro.png",
+    "slug": "nduro",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/lectrix-ev/nduro.png",
+    "reason": "non-white (avg RGB: 142,17,30, 0% white pixels)",
+    "avg_rgb": [
+      141.728431372549,
+      16.75294117647059,
+      30.13921568627451
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "mahindra-two-wheelers",
+    "file": "centuro-125.jpg",
+    "slug": "centuro-125",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/mahindra-two-wheelers/centuro-125.jpg",
+    "reason": "non-white (avg RGB: 110,80,64, 0% white pixels)",
+    "avg_rgb": [
+      110.20490196078431,
+      80.25392156862745,
+      63.69019607843137
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "mahindra-two-wheelers",
+    "file": "gusto-125.jpg",
+    "slug": "gusto-125",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/mahindra-two-wheelers/gusto-125.jpg",
+    "reason": "non-white (avg RGB: 143,142,140, 47% white pixels)",
+    "avg_rgb": [
+      142.88823529411764,
+      142.27745098039216,
+      140.28725490196078
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "moto-guzzi",
+    "file": "v7-sport.jpg",
+    "slug": "v7-sport",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/moto-guzzi/v7-sport.jpg",
+    "reason": "non-white (avg RGB: 193,192,192, 0% white pixels)",
+    "avg_rgb": [
+      192.51176470588234,
+      192.3950980392157,
+      192.00196078431372
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "moto-guzzi",
+    "file": "v85-tt.jpg",
+    "slug": "v85-tt",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/moto-guzzi/v85-tt.jpg",
+    "reason": "non-white (avg RGB: 162,177,193, 22% white pixels)",
+    "avg_rgb": [
+      162.1235294117647,
+      177.41960784313724,
+      193.32647058823528
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "norton-motorcycles",
+    "file": "commando-961.jpg",
+    "slug": "commando-961",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/norton-motorcycles/commando-961.jpg",
+    "reason": "non-white (avg RGB: 39,38,35, 0% white pixels)",
+    "avg_rgb": [
+      39.12647058823529,
+      37.65882352941176,
+      34.86862745098039
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "norton-motorcycles",
+    "file": "v4cr.jpg",
+    "slug": "v4cr",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/norton-motorcycles/v4cr.jpg",
+    "reason": "non-white (avg RGB: 195,195,197, 0% white pixels)",
+    "avg_rgb": [
+      195.32549019607842,
+      195.32549019607842,
+      197.32549019607842
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "oben-electric",
+    "file": "rorr-ez.jpg",
+    "slug": "rorr-ez",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/oben-electric/rorr-ez.jpg",
+    "reason": "non-white (avg RGB: 68,72,83, 0% white pixels)",
+    "avg_rgb": [
+      68.3421568627451,
+      72.28823529411764,
+      83.47450980392156
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "oben-electric",
+    "file": "rorr.jpg",
+    "slug": "rorr",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/oben-electric/rorr.jpg",
+    "reason": "non-white (avg RGB: 81,13,4, 0% white pixels)",
+    "avg_rgb": [
+      80.99117647058823,
+      13.330392156862745,
+      4.33235294117647
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "odysse-electric",
+    "file": "e2go.jpg",
+    "slug": "e2go",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/odysse-electric/e2go.jpg",
+    "reason": "non-white (avg RGB: 205,221,228, 14% white pixels)",
+    "avg_rgb": [
+      205.21764705882353,
+      220.6892156862745,
+      228.41764705882352
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "odysse-electric",
+    "file": "hawk.jpg",
+    "slug": "hawk",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/odysse-electric/hawk.jpg",
+    "reason": "non-white (avg RGB: 194,215,233, 47% white pixels)",
+    "avg_rgb": [
+      193.79117647058823,
+      215.25392156862745,
+      233.29705882352943
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "odysse-electric",
+    "file": "racer-neo.jpg",
+    "slug": "racer-neo",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/odysse-electric/racer-neo.jpg",
+    "reason": "non-white (avg RGB: 140,141,141, 55% white pixels)",
+    "avg_rgb": [
+      140.35588235294117,
+      140.76960784313727,
+      141.09607843137255
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "odysse-electric",
+    "file": "racer.jpg",
+    "slug": "racer",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/odysse-electric/racer.jpg",
+    "reason": "non-white (avg RGB: 174,180,189, 35% white pixels)",
+    "avg_rgb": [
+      174.16666666666666,
+      180.38039215686274,
+      189.39901960784314
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "odysse-electric",
+    "file": "vader.jpg",
+    "slug": "vader",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/odysse-electric/vader.jpg",
+    "reason": "non-white (avg RGB: 189,204,210, 20% white pixels)",
+    "avg_rgb": [
+      189.1137254901961,
+      203.9950980392157,
+      210.34607843137255
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "okaya-ev",
+    "file": "defy-22.jpg",
+    "slug": "defy-22",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/okaya-ev/defy-22.jpg",
+    "reason": "non-white (avg RGB: 154,168,173, 0% white pixels)",
+    "avg_rgb": [
+      153.7921568627451,
+      168.01078431372548,
+      172.7019607843137
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "okaya-ev",
+    "file": "faast-f2f.jpg",
+    "slug": "faast-f2f",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/okaya-ev/faast-f2f.jpg",
+    "reason": "non-white (avg RGB: 159,173,144, 24% white pixels)",
+    "avg_rgb": [
+      158.73235294117646,
+      172.8549019607843,
+      144.2421568627451
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "okaya-ev",
+    "file": "faast-f3.jpg",
+    "slug": "faast-f3",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/okaya-ev/faast-f3.jpg",
+    "reason": "non-white (avg RGB: 195,197,196, 9% white pixels)",
+    "avg_rgb": [
+      194.7980392156863,
+      196.98235294117646,
+      195.71470588235294
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "okaya-ev",
+    "file": "motofaast.jpg",
+    "slug": "motofaast",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/okaya-ev/motofaast.jpg",
+    "reason": "non-white (avg RGB: 144,146,148, 0% white pixels)",
+    "avg_rgb": [
+      143.87549019607843,
+      145.6656862745098,
+      148.40196078431373
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "okinawa-autotech",
+    "file": "dual-100.jpg",
+    "slug": "dual-100",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/okinawa-autotech/dual-100.jpg",
+    "reason": "non-white (avg RGB: 189,183,196, 25% white pixels)",
+    "avg_rgb": [
+      188.8735294117647,
+      183.01372549019607,
+      196.42156862745097
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "okinawa-autotech",
+    "file": "okhi-90.jpg",
+    "slug": "okhi-90",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/okinawa-autotech/okhi-90.jpg",
+    "reason": "non-white (avg RGB: 131,204,154, 0% white pixels)",
+    "avg_rgb": [
+      130.74607843137255,
+      203.58627450980393,
+      154.10196078431372
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "okinawa-autotech",
+    "file": "r30.png",
+    "slug": "r30",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/okinawa-autotech/r30.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "okinawa-autotech",
+    "file": "ridge-100.png",
+    "slug": "ridge-100",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/okinawa-autotech/ridge-100.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ola-electric",
+    "file": "roadster.jpg",
+    "slug": "roadster",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ola-electric/roadster.jpg",
+    "reason": "non-white (avg RGB: 65,64,63, 0% white pixels)",
+    "avg_rgb": [
+      65.37941176470588,
+      63.67254901960784,
+      62.501960784313724
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ola-electric",
+    "file": "s1-x.jpg",
+    "slug": "s1-x",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ola-electric/s1-x.jpg",
+    "reason": "non-white (avg RGB: 126,126,126, 21% white pixels)",
+    "avg_rgb": [
+      125.57352941176471,
+      125.57352941176471,
+      125.57352941176471
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ola-electric",
+    "file": "s1-z.jpg",
+    "slug": "s1-z",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ola-electric/s1-z.jpg",
+    "reason": "non-white (avg RGB: 194,208,218, 30% white pixels)",
+    "avg_rgb": [
+      194.1078431372549,
+      208.21372549019608,
+      218.25
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "pure-ev",
+    "file": "ecodryft.jpg",
+    "slug": "ecodryft",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/pure-ev/ecodryft.jpg",
+    "reason": "non-white (avg RGB: 0,1,1, 0% white pixels)",
+    "avg_rgb": [
+      0.4676470588235294,
+      0.5264705882352941,
+      0.5058823529411764
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "pure-ev",
+    "file": "etryst-350.jpg",
+    "slug": "etryst-350",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/pure-ev/etryst-350.jpg",
+    "reason": "non-white (avg RGB: 133,147,156, 0% white pixels)",
+    "avg_rgb": [
+      132.6450980392157,
+      146.97549019607843,
+      156.31666666666666
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "quantum-energy",
+    "file": "bziness.jpg",
+    "slug": "bziness",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/quantum-energy/bziness.jpg",
+    "reason": "non-white (avg RGB: 163,173,180, 2% white pixels)",
+    "avg_rgb": [
+      163.11176470588236,
+      172.74901960784314,
+      180.46960784313725
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "quantum-energy",
+    "file": "plasma.jpg",
+    "slug": "plasma",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/quantum-energy/plasma.jpg",
+    "reason": "non-white (avg RGB: 57,83,102, 0% white pixels)",
+    "avg_rgb": [
+      57.240196078431374,
+      83.13235294117646,
+      102.28333333333333
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "river-ev",
+    "file": "indie-gen-3.jpg",
+    "slug": "indie-gen-3",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/river-ev/indie-gen-3.jpg",
+    "reason": "non-white (avg RGB: 99,108,116, 0% white pixels)",
+    "avg_rgb": [
+      98.87941176470588,
+      107.68333333333334,
+      116.49215686274509
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "royal-enfield",
+    "file": "bear-650.jpg",
+    "slug": "bear-650",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/royal-enfield/bear-650.jpg",
+    "reason": "non-white (avg RGB: 99,94,92, 0% white pixels)",
+    "avg_rgb": [
+      98.54705882352941,
+      94.48627450980392,
+      92.33039215686274
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "royal-enfield",
+    "file": "guerrilla-450.jpg",
+    "slug": "guerrilla-450",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/royal-enfield/guerrilla-450.jpg",
+    "reason": "non-white (avg RGB: 180,169,158, 0% white pixels)",
+    "avg_rgb": [
+      180.21470588235294,
+      168.99019607843138,
+      158.0392156862745
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "royal-enfield",
+    "file": "hunter-350.jpg",
+    "slug": "hunter-350",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/royal-enfield/hunter-350.jpg",
+    "reason": "non-white (avg RGB: 91,94,97, 0% white pixels)",
+    "avg_rgb": [
+      91.45490196078431,
+      94.4578431372549,
+      96.87058823529412
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "royal-enfield",
+    "file": "shotgun-650.jpg",
+    "slug": "shotgun-650",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/royal-enfield/shotgun-650.jpg",
+    "reason": "non-white (avg RGB: 151,135,121, 0% white pixels)",
+    "avg_rgb": [
+      151.49803921568628,
+      134.8294117647059,
+      120.54607843137255
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "simple-energy",
+    "file": "one-gen-15.jpg",
+    "slug": "one-gen-15",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/simple-energy/one-gen-15.jpg",
+    "reason": "non-white (avg RGB: 149,137,120, 0% white pixels)",
+    "avg_rgb": [
+      149.46372549019608,
+      136.8392156862745,
+      120.41078431372549
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "simple-energy",
+    "file": "one.jpg",
+    "slug": "one",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/simple-energy/one.jpg",
+    "reason": "non-white (avg RGB: 81,81,82, 0% white pixels)",
+    "avg_rgb": [
+      80.9343137254902,
+      80.77745098039216,
+      82.41960784313726
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "simple-energy",
+    "file": "ones.jpg",
+    "slug": "ones",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/simple-energy/ones.jpg",
+    "reason": "non-white (avg RGB: 47,42,36, 0% white pixels)",
+    "avg_rgb": [
+      47.05882352941177,
+      42.12156862745098,
+      35.72549019607843
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "suzuki-motorcycle",
+    "file": "avenis-125.png",
+    "slug": "avenis-125",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/suzuki-motorcycle/avenis-125.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "suzuki-motorcycle",
+    "file": "avenis.jpg",
+    "slug": "avenis",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/suzuki-motorcycle/avenis.jpg",
+    "reason": "non-white (avg RGB: 76,149,143, 0% white pixels)",
+    "avg_rgb": [
+      76.05882352941177,
+      148.93235294117648,
+      142.7980392156863
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "suzuki-motorcycle",
+    "file": "burgman-street-125.png",
+    "slug": "burgman-street-125",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/suzuki-motorcycle/burgman-street-125.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "suzuki-motorcycle",
+    "file": "gixxer-sf.jpg",
+    "slug": "gixxer-sf",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/suzuki-motorcycle/gixxer-sf.jpg",
+    "reason": "non-white (avg RGB: 117,116,118, 0% white pixels)",
+    "avg_rgb": [
+      116.76274509803922,
+      115.95588235294117,
+      117.90098039215687
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "tork-motors",
+    "file": "kratos-r.jpg",
+    "slug": "kratos-r",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/tork-motors/kratos-r.jpg",
+    "reason": "non-white (avg RGB: 128,130,129, 0% white pixels)",
+    "avg_rgb": [
+      128.03235294117647,
+      129.96176470588236,
+      129.33529411764707
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "tork-motors",
+    "file": "kratos-x.jpg",
+    "slug": "kratos-x",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/tork-motors/kratos-x.jpg",
+    "reason": "non-white (avg RGB: 115,123,132, 0% white pixels)",
+    "avg_rgb": [
+      115.16568627450981,
+      123.04803921568627,
+      132.0186274509804
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "triumph-india",
+    "file": "bonneville-speedmaster.png",
+    "slug": "bonneville-speedmaster",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/triumph-india/bonneville-speedmaster.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "triumph-india",
+    "file": "bonneville-t120.png",
+    "slug": "bonneville-t120",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/triumph-india/bonneville-t120.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "triumph-india",
+    "file": "scrambler-400-x.jpg",
+    "slug": "scrambler-400-x",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/triumph-india/scrambler-400-x.jpg",
+    "reason": "non-white (avg RGB: 196,186,177, 49% white pixels)",
+    "avg_rgb": [
+      196.1264705882353,
+      185.52450980392157,
+      176.83823529411765
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "triumph-india",
+    "file": "scrambler-400-xc.jpg",
+    "slug": "scrambler-400-xc",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/triumph-india/scrambler-400-xc.jpg",
+    "reason": "non-white (avg RGB: 110,98,83, 22% white pixels)",
+    "avg_rgb": [
+      110.19901960784314,
+      98.39901960784314,
+      83.09509803921569
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "triumph-india",
+    "file": "scrambler-900.png",
+    "slug": "scrambler-900",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/triumph-india/scrambler-900.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.3323529411764706,
+      0.3323529411764706,
+      0.3323529411764706
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "triumph-india",
+    "file": "speed-400.png",
+    "slug": "speed-400",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/triumph-india/speed-400.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "triumph-india",
+    "file": "speed-t4.jpg",
+    "slug": "speed-t4",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/triumph-india/speed-t4.jpg",
+    "reason": "non-white (avg RGB: 69,60,52, 0% white pixels)",
+    "avg_rgb": [
+      69.31470588235294,
+      60.40196078431372,
+      52.23725490196078
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "triumph-india",
+    "file": "speed-triple-1200-rs.png",
+    "slug": "speed-triple-1200-rs",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/triumph-india/speed-triple-1200-rs.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "triumph-india",
+    "file": "street-triple-765-r.jpg",
+    "slug": "street-triple-765-r",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/triumph-india/street-triple-765-r.jpg",
+    "reason": "non-white (avg RGB: 35,30,30, 0% white pixels)",
+    "avg_rgb": [
+      35.318627450980394,
+      30.41372549019608,
+      29.87549019607843
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "triumph-india",
+    "file": "tiger-660.png",
+    "slug": "tiger-660",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/triumph-india/tiger-660.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "triumph-india",
+    "file": "tiger-850-sport.png",
+    "slug": "tiger-850-sport",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/triumph-india/tiger-850-sport.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "triumph-india",
+    "file": "tiger-sport-660.png",
+    "slug": "tiger-sport-660",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/triumph-india/tiger-sport-660.png",
+    "reason": "non-white (avg RGB: 71,112,76, 0% white pixels)",
+    "avg_rgb": [
+      71.0,
+      112.0,
+      76.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "tvs-iqube",
+    "file": "iqube-s.jpg",
+    "slug": "iqube-s",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/tvs-iqube/iqube-s.jpg",
+    "reason": "non-white (avg RGB: 50,78,100, 1% white pixels)",
+    "avg_rgb": [
+      50.206862745098036,
+      78.3656862745098,
+      99.55686274509804
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "tvs-iqube",
+    "file": "iqube.jpg",
+    "slug": "iqube",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/tvs-iqube/iqube.jpg",
+    "reason": "non-white (avg RGB: 161,186,197, 0% white pixels)",
+    "avg_rgb": [
+      160.92450980392158,
+      185.6264705882353,
+      197.1362745098039
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "tvs-motor",
+    "file": "apache-rtr-200-4v.jpg",
+    "slug": "apache-rtr-200-4v",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/tvs-motor/apache-rtr-200-4v.jpg",
+    "reason": "non-white (avg RGB: 176,177,181, 49% white pixels)",
+    "avg_rgb": [
+      175.7450980392157,
+      176.80490196078432,
+      181.37450980392157
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "tvs-motor",
+    "file": "iqube-electric.jpg",
+    "slug": "iqube-electric",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/tvs-motor/iqube-electric.jpg",
+    "reason": "non-white (avg RGB: 161,186,197, 0% white pixels)",
+    "avg_rgb": [
+      160.92450980392158,
+      185.6264705882353,
+      197.1362745098039
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "tvs-motor",
+    "file": "jupiter.jpg",
+    "slug": "jupiter",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/tvs-motor/jupiter.jpg",
+    "reason": "non-white (avg RGB: 187,179,175, 44% white pixels)",
+    "avg_rgb": [
+      187.14901960784314,
+      178.60098039215686,
+      174.75098039215686
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "tvs-motor",
+    "file": "ntorq-150.jpg",
+    "slug": "ntorq-150",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/tvs-motor/ntorq-150.jpg",
+    "reason": "non-white (avg RGB: 174,98,84, 0% white pixels)",
+    "avg_rgb": [
+      173.70392156862746,
+      98.17254901960784,
+      83.79411764705883
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "tvs-motor",
+    "file": "radeon.jpg",
+    "slug": "radeon",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/tvs-motor/radeon.jpg",
+    "reason": "non-white (avg RGB: 131,143,149, 0% white pixels)",
+    "avg_rgb": [
+      131.24313725490197,
+      143.25686274509803,
+      149.13725490196077
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "tvs-motor",
+    "file": "raider-125.png",
+    "slug": "raider-125",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/tvs-motor/raider-125.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.14411764705882352,
+      0.15,
+      0.15784313725490196
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "tvs-motor",
+    "file": "scooty-pep-plus.jpg",
+    "slug": "scooty-pep-plus",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/tvs-motor/scooty-pep-plus.jpg",
+    "reason": "non-white (avg RGB: 198,174,158, 0% white pixels)",
+    "avg_rgb": [
+      198.18823529411765,
+      173.59509803921569,
+      158.18235294117648
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "tvs-motor",
+    "file": "sport.jpg",
+    "slug": "sport",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/tvs-motor/sport.jpg",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "tvs-motor",
+    "file": "xl100-comfort.png",
+    "slug": "xl100-comfort",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/tvs-motor/xl100-comfort.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ultraviolette",
+    "file": "f77-mach-2.png",
+    "slug": "f77-mach-2",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ultraviolette/f77-mach-2.png",
+    "reason": "non-white (avg RGB: 116,116,116, 46% white pixels)",
+    "avg_rgb": [
+      116.25,
+      116.25,
+      116.25
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ultraviolette",
+    "file": "shockwave.jpg",
+    "slug": "shockwave",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ultraviolette/shockwave.jpg",
+    "reason": "non-white (avg RGB: 70,65,113, 0% white pixels)",
+    "avg_rgb": [
+      70.44705882352942,
+      64.52745098039216,
+      112.56960784313725
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "ultraviolette",
+    "file": "tesseract.jpg",
+    "slug": "tesseract",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/ultraviolette/tesseract.jpg",
+    "reason": "non-white (avg RGB: 31,33,43, 0% white pixels)",
+    "avg_rgb": [
+      30.71372549019608,
+      33.34411764705882,
+      43.0921568627451
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "vespa-india",
+    "file": "vespa-150.jpg",
+    "slug": "vespa-150",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/vespa-india/vespa-150.jpg",
+    "reason": "non-white (avg RGB: 104,67,49, 0% white pixels)",
+    "avg_rgb": [
+      103.90098039215687,
+      67.40980392156862,
+      49.043137254901964
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "vespa-india",
+    "file": "vespa-qala.jpg",
+    "slug": "vespa-qala",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/vespa-india/vespa-qala.jpg",
+    "reason": "non-white (avg RGB: 214,214,214, 21% white pixels)",
+    "avg_rgb": [
+      213.75294117647059,
+      213.75294117647059,
+      213.75294117647059
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "vespa-india",
+    "file": "vespa-s-tech-125.png",
+    "slug": "vespa-s-tech-125",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/vespa-india/vespa-s-tech-125.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.05588235294117647,
+      0.05588235294117647,
+      0.05588235294117647
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "vespa-india",
+    "file": "vespa-tech-125.png",
+    "slug": "vespa-tech-125",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/vespa-india/vespa-tech-125.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "vida-hero",
+    "file": "v2.jpg",
+    "slug": "v2",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/vida-hero/v2.jpg",
+    "reason": "non-white (avg RGB: 109,105,99, 0% white pixels)",
+    "avg_rgb": [
+      109.09019607843138,
+      105.43529411764706,
+      99.35882352941177
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "yamaha-india",
+    "file": "aerox-155-version-s.jpg",
+    "slug": "aerox-155-version-s",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/yamaha-india/aerox-155-version-s.jpg",
+    "reason": "non-white (avg RGB: 123,115,108, 0% white pixels)",
+    "avg_rgb": [
+      123.42647058823529,
+      114.7343137254902,
+      108.3078431372549
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "yamaha-india",
+    "file": "fascino-125.jpg",
+    "slug": "fascino-125",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/yamaha-india/fascino-125.jpg",
+    "reason": "non-white (avg RGB: 238,170,149, 0% white pixels)",
+    "avg_rgb": [
+      237.66470588235293,
+      170.42450980392158,
+      148.98921568627452
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "yamaha-india",
+    "file": "fz-fi.jpg",
+    "slug": "fz-fi",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/yamaha-india/fz-fi.jpg",
+    "reason": "non-white (avg RGB: 81,92,99, 1% white pixels)",
+    "avg_rgb": [
+      80.87647058823529,
+      91.66372549019607,
+      98.77352941176471
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "yamaha-india",
+    "file": "fz-s-fi.jpg",
+    "slug": "fz-s-fi",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/yamaha-india/fz-s-fi.jpg",
+    "reason": "non-white (avg RGB: 222,202,182, 3% white pixels)",
+    "avg_rgb": [
+      222.17745098039217,
+      201.73039215686273,
+      182.47941176470587
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "yamaha-india",
+    "file": "fz-x.jpg",
+    "slug": "fz-x",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/yamaha-india/fz-x.jpg",
+    "reason": "non-white (avg RGB: 36,35,41, 0% white pixels)",
+    "avg_rgb": [
+      36.14411764705882,
+      34.97549019607843,
+      41.07156862745098
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "yamaha-india",
+    "file": "fz25.png",
+    "slug": "fz25",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/yamaha-india/fz25.png",
+    "reason": "non-white (avg RGB: 10,10,10, 4% white pixels)",
+    "avg_rgb": [
+      10.142156862745098,
+      10.141176470588235,
+      10.142156862745098
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "yamaha-india",
+    "file": "fzs-fi-v4.jpg",
+    "slug": "fzs-fi-v4",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/yamaha-india/fzs-fi-v4.jpg",
+    "reason": "non-white (avg RGB: 139,152,161, 17% white pixels)",
+    "avg_rgb": [
+      139.23921568627452,
+      152.47450980392156,
+      160.54019607843136
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "yamaha-india",
+    "file": "mt-09.jpg",
+    "slug": "mt-09",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/yamaha-india/mt-09.jpg",
+    "reason": "non-white (avg RGB: 113,137,153, 0% white pixels)",
+    "avg_rgb": [
+      113.10392156862746,
+      137.09803921568627,
+      153.0313725490196
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "yamaha-india",
+    "file": "mt-15-v20.jpg",
+    "slug": "mt-15-v20",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/yamaha-india/mt-15-v20.jpg",
+    "reason": "non-white (avg RGB: 140,136,128, 0% white pixels)",
+    "avg_rgb": [
+      139.92549019607844,
+      135.69019607843137,
+      127.52549019607844
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "yamaha-india",
+    "file": "r15s.png",
+    "slug": "r15s",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/yamaha-india/r15s.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "yamaha-india",
+    "file": "ray-zr-125-fi-street-rally.jpg",
+    "slug": "ray-zr-125-fi-street-rally",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/yamaha-india/ray-zr-125-fi-street-rally.jpg",
+    "reason": "non-white (avg RGB: 149,148,143, 8% white pixels)",
+    "avg_rgb": [
+      148.68235294117648,
+      148.25686274509803,
+      143.4470588235294
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "yamaha-india",
+    "file": "ray-zr-125-fi.jpg",
+    "slug": "ray-zr-125-fi",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/yamaha-india/ray-zr-125-fi.jpg",
+    "reason": "non-white (avg RGB: 151,149,143, 0% white pixels)",
+    "avg_rgb": [
+      150.57254901960783,
+      149.1313725490196,
+      142.95980392156864
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "yamaha-india",
+    "file": "ray-zr-125.jpg",
+    "slug": "ray-zr-125",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/yamaha-india/ray-zr-125.jpg",
+    "reason": "non-white (avg RGB: 127,135,144, 0% white pixels)",
+    "avg_rgb": [
+      127.3656862745098,
+      135.32843137254903,
+      144.34803921568627
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "yezdi-motorcycles",
+    "file": "roadster.png",
+    "slug": "roadster",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/yezdi-motorcycles/roadster.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "zontes-india",
+    "file": "350r.jpg",
+    "slug": "350r",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/zontes-india/350r.jpg",
+    "reason": "non-white (avg RGB: 27,52,85, 0% white pixels)",
+    "avg_rgb": [
+      27.195098039215686,
+      51.92843137254902,
+      85.07745098039216
+    ]
+  },
+  {
+    "category": "2w",
+    "brand": "zontes-india",
+    "file": "350x.jpg",
+    "slug": "350x",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/zontes-india/350x.jpg",
+    "reason": "non-white (avg RGB: 117,182,178, 25% white pixels)",
+    "avg_rgb": [
+      116.71372549019608,
+      182.26470588235293,
+      177.67843137254903
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "atul-auto",
+    "file": "gem-paxx.png",
+    "slug": "gem-paxx",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/atul-auto/gem-paxx.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "atul-auto",
+    "file": "rik-electric.png",
+    "slug": "rik-electric",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/atul-auto/rik-electric.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "bajaj-auto-3w",
+    "file": "compact-re-cng.jpg",
+    "slug": "compact-re-cng",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/bajaj-auto-3w/compact-re-cng.jpg",
+    "reason": "non-white (avg RGB: 175,189,199, 19% white pixels)",
+    "avg_rgb": [
+      175.22745098039215,
+      188.71666666666667,
+      199.2578431372549
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "bajaj-auto-3w",
+    "file": "gogo.jpg",
+    "slug": "gogo",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/bajaj-auto-3w/gogo.jpg",
+    "reason": "non-white (avg RGB: 53,89,108, 0% white pixels)",
+    "avg_rgb": [
+      53.0078431372549,
+      88.70882352941176,
+      108.16568627450981
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "bajaj-auto-3w",
+    "file": "maxima-c-cng.jpg",
+    "slug": "maxima-c-cng",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/bajaj-auto-3w/maxima-c-cng.jpg",
+    "reason": "non-white (avg RGB: 108,115,112, 3% white pixels)",
+    "avg_rgb": [
+      107.65098039215687,
+      115.3578431372549,
+      111.64117647058823
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "bajaj-auto-3w",
+    "file": "maxima-x-wide-diesel.jpg",
+    "slug": "maxima-x-wide-diesel",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/bajaj-auto-3w/maxima-x-wide-diesel.jpg",
+    "reason": "non-white (avg RGB: 48,75,95, 3% white pixels)",
+    "avg_rgb": [
+      47.72156862745098,
+      75.22549019607843,
+      94.80196078431372
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "bajaj-auto-3w",
+    "file": "maxima-xl-electric.jpg",
+    "slug": "maxima-xl-electric",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/bajaj-auto-3w/maxima-xl-electric.jpg",
+    "reason": "non-white (avg RGB: 185,199,212, 7% white pixels)",
+    "avg_rgb": [
+      185.05098039215687,
+      199.41372549019607,
+      212.4735294117647
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "bajaj-auto-3w",
+    "file": "maxima-z-cng.jpg",
+    "slug": "maxima-z-cng",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/bajaj-auto-3w/maxima-z-cng.jpg",
+    "reason": "non-white (avg RGB: 123,142,137, 0% white pixels)",
+    "avg_rgb": [
+      122.84117647058824,
+      142.24705882352941,
+      137.3421568627451
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "bajaj-auto-3w",
+    "file": "re-electric.jpg",
+    "slug": "re-electric",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/bajaj-auto-3w/re-electric.jpg",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "bajaj-auto-3w",
+    "file": "re-lpg.jpg",
+    "slug": "re-lpg",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/bajaj-auto-3w/re-lpg.jpg",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "bajaj-auto-3w",
+    "file": "riki-p40.jpg",
+    "slug": "riki-p40",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/bajaj-auto-3w/riki-p40.jpg",
+    "reason": "non-white (avg RGB: 35,76,62, 0% white pixels)",
+    "avg_rgb": [
+      34.65588235294118,
+      76.49509803921569,
+      61.6764705882353
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "euler-motors",
+    "file": "hiload-dv-ev.jpg",
+    "slug": "hiload-dv-ev",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/euler-motors/hiload-dv-ev.jpg",
+    "reason": "non-white (avg RGB: 143,142,131, 0% white pixels)",
+    "avg_rgb": [
+      142.8343137254902,
+      141.69901960784313,
+      130.68039215686275
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "euler-motors",
+    "file": "hiload-ev-120.jpg",
+    "slug": "hiload-ev-120",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/euler-motors/hiload-ev-120.jpg",
+    "reason": "non-white (avg RGB: 156,173,184, 2% white pixels)",
+    "avg_rgb": [
+      156.03725490196078,
+      172.8686274509804,
+      184.34117647058824
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "euler-motors",
+    "file": "hiload-ev-170.jpg",
+    "slug": "hiload-ev-170",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/euler-motors/hiload-ev-170.jpg",
+    "reason": "non-white (avg RGB: 129,122,107, 0% white pixels)",
+    "avg_rgb": [
+      128.75294117647059,
+      122.42254901960784,
+      107.3578431372549
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "greaves-electric-3w",
+    "file": "eltra-city-xtra.jpg",
+    "slug": "eltra-city-xtra",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/greaves-electric-3w/eltra-city-xtra.jpg",
+    "reason": "non-white (avg RGB: 132,137,135, 44% white pixels)",
+    "avg_rgb": [
+      131.79509803921567,
+      136.6137254901961,
+      134.64901960784314
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "greaves-electric-3w",
+    "file": "eltra-city.png",
+    "slug": "eltra-city",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/greaves-electric-3w/eltra-city.png",
+    "reason": "non-white (avg RGB: 71,112,76, 0% white pixels)",
+    "avg_rgb": [
+      71.0,
+      112.0,
+      76.0
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "greaves-electric-3w",
+    "file": "xargo.jpg",
+    "slug": "xargo",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/greaves-electric-3w/xargo.jpg",
+    "reason": "non-white (avg RGB: 199,201,202, 51% white pixels)",
+    "avg_rgb": [
+      198.95686274509805,
+      201.21372549019608,
+      201.64705882352942
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "kinetic-green",
+    "file": "safar-shakti.jpg",
+    "slug": "safar-shakti",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/kinetic-green/safar-shakti.jpg",
+    "reason": "non-white (avg RGB: 163,163,163, 47% white pixels)",
+    "avg_rgb": [
+      162.74411764705883,
+      162.74411764705883,
+      162.74411764705883
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "kinetic-green",
+    "file": "safar-smart.jpg",
+    "slug": "safar-smart",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/kinetic-green/safar-smart.jpg",
+    "reason": "non-white (avg RGB: 210,200,168, 3% white pixels)",
+    "avg_rgb": [
+      209.8735294117647,
+      200.0872549019608,
+      167.6794117647059
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "lohia-auto",
+    "file": "comfort-f2f.jpg",
+    "slug": "comfort-f2f",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/lohia-auto/comfort-f2f.jpg",
+    "reason": "non-white (avg RGB: 78,125,145, 0% white pixels)",
+    "avg_rgb": [
+      78.4892156862745,
+      124.80686274509804,
+      145.06274509803922
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "lohia-auto",
+    "file": "humsafar-l5-cargo.png",
+    "slug": "humsafar-l5-cargo",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/lohia-auto/humsafar-l5-cargo.png",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "lohia-auto",
+    "file": "humsafar-l5-passenger.jpg",
+    "slug": "humsafar-l5-passenger",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/lohia-auto/humsafar-l5-passenger.jpg",
+    "reason": "non-white (avg RGB: 180,169,158, 6% white pixels)",
+    "avg_rgb": [
+      180.06960784313725,
+      169.0392156862745,
+      158.43333333333334
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "lohia-auto",
+    "file": "narain-dx.jpg",
+    "slug": "narain-dx",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/lohia-auto/narain-dx.jpg",
+    "reason": "non-white (avg RGB: 99,127,138, 21% white pixels)",
+    "avg_rgb": [
+      99.04411764705883,
+      126.71764705882353,
+      138.09803921568627
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "mahindra-3w",
+    "file": "alfa-load.jpg",
+    "slug": "alfa-load",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/mahindra-3w/alfa-load.jpg",
+    "reason": "non-white (avg RGB: 188,190,192, 25% white pixels)",
+    "avg_rgb": [
+      187.8392156862745,
+      189.84803921568627,
+      191.95686274509805
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "mahindra-3w",
+    "file": "e-alfa-plus.jpg",
+    "slug": "e-alfa-plus",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/mahindra-3w/e-alfa-plus.jpg",
+    "reason": "non-white (avg RGB: 147,152,151, 0% white pixels)",
+    "avg_rgb": [
+      146.55490196078432,
+      152.01764705882354,
+      151.18823529411765
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "mahindra-3w",
+    "file": "treo-plus.jpg",
+    "slug": "treo-plus",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/mahindra-3w/treo-plus.jpg",
+    "reason": "non-white (avg RGB: 188,180,178, 24% white pixels)",
+    "avg_rgb": [
+      187.90392156862745,
+      180.04509803921567,
+      178.09803921568627
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "mahindra-3w",
+    "file": "treo-zor.jpg",
+    "slug": "treo-zor",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/mahindra-3w/treo-zor.jpg",
+    "reason": "non-white (avg RGB: 103,108,110, 0% white pixels)",
+    "avg_rgb": [
+      102.59901960784313,
+      108.1686274509804,
+      110.21274509803922
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "mahindra-3w",
+    "file": "treo.jpg",
+    "slug": "treo",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/mahindra-3w/treo.jpg",
+    "reason": "non-white (avg RGB: 173,175,177, 50% white pixels)",
+    "avg_rgb": [
+      172.85098039215686,
+      175.0235294117647,
+      177.02549019607844
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "mahindra-3w",
+    "file": "udo.jpg",
+    "slug": "udo",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/mahindra-3w/udo.jpg",
+    "reason": "non-white (avg RGB: 135,125,161, 0% white pixels)",
+    "avg_rgb": [
+      134.95980392156864,
+      125.46470588235294,
+      161.39117647058825
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "mahindra-3w",
+    "file": "zor-grand.jpg",
+    "slug": "zor-grand",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/mahindra-3w/zor-grand.jpg",
+    "reason": "non-white (avg RGB: 109,128,141, 0% white pixels)",
+    "avg_rgb": [
+      109.21666666666667,
+      127.99705882352941,
+      141.29901960784315
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "piaggio-ape",
+    "file": "auto-dx.jpg",
+    "slug": "auto-dx",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/piaggio-ape/auto-dx.jpg",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "piaggio-ape",
+    "file": "e-xtra-fx.jpg",
+    "slug": "e-xtra-fx",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/piaggio-ape/e-xtra-fx.jpg",
+    "reason": "non-white (avg RGB: 142,152,162, 26% white pixels)",
+    "avg_rgb": [
+      142.26960784313727,
+      152.22549019607843,
+      161.97941176470587
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "piaggio-ape",
+    "file": "nxt-plus.jpg",
+    "slug": "nxt-plus",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/piaggio-ape/nxt-plus.jpg",
+    "reason": "non-white (avg RGB: 42,62,67, 0% white pixels)",
+    "avg_rgb": [
+      41.97254901960784,
+      62.220588235294116,
+      67.13039215686274
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "piaggio-ape",
+    "file": "xtra-ldx-cng.jpg",
+    "slug": "xtra-ldx-cng",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/piaggio-ape/xtra-ldx-cng.jpg",
+    "reason": "non-white (avg RGB: 192,192,187, 38% white pixels)",
+    "avg_rgb": [
+      191.5441176470588,
+      192.44117647058823,
+      187.1392156862745
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "piaggio-ape",
+    "file": "xtra-ldx-diesel.jpg",
+    "slug": "xtra-ldx-diesel",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/piaggio-ape/xtra-ldx-diesel.jpg",
+    "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+    "avg_rgb": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "tvs-king",
+    "file": "king-duramax-plus.jpg",
+    "slug": "king-duramax-plus",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/tvs-king/king-duramax-plus.jpg",
+    "reason": "non-white (avg RGB: 200,200,200, 0% white pixels)",
+    "avg_rgb": [
+      199.94117647058823,
+      199.94117647058823,
+      199.94117647058823
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "tvs-king",
+    "file": "king-duramax.jpg",
+    "slug": "king-duramax",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/tvs-king/king-duramax.jpg",
+    "reason": "non-white (avg RGB: 206,202,206, 26% white pixels)",
+    "avg_rgb": [
+      205.6764705882353,
+      202.36666666666667,
+      206.2186274509804
+    ]
+  },
+  {
+    "category": "3w",
+    "brand": "tvs-king",
+    "file": "king-kargo-hd-ev.jpg",
+    "slug": "king-kargo-hd-ev",
+    "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/tvs-king/king-kargo-hd-ev.jpg",
+    "reason": "non-white (avg RGB: 64,60,93, 1% white pixels)",
+    "avg_rgb": [
+      64.38627450980393,
+      59.94019607843137,
+      93.3313725490196
+    ]
+  }
+]

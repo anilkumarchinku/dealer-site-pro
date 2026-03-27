@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Loader2, AlertCircle, CheckCircle, LogIn } from "lucide-react";
 import { supabase } from "@/lib/supabase";
+import { isValidEmail } from "@/lib/validations/client";
 
 export default function LoginPage() {
     return (
@@ -30,8 +31,8 @@ function LoginForm() {
         e.preventDefault();
         setError(null);
 
-        if (!email.trim() || !email.includes('@')) {
-            setError("Please enter a valid email");
+        if (!email.trim() || !isValidEmail(email)) {
+            setError("Please enter a valid email address");
             return;
         }
         if (!password) {

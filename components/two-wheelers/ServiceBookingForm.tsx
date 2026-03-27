@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import type { TwoWheelerServiceType } from "@/lib/types/two-wheeler"
+import { validateServiceBookingForm } from "@/lib/validations/client"
 
 interface Props {
     dealerId: string
@@ -43,7 +44,16 @@ export function ServiceBookingForm({ dealerId }: Props) {
 
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault()
-        if (!form.service_type) { setError("Please select a service type"); return }
+        const validationErrors = validateServiceBookingForm({
+            customer_name:  form.customer_name,
+            phone:          form.phone,
+            service_type:   form.service_type,
+            preferred_date: form.preferred_date,
+        })
+        if (Object.keys(validationErrors).length > 0) {
+            setError(Object.values(validationErrors).join('. '))
+            return
+        }
         setSubmitting(true)
         setError("")
 

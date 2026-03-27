@@ -10,6 +10,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { sendOtp } from '@/lib/services/otp-service'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
+import { sendOtpSchema, formatZodErrors } from '@/lib/validations/schemas'
 
 export async function POST(request: NextRequest) {
     // Rate limit: max 5 OTP requests per IP per 15 minutes
@@ -18,21 +19,16 @@ export async function POST(request: NextRequest) {
 
     try {
         const body = await request.json()
-        const { email, purpose } = body
 
-        if (!email || !email.includes('@')) {
+        // ── Validate with Zod ───────────────────────────────────────────────
+        const parsed = sendOtpSchema.safeParse(body)
+        if (!parsed.success) {
             return NextResponse.json(
-                { error: 'Valid email is required' },
+                { error: formatZodErrors(parsed.error) },
                 { status: 400 }
             )
         }
-
-        if (!['login', 'register'].includes(purpose)) {
-            return NextResponse.json(
-                { error: 'Purpose must be "login" or "register"' },
-                { status: 400 }
-            )
-        }
+        const { email, purpose } = parsed.data
 
         const result = await sendOtp(email, purpose)
 

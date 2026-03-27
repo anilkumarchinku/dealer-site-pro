@@ -1,0 +1,62 @@
+{
+  "saved": 30,
+  "failed": 6,
+  "total": 36,
+  "timestamp": "2026-03-27T09:56:33.501Z",
+  "failedItems": [
+    {
+      "brand": "Honda",
+      "brandSlug": "honda-hmsi",
+      "model": "Dio",
+      "slug": "dio",
+      "type": "2w",
+      "status": "failed",
+      "reason": "download_failed"
+    },
+    {
+      "brand": "Honda",
+      "brandSlug": "honda-hmsi",
+      "model": "H'ness CB350",
+      "slug": "hness-cb350",
+      "type": "2w",
+      "status": "failed",
+      "reason": "download_failed"
+    },
+    {
+      "brand": "Honda",
+      "brandSlug": "honda-hmsi",
+      "model": "CB350C",
+      "slug": "cb350c",
+      "type": "2w",
+      "status": "failed",
+      "reason": "download_failed"
+    },
+    {
+      "brand": "Yamaha",
+      "brandSlug": "yamaha-india",
+      "model": "Fascino 125",
+      "slug": "fascino-125",
+      "type": "2w",
+      "status": "failed",
+      "reason": "download_failed"
+    },
+    {
+      "brand": "Vespa",
+      "brandSlug": "vespa-india",
+      "model": "VXL 125",
+      "slug": "vxl-125",
+      "type": "2w",
+      "status": "failed",
+      "reason": "download_failed"
+    },
+    {
+      "brand": "Jawa",
+      "brandSlug": "jawa-motorcycles",
+      "model": "Jawa 42 FJ",
+      "slug": "42-fj",
+      "type": "2w",
+      "status": "failed",
+      "reason": "download_failed"
+    }
+  ]
+}

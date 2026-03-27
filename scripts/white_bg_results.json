@@ -1,0 +1,215 @@
+{
+  "saved": 350,
+  "failed": 16,
+  "failedItems": [
+    {
+      "category": "4w",
+      "brand": "aston-martin",
+      "file": "db12.jpg",
+      "slug": "db12",
+      "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/aston-martin/db12.jpg",
+      "reason": "non-white (avg RGB: 102,134,108, 0% white pixels)",
+      "avg_rgb": [
+        102.34411764705882,
+        133.9392156862745,
+        108.18725490196078
+      ]
+    },
+    {
+      "category": "4w",
+      "brand": "jaguar",
+      "file": "f-type.jpg",
+      "slug": "f-type",
+      "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/jaguar/f-type.jpg",
+      "reason": "non-white (avg RGB: 0,39,31, 0% white pixels)",
+      "avg_rgb": [
+        0.13529411764705881,
+        39.14411764705882,
+        31.102941176470587
+      ]
+    },
+    {
+      "category": "4w",
+      "brand": "land-rover",
+      "file": "range-rover-sport.jpg",
+      "slug": "range-rover-sport",
+      "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/land-rover/range-rover-sport.jpg",
+      "reason": "non-white (avg RGB: 126,122,109, 0% white pixels)",
+      "avg_rgb": [
+        126.0578431372549,
+        121.66568627450981,
+        109.06176470588235
+      ]
+    },
+    {
+      "category": "4w",
+      "brand": "lexus",
+      "file": "gx.jpg",
+      "slug": "gx",
+      "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/lexus/gx.jpg",
+      "reason": "non-white (avg RGB: 154,144,129, 0% white pixels)",
+      "avg_rgb": [
+        154.15392156862745,
+        143.70392156862746,
+        129.49019607843138
+      ]
+    },
+    {
+      "category": "4w",
+      "brand": "volkswagen",
+      "file": "tiguan.jpg",
+      "slug": "tiguan",
+      "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/cars/volkswagen/tiguan.jpg",
+      "reason": "non-white (avg RGB: 140,102,91, 0% white pixels)",
+      "avg_rgb": [
+        140.3656862745098,
+        102.20882352941176,
+        90.58921568627451
+      ]
+    },
+    {
+      "category": "2w",
+      "brand": "honda",
+      "file": "honda-gold-wing.png",
+      "slug": "honda-gold-wing",
+      "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-gold-wing.png",
+      "reason": "non-white (avg RGB: 199,199,199, 47% white pixels)",
+      "avg_rgb": [
+        199.46274509803922,
+        199.46176470588236,
+        199.46176470588236
+      ]
+    },
+    {
+      "category": "2w",
+      "brand": "honda",
+      "file": "honda-nx500.jpg",
+      "slug": "honda-nx500",
+      "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda/honda-nx500.jpg",
+      "reason": "non-white (avg RGB: 182,151,160, 3% white pixels)",
+      "avg_rgb": [
+        182.20980392156864,
+        151.48627450980393,
+        160.40980392156862
+      ]
+    },
+    {
+      "category": "2w",
+      "brand": "honda-hmsi",
+      "file": "africa-twin.png",
+      "slug": "africa-twin",
+      "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/africa-twin.png",
+      "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+      "avg_rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "category": "2w",
+      "brand": "honda-hmsi",
+      "file": "gold-wing.png",
+      "slug": "gold-wing",
+      "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/honda-hmsi/gold-wing.png",
+      "reason": "non-white (avg RGB: 199,199,199, 47% white pixels)",
+      "avg_rgb": [
+        199.46274509803922,
+        199.46176470588236,
+        199.46176470588236
+      ]
+    },
+    {
+      "category": "2w",
+      "brand": "indian-motorcycle",
+      "file": "chief-dark-horse.jpg",
+      "slug": "chief-dark-horse",
+      "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/indian-motorcycle/chief-dark-horse.jpg",
+      "reason": "non-white (avg RGB: 84,61,49, 0% white pixels)",
+      "avg_rgb": [
+        84.08039215686274,
+        61.16372549019608,
+        48.6578431372549
+      ]
+    },
+    {
+      "category": "2w",
+      "brand": "jawa-motorcycles",
+      "file": "42-fj.jpg",
+      "slug": "42-fj",
+      "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/jawa-motorcycles/42-fj.jpg",
+      "reason": "non-white (avg RGB: 92,87,100, 5% white pixels)",
+      "avg_rgb": [
+        91.67156862745098,
+        86.86274509803921,
+        100.40490196078431
+      ]
+    },
+    {
+      "category": "2w",
+      "brand": "jawa-motorcycles",
+      "file": "jawa-42-fj.png",
+      "slug": "jawa-42-fj",
+      "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/jawa-motorcycles/jawa-42-fj.png",
+      "reason": "non-white (avg RGB: 0,0,0, 0% white pixels)",
+      "avg_rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "category": "2w",
+      "brand": "odysse-electric",
+      "file": "vader.jpg",
+      "slug": "vader",
+      "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/odysse-electric/vader.jpg",
+      "reason": "non-white (avg RGB: 189,204,210, 20% white pixels)",
+      "avg_rgb": [
+        189.1137254901961,
+        203.9950980392157,
+        210.34607843137255
+      ]
+    },
+    {
+      "category": "2w",
+      "brand": "triumph-india",
+      "file": "tiger-sport-660.png",
+      "slug": "tiger-sport-660",
+      "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/2w/triumph-india/tiger-sport-660.png",
+      "reason": "non-white (avg RGB: 71,112,76, 0% white pixels)",
+      "avg_rgb": [
+        71,
+        112,
+        76
+      ]
+    },
+    {
+      "category": "3w",
+      "brand": "euler-motors",
+      "file": "hiload-dv-ev.jpg",
+      "slug": "hiload-dv-ev",
+      "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/euler-motors/hiload-dv-ev.jpg",
+      "reason": "non-white (avg RGB: 143,142,131, 0% white pixels)",
+      "avg_rgb": [
+        142.8343137254902,
+        141.69901960784313,
+        130.68039215686275
+      ]
+    },
+    {
+      "category": "3w",
+      "brand": "mahindra-3w",
+      "file": "udo.jpg",
+      "slug": "udo",
+      "path": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/mahindra-3w/udo.jpg",
+      "reason": "non-white (avg RGB: 135,125,161, 0% white pixels)",
+      "avg_rgb": [
+        134.95980392156864,
+        125.46470588235294,
+        161.39117647058825
+      ]
+    }
+  ],
+  "timestamp": "2026-03-27T11:10:27.340Z"
+}

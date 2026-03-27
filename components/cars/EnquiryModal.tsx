@@ -36,6 +36,7 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { getBrandLogo } from '@/lib/data/brand-logos';
 import { getContrastText } from '@/lib/utils/color-contrast';
+import { validateLeadForm, type ValidationErrors } from '@/lib/validations/client';
 
 interface EnquiryModalProps {
     car: Car | null;
@@ -55,6 +56,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [formErrors, setFormErrors] = useState<ValidationErrors>({});
     const [detailedInfo, setDetailedInfo] = useState<DetailedCarInfo[]>([]);
 
     // Fetch detailed car info when modal opens
@@ -73,6 +75,10 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        const errors = validateLeadForm(formData);
+        setFormErrors(errors);
+        if (Object.keys(errors).length > 0) return;
+
         setIsSubmitting(true);
 
         // Simulate API call
@@ -85,6 +91,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
         setTimeout(() => {
             setIsSubmitted(false);
             setFormData({ name: '', email: '', phone: '', message: '' });
+            setFormErrors({});
             onOpenChange(false);
         }, 3000);
     };
@@ -390,6 +397,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                                 required
                                             />
+                                            {formErrors.name && <p className="text-xs text-red-500 mt-1">{formErrors.name}</p>}
                                         </div>
                                         <div>
                                             <Label htmlFor="phone">Phone Number *</Label>
@@ -401,6 +409,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                                 required
                                             />
+                                            {formErrors.phone && <p className="text-xs text-red-500 mt-1">{formErrors.phone}</p>}
                                         </div>
                                     </div>
                                     <div>
@@ -413,6 +422,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                             required
                                         />
+                                        {formErrors.email && <p className="text-xs text-red-500 mt-1">{formErrors.email}</p>}
                                     </div>
                                     <div>
                                         <Label htmlFor="message">Message (Optional)</Label>

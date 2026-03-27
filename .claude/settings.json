@@ -29,7 +29,8 @@
       "Bash(do ls \"/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/2w/$f/\")",
       "Bash(/tmp/audit-3w-transmission.js:*)",
       "Bash(/tmp/audit-carcard-trans.js:*)",
-      "Bash(/tmp/audit-2w-transmission.js:*)"
+      "Bash(/tmp/audit-2w-transmission.js:*)",
+      "Read(//Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/**)"
     ],
     "additionalDirectories": [
       "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/logos/2w"

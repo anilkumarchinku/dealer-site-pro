@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import type { ThreeWheelerLeadType } from "@/lib/types/three-wheeler"
 import { X } from "lucide-react"
+import { validateLeadForm } from "@/lib/validations/client"
 
 interface Props {
     dealerId:       string
@@ -35,7 +36,11 @@ export function LeadFormModal({
 
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault()
-        if (!name || !phone) return
+        const validationErrors = validateLeadForm({ name, phone, email: email || undefined })
+        if (Object.keys(validationErrors).length > 0) {
+            setError(Object.values(validationErrors).join('. '))
+            return
+        }
         setSubmitting(true)
         setError("")
 

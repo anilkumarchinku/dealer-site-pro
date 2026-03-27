@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createDomainSubscription } from '@/lib/services/payment-service'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
+import { createSubscriptionSchema, formatZodErrors } from '@/lib/validations/schemas'
 
 /**
  * POST /api/payments/create-subscription
@@ -18,21 +19,16 @@ export async function POST(request: NextRequest) {
         if (errorResponse) return errorResponse
 
         const body = await request.json()
-        const { dealerId, tier, domainId } = body
 
-        if (!dealerId || !tier || !domainId) {
+        // ── Validate with Zod ───────────────────────────────────────────────
+        const parsed = createSubscriptionSchema.safeParse(body)
+        if (!parsed.success) {
             return NextResponse.json(
-                { success: false, error: 'Dealer ID, tier, and domain ID are required' },
+                { success: false, error: formatZodErrors(parsed.error) },
                 { status: 400 }
             )
         }
-
-        if (!['pro', 'premium'].includes(tier)) {
-            return NextResponse.json(
-                { success: false, error: 'Invalid tier. Must be "pro" or "premium"' },
-                { status: 400 }
-            )
-        }
+        const { dealerId, tier, domainId } = parsed.data
 
         // Verify the authenticated user owns the dealer account
         const { errorResponse: ownerErr } = await requireDealerOwnership(supabase, user.id, dealerId)
