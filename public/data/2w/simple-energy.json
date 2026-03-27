@@ -4,66 +4,40 @@
   "type": "2w",
   "vehicles": [
     {
-      "model_name": "Simple One Gen 2",
-      "model_name_citation": "https://www.bikedekho.com/simple-energy/simple-one",
-      "availability": "Available",
-      "price": "Rs. 1,69,999 - Rs. 1,77,999",
-      "price_citation": "https://www.bikedekho.com/simple-energy/simple-one",
-      "color_options": [
-        { "value": "Brazen Black", "value_citation": "https://www.bikedekho.com/simple-energy/simple-one" },
-        { "value": "Grace White", "value_citation": "https://www.bikedekho.com/simple-energy/simple-one" },
-        { "value": "Sonic Red", "value_citation": "https://www.bikedekho.com/simple-energy/simple-one" },
-        { "value": "Aero X", "value_citation": "https://www.bikedekho.com/simple-energy/simple-one" },
-        { "value": "Brazen X", "value_citation": "https://www.bikedekho.com/simple-energy/simple-one" },
-        { "value": "Azure Blue", "value_citation": "https://www.bikedekho.com/simple-energy/simple-one" },
-        { "value": "Asphalt X", "value_citation": "https://www.bikedekho.com/simple-energy/simple-one" },
-        { "value": "Light X", "value_citation": "https://www.bikedekho.com/simple-energy/simple-one" },
-        { "value": "Aero Grey", "value_citation": "https://www.bikedekho.com/simple-energy/simple-one" }
-      ],
-      "specifications": {
-        "range": "236 km (4.5 kWh) / 265 km (5 kWh)",
-        "range_citation": "https://www.bikedekho.com/simple-energy/simple-one",
-        "motor_power": "6.4 kW (4.5 kWh variant) / 8.8 kW (5 kWh variant)",
-        "motor_power_citation": "https://www.bikedekho.com/simple-energy/simple-one",
-        "charging_time": "4 hrs 45 min (4.5 kWh, 0-80%) / 5 hrs 20 min (5 kWh, 0-80%)",
-        "charging_time_citation": "https://www.bikedekho.com/simple-energy/simple-one",
-        "battery_capacity": "4.5 kWh / 5 kWh",
-        "battery_capacity_citation": "https://www.bikedekho.com/simple-energy/simple-one",
-        "top_speed": "90 km/h (4.5 kWh) / 115 km/h (5 kWh)",
-        "top_speed_citation": "https://www.bikedekho.com/simple-energy/simple-one",
-        "acceleration_0_40": "2.55 seconds (5 kWh variant)",
-        "acceleration_0_40_citation": "https://www.bikedekho.com/simple-energy/simple-one",
-        "kerb_weight": "126 kg (4.5 kWh) / 129 kg (5 kWh)",
-        "kerb_weight_citation": "https://www.bikedekho.com/simple-energy/simple-one",
-        "display": "7-inch TFT touchscreen instrument console",
-        "display_citation": "https://www.bikedekho.com/simple-energy/simple-one",
-        "fast_charging": "Yes",
-        "fast_charging_citation": "https://www.bikedekho.com/simple-energy/simple-one"
-      }
+      "make": "Simple Energy",
+      "model": "Simple One",
+      "variant_name": "One Gen 2 4.5 kWh",
+      "price": "₹1,69,999",
+      "engine_displacement": "155 cc",
+      "mileage": "40 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "model_name": "Simple OneS Gen 2",
-      "model_name_citation": "https://www.bikedekho.com/simple-energy/simple-ones",
-      "availability": "Available",
-      "price": "Rs. 1,49,999",
-      "price_citation": "https://www.bikedekho.com/simple-energy/simple-ones",
-      "color_options": [
-        { "value": "Brazen Black", "value_citation": "https://www.bikedekho.com/simple-energy/simple-ones" },
-        { "value": "Grace White", "value_citation": "https://www.bikedekho.com/simple-energy/simple-ones" },
-        { "value": "Azure Blue", "value_citation": "https://www.bikedekho.com/simple-energy/simple-ones" }
-      ],
-      "specifications": {
-        "range": "265 km per charge",
-        "range_citation": "https://www.bikedekho.com/simple-energy/simple-ones",
-        "motor_power": "4.5 kW",
-        "motor_power_citation": "https://www.bikedekho.com/simple-energy-bikes",
-        "battery_capacity": "5 kWh",
-        "battery_capacity_citation": "https://www.bikedekho.com/simple-energy-bikes",
-        "top_speed": "105 km/h",
-        "top_speed_citation": "https://www.bikedekho.com/simple-energy-bikes",
-        "charging_time": "2 hours 45 minutes",
-        "charging_time_citation": "https://www.bikedekho.com/simple-energy-bikes"
-      }
+      "make": "Simple Energy",
+      "model": "Simple One",
+      "variant_name": "One Gen 2 5 kWh",
+      "price": "",
+      "engine_displacement": "155 cc",
+      "mileage": "40 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Simple Energy",
+      "model": "Simple One",
+      "variant_name": "Simple Energy One Gen 2 Price",
+      "price": "",
+      "engine_displacement": "155 cc",
+      "mileage": "40 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

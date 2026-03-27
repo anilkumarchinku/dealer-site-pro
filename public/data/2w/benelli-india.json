@@ -1,282 +1,43 @@
 {
-  "brand": "Benelli India",
+  "brand": "Benelli",
   "brandId": "benelli-india",
   "type": "2w",
   "vehicles": [
     {
-      "make": "Benelli India",
-      "model": "Benelli Leoncino 500",
-      "status": "Available",
-      "price": "Rs 4,59,000",
+      "make": "Benelli",
+      "model": "TRK 502",
+      "variant_name": "Benelli TRK 502",
+      "price": "₹6,62,000",
+      "engine_displacement": "",
+      "mileage": "",
+      "source_section": "Available",
+      "variants": [],
       "colors": [],
-      "specifications": {
-        "engine_details": "500 cc, Inline 2-cylinder, 4-stroke, liquid-cooled, DOHC, 4 valves per cylinder",
-        "torque": "46 Nm @ 6000 rpm",
-        "mileage": "23 kmpl (ARAI claimed)",
-        "features": [
-          "Dual-Channel ABS",
-          "Switchable ABS",
-          "DRLs",
-          "Adjustable Windscreen",
-          "LED Headlight",
-          "LED Taillight",
-          "LED Turn-Signal",
-          "Projector Headlights",
-          "Digital Instrument Console",
-          "Clock",
-          "Hazard Warning Lights",
-          "Shift Light",
-          "Engine Kill Switch",
-          "Passenger Footrest"
-        ],
-        "description": "Power: 47.5 PS @ 8500 rpm; Top Speed: 170 km/h; Fuel Tank: 12.7 L; Kerb Weight: 207 kg"
-      }
+      "technical_specifications": {}
     },
     {
-      "make": "Benelli India",
-      "model": "Benelli TRK 502",
-      "status": "Available",
-      "price": "Rs 5,00,000",
+      "make": "Benelli",
+      "model": "502C",
+      "variant_name": "Benelli 502C",
+      "price": "₹5,79,964",
+      "engine_displacement": "",
+      "mileage": "",
+      "source_section": "Available",
+      "variants": [],
       "colors": [],
-      "specifications": {
-        "engine_details": "500 cc, Twin Cylinder, DOHC, Liquid Cooled, 8 Valve",
-        "torque": "46 Nm @ 6000 rpm",
-        "mileage": "30.16 kmpl (ARAI)",
-        "features": [
-          "ABS Dual Channel",
-          "DRLs",
-          "Mobile Connectivity Bluetooth",
-          "Navigation",
-          "Adjustable Windshield",
-          "LED Tail Light",
-          "Digital Speedometer",
-          "Digital Odometer",
-          "Digital Tripmeter",
-          "Fuel gauge",
-          "USB Charging Port",
-          "Call/SMS Alerts",
-          "Roadside Assistance"
-        ],
-        "description": "Power: 47.5 PS @ 8500 rpm; Kerb weight: 235 kg; Fuel capacity: 20 L; Steel Tube Trellis Chassis"
-      }
+      "technical_specifications": {}
     },
     {
-      "make": "Benelli India",
-      "model": "Benelli 502 C",
-      "status": "Available",
-      "price": "Rs 5,20,000",
+      "make": "Benelli",
+      "model": "Imperiale 400",
+      "variant_name": "Benelli Imperiale 400",
+      "price": "₹1,79,488",
+      "engine_displacement": "",
+      "mileage": "",
+      "source_section": "Available",
+      "variants": [],
       "colors": [],
-      "specifications": {
-        "engine_details": "500 cc, 2 Cylinder, 4 Stroke, 8-valve, DOHC, Liquid Cooled",
-        "torque": "46 Nm @ 6000 rpm",
-        "mileage": "26.52 kmpl (ARAI)",
-        "features": [
-          "Dual Channel ABS",
-          "DRLs",
-          "LED headlight",
-          "LED taillight",
-          "LED turn-signal lamp",
-          "Digital instrument console",
-          "Fuel gauge",
-          "Hazard warning lights",
-          "Engine kill switch",
-          "Pass switch",
-          "Clock"
-        ],
-        "description": "Kerb weight: 216 kg; Fuel capacity: 21.5 L; Ground clearance: 210 mm; Steel Trellis Frame"
-      }
-    },
-    {
-      "make": "Benelli India",
-      "model": "Benelli TNT 300",
-      "status": "Discontinued",
-      "price": "Discontinued",
-      "colors": [],
-      "specifications": {
-        "engine_details": "300 cc, In-line, 2-cylinder, 4-stroke, liquid-cooled, 8-valve, DOHC",
-        "torque": "26.5 Nm @ 10,000 rpm",
-        "mileage": "25 kmpl (ARAI)",
-        "features": [
-          "Dual-Channel ABS",
-          "LED tail light",
-          "LED turn-signal lamps",
-          "Digital speedometer",
-          "Digital odometer",
-          "Digital tripmeter",
-          "Analogue tachometer",
-          "Digital Fuel gauge",
-          "Clock",
-          "Average fuel-economy indicator",
-          "Distance-to-empty indicator"
-        ],
-        "description": "Max power: 38.26 PS @ 11,500 rpm; Top speed: 154 km/h; Fuel capacity: 16 L; Kerb weight: 196 kg"
-      }
-    },
-    {
-      "make": "Benelli India",
-      "model": "Benelli 302 S",
-      "status": "Discontinued",
-      "price": "Discontinued",
-      "colors": [],
-      "specifications": {
-        "engine_details": "300 cc, Liquid-cooled, inline-2 cylinder, DOHC, 4-valve per cylinder",
-        "torque": "25.6 Nm @ 9750 rpm",
-        "mileage": "34 kmpl",
-        "features": [
-          "ABS Dual Channel",
-          "LED Tail Light",
-          "LED Headlight with DRLs",
-          "Digital Speedometer",
-          "Digital Odometer",
-          "Digital Tripmeter",
-          "Analogue Tachometer",
-          "Fuel Gauge (digital)",
-          "Clock",
-          "Low Battery/Oil/Fuel indicators"
-        ],
-        "description": "Kerb Weight: 209 kg; Fuel Capacity: 14 L; Power: 30.06 PS @ 11000 rpm; Trestle in steel tubes frame"
-      }
-    },
-    {
-      "make": "Benelli India",
-      "model": "Benelli Imperiale 400",
-      "status": "Discontinued",
-      "price": "Discontinued",
-      "colors": [],
-      "specifications": {
-        "engine_details": "373.5 cc, air-cooled, fuel-injected, single-cylinder",
-        "torque": "29 Nm @ 3500 rpm",
-        "mileage": "33.49 kmpl (ARAI)",
-        "features": [
-          "Dual-Channel ABS",
-          "CBS",
-          "Digital fuel gauge",
-          "Halogen headlamp",
-          "Bulb-type tail lamp",
-          "Bulb-type turn indicators",
-          "Twin-pod instrument console",
-          "Digital odometer"
-        ],
-        "description": "Power: 21 PS @ 6000 rpm; Kerb weight: 205 kg; 5-speed gearbox; 19-inch front/18-inch rear wheels"
-      }
-    },
-    {
-      "make": "Benelli India",
-      "model": "Benelli TRK 251",
-      "status": "Discontinued",
-      "price": "Discontinued",
-      "colors": [],
-      "specifications": {
-        "engine_details": "249 cc, Single Cylinder, 4-Valve, 4-Stroke, Liquid Cooled",
-        "torque": "21.1 Nm @ 8000 rpm",
-        "mileage": "31.81 kmpl (ARAI)",
-        "features": [
-          "ABS Dual Channel",
-          "DRLs",
-          "LED Tail Light",
-          "Halogen Headlight",
-          "LED Turn Signal",
-          "Digital Speedometer",
-          "Digital Odometer",
-          "Digital Tripmeter",
-          "Digital Tachometer",
-          "Fuel gauge",
-          "Split seat",
-          "Body graphics"
-        ],
-        "description": "Peak Power: 25.8 PS @ 9250 rpm; Kerb Weight: 164 kg; Fuel Capacity: 18 L; Ground Clearance: 170 mm"
-      }
-    },
-    {
-      "make": "Benelli India",
-      "model": "Benelli 302R",
-      "status": "Discontinued",
-      "price": "Discontinued",
-      "colors": [],
-      "specifications": {
-        "engine_details": "300 cc, In-line 2-cylinder, 4-stroke, 8-valve, DOHC, Liquid-cooled",
-        "torque": "26.5 Nm @ 10,000 rpm",
-        "mileage": "34 kmpl (city/combined)",
-        "features": [
-          "Dual-Channel ABS",
-          "DRLs",
-          "LED tail-lamp",
-          "LED turn-signal",
-          "Halogen head-lamp",
-          "Digital speedometer",
-          "Digital odometer",
-          "Digital tripmeter",
-          "Digital fuel gauge",
-          "Analogue tachometer",
-          "Clock",
-          "Step-up seat"
-        ],
-        "description": "Peak power: 38.79 PS @ 11,500 rpm; Frame: Steel trestle; Fuel tank: 14 L; Kerb weight: (not specified, but similar to TNT 300)"
-      }
-    },
-    {
-      "make": "Benelli India",
-      "model": "Benelli Leoncino 250",
-      "status": "Discontinued",
-      "price": "Discontinued",
-      "colors": [],
-      "specifications": {
-        "engine_details": "249 cc liquid-cooled single-cylinder, 4-valve DOHC engine",
-        "torque": "21 Nm @ 8000 rpm",
-        "mileage": "37.38 kmpl (city)",
-        "features": [
-          "ABS Dual Channel",
-          "DRLs",
-          "LED Tail Light",
-          "Digital Speedometer",
-          "Digital Odometer",
-          "Digital Tripmeter",
-          "Digital Tachometer",
-          "Fuel gauge",
-          "Digital Instrument Console",
-          "Clock",
-          "LED Headlight",
-          "LED Turn Signals"
-        ],
-        "description": "Power: 25.8 PS @ 9250 rpm; Top Speed: 114 kmph; Fuel Capacity: 12.5 L; Kerb Weight: 162 kg"
-      }
-    },
-    {
-      "make": "Benelli India",
-      "model": "Benelli Leoncino 800",
-      "status": "Upcoming",
-      "price": "Rs 8,50,000 (Expected)",
-      "colors": [],
-      "specifications": {
-        "engine_details": "754 cc, Twin Cylinder, Liquid Cooled",
-        "torque": "67 Nm",
-        "mileage": "N/A",
-        "features": [
-          "Double Disc Brakes",
-          "Tubeless Tyres",
-          "Self Start Only"
-        ],
-        "description": "Power: 81.5 PS; Kerb Weight: 220 kg; Upcoming cruiser-class motorcycle competing against Honda Rebel 500 and Kawasaki Vulcan S."
-      }
-    },
-    {
-      "make": "Benelli India",
-      "model": "Benelli 752 S",
-      "status": "Upcoming",
-      "price": "Rs 7,00,000 - Rs 8,00,000 (Expected)",
-      "colors": [],
-      "specifications": {
-        "engine_details": "754 cc, Twin Cylinder, Liquid Cooled, DOHC",
-        "torque": "67 Nm (Expected)",
-        "mileage": "N/A",
-        "features": [
-          "Dual-Channel ABS",
-          "LED Headlight",
-          "Digital Instrument Console",
-          "Disc Brakes (Front & Rear)"
-        ],
-        "description": "Upcoming naked sport motorcycle from Benelli. Expected to share the 754 cc twin-cylinder platform with the Leoncino 800."
-      }
+      "technical_specifications": {}
     }
   ]
 }

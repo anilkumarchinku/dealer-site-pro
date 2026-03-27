@@ -1,125 +1,55 @@
 {
-  "cfmoto_bikes": [
+  "brand": "CFMoto",
+  "brandId": "cfmoto-india",
+  "type": "2w",
+  "vehicles": [
     {
-      "bike_name": "CFMoto 300NK",
-      "bike_name_citation": "https://www.bikedekho.com/cfmoto/300nk",
-      "price": "Rs. 2,29,000 Onwards",
-      "price_citation": "https://www.bikedekho.com/cfmoto-bikes",
-      "engine_displacement": "292.4 cc",
-      "engine_displacement_citation": "https://www.bikedekho.com/cfmoto/300nk",
-      "mileage": "33 kmpl",
-      "mileage_citation": "https://www.bikedekho.com/cfmoto/300nk",
-      "performance_metrics": {
-        "power": "27.87 PS",
-        "power_citation": "https://www.bikedekho.com/cfmoto/300nk",
-        "torque": "20 Nm @ 7000 rpm",
-        "torque_citation": "https://www.bikedekho.com/cfmoto/300nk",
-        "top_speed": "127 kmph",
-        "top_speed_citation": "https://www.bikedekho.com/cfmoto/300nk"
-      }
+      "make": "CFMoto",
+      "model": "300NK",
+      "variant_name": "CFMoto 300NK",
+      "price": "₹2,29,000",
+      "engine_displacement": "",
+      "mileage": "",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "bike_name": "CFMoto 650NK",
-      "bike_name_citation": "https://www.bikedekho.com/cfmoto/650nk",
-      "price": "Rs. 4,29,000 Onwards",
-      "price_citation": "https://www.bikedekho.com/cfmoto-bikes",
-      "engine_displacement": "649.3 cc",
-      "engine_displacement_citation": "https://www.bikedekho.com/cfmoto/650nk",
-      "mileage": "20 kmpl",
-      "mileage_citation": "https://www.bikedekho.com/cfmoto/650nk",
-      "performance_metrics": {
-        "power": "61.18 PS @ 9000 rpm",
-        "power_citation": "https://www.bikedekho.com/cfmoto/650nk",
-        "torque": "56 Nm @ 7000 rpm",
-        "torque_citation": "https://www.bikedekho.com/cfmoto/650nk",
-        "top_speed": "180 km/h",
-        "top_speed_citation": "https://www.bikedekho.com/cfmoto/650nk"
-      }
+      "make": "CFMoto",
+      "model": "650NK",
+      "variant_name": "CFMoto 650NK",
+      "price": "₹4,29,000",
+      "engine_displacement": "",
+      "mileage": "",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "bike_name": "CFMoto 650MT",
-      "bike_name_citation": "https://www.bikedekho.com/cfmoto/650mt",
-      "price": "Rs. 5,29,000 Onwards",
-      "price_citation": "https://www.bikedekho.com/cfmoto-bikes",
-      "engine_displacement": "649 cc",
-      "engine_displacement_citation": "https://www.bikedekho.com/cfmoto/650mt",
-      "mileage": "20 kmpl",
-      "mileage_citation": "https://www.bikedekho.com/cfmoto/650mt",
-      "performance_metrics": {
-        "power": "70.70 PS",
-        "power_citation": "https://www.bikedekho.com/cfmoto/650mt",
-        "torque": "62 Nm",
-        "torque_citation": "https://www.bikedekho.com/cfmoto/650mt",
-        "top_speed": "170 kmph",
-        "top_speed_citation": "https://www.bikedekho.com/cfmoto/650mt"
-      }
+      "make": "CFMoto",
+      "model": "650MT",
+      "variant_name": "CFMoto 650MT",
+      "price": "₹5,29,000",
+      "engine_displacement": "",
+      "mileage": "",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "bike_name": "CFMoto 650GT",
-      "bike_name_citation": "https://www.bikedekho.com/cfmoto/650gt",
-      "price": "Rs. 5,59,000 Onwards",
-      "price_citation": "https://www.bikedekho.com/cfmoto-bikes",
-      "engine_displacement": "649.3 cc",
-      "engine_displacement_citation": "https://www.bikedekho.com/cfmoto/650gt",
-      "mileage": "20 kmpl",
-      "mileage_citation": "https://www.bikedekho.com/cfmoto/650gt",
-      "performance_metrics": {
-        "power": "62.54 PS @ 9000 rpm",
-        "power_citation": "https://www.bikedekho.com/cfmoto/650gt",
-        "torque": "58.5 Nm @ 7000 rpm",
-        "torque_citation": "https://www.bikedekho.com/cfmoto/650gt",
-        "top_speed": "195 kmph",
-        "top_speed_citation": "https://www.bikedekho.com/cfmoto/650gt"
-      }
-    },
-    {
-      "bike_name": "CFMoto 450SR",
-      "bike_name_citation": "https://www.bikedekho.com/cfmoto/450sr",
-      "price": "Rs 4,30,000 (Expected)",
-      "price_citation": "https://www.bikedekho.com/cfmoto-bikes",
-      "engine_displacement": "449.5 cc",
-      "engine_displacement_citation": "https://www.bikedekho.com/cfmoto/450sr",
-      "mileage": "34 kmpl",
-      "mileage_citation": "https://www.bikedekho.com/cfmoto/450sr",
-      "performance_metrics": {
-        "power": "51.6 PS",
-        "power_citation": "https://www.bikedekho.com/cfmoto/450sr",
-        "torque": "40 Nm",
-        "torque_citation": "https://www.bikedekho.com/cfmoto/450sr",
-        "top_speed": "190 kmph",
-        "top_speed_citation": "https://www.bikedekho.com/cfmoto/450sr"
-      }
-    },
-    {
-      "bike_name": "CFMoto 450SS",
-      "bike_name_citation": "https://www.bikedekho.com/cfmoto/450ss",
-      "price": "Price to be announced",
-      "price_citation": "https://www.bikedekho.com/cfmoto-bikes",
-      "engine_displacement": "449 cc",
-      "engine_displacement_citation": "https://www.bikedekho.com/cfmoto/450ss",
-      "performance_metrics": {
-        "power": "50 PS",
-        "power_citation": "https://www.bikedekho.com/cfmoto/450ss",
-        "torque": "39 Nm",
-        "torque_citation": "https://www.bikedekho.com/cfmoto/450ss"
-      }
-    },
-    {
-      "bike_name": "CFMoto 450MT",
-      "bike_name_citation": "https://www.bikedekho.com/cfmoto/450mt",
-      "availability": "Upcoming",
-      "price": "Rs 4,00,000 - Rs 4,50,000 (Expected)",
-      "price_citation": "https://www.bikedekho.com/cfmoto-bikes",
-      "engine_displacement": "449 cc",
-      "engine_displacement_citation": "https://www.bikedekho.com/cfmoto/450mt",
-      "performance_metrics": {
-        "power": "50 PS (Expected)",
-        "power_citation": "https://www.bikedekho.com/cfmoto/450mt",
-        "torque": "40 Nm (Expected)",
-        "torque_citation": "https://www.bikedekho.com/cfmoto/450mt",
-        "description": "Upcoming adventure-touring motorcycle from CFMoto, sharing the 449 cc twin-cylinder platform with the 450SR and 450SS. Expected to feature upright ergonomics, long-travel suspension, and touring-friendly accessories.",
-        "description_citation": "https://www.bikedekho.com/cfmoto-bikes"
-      }
+      "make": "CFMoto",
+      "model": "650GT",
+      "variant_name": "CFMoto 650GT",
+      "price": "₹5,59,000",
+      "engine_displacement": "",
+      "mileage": "",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

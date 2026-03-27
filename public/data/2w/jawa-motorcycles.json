@@ -1,143 +1,295 @@
 {
-  "brand": "Jawa Motorcycles",
+  "brand": "Jawa",
   "brandId": "jawa-motorcycles",
   "type": "2w",
   "vehicles": [
     {
-      "model_name": "Jawa 42",
-      "model_name_citation": "https://www.bikewale.com/jawa-bikes/42/",
-      "price": "₹1,81,357 - ₹1,84,000",
-      "price_citation": "https://www.bikewale.com/jawa-bikes/42/",
-      "engine_details": "294.72 cc, Single Cylinder, Liquid Cooled",
-      "engine_details_citation": "https://www.jawayezdimotorcycles.com/products/jawa-42",
-      "torque": "26.84 Nm",
-      "torque_citation": "https://www.jawayezdimotorcycles.com/products/jawa-42",
+      "make": "Jawa",
+      "model": "42",
+      "variant_name": "42 1 Channel - Spoke - Vega White",
+      "price": "₹1,61,265",
+      "engine_displacement": "350 cc",
       "mileage": "32 kmpl",
-      "mileage_citation": "https://www.bikewale.com/jawa-bikes/42/",
-      "features": [
-        {
-          "value": "Dual Channel ABS",
-          "value_citation": "https://www.jawayezdimotorcycles.com/products/jawa-42"
-        },
-        {
-          "value": "Telescopic Front Forks",
-          "value_citation": "https://www.jawayezdimotorcycles.com/products/jawa-42"
-        },
-        {
-          "value": "Twin Rear Shocks",
-          "value_citation": "https://www.jawayezdimotorcycles.com/products/jawa-42"
-        }
-      ],
-      "more_details": "Modern retro roadster with a sporty character. Weighs 184 kg with 178 mm ground clearance.",
-      "more_details_citation": "https://www.jawayezdimotorcycles.com/products/jawa-42"
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "model_name": "Jawa Perak",
-      "model_name_citation": "https://www.jawayezdimotorcycles.com/products/jawa-perak",
-      "price": "₹2,09,000",
-      "price_citation": "https://www.jawayezdimotorcycles.com/products/jawa-perak",
-      "engine_details": "334 cc, Single Cylinder, Liquid Cooled",
-      "engine_details_citation": "https://www.jawayezdimotorcycles.com/products/jawa-perak",
-      "torque": "32.74 Nm",
-      "torque_citation": "https://www.jawayezdimotorcycles.com/products/jawa-perak",
-      "mileage": "30 kmpl",
-      "mileage_citation": "https://www.jawayezdimotorcycles.com/products/jawa-perak",
-      "features": [
-        {
-          "value": "Single seat bobber styling",
-          "value_citation": "https://www.jawayezdimotorcycles.com/products/jawa-perak"
-        },
-        {
-          "value": "Dual Channel ABS",
-          "value_citation": "https://www.jawayezdimotorcycles.com/products/jawa-perak"
-        }
-      ],
-      "more_details": "India's first factory custom bobber. Powered by a 334 cc liquid-cooled engine with 29.51 bhp.",
-      "more_details_citation": "https://www.jawayezdimotorcycles.com/products/jawa-perak"
-    },
-    {
-      "model_name": "Jawa 350",
-      "model_name_citation": "https://www.bikewale.com/jawa-bikes/",
-      "price": "₹1,83,000 - ₹2,14,000",
-      "price_citation": "https://www.bikewale.com/jawa-bikes/",
-      "engine_details": "334 cc, Single Cylinder, Liquid Cooled",
-      "engine_details_citation": "https://www.bikewale.com/jawa-bikes/",
-      "torque": "32.74 Nm",
-      "torque_citation": "https://www.bikewale.com/jawa-bikes/",
-      "mileage": "30 kmpl",
-      "mileage_citation": "https://www.bikewale.com/jawa-bikes/",
-      "features": [
-        {
-          "value": "Dual Channel ABS",
-          "value_citation": "https://www.bikewale.com/jawa-bikes/"
-        },
-        {
-          "value": "Telescopic Front Forks",
-          "value_citation": "https://www.bikewale.com/jawa-bikes/"
-        },
-        {
-          "value": "Twin Rear Shocks",
-          "value_citation": "https://www.bikewale.com/jawa-bikes/"
-        }
-      ],
-      "more_details": "Classic retro-styled motorcycle. Weighs 194 kg with 178 mm ground clearance and 334 cc liquid-cooled engine producing 29.51 bhp.",
-      "more_details_citation": "https://www.bikewale.com/jawa-bikes/"
-    },
-    {
-      "model_name": "Jawa 42 FJ",
-      "model_name_citation": "https://www.bikewale.com/jawa-bikes/",
-      "price": "₹1,83,000 - ₹2,09,000",
-      "price_citation": "https://www.bikewale.com/jawa-bikes/",
-      "engine_details": "294.72 cc, Single Cylinder, Liquid Cooled",
-      "engine_details_citation": "https://www.bikewale.com/jawa-bikes/",
-      "torque": "26.84 Nm",
-      "torque_citation": "https://www.bikewale.com/jawa-bikes/",
+      "make": "Jawa",
+      "model": "42",
+      "variant_name": "42 1 Channel - Spoke - Voyager Red - Asteroid Grey - Odyssey Black",
+      "price": "",
+      "engine_displacement": "350 cc",
       "mileage": "32 kmpl",
-      "mileage_citation": "https://www.bikewale.com/jawa-bikes/",
-      "features": [
-        {
-          "value": "Dual Channel ABS",
-          "value_citation": "https://www.bikewale.com/jawa-bikes/"
-        },
-        {
-          "value": "Telescopic Front Forks",
-          "value_citation": "https://www.bikewale.com/jawa-bikes/"
-        },
-        {
-          "value": "Twin Rear Shocks",
-          "value_citation": "https://www.bikewale.com/jawa-bikes/"
-        }
-      ],
-      "more_details": "Modern retro roadster variant with updated styling and features. Weighs 184 kg with 178 mm ground clearance.",
-      "more_details_citation": "https://www.bikewale.com/jawa-bikes/"
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "model_name": "Jawa 42 Bobber",
-      "model_name_citation": "https://www.jawayezdimotorcycles.com/products/jawa-42-bobber",
-      "price": "₹2,09,000 - ₹2,23,000",
-      "price_citation": "https://www.bikewale.com/jawa-bikes/42-bobber/",
-      "engine_details": "334 cc, Single Cylinder, Liquid Cooled",
-      "engine_details_citation": "https://www.jawayezdimotorcycles.com/products/jawa-42-bobber",
-      "torque": "32.74 Nm",
-      "torque_citation": "https://www.jawayezdimotorcycles.com/products/jawa-42-bobber",
+      "make": "Jawa",
+      "model": "42",
+      "variant_name": "42 2 Channel - Spoke - Vega White",
+      "price": "",
+      "engine_displacement": "350 cc",
+      "mileage": "32 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42",
+      "variant_name": "42 2 Channel - Spoke - Voyager Red - Asteroid Grey - Odyssey Black",
+      "price": "",
+      "engine_displacement": "350 cc",
+      "mileage": "32 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42",
+      "variant_name": "42 2 Channel - Alloy - Sirius White Matte",
+      "price": "",
+      "engine_displacement": "350 cc",
+      "mileage": "32 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42",
+      "variant_name": "42 2 Channel - Alloy - Nebula Blue - Celestial Copper Matte",
+      "price": "",
+      "engine_displacement": "350 cc",
+      "mileage": "32 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42",
+      "variant_name": "42 2 Channel - Alloy - Orion Red Matte",
+      "price": "",
+      "engine_displacement": "350 cc",
+      "mileage": "32 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42",
+      "variant_name": "42 2 Channel - Alloy - All Star Black Matte",
+      "price": "",
+      "engine_displacement": "350 cc",
+      "mileage": "32 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42",
+      "variant_name": "42 2 Channel - Alloy - Dual Tone",
+      "price": "",
+      "engine_displacement": "350 cc",
+      "mileage": "32 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42",
+      "variant_name": "42 Ivory Edition",
+      "price": "",
+      "engine_displacement": "350 cc",
+      "mileage": "32 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42",
+      "variant_name": "Jawa 42 Price",
+      "price": "",
+      "engine_displacement": "350 cc",
+      "mileage": "32 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "Jawa 350",
+      "variant_name": "Jawa Standard",
+      "price": "₹1,67,433",
+      "engine_displacement": "",
+      "mileage": "",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42 Bobber",
+      "variant_name": "42 Bobber Moonstone White",
+      "price": "₹1,95,305",
+      "engine_displacement": "334 cc",
       "mileage": "30 kmpl",
-      "mileage_citation": "https://www.bikewale.com/jawa-bikes/42-bobber/",
-      "features": [
-        {
-          "value": "Dual Channel ABS",
-          "value_citation": "https://www.jawayezdimotorcycles.com/products/jawa-42-bobber"
-        },
-        {
-          "value": "Low-slung cantilever seat",
-          "value_citation": "https://www.jawayezdimotorcycles.com/products/jawa-42-bobber"
-        },
-        {
-          "value": "Bobber styling",
-          "value_citation": "https://www.jawayezdimotorcycles.com/products/jawa-42-bobber"
-        }
-      ],
-      "more_details": "Bobber-styled variant of the Jawa 42 with a 334 cc liquid-cooled engine producing 29.51 bhp and 32.74 Nm torque.",
-      "more_details_citation": "https://www.jawayezdimotorcycles.com/products/jawa-42-bobber"
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42 Bobber",
+      "variant_name": "42 Bobber Mystic Copper - Spoke Wheel",
+      "price": "",
+      "engine_displacement": "334 cc",
+      "mileage": "30 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42 Bobber",
+      "variant_name": "42 Bobber Jasper Red - Spoke Wheel",
+      "price": "",
+      "engine_displacement": "334 cc",
+      "mileage": "30 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42 Bobber",
+      "variant_name": "42 Bobber Mystic Copper and Jasper Red - Alloy Wheel",
+      "price": "",
+      "engine_displacement": "334 cc",
+      "mileage": "30 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42 Bobber",
+      "variant_name": "42 Bobber Black Mirror and Red Sheen - Alloy Wheel",
+      "price": "",
+      "engine_displacement": "334 cc",
+      "mileage": "30 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42 Bobber",
+      "variant_name": "Jawa 42 Bobber Price",
+      "price": "",
+      "engine_displacement": "334 cc",
+      "mileage": "30 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "Perak",
+      "variant_name": "Jawa Perak",
+      "price": "₹2,21,804",
+      "engine_displacement": "",
+      "mileage": "",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42 FJ",
+      "variant_name": "42 FJ Aurora Green Matte - Spoke",
+      "price": "₹1,83,595",
+      "engine_displacement": "334 cc",
+      "mileage": "30 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42 FJ",
+      "variant_name": "42 FJ Aurora Green Matte - Alloy",
+      "price": "",
+      "engine_displacement": "334 cc",
+      "mileage": "30 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42 FJ",
+      "variant_name": "42 FJ Cosmo Blue Matte and Mystique Copper",
+      "price": "",
+      "engine_displacement": "334 cc",
+      "mileage": "30 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42 FJ",
+      "variant_name": "42 FJ Deep Black - Matte Red and Matte Black",
+      "price": "",
+      "engine_displacement": "334 cc",
+      "mileage": "30 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42 FJ",
+      "variant_name": "Jawa 42 FJ Price",
+      "price": "",
+      "engine_displacement": "334 cc",
+      "mileage": "30 kmpl",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

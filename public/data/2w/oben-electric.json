@@ -1,92 +1,19 @@
 {
-  "brand": "Oben Electric",
+  "brand": "Oben",
   "brandId": "oben-electric",
   "type": "2w",
   "vehicles": [
     {
-      "model_name": "Oben Rorr",
-      "model_name_citation": "https://www.bikedekho.com/oben-electric/rorr",
-      "availability": "Available",
-      "pricing": {
-        "ex_showroom_price": "Rs. 1,49,999",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/oben-electric/rorr"
-      },
-      "available_colors": [
-        { "value": "Red", "value_citation": "https://www.bikedekho.com/oben-electric/rorr/colors" },
-        { "value": "Black", "value_citation": "https://www.bikedekho.com/oben-electric/rorr/colors" },
-        { "value": "Blue", "value_citation": "https://www.bikedekho.com/oben-electric/rorr/colors" }
-      ],
-      "specifications": {
-        "range": "187 km per charge",
-        "range_citation": "https://www.bikedekho.com/oben-electric/rorr"
-      }
-    },
-    {
-      "model_name": "Oben Rorr EZ",
-      "model_name_citation": "https://www.bikedekho.com/oben-electric/rorr-ez",
-      "availability": "Available",
-      "pricing": {
-        "ex_showroom_price": "Rs. 99,999 - Rs. 1,29,999",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/oben-electric/rorr-ez"
-      },
-      "available_colors": [
-        { "value": "Electro Amber", "value_citation": "https://www.bikedekho.com/oben-electric/rorr-ez" },
-        { "value": "Photon White", "value_citation": "https://www.bikedekho.com/oben-electric/rorr-ez" },
-        { "value": "Flux Grey", "value_citation": "https://www.bikedekho.com/oben-electric/rorr-ez" },
-        { "value": "Surge Cyan", "value_citation": "https://www.bikedekho.com/oben-electric/rorr-ez" },
-        { "value": "Lumina Green", "value_citation": "https://www.bikedekho.com/oben-electric/rorr-ez" }
-      ],
-      "specifications": {
-        "motor_power": "7.5 kW",
-        "motor_power_citation": "https://www.bikedekho.com/oben-electric/rorr-ez",
-        "top_speed": "95 km/h",
-        "top_speed_citation": "https://www.bikedekho.com/oben-electric/rorr-ez",
-        "battery_options": "2.6 kWh / 3.4 kWh / 4.4 kWh",
-        "battery_options_citation": "https://www.bikedekho.com/oben-electric/rorr-ez",
-        "range": "110 km (2.6 kWh) / 140 km (3.4 kWh) / 175 km (4.4 kWh)",
-        "range_citation": "https://www.bikedekho.com/oben-electric/rorr-ez",
-        "charging_time": "45 minutes (0-80%), 4 hours (0-100%)",
-        "charging_time_citation": "https://www.bikedekho.com/oben-electric/rorr-ez",
-        "battery_warranty": "5 years or 75,000 km",
-        "battery_warranty_citation": "https://www.bikedekho.com/oben-electric/rorr-ez",
-        "acceleration_0_40": "3.3 - 3.4 seconds",
-        "acceleration_0_40_citation": "https://www.bikedekho.com/oben-electric/rorr-ez",
-        "seat_height": "810 mm",
-        "seat_height_citation": "https://www.bikedekho.com/oben-electric/rorr-ez"
-      }
-    },
-    {
-      "model_name": "Oben Rorr EZ Sigma",
-      "model_name_citation": "https://www.bikedekho.com/oben-electric/rorr-ez-sigma",
-      "availability": "Available",
-      "pricing": {
-        "ex_showroom_price": "Rs. 1,16,499 - Rs. 1,26,499",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/oben-electric/rorr-ez-sigma"
-      },
-      "available_colors": [
-        { "value": "Electro Amber", "value_citation": "https://www.bikedekho.com/oben-electric/rorr-ez-sigma" },
-        { "value": "Electric Red", "value_citation": "https://www.bikedekho.com/oben-electric/rorr-ez-sigma" },
-        { "value": "Surge Cyan", "value_citation": "https://www.bikedekho.com/oben-electric/rorr-ez-sigma" },
-        { "value": "Photon White", "value_citation": "https://www.bikedekho.com/oben-electric/rorr-ez-sigma" }
-      ],
-      "specifications": {
-        "top_speed": "95 km/h",
-        "top_speed_citation": "https://www.bikedekho.com/oben-electric/rorr-ez-sigma",
-        "battery_options": "3.4 kWh / 4.4 kWh",
-        "battery_options_citation": "https://www.bikedekho.com/oben-electric/rorr-ez-sigma",
-        "range": "140 km (3.4 kWh) / 175 km (4.4 kWh)",
-        "range_citation": "https://www.bikedekho.com/oben-electric/rorr-ez-sigma",
-        "charging_time": "1.5 hours (0-80% for 3.4 kWh) / 2 hours (0-80% for 4.4 kWh)",
-        "charging_time_citation": "https://www.bikedekho.com/oben-electric/rorr-ez-sigma",
-        "battery_warranty": "8 years or 80,000 km",
-        "battery_warranty_citation": "https://www.bikedekho.com/oben-electric/rorr-ez-sigma",
-        "battery_chemistry": "LFP (Lithium Iron Phosphate)",
-        "battery_chemistry_citation": "https://www.bikedekho.com/oben-electric/rorr-ez-sigma",
-        "kerb_weight": "143 kg (3.4 kWh) / 148 kg (4.4 kWh)",
-        "kerb_weight_citation": "https://www.bikedekho.com/oben-electric/rorr-ez-sigma",
-        "features": "5-inch TFT console, Bluetooth connectivity, 3 ride modes (Eco, City, Havoc), Fast charging, ABS, App connectivity",
-        "features_citation": "https://www.bikedekho.com/oben-electric/rorr-ez-sigma"
-      }
+      "make": "Oben",
+      "model": "Rorr",
+      "variant_name": "Oben Rorr",
+      "price": "₹1,49,999",
+      "engine_displacement": "",
+      "mileage": "",
+      "source_section": "Available",
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }
