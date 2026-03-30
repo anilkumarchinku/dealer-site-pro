@@ -280,7 +280,8 @@
       ],
       "image_urls": [{ "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Kodiaq/9930/1764935007679/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/skoda/kodiaq" }],
       "availability_status": "on_sale", "availability_status_citation": "https://www.cardekho.com/skoda/kodiaq",
-      "source_url": "https://www.cardekho.com/skoda/kodiaq", "source_url_citation": "https://www.cardekho.com/skoda/kodiaq"
+      "source_url": "https://www.cardekho.com/skoda/kodiaq", "source_url_citation": "https://www.cardekho.com/skoda/kodiaq",
+      "discontinued": true
     },
     {
       "make": "Skoda", "make_citation": "https://www.cardekho.com/skoda/kodiaq",
@@ -317,7 +318,8 @@
       ],
       "image_urls": [{ "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Kodiaq/9930/1764935007679/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/skoda/kodiaq" }],
       "availability_status": "on_sale", "availability_status_citation": "https://www.cardekho.com/skoda/kodiaq",
-      "source_url": "https://www.cardekho.com/skoda/kodiaq", "source_url_citation": "https://www.cardekho.com/skoda/kodiaq"
+      "source_url": "https://www.cardekho.com/skoda/kodiaq", "source_url_citation": "https://www.cardekho.com/skoda/kodiaq",
+      "discontinued": true
     },
     {
       "make": "Skoda", "make_citation": "https://www.cardekho.com/skoda/slavia",
@@ -462,6 +464,111 @@
       "image_urls": [{ "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Octavia-RS/9524/1762503875410/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/skoda/octavia-rs" }],
       "availability_status": "on_sale", "availability_status_citation": "https://www.cardekho.com/skoda/octavia-rs",
       "source_url": "https://www.cardekho.com/skoda/octavia-rs", "source_url_citation": "https://www.cardekho.com/skoda/octavia-rs"
+    },
+    {
+      "make": "Skoda", "make_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "model": "Kodiaq", "model_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "variant_name": "Kodiaq Lounge", "variant_name_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "ex_showroom_price": { "min": 3999000, "min_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm", "max": 3999000, "max_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+      "fuel_type": "Petrol", "fuel_type_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "transmission": "Automatic", "transmission_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "engine_displacement_cc": 1984, "engine_displacement_cc_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "power_bhp": 201, "power_bhp_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "torque_nm": 320, "torque_nm_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "mileage_kmpl": 14.86, "mileage_kmpl_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "seating_capacity": 5, "seating_capacity_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "boot_space_l": 910, "boot_space_l_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "ground_clearance_mm": 191, "ground_clearance_mm_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "length_mm": 4758, "length_mm_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "width_mm": 1864, "width_mm_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "height_mm": 1659, "height_mm_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "key_features": [
+        { "value": "10.25-inch touchscreen infotainment", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "Virtual cockpit display", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "Wireless Android Auto & Apple CarPlay", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "Powered tailgate", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" }
+      ],
+      "safety_features": [
+        { "value": "8 airbags", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "ESC", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "TPMS", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "Hill hold control", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" }
+      ],
+      "image_urls": [{ "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Kodiaq/9930/1764935007679/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" }],
+      "availability_status": "on_sale", "availability_status_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "source_url": "https://www.cardekho.com/skoda/kodiaq/variants.htm", "source_url_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm"
+    },
+    {
+      "make": "Skoda", "make_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "model": "Kodiaq", "model_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "variant_name": "Kodiaq Sportline", "variant_name_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "ex_showroom_price": { "min": 4376000, "min_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm", "max": 4376000, "max_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+      "fuel_type": "Petrol", "fuel_type_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "transmission": "Automatic", "transmission_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "engine_displacement_cc": 1984, "engine_displacement_cc_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "power_bhp": 201, "power_bhp_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "torque_nm": 320, "torque_nm_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "mileage_kmpl": 14.86, "mileage_kmpl_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "seating_capacity": 5, "seating_capacity_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "boot_space_l": 910, "boot_space_l_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "ground_clearance_mm": 191, "ground_clearance_mm_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "length_mm": 4758, "length_mm_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "width_mm": 1864, "width_mm_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "height_mm": 1659, "height_mm_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "key_features": [
+        { "value": "10.25-inch touchscreen infotainment", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "Sportline exterior styling", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "Virtual cockpit display", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "Wireless Android Auto & Apple CarPlay", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "Sport seats with Alcantara", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" }
+      ],
+      "safety_features": [
+        { "value": "8 airbags", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "ESC", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "TPMS", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "Adaptive cruise control", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" }
+      ],
+      "image_urls": [{ "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Kodiaq/9930/1764935007679/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" }],
+      "availability_status": "on_sale", "availability_status_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "source_url": "https://www.cardekho.com/skoda/kodiaq/variants.htm", "source_url_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm"
+    },
+    {
+      "make": "Skoda", "make_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "model": "Kodiaq", "model_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "variant_name": "Kodiaq Selection L&K", "variant_name_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "ex_showroom_price": { "min": 4596000, "min_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm", "max": 4596000, "max_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+      "fuel_type": "Petrol", "fuel_type_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "transmission": "Automatic", "transmission_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "engine_displacement_cc": 1984, "engine_displacement_cc_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "power_bhp": 201, "power_bhp_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "torque_nm": 320, "torque_nm_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "mileage_kmpl": 14.86, "mileage_kmpl_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "seating_capacity": 5, "seating_capacity_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "boot_space_l": 910, "boot_space_l_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "ground_clearance_mm": 191, "ground_clearance_mm_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "length_mm": 4758, "length_mm_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "width_mm": 1864, "width_mm_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "height_mm": 1659, "height_mm_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "key_features": [
+        { "value": "10.25-inch touchscreen infotainment", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "Laurin & Klement premium interior", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "Virtual cockpit display", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "Wireless Android Auto & Apple CarPlay", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "Ventilated & powered front seats", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" }
+      ],
+      "safety_features": [
+        { "value": "8 airbags", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "ESC", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "TPMS", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" },
+        { "value": "Adaptive cruise control", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" }
+      ],
+      "image_urls": [{ "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Kodiaq/9930/1764935007679/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm" }],
+      "availability_status": "on_sale", "availability_status_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "source_url": "https://www.cardekho.com/skoda/kodiaq/variants.htm", "source_url_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm"
     }
   ]
 }

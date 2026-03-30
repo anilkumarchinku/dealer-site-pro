@@ -541,6 +541,60 @@
             "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/RX/11360/1769081565510/front-left-side-47.jpg"
           }
         ]
+      },
+      {
+        "make": "Lexus",
+        "model": "LX",
+        "variant_name": "LX 500d Overtrail",
+        "pricing": {
+          "ex_showroom_min": 29100000,
+          "ex_showroom_max": 29100000
+        },
+        "powertrain": {
+          "fuel": "Diesel",
+          "transmission": "10-speed Automatic"
+        },
+        "engine_specs": {
+          "displacement": "3346 cc",
+          "power": "304.41 bhp",
+          "torque": "700 Nm",
+          "mileage": "5 kmpl"
+        },
+        "dimensions": {
+          "seating": 5,
+          "boot": "174 L",
+          "ground_clearance": "205 mm",
+          "length": "5100 mm",
+          "width": "1990 mm",
+          "height": "1885 mm"
+        },
+        "key_features": [
+          {
+            "value": "Overtrail off-road package"
+          },
+          {
+            "value": "12.3-inch touchscreen infotainment"
+          },
+          {
+            "value": "Mark Levinson 25-speaker surround sound"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "10 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          },
+          {
+            "value": "Lexus Safety System+"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LX/8657/1769081229491/front-left-side-47.jpg"
+          }
+        ]
       }
     ]
   }

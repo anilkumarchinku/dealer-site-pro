@@ -42,7 +42,7 @@
       "make": "Aston Martin",
       "model": "DBX",
       "variant_name": "DBX707",
-      "ex_showroom_price": 38200001,
+      "ex_showroom_price": 43800000,
       "fuel_type": "Petrol",
       "transmission": "Automatic (9-Speed AT)",
       "drivetrain": "AWD",
@@ -186,6 +186,44 @@
       ],
       "image_urls": [
         { "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Aston-Martin/Vanquish/12432/1769509396621/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2025
+    },
+    {
+      "make": "Aston Martin",
+      "model": "DBX",
+      "variant_name": "V8",
+      "ex_showroom_price": 38200001,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (9-Speed AT)",
+      "drivetrain": "AWD",
+      "engine_displacement_cc": 3982,
+      "power_bhp": 542,
+      "torque_nm": 700,
+      "mileage_kmpl": 8.0,
+      "seating_capacity": 5,
+      "boot_space_l": 632,
+      "ground_clearance_mm": 190,
+      "length_mm": 5039,
+      "width_mm": 1998,
+      "height_mm": 1680,
+      "key_features": [
+        { "value": "4.0L twin-turbo V8 engine" },
+        { "value": "All-wheel drive" },
+        { "value": "10.25-inch touchscreen infotainment" },
+        { "value": "Panoramic glass roof" },
+        { "value": "Adaptive air suspension" }
+      ],
+      "safety_features": [
+        { "value": "10 airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "360-degree surround camera" },
+        { "value": "Blind spot monitoring" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Aston-Martin/DBX/6695/1769509254259/front-left-side-47.jpg" }
       ],
       "availability_status": "on_sale",
       "launch_year": 2025

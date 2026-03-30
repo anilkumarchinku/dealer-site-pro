@@ -2187,6 +2187,216 @@
       ],
       "source_url": "https://www.cardekho.com/land-rover/range-rover",
       "source_url_citation": "https://www.cardekho.com/land-rover/range-rover"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "model": "Range Rover",
+      "model_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "variant_name": "3.0 l Diesel LWB SV",
+      "variant_name_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "ex_showroom_price": 38501000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "engine_displacement_cc": 2997,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "power_bhp": 394,
+      "power_bhp_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "torque_nm": 700,
+      "torque_nm_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "mileage_kmpl": 13.16,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover/Land_Rover_Range_Rover_3.0_l_Diesel_LWB_SV.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+        "boot": 541,
+        "boot_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+        "ground_clearance": 219,
+        "ground_clearance_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+        "length": 5252,
+        "length_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+        "width": 2209,
+        "width_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+        "height": 1870,
+        "height_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+      },
+      "key_features": [
+        {
+          "value": "13.1-inch Pivi Pro Touchscreen",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        },
+        {
+          "value": "Meridian Signature Sound System",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        },
+        {
+          "value": "SV Bespoke Interior",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        },
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        },
+        {
+          "value": "Terrain Response 2",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Range-Rover/11540/1719037980777/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "source_url_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "model": "Range Rover",
+      "model_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "variant_name": "3.0 l LWB Autobiography",
+      "variant_name_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "ex_showroom_price": 25666000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "engine_displacement_cc": 2996,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "power_bhp": 394,
+      "power_bhp_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "torque_nm": 550,
+      "torque_nm_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "mileage_kmpl": 10.42,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover/Land_Rover_Range_Rover_3.0_l_Petrol_LWB_Autobiography.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+        "boot": 541,
+        "boot_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+        "ground_clearance": 219,
+        "ground_clearance_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+        "length": 5252,
+        "length_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+        "width": 2209,
+        "width_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+        "height": 1870,
+        "height_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+      },
+      "key_features": [
+        {
+          "value": "13.1-inch Pivi Pro Touchscreen",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        },
+        {
+          "value": "Meridian Signature Sound System",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        },
+        {
+          "value": "Autobiography Interior Package",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        },
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        },
+        {
+          "value": "Terrain Response 2",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Range-Rover/11540/1719037980777/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "source_url_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+    },
+    {
+      "make": "Land Rover",
+      "make_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "model": "Range Rover",
+      "model_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "variant_name": "4.4 l Petrol LWB SV",
+      "variant_name_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "ex_showroom_price": 42500000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "transmission": "8-Speed Automatic",
+      "transmission_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "drivetrain": "AWD",
+      "drivetrain_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "engine_displacement_cc": 4395,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "power_bhp": 606,
+      "power_bhp_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "torque_nm": 750,
+      "torque_nm_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "mileage_kmpl": 8.0,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Land_Rover_Range_Rover/Land_Rover_Range_Rover_4.4_l_Petrol_LWB_SV.htm",
+      "dimensions": {
+        "seating": 5,
+        "seating_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+        "boot": 541,
+        "boot_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+        "ground_clearance": 219,
+        "ground_clearance_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+        "length": 5252,
+        "length_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+        "width": 2209,
+        "width_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+        "height": 1870,
+        "height_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+      },
+      "key_features": [
+        {
+          "value": "13.1-inch Pivi Pro Touchscreen",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        },
+        {
+          "value": "Meridian Signature Sound System",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        },
+        {
+          "value": "SV Bespoke Interior",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        },
+        {
+          "value": "360° Camera",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        },
+        {
+          "value": "Terrain Response 2",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        }
+      ],
+      "ncap_rating": "5 Star",
+      "ncap_rating_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Range-Rover/11540/1719037980777/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
+        }
+      ],
+      "source_url": "https://www.cardekho.com/land-rover/range-rover/variants.htm",
+      "source_url_citation": "https://www.cardekho.com/land-rover/range-rover/variants.htm"
     }
   ]
 }

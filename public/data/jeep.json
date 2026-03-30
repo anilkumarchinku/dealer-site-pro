@@ -347,6 +347,495 @@
             "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Wrangler/9782/1767782355459/front-left-side-47.jpg?tr=w-230"
           }
         ]
+      },
+      {
+        "make": "Jeep",
+        "model": "Compass",
+        "powertrain": {
+          "fuel": "Diesel",
+          "drivetrain": "FWD",
+          "transmission": "Manual"
+        },
+        "engine_specs": {
+          "displacement": "1956 cc",
+          "power": "168 bhp",
+          "torque": "350 Nm",
+          "mileage": "17.1 kmpl"
+        },
+        "dimensions": {
+          "length": "4405 mm",
+          "width": "1818 mm",
+          "height": "1640 mm"
+        },
+        "key_features": [
+          {
+            "value": "10.1-inch free-standing touchscreen"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Compass/10938/1755774843690/front-left-side-47.jpg?tr=w-230"
+          }
+        ],
+        "variant_name": "Trail Edition",
+        "ex_showroom_price": 2366000,
+        "hyderabad_on_road_price": null
+      },
+      {
+        "make": "Jeep",
+        "model": "Compass",
+        "powertrain": {
+          "fuel": "Diesel",
+          "drivetrain": "FWD",
+          "transmission": "Automatic"
+        },
+        "engine_specs": {
+          "displacement": "1956 cc",
+          "power": "168 bhp",
+          "torque": "350 Nm",
+          "mileage": "14.9 kmpl"
+        },
+        "dimensions": {
+          "length": "4405 mm",
+          "width": "1818 mm",
+          "height": "1640 mm"
+        },
+        "key_features": [
+          {
+            "value": "10.1-inch free-standing touchscreen"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Compass/10938/1755774843690/front-left-side-47.jpg?tr=w-230"
+          }
+        ],
+        "variant_name": "Trail Edition AT",
+        "ex_showroom_price": 2552000,
+        "hyderabad_on_road_price": null
+      },
+      {
+        "make": "Jeep",
+        "model": "Compass",
+        "powertrain": {
+          "fuel": "Diesel",
+          "drivetrain": "FWD",
+          "transmission": "Manual"
+        },
+        "engine_specs": {
+          "displacement": "1956 cc",
+          "power": "168 bhp",
+          "torque": "350 Nm",
+          "mileage": "17.1 kmpl"
+        },
+        "dimensions": {
+          "length": "4405 mm",
+          "width": "1818 mm",
+          "height": "1640 mm"
+        },
+        "key_features": [
+          {
+            "value": "10.1-inch free-standing touchscreen"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Compass/10938/1755774843690/front-left-side-47.jpg?tr=w-230"
+          }
+        ],
+        "variant_name": "2.0 Limited Opt",
+        "ex_showroom_price": 2458000,
+        "hyderabad_on_road_price": null
+      },
+      {
+        "make": "Jeep",
+        "model": "Compass",
+        "powertrain": {
+          "fuel": "Diesel",
+          "drivetrain": "FWD",
+          "transmission": "Manual"
+        },
+        "engine_specs": {
+          "displacement": "1956 cc",
+          "power": "168 bhp",
+          "torque": "350 Nm",
+          "mileage": "17.1 kmpl"
+        },
+        "dimensions": {
+          "length": "4405 mm",
+          "width": "1818 mm",
+          "height": "1640 mm"
+        },
+        "key_features": [
+          {
+            "value": "10.1-inch free-standing touchscreen"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Compass/10938/1755774843690/front-left-side-47.jpg?tr=w-230"
+          }
+        ],
+        "variant_name": "2.0 Longitude Opt",
+        "ex_showroom_price": 2545000,
+        "hyderabad_on_road_price": null
+      },
+      {
+        "make": "Jeep",
+        "model": "Compass",
+        "powertrain": {
+          "fuel": "Diesel",
+          "drivetrain": "FWD",
+          "transmission": "Automatic"
+        },
+        "engine_specs": {
+          "displacement": "1956 cc",
+          "power": "168 bhp",
+          "torque": "350 Nm",
+          "mileage": "14.9 kmpl"
+        },
+        "dimensions": {
+          "length": "4405 mm",
+          "width": "1818 mm",
+          "height": "1640 mm"
+        },
+        "key_features": [
+          {
+            "value": "10.1-inch free-standing touchscreen"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Compass/10938/1755774843690/front-left-side-47.jpg?tr=w-230"
+          }
+        ],
+        "variant_name": "2.0 Limited Opt FWD AT",
+        "ex_showroom_price": 2645000,
+        "hyderabad_on_road_price": null
+      },
+      {
+        "make": "Jeep",
+        "model": "Compass",
+        "powertrain": {
+          "fuel": "Diesel",
+          "drivetrain": "FWD",
+          "transmission": "Manual"
+        },
+        "engine_specs": {
+          "displacement": "1956 cc",
+          "power": "168 bhp",
+          "torque": "350 Nm",
+          "mileage": "17.1 kmpl"
+        },
+        "dimensions": {
+          "length": "4405 mm",
+          "width": "1818 mm",
+          "height": "1640 mm"
+        },
+        "key_features": [
+          {
+            "value": "10.1-inch free-standing touchscreen"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Compass/10938/1755774843690/front-left-side-47.jpg?tr=w-230"
+          }
+        ],
+        "variant_name": "2.0 Model S Opt",
+        "ex_showroom_price": 2645000,
+        "hyderabad_on_road_price": null
+      },
+      {
+        "make": "Jeep",
+        "model": "Compass",
+        "powertrain": {
+          "fuel": "Diesel",
+          "drivetrain": "FWD",
+          "transmission": "Automatic"
+        },
+        "engine_specs": {
+          "displacement": "1956 cc",
+          "power": "168 bhp",
+          "torque": "350 Nm",
+          "mileage": "14.9 kmpl"
+        },
+        "dimensions": {
+          "length": "4405 mm",
+          "width": "1818 mm",
+          "height": "1640 mm"
+        },
+        "key_features": [
+          {
+            "value": "10.1-inch free-standing touchscreen"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Compass/10938/1755774843690/front-left-side-47.jpg?tr=w-230"
+          }
+        ],
+        "variant_name": "2.0 Model S Opt FWD AT",
+        "ex_showroom_price": 2851000,
+        "hyderabad_on_road_price": null
+      },
+      {
+        "make": "Jeep",
+        "model": "Compass",
+        "powertrain": {
+          "fuel": "Diesel",
+          "drivetrain": "AWD",
+          "transmission": "Automatic"
+        },
+        "engine_specs": {
+          "displacement": "1956 cc",
+          "power": "168 bhp",
+          "torque": "350 Nm",
+          "mileage": "14.9 kmpl"
+        },
+        "dimensions": {
+          "length": "4405 mm",
+          "width": "1818 mm",
+          "height": "1640 mm"
+        },
+        "key_features": [
+          {
+            "value": "10.1-inch free-standing touchscreen"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Compass/10938/1755774843690/front-left-side-47.jpg?tr=w-230"
+          }
+        ],
+        "variant_name": "2.0 Model S Opt 4x4 AT",
+        "ex_showroom_price": 3045000,
+        "hyderabad_on_road_price": null
+      },
+      {
+        "make": "Jeep",
+        "model": "Compass",
+        "powertrain": {
+          "fuel": "Diesel",
+          "drivetrain": "FWD",
+          "transmission": "Manual"
+        },
+        "engine_specs": {
+          "displacement": "1956 cc",
+          "power": "168 bhp",
+          "torque": "350 Nm",
+          "mileage": "17.1 kmpl"
+        },
+        "dimensions": {
+          "length": "4405 mm",
+          "width": "1818 mm",
+          "height": "1640 mm"
+        },
+        "key_features": [
+          {
+            "value": "10.1-inch free-standing touchscreen"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Compass/10938/1755774843690/front-left-side-47.jpg?tr=w-230"
+          }
+        ],
+        "variant_name": "Track Edition",
+        "ex_showroom_price": 2670000,
+        "hyderabad_on_road_price": null
+      },
+      {
+        "make": "Jeep",
+        "model": "Compass",
+        "powertrain": {
+          "fuel": "Diesel",
+          "drivetrain": "FWD",
+          "transmission": "Automatic"
+        },
+        "engine_specs": {
+          "displacement": "1956 cc",
+          "power": "168 bhp",
+          "torque": "350 Nm",
+          "mileage": "14.9 kmpl"
+        },
+        "dimensions": {
+          "length": "4405 mm",
+          "width": "1818 mm",
+          "height": "1640 mm"
+        },
+        "key_features": [
+          {
+            "value": "10.1-inch free-standing touchscreen"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Compass/10938/1755774843690/front-left-side-47.jpg?tr=w-230"
+          }
+        ],
+        "variant_name": "Track Edition AT",
+        "ex_showroom_price": 2876000,
+        "hyderabad_on_road_price": null
+      },
+      {
+        "make": "Jeep",
+        "model": "Compass",
+        "powertrain": {
+          "fuel": "Diesel",
+          "drivetrain": "AWD",
+          "transmission": "Automatic"
+        },
+        "engine_specs": {
+          "displacement": "1956 cc",
+          "power": "168 bhp",
+          "torque": "350 Nm",
+          "mileage": "14.9 kmpl"
+        },
+        "dimensions": {
+          "length": "4405 mm",
+          "width": "1818 mm",
+          "height": "1640 mm"
+        },
+        "key_features": [
+          {
+            "value": "10.1-inch free-standing touchscreen"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Compass/10938/1755774843690/front-left-side-47.jpg?tr=w-230"
+          }
+        ],
+        "variant_name": "Track Edition AT 4X4",
+        "ex_showroom_price": 3070000,
+        "hyderabad_on_road_price": null
+      },
+      {
+        "make": "Jeep",
+        "model": "Wrangler",
+        "variant_name": "Willys 41 Special Edition",
+        "ex_showroom_price": 7324000,
+        "hyderabad_on_road_price": null,
+        "powertrain": {
+          "fuel": "Petrol",
+          "transmission": "Automatic",
+          "drivetrain": "4-WD"
+        },
+        "engine_specs": {
+          "displacement": "1995 cc",
+          "power": "268 bhp",
+          "torque": "400 Nm",
+          "mileage": "10.6 kmpl"
+        },
+        "dimensions": {
+          "length": "4867 mm",
+          "width": "1931 mm",
+          "height": "1864 mm"
+        },
+        "key_features": [
+          {
+            "value": "12.3-inch touchscreen"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "6 Airbags"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Wrangler/9782/1767782355459/front-left-side-47.jpg?tr=w-230"
+          }
+        ]
       }
     ]
   }

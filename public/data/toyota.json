@@ -5021,6 +5021,267 @@
         "source_url_citation": "https://www.cardekho.com/toyota/land-cruiser-300",
         "launch_year_citation": "https://www.cardekho.com/toyota/land-cruiser-300"
       }
+    },
+    {
+      "make": "Toyota",
+      "make_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+      "model": "Fortuner Legender",
+      "model_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+      "variant_name": "Fortuner Legender 4x2 AT",
+      "variant_name_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+      "pricing": {
+        "ex_showroom_min": 4217000,
+        "ex_showroom_min_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "ex_showroom_max": 4217000,
+        "ex_showroom_max_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "hyderabad_on_road": null,
+        "hyderabad_on_road_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+      },
+      "powertrain": {
+        "fuel_type": "Diesel",
+        "fuel_type_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "transmission": "Automatic",
+        "transmission_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+      },
+      "engine_specs": {
+        "displacement": 2755,
+        "displacement_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "power": 201.15,
+        "power_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "torque": 500,
+        "torque_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "mileage": 10.52,
+        "mileage_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+      },
+      "dimensions": {
+        "seating": 7,
+        "seating_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "boot": 296,
+        "boot_citation": "https://www.cardekho.com/toyota/fortuner-legender/specs",
+        "ground_clearance": 221,
+        "ground_clearance_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "length": 4795,
+        "length_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "width": 1855,
+        "width_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "height": 1835,
+        "height_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "8-inch touchscreen",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          },
+          {
+            "value": "Sequential LED turn indicators",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          }
+        ],
+        "safety": [
+          {
+            "value": "7 Airbags",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          },
+          {
+            "value": "ABS + EBD",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          },
+          {
+            "value": "Toyota Safety Sense",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          }
+        ]
+      },
+      "media": {
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Fortuner-Legender/11350/front-left-side-47.jpg?tr=w-230",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          }
+        ]
+      },
+      "metadata": {
+        "availability_status": "On Sale",
+        "availability_status_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "source_url": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "source_url_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "launch_year_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+      }
+    },
+    {
+      "make": "Toyota",
+      "make_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+      "model": "Fortuner Legender",
+      "model_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+      "variant_name": "Fortuner Legender 4x4",
+      "variant_name_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+      "pricing": {
+        "ex_showroom_min": 4430000,
+        "ex_showroom_min_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "ex_showroom_max": 4430000,
+        "ex_showroom_max_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "hyderabad_on_road": null,
+        "hyderabad_on_road_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+      },
+      "powertrain": {
+        "fuel_type": "Diesel",
+        "fuel_type_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "transmission": "Manual",
+        "transmission_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+      },
+      "engine_specs": {
+        "displacement": 2755,
+        "displacement_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "power": 201.15,
+        "power_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "torque": 500,
+        "torque_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "mileage": 10.52,
+        "mileage_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+      },
+      "dimensions": {
+        "seating": 7,
+        "seating_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "boot": 296,
+        "boot_citation": "https://www.cardekho.com/toyota/fortuner-legender/specs",
+        "ground_clearance": 221,
+        "ground_clearance_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "length": 4795,
+        "length_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "width": 1855,
+        "width_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "height": 1835,
+        "height_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "8-inch touchscreen",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          },
+          {
+            "value": "Sequential LED turn indicators",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          }
+        ],
+        "safety": [
+          {
+            "value": "7 Airbags",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          },
+          {
+            "value": "ABS + EBD",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          },
+          {
+            "value": "Toyota Safety Sense",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          }
+        ]
+      },
+      "media": {
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Fortuner-Legender/11350/front-left-side-47.jpg?tr=w-230",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          }
+        ]
+      },
+      "metadata": {
+        "availability_status": "On Sale",
+        "availability_status_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "source_url": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "source_url_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "launch_year_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+      }
+    },
+    {
+      "make": "Toyota",
+      "make_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+      "model": "Fortuner Legender",
+      "model_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+      "variant_name": "Fortuner Legender Neo Drive",
+      "variant_name_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+      "pricing": {
+        "ex_showroom_min": 4746000,
+        "ex_showroom_min_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "ex_showroom_max": 4746000,
+        "ex_showroom_max_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "hyderabad_on_road": null,
+        "hyderabad_on_road_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+      },
+      "powertrain": {
+        "fuel_type": "Diesel",
+        "fuel_type_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "transmission": "Automatic",
+        "transmission_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+      },
+      "engine_specs": {
+        "displacement": 2755,
+        "displacement_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "power": 201.15,
+        "power_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "torque": 500,
+        "torque_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "mileage": 10.52,
+        "mileage_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+      },
+      "dimensions": {
+        "seating": 7,
+        "seating_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "boot": 296,
+        "boot_citation": "https://www.cardekho.com/toyota/fortuner-legender/specs",
+        "ground_clearance": 221,
+        "ground_clearance_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "length": 4795,
+        "length_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "width": 1855,
+        "width_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "height": 1835,
+        "height_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+      },
+      "features": {
+        "key": [
+          {
+            "value": "8-inch touchscreen",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          },
+          {
+            "value": "Sequential LED turn indicators",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          }
+        ],
+        "safety": [
+          {
+            "value": "7 Airbags",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          },
+          {
+            "value": "ABS + EBD",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          },
+          {
+            "value": "Toyota Safety Sense",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          }
+        ]
+      },
+      "media": {
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Fortuner-Legender/11350/front-left-side-47.jpg?tr=w-230",
+            "value_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+          }
+        ]
+      },
+      "metadata": {
+        "availability_status": "On Sale",
+        "availability_status_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "source_url": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "source_url_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm",
+        "launch_year_citation": "https://www.cardekho.com/toyota/fortuner-legender/variants.htm"
+      }
     }
   ]
 }

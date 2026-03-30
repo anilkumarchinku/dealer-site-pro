@@ -518,6 +518,71 @@
             "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Lamborghini/Temerario/12475/1769059319922/front-left-side-47.jpg"
           }
         ]
+      },
+      {
+        "make": "Lamborghini",
+        "model": "Urus",
+        "variant_name": "Urus SE Plugin Hybrid",
+        "pricing": {
+          "ex_showroom_min": 45700000,
+          "ex_showroom_max": 45700000
+        },
+        "powertrain": {
+          "fuel": "Petrol (PHEV)",
+          "transmission": "Automatic (8-Speed AT)"
+        },
+        "engine_performance": {
+          "displacement": "3999 cc",
+          "power": "800 bhp",
+          "torque": "950 Nm"
+        },
+        "dimensions": {
+          "seating": 5,
+          "boot": "616 L",
+          "ground_clearance": "170 mm",
+          "length_width_height": "5112 x 2181 x 1638 mm"
+        },
+        "features": {
+          "key_features": [
+            {
+              "value": "4.0L twin-turbo V8 with plug-in hybrid system"
+            },
+            {
+              "value": "All-wheel drive with torque vectoring"
+            },
+            {
+              "value": "12.3-inch touchscreen infotainment"
+            },
+            {
+              "value": "Adaptive air suspension with driving modes"
+            },
+            {
+              "value": "Bang & Olufsen 3D surround sound system"
+            }
+          ],
+          "safety_features": [
+            {
+              "value": "8 airbags"
+            },
+            {
+              "value": "ABS with EBD"
+            },
+            {
+              "value": "ESC"
+            },
+            {
+              "value": "360-degree camera system"
+            },
+            {
+              "value": "ADAS suite"
+            }
+          ]
+        },
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Lamborghini/Urus/10636/1769059431316/front-left-side-47.jpg"
+          }
+        ]
       }
     ]
   }

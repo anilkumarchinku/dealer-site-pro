@@ -739,6 +739,80 @@
       ],
       "availability_status": "on_sale",
       "launch_year": 2025
+    },
+    {
+      "make": "Porsche",
+      "model": "911",
+      "variant_name": "Carrera 4 GTS",
+      "ex_showroom_price": 27500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed PDK)",
+      "engine_displacement_cc": 3600,
+      "power_bhp": 533,
+      "torque_nm": 610,
+      "mileage_kmpl": 10.64,
+      "seating_capacity": 4,
+      "boot_space_l": 132,
+      "ground_clearance_mm": 100,
+      "length_mm": 4573,
+      "width_mm": 1852,
+      "height_mm": 1298,
+      "key_features": [
+        { "value": "All-wheel drive with Porsche Traction Management" },
+        { "value": "Sport Chrono Package" },
+        { "value": "GTS-tuned sport suspension" },
+        { "value": "Bose surround sound system" },
+        { "value": "Sport exhaust system" }
+      ],
+      "safety_features": [
+        { "value": "4 airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Porsche Stability Management (PSM)" },
+        { "value": "TPMS" },
+        { "value": "Rear parking camera" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Porsche/911/11757/1762933836560/front-view-118.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2025
+    },
+    {
+      "make": "Porsche",
+      "model": "Cayenne",
+      "variant_name": "Cayenne GTS",
+      "ex_showroom_price": 19400000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed Tiptronic S)",
+      "engine_displacement_cc": 3996,
+      "power_bhp": 500,
+      "torque_nm": 660,
+      "mileage_kmpl": 10.8,
+      "seating_capacity": 5,
+      "boot_space_l": 772,
+      "ground_clearance_mm": 194,
+      "length_mm": 4930,
+      "width_mm": 1983,
+      "height_mm": 1696,
+      "key_features": [
+        { "value": "4.0L twin-turbo V8 engine" },
+        { "value": "All-wheel drive with Porsche Traction Management" },
+        { "value": "Sport Chrono Package" },
+        { "value": "GTS sport suspension" },
+        { "value": "GTS interior package" }
+      ],
+      "safety_features": [
+        { "value": "6 airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Porsche Stability Management (PSM)" },
+        { "value": "TPMS" },
+        { "value": "360-degree surround-view camera" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Porsche/Cayenne/9903/1769058007478/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2025
     }
   ]
 }

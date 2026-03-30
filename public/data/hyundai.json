@@ -16318,6 +16318,498 @@
       "availability_status_citation": "https://www.cardekho.com/hyundai/i20-n-line",
       "source_url": "https://www.cardekho.com/hyundai/i20-n-line",
       "source_url_citation": "https://www.cardekho.com/hyundai/i20-n-line"
+    },
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "Venue N Line",
+      "model_citation": "https://www.cardekho.com/hyundai/venue-n-line",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "engine_displacement_cc": 998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "power_bhp": 118.41,
+      "power_bhp_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "torque_nm": 172,
+      "torque_nm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "boot_space_l": 375,
+      "boot_space_l_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "ground_clearance_mm": 190,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "length_mm": 3995,
+      "length_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "width_mm": 1800,
+      "width_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "height_mm": 1665,
+      "height_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "key_features": [
+        {
+          "value": "N Line sporty styling",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "N Line sport steering wheel",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "Red accent stitching",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Venue-N-Line/9505/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "source_url": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "source_url_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "variant_name": "N6",
+      "variant_name_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "ex_showroom_price": {
+        "min": 1065400,
+        "min_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+        "max": 1065400,
+        "max_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+      },
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "mileage_kmpl": 18.74,
+      "mileage_kmpl_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+    },
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "Venue N Line",
+      "model_citation": "https://www.cardekho.com/hyundai/venue-n-line",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "engine_displacement_cc": 998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "power_bhp": 118.41,
+      "power_bhp_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "torque_nm": 172,
+      "torque_nm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "boot_space_l": 375,
+      "boot_space_l_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "ground_clearance_mm": 190,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "length_mm": 3995,
+      "length_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "width_mm": 1800,
+      "width_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "height_mm": 1665,
+      "height_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "key_features": [
+        {
+          "value": "N Line sporty styling",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "N Line sport steering wheel",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "Red accent stitching",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Venue-N-Line/9505/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "source_url": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "source_url_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "variant_name": "N6 Dual Tone",
+      "variant_name_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "ex_showroom_price": {
+        "min": 1083400,
+        "min_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+        "max": 1083400,
+        "max_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+      },
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "mileage_kmpl": 18.74,
+      "mileage_kmpl_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+    },
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "Venue N Line",
+      "model_citation": "https://www.cardekho.com/hyundai/venue-n-line",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "engine_displacement_cc": 998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "power_bhp": 118.41,
+      "power_bhp_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "torque_nm": 172,
+      "torque_nm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "boot_space_l": 375,
+      "boot_space_l_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "ground_clearance_mm": 190,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "length_mm": 3995,
+      "length_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "width_mm": 1800,
+      "width_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "height_mm": 1665,
+      "height_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "key_features": [
+        {
+          "value": "N Line sporty styling",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "N Line sport steering wheel",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "Red accent stitching",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Venue-N-Line/9505/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "source_url": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "source_url_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "variant_name": "N6 DCT",
+      "variant_name_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "ex_showroom_price": {
+        "min": 1155400,
+        "min_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+        "max": 1155400,
+        "max_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+      },
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "mileage_kmpl": 20,
+      "mileage_kmpl_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+    },
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "Venue N Line",
+      "model_citation": "https://www.cardekho.com/hyundai/venue-n-line",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "engine_displacement_cc": 998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "power_bhp": 118.41,
+      "power_bhp_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "torque_nm": 172,
+      "torque_nm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "boot_space_l": 375,
+      "boot_space_l_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "ground_clearance_mm": 190,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "length_mm": 3995,
+      "length_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "width_mm": 1800,
+      "width_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "height_mm": 1665,
+      "height_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "key_features": [
+        {
+          "value": "N Line sporty styling",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "N Line sport steering wheel",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "Red accent stitching",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Venue-N-Line/9505/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "source_url": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "source_url_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "variant_name": "N6 DCT Dual Tone",
+      "variant_name_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "ex_showroom_price": {
+        "min": 1173400,
+        "min_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+        "max": 1173400,
+        "max_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+      },
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "mileage_kmpl": 20,
+      "mileage_kmpl_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+    },
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "Venue N Line",
+      "model_citation": "https://www.cardekho.com/hyundai/venue-n-line",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "engine_displacement_cc": 998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "power_bhp": 118.41,
+      "power_bhp_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "torque_nm": 172,
+      "torque_nm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "boot_space_l": 375,
+      "boot_space_l_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "ground_clearance_mm": 190,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "length_mm": 3995,
+      "length_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "width_mm": 1800,
+      "width_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "height_mm": 1665,
+      "height_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "key_features": [
+        {
+          "value": "N Line sporty styling",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "N Line sport steering wheel",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "Red accent stitching",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Venue-N-Line/9505/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "source_url": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "source_url_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "variant_name": "N10 DCT",
+      "variant_name_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "ex_showroom_price": {
+        "min": 1540100,
+        "min_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+        "max": 1540100,
+        "max_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+      },
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "mileage_kmpl": 20,
+      "mileage_kmpl_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+    },
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "Venue N Line",
+      "model_citation": "https://www.cardekho.com/hyundai/venue-n-line",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "engine_displacement_cc": 998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "power_bhp": 118.41,
+      "power_bhp_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "torque_nm": 172,
+      "torque_nm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "boot_space_l": 375,
+      "boot_space_l_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "ground_clearance_mm": 190,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "length_mm": 3995,
+      "length_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "width_mm": 1800,
+      "width_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "height_mm": 1665,
+      "height_mm_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "key_features": [
+        {
+          "value": "N Line sporty styling",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "N Line sport steering wheel",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "Red accent stitching",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Venue-N-Line/9505/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "source_url": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "source_url_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "variant_name": "N10 DCT Dual Tone",
+      "variant_name_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "ex_showroom_price": {
+        "min": 1558100,
+        "min_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+        "max": 1558100,
+        "max_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+      },
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
+      "mileage_kmpl": 20,
+      "mileage_kmpl_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
     }
   ]
 }

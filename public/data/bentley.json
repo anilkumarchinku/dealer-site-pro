@@ -100,6 +100,308 @@
           "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Continental/10473/1769060132454/front-left-side-47.jpg"
         }
       ]
+    },
+    {
+      "make": "Bentley",
+      "model": "Bentayga",
+      "variant_name": "S",
+      "ex_showroom_price_min": 58718776,
+      "ex_showroom_price_max": 58718776,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3993,
+      "power": 542,
+      "torque": 770,
+      "mileage": 8.6,
+      "dimensions_length": 5125,
+      "dimensions_width": 2222,
+      "dimensions_height": 1728,
+      "capacities_seating": 4,
+      "capacities_boot_space": 484,
+      "key_features": [
+        {
+          "value": "Sport-tuned chassis"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Bentayga/7891/1770880450103/front-left-side-47.jpg"
+        }
+      ]
+    },
+    {
+      "make": "Bentley",
+      "model": "Bentayga",
+      "variant_name": "Azure",
+      "ex_showroom_price_min": 63674093,
+      "ex_showroom_price_max": 63674093,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3993,
+      "power": 542,
+      "torque": 770,
+      "mileage": 8.6,
+      "dimensions_length": 5125,
+      "dimensions_width": 2222,
+      "dimensions_height": 1728,
+      "capacities_seating": 4,
+      "capacities_boot_space": 484,
+      "key_features": [
+        {
+          "value": "Azure comfort specification"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Bentayga/7891/1770880450103/front-left-side-47.jpg"
+        }
+      ]
+    },
+    {
+      "make": "Bentley",
+      "model": "Bentayga",
+      "variant_name": "EWB",
+      "ex_showroom_price_min": 56000000,
+      "ex_showroom_price_max": 56000000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3993,
+      "power": 542,
+      "torque": 770,
+      "mileage": 8.6,
+      "dimensions_length": 5325,
+      "dimensions_width": 2222,
+      "dimensions_height": 1728,
+      "capacities_seating": 4,
+      "capacities_boot_space": 484,
+      "key_features": [
+        {
+          "value": "Extended Wheelbase"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Bentayga/7891/1770880450103/front-left-side-47.jpg"
+        }
+      ]
+    },
+    {
+      "make": "Bentley",
+      "model": "Bentayga",
+      "variant_name": "EWB Azure First Edition",
+      "ex_showroom_price_min": 67502600,
+      "ex_showroom_price_max": 67502600,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3993,
+      "power": 542,
+      "torque": 770,
+      "mileage": 8.6,
+      "dimensions_length": 5325,
+      "dimensions_width": 2222,
+      "dimensions_height": 1728,
+      "capacities_seating": 4,
+      "capacities_boot_space": 484,
+      "key_features": [
+        {
+          "value": "EWB Azure First Edition specification"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Bentayga/7891/1770880450103/front-left-side-47.jpg"
+        }
+      ]
+    },
+    {
+      "make": "Bentley",
+      "model": "Flying Spur",
+      "variant_name": "V6 Hybrid",
+      "ex_showroom_price_min": 52500000,
+      "ex_showroom_price_max": 52500000,
+      "fuel_type": "Hybrid",
+      "transmission": "Automatic",
+      "engine_displacement": 2995,
+      "power": 462,
+      "torque": 700,
+      "mileage": 12.5,
+      "dimensions_length": 5316,
+      "dimensions_width": 2013,
+      "dimensions_height": 1484,
+      "capacities_seating": 4,
+      "capacities_boot_space": 467,
+      "ground_clearance": 110,
+      "key_features": [
+        {
+          "value": "V6 Hybrid powertrain"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Flying-Spur/11205/1769061207122/front-left-side-47.jpg"
+        }
+      ]
+    },
+    {
+      "make": "Bentley",
+      "model": "Flying Spur",
+      "variant_name": "Mulliner W12",
+      "ex_showroom_price_min": 76000000,
+      "ex_showroom_price_max": 76000000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 5950,
+      "power": 626,
+      "torque": 900,
+      "mileage": 10.0,
+      "dimensions_length": 5316,
+      "dimensions_width": 2013,
+      "dimensions_height": 1484,
+      "capacities_seating": 4,
+      "capacities_boot_space": 467,
+      "ground_clearance": 110,
+      "key_features": [
+        {
+          "value": "Mulliner handcrafted interior"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Flying-Spur/11205/1769061207122/front-left-side-47.jpg"
+        }
+      ]
+    },
+    {
+      "make": "Bentley",
+      "model": "Continental GT",
+      "variant_name": "V8",
+      "ex_showroom_price_min": 52300000,
+      "ex_showroom_price_max": 52300000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3996,
+      "power": 542,
+      "torque": 770,
+      "mileage": 12.9,
+      "dimensions_length": 4807,
+      "dimensions_width": 2226,
+      "dimensions_height": 1401,
+      "capacities_seating": 4,
+      "capacities_boot_space": 358,
+      "ground_clearance": 152,
+      "key_features": [
+        {
+          "value": "4.0L Twin-Turbo V8 engine"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "4 airbags"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Continental/10473/1769060132454/front-left-side-47.jpg"
+        }
+      ]
+    },
+    {
+      "make": "Bentley",
+      "model": "Continental GT",
+      "variant_name": "Mulliner V8",
+      "ex_showroom_price_min": 69500000,
+      "ex_showroom_price_max": 69500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3996,
+      "power": 542,
+      "torque": 770,
+      "mileage": 12.9,
+      "dimensions_length": 4807,
+      "dimensions_width": 2226,
+      "dimensions_height": 1401,
+      "capacities_seating": 4,
+      "capacities_boot_space": 358,
+      "ground_clearance": 152,
+      "key_features": [
+        {
+          "value": "Mulliner handcrafted specification"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "4 airbags"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Continental/10473/1769060132454/front-left-side-47.jpg"
+        }
+      ]
+    },
+    {
+      "make": "Bentley",
+      "model": "Continental GTC",
+      "variant_name": "Mulliner W12",
+      "ex_showroom_price_min": 84500000,
+      "ex_showroom_price_max": 84500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 5950,
+      "power": 650,
+      "torque": 900,
+      "mileage": 12.9,
+      "dimensions_length": 4807,
+      "dimensions_width": 2226,
+      "dimensions_height": 1401,
+      "capacities_seating": 4,
+      "capacities_boot_space": 358,
+      "ground_clearance": 152,
+      "key_features": [
+        {
+          "value": "W12 Twin-Turbo with Mulliner specification"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "4 airbags"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Continental/10473/1769060132454/front-left-side-47.jpg"
+        }
+      ]
     }
   ]
 }

@@ -269,6 +269,231 @@
             "image_urls": [],
             "availability_status": "upcoming",
             "launch_year": 2026
+        },
+        {
+            "make": "VinFast",
+            "model": "VF 6",
+            "variant_name": "Wind Infinity",
+            "ex_showroom_price_min_inr": 1919000,
+            "ex_showroom_price_max_inr": 1919000,
+            "hyderabad_on_road_price_inr": null,
+            "fuel_type": "Electric",
+            "transmission": "Automatic",
+            "battery_capacity_kwh": 59.6,
+            "range_km": 468,
+            "power_bhp": 201,
+            "torque_nm": 310,
+            "seating_capacity": 5,
+            "boot_space_l": 0,
+            "ground_clearance_mm": 0,
+            "length_mm": 4241,
+            "width_mm": 1834,
+            "height_mm": 1615,
+            "key_features": [
+                {
+                    "value": "Panoramic Sunroof"
+                },
+                {
+                    "value": "Infinity premium audio"
+                },
+                {
+                    "value": "ADAS Level 2"
+                }
+            ],
+            "safety_features": [
+                {
+                    "value": "6 Airbags"
+                },
+                {
+                    "value": "360 Degree Camera"
+                },
+                {
+                    "value": "Blind Spot Monitoring"
+                }
+            ],
+            "image_urls": [],
+            "availability_status": "on_sale",
+            "launch_year": 2025
+        },
+        {
+            "make": "VinFast",
+            "model": "VF 7",
+            "variant_name": "Earth",
+            "ex_showroom_price_min_inr": 2089000,
+            "ex_showroom_price_max_inr": 2089000,
+            "hyderabad_on_road_price_inr": null,
+            "fuel_type": "Electric",
+            "transmission": "Automatic",
+            "battery_capacity_kwh": 59.6,
+            "range_km": 438,
+            "power_bhp": 177,
+            "torque_nm": 250,
+            "seating_capacity": 5,
+            "boot_space_l": 0,
+            "ground_clearance_mm": 0,
+            "length_mm": 4545,
+            "width_mm": 1890,
+            "height_mm": 1635,
+            "key_features": [
+                {
+                    "value": "15-inch Touchscreen"
+                },
+                {
+                    "value": "Dual Zone Climate Control"
+                },
+                {
+                    "value": "Wireless Charging"
+                }
+            ],
+            "safety_features": [
+                {
+                    "value": "8 Airbags"
+                },
+                {
+                    "value": "ADAS Suite"
+                },
+                {
+                    "value": "Traction Control"
+                }
+            ],
+            "image_urls": [],
+            "availability_status": "on_sale",
+            "launch_year": 2025
+        },
+        {
+            "make": "VinFast",
+            "model": "VF 7",
+            "variant_name": "Wind Infinity",
+            "ex_showroom_price_min_inr": 2519000,
+            "ex_showroom_price_max_inr": 2519000,
+            "hyderabad_on_road_price_inr": null,
+            "fuel_type": "Electric",
+            "transmission": "Automatic",
+            "battery_capacity_kwh": 59.6,
+            "range_km": 438,
+            "power_bhp": 177,
+            "torque_nm": 250,
+            "seating_capacity": 5,
+            "boot_space_l": 0,
+            "ground_clearance_mm": 0,
+            "length_mm": 4545,
+            "width_mm": 1890,
+            "height_mm": 1635,
+            "key_features": [
+                {
+                    "value": "15-inch Touchscreen"
+                },
+                {
+                    "value": "Infinity premium audio"
+                },
+                {
+                    "value": "Wireless Charging"
+                }
+            ],
+            "safety_features": [
+                {
+                    "value": "8 Airbags"
+                },
+                {
+                    "value": "ADAS Suite"
+                },
+                {
+                    "value": "Traction Control"
+                }
+            ],
+            "image_urls": [],
+            "availability_status": "on_sale",
+            "launch_year": 2025
+        },
+        {
+            "make": "VinFast",
+            "model": "VF 7",
+            "variant_name": "Sky",
+            "ex_showroom_price_min_inr": 2549000,
+            "ex_showroom_price_max_inr": 2549000,
+            "hyderabad_on_road_price_inr": null,
+            "fuel_type": "Electric",
+            "transmission": "Automatic",
+            "battery_capacity_kwh": 70.8,
+            "range_km": 510,
+            "power_bhp": 349,
+            "torque_nm": 500,
+            "seating_capacity": 5,
+            "boot_space_l": 0,
+            "ground_clearance_mm": 0,
+            "length_mm": 4545,
+            "width_mm": 1890,
+            "height_mm": 1635,
+            "key_features": [
+                {
+                    "value": "All-Wheel Drive (Dual Motor)"
+                },
+                {
+                    "value": "Premium Audio System"
+                },
+                {
+                    "value": "15-inch Touchscreen"
+                }
+            ],
+            "safety_features": [
+                {
+                    "value": "8 Airbags"
+                },
+                {
+                    "value": "Advanced ADAS"
+                },
+                {
+                    "value": "Park Assist"
+                }
+            ],
+            "image_urls": [],
+            "availability_status": "on_sale",
+            "launch_year": 2025
+        },
+        {
+            "make": "VinFast",
+            "model": "VF 7",
+            "variant_name": "Sky Infinity",
+            "ex_showroom_price_min_inr": 2619000,
+            "ex_showroom_price_max_inr": 2619000,
+            "hyderabad_on_road_price_inr": null,
+            "fuel_type": "Electric",
+            "transmission": "Automatic",
+            "battery_capacity_kwh": 70.8,
+            "range_km": 510,
+            "power_bhp": 349,
+            "torque_nm": 500,
+            "seating_capacity": 5,
+            "boot_space_l": 0,
+            "ground_clearance_mm": 0,
+            "length_mm": 4545,
+            "width_mm": 1890,
+            "height_mm": 1635,
+            "key_features": [
+                {
+                    "value": "All-Wheel Drive (Dual Motor)"
+                },
+                {
+                    "value": "Infinity premium audio"
+                },
+                {
+                    "value": "Vented Front Seats"
+                }
+            ],
+            "safety_features": [
+                {
+                    "value": "8 Airbags"
+                },
+                {
+                    "value": "Advanced ADAS"
+                },
+                {
+                    "value": "Park Assist"
+                }
+            ],
+            "image_urls": [],
+            "availability_status": "on_sale",
+            "launch_year": 2025
         }
     ]
 }
