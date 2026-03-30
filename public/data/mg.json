@@ -38,6 +38,12 @@
         {
           "value": "Rear Parking Sensors"
         }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Astor/11413/1762752659543/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/astor"
+        }
       ]
     },
     {
@@ -68,6 +74,12 @@
         {
           "value": "Dual Airbags"
         }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Astor/11413/1762752659543/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/astor"
+        }
       ]
     },
     {
@@ -82,7 +94,13 @@
       "power": "108.49bhp",
       "torque": "144Nm",
       "mileage_range": "15.43 kmpl",
-      "seating_capacity": 5
+      "seating_capacity": 5,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Astor/11413/1762752659543/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/astor"
+        }
+      ]
     },
     {
       "make": "MG",
@@ -96,7 +114,13 @@
       "power": "108.49bhp",
       "torque": "144Nm",
       "mileage_range": "15.43 kmpl",
-      "seating_capacity": 5
+      "seating_capacity": 5,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Astor/11413/1762752659543/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/astor"
+        }
+      ]
     },
     {
       "make": "MG",
@@ -110,7 +134,13 @@
       "power": "108.49bhp",
       "torque": "144Nm",
       "mileage_range": "14.82 kmpl",
-      "seating_capacity": 5
+      "seating_capacity": 5,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Astor/11413/1762752659543/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/astor"
+        }
+      ]
     },
     {
       "make": "MG",
@@ -124,7 +154,13 @@
       "power": "108.49bhp",
       "torque": "144Nm",
       "mileage_range": "14.82 kmpl",
-      "seating_capacity": 5
+      "seating_capacity": 5,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Astor/11413/1762752659543/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/astor"
+        }
+      ]
     },
     {
       "make": "MG",
@@ -138,7 +174,13 @@
       "power": "108.49bhp",
       "torque": "144Nm",
       "mileage_range": "14.82 kmpl",
-      "seating_capacity": 5
+      "seating_capacity": 5,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Astor/11413/1762752659543/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/astor"
+        }
+      ]
     },
     {
       "make": "MG",
@@ -152,7 +194,13 @@
       "power": "108.49bhp",
       "torque": "144Nm",
       "mileage_range": "14.82 kmpl",
-      "seating_capacity": 5
+      "seating_capacity": 5,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Astor/11413/1762752659543/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/astor"
+        }
+      ]
     },
     {
       "make": "MG",
@@ -192,6 +240,12 @@
         {
           "value": "360 View Camera"
         }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Gloster/9294/1755844590260/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/gloster"
+        }
       ]
     },
     {
@@ -202,7 +256,14 @@
       "default_hyderabad_on_road_price": "49,69,000",
       "fuel_type": "Diesel",
       "drivetrain": "2WD",
-      "seating_capacity": 6
+      "seating_capacity": 6,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Gloster/9294/1755844590260/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/gloster"
+        }
+      ],
+      "transmission": "Automatic (8-Speed)"
     },
     {
       "make": "MG",
@@ -212,7 +273,14 @@
       "default_hyderabad_on_road_price": "49,69,000",
       "fuel_type": "Diesel",
       "drivetrain": "2WD",
-      "seating_capacity": 7
+      "seating_capacity": 7,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Gloster/9294/1755844590260/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/gloster"
+        }
+      ],
+      "transmission": "Automatic (8-Speed)"
     },
     {
       "make": "MG",
@@ -222,7 +290,14 @@
       "default_hyderabad_on_road_price": "5,050,000",
       "fuel_type": "Diesel",
       "drivetrain": "2WD",
-      "seating_capacity": 6
+      "seating_capacity": 6,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Gloster/9294/1755844590260/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/gloster"
+        }
+      ],
+      "transmission": "Automatic (8-Speed)"
     },
     {
       "make": "MG",
@@ -232,7 +307,14 @@
       "default_hyderabad_on_road_price": "5,050,000",
       "fuel_type": "Diesel",
       "drivetrain": "2WD",
-      "seating_capacity": 7
+      "seating_capacity": 7,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Gloster/9294/1755844590260/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/gloster"
+        }
+      ],
+      "transmission": "Automatic (8-Speed)"
     },
     {
       "make": "MG",
@@ -244,7 +326,14 @@
       "drivetrain": "4WD",
       "power": "212.55 bhp",
       "torque": "478.5 Nm",
-      "seating_capacity": 6
+      "seating_capacity": 6,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Gloster/9294/1755844590260/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/gloster"
+        }
+      ],
+      "transmission": "Automatic (8-Speed)"
     },
     {
       "make": "MG",
@@ -256,7 +345,14 @@
       "drivetrain": "4WD",
       "power": "212.55 bhp",
       "torque": "478.5 Nm",
-      "seating_capacity": 7
+      "seating_capacity": 7,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Gloster/9294/1755844590260/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/gloster"
+        }
+      ],
+      "transmission": "Automatic (8-Speed)"
     },
     {
       "make": "MG",
@@ -268,7 +364,14 @@
       "drivetrain": "4WD",
       "power": "212.55 bhp",
       "torque": "478.5 Nm",
-      "seating_capacity": 6
+      "seating_capacity": 6,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Gloster/9294/1755844590260/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/gloster"
+        }
+      ],
+      "transmission": "Automatic (8-Speed)"
     },
     {
       "make": "MG",
@@ -280,7 +383,14 @@
       "drivetrain": "4WD",
       "power": "212.55 bhp",
       "torque": "478.5 Nm",
-      "seating_capacity": 7
+      "seating_capacity": 7,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Gloster/9294/1755844590260/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/gloster"
+        }
+      ],
+      "transmission": "Automatic (8-Speed)"
     },
     {
       "make": "MG",
@@ -317,6 +427,12 @@
         {
           "value": "EBD"
         }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Hector/13125/1768813549348/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/hector"
+        }
       ]
     },
     {
@@ -327,7 +443,13 @@
       "default_hyderabad_on_road_price": "17,15,061",
       "fuel_type": "Petrol",
       "transmission": "Manual",
-      "seating_capacity": 5
+      "seating_capacity": 5,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Hector/13125/1768813549348/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/hector"
+        }
+      ]
     },
     {
       "make": "MG",
@@ -337,7 +459,13 @@
       "default_hyderabad_on_road_price": "18,36,742",
       "fuel_type": "Petrol",
       "transmission": "Manual",
-      "seating_capacity": 5
+      "seating_capacity": 5,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Hector/13125/1768813549348/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/hector"
+        }
+      ]
     },
     {
       "make": "MG",
@@ -347,7 +475,13 @@
       "default_hyderabad_on_road_price": "19,94,926",
       "fuel_type": "Petrol",
       "transmission": "Automatic (CVT)",
-      "seating_capacity": 5
+      "seating_capacity": 5,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Hector/13125/1768813549348/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/hector"
+        }
+      ]
     },
     {
       "make": "MG",
@@ -357,7 +491,13 @@
       "default_hyderabad_on_road_price": "20,55,766",
       "fuel_type": "Petrol",
       "transmission": "Manual",
-      "seating_capacity": 5
+      "seating_capacity": 5,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Hector/13125/1768813549348/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/hector"
+        }
+      ]
     },
     {
       "make": "MG",
@@ -367,7 +507,13 @@
       "default_hyderabad_on_road_price": "22,13,950",
       "fuel_type": "Petrol",
       "transmission": "Automatic (CVT)",
-      "seating_capacity": 5
+      "seating_capacity": 5,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Hector/13125/1768813549348/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/hector"
+        }
+      ]
     },
     {
       "make": "MG",
@@ -377,7 +523,13 @@
       "default_hyderabad_on_road_price": "23,23,463",
       "fuel_type": "Petrol",
       "transmission": "Automatic (CVT)",
-      "seating_capacity": 5
+      "seating_capacity": 5,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Hector/13125/1768813549348/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/hector"
+        }
+      ]
     },
     {
       "make": "MG",
@@ -410,6 +562,12 @@
         {
           "value": "ADAS"
         }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Hector-Plus/13137/1765892297285/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/hector-plus"
+        }
       ]
     },
     {
@@ -420,7 +578,13 @@
       "default_hyderabad_on_road_price": "21,17,000 - 23,84,000",
       "fuel_type": "Petrol",
       "transmission": "CVT",
-      "seating_capacity": 7
+      "seating_capacity": 7,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Hector-Plus/13137/1765892297285/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/hector-plus"
+        }
+      ]
     },
     {
       "make": "MG",
@@ -430,7 +594,13 @@
       "default_hyderabad_on_road_price": "21,17,000 - 23,84,000",
       "fuel_type": "Petrol",
       "transmission": "CVT",
-      "seating_capacity": 7
+      "seating_capacity": 7,
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Hector-Plus/13137/1765892297285/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/hector-plus"
+        }
+      ]
     },
     {
       "make": "MG",
@@ -464,6 +634,12 @@
         {
           "value": "TPMS"
         }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Windsor-EV/11848/1755845275936/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/windsor-ev"
+        }
       ]
     },
     {
@@ -474,7 +650,14 @@
       "default_hyderabad_on_road_price": "16,89,449",
       "fuel_type": "Electric",
       "battery_capacity_ev": "38 kWh",
-      "mileage_range": "332 km"
+      "mileage_range": "332 km",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Windsor-EV/11848/1755845275936/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/windsor-ev"
+        }
+      ],
+      "transmission": "Automatic"
     },
     {
       "make": "MG",
@@ -484,7 +667,14 @@
       "default_hyderabad_on_road_price": "17,98,126",
       "fuel_type": "Electric",
       "battery_capacity_ev": "38 kWh",
-      "mileage_range": "332 km"
+      "mileage_range": "332 km",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Windsor-EV/11848/1755845275936/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/windsor-ev"
+        }
+      ],
+      "transmission": "Automatic"
     },
     {
       "make": "MG",
@@ -494,7 +684,14 @@
       "default_hyderabad_on_road_price": "18,86,717",
       "fuel_type": "Electric",
       "battery_capacity_ev": "52.9 kWh",
-      "mileage_range": "449 km"
+      "mileage_range": "449 km",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Windsor-EV/11848/1755845275936/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/windsor-ev"
+        }
+      ],
+      "transmission": "Automatic"
     },
     {
       "make": "MG",
@@ -504,7 +701,14 @@
       "default_hyderabad_on_road_price": "20,02,943",
       "fuel_type": "Electric",
       "battery_capacity_ev": "52.9 kWh",
-      "mileage_range": "449 km"
+      "mileage_range": "449 km",
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Windsor-EV/11848/1755845275936/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/windsor-ev"
+        }
+      ],
+      "transmission": "Automatic"
     },
     {
       "make": "MG",
@@ -523,14 +727,32 @@
       "seating_capacity": 4,
       "ground_clearance": "165 mm",
       "key_features": [
-        { "value": "Compact city-car design" },
-        { "value": "Rear-wheel drive" },
-        { "value": "Connected car technology" }
+        {
+          "value": "Compact city-car design"
+        },
+        {
+          "value": "Rear-wheel drive"
+        },
+        {
+          "value": "Connected car technology"
+        }
       ],
       "safety_features": [
-        { "value": "2 Airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Rear parking sensors" }
+        {
+          "value": "2 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Rear parking sensors"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Comet-EV/11556/1772712400778/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/comet-ev"
+        }
       ]
     },
     {
@@ -550,16 +772,38 @@
       "seating_capacity": 4,
       "ground_clearance": "165 mm",
       "key_features": [
-        { "value": "10.25-inch touchscreen" },
-        { "value": "Wireless Apple CarPlay & Android Auto" },
-        { "value": "Rear-wheel drive" },
-        { "value": "Smart connectivity features" }
+        {
+          "value": "10.25-inch touchscreen"
+        },
+        {
+          "value": "Wireless Apple CarPlay & Android Auto"
+        },
+        {
+          "value": "Rear-wheel drive"
+        },
+        {
+          "value": "Smart connectivity features"
+        }
       ],
       "safety_features": [
-        { "value": "2 Airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Rear parking sensors" },
-        { "value": "Rear parking camera" }
+        {
+          "value": "2 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Rear parking sensors"
+        },
+        {
+          "value": "Rear parking camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Comet-EV/11556/1772712400778/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/comet-ev"
+        }
       ]
     },
     {
@@ -579,17 +823,41 @@
       "seating_capacity": 4,
       "ground_clearance": "165 mm",
       "key_features": [
-        { "value": "10.25-inch touchscreen" },
-        { "value": "Wireless Apple CarPlay & Android Auto" },
-        { "value": "Cruise control" },
-        { "value": "Premium interiors with dual-tone cabin" }
+        {
+          "value": "10.25-inch touchscreen"
+        },
+        {
+          "value": "Wireless Apple CarPlay & Android Auto"
+        },
+        {
+          "value": "Cruise control"
+        },
+        {
+          "value": "Premium interiors with dual-tone cabin"
+        }
       ],
       "safety_features": [
-        { "value": "2 Airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Rear parking sensors" },
-        { "value": "Rear parking camera" },
-        { "value": "Hill start assist" }
+        {
+          "value": "2 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Rear parking sensors"
+        },
+        {
+          "value": "Rear parking camera"
+        },
+        {
+          "value": "Hill start assist"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Comet-EV/11556/1772712400778/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/comet-ev"
+        }
       ]
     },
     {
@@ -610,18 +878,44 @@
       "boot_space": "470 L",
       "ground_clearance": "177 mm",
       "key_features": [
-        { "value": "10.1-inch touchscreen infotainment" },
-        { "value": "Digital instrument cluster" },
-        { "value": "Connected car features with iSMART" },
-        { "value": "PM 2.5 air filter" },
-        { "value": "LED headlamps with DRLs" }
+        {
+          "value": "10.1-inch touchscreen infotainment"
+        },
+        {
+          "value": "Digital instrument cluster"
+        },
+        {
+          "value": "Connected car features with iSMART"
+        },
+        {
+          "value": "PM 2.5 air filter"
+        },
+        {
+          "value": "LED headlamps with DRLs"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "ESC" },
-        { "value": "TPMS" },
-        { "value": "Rear parking camera" }
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "ESC"
+        },
+        {
+          "value": "TPMS"
+        },
+        {
+          "value": "Rear parking camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/ZS-EV/11503/1755845485024/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/zs-ev"
+        }
       ]
     },
     {
@@ -642,20 +936,50 @@
       "boot_space": "470 L",
       "ground_clearance": "177 mm",
       "key_features": [
-        { "value": "10.1-inch touchscreen infotainment" },
-        { "value": "Digital instrument cluster" },
-        { "value": "Panoramic sunroof" },
-        { "value": "ADAS Level 2" },
-        { "value": "JBL premium sound system" },
-        { "value": "Wireless phone charging" }
+        {
+          "value": "10.1-inch touchscreen infotainment"
+        },
+        {
+          "value": "Digital instrument cluster"
+        },
+        {
+          "value": "Panoramic sunroof"
+        },
+        {
+          "value": "ADAS Level 2"
+        },
+        {
+          "value": "JBL premium sound system"
+        },
+        {
+          "value": "Wireless phone charging"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "ESC" },
-        { "value": "TPMS" },
-        { "value": "360-degree camera" },
-        { "value": "ADAS (Lane Keep Assist, Adaptive Cruise Control)" }
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "ESC"
+        },
+        {
+          "value": "TPMS"
+        },
+        {
+          "value": "360-degree camera"
+        },
+        {
+          "value": "ADAS (Lane Keep Assist, Adaptive Cruise Control)"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/ZS-EV/11503/1755845485024/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/zs-ev"
+        }
       ]
     },
     {
@@ -676,20 +1000,50 @@
       "boot_space": "390 L",
       "ground_clearance": "163 mm",
       "key_features": [
-        { "value": "90 kWh battery pack" },
-        { "value": "Second-row captain seats with massage and 16-way adjustment" },
-        { "value": "Dual panoramic sunroof" },
-        { "value": "Entertainment screens for rear passengers" },
-        { "value": "Premium 7-seater MPV" },
-        { "value": "Over-the-air updates" }
+        {
+          "value": "90 kWh battery pack"
+        },
+        {
+          "value": "Second-row captain seats with massage and 16-way adjustment"
+        },
+        {
+          "value": "Dual panoramic sunroof"
+        },
+        {
+          "value": "Entertainment screens for rear passengers"
+        },
+        {
+          "value": "Premium 7-seater MPV"
+        },
+        {
+          "value": "Over-the-air updates"
+        }
       ],
       "safety_features": [
-        { "value": "7 Airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "ESC" },
-        { "value": "TPMS" },
-        { "value": "360-degree camera" },
-        { "value": "ADAS suite" }
+        {
+          "value": "7 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "ESC"
+        },
+        {
+          "value": "TPMS"
+        },
+        {
+          "value": "360-degree camera"
+        },
+        {
+          "value": "ADAS suite"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/M9/12270/1758802685718/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/m9"
+        }
       ]
     },
     {
@@ -709,19 +1063,47 @@
       "seating_capacity": 2,
       "ground_clearance": "120 mm",
       "key_features": [
-        { "value": "Dual electric motors with AWD" },
-        { "value": "Electrically operated scissor doors" },
-        { "value": "Fighter-jet cockpit design" },
-        { "value": "77 kWh battery with 580 km range" },
-        { "value": "Convertible soft-top" },
-        { "value": "0-100 km/h in 3.2 seconds" }
+        {
+          "value": "Dual electric motors with AWD"
+        },
+        {
+          "value": "Electrically operated scissor doors"
+        },
+        {
+          "value": "Fighter-jet cockpit design"
+        },
+        {
+          "value": "77 kWh battery with 580 km range"
+        },
+        {
+          "value": "Convertible soft-top"
+        },
+        {
+          "value": "0-100 km/h in 3.2 seconds"
+        }
       ],
       "safety_features": [
-        { "value": "4 Airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Electronic Stability Control" },
-        { "value": "Traction control" },
-        { "value": "Rear parking camera" }
+        {
+          "value": "4 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "Traction control"
+        },
+        {
+          "value": "Rear parking camera"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/MG/Cyberster/12221/1758802623039/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mg/cyberster"
+        }
       ]
     }
   ]
