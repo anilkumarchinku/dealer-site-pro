@@ -129,8 +129,8 @@ export async function POST(request: NextRequest) {
         }
     } catch (err) {
         console.error('[Razorpay Webhook] Error processing event:', eventType, err)
-        // Return 200 to prevent Razorpay from retrying — log the error separately
-        return NextResponse.json({ received: true, error: 'Processing error' }, { status: 200 })
+        // Return 500 so Razorpay retries the event — prevents silent data loss
+        return NextResponse.json({ received: true, error: 'Processing error' }, { status: 500 })
     }
 
     return NextResponse.json({ received: true })

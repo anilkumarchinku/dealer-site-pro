@@ -17,6 +17,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { requireAuth } from '@/lib/supabase-server'
 
 // Normalise RC: uppercase, remove spaces/hyphens
 function normaliseRC(rc: string): string {
@@ -80,6 +81,10 @@ async function rapidorLookup(rc: string): Promise<Record<string, unknown>> {
 }
 
 export async function POST(request: NextRequest) {
+    // Auth: only authenticated dealers can perform RC lookups
+    const { errorResponse } = await requireAuth()
+    if (errorResponse) return errorResponse
+
     const body = await request.json().catch(() => null)
     if (!body?.rc) {
         return NextResponse.json({ error: 'RC number is required' }, { status: 400 })

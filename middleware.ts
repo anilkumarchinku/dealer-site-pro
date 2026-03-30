@@ -184,8 +184,8 @@ export async function middleware(request: NextRequest) {
     // Vercel Edge we fail-open (allow request through) rather than crashing.
     let isLoggedIn = false
     try {
-        const { data: { session } } = await supabase.auth.getSession()
-        isLoggedIn = !!session
+        const { data: { user } } = await supabase.auth.getUser()
+        isLoggedIn = !!user
     } catch {
         // Supabase unreachable — block protected routes rather than fail-open
         const isProtectedOnFail = PROTECTED_PREFIXES.some(p => pathname.startsWith(p))

@@ -135,6 +135,28 @@ export const twLeadSchema = z.object({
 
 export type TwLeadInput = z.infer<typeof twLeadSchema>
 
+// ── Three-wheeler lead schema ────────────────────────────────────
+
+export const THW_LEAD_TYPES = [
+    'test_drive', 'best_price', 'finance', 'exchange', 'callback', 'inspection', 'offer', 'service', 'parts', 'demo'
+] as const
+
+export const thwLeadSchema = z.object({
+    dealer_id:         uuid,
+    lead_type:         z.enum(THW_LEAD_TYPES),
+    name:              personName,
+    phone:             indianPhone,
+    email:             optionalEmail,
+    vehicle_id:        z.string().optional().nullable(),
+    vehicle_name:      z.string().max(200).optional().nullable(),
+    used_vehicle_id:   z.string().optional().nullable(),
+    preferred_date:    dateString.optional().nullable(),
+    message:           message,
+    offer_price_paise: z.number().int().min(0).optional().nullable(),
+})
+
+export type ThwLeadInput = z.infer<typeof thwLeadSchema>
+
 // ── Two-wheeler service booking schema ──────────────────────────
 
 export const TW_SERVICE_TYPES = [

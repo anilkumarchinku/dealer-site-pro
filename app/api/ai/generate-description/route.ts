@@ -19,8 +19,13 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { requireAuth } from '@/lib/supabase-server'
 
 export async function POST(request: NextRequest) {
+    // Auth: only authenticated dealers can generate descriptions
+    const { errorResponse } = await requireAuth()
+    if (errorResponse) return errorResponse
+
     const apiKey = process.env.ANTHROPIC_API_KEY
     if (!apiKey) {
         return NextResponse.json({ error: 'AI description generation not configured (ANTHROPIC_API_KEY missing)' }, { status: 503 })

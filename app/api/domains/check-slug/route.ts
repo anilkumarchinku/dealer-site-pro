@@ -1,12 +1,18 @@
 import { NextResponse } from 'next/server'
 import { isSlugAvailable } from '@/lib/services/domain-service'
 import { validateSlug, generateSlug } from '@/lib/utils/slug'
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 /**
  * GET /api/domains/check-slug?name=ABC Motors
  * Check if a slug is available and return the generated slug
+ * Public (needed during onboarding) but rate-limited to prevent enumeration
  */
 export async function GET(request: Request) {
+    // Rate limit: 10 slug checks per IP per minute
+    const rateLimit = await rateLimitOrNull('check_slug', request, 10, 60 * 1000)
+    if (rateLimit) return rateLimit
+
     try {
         const { searchParams } = new URL(request.url)
         const businessName = searchParams.get('name')

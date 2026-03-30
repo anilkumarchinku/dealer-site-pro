@@ -12,6 +12,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
+import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
 const GOOGLE_API_KEY = process.env.GOOGLE_PLACES_API_KEY
 
@@ -68,6 +69,10 @@ async function fetchGoogleReviews(placeId: string): Promise<GoogleReview[]> {
 
 // ── POST handler ──────────────────────────────────────────────────────────────
 export async function POST(request: NextRequest) {
+    // Auth: only authenticated dealers can trigger Google sync
+    const { user, supabase: authClient, errorResponse } = await requireAuth()
+    if (errorResponse) return errorResponse
+
     if (!GOOGLE_API_KEY) {
         return NextResponse.json(
             { error: 'Google Places API key not configured on this server.' },
@@ -81,6 +86,11 @@ export async function POST(request: NextRequest) {
     }
 
     const { dealer_id, maps_url } = body as { dealer_id: string; maps_url?: string }
+
+    // Verify the caller owns this dealer
+    const { errorResponse: ownershipError } = await requireDealerOwnership(authClient, user.id, dealer_id)
+    if (ownershipError) return ownershipError
+
     const supabase = getSupabase()
 
     // ── 1. Verify dealer & get existing place_id ──────────────────────────────

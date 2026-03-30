@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { verifyPaymentSignature } from '@/lib/services/payment-service'
-import { createRouteClient } from '@/lib/supabase-server'
+import { createRouteClient, requireAuth } from '@/lib/supabase-server'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 import { logger } from '@/lib/utils/logger'
 
@@ -26,6 +26,10 @@ interface PaymentVerifyResponse {
  * This header should be a unique UUID for each payment verification
  */
 export async function POST(request: NextRequest): Promise<NextResponse<PaymentVerifyResponse>> {
+    // Auth: only authenticated users can verify payments
+    const { errorResponse: authError } = await requireAuth()
+    if (authError) return authError as NextResponse<PaymentVerifyResponse>
+
     // Rate limit: max 10 payment verifications per IP per hour
     const rateLimit = await rateLimitOrNull('payment_verify', request, 10, 60 * 60 * 1000)
     if (rateLimit) return rateLimit as NextResponse<PaymentVerifyResponse>

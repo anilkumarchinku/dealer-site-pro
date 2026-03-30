@@ -5,6 +5,7 @@ import { createThreeWheelerLead, getThreeWheelerLeads, updateThreeWheelerLeadSta
 import { forwardLeadToCyepro } from '@/lib/services/cyepro-service'
 import { createClient } from '@supabase/supabase-js'
 import type { ThreeWheelerLeadStatus } from '@/lib/types/three-wheeler'
+import { thwLeadSchema, formatZodErrors } from '@/lib/validations/schemas'
 
 function getSupabase() {
     return createClient(
@@ -18,11 +19,34 @@ export async function POST(request: NextRequest) {
     if (rateLimit) return rateLimit
 
     const body = await request.json().catch(() => null)
-    if (!body || !body.dealer_id || !body.name || !body.phone || !body.lead_type) {
-        return NextResponse.json({ error: 'dealer_id, name, phone and lead_type are required' }, { status: 400 })
+    if (!body) {
+        return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })
     }
 
-    const result = await createThreeWheelerLead({ status: 'new', ...body })
+    // ── Validate with Zod ───────────────────────────────────────────────
+    const parsed = thwLeadSchema.safeParse(body)
+    if (!parsed.success) {
+        return NextResponse.json(
+            { error: formatZodErrors(parsed.error) },
+            { status: 400 }
+        )
+    }
+    const { dealer_id, lead_type, name, phone, email, vehicle_id, vehicle_name, used_vehicle_id, preferred_date, message, offer_price_paise } = parsed.data
+
+    const result = await createThreeWheelerLead({
+        dealer_id,
+        vehicle_id:        vehicle_id        ?? null,
+        used_vehicle_id:   used_vehicle_id   ?? null,
+        lead_type,
+        name,
+        phone,
+        email:             email             ?? null,
+        preferred_date:    preferred_date    ?? null,
+        message:           message           ?? null,
+        offer_price_paise: offer_price_paise ?? null,
+        fleet_size:        null,
+        status:            'new',
+    })
     if (!result.success) return NextResponse.json({ error: result.error }, { status: 400 })
 
     // ── Forward to Cyepro CRM if dealer has API key (fire-and-forget) ─────────
@@ -30,17 +54,17 @@ export async function POST(request: NextRequest) {
     const { data: dealer } = await supabase
         .from('dealers')
         .select('cyepro_api_key')
-        .eq('id', body.dealer_id)
+        .eq('id', dealer_id)
         .single()
 
     if (dealer?.cyepro_api_key) {
         forwardLeadToCyepro(dealer.cyepro_api_key, {
-            customerName:  body.name,
-            customerPhone: body.phone,
-            customerEmail: body.email      ?? undefined,
-            vehicleName:   body.vehicle_name ?? undefined,
-            message:       body.message    ?? undefined,
-            leadSource:    body.lead_type,
+            customerName:  name,
+            customerPhone: phone,
+            customerEmail: email           ?? undefined,
+            vehicleName:   vehicle_name    ?? undefined,
+            message:       message         ?? undefined,
+            leadSource:    lead_type,
         }).catch(() => { /* already logged inside */ })
     }
 

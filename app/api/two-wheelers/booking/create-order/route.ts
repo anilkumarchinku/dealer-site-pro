@@ -41,8 +41,14 @@ export async function POST(request: NextRequest) {
         )
     }
 
-    if (booking_amount_paise < 100) {
-        return NextResponse.json({ error: 'Minimum booking amount is ₹1' }, { status: 400 })
+    // Server-side price bounds to prevent manipulation
+    const MIN_BOOKING_PAISE =   50_000    // ₹500 minimum booking token
+    const MAX_BOOKING_PAISE = 10_00_000   // ₹10,000 maximum booking token
+    if (booking_amount_paise < MIN_BOOKING_PAISE || booking_amount_paise > MAX_BOOKING_PAISE) {
+        return NextResponse.json(
+            { error: `Booking amount must be between ₹500 and ₹10,000` },
+            { status: 400 }
+        )
     }
 
     // Create booking record (idempotent — unique constraint on idempotency_key)

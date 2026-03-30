@@ -50,8 +50,7 @@ const nextConfig: NextConfig = {
                 value: 'max-age=63072000; includeSubDomains',
             },
             {
-                // Report-Only mode — observes violations without blocking. Switch to Content-Security-Policy after testing.
-                key: 'Content-Security-Policy-Report-Only',
+                key: 'Content-Security-Policy',
                 value: [
                     "default-src 'self'",
                     "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://checkout.razorpay.com",

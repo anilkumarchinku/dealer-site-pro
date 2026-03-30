@@ -40,14 +40,34 @@ export async function GET(request: Request) {
     const supabase = getSupabase()
 
     // Look up by custom_domain in dealer_domains table
-    // Use separate .eq() calls to avoid PostgREST filter injection via .or() string interpolation
-    const { data, error } = await supabase
+    // Use separate queries to avoid PostgREST filter injection via .or() string interpolation
+    const selectFields = 'dealer_id, subdomain, custom_domain, status, site_slug, dealers(slug, id)'
+    let data = null
+    let error = null
+
+    // Try custom_domain first
+    const { data: d1 } = await supabase
         .from('dealer_domains')
-        .select('dealer_id, subdomain, custom_domain, status, site_slug, dealers(slug, id)')
-        .or(`custom_domain.eq.${domain},subdomain_url.eq.${domain}`)
+        .select(selectFields)
+        .eq('custom_domain', domain)
         .in('status', ['active', 'pending'])
         .limit(1)
         .single()
+
+    if (d1) {
+        data = d1
+    } else {
+        // Fallback: try subdomain_url
+        const { data: d2, error: e2 } = await supabase
+            .from('dealer_domains')
+            .select(selectFields)
+            .eq('subdomain_url', domain)
+            .in('status', ['active', 'pending'])
+            .limit(1)
+            .single()
+        data = d2
+        error = e2
+    }
 
     if (error || !data) {
         // Try a broader search — also check dealers.slug directly
