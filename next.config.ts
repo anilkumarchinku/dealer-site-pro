@@ -35,6 +35,11 @@ const nextConfig: NextConfig = {
                 protocol: 'https',
                 hostname: 'storage.googleapis.com',
             },
+            // CardDekho CDN (car catalog images)
+            {
+                protocol: 'https',
+                hostname: 'stimg.cardekho.com',
+            },
         ],
     },
     // Security headers
