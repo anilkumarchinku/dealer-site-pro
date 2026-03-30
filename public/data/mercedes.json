@@ -6502,6 +6502,306 @@
           "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-CLE-53/12771/1763468198459/front-left-side-47.jpg?tr=w-230"
         }
       ]
+    },
+    "58": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG GLE 63 S",
+      "variant_name": "AMG GLE 63 S 4MATIC+ Coupe",
+      "ex_showroom_price_min": 231000000,
+      "ex_showroom_price_max": 231000000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3982,
+      "power": 603,
+      "torque": 850,
+      "dimensions_seating": 5,
+      "dimensions_boot": 630,
+      "dimensions_ground_clearance": 172,
+      "dimensions_length": 4939,
+      "dimensions_width": 2019,
+      "dimensions_height": 1794,
+      "key_features": [
+        {
+          "value": "AMG Performance 4MATIC+"
+        },
+        {
+          "value": "AMG DYNAMIC SELECT"
+        },
+        {
+          "value": "AMG Active Ride Control"
+        },
+        {
+          "value": "MBUX Infotainment System"
+        },
+        {
+          "value": "Burmester Surround Sound"
+        },
+        {
+          "value": "Panoramic Sunroof"
+        },
+        {
+          "value": "AMG Sport Exhaust"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "9 Airbags"
+        },
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "Active Brake Assist"
+        },
+        {
+          "value": "TPMS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-GLE-63-S/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "59": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG GT R",
+      "variant_name": "AMG GT R",
+      "ex_showroom_price_min": 247500000,
+      "ex_showroom_price_max": 247500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3982,
+      "power": 577,
+      "torque": 700,
+      "dimensions_seating": 2,
+      "dimensions_boot": 214,
+      "dimensions_ground_clearance": 120,
+      "dimensions_length": 4551,
+      "dimensions_width": 1939,
+      "dimensions_height": 1291,
+      "key_features": [
+        {
+          "value": "AMG 4.0L V8 Biturbo Engine"
+        },
+        {
+          "value": "AMG SPEEDSHIFT DCT 7-speed"
+        },
+        {
+          "value": "AMG Ride Control+ Suspension"
+        },
+        {
+          "value": "AMG Track Pace"
+        },
+        {
+          "value": "Aerodynamic Active Elements"
+        },
+        {
+          "value": "AMG Carbon Fibre Package"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "AMG 9-stage traction control"
+        },
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "Electronic Stability Program"
+        },
+        {
+          "value": "TPMS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-GT-R/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "60": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG A 45 S",
+      "variant_name": "AMG A 45 S 4MATIC+",
+      "ex_showroom_price_min": 9480000,
+      "ex_showroom_price_max": 9480000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 1991,
+      "power": 415.71,
+      "torque": 500,
+      "mileage_range": 10,
+      "dimensions_seating": 5,
+      "dimensions_boot": 370,
+      "dimensions_ground_clearance": 130,
+      "dimensions_length": 4546,
+      "dimensions_width": 1992,
+      "dimensions_height": 1412,
+      "key_features": [
+        {
+          "value": "AMG 2.0L 4-cylinder turbo engine"
+        },
+        {
+          "value": "AMG SPEEDSHIFT DCT 8G"
+        },
+        {
+          "value": "AMG Performance 4MATIC AWD"
+        },
+        {
+          "value": "AMG Track Pace app"
+        },
+        {
+          "value": "MBUX infotainment system"
+        },
+        {
+          "value": "AMG Performance steering wheel"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Program"
+        },
+        {
+          "value": "TPMS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-A-45-S/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "61": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG GLA 35",
+      "variant_name": "AMG GLA 35 4MATIC",
+      "ex_showroom_price_min": 6007000,
+      "ex_showroom_price_max": 6007000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 1991,
+      "power": 301.73,
+      "torque": 400,
+      "mileage_range": 11,
+      "dimensions_seating": 5,
+      "dimensions_boot": 435,
+      "dimensions_ground_clearance": 170,
+      "dimensions_length": 4436,
+      "dimensions_width": 1849,
+      "dimensions_height": 1588,
+      "key_features": [
+        {
+          "value": "AMG 2.0L 4-cylinder turbo engine"
+        },
+        {
+          "value": "AMG SPEEDSHIFT DCT 8G"
+        },
+        {
+          "value": "AMG Performance 4MATIC AWD"
+        },
+        {
+          "value": "MBUX infotainment system"
+        },
+        {
+          "value": "AMG Sport exhaust system"
+        },
+        {
+          "value": "Matrix LED headlights"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "7 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Program"
+        },
+        {
+          "value": "Active Brake Assist"
+        },
+        {
+          "value": "TPMS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-GLA-35/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "62": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG E 63 S",
+      "variant_name": "AMG E 63 S 4MATIC+",
+      "ex_showroom_price_min": 19000000,
+      "ex_showroom_price_max": 19000000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 3982,
+      "power": 612,
+      "torque": 850,
+      "mileage_range": 8,
+      "dimensions_seating": 5,
+      "dimensions_boot": 540,
+      "dimensions_ground_clearance": 120,
+      "dimensions_length": 4949,
+      "dimensions_width": 2044,
+      "dimensions_height": 1468,
+      "key_features": [
+        {
+          "value": "AMG 4.0L V8 biturbo engine"
+        },
+        {
+          "value": "AMG SPEEDSHIFT MCT 9G"
+        },
+        {
+          "value": "AMG Performance 4MATIC+ AWD"
+        },
+        {
+          "value": "AMG Ride Control+ air suspension"
+        },
+        {
+          "value": "AMG Track Pace app"
+        },
+        {
+          "value": "MBUX infotainment with AMG menu"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "9 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Program"
+        },
+        {
+          "value": "Active Brake Assist"
+        },
+        {
+          "value": "TPMS"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-E63-S/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
     }
   }
 }

@@ -2834,6 +2834,564 @@
       "availability_status_citation": "https://www.cardekho.com/bmw/3-series",
       "source_url": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
       "dimensions": {}
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "model": "8 Series Gran Coupe",
+      "model_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "variant_name": "840i M Sport",
+      "variant_name_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "ex_showroom_price_min_inr": 12900000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "engine_displacement_cc": 2998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "power_bhp": 333.56,
+      "power_bhp_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "torque_nm": 500,
+      "torque_nm_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "mileage_kmpl": 12.41,
+      "mileage_kmpl_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "Multi-function Steering Wheel",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "Ambient Lighting",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "Head-Up Display",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "Gesture Control",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/8-Series-Gran-Coupe/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "source_url": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "dimensions": {}
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "model": "8 Series Gran Coupe",
+      "model_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "variant_name": "M850i xDrive",
+      "variant_name_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "ex_showroom_price_min_inr": 16900000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "engine_displacement_cc": 4395,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "power_bhp": 523.13,
+      "power_bhp_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "torque_nm": 750,
+      "torque_nm_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "mileage_kmpl": 10.68,
+      "mileage_kmpl_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "Multi-function Steering Wheel",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "Ambient Lighting",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "Head-Up Display",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "xDrive All-Wheel Drive",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/8-Series-Gran-Coupe/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "source_url": "https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm",
+      "dimensions": {}
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "model": "M4 Competition",
+      "model_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "variant_name": "xDrive",
+      "variant_name_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "ex_showroom_price_min_inr": 15200000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "engine_displacement_cc": 2993,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "power_bhp": 503,
+      "power_bhp_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "torque_nm": 650,
+      "torque_nm_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "mileage_kmpl": 9.7,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "seating_capacity": 4,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "boot_space_l": 440,
+      "boot_space_l_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "length_mm": 4794,
+      "length_mm_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "width_mm": 1887,
+      "width_mm_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "height_mm": 1393,
+      "height_mm_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
+        },
+        {
+          "value": "Brake Assist",
+          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
+        },
+        {
+          "value": "HUD",
+          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
+        },
+        {
+          "value": "Hill Assist",
+          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/M4-Competition/11702/1762778618869/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "source_url": "https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm",
+      "dimensions": {}
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/bmw/m8/variants.htm",
+      "model": "M8 Coupe Competition",
+      "model_citation": "https://www.cardekho.com/bmw/m8/variants.htm",
+      "variant_name": "Coupe Competition 50 Jahre",
+      "variant_name_citation": "https://www.cardekho.com/bmw/m8/variants.htm",
+      "ex_showroom_price_min_inr": 23840000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/bmw/m8/variants.htm",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/m8/variants.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/bmw/m8/variants.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/bmw/m8/variants.htm",
+      "engine_displacement_cc": 4395,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/bmw/m8/variants.htm",
+      "power_bhp": 616.87,
+      "power_bhp_citation": "https://www.cardekho.com/bmw/m8/variants.htm",
+      "torque_nm": 750,
+      "torque_nm_citation": "https://www.cardekho.com/bmw/m8/variants.htm",
+      "mileage_kmpl": 8.7,
+      "mileage_kmpl_citation": "https://www.cardekho.com/bmw/m8/variants.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/bmw/m8/variants.htm",
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/m8/variants.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/m8/variants.htm",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/bmw/m8/variants.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/bmw/m8/variants.htm"
+        },
+        {
+          "value": "Multi-function Steering Wheel",
+          "value_citation": "https://www.cardekho.com/bmw/m8/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/bmw/m8/variants.htm"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/bmw/m8/variants.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/bmw/m8/variants.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/bmw/m8/variants.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/M8-Coupe-Competition/10583/1762779385889/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/bmw/m8/variants.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/bmw/m8/variants.htm",
+      "source_url": "https://www.cardekho.com/bmw/m8/variants.htm",
+      "dimensions": {}
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "model": "M340i",
+      "model_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "variant_name": "50 Jahre Edition",
+      "variant_name_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "ex_showroom_price_min_inr": 7285000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "engine_displacement_cc": 2998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "power_bhp": 368.78,
+      "power_bhp_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "torque_nm": 500,
+      "torque_nm_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "mileage_kmpl": 13.02,
+      "mileage_kmpl_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/bmw/3-series/variants.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/bmw/3-series/variants.htm"
+        },
+        {
+          "value": "Multi-function Steering Wheel",
+          "value_citation": "https://www.cardekho.com/bmw/3-series/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/bmw/3-series/variants.htm"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/bmw/3-series/variants.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/bmw/3-series/variants.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/bmw/3-series/variants.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/3-Series-Gran-Limousine/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/bmw/3-series/variants.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "source_url": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "dimensions": {}
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "model": "M340i",
+      "model_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "variant_name": "xDrive",
+      "variant_name_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "ex_showroom_price_min_inr": 7540000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "engine_displacement_cc": 2998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "power_bhp": 368.78,
+      "power_bhp_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "torque_nm": 500,
+      "torque_nm_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "mileage_kmpl": 13.02,
+      "mileage_kmpl_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/bmw/3-series/variants.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/bmw/3-series/variants.htm"
+        },
+        {
+          "value": "Multi-function Steering Wheel",
+          "value_citation": "https://www.cardekho.com/bmw/3-series/variants.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/bmw/3-series/variants.htm"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/bmw/3-series/variants.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/bmw/3-series/variants.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/bmw/3-series/variants.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/3-Series-Gran-Limousine/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/bmw/3-series/variants.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "source_url": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "dimensions": {}
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "model": "X5 M Competition",
+      "model_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "variant_name": "Competition",
+      "variant_name_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "ex_showroom_price_min_inr": 20790000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "engine_displacement_cc": 4395,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "power_bhp": 617,
+      "power_bhp_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "torque_nm": 750,
+      "torque_nm_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "mileage_kmpl": 8.29,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "boot_space_l_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "width_mm": 2218,
+      "width_mm_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "height_mm": 1748,
+      "height_mm_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm"
+        },
+        {
+          "value": "Alloy Wheels",
+          "value_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm"
+        },
+        {
+          "value": "Cruise Control",
+          "value_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm"
+        },
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm"
+        },
+        {
+          "value": "Rear AC Vents",
+          "value_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/X5-M-Competition/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "source_url": "https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm",
+      "dimensions": {}
     }
   ]
 }

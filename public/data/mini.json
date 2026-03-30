@@ -1100,6 +1100,210 @@
             "value_citation": "https://www.cardekho.com/mini/cooper-convertible/specs"
           }
         ]
+      },
+      {
+        "variant_name": "Cooper SE Electric Standard",
+        "variant_name_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+        "ex_showroom_price": 5300000,
+        "ex_showroom_price_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+        "transmission": "Automatic (Single-Speed)",
+        "transmission_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+        "engine_displacement_or_battery_capacity": "32.6 kWh",
+        "engine_displacement_or_battery_capacity_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+        "power": "184 bhp",
+        "power_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+        "torque": "270 Nm",
+        "torque_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+        "mileage_or_range": "270 km (WLTP)",
+        "mileage_or_range_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+        "dimensions": {
+          "length": "3850 mm",
+          "length_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+          "width": "1727 mm",
+          "width_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+          "height": "1432 mm",
+          "height_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+        },
+        "key_features": [
+          {
+            "value": "Adaptive LED Headlights",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Wireless Charging",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Cruise Control",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Ambient Lighting",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Comfort Access System",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "One-Pedal Driving",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "4 Airbags",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "ESC",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Driving Assistant",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Parking Assistant",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mini/Cooper-SE/front-left-side-47.jpg",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          }
+        ]
+      },
+      {
+        "variant_name": "Cooper SE Electric Premium",
+        "variant_name_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+        "ex_showroom_price": 5500000,
+        "ex_showroom_price_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+        "fuel_type": "Electric",
+        "fuel_type_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+        "transmission": "Automatic (Single-Speed)",
+        "transmission_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+        "engine_displacement_or_battery_capacity": "32.6 kWh",
+        "engine_displacement_or_battery_capacity_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+        "power": "184 bhp",
+        "power_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+        "torque": "270 Nm",
+        "torque_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+        "mileage_or_range": "270 km (WLTP)",
+        "mileage_or_range_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+        "dimensions": {
+          "length": "3850 mm",
+          "length_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+          "width": "1727 mm",
+          "width_citation": "https://www.cardekho.com/mini/cooper-se/specs",
+          "height": "1432 mm",
+          "height_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+        },
+        "key_features": [
+          {
+            "value": "Adaptive LED Headlights",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Wireless Charging",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Cruise Control",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Ambient Lighting",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Comfort Access System",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Automatic Climate Control",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Alloy Wheels",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "One-Pedal Driving",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Head-Up Display",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Sunroof",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "4 Airbags",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "ABS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "EBD",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "ESC",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Driving Assistant",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Parking Assistant",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "TPMS",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          },
+          {
+            "value": "Rear Camera with Guided Lines",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mini/Cooper-SE/front-left-side-47.jpg",
+            "value_citation": "https://www.cardekho.com/mini/cooper-se/specs"
+          }
+        ]
       }
     ]
   }

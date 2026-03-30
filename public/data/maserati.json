@@ -1,0 +1,422 @@
+{
+  "maserati": [
+    {
+      "make": "Maserati",
+      "model": "Grecale",
+      "variant_name": "GT",
+      "ex_showroom_price": 13100000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed)",
+      "drivetrain": "AWD",
+      "engine_displacement_cc": 1995,
+      "power_bhp": 296,
+      "torque_nm": 450,
+      "mileage_kmpl": 17.4,
+      "seating_capacity": 5,
+      "boot_space_l": 535,
+      "ground_clearance_mm": 185,
+      "length_mm": 4846,
+      "width_mm": 1948,
+      "height_mm": 1670,
+      "key_features": [
+        { "value": "2.0L mild-hybrid L4 engine" },
+        { "value": "All-wheel drive" },
+        { "value": "12.3-inch MIA touchscreen infotainment" },
+        { "value": "12.3-inch digital instrument cluster" },
+        { "value": "Adaptive suspension" }
+      ],
+      "safety_features": [
+        { "value": "6 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Blind Spot Monitoring" },
+        { "value": "Rear Cross Traffic Alert" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maserati/Grecale/9759/1769679013614/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2023
+    },
+    {
+      "make": "Maserati",
+      "model": "Grecale",
+      "variant_name": "Trofeo",
+      "ex_showroom_price": 20500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed)",
+      "drivetrain": "AWD",
+      "engine_displacement_cc": 3000,
+      "power_bhp": 523,
+      "torque_nm": 620,
+      "mileage_kmpl": 9.2,
+      "seating_capacity": 5,
+      "boot_space_l": 535,
+      "ground_clearance_mm": 185,
+      "length_mm": 4846,
+      "width_mm": 1948,
+      "height_mm": 1670,
+      "key_features": [
+        { "value": "3.0L twin-turbo V6 Nettuno engine" },
+        { "value": "All-wheel drive with Torque Vectoring" },
+        { "value": "Sport-tuned exhaust system" },
+        { "value": "21-inch alloy wheels" },
+        { "value": "Corsa Trofeo drive mode" }
+      ],
+      "safety_features": [
+        { "value": "6 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "360-degree camera" },
+        { "value": "TPMS" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maserati/Grecale/9759/1769679013614/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2023
+    },
+    {
+      "make": "Maserati",
+      "model": "Levante",
+      "variant_name": "Diesel",
+      "ex_showroom_price": 14900000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic (8-Speed)",
+      "drivetrain": "AWD",
+      "engine_displacement_cc": 2987,
+      "power_bhp": 275,
+      "torque_nm": 600,
+      "mileage_kmpl": 12.0,
+      "seating_capacity": 5,
+      "boot_space_l": 580,
+      "ground_clearance_mm": 205,
+      "length_mm": 5003,
+      "width_mm": 2158,
+      "height_mm": 1679,
+      "key_features": [
+        { "value": "3.0L V6 diesel engine" },
+        { "value": "All-wheel drive with air suspension" },
+        { "value": "10.1-inch touchscreen infotainment" },
+        { "value": "Skyhook electronic suspension" },
+        { "value": "Harman Kardon premium audio" }
+      ],
+      "safety_features": [
+        { "value": "6 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Blind Spot Monitoring" },
+        { "value": "Rear Parking Camera" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maserati/Levante/6716/1769679178413/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2017
+    },
+    {
+      "make": "Maserati",
+      "model": "Levante",
+      "variant_name": "S",
+      "ex_showroom_price": 17500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed)",
+      "drivetrain": "AWD",
+      "engine_displacement_cc": 2979,
+      "power_bhp": 350,
+      "torque_nm": 500,
+      "mileage_kmpl": 12.0,
+      "seating_capacity": 5,
+      "boot_space_l": 580,
+      "ground_clearance_mm": 205,
+      "length_mm": 5003,
+      "width_mm": 2158,
+      "height_mm": 1679,
+      "key_features": [
+        { "value": "3.0L V6 twin-turbo petrol engine" },
+        { "value": "All-wheel drive" },
+        { "value": "Sport driving mode" },
+        { "value": "20-inch alloy wheels" },
+        { "value": "Harman Kardon premium audio" }
+      ],
+      "safety_features": [
+        { "value": "6 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Blind Spot Monitoring" },
+        { "value": "360-degree surround camera" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maserati/Levante/6716/1769679178413/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2017
+    },
+    {
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "variant_name": "Modena",
+      "ex_showroom_price": 22500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (6-Speed)",
+      "drivetrain": "RWD",
+      "engine_displacement_cc": 4691,
+      "power_bhp": 460,
+      "torque_nm": 520,
+      "mileage_kmpl": 10.0,
+      "seating_capacity": 4,
+      "boot_space_l": 240,
+      "ground_clearance_mm": 115,
+      "length_mm": 4881,
+      "width_mm": 1915,
+      "height_mm": 1353,
+      "key_features": [
+        { "value": "4.7L V8 naturally aspirated engine" },
+        { "value": "Rear-wheel drive" },
+        { "value": "10.25-inch MIA touchscreen" },
+        { "value": "Bose surround sound system" },
+        { "value": "Sport Corsa mode" }
+      ],
+      "safety_features": [
+        { "value": "6 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Traction Control" },
+        { "value": "Parking sensors with camera" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maserati/GranTurismo/6718/1769678894025/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2023
+    },
+    {
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "variant_name": "Trofeo",
+      "ex_showroom_price": 27500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (6-Speed)",
+      "drivetrain": "RWD",
+      "engine_displacement_cc": 4691,
+      "power_bhp": 530,
+      "torque_nm": 570,
+      "mileage_kmpl": 9.0,
+      "seating_capacity": 4,
+      "boot_space_l": 240,
+      "ground_clearance_mm": 115,
+      "length_mm": 4881,
+      "width_mm": 1915,
+      "height_mm": 1353,
+      "key_features": [
+        { "value": "4.7L V8 naturally aspirated engine - Trofeo spec" },
+        { "value": "Carbon-ceramic brakes" },
+        { "value": "Corsa-tuned suspension" },
+        { "value": "Alcantara performance interior" },
+        { "value": "Corsa Trofeo drive mode" }
+      ],
+      "safety_features": [
+        { "value": "6 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Traction Control" },
+        { "value": "TPMS" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maserati/GranTurismo/6718/1769678894025/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2023
+    },
+    {
+      "make": "Maserati",
+      "model": "Quattroporte",
+      "variant_name": "GranLusso",
+      "ex_showroom_price": 17100000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed)",
+      "drivetrain": "RWD",
+      "engine_displacement_cc": 2979,
+      "power_bhp": 350,
+      "torque_nm": 580,
+      "mileage_kmpl": 11.76,
+      "seating_capacity": 5,
+      "boot_space_l": 530,
+      "ground_clearance_mm": 100,
+      "length_mm": 5262,
+      "width_mm": 1948,
+      "height_mm": 1481,
+      "key_features": [
+        { "value": "3.0L V6 twin-turbo engine" },
+        { "value": "GranLusso comfort specification" },
+        { "value": "10.1-inch touchscreen infotainment" },
+        { "value": "Full-grain leather interior" },
+        { "value": "Bowers & Wilkins surround sound" }
+      ],
+      "safety_features": [
+        { "value": "6 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Adaptive cruise control" },
+        { "value": "Lane Departure Warning" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maserati/Quattroporte/6715/1769679309754/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2020
+    },
+    {
+      "make": "Maserati",
+      "model": "Quattroporte",
+      "variant_name": "GranSport",
+      "ex_showroom_price": 18500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed)",
+      "drivetrain": "RWD",
+      "engine_displacement_cc": 2979,
+      "power_bhp": 350,
+      "torque_nm": 580,
+      "mileage_kmpl": 11.76,
+      "seating_capacity": 5,
+      "boot_space_l": 530,
+      "ground_clearance_mm": 100,
+      "length_mm": 5262,
+      "width_mm": 1948,
+      "height_mm": 1481,
+      "key_features": [
+        { "value": "3.0L V6 twin-turbo engine - Sport tuning" },
+        { "value": "Sport-tuned suspension" },
+        { "value": "Sport exhaust with quad outlets" },
+        { "value": "20-inch alloy wheels" },
+        { "value": "Alcantara sport interior" }
+      ],
+      "safety_features": [
+        { "value": "6 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Traction Control" },
+        { "value": "360-degree camera" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maserati/Quattroporte/6715/1769679309754/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2020
+    },
+    {
+      "make": "Maserati",
+      "model": "Quattroporte",
+      "variant_name": "Diesel",
+      "ex_showroom_price": 16700000,
+      "fuel_type": "Diesel",
+      "transmission": "Automatic (8-Speed)",
+      "drivetrain": "RWD",
+      "engine_displacement_cc": 2999,
+      "power_bhp": 275,
+      "torque_nm": 600,
+      "mileage_kmpl": 12.0,
+      "seating_capacity": 5,
+      "boot_space_l": 530,
+      "ground_clearance_mm": 100,
+      "length_mm": 5262,
+      "width_mm": 1948,
+      "height_mm": 1481,
+      "key_features": [
+        { "value": "3.0L V6 diesel engine" },
+        { "value": "Rear-wheel drive" },
+        { "value": "10.1-inch touchscreen infotainment" },
+        { "value": "Luxury leather interior" },
+        { "value": "Adaptive suspension" }
+      ],
+      "safety_features": [
+        { "value": "6 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Traction Control" },
+        { "value": "Rear parking camera" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maserati/Quattroporte/6715/1769679309754/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2020
+    },
+    {
+      "make": "Maserati",
+      "model": "GranCabrio",
+      "variant_name": "Sport",
+      "ex_showroom_price": 24600000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (6-Speed)",
+      "drivetrain": "RWD",
+      "engine_displacement_cc": 4691,
+      "power_bhp": 460,
+      "torque_nm": 520,
+      "mileage_kmpl": 10.2,
+      "seating_capacity": 4,
+      "boot_space_l": 172,
+      "ground_clearance_mm": 120,
+      "length_mm": 4881,
+      "width_mm": 1915,
+      "height_mm": 1374,
+      "key_features": [
+        { "value": "4.7L V8 naturally aspirated engine" },
+        { "value": "Fully retractable soft-top convertible" },
+        { "value": "Sport exhaust system" },
+        { "value": "Bose surround sound system" },
+        { "value": "Rear-wheel drive" }
+      ],
+      "safety_features": [
+        { "value": "6 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Roll-over protection bars" },
+        { "value": "Traction Control" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maserati/GranCabrio/6719/1769678730637/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2020
+    },
+    {
+      "make": "Maserati",
+      "model": "GranCabrio",
+      "variant_name": "Trofeo",
+      "ex_showroom_price": 26900000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (6-Speed)",
+      "drivetrain": "RWD",
+      "engine_displacement_cc": 4691,
+      "power_bhp": 530,
+      "torque_nm": 570,
+      "mileage_kmpl": 9.5,
+      "seating_capacity": 4,
+      "boot_space_l": 172,
+      "ground_clearance_mm": 120,
+      "length_mm": 4881,
+      "width_mm": 1915,
+      "height_mm": 1374,
+      "key_features": [
+        { "value": "4.7L V8 naturally aspirated engine - Trofeo spec" },
+        { "value": "Fully retractable soft-top convertible" },
+        { "value": "Carbon-ceramic brakes" },
+        { "value": "Corsa Trofeo drive mode" },
+        { "value": "Sport-tuned suspension" }
+      ],
+      "safety_features": [
+        { "value": "6 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Roll-over protection bars" },
+        { "value": "TPMS" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maserati/GranCabrio/6719/1769678730637/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2020
+    }
+  ]
+}

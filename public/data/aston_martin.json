@@ -227,6 +227,82 @@
       ],
       "availability_status": "on_sale",
       "launch_year": 2025
+    },
+    {
+      "make": "Aston Martin",
+      "model": "DB11",
+      "variant_name": "V8",
+      "ex_showroom_price": 38000000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (9-Speed AT)",
+      "drivetrain": "RWD",
+      "engine_displacement_cc": 3998,
+      "power_bhp": 502.88,
+      "torque_nm": 675,
+      "mileage_kmpl": 9.0,
+      "seating_capacity": 2,
+      "boot_space_l": 300,
+      "ground_clearance_mm": 120,
+      "length_mm": 4739,
+      "width_mm": 1940,
+      "height_mm": 1279,
+      "key_features": [
+        { "value": "4.0L twin-turbo V8 engine" },
+        { "value": "9-speed automatic transmission" },
+        { "value": "Rear-wheel drive" },
+        { "value": "10.25-inch touchscreen infotainment with Apple CarPlay" },
+        { "value": "Adaptive damping with Sport/GT/Sport+ modes" }
+      ],
+      "safety_features": [
+        { "value": "8 airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Traction control" },
+        { "value": "Parking sensors with rear camera" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DB11/6694/1769509009640/front-left-side-47.jpg" }
+      ],
+      "availability_status": "discontinued",
+      "launch_year": 2017
+    },
+    {
+      "make": "Aston Martin",
+      "model": "DBS Superleggera",
+      "variant_name": "V12",
+      "ex_showroom_price": 50000000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed AT)",
+      "drivetrain": "RWD",
+      "engine_displacement_cc": 5204,
+      "power_bhp": 715,
+      "torque_nm": 900,
+      "mileage_kmpl": 8.0,
+      "seating_capacity": 2,
+      "boot_space_l": 270,
+      "ground_clearance_mm": 110,
+      "length_mm": 4712,
+      "width_mm": 1967,
+      "height_mm": 1280,
+      "key_features": [
+        { "value": "5.2L twin-turbo V12 engine" },
+        { "value": "8-speed automatic transmission" },
+        { "value": "Carbon-fibre bodywork (superleggera)" },
+        { "value": "10.25-inch touchscreen infotainment" },
+        { "value": "Adaptive damping suspension" }
+      ],
+      "safety_features": [
+        { "value": "4 airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Traction control" },
+        { "value": "Advanced safety systems" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DBS-Superleggera/6693/1769508892516/front-left-side-47.jpg" }
+      ],
+      "availability_status": "upcoming",
+      "launch_year": 2026
     }
   ]
 }

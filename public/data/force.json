@@ -248,6 +248,192 @@
           }
         ],
         "availability_status": "on_sale"
+      },
+      {
+        "variant_name": "Force Trax Cruiser 9 STR",
+        "ex_showroom_price": "Rs. 12,91,000",
+        "hyderabad_on_road_price": "Rs. 15,20,000",
+        "fuel_type": "Diesel",
+        "transmission": "Manual",
+        "engine_displacement_cc": 2596,
+        "power_bhp": 90,
+        "torque_nm": 260,
+        "mileage": "14.5 kmpl",
+        "seating_capacity": 9,
+        "dimensions": {
+          "length_mm": 5120,
+          "width_mm": 1818,
+          "height_mm": 2027,
+          "ground_clearance_mm": 191
+        },
+        "boot_space_l": null,
+        "key_features": [
+          {
+            "value": "9-Seater Configuration"
+          },
+          {
+            "value": "63.5 L Fuel Tank"
+          },
+          {
+            "value": "Rear-Wheel Drive"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "2 Airbags"
+          },
+          {
+            "value": "Anti-Lock Braking System (ABS)"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Trax-Cruiser/front-left-side-47.jpg",
+            "value_citation": "https://www.cardekho.com/force-motors/trax-cruiser/"
+          }
+        ],
+        "availability_status": "on_sale"
+      },
+      {
+        "variant_name": "Force Trax Cruiser 12 STR",
+        "ex_showroom_price": "Rs. 13,06,000",
+        "hyderabad_on_road_price": "Rs. 15,40,000",
+        "fuel_type": "Diesel",
+        "transmission": "Manual",
+        "engine_displacement_cc": 2596,
+        "power_bhp": 90,
+        "torque_nm": 260,
+        "mileage": "14.5 kmpl",
+        "seating_capacity": 12,
+        "dimensions": {
+          "length_mm": 5120,
+          "width_mm": 1818,
+          "height_mm": 2027,
+          "ground_clearance_mm": 191
+        },
+        "boot_space_l": null,
+        "key_features": [
+          {
+            "value": "12-Seater Configuration"
+          },
+          {
+            "value": "63.5 L Fuel Tank"
+          },
+          {
+            "value": "Rear-Wheel Drive"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "2 Airbags"
+          },
+          {
+            "value": "Anti-Lock Braking System (ABS)"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Trax-Cruiser/front-left-side-47.jpg",
+            "value_citation": "https://www.cardekho.com/force-motors/trax-cruiser/"
+          }
+        ],
+        "availability_status": "on_sale"
+      },
+      {
+        "variant_name": "Force Trax Cruiser 12 STR AC",
+        "ex_showroom_price": "Rs. 14,21,000",
+        "hyderabad_on_road_price": "Rs. 16,70,000",
+        "fuel_type": "Diesel",
+        "transmission": "Manual",
+        "engine_displacement_cc": 2596,
+        "power_bhp": 90,
+        "torque_nm": 260,
+        "mileage": "14.5 kmpl",
+        "seating_capacity": 12,
+        "dimensions": {
+          "length_mm": 5120,
+          "width_mm": 1818,
+          "height_mm": 2027,
+          "ground_clearance_mm": 191
+        },
+        "boot_space_l": null,
+        "key_features": [
+          {
+            "value": "12-Seater Configuration"
+          },
+          {
+            "value": "Air Conditioning"
+          },
+          {
+            "value": "63.5 L Fuel Tank"
+          },
+          {
+            "value": "Rear-Wheel Drive"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "2 Airbags"
+          },
+          {
+            "value": "Anti-Lock Braking System (ABS)"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Trax-Cruiser/front-left-side-47.jpg",
+            "value_citation": "https://www.cardekho.com/force-motors/trax-cruiser/"
+          }
+        ],
+        "availability_status": "on_sale"
+      },
+      {
+        "variant_name": "Force Trax Cruiser 9 STR AC",
+        "ex_showroom_price": "Rs. 14,22,000",
+        "hyderabad_on_road_price": "Rs. 16,72,000",
+        "fuel_type": "Diesel",
+        "transmission": "Manual",
+        "engine_displacement_cc": 2596,
+        "power_bhp": 90,
+        "torque_nm": 260,
+        "mileage": "14.5 kmpl",
+        "seating_capacity": 9,
+        "dimensions": {
+          "length_mm": 5120,
+          "width_mm": 1818,
+          "height_mm": 2027,
+          "ground_clearance_mm": 191
+        },
+        "boot_space_l": null,
+        "key_features": [
+          {
+            "value": "9-Seater Configuration"
+          },
+          {
+            "value": "Air Conditioning"
+          },
+          {
+            "value": "63.5 L Fuel Tank"
+          },
+          {
+            "value": "Rear-Wheel Drive"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "2 Airbags"
+          },
+          {
+            "value": "Anti-Lock Braking System (ABS)"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Trax-Cruiser/front-left-side-47.jpg",
+            "value_citation": "https://www.cardekho.com/force-motors/trax-cruiser/"
+          }
+        ],
+        "availability_status": "on_sale"
       }
     ]
   }

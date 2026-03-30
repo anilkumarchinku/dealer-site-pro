@@ -549,6 +549,115 @@
             ],
             "availability_status": "on_sale",
             "launch_year": 2025
+        },
+        {
+            "make": "VinFast",
+            "model": "VF 3",
+            "variant_name": "Standard",
+            "ex_showroom_price_min_inr": 1000000,
+            "ex_showroom_price_max_inr": 1000000,
+            "hyderabad_on_road_price_inr": null,
+            "fuel_type": "Electric",
+            "transmission": "Automatic",
+            "battery_capacity_kwh": null,
+            "range_km": 215,
+            "power_bhp": null,
+            "torque_nm": null,
+            "seating_capacity": 4,
+            "boot_space_l": 0,
+            "ground_clearance_mm": 0,
+            "length_mm": 0,
+            "width_mm": 0,
+            "height_mm": 0,
+            "key_features": [
+                {
+                    "value": "Fully digital instrument cluster"
+                },
+                {
+                    "value": "Touchscreen infotainment"
+                },
+                {
+                    "value": "Three driving modes: Eco, Comfort, Sport"
+                },
+                {
+                    "value": "Fast charging (10-70% in 36 minutes)"
+                }
+            ],
+            "safety_features": [
+                {
+                    "value": "Multiple Airbags"
+                },
+                {
+                    "value": "ABS"
+                },
+                {
+                    "value": "ESC"
+                },
+                {
+                    "value": "Autonomous Emergency Braking"
+                },
+                {
+                    "value": "Lane Departure Warning"
+                },
+                {
+                    "value": "Rear Parking Sensors"
+                }
+            ],
+            "image_urls": [
+                {
+                    "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/VinFast/VF3/12337/front-left-side-47.jpg",
+                    "value_citation": "https://www.cardekho.com/vinfast/vf3"
+                }
+            ],
+            "availability_status": "upcoming",
+            "launch_year": 2026
+        },
+        {
+            "make": "VinFast",
+            "model": "Limo Green",
+            "variant_name": "Standard",
+            "ex_showroom_price_min_inr": 1900000,
+            "ex_showroom_price_max_inr": 2400000,
+            "hyderabad_on_road_price_inr": null,
+            "fuel_type": "Electric",
+            "transmission": "Automatic",
+            "battery_capacity_kwh": null,
+            "range_km": null,
+            "power_bhp": null,
+            "torque_nm": null,
+            "seating_capacity": null,
+            "boot_space_l": 0,
+            "ground_clearance_mm": 0,
+            "length_mm": 0,
+            "width_mm": 0,
+            "height_mm": 0,
+            "key_features": [
+                {
+                    "value": "Electric SUV"
+                },
+                {
+                    "value": "Touchscreen infotainment"
+                }
+            ],
+            "safety_features": [
+                {
+                    "value": "Multiple Airbags"
+                },
+                {
+                    "value": "ABS"
+                },
+                {
+                    "value": "ESC"
+                }
+            ],
+            "image_urls": [
+                {
+                    "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/VinFast/Limo-Green/front-left-side-47.jpg",
+                    "value_citation": "https://www.cardekho.com/vinfast/limo-green"
+                }
+            ],
+            "availability_status": "upcoming",
+            "launch_year": 2026
         }
     ]
 }

@@ -461,6 +461,60 @@
       {
         "make": "Lexus",
         "model": "RX",
+        "variant_name": "350h Exquisite",
+        "pricing": {
+          "ex_showroom_min": 8999000,
+          "ex_showroom_max": 8999000
+        },
+        "powertrain": {
+          "fuel": "Petrol (Hybrid)",
+          "transmission": "Automatic (E-CVT)"
+        },
+        "engine_specs": {
+          "displacement": "2487 cc",
+          "power": "190.42 bhp",
+          "torque": "242 Nm",
+          "mileage": "15 kmpl"
+        },
+        "dimensions": {
+          "seating": 5,
+          "boot": "505 L",
+          "ground_clearance": "195 mm",
+          "length": "4890 mm",
+          "width": "1920 mm",
+          "height": "1695 mm"
+        },
+        "key_features": [
+          {
+            "value": "14-inch touchscreen (EMV)"
+          },
+          {
+            "value": "Mark Levinson 15-speaker audio"
+          },
+          {
+            "value": "Panoramic moonroof"
+          }
+        ],
+        "safety_features": [
+          {
+            "value": "10 airbags"
+          },
+          {
+            "value": "ABS + EBD"
+          },
+          {
+            "value": "Lexus Safety System+"
+          }
+        ],
+        "image_urls": [
+          {
+            "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/RX/11360/1769081565510/front-left-side-47.jpg"
+          }
+        ]
+      },
+      {
+        "make": "Lexus",
+        "model": "RX",
         "variant_name": "350h Luxury Premium System",
         "pricing": {
           "ex_showroom_min": 9613000,

@@ -507,6 +507,52 @@
           "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/MU-X/8652/1768896726832/front-left-side-47.jpg?tr=w-230"
         }
       ]
+    },
+    {
+      "variant_name": "S-CAB Z 4x2 MT",
+      "ex_showroom_price_min_inr": 1589500,
+      "ex_showroom_price_max_inr": 1589500,
+      "hyderabad_on_road_price_inr": 1894600,
+      "fuel_type": "Diesel",
+      "transmission": "Manual",
+      "drivetrain": "4x2",
+      "engine_displacement_cc": 2499,
+      "power_bhp": 77.77,
+      "torque_nm": 176,
+      "mileage_kmpl": 16.56,
+      "seating_capacity": 5,
+      "boot_space_l": 1700,
+      "ground_clearance_mm": 220,
+      "length_mm": 5295,
+      "width_mm": 1860,
+      "height_mm": 1840,
+      "key_features": [
+        {
+          "value": "Variable Geometric Turbo Intercooled Engine"
+        },
+        {
+          "value": "Power Steering"
+        },
+        {
+          "value": "Air Conditioner"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "2 Airbags"
+        },
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "Parking Sensors"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/S-CAB/9890/1768897223625/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
     }
   ]
 }

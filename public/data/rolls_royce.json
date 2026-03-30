@@ -1,0 +1,272 @@
+{
+  "rolls_royce": [
+    {
+      "make": "Rolls-Royce",
+      "model": "Cullinan",
+      "variant_name": "Base",
+      "ex_showroom_price": 105000000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed)",
+      "drivetrain": "AWD",
+      "engine_displacement_cc": 6750,
+      "power_bhp": 563,
+      "torque_nm": 850,
+      "mileage_kmpl": 6.6,
+      "seating_capacity": 5,
+      "boot_space_l": 560,
+      "ground_clearance_mm": 220,
+      "length_mm": 5341,
+      "width_mm": 2000,
+      "height_mm": 1835,
+      "key_features": [
+        { "value": "6.75L twin-turbo V12 engine" },
+        { "value": "All-wheel drive" },
+        { "value": "Air suspension with self-levelling" },
+        { "value": "Spirit of Ecstasy illuminated figurine" },
+        { "value": "Bespoke audio system" }
+      ],
+      "safety_features": [
+        { "value": "8 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Parking sensors (front + rear)" },
+        { "value": "Surround view cameras" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Rolls-Royce/Cullinan/7756/1769057668688/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2019
+    },
+    {
+      "make": "Rolls-Royce",
+      "model": "Cullinan",
+      "variant_name": "Black Badge",
+      "ex_showroom_price": 122500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed)",
+      "drivetrain": "AWD",
+      "engine_displacement_cc": 6750,
+      "power_bhp": 592,
+      "torque_nm": 900,
+      "mileage_kmpl": 6.0,
+      "seating_capacity": 5,
+      "boot_space_l": 560,
+      "ground_clearance_mm": 220,
+      "length_mm": 5341,
+      "width_mm": 2000,
+      "height_mm": 1835,
+      "key_features": [
+        { "value": "6.75L twin-turbo V12 - Black Badge tuning" },
+        { "value": "All-wheel drive" },
+        { "value": "Darkened chrome and carbon-fibre accents" },
+        { "value": "Sport-tuned air suspension" },
+        { "value": "Black Spirit of Ecstasy" }
+      ],
+      "safety_features": [
+        { "value": "8 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Night Vision" },
+        { "value": "Surround view cameras" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Rolls-Royce/Cullinan/7756/1769057668688/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2020
+    },
+    {
+      "make": "Rolls-Royce",
+      "model": "Ghost Series II",
+      "variant_name": "Standard Wheelbase",
+      "ex_showroom_price": 89500000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed)",
+      "drivetrain": "AWD",
+      "engine_displacement_cc": 6750,
+      "power_bhp": 563,
+      "torque_nm": 820,
+      "mileage_kmpl": 6.33,
+      "seating_capacity": 5,
+      "boot_space_l": 490,
+      "ground_clearance_mm": 135,
+      "length_mm": 5546,
+      "width_mm": 2148,
+      "height_mm": 1571,
+      "key_features": [
+        { "value": "6.75L twin-turbo V12 engine" },
+        { "value": "Planar suspension system (Series II)" },
+        { "value": "Illuminated fascia with constellation headliner" },
+        { "value": "Bespoke audio system" },
+        { "value": "Night Vision with pedestrian detection" }
+      ],
+      "safety_features": [
+        { "value": "6 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Night Vision" },
+        { "value": "Rear parking camera" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Rolls-Royce/Ghost/11203/1769057920697/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2021
+    },
+    {
+      "make": "Rolls-Royce",
+      "model": "Ghost Series II",
+      "variant_name": "Extended Wheelbase",
+      "ex_showroom_price": 105200000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed)",
+      "drivetrain": "AWD",
+      "engine_displacement_cc": 6750,
+      "power_bhp": 563,
+      "torque_nm": 820,
+      "mileage_kmpl": 6.0,
+      "seating_capacity": 5,
+      "boot_space_l": 490,
+      "ground_clearance_mm": 135,
+      "length_mm": 5716,
+      "width_mm": 2148,
+      "height_mm": 1571,
+      "key_features": [
+        { "value": "Extended Wheelbase for rear passenger comfort" },
+        { "value": "6.75L twin-turbo V12 engine" },
+        { "value": "Lounge seating configuration" },
+        { "value": "Rear entertainment system" },
+        { "value": "Lambswool floor mats" }
+      ],
+      "safety_features": [
+        { "value": "6 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Night Vision" },
+        { "value": "360-degree surround camera" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Rolls-Royce/Ghost/11203/1769057920697/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2021
+    },
+    {
+      "make": "Rolls-Royce",
+      "model": "Phantom",
+      "variant_name": "Standard Wheelbase",
+      "ex_showroom_price": 89900000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed)",
+      "drivetrain": "RWD",
+      "engine_displacement_cc": 6749,
+      "power_bhp": 563,
+      "torque_nm": 900,
+      "mileage_kmpl": 9.8,
+      "seating_capacity": 5,
+      "boot_space_l": 548,
+      "ground_clearance_mm": 132,
+      "length_mm": 5762,
+      "width_mm": 2018,
+      "height_mm": 1646,
+      "key_features": [
+        { "value": "6.75L twin-turbo V12 engine" },
+        { "value": "All-aluminium spaceframe body" },
+        { "value": "Gallery dashboard bespoke glass panel" },
+        { "value": "Starlight headliner with fiber optic lights" },
+        { "value": "Coach doors (rear-hinged)" }
+      ],
+      "safety_features": [
+        { "value": "9 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Night Vision with pedestrian detection" },
+        { "value": "Lane Departure Warning" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Rolls-Royce/Phantom/7754/1769058142088/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2018
+    },
+    {
+      "make": "Rolls-Royce",
+      "model": "Phantom",
+      "variant_name": "Extended Wheelbase",
+      "ex_showroom_price": 104800000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed)",
+      "drivetrain": "RWD",
+      "engine_displacement_cc": 6749,
+      "power_bhp": 563,
+      "torque_nm": 900,
+      "mileage_kmpl": 9.0,
+      "seating_capacity": 5,
+      "boot_space_l": 548,
+      "ground_clearance_mm": 132,
+      "length_mm": 5982,
+      "width_mm": 2018,
+      "height_mm": 1646,
+      "key_features": [
+        { "value": "Extended wheelbase for ultimate rear comfort" },
+        { "value": "6.75L twin-turbo V12 engine" },
+        { "value": "Privacy Suite with glass partition optional" },
+        { "value": "Starlight headliner" },
+        { "value": "Bespoke rear seating with ottoman" }
+      ],
+      "safety_features": [
+        { "value": "9 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Night Vision" },
+        { "value": "Surround view cameras" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Rolls-Royce/Phantom/7754/1769058142088/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2018
+    },
+    {
+      "make": "Rolls-Royce",
+      "model": "Spectre",
+      "variant_name": "Base",
+      "ex_showroom_price": 75000000,
+      "fuel_type": "Electric",
+      "transmission": "Automatic (Electric)",
+      "drivetrain": "AWD",
+      "engine_displacement_cc": 0,
+      "battery_capacity_kwh": 102,
+      "range_km": 530,
+      "power_bhp": 577,
+      "torque_nm": 900,
+      "mileage_kmpl": null,
+      "seating_capacity": 4,
+      "boot_space_l": 390,
+      "ground_clearance_mm": 130,
+      "length_mm": 5475,
+      "width_mm": 2047,
+      "height_mm": 1423,
+      "key_features": [
+        { "value": "102 kWh battery with 530 km range" },
+        { "value": "All-wheel drive with dual motors" },
+        { "value": "Rolls-Royce first fully electric vehicle" },
+        { "value": "Spirit of Ecstasy illuminated" },
+        { "value": "Starlight headliner" }
+      ],
+      "safety_features": [
+        { "value": "8 Airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Electronic Stability Control" },
+        { "value": "Adaptive cruise control" },
+        { "value": "Surround view cameras" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Rolls-Royce/Spectre/10939/1769058319978/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2024
+    }
+  ]
+}
