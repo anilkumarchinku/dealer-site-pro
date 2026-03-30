@@ -1,0 +1,37 @@
+{
+  "brand": "Altigreen",
+  "brandId": "altigreen",
+  "type": "3w",
+  "vehicles": [
+    {
+      "variant_name": "Altigreen neEV",
+      "ex_showroom_price": "₹3.55 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "11 kW", "torque": "42 Nm" },
+      "dimensions": { "length": "3530 mm", "width": "1550 mm", "height": "1780 mm" },
+      "payload_features": { "gross_vehicle_weight": "1095 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "source_url": "https://www.altigreen.com/"
+    },
+    {
+      "variant_name": "Altigreen neEV Tez",
+      "ex_showroom_price": "₹3.85 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "14.5 kW", "torque": "50 Nm" },
+      "dimensions": { "length": "3530 mm", "width": "1550 mm", "height": "1780 mm" },
+      "payload_features": { "gross_vehicle_weight": "1095 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "source_url": "https://www.altigreen.com/"
+    },
+    {
+      "variant_name": "Altigreen neEV Rahi",
+      "ex_showroom_price": "₹4.36 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "14.5 kW", "torque": "50 Nm" },
+      "dimensions": { "length": "3530 mm", "width": "1550 mm", "height": "1780 mm" },
+      "payload_features": { "gross_vehicle_weight": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "source_url": "https://www.altigreen.com/"
+    }
+  ]
+}

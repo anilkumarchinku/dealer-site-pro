@@ -89,17 +89,31 @@ let lohiaData: any = null
 let mahindraData: any = null
 let piaggioData: any = null
 let tvsKingData: any = null
+let ycData: any = null
+let saeraData: any = null
+let omegaData: any = null
+let altigreenData: any = null
+let montraData: any = null
+let terraData: any = null
+let etrioData: any = null
 
 /* eslint-disable @typescript-eslint/no-require-imports */
-try { atulData    = require('@/public/data/3w/atul-auto.json')            } catch { /* optional */ }
-try { bajajData   = require('@/public/data/3w/bajaj-auto-3w.json')        } catch { /* optional */ }
-try { eulerData   = require('@/public/data/3w/euler-motors.json')         } catch { /* optional */ }
-try { greavesData = require('@/public/data/3w/greaves-electric-3w.json')  } catch { /* optional */ }
-try { kineticData = require('@/public/data/3w/kinetic-green.json')        } catch { /* optional */ }
-try { lohiaData   = require('@/public/data/3w/lohia-auto.json')           } catch { /* optional */ }
-try { mahindraData = require('@/public/data/3w/mahindra-3w.json')         } catch { /* optional */ }
-try { piaggioData = require('@/public/data/3w/piaggio-ape.json')          } catch { /* optional */ }
-try { tvsKingData = require('@/public/data/3w/tvs-king.json')             } catch { /* optional */ }
+try { atulData      = require('@/public/data/3w/atul-auto.json')            } catch { /* optional */ }
+try { bajajData     = require('@/public/data/3w/bajaj-auto-3w.json')        } catch { /* optional */ }
+try { eulerData     = require('@/public/data/3w/euler-motors.json')         } catch { /* optional */ }
+try { greavesData   = require('@/public/data/3w/greaves-electric-3w.json')  } catch { /* optional */ }
+try { kineticData   = require('@/public/data/3w/kinetic-green.json')        } catch { /* optional */ }
+try { lohiaData     = require('@/public/data/3w/lohia-auto.json')           } catch { /* optional */ }
+try { mahindraData  = require('@/public/data/3w/mahindra-3w.json')          } catch { /* optional */ }
+try { piaggioData   = require('@/public/data/3w/piaggio-ape.json')          } catch { /* optional */ }
+try { tvsKingData   = require('@/public/data/3w/tvs-king.json')             } catch { /* optional */ }
+try { ycData        = require('@/public/data/3w/yc-ev.json')                } catch { /* optional */ }
+try { saeraData     = require('@/public/data/3w/saera-ev.json')             } catch { /* optional */ }
+try { omegaData     = require('@/public/data/3w/omega-seiki-mobility.json') } catch { /* optional */ }
+try { altigreenData = require('@/public/data/3w/altigreen.json')            } catch { /* optional */ }
+try { montraData    = require('@/public/data/3w/montra-ev.json')            } catch { /* optional */ }
+try { terraData     = require('@/public/data/3w/terra-motors.json')         } catch { /* optional */ }
+try { etrioData     = require('@/public/data/3w/etrio.json')                } catch { /* optional */ }
 /* eslint-enable @typescript-eslint/no-require-imports */
 
 // ── Extractors for different JSON formats ────────────────────────
@@ -197,6 +211,13 @@ const BRAND_FILES: BrandFile[] = ([
     { data: mahindraData, brandId: 'mahindra-3w',          format: 'make-model', modelKey: 'model'        },
     { data: piaggioData,  brandId: 'piaggio-ape',          format: 'make-model', modelKey: 'model'        },
     { data: tvsKingData,  brandId: 'tvs-king',             format: 'make-model', modelKey: 'model'        },
+    { data: ycData,       brandId: 'yc-ev',                format: 'bajaj',      modelKey: 'variant_name' },
+    { data: saeraData,    brandId: 'saera-ev',             format: 'bajaj',      modelKey: 'variant_name' },
+    { data: omegaData,    brandId: 'omega-seiki-mobility', format: 'bajaj',      modelKey: 'variant_name' },
+    { data: altigreenData,brandId: 'altigreen',            format: 'bajaj',      modelKey: 'variant_name' },
+    { data: montraData,   brandId: 'montra-ev',            format: 'bajaj',      modelKey: 'variant_name' },
+    { data: terraData,    brandId: 'terra-motors',         format: 'bajaj',      modelKey: 'variant_name' },
+    { data: etrioData,    brandId: 'etrio',                format: 'bajaj',      modelKey: 'variant_name' },
 ] as BrandFile[]).filter(b => b.data)
 
 const enrichmentCache = new Map<string, ThreeWheelerEnrichment>()

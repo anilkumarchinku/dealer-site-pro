@@ -1,0 +1,59 @@
+{
+  "brand": "BattRE Electric",
+  "brandId": "battre-ev",
+  "type": "2w",
+  "vehicles": [
+    {
+      "model_name": "BattRE LOEV",
+      "price": "Rs. 59,900",
+      "specifications": {
+        "Motor Power": "250W",
+        "Range": "85 km",
+        "Battery Capacity": "1.8 kWh",
+        "Top Speed": "25 km/h"
+      },
+      "source_section": "Available",
+      "colors": ["White", "Grey"]
+    },
+    {
+      "model_name": "BattRE LOEV+",
+      "price": "Rs. 79,999",
+      "specifications": {
+        "Motor Power": "250W",
+        "Range": "90 km",
+        "Battery Capacity": "2.0 kWh",
+        "Top Speed": "25 km/h",
+        "USB Charging Port": "Yes"
+      },
+      "source_section": "Available",
+      "colors": ["White", "Grey", "Red"]
+    },
+    {
+      "model_name": "BattRE Storie",
+      "price": "Rs. 99,999",
+      "specifications": {
+        "Motor Power": "2.0 kW",
+        "Range": "100 km",
+        "Battery Capacity": "2.88 kWh",
+        "Top Speed": "60 km/h",
+        "USB Charging Port": "Yes"
+      },
+      "source_section": "Available",
+      "colors": ["White", "Black", "Blue"]
+    },
+    {
+      "model_name": "BattRE ONE",
+      "price": "Rs. 1,29,999",
+      "specifications": {
+        "Motor Power": "3.0 kW",
+        "Range": "120 km",
+        "Battery Capacity": "3.5 kWh",
+        "Top Speed": "75 km/h",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "source_section": "Available",
+      "colors": ["Black", "White", "Red"]
+    }
+  ]
+}

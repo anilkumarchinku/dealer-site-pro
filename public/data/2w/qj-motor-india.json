@@ -1,0 +1,55 @@
+{
+  "brand": "QJ Motor India",
+  "brandId": "qj-motor-india",
+  "type": "2w",
+  "vehicles": [
+    {
+      "model_name": "QJ Motor SRC 250",
+      "price": "Rs. 1,37,000",
+      "engine_displacement": "249 cc",
+      "mileage": "30 kmpl",
+      "top_speed": "130 km/h",
+      "torque": "22.5 Nm",
+      "source_section": "Available",
+      "variants": [],
+      "colors": ["Black", "Grey"],
+      "technical_specifications": {}
+    },
+    {
+      "model_name": "QJ Motor SRC 500",
+      "price": "Rs. 4,99,000",
+      "engine_displacement": "500 cc",
+      "mileage": "25 kmpl",
+      "top_speed": "150 km/h",
+      "torque": "46.5 Nm",
+      "source_section": "Available",
+      "variants": [],
+      "colors": ["Black", "Red", "Silver"],
+      "technical_specifications": {}
+    },
+    {
+      "model_name": "QJ Motor SRV 300",
+      "price": "Rs. 2,99,000",
+      "engine_displacement": "296 cc",
+      "mileage": "28 kmpl",
+      "top_speed": "140 km/h",
+      "torque": "25.5 Nm",
+      "source_section": "Available",
+      "variants": [],
+      "colors": ["Black", "Grey"],
+      "technical_specifications": {}
+    },
+    {
+      "model_name": "QJ Motor SRK 400",
+      "price": "Rs. 3,99,000",
+      "engine_displacement": "400 cc",
+      "mileage": "27 kmpl",
+      "top_speed": "160 km/h",
+      "torque": "37 Nm",
+      "source_section": "Available",
+      "variants": [],
+      "colors": ["Black", "Blue", "Red"],
+      "technical_specifications": {}
+    }
+  ]
+}

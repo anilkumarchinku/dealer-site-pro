@@ -16,8 +16,11 @@ function toSlug(value: string) {
         .replace(/-+/g, '-').replace(/^-+|-+$/g, '').substring(0, 63);
 }
 
+const LOGO_EXT_3W: Record<string, string> = {
+    "etrio": "svg", "qj-motor-india": "svg",
+};
 function logoSrc(brandId: string) {
-    return `/data/brand-logos/${brandId}.png`;
+    return `/data/brand-logos/${brandId}.${LOGO_EXT_3W[brandId] ?? "png"}`;
 }
 
 const THREE_WHEELER_BRANDS = (brandData.threeWheelers as { brandId: string; brand: string }[]);

@@ -1,0 +1,47 @@
+{
+  "brand": "YC Electric",
+  "brandId": "yc-ev",
+  "type": "3w",
+  "vehicles": [
+    {
+      "variant_name": "YC Electric Yatri",
+      "ex_showroom_price": "₹1.26 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "1.2 kW", "torque": "" },
+      "dimensions": { "length": "", "width": "", "height": "" },
+      "payload_features": { "gross_vehicle_weight": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "source_url": "https://www.cmv360.com/three-wheelers/yc-electric"
+    },
+    {
+      "variant_name": "YC Electric Yatri Deluxe",
+      "ex_showroom_price": "₹1.50 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "1.5 kW", "torque": "" },
+      "dimensions": { "length": "", "width": "", "height": "" },
+      "payload_features": { "gross_vehicle_weight": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "source_url": "https://www.cmv360.com/three-wheelers/yc-electric"
+    },
+    {
+      "variant_name": "YC Electric Yatri Super",
+      "ex_showroom_price": "₹1.65 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "1.5 kW", "torque": "" },
+      "dimensions": { "length": "", "width": "", "height": "" },
+      "payload_features": { "gross_vehicle_weight": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "source_url": "https://www.cmv360.com/three-wheelers/yc-electric"
+    },
+    {
+      "variant_name": "YC Electric Yatri Plus",
+      "ex_showroom_price": "₹1.80 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "2.0 kW", "torque": "" },
+      "dimensions": { "length": "", "width": "", "height": "" },
+      "payload_features": { "gross_vehicle_weight": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "source_url": "https://www.cmv360.com/three-wheelers/yc-electric"
+    }
+  ]
+}

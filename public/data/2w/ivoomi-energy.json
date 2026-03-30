@@ -1,0 +1,47 @@
+{
+  "brand": "iVOOMi",
+  "brandId": "ivoomi-energy",
+  "type": "2w",
+  "vehicles": [
+    {
+      "model_name": "iVOOMi S1",
+      "price": "Rs. 79,999",
+      "specifications": {
+        "Motor Power": "1.5 kW",
+        "Range": "100 km",
+        "Battery Capacity": "2.3 kWh",
+        "Top Speed": "60 km/h",
+        "USB Charging Port": "Yes"
+      },
+      "source_section": "Available",
+      "colors": ["White", "Black", "Red"]
+    },
+    {
+      "model_name": "iVOOMi Jeet X",
+      "price": "Rs. 89,999",
+      "specifications": {
+        "Motor Power": "2.0 kW",
+        "Range": "110 km",
+        "Battery Capacity": "2.88 kWh",
+        "Top Speed": "65 km/h",
+        "USB Charging Port": "Yes"
+      },
+      "source_section": "Available",
+      "colors": ["White", "Grey", "Blue"]
+    },
+    {
+      "model_name": "iVOOMi JeetX ZE",
+      "price": "Rs. 99,999",
+      "specifications": {
+        "Motor Power": "2.5 kW",
+        "Range": "120 km",
+        "Battery Capacity": "3.0 kWh",
+        "Top Speed": "70 km/h",
+        "Bluetooth Connectivity": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "source_section": "Available",
+      "colors": ["Black", "White", "Red"]
+    }
+  ]
+}

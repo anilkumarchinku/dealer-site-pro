@@ -1,0 +1,61 @@
+{
+  "brand": "BGauss",
+  "brandId": "bgauss",
+  "type": "2w",
+  "vehicles": [
+    {
+      "model_name": "BGauss C12i EX",
+      "price": "Rs. 94,990",
+      "specifications": {
+        "Motor Power": "2.2 kW",
+        "Range": "90 km",
+        "Battery Capacity": "2.3 kWh",
+        "Top Speed": "55 km/h",
+        "USB Charging Port": "Yes"
+      },
+      "source_section": "Available",
+      "colors": ["White", "Grey", "Red"]
+    },
+    {
+      "model_name": "BGauss C12 Max",
+      "price": "Rs. 1,09,990",
+      "specifications": {
+        "Motor Power": "2.2 kW",
+        "Range": "110 km",
+        "Battery Capacity": "3.0 kWh",
+        "Top Speed": "55 km/h",
+        "USB Charging Port": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "source_section": "Available",
+      "colors": ["White", "Blue", "Red"]
+    },
+    {
+      "model_name": "BGauss RUV 350",
+      "price": "Rs. 1,19,990",
+      "specifications": {
+        "Motor Power": "3.0 kW",
+        "Range": "120 km",
+        "Battery Capacity": "3.5 kWh",
+        "Top Speed": "70 km/h",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "source_section": "Available",
+      "colors": ["Black", "White", "Blue"]
+    },
+    {
+      "model_name": "BGauss OoWah",
+      "price": "Rs. 1,29,990",
+      "specifications": {
+        "Motor Power": "2.5 kW",
+        "Range": "100 km",
+        "Battery Capacity": "2.88 kWh",
+        "Top Speed": "65 km/h",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "source_section": "Available",
+      "colors": ["White", "Black", "Green"]
+    }
+  ]
+}

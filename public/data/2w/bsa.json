@@ -1,0 +1,19 @@
+{
+  "brand": "BSA Motorcycles",
+  "brandId": "bsa",
+  "type": "2w",
+  "vehicles": [
+    {
+      "model_name": "BSA Gold Star 650",
+      "price": "Rs. 3,00,000",
+      "engine_displacement": "652 cc",
+      "mileage": "30 kmpl",
+      "top_speed": "170 km/h",
+      "torque": "55 Nm @ 5500 rpm",
+      "source_section": "Available",
+      "variants": [],
+      "colors": ["Insignia Red", "Highland Green", "Silver Sheen", "Legend Black"],
+      "technical_specifications": {}
+    }
+  ]
+}

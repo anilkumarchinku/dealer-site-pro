@@ -1,0 +1,37 @@
+{
+  "brand": "ETrio",
+  "brandId": "etrio",
+  "type": "3w",
+  "vehicles": [
+    {
+      "variant_name": "ETrio Touro Mini",
+      "ex_showroom_price": "₹3.90 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "7.5 kW", "torque": "" },
+      "dimensions": { "length": "", "width": "", "height": "" },
+      "payload_features": { "gross_vehicle_weight": "1100 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "source_url": "https://etrio.in/"
+    },
+    {
+      "variant_name": "ETrio Touro Max",
+      "ex_showroom_price": "₹4.20 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "10 kW", "torque": "" },
+      "dimensions": { "length": "3385 mm", "width": "1480 mm", "height": "1800 mm" },
+      "payload_features": { "gross_vehicle_weight": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "source_url": "https://etrio.in/"
+    },
+    {
+      "variant_name": "ETrio Touro Max++",
+      "ex_showroom_price": "₹4.40 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "12 kW", "torque": "" },
+      "dimensions": { "length": "", "width": "", "height": "" },
+      "payload_features": { "gross_vehicle_weight": "1300 kg", "payload": "550 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "source_url": "https://etrio.in/"
+    }
+  ]
+}

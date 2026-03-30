@@ -1,0 +1,37 @@
+{
+  "brand": "Montra Electric",
+  "brandId": "montra-ev",
+  "type": "3w",
+  "vehicles": [
+    {
+      "variant_name": "Montra Super Auto",
+      "ex_showroom_price": "₹3.77 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "7.5 kW", "torque": "" },
+      "dimensions": { "length": "", "width": "", "height": "" },
+      "payload_features": { "gross_vehicle_weight": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "source_url": "https://www.montraelectric.com/"
+    },
+    {
+      "variant_name": "Montra Super Auto-X",
+      "ex_showroom_price": "₹4.10 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "10 kW", "torque": "" },
+      "dimensions": { "length": "", "width": "", "height": "" },
+      "payload_features": { "gross_vehicle_weight": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "source_url": "https://www.montraelectric.com/"
+    },
+    {
+      "variant_name": "Montra Super Cargo",
+      "ex_showroom_price": "₹4.37 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "10 kW", "torque": "" },
+      "dimensions": { "length": "", "width": "", "height": "" },
+      "payload_features": { "gross_vehicle_weight": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "source_url": "https://www.montraelectric.com/"
+    }
+  ]
+}

@@ -2,8 +2,8 @@
   "meta": {
     "title": "Indian Two-Wheeler & Three-Wheeler Brand Models",
     "description": "Comprehensive list of all currently sold 2W and 3W models in India (2026) — discontinued models removed",
-    "totalBrands": 47,
-    "generatedAt": "2026-03-23"
+    "totalBrands": 69,
+    "generatedAt": "2026-03-30"
   },
   "twoWheelers": {
     "traditional": [
@@ -484,6 +484,38 @@
         }
       },
       {
+        "brandId": "yezdi-motorcycles",
+        "brand": "Yezdi Motorcycles",
+        "models": {
+          "motorcycles": [
+            "Roadster",
+            "Scrambler",
+            "Adventure"
+          ]
+        }
+      },
+      {
+        "brandId": "bsa",
+        "brand": "BSA Motorcycles",
+        "models": {
+          "motorcycles": [
+            "Gold Star 650"
+          ]
+        }
+      },
+      {
+        "brandId": "qj-motor-india",
+        "brand": "QJ Motor India",
+        "models": {
+          "motorcycles": [
+            "SRC 250",
+            "SRC 500",
+            "SRV 300",
+            "SRK 400"
+          ]
+        }
+      },
+      {
         "brandId": "norton-motorcycles",
         "brand": "Norton Motorcycles",
         "models": {
@@ -579,12 +611,157 @@
         }
       },
       {
-        "brandId": "tork-motors",
-        "brand": "Tork Motors",
+        "brandId": "okinawa-autotech",
+        "brand": "Okinawa Autotech",
+        "models": {
+          "scooters": [
+            "Okhi 90",
+            "iPraise+",
+            "PraisePro",
+            "Dual 100",
+            "Ridge 100",
+            "Ridge+",
+            "R30",
+            "Lite"
+          ]
+        }
+      },
+      {
+        "brandId": "simple-energy",
+        "brand": "Simple Energy",
+        "models": {
+          "scooters": [
+            "One Gen 2",
+            "OneS Gen 2"
+          ]
+        }
+      },
+      {
+        "brandId": "komaki",
+        "brand": "Komaki",
+        "models": {
+          "scooters": [
+            "Flora",
+            "DT 3000",
+            "Venice",
+            "SE",
+            "TN 95",
+            "Ranger",
+            "XGT KM"
+          ],
+          "motorcycles": [
+            "M5",
+            "Ranger Cafe Racer"
+          ]
+        }
+      },
+      {
+        "brandId": "matter-ev",
+        "brand": "Matter",
         "models": {
           "motorcycles": [
-            "Kratos R",
-            "Kratos X"
+            "Aera 5000",
+            "Aera 5000+"
+          ]
+        }
+      },
+      {
+        "brandId": "hop-electric",
+        "brand": "Hop Electric",
+        "models": {
+          "scooters": [
+            "Lyf",
+            "Leo"
+          ],
+          "motorcycles": [
+            "OXO"
+          ]
+        }
+      },
+      {
+        "brandId": "odysse-electric",
+        "brand": "Odysse Electric",
+        "models": {
+          "scooters": [
+            "E2go",
+            "E2go Lite",
+            "Hawk Plus",
+            "Racer",
+            "V2",
+            "V2 Plus",
+            "SNAP"
+          ],
+          "motorcycles": [
+            "Evoqis"
+          ]
+        }
+      },
+      {
+        "brandId": "joy-e-bike",
+        "brand": "Joy e-bike",
+        "models": {
+          "scooters": [
+            "Gen Next Nanu",
+            "Wolf Plus",
+            "Mihos",
+            "Glob",
+            "Beast"
+          ]
+        }
+      },
+      {
+        "brandId": "bounce-infinity",
+        "brand": "Bounce Infinity",
+        "models": {
+          "scooters": [
+            "E1",
+            "E1 Limited Edition"
+          ]
+        }
+      },
+      {
+        "brandId": "quantum-energy",
+        "brand": "Quantum Energy",
+        "models": {
+          "scooters": [
+            "Milan",
+            "Plasma",
+            "BZiness"
+          ]
+        }
+      },
+      {
+        "brandId": "bgauss",
+        "brand": "BGauss",
+        "models": {
+          "scooters": [
+            "C12i EX",
+            "C12 Max",
+            "RUV 350",
+            "OoWah"
+          ]
+        }
+      },
+      {
+        "brandId": "battre-ev",
+        "brand": "BattRE Electric",
+        "models": {
+          "scooters": [
+            "LOEV",
+            "LOEV+",
+            "Storie",
+            "ONE"
+          ]
+        }
+      },
+      {
+        "brandId": "ivoomi-energy",
+        "brand": "iVOOMi",
+        "models": {
+          "scooters": [
+            "S1",
+            "Jeet X",
+            "JeetX ZE"
           ]
         }
       },
@@ -686,6 +863,12 @@
           "Maxima XL Electric",
           "Maxima X Wide Diesel",
           "Maxima C CNG"
+        ],
+        "electric": [
+          "GoGo P5009",
+          "GoGo P5012",
+          "GoGo P7012",
+          "WEGO P9018"
         ]
       }
     },
@@ -810,6 +993,125 @@
         ],
         "passenger": [
           "Eltra City"
+        ]
+      }
+    },
+    {
+      "brandId": "lohia-auto",
+      "brand": "Lohia Auto",
+      "models": {
+        "passenger": [
+          "Narain XiV",
+          "Youdha Humsafar"
+        ],
+        "cargo": [
+          "Youdha Trevo Cargo",
+          "Youdha EPOD"
+        ],
+        "electric": [
+          "Youdha EPOD Electric"
+        ]
+      }
+    },
+    {
+      "brandId": "yc-ev",
+      "brand": "YC Electric",
+      "models": {
+        "passenger": [
+          "Yatri",
+          "Yatri Deluxe",
+          "Yatri Super",
+          "Yatri Plus"
+        ],
+        "cargo": [
+          "Yatri Cart",
+          "E Loader"
+        ]
+      }
+    },
+    {
+      "brandId": "saera-ev",
+      "brand": "Saera Electric (Mayuri)",
+      "models": {
+        "passenger": [
+          "Mayuri Grand",
+          "Mayuri Star",
+          "Mayuri Pro Star",
+          "Mayuri Pro 1000"
+        ],
+        "cargo": [
+          "Mayuri E Cart Loader",
+          "Mayuri DV"
+        ]
+      }
+    },
+    {
+      "brandId": "omega-seiki-mobility",
+      "brand": "Omega Seiki Mobility",
+      "models": {
+        "passenger": [
+          "Stream City",
+          "Stream City 2.0",
+          "Stream City Qik"
+        ],
+        "cargo": [
+          "Rage Plus",
+          "Rage+ Rapid",
+          "Stream"
+        ]
+      }
+    },
+    {
+      "brandId": "altigreen",
+      "brand": "Altigreen",
+      "models": {
+        "passenger": [
+          "neEV Rahi"
+        ],
+        "cargo": [
+          "neEV",
+          "neEV Tez",
+          "neEV Tez High Deck"
+        ]
+      }
+    },
+    {
+      "brandId": "montra-ev",
+      "brand": "Montra Electric",
+      "models": {
+        "passenger": [
+          "Super Auto",
+          "Super Auto-X"
+        ],
+        "cargo": [
+          "Super Cargo"
+        ]
+      }
+    },
+    {
+      "brandId": "terra-motors",
+      "brand": "Terra Motors",
+      "models": {
+        "passenger": [
+          "Y4A",
+          "Y4A Pro",
+          "Rizin"
+        ],
+        "cargo": [
+          "Kyoro+"
+        ]
+      }
+    },
+    {
+      "brandId": "etrio",
+      "brand": "ETrio",
+      "models": {
+        "passenger": [
+          "Touro Max"
+        ],
+        "cargo": [
+          "Touro Mini",
+          "Touro Max++"
         ]
       }
     }

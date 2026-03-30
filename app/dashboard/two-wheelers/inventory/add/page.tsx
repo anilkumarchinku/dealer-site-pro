@@ -17,6 +17,7 @@ const STOCK   = ["available", "booking_open", "out_of_stock"] as const
 const LOGO_EXT: Record<string, string> = {
     "cfmoto-india": "svg", "tork-motors": "svg", "hop-electric": "svg",
     "yulu": "svg", "zontes-india": "svg", "okinawa-autotech": "webp",
+    "qj-motor-india": "svg",
 }
 const ALL_2W_BRANDS = [
     ...(brandData.twoWheelers.traditional as { brandId: string; brand: string; models: Record<string, string[]> }[]),
