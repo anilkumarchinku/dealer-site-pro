@@ -6386,6 +6386,122 @@
           "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/V-Class/10902/1772526111627/front-left-side-47.jpg?tr=w-230"
         }
       ]
+    },
+    "56": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG C43",
+      "variant_name": "4Matic",
+      "ex_showroom_price_min": 9405000,
+      "ex_showroom_price_max": 9405000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 1991,
+      "power": 402.3,
+      "torque": 500,
+      "mileage_range": 10,
+      "dimensions_seating": 5,
+      "dimensions_boot": 455,
+      "dimensions_length": 4791,
+      "dimensions_width": 2033,
+      "dimensions_height": 1450,
+      "key_features": [
+        {
+          "value": "Sunroof"
+        },
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Parking Sensors"
+        },
+        {
+          "value": "Ambient Lighting"
+        },
+        {
+          "value": "Rear AC Vents"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "7 Airbags"
+        },
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "Electronic Stability Control"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-C43/11277/1763467742516/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
+    },
+    "57": {
+      "make": "Mercedes-Benz",
+      "model_name": "AMG CLE 53",
+      "variant_name": "AMG CLE 53",
+      "ex_showroom_price_min": 12770270,
+      "ex_showroom_price_max": 12770270,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic",
+      "engine_displacement": 2999,
+      "power": 442,
+      "torque": 560,
+      "dimensions_seating": 4,
+      "dimensions_boot": 425,
+      "dimensions_length": 4851,
+      "dimensions_width": 1885,
+      "dimensions_height": 1435,
+      "key_features": [
+        {
+          "value": "Alloy Wheels"
+        },
+        {
+          "value": "Automatic Climate Control"
+        },
+        {
+          "value": "Cruise Control"
+        },
+        {
+          "value": "Keyless Entry"
+        },
+        {
+          "value": "Ambient Lighting"
+        },
+        {
+          "value": "Heated Steering Wheel"
+        },
+        {
+          "value": "Massage Seats"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "8 Airbags"
+        },
+        {
+          "value": "ABS"
+        },
+        {
+          "value": "Electronic Stability Control"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-CLE-53/12771/1763468198459/front-left-side-47.jpg?tr=w-230"
+        }
+      ]
     }
   }
 }

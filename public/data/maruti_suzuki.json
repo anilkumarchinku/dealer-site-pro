@@ -6889,6 +6889,812 @@
       ],
       "hyderabad_on_road_price": null,
       "hyderabad_on_road_price_citation": null
+    },
+    {
+      "variant_name": "Maruti Alto Tour H1 Petrol",
+      "variant_name_citation": "https://www.cardekho.com/maruti/alto-tour-h1/variants.htm",
+      "ex_showroom_price": 399900,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/alto-tour-h1/variants.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+      "engine_displacement_cc": 998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+      "power_bhp": 67.58,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+      "torque_nm": 91.1,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+      "mileage": 24.39,
+      "mileage_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+      "dimensions": {
+        "length_mm": 3530,
+        "length_mm_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+        "width_mm": 1490,
+        "width_mm_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+        "height_mm": 1520,
+        "height_mm_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+        "ground_clearance_mm": 160,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+        "boot_space_liters": 214,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs"
+      },
+      "key_features": [
+        {
+          "value": "Manual AC",
+          "value_citation": "https://www.cardekho.com/maruti/alto-tour-h1"
+        },
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/maruti/alto-tour-h1"
+        },
+        {
+          "value": "5-speed manual transmission",
+          "value_citation": "https://www.cardekho.com/maruti/alto-tour-h1"
+        },
+        {
+          "value": "Parking sensors",
+          "value_citation": "https://www.cardekho.com/maruti/alto-tour-h1"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Alto-Tour-H1/12517/1762857166816/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/alto-tour-h1"
+        }
+      ],
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": null
+    },
+    {
+      "variant_name": "Maruti Alto Tour H1 CNG",
+      "variant_name_citation": "https://www.cardekho.com/maruti/alto-tour-h1/variants.htm",
+      "ex_showroom_price": 481900,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/alto-tour-h1/variants.htm",
+      "fuel_type": "CNG",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+      "engine_displacement_cc": 998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+      "power_bhp": 55.92,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+      "torque_nm": 82.1,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+      "mileage": 33.4,
+      "mileage_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+      "dimensions": {
+        "length_mm": 3530,
+        "length_mm_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+        "width_mm": 1490,
+        "width_mm_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+        "height_mm": 1520,
+        "height_mm_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+        "ground_clearance_mm": 160,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs"
+      },
+      "capacities": {
+        "seating_capacity": 4,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
+        "boot_space_liters": 214,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs"
+      },
+      "key_features": [
+        {
+          "value": "Factory-fitted CNG kit",
+          "value_citation": "https://www.cardekho.com/maruti/alto-tour-h1"
+        },
+        {
+          "value": "Manual AC",
+          "value_citation": "https://www.cardekho.com/maruti/alto-tour-h1"
+        },
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/maruti/alto-tour-h1"
+        },
+        {
+          "value": "Parking sensors",
+          "value_citation": "https://www.cardekho.com/maruti/alto-tour-h1"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Alto-Tour-H1/12517/1762857166816/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/alto-tour-h1"
+        }
+      ],
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": null
+    },
+    {
+      "variant_name": "Maruti Dzire Tour S STD",
+      "variant_name_citation": "https://www.cardekho.com/maruti/dzire-tour-s/variants.htm",
+      "ex_showroom_price": 623800,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/dzire-tour-s/variants.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+      "engine_displacement_cc": 1197,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+      "power_bhp": 80,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+      "torque_nm": 111.7,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+      "mileage": 26.06,
+      "mileage_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+      "dimensions": {
+        "length_mm": 3995,
+        "length_mm_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+        "width_mm": 1735,
+        "width_mm_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+        "height_mm": 1525,
+        "height_mm_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+        "ground_clearance_mm": 163,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+        "boot_space_liters": 382,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs"
+      },
+      "key_features": [
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/maruti/dzire-tour-s"
+        },
+        {
+          "value": "Keyless entry",
+          "value_citation": "https://www.cardekho.com/maruti/dzire-tour-s"
+        },
+        {
+          "value": "5-speed manual transmission",
+          "value_citation": "https://www.cardekho.com/maruti/dzire-tour-s"
+        },
+        {
+          "value": "Parking sensors",
+          "value_citation": "https://www.cardekho.com/maruti/dzire-tour-s"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Dzire-Tour-S/12461/1762857975456/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/dzire-tour-s"
+        }
+      ],
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": null
+    },
+    {
+      "variant_name": "Maruti Dzire Tour S CNG",
+      "variant_name_citation": "https://www.cardekho.com/maruti/dzire-tour-s/variants.htm",
+      "ex_showroom_price": 709800,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/dzire-tour-s/variants.htm",
+      "fuel_type": "CNG",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+      "engine_displacement_cc": 1197,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+      "power_bhp": 69,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+      "torque_nm": 99,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+      "mileage": 34.3,
+      "mileage_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+      "dimensions": {
+        "length_mm": 3995,
+        "length_mm_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+        "width_mm": 1735,
+        "width_mm_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+        "height_mm": 1525,
+        "height_mm_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+        "ground_clearance_mm": 163,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs",
+        "boot_space_liters": 382,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs"
+      },
+      "key_features": [
+        {
+          "value": "Factory-fitted CNG kit",
+          "value_citation": "https://www.cardekho.com/maruti/dzire-tour-s"
+        },
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/maruti/dzire-tour-s"
+        },
+        {
+          "value": "Keyless entry",
+          "value_citation": "https://www.cardekho.com/maruti/dzire-tour-s"
+        },
+        {
+          "value": "Parking sensors",
+          "value_citation": "https://www.cardekho.com/maruti/dzire-tour-s"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/dzire-tour-s/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Dzire-Tour-S/12461/1762857975456/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/dzire-tour-s"
+        }
+      ],
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": null
+    },
+    {
+      "variant_name": "Maruti Wagon R Tour H3 Petrol",
+      "variant_name_citation": "https://www.cardekho.com/maruti/wagon-r-tour/variants.htm",
+      "ex_showroom_price": 499000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/wagon-r-tour/variants.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+      "engine_displacement_cc": 998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+      "power_bhp": 65.71,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+      "torque_nm": 89,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+      "mileage": 25.4,
+      "mileage_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+      "dimensions": {
+        "length_mm": 3655,
+        "length_mm_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+        "width_mm": 1620,
+        "width_mm_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+        "height_mm": 1675,
+        "height_mm_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+        "ground_clearance_mm": 165,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+        "boot_space_liters": 341,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs"
+      },
+      "key_features": [
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour"
+        },
+        {
+          "value": "Front power windows",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour"
+        },
+        {
+          "value": "Air conditioning",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour"
+        },
+        {
+          "value": "Tall-boy design",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Wagon-R-tour/9442/1762863641169/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour"
+        }
+      ],
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": null
+    },
+    {
+      "variant_name": "Maruti Wagon R Tour H3 CNG",
+      "variant_name_citation": "https://www.cardekho.com/maruti/wagon-r-tour/variants.htm",
+      "ex_showroom_price": 588900,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/wagon-r-tour/variants.htm",
+      "fuel_type": "CNG",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+      "engine_displacement_cc": 998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+      "power_bhp": 55.92,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+      "torque_nm": 82.1,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+      "mileage": 34.73,
+      "mileage_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+      "dimensions": {
+        "length_mm": 3655,
+        "length_mm_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+        "width_mm": 1620,
+        "width_mm_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+        "height_mm": 1675,
+        "height_mm_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+        "ground_clearance_mm": 165,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs"
+      },
+      "capacities": {
+        "seating_capacity": 5,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs",
+        "boot_space_liters": 341,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs"
+      },
+      "key_features": [
+        {
+          "value": "Factory-fitted CNG kit",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour"
+        },
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour"
+        },
+        {
+          "value": "Front power windows",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour"
+        },
+        {
+          "value": "Air conditioning",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs"
+        },
+        {
+          "value": "ESP",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Wagon-R-tour/9442/1762863641169/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/wagon-r-tour"
+        }
+      ],
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": null
+    },
+    {
+      "variant_name": "Maruti Ertiga Tour STD",
+      "variant_name_citation": "https://www.cardekho.com/maruti/ertiga-tour/variants.htm",
+      "ex_showroom_price": 967820,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/ertiga-tour/variants.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+      "power_bhp": 103.25,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+      "torque_nm": 138,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+      "mileage": 18.04,
+      "mileage_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+      "dimensions": {
+        "length_mm": 4395,
+        "length_mm_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+        "width_mm": 1735,
+        "width_mm_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+        "height_mm": 1690,
+        "height_mm_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+        "ground_clearance_mm": 163,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs"
+      },
+      "capacities": {
+        "seating_capacity": 7,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+        "boot_space_liters": 209,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs"
+      },
+      "key_features": [
+        {
+          "value": "7-seater configuration",
+          "value_citation": "https://www.cardekho.com/maruti/ertiga-tour"
+        },
+        {
+          "value": "Keyless entry",
+          "value_citation": "https://www.cardekho.com/maruti/ertiga-tour"
+        },
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/maruti/ertiga-tour"
+        },
+        {
+          "value": "Air conditioning",
+          "value_citation": "https://www.cardekho.com/maruti/ertiga-tour"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Ertiga-Tour/9617/1762858404297/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/ertiga-tour"
+        }
+      ],
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": null
+    },
+    {
+      "variant_name": "Maruti Ertiga Tour STD CNG",
+      "variant_name_citation": "https://www.cardekho.com/maruti/ertiga-tour/variants.htm",
+      "ex_showroom_price": 1058820,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/ertiga-tour/variants.htm",
+      "fuel_type": "CNG",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+      "engine_displacement_cc": 1462,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+      "power_bhp": 103.25,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+      "torque_nm": 138,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+      "mileage": 26.08,
+      "mileage_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+      "dimensions": {
+        "length_mm": 4395,
+        "length_mm_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+        "width_mm": 1735,
+        "width_mm_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+        "height_mm": 1690,
+        "height_mm_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+        "ground_clearance_mm": 163,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs"
+      },
+      "capacities": {
+        "seating_capacity": 7,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs",
+        "boot_space_liters": 209,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs"
+      },
+      "key_features": [
+        {
+          "value": "Factory-fitted CNG kit",
+          "value_citation": "https://www.cardekho.com/maruti/ertiga-tour"
+        },
+        {
+          "value": "7-seater configuration",
+          "value_citation": "https://www.cardekho.com/maruti/ertiga-tour"
+        },
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/maruti/ertiga-tour"
+        },
+        {
+          "value": "Air conditioning",
+          "value_citation": "https://www.cardekho.com/maruti/ertiga-tour"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Dual Front Airbags",
+          "value_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/ertiga-tour/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Ertiga-Tour/9617/1762858404297/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/ertiga-tour"
+        }
+      ],
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": null
+    },
+    {
+      "variant_name": "Maruti Eeco Cargo STD",
+      "variant_name_citation": "https://www.cardekho.com/maruti/eeco-cargo/variants.htm",
+      "ex_showroom_price": 538800,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/eeco-cargo/variants.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "engine_displacement_cc": 1197,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "power_bhp": 79.65,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "torque_nm": 104.4,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "mileage": 20.2,
+      "mileage_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "dimensions": {
+        "length_mm": 3675,
+        "length_mm_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+        "width_mm": 1475,
+        "width_mm_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+        "height_mm": 1825,
+        "height_mm_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+        "ground_clearance_mm": 160,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs"
+      },
+      "capacities": {
+        "seating_capacity": 2,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+        "boot_space_liters": 540,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs"
+      },
+      "key_features": [
+        {
+          "value": "Large cargo space (540L)",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo"
+        },
+        {
+          "value": "5-speed manual transmission",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo"
+        },
+        {
+          "value": "2-seater configuration",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Driver Airbag",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Eeco-Cargo/9449/1762858188201/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo"
+        }
+      ],
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": null
+    },
+    {
+      "variant_name": "Maruti Eeco Cargo STD CNG",
+      "variant_name_citation": "https://www.cardekho.com/maruti/eeco-cargo/variants.htm",
+      "ex_showroom_price": 621000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/eeco-cargo/variants.htm",
+      "fuel_type": "CNG",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "engine_displacement_cc": 1197,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "power_bhp": 70.67,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "torque_nm": 95,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "mileage": 27.05,
+      "mileage_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "dimensions": {
+        "length_mm": 3675,
+        "length_mm_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+        "width_mm": 1475,
+        "width_mm_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+        "height_mm": 1825,
+        "height_mm_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+        "ground_clearance_mm": 160,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs"
+      },
+      "capacities": {
+        "seating_capacity": 2,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+        "boot_space_liters": 540,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs"
+      },
+      "key_features": [
+        {
+          "value": "Factory-fitted CNG kit",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo"
+        },
+        {
+          "value": "Large cargo space (540L)",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo"
+        },
+        {
+          "value": "5-speed manual transmission",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo"
+        },
+        {
+          "value": "2-seater configuration",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Driver Airbag",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Eeco-Cargo/9449/1762858188201/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo"
+        }
+      ],
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": null
+    },
+    {
+      "variant_name": "Maruti Eeco Cargo STD AC CNG",
+      "variant_name_citation": "https://www.cardekho.com/maruti/eeco-cargo/variants.htm",
+      "ex_showroom_price": 660500,
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/eeco-cargo/variants.htm",
+      "fuel_type": "CNG",
+      "fuel_type_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "engine_displacement_cc": 1197,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "power_bhp": 70.67,
+      "power_bhp_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "torque_nm": 95,
+      "torque_nm_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "mileage": 27.05,
+      "mileage_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+      "dimensions": {
+        "length_mm": 3675,
+        "length_mm_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+        "width_mm": 1475,
+        "width_mm_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+        "height_mm": 1825,
+        "height_mm_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+        "ground_clearance_mm": 160,
+        "ground_clearance_mm_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs"
+      },
+      "capacities": {
+        "seating_capacity": 2,
+        "seating_capacity_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs",
+        "boot_space_liters": 540,
+        "boot_space_liters_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs"
+      },
+      "key_features": [
+        {
+          "value": "Factory-fitted CNG kit",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo"
+        },
+        {
+          "value": "Air conditioning",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo"
+        },
+        {
+          "value": "Large cargo space (540L)",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo"
+        },
+        {
+          "value": "2-seater configuration",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "Driver Airbag",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs"
+        },
+        {
+          "value": "Rear Parking Sensors",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Eeco-Cargo/9449/1762858188201/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/maruti/eeco-cargo"
+        }
+      ],
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": null
     }
   ]
 }

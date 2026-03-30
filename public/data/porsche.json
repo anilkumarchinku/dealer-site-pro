@@ -813,6 +813,80 @@
       ],
       "availability_status": "on_sale",
       "launch_year": 2025
+    },
+    {
+      "make": "Porsche",
+      "model": "Cayenne Coupe",
+      "variant_name": "Cayenne Coupe",
+      "ex_showroom_price": 14441000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed Tiptronic S)",
+      "engine_displacement_cc": 2894,
+      "power_bhp": 349,
+      "torque_nm": 600,
+      "mileage_kmpl": 8,
+      "seating_capacity": 4,
+      "boot_space_l": 625,
+      "ground_clearance_mm": 194,
+      "length_mm": 4930,
+      "width_mm": 1983,
+      "height_mm": 1676,
+      "key_features": [
+        { "value": "3.0L turbocharged V6 engine" },
+        { "value": "All-wheel drive with Porsche Traction Management" },
+        { "value": "Coupe-style sloping roofline" },
+        { "value": "12.3-inch touchscreen infotainment" },
+        { "value": "Adaptive air suspension" }
+      ],
+      "safety_features": [
+        { "value": "6 airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Porsche Stability Management (PSM)" },
+        { "value": "TPMS" },
+        { "value": "Rear parking camera" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Porsche/Cayenne-Coupe/9596/1737541812498/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2025
+    },
+    {
+      "make": "Porsche",
+      "model": "Cayenne Coupe",
+      "variant_name": "Cayenne Coupe GTS",
+      "ex_showroom_price": 19541000,
+      "fuel_type": "Petrol",
+      "transmission": "Automatic (8-Speed Tiptronic S)",
+      "engine_displacement_cc": 3996,
+      "power_bhp": 493,
+      "torque_nm": 660,
+      "mileage_kmpl": 8,
+      "seating_capacity": 4,
+      "boot_space_l": 625,
+      "ground_clearance_mm": 194,
+      "length_mm": 4930,
+      "width_mm": 1983,
+      "height_mm": 1676,
+      "key_features": [
+        { "value": "4.0L twin-turbo V8 engine" },
+        { "value": "All-wheel drive with Porsche Traction Management" },
+        { "value": "Sport Chrono Package" },
+        { "value": "GTS sport suspension" },
+        { "value": "GTS interior package" }
+      ],
+      "safety_features": [
+        { "value": "6 airbags" },
+        { "value": "ABS with EBD" },
+        { "value": "Porsche Stability Management (PSM)" },
+        { "value": "TPMS" },
+        { "value": "360-degree surround-view camera" }
+      ],
+      "image_urls": [
+        { "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Porsche/Cayenne-Coupe/9596/1737541812498/front-left-side-47.jpg" }
+      ],
+      "availability_status": "on_sale",
+      "launch_year": 2025
     }
   ]
 }

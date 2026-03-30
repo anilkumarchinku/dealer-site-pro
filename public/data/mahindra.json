@@ -16597,23 +16597,62 @@
       "boot_capacity": "460",
       "boot_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "key_features": [
-        { "value": "Power steering", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Air-conditioner", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Multi-function steering wheel", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Air-conditioner",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Multi-function steering wheel",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ISOFIX", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Rear camera", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Rear camera",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n"
+        }
       ]
     },
     {
@@ -16640,33 +16679,76 @@
       "mileage": "15.94 kmpl",
       "mileage_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "dimensions": {
-        "length": "4662", "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "width": "1917", "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "height": "1857", "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "ground_clearance": "200", "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        "length": "4662",
+        "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "width": "1917",
+        "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "height": "1857",
+        "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "ground_clearance": "200",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
       },
       "seating_capacity": "7",
       "seating_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "boot_capacity": "460",
       "boot_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "key_features": [
-        { "value": "Power steering", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Air-conditioner", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Multi-function steering wheel", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Air-conditioner",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Multi-function steering wheel",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ISOFIX", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Rear camera", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Rear camera",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n"
+        }
       ]
     },
     {
@@ -16693,34 +16775,80 @@
       "mileage": "15.94 kmpl",
       "mileage_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "dimensions": {
-        "length": "4662", "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "width": "1917", "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "height": "1857", "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "ground_clearance": "200", "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        "length": "4662",
+        "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "width": "1917",
+        "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "height": "1857",
+        "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "ground_clearance": "200",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
       },
       "seating_capacity": "7",
       "seating_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "boot_capacity": "460",
       "boot_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "key_features": [
-        { "value": "Power steering", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Air-conditioner", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Multi-function steering wheel", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Air-conditioner",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Multi-function steering wheel",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ISOFIX", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Rear camera", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Rear camera",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n"
+        }
       ]
     },
     {
@@ -16747,34 +16875,80 @@
       "mileage": "15.94 kmpl",
       "mileage_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "dimensions": {
-        "length": "4662", "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "width": "1917", "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "height": "1857", "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "ground_clearance": "200", "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        "length": "4662",
+        "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "width": "1917",
+        "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "height": "1857",
+        "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "ground_clearance": "200",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
       },
       "seating_capacity": "7",
       "seating_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "boot_capacity": "460",
       "boot_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "key_features": [
-        { "value": "Power steering", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Sunroof", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Multi-function steering wheel", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Multi-function steering wheel",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ISOFIX", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Rear camera", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Rear camera",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n"
+        }
       ]
     },
     {
@@ -16801,34 +16975,80 @@
       "mileage": "15.94 kmpl",
       "mileage_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "dimensions": {
-        "length": "4662", "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "width": "1917", "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "height": "1857", "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "ground_clearance": "200", "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        "length": "4662",
+        "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "width": "1917",
+        "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "height": "1857",
+        "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "ground_clearance": "200",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
       },
       "seating_capacity": "7",
       "seating_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "boot_capacity": "460",
       "boot_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "key_features": [
-        { "value": "Power steering", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Sunroof", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Multi-function steering wheel", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Multi-function steering wheel",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ISOFIX", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Rear camera", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Rear camera",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n"
+        }
       ]
     },
     {
@@ -16855,34 +17075,80 @@
       "mileage": "15.94 kmpl",
       "mileage_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "dimensions": {
-        "length": "4662", "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "width": "1917", "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "height": "1857", "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "ground_clearance": "200", "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        "length": "4662",
+        "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "width": "1917",
+        "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "height": "1857",
+        "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "ground_clearance": "200",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
       },
       "seating_capacity": "7",
       "seating_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "boot_capacity": "460",
       "boot_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "key_features": [
-        { "value": "Power steering", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Sunroof", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ADAS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ADAS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ISOFIX", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Rear camera", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Rear camera",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n"
+        }
       ]
     },
     {
@@ -16909,34 +17175,80 @@
       "mileage": "15.94 kmpl",
       "mileage_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "dimensions": {
-        "length": "4662", "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "width": "1917", "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "height": "1857", "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "ground_clearance": "200", "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        "length": "4662",
+        "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "width": "1917",
+        "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "height": "1857",
+        "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "ground_clearance": "200",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
       },
       "seating_capacity": "7",
       "seating_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "boot_capacity": "460",
       "boot_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "key_features": [
-        { "value": "Power steering", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Sunroof", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ADAS Level 2", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ADAS Level 2",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ISOFIX", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Rear camera", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Rear camera",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n"
+        }
       ]
     },
     {
@@ -16963,31 +17275,68 @@
       "mileage": "15.94 kmpl",
       "mileage_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "dimensions": {
-        "length": "4662", "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "width": "1917", "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "height": "1857", "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "ground_clearance": "200", "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        "length": "4662",
+        "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "width": "1917",
+        "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "height": "1857",
+        "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "ground_clearance": "200",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
       },
       "seating_capacity": "7",
       "seating_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "boot_capacity": "460",
       "boot_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "key_features": [
-        { "value": "Power steering", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Sunroof", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n"
+        }
       ]
     },
     {
@@ -17014,35 +17363,84 @@
       "mileage": "15.94 kmpl",
       "mileage_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "dimensions": {
-        "length": "4662", "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "width": "1917", "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "height": "1857", "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "ground_clearance": "200", "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        "length": "4662",
+        "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "width": "1917",
+        "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "height": "1857",
+        "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "ground_clearance": "200",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
       },
       "seating_capacity": "7",
       "seating_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "boot_capacity": "460",
       "boot_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "key_features": [
-        { "value": "Power steering", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Sunroof", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ADAS Level 2", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "4x4 drivetrain", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ADAS Level 2",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "4x4 drivetrain",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ISOFIX", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Rear camera", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Rear camera",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n"
+        }
       ]
     },
     {
@@ -17069,31 +17467,68 @@
       "mileage": "12.12 kmpl",
       "mileage_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "dimensions": {
-        "length": "4662", "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "width": "1917", "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "height": "1857", "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
-        "ground_clearance": "200", "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        "length": "4662",
+        "length_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "width": "1917",
+        "width_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "height": "1857",
+        "height_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
+        "ground_clearance": "200",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
       },
       "seating_capacity": "7",
       "seating_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "boot_capacity": "460",
       "boot_capacity_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs",
       "key_features": [
-        { "value": "Power steering", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "Sunroof", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/scorpio-n" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/scorpio-n"
+        }
       ]
     },
     {
@@ -17119,34 +17554,80 @@
       "mileage_range": "375 km",
       "mileage_range_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
       "dimensions": {
-        "length": "4200", "length_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
-        "width": "1821", "width_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
-        "height": "1634", "height_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
-        "ground_clearance": "180", "ground_clearance_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        "length": "4200",
+        "length_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
+        "width": "1821",
+        "width_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
+        "height": "1634",
+        "height_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
+        "ground_clearance": "180",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
       },
       "seating_capacity": "5",
       "seating_capacity_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
       "boot_capacity": "368",
       "boot_capacity_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
       "key_features": [
-        { "value": "Power steering", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "Air-conditioner", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "Keyless entry", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "Sunroof", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" }
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "Air-conditioner",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "Keyless entry",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "ISOFIX", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "Rear camera", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "Rear camera",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XUV400-EV/10174/1675834882271/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XUV400-EV/10174/1675834882271/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev"
+        }
       ]
     },
     {
@@ -17172,33 +17653,76 @@
       "mileage_range": "375 km",
       "mileage_range_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
       "dimensions": {
-        "length": "4200", "length_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
-        "width": "1821", "width_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
-        "height": "1634", "height_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
-        "ground_clearance": "180", "ground_clearance_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        "length": "4200",
+        "length_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
+        "width": "1821",
+        "width_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
+        "height": "1634",
+        "height_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
+        "ground_clearance": "180",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
       },
       "seating_capacity": "5",
       "seating_capacity_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
       "boot_capacity": "368",
       "boot_capacity_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
       "key_features": [
-        { "value": "Power steering", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "Air-conditioner", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "Keyless entry", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "Sunroof", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" }
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "Air-conditioner",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "Keyless entry",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "ISOFIX", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XUV400-EV/10174/1675834882271/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XUV400-EV/10174/1675834882271/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev"
+        }
       ]
     },
     {
@@ -17224,33 +17748,76 @@
       "mileage_range": "456 km",
       "mileage_range_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
       "dimensions": {
-        "length": "4200", "length_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
-        "width": "1821", "width_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
-        "height": "1634", "height_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
-        "ground_clearance": "180", "ground_clearance_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        "length": "4200",
+        "length_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
+        "width": "1821",
+        "width_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
+        "height": "1634",
+        "height_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
+        "ground_clearance": "180",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
       },
       "seating_capacity": "5",
       "seating_capacity_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
       "boot_capacity": "368",
       "boot_capacity_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
       "key_features": [
-        { "value": "Power steering", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "Air-conditioner", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "Keyless entry", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "Sunroof", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" }
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "Air-conditioner",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "Keyless entry",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "ISOFIX", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XUV400-EV/10174/1675834882271/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XUV400-EV/10174/1675834882271/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev"
+        }
       ]
     },
     {
@@ -17276,33 +17843,76 @@
       "mileage_range": "456 km",
       "mileage_range_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
       "dimensions": {
-        "length": "4200", "length_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
-        "width": "1821", "width_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
-        "height": "1634", "height_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
-        "ground_clearance": "180", "ground_clearance_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        "length": "4200",
+        "length_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
+        "width": "1821",
+        "width_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
+        "height": "1634",
+        "height_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
+        "ground_clearance": "180",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
       },
       "seating_capacity": "5",
       "seating_capacity_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
       "boot_capacity": "368",
       "boot_capacity_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs",
       "key_features": [
-        { "value": "Power steering", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "Air-conditioner", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "Keyless entry", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "Sunroof", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" }
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "Air-conditioner",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "Keyless entry",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "Sunroof",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" },
-        { "value": "ISOFIX", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XUV400-EV/10174/1675834882271/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XUV400-EV/10174/1675834882271/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv400-ev"
+        }
       ]
     },
     {
@@ -17328,32 +17938,78 @@
       "mileage_range": "521 km",
       "mileage_range_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
       "dimensions": {
-        "length": "4740", "length_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
-        "width": "1900", "width_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
-        "height": "1747", "height_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
-        "ground_clearance": "201", "ground_clearance_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        "length": "4740",
+        "length_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
+        "width": "1900",
+        "width_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
+        "height": "1747",
+        "height_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
+        "ground_clearance": "201",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
       },
       "seating_capacity": "7",
       "seating_capacity_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
       "key_features": [
-        { "value": "Three-screen setup", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Level 2 ADAS", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Ventilated seats", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" }
+        {
+          "value": "Three-screen setup",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Level 2 ADAS",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Ventilated seats",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        }
       ],
       "safety_features": [
-        { "value": "7 airbags", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "ISOFIX", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "360° view camera", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" }
+        {
+          "value": "7 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "360° view camera",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XEV-9S/11200/1737523498498/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/xev-9s" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XEV-9S/11200/1737523498498/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s"
+        }
       ]
     },
     {
@@ -17379,32 +18035,78 @@
       "mileage_range": "679 km",
       "mileage_range_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
       "dimensions": {
-        "length": "4740", "length_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
-        "width": "1900", "width_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
-        "height": "1747", "height_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
-        "ground_clearance": "201", "ground_clearance_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        "length": "4740",
+        "length_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
+        "width": "1900",
+        "width_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
+        "height": "1747",
+        "height_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
+        "ground_clearance": "201",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
       },
       "seating_capacity": "7",
       "seating_capacity_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
       "key_features": [
-        { "value": "Three-screen setup", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Level 2 ADAS", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Ventilated seats", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" }
+        {
+          "value": "Three-screen setup",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Level 2 ADAS",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Ventilated seats",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        }
       ],
       "safety_features": [
-        { "value": "7 airbags", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "ISOFIX", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "360° view camera", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" }
+        {
+          "value": "7 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "360° view camera",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XEV-9S/11200/1737523498498/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/xev-9s" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XEV-9S/11200/1737523498498/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s"
+        }
       ]
     },
     {
@@ -17430,32 +18132,78 @@
       "mileage_range": "679 km",
       "mileage_range_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
       "dimensions": {
-        "length": "4740", "length_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
-        "width": "1900", "width_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
-        "height": "1747", "height_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
-        "ground_clearance": "201", "ground_clearance_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        "length": "4740",
+        "length_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
+        "width": "1900",
+        "width_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
+        "height": "1747",
+        "height_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
+        "ground_clearance": "201",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
       },
       "seating_capacity": "7",
       "seating_capacity_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
       "key_features": [
-        { "value": "Three-screen setup", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Level 2 ADAS", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Ventilated seats", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" }
+        {
+          "value": "Three-screen setup",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Level 2 ADAS",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Ventilated seats",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        }
       ],
       "safety_features": [
-        { "value": "7 airbags", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "ISOFIX", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "360° view camera", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" }
+        {
+          "value": "7 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "360° view camera",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XEV-9S/11200/1737523498498/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/xev-9s" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XEV-9S/11200/1737523498498/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s"
+        }
       ]
     },
     {
@@ -17481,32 +18229,78 @@
       "mileage_range": "679 km",
       "mileage_range_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
       "dimensions": {
-        "length": "4740", "length_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
-        "width": "1900", "width_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
-        "height": "1747", "height_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
-        "ground_clearance": "201", "ground_clearance_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        "length": "4740",
+        "length_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
+        "width": "1900",
+        "width_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
+        "height": "1747",
+        "height_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
+        "ground_clearance": "201",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
       },
       "seating_capacity": "7",
       "seating_capacity_citation": "https://www.cardekho.com/mahindra/xev-9s/specs",
       "key_features": [
-        { "value": "Three-screen setup", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Level 2 ADAS", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "Ventilated seats", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" }
+        {
+          "value": "Three-screen setup",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Level 2 ADAS",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "Ventilated seats",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        }
       ],
       "safety_features": [
-        { "value": "7 airbags", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "ISOFIX", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" },
-        { "value": "360° view camera", "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs" }
+        {
+          "value": "7 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "ISOFIX",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        },
+        {
+          "value": "360° view camera",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XEV-9S/11200/1737523498498/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/xev-9s" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XEV-9S/11200/1737523498498/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/xev-9s"
+        }
       ]
     },
     {
@@ -17543,21 +18337,54 @@
       "boot_capacity": "364",
       "boot_capacity_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs",
       "key_features": [
-        { "value": "Dual 10.25-inch screens", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" },
-        { "value": "7-speaker Harman Kardon audio system", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" },
-        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" },
-        { "value": "Dual-zone climate control", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" }
+        {
+          "value": "Dual 10.25-inch screens",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        },
+        {
+          "value": "7-speaker Harman Kardon audio system",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        },
+        {
+          "value": "Dual-zone climate control",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Mahindra/XUV-3XO-EV/12263/1767759269079/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Mahindra/XUV-3XO-EV/12263/1767759269079/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev"
+        }
       ]
     },
     {
@@ -17594,21 +18421,642 @@
       "boot_capacity": "364",
       "boot_capacity_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs",
       "key_features": [
-        { "value": "Dual 10.25-inch screens", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" },
-        { "value": "7-speaker Harman Kardon audio system", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" },
-        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" },
-        { "value": "Dual-zone climate control", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" },
-        { "value": "Connected car features", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" }
+        {
+          "value": "Dual 10.25-inch screens",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        },
+        {
+          "value": "7-speaker Harman Kardon audio system",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        },
+        {
+          "value": "Dual-zone climate control",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        },
+        {
+          "value": "Connected car features",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Mahindra/XUV-3XO-EV/12263/1767759269079/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Mahindra/XUV-3XO-EV/12263/1767759269079/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/xuv-3xo-ev"
+        }
+      ]
+    },
+    {
+      "make": "Mahindra",
+      "make_citation": "https://www.cardekho.com/cars/Mahindra",
+      "model": "Bolero Neo Plus",
+      "model_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus",
+      "variant_name": "P4 2.2 Diesel MT",
+      "variant_name_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/price-in-hyderabad",
+      "ex_showroom_price": "Rs 10,90,000",
+      "ex_showroom_price_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/price-in-hyderabad",
+      "hyderabad_on_road_price": "Rs 12,95,000",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/price-in-hyderabad",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+      "engine_displacement": "2184",
+      "engine_displacement_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+      "power": "118.35 bhp",
+      "power_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+      "torque": "280 Nm",
+      "torque_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+      "mileage_range": "14 kmpl",
+      "mileage_range_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+      "dimensions": {
+        "length": "4400",
+        "length_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+        "width": "1795",
+        "width_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+        "height": "1812",
+        "height_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+        "ground_clearance": "180",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+      },
+      "seating_capacity": "9",
+      "seating_capacity_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+      "boot_capacity": "696",
+      "boot_capacity_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+      "key_features": [
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        },
+        {
+          "value": "8.9-inch display",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        },
+        {
+          "value": "Keyless entry",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        },
+        {
+          "value": "17-inch alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        },
+        {
+          "value": "Parking sensors",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "2 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        },
+        {
+          "value": "Rear parking sensors",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Bolero-Neo-Plus/9137/1758198862271/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus"
+        }
+      ]
+    },
+    {
+      "make": "Mahindra",
+      "make_citation": "https://www.cardekho.com/cars/Mahindra",
+      "model": "Bolero Neo Plus",
+      "model_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus",
+      "variant_name": "P10 2.2 Diesel MT",
+      "variant_name_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/price-in-hyderabad",
+      "ex_showroom_price": "Rs 11,95,000",
+      "ex_showroom_price_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/price-in-hyderabad",
+      "hyderabad_on_road_price": "Rs 14,18,000",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/price-in-hyderabad",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+      "engine_displacement": "2184",
+      "engine_displacement_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+      "power": "118.35 bhp",
+      "power_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+      "torque": "280 Nm",
+      "torque_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+      "mileage_range": "14 kmpl",
+      "mileage_range_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+      "dimensions": {
+        "length": "4400",
+        "length_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+        "width": "1795",
+        "width_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+        "height": "1812",
+        "height_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+        "ground_clearance": "180",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+      },
+      "seating_capacity": "9",
+      "seating_capacity_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+      "boot_capacity": "696",
+      "boot_capacity_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs",
+      "key_features": [
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        },
+        {
+          "value": "8.9-inch display",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        },
+        {
+          "value": "Keyless entry",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        },
+        {
+          "value": "17-inch alloy wheels",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        },
+        {
+          "value": "Parking sensors",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "2 airbags",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        },
+        {
+          "value": "Rear parking sensors",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Bolero-Neo-Plus/9137/1758198862271/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-neo-plus"
+        }
+      ]
+    },
+    {
+      "make": "Mahindra",
+      "make_citation": "https://www.cardekho.com/cars/Mahindra",
+      "model": "Bolero Pik-Up",
+      "model_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "variant_name": "MS CBC 1.3T",
+      "variant_name_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "ex_showroom_price": "Rs 9,05,000",
+      "ex_showroom_price_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "hyderabad_on_road_price": "Rs 10,47,000",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "engine_displacement": "2523",
+      "engine_displacement_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "power": "76 bhp",
+      "power_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "torque": "200 Nm",
+      "torque_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "mileage_range": "17.20 kmpl",
+      "mileage_range_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "dimensions": {
+        "length": "5219",
+        "length_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "width": "1700",
+        "width_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "height": "1825",
+        "height_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "ground_clearance": "180",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+      },
+      "seating_capacity": "2",
+      "seating_capacity_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "boot_capacity": "N/A",
+      "boot_capacity_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "key_features": [
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "1 airbag",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Bolero-Pik-Up/12238/1769597077567/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up"
+        }
+      ]
+    },
+    {
+      "make": "Mahindra",
+      "make_citation": "https://www.cardekho.com/cars/Mahindra",
+      "model": "Bolero Pik-Up",
+      "model_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "variant_name": "MS CBC 4WD 1.3T",
+      "variant_name_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "ex_showroom_price": "Rs 9,35,000",
+      "ex_showroom_price_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "hyderabad_on_road_price": "Rs 10,80,000",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "engine_displacement": "2523",
+      "engine_displacement_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "power": "76 bhp",
+      "power_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "torque": "200 Nm",
+      "torque_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "mileage_range": "17.20 kmpl",
+      "mileage_range_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "dimensions": {
+        "length": "5219",
+        "length_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "width": "1700",
+        "width_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "height": "1825",
+        "height_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "ground_clearance": "180",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+      },
+      "seating_capacity": "2",
+      "seating_capacity_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "boot_capacity": "N/A",
+      "boot_capacity_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "key_features": [
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "4WD drivetrain",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "1 airbag",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Bolero-Pik-Up/12238/1769597077567/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up"
+        }
+      ]
+    },
+    {
+      "make": "Mahindra",
+      "make_citation": "https://www.cardekho.com/cars/Mahindra",
+      "model": "Bolero Pik-Up",
+      "model_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "variant_name": "MS FB 1.3T",
+      "variant_name_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "ex_showroom_price": "Rs 9,56,000",
+      "ex_showroom_price_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "hyderabad_on_road_price": "Rs 11,00,000",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "engine_displacement": "2523",
+      "engine_displacement_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "power": "76 bhp",
+      "power_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "torque": "200 Nm",
+      "torque_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "mileage_range": "17.20 kmpl",
+      "mileage_range_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "dimensions": {
+        "length": "5219",
+        "length_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "width": "1700",
+        "width_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "height": "1825",
+        "height_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "ground_clearance": "180",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+      },
+      "seating_capacity": "2",
+      "seating_capacity_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "boot_capacity": "N/A",
+      "boot_capacity_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "key_features": [
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "Flat bed",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "1 airbag",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Bolero-Pik-Up/12238/1769597077567/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up"
+        }
+      ]
+    },
+    {
+      "make": "Mahindra",
+      "make_citation": "https://www.cardekho.com/cars/Mahindra",
+      "model": "Bolero Pik-Up",
+      "model_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "variant_name": "4WD 1.3T",
+      "variant_name_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "ex_showroom_price": "Rs 9,58,000",
+      "ex_showroom_price_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "hyderabad_on_road_price": "Rs 11,05,000",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "engine_displacement": "2523",
+      "engine_displacement_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "power": "76 bhp",
+      "power_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "torque": "200 Nm",
+      "torque_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "mileage_range": "17.20 kmpl",
+      "mileage_range_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "dimensions": {
+        "length": "5219",
+        "length_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "width": "1700",
+        "width_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "height": "1825",
+        "height_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "ground_clearance": "180",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+      },
+      "seating_capacity": "2",
+      "seating_capacity_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "boot_capacity": "N/A",
+      "boot_capacity_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "key_features": [
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "4WD drivetrain",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "1 airbag",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Bolero-Pik-Up/12238/1769597077567/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up"
+        }
+      ]
+    },
+    {
+      "make": "Mahindra",
+      "make_citation": "https://www.cardekho.com/cars/Mahindra",
+      "model": "Bolero Pik-Up",
+      "model_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "variant_name": "FB 1.3T",
+      "variant_name_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "ex_showroom_price": "Rs 9,63,000",
+      "ex_showroom_price_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "hyderabad_on_road_price": "Rs 11,10,000",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "engine_displacement": "2523",
+      "engine_displacement_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "power": "76 bhp",
+      "power_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "torque": "200 Nm",
+      "torque_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "mileage_range": "17.20 kmpl",
+      "mileage_range_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "dimensions": {
+        "length": "5219",
+        "length_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "width": "1700",
+        "width_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "height": "1825",
+        "height_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "ground_clearance": "180",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+      },
+      "seating_capacity": "2",
+      "seating_capacity_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "boot_capacity": "N/A",
+      "boot_capacity_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "key_features": [
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "Flat bed",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "1 airbag",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Bolero-Pik-Up/12238/1769597077567/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up"
+        }
+      ]
+    },
+    {
+      "make": "Mahindra",
+      "make_citation": "https://www.cardekho.com/cars/Mahindra",
+      "model": "Bolero Pik-Up",
+      "model_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "variant_name": "FB AC 1.3T",
+      "variant_name_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "ex_showroom_price": "Rs 9,86,000",
+      "ex_showroom_price_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "hyderabad_on_road_price": "Rs 11,35,000",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/mahindra/bolero-pik-up",
+      "fuel_type": "Diesel",
+      "fuel_type_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "engine_displacement": "2523",
+      "engine_displacement_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "power": "76 bhp",
+      "power_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "torque": "200 Nm",
+      "torque_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "mileage_range": "17.20 kmpl",
+      "mileage_range_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "dimensions": {
+        "length": "5219",
+        "length_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "width": "1700",
+        "width_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "height": "1825",
+        "height_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+        "ground_clearance": "180",
+        "ground_clearance_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+      },
+      "seating_capacity": "2",
+      "seating_capacity_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "boot_capacity": "N/A",
+      "boot_capacity_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs",
+      "key_features": [
+        {
+          "value": "Power steering",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "Flat bed",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "Air-conditioner",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "1 airbag",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up/specs"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Bolero-Pik-Up/12238/1769597077567/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/mahindra/bolero-pik-up"
+        }
       ]
     }
   ]

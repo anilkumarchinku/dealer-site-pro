@@ -2654,6 +2654,186 @@
       "range_km": 635,
       "range_km_citation": "https://www.cardekho.com/bmw/ix/variants.htm",
       "dimensions": {}
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm",
+      "model": "3 Series",
+      "model_citation": "https://www.cardekho.com/bmw/3-series",
+      "variant_name": "M340i 50 Jahre Edition",
+      "variant_name_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm",
+      "ex_showroom_price_min_inr": 7285000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm",
+      "engine_displacement_cc": 2998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm",
+      "power_bhp": 368.78,
+      "power_bhp_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm",
+      "torque_nm": 500,
+      "torque_nm_citation": "https://www.cardekho.com/bmw/3-series/specs",
+      "mileage_kmpl": 13.02,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm",
+      "boot_space_l": 480,
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/3-series/specs",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/3-series/specs",
+      "width_mm": 1827,
+      "width_mm_citation": "https://www.cardekho.com/bmw/3-series/specs",
+      "height_mm": 1442,
+      "height_mm_citation": "https://www.cardekho.com/bmw/3-series/specs",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm"
+        },
+        {
+          "value": "Multi-function Steering Wheel",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm"
+        },
+        {
+          "value": "Sport Seats",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm"
+        },
+        {
+          "value": "Ambient Lighting",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm"
+        },
+        {
+          "value": "Head-Up Display",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/3-Series/12300/1756024367684/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/bmw/3-series",
+      "source_url": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm",
+      "dimensions": {}
+    },
+    {
+      "make": "BMW",
+      "make_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "model": "3 Series",
+      "model_citation": "https://www.cardekho.com/bmw/3-series",
+      "variant_name": "M340i xDrive",
+      "variant_name_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "ex_showroom_price_min_inr": 7540000,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "hyderabad_on_road_price_inr_citation": "https://www.cardekho.com/bmw/3-series/variants.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "engine_displacement_cc": 2998,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "power_bhp": 368.78,
+      "power_bhp_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "torque_nm": 500,
+      "torque_nm_citation": "https://www.cardekho.com/bmw/3-series/specs",
+      "mileage_kmpl": 13.02,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "boot_space_l": 480,
+      "boot_space_l_citation": "https://www.cardekho.com/bmw/3-series/specs",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/bmw/3-series/specs",
+      "width_mm": 1827,
+      "width_mm_citation": "https://www.cardekho.com/bmw/3-series/specs",
+      "height_mm": 1442,
+      "height_mm_citation": "https://www.cardekho.com/bmw/3-series/specs",
+      "key_features": [
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm"
+        },
+        {
+          "value": "Automatic Climate Control",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm"
+        },
+        {
+          "value": "Multi-function Steering Wheel",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm"
+        },
+        {
+          "value": "xDrive All-Wheel Drive",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm"
+        },
+        {
+          "value": "Sport Seats with Memory",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm"
+        },
+        {
+          "value": "Head-Up Display",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm"
+        },
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/3-Series/12300/1756024367684/front-left-side-47.jpg?tr=w-300",
+          "value_citation": "https://www.cardekho.com/bmw/3-series"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/bmw/3-series",
+      "source_url": "https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm",
+      "dimensions": {}
     }
   ]
 }

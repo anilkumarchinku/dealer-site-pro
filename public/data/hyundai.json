@@ -16810,6 +16810,162 @@
       "transmission_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm",
       "mileage_kmpl": 20,
       "mileage_kmpl_citation": "https://www.cardekho.com/hyundai/venue-n-line/variants.htm"
+    },
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "Prime HB",
+      "model_citation": "https://www.cardekho.com/hyundai/prime-hb",
+      "variant_name": "Prime HB",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Prime_HB/Hyundai_Prime_HB.htm",
+      "ex_showroom_price": {
+        "min": 599900,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Prime_HB/Hyundai_Prime_HB.htm",
+        "max": 599900,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Prime_HB/Hyundai_Prime_HB.htm"
+      },
+      "hyderabad_on_road_price": 640000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/prime-hb/price-in-hyderabad",
+      "fuel_type": "CNG",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Hyundai_Prime_HB/Hyundai_Prime_HB.htm",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/overview/Hyundai_Prime_HB/Hyundai_Prime_HB.htm",
+      "engine_displacement_cc": 1197,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Hyundai_Prime_HB/Hyundai_Prime_HB.htm",
+      "power_bhp": 67.72,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Hyundai_Prime_HB/Hyundai_Prime_HB.htm",
+      "torque_nm": 95.2,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Hyundai_Prime_HB/Hyundai_Prime_HB.htm",
+      "mileage_kmpl": 27.32,
+      "mileage_kmpl_citation": "https://www.hyundai.com/in/en/find-a-car/taxi/prime-hb",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Hyundai_Prime_HB/Hyundai_Prime_HB.htm",
+      "boot_space_l": null,
+      "boot_space_l_citation": "https://www.cardekho.com/hyundai/prime-hb/specs",
+      "ground_clearance_mm": null,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/hyundai/prime-hb/specs",
+      "length_mm": 3815,
+      "length_mm_citation": "https://www.cardekho.com/hyundai/prime-hb/specs",
+      "width_mm": 1680,
+      "width_mm_citation": "https://www.cardekho.com/hyundai/prime-hb/specs",
+      "height_mm": 1520,
+      "height_mm_citation": "https://www.cardekho.com/hyundai/prime-hb/specs",
+      "key_features": [
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Prime_HB/Hyundai_Prime_HB.htm"
+        },
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Prime_HB/Hyundai_Prime_HB.htm"
+        },
+        {
+          "value": "Rear AC Vents",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Prime_HB/Hyundai_Prime_HB.htm"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Prime_HB/Hyundai_Prime_HB.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Prime_HB/Hyundai_Prime_HB.htm"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Prime_HB/Hyundai_Prime_HB.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Prime-HB/13173/1767101740320/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Prime_HB/Hyundai_Prime_HB.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/hyundai/prime-hb",
+      "source_url": "https://www.cardekho.com/hyundai/prime-hb",
+      "source_url_citation": "https://www.cardekho.com/hyundai/prime-hb"
+    },
+    {
+      "make": "Hyundai",
+      "make_citation": "https://www.cardekho.com/cars/Hyundai",
+      "model": "Prime SD",
+      "model_citation": "https://www.cardekho.com/hyundai/prime-sd",
+      "variant_name": "Prime SD",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Prime_SD/Hyundai_Prime_SD.htm",
+      "ex_showroom_price": {
+        "min": 690000,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Prime_SD/Hyundai_Prime_SD.htm",
+        "max": 690000,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Prime_SD/Hyundai_Prime_SD.htm"
+      },
+      "hyderabad_on_road_price": 690000,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/prime-sd/price-in-hyderabad",
+      "fuel_type": "CNG",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Hyundai_Prime_SD/Hyundai_Prime_SD.htm",
+      "transmission": "Manual",
+      "transmission_citation": "https://www.cardekho.com/overview/Hyundai_Prime_SD/Hyundai_Prime_SD.htm",
+      "engine_displacement_cc": 1197,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Hyundai_Prime_SD/Hyundai_Prime_SD.htm",
+      "power_bhp": 67.72,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Hyundai_Prime_SD/Hyundai_Prime_SD.htm",
+      "torque_nm": 95.2,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Hyundai_Prime_SD/Hyundai_Prime_SD.htm",
+      "mileage_kmpl": 27.32,
+      "mileage_kmpl_citation": "https://www.popularhyundai.com/model/Taxi/prime-sd",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Hyundai_Prime_SD/Hyundai_Prime_SD.htm",
+      "boot_space_l": null,
+      "boot_space_l_citation": "https://www.cardekho.com/hyundai/prime-sd/specs",
+      "ground_clearance_mm": null,
+      "ground_clearance_mm_citation": "https://www.cardekho.com/hyundai/prime-sd/specs",
+      "length_mm": 3995,
+      "length_mm_citation": "https://www.popularhyundai.com/model/Taxi/prime-sd",
+      "width_mm": 1680,
+      "width_mm_citation": "https://www.popularhyundai.com/model/Taxi/prime-sd",
+      "height_mm": 1520,
+      "height_mm_citation": "https://www.popularhyundai.com/model/Taxi/prime-sd",
+      "key_features": [
+        {
+          "value": "Keyless Entry",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Prime_SD/Hyundai_Prime_SD.htm"
+        },
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Prime_SD/Hyundai_Prime_SD.htm"
+        },
+        {
+          "value": "Rear AC Vents",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Prime_SD/Hyundai_Prime_SD.htm"
+        },
+        {
+          "value": "Parking Sensors",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Prime_SD/Hyundai_Prime_SD.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Prime_SD/Hyundai_Prime_SD.htm"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Prime_SD/Hyundai_Prime_SD.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Prime-SD/13174/1770884620026/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Hyundai_Prime_SD/Hyundai_Prime_SD.htm"
+        }
+      ],
+      "availability_status": "on_sale",
+      "availability_status_citation": "https://www.cardekho.com/hyundai/prime-sd",
+      "source_url": "https://www.cardekho.com/hyundai/prime-sd",
+      "source_url_citation": "https://www.cardekho.com/hyundai/prime-sd"
     }
   ]
 }
