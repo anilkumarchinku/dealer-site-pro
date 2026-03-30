@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="pureev-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0062BD"/>
+      <stop offset="100%" stop-color="#0057A8"/>
+    </linearGradient>
+    <linearGradient id="pureev-shine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="24" fill="url(#pureev-bg)"/>
+  <rect width="200" height="100" rx="24" fill="url(#pureev-shine)"/>
+  <text x="100" y="88" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="800" font-size="42" fill="#FFFFFF" letter-spacing="3">PURE</text>
+  <text x="100" y="130" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="800" font-size="42" fill="#FFFFFF" letter-spacing="3">EV</text>
+  <rect x="56" y="140" width="88" height="2.5" rx="1.25" fill="#FFFFFF" opacity="0.35"/>
+  <text x="100" y="164" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="500" font-size="11" fill="#FFFFFF" letter-spacing="4" opacity="0.7">ELECTRIC</text>
+</svg>

@@ -115,7 +115,12 @@ const BRAND_FOLDER_MAP_2W: Record<string, string> = {
     "vespa": "vespa-india",
     "yezdi motorcycles": "yezdi-motorcycles",
     "yulu": "yulu",
-    "zontes india": "zontes-india"
+    "zontes india": "zontes-india",
+    "bsa motorcycles": "bsa",
+    "qj motor india": "qj-motor-india",
+    "bgauss": "bgauss",
+    "battre electric": "battre-ev",
+    "ivoomi": "ivoomi-energy"
 }
 
 const BRAND_FOLDER_MAP_3W: Record<string, string> = {
@@ -140,6 +145,13 @@ const BRAND_FOLDER_MAP_3W: Record<string, string> = {
     "atul auto": "atul-auto",
     "lohia": "lohia-auto",
     "lohia auto": "lohia-auto",
+    "yc electric": "yc-ev",
+    "saera electric (mayuri)": "saera-ev",
+    "omega seiki mobility": "omega-seiki-mobility",
+    "altigreen": "altigreen",
+    "montra electric": "montra-ev",
+    "terra motors": "terra-motors",
+    "etrio": "etrio",
 }
 
 /**

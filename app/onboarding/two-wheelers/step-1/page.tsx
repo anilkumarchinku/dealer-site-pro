@@ -17,9 +17,7 @@ function toSlug(value: string) {
 }
 
 const LOGO_EXT: Record<string, string> = {
-    "cfmoto-india": "svg", "tork-motors": "svg", "hop-electric": "svg",
-    "yulu": "svg", "zontes-india": "svg", "okinawa-autotech": "webp",
-    "qj-motor-india": "svg",
+    "hop-electric": "svg", "okinawa-autotech": "webp",
 };
 function logoSrc(brandId: string) {
     return `/data/brand-logos/${brandId}.${LOGO_EXT[brandId] ?? "png"}`;

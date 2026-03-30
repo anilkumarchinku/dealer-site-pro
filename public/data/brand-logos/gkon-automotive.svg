@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="gkon-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9668"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="gkon-shine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="24" fill="url(#gkon-bg)"/>
+  <rect width="200" height="100" rx="24" fill="url(#gkon-shine)"/>
+  <text x="100" y="100" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="800" font-size="52" fill="#FFFFFF" letter-spacing="5">GKON</text>
+  <rect x="48" y="114" width="104" height="2.5" rx="1.25" fill="#FFFFFF" opacity="0.4"/>
+  <text x="100" y="142" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="500" font-size="13" fill="#FFFFFF" letter-spacing="5" opacity="0.85">AUTOMOTIVE</text>
+  <text x="100" y="164" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="600" font-size="10" fill="#FFFFFF" letter-spacing="3" opacity="0.6">ELECTRIC VEHICLES</text>
+</svg>
