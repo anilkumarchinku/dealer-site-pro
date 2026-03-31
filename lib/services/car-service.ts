@@ -273,8 +273,8 @@ function mapDbCarToCar(dbCar: any): Car {
     const engineObj = dbCar.engine ?? {
         type:         fuelTypeDisplay,
         displacement: dbCar.engine_cc ?? null,
-        power:        dbCar.engine_power ?? '—',
-        torque:       dbCar.engine_torque ?? '—',
+        power:        dbCar.engine_power ?? null,
+        torque:       dbCar.engine_torque ?? null,
     };
 
     // ── Performance ───────────────────────────────────────────────────────────
