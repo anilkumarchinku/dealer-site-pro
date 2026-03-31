@@ -7,157 +7,145 @@
       "make": "Suzuki",
       "model": "Access 125",
       "variant_name": "Access 125 Standard",
-      "price": "₹80,643",
-      "engine_displacement": "125 cc",
+      "price": "₹78,184",
+      "engine_displacement": "124 cc",
       "mileage": "47 kmpl",
       "max_power": "8.3 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Access 125 Standard", "price": "₹78,184" },
+        { "name": "Access 125 Special Edition", "price": "₹85,216" },
+        { "name": "Access 125 Ride Connect Edition", "price": "₹89,718" },
+        { "name": "Access 125 Ride Connect ABS Edition", "price": "₹93,683" },
+        { "name": "Access 125 Ride Connect TFT Edition", "price": "₹95,363" },
+        { "name": "Access 125 Ride Connect TFT ABS Edition", "price": "₹1,00,274" }
+      ],
+      "colors": [
+        "Metallic Mat Black",
+        "Pearl Grace White",
+        "Metallic Mat Stellar Blue",
+        "Solid Ice Green",
+        "Pearl Shiny Beige",
+        "Pearl Mat Aqua Silver"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 124,
+        "max_power_bhp": 8.3,
+        "max_torque_nm": 10.2,
+        "cooling": "Air-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "CVT Automatic",
+        "kerb_weight_kg": 106,
+        "fuel_tank_litres": 5.3,
+        "top_speed_kmph": 90,
+        "mileage_kmpl": 47,
+        "emission_standard": "BS6 Phase 2B",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "abs": "Combined Braking System",
+        "features": [
+          "USB charging port",
+          "Kick and self start",
+          "Steel wheels"
+        ]
+      }
     },
     {
       "make": "Suzuki",
-      "model": "Access 125",
-      "variant_name": "Access 125 Special Edition",
-      "price": "",
-      "engine_displacement": "125 cc",
-      "mileage": "47 kmpl",
-      "max_power": "8.3 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Access 125",
-      "variant_name": "Access 125 Ride Connect Edition",
-      "price": "",
-      "engine_displacement": "125 cc",
-      "mileage": "47 kmpl",
-      "max_power": "8.3 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Access 125",
-      "variant_name": "Access 125 Ride Connect ABS Edition",
-      "price": "",
-      "engine_displacement": "125 cc",
-      "mileage": "47 kmpl",
-      "max_power": "8.3 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Access 125",
-      "variant_name": "Access 125 Ride Connect TFT Edition",
-      "price": "",
-      "engine_displacement": "125 cc",
-      "mileage": "47 kmpl",
-      "max_power": "8.3 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Access 125",
-      "variant_name": "Access 125 Ride Connect TFT ABS Edition",
-      "price": "",
-      "engine_displacement": "125 cc",
-      "mileage": "47 kmpl",
-      "max_power": "8.3 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Avenis",
+      "model": "Avenis 125",
       "variant_name": "Avenis 125 Standard",
       "price": "₹86,262",
       "engine_displacement": "124 cc",
       "mileage": "49.6 kmpl",
       "max_power": "8.58 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Avenis 125 Standard", "price": "₹86,262" },
+        { "name": "Avenis 125 Race Edition", "price": "₹87,500" },
+        { "name": "Avenis 125 Special Edition", "price": "₹88,645" }
+      ],
+      "colors": [
+        "Metallic Matte Platinum Silver and Glass Sparkle Black",
+        "Glossy Sparkle Black",
+        "Glossy Sparkle Black Pearl Mira Red",
+        "Glossy Sparkle Black Pearl Glacier White",
+        "Champion Yellow No 2 Glossy Sparkle Black",
+        "Metallic Mat Black and Metallic Mat Titanium Silver"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 124,
+        "max_power_bhp": 8.58,
+        "max_torque_nm": 10,
+        "cooling": "Air-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "CVT Automatic",
+        "kerb_weight_kg": 106,
+        "fuel_tank_litres": 5.2,
+        "top_speed_kmph": 90,
+        "mileage_kmpl": 49.6,
+        "emission_standard": "BS6 Phase 2B",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "abs": "Combined Braking System",
+        "seat_height_mm": 780,
+        "features": [
+          "USB charging port",
+          "Kick and self start",
+          "Alloy wheels"
+        ]
+      }
     },
     {
       "make": "Suzuki",
-      "model": "Avenis",
-      "variant_name": "Avenis 125 Race Edition",
-      "price": "",
-      "engine_displacement": "124 cc",
-      "mileage": "49.6 kmpl",
-      "max_power": "8.58 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Avenis",
-      "variant_name": "Avenis 125 Special Edition",
-      "price": "",
-      "engine_displacement": "124 cc",
-      "mileage": "49.6 kmpl",
-      "max_power": "8.58 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Burgman Street",
+      "model": "Burgman Street 125",
       "variant_name": "Burgman Street 125 Standard - OBD 2B",
-      "price": "₹96,250",
+      "price": "₹93,676",
       "engine_displacement": "124 cc",
-      "mileage": "58.5 kmpl",
+      "mileage": "50 kmpl",
       "max_power": "8.58 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Burgman Street",
-      "variant_name": "Burgman Street 125 Ride Connect Edition - OBD 2B",
-      "price": "",
-      "engine_displacement": "124 cc",
-      "mileage": "58.5 kmpl",
-      "max_power": "8.58 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Burgman Street",
-      "variant_name": "Burgman Street 125 EX - OBD 2B",
-      "price": "",
-      "engine_displacement": "124 cc",
-      "mileage": "58.5 kmpl",
-      "max_power": "8.58 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Burgman Street 125 Standard - OBD 2B", "price": "₹93,676" },
+        { "name": "Burgman Street 125 Ride Connect Edition - OBD 2B", "price": "₹1,07,715" },
+        { "name": "Burgman Street 125 EX - OBD 2B", "price": "₹1,19,096" }
+      ],
+      "colors": [
+        "Pearl Mirage White",
+        "Metallic Matte Titanium Silver",
+        "Glossy Grey",
+        "Pearl Matte Shadow Green",
+        "Metallic Matte Black No. 2",
+        "Matte Blue",
+        "Pearl Grace White",
+        "Metallic Matte Stellar Blue",
+        "Metallic Royal Bronze"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 124,
+        "max_power_bhp": 8.58,
+        "max_torque_nm": 10,
+        "cooling": "Air-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "CVT Automatic",
+        "kerb_weight_kg": 110,
+        "fuel_tank_litres": 5.5,
+        "top_speed_kmph": 95,
+        "mileage_kmpl": 50,
+        "emission_standard": "BS6 Phase 2B",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "abs": "Combined Braking System",
+        "features": [
+          "Fully-digital instrument console",
+          "Bluetooth connectivity",
+          "Silent start",
+          "Auto engine start/stop",
+          "Suzuki Eco Performance Alpha"
+        ]
+      }
     },
     {
       "make": "Suzuki",
@@ -168,22 +156,40 @@
       "mileage": "45 kmpl",
       "max_power": "13.41 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Gixxer",
-      "variant_name": "Gixxer Ride Connect Special Edition - OBD 2B",
-      "price": "",
-      "engine_displacement": "155 cc",
-      "mileage": "45 kmpl",
-      "max_power": "13.41 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Gixxer Ride Connect - OBD 2B", "price": "₹1,28,892" },
+        { "name": "Gixxer Ride Connect Special Edition - OBD 2B", "price": "₹1,29,345" }
+      ],
+      "colors": [
+        "Pearl Mira Red",
+        "Glass Sparkle Black",
+        "Metallic Triton Blue",
+        "Grey and Red",
+        "Met Oort Gray and Met Lush Green",
+        "Met Triton Blue and Pearl Glacier White"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 155,
+        "max_power_bhp": 13.41,
+        "max_torque_nm": 13.8,
+        "cooling": "Air-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "5 Speed Manual",
+        "kerb_weight_kg": 141,
+        "fuel_tank_litres": 12,
+        "top_speed_kmph": 115,
+        "mileage_kmpl": 45,
+        "emission_standard": "BS6 Phase 2B",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Single-channel ABS",
+        "features": [
+          "Bluetooth connected instrument cluster",
+          "Alloy wheels",
+          "LED headlamp"
+        ]
+      }
     },
     {
       "make": "Suzuki",
@@ -194,22 +200,40 @@
       "mileage": "45 kmpl",
       "max_power": "13.4 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Gixxer SF",
-      "variant_name": "Gixxer SF Ride Connect Special Edition - OBD 2B",
-      "price": "",
-      "engine_displacement": "155 cc",
-      "mileage": "45 kmpl",
-      "max_power": "13.4 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Gixxer SF Ride Connect - OBD 2B", "price": "₹1,37,594" },
+        { "name": "Gixxer SF Ride Connect Special Edition - OBD 2B", "price": "₹1,38,061" }
+      ],
+      "colors": [
+        "Pearl Mira Red",
+        "Metallic Triton Blue",
+        "Glass Sparkle Black",
+        "Met Triton Blue and Pearl Glacier White",
+        "Grey and Red",
+        "Met Oort Gray and Met Lush Green"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 155,
+        "max_power_bhp": 13.4,
+        "max_torque_nm": 13.8,
+        "cooling": "Air-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "5 Speed Manual",
+        "kerb_weight_kg": 148,
+        "fuel_tank_litres": 12,
+        "top_speed_kmph": 125,
+        "mileage_kmpl": 45,
+        "emission_standard": "BS6 Phase 2B",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Single-channel ABS",
+        "features": [
+          "Full fairing",
+          "Bluetooth connected instrument cluster",
+          "Alloy wheels"
+        ]
+      }
     },
     {
       "make": "Suzuki",
@@ -220,22 +244,39 @@
       "mileage": "35 kmpl",
       "max_power": "26.13 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Gixxer 250",
-      "variant_name": "Gixxer 250 Special Edition",
-      "price": "",
-      "engine_displacement": "249 cc",
-      "mileage": "35 kmpl",
-      "max_power": "26.13 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Gixxer 250 Standard", "price": "₹1,83,994" },
+        { "name": "Gixxer 250 Special Edition", "price": "₹1,84,451" }
+      ],
+      "colors": [
+        "Met. Triton Blue / Pearl Glacier White",
+        "Pearl Glacier White / Metallic Mat Platinum Silver",
+        "Glass Sparkle Black",
+        "Metallic Matte Black",
+        "Met. Mat Black / Met. Mat Bordeaux Red"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 249,
+        "max_power_bhp": 26.13,
+        "max_torque_nm": 22.2,
+        "cooling": "Oil-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "6 Speed Manual",
+        "kerb_weight_kg": 156,
+        "fuel_tank_litres": 12,
+        "top_speed_kmph": 130,
+        "mileage_kmpl": 35,
+        "emission_standard": "BS6 Phase 2B",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Dual-channel ABS",
+        "features": [
+          "LED headlamp",
+          "Digital instrument cluster",
+          "Alloy wheels"
+        ]
+      }
     },
     {
       "make": "Suzuki",
@@ -243,25 +284,254 @@
       "variant_name": "Gixxer SF 250 Standard",
       "price": "₹1,92,245",
       "engine_displacement": "249 cc",
-      "mileage": "35 kmpl",
+      "mileage": "36 kmpl",
       "max_power": "26.13 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Gixxer SF 250 Standard", "price": "₹1,92,245" },
+        { "name": "Gixxer SF 250 Special Edition", "price": "₹1,92,703" }
+      ],
+      "colors": [
+        "Met Triton Blue / Pearl Glacier White",
+        "Pearl Glacier White / Metallic Mat Platinum Silver",
+        "Glass Sparkle Black",
+        "Metallic Matte Black",
+        "Met Mat Black / Met Mat Bordeaux Red"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 249,
+        "max_power_bhp": 26.13,
+        "max_torque_nm": 22.2,
+        "cooling": "Oil-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "6 Speed Manual",
+        "kerb_weight_kg": 161,
+        "fuel_tank_litres": 12,
+        "top_speed_kmph": 150,
+        "mileage_kmpl": 36,
+        "emission_standard": "BS6 Phase 2B",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Dual-channel ABS",
+        "features": [
+          "Full fairing",
+          "LED headlamp",
+          "Digital instrument cluster",
+          "Alloy wheels"
+        ]
+      }
     },
     {
       "make": "Suzuki",
-      "model": "Gixxer SF 250",
-      "variant_name": "Gixxer SF 250 Special Edition",
-      "price": "",
+      "model": "Gixxer SF 250 Flex Fuel",
+      "variant_name": "Gixxer SF 250 Flex Fuel Standard",
+      "price": "₹2,00,791",
       "engine_displacement": "249 cc",
       "mileage": "35 kmpl",
       "max_power": "26.13 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Gixxer SF 250 Flex Fuel Standard", "price": "₹2,00,791" }
+      ],
+      "colors": [
+        "Met Matt Black",
+        "Met Matt Black and Met Mat Bordeaux Red"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 249,
+        "max_power_bhp": 26.13,
+        "max_torque_nm": 22.2,
+        "cooling": "Oil-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection (Flex Fuel E20/E85 compatible)",
+        "gearbox": "6 Speed Manual",
+        "kerb_weight_kg": 161,
+        "fuel_tank_litres": 12,
+        "top_speed_kmph": 150,
+        "mileage_kmpl": 35,
+        "emission_standard": "BS6 Phase 2B",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Dual-channel ABS",
+        "features": [
+          "Flex fuel technology",
+          "Full fairing",
+          "LED headlamp",
+          "Digital instrument cluster"
+        ]
+      }
+    },
+    {
+      "make": "Suzuki",
+      "model": "V-Strom SX",
+      "variant_name": "V-Strom SX Standard",
+      "price": "₹2,00,382",
+      "engine_displacement": "249 cc",
+      "mileage": "36 kmpl",
+      "max_power": "26.1 bhp",
+      "source_section": "Available",
+      "variants": [
+        { "name": "V-Strom SX Standard", "price": "₹2,00,382" }
+      ],
+      "colors": [
+        "Glass Sparkle Black (YVB)",
+        "Pearl Glacier White + Metallic Mat Stellar Blue",
+        "Champion Yellow + Glass Sparkle Black",
+        "Champion Blue",
+        "Met Sonoma Red",
+        "Glass Sparkle Black",
+        "Champion Yellow No 2"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 249,
+        "max_power_bhp": 26.1,
+        "max_torque_nm": 22.2,
+        "cooling": "Oil-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "6 Speed Manual",
+        "kerb_weight_kg": 167,
+        "fuel_tank_litres": 12,
+        "top_speed_kmph": 140,
+        "mileage_kmpl": 36,
+        "emission_standard": "BS6 Phase 2B",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Dual-channel ABS",
+        "features": [
+          "Adventure tourer design",
+          "Bluetooth instrument cluster",
+          "Alloy wheels"
+        ]
+      }
+    },
+    {
+      "make": "Suzuki",
+      "model": "GSX-8R",
+      "variant_name": "GSX-8R Standard",
+      "price": "₹9,89,328",
+      "engine_displacement": "776 cc",
+      "mileage": "23.8 kmpl",
+      "max_power": "81.8 bhp",
+      "source_section": "Available",
+      "variants": [
+        { "name": "GSX-8R Standard", "price": "₹9,89,328" }
+      ],
+      "colors": [
+        "Metallic Matt Black",
+        "Metallic Matt Sword Silver",
+        "Metallic Triton Blue"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 776,
+        "max_power_bhp": 81.8,
+        "max_torque_nm": 78,
+        "cooling": "Liquid-cooled",
+        "cylinders": 2,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "6 Speed Manual",
+        "kerb_weight_kg": 205,
+        "fuel_tank_litres": 14,
+        "top_speed_kmph": 220,
+        "mileage_kmpl": 23.8,
+        "emission_standard": "BS6 Phase 2B",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Dual-channel ABS",
+        "features": [
+          "Full fairing",
+          "TFT display",
+          "Ride-by-wire",
+          "Traction control",
+          "Multiple riding modes"
+        ]
+      }
+    },
+    {
+      "make": "Suzuki",
+      "model": "V-Strom 800 DE",
+      "variant_name": "V-Strom 800 DE Standard",
+      "price": "₹11,01,541",
+      "engine_displacement": "776 cc",
+      "mileage": "22.7 kmpl",
+      "max_power": "83 bhp",
+      "source_section": "Available",
+      "variants": [
+        { "name": "V-Strom 800 DE Standard", "price": "₹11,01,541" }
+      ],
+      "colors": [
+        "Glass Sparkle Black",
+        "Pearl Tech White",
+        "Champion Yellow"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 776,
+        "max_power_bhp": 83,
+        "max_torque_nm": 78,
+        "cooling": "Liquid-cooled",
+        "cylinders": 2,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "6 Speed Manual",
+        "kerb_weight_kg": 232,
+        "fuel_tank_litres": 20,
+        "top_speed_kmph": 205,
+        "mileage_kmpl": 22.7,
+        "emission_standard": "BS6 Phase 2B",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Cornering ABS",
+        "features": [
+          "Adventure tourer",
+          "Spoke wheels",
+          "TFT display",
+          "Traction control",
+          "Cruise control"
+        ]
+      }
+    },
+    {
+      "make": "Suzuki",
+      "model": "Hayabusa",
+      "variant_name": "Hayabusa Standard",
+      "price": "₹18,06,885",
+      "engine_displacement": "1340 cc",
+      "mileage": "17 kmpl",
+      "max_power": "190 bhp",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Hayabusa Standard", "price": "₹18,06,885" }
+      ],
+      "colors": [
+        "Metallic Mystic Silver / Pearl Vigor Blue",
+        "Glass Sparkle Black / Metallic Mat Titanium Silver",
+        "Metallic Mat Steel Green / Glass Sparkle Black"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 1340,
+        "max_power_bhp": 190,
+        "max_torque_nm": 142,
+        "cooling": "Liquid-cooled",
+        "cylinders": 4,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "6 Speed Manual",
+        "kerb_weight_kg": 266,
+        "fuel_tank_litres": 20,
+        "top_speed_kmph": 300,
+        "mileage_kmpl": 17,
+        "emission_standard": "BS6 Phase 2B",
+        "brakes_front": "Disc (Dual)",
+        "brakes_rear": "Disc",
+        "abs": "Cornering ABS",
+        "features": [
+          "Lean-angle-sensitive traction control",
+          "Bi-directional quickshifter",
+          "Suzuki Intelligent Ride System (S.I.R.S.)",
+          "Multiple riding modes",
+          "Launch control",
+          "LED lighting"
+        ]
+      }
     }
   ]
 }

@@ -2,174 +2,470 @@
   "brand": "BMW Motorrad",
   "brandId": "bmw-motorrad-india",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
       "make": "BMW Motorrad",
-      "model": "S 1000 RR",
-      "variant_name": "BMW s1000rr",
-      "price": "₹20,75,000",
-      "engine_displacement": "",
-      "mileage": "",
+      "model": "G 310 RR",
+      "variant_name": "BMW G 310 RR",
+      "price": "₹2,84,995",
+      "engine_displacement": "312 cc",
+      "mileage": "30 kmpl",
+      "top_speed": "160 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "R 1300 GS",
-      "variant_name": "R 1300 GS Pro",
-      "price": "₹23,24,923",
-      "engine_displacement": "300 cc",
-      "mileage": "21 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "R 1300 GS",
-      "variant_name": "R 1300 GS Option 719",
-      "price": "",
-      "engine_displacement": "300 cc",
-      "mileage": "21 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "R 1300 GS",
-      "variant_name": "BMW R 1300 GS Price",
-      "price": "",
-      "engine_displacement": "300 cc",
-      "mileage": "21 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "R 1300 GS Adventure",
-      "variant_name": "R 1300 GS Adventure Standard",
-      "price": "₹25,74,896",
-      "engine_displacement": "300 cc",
-      "mileage": "21 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "R 1300 GS Adventure",
-      "variant_name": "R 1300 GS Adventure Style Triple Black",
-      "price": "",
-      "engine_displacement": "300 cc",
-      "mileage": "21 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "R 1300 GS Adventure",
-      "variant_name": "R 1300 GS Adventure Style GS Trophy",
-      "price": "",
-      "engine_displacement": "300 cc",
-      "mileage": "21 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "R 1300 GS Adventure",
-      "variant_name": "R 1300 GS Adventure Style Option 719",
-      "price": "",
-      "engine_displacement": "300 cc",
-      "mileage": "21 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "R 1300 GS Adventure",
-      "variant_name": "BMW R 1300 GS Adventure Price",
-      "price": "",
-      "engine_displacement": "300 cc",
-      "mileage": "21 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "F 900 GS",
-      "variant_name": "BMW F 900 GS",
-      "price": "₹15,49,915",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "S 1000 R",
-      "variant_name": "BMW S 1000 R",
-      "price": "₹21,74,938",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "G 310 RR Standard", "price": "₹2,84,995" }
+      ],
+      "colors": ["Racing Red", "Cosmic Black"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Single-cylinder",
+        "power": "33.5 bhp",
+        "torque": "27.3 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "11 litres",
+        "seat_height": "811 mm",
+        "kerb_weight": "174 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Dual-channel ABS",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
       "make": "BMW Motorrad",
       "model": "CE 02",
       "variant_name": "BMW CE 02",
       "price": "₹4,49,900",
-      "engine_displacement": "",
-      "mileage": "",
+      "engine_displacement": "Electric",
+      "mileage": "108 km range",
+      "top_speed": "95 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "CE 02 Standard", "price": "₹4,49,900" }
+      ],
+      "colors": ["Cosmic Black Two", "Cosmic Black"],
+      "technical_specifications": {
+        "motor_type": "Electric",
+        "power": "11 kW",
+        "range": "108 km",
+        "charging_time": "5.12 hours (0-100%)",
+        "seat_height": "745 mm",
+        "kerb_weight": "142 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "features": "USB charging port, Reverse gear, Modern instrument cluster"
+      }
+    },
+    {
+      "make": "BMW Motorrad",
+      "model": "C 400 GT",
+      "variant_name": "BMW C 400 GT",
+      "price": "₹10,98,979",
+      "engine_displacement": "350 cc",
+      "mileage": "25 kmpl",
+      "top_speed": "139 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "C 400 GT Standard", "price": "₹10,98,979" }
+      ],
+      "colors": ["Alpine White", "Blackstorm Metallic"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Single-cylinder",
+        "power": "33.5 bhp",
+        "torque": "35 Nm",
+        "gearbox": "CVT",
+        "fuel_tank": "12.8 litres",
+        "seat_height": "775 mm",
+        "kerb_weight": "214 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "BMW Motorrad",
+      "model": "F 900 GS",
+      "variant_name": "BMW F 900 GS",
+      "price": "₹15,49,915",
+      "engine_displacement": "895 cc",
+      "mileage": "22.7 kmpl",
+      "top_speed": "200 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "F 900 GS Standard", "price": "₹15,49,915" }
+      ],
+      "colors": ["GS Trophy", "Passion"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "103.25 bhp",
+        "torque": "93 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "14.5 litres",
+        "seat_height": "870 mm",
+        "kerb_weight": "219 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "BMW Motorrad",
+      "model": "F 900 GS Adventure",
+      "variant_name": "BMW F 900 GS Adventure",
+      "price": "₹16,99,888",
+      "engine_displacement": "895 cc",
+      "mileage": "22 kmpl",
+      "top_speed": "200 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "F 900 GS Adventure Standard", "price": "₹16,99,888" }
+      ],
+      "colors": ["Light White", "GS Trophy"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "103.25 bhp",
+        "torque": "93 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "23 litres",
+        "seat_height": "875 mm",
+        "kerb_weight": "234 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "BMW Motorrad",
+      "model": "S 1000 R",
+      "variant_name": "BMW S 1000 R",
+      "price": "₹21,74,938",
+      "engine_displacement": "999 cc",
+      "mileage": "16 kmpl",
+      "top_speed": "200 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "S 1000 R Standard", "price": "₹21,74,938" }
+      ],
+      "colors": ["Bluefire/Mugiallo Yellow", "Light White/M Motorsport", "Blackstorm Metallic"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-four",
+        "power": "167.6 bhp",
+        "torque": "114 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "16.5 litres",
+        "seat_height": "830 mm",
+        "kerb_weight": "199 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
       "make": "BMW Motorrad",
       "model": "R 12",
       "variant_name": "BMW R 12",
       "price": "₹21,74,965",
-      "engine_displacement": "",
-      "mileage": "",
+      "engine_displacement": "1170 cc",
+      "mileage": "19.6 kmpl",
+      "top_speed": "215 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "R 12 Standard", "price": "₹21,74,965" }
+      ],
+      "colors": ["Blackstorm Metallic"],
+      "technical_specifications": {
+        "engine_type": "Air/Oil-cooled, Boxer-twin",
+        "power": "93.7 bhp",
+        "torque": "109.8 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "14 litres",
+        "seat_height": "754 mm",
+        "kerb_weight": "227 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "BMW Motorrad",
+      "model": "R 12 nineT",
+      "variant_name": "BMW R 12 nineT",
+      "price": "₹22,74,974",
+      "engine_displacement": "1170 cc",
+      "mileage": "19 kmpl",
+      "top_speed": "200 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "R 12 nineT Standard", "price": "₹22,74,974" }
+      ],
+      "colors": ["Option 719 Mineral White Metallic", "Blackstorm Metallic"],
+      "technical_specifications": {
+        "engine_type": "Air/Oil-cooled, Boxer-twin",
+        "power": "108 bhp",
+        "torque": "115 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "16 litres",
+        "seat_height": "795 mm",
+        "kerb_weight": "223 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "BMW Motorrad",
+      "model": "R 1300 GS",
+      "variant_name": "BMW R 1300 GS",
+      "price": "₹23,24,923 - ₹26,50,923",
+      "engine_displacement": "1300 cc",
+      "mileage": "21 kmpl",
+      "top_speed": "225 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "R 1300 GS Pro", "price": "₹23,24,923" },
+        { "name": "R 1300 GS Option 719", "price": "₹26,50,923" }
+      ],
+      "colors": ["Light White / Light Gray", "Aurelius Green Metallic"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Boxer-twin",
+        "power": "145 bhp",
+        "torque": "149 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "19 litres",
+        "seat_height": "850 mm",
+        "kerb_weight": "237 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "BMW Motorrad",
+      "model": "S 1000 RR",
+      "variant_name": "BMW S 1000 RR",
+      "price": "₹23,24,936",
+      "engine_displacement": "999 cc",
+      "mileage": "16 kmpl",
+      "top_speed": "303 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "S 1000 RR Standard", "price": "₹23,24,936" }
+      ],
+      "colors": ["Black Storm Metallic", "Passion", "Light White"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-four",
+        "power": "206.51 bhp",
+        "torque": "113 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "16.5 litres",
+        "seat_height": "832 mm",
+        "kerb_weight": "197 kg",
+        "brakes_front": "Dual Disc (320mm)",
+        "brakes_rear": "Disc (220mm)",
+        "abs": "Dual-channel ABS",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "Ride modes (Rain, Road, Dynamic, Race), Digital cluster with GPS/navigation, Mobile connectivity"
+      }
+    },
+    {
+      "make": "BMW Motorrad",
+      "model": "S 1000 XR",
+      "variant_name": "BMW S 1000 XR",
+      "price": "₹24,53,000",
+      "engine_displacement": "999 cc",
+      "mileage": "16 kmpl",
+      "top_speed": "250 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "S 1000 XR Standard", "price": "₹24,53,000" }
+      ],
+      "colors": ["Racing Red", "Blackstorm Metallic"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-four",
+        "power": "165 bhp",
+        "torque": "114 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "20 litres",
+        "seat_height": "840 mm",
+        "kerb_weight": "220 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "BMW Motorrad",
+      "model": "M 1000 R",
+      "variant_name": "BMW M 1000 R",
+      "price": "₹33,50,000",
+      "engine_displacement": "999 cc",
+      "mileage": "15 kmpl",
+      "top_speed": "280 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "M 1000 R Standard", "price": "₹33,50,000" }
+      ],
+      "colors": ["M Motorsport"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-four",
+        "power": "210 bhp",
+        "torque": "113 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "16.5 litres",
+        "seat_height": "830 mm",
+        "kerb_weight": "199 kg",
+        "brakes_front": "Brembo Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "BMW Motorrad",
+      "model": "R18",
+      "variant_name": "BMW R18",
+      "price": "₹34,72,855",
+      "engine_displacement": "1802 cc",
+      "mileage": "17 kmpl",
+      "top_speed": "180 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "R18 Standard", "price": "₹34,72,855" }
+      ],
+      "colors": ["Manhattan Metallic Matt", "Galaxy Dust Metallic/Titan Silver 2 Metallic", "Black Storm Metallic", "Gravity Blue Metallic", "Mineral White Metallic"],
+      "technical_specifications": {
+        "engine_type": "Air/Oil-cooled, Boxer-twin",
+        "power": "89.84 bhp",
+        "torque": "158 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "24 litres",
+        "seat_height": "740 mm",
+        "kerb_weight": "427 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "BMW Motorrad",
+      "model": "K 1600",
+      "variant_name": "BMW K 1600",
+      "price": "₹37,49,261",
+      "engine_displacement": "1649 cc",
+      "mileage": "15 kmpl",
+      "top_speed": "200 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "K 1600 GTL Standard", "price": "₹37,49,261" }
+      ],
+      "colors": ["Blackstorm Metallic", "Option 719 Mineral White"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-six",
+        "power": "160 bhp",
+        "torque": "180 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "26.5 litres",
+        "seat_height": "810 mm",
+        "kerb_weight": "348 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "BMW Motorrad",
+      "model": "CE 04",
+      "variant_name": "BMW CE 04",
+      "price": "₹15,25,000",
+      "engine_displacement": "Electric",
+      "mileage": "130 km range",
+      "top_speed": "120 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "CE 04 Standard", "price": "₹15,25,000" }
+      ],
+      "colors": ["Light White", "Magellan Grey Metallic"],
+      "technical_specifications": {
+        "motor_type": "Electric",
+        "power": "31 kW (42 bhp)",
+        "range": "130 km",
+        "charging_time": "4.2 hours (0-100%)",
+        "seat_height": "780 mm",
+        "kerb_weight": "231 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "features": "10.25-inch TFT display, Navigation, Connectivity"
+      }
     },
     {
       "make": "BMW Motorrad",
       "model": "M 1000 XR",
       "variant_name": "BMW M 1000 XR",
       "price": "₹48,63,000",
-      "engine_displacement": "",
-      "mileage": "",
+      "engine_displacement": "999 cc",
+      "mileage": "15 kmpl",
+      "top_speed": "278 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "M 1000 XR Standard", "price": "₹48,63,000" }
+      ],
+      "colors": ["Light Blue, Dark Blue and Red"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-four",
+        "power": "201 bhp",
+        "torque": "113 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "20 litres",
+        "seat_height": "850 mm",
+        "kerb_weight": "223 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     }
   ]
 }

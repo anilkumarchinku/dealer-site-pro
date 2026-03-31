@@ -2,42 +2,126 @@
   "brand": "Benelli",
   "brandId": "benelli-india",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
       "make": "Benelli",
-      "model": "TRK 502",
-      "variant_name": "Benelli TRK 502",
-      "price": "₹6,62,000",
-      "engine_displacement": "",
-      "mileage": "",
+      "model": "Leoncino 500",
+      "variant_name": "Benelli Leoncino 500",
+      "price": "₹5,59,894",
+      "engine_displacement": "500 cc",
+      "mileage": "23 kmpl",
+      "top_speed": "170 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Leoncino 500 Standard", "price": "₹5,59,894" }
+      ],
+      "colors": ["Red", "Silver"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "46.8 bhp",
+        "torque": "46 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "12.7 litres",
+        "seat_height": "810 mm",
+        "kerb_weight": "207 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Switchable Dual-channel ABS",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
       "make": "Benelli",
       "model": "502C",
       "variant_name": "Benelli 502C",
       "price": "₹5,79,964",
-      "engine_displacement": "",
-      "mileage": "",
+      "engine_displacement": "500 cc",
+      "mileage": "22 kmpl",
+      "top_speed": "175 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "502C Standard", "price": "₹5,79,964" }
+      ],
+      "colors": ["Glossy Black", "Purple", "Matte Black"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "46.8 bhp",
+        "torque": "46 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "21 litres",
+        "seat_height": "750 mm",
+        "kerb_weight": "216 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "USD forks, Pirelli tires, TFT screen"
+      }
     },
     {
       "make": "Benelli",
-      "model": "Imperiale 400",
-      "variant_name": "Benelli Imperiale 400",
-      "price": "₹1,79,488",
-      "engine_displacement": "",
-      "mileage": "",
+      "model": "TRK 502",
+      "variant_name": "Benelli TRK 502",
+      "price": "₹6,62,000",
+      "engine_displacement": "500 cc",
+      "mileage": "25 kmpl",
+      "top_speed": "150 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "TRK 502 Standard", "price": "₹6,62,000" }
+      ],
+      "colors": ["White", "Black"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "46.8 bhp",
+        "torque": "46 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "20 litres",
+        "seat_height": "800 mm",
+        "kerb_weight": "228 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B"
+      }
+    },
+    {
+      "make": "Benelli",
+      "model": "TRK 502X",
+      "variant_name": "Benelli TRK 502X",
+      "price": "₹7,14,000 - ₹7,42,740",
+      "engine_displacement": "500 cc",
+      "mileage": "25 kmpl",
+      "top_speed": "160 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "TRK 502X Standard", "price": "₹7,14,000" },
+        { "name": "TRK 502X Adventure", "price": "₹7,42,740" }
+      ],
+      "colors": ["White", "Green", "Yellow"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "46.8 bhp",
+        "torque": "46 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "20 litres",
+        "seat_height": "830 mm",
+        "kerb_weight": "235 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B"
+      }
     }
   ]
 }

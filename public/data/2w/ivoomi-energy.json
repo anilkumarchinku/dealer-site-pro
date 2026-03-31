@@ -1,47 +1,66 @@
 {
-  "brand": "iVOOMi",
+  "brand": "iVOOMi Energy",
   "brandId": "ivoomi-energy",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
-      "model_name": "iVOOMi S1",
-      "price": "Rs. 79,999",
+      "make": "iVOOMi Energy",
+      "model": "S1",
+      "variant_name": "iVOOMi Energy S1",
+      "price": "₹68,990",
+      "source_section": "Available",
       "specifications": {
-        "Motor Power": "1.5 kW",
+        "Motor Power": "1.2 kW",
         "Range": "100 km",
-        "Battery Capacity": "2.3 kWh",
-        "Top Speed": "60 km/h",
-        "USB Charging Port": "Yes"
-      },
-      "source_section": "Available",
-      "colors": ["White", "Black", "Red"]
-    },
-    {
-      "model_name": "iVOOMi Jeet X",
-      "price": "Rs. 89,999",
-      "specifications": {
-        "Motor Power": "2.0 kW",
-        "Range": "110 km",
-        "Battery Capacity": "2.88 kWh",
-        "Top Speed": "65 km/h",
-        "USB Charging Port": "Yes"
-      },
-      "source_section": "Available",
-      "colors": ["White", "Grey", "Blue"]
-    },
-    {
-      "model_name": "iVOOMi JeetX ZE",
-      "price": "Rs. 99,999",
-      "specifications": {
-        "Motor Power": "2.5 kW",
-        "Range": "120 km",
-        "Battery Capacity": "3.0 kWh",
-        "Top Speed": "70 km/h",
-        "Bluetooth Connectivity": "Yes",
+        "Battery Capacity": "48V 26Ah",
+        "Top Speed": "45 kmph",
+        "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "colors": ["Ice White", "Midnight Black", "Royal Blue", "Peppy Pink"],
+      "variants": [
+        { "name": "S1", "price": "₹68,990" }
+      ]
+    },
+    {
+      "make": "iVOOMi Energy",
+      "model": "S1 Pro",
+      "variant_name": "iVOOMi Energy S1 Pro",
+      "price": "₹75,990",
       "source_section": "Available",
-      "colors": ["Black", "White", "Red"]
+      "specifications": {
+        "Motor Power": "1.2 kW",
+        "Range": "100 km",
+        "Battery Capacity": "48V 30Ah",
+        "Top Speed": "45 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Ice White", "Midnight Black", "Royal Blue", "Peppy Pink"],
+      "variants": [
+        { "name": "S1 Pro", "price": "₹75,990" }
+      ]
+    },
+    {
+      "make": "iVOOMi Energy",
+      "model": "Energy",
+      "variant_name": "iVOOMi Energy Energy",
+      "price": "₹79,990",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "1.5 kW",
+        "Range": "90 km",
+        "Battery Capacity": "60V 28Ah",
+        "Top Speed": "50 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Ice White", "Midnight Black", "Royal Blue", "Peppy Pink"],
+      "variants": [
+        { "name": "Energy", "price": "₹79,990" }
+      ]
     }
   ]
 }

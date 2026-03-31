@@ -2,114 +2,46 @@
   "brand": "Hop Electric",
   "brandId": "hop-electric",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
-      "model_name": "Hop Electric Leo",
-      "model_name_citation": "https://www.zigwheels.in/hop-electric-bikes/leo/specifications",
-      "engine_details": "BLDC Motor, 250 W Rated Power, 1500 W Peak Power",
-      "engine_details_citation": "https://www.zigwheels.in/hop-electric-bikes/leo/specifications",
-      "torque": "Not specified",
-      "torque_citation": "https://www.zigwheels.in/hop-electric-bikes/leo/specifications",
-      "mileage": "75 km per charge (IDC claimed)",
-      "mileage_citation": "https://www.zigwheels.in/hop-electric-bikes/leo/specifications",
-      "features": [
-        {
-          "value": "LED Headlight",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/leo/specifications"
-        },
-        {
-          "value": "Digital Instrument Cluster",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/leo/specifications"
-        },
-        {
-          "value": "USB Charging Port",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/leo/specifications"
-        },
-        {
-          "value": "LED Tail Lamp",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/leo/specifications"
-        },
-        {
-          "value": "Reverse Assist",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/leo/specifications"
-        },
-        {
-          "value": "Adjustable Riding Modes",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/leo/specifications"
-        },
-        {
-          "value": "Tubeless Tyres",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/leo/specifications"
-        },
-        {
-          "value": "Telescopic Front Suspension",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/leo/specifications"
-        },
-        {
-          "value": "Hydraulic Rear Suspension",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/leo/specifications"
-        },
-        {
-          "value": "Combi-Braking System",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/leo/specifications"
-        }
-      ],
-      "more_details": "The 2025 Hop Electric Leo is a budget-friendly electric scooter offering a range of 75 km per charge, 250 W rated power, and essential features including LED lighting, digital cluster, USB charging, reverse assist, and adjustable riding modes.",
-      "more_details_citation": "https://www.zigwheels.in/hop-electric-bikes/leo/specifications"
+      "make": "Hop Electric",
+      "model": "Leo",
+      "variant_name": "Hop Electric Leo",
+      "price": "₹89,990",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "1.5 kW",
+        "Range": "90 km",
+        "Battery Capacity": "2.5 kWh",
+        "Top Speed": "55 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Sky Blue", "Jet Black", "Pearl White", "Sporty Red"],
+      "variants": [
+        { "name": "Leo", "price": "₹89,990" }
+      ]
     },
     {
-      "model_name": "Hop Electric Oxo",
-      "model_name_citation": "https://www.zigwheels.in/hop-electric-bikes/oxo/specifications",
-      "engine_details": "BLDC Motor, 5000 W Rated Power, 5000 W Peak Power",
-      "engine_details_citation": "https://www.zigwheels.in/hop-electric-bikes/oxo/specifications",
-      "torque": "Not specified",
-      "torque_citation": "https://www.zigwheels.in/hop-electric-bikes/oxo/specifications",
-      "mileage": "150 km per charge (IDC claimed)",
-      "mileage_citation": "https://www.zigwheels.in/hop-electric-bikes/oxo/specifications",
-      "features": [
-        {
-          "value": "LED Headlight",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/oxo/specifications"
-        },
-        {
-          "value": "Digital Instrument Cluster",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/oxo/specifications"
-        },
-        {
-          "value": "USB Charging Port",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/oxo/specifications"
-        },
-        {
-          "value": "LED Tail Lamp",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/oxo/specifications"
-        },
-        {
-          "value": "Reverse Assist",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/oxo/specifications"
-        },
-        {
-          "value": "Adjustable Riding Modes",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/oxo/specifications"
-        },
-        {
-          "value": "Tubeless Tyres",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/oxo/specifications"
-        },
-        {
-          "value": "Telescopic Front Suspension",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/oxo/specifications"
-        },
-        {
-          "value": "Hydraulic Rear Suspension",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/oxo/specifications"
-        },
-        {
-          "value": "Combi-Braking System",
-          "value_citation": "https://www.zigwheels.in/hop-electric-bikes/oxo/specifications"
-        }
-      ],
-      "more_details": "The 2025 Hop Electric Oxo is a performance-oriented electric motorcycle offering a range of 150 km per charge, 5000 W rated power, and premium features including LED lighting, digital cluster, USB charging, reverse assist, and adjustable riding modes.",
-      "more_details_citation": "https://www.zigwheels.in/hop-electric-bikes/oxo/specifications"
+      "make": "Hop Electric",
+      "model": "LYF",
+      "variant_name": "Hop Electric LYF",
+      "price": "₹79,990",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "1.5 kW",
+        "Range": "90 km",
+        "Battery Capacity": "2.5 kWh",
+        "Top Speed": "55 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Sky Blue", "Jet Black", "Pearl White", "Sporty Red"],
+      "variants": [
+        { "name": "LYF", "price": "₹79,990" }
+      ]
     }
   ]
 }

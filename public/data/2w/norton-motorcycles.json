@@ -1,29 +1,61 @@
 {
   "brand": "Norton",
+  "brandId": "norton-motorcycles",
+  "type": "2w",
   "vehicles": [
     {
+      "make": "Norton",
       "model": "V4CR",
-      "fuel_type": "Petrol",
-      "engine_cc": 1200,
+      "variant_name": "Norton V4CR",
+      "price": "₹32,00,000",
+      "engine_displacement": "1200 cc",
+      "mileage": "10 kmpl",
+      "top_speed": "260 kmph",
       "max_power": "185 bhp",
-      "torque": "130 Nm",
-      "mileage_kmpl": 14,
-      "top_speed_kmph": 270,
-      "ex_showroom_price": "₹ 35.00 Lakh",
-      "colors": ["Graphite Black", "Norton Red"],
-      "features": ["Brembo brakes", "Ohlins suspension", "TFT display", "Traction control", "Ride modes"]
+      "source_section": "Available",
+      "colors": ["Silver Carbon", "Brushed Aluminum"],
+      "variants": [
+        { "name": "Standard", "price": "₹32,00,000" }
+      ],
+      "technical_specifications": {
+        "engine_type": "V4, Liquid-cooled",
+        "power": "185 bhp",
+        "torque": "130 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "17 litres",
+        "kerb_weight": "198 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
+      "make": "Norton",
       "model": "Commando 961",
-      "fuel_type": "Petrol",
-      "engine_cc": 961,
-      "max_power": "80 bhp",
-      "torque": "90 Nm",
-      "mileage_kmpl": 18,
-      "top_speed_kmph": 195,
-      "ex_showroom_price": "₹ 28.00 Lakh",
-      "colors": ["Silver Dream", "Manx Orange", "Black"],
-      "features": ["Classic styling", "Modern electronics", "Slipper clutch", "ABS"]
+      "variant_name": "Norton Commando 961",
+      "price": "₹30,00,000",
+      "engine_displacement": "961 cc",
+      "mileage": "15 kmpl",
+      "top_speed": "185 kmph",
+      "max_power": "88 bhp",
+      "source_section": "Available",
+      "colors": ["Manx Silver", "Black Lightning"],
+      "variants": [
+        { "name": "Standard", "price": "₹30,00,000" }
+      ],
+      "technical_specifications": {
+        "engine_type": "Parallel-twin, Air-cooled",
+        "power": "88 bhp",
+        "torque": "90 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "14.5 litres",
+        "kerb_weight": "198 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "emission": "BS6 Phase 2"
+      }
     }
   ]
 }

@@ -1,59 +1,85 @@
 {
-  "brand": "BattRE Electric",
+  "brand": "Battre Electric",
   "brandId": "battre-ev",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
-      "model_name": "BattRE LOEV",
-      "price": "Rs. 59,900",
-      "specifications": {
-        "Motor Power": "250W",
-        "Range": "85 km",
-        "Battery Capacity": "1.8 kWh",
-        "Top Speed": "25 km/h"
-      },
+      "make": "Battre Electric",
+      "model": "EM",
+      "variant_name": "Battre Electric EM",
+      "price": "₹79,999",
       "source_section": "Available",
-      "colors": ["White", "Grey"]
+      "specifications": {
+        "Motor Power": "1.5 kW",
+        "Range": "130 km",
+        "Battery Capacity": "60V 35Ah",
+        "Top Speed": "55 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Gloss Black", "Ivory White", "Marine Blue", "Burgundy Red"],
+      "variants": [
+        { "name": "EM", "price": "₹79,999" }
+      ]
     },
     {
-      "model_name": "BattRE LOEV+",
-      "price": "Rs. 79,999",
-      "specifications": {
-        "Motor Power": "250W",
-        "Range": "90 km",
-        "Battery Capacity": "2.0 kWh",
-        "Top Speed": "25 km/h",
-        "USB Charging Port": "Yes"
-      },
+      "make": "Battre Electric",
+      "model": "One",
+      "variant_name": "Battre Electric One",
+      "price": "₹69,999",
       "source_section": "Available",
-      "colors": ["White", "Grey", "Red"]
-    },
-    {
-      "model_name": "BattRE Storie",
-      "price": "Rs. 99,999",
       "specifications": {
-        "Motor Power": "2.0 kW",
+        "Motor Power": "1.2 kW",
         "Range": "100 km",
-        "Battery Capacity": "2.88 kWh",
-        "Top Speed": "60 km/h",
-        "USB Charging Port": "Yes"
+        "Battery Capacity": "60V 30Ah",
+        "Top Speed": "50 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
       },
-      "source_section": "Available",
-      "colors": ["White", "Black", "Blue"]
+      "colors": ["Gloss Black", "Ivory White", "Marine Blue", "Burgundy Red"],
+      "variants": [
+        { "name": "One", "price": "₹69,999" }
+      ]
     },
     {
-      "model_name": "BattRE ONE",
-      "price": "Rs. 1,29,999",
-      "specifications": {
-        "Motor Power": "3.0 kW",
-        "Range": "120 km",
-        "Battery Capacity": "3.5 kWh",
-        "Top Speed": "75 km/h",
-        "Fast Charging": "Yes",
-        "Bluetooth Connectivity": "Yes"
-      },
+      "make": "Battre Electric",
+      "model": "Yelo",
+      "variant_name": "Battre Electric Yelo",
+      "price": "₹59,999",
       "source_section": "Available",
-      "colors": ["Black", "White", "Red"]
+      "specifications": {
+        "Motor Power": "1.0 kW",
+        "Range": "80 km",
+        "Battery Capacity": "48V 28Ah",
+        "Top Speed": "45 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Gloss Black", "Ivory White", "Marine Blue", "Burgundy Red"],
+      "variants": [
+        { "name": "Yelo", "price": "₹59,999" }
+      ]
+    },
+    {
+      "make": "Battre Electric",
+      "model": "Smart",
+      "variant_name": "Battre Electric Smart",
+      "price": "₹64,999",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "1.2 kW",
+        "Range": "90 km",
+        "Battery Capacity": "60V 28Ah",
+        "Top Speed": "50 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Gloss Black", "Ivory White", "Marine Blue", "Burgundy Red"],
+      "variants": [
+        { "name": "Smart", "price": "₹64,999" }
+      ]
     }
   ]
 }

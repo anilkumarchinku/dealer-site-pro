@@ -7,49 +7,109 @@
       "make": "CFMoto",
       "model": "300NK",
       "variant_name": "CFMoto 300NK",
-      "price": "₹2,29,000",
-      "engine_displacement": "",
-      "mileage": "",
+      "price": "₹2,29,900",
+      "engine_displacement": "292 cc",
+      "mileage": "30 kmpl",
+      "top_speed": "168 kmph",
+      "max_power": "26 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": ["Frost Black", "Flame Red", "Storm Grey"],
+      "variants": [
+        { "name": "Standard", "price": "₹2,29,900" }
+      ],
+      "technical_specifications": {
+        "engine_type": "Single-cylinder, Liquid-cooled",
+        "power": "26 bhp",
+        "torque": "28 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13.5 litres",
+        "kerb_weight": "165 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
       "make": "CFMoto",
       "model": "650NK",
       "variant_name": "CFMoto 650NK",
-      "price": "₹4,29,000",
-      "engine_displacement": "",
-      "mileage": "",
+      "price": "₹5,49,900",
+      "engine_displacement": "649 cc",
+      "mileage": "22 kmpl",
+      "top_speed": "160 kmph",
+      "max_power": "54 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": ["Frost Black", "Flame Red"],
+      "variants": [
+        { "name": "Standard", "price": "₹5,49,900" }
+      ],
+      "technical_specifications": {
+        "engine_type": "Parallel-twin, Liquid-cooled",
+        "power": "54 bhp",
+        "torque": "55 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "17 litres",
+        "kerb_weight": "210 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
       "make": "CFMoto",
       "model": "650MT",
       "variant_name": "CFMoto 650MT",
-      "price": "₹5,29,000",
-      "engine_displacement": "",
-      "mileage": "",
+      "price": "₹6,49,900",
+      "engine_displacement": "649 cc",
+      "mileage": "22 kmpl",
+      "top_speed": "180 kmph",
+      "max_power": "54 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": ["Frost Black", "Ocean Blue", "Adventure Orange"],
+      "variants": [
+        { "name": "Standard", "price": "₹6,49,900" }
+      ],
+      "technical_specifications": {
+        "engine_type": "Parallel-twin, Liquid-cooled",
+        "power": "54 bhp",
+        "torque": "55 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "17 litres",
+        "kerb_weight": "218 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
       "make": "CFMoto",
       "model": "650GT",
       "variant_name": "CFMoto 650GT",
-      "price": "₹5,59,000",
-      "engine_displacement": "",
-      "mileage": "",
+      "price": "₹7,19,900",
+      "engine_displacement": "649 cc",
+      "mileage": "22 kmpl",
+      "top_speed": "175 kmph",
+      "max_power": "54 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": ["Pearl White", "Midnight Black"],
+      "variants": [
+        { "name": "Standard", "price": "₹7,19,900" }
+      ],
+      "technical_specifications": {
+        "engine_type": "Parallel-twin, Liquid-cooled",
+        "power": "54 bhp",
+        "torque": "55 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "17 litres",
+        "kerb_weight": "228 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "emission": "BS6 Phase 2"
+      }
     }
   ]
 }

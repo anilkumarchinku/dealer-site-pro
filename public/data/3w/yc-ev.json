@@ -2,46 +2,56 @@
   "brand": "YC Electric",
   "brandId": "yc-ev",
   "type": "3w",
+  "lastUpdated": "2026-03-30",
+  "source": "CardDekho",
   "vehicles": [
     {
-      "variant_name": "YC Electric Yatri",
-      "ex_showroom_price": "₹1.26 Lakh",
-      "mileage": "",
-      "engine_details": { "displacement": "", "max_power": "1.2 kW", "torque": "" },
-      "dimensions": { "length": "", "width": "", "height": "" },
-      "payload_features": { "gross_vehicle_weight": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
-      "source_url": "https://www.cmv360.com/three-wheelers/yc-electric"
+      "variant_name": "YC Electric Yatri/Electric",
+      "ex_showroom_price": "₹2.95 Lakh",
+      "mileage": "100 km range",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "8 kW",
+        "torque": ""
+      },
+      "payload_features": { "gross_vehicle_weight": "630 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
     },
     {
-      "variant_name": "YC Electric Yatri Deluxe",
-      "ex_showroom_price": "₹1.50 Lakh",
-      "mileage": "",
-      "engine_details": { "displacement": "", "max_power": "1.5 kW", "torque": "" },
-      "dimensions": { "length": "", "width": "", "height": "" },
-      "payload_features": { "gross_vehicle_weight": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
-      "source_url": "https://www.cmv360.com/three-wheelers/yc-electric"
+      "variant_name": "YC Electric Yatri Deluxe/Electric",
+      "ex_showroom_price": "₹3.25 Lakh",
+      "mileage": "120 km range",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "10 kW",
+        "torque": ""
+      },
+      "payload_features": { "gross_vehicle_weight": "650 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
     },
     {
-      "variant_name": "YC Electric Yatri Super",
-      "ex_showroom_price": "₹1.65 Lakh",
-      "mileage": "",
-      "engine_details": { "displacement": "", "max_power": "1.5 kW", "torque": "" },
-      "dimensions": { "length": "", "width": "", "height": "" },
-      "payload_features": { "gross_vehicle_weight": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
-      "source_url": "https://www.cmv360.com/three-wheelers/yc-electric"
+      "variant_name": "YC Electric Yatri Super/Electric",
+      "ex_showroom_price": "₹3.60 Lakh",
+      "mileage": "140 km range",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "12 kW",
+        "torque": ""
+      },
+      "payload_features": { "gross_vehicle_weight": "680 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
     },
     {
-      "variant_name": "YC Electric Yatri Plus",
-      "ex_showroom_price": "₹1.80 Lakh",
-      "mileage": "",
-      "engine_details": { "displacement": "", "max_power": "2.0 kW", "torque": "" },
-      "dimensions": { "length": "", "width": "", "height": "" },
-      "payload_features": { "gross_vehicle_weight": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
-      "source_url": "https://www.cmv360.com/three-wheelers/yc-electric"
+      "variant_name": "YC Electric Cargo/Electric",
+      "ex_showroom_price": "₹3.40 Lakh",
+      "mileage": "120 km range",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "10 kW",
+        "torque": ""
+      },
+      "payload_features": { "gross_vehicle_weight": "800 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
     }
   ]
 }

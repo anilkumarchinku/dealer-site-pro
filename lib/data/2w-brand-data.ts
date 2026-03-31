@@ -402,7 +402,7 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
         // Extract all variants with names + prices
         const allVariants = (v.variants || [])
             .map((variantItem: any) => ({
-                name: variantItem.variant_name || '',
+                name: variantItem.variant_name || variantItem.name || '',
                 price_paise: parsePrice(variantItem.price),
             }))
             .filter((vv: { name: string; price_paise: number }) => vv.name && vv.price_paise > 0)
@@ -419,9 +419,9 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
             colors,
             features,
             description: null,
-            max_power: engine['Max Power'] || engine['Power'] || null,
-            torque: engine['Max Torque'] || null,
-            variant: firstVar.variant_name || null,
+            max_power: engine['Max Power'] || engine['Power'] || v.max_power || (v.technical_specifications || {}).power || null,
+            torque: engine['Max Torque'] || v.max_torque || (v.technical_specifications || {}).torque || null,
+            variant: firstVar.variant_name || firstVar.name || null,
             all_variants: allVariants,
             stock_status: parseSourceSection(v.source_section),
             transmission: normalizeTransmission(engine['Gear Box'] || engine['Gearbox']),
@@ -494,8 +494,8 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
         description: specs.description || null,
         max_power: techEngine['Max Power'] || techEngine['Power']
             || specs.max_power || specs.power || (v.other_performance_metrics || {})['power_bhp']
-            || null,
-        torque: specs.torque || v.torque || techEngine['Max Torque'] || null,
+            || v.max_power || techSpecs.power || null,
+        torque: specs.torque || v.torque || techEngine['Max Torque'] || techSpecs.torque || null,
         variant: null,
         all_variants: [],
         stock_status: parseSourceSection(v.source_section),
@@ -602,18 +602,26 @@ for (const brandFile of STANDARD_BRAND_FILES) {
     }
 }
 
-// Flat-format brands (non-standard root key)
+// Flat-format brands (non-standard root key, with fallback to vehicles array)
 for (const { data, brandId, brand, rootKey } of FLAT_BRAND_FILES) {
     const items = data[rootKey]
-    if (!Array.isArray(items)) continue
-
-    brandNameMap.set(brandId, brand)
-
-    for (const item of items) {
-        const modelName: string = item.model_name || item.bike_name || ''
-        if (!modelName) continue
-        const enrichment = extractFromFlatItem(item)
-        enrichmentCache.set(normalizeModelKey(brandId, modelName), enrichment)
+    if (Array.isArray(items) && items.length > 0) {
+        brandNameMap.set(brandId, brand)
+        for (const item of items) {
+            const modelName: string = item.model_name || item.bike_name || item.model || ''
+            if (!modelName) continue
+            const enrichment = extractFromFlatItem(item)
+            enrichmentCache.set(normalizeModelKey(brandId, modelName), enrichment)
+        }
+    } else if (Array.isArray(data.vehicles) && data.vehicles.length > 0) {
+        // Fallback: brand file uses standard `vehicles` array — extract via vehicle extractor
+        brandNameMap.set(brandId, brand)
+        for (const v of data.vehicles) {
+            const modelName: string = v.model || v.model_name || ''
+            if (!modelName) continue
+            const enrichment = extractFromVehicle(v)
+            enrichmentCache.set(normalizeModelKey(brandId, modelName), enrichment)
+        }
     }
 }
 

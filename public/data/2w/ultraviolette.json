@@ -2,18 +2,48 @@
   "brand": "Ultraviolette",
   "brandId": "ultraviolette",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
       "make": "Ultraviolette",
-      "model": "F77",
-      "variant_name": "Ultraviolette F77 2022",
+      "model": "F77 Mach 2",
+      "variant_name": "Ultraviolette F77 Mach 2",
       "price": "₹3,80,000",
-      "engine_displacement": "",
-      "mileage": "",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "31.44 kW peak",
+        "Range": "307 km",
+        "Battery Capacity": "10.3 kWh",
+        "Top Speed": "152 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Laser Blue", "Acoustic White", "Ember Orange", "Airstrike Khaki", "Shadow Black"],
+      "variants": [
+        { "name": "F77 Mach 2 10.3 kWh", "price": "₹3,80,000" }
+      ]
+    },
+    {
+      "make": "Ultraviolette",
+      "model": "F77 Recon",
+      "variant_name": "Ultraviolette F77 Recon",
+      "price": "₹3,23,000",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "31.44 kW peak",
+        "Range": "206 km",
+        "Battery Capacity": "7.1 kWh",
+        "Top Speed": "152 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Laser Blue", "Acoustic White", "Ember Orange", "Airstrike Khaki", "Shadow Black"],
+      "variants": [
+        { "name": "F77 Recon 7.1 kWh", "price": "₹3,23,000" }
+      ]
     }
   ]
 }

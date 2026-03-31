@@ -2,140 +2,84 @@
   "brand": "Kabira Mobility",
   "brandId": "kabira-mobility",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
-      "model_name": "Kabira KM3000 Mark 2",
-      "model_name_citation": "https://www.bikedekho.com/kabira-mobility-bikes",
-      "price": "Rs 1,49,900 onwards",
-      "price_citation": "https://www.bikedekho.com/kabira-mobility/km-3000/specifications",
-      "available_colors": [
-        {
-          "value": "Glossy Black",
-          "value_citation": "https://www.bikedekho.com/kabira-mobility/km-3000/colors"
-        },
-        {
-          "value": "Glossy Red",
-          "value_citation": "https://www.bikedekho.com/kabira-mobility/km-3000/colors"
-        }
-      ],
-      "technical_specifications": {
-        "motor_power": "5 kW (continuous), Peak Power 12 kW",
-        "motor_power_citation": "https://www.bikedekho.com/kabira-mobility/km-3000/specifications",
-        "range": "178 km/charge (claimed)",
-        "range_citation": "https://www.bikedekho.com/kabira-mobility/km-3000/specifications",
-        "battery_capacity": "4.1 kWh",
-        "battery_capacity_citation": "https://www.bikedekho.com/kabira-mobility/km-3000/specifications",
-        "top_speed": "120 km/Hr",
-        "top_speed_citation": "https://www.bikedekho.com/kabira-mobility/km-3000/specifications",
-        "charging_time": "3 Hours",
-        "charging_time_citation": "https://www.bikedekho.com/kabira-mobility/km-3000/specifications",
-        "additional_specs": {
-          "Front Brake": "Disc (320 mm diameter)",
-          "Rear Brake": "Disc (230 mm diameter)",
-          "Braking Type": "Combi Brake System",
-          "Front Tyre": "110/70-17 (Tubeless)",
-          "Rear Tyre": "140/60-17 (Tubeless)",
-          "Wheel Type": "Alloy",
-          "Kerb Weight": "152 kg",
-          "Torque": "192 Nm"
-        }
-      }
+      "make": "Kabira Mobility",
+      "model": "KM3000",
+      "variant_name": "Kabira KM3000",
+      "price": "₹1,25,000",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "3 kW",
+        "Range": "120 km",
+        "Battery Capacity": "3.5 kWh",
+        "Top Speed": "100 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
+      "variants": [
+        { "name": "KM3000", "price": "₹1,25,000" }
+      ]
     },
     {
-      "model_name": "Kabira KM4000 Mark 2",
-      "model_name_citation": "https://www.bikedekho.com/kabira-mobility-bikes",
-      "price": "Rs 1,50,900 onwards",
-      "price_citation": "https://www.bikedekho.com/kabira-mobility/km-4000/specifications",
-      "available_colors": [
-        {
-          "value": "Glossy Black",
-          "value_citation": "https://www.bikedekho.com/kabira-mobility/km-4000/colors"
-        },
-        {
-          "value": "Glossy Red",
-          "value_citation": "https://www.bikedekho.com/kabira-mobility/km-4000/colors"
-        }
-      ],
-      "technical_specifications": {
-        "motor_power": "5 kW (continuous), 12 kW peak",
-        "motor_power_citation": "https://www.bikedekho.com/kabira-mobility/km-4000/specifications",
-        "range": "178 km per charge (claimed)",
-        "range_citation": "https://www.bikedekho.com/kabira-mobility/km-4000/specifications",
-        "battery_capacity": "4.1 kWh",
-        "battery_capacity_citation": "https://www.bikedekho.com/kabira-mobility/km-4000/specifications",
-        "top_speed": "120 km/h",
-        "top_speed_citation": "https://www.bikedekho.com/kabira-mobility/km-4000/specifications",
-        "charging_time": "3 hours (0-100%)",
-        "charging_time_citation": "https://www.bikedekho.com/kabira-mobility/km-4000/specifications",
-        "additional_specs": {
-          "Brakes": "Front Disc, Rear Disc (Combi Brake System)",
-          "Front Tyre": "110/70-17 (Tubeless)",
-          "Rear Tyre": "140/60-17 (Tubeless)",
-          "Wheel Type": "Alloy",
-          "Kerb Weight": "152 kg",
-          "Torque": "192 Nm"
-        }
-      }
+      "make": "Kabira Mobility",
+      "model": "KM4000",
+      "variant_name": "Kabira KM4000",
+      "price": "₹1,40,000",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "4 kW",
+        "Range": "150 km",
+        "Battery Capacity": "4 kWh",
+        "Top Speed": "120 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
+      "variants": [
+        { "name": "KM4000", "price": "₹1,40,000" }
+      ]
     },
     {
-      "model_name": "Kabira Hermes 75",
-      "model_name_citation": "https://www.bikedekho.com/kabira-mobility-bikes",
-      "price": "Rs 74,200 onwards",
-      "price_citation": "https://www.bikedekho.com/kabira-mobility/hermes-75/specifications",
-      "available_colors": [
-        {
-          "value": "Glossy Black",
-          "value_citation": "https://www.bikedekho.com/kabira-mobility/hermes-75/colors"
-        },
-        {
-          "value": "Glossy White",
-          "value_citation": "https://www.bikedekho.com/kabira-mobility/hermes-75/colors"
-        }
-      ],
-      "technical_specifications": {
-        "motor_power": "2.5 kW",
-        "motor_power_citation": "https://www.bikedekho.com/kabira-mobility/hermes-75/specifications",
-        "range": "120 km/charge",
-        "range_citation": "https://www.bikedekho.com/kabira-mobility/hermes-75/specifications",
-        "battery_capacity": "2.5 KWh",
-        "battery_capacity_citation": "https://www.bikedekho.com/kabira-mobility/hermes-75/specifications",
-        "top_speed": "75 km/Hr",
-        "top_speed_citation": "https://www.bikedekho.com/kabira-mobility/hermes-75/specifications",
-        "charging_time": "3.5 Hr (full charge)",
-        "charging_time_citation": "https://www.bikedekho.com/kabira-mobility/hermes-75/specifications",
-        "additional_specs": {
-          "Front Brake": "Disc (220 mm diameter)",
-          "Rear Brake": "Disc (180 mm diameter)",
-          "Braking Type": "Combi Brake System",
-          "Tyre Type": "Tubeless",
-          "Wheel Size": "Front 304.8 mm, Rear 304.8 mm",
-          "Kerb Weight": "106 kg"
-        }
-      }
+      "make": "Kabira Mobility",
+      "model": "Intercity Neo",
+      "variant_name": "Kabira Intercity Neo",
+      "price": "₹1,59,900",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "4 kW",
+        "Range": "180 km",
+        "Battery Capacity": "4 kWh",
+        "Top Speed": "110 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
+      "variants": [
+        { "name": "Intercity Neo", "price": "₹1,59,900" }
+      ]
     },
     {
-      "model_name": "Kabira Mobility KM5000",
-      "model_name_citation": "https://www.bikedekho.com/kabira-mobility-bikes",
-      "price": "Rs 3,15,000",
-      "price_citation": "https://www.bikedekho.com/kabira-mobility/km-5000",
-      "available_colors": [],
-      "technical_specifications": {
-        "motor_power": "27 kW",
-        "motor_power_citation": "https://www.bikedekho.com/kabira-mobility/km-5000",
-        "range": "344 km/charge",
-        "range_citation": "https://www.bikedekho.com/kabira-mobility/km-5000",
-        "battery_capacity": "7.1 KWh",
-        "battery_capacity_citation": "https://www.bikedekho.com/kabira-mobility/km-5000",
-        "top_speed": "188 km/Hr",
-        "top_speed_citation": "https://www.bikedekho.com/kabira-mobility/km-5000",
-        "charging_time": "2 hours (0-80%)",
-        "charging_time_citation": "https://www.bikedekho.com/kabira-mobility/km-5000",
-        "additional_specs": {
-          "Brakes": "Double Disc (Front Disc, Rear Disc)",
-          "Weight": "197 kg",
-          "Torque": "90 Nm"
-        }
-      }
+      "make": "Kabira Mobility",
+      "model": "Intercity FS",
+      "variant_name": "Kabira Intercity FS",
+      "price": "₹1,74,900",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "5 kW",
+        "Range": "200 km",
+        "Battery Capacity": "5 kWh",
+        "Top Speed": "120 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
+      "variants": [
+        { "name": "Intercity FS", "price": "₹1,74,900" }
+      ]
     }
   ]
 }

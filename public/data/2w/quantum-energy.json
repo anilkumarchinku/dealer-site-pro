@@ -2,136 +2,84 @@
   "brand": "Quantum Energy",
   "brandId": "quantum-energy",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
-      "model_name": "Quantum BZiness",
-      "model_name_citation": "https://www.bikedekho.com/quantum-energy/bziness",
-      "price": "Rs. 96,499 - Rs. 1,20,454",
-      "price_citation": "https://www.bikedekho.com/quantum-energy/bziness",
-      "color_options": [
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/quantum-energy/bziness"
-        },
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/quantum-energy/bziness"
-        },
-        {
-          "value": "Gray",
-          "value_citation": "https://www.bikedekho.com/quantum-energy/bziness"
-        }
-      ],
+      "make": "Quantum Energy",
+      "model": "Elko",
+      "variant_name": "Quantum Energy Elko",
+      "price": "₹79,999",
+      "source_section": "Available",
       "specifications": {
-        "range": "80-90 km/charge",
-        "range_citation": "https://www.bikedekho.com/quantum-energy/bziness/specifications",
-        "motor_power": "1.2 kW",
-        "motor_power_citation": "https://www.bikedekho.com/quantum-energy/bziness/specifications",
-        "charging_time": "4-6 hours",
-        "charging_time_citation": "https://www.bikedekho.com/quantum-energy/bziness/specifications",
-        "battery_capacity": "3 Kwh",
-        "battery_capacity_citation": "https://www.bikedekho.com/quantum-energy/bziness/specifications",
-        "top_speed": "50 km/Hr",
-        "top_speed_citation": "https://www.bikedekho.com/quantum-energy/bziness/specifications"
-      }
+        "Motor Power": "1.5 kW",
+        "Range": "110 km",
+        "Battery Capacity": "60V 30Ah",
+        "Top Speed": "60 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Storm Blue", "Pearl White", "Midnight Black", "Flame Red"],
+      "variants": [
+        { "name": "Elko", "price": "₹79,999" }
+      ]
     },
     {
-      "model_name": "Quantum Milan",
-      "model_name_citation": "https://www.bikedekho.com/quantum-energy/milan",
-      "price": "Rs. 89,000",
-      "price_citation": "https://www.bikedekho.com/quantum-energy/milan",
-      "color_options": [
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/quantum-energy/milan"
-        },
-        {
-          "value": "Grey",
-          "value_citation": "https://www.bikedekho.com/quantum-energy/milan"
-        },
-        {
-          "value": "Light Blue",
-          "value_citation": "https://www.bikedekho.com/quantum-energy/milan"
-        },
-        {
-          "value": "Sky Blue",
-          "value_citation": "https://www.bikedekho.com/quantum-energy/milan"
-        }
-      ],
+      "make": "Quantum Energy",
+      "model": "Hum Se Honda",
+      "variant_name": "Quantum Energy Hum Se Honda",
+      "price": "₹74,999",
+      "source_section": "Available",
       "specifications": {
-        "range": "80-95 km/charge",
-        "range_citation": "https://www.bikedekho.com/quantum-energy/milan/specifications",
-        "motor_power": "1 kW",
-        "motor_power_citation": "https://www.bikedekho.com/quantum-energy/milan/specifications",
-        "charging_time": "4 hours",
-        "charging_time_citation": "https://www.bikedekho.com/quantum-energy/milan/colors",
-        "battery_capacity": "1.87 Kwh",
-        "battery_capacity_citation": "https://www.bikedekho.com/quantum-energy/milan/specifications",
-        "top_speed": "50 km/Hr",
-        "top_speed_citation": "https://www.bikedekho.com/quantum-energy/milan/specifications"
-      }
+        "Motor Power": "1.5 kW",
+        "Range": "100 km",
+        "Battery Capacity": "60V 30Ah",
+        "Top Speed": "55 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Storm Blue", "Pearl White", "Midnight Black", "Flame Red"],
+      "variants": [
+        { "name": "Hum Se Honda", "price": "₹74,999" }
+      ]
     },
     {
-      "model_name": "Quantum Plasma",
-      "model_name_citation": "https://www.bikedekho.com/quantum-energy/plasma",
-      "price": "Rs. 89,095 - Rs. 1,24,573",
-      "price_citation": "https://www.bikedekho.com/quantum-energy/plasma",
-      "color_options": [
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/quantum-energy/plasma"
-        },
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/quantum-energy/plasma"
-        },
-        {
-          "value": "Silver",
-          "value_citation": "https://www.bikedekho.com/quantum-energy/plasma"
-        },
-        {
-          "value": "Blue",
-          "value_citation": "https://www.bikedekho.com/quantum-energy/plasma"
-        }
-      ],
+      "make": "Quantum Energy",
+      "model": "Miles 52",
+      "variant_name": "Quantum Energy Miles 52",
+      "price": "₹84,999",
+      "source_section": "Available",
       "specifications": {
-        "range": "100 km/charge",
-        "range_citation": "https://www.bikedekho.com/quantum-energy/plasma/specifications",
-        "motor_power": "1.5 kW",
-        "motor_power_citation": "https://www.bikedekho.com/quantum-energy/plasma/specifications",
-        "battery_capacity": "2.18 Kwh",
-        "battery_capacity_citation": "https://www.bikedekho.com/quantum-energy/plasma/specifications",
-        "top_speed": "60 km/Hr",
-        "top_speed_citation": "https://www.bikedekho.com/quantum-energy/plasma/specifications"
-      }
+        "Motor Power": "1.5 kW",
+        "Range": "110 km",
+        "Battery Capacity": "60V 30Ah",
+        "Top Speed": "60 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Storm Blue", "Pearl White", "Midnight Black", "Flame Red"],
+      "variants": [
+        { "name": "Miles 52", "price": "₹84,999" }
+      ]
     },
     {
-      "model_name": "Quantum Elektron",
-      "model_name_citation": "https://www.bikedekho.com/quantum-energy/elektron",
-      "price": "Rs. 91,000",
-      "price_citation": "https://www.bikedekho.com/quantum-energy/elektron",
-      "color_options": [
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/quantum-energy/elektron"
-        },
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/quantum-energy/elektron"
-        },
-        {
-          "value": "Sky Blue",
-          "value_citation": "https://www.bikedekho.com/quantum-energy/elektron"
-        }
-      ],
+      "make": "Quantum Energy",
+      "model": "Miles 60",
+      "variant_name": "Quantum Energy Miles 60",
+      "price": "₹89,999",
+      "source_section": "Available",
       "specifications": {
-        "range": "80-85 km/charge",
-        "range_citation": "https://www.bikedekho.com/quantum-energy/elektron/specifications",
-        "motor_power": "1 kW",
-        "motor_power_citation": "https://www.bikedekho.com/quantum-energy/elektron/specifications",
-        "top_speed": "50 km/Hr",
-        "top_speed_citation": "https://www.bikedekho.com/quantum-energy/elektron/specifications"
-      }
+        "Motor Power": "1.5 kW",
+        "Range": "130 km",
+        "Battery Capacity": "72V 32Ah",
+        "Top Speed": "65 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Storm Blue", "Pearl White", "Midnight Black", "Flame Red"],
+      "variants": [
+        { "name": "Miles 60", "price": "₹89,999" }
+      ]
     }
   ]
 }

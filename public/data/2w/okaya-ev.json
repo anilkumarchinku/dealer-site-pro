@@ -2,181 +2,121 @@
   "brand": "Okaya EV",
   "brandId": "okaya-ev",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
-      "model_name": "Okaya Classiq",
-      "model_name_citation": "https://www.bikedekho.com/okaya-ev/classiq",
-      "pricing": {
-        "ex_showroom_price": "Rs. 99,999",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/okaya-ev/classiq"
-      },
-      "available_colors": [
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/classiq/colors"
-        },
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/classiq/colors"
-        },
-        {
-          "value": "Blue",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/classiq/colors"
-        },
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/classiq/colors"
-        }
-      ],
+      "make": "Okaya EV",
+      "model": "Faast F4",
+      "variant_name": "Okaya EV Faast F4",
+      "price": "₹99,990",
+      "source_section": "Available",
       "specifications": {
-        "range": "125 km per charge",
-        "range_citation": "https://www.bikedekho.com/okaya-ev/classiq"
-      }
+        "Motor Power": "1.5 kW",
+        "Range": "140 km",
+        "Battery Capacity": "2.5 kWh",
+        "Top Speed": "65 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
+      "variants": [
+        { "name": "Faast F4", "price": "₹99,990" }
+      ]
     },
     {
-      "model_name": "Okaya Freedum",
-      "model_name_citation": "https://www.bikedekho.com/okaya-ev/freedum",
-      "pricing": {
-        "ex_showroom_price": "Rs. 74,999",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/okaya-ev/freedum"
-      },
-      "available_colors": [
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/freedum/colors"
-        },
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/freedum/colors"
-        },
-        {
-          "value": "Blue",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/freedum/colors"
-        },
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/freedum/colors"
-        }
-      ],
+      "make": "Okaya EV",
+      "model": "Faast F2B",
+      "variant_name": "Okaya EV Faast F2B",
+      "price": "₹89,990",
+      "source_section": "Available",
       "specifications": {
-        "range": "100 km per charge",
-        "range_citation": "https://www.bikedekho.com/okaya-ev/freedum"
-      }
+        "Motor Power": "1.5 kW",
+        "Range": "120 km",
+        "Battery Capacity": "2.5 kWh",
+        "Top Speed": "60 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
+      "variants": [
+        { "name": "Faast F2B", "price": "₹89,990" }
+      ]
     },
     {
-      "model_name": "Okaya Freedum Li",
-      "model_name_citation": "https://www.bikedekho.com/okaya-ev/freedum-li",
-      "pricing": {
-        "ex_showroom_price": "Rs. 84,999",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/okaya-ev/freedum-li"
-      },
-      "available_colors": [
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/freedum-li/colors"
-        },
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/freedum-li/colors"
-        },
-        {
-          "value": "Blue",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/freedum-li/colors"
-        },
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/freedum-li/colors"
-        }
-      ],
+      "make": "Okaya EV",
+      "model": "Classiq Pro",
+      "variant_name": "Okaya EV Classiq Pro",
+      "price": "₹79,990",
+      "source_section": "Available",
       "specifications": {
-        "range": "110 km per charge",
-        "range_citation": "https://www.bikedekho.com/okaya-ev/freedum-li"
-      }
+        "Motor Power": "1.5 kW",
+        "Range": "100 km",
+        "Battery Capacity": "1.8 kWh",
+        "Top Speed": "50 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
+      "variants": [
+        { "name": "Classiq Pro", "price": "₹79,990" }
+      ]
     },
     {
-      "model_name": "Okaya Avion",
-      "model_name_citation": "https://www.bikedekho.com/okaya-ev/avion",
-      "pricing": {
-        "ex_showroom_price": "Rs. 79,999",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/okaya-ev/avion"
-      },
-      "available_colors": [
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/avion/colors"
-        },
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/avion/colors"
-        },
-        {
-          "value": "Blue",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/avion/colors"
-        },
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/avion/colors"
-        }
-      ],
+      "make": "Okaya EV",
+      "model": "Ferrato Connect",
+      "variant_name": "Okaya EV Ferrato Connect",
+      "price": "₹1,09,990",
+      "source_section": "Available",
       "specifications": {
-        "range": "90 km per charge",
-        "range_citation": "https://www.bikedekho.com/okaya-ev/avion"
-      }
+        "Motor Power": "1.5 kW",
+        "Range": "150 km",
+        "Battery Capacity": "2.5 kWh",
+        "Top Speed": "65 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
+      "variants": [
+        { "name": "Ferrato Connect", "price": "₹1,09,990" }
+      ]
     },
     {
-      "model_name": "Okaya Avioniq",
-      "model_name_citation": "https://www.bikedekho.com/okaya-ev/avioniq",
-      "pricing": {
-        "ex_showroom_price": "Rs. 89,999",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/okaya-ev/avioniq"
-      },
-      "available_colors": [
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/avioniq/colors"
-        },
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/avioniq/colors"
-        },
-        {
-          "value": "Blue",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/avioniq/colors"
-        },
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/avioniq/colors"
-        }
-      ],
+      "make": "Okaya EV",
+      "model": "Hunk H1",
+      "variant_name": "Okaya EV Hunk H1",
+      "price": "₹99,990",
+      "source_section": "Available",
       "specifications": {
-        "range": "100 km per charge",
-        "range_citation": "https://www.bikedekho.com/okaya-ev/avioniq"
-      }
+        "Motor Power": "1.5 kW",
+        "Range": "150 km",
+        "Battery Capacity": "2.5 kWh",
+        "Top Speed": "65 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
+      "variants": [
+        { "name": "Hunk H1", "price": "₹99,990" }
+      ]
     },
     {
-      "model_name": "Okaya Faast",
-      "model_name_citation": "https://www.bikedekho.com/okaya-ev/faast",
-      "pricing": {
-        "ex_showroom_price": "Rs. 99,999",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/okaya-ev/faast"
+      "make": "Okaya EV",
+      "model": "Motofaast",
+      "variant_name": "Okaya EV Motofaast",
+      "price": "₹1,14,990",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "1.5 kW",
+        "Range": "160 km",
+        "Battery Capacity": "2.5 kWh",
+        "Top Speed": "85 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
       },
-      "available_colors": [
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/faast/colors"
-        },
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/faast/colors"
-        },
-        {
-          "value": "Blue",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/faast/colors"
-        },
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/okaya-ev/faast/colors"
-        }
+      "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
+      "variants": [
+        { "name": "Motofaast", "price": "₹1,14,990" }
       ]
     }
   ]

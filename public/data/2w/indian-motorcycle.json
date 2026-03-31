@@ -1,55 +1,156 @@
 {
-  "brand": "Indian",
+  "brand": "Indian Motorcycle",
   "brandId": "indian-motorcycle",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
       "make": "Indian",
       "model": "Scout Bobber",
       "variant_name": "Indian Scout Bobber",
       "price": "₹14,95,115",
-      "engine_displacement": "",
-      "mileage": "",
+      "engine_displacement": "1250 cc",
+      "mileage": "21 kmpl",
+      "top_speed": "180 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Scout Bobber Standard", "price": "₹14,95,115" }
+      ],
+      "colors": ["Black Metallic"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, V-twin",
+        "power": "106.46 bhp",
+        "torque": "108 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13 litres",
+        "seat_height": "665 mm",
+        "kerb_weight": "246 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
       "make": "Indian",
-      "model": "Chief Dark Horse",
-      "variant_name": "Indian Chief Dark Horse",
-      "price": "₹21,58,779",
-      "engine_displacement": "",
-      "mileage": "",
+      "model": "Scout Classic",
+      "variant_name": "Indian Scout Classic",
+      "price": "₹14,98,321",
+      "engine_displacement": "1250 cc",
+      "mileage": "21 kmpl",
+      "top_speed": "180 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Scout Classic Standard", "price": "₹14,98,321" }
+      ],
+      "colors": ["Black Metallic"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, V-twin",
+        "power": "106.46 bhp",
+        "torque": "108 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13 litres",
+        "seat_height": "680 mm",
+        "kerb_weight": "252 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
       "make": "Indian",
-      "model": "Chieftain",
-      "variant_name": "Indian Chieftain",
-      "price": "₹34,18,128",
-      "engine_displacement": "",
-      "mileage": "",
+      "model": "Sport Scout",
+      "variant_name": "Indian Sport Scout",
+      "price": "₹15,05,802",
+      "engine_displacement": "1250 cc",
+      "mileage": "20 kmpl",
+      "top_speed": "190 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Sport Scout Standard", "price": "₹15,05,802" }
+      ],
+      "colors": ["Black Metallic"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, V-twin",
+        "power": "106.46 bhp",
+        "torque": "108 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13 litres",
+        "seat_height": "680 mm",
+        "kerb_weight": "248 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
       "make": "Indian",
-      "model": "Roadmaster",
-      "variant_name": "Indian Roadmaster",
-      "price": "₹41,76,501",
-      "engine_displacement": "",
-      "mileage": "",
+      "model": "101 Scout",
+      "variant_name": "Indian 101 Scout",
+      "price": "₹17,08,855",
+      "engine_displacement": "1250 cc",
+      "mileage": "20 kmpl",
+      "top_speed": "185 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "101 Scout Standard", "price": "₹17,08,855" }
+      ],
+      "colors": ["Ghost White Metallic with Graphics", "Sunset Red Metallic with Graphics"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, V-twin",
+        "power": "112.54 bhp",
+        "torque": "109 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13 litres",
+        "seat_height": "680 mm",
+        "kerb_weight": "249 kg",
+        "brakes_front": "Brembo Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "4-inch touchscreen Ride Command display, Turn-by-turn navigation, Bluetooth, Selectable ride modes, Adjustable piggyback shocks, Inverted front forks"
+      }
+    },
+    {
+      "make": "Indian",
+      "model": "Super Scout",
+      "variant_name": "Indian Super Scout",
+      "price": "₹17,25,954",
+      "engine_displacement": "1250 cc",
+      "mileage": "20 kmpl",
+      "top_speed": "180 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Super Scout Standard", "price": "₹17,25,954" }
+      ],
+      "colors": ["Maroon Metallic with Graphics", "Black Smoke with Graphics"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, V-twin (SpeedPlus)",
+        "power": "106.46 bhp",
+        "torque": "108 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13 litres",
+        "seat_height": "680 mm",
+        "kerb_weight": "268 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke (16-inch with Pirelli MT60RS)",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "Cruise control, Selectable ride modes (Rain, Standard, Sport), Quick-release windshield & saddlebags, Two-up seat, Keyless ignition, USB charging, 4-inch touchscreen Ride Command"
+      }
     }
   ]
 }

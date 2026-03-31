@@ -2,18 +2,40 @@
   "brand": "BSA Motorcycles",
   "brandId": "bsa",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
-      "model_name": "BSA Gold Star 650",
-      "price": "Rs. 3,00,000",
+      "make": "BSA",
+      "model": "Gold Star 650",
+      "variant_name": "BSA Gold Star 650",
+      "price": "₹3,24,633 - ₹3,62,381",
       "engine_displacement": "652 cc",
-      "mileage": "30 kmpl",
-      "top_speed": "170 km/h",
-      "torque": "55 Nm @ 5500 rpm",
+      "mileage": "26 kmpl",
+      "top_speed": "160 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": ["Insignia Red", "Highland Green", "Silver Sheen", "Legend Black"],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Gold Star 650 Standard", "price": "₹3,24,633" },
+        { "name": "Gold Star 650 Chrome", "price": "₹3,42,381" },
+        { "name": "Gold Star 650 Premium", "price": "₹3,62,381" }
+      ],
+      "colors": ["Highland Green", "Insignia Red", "Dawn Silver", "Midnight Black", "Shadow Black", "Silver Sheen"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Single-cylinder",
+        "power": "45.6 bhp",
+        "torque": "55 Nm",
+        "gearbox": "5-Speed Manual",
+        "fuel_tank": "12 litres",
+        "seat_height": "782 mm",
+        "kerb_weight": "201 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "Assist and slipper clutch"
+      }
     }
   ]
 }

@@ -2,32 +2,46 @@
   "brand": "Hero Electric",
   "brandId": "hero-electric",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
-      "model_name": "Hero Electric Optima",
-      "model_name_citation": "https://heroelectric.in/optima",
-      "engine_details": "BLDC Motor, 1.2 kW Peak Power",
-      "engine_details_citation": "https://heroelectric.in/optima",
-      "torque": "Not specified",
-      "torque_citation": "https://heroelectric.in/optima",
-      "mileage": "135 km per charge (Dual Battery)",
-      "mileage_citation": "https://heroelectric.in/optima",
-      "features": [],
-      "more_details": "One of India's most popular electric scooters for daily commuting.",
-      "more_details_citation": "https://heroelectric.in/optima"
+      "make": "Hero Electric",
+      "model": "Optima CX",
+      "variant_name": "Hero Electric Optima CX",
+      "price": "₹74,490",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "1.1 kW",
+        "Range": "82 km",
+        "Battery Capacity": "48V 36Ah",
+        "Top Speed": "45 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Fiery Red", "Ivory White", "Midnight Black", "Ocean Blue"],
+      "variants": [
+        { "name": "Optima CX", "price": "₹74,490" }
+      ]
     },
     {
-      "model_name": "Hero Electric Photon",
-      "model_name_citation": "https://heroelectric.in/photon",
-      "engine_details": "BLDC Motor, 1.2 kW Peak Power",
-      "engine_details_citation": "https://heroelectric.in/photon",
-      "torque": "Not specified",
-      "torque_citation": "https://heroelectric.in/photon",
-      "mileage": "108 km per charge",
-      "mileage_citation": "https://heroelectric.in/photon",
-      "features": [],
-      "more_details": "A high-speed electric scooter with premium design.",
-      "more_details_citation": "https://heroelectric.in/photon"
+      "make": "Hero Electric",
+      "model": "Photon CX",
+      "variant_name": "Hero Electric Photon CX",
+      "price": "₹81,490",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "1.1 kW",
+        "Range": "82 km",
+        "Battery Capacity": "48V 36Ah",
+        "Top Speed": "45 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Fiery Red", "Ivory White", "Midnight Black", "Ocean Blue"],
+      "variants": [
+        { "name": "Photon CX", "price": "₹81,490" }
+      ]
     }
   ]
 }

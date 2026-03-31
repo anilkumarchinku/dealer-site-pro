@@ -202,15 +202,15 @@ interface BrandFile {
 }
 
 const BRAND_FILES: BrandFile[] = ([
-    { data: atulData,     brandId: 'atul-auto',           format: 'atul',       modelKey: 'model_name'   },
+    { data: atulData,     brandId: 'atul-auto',           format: 'bajaj',      modelKey: 'variant_name' },
     { data: bajajData,    brandId: 'bajaj-auto-3w',        format: 'bajaj',      modelKey: 'variant_name' },
-    { data: eulerData,    brandId: 'euler-motors',         format: 'make-model', modelKey: 'model'        },
-    { data: greavesData,  brandId: 'greaves-electric-3w',  format: 'make-model', modelKey: 'model'        },
-    { data: kineticData,  brandId: 'kinetic-green',        format: 'make-model', modelKey: 'model'        },
+    { data: eulerData,    brandId: 'euler-motors',         format: 'bajaj',      modelKey: 'variant_name' },
+    { data: greavesData,  brandId: 'greaves-electric-3w',  format: 'bajaj',      modelKey: 'variant_name' },
+    { data: kineticData,  brandId: 'kinetic-green',        format: 'bajaj',      modelKey: 'variant_name' },
     { data: lohiaData,    brandId: 'lohia-auto',           format: 'make-model', modelKey: 'model'        },
-    { data: mahindraData, brandId: 'mahindra-3w',          format: 'make-model', modelKey: 'model'        },
+    { data: mahindraData, brandId: 'mahindra-3w',          format: 'bajaj',      modelKey: 'variant_name' },
     { data: piaggioData,  brandId: 'piaggio-ape',          format: 'make-model', modelKey: 'model'        },
-    { data: tvsKingData,  brandId: 'tvs-king',             format: 'make-model', modelKey: 'model'        },
+    { data: tvsKingData,  brandId: 'tvs-king',             format: 'bajaj',      modelKey: 'variant_name' },
     { data: ycData,       brandId: 'yc-ev',                format: 'bajaj',      modelKey: 'variant_name' },
     { data: saeraData,    brandId: 'saera-ev',             format: 'bajaj',      modelKey: 'variant_name' },
     { data: omegaData,    brandId: 'omega-seiki-mobility', format: 'bajaj',      modelKey: 'variant_name' },

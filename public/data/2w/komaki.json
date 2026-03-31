@@ -2,101 +2,26 @@
   "brand": "Komaki",
   "brandId": "komaki",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
+      "make": "Komaki",
       "model": "Komaki Ranger",
-      "model_citation": "https://www.bikedekho.com/komaki/ranger",
-      "status": "Available",
-      "status_citation": "https://www.bikedekho.com/komaki/ranger",
+      "variant_name": "Komaki Ranger",
+      "price": "₹89,999",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "2 kW",
+        "Range": "200 km",
+        "Battery Capacity": "96V 32Ah",
+        "Top Speed": "65 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Matte Grey", "Pearl White", "Glossy Black", "Red"],
       "variants": [
-        {
-          "variant_name": "Komaki Ranger",
-          "variant_name_citation": "https://www.bikedekho.com/komaki/ranger/variants",
-          "price": "₹1,68,000",
-          "price_citation": "https://www.bikedekho.com/komaki/ranger/variants",
-          "colors": [
-            {
-              "value": "Blue",
-              "value_citation": "https://www.bikedekho.com/komaki/ranger/colors"
-            },
-            {
-              "value": "Red",
-              "value_citation": "https://www.bikedekho.com/komaki/ranger/colors"
-            },
-            {
-              "value": "Black",
-              "value_citation": "https://www.bikedekho.com/komaki/ranger/colors"
-            }
-          ],
-          "technical_specifications": {
-            "engine_and_transmission": {
-              "Engine Type": "BLDC",
-              "Displacement": "0 cc",
-              "Max Torque": "220 Nm",
-              "No. of Cylinders": "1",
-              "Cooling System": "Air Cooled",
-              "Valve Per Cylinder": "1",
-              "Starting": "Self Start Only",
-              "Fuel Supply": "Battery",
-              "Clutch": "No Clutch",
-              "Gear Box": "No Gear",
-              "Bore": "0 mm",
-              "Stroke": "0 mm",
-              "Compression Ratio": "0",
-              "Emission Type": "BS6",
-              "Gear Shifting Pattern": "0",
-              "Spark Plugs": "0"
-            },
-            "chassis_and_suspension": {
-              "Body Type": "Cruiser Bikes",
-              "Body Graphics": "Yes"
-            },
-            "dimensions_and_capacity": {
-              "Width": "850 mm",
-              "Length": "2320 mm",
-              "Height": "1160 mm",
-              "Fuel Capacity": "0 L",
-              "Fuel Reserve": "0 L",
-              "Saddle Height": "730 mm",
-              "Ground Clearance": "170 mm",
-              "Wheelbase": "1615 mm",
-              "Kerb Weight": "192 kg",
-              "Pillion Seat": "Yes",
-              "Pillion Grab Rail": "Yes"
-            },
-            "electricals": {
-              "Headlight": "LED",
-              "Taillight": "LED",
-              "Turn Signal Lamp": "LED",
-              "Low Oil Indicator": "No",
-              "Low Fuel Indicator": "No",
-              "Distance to Empty Indicator": "Yes",
-              "Average Fuel economy Indicator": "Yes"
-            },
-            "tyres_and_brakes": {
-              "Front Brake Diameter": "240 mm",
-              "Rear Brake Diameter": "240 mm",
-              "Radial Tyre": "No",
-              "Front Tyre Pressure (Rider)": "0 psi",
-              "Front Tyre Pressure (Rider & Pillion)": "0 psi",
-              "Rear Tyre Pressure (Rider)": "0 psi",
-              "Rear Tyre Pressure (Rider & Pillion)": "0 psi"
-            },
-            "performance_and_features": {
-              "Instrument Console": "Digital",
-              "Speedometer": "Digital",
-              "Tripmeter": "Digital",
-              "Odometer": "Digital",
-              "Additional Features Of Variant": "ABS",
-              "Seat Type": "Split",
-              "Body Graphics": "Yes",
-              "Clock": "Yes",
-              "Passenger Footrest": "Yes",
-              "Average Fuel economy Indicator": "Yes",
-              "Distance to Empty Indicator": "Yes"
-            }
-          }
-        }
+        { "name": "Komaki Ranger", "price": "₹89,999" }
       ]
     }
   ]

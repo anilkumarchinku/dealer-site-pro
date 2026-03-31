@@ -2,198 +2,486 @@
   "brand": "Triumph",
   "brandId": "triumph-india",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
-    {
-      "make": "Triumph",
-      "model": "Speed 400",
-      "variant_name": "Triumph Speed 400",
-      "price": "₹2,39,005",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
     {
       "make": "Triumph",
       "model": "Speed T4",
       "variant_name": "Triumph Speed T4",
       "price": "₹1,95,006",
-      "engine_displacement": "",
-      "mileage": "",
+      "engine_displacement": "398 cc",
+      "mileage": "29 kmpl",
+      "top_speed": "135 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Speed T4 Standard", "price": "₹1,95,006" }
+      ],
+      "colors": ["Baja Orange", "Phantom Black / Pearl Metallic White", "Phantom Black / Storm Grey", "Caspian Blue / Pearl Metallic White", "Lava Red Gloss / Pearl Metallic White"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Single-cylinder",
+        "power": "30.6 bhp",
+        "torque": "36 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13 litres",
+        "seat_height": "806 mm",
+        "kerb_weight": "180 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B"
+      }
     },
     {
       "make": "Triumph",
-      "model": "Scrambler 400 XC",
-      "variant_name": "Triumph Scrambler 400 XC",
-      "price": "₹2,96,916",
-      "engine_displacement": "",
-      "mileage": "",
+      "model": "Speed 400",
+      "variant_name": "Triumph Speed 400",
+      "price": "₹2,39,005",
+      "engine_displacement": "398 cc",
+      "mileage": "28 kmpl",
+      "top_speed": "160 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Speed 400 Standard", "price": "₹2,39,005" }
+      ],
+      "colors": ["Racing Red / Pearl Metallic White", "Pearl Metallic White / Pewter Grey", "Phantom Black / Pewter Grey", "Racing Yellow / Pearl Metallic White"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Single-cylinder",
+        "power": "39.5 bhp",
+        "torque": "37.5 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13 litres",
+        "seat_height": "803 mm",
+        "kerb_weight": "179 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Dual-channel ABS",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B",
+        "features": "Traction control"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Scrambler 400 X",
+      "variant_name": "Triumph Scrambler 400 X",
+      "price": "₹2,69,976",
+      "engine_displacement": "398 cc",
+      "mileage": "27 kmpl",
+      "top_speed": "150 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Scrambler 400 X", "price": "₹2,69,976" }
+      ],
+      "colors": ["Vanilla White", "Granite", "Racing Yellow"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Single-cylinder",
+        "power": "39.5 bhp",
+        "torque": "37.5 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13 litres",
+        "seat_height": "835 mm",
+        "kerb_weight": "190 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke (Tubeless cross-spoke)",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B",
+        "features": "Switchable traction control"
+      }
     },
     {
       "make": "Triumph",
       "model": "Thruxton 400",
       "variant_name": "Triumph Thruxton 400",
       "price": "₹2,76,384",
-      "engine_displacement": "",
-      "mileage": "",
+      "engine_displacement": "398 cc",
+      "mileage": "27.5 kmpl",
+      "top_speed": "170 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Thruxton 400 Standard", "price": "₹2,76,384" }
+      ],
+      "colors": ["Pearl Metallic White/Storm Grey", "Phantom Black/Aluminium Silver", "Lava Red Gloss/Aluminium Silver", "Metallic Racing Yellow/Aluminium Silver"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Single-cylinder",
+        "power": "41.4 bhp",
+        "torque": "37.5 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13 litres",
+        "seat_height": "795 mm",
+        "kerb_weight": "183 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Dual-channel ABS",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B",
+        "features": "Switchable traction control, Cafe racer styling with half-fairing, Clip-on handlebars"
+      }
     },
     {
       "make": "Triumph",
       "model": "Trident 660",
       "variant_name": "Triumph Trident 660",
       "price": "₹8,99,000",
-      "engine_displacement": "",
-      "mileage": "",
+      "engine_displacement": "660 cc",
+      "mileage": "15 kmpl",
+      "top_speed": "212 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Daytona 660",
-      "variant_name": "Triumph Daytona 660",
-      "price": "₹9,88,400",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger Sport 660",
-      "variant_name": "Triumph Tiger Sport 660",
-      "price": "₹9,45,000",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 900",
-      "variant_name": "Tiger 900 GT",
-      "price": "₹14,40,000",
-      "engine_displacement": "888 cc",
-      "mileage": "21.2 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 900",
-      "variant_name": "Tiger 900 Rally Pro",
-      "price": "",
-      "engine_displacement": "888 cc",
-      "mileage": "21.2 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 900",
-      "variant_name": "Triumph Tiger 900 Price",
-      "price": "",
-      "engine_displacement": "888 cc",
-      "mileage": "21.2 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Trident 660 Standard", "price": "₹8,99,000" }
+      ],
+      "colors": ["Cobalt Blue / Sapphire Black", "Cosmic Yellow / Sapphire Black", "Diablo Red / Sapphire Black", "Jet Black"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-triple",
+        "power": "80 bhp",
+        "torque": "64 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "14 litres",
+        "seat_height": "805 mm",
+        "kerb_weight": "189 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B",
+        "features": "Cruise control, Multiple ride modes, Showa suspension, Michelin Road 5 tires"
+      }
     },
     {
       "make": "Triumph",
       "model": "Speed Twin 900",
       "variant_name": "Triumph Speed Twin 900",
       "price": "₹9,71,300",
-      "engine_displacement": "",
-      "mileage": "",
+      "engine_displacement": "900 cc",
+      "mileage": "24 kmpl",
+      "top_speed": "185 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Speed Twin 900 Standard", "price": "₹9,71,300" }
+      ],
+      "colors": ["Matt Storm Grey", "Red Hopper", "Matt Baja Orange", "Jet Black"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "64 bhp",
+        "torque": "80 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "14.5 litres",
+        "seat_height": "809 mm",
+        "kerb_weight": "216 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Dual-channel ABS",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "USD Marzocchi front forks, Semi-digital instrument cluster"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Scrambler 900",
+      "variant_name": "Triumph Scrambler 900",
+      "price": "₹10,74,700",
+      "engine_displacement": "900 cc",
+      "mileage": "23 kmpl",
+      "top_speed": "175 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Scrambler 900 Standard", "price": "₹10,74,700" }
+      ],
+      "colors": ["Carnival Red / Jet Black", "Matt Khaki", "Jet Black"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "64.1 bhp",
+        "torque": "80 Nm",
+        "gearbox": "5-Speed Manual",
+        "fuel_tank": "12 litres",
+        "seat_height": "790 mm",
+        "kerb_weight": "223 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes (Switchable)",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "Ride-by-Wire, Traction control, Two riding modes (Road, Rain)"
+      }
     },
     {
       "make": "Triumph",
       "model": "Bonneville T100",
       "variant_name": "Triumph Bonneville T100",
       "price": "₹10,85,400",
-      "engine_displacement": "",
-      "mileage": "",
+      "engine_displacement": "900 cc",
+      "mileage": "24 kmpl",
+      "top_speed": "185 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Bonneville T100 Standard", "price": "₹10,85,400" }
+      ],
+      "colors": ["Competition Green / Ironstone", "Carnival Red Fusion White", "Jet Black", "Aluminium / Baja Orange"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "64.1 bhp",
+        "torque": "80 Nm",
+        "gearbox": "5-Speed Manual",
+        "fuel_tank": "14.5 litres",
+        "seat_height": "790 mm",
+        "kerb_weight": "228 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
       "make": "Triumph",
       "model": "Bonneville T120",
       "variant_name": "Triumph Bonneville T120",
       "price": "₹12,35,000",
-      "engine_displacement": "",
-      "mileage": "",
+      "engine_displacement": "1200 cc",
+      "mileage": "21 kmpl",
+      "top_speed": "190 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Bonneville T120 Standard", "price": "₹12,35,000" }
+      ],
+      "colors": ["Jet Black / Fusion White", "Cordovan Red Silver Ice", "Jet Black", "Crystal White / Cranberry Red"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "78.9 bhp",
+        "torque": "105 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "14.5 litres",
+        "seat_height": "790 mm",
+        "kerb_weight": "236 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Bonneville Bobber",
+      "variant_name": "Triumph Bonneville Bobber",
+      "price": "₹13,37,500",
+      "engine_displacement": "1200 cc",
+      "mileage": "21.7 kmpl",
+      "top_speed": "150 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Bonneville Bobber Standard", "price": "₹13,37,500" }
+      ],
+      "colors": ["Jet Black / Ash Gray", "Stealth Edition - Phantom Purple / Silver Purple", "Red Hopper", "Jet Black", "Matt Storm Grey / Matt Ironstone"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "76.9 bhp",
+        "torque": "106 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "12 litres",
+        "seat_height": "690 mm",
+        "kerb_weight": "251 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "Riding modes"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Bonneville Speedmaster",
+      "variant_name": "Triumph Bonneville Speedmaster",
+      "price": "₹13,37,500",
+      "engine_displacement": "1200 cc",
+      "mileage": "21 kmpl",
+      "top_speed": "160 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Bonneville Speedmaster Standard", "price": "₹13,37,500" }
+      ],
+      "colors": ["Jet Black", "Cordovan Red"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "76.9 bhp",
+        "torque": "106 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "12 litres",
+        "seat_height": "705 mm",
+        "kerb_weight": "251 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Street Triple R",
+      "variant_name": "Triumph Street Triple R",
+      "price": "₹11,16,300",
+      "engine_displacement": "765 cc",
+      "mileage": "18 kmpl",
+      "top_speed": "225 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Street Triple R", "price": "₹11,16,300" }
+      ],
+      "colors": ["Diablo Red", "Sapphire Black"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-triple",
+        "power": "118 bhp",
+        "torque": "77 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "17.4 litres",
+        "seat_height": "810 mm",
+        "kerb_weight": "166 kg",
+        "brakes_front": "Disc (310mm)",
+        "brakes_rear": "Disc (220mm)",
+        "abs": "Dual-channel ABS",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "Showa 41mm USD forks, Monoshock rear"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Speed Triple 1200 RS",
+      "variant_name": "Triumph Speed Triple 1200 RS",
+      "price": "₹21,75,900",
+      "engine_displacement": "1160 cc",
+      "mileage": "16 kmpl",
+      "top_speed": "250 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Speed Triple 1200 RS", "price": "₹21,75,900" }
+      ],
+      "colors": ["Sapphire Black", "Storm Grey"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-triple",
+        "power": "177 bhp",
+        "torque": "125 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "15.5 litres",
+        "seat_height": "830 mm",
+        "kerb_weight": "198 kg",
+        "brakes_front": "Brembo Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes (Cornering ABS)",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Tiger 900",
+      "variant_name": "Triumph Tiger 900",
+      "price": "₹14,40,000",
+      "engine_displacement": "888 cc",
+      "mileage": "21.2 kmpl",
+      "top_speed": "200 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Tiger 900 GT", "price": "₹14,40,000" },
+        { "name": "Tiger 900 Rally Pro", "price": "₹16,50,000" }
+      ],
+      "colors": ["Sapphire Black", "Snowdonia White", "Matt Khaki Green"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-triple",
+        "power": "94 bhp",
+        "torque": "87 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "20 litres",
+        "seat_height": "810 mm",
+        "kerb_weight": "201 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy / Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Tiger 1200",
+      "variant_name": "Triumph Tiger 1200",
+      "price": "₹19,39,000 - ₹22,29,000",
+      "engine_displacement": "1160 cc",
+      "mileage": "18 kmpl",
+      "top_speed": "220 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Tiger 1200 GT Pro", "price": "₹19,39,000" },
+        { "name": "Tiger 1200 GT Explorer", "price": "₹20,50,000" },
+        { "name": "Tiger 1200 Rally Pro", "price": "₹21,29,000" },
+        { "name": "Tiger 1200 Rally Explorer", "price": "₹22,29,000" }
+      ],
+      "colors": ["Lucerne Blue", "Sapphire Black", "Snowdonia White", "Matt Khaki Green"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-triple",
+        "power": "148 bhp",
+        "torque": "130 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "20 litres",
+        "seat_height": "850 mm",
+        "kerb_weight": "245 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
       "make": "Triumph",
       "model": "Rocket 3",
-      "variant_name": "Rocket 3 R",
-      "price": "₹24,01,955",
-      "engine_displacement": "458 cc",
+      "variant_name": "Triumph Rocket 3",
+      "price": "₹24,01,955 - ₹24,66,008",
+      "engine_displacement": "2458 cc",
       "mileage": "14.6 kmpl",
+      "top_speed": "220 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Rocket 3",
-      "variant_name": "Rocket 3 GT",
-      "price": "",
-      "engine_displacement": "458 cc",
-      "mileage": "14.6 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Rocket 3",
-      "variant_name": "Triumph Rocket 3 Price",
-      "price": "",
-      "engine_displacement": "458 cc",
-      "mileage": "14.6 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Rocket 3 R", "price": "₹24,01,955" },
+        { "name": "Rocket 3 GT", "price": "₹24,66,008" }
+      ],
+      "colors": ["Silver Ice Cranberry Red", "Phantom Black", "Korosi Red", "Sapphire Black (GT)", "Silver Ice and Storm Grey (GT)"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-triple",
+        "power": "165 bhp",
+        "torque": "221 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "18 litres",
+        "seat_height": "773 mm",
+        "kerb_weight": "304 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes (Cornering ABS)",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "Traction control, Riding modes, TFT screen with Bluetooth"
+      }
     }
   ]
 }

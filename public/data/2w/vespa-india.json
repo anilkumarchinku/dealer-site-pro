@@ -2,66 +2,155 @@
   "brand": "Vespa",
   "brandId": "vespa-india",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
       "make": "Vespa",
-      "model": "VXL 125",
-      "variant_name": "Vespa VXL 125",
-      "price": "₹87,569",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Vespa",
-      "model": "SXL 125",
-      "variant_name": "Vespa SXL 125",
-      "price": "₹92,082",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Vespa",
-      "model": "ZX 125",
+      "model": "Vespa ZX 125",
       "variant_name": "Vespa ZX 125",
       "price": "₹1,14,290",
-      "engine_displacement": "",
-      "mileage": "",
+      "engine_displacement": "124.45 cc",
+      "mileage": "45 kmpl",
+      "top_speed": "90 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "ZX 125 Standard", "price": "₹1,14,290" }
+      ],
+      "colors": ["Grey", "Black", "White", "Pink", "Red", "Sky Blue", "Yellow"],
+      "technical_specifications": {
+        "engine_type": "Air-cooled, Single-cylinder",
+        "power": "9.76 bhp",
+        "torque": "9.6 Nm",
+        "gearbox": "CVT",
+        "fuel_tank": "7 litres",
+        "seat_height": "770 mm",
+        "kerb_weight": "114 kg",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "abs": "No",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
       "make": "Vespa",
-      "model": "VXL 150",
-      "variant_name": "Vespa VXL 150",
-      "price": "₹94,606",
-      "engine_displacement": "",
-      "mileage": "",
+      "model": "Vespa 125",
+      "variant_name": "Vespa 125",
+      "price": "₹1,28,321",
+      "engine_displacement": "124.45 cc",
+      "mileage": "45 kmpl",
+      "top_speed": "95 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Vespa 125 Standard", "price": "₹1,28,321" }
+      ],
+      "colors": ["Grey", "Black", "White", "Red", "Blue", "Yellow"],
+      "technical_specifications": {
+        "engine_type": "Air-cooled, Single-cylinder",
+        "power": "9.76 bhp",
+        "torque": "9.6 Nm",
+        "gearbox": "CVT",
+        "fuel_tank": "7 litres",
+        "seat_height": "770 mm",
+        "kerb_weight": "114 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "abs": "No",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
       "make": "Vespa",
-      "model": "SXL 150",
-      "variant_name": "Vespa SXL 150",
-      "price": "₹98,353",
-      "engine_displacement": "",
-      "mileage": "",
+      "model": "Vespa S 125",
+      "variant_name": "Vespa S 125",
+      "price": "₹1,32,606",
+      "engine_displacement": "124.45 cc",
+      "mileage": "40 kmpl",
+      "top_speed": "95 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Vespa S 125 Standard", "price": "₹1,32,606" }
+      ],
+      "colors": ["Matte Black", "Midnight Blue", "Matte Red", "Pearl White"],
+      "technical_specifications": {
+        "engine_type": "Air-cooled, Single-cylinder",
+        "power": "9.9 bhp",
+        "torque": "9.6 Nm",
+        "gearbox": "CVT",
+        "fuel_tank": "8 litres",
+        "seat_height": "770 mm",
+        "kerb_weight": "114 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "abs": "No",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "Full-metal body, Rectangular headlamp, Chrome detailing"
+      }
+    },
+    {
+      "make": "Vespa",
+      "model": "Vespa 150",
+      "variant_name": "Vespa 150",
+      "price": "₹1,42,356",
+      "engine_displacement": "149.5 cc",
+      "mileage": "41.5 kmpl",
+      "top_speed": "100 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Vespa 150 Standard", "price": "₹1,42,356" }
+      ],
+      "colors": ["Yellow", "White", "Red", "Grey", "Blue", "Black"],
+      "technical_specifications": {
+        "engine_type": "Air-cooled, Single-cylinder",
+        "power": "11.4 bhp",
+        "torque": "10.6 Nm",
+        "gearbox": "CVT",
+        "fuel_tank": "8 litres",
+        "seat_height": "770 mm",
+        "kerb_weight": "114 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "abs": "No",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Vespa",
+      "model": "Vespa S 150",
+      "variant_name": "Vespa S 150",
+      "price": "₹1,45,424",
+      "engine_displacement": "149.5 cc",
+      "mileage": "35 kmpl",
+      "top_speed": "100 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Vespa S 150 Standard", "price": "₹1,45,424" }
+      ],
+      "colors": ["Matte Red", "Matte Black", "Pearl White", "Midnight Blue"],
+      "technical_specifications": {
+        "engine_type": "Air-cooled, Single-cylinder",
+        "power": "11.4 bhp",
+        "torque": "10.6 Nm",
+        "gearbox": "CVT",
+        "fuel_tank": "8 litres",
+        "seat_height": "770 mm",
+        "kerb_weight": "114 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "abs": "No",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "Full-metal body, Rectangular headlamp, Chrome detailing, Matte finish"
+      }
     }
   ]
 }

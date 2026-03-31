@@ -1,115 +1,52 @@
 {
-  "brand": "Vida",
+  "brand": "Vida (Hero)",
   "brandId": "vida-hero",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
       "make": "Vida",
       "model": "V2",
-      "variant_name": "V2 Plus",
-      "price": "₹1,29,550",
-      "engine_displacement": "125 cc",
-      "mileage": "42 kmpl",
+      "variant_name": "Vida V2",
+      "price": "₹1,09,990",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Vida",
-      "model": "V2",
-      "variant_name": "V2 Pro",
-      "price": "",
-      "engine_displacement": "125 cc",
-      "mileage": "42 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Vida",
-      "model": "V2",
-      "variant_name": "VIDA V2 Price",
-      "price": "",
-      "engine_displacement": "125 cc",
-      "mileage": "42 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "5.3 kW",
+        "Range": "143 km",
+        "Battery Capacity": "3.44 kWh",
+        "Top Speed": "80 kmph",
+        "Riding Modes": "Yes",
+        "Bluetooth Connectivity": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Matte Nexus Blue", "Gloss Pearl White", "Matte Turbo Green", "Matte Nexus Red", "Gloss Red Zeal"],
+      "variants": [
+        { "name": "V2", "price": "₹1,09,990" },
+        { "name": "V2 Plus", "price": "₹1,19,990" }
+      ]
     },
     {
       "make": "Vida",
       "model": "VX2",
-      "variant_name": "VX2 Go - 2.2kWh",
-      "price": "₹99,490",
-      "engine_displacement": "",
-      "mileage": "",
+      "variant_name": "Vida VX2",
+      "price": "₹1,29,990",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Vida",
-      "model": "VX2",
-      "variant_name": "VX2 Go - 3.4kWh",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Vida",
-      "model": "VX2",
-      "variant_name": "VX2 Plus - 3.4 kWh",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Vida",
-      "model": "VX2",
-      "variant_name": "Upcoming",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Vida",
-      "model": "VX2",
-      "variant_name": "VX2 Plus - KKR Limited Edition",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Vida",
-      "model": "VX2",
-      "variant_name": "VIDA VX2 Price",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "6 kW",
+        "Range": "165 km",
+        "Battery Capacity": "3.94 kWh",
+        "Top Speed": "80 kmph",
+        "Riding Modes": "Yes",
+        "Bluetooth Connectivity": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Matte Nexus Blue", "Gloss Pearl White", "Matte Turbo Green", "Matte Nexus Red", "Gloss Red Zeal"],
+      "variants": [
+        { "name": "VX2", "price": "₹1,29,990" },
+        { "name": "VX2 Pro", "price": "₹1,39,990" },
+        { "name": "VX2+ Pro", "price": "₹1,59,990" }
+      ]
     }
   ]
 }

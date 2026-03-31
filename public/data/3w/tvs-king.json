@@ -2,581 +2,80 @@
   "brand": "TVS",
   "brandId": "tvs-king",
   "type": "3w",
+  "lastUpdated": "2026-03-30",
+  "source": "CardDekho",
   "vehicles": [
     {
-      "variant_name": "ZS+ Fi-4S CNG (Cng)",
-      "ex_showroom_price": "",
-      "mileage": "",
+      "variant_name": "King ZS+ Fi-4S/CNG",
+      "ex_showroom_price": "₹3.35 Lakh",
+      "mileage": "39 km/kg",
       "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
+        "displacement": "197.2 cc",
+        "max_power": "13 bhp",
+        "torque": "15.5 Nm"
       },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
+      "payload_features": { "gross_vehicle_weight": "703 kg" },
+      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
     },
     {
-      "variant_name": "LS+ Fi-4S LPG (Lpg)",
-      "ex_showroom_price": "",
-      "mileage": "",
+      "variant_name": "King LS+ Fi-4S/LPG",
+      "ex_showroom_price": "₹3.20 Lakh",
+      "mileage": "34 km/kg",
       "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
+        "displacement": "197.2 cc",
+        "max_power": "13 bhp",
+        "torque": "15.5 Nm"
       },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "LPG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
+      "payload_features": { "gross_vehicle_weight": "703 kg" },
+      "technical_specifications": { "fuel_type": "LPG", "transmission_type": "Manual" }
     },
     {
-      "variant_name": "GS+ Fi-4S Petrol (Petrol)",
-      "ex_showroom_price": "",
-      "mileage": "",
+      "variant_name": "King GS+ Fi-4S/Petrol",
+      "ex_showroom_price": "₹3.10 Lakh",
+      "mileage": "40 kmpl",
       "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
+        "displacement": "197.2 cc",
+        "max_power": "13 bhp",
+        "torque": "15.5 Nm"
       },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Petrol",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
+      "payload_features": { "gross_vehicle_weight": "703 kg" },
+      "technical_specifications": { "fuel_type": "Petrol", "transmission_type": "Manual" }
     },
     {
-      "variant_name": "TVS King EV MAX",
-      "ex_showroom_price": "₹3.00 Lakh",
-      "mileage": "",
+      "variant_name": "King Duramax 4S/Diesel",
+      "ex_showroom_price": "₹3.85 Lakh",
+      "mileage": "32 kmpl",
       "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
+        "displacement": "237 cc",
+        "max_power": "9 bhp",
+        "torque": "18 Nm"
       },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
+      "payload_features": { "gross_vehicle_weight": "785 kg" },
+      "technical_specifications": { "fuel_type": "Diesel", "transmission_type": "Manual" }
     },
     {
-      "variant_name": "2000/3 Seater (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "",
+      "variant_name": "King Deluxe Plus/CNG",
+      "ex_showroom_price": "₹3.60 Lakh",
+      "mileage": "39 km/kg",
       "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
+        "displacement": "197.2 cc",
+        "max_power": "13 bhp",
+        "torque": "15.5 Nm"
       },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
+      "payload_features": { "gross_vehicle_weight": "720 kg" },
+      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
     },
     {
-      "variant_name": "TVS King Duramax",
-      "ex_showroom_price": "₹2.25 Lakh",
-      "mileage": "",
+      "variant_name": "King EV Max/Electric",
+      "ex_showroom_price": "₹3.80 Lakh",
+      "mileage": "145 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "11 kW",
         "torque": ""
       },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
-    },
-    {
-      "variant_name": "GD 225 LC Fi-4S Petrol (Petrol)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Petrol",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
-    },
-    {
-      "variant_name": "ZD 225 LC Fi-4S CNG (Cng)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
-    },
-    {
-      "variant_name": "ZK Fi PF-4S CNG (Cng)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
-    },
-    {
-      "variant_name": "ZK Fi-4S CNG (Cng)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
-    },
-    {
-      "variant_name": "2310/FSD (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
-    },
-    {
-      "variant_name": "2310/CBC (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
-    },
-    {
-      "variant_name": "2310/Container (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
-    },
-    {
-      "variant_name": "2310/Platform (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
-    },
-    {
-      "variant_name": "TVS King Duramax Plus",
-      "ex_showroom_price": "₹2.58 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
-    },
-    {
-      "variant_name": "TVS King Kargo CNG HD",
-      "ex_showroom_price": "₹2.71 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
-    },
-    {
-      "variant_name": "2310/CBC (Cng)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
-    },
-    {
-      "variant_name": "2310/Platform (Cng)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
-    },
-    {
-      "variant_name": "2310/FSD (Cng)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
-    },
-    {
-      "variant_name": "2310/Container (Cng)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "386 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king"
-    },
-    {
-      "variant_name": "King Kargo ZK Fi PF-4S CNG",
-      "ex_showroom_price": "₹2.45 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "864 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king-kargo"
-    },
-    {
-      "variant_name": "King Kargo ZK Fi-4S CNG",
-      "ex_showroom_price": "₹2.69 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "864 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king-kargo"
-    },
-    {
-      "variant_name": "YC Electric E Loader",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "864 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king-kargo"
-    },
-    {
-      "variant_name": "Very Good cargo Rickshaw",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "864 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king-kargo"
-    },
-    {
-      "variant_name": "Best mileage, high payload and low maintenance",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "864 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/tvs/king-kargo"
+      "payload_features": { "gross_vehicle_weight": "660 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
     }
   ]
 }

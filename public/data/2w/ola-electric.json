@@ -1,393 +1,259 @@
 {
-  "brand": "Ola",
+  "brand": "Ola Electric",
   "brandId": "ola-electric",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
-      "make": "Ola",
+      "make": "Ola Electric",
       "model": "S1 Pro",
-      "variant_name": "S1 Pro 3 kWh",
-      "price": "₹1,29,863",
-      "engine_displacement": "",
-      "mileage": "",
+      "variant_name": "Ola Electric S1 Pro",
+      "price": "₹1,47,499",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "11 kW peak",
+        "Range": "195 km",
+        "Battery Capacity": "4 kWh",
+        "Top Speed": "120 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"],
+      "variants": [
+        { "name": "S1 Pro 4 kWh", "price": "₹1,47,499" }
+      ]
     },
     {
-      "make": "Ola",
-      "model": "S1 Pro",
-      "variant_name": "S1 Pro 4 kWh",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
+      "make": "Ola Electric",
+      "model": "S1 Air",
+      "variant_name": "Ola Electric S1 Air",
+      "price": "₹1,09,999",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "8.5 kW peak",
+        "Range": "150 km",
+        "Battery Capacity": "2.5 kWh",
+        "Top Speed": "90 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"],
+      "variants": [
+        { "name": "S1 Air 2.5 kWh", "price": "₹1,09,999" }
+      ]
     },
     {
-      "make": "Ola",
-      "model": "S1 Pro",
-      "variant_name": "S1 Pro Sport",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
+      "make": "Ola Electric",
+      "model": "S1 X+",
+      "variant_name": "Ola Electric S1 X+",
+      "price": "₹89,999 - ₹1,14,999",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "6 kW peak",
+        "Range": "151 km",
+        "Battery Capacity": "4 kWh",
+        "Top Speed": "90 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"],
+      "variants": [
+        { "name": "S1 X+ 2 kWh", "price": "₹89,999" },
+        { "name": "S1 X+ 3 kWh", "price": "₹1,09,999" },
+        { "name": "S1 X+ 4 kWh", "price": "₹1,14,999" }
+      ]
     },
     {
-      "make": "Ola",
-      "model": "S1 Pro",
-      "variant_name": "S1 Pro Plus 4 kWh",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
-      "model": "S1 Pro",
-      "variant_name": "S1 Pro Plus 5.2 kWh",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
-      "model": "S1 Pro",
-      "variant_name": "OLA S1 Pro Price",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
-      "model": "S1 X",
-      "variant_name": "S1 X 2 kWh",
-      "price": "₹89,899",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
-      "model": "S1 X",
-      "variant_name": "S1 X 3 kWh",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
-      "model": "S1 X",
-      "variant_name": "S1 X 4 kWh",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
-      "model": "S1 X",
-      "variant_name": "S1 X Plus",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
-      "model": "S1 X",
-      "variant_name": "OLA S1 X Price",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
+      "make": "Ola Electric",
       "model": "S1 Z",
-      "variant_name": "OLA S1 Z",
-      "price": "₹59,999",
-      "engine_displacement": "",
-      "mileage": "",
+      "variant_name": "Ola Electric S1 Z",
+      "price": "₹79,999",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "4.5 kW peak",
+        "Range": "123 km",
+        "Battery Capacity": "2 kWh",
+        "Top Speed": "73 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "No",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow"],
+      "variants": [
+        { "name": "S1 Z 2 kWh", "price": "₹79,999" }
+      ]
     },
     {
-      "make": "Ola",
+      "make": "Ola Electric",
       "model": "Roadster",
-      "variant_name": "Roadster 3.5 kwh",
-      "price": "₹1,04,999",
-      "engine_displacement": "334 cc",
-      "mileage": "30 kmpl",
+      "variant_name": "Ola Electric Roadster",
+      "price": "₹1,49,999 - ₹1,99,999",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
-      "model": "Roadster",
-      "variant_name": "Roadster 4.5 kwh",
-      "price": "",
-      "engine_displacement": "334 cc",
-      "mileage": "30 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
-      "model": "Roadster",
-      "variant_name": "Roadster 6 kwh",
-      "price": "",
-      "engine_displacement": "334 cc",
-      "mileage": "30 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
-      "model": "Roadster",
-      "variant_name": "OLA Roadster Price",
-      "price": "",
-      "engine_displacement": "334 cc",
-      "mileage": "30 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "16 kW peak",
+        "Range": "195 km",
+        "Battery Capacity": "6 kWh",
+        "Top Speed": "124 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Galactic Blue"],
+      "variants": [
+        { "name": "Roadster Base (8 kW)", "price": "₹1,49,999" },
+        { "name": "Roadster Ultra (12 kW)", "price": "₹1,69,999" },
+        { "name": "Roadster Pro (16 kW)", "price": "₹1,99,999" }
+      ]
     }
   ],
   "ola_electric_bikes": [
     {
-      "make": "Ola",
-      "model": "S1 Pro",
-      "variant_name": "S1 Pro 3 kWh",
-      "price": "₹1,29,863",
-      "engine_displacement": "",
-      "mileage": "",
+      "make": "Ola Electric",
+      "model_name": "S1 Pro",
+      "price": "₹1,47,499",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "11 kW peak",
+        "Range": "195 km",
+        "Battery Capacity": "4 kWh",
+        "Top Speed": "120 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"]
     },
     {
-      "make": "Ola",
-      "model": "S1 Pro",
-      "variant_name": "S1 Pro 4 kWh",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
+      "make": "Ola Electric",
+      "model_name": "S1 Air",
+      "price": "₹1,09,999",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "8.5 kW peak",
+        "Range": "150 km",
+        "Battery Capacity": "2.5 kWh",
+        "Top Speed": "90 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"]
     },
     {
-      "make": "Ola",
-      "model": "S1 Pro",
-      "variant_name": "S1 Pro Sport",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
+      "make": "Ola Electric",
+      "model_name": "S1 X+ 2 kWh",
+      "price": "₹89,999",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "6 kW peak",
+        "Range": "91 km",
+        "Battery Capacity": "2 kWh",
+        "Top Speed": "90 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"]
     },
     {
-      "make": "Ola",
-      "model": "S1 Pro",
-      "variant_name": "S1 Pro Plus 4 kWh",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
+      "make": "Ola Electric",
+      "model_name": "S1 X+ 3 kWh",
+      "price": "₹1,09,999",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "6 kW peak",
+        "Range": "123 km",
+        "Battery Capacity": "3 kWh",
+        "Top Speed": "90 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"]
     },
     {
-      "make": "Ola",
-      "model": "S1 Pro",
-      "variant_name": "S1 Pro Plus 5.2 kWh",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
+      "make": "Ola Electric",
+      "model_name": "S1 X+ 4 kWh",
+      "price": "₹1,14,999",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "6 kW peak",
+        "Range": "151 km",
+        "Battery Capacity": "4 kWh",
+        "Top Speed": "90 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"]
     },
     {
-      "make": "Ola",
-      "model": "S1 Pro",
-      "variant_name": "OLA S1 Pro Price",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
+      "make": "Ola Electric",
+      "model_name": "S1 Z",
+      "price": "₹79,999",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "4.5 kW peak",
+        "Range": "123 km",
+        "Battery Capacity": "2 kWh",
+        "Top Speed": "73 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "No",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow"]
     },
     {
-      "make": "Ola",
-      "model": "S1 X",
-      "variant_name": "S1 X 2 kWh",
-      "price": "₹89,899",
-      "engine_displacement": "",
-      "mileage": "",
+      "make": "Ola Electric",
+      "model_name": "Roadster Base",
+      "price": "₹1,49,999",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "8 kW",
+        "Range": "145 km",
+        "Battery Capacity": "3.5 kWh",
+        "Top Speed": "124 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Galactic Blue"]
     },
     {
-      "make": "Ola",
-      "model": "S1 X",
-      "variant_name": "S1 X 3 kWh",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
+      "make": "Ola Electric",
+      "model_name": "Roadster Ultra",
+      "price": "₹1,69,999",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "12 kW",
+        "Range": "166 km",
+        "Battery Capacity": "4.5 kWh",
+        "Top Speed": "124 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Galactic Blue"]
     },
     {
-      "make": "Ola",
-      "model": "S1 X",
-      "variant_name": "S1 X 4 kWh",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
+      "make": "Ola Electric",
+      "model_name": "Roadster Pro",
+      "price": "₹1,99,999",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
-      "model": "S1 X",
-      "variant_name": "S1 X Plus",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
-      "model": "S1 X",
-      "variant_name": "OLA S1 X Price",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
-      "model": "S1 Z",
-      "variant_name": "OLA S1 Z",
-      "price": "₹59,999",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
-      "model": "Roadster",
-      "variant_name": "Roadster 3.5 kwh",
-      "price": "₹1,04,999",
-      "engine_displacement": "334 cc",
-      "mileage": "30 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
-      "model": "Roadster",
-      "variant_name": "Roadster 4.5 kwh",
-      "price": "",
-      "engine_displacement": "334 cc",
-      "mileage": "30 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
-      "model": "Roadster",
-      "variant_name": "Roadster 6 kwh",
-      "price": "",
-      "engine_displacement": "334 cc",
-      "mileage": "30 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ola",
-      "model": "Roadster",
-      "variant_name": "OLA Roadster Price",
-      "price": "",
-      "engine_displacement": "334 cc",
-      "mileage": "30 kmpl",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "16 kW",
+        "Range": "195 km",
+        "Battery Capacity": "6 kWh",
+        "Top Speed": "124 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Galactic Blue"]
     }
   ]
 }

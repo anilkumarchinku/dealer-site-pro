@@ -2,30 +2,68 @@
   "brand": "Husqvarna",
   "brandId": "husqvarna-india",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
       "make": "Husqvarna",
       "model": "Vitpilen 250",
       "variant_name": "Husqvarna Vitpilen 250",
       "price": "₹2,12,976",
-      "engine_displacement": "",
-      "mileage": "",
+      "engine_displacement": "249 cc",
+      "mileage": "37 kmpl",
+      "top_speed": "150 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Vitpilen 250 Standard", "price": "₹2,12,976" }
+      ],
+      "colors": ["White"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Single-cylinder SOHC",
+        "power": "30.57 bhp",
+        "torque": "25 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13.5 litres",
+        "seat_height": "820 mm",
+        "kerb_weight": "163.8 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Dual-channel ABS with Supermoto mode",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B",
+        "features": "5-inch LCD display, Type-C USB charging, Traction control, Bi-directional quickshifter, All-LED lighting, 43mm USD forks"
+      }
     },
     {
       "make": "Husqvarna",
       "model": "Svartpilen 401",
       "variant_name": "Husqvarna Svartpilen 401",
       "price": "₹2,97,733",
-      "engine_displacement": "",
-      "mileage": "",
+      "engine_displacement": "399 cc",
+      "mileage": "29 kmpl",
+      "top_speed": "160 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Svartpilen 401 Standard", "price": "₹2,97,733" }
+      ],
+      "colors": ["Black"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Single-cylinder",
+        "power": "42.9 bhp",
+        "torque": "39 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13.5 litres",
+        "seat_height": "820 mm",
+        "kerb_weight": "171.2 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B",
+        "features": "Fully digital console with riding modes, Traction control"
+      }
     }
   ]
 }

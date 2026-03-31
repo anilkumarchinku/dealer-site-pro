@@ -2,54 +2,125 @@
   "brand": "QJ Motor India",
   "brandId": "qj-motor-india",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
-      "model_name": "QJ Motor SRC 250",
-      "price": "Rs. 1,37,000",
+      "make": "QJ Motor",
+      "model": "SRC 250",
+      "variant_name": "QJ Motor SRC 250",
+      "price": "₹1,37,027",
       "engine_displacement": "249 cc",
-      "mileage": "30 kmpl",
-      "top_speed": "130 km/h",
-      "torque": "22.5 Nm",
+      "mileage": "39 kmpl",
+      "top_speed": "135 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": ["Black", "Grey"],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "SRC 250 Standard", "price": "₹1,37,027" }
+      ],
+      "colors": ["Silver", "Red", "Black"],
+      "technical_specifications": {
+        "engine_type": "Air-cooled, Single-cylinder",
+        "power": "17.16 bhp",
+        "torque": "17 Nm",
+        "gearbox": "5-Speed Manual",
+        "fuel_tank": "14 litres",
+        "seat_height": "780 mm",
+        "kerb_weight": "163 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
-      "model_name": "QJ Motor SRC 500",
-      "price": "Rs. 4,99,000",
-      "engine_displacement": "500 cc",
-      "mileage": "25 kmpl",
-      "top_speed": "150 km/h",
-      "torque": "46.5 Nm",
+      "make": "QJ Motor",
+      "model": "SRC 500",
+      "variant_name": "QJ Motor SRC 500",
+      "price": "₹2,10,019",
+      "engine_displacement": "480 cc",
+      "mileage": "34.8 kmpl",
+      "top_speed": "145 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": ["Black", "Red", "Silver"],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "SRC 500 Standard", "price": "₹2,10,019" }
+      ],
+      "colors": ["Silver Black", "Red & White", "Golden Black"],
+      "technical_specifications": {
+        "engine_type": "Single-cylinder",
+        "power": "25.15 bhp",
+        "torque": "36 Nm",
+        "gearbox": "5-Speed Manual",
+        "fuel_tank": "15.5 litres",
+        "seat_height": "800 mm",
+        "kerb_weight": "205 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
-      "model_name": "QJ Motor SRV 300",
-      "price": "Rs. 2,99,000",
+      "make": "QJ Motor",
+      "model": "SRV 300",
+      "variant_name": "QJ Motor SRV 300",
+      "price": "₹3,03,010",
       "engine_displacement": "296 cc",
-      "mileage": "28 kmpl",
-      "top_speed": "140 km/h",
-      "torque": "25.5 Nm",
+      "mileage": "29 kmpl",
+      "top_speed": "135 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": ["Black", "Grey"],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "SRV 300 Standard", "price": "₹3,03,010" }
+      ],
+      "colors": ["Green", "Red", "Orange", "Black"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, V-twin",
+        "power": "29.88 bhp",
+        "torque": "26 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13.5 litres",
+        "seat_height": "700 mm",
+        "kerb_weight": "164 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
-      "model_name": "QJ Motor SRK 400",
-      "price": "Rs. 3,99,000",
+      "make": "QJ Motor",
+      "model": "SRK 400",
+      "variant_name": "QJ Motor SRK 400",
+      "price": "₹3,98,974",
       "engine_displacement": "400 cc",
-      "mileage": "27 kmpl",
-      "top_speed": "160 km/h",
-      "torque": "37 Nm",
+      "mileage": "25 kmpl",
+      "top_speed": "160 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": ["Black", "Blue", "Red"],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "SRK 400 Standard", "price": "₹3,98,974" }
+      ],
+      "colors": ["White", "Red and Black", "Red"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "40.34 bhp",
+        "torque": "37 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13.5 litres",
+        "seat_height": "785 mm",
+        "kerb_weight": "186 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "TFT Instrument cluster"
+      }
     }
   ]
 }

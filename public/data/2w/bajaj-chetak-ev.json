@@ -2,66 +2,88 @@
   "brand": "Bajaj Chetak",
   "brandId": "bajaj-chetak-ev",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
       "make": "Bajaj Chetak",
-      "model": "Chetak",
-      "variant_name": "Chetak 3001",
-      "price": "₹1,07,533",
-      "engine_displacement": "",
-      "mileage": "",
+      "model": "Chetak Premium",
+      "variant_name": "Bajaj Chetak Premium",
+      "price": "₹1,28,748",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "4.2 kW",
+        "Range": "126 km",
+        "Battery Capacity": "3.8 kWh",
+        "Top Speed": "73 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "No",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Cyber White", "Hazel Brown", "Blazing Black", "Manhattan Red", "Mist Silver", "Indigo Metallic"],
+      "variants": [
+        { "name": "Chetak Premium 3.8 kWh", "price": "₹1,28,748" }
+      ]
     },
     {
       "make": "Bajaj Chetak",
-      "model": "Chetak",
-      "variant_name": "Chetak 3503",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
+      "model": "Chetak Urbane",
+      "variant_name": "Bajaj Chetak Urbane",
+      "price": "₹1,17,998",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "4.2 kW",
+        "Range": "108 km",
+        "Battery Capacity": "2.9 kWh",
+        "Top Speed": "73 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "No",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Cyber White", "Hazel Brown", "Blazing Black", "Manhattan Red", "Mist Silver"],
+      "variants": [
+        { "name": "Chetak Urbane 2.9 kWh", "price": "₹1,17,998" }
+      ]
     },
     {
       "make": "Bajaj Chetak",
-      "model": "Chetak",
-      "variant_name": "Chetak 3502",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
+      "model": "Chetak Leadr",
+      "variant_name": "Bajaj Chetak Leadr",
+      "price": "₹1,42,998",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "4.2 kW",
+        "Range": "170 km",
+        "Battery Capacity": "5.0 kWh",
+        "Top Speed": "73 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "No",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Cyber White", "Hazel Brown", "Blazing Black", "Manhattan Red", "Mist Silver", "Indigo Metallic"],
+      "variants": [
+        { "name": "Chetak Leadr 5.0 kWh", "price": "₹1,42,998" }
+      ]
     },
     {
       "make": "Bajaj Chetak",
-      "model": "Chetak",
-      "variant_name": "Chetak 3501",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
+      "model": "Chetak Legacy",
+      "variant_name": "Bajaj Chetak Legacy",
+      "price": "₹1,28,998",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Bajaj Chetak",
-      "model": "Chetak",
-      "variant_name": "Bajaj Chetak Price",
-      "price": "",
-      "engine_displacement": "",
-      "mileage": "",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "specifications": {
+        "Motor Power": "4.2 kW",
+        "Range": "126 km",
+        "Battery Capacity": "3.8 kWh",
+        "Top Speed": "73 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "No",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "colors": ["Cyber White", "Hazel Brown", "Blazing Black", "Indigo Metallic"],
+      "variants": [
+        { "name": "Chetak Legacy 3.8 kWh", "price": "₹1,28,998" }
+      ]
     }
   ]
 }

@@ -2,38 +2,46 @@
   "brand": "Pure EV",
   "brandId": "pure-ev",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
-      "model_name": "Pure EV EcoDryft",
-      "model_name_citation": "https://pureev.in/ecodryft",
-      "engine_details": "3.0 kW Motor",
-      "engine_details_citation": "https://pureev.in/ecodryft",
-      "torque": "40 Nm",
-      "torque_citation": "https://pureev.in/ecodryft",
-      "mileage": "135 km per charge (Certified)",
-      "mileage_citation": "https://pureev.in/ecodryft",
-      "features": [
-        { "value": "LED display", "value_citation": "https://pureev.in/ecodryft" },
-        { "value": "3 Riding Modes", "value_citation": "https://pureev.in/ecodryft" }
-      ],
-      "more_details": "India's most reliable electric motorcycle.",
-      "more_details_citation": "https://pureev.in/ecodryft"
+      "make": "Pure EV",
+      "model": "EPluto 7G",
+      "variant_name": "Pure EV EPluto 7G",
+      "price": "₹1,14,990",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "1.5 kW",
+        "Range": "171 km",
+        "Battery Capacity": "72V 45Ah",
+        "Top Speed": "55 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Glam White", "Jet Black", "Atomic Orange", "Electric Blue"],
+      "variants": [
+        { "name": "EPluto 7G", "price": "₹1,14,990" }
+      ]
     },
     {
-      "model_name": "Pure EV ePluto 7G",
-      "model_name_citation": "https://pureev.in/epluto7g",
-      "engine_details": "2.2 kW Motor",
-      "engine_details_citation": "https://pureev.in/epluto7g",
-      "torque": "30 Nm",
-      "torque_citation": "https://pureev.in/epluto7g",
-      "mileage": "111 km per charge (Certified)",
-      "mileage_citation": "https://pureev.in/epluto7g",
-      "features": [
-        { "value": "Retro Design", "value_citation": "https://pureev.in/epluto7g" },
-        { "value": "Anti-theft Smart Lock", "value_citation": "https://pureev.in/epluto7g" }
-      ],
-      "more_details": "A premium electric scooter with a classic retro look.",
-      "more_details_citation": "https://pureev.in/epluto7g"
+      "make": "Pure EV",
+      "model": "eTrance Neo",
+      "variant_name": "Pure EV eTrance Neo",
+      "price": "₹78,990",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "1.5 kW",
+        "Range": "120 km",
+        "Battery Capacity": "60V 30Ah",
+        "Top Speed": "50 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Glam White", "Jet Black", "Atomic Orange", "Electric Blue"],
+      "variants": [
+        { "name": "eTrance Neo", "price": "₹78,990" }
+      ]
     }
   ]
 }

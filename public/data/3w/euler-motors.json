@@ -5,11 +5,11 @@
   "vehicles": [
     {
       "variant_name": "Euler Motors HiLoad EV",
-      "ex_showroom_price": "₹4.32 Lakh",
-      "mileage": "",
+      "ex_showroom_price": "₹5.00 Lakh",
+      "mileage": "157 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "14.8 kW",
         "torque": ""
       },
       "dimensions": {
@@ -18,21 +18,21 @@
         "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "1495 kg"
+        "gross_vehicle_weight": "1450 kg"
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
     },
     {
       "variant_name": "2200/TR (Electric)",
       "ex_showroom_price": "",
-      "mileage": "",
+      "mileage": "157 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "14.8 kW",
         "torque": ""
       },
       "dimensions": {
@@ -45,17 +45,17 @@
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
     },
     {
       "variant_name": "2200/XR (Electric)",
       "ex_showroom_price": "",
-      "mileage": "",
+      "mileage": "157 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "14.8 kW",
         "torque": ""
       },
       "dimensions": {
@@ -68,17 +68,17 @@
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
     },
     {
       "variant_name": "T1500 (Electric)",
       "ex_showroom_price": "",
-      "mileage": "",
+      "mileage": "157 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "14.8 kW",
         "torque": ""
       },
       "dimensions": {
@@ -91,17 +91,17 @@
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
     },
     {
       "variant_name": "LongRange 200 (Electric)",
       "ex_showroom_price": "",
-      "mileage": "",
+      "mileage": "157 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "14.8 kW",
         "torque": ""
       },
       "dimensions": {
@@ -114,17 +114,17 @@
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
     },
     {
       "variant_name": "2080/City (Electric)",
       "ex_showroom_price": "",
-      "mileage": "",
+      "mileage": "157 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "14.8 kW",
         "torque": ""
       },
       "dimensions": {
@@ -137,17 +137,17 @@
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
     },
     {
       "variant_name": "2180/Fast Charge (Electric)",
       "ex_showroom_price": "",
-      "mileage": "",
+      "mileage": "157 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "14.8 kW",
         "torque": ""
       },
       "dimensions": {
@@ -160,17 +160,17 @@
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
     },
     {
       "variant_name": "2180/Maxx (Electric)",
       "ex_showroom_price": "",
-      "mileage": "",
+      "mileage": "157 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "14.8 kW",
         "torque": ""
       },
       "dimensions": {
@@ -183,17 +183,17 @@
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
     },
     {
       "variant_name": "2200/MAXX (Electric)",
       "ex_showroom_price": "",
-      "mileage": "",
+      "mileage": "157 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "14.8 kW",
         "torque": ""
       },
       "dimensions": {
@@ -206,17 +206,17 @@
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
     },
     {
       "variant_name": "2200/PLUS (Electric)",
       "ex_showroom_price": "",
-      "mileage": "",
+      "mileage": "157 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "14.8 kW",
         "torque": ""
       },
       "dimensions": {
@@ -229,17 +229,17 @@
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
     },
     {
       "variant_name": "2200/SR (Electric)",
       "ex_showroom_price": "",
-      "mileage": "",
+      "mileage": "157 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "14.8 kW",
         "torque": ""
       },
       "dimensions": {
@@ -252,17 +252,17 @@
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
     },
     {
       "variant_name": "Euler Motors NEO HiCity",
       "ex_showroom_price": "₹4.30 Lakh",
-      "mileage": "",
+      "mileage": "157 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "14.8 kW",
         "torque": ""
       },
       "dimensions": {
@@ -275,17 +275,17 @@
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
     },
     {
       "variant_name": "MAXX (Electric)",
       "ex_showroom_price": "",
-      "mileage": "",
+      "mileage": "157 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "14.8 kW",
         "torque": ""
       },
       "dimensions": {
@@ -298,17 +298,17 @@
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
     },
     {
       "variant_name": "PLUS (Electric)",
       "ex_showroom_price": "",
-      "mileage": "",
+      "mileage": "157 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "14.8 kW",
         "torque": ""
       },
       "dimensions": {
@@ -321,17 +321,17 @@
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
     },
     {
       "variant_name": "HiCity",
       "ex_showroom_price": "",
-      "mileage": "",
+      "mileage": "157 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "14.8 kW",
         "torque": ""
       },
       "dimensions": {
@@ -344,7 +344,7 @@
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
     }

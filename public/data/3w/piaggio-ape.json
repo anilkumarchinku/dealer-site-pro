@@ -1,1065 +1,115 @@
 {
-  "brand": "Piaggio",
+  "brand": "Piaggio Ape",
   "brandId": "piaggio-ape",
   "type": "3w",
+  "lastUpdated": "2026-03-30",
+  "source": "CardDekho",
   "vehicles": [
     {
-      "variant_name": "Piaggio Ape Xtra LDX",
-      "ex_showroom_price": "₹2.55 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
+      "make": "Piaggio",
+      "model": "Ape City Plus",
+      "fuel_type": "CNG",
+      "engine_cc": 218,
+      "mileage_kmpl": null,
+      "max_power": "9.58 bhp",
+      "torque": "12 Nm",
+      "gvw_kg": 720,
+      "passenger_capacity": 3,
+      "ex_showroom_price": "₹3.45 Lakh",
+      "transmission_type": "Manual"
     },
     {
-      "variant_name": "2100/Diesel (Diesel)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Diesel",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
+      "make": "Piaggio",
+      "model": "Ape City Plus",
+      "fuel_type": "LPG",
+      "engine_cc": 218,
+      "mileage_kmpl": null,
+      "max_power": "9.58 bhp",
+      "torque": "12 Nm",
+      "gvw_kg": 720,
+      "passenger_capacity": 3,
+      "ex_showroom_price": "₹3.35 Lakh",
+      "transmission_type": "Manual"
     },
     {
-      "variant_name": "2100/CNG (Cng)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
+      "make": "Piaggio",
+      "model": "Ape City Plus",
+      "fuel_type": "Petrol",
+      "engine_cc": 218,
+      "mileage_kmpl": null,
+      "max_power": "9.58 bhp",
+      "torque": "12 Nm",
+      "gvw_kg": 720,
+      "passenger_capacity": 3,
+      "ex_showroom_price": "₹3.25 Lakh",
+      "transmission_type": "Manual"
     },
     {
-      "variant_name": "Piaggio Ape E City",
-      "ex_showroom_price": "₹2.89 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
+      "make": "Piaggio",
+      "model": "Ape Xtra LD",
+      "fuel_type": "Diesel",
+      "engine_cc": 422,
+      "mileage_kmpl": null,
+      "max_power": "12 bhp",
+      "torque": "30 Nm",
+      "gvw_kg": 1380,
+      "passenger_capacity": null,
+      "ex_showroom_price": "₹4.20 Lakh",
+      "transmission_type": "Manual"
     },
     {
-      "variant_name": "3-Seater/1920/Electric/Swappable (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
+      "make": "Piaggio",
+      "model": "Ape Xtra LD",
+      "fuel_type": "CNG",
+      "engine_cc": 422,
+      "mileage_kmpl": null,
+      "max_power": "12 bhp",
+      "torque": "30 Nm",
+      "gvw_kg": 1380,
+      "passenger_capacity": null,
+      "ex_showroom_price": "₹4.40 Lakh",
+      "transmission_type": "Manual"
     },
     {
-      "variant_name": "Piaggio Ape Auto DX",
-      "ex_showroom_price": "₹3.55 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
+      "make": "Piaggio",
+      "model": "Ape E-City FX",
+      "fuel_type": "Electric",
+      "engine_cc": null,
+      "mileage_kmpl": null,
+      "range_km": 120,
+      "max_power": "7 kW",
+      "torque": null,
+      "gvw_kg": 750,
+      "passenger_capacity": 3,
+      "ex_showroom_price": "₹4.40 Lakh",
+      "transmission_type": "Automatic"
     },
     {
-      "variant_name": "3-Seater/1920/Diesel (Diesel)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Diesel",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
+      "make": "Piaggio",
+      "model": "Ape E-City FX Max",
+      "fuel_type": "Electric",
+      "engine_cc": null,
+      "mileage_kmpl": null,
+      "range_km": 150,
+      "max_power": "10 kW",
+      "torque": null,
+      "gvw_kg": 800,
+      "passenger_capacity": 3,
+      "ex_showroom_price": "₹5.10 Lakh",
+      "transmission_type": "Automatic"
     },
     {
-      "variant_name": "3-Seater/1920/CNG (Cng)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
-    },
-    {
-      "variant_name": "3-Seater/1920/LPG (Lpg)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "LPG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
-    },
-    {
-      "variant_name": "2100/Electric (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
-    },
-    {
-      "variant_name": "Piaggio Ape E City FX Max",
-      "ex_showroom_price": "₹3.30 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
-    },
-    {
-      "variant_name": "3-Seater/1920/Electric\t (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
-    },
-    {
-      "variant_name": "Piaggio Ape City Plus",
-      "ex_showroom_price": "₹2.55 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
-    },
-    {
-      "variant_name": "3-Seater/1920/Petrol (Petrol)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Petrol",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
-    },
-    {
-      "variant_name": "Piaggio Ape Xtra LDX Plus",
-      "ex_showroom_price": "₹2.66 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
-    },
-    {
-      "variant_name": "2100/Petrol/HT (Petrol)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Petrol",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
-    },
-    {
-      "variant_name": "2100/HT/CNG (Cng)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
-    },
-    {
-      "variant_name": "2100/LDX Classic (Diesel)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Diesel",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
-    },
-    {
-      "variant_name": "1920/DX Classic (Diesel)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Diesel",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
-    },
-    {
-      "variant_name": "2100/LDX Plus Classic (Diesel)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Diesel",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
-    },
-    {
-      "variant_name": "Piaggio Ape E Xtra FX Max",
-      "ex_showroom_price": "₹3.49 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
-    },
-    {
-      "variant_name": "1920/Electric (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-auto-dx"
-    },
-    {
-      "variant_name": "Ape City Plus 3-Seater/1920/CNG",
-      "ex_showroom_price": "₹2.55 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "671 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-city-plus"
-    },
-    {
-      "variant_name": "Ape City Plus 3-Seater/1920/Diesel",
-      "ex_showroom_price": "₹2.24 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "671 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Diesel",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-city-plus"
-    },
-    {
-      "variant_name": "Ape City Plus 3-Seater/1920/LPG",
-      "ex_showroom_price": "₹2.22 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "671 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "LPG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-city-plus"
-    },
-    {
-      "variant_name": "Ape City Plus 3-Seater/1920/Petrol",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "671 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Petrol",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-city-plus"
-    },
-    {
-      "variant_name": "Piaggio Ape NXT Plus",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "671 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-city-plus"
-    },
-    {
-      "variant_name": "ok auto rickshaw for city",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "671 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-city-plus"
-    },
-    {
-      "variant_name": "good for city passenger travel.",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "671 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-city-plus"
-    },
-    {
-      "variant_name": "Not happy with Ape City plus",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "671 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-city-plus"
-    },
-    {
-      "variant_name": "Ape Xtra LDX BS-IV Xtra/BS-IV",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": ""
-      },
-      "technical_specifications": {
-        "fuel_type": "Diesel",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-xtra-ldx"
-    },
-    {
-      "variant_name": "Ape Xtra LDX BS-IV Xtra LD/BS-IV",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": ""
-      },
-      "technical_specifications": {
-        "fuel_type": "Diesel",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-xtra-ldx"
-    },
-    {
-      "variant_name": "Baxy Pro",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "389 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-e-city"
-    },
-    {
-      "variant_name": "Ape E City 3-Seater/1920/Electric/Swappable",
-      "ex_showroom_price": "₹2.89 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "389 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-e-city"
-    },
-    {
-      "variant_name": "Affordable and profitable",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "389 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-e-city"
-    },
-    {
-      "variant_name": "City trips ke liye perfect",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "389 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-e-city"
-    },
-    {
-      "variant_name": "Ek shandaar electric auto",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "389 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-e-city"
-    },
-    {
-      "variant_name": "Ek kaafi acchi electric option",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "389 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-e-city"
-    },
-    {
-      "variant_name": "Good CNG options autorickshaw",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "389 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-e-city"
-    },
-    {
-      "variant_name": "Not recommend E city to anyone",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "389 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-e-city"
-    },
-    {
-      "variant_name": "Ape E Xtra FX 2100/Electric",
-      "ex_showroom_price": "₹3.20 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-e-xtra"
-    },
-    {
-      "variant_name": "Reliable cargo three-wheeler",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-e-xtra"
-    },
-    {
-      "variant_name": "Ek bharosemand cargo carrier",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-e-xtra"
-    },
-    {
-      "variant_name": "Ek bharosemaand three wheeler cargo carrier",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-e-xtra"
-    },
-    {
-      "variant_name": "Kaafi capable electric cargo three wheeler",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-e-xtra"
-    },
-    {
-      "variant_name": "Shandaar capacity",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "975 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/piaggio/ape-e-xtra"
+      "make": "Piaggio",
+      "model": "Ape Truk Plus",
+      "fuel_type": "Diesel",
+      "engine_cc": 422,
+      "mileage_kmpl": null,
+      "max_power": "12 bhp",
+      "torque": "30 Nm",
+      "gvw_kg": 1380,
+      "passenger_capacity": null,
+      "ex_showroom_price": "₹4.65 Lakh",
+      "transmission_type": "Manual"
     }
   ]
 }

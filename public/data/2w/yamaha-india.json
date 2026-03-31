@@ -5,159 +5,542 @@
   "vehicles": [
     {
       "make": "Yamaha",
-      "model": "Fzs FI V4",
+      "model": "FZ-Fi",
+      "variant_name": "FZ FI Standard",
+      "price": "₹1,09,924",
+      "engine_displacement": "149 cc",
+      "mileage": "46 kmpl",
+      "max_power": "12.2 bhp",
+      "source_section": "Available",
+      "variants": [
+        { "name": "FZ FI Standard", "price": "₹1,09,924" }
+      ],
+      "colors": [
+        "Matte Cyan",
+        "Metallic Black"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 149,
+        "max_power_bhp": 12.2,
+        "max_torque_nm": 13.3,
+        "cooling": "Air-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "5 Speed Manual",
+        "kerb_weight_kg": 135,
+        "fuel_tank_litres": 13,
+        "top_speed_kmph": 115,
+        "mileage_kmpl": 46,
+        "emission_standard": "BS6 Phase 2",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Single-channel ABS",
+        "features": [
+          "LED headlamp",
+          "Digital instrument cluster"
+        ]
+      }
+    },
+    {
+      "make": "Yamaha",
+      "model": "FZ Rave",
+      "variant_name": "FZ Rave Standard",
+      "price": "₹1,20,060",
+      "engine_displacement": "149 cc",
+      "mileage": "51 kmpl",
+      "max_power": "12.2 bhp",
+      "source_section": "Available",
+      "variants": [
+        { "name": "FZ Rave Standard", "price": "₹1,20,060" }
+      ],
+      "colors": [
+        "Metallic Black",
+        "Matte Titan"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 149,
+        "max_power_bhp": 12.2,
+        "max_torque_nm": 13.3,
+        "cooling": "Air-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "5 Speed Manual",
+        "kerb_weight_kg": 136,
+        "fuel_tank_litres": 13,
+        "top_speed_kmph": 115,
+        "mileage_kmpl": 51,
+        "emission_standard": "BS6 Phase 2",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Single-channel ABS",
+        "features": [
+          "LED headlamp",
+          "Disc brakes front and rear",
+          "ABS"
+        ]
+      }
+    },
+    {
+      "make": "Yamaha",
+      "model": "FZ-S Fi",
+      "variant_name": "FZ S FI Standard",
+      "price": "₹1,13,256",
+      "engine_displacement": "149 cc",
+      "mileage": "45 kmpl",
+      "max_power": "12.2 bhp",
+      "source_section": "Available",
+      "variants": [
+        { "name": "FZ S FI Standard", "price": "₹1,13,256" },
+        { "name": "FZ S FI Deluxe", "price": "₹1,14,173" }
+      ],
+      "colors": [
+        "Matte Red",
+        "Matte Grey",
+        "Dark Knight"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 149,
+        "max_power_bhp": 12.2,
+        "max_torque_nm": 13.3,
+        "cooling": "Air-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "5 Speed Manual",
+        "kerb_weight_kg": 135,
+        "fuel_tank_litres": 13,
+        "top_speed_kmph": 115,
+        "mileage_kmpl": 45,
+        "emission_standard": "BS6 Phase 2",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Single-channel ABS",
+        "features": [
+          "LCD display",
+          "Eco indicator",
+          "LED headlamp"
+        ]
+      }
+    },
+    {
+      "make": "Yamaha",
+      "model": "FZ-S Fi V4",
       "variant_name": "FZS FI V4 Standard",
       "price": "₹1,20,409",
       "engine_displacement": "149 cc",
-      "mileage": "60 kmpl",
-      "max_power": "16.9 PS",
+      "mileage": "57.4 kmpl",
+      "max_power": "12.2 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "FZS FI V4 Standard", "price": "₹1,20,409" },
+        { "name": "FZS FI V4 Deluxe", "price": "₹1,23,241" },
+        { "name": "FZS FI V4 Standard - OBD 2B", "price": "₹1,26,074" }
+      ],
+      "colors": [
+        "Ice Fluo-Vermillion",
+        "Cyber Green",
+        "Matte Black Dlx",
+        "Racing Blue",
+        "Majesty Red",
+        "Metallic Grey",
+        "Matte Black",
+        "Dark Matte Blue"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 149,
+        "max_power_bhp": 12.2,
+        "max_torque_nm": 13.3,
+        "cooling": "Air-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "5 Speed Manual",
+        "kerb_weight_kg": 136,
+        "fuel_tank_litres": 13,
+        "top_speed_kmph": 115,
+        "mileage_kmpl": 57.4,
+        "emission_standard": "BS6 Phase 2",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Single-channel ABS",
+        "features": [
+          "LED lighting",
+          "Digital instrument cluster",
+          "Bluetooth connectivity",
+          "Traction control"
+        ]
+      }
     },
     {
       "make": "Yamaha",
-      "model": "Fzs FI V4",
-      "variant_name": "FZS FI V4 Deluxe",
-      "price": "",
+      "model": "FZ-S Fi Hybrid",
+      "variant_name": "FZ S Hybrid Standard",
+      "price": "₹1,35,174",
       "engine_displacement": "149 cc",
-      "mileage": "60 kmpl",
-      "max_power": "16.9 PS",
+      "mileage": "53 kmpl",
+      "max_power": "12.2 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "FZ S Hybrid Standard", "price": "₹1,35,174" }
+      ],
+      "colors": [
+        "Matte Black",
+        "Racing Blue",
+        "Cyan Metallic Grey"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 149,
+        "max_power_bhp": 12.2,
+        "max_torque_nm": 13.3,
+        "cooling": "Air-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "5 Speed Manual",
+        "kerb_weight_kg": 136,
+        "fuel_tank_litres": 13,
+        "top_speed_kmph": 100,
+        "mileage_kmpl": 53,
+        "emission_standard": "BS6 Phase 2",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Single-channel ABS",
+        "features": [
+          "Bluetooth TFT console",
+          "Traction control system",
+          "LED headlight",
+          "Hybrid assist"
+        ]
+      }
     },
     {
       "make": "Yamaha",
-      "model": "Fzs FI V4",
-      "variant_name": "FZS FI V4 Standard - OBD 2B",
-      "price": "",
+      "model": "FZ-X",
+      "variant_name": "FZ X Standard",
+      "price": "₹1,21,667",
       "engine_displacement": "149 cc",
-      "mileage": "60 kmpl",
-      "max_power": "16.9 PS",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Mt 15",
-      "variant_name": "MT 15 V2 Standard [2024]",
-      "price": "₹1,59,197",
-      "engine_displacement": "155 cc",
       "mileage": "47 kmpl",
-      "max_power": "18.1 bhp",
+      "max_power": "12.2 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "FZ X Standard", "price": "₹1,21,667" },
+        { "name": "FZ X Dark Matte Blue Purple", "price": "₹1,30,054" }
+      ],
+      "colors": [
+        "Metallic Black",
+        "Dark Matte Blue"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 149,
+        "max_power_bhp": 12.2,
+        "max_torque_nm": 13.3,
+        "cooling": "Air-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "5 Speed Manual",
+        "kerb_weight_kg": 139,
+        "fuel_tank_litres": 10,
+        "top_speed_kmph": 115,
+        "mileage_kmpl": 47,
+        "emission_standard": "BS6 Phase 2",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Single-channel ABS",
+        "seat_height_mm": 810,
+        "features": [
+          "LED headlamp",
+          "Digital console",
+          "Traction control",
+          "Neo-retro design"
+        ]
+      }
     },
     {
       "make": "Yamaha",
-      "model": "Mt 15",
+      "model": "MT-15 V2.0",
       "variant_name": "MT 15 V2 Standard",
-      "price": "",
+      "price": "₹1,59,041",
       "engine_displacement": "155 cc",
       "mileage": "47 kmpl",
       "max_power": "18.1 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Mt 15",
-      "variant_name": "MT 15 V2 Deluxe",
-      "price": "",
-      "engine_displacement": "155 cc",
-      "mileage": "47 kmpl",
-      "max_power": "18.1 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "MT 15 V2 Standard [2024]", "price": "₹1,58,200" },
+        { "name": "MT 15 V2 Standard", "price": "₹1,59,041" },
+        { "name": "MT 15 V2 Deluxe", "price": "₹1,69,038" }
+      ],
+      "colors": [
+        "Metallic Black",
+        "Metallic Silver Cyan",
+        "Ice Storm",
+        "Vivid Violet Metallic",
+        "Metallic Black DLX"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 155,
+        "max_power_bhp": 18.1,
+        "max_torque_nm": 14.1,
+        "cooling": "Liquid-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "6 Speed Manual",
+        "kerb_weight_kg": 141,
+        "fuel_tank_litres": 10,
+        "top_speed_kmph": 130,
+        "mileage_kmpl": 47,
+        "emission_standard": "BS6 Phase 2",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Single-channel ABS",
+        "seat_height_mm": 810,
+        "features": [
+          "LED headlight",
+          "Digital instrument cluster with Bluetooth",
+          "Upside-down forks",
+          "Aluminium chassis",
+          "Assist and slipper clutch"
+        ]
+      }
     },
     {
       "make": "Yamaha",
       "model": "R15 V4",
       "variant_name": "R15 V4 Standard",
-      "price": "₹1,67,085",
+      "price": "₹1,66,200",
       "engine_displacement": "155 cc",
-      "mileage": "45 kmpl",
+      "mileage": "51.4 kmpl",
       "max_power": "18.1 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "R15 V4 Standard", "price": "₹1,66,200" },
+        { "name": "R15 V4 Dark Knight", "price": "₹1,72,000" },
+        { "name": "R15 V4 Dual Tone", "price": "₹1,76,000" },
+        { "name": "R15 V4 M", "price": "₹1,85,000" },
+        { "name": "R15 V4 M - MotoGP Edition", "price": "₹1,90,000" },
+        { "name": "R15 V4 M - Carbon Fibre", "price": "₹1,96,000" }
+      ],
+      "colors": [
+        "Metallic Grey",
+        "Dark Knight",
+        "Metallic Black",
+        "Intensity White",
+        "Metallic Red",
+        "Matte White Pearl",
+        "Racing Blue",
+        "Icon Performance",
+        "MotoGP Edition"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 155,
+        "max_power_bhp": 18.1,
+        "max_torque_nm": 14.2,
+        "cooling": "Liquid-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "6 Speed Manual",
+        "kerb_weight_kg": 141,
+        "fuel_tank_litres": 11,
+        "top_speed_kmph": 140,
+        "mileage_kmpl": 51.4,
+        "emission_standard": "BS6 Phase 2",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Dual-channel ABS",
+        "features": [
+          "Traction control system",
+          "Quick shifter",
+          "USD front forks",
+          "Deltabox frame",
+          "Variable Valve Actuation (VVA)"
+        ]
+      }
     },
     {
       "make": "Yamaha",
-      "model": "R15 V4",
-      "variant_name": "R15 V4 Dark Knight",
-      "price": "",
+      "model": "R15S",
+      "variant_name": "R15S Standard",
+      "price": "₹1,51,597",
       "engine_displacement": "155 cc",
-      "mileage": "45 kmpl",
+      "mileage": "46 kmpl",
       "max_power": "18.1 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "R15S Standard", "price": "₹1,51,597" }
+      ],
+      "colors": [
+        "Matte Black (New)",
+        "Matte Black",
+        "Racing Blue"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 155,
+        "max_power_bhp": 18.1,
+        "max_torque_nm": 14.2,
+        "cooling": "Liquid-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "6 Speed Manual",
+        "kerb_weight_kg": 142,
+        "fuel_tank_litres": 11,
+        "top_speed_kmph": 136,
+        "mileage_kmpl": 46,
+        "emission_standard": "BS6 Phase 2",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Dual-channel ABS",
+        "features": [
+          "Traction control system",
+          "Quickshifter",
+          "LED headlamps"
+        ]
+      }
     },
     {
       "make": "Yamaha",
-      "model": "R15 V4",
-      "variant_name": "R15 V4 Dual Tone",
-      "price": "",
+      "model": "XSR155",
+      "variant_name": "XSR 155 Metallic Blue",
+      "price": "₹1,50,957",
       "engine_displacement": "155 cc",
-      "mileage": "45 kmpl",
+      "mileage": "46 kmpl",
       "max_power": "18.1 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "XSR 155 Metallic Blue", "price": "₹1,50,957" },
+        { "name": "XSR 155 Vivid Red", "price": "₹1,54,000" },
+        { "name": "XSR 155 Metallic Grey", "price": "₹1,57,000" },
+        { "name": "XSR 155 Metallic Black and Greyish Green Metallic", "price": "₹1,59,990" }
+      ],
+      "colors": [
+        "Metallic Blue",
+        "Vivid Red",
+        "Metallic Grey",
+        "Metallic Black",
+        "Greyish Green Metallic"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 155,
+        "max_power_bhp": 18.1,
+        "max_torque_nm": 14.2,
+        "cooling": "Liquid-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "6 Speed Manual",
+        "kerb_weight_kg": 137,
+        "fuel_tank_litres": 10,
+        "top_speed_kmph": 130,
+        "mileage_kmpl": 46,
+        "emission_standard": "BS6 Phase 2",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Dual-channel ABS",
+        "features": [
+          "LED headlamp",
+          "VVA engine",
+          "Neo-retro design"
+        ]
+      }
     },
     {
       "make": "Yamaha",
-      "model": "R15 V4",
-      "variant_name": "R15 V4 M",
-      "price": "",
-      "engine_displacement": "155 cc",
-      "mileage": "45 kmpl",
-      "max_power": "18.1 bhp",
+      "model": "Ray ZR 125 Fi",
+      "variant_name": "Ray ZR 125 Drum - Hybrid",
+      "price": "₹76,235",
+      "engine_displacement": "125 cc",
+      "mileage": "49 kmpl",
+      "max_power": "8.04 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Ray ZR 125 Drum - Hybrid", "price": "₹76,235" },
+        { "name": "Ray ZR 125 Disc Hybrid", "price": "₹82,000" },
+        { "name": "Ray ZR 125 Disc - Racing Blue and Dark Matte Blue", "price": "₹85,000" },
+        { "name": "Ray ZR 125 Street Rally - Hybrid", "price": "₹88,425" }
+      ],
+      "colors": [
+        "Silver White Cocktail",
+        "Matte Red",
+        "Cyan Blue",
+        "Metallic Black",
+        "Dark Matte Blue",
+        "Racing Blue",
+        "Matte Grey Metallic",
+        "Matte Black",
+        "Cyber Green",
+        "Ice Fluo-Vermillion"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 125,
+        "max_power_bhp": 8.04,
+        "max_torque_nm": 10.3,
+        "cooling": "Air-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "CVT",
+        "kerb_weight_kg": 99,
+        "fuel_tank_litres": 5.2,
+        "top_speed_kmph": 90,
+        "mileage_kmpl": 49,
+        "emission_standard": "BS6 Phase 2B",
+        "brakes_front": "Drum / Disc",
+        "brakes_rear": "Drum",
+        "abs": "Combined Braking System",
+        "seat_height_mm": 785,
+        "features": [
+          "Hybrid technology",
+          "Kick and self start",
+          "Alloy wheels"
+        ]
+      }
     },
     {
       "make": "Yamaha",
-      "model": "R15 V4",
-      "variant_name": "R15 V4 M - MotoGP Edition",
-      "price": "",
-      "engine_displacement": "155 cc",
-      "mileage": "45 kmpl",
-      "max_power": "18.1 bhp",
+      "model": "Fascino 125 Fi",
+      "variant_name": "Fascino 125 Drum - Hybrid",
+      "price": "₹74,910",
+      "engine_displacement": "125 cc",
+      "mileage": "50 kmpl",
+      "max_power": "8.04 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "R15 V4",
-      "variant_name": "R15 V4 M - Carbon Fibre",
-      "price": "",
-      "engine_displacement": "155 cc",
-      "mileage": "45 kmpl",
-      "max_power": "18.1 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Fascino 125 Drum", "price": "₹74,910" },
+        { "name": "Fascino 125 Drum Deluxe", "price": "₹74,910" },
+        { "name": "Fascino 125 Drum - Hybrid", "price": "₹74,910" },
+        { "name": "Fascino 125 Disc", "price": "₹86,088" },
+        { "name": "Fascino 125 S - Hybrid", "price": "₹87,385" },
+        { "name": "Fascino 125 Disc Deluxe", "price": "₹88,466" },
+        { "name": "Fascino 125 Disc Special Edition", "price": "₹89,305" },
+        { "name": "Fascino 125 Disc - Dark Matte Blue Special Edition", "price": "₹90,005" },
+        { "name": "Fascino 125 S - Hybrid (Colour TFT/ TBT)", "price": "₹97,319" }
+      ],
+      "colors": [
+        "Metallic White",
+        "Matte Copper",
+        "Silver",
+        "Dark Matte Blue",
+        "Cool Blue Metallic",
+        "Metallic Black",
+        "Cyan Blue",
+        "Vivid Red",
+        "Matte Grey Special"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 125,
+        "max_power_bhp": 8.04,
+        "max_torque_nm": 10.3,
+        "cooling": "Air-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "CVT",
+        "kerb_weight_kg": 99,
+        "fuel_tank_litres": 5.2,
+        "top_speed_kmph": 90,
+        "mileage_kmpl": 50,
+        "emission_standard": "BS6 Phase 2B",
+        "brakes_front": "Drum / Disc",
+        "brakes_rear": "Drum",
+        "abs": "Combined Braking System",
+        "features": [
+          "Hybrid technology",
+          "Kick and self start",
+          "Alloy wheels"
+        ]
+      }
     },
     {
       "make": "Yamaha",
@@ -168,269 +551,40 @@
       "mileage": "40 kmpl",
       "max_power": "14.75 bhp",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Aerox 155",
-      "variant_name": "Aerox 155 S",
-      "price": "",
-      "engine_displacement": "155 cc",
-      "mileage": "40 kmpl",
-      "max_power": "14.75 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Fascino 125",
-      "variant_name": "Fascino 125 Drum - Hybrid",
-      "price": "₹77,091",
-      "engine_displacement": "124 cc",
-      "mileage": "49 kmpl",
-      "max_power": "8.04 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Fascino 125",
-      "variant_name": "Fascino 125 Drum",
-      "price": "",
-      "engine_displacement": "124 cc",
-      "mileage": "49 kmpl",
-      "max_power": "8.04 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Fascino 125",
-      "variant_name": "Fascino 125 Drum Deluxe",
-      "price": "",
-      "engine_displacement": "124 cc",
-      "mileage": "49 kmpl",
-      "max_power": "8.04 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Fascino 125",
-      "variant_name": "Fascino 125 Disc",
-      "price": "",
-      "engine_displacement": "124 cc",
-      "mileage": "49 kmpl",
-      "max_power": "8.04 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Fascino 125",
-      "variant_name": "Fascino 125 Disc Deluxe",
-      "price": "",
-      "engine_displacement": "124 cc",
-      "mileage": "49 kmpl",
-      "max_power": "8.04 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Fascino 125",
-      "variant_name": "Fascino 125 Disc Special Edition",
-      "price": "",
-      "engine_displacement": "124 cc",
-      "mileage": "49 kmpl",
-      "max_power": "8.04 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Fascino 125",
-      "variant_name": "Fascino 125 S - Hybrid",
-      "price": "",
-      "engine_displacement": "124 cc",
-      "mileage": "49 kmpl",
-      "max_power": "8.04 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Fascino 125",
-      "variant_name": "Fascino 125 Disc - Dark Matte Blue Special Edition",
-      "price": "",
-      "engine_displacement": "124 cc",
-      "mileage": "49 kmpl",
-      "max_power": "8.04 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Fascino 125",
-      "variant_name": "Fascino 125 S - Hybrid (Colour TFT/ TBT)",
-      "price": "",
-      "engine_displacement": "124 cc",
-      "mileage": "49 kmpl",
-      "max_power": "8.04 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Ray Zr 125",
-      "variant_name": "Ray ZR 125 Drum - Hybrid",
-      "price": "₹76,235",
-      "engine_displacement": "125 cc",
-      "mileage": "49 kmpl",
-      "max_power": "8.04 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Ray Zr 125",
-      "variant_name": "Ray ZR 125 Disc Hybrid",
-      "price": "",
-      "engine_displacement": "125 cc",
-      "mileage": "49 kmpl",
-      "max_power": "8.04 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Ray Zr 125",
-      "variant_name": "Ray ZR 125 Disc - Racing Blue and Dark Matte Blue",
-      "price": "",
-      "engine_displacement": "125 cc",
-      "mileage": "49 kmpl",
-      "max_power": "8.04 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Ray Zr 125",
-      "variant_name": "Ray ZR 125 Street Rally - Hybrid",
-      "price": "",
-      "engine_displacement": "125 cc",
-      "mileage": "49 kmpl",
-      "max_power": "8.04 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Fz X",
-      "variant_name": "FZ X Standard",
-      "price": "₹1,21,667",
-      "engine_displacement": "149 cc",
-      "mileage": "47 kmpl",
-      "max_power": "12.2 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Fz X",
-      "variant_name": "FZ X Dark Matte Blue Purple",
-      "price": "",
-      "engine_displacement": "149 cc",
-      "mileage": "47 kmpl",
-      "max_power": "12.2 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Xsr 155",
-      "variant_name": "XSR 155 Metallic Blue",
-      "price": "₹1,50,957",
-      "engine_displacement": "155 cc",
-      "mileage": "46 kmpl",
-      "max_power": "18.1 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Xsr 155",
-      "variant_name": "XSR 155 Vivid Red",
-      "price": "",
-      "engine_displacement": "155 cc",
-      "mileage": "46 kmpl",
-      "max_power": "18.1 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Xsr 155",
-      "variant_name": "XSR 155 Metallic Grey",
-      "price": "",
-      "engine_displacement": "155 cc",
-      "mileage": "46 kmpl",
-      "max_power": "18.1 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yamaha",
-      "model": "Xsr 155",
-      "variant_name": "XSR 155 Metallic Black and Greyish Green Metallic",
-      "price": "",
-      "engine_displacement": "155 cc",
-      "mileage": "46 kmpl",
-      "max_power": "18.1 bhp",
-      "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Aerox 155 Standard", "price": "₹1,40,445" },
+        { "name": "Aerox 155 S", "price": "₹1,43,464" }
+      ],
+      "colors": [
+        "Metallic Black",
+        "Grey Vermillion",
+        "Ice Fluo Vermillion",
+        "Racing Blue"
+      ],
+      "technical_specifications": {
+        "engine_displacement_cc": 155,
+        "max_power_bhp": 14.75,
+        "max_torque_nm": 13.9,
+        "cooling": "Liquid-cooled",
+        "cylinders": 1,
+        "fuel_system": "Fuel Injection",
+        "gearbox": "CVT",
+        "kerb_weight_kg": 126,
+        "fuel_tank_litres": 5.5,
+        "top_speed_kmph": 115,
+        "mileage_kmpl": 40,
+        "emission_standard": "BS6 Phase 2B",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "abs": "Single-channel ABS",
+        "seat_height_mm": 790,
+        "features": [
+          "Maxi-scooter design",
+          "LED headlamp",
+          "Digital console with Bluetooth",
+          "Alloy wheels"
+        ]
+      }
     }
   ]
 }

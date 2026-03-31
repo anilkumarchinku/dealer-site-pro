@@ -1,138 +1,52 @@
 {
+  "brand": "Moto Guzzi",
+  "brandId": "moto-guzzi",
+  "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
+  "vehicles": [
+    {
+      "make": "Moto Guzzi",
+      "model": "V85 TT",
+      "variant_name": "Moto Guzzi V85 TT",
+      "price": "₹16,45,802",
+      "engine_displacement": "853 cc",
+      "mileage": "23.8 kmpl",
+      "top_speed": "165 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "V85 TT Standard", "price": "₹16,45,802" }
+      ],
+      "colors": ["Grey", "White & Red", "White & Yellow", "Black"],
+      "technical_specifications": {
+        "engine_type": "Air-cooled, Transverse V-twin",
+        "power": "75.09 bhp",
+        "torque": "82 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "23 litres",
+        "seat_height": "828 mm",
+        "kerb_weight": "230 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "Safety electronics package"
+      }
+    }
+  ],
   "moto_guzzi_bikes": [
     {
-      "bike_name": "Moto Guzzi V85 TT",
-      "bike_name_citation": "https://www.bikedekho.com/moto-guzzi/v85-tt",
-      "price": "Rs. 15,40,000",
-      "price_citation": "https://www.bikedekho.com/moto-guzzi/v85-tt",
-      "engine_displacement": "853 cc",
-      "engine_displacement_citation": "https://www.bikedekho.com/moto-guzzi/v85-tt",
-      "mileage": "20.4 Kmpl",
-      "mileage_citation": "https://www.bikedekho.com/moto-guzzi/v85-tt",
-      "performance_metrics": {
-        "power": "76 PS @ 7500 rpm",
-        "power_citation": "https://www.bikedekho.com/moto-guzzi/v85-tt/specifications",
-        "torque": "82 Nm @ 5000 rpm",
-        "torque_citation": "https://www.bikedekho.com/moto-guzzi/v85-tt/specifications",
-        "top_speed": "165 kmph",
-        "top_speed_citation": "https://www.bikedekho.com/moto-guzzi/v85-tt/specifications"
-      }
-    },
-    {
-      "bike_name": "Moto Guzzi Stelvio",
-      "bike_name_citation": "https://www.bikedekho.com/moto-guzzi/stelvio",
-      "price": "Price to be announced",
-      "price_citation": "https://www.bikedekho.com/moto-guzzi/stelvio",
-      "engine_displacement": "Not found",
-      "engine_displacement_citation": "https://www.bikedekho.com/moto-guzzi/stelvio",
-      "mileage": "Not found",
-      "mileage_citation": "https://www.bikedekho.com/moto-guzzi/stelvio"
-    },
-    {
-      "bike_name": "Moto Guzzi MGX-21",
-      "bike_name_citation": "https://www.bikedekho.com/moto-guzzi/mgx-21",
-      "price": "Rs. 27,78,000",
-      "price_citation": "https://www.bikedekho.com/moto-guzzi/mgx-21",
-      "engine_displacement": "1380 cc",
-      "engine_displacement_citation": "https://www.bikedekho.com/moto-guzzi/mgx-21/specifications",
-      "mileage": "Not found",
-      "mileage_citation": "https://www.bikedekho.com/moto-guzzi/mgx-21/specifications",
-      "performance_metrics": {
-        "power": "96.5 PS @ 6500 rpm",
-        "power_citation": "https://www.bikedekho.com/moto-guzzi/mgx-21/specifications",
-        "torque": "121 Nm @ 3000 rpm",
-        "torque_citation": "https://www.bikedekho.com/moto-guzzi/mgx-21/specifications"
-      }
-    },
-    {
-      "bike_name": "Moto Guzzi Griso 1200 8V",
-      "bike_name_citation": "https://www.bikedekho.com/moto-guzzi/griso-1200-8v",
-      "price": "Rs. 17,98,000",
-      "price_citation": "https://www.bikedekho.com/moto-guzzi/griso-1200-8v",
-      "engine_displacement": "1151 cc",
-      "engine_displacement_citation": "https://www.bikedekho.com/moto-guzzi/griso-1200-8v",
-      "mileage": "16 kmpl",
-      "mileage_citation": "https://www.bikedekho.com/moto-guzzi/griso-1200-8v",
-      "performance_metrics": {
-        "power": "106 PS @ 6600 rpm",
-        "power_citation": "https://www.bikedekho.com/moto-guzzi/griso-1200-8v",
-        "torque": "107 Nm @ 6600 rpm",
-        "torque_citation": "https://www.bikedekho.com/moto-guzzi/griso-1200-8v",
-        "top_speed": "230 kmph",
-        "top_speed_citation": "https://www.bikedekho.com/moto-guzzi/griso-1200-8v"
-      }
-    },
-    {
-      "bike_name": "Moto Guzzi California 1400",
-      "bike_name_citation": "https://www.bikedekho.com/moto-guzzi/california-1400",
-      "price": "Rs. 22,02,000",
-      "price_citation": "https://www.bikedekho.com/moto-guzzi/california-1400",
-      "engine_displacement": "1380 cc",
-      "engine_displacement_citation": "https://www.bikedekho.com/moto-guzzi/california-1400",
-      "mileage": "10 kmpl",
-      "mileage_citation": "https://www.bikedekho.com/moto-guzzi/california-1400",
-      "performance_metrics": {
-        "power": "97.53 PS @ 6500 rpm",
-        "power_citation": "https://www.bikedekho.com/moto-guzzi/california-1400",
-        "torque": "121 Nm @ 3000 rpm",
-        "torque_citation": "https://www.bikedekho.com/moto-guzzi/california-1400",
-        "top_speed": "203 kmph",
-        "top_speed_citation": "https://www.bikedekho.com/moto-guzzi/california-1400"
-      }
-    },
-    {
-      "bike_name": "Moto Guzzi Sports 8V",
-      "bike_name_citation": "https://www.bikedekho.com/moto-guzzi/sports-8v",
-      "price": "Rs. 18,45,000",
-      "price_citation": "https://www.bikedekho.com/moto-guzzi/sports-8v",
-      "engine_displacement": "1151 cc",
-      "engine_displacement_citation": "https://www.bikedekho.com/moto-guzzi/sports-8v",
-      "mileage": "14 Kmpl",
-      "mileage_citation": "https://www.bikedekho.com/moto-guzzi/sports-8v",
-      "performance_metrics": {
-        "power": "103.3 bhp @ 7500 rpm",
-        "power_citation": "https://www.bikedekho.com/moto-guzzi/sports-8v",
-        "torque": "105 Nm @ 6750 rpm",
-        "torque_citation": "https://www.bikedekho.com/moto-guzzi/sports-8v",
-        "top_speed": "209 kmph",
-        "top_speed_citation": "https://www.bikedekho.com/moto-guzzi/sports-8v"
-      }
-    },
-    {
-      "bike_name": "Moto Guzzi Audace 1400",
-      "bike_name_citation": "https://www.bikedekho.com/moto-guzzi/moto-guzzi-audace-1400",
-      "price": "Not found",
-      "price_citation": "https://www.bikedekho.com/moto-guzzi/moto-guzzi-audace-1400",
-      "engine_displacement": "1380 cc",
-      "engine_displacement_citation": "https://www.bikedekho.com/moto-guzzi/moto-guzzi-audace-1400",
-      "mileage": "Not found",
-      "mileage_citation": "https://www.bikedekho.com/moto-guzzi/moto-guzzi-audace-1400"
-    },
-    {
-      "bike_name": "Moto Guzzi Eldorado",
-      "bike_name_citation": "https://www.bikedekho.com/moto-guzzi/eldorado",
-      "price": "Rs. 21,16,000",
-      "price_citation": "https://www.bikedekho.com/moto-guzzi/eldorado",
-      "engine_displacement": "1380 cc",
-      "engine_displacement_citation": "https://www.bikedekho.com/moto-guzzi/eldorado",
-      "mileage": "Not found",
-      "mileage_citation": "https://www.bikedekho.com/moto-guzzi/eldorado"
-    },
-    {
-      "bike_name": "Moto Guzzi Audace",
-      "bike_name_citation": "https://www.bikedekho.com/moto-guzzi/audace",
-      "price": "Rs. 19,94,000",
-      "price_citation": "https://www.bikedekho.com/moto-guzzi/audace",
-      "engine_displacement": "1380 cc",
-      "engine_displacement_citation": "https://www.bikedekho.com/moto-guzzi/audace",
-      "mileage": "Not found",
-      "mileage_citation": "https://www.bikedekho.com/moto-guzzi/audace",
-      "performance_metrics": {
-        "power": "96.5 PS @ 6500 rpm",
-        "power_citation": "https://www.bikedekho.com/moto-guzzi/audace",
-        "torque": "121 Nm @ 3000 rpm",
-        "torque_citation": "https://www.bikedekho.com/moto-guzzi/audace"
-      }
+      "model_name": "V85 TT",
+      "price": "₹16,00,000",
+      "engine": "853 cc",
+      "mileage": "17 kmpl",
+      "max_power": "80 bhp",
+      "torque": "80 Nm",
+      "top_speed": "200 km/h",
+      "gear_box": "6-speed",
+      "colors": ["Arancione", "Bianco Ghiaccio", "Giallo Mojave", "Rosso Rame"]
     }
   ]
 }

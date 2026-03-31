@@ -5,11 +5,11 @@
   "vehicles": [
     {
       "variant_name": "Eltra City 3 Seater/Electric",
-      "ex_showroom_price": "₹3.86 Lakh",
-      "mileage": "",
+      "ex_showroom_price": "₹3.40 Lakh",
+      "mileage": "110 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "5 kW",
         "torque": ""
       },
       "dimensions": {
@@ -18,21 +18,21 @@
         "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "754 kg"
+        "gross_vehicle_weight": "600 kg"
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/greaves/eltra-city"
     },
     {
       "variant_name": "Greaves D435 Cargo-Powered by Greaves",
-      "ex_showroom_price": "₹3.50 Lakh",
-      "mileage": "",
+      "ex_showroom_price": "₹4.50 Lakh",
+      "mileage": "130 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "7.5 kW",
         "torque": ""
       },
       "dimensions": {
@@ -41,21 +41,21 @@
         "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "754 kg"
+        "gross_vehicle_weight": "1000 kg"
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/greaves/eltra-city"
     },
     {
       "variant_name": "Greaves D435 City-Powered by Greaves",
-      "ex_showroom_price": "₹3.15 Lakh",
-      "mileage": "",
+      "ex_showroom_price": "₹4.20 Lakh",
+      "mileage": "130 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "7.5 kW",
         "torque": ""
       },
       "dimensions": {
@@ -64,21 +64,21 @@
         "height": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "754 kg"
+        "gross_vehicle_weight": "750 kg"
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/greaves/eltra-city"
     },
     {
       "variant_name": "Greaves Eltra City Xtra",
       "ex_showroom_price": "₹3.57 Lakh",
-      "mileage": "",
+      "mileage": "110 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "5 kW",
         "torque": ""
       },
       "dimensions": {
@@ -91,17 +91,17 @@
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/greaves/eltra-city"
     },
     {
       "variant_name": "Greaves D599 Plus City-Powered by Greaves",
       "ex_showroom_price": "₹3.25 Lakh",
-      "mileage": "",
+      "mileage": "110 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "5 kW",
         "torque": ""
       },
       "dimensions": {
@@ -114,86 +114,17 @@
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/greaves/eltra-city"
     },
     {
-      "variant_name": "OSM Rage Plus RapidEv Pro",
-      "ex_showroom_price": "₹4.06 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": ""
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/greaves/eltra"
-    },
-    {
-      "variant_name": "Baxy Mobility Super King",
-      "ex_showroom_price": "₹4.10 Lakh",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": ""
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/greaves/eltra"
-    },
-    {
-      "variant_name": "OSM Rage Plus",
-      "ex_showroom_price": "",
-      "mileage": "",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "",
-        "torque": ""
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": ""
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Manual"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/greaves/eltra"
-    },
-    {
       "variant_name": "Greaves Eltra City",
       "ex_showroom_price": "₹3.86 Lakh",
-      "mileage": "",
+      "mileage": "110 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "",
+        "max_power": "5 kW",
         "torque": ""
       },
       "dimensions": {
@@ -206,7 +137,7 @@
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Manual"
+        "transmission_type": "Automatic"
       },
       "source_url": "https://trucks.cardekho.com/en/trucks/greaves/eltra"
     }

@@ -2,66 +2,421 @@
   "brand": "Kawasaki",
   "brandId": "kawasaki-india",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
       "make": "Kawasaki",
       "model": "W175",
-      "variant_name": "W175 Candy Persimmon Red",
-      "price": "₹1,15,006",
-      "engine_displacement": "175 cc",
+      "variant_name": "Kawasaki W175",
+      "price": "₹1,15,006 - ₹1,25,007",
+      "engine_displacement": "177 cc",
       "mileage": "40 kmpl",
+      "top_speed": "110 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "W175 Standard", "price": "₹1,15,006" },
+        { "name": "W175 Alloy Wheel", "price": "₹1,25,007" }
+      ],
+      "colors": ["Ebony", "Candy Persimmon Red", "Metallic Moondust Gray", "Candy Emerald Green", "Metallic Graphite Grey", "Metallic Ocean Blue"],
+      "technical_specifications": {
+        "engine_type": "Air-cooled, Single-cylinder",
+        "power": "12.8 bhp",
+        "torque": "13.2 Nm",
+        "gearbox": "5-Speed Manual",
+        "fuel_tank": "12 litres",
+        "seat_height": "790 mm",
+        "kerb_weight": "135 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
       "make": "Kawasaki",
-      "model": "W175",
-      "variant_name": "W175 Ebony",
-      "price": "",
-      "engine_displacement": "175 cc",
-      "mileage": "40 kmpl",
+      "model": "Eliminator",
+      "variant_name": "Kawasaki Eliminator",
+      "price": "₹6,15,965",
+      "engine_displacement": "451 cc",
+      "mileage": "31.45 kmpl",
+      "top_speed": "160 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Eliminator Standard", "price": "₹6,15,965" }
+      ],
+      "colors": ["Metallic Flat Black"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "44.7 bhp",
+        "torque": "42.6 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13 litres",
+        "seat_height": "735 mm",
+        "kerb_weight": "176 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     },
     {
       "make": "Kawasaki",
-      "model": "W175",
-      "variant_name": "W175 Metallic",
-      "price": "",
-      "engine_displacement": "175 cc",
-      "mileage": "40 kmpl",
+      "model": "Ninja 300",
+      "variant_name": "Kawasaki Ninja 300",
+      "price": "₹3,17,000",
+      "engine_displacement": "296 cc",
+      "mileage": "26 kmpl",
+      "top_speed": "160 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Ninja 300 Standard", "price": "₹3,17,000" }
+      ],
+      "colors": ["Candy Lime Green / Ebony", "Lime Green"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "38.88 bhp",
+        "torque": "26.1 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "17 litres",
+        "seat_height": "780 mm",
+        "kerb_weight": "179 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B"
+      }
     },
     {
       "make": "Kawasaki",
-      "model": "W175",
-      "variant_name": "W175 Alloy Wheel",
-      "price": "",
-      "engine_displacement": "175 cc",
-      "mileage": "40 kmpl",
+      "model": "Ninja 500",
+      "variant_name": "Kawasaki Ninja 500",
+      "price": "₹5,65,976",
+      "engine_displacement": "451 cc",
+      "mileage": "28.7 kmpl",
+      "top_speed": "190 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Ninja 500 Standard", "price": "₹5,65,976" }
+      ],
+      "colors": ["Metallic Carbon Gray"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "44.7 bhp",
+        "torque": "42.6 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "14 litres",
+        "seat_height": "785 mm",
+        "kerb_weight": "171 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B",
+        "instrument_cluster": "TFT Display",
+        "lighting": "LED Headlight"
+      }
     },
     {
       "make": "Kawasaki",
-      "model": "W175",
-      "variant_name": "Kawasaki W175 Price",
-      "price": "",
-      "engine_displacement": "175 cc",
-      "mileage": "40 kmpl",
+      "model": "Z650",
+      "variant_name": "Kawasaki Z650",
+      "price": "₹7,25,960",
+      "engine_displacement": "649 cc",
+      "mileage": "27 kmpl",
+      "top_speed": "201 kmph",
       "source_section": "Available",
-      "variants": [],
-      "colors": [],
-      "technical_specifications": {}
+      "variants": [
+        { "name": "Z650 Standard", "price": "₹7,25,960" }
+      ],
+      "colors": ["Metallic Matte Dark Gray / Metallic Spark Black"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "67.31 bhp",
+        "torque": "64 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "15 litres",
+        "seat_height": "790 mm",
+        "kerb_weight": "191 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "instrument_cluster": "TFT Display with Bluetooth"
+      }
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z650RS",
+      "variant_name": "Kawasaki Z650RS",
+      "price": "₹7,83,000",
+      "engine_displacement": "649 cc",
+      "mileage": "25 kmpl",
+      "top_speed": "195 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Z650RS Standard", "price": "₹7,83,000" }
+      ],
+      "colors": ["Metallic Ocean Blue"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "67.07 bhp",
+        "torque": "62.1 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "12 litres",
+        "seat_height": "800 mm",
+        "kerb_weight": "192 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 650",
+      "variant_name": "Kawasaki Ninja 650",
+      "price": "₹7,91,000",
+      "engine_displacement": "649 cc",
+      "mileage": "25 kmpl",
+      "top_speed": "210 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Ninja 650 Standard", "price": "₹7,91,000" }
+      ],
+      "colors": ["Lime Green"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "67.3 bhp",
+        "torque": "64 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "15 litres",
+        "seat_height": "790 mm",
+        "kerb_weight": "196 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B"
+      }
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Versys 650",
+      "variant_name": "Kawasaki Versys 650",
+      "price": "₹8,63,000",
+      "engine_displacement": "649 cc",
+      "mileage": "19.4 kmpl",
+      "top_speed": "199 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Versys 650 Standard", "price": "₹8,63,000" }
+      ],
+      "colors": ["Metallic Graphite Gray / Metallic Spark Black"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "65.7 bhp",
+        "torque": "61 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "21 litres",
+        "seat_height": "845 mm",
+        "kerb_weight": "218 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B"
+      }
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Vulcan S",
+      "variant_name": "Kawasaki Vulcan S",
+      "price": "₹8,13,000",
+      "engine_displacement": "649 cc",
+      "mileage": "22 kmpl",
+      "top_speed": "170 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Vulcan S Standard", "price": "₹8,13,000" }
+      ],
+      "colors": ["Metallic Flat Spark Black"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "59.94 bhp",
+        "torque": "61 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "14 litres",
+        "seat_height": "705 mm",
+        "kerb_weight": "226 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z900",
+      "variant_name": "Kawasaki Z900",
+      "price": "₹9,99,000",
+      "engine_displacement": "948 cc",
+      "mileage": "21 kmpl",
+      "top_speed": "240 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Z900 Standard", "price": "₹9,99,000" }
+      ],
+      "colors": ["Metallic Matte Graphenesteel Gray / Metallic Spark Black", "Candy Lime Green / Metallic Carbon Gray"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-four",
+        "power": "123.6 bhp",
+        "torque": "98.6 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "17 litres",
+        "seat_height": "830 mm",
+        "kerb_weight": "212 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes (Cornering ABS)",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B",
+        "features": "6-axis IMU, Bi-directional quickshifter, 5-inch TFT with Bluetooth, Traction control, Ride modes, Cruise control"
+      }
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 1100SX",
+      "variant_name": "Kawasaki Ninja 1100SX",
+      "price": "₹14,42,000",
+      "engine_displacement": "1099 cc",
+      "mileage": "17.8 kmpl",
+      "top_speed": "249 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Ninja 1100SX Standard", "price": "₹14,42,000" }
+      ],
+      "colors": ["Metallic Brilliant Golden Black / Metallic Carbon Gray"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-four",
+        "power": "134.1 bhp",
+        "torque": "113 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "19 litres",
+        "seat_height": "820 mm",
+        "kerb_weight": "238 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B"
+      }
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-10R",
+      "variant_name": "Kawasaki Ninja ZX-10R",
+      "price": "₹20,79,000",
+      "engine_displacement": "998 cc",
+      "mileage": "20 kmpl",
+      "top_speed": "299 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Ninja ZX-10R Standard", "price": "₹20,79,000" }
+      ],
+      "colors": ["Metallic Graphite Gray / Metallic Diablo Black", "Lime Green / Ebony / Pearl Blizzard White"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-four",
+        "power": "193 bhp (213 hp with ram air)",
+        "torque": "114.9 Nm",
+        "gearbox": "6-Speed Manual with Bi-directional Quickshifter",
+        "fuel_tank": "17 litres",
+        "seat_height": "835 mm",
+        "kerb_weight": "207 kg",
+        "brakes_front": "Brembo Dual Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes (Cornering ABS)",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B",
+        "features": "Traction control, Cornering management, Launch control, Engine braking control, Full-color TFT with Bluetooth, Integrated aerodynamic winglets"
+      }
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z H2",
+      "variant_name": "Kawasaki Z H2",
+      "price": "₹30,55,818",
+      "engine_displacement": "998 cc",
+      "mileage": "18 kmpl",
+      "top_speed": "280 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Z H2 Standard", "price": "₹30,55,818" }
+      ],
+      "colors": ["Metallic Matte Graphenesteel Grey / Ebony"],
+      "technical_specifications": {
+        "engine_type": "Supercharged, Liquid-cooled, Inline-four",
+        "power": "197.26 bhp",
+        "torque": "137 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "19 litres",
+        "seat_height": "830 mm",
+        "kerb_weight": "240 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja H2 SX SE",
+      "variant_name": "Kawasaki Ninja H2 SX SE",
+      "price": "₹36,27,783",
+      "engine_displacement": "998 cc",
+      "mileage": "23 kmpl",
+      "top_speed": "330 kmph",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Ninja H2 SX SE", "price": "₹36,27,783" }
+      ],
+      "colors": ["Metallic Diablo Black"],
+      "technical_specifications": {
+        "engine_type": "Supercharged, Liquid-cooled, Inline-four",
+        "power": "197.2 bhp",
+        "torque": "137.3 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "19 litres",
+        "seat_height": "820 mm",
+        "kerb_weight": "268 kg",
+        "brakes_front": "Dual Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes (Dual-channel)",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "6.5-inch TFT Display, Bluetooth, GPS Navigation, Quickshifter, Traction control, Cruise control, Keyless ignition"
+      }
     }
   ]
 }

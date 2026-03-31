@@ -2,177 +2,121 @@
   "brand": "Odysse Electric",
   "brandId": "odysse-electric",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
-      "model_name": "Odysse Evo",
-      "model_name_citation": "https://www.bikedekho.com/odysse-electric/evo",
-      "pricing": {
-        "ex_showroom_price": "Rs. 65,000 Onwards",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/odysse-electric/evo"
-      },
-      "available_colors": [
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/evo/colors"
-        },
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/evo/colors"
-        },
-        {
-          "value": "Blue",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/evo/colors"
-        },
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/evo/colors"
-        }
-      ],
+      "make": "Odysse Electric",
+      "model": "E2",
+      "variant_name": "Odysse Electric E2",
+      "price": "₹72,999",
+      "source_section": "Available",
       "specifications": {
-        "range": "80 km per charge",
-        "range_citation": "https://www.bikedekho.com/odysse-electric/evo"
-      }
+        "Motor Power": "1.5 kW",
+        "Range": "100 km",
+        "Battery Capacity": "60V 30Ah",
+        "Top Speed": "55 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
+      "variants": [
+        { "name": "E2", "price": "₹72,999" }
+      ]
     },
     {
-      "model_name": "Odysse Hawk",
-      "model_name_citation": "https://www.bikedekho.com/odysse-electric/hawk",
-      "pricing": {
-        "ex_showroom_price": "Rs. 70,000 Onwards",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/odysse-electric/hawk"
-      },
-      "available_colors": [
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/hawk/colors"
-        },
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/hawk/colors"
-        },
-        {
-          "value": "Blue",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/hawk/colors"
-        },
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/hawk/colors"
-        }
-      ],
+      "make": "Odysse Electric",
+      "model": "E2S",
+      "variant_name": "Odysse Electric E2S",
+      "price": "₹77,999",
+      "source_section": "Available",
       "specifications": {
-        "range": "85 km per charge",
-        "range_citation": "https://www.bikedekho.com/odysse-electric/hawk"
-      }
+        "Motor Power": "1.5 kW",
+        "Range": "100 km",
+        "Battery Capacity": "60V 30Ah",
+        "Top Speed": "55 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
+      "variants": [
+        { "name": "E2S", "price": "₹77,999" }
+      ]
     },
     {
-      "model_name": "Odysse Racer",
-      "model_name_citation": "https://www.bikedekho.com/odysse-electric/racer",
-      "pricing": {
-        "ex_showroom_price": "Rs. 75,000 Onwards",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/odysse-electric/racer"
-      },
-      "available_colors": [
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/racer/colors"
-        },
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/racer/colors"
-        },
-        {
-          "value": "Blue",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/racer/colors"
-        },
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/racer/colors"
-        }
-      ],
+      "make": "Odysse Electric",
+      "model": "E4",
+      "variant_name": "Odysse Electric E4",
+      "price": "₹84,999",
+      "source_section": "Available",
       "specifications": {
-        "range": "90 km per charge",
-        "range_citation": "https://www.bikedekho.com/odysse-electric/racer"
-      }
+        "Motor Power": "1.5 kW",
+        "Range": "120 km",
+        "Battery Capacity": "60V 35Ah",
+        "Top Speed": "60 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
+      "variants": [
+        { "name": "E4", "price": "₹84,999" }
+      ]
     },
     {
-      "model_name": "Odysse E2K",
-      "model_name_citation": "https://www.bikedekho.com/odysse-electric/e2k",
-      "pricing": {
-        "ex_showroom_price": "Rs. 80,000 Onwards",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/odysse-electric/e2k"
-      },
-      "available_colors": [
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/e2k/colors"
-        },
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/e2k/colors"
-        },
-        {
-          "value": "Blue",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/e2k/colors"
-        },
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/e2k/colors"
-        }
-      ],
+      "make": "Odysse Electric",
+      "model": "Evoqis",
+      "variant_name": "Odysse Electric Evoqis",
+      "price": "₹89,999",
+      "source_section": "Available",
       "specifications": {
-        "range": "95 km per charge",
-        "range_citation": "https://www.bikedekho.com/odysse-electric/e2k"
-      }
+        "Motor Power": "1.5 kW",
+        "Range": "120 km",
+        "Battery Capacity": "60V 35Ah",
+        "Top Speed": "60 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
+      "variants": [
+        { "name": "Evoqis", "price": "₹89,999" }
+      ]
     },
     {
-      "model_name": "Odysse E2K Pro",
-      "model_name_citation": "https://www.bikedekho.com/odysse-electric/e2k-pro",
-      "pricing": {
-        "ex_showroom_price": "Rs. 85,000 Onwards",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/odysse-electric/e2k-pro"
-      },
-      "available_colors": [
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/e2k-pro/colors"
-        },
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/e2k-pro/colors"
-        },
-        {
-          "value": "Blue",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/e2k-pro/colors"
-        },
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/e2k-pro/colors"
-        }
-      ],
+      "make": "Odysse Electric",
+      "model": "Rogue",
+      "variant_name": "Odysse Electric Rogue",
+      "price": "₹94,999",
+      "source_section": "Available",
       "specifications": {
-        "range": "100 km per charge",
-        "range_citation": "https://www.bikedekho.com/odysse-electric/e2k-pro"
-      }
+        "Motor Power": "1.5 kW",
+        "Range": "120 km",
+        "Battery Capacity": "60V 35Ah",
+        "Top Speed": "60 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
+      "variants": [
+        { "name": "Rogue", "price": "₹94,999" }
+      ]
     },
     {
-      "model_name": "Odysse Evo Plus",
-      "model_name_citation": "https://www.bikedekho.com/odysse-electric/evo-plus",
-      "pricing": {
-        "ex_showroom_price": "Rs. 70,000 Onwards",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/odysse-electric/evo-plus"
+      "make": "Odysse Electric",
+      "model": "Stream",
+      "variant_name": "Odysse Electric Stream",
+      "price": "₹69,999",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "1.5 kW",
+        "Range": "90 km",
+        "Battery Capacity": "60V 30Ah",
+        "Top Speed": "55 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
       },
-      "available_colors": [
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/evo-plus/colors"
-        },
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/evo-plus/colors"
-        },
-        {
-          "value": "Blue",
-          "value_citation": "https://www.bikedekho.com/odysse-electric/evo-plus/colors"
-        }
+      "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
+      "variants": [
+        { "name": "Stream", "price": "₹69,999" }
       ]
     }
   ]

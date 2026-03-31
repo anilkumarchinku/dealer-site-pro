@@ -1,179 +1,72 @@
 {
-  "brand": "Mahindra Two Wheelers",
+  "brand": "Mahindra",
   "brandId": "mahindra-two-wheelers",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
-      "model_name": "Mahindra Centuro",
-      "model_name_citation": "https://www.bikedekho.com/mahindra/centuro",
-      "pricing": {
-        "ex_showroom_price": "Rs. 45,000 Onwards",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/mahindra/centuro"
-      },
-      "available_colors": [
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/mahindra/centuro/colors"
-        },
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/mahindra/centuro/colors"
-        },
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/mahindra/centuro/colors"
-        },
-        {
-          "value": "Blue",
-          "value_citation": "https://www.bikedekho.com/mahindra/centuro/colors"
-        }
+      "make": "Mahindra",
+      "model": "Mojo 300 ABS",
+      "variant_name": "Mojo 300 ABS",
+      "price": "₹1,53,000",
+      "engine_displacement": "294.73 cc",
+      "mileage": "30 kmpl",
+      "top_speed": "147 kmph",
+      "max_power": "27.2 bhp",
+      "source_section": "Discontinued",
+      "colors": ["Black", "Red", "Blue"],
+      "variants": [
+        { "name": "Standard", "price": "₹1,53,000" }
       ],
-      "specifications": {
-        "range": "85 km per charge",
-        "range_citation": "https://www.bikedekho.com/mahindra/centuro"
+      "technical_specifications": {
+        "power": "27.2 bhp",
+        "torque": "30 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "21 litres"
       }
     },
     {
-      "model_name": "Mahindra Gusto",
-      "model_name_citation": "https://www.bikedekho.com/mahindra/gusto",
-      "pricing": {
-        "ex_showroom_price": "Rs. 50,000 Onwards",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/mahindra/gusto"
-      },
-      "available_colors": [
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/mahindra/gusto/colors"
-        },
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/mahindra/gusto/colors"
-        },
-        {
-          "value": "Blue",
-          "value_citation": "https://www.bikedekho.com/mahindra/gusto/colors"
-        },
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/mahindra/gusto/colors"
-        }
+      "make": "Mahindra",
+      "model": "Centuro N1",
+      "variant_name": "Centuro N1",
+      "price": "₹52,500",
+      "engine_displacement": "106 cc",
+      "mileage": "70 kmpl",
+      "top_speed": "90 kmph",
+      "max_power": "8.0 bhp",
+      "source_section": "Discontinued",
+      "colors": ["Red", "White", "Black", "Blue"],
+      "variants": [
+        { "name": "N1", "price": "₹52,500" }
       ],
-      "specifications": {
-        "range": "60 km per charge",
-        "range_citation": "https://www.bikedekho.com/mahindra/gusto"
+      "technical_specifications": {
+        "power": "8.0 bhp",
+        "torque": "8.5 Nm",
+        "gearbox": "4-Speed Manual",
+        "fuel_tank": "8 litres"
       }
     },
     {
-      "model_name": "Mahindra Gusto 125",
-      "model_name_citation": "https://www.bikedekho.com/mahindra/gusto-125",
-      "pricing": {
-        "ex_showroom_price": "Rs. 55,000 Onwards",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/mahindra/gusto-125"
-      },
-      "available_colors": [
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/mahindra/gusto-125/colors"
-        },
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/mahindra/gusto-125/colors"
-        },
-        {
-          "value": "Blue",
-          "value_citation": "https://www.bikedekho.com/mahindra/gusto-125/colors"
-        },
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/mahindra/gusto-125/colors"
-        }
+      "make": "Mahindra",
+      "model": "Gusto 110",
+      "variant_name": "Gusto 110",
+      "price": "₹54,000",
+      "engine_displacement": "109 cc",
+      "mileage": "45 kmpl",
+      "top_speed": "85 kmph",
+      "max_power": "8.2 bhp",
+      "source_section": "Discontinued",
+      "colors": ["White", "Red", "Blue", "Black"],
+      "variants": [
+        { "name": "Standard", "price": "₹54,000" }
       ],
-      "specifications": {
-        "range": "65 km per charge",
-        "range_citation": "https://www.bikedekho.com/mahindra/gusto-125"
+      "technical_specifications": {
+        "power": "8.2 bhp",
+        "torque": "9 Nm",
+        "gearbox": "CVT Automatic",
+        "fuel_tank": "5.5 litres"
       }
-    },
-    {
-      "model_name": "Mahindra Mojo",
-      "model_name_citation": "https://www.bikedekho.com/mahindra/mojo",
-      "pricing": {
-        "ex_showroom_price": "Rs. 1,75,000 Onwards",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/mahindra/mojo"
-      },
-      "available_colors": [
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/mahindra/mojo/colors"
-        },
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/mahindra/mojo/colors"
-        },
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/mahindra/mojo/colors"
-        }
-      ],
-      "specifications": {
-        "range": "35 km per litre",
-        "range_citation": "https://www.bikedekho.com/mahindra/mojo"
-      }
-    },
-    {
-      "model_name": "Mahindra Centuro NXT",
-      "model_name_citation": "https://www.bikedekho.com/mahindra/centuro-nxt",
-      "pricing": {
-        "ex_showroom_price": "Rs. 48,000 Onwards",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/mahindra/centuro-nxt"
-      },
-      "available_colors": [
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/mahindra/centuro-nxt/colors"
-        },
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/mahindra/centuro-nxt/colors"
-        },
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/mahindra/centuro-nxt/colors"
-        }
-      ],
-      "specifications": {
-        "range": "85 km per charge",
-        "range_citation": "https://www.bikedekho.com/mahindra/centuro-nxt"
-      }
-    },
-    {
-      "model_name": "Mahindra Centuro Rockstar",
-      "model_name_citation": "https://www.bikedekho.com/mahindra/centuro-rockstar",
-      "pricing": {
-        "ex_showroom_price": "Rs. 47,000 Onwards",
-        "ex_showroom_price_citation": "https://www.bikedekho.com/mahindra/centuro-rockstar"
-      },
-      "available_colors": [
-        {
-          "value": "Red",
-          "value_citation": "https://www.bikedekho.com/mahindra/centuro-rockstar/colors"
-        },
-        {
-          "value": "White",
-          "value_citation": "https://www.bikedekho.com/mahindra/centuro-rockstar/colors"
-        },
-        {
-          "value": "Black",
-          "value_citation": "https://www.bikedekho.com/mahindra/centuro-rockstar/colors"
-        }
-      ],
-      "specifications": {
-        "range": "85 km per charge",
-        "range_citation": "https://www.bikedekho.com/mahindra/centuro-rockstar"
-      }
-    },
-    {
-      "model_name": "Mahindra Centuro Disc",
-      "model_name_citation": "https://www.bikedekho.com/mahindra/centuro-disc"
     }
   ]
 }

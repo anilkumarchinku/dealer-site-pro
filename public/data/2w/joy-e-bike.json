@@ -2,45 +2,65 @@
   "brand": "Joy e-bike",
   "brandId": "joy-e-bike",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
-      "model_name": "Joy e-bike Wolf",
-      "model_name_citation": "https://www.joyebike.com/wolf",
-      "engine_details": "250 W BLDC Motor",
-      "engine_details_citation": "https://www.joyebike.com/wolf",
-      "torque": "Not specified",
-      "torque_citation": "https://www.joyebike.com/wolf",
-      "mileage": "60 km per charge",
-      "mileage_citation": "https://www.joyebike.com/wolf",
-      "features": [],
-      "more_details": "A smart electric scooter for urban commuting.",
-      "more_details_citation": "https://www.joyebike.com/wolf"
+      "make": "Joy e-bike",
+      "model": "Wolf Plus",
+      "variant_name": "Joy e-bike Wolf Plus",
+      "price": "₹89,399",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "1.5 kW",
+        "Range": "90 km",
+        "Battery Capacity": "60V 24Ah",
+        "Top Speed": "55 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Cosmic Black", "Arctic White", "Lava Red", "Ocean Blue"],
+      "variants": [
+        { "name": "Wolf Plus", "price": "₹89,399" }
+      ]
     },
     {
-      "model_name": "Joy e-bike Beast",
-      "model_name_citation": "https://www.joyebike.com/beast",
-      "engine_details": "5 kW High-power Motor",
-      "engine_details_citation": "https://www.joyebike.com/beast",
-      "torque": "Not specified",
-      "torque_citation": "https://www.joyebike.com/beast",
-      "mileage": "110 km per charge",
-      "mileage_citation": "https://www.joyebike.com/beast",
-      "features": [],
-      "more_details": "Performance oriented electric motorcycle.",
-      "more_details_citation": "https://www.joyebike.com/beast"
+      "make": "Joy e-bike",
+      "model": "Mihos",
+      "variant_name": "Joy e-bike Mihos",
+      "price": "₹79,999",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "1.5 kW",
+        "Range": "90 km",
+        "Battery Capacity": "60V 24Ah",
+        "Top Speed": "55 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Cosmic Black", "Arctic White", "Lava Red", "Ocean Blue"],
+      "variants": [
+        { "name": "Mihos", "price": "₹79,999" }
+      ]
     },
     {
-      "model_name": "Joy e-bike Monster",
-      "model_name_citation": "https://www.joyebike.com/monster",
-      "engine_details": "250 W Motor",
-      "engine_details_citation": "https://www.joyebike.com/monster",
-      "torque": "Not specified",
-      "torque_citation": "https://www.joyebike.com/monster",
-      "mileage": "75 km per charge",
-      "mileage_citation": "https://www.joyebike.com/monster",
-      "features": [],
-      "more_details": "A compact and stylish electric motorcycle for enthusiasts.",
-      "more_details_citation": "https://www.joyebike.com/monster"
+      "make": "Joy e-bike",
+      "model": "Monster",
+      "variant_name": "Joy e-bike Monster",
+      "price": "₹95,999",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "1.5 kW",
+        "Range": "100 km",
+        "Battery Capacity": "60V 28Ah",
+        "Top Speed": "55 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Cosmic Black", "Arctic White", "Lava Red", "Ocean Blue"],
+      "variants": [
+        { "name": "Monster", "price": "₹95,999" }
+      ]
     }
   ]
 }

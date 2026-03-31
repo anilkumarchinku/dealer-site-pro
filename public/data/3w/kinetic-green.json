@@ -4,68 +4,72 @@
   "type": "3w",
   "vehicles": [
     {
-      "make": "Kinetic Green",
-      "model": "Safar Smart",
-      "category": "passenger",
-      "fuel_type": "Electric",
-      "range_km": 120,
-      "max_power": "6.3 kW",
-      "max_speed_kmph": 45,
-      "battery_kwh": 7.2,
-      "charging_time_hours": 5,
-      "passenger_capacity": 3,
-      "gvw_kg": 900,
-      "ex_showroom_price": "₹1.45 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Safar Smart/Electric",
+      "ex_showroom_price": "₹3.15 Lakh",
+      "mileage": "80 km range",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "3 kW",
+        "torque": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "550 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      }
     },
     {
-      "make": "Kinetic Green",
-      "model": "Super DX",
-      "category": "passenger",
-      "fuel_type": "Electric",
-      "range_km": 140,
-      "max_power": "8 kW",
-      "max_speed_kmph": 50,
-      "battery_kwh": 9.0,
-      "charging_time_hours": 6,
-      "passenger_capacity": 3,
-      "gvw_kg": 940,
-      "ex_showroom_price": "₹1.38 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Super DX/Electric",
+      "ex_showroom_price": "₹3.50 Lakh",
+      "mileage": "100 km range",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "3 kW",
+        "torque": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "600 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      }
     },
     {
-      "make": "Kinetic Green",
-      "model": "Safar Shakti",
-      "category": "cargo",
-      "fuel_type": "Electric",
-      "range_km": 110,
-      "max_power": "6.3 kW",
-      "max_speed_kmph": 45,
-      "battery_kwh": 7.2,
-      "charging_time_hours": 5,
-      "payload_kg": 500,
-      "gvw_kg": 1050,
-      "ex_showroom_price": "₹1.80-2.00 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Safar Shakti/Electric",
+      "ex_showroom_price": "₹3.80 Lakh",
+      "mileage": "120 km range",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "5 kW",
+        "torque": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "650 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      }
     },
     {
-      "make": "Kinetic Green",
-      "model": "Safar Jumbo Ranger",
-      "category": "cargo",
-      "fuel_type": "Electric",
-      "range_km": 125,
-      "max_power": "10 kW",
-      "max_speed_kmph": 50,
-      "battery_kwh": 9.5,
-      "charging_time_hours": 6,
-      "payload_kg": 700,
-      "gvw_kg": 1250,
-      "ex_showroom_price": "₹3.45 Lakh",
-      "status": "Available",
-      "variants": []
+      "variant_name": "Safar Passenger/CNG",
+      "ex_showroom_price": "₹2.65 Lakh",
+      "mileage": "50 km/kg",
+      "engine_details": {
+        "displacement": "216 cc",
+        "max_power": "11 bhp",
+        "torque": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "630 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      }
     }
   ]
 }

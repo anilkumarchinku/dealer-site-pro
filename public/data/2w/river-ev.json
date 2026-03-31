@@ -2,42 +2,27 @@
   "brand": "River",
   "brandId": "river-ev",
   "type": "2w",
+  "lastUpdated": "2026-03-30",
+  "source": "BikeWale",
   "vehicles": [
     {
-      "model_name": "River Indie",
-      "model_name_citation": "https://www.river.co.in/indie",
-      "price": "₹1,24,999",
-      "price_citation": "https://www.river.co.in/indie",
-      "color_options": [
-        {
-          "value": "Sparkling Blue",
-          "value_citation": "https://www.river.co.in/indie"
-        },
-        {
-          "value": "Astro Grey",
-          "value_citation": "https://www.river.co.in/indie"
-        },
-        {
-          "value": "Scuba Blue",
-          "value_citation": "https://www.river.co.in/indie"
-        },
-        {
-          "value": "Mars Orange",
-          "value_citation": "https://www.river.co.in/indie"
-        }
-      ],
+      "make": "River",
+      "model": "Indie",
+      "variant_name": "River Indie",
+      "price": "₹1,24,900",
+      "source_section": "Available",
       "specifications": {
-        "range": "120 km",
-        "range_citation": "https://www.river.co.in/indie",
-        "motor_power": "3 kW",
-        "motor_power_citation": "https://www.river.co.in/indie",
-        "charging_time": "5 hours",
-        "charging_time_citation": "https://www.bikedekho.com/river/indie/specifications",
-        "battery_capacity": "4 kWh",
-        "battery_capacity_citation": "https://www.bikedekho.com/river/indie/specifications",
-        "top_speed": "90 km/Hr",
-        "top_speed_citation": "https://www.bikedekho.com/river/indie/specifications"
-      }
+        "Motor Power": "4.5 kW",
+        "Range": "120 km",
+        "Battery Capacity": "4 kWh",
+        "Top Speed": "90 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "colors": ["Cyan Blue", "Titanium Grey", "Ivory White", "Sunset Orange"],
+      "variants": [
+        { "name": "Indie", "price": "₹1,24,900" }
+      ]
     }
   ]
 }
