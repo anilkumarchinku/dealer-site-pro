@@ -63,7 +63,7 @@ export async function getAllCars(filters?: CarFilters): Promise<CarSearchResult>
         return { cars: [], total: 0, page, pageSize, filters: filters || {} };
     }
 
-    let cars = (data || []).map(mapDbCarToCar);
+    let cars = groupVariantsByModel(data || []).map(mapDbCarToCar);
 
     // Apply search logic (client-side for now as it searches multiple fields)
     if (filters?.searchQuery) {
@@ -120,7 +120,7 @@ export async function getCarsByMake(make: string): Promise<Car[]> {
         .eq('make', make);
 
     if (error || !data) return [];
-    return data.map(mapDbCarToCar);
+    return groupVariantsByModel(data).map(mapDbCarToCar);
 }
 
 /**
@@ -132,10 +132,9 @@ export async function getFeaturedCars(limit: number = 6): Promise<Car[]> {
         .select('*')
         .eq('is_active', true)
         .gte('popularity_score', 8)
-        .order('popularity_score', { ascending: false })
-        .limit(limit);
+        .order('popularity_score', { ascending: false });
     if (!data) return [];
-    return data.map(mapDbCarToCar);
+    return groupVariantsByModel(data).slice(0, limit).map(mapDbCarToCar);
 }
 
 /**
@@ -147,11 +146,9 @@ export async function getLatestCars(limit: number = 8): Promise<Car[]> {
         .from(CAR_TABLE)
         .select('*')
         .eq('is_active', true)
-        .order('year', { ascending: false })
-        .order('scraped_at', { ascending: false })
-        .limit(limit);
+        .order('year', { ascending: false });
     if (!data) return [];
-    return data.map(mapDbCarToCar);
+    return groupVariantsByModel(data).slice(0, limit).map(mapDbCarToCar);
 }
 
 /**
@@ -171,7 +168,7 @@ export async function getSimilarCars(carId: string, limit: number = 4): Promise<
 
     if (!data) return [];
 
-    const candidates = data.map(mapDbCarToCar);
+    const candidates = groupVariantsByModel(data).map(mapDbCarToCar);
 
     return candidates
         .filter(c =>
@@ -182,6 +179,38 @@ export async function getSimilarCars(carId: string, limit: number = 4): Promise<
 }
 
 // ... other functions can be similarly adapted or just use getAllCars internals
+
+/**
+ * Groups variant rows by (make, model), returning one row per model.
+ * Aggregates: price range (min/max), fuel_types array, transmissions array.
+ */
+function groupVariantsByModel(rows: any[]): any[] {
+    const modelMap = new Map<string, any>();
+    for (const row of rows) {
+        const key = `${row.make}|${row.model}`;
+        if (!modelMap.has(key)) {
+            modelMap.set(key, {
+                ...row,
+                fuel_types: row.fuel_type ? [row.fuel_type] : [],
+                transmissions: row.transmission ? [row.transmission] : [],
+                variant: '',
+            });
+        } else {
+            const existing = modelMap.get(key)!;
+            const rowMin = row.price_min_paise ?? 0;
+            const rowMax = row.price_max_paise ?? 0;
+            if (rowMin > 0 && (existing.price_min_paise === 0 || rowMin < existing.price_min_paise))
+                existing.price_min_paise = rowMin;
+            if (rowMax > existing.price_max_paise)
+                existing.price_max_paise = rowMax;
+            if (row.fuel_type && !existing.fuel_types.includes(row.fuel_type))
+                existing.fuel_types.push(row.fuel_type);
+            if (row.transmission && !existing.transmissions.includes(row.transmission))
+                existing.transmissions.push(row.transmission);
+        }
+    }
+    return Array.from(modelMap.values());
+}
 
 /**
  * Helper to map DB result to Car interface.
@@ -310,8 +339,7 @@ export async function getFuelEfficientCars(limit: number = 6): Promise<Car[]> {
         .in('fuel_type', ['Electric', 'Hybrid', 'CNG'])
         .eq('is_active', true)
         .order('year', { ascending: false })
-        .limit(limit)
-    return (data ?? []).map(mapDbCarToCar)
+    return groupVariantsByModel(data ?? []).slice(0, limit).map(mapDbCarToCar)
 }
 
 export async function getTopRatedCars(limit: number = 6): Promise<Car[]> {
@@ -320,8 +348,7 @@ export async function getTopRatedCars(limit: number = 6): Promise<Car[]> {
         .select('*')
         .eq('is_active', true)
         .order('year', { ascending: false })
-        .limit(limit)
-    return (data ?? []).map(mapDbCarToCar)
+    return groupVariantsByModel(data ?? []).slice(0, limit).map(mapDbCarToCar)
 }
 
 /**
@@ -395,6 +422,6 @@ export async function getCarsByMakeAndBodyType(make: string, bodyType?: string):
 
     const { data } = await query.order('popularity_score', { ascending: false });
     if (!data) return [];
-    return data.map(mapDbCarToCar);
+    return groupVariantsByModel(data).map(mapDbCarToCar);
 }
 
