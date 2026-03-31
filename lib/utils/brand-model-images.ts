@@ -24,7 +24,7 @@ export function modelToSlug(model: string): string {
  * one that loads (or pass both as fallback chain).
  */
 export function getScrapedImageUrls(
-    vehicleCategory: "2w" | "3w",
+    vehicleCategory: "2w" | "3w" | "4w",
     brandId: string,
     model: string
 ): [string, string] {
@@ -38,7 +38,7 @@ export function getScrapedImageUrls(
  * Uses jpg extension — the most common in the scraped dataset.
  */
 export function getScrapedImageFallback(
-    vehicleCategory: "2w" | "3w",
+    vehicleCategory: "2w" | "3w" | "4w",
     brandId: string,
     model: string
 ): string {
@@ -154,14 +154,54 @@ const BRAND_FOLDER_MAP_3W: Record<string, string> = {
     "etrio": "etrio",
 }
 
+const BRAND_FOLDER_MAP_4W: Record<string, string> = {
+    "lamborghini": "lamborghini",
+    "aston martin": "aston-martin",
+    "audi": "audi",
+    "bentley": "bentley",
+    "bmw": "bmw",
+    "byd": "byd",
+    "citroen": "citroen",
+    "force": "force",
+    "force motors": "force-motors",
+    "honda": "honda",
+    "hyundai": "hyundai",
+    "isuzu": "isuzu",
+    "jaguar": "jaguar",
+    "jeep": "jeep",
+    "kia": "kia",
+    "land rover": "land-rover",
+    "lexus": "lexus",
+    "mahindra": "mahindra",
+    "maruti suzuki": "maruti-suzuki",
+    "maruti": "maruti-suzuki",
+    "suzuki": "maruti-suzuki",
+    "mercedes-benz": "mercedes-benz",
+    "mercedes": "mercedes-benz",
+    "mg": "mg",
+    "mg motor": "mg",
+    "mini": "mini",
+    "nissan": "nissan",
+    "porsche": "porsche",
+    "renault": "renault",
+    "skoda": "skoda",
+    "tata": "tata",
+    "tata motors": "tata-motors",
+    "toyota": "toyota",
+    "vinfast": "vinfast",
+    "volkswagen": "volkswagen",
+    "vw": "volkswagen",
+    "volvo": "volvo",
+}
+
 /**
  * Resolves the brandId from a brand display name.
  * Checks explicit folder map first, then falls back to kebab-case conversion.
  * Used when the DB only stores the display name (e.g. "Hero MotoCorp").
  */
-export function brandNameToId(brandName: string, category: "2w" | "3w" = "2w"): string {
+export function brandNameToId(brandName: string, category: "2w" | "3w" | "4w" = "2w"): string {
     const lower = brandName.toLowerCase().trim();
-    const map = category === "3w" ? BRAND_FOLDER_MAP_3W : BRAND_FOLDER_MAP_2W;
+    const map = category === "3w" ? BRAND_FOLDER_MAP_3W : category === "4w" ? BRAND_FOLDER_MAP_4W : BRAND_FOLDER_MAP_2W;
 
     if (map[lower]) return map[lower];
 

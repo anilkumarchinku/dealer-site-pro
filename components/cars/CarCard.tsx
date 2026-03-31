@@ -205,8 +205,8 @@ export function CarCard({
                 {/* ── Image ── */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-white">
                     {(() => {
-                        const showScraped = car.vehicleCategory === '2w' || car.vehicleCategory === '3w';
-                        const scrapedUrls = showScraped ? getScrapedImageUrls(car.vehicleCategory as '2w' | '3w', brandNameToId(car.make, car.vehicleCategory as '2w' | '3w'), car.model) : [];
+                        const showScraped = car.vehicleCategory === '2w' || car.vehicleCategory === '3w' || car.vehicleCategory === '4w';
+                        const scrapedUrls = showScraped ? getScrapedImageUrls(car.vehicleCategory as '2w' | '3w' | '4w', brandNameToId(car.make, car.vehicleCategory as '2w' | '3w' | '4w'), car.model) : [];
                         const displayUrl = (!car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError)
                             ? (scrapedUrls[scrapedIdx] || null)
                             : car.images.hero;
