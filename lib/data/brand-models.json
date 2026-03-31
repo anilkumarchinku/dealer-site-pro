@@ -3,7 +3,9 @@
     "title": "Indian Two-Wheeler & Three-Wheeler Brand Models",
     "description": "Comprehensive list of all currently sold 2W and 3W models in India (2026) — discontinued models removed",
     "totalBrands": 69,
-    "generatedAt": "2026-03-30"
+    "totalModels": 453,
+    "generatedAt": "2026-03-31",
+    "notes": "Audited against BikeWale/CardDekho. CFMoto and Norton have 0 models currently on sale in India."
   },
   "twoWheelers": {
     "traditional": [
@@ -12,11 +14,9 @@
         "brand": "Hero MotoCorp",
         "models": {
           "motorcycles": [
-            "HF 100",
             "HF Deluxe",
             "Splendor Plus",
             "Splendor Plus Xtec",
-            "Splendor Plus Xtec 2.0",
             "Super Splendor Xtec",
             "Passion Plus",
             "Glamour",
@@ -48,10 +48,14 @@
         "models": {
           "motorcycles": [
             "SP 125",
-            "Shine 125",
+            "Shine",
+            "Shine 100",
             "Unicorn",
+            "Livo",
             "CB125 Hornet",
             "SP160",
+            "NX200",
+            "Hornet 2.0",
             "CB300F",
             "Hness CB350",
             "CB350RS",
@@ -65,7 +69,7 @@
             "Goldwing Tour"
           ],
           "scooters": [
-            "Activa 110",
+            "Activa",
             "Activa 125",
             "Activa e",
             "Dio",
@@ -94,8 +98,6 @@
             "Ronin"
           ],
           "scooters": [
-            "XL100",
-            "Scooty Pep Plus",
             "Zest 110",
             "Jupiter",
             "Jupiter 125",
@@ -113,7 +115,7 @@
         "brand": "Bajaj Auto",
         "models": {
           "motorcycles": [
-            "CT 110X",
+            "CT 110",
             "Platina 110",
             "Pulsar 125",
             "Pulsar N125",
@@ -161,24 +163,16 @@
             "FZ Rave",
             "FZ-S Fi",
             "FZ-S Fi Hybrid",
-            "FZ-S Fi V4.0 DLX",
             "FZ-X",
-            "FZ25",
             "MT-15 V2.0",
-            "MT-03",
-            "MT-07",
-            "MT-09",
             "R15 V4",
             "R15S",
-            "R3",
             "XSR155"
           ],
           "scooters": [
             "Ray ZR 125 Fi",
-            "Ray ZR 125 Fi Street Rally",
             "Fascino 125 Fi",
-            "Aerox 155",
-            "Aerox 155 Version S"
+            "Aerox 155"
           ]
         }
       },
@@ -231,7 +225,6 @@
         "brand": "Husqvarna India",
         "models": {
           "motorcycles": [
-            "Vitpilen 125",
             "Vitpilen 250",
             "Svartpilen 401"
           ]
@@ -266,9 +259,10 @@
         "brand": "Kawasaki India",
         "models": {
           "motorcycles": [
+            "W175",
             "Eliminator",
             "Ninja 500",
-            "Ninja ZX-4R",
+            "Ninja 300",
             "Z650",
             "Z650RS",
             "Ninja 650",
@@ -306,8 +300,6 @@
           "scooters": [
             "Vespa 125",
             "Vespa S 125",
-            "Vespa Tech 125",
-            "Vespa S Tech 125",
             "Vespa 150",
             "Vespa S 150"
           ]
@@ -326,8 +318,6 @@
             "Breakout",
             "Street Glide",
             "Road Glide",
-            "CVO Street Glide",
-            "CVO Road Glide",
             "Pan America 1250 Special",
             "X440"
           ]
@@ -341,18 +331,19 @@
             "Speed 400",
             "Scrambler 400 X",
             "Trident 660",
-            "Tiger 850 Sport",
             "Speed Twin 900",
             "Scrambler 900",
             "Bonneville T100",
             "Bonneville T120",
             "Bonneville Bobber",
             "Bonneville Speedmaster",
-            "Street Triple 765 R",
+            "Street Triple R",
             "Speed Triple 1200 RS",
             "Tiger 900",
             "Tiger 1200",
-            "Rocket 3"
+            "Rocket 3",
+            "Speed T4",
+            "Thruxton 400"
           ]
         }
       },
@@ -361,7 +352,6 @@
         "brand": "Ducati India",
         "models": {
           "motorcycles": [
-            "Scrambler 800",
             "Monster",
             "Panigale V2",
             "Streetfighter V2",
@@ -370,10 +360,11 @@
             "Multistrada V2",
             "Multistrada V4",
             "DesertX",
-            "DesertX Discovery",
             "Diavel V4",
-            "XDiavel",
-            "Hypermotard 950"
+            "XDiavel V4",
+            "Hypermotard 950",
+            "Scrambler Icon",
+            "Scrambler Nightshift"
           ]
         }
       },
@@ -382,8 +373,6 @@
         "brand": "BMW Motorrad India",
         "models": {
           "motorcycles": [
-            "G 310 R",
-            "G 310 GS",
             "G 310 RR",
             "CE 02",
             "F 900 GS",
@@ -391,9 +380,9 @@
             "R 1300 GS",
             "S 1000 R",
             "S 1000 RR",
-            "M 1000 RR",
             "S 1000 XR",
             "M 1000 XR",
+            "M 1000 R",
             "R 12",
             "R 12 nineT",
             "R18",
@@ -408,22 +397,11 @@
         "brand": "Indian Motorcycle",
         "models": {
           "motorcycles": [
-            "Chief Dark Horse",
-            "Chief Bobber Dark Horse",
-            "Sport Chief",
-            "Super Chief Limited",
-            "Super Chief Dark Horse",
-            "Springfield",
-            "Springfield Dark Horse",
-            "Chieftain Dark Horse",
-            "Chieftain Limited",
-            "Challenger Limited",
-            "Challenger Dark Horse",
-            "Pursuit Limited",
-            "Pursuit Dark Horse",
-            "Roadmaster",
-            "Roadmaster Limited",
-            "Roadmaster Dark Horse"
+            "Scout Bobber",
+            "Scout Classic",
+            "Sport Scout",
+            "101 Scout",
+            "Super Scout"
           ]
         }
       },
@@ -432,10 +410,7 @@
         "brand": "Moto Guzzi",
         "models": {
           "motorcycles": [
-            "V7",
-            "V7 Sport",
-            "V85 TT",
-            "V100 Mandello"
+            "V85 TT"
           ]
         }
       },
@@ -443,14 +418,7 @@
         "brandId": "cfmoto-india",
         "brand": "CFMoto India",
         "models": {
-          "motorcycles": [
-            "300NK",
-            "450MT",
-            "675SR-R",
-            "650NK",
-            "650MT",
-            "650GT"
-          ]
+          "motorcycles": []
         }
       },
       {
@@ -460,7 +428,7 @@
           "motorcycles": [
             "SR125",
             "K-Light 250V",
-            "RS 250",
+            "SR250",
             "V302C",
             "K300 SF",
             "RR300"
@@ -519,10 +487,7 @@
         "brandId": "norton-motorcycles",
         "brand": "Norton Motorcycles",
         "models": {
-          "motorcycles": [
-            "V4CR",
-            "Commando 961"
-          ]
+          "motorcycles": []
         }
       }
     ],
@@ -533,10 +498,14 @@
         "models": {
           "scooters": [
             "S1 Pro",
-            "S1 X"
+            "S1 X",
+            "S1 X Plus",
+            "S1 Pro Plus"
           ],
           "motorcycles": [
-            "Roadster"
+            "Roadster",
+            "Roadster X",
+            "Roadster Pro"
           ]
         }
       },
@@ -557,9 +526,8 @@
         "brand": "Bajaj Chetak",
         "models": {
           "scooters": [
-            "Chetak 3501",
-            "Chetak 3502",
-            "Chetak 3503"
+            "Chetak",
+            "Chetak C25"
           ]
         }
       },
@@ -572,7 +540,8 @@
             "iQube S",
             "iQube ST",
             "iQube ST 5.3 kWh",
-            "TVS X"
+            "TVS X",
+            "TVS Orbiter"
           ]
         }
       },
@@ -594,7 +563,8 @@
           "motorcycles": [
             "RV BlazeX",
             "RV400",
-            "RV400 BRZ"
+            "RV400 BRZ",
+            "RV1"
           ]
         }
       },
@@ -647,11 +617,10 @@
             "SE",
             "TN 95",
             "Ranger",
-            "XGT KM"
-          ],
-          "motorcycles": [
-            "M5",
-            "Ranger Cafe Racer"
+            "XGT KM",
+            "X One",
+            "XGT CAT 2.0",
+            "XGT X5"
           ]
         }
       },
@@ -670,7 +639,6 @@
         "brand": "Hop Electric",
         "models": {
           "scooters": [
-            "Lyf",
             "Leo"
           ],
           "motorcycles": [
@@ -691,9 +659,7 @@
             "V2 Plus",
             "SNAP"
           ],
-          "motorcycles": [
-            "Evoqis"
-          ]
+          "motorcycles": []
         }
       },
       {
@@ -701,11 +667,10 @@
         "brand": "Joy e-bike",
         "models": {
           "scooters": [
-            "Gen Next Nanu",
-            "Wolf Plus",
+            "Gen Nxt",
+            "Wolf",
             "Mihos",
-            "Glob",
-            "Beast"
+            "Glob"
           ]
         }
       },
@@ -715,7 +680,7 @@
         "models": {
           "scooters": [
             "E1",
-            "E1 Limited Edition"
+            "E1X"
           ]
         }
       },
@@ -736,7 +701,7 @@
         "models": {
           "scooters": [
             "C12i EX",
-            "C12 Max",
+            "C12i Max",
             "RUV 350",
             "OoWah"
           ]
@@ -760,8 +725,7 @@
         "models": {
           "scooters": [
             "S1",
-            "Jeet X",
-            "JeetX ZE"
+            "Jeet X"
           ]
         }
       },
@@ -771,7 +735,8 @@
         "models": {
           "motorcycles": [
             "F77 Mach 2",
-            "F77 SuperStreet"
+            "F77 SuperStreet",
+            "X47 Crossover"
           ]
         }
       },
@@ -798,9 +763,7 @@
             "Faast F3",
             "Faast F4",
             "Freedum",
-            "ClassIQ+",
-            "Motofaast",
-            "Defy 22"
+            "Motofaast"
           ]
         }
       },
@@ -810,7 +773,8 @@
         "models": {
           "motorcycles": [
             "Rorr",
-            "Rorr EZ"
+            "Rorr EZ",
+            "Rorr EZ Sigma"
           ]
         }
       },
@@ -856,18 +820,19 @@
           "RE CNG",
           "RE LPG",
           "RE Diesel",
-          "Maxima Z CNG",
+          "Maxima Z Diesel",
           "Compact RE CNG"
         ],
         "cargo": [
-          "Maxima XL Electric",
+          "Maxima XL E-Tec",
           "Maxima X Wide Diesel",
           "Maxima C CNG"
         ],
         "electric": [
-          "GoGo P5009",
-          "GoGo P5012",
-          "GoGo P7012",
+          "GoGo P50",
+          "GoGo P70",
+          "Riki P4005",
+          "RE E Tech 9.0",
           "WEGO P9018"
         ]
       }
@@ -880,17 +845,21 @@
           "Auto Classic",
           "Auto DX",
           "NXT+",
-          "Metro"
+          "Metro",
+          "Auto Plus",
+          "Auto DXL",
+          "City Plus"
         ],
         "cargo": [
-          "Xtra LDX Diesel"
+          "Xtra LDX Diesel",
+          "Xtra LDX Plus",
+          "Xtra HD"
         ],
         "cargo_cng": [
           "Xtra LDX CNG"
         ],
         "electric": [
           "E-City",
-          "E-Xtra FX",
           "E-Xtra FX Max"
         ]
       }
@@ -909,7 +878,8 @@
         ],
         "electric": [
           "King EV Max",
-          "King Kargo HD EV"
+          "King Kargo HD EV",
+          "King EP1"
         ]
       }
     },
@@ -918,9 +888,10 @@
       "brand": "Mahindra (3W)",
       "models": {
         "passenger": [
-          "Alfa Passenger",
           "E-Alfa Plus",
-          "E-Alfa Mini"
+          "E-Alfa Mini",
+          "Alfa DX",
+          "Alfa Plus"
         ],
         "cargo": [
           "Alfa Load",
@@ -930,8 +901,8 @@
           "Treo",
           "Treo Plus",
           "Treo Zor",
-          "Treo Yaari HRT",
-          "Treo Yaari SFT",
+          "Treo Yaari Passenger",
+          "Treo Yaari Cargo",
           "UDO"
         ]
       }
@@ -943,14 +914,16 @@
         "passenger": [
           "Gem Paxx",
           "Elite Plus",
-          "Rik Auto"
+          "Rik",
+          "Gemini Plus"
         ],
         "cargo": [
           "Gem Cargo",
-          "Shakti Cargo"
+          "Shakti Cargo",
+          "Elite Cargo"
         ],
         "electric": [
-          "Rik Electric"
+          "Rik Twin"
         ]
       }
     },
@@ -964,7 +937,7 @@
         ],
         "cargo": [
           "Safar Shakti",
-          "Safar Jumbo Ranger"
+          "Safar Jumbo"
         ]
       }
     },
@@ -977,9 +950,7 @@
           "NEO HiRange"
         ],
         "cargo": [
-          "HiLoad DV EV",
-          "HiLoad EV 120",
-          "HiLoad EV 170"
+          "HiLoad EV"
         ]
       }
     },
@@ -989,7 +960,7 @@
       "models": {
         "cargo": [
           "Eltra City XTRA",
-          "Xargo"
+          "E Pro Cargo"
         ],
         "passenger": [
           "Eltra City"
@@ -1002,14 +973,14 @@
       "models": {
         "passenger": [
           "Narain XiV",
-          "Youdha Humsafar"
+          "Youdha Humsafar",
+          "Narain XiW",
+          "Narain DLX"
         ],
         "cargo": [
           "Youdha Trevo Cargo",
-          "Youdha EPOD"
-        ],
-        "electric": [
-          "Youdha EPOD Electric"
+          "Youdha EPOD",
+          "Youdha Garbage Van"
         ]
       }
     },
@@ -1019,9 +990,7 @@
       "models": {
         "passenger": [
           "Yatri",
-          "Yatri Deluxe",
-          "Yatri Super",
-          "Yatri Plus"
+          "Yatri Deluxe"
         ],
         "cargo": [
           "Yatri Cart",
@@ -1051,12 +1020,11 @@
       "models": {
         "passenger": [
           "Stream City",
-          "Stream City 2.0",
           "Stream City Qik"
         ],
         "cargo": [
           "Rage Plus",
-          "Rage+ Rapid",
+          "Rage Plus Rapid EV",
           "Stream"
         ]
       }
@@ -1069,9 +1037,9 @@
           "neEV Rahi"
         ],
         "cargo": [
-          "neEV",
           "neEV Tez",
-          "neEV Tez High Deck"
+          "neEV Low Deck",
+          "neEV High Deck"
         ]
       }
     },
@@ -1080,8 +1048,7 @@
       "brand": "Montra Electric",
       "models": {
         "passenger": [
-          "Super Auto",
-          "Super Auto-X"
+          "Super Auto"
         ],
         "cargo": [
           "Super Cargo"
@@ -1095,10 +1062,12 @@
         "passenger": [
           "Y4A",
           "Y4A Pro",
-          "Rizin"
+          "Rizin",
+          "Kyoto",
+          "Sumo"
         ],
         "cargo": [
-          "Kyoro+"
+          "Kyoro L5"
         ]
       }
     },
@@ -1109,10 +1078,7 @@
         "passenger": [
           "Touro Max"
         ],
-        "cargo": [
-          "Touro Mini",
-          "Touro Max++"
-        ]
+        "cargo": []
       }
     }
   ]
