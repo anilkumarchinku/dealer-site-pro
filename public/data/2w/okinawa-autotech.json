@@ -10,6 +10,7 @@
       "model": "PraisePro",
       "variant_name": "Okinawa PraisePro",
       "price": "₹82,998",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -19,6 +20,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "42 Nm",
       "colors": ["Ice Blue", "Pearl White", "Midnight Black", "Glossy Red"],
       "variants": [
         { "name": "PraisePro", "price": "₹82,998" }
@@ -29,6 +31,7 @@
       "model": "Okhi-90",
       "variant_name": "Okinawa Okhi-90",
       "price": "₹1,29,500",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -38,6 +41,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "90 Nm",
       "colors": ["Cosmic Grey", "Pearl White", "Berry Red", "Midnight Black"],
       "variants": [
         { "name": "Okhi-90", "price": "₹1,29,500" }

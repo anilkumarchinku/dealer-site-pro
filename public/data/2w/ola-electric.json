@@ -10,6 +10,7 @@
       "model": "S1 Pro",
       "variant_name": "Ola Electric S1 Pro",
       "price": "₹1,47,499",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "11 kW peak",
@@ -20,6 +21,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "58 Nm",
       "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"],
       "variants": [
         { "name": "S1 Pro 4 kWh", "price": "₹1,47,499" }
@@ -30,6 +32,7 @@
       "model": "S1 Air",
       "variant_name": "Ola Electric S1 Air",
       "price": "₹1,09,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "8.5 kW peak",
@@ -40,6 +43,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "50 Nm",
       "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"],
       "variants": [
         { "name": "S1 Air 2.5 kWh", "price": "₹1,09,999" }
@@ -50,6 +54,7 @@
       "model": "S1 X+",
       "variant_name": "Ola Electric S1 X+",
       "price": "₹89,999 - ₹1,14,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "6 kW peak",
@@ -60,6 +65,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "50 Nm",
       "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"],
       "variants": [
         { "name": "S1 X+ 2 kWh", "price": "₹89,999" },
@@ -72,6 +78,7 @@
       "model": "S1 Z",
       "variant_name": "Ola Electric S1 Z",
       "price": "₹79,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "4.5 kW peak",
@@ -82,6 +89,7 @@
         "Fast Charging": "No",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "41 Nm",
       "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow"],
       "variants": [
         { "name": "S1 Z 2 kWh", "price": "₹79,999" }
@@ -92,6 +100,7 @@
       "model": "Roadster",
       "variant_name": "Ola Electric Roadster",
       "price": "₹1,49,999 - ₹1,99,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "16 kW peak",
@@ -102,6 +111,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "105 Nm",
       "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Galactic Blue"],
       "variants": [
         { "name": "Roadster Base (8 kW)", "price": "₹1,49,999" },
@@ -115,6 +125,7 @@
       "make": "Ola Electric",
       "model_name": "S1 Pro",
       "price": "₹1,47,499",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "11 kW peak",
@@ -125,12 +136,14 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "58 Nm",
       "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"]
     },
     {
       "make": "Ola Electric",
       "model_name": "S1 Air",
       "price": "₹1,09,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "8.5 kW peak",
@@ -141,12 +154,14 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "50 Nm",
       "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"]
     },
     {
       "make": "Ola Electric",
       "model_name": "S1 X+ 2 kWh",
       "price": "₹89,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "6 kW peak",
@@ -157,12 +172,14 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "50 Nm",
       "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"]
     },
     {
       "make": "Ola Electric",
       "model_name": "S1 X+ 3 kWh",
       "price": "₹1,09,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "6 kW peak",
@@ -173,12 +190,14 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "50 Nm",
       "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"]
     },
     {
       "make": "Ola Electric",
       "model_name": "S1 X+ 4 kWh",
       "price": "₹1,14,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "6 kW peak",
@@ -189,12 +208,14 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "50 Nm",
       "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"]
     },
     {
       "make": "Ola Electric",
       "model_name": "S1 Z",
       "price": "₹79,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "4.5 kW peak",
@@ -205,12 +226,14 @@
         "Fast Charging": "No",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "41 Nm",
       "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow"]
     },
     {
       "make": "Ola Electric",
       "model_name": "Roadster Base",
       "price": "₹1,49,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "8 kW",
@@ -221,12 +244,14 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "105 Nm",
       "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Galactic Blue"]
     },
     {
       "make": "Ola Electric",
       "model_name": "Roadster Ultra",
       "price": "₹1,69,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "12 kW",
@@ -237,12 +262,14 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "105 Nm",
       "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Galactic Blue"]
     },
     {
       "make": "Ola Electric",
       "model_name": "Roadster Pro",
       "price": "₹1,99,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "16 kW",
@@ -253,6 +280,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "105 Nm",
       "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Galactic Blue"]
     }
   ]

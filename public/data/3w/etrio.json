@@ -7,30 +7,70 @@
       "variant_name": "ETrio Touro Mini",
       "ex_showroom_price": "₹2.85 Lakh",
       "mileage": "80 km range",
-      "engine_details": { "displacement": "", "max_power": "5 kW", "torque": "" },
-      "dimensions": { "length": "", "width": "", "height": "" },
-      "payload_features": { "gross_vehicle_weight": "560 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "engine_details": {
+        "displacement": "",
+        "max_power": "5 kW",
+        "torque": "40 Nm"
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "560 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      },
       "source_url": "https://etrio.in/"
     },
     {
       "variant_name": "ETrio Touro Max",
       "ex_showroom_price": "₹3.20 Lakh",
       "mileage": "100 km range",
-      "engine_details": { "displacement": "", "max_power": "7.5 kW", "torque": "" },
-      "dimensions": { "length": "3385 mm", "width": "1480 mm", "height": "1800 mm" },
-      "payload_features": { "gross_vehicle_weight": "700 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "engine_details": {
+        "displacement": "",
+        "max_power": "7.5 kW",
+        "torque": "50 Nm"
+      },
+      "dimensions": {
+        "length": "3385 mm",
+        "width": "1480 mm",
+        "height": "1800 mm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "700 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      },
       "source_url": "https://etrio.in/"
     },
     {
       "variant_name": "ETrio Touro Max++",
       "ex_showroom_price": "₹3.80 Lakh",
       "mileage": "120 km range",
-      "engine_details": { "displacement": "", "max_power": "11 kW", "torque": "" },
-      "dimensions": { "length": "", "width": "", "height": "" },
-      "payload_features": { "gross_vehicle_weight": "900 kg", "payload": "550 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "engine_details": {
+        "displacement": "",
+        "max_power": "11 kW",
+        "torque": "55 Nm"
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "900 kg",
+        "payload": "550 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      },
       "source_url": "https://etrio.in/"
     }
   ]

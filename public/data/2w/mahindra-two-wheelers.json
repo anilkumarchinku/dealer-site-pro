@@ -14,10 +14,19 @@
       "mileage": "30 kmpl",
       "top_speed": "147 kmph",
       "max_power": "27.2 bhp",
+      "fuel_type": "Petrol",
+      "max_torque": "30 Nm",
       "source_section": "Discontinued",
-      "colors": ["Black", "Red", "Blue"],
+      "colors": [
+        "Black",
+        "Red",
+        "Blue"
+      ],
       "variants": [
-        { "name": "Standard", "price": "₹1,53,000" }
+        {
+          "name": "Standard",
+          "price": "₹1,53,000"
+        }
       ],
       "technical_specifications": {
         "power": "27.2 bhp",
@@ -35,17 +44,27 @@
       "mileage": "70 kmpl",
       "top_speed": "90 kmph",
       "max_power": "8.0 bhp",
+      "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "colors": ["Red", "White", "Black", "Blue"],
+      "colors": [
+        "Red",
+        "White",
+        "Black",
+        "Blue"
+      ],
       "variants": [
-        { "name": "N1", "price": "₹52,500" }
+        {
+          "name": "N1",
+          "price": "₹52,500"
+        }
       ],
       "technical_specifications": {
         "power": "8.0 bhp",
         "torque": "8.5 Nm",
         "gearbox": "4-Speed Manual",
         "fuel_tank": "8 litres"
-      }
+      },
+      "max_torque": "8.5 Nm"
     },
     {
       "make": "Mahindra",
@@ -56,17 +75,27 @@
       "mileage": "45 kmpl",
       "top_speed": "85 kmph",
       "max_power": "8.2 bhp",
+      "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "colors": ["White", "Red", "Blue", "Black"],
+      "colors": [
+        "White",
+        "Red",
+        "Blue",
+        "Black"
+      ],
       "variants": [
-        { "name": "Standard", "price": "₹54,000" }
+        {
+          "name": "Standard",
+          "price": "₹54,000"
+        }
       ],
       "technical_specifications": {
         "power": "8.2 bhp",
         "torque": "9 Nm",
         "gearbox": "CVT Automatic",
         "fuel_tank": "5.5 litres"
-      }
+      },
+      "max_torque": "8.5 Nm"
     }
   ]
 }

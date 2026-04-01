@@ -13,6 +13,8 @@
       "engine_displacement": "652 cc",
       "mileage": "26 kmpl",
       "top_speed": "160 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "55 Nm",
       "source_section": "Available",
       "variants": [
         { "name": "Gold Star 650 Standard", "price": "₹3,24,633" },

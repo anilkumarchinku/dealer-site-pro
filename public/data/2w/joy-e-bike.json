@@ -10,6 +10,7 @@
       "model": "Wolf Plus",
       "variant_name": "Joy e-bike Wolf Plus",
       "price": "₹89,399",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -19,6 +20,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "55 Nm",
       "colors": ["Cosmic Black", "Arctic White", "Lava Red", "Ocean Blue"],
       "variants": [
         { "name": "Wolf Plus", "price": "₹89,399" }
@@ -29,6 +31,7 @@
       "model": "Mihos",
       "variant_name": "Joy e-bike Mihos",
       "price": "₹79,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -38,6 +41,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "35 Nm",
       "colors": ["Cosmic Black", "Arctic White", "Lava Red", "Ocean Blue"],
       "variants": [
         { "name": "Mihos", "price": "₹79,999" }
@@ -48,6 +52,7 @@
       "model": "Monster",
       "variant_name": "Joy e-bike Monster",
       "price": "₹95,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -57,6 +62,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "55 Nm",
       "colors": ["Cosmic Black", "Arctic White", "Lava Red", "Ocean Blue"],
       "variants": [
         { "name": "Monster", "price": "₹95,999" }

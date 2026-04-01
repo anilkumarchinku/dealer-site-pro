@@ -13,6 +13,8 @@
       "engine_displacement": "853 cc",
       "mileage": "23.8 kmpl",
       "top_speed": "165 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "80 Nm",
       "source_section": "Available",
       "variants": [
         { "name": "V85 TT Standard", "price": "₹16,45,802" }
@@ -46,7 +48,9 @@
       "torque": "80 Nm",
       "top_speed": "200 km/h",
       "gear_box": "6-speed",
-      "colors": ["Arancione", "Bianco Ghiaccio", "Giallo Mojave", "Rosso Rame"]
+      "colors": ["Arancione", "Bianco Ghiaccio", "Giallo Mojave", "Rosso Rame"],
+      "fuel_type": "Petrol",
+      "max_torque": "80 Nm"
     }
   ]
 }

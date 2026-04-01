@@ -10,6 +10,7 @@
       "model": "RV400 BRZ",
       "variant_name": "Revolt RV400 BRZ",
       "price": "₹1,38,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "4.4 kW peak",
@@ -20,6 +21,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "85 Nm",
       "colors": ["Cosmic Black", "Rebel Red", "Mist Grey", "Storm White"],
       "variants": [
         { "name": "RV400 BRZ", "price": "₹1,38,999" }
@@ -30,6 +32,7 @@
       "model": "RV1",
       "variant_name": "Revolt RV1",
       "price": "₹99,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW continuous",
@@ -40,6 +43,7 @@
         "Fast Charging": "No",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "85 Nm",
       "colors": ["Red", "Black", "White"],
       "variants": [
         { "name": "RV1", "price": "₹99,999" }
@@ -50,6 +54,7 @@
       "model": "RV1+",
       "variant_name": "Revolt RV1+",
       "price": "₹1,09,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW continuous",
@@ -60,6 +65,7 @@
         "Fast Charging": "No",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "85 Nm",
       "colors": ["Red", "Black", "White"],
       "variants": [
         { "name": "RV1+", "price": "₹1,09,999" }

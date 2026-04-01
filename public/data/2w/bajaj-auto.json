@@ -15,6 +15,7 @@
       "max_power": "8.48 bhp",
       "max_torque": "9.81 Nm",
       "top_speed": "90 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "CT 110 Standard", "price": "₹68,050" }
@@ -49,6 +50,7 @@
       "max_power": "8.48 bhp",
       "max_torque": "9.81 Nm",
       "top_speed": "90 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Platina 110 Standard", "price": "₹69,941" }
@@ -82,6 +84,7 @@
       "max_power": "11.64 bhp",
       "max_torque": "10.8 Nm",
       "top_speed": "105 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Pulsar 125 Neon Single Seat", "price": "₹82,420" },
@@ -116,6 +119,7 @@
       "max_power": "11.83 bhp",
       "max_torque": "11 Nm",
       "top_speed": "107 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Pulsar N125 Disc - Bluetooth", "price": "₹93,668" },
@@ -150,6 +154,7 @@
       "max_power": "11.8 bhp",
       "max_torque": "11 Nm",
       "top_speed": "105 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Pulsar NS125 Standard", "price": "₹92,671" },
@@ -185,6 +190,7 @@
       "max_power": "13.8 bhp",
       "max_torque": "13.25 Nm",
       "top_speed": "112 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Pulsar 150 Single Disc [2026]", "price": "₹1,10,120" },
@@ -219,6 +225,7 @@
       "max_power": "15.68 bhp",
       "max_torque": "14.65 Nm",
       "top_speed": "118 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Pulsar N160 Single Seat Twin Disc", "price": "₹1,14,840" },
@@ -256,6 +263,7 @@
       "max_power": "17.03 bhp",
       "max_torque": "14.6 Nm",
       "top_speed": "120 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Pulsar NS160 Standard", "price": "₹1,21,837" }
@@ -291,6 +299,7 @@
       "max_power": "24.13 bhp",
       "max_torque": "18.74 Nm",
       "top_speed": "130 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Pulsar NS200 Standard", "price": "₹1,34,162" }
@@ -325,6 +334,7 @@
       "max_power": "20.11 bhp",
       "max_torque": "18.55 Nm",
       "top_speed": "136 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Pulsar 220F Single Disc", "price": "₹1,27,478" },
@@ -360,6 +370,7 @@
       "max_power": "24.1 bhp",
       "max_torque": "21.5 Nm",
       "top_speed": "132 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Pulsar N250 Standard", "price": "₹1,34,758" }
@@ -395,6 +406,7 @@
       "max_power": "42.41 bhp",
       "max_torque": "35 Nm",
       "top_speed": "157 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Pulsar NS400Z Standard", "price": "₹1,94,061" }
@@ -429,6 +441,7 @@
       "max_power": "26.63 bhp",
       "max_torque": "23.5 Nm",
       "top_speed": "132 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Dominar 250 Standard", "price": "₹1,78,273" }
@@ -464,6 +477,7 @@
       "max_power": "39.42 bhp",
       "max_torque": "35 Nm",
       "top_speed": "155 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Dominar 400 Standard", "price": "₹2,38,873" }
@@ -499,6 +513,7 @@
       "max_power": "18.76 bhp",
       "max_torque": "17.55 Nm",
       "top_speed": "120 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Avenger Cruise 220 Standard", "price": "₹1,26,620" }

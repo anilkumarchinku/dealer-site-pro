@@ -12,10 +12,19 @@
       "mileage": "30 kmpl",
       "top_speed": "168 kmph",
       "max_power": "26 bhp",
+      "fuel_type": "Petrol",
+      "max_torque": "25 Nm",
       "source_section": "Available",
-      "colors": ["Frost Black", "Flame Red", "Storm Grey"],
+      "colors": [
+        "Frost Black",
+        "Flame Red",
+        "Storm Grey"
+      ],
       "variants": [
-        { "name": "Standard", "price": "₹2,29,900" }
+        {
+          "name": "Standard",
+          "price": "₹2,29,900"
+        }
       ],
       "technical_specifications": {
         "engine_type": "Single-cylinder, Liquid-cooled",
@@ -39,10 +48,18 @@
       "mileage": "22 kmpl",
       "top_speed": "160 kmph",
       "max_power": "54 bhp",
+      "fuel_type": "Petrol",
+      "max_torque": "62 Nm",
       "source_section": "Available",
-      "colors": ["Frost Black", "Flame Red"],
+      "colors": [
+        "Frost Black",
+        "Flame Red"
+      ],
       "variants": [
-        { "name": "Standard", "price": "₹5,49,900" }
+        {
+          "name": "Standard",
+          "price": "₹5,49,900"
+        }
       ],
       "technical_specifications": {
         "engine_type": "Parallel-twin, Liquid-cooled",
@@ -66,10 +83,19 @@
       "mileage": "22 kmpl",
       "top_speed": "180 kmph",
       "max_power": "54 bhp",
+      "fuel_type": "Petrol",
+      "max_torque": "62 Nm",
       "source_section": "Available",
-      "colors": ["Frost Black", "Ocean Blue", "Adventure Orange"],
+      "colors": [
+        "Frost Black",
+        "Ocean Blue",
+        "Adventure Orange"
+      ],
       "variants": [
-        { "name": "Standard", "price": "₹6,49,900" }
+        {
+          "name": "Standard",
+          "price": "₹6,49,900"
+        }
       ],
       "technical_specifications": {
         "engine_type": "Parallel-twin, Liquid-cooled",
@@ -93,10 +119,17 @@
       "mileage": "22 kmpl",
       "top_speed": "175 kmph",
       "max_power": "54 bhp",
+      "fuel_type": "Petrol",
       "source_section": "Available",
-      "colors": ["Pearl White", "Midnight Black"],
+      "colors": [
+        "Pearl White",
+        "Midnight Black"
+      ],
       "variants": [
-        { "name": "Standard", "price": "₹7,19,900" }
+        {
+          "name": "Standard",
+          "price": "₹7,19,900"
+        }
       ],
       "technical_specifications": {
         "engine_type": "Parallel-twin, Liquid-cooled",
@@ -109,7 +142,8 @@
         "brakes_rear": "Disc",
         "abs": "Yes",
         "emission": "BS6 Phase 2"
-      }
+      },
+      "max_torque": "62 Nm"
     }
   ]
 }

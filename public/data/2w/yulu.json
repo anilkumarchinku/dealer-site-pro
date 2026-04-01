@@ -10,6 +10,7 @@
       "model": "Miracle GR",
       "variant_name": "Yulu Miracle GR",
       "price": "₹74,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "250 W",
@@ -20,6 +21,7 @@
         "Fast Charging": "Yes",
         "Swappable Battery": "Yes"
       },
+      "max_torque": "8 Nm",
       "colors": ["Red", "Blue", "White", "Black"],
       "variants": [
         { "name": "Miracle GR", "price": "₹74,999" }

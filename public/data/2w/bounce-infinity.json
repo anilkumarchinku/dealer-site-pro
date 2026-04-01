@@ -10,6 +10,7 @@
       "model": "E1",
       "variant_name": "Bounce Infinity E1",
       "price": "₹68,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -20,6 +21,7 @@
         "Fast Charging": "Yes",
         "Swappable Battery": "Yes"
       },
+      "max_torque": "42 Nm",
       "colors": ["Midnight Black", "Pearl White", "Sport Blue", "Racing Red"],
       "variants": [
         { "name": "E1", "price": "₹68,999" }
@@ -30,6 +32,7 @@
       "model": "E1+",
       "variant_name": "Bounce Infinity E1+",
       "price": "₹78,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -40,6 +43,7 @@
         "Fast Charging": "Yes",
         "Swappable Battery": "Yes"
       },
+      "max_torque": "42 Nm",
       "colors": ["Midnight Black", "Pearl White", "Sport Blue", "Racing Red"],
       "variants": [
         { "name": "E1+", "price": "₹78,999" }

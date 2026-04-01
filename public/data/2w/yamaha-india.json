@@ -11,6 +11,8 @@
       "engine_displacement": "149 cc",
       "mileage": "46 kmpl",
       "max_power": "12.2 bhp",
+      "max_torque": "13.3 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "FZ FI Standard", "price": "₹1,09,924" }
@@ -49,6 +51,8 @@
       "engine_displacement": "149 cc",
       "mileage": "51 kmpl",
       "max_power": "12.2 bhp",
+      "max_torque": "13.3 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "FZ Rave Standard", "price": "₹1,20,060" }
@@ -88,6 +92,8 @@
       "engine_displacement": "149 cc",
       "mileage": "45 kmpl",
       "max_power": "12.2 bhp",
+      "max_torque": "13.3 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "FZ S FI Standard", "price": "₹1,13,256" },
@@ -129,6 +135,8 @@
       "engine_displacement": "149 cc",
       "mileage": "57.4 kmpl",
       "max_power": "12.2 bhp",
+      "max_torque": "13.3 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "FZS FI V4 Standard", "price": "₹1,20,409" },
@@ -177,6 +185,8 @@
       "engine_displacement": "149 cc",
       "mileage": "53 kmpl",
       "max_power": "12.2 bhp",
+      "max_torque": "13.3 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "FZ S Hybrid Standard", "price": "₹1,35,174" }
@@ -218,6 +228,8 @@
       "engine_displacement": "149 cc",
       "mileage": "47 kmpl",
       "max_power": "12.2 bhp",
+      "max_torque": "13.3 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "FZ X Standard", "price": "₹1,21,667" },
@@ -260,6 +272,8 @@
       "engine_displacement": "155 cc",
       "mileage": "47 kmpl",
       "max_power": "18.1 bhp",
+      "max_torque": "14.1 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "MT 15 V2 Standard [2024]", "price": "₹1,58,200" },
@@ -307,6 +321,8 @@
       "engine_displacement": "155 cc",
       "mileage": "51.4 kmpl",
       "max_power": "18.1 bhp",
+      "max_torque": "14.2 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "R15 V4 Standard", "price": "₹1,66,200" },
@@ -360,6 +376,8 @@
       "engine_displacement": "155 cc",
       "mileage": "46 kmpl",
       "max_power": "18.1 bhp",
+      "max_torque": "14.2 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "R15S Standard", "price": "₹1,51,597" }
@@ -400,6 +418,8 @@
       "engine_displacement": "155 cc",
       "mileage": "46 kmpl",
       "max_power": "18.1 bhp",
+      "max_torque": "14.1 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "XSR 155 Metallic Blue", "price": "₹1,50,957" },
@@ -445,6 +465,8 @@
       "engine_displacement": "125 cc",
       "mileage": "49 kmpl",
       "max_power": "8.04 bhp",
+      "max_torque": "10.3 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Ray ZR 125 Drum - Hybrid", "price": "₹76,235" },
@@ -496,6 +518,8 @@
       "engine_displacement": "125 cc",
       "mileage": "50 kmpl",
       "max_power": "8.04 bhp",
+      "max_torque": "10.3 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Fascino 125 Drum", "price": "₹74,910" },
@@ -550,6 +574,8 @@
       "engine_displacement": "155 cc",
       "mileage": "40 kmpl",
       "max_power": "14.75 bhp",
+      "max_torque": "13.9 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Aerox 155 Standard", "price": "₹1,40,445" },

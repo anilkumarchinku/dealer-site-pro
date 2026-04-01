@@ -10,6 +10,7 @@
       "model": "Optima CX",
       "variant_name": "Hero Electric Optima CX",
       "price": "₹74,490",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.1 kW",
@@ -19,6 +20,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "42 Nm",
       "colors": ["Fiery Red", "Ivory White", "Midnight Black", "Ocean Blue"],
       "variants": [
         { "name": "Optima CX", "price": "₹74,490" }
@@ -29,6 +31,7 @@
       "model": "Photon CX",
       "variant_name": "Hero Electric Photon CX",
       "price": "₹81,490",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.1 kW",
@@ -38,6 +41,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "42 Nm",
       "colors": ["Fiery Red", "Ivory White", "Midnight Black", "Ocean Blue"],
       "variants": [
         { "name": "Photon CX", "price": "₹81,490" }

@@ -10,6 +10,7 @@
       "model": "Kratos R",
       "variant_name": "Tork Kratos R",
       "price": "₹1,34,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "9 kW",
@@ -19,6 +20,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "38 Nm",
       "colors": ["Volcanic Black", "Snow White", "Carnelian Orange", "Mirage Blue"],
       "variants": [
         { "name": "Kratos R", "price": "₹1,34,999" },

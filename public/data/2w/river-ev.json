@@ -10,6 +10,7 @@
       "model": "Indie",
       "variant_name": "River Indie",
       "price": "₹1,24,900",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "4.5 kW",
@@ -19,6 +20,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "57 Nm",
       "colors": ["Cyan Blue", "Titanium Grey", "Ivory White", "Sunset Orange"],
       "variants": [
         { "name": "Indie", "price": "₹1,24,900" }

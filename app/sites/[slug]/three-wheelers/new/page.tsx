@@ -19,47 +19,85 @@ interface Props {
 
 const ALL_3W_BRANDS = THREE_WHEELER_BRANDS
 
+function generate3WFeatures(v: ThreeWheelerVehicle): string[] {
+  const f: string[] = []
+  if (v.fuel_type === 'electric') {
+    f.push('Electric Drive', 'Zero Emissions', 'Low Maintenance Cost')
+    if (v.range_km) f.push(`${v.range_km} km Range`)
+    if (v.battery_kwh) f.push(`${v.battery_kwh} kWh Battery`)
+    if (v.fame_subsidy_eligible) f.push('FAME II Subsidy Eligible')
+  } else if (v.fuel_type === 'cng') {
+    f.push('CNG Powered', 'BS6 Compliant', 'Low Running Cost')
+    if (v.cng_mileage_km_per_kg) f.push(`${v.cng_mileage_km_per_kg} km/kg Mileage`)
+    else if (v.mileage_kmpl) f.push(`${v.mileage_kmpl} kmpl Mileage`)
+  } else if (v.fuel_type === 'diesel') {
+    f.push('Diesel Engine', 'High Torque', 'Heavy Duty')
+    if (v.mileage_kmpl) f.push(`${v.mileage_kmpl} kmpl Mileage`)
+  } else {
+    f.push('BS6 Compliant')
+    if (v.mileage_kmpl) f.push(`${v.mileage_kmpl} kmpl Mileage`)
+  }
+  if (v.engine_cc) f.push(`${v.engine_cc} cc Engine`)
+  if (v.passenger_capacity) f.push(`${v.passenger_capacity}-Seater`, 'Comfortable Seating')
+  if (v.payload_kg) f.push(`${v.payload_kg} kg Payload Capacity`)
+  if (v.max_speed_kmph) f.push(`${v.max_speed_kmph} kmph Top Speed`)
+  if (v.bs6_compliant && !f.includes('BS6 Compliant')) f.push('BS6 Compliant')
+  return [...new Set(f)].slice(0, 8)
+}
+
 function threeWheelersToCars(vehicles: ThreeWheelerVehicle[]): Car[] {
-  return vehicles.map(v => ({
-    id: v.id,
-    make: v.brand,
-    model: v.model,
-    variant: v.variant ?? '',
-    year: v.year,
-    bodyType: v.body_type ?? 'Auto',
-    segment: 'B' as Car['segment'],
-    pricing: {
-      exShowroom: {
-        min: v.ex_showroom_price_paise > 0 ? Math.round(v.ex_showroom_price_paise / 100) : null,
-        max: v.ex_showroom_price_paise > 0 ? Math.round(v.ex_showroom_price_paise / 100) : null,
-        currency: 'INR' as const,
+  return vehicles.map(v => {
+    const priceINR = v.ex_showroom_price_paise > 0 ? Math.round(v.ex_showroom_price_paise / 100) : null
+    const fuelLabel = v.fuel_type === 'electric' ? 'Electric' : v.fuel_type === 'cng' ? 'CNG' : 'Diesel'
+    return {
+      id: v.id,
+      make: v.brand,
+      model: v.model,
+      variant: v.variant ?? '',
+      year: v.year,
+      bodyType: v.body_type ?? 'Auto',
+      segment: 'B' as Car['segment'],
+      pricing: {
+        exShowroom: { min: priceINR, max: priceINR, currency: 'INR' as const },
       },
-    },
-    engine: {
-      type: v.fuel_type === 'electric' ? 'Electric' : v.fuel_type === 'cng' ? 'CNG' : 'Petrol',
-      power: '—',
-      torque: '—',
-    },
-    transmission: { type: v.transmission || 'Automatic' },
-    performance: {
-      fuelEfficiency: v.mileage_kmpl ?? undefined,
-      topSpeed: v.max_speed_kmph ?? undefined,
-      range: v.range_km ?? undefined,
-    },
-    dimensions: { seatingCapacity: v.passenger_capacity ?? null, bootSpace: v.payload_kg ?? undefined },
-    vehicleCategory: '3w' as const,
-    features: { keyFeatures: v.features ?? [] },
-    images: {
-      hero: v.images?.[0] ?? '',
-      exterior: v.images ?? [],
-      interior: [],
-    },
-    meta: { viewCount: v.views ?? 0 },
-    price: v.ex_showroom_price_paise > 0
-      ? `₹${(v.ex_showroom_price_paise / 100).toLocaleString('en-IN')}`
-      : 'Price on request',
-    condition: 'new' as const,
-  }))
+      engine: {
+        type: fuelLabel,
+        displacement: v.engine_cc ?? null,
+        power: v.max_power || '',
+        torque: v.torque || '',
+      },
+      transmission: { type: v.transmission || 'Automatic' },
+      performance: {
+        fuelEfficiency: v.mileage_kmpl ?? undefined,
+        topSpeed: v.max_speed_kmph ?? undefined,
+        range: v.range_km ?? undefined,
+      },
+      dimensions: { seatingCapacity: v.passenger_capacity ?? null, bootSpace: v.payload_kg ?? undefined },
+      vehicleCategory: '3w' as const,
+      features: { keyFeatures: v.features?.length ? v.features : generate3WFeatures(v) },
+      images: {
+        hero: v.images?.[0] ?? '',
+        exterior: v.images ?? [],
+        interior: [],
+      },
+      variants: [{
+        id: `${v.id}-v1`,
+        name: v.variant || `${v.model} Standard`,
+        price: priceINR ?? 0,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        transmission: (v.transmission || 'Automatic') as any,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        fuelType: fuelLabel as any,
+        keyFeatures: generate3WFeatures(v).slice(0, 3),
+        isPopular: true,
+      }],
+      meta: { viewCount: v.views ?? 0 },
+      price: priceINR
+        ? `₹${priceINR.toLocaleString('en-IN')}`
+        : 'Price on request',
+      condition: 'new' as const,
+    }
+  })
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

@@ -10,6 +10,7 @@
       "model": "D15i Neo",
       "variant_name": "BGauss D15i Neo",
       "price": "₹99,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.2 kW",
@@ -19,6 +20,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "42 Nm",
       "colors": ["Coral Orange", "Mystic Blue", "Urban Black", "Snow White"],
       "variants": [
         { "name": "D15i Neo", "price": "₹99,990" }
@@ -29,6 +31,7 @@
       "model": "B8 Neo",
       "variant_name": "BGauss B8 Neo",
       "price": "₹89,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -38,6 +41,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "40 Nm",
       "colors": ["Coral Orange", "Mystic Blue", "Urban Black", "Snow White"],
       "variants": [
         { "name": "B8 Neo", "price": "₹89,990" }
@@ -48,6 +52,7 @@
       "model": "A2 Neo",
       "variant_name": "BGauss A2 Neo",
       "price": "₹79,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.2 kW",
@@ -57,6 +62,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "40 Nm",
       "colors": ["Coral Orange", "Mystic Blue", "Urban Black", "Snow White"],
       "variants": [
         { "name": "A2 Neo", "price": "₹79,990" }
@@ -67,6 +73,7 @@
       "model": "RUV501",
       "variant_name": "BGauss RUV501",
       "price": "₹1,09,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -76,6 +83,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "42 Nm",
       "colors": ["Coral Orange", "Mystic Blue", "Urban Black", "Snow White"],
       "variants": [
         { "name": "RUV501", "price": "₹1,09,990" }

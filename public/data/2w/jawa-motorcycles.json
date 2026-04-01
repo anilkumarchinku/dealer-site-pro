@@ -13,15 +13,47 @@
       "engine_displacement": "294.72 cc",
       "mileage": "32 kmpl",
       "top_speed": "130 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "18.6 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "42 1 Channel Spoke", "price": "₹1,61,265" },
-        { "name": "42 2 Channel Spoke", "price": "₹1,66,265" },
-        { "name": "42 2 Channel Alloy", "price": "₹1,72,786" },
-        { "name": "42 Alloy Dual Tone", "price": "₹1,82,786" },
-        { "name": "42 Ivory Edition", "price": "₹1,86,786" }
+        {
+          "name": "42 1 Channel Spoke",
+          "price": "₹1,61,265"
+        },
+        {
+          "name": "42 2 Channel Spoke",
+          "price": "₹1,66,265"
+        },
+        {
+          "name": "42 2 Channel Alloy",
+          "price": "₹1,72,786"
+        },
+        {
+          "name": "42 Alloy Dual Tone",
+          "price": "₹1,82,786"
+        },
+        {
+          "name": "42 Ivory Edition",
+          "price": "₹1,86,786"
+        }
       ],
-      "colors": ["Vega White", "Voyager Red", "Asteroid Grey", "Odyssey Black", "Nebula Blue", "Celestial Copper Matte", "Orion Red Matte", "Sirius White Matte", "All Star Black Matte", "Cosmic Rock DT", "Celestial Copper Matte DT", "Starship Blue DT", "Infinity Black Matte DT", "Ivory"],
+      "colors": [
+        "Vega White",
+        "Voyager Red",
+        "Asteroid Grey",
+        "Odyssey Black",
+        "Nebula Blue",
+        "Celestial Copper Matte",
+        "Orion Red Matte",
+        "Sirius White Matte",
+        "All Star Black Matte",
+        "Cosmic Rock DT",
+        "Celestial Copper Matte DT",
+        "Starship Blue DT",
+        "Infinity Black Matte DT",
+        "Ivory"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Single-cylinder",
         "power": "26.94 bhp",
@@ -46,14 +78,33 @@
       "engine_displacement": "334 cc",
       "mileage": "30 kmpl",
       "top_speed": "130 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "42 FJ Spoke", "price": "₹1,83,595" },
-        { "name": "42 FJ Alloy", "price": "₹1,93,595" },
-        { "name": "42 FJ Alloy Dual Tone", "price": "₹2,01,740" },
-        { "name": "42 FJ Premium", "price": "₹2,06,740" }
+        {
+          "name": "42 FJ Spoke",
+          "price": "₹1,83,595"
+        },
+        {
+          "name": "42 FJ Alloy",
+          "price": "₹1,93,595"
+        },
+        {
+          "name": "42 FJ Alloy Dual Tone",
+          "price": "₹2,01,740"
+        },
+        {
+          "name": "42 FJ Premium",
+          "price": "₹2,06,740"
+        }
       ],
-      "colors": ["Cosmo Blue Matte", "Mystique Copper", "Deep Black Matte Black Clad", "Deep Black Matte Red Clad", "Aurora Green Matte"],
+      "colors": [
+        "Cosmo Blue Matte",
+        "Mystique Copper",
+        "Deep Black Matte Black Clad",
+        "Deep Black Matte Red Clad",
+        "Aurora Green Matte"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Single-cylinder",
         "power": "28.77 bhp",
@@ -68,7 +119,8 @@
         "wheel_type": "Spoke",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"
-      }
+      },
+      "max_torque": "18.6 Nm"
     },
     {
       "make": "Jawa",
@@ -78,13 +130,30 @@
       "engine_displacement": "334 cc",
       "mileage": "30 kmpl",
       "top_speed": "130 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "18.6 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "42 Bobber Spoke", "price": "₹1,95,305" },
-        { "name": "42 Bobber Alloy", "price": "₹2,10,305" },
-        { "name": "42 Bobber Premium", "price": "₹2,22,048" }
+        {
+          "name": "42 Bobber Spoke",
+          "price": "₹1,95,305"
+        },
+        {
+          "name": "42 Bobber Alloy",
+          "price": "₹2,10,305"
+        },
+        {
+          "name": "42 Bobber Premium",
+          "price": "₹2,22,048"
+        }
       ],
-      "colors": ["Mystic Copper", "Moonstone White", "Jasper Red", "Red Sheen", "Black Mirror"],
+      "colors": [
+        "Mystic Copper",
+        "Moonstone White",
+        "Jasper Red",
+        "Red Sheen",
+        "Black Mirror"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Single-cylinder",
         "power": "29.51 bhp",
@@ -109,13 +178,33 @@
       "engine_displacement": "334 cc",
       "mileage": "28.5 kmpl",
       "top_speed": "125 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "28.3 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Jawa 350 Standard", "price": "₹1,82,531" },
-        { "name": "Jawa 350 Chrome", "price": "₹2,05,458" },
-        { "name": "Jawa 350 Premium", "price": "₹2,21,458" }
+        {
+          "name": "Jawa 350 Standard",
+          "price": "₹1,82,531"
+        },
+        {
+          "name": "Jawa 350 Chrome",
+          "price": "₹2,05,458"
+        },
+        {
+          "name": "Jawa 350 Premium",
+          "price": "₹2,21,458"
+        }
       ],
-      "colors": ["White", "Black", "Orange", "Maroon", "Deep Forest", "Grey", "Obsidian Black", "Chrome Maroon"],
+      "colors": [
+        "White",
+        "Black",
+        "Orange",
+        "Maroon",
+        "Deep Forest",
+        "Grey",
+        "Obsidian Black",
+        "Chrome Maroon"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Single-cylinder",
         "power": "22.26 bhp",

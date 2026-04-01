@@ -13,11 +13,21 @@
       "engine_displacement": "803 cc",
       "mileage": "19 kmpl",
       "top_speed": "185 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "57 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Scrambler Icon Standard", "price": "₹10,65,200" }
+        {
+          "name": "Scrambler Icon Standard",
+          "price": "₹10,65,200"
+        }
       ],
-      "colors": ["Matte Black", "Ducati Red", "Yellow", "Stone White and Metal Rose"],
+      "colors": [
+        "Matte Black",
+        "Ducati Red",
+        "Yellow",
+        "Stone White and Metal Rose"
+      ],
       "technical_specifications": {
         "engine_type": "Air-cooled, L-twin",
         "power": "71.87 bhp",
@@ -42,11 +52,17 @@
       "engine_displacement": "803 cc",
       "mileage": "19 kmpl",
       "top_speed": "185 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Scrambler Nightshift", "price": "₹13,46,600" }
+        {
+          "name": "Scrambler Nightshift",
+          "price": "₹13,46,600"
+        }
       ],
-      "colors": ["Nebula Blue"],
+      "colors": [
+        "Nebula Blue"
+      ],
       "technical_specifications": {
         "engine_type": "Air-cooled, L-twin",
         "power": "71.87 bhp",
@@ -62,7 +78,8 @@
         "start_type": "Self Start",
         "emission": "BS6 Phase 2",
         "features": "TFT display, LED lighting"
-      }
+      },
+      "max_torque": "57 Nm"
     },
     {
       "make": "Ducati",
@@ -72,13 +89,28 @@
       "engine_displacement": "937 cc",
       "mileage": "19 kmpl",
       "top_speed": "200 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "92 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Monster Standard", "price": "₹13,84,000" },
-        { "name": "Monster Plus", "price": "₹15,44,000" },
-        { "name": "Monster SP", "price": "₹17,04,580" }
+        {
+          "name": "Monster Standard",
+          "price": "₹13,84,000"
+        },
+        {
+          "name": "Monster Plus",
+          "price": "₹15,44,000"
+        },
+        {
+          "name": "Monster SP",
+          "price": "₹17,04,580"
+        }
       ],
-      "colors": ["Dark Stealth", "Aviator Grey", "Ducati Red"],
+      "colors": [
+        "Dark Stealth",
+        "Aviator Grey",
+        "Ducati Red"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, L-twin",
         "power": "109.96 bhp",
@@ -103,12 +135,24 @@
       "engine_displacement": "937 cc",
       "mileage": "19.6 kmpl",
       "top_speed": "220 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "96 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Hypermotard 950 RVE", "price": "₹17,10,500" },
-        { "name": "Hypermotard 950 SP", "price": "₹20,35,878" }
+        {
+          "name": "Hypermotard 950 RVE",
+          "price": "₹17,10,500"
+        },
+        {
+          "name": "Hypermotard 950 SP",
+          "price": "₹20,35,878"
+        }
       ],
-      "colors": ["Graffiti Evo", "Graffiti", "SP Livery"],
+      "colors": [
+        "Graffiti Evo",
+        "Graffiti",
+        "SP Livery"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, L-twin",
         "power": "112.6 bhp",
@@ -133,12 +177,23 @@
       "engine_displacement": "890 cc",
       "mileage": "17 kmpl",
       "top_speed": "270 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "100 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Streetfighter V2 Standard", "price": "₹17,50,200" },
-        { "name": "Streetfighter V2 S", "price": "₹19,48,900" }
+        {
+          "name": "Streetfighter V2 Standard",
+          "price": "₹17,50,200"
+        },
+        {
+          "name": "Streetfighter V2 S",
+          "price": "₹19,48,900"
+        }
       ],
-      "colors": ["Ducati Red", "Ducati Red - S"],
+      "colors": [
+        "Ducati Red",
+        "Ducati Red - S"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V-twin (Superquadro)",
         "power": "118 bhp",
@@ -163,13 +218,27 @@
       "engine_displacement": "890 cc",
       "mileage": "17 kmpl",
       "top_speed": "182 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "96 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Multistrada V2 Standard", "price": "₹18,88,000" },
-        { "name": "Multistrada V2 S", "price": "₹20,09,000" },
-        { "name": "Multistrada V2 S Storm Green", "price": "₹21,29,700" }
+        {
+          "name": "Multistrada V2 Standard",
+          "price": "₹18,88,000"
+        },
+        {
+          "name": "Multistrada V2 S",
+          "price": "₹20,09,000"
+        },
+        {
+          "name": "Multistrada V2 S Storm Green",
+          "price": "₹21,29,700"
+        }
       ],
-      "colors": ["Ducati Red", "Storm Green"],
+      "colors": [
+        "Ducati Red",
+        "Storm Green"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V-twin (Superquadro)",
         "power": "113.98 bhp",
@@ -194,12 +263,23 @@
       "engine_displacement": "890 cc",
       "mileage": "16.6 kmpl",
       "top_speed": "299 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "100 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Panigale V2 Standard", "price": "₹19,11,900" },
-        { "name": "Panigale V2 S", "price": "₹21,09,900" }
+        {
+          "name": "Panigale V2 Standard",
+          "price": "₹19,11,900"
+        },
+        {
+          "name": "Panigale V2 S",
+          "price": "₹21,09,900"
+        }
       ],
-      "colors": ["Ducati Red", "S - Ducati Red"],
+      "colors": [
+        "Ducati Red",
+        "S - Ducati Red"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V-twin (Superquadro)",
         "power": "118 bhp",
@@ -224,13 +304,28 @@
       "engine_displacement": "937 cc",
       "mileage": "17.8 kmpl",
       "top_speed": "209 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "75 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "DesertX Standard", "price": "₹19,59,200" },
-        { "name": "DesertX Rally", "price": "₹22,46,000" },
-        { "name": "DesertX Discovery", "price": "₹25,33,700" }
+        {
+          "name": "DesertX Standard",
+          "price": "₹19,59,200"
+        },
+        {
+          "name": "DesertX Rally",
+          "price": "₹22,46,000"
+        },
+        {
+          "name": "DesertX Discovery",
+          "price": "₹25,33,700"
+        }
       ],
-      "colors": ["Star White Silk", "Rally", "Thrilling Black and Ducati Red"],
+      "colors": [
+        "Star White Silk",
+        "Rally",
+        "Thrilling Black and Ducati Red"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, L-twin",
         "power": "108.6 bhp",
@@ -255,13 +350,28 @@
       "engine_displacement": "1158 cc",
       "mileage": "15 kmpl",
       "top_speed": "180 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "125 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Multistrada V4 Standard", "price": "₹24,56,300" },
-        { "name": "Multistrada V4 S", "price": "₹30,36,000" },
-        { "name": "Multistrada V4 Pikes Peak", "price": "₹36,16,700" }
+        {
+          "name": "Multistrada V4 Standard",
+          "price": "₹24,56,300"
+        },
+        {
+          "name": "Multistrada V4 S",
+          "price": "₹30,36,000"
+        },
+        {
+          "name": "Multistrada V4 Pikes Peak",
+          "price": "₹36,16,700"
+        }
       ],
-      "colors": ["Ducati Red", "Arctic White", "Thrilling Black"],
+      "colors": [
+        "Ducati Red",
+        "Arctic White",
+        "Thrilling Black"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V4 (Granturismo)",
         "power": "170 bhp",
@@ -287,12 +397,22 @@
       "engine_displacement": "1103 cc",
       "mileage": "13.15 kmpl",
       "top_speed": "299 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "124 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Streetfighter V4 Standard", "price": "₹28,68,600" },
-        { "name": "Streetfighter V4 S", "price": "₹32,38,400" }
+        {
+          "name": "Streetfighter V4 Standard",
+          "price": "₹28,68,600"
+        },
+        {
+          "name": "Streetfighter V4 S",
+          "price": "₹32,38,400"
+        }
       ],
-      "colors": ["Red"],
+      "colors": [
+        "Red"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V4 (Desmosedici Stradale)",
         "power": "205 bhp",
@@ -317,11 +437,19 @@
       "engine_displacement": "1158 cc",
       "mileage": "15.6 kmpl",
       "top_speed": "299 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "115 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Diavel V4 Standard", "price": "₹29,07,600" }
+        {
+          "name": "Diavel V4 Standard",
+          "price": "₹29,07,600"
+        }
       ],
-      "colors": ["Thrilling Black", "Ducati Red"],
+      "colors": [
+        "Thrilling Black",
+        "Ducati Red"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V4 (Granturismo)",
         "power": "166.28 bhp",
@@ -346,11 +474,19 @@
       "engine_displacement": "1158 cc",
       "mileage": "15 kmpl",
       "top_speed": "250 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "129 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "XDiavel V4 Standard", "price": "₹30,88,700" }
+        {
+          "name": "XDiavel V4 Standard",
+          "price": "₹30,88,700"
+        }
       ],
-      "colors": ["Thrilling Black", "Ducati Red"],
+      "colors": [
+        "Thrilling Black",
+        "Ducati Red"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V4 (Granturismo)",
         "power": "168 bhp",
@@ -376,13 +512,28 @@
       "engine_displacement": "1103 cc",
       "mileage": "12 kmpl",
       "top_speed": "299 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "124 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Panigale V4 Standard", "price": "₹32,05,100" },
-        { "name": "Panigale V4 S", "price": "₹42,05,100" },
-        { "name": "Panigale V4 Tricolore", "price": "₹77,00,000" }
+        {
+          "name": "Panigale V4 Standard",
+          "price": "₹32,05,100"
+        },
+        {
+          "name": "Panigale V4 S",
+          "price": "₹42,05,100"
+        },
+        {
+          "name": "Panigale V4 Tricolore",
+          "price": "₹77,00,000"
+        }
       ],
-      "colors": ["Ducati Red", "Ducati Red S", "Tricolore Livery"],
+      "colors": [
+        "Ducati Red",
+        "Ducati Red S",
+        "Tricolore Livery"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V4 (Desmosedici Stradale)",
         "power": "219 bhp",

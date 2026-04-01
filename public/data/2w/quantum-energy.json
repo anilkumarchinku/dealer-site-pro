@@ -10,6 +10,7 @@
       "model": "Elko",
       "variant_name": "Quantum Energy Elko",
       "price": "₹79,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -19,6 +20,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "35 Nm",
       "colors": ["Storm Blue", "Pearl White", "Midnight Black", "Flame Red"],
       "variants": [
         { "name": "Elko", "price": "₹79,999" }
@@ -29,6 +31,7 @@
       "model": "Hum Se Honda",
       "variant_name": "Quantum Energy Hum Se Honda",
       "price": "₹74,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -38,6 +41,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "35 Nm",
       "colors": ["Storm Blue", "Pearl White", "Midnight Black", "Flame Red"],
       "variants": [
         { "name": "Hum Se Honda", "price": "₹74,999" }
@@ -48,6 +52,7 @@
       "model": "Miles 52",
       "variant_name": "Quantum Energy Miles 52",
       "price": "₹84,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -57,6 +62,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "35 Nm",
       "colors": ["Storm Blue", "Pearl White", "Midnight Black", "Flame Red"],
       "variants": [
         { "name": "Miles 52", "price": "₹84,999" }
@@ -67,6 +73,7 @@
       "model": "Miles 60",
       "variant_name": "Quantum Energy Miles 60",
       "price": "₹89,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -76,6 +83,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "35 Nm",
       "colors": ["Storm Blue", "Pearl White", "Midnight Black", "Flame Red"],
       "variants": [
         { "name": "Miles 60", "price": "₹89,999" }

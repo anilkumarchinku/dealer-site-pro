@@ -10,6 +10,7 @@
       "model": "EPluto 7G",
       "variant_name": "Pure EV EPluto 7G",
       "price": "₹1,14,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -19,6 +20,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "32 Nm",
       "colors": ["Glam White", "Jet Black", "Atomic Orange", "Electric Blue"],
       "variants": [
         { "name": "EPluto 7G", "price": "₹1,14,990" }
@@ -29,6 +31,7 @@
       "model": "eTrance Neo",
       "variant_name": "Pure EV eTrance Neo",
       "price": "₹78,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -38,6 +41,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "32 Nm",
       "colors": ["Glam White", "Jet Black", "Atomic Orange", "Electric Blue"],
       "variants": [
         { "name": "eTrance Neo", "price": "₹78,990" }

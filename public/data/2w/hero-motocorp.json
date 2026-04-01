@@ -2,7 +2,7 @@
   "brand": "Hero",
   "brandId": "hero-motocorp",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -16,15 +16,46 @@
       "max_torque": "8.05 Nm",
       "top_speed": "85 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "HF Deluxe HF 100 - Drum Kick Alloy - OBD 2B", "price": "₹58,646" },
-        { "name": "HF Deluxe Kick Alloy - OBD 2B", "price": "₹60,500" },
-        { "name": "HF Deluxe Self Alloy - OBD 2B", "price": "₹63,200" },
-        { "name": "HF Deluxe All Black - OBD 2B", "price": "₹65,500" },
-        { "name": "HF Deluxe I3S Alloy - OBD 2B", "price": "₹67,000" },
-        { "name": "HF Deluxe I3S Pro - OBD 2B", "price": "₹69,473" }
+        {
+          "name": "HF Deluxe HF 100 - Drum Kick Alloy - OBD 2B",
+          "price": "₹58,646"
+        },
+        {
+          "name": "HF Deluxe Kick Alloy - OBD 2B",
+          "price": "₹60,500"
+        },
+        {
+          "name": "HF Deluxe Self Alloy - OBD 2B",
+          "price": "₹63,200"
+        },
+        {
+          "name": "HF Deluxe All Black - OBD 2B",
+          "price": "₹65,500"
+        },
+        {
+          "name": "HF Deluxe I3S Alloy - OBD 2B",
+          "price": "₹67,000"
+        },
+        {
+          "name": "HF Deluxe I3S Pro - OBD 2B",
+          "price": "₹69,473"
+        }
       ],
-      "colors": ["Blue Black", "Red Black", "Candy Blazing Red", "Black Nexus Blue", "Sports Red Black", "Black Grey Stripe", "Black", "Red and Black", "Yellow and Black", "Grey and Black", "Blue and Black"],
+      "colors": [
+        "Blue Black",
+        "Red Black",
+        "Candy Blazing Red",
+        "Black Nexus Blue",
+        "Sports Red Black",
+        "Black Grey Stripe",
+        "Black",
+        "Red and Black",
+        "Yellow and Black",
+        "Grey and Black",
+        "Blue and Black"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder, 4-stroke",
         "displacement": "97.2 cc",
@@ -54,13 +85,35 @@
       "max_torque": "8.05 Nm",
       "top_speed": "87 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Splendor Plus Drum Brake - OBD 2B", "price": "₹74,958" },
-        { "name": "Splendor Plus Drum Brake I3S - OBD 2B", "price": "₹75,800" },
-        { "name": "Splendor Plus I3S - Black and Accent Edition - OBD 2B", "price": "₹76,500" },
-        { "name": "Splendor Plus Million Edition", "price": "₹77,406" }
+        {
+          "name": "Splendor Plus Drum Brake - OBD 2B",
+          "price": "₹74,958"
+        },
+        {
+          "name": "Splendor Plus Drum Brake I3S - OBD 2B",
+          "price": "₹75,800"
+        },
+        {
+          "name": "Splendor Plus I3S - Black and Accent Edition - OBD 2B",
+          "price": "₹76,500"
+        },
+        {
+          "name": "Splendor Plus Million Edition",
+          "price": "₹77,406"
+        }
       ],
-      "colors": ["Black Heavy Grey", "Blue Black", "Black Red Purple", "Sports Red Black", "Force Silver", "Black and Accent", "Matt Grey", "Industrial Dark Grey"],
+      "colors": [
+        "Black Heavy Grey",
+        "Blue Black",
+        "Black Red Purple",
+        "Sports Red Black",
+        "Force Silver",
+        "Black and Accent",
+        "Matt Grey",
+        "Industrial Dark Grey"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder, 4-stroke",
         "displacement": "97.2 cc",
@@ -90,11 +143,26 @@
       "max_torque": "8.05 Nm",
       "top_speed": "87 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Splendor Plus Xtec Drum - OBD 2B", "price": "₹78,647" },
-        { "name": "Splendor Plus Xtec I3S - OBD 2B", "price": "₹81,689" }
+        {
+          "name": "Splendor Plus Xtec Drum - OBD 2B",
+          "price": "₹78,647"
+        },
+        {
+          "name": "Splendor Plus Xtec I3S - OBD 2B",
+          "price": "₹81,689"
+        }
       ],
-      "colors": ["Nobel Red", "Matte Grey", "Black Heavy Grey", "Black with Greenish Yellow", "Red Black", "Black Tornado Grey", "Black Sparking Blue"],
+      "colors": [
+        "Nobel Red",
+        "Matte Grey",
+        "Black Heavy Grey",
+        "Black with Greenish Yellow",
+        "Red Black",
+        "Black Tornado Grey",
+        "Black Sparking Blue"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder, 4-stroke",
         "displacement": "97.2 cc",
@@ -126,10 +194,20 @@
       "max_torque": "10.35 Nm",
       "top_speed": "95 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Super Splendor Xtec", "price": "₹82,876" }
+        {
+          "name": "Super Splendor Xtec",
+          "price": "₹82,876"
+        }
       ],
-      "colors": ["Black and Accent", "Black Sports Red", "Candy Blazing Red", "Metallic Nexus Blue", "Black Silver Str"],
+      "colors": [
+        "Black and Accent",
+        "Black Sports Red",
+        "Candy Blazing Red",
+        "Metallic Nexus Blue",
+        "Black Silver Str"
+      ],
       "technical_specifications": {
         "engine_type": "Single-cylinder, Air Cooled, 2 Valves",
         "displacement": "124.7 cc",
@@ -161,11 +239,22 @@
       "max_torque": "8.05 Nm",
       "top_speed": "85 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Passion Plus Drum Brake - OBD 2B", "price": "₹77,439" },
-        { "name": "Passion Plus Million Edition", "price": "₹78,829" }
+        {
+          "name": "Passion Plus Drum Brake - OBD 2B",
+          "price": "₹77,439"
+        },
+        {
+          "name": "Passion Plus Million Edition",
+          "price": "₹78,829"
+        }
       ],
-      "colors": ["Black Heavy Grey", "Black Nexus Blue", "Industrial Dark Grey"],
+      "colors": [
+        "Black Heavy Grey",
+        "Black Nexus Blue",
+        "Industrial Dark Grey"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder, 4-stroke",
         "displacement": "97.2 cc",
@@ -195,11 +284,23 @@
       "max_torque": "10.4 Nm",
       "top_speed": "95 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Glamour Drum Brake - OBD 2B", "price": "₹83,617" },
-        { "name": "Glamour Disc Brake - OBD 2B", "price": "₹87,304" }
+        {
+          "name": "Glamour Drum Brake - OBD 2B",
+          "price": "₹83,617"
+        },
+        {
+          "name": "Glamour Disc Brake - OBD 2B",
+          "price": "₹87,304"
+        }
       ],
-      "colors": ["Black Metallic Silver", "Techno Blue Met Black", "Candy Blazing Red", "Black Sports Red"],
+      "colors": [
+        "Black Metallic Silver",
+        "Techno Blue Met Black",
+        "Candy Blazing Red",
+        "Black Sports Red"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
         "displacement": "124.7 cc",
@@ -230,11 +331,23 @@
       "max_torque": "10.6 Nm",
       "top_speed": "95 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Glamour Xtec Drum Brake", "price": "₹84,315" },
-        { "name": "Glamour Xtec Disc Brake", "price": "₹88,521" }
+        {
+          "name": "Glamour Xtec Drum Brake",
+          "price": "₹84,315"
+        },
+        {
+          "name": "Glamour Xtec Disc Brake",
+          "price": "₹88,521"
+        }
       ],
-      "colors": ["Candy Blazing Red", "Black", "Grey Blue Stripe", "Metallic Nexus Blue"],
+      "colors": [
+        "Candy Blazing Red",
+        "Black",
+        "Grey Blue Stripe",
+        "Metallic Nexus Blue"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2, Single-cylinder",
         "displacement": "124.7 cc",
@@ -265,11 +378,24 @@
       "max_torque": "10.5 Nm",
       "top_speed": "105 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Glamour X 125 Base", "price": "₹86,073" },
-        { "name": "Glamour X 125 Top", "price": "₹93,666" }
+        {
+          "name": "Glamour X 125 Base",
+          "price": "₹86,073"
+        },
+        {
+          "name": "Glamour X 125 Top",
+          "price": "₹93,666"
+        }
       ],
-      "colors": ["Metallic Nexus Blue", "Matt Metallic Silver", "Candy Blazing Red", "Black Teal Blue", "Black Pearl Red"],
+      "colors": [
+        "Metallic Nexus Blue",
+        "Matt Metallic Silver",
+        "Candy Blazing Red",
+        "Black Teal Blue",
+        "Black Pearl Red"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
         "displacement": "124.7 cc",
@@ -301,13 +427,34 @@
       "max_torque": "10.5 Nm",
       "top_speed": "100 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Xtreme 125R IBS - OBD 2B", "price": "₹90,652" },
-        { "name": "Xtreme 125R Single Seat ABS - OBD 2B", "price": "₹95,000" },
-        { "name": "Xtreme 125R Dual Channel ABS", "price": "₹1,02,000" },
-        { "name": "Xtreme 125R Single Seat ABS", "price": "₹1,07,163" }
+        {
+          "name": "Xtreme 125R IBS - OBD 2B",
+          "price": "₹90,652"
+        },
+        {
+          "name": "Xtreme 125R Single Seat ABS - OBD 2B",
+          "price": "₹95,000"
+        },
+        {
+          "name": "Xtreme 125R Dual Channel ABS",
+          "price": "₹1,02,000"
+        },
+        {
+          "name": "Xtreme 125R Single Seat ABS",
+          "price": "₹1,07,163"
+        }
       ],
-      "colors": ["Abrax Orange", "Stallion Black", "Firestorm Red", "Cobalt Blue", "Black Leaf Green", "Black Matshdow Grey", "Black Pearl Red"],
+      "colors": [
+        "Abrax Orange",
+        "Stallion Black",
+        "Firestorm Red",
+        "Cobalt Blue",
+        "Black Leaf Green",
+        "Black Matshdow Grey",
+        "Black Pearl Red"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
         "displacement": "124.7 cc",
@@ -339,10 +486,17 @@
       "max_torque": "14 Nm",
       "top_speed": "107 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Xtreme 160R Standard", "price": "₹1,05,667" }
+        {
+          "name": "Xtreme 160R Standard",
+          "price": "₹1,05,667"
+        }
       ],
-      "colors": ["Matt Pearl White", "Stealth Black"],
+      "colors": [
+        "Matt Pearl White",
+        "Stealth Black"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
         "displacement": "163.2 cc",
@@ -373,12 +527,28 @@
       "max_torque": "14.6 Nm",
       "top_speed": "115 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Xtreme 160R 4V Double Disc", "price": "₹1,31,755" },
-        { "name": "Xtreme 160R 4V Cruise Control", "price": "₹1,36,000" },
-        { "name": "Xtreme 160R 4V Combat-Edition", "price": "₹1,42,000" }
+        {
+          "name": "Xtreme 160R 4V Double Disc",
+          "price": "₹1,31,755"
+        },
+        {
+          "name": "Xtreme 160R 4V Cruise Control",
+          "price": "₹1,36,000"
+        },
+        {
+          "name": "Xtreme 160R 4V Combat-Edition",
+          "price": "₹1,42,000"
+        }
       ],
-      "colors": ["Stealth Black", "Neon Shooting Star", "Kevlar Brown", "Matt Shadow Grey", "Matt Slate Black"],
+      "colors": [
+        "Stealth Black",
+        "Neon Shooting Star",
+        "Kevlar Brown",
+        "Matt Shadow Grey",
+        "Matt Slate Black"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, 4-Valve, Single-cylinder",
         "displacement": "163.2 cc",
@@ -410,10 +580,18 @@
       "max_torque": "25 Nm",
       "top_speed": "130 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Xtreme 250R Standard", "price": "₹1,67,351" }
+        {
+          "name": "Xtreme 250R Standard",
+          "price": "₹1,67,351"
+        }
       ],
-      "colors": ["Firestorm Red", "Stealth Black", "Neon Shooting Star"],
+      "colors": [
+        "Firestorm Red",
+        "Stealth Black",
+        "Neon Shooting Star"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2, Single-cylinder",
         "displacement": "249.03 cc",
@@ -444,12 +622,31 @@
       "max_torque": "17.35 Nm",
       "top_speed": "115 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "XPulse 200 4V Standard", "price": "₹1,41,059" },
-        { "name": "XPulse 200 4V Pro", "price": "₹1,48,000" },
-        { "name": "XPulse 200 4V Pro Dakar Edition", "price": "₹1,55,816" }
+        {
+          "name": "XPulse 200 4V Standard",
+          "price": "₹1,41,059"
+        },
+        {
+          "name": "XPulse 200 4V Pro",
+          "price": "₹1,48,000"
+        },
+        {
+          "name": "XPulse 200 4V Pro Dakar Edition",
+          "price": "₹1,55,816"
+        }
       ],
-      "colors": ["Sports Red", "Techno Blue Met Black", "Met Nexus Blue White", "Metallic Nexus Blue", "Black Sports Red", "Polestar Blue", "Pearl Fadeless White", "Gloss Goldfish Silver"],
+      "colors": [
+        "Sports Red",
+        "Techno Blue Met Black",
+        "Met Nexus Blue White",
+        "Metallic Nexus Blue",
+        "Black Sports Red",
+        "Polestar Blue",
+        "Pearl Fadeless White",
+        "Gloss Goldfish Silver"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2, 4-Valve, Single-cylinder",
         "displacement": "199.6 cc",
@@ -481,11 +678,23 @@
       "max_torque": "20.7 Nm",
       "top_speed": "130 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "XPulse 210 Base", "price": "₹1,62,901" },
-        { "name": "XPulse 210 Top", "price": "₹1,71,821" }
+        {
+          "name": "XPulse 210 Base",
+          "price": "₹1,62,901"
+        },
+        {
+          "name": "XPulse 210 Top",
+          "price": "₹1,71,821"
+        }
       ],
-      "colors": ["Wild Red", "Glacier White", "Alpine Silver", "Azure Blue"],
+      "colors": [
+        "Wild Red",
+        "Glacier White",
+        "Alpine Silver",
+        "Azure Blue"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2, Liquid-cooled, Single-cylinder",
         "displacement": "210 cc",
@@ -517,11 +726,23 @@
       "max_torque": "20.4 Nm",
       "top_speed": "130 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Karizma XMR Top", "price": "₹1,84,154" },
-        { "name": "Karizma XMR Combat Edition", "price": "₹1,85,767" }
+        {
+          "name": "Karizma XMR Top",
+          "price": "₹1,84,154"
+        },
+        {
+          "name": "Karizma XMR Combat Edition",
+          "price": "₹1,85,767"
+        }
       ],
-      "colors": ["Matte Phantom Black", "Turbo Red", "Iconic Yellow", "Combat Edition"],
+      "colors": [
+        "Matte Phantom Black",
+        "Turbo Red",
+        "Iconic Yellow",
+        "Combat Edition"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Liquid-cooled, Single-cylinder",
         "displacement": "210 cc",
@@ -553,12 +774,28 @@
       "max_torque": "36 Nm",
       "top_speed": "150 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Mavrick 440 Base", "price": "₹2,13,198" },
-        { "name": "Mavrick 440 Mid", "price": "₹2,26,000" },
-        { "name": "Mavrick 440 Top", "price": "₹2,39,914" }
+        {
+          "name": "Mavrick 440 Base",
+          "price": "₹2,13,198"
+        },
+        {
+          "name": "Mavrick 440 Mid",
+          "price": "₹2,26,000"
+        },
+        {
+          "name": "Mavrick 440 Top",
+          "price": "₹2,39,914"
+        }
       ],
-      "colors": ["Arctic White", "Celestial Blue", "Fearless Red", "Enigma Black", "Phantom Black"],
+      "colors": [
+        "Arctic White",
+        "Celestial Blue",
+        "Fearless Red",
+        "Enigma Black",
+        "Phantom Black"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2, Single-cylinder",
         "displacement": "440 cc",
@@ -588,11 +825,26 @@
       "max_torque": "8.7 Nm",
       "top_speed": "75 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Pleasure Plus LX - OBD 2B", "price": "₹68,054" },
-        { "name": "Pleasure Plus VX - OBD 2B", "price": "₹71,523" }
+        {
+          "name": "Pleasure Plus LX - OBD 2B",
+          "price": "₹68,054"
+        },
+        {
+          "name": "Pleasure Plus VX - OBD 2B",
+          "price": "₹71,523"
+        }
       ],
-      "colors": ["Sport Red", "Polestar Blue", "Pearl Silver White", "Teal Blue", "Mat Black", "Matte Red", "Mat Vernier Grey"],
+      "colors": [
+        "Sport Red",
+        "Polestar Blue",
+        "Pearl Silver White",
+        "Teal Blue",
+        "Mat Black",
+        "Matte Red",
+        "Mat Vernier Grey"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2, Single-cylinder",
         "displacement": "110.9 cc",
@@ -623,10 +875,19 @@
       "max_torque": "8.7 Nm",
       "top_speed": "75 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Pleasure Plus Xtec", "price": "₹75,939" }
+        {
+          "name": "Pleasure Plus Xtec",
+          "price": "₹75,939"
+        }
       ],
-      "colors": ["Pearl Blue", "Copper Brown", "Matte Black", "Matte Vernier Grey"],
+      "colors": [
+        "Pearl Blue",
+        "Copper Brown",
+        "Matte Black",
+        "Matte Vernier Grey"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
         "displacement": "110.9 cc",
@@ -657,12 +918,28 @@
       "max_torque": "10.4 Nm",
       "top_speed": "85 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Destini 125 VX - OBD 2B", "price": "₹79,652" },
-        { "name": "Destini 125 ZX - OBD 2B", "price": "₹84,000" },
-        { "name": "Destini 125 ZX+ - OBD 2B", "price": "₹89,207" }
+        {
+          "name": "Destini 125 VX - OBD 2B",
+          "price": "₹79,652"
+        },
+        {
+          "name": "Destini 125 ZX - OBD 2B",
+          "price": "₹84,000"
+        },
+        {
+          "name": "Destini 125 ZX+ - OBD 2B",
+          "price": "₹89,207"
+        }
       ],
-      "colors": ["Eternal White", "Groovy Red", "Regal Black", "Cosmic Blue", "Mystique Magenta"],
+      "colors": [
+        "Eternal White",
+        "Groovy Red",
+        "Regal Black",
+        "Cosmic Blue",
+        "Mystique Magenta"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
         "displacement": "124.6 cc",
@@ -694,10 +971,19 @@
       "max_torque": "10.36 Nm",
       "top_speed": "85 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Destini Prime Standard", "price": "₹75,586" }
+        {
+          "name": "Destini Prime Standard",
+          "price": "₹75,586"
+        }
       ],
-      "colors": ["Panther Black", "Metallic Nexus Blue", "Nobel Red", "Pearl Silver White"],
+      "colors": [
+        "Panther Black",
+        "Metallic Nexus Blue",
+        "Nobel Red",
+        "Pearl Silver White"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
         "displacement": "124.6 cc",
@@ -728,12 +1014,29 @@
       "max_torque": "8.7 Nm",
       "top_speed": "87 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Xoom 110 VX - Drum - OBD 2B", "price": "₹76,780" },
-        { "name": "Xoom 110 ZX - Disc - OBD 2B", "price": "₹80,000" },
-        { "name": "Xoom 110 Combat Edition - OBD 2B", "price": "₹82,937" }
+        {
+          "name": "Xoom 110 VX - Drum - OBD 2B",
+          "price": "₹76,780"
+        },
+        {
+          "name": "Xoom 110 ZX - Disc - OBD 2B",
+          "price": "₹80,000"
+        },
+        {
+          "name": "Xoom 110 Combat Edition - OBD 2B",
+          "price": "₹82,937"
+        }
       ],
-      "colors": ["Pearl Silver White", "Polestar Blue", "Black", "Matte Abrax Orange", "Sports Red", "Matt Shadow Grey"],
+      "colors": [
+        "Pearl Silver White",
+        "Polestar Blue",
+        "Black",
+        "Matte Abrax Orange",
+        "Sports Red",
+        "Matt Shadow Grey"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
         "displacement": "110.9 cc",
@@ -765,11 +1068,23 @@
       "max_torque": "10.4 Nm",
       "top_speed": "95 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Xoom 125 VX", "price": "₹84,493" },
-        { "name": "Xoom 125 ZX", "price": "₹92,151" }
+        {
+          "name": "Xoom 125 VX",
+          "price": "₹84,493"
+        },
+        {
+          "name": "Xoom 125 ZX",
+          "price": "₹92,151"
+        }
       ],
-      "colors": ["Metallic Turbo Blue", "Matt Storm Grey", "Inferno Red", "Matt Neon Lime"],
+      "colors": [
+        "Metallic Turbo Blue",
+        "Matt Storm Grey",
+        "Inferno Red",
+        "Matt Neon Lime"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2, Single-cylinder",
         "displacement": "124.6 cc",
@@ -801,10 +1116,19 @@
       "max_torque": "14 Nm",
       "top_speed": "110 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Xoom 160 Standard", "price": "₹1,37,155" }
+        {
+          "name": "Xoom 160 Standard",
+          "price": "₹1,37,155"
+        }
       ],
-      "colors": ["Matte Rainforest Green", "Matte Volcanic Grey", "Summit White", "Canyon Red"],
+      "colors": [
+        "Matte Rainforest Green",
+        "Matte Volcanic Grey",
+        "Summit White",
+        "Canyon Red"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2, Single-cylinder",
         "displacement": "156 cc",

@@ -10,6 +10,7 @@
       "model": "Komaki Ranger",
       "variant_name": "Komaki Ranger",
       "price": "₹89,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "2 kW",
@@ -19,6 +20,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "35 Nm",
       "colors": ["Matte Grey", "Pearl White", "Glossy Black", "Red"],
       "variants": [
         { "name": "Komaki Ranger", "price": "₹89,999" }

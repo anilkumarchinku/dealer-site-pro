@@ -14,8 +14,13 @@
         "max_power": "8.8 bhp",
         "torque": "12.5 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "645 kg" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+      "payload_features": {
+        "gross_vehicle_weight": "645 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      }
     },
     {
       "variant_name": "Gem Paxx 3-Seater/Petrol",
@@ -26,8 +31,13 @@
         "max_power": "8.8 bhp",
         "torque": "12.5 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "645 kg" },
-      "technical_specifications": { "fuel_type": "Petrol", "transmission_type": "Manual" }
+      "payload_features": {
+        "gross_vehicle_weight": "645 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      }
     },
     {
       "variant_name": "Gem Paxx 3-Seater/LPG",
@@ -38,8 +48,13 @@
         "max_power": "8.8 bhp",
         "torque": "12.5 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "645 kg" },
-      "technical_specifications": { "fuel_type": "LPG", "transmission_type": "Manual" }
+      "payload_features": {
+        "gross_vehicle_weight": "645 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "transmission_type": "Manual"
+      }
     },
     {
       "variant_name": "Smart 3-Seater/CNG",
@@ -50,8 +65,13 @@
         "max_power": "8.8 bhp",
         "torque": "12.5 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "700 kg" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+      "payload_features": {
+        "gross_vehicle_weight": "700 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      }
     },
     {
       "variant_name": "Smart Cargo/CNG",
@@ -62,8 +82,13 @@
         "max_power": "8.8 bhp",
         "torque": "12.5 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "720 kg" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+      "payload_features": {
+        "gross_vehicle_weight": "720 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      }
     },
     {
       "variant_name": "Elite 3-Seater/CNG",
@@ -74,8 +99,13 @@
         "max_power": "9.9 bhp",
         "torque": "14 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "750 kg" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+      "payload_features": {
+        "gross_vehicle_weight": "750 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      }
     },
     {
       "variant_name": "Rik/Electric",
@@ -84,10 +114,15 @@
       "engine_details": {
         "displacement": "",
         "max_power": "12 kW",
-        "torque": ""
+        "torque": "25 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "620 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+      "payload_features": {
+        "gross_vehicle_weight": "620 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      }
     },
     {
       "variant_name": "E-Rik/Electric",
@@ -96,10 +131,15 @@
       "engine_details": {
         "displacement": "",
         "max_power": "15 kW",
-        "torque": ""
+        "torque": "40 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "680 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+      "payload_features": {
+        "gross_vehicle_weight": "680 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      }
     }
   ]
 }

@@ -10,6 +10,7 @@
       "model": "Rorr EZ",
       "variant_name": "Oben Rorr EZ",
       "price": "₹1,34,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "10 kW",
@@ -20,6 +21,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "140 Nm",
       "colors": ["Nebula Black", "Arctic White", "Titan Orange", "Cosmic Blue"],
       "variants": [
         { "name": "Rorr EZ 4.4 kWh", "price": "₹1,34,999" }

@@ -11,6 +11,8 @@
       "engine_displacement": "124 cc",
       "mileage": "47 kmpl",
       "max_power": "8.3 bhp",
+      "max_torque": "10 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Access 125 Standard", "price": "₹78,184" },
@@ -59,6 +61,8 @@
       "engine_displacement": "124 cc",
       "mileage": "49.6 kmpl",
       "max_power": "8.58 bhp",
+      "max_torque": "10 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Avenis 125 Standard", "price": "₹86,262" },
@@ -105,6 +109,8 @@
       "engine_displacement": "124 cc",
       "mileage": "50 kmpl",
       "max_power": "8.58 bhp",
+      "max_torque": "10 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Burgman Street 125 Standard - OBD 2B", "price": "₹93,676" },
@@ -155,6 +161,8 @@
       "engine_displacement": "155 cc",
       "mileage": "45 kmpl",
       "max_power": "13.41 bhp",
+      "max_torque": "13.8 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Gixxer Ride Connect - OBD 2B", "price": "₹1,28,892" },
@@ -199,6 +207,8 @@
       "engine_displacement": "155 cc",
       "mileage": "45 kmpl",
       "max_power": "13.4 bhp",
+      "max_torque": "13.8 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Gixxer SF Ride Connect - OBD 2B", "price": "₹1,37,594" },
@@ -243,6 +253,8 @@
       "engine_displacement": "249 cc",
       "mileage": "35 kmpl",
       "max_power": "26.13 bhp",
+      "max_torque": "22.6 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Gixxer 250 Standard", "price": "₹1,83,994" },
@@ -286,6 +298,8 @@
       "engine_displacement": "249 cc",
       "mileage": "36 kmpl",
       "max_power": "26.13 bhp",
+      "max_torque": "22.6 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Gixxer SF 250 Standard", "price": "₹1,92,245" },
@@ -330,6 +344,8 @@
       "engine_displacement": "249 cc",
       "mileage": "35 kmpl",
       "max_power": "26.13 bhp",
+      "max_torque": "22.6 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Gixxer SF 250 Flex Fuel Standard", "price": "₹2,00,791" }
@@ -370,6 +386,8 @@
       "engine_displacement": "249 cc",
       "mileage": "36 kmpl",
       "max_power": "26.1 bhp",
+      "max_torque": "22.6 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "V-Strom SX Standard", "price": "₹2,00,382" }
@@ -414,6 +432,8 @@
       "engine_displacement": "776 cc",
       "mileage": "23.8 kmpl",
       "max_power": "81.8 bhp",
+      "max_torque": "78 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "GSX-8R Standard", "price": "₹9,89,328" }
@@ -456,6 +476,8 @@
       "engine_displacement": "776 cc",
       "mileage": "22.7 kmpl",
       "max_power": "83 bhp",
+      "max_torque": "78 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "V-Strom 800 DE Standard", "price": "₹11,01,541" }
@@ -498,6 +520,8 @@
       "engine_displacement": "1340 cc",
       "mileage": "17 kmpl",
       "max_power": "190 bhp",
+      "max_torque": "187.7 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Hayabusa Standard", "price": "₹18,06,885" }

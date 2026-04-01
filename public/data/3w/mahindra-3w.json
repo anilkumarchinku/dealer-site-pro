@@ -14,8 +14,13 @@
         "max_power": "9.4 bhp",
         "torque": "13 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "699 kg" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+      "payload_features": {
+        "gross_vehicle_weight": "699 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      }
     },
     {
       "variant_name": "Alfa Dx 2005/3 Seater/Petrol",
@@ -26,8 +31,13 @@
         "max_power": "9.4 bhp",
         "torque": "13 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "699 kg" },
-      "technical_specifications": { "fuel_type": "Petrol", "transmission_type": "Manual" }
+      "payload_features": {
+        "gross_vehicle_weight": "699 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      }
     },
     {
       "variant_name": "Alfa Dx 2005/3 Seater/LPG",
@@ -38,8 +48,13 @@
         "max_power": "9.4 bhp",
         "torque": "13 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "699 kg" },
-      "technical_specifications": { "fuel_type": "LPG", "transmission_type": "Manual" }
+      "payload_features": {
+        "gross_vehicle_weight": "699 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "transmission_type": "Manual"
+      }
     },
     {
       "variant_name": "Alfa Plus/CNG",
@@ -50,8 +65,13 @@
         "max_power": "10.2 bhp",
         "torque": "14 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "800 kg" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+      "payload_features": {
+        "gross_vehicle_weight": "800 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      }
     },
     {
       "variant_name": "Alfa Plus/Petrol",
@@ -62,8 +82,13 @@
         "max_power": "10.2 bhp",
         "torque": "14 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "800 kg" },
-      "technical_specifications": { "fuel_type": "Petrol", "transmission_type": "Manual" }
+      "payload_features": {
+        "gross_vehicle_weight": "800 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      }
     },
     {
       "variant_name": "Alfa Plus/LPG",
@@ -74,8 +99,13 @@
         "max_power": "10.2 bhp",
         "torque": "14 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "800 kg" },
-      "technical_specifications": { "fuel_type": "LPG", "transmission_type": "Manual" }
+      "payload_features": {
+        "gross_vehicle_weight": "800 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "transmission_type": "Manual"
+      }
     },
     {
       "variant_name": "Treo/Electric",
@@ -84,10 +114,15 @@
       "engine_details": {
         "displacement": "",
         "max_power": "8 kW",
-        "torque": ""
+        "torque": "120 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "640 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+      "payload_features": {
+        "gross_vehicle_weight": "640 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      }
     },
     {
       "variant_name": "Treo Zor/Electric",
@@ -96,10 +131,15 @@
       "engine_details": {
         "displacement": "",
         "max_power": "12 kW",
-        "torque": ""
+        "torque": "120 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "970 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+      "payload_features": {
+        "gross_vehicle_weight": "970 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      }
     },
     {
       "variant_name": "e-Alfa Mini/Electric",
@@ -108,10 +148,15 @@
       "engine_details": {
         "displacement": "",
         "max_power": "3 kW",
-        "torque": ""
+        "torque": "42 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "550 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+      "payload_features": {
+        "gross_vehicle_weight": "550 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      }
     },
     {
       "variant_name": "e-Alfa/Electric",
@@ -120,10 +165,15 @@
       "engine_details": {
         "displacement": "",
         "max_power": "8 kW",
-        "torque": ""
+        "torque": "55 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "630 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+      "payload_features": {
+        "gross_vehicle_weight": "630 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      }
     }
   ]
 }

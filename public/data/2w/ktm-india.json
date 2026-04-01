@@ -11,6 +11,8 @@
       "engine_displacement": "164 cc",
       "mileage": "36 kmpl",
       "max_power": "18.73 bhp",
+      "max_torque": "15.5 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "RC 160 Standard", "price": "₹1,84,998" }
@@ -51,6 +53,8 @@
       "engine_displacement": "164 cc",
       "mileage": "36 kmpl",
       "max_power": "18.73 bhp",
+      "max_torque": "15.5 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "160 Duke LCD Cluster", "price": "₹1,70,545" },
@@ -92,6 +96,8 @@
       "engine_displacement": "200 cc",
       "mileage": "43.5 kmpl",
       "max_power": "24.6 bhp",
+      "max_torque": "19.5 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "RC 200 GP Edition", "price": "₹2,16,217" },
@@ -134,6 +140,8 @@
       "engine_displacement": "200 cc",
       "mileage": "35 kmpl",
       "max_power": "24.67 bhp",
+      "max_torque": "19.5 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "200 Duke Standard", "price": "₹1,94,149" },
@@ -178,6 +186,8 @@
       "engine_displacement": "249 cc",
       "mileage": "31 kmpl",
       "max_power": "30.57 bhp",
+      "max_torque": "24 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "250 Duke Standard", "price": "₹2,13,970" }
@@ -220,6 +230,8 @@
       "engine_displacement": "249 cc",
       "mileage": "32 kmpl",
       "max_power": "30.5 bhp",
+      "max_torque": "24 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "250 Adventure Standard", "price": "₹2,42,135" }
@@ -260,6 +272,8 @@
       "engine_displacement": "373 cc",
       "mileage": "29 kmpl",
       "max_power": "42.9 bhp",
+      "max_torque": "39 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "RC 390 GP Edition", "price": "₹3,23,068" },
@@ -305,6 +319,8 @@
       "engine_displacement": "399 cc",
       "mileage": "28.4 kmpl",
       "max_power": "45.3 bhp",
+      "max_torque": "39 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "390 Duke Standard", "price": "₹2,99,896" }
@@ -348,6 +364,8 @@
       "engine_displacement": "399 cc",
       "mileage": "27 kmpl",
       "max_power": "45.3 bhp",
+      "max_torque": "39 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "390 Adventure Standard", "price": "₹3,97,316" }
@@ -390,6 +408,8 @@
       "engine_displacement": "399 cc",
       "mileage": "27 kmpl",
       "max_power": "44.2 bhp",
+      "max_torque": "39 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "390 Adventure R Standard", "price": "₹3,78,524" }
@@ -428,6 +448,8 @@
       "engine_displacement": "399 cc",
       "mileage": "29 kmpl",
       "max_power": "45.3 bhp",
+      "max_torque": "39 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "390 Adventure X Standard", "price": "₹3,28,615" }
@@ -467,6 +489,8 @@
       "engine_displacement": "399 cc",
       "mileage": "27 kmpl",
       "max_power": "45.37 bhp",
+      "max_torque": "39 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "390 Enduro R Standard", "price": "₹3,41,763" },
@@ -506,6 +530,8 @@
       "engine_displacement": "889 cc",
       "mileage": "21 kmpl",
       "max_power": "119 bhp",
+      "max_torque": "99 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "890 Duke R Standard", "price": "₹14,50,000" }
@@ -546,6 +572,8 @@
       "engine_displacement": "1350 cc",
       "mileage": "29 kmpl",
       "max_power": "187.7 bhp",
+      "max_torque": "145 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "1390 Super Duke R Standard", "price": "₹22,95,800" }

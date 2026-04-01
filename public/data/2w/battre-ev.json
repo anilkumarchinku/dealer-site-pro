@@ -10,6 +10,7 @@
       "model": "EM",
       "variant_name": "Battre Electric EM",
       "price": "₹79,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -19,6 +20,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "40 Nm",
       "colors": ["Gloss Black", "Ivory White", "Marine Blue", "Burgundy Red"],
       "variants": [
         { "name": "EM", "price": "₹79,999" }
@@ -29,6 +31,7 @@
       "model": "One",
       "variant_name": "Battre Electric One",
       "price": "₹69,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.2 kW",
@@ -38,6 +41,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "40 Nm",
       "colors": ["Gloss Black", "Ivory White", "Marine Blue", "Burgundy Red"],
       "variants": [
         { "name": "One", "price": "₹69,999" }
@@ -48,6 +52,7 @@
       "model": "Yelo",
       "variant_name": "Battre Electric Yelo",
       "price": "₹59,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.0 kW",
@@ -57,6 +62,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "40 Nm",
       "colors": ["Gloss Black", "Ivory White", "Marine Blue", "Burgundy Red"],
       "variants": [
         { "name": "Yelo", "price": "₹59,999" }
@@ -67,6 +73,7 @@
       "model": "Smart",
       "variant_name": "Battre Electric Smart",
       "price": "₹64,999",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.2 kW",
@@ -76,6 +83,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "40 Nm",
       "colors": ["Gloss Black", "Ivory White", "Marine Blue", "Burgundy Red"],
       "variants": [
         { "name": "Smart", "price": "₹64,999" }

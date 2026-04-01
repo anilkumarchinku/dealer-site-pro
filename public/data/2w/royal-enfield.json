@@ -11,6 +11,8 @@
       "engine_displacement": "349 cc",
       "mileage": "35 kmpl",
       "max_power": "20.2 bhp",
+      "max_torque": "27 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Classic 350 Redditch", "price": "₹1,82,658" },
@@ -58,6 +60,8 @@
       "engine_displacement": "349 cc",
       "mileage": "36.2 kmpl",
       "max_power": "20.2 bhp",
+      "max_torque": "27 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Hunter 350 Standard", "price": "₹1,37,640" },
@@ -99,6 +103,8 @@
       "engine_displacement": "349 cc",
       "mileage": "35 kmpl",
       "max_power": "20.2 bhp",
+      "max_torque": "28 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Bullet 350 Battalion Black", "price": "₹1,62,025" },
@@ -140,6 +146,8 @@
       "engine_displacement": "349 cc",
       "mileage": "32 kmpl",
       "max_power": "20.2 bhp",
+      "max_torque": "27 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Meteor 350 Fireball", "price": "₹1,95,762" },
@@ -191,6 +199,8 @@
       "engine_displacement": "349 cc",
       "mileage": "36.2 kmpl",
       "max_power": "20.2 bhp",
+      "max_torque": "27 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Goan Classic 350 Single Tone", "price": "₹2,19,787" },
@@ -228,6 +238,8 @@
       "engine_displacement": "443 cc",
       "mileage": "29.5 kmpl",
       "max_power": "25.4 bhp",
+      "max_torque": "34 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Scram 440 Trail", "price": "₹2,23,131" },
@@ -266,6 +278,8 @@
       "engine_displacement": "452 cc",
       "mileage": "29 kmpl",
       "max_power": "39.47 bhp",
+      "max_torque": "40 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Himalayan 450 Base", "price": "₹3,05,736" },
@@ -314,6 +328,8 @@
       "engine_displacement": "452 cc",
       "mileage": "29 kmpl",
       "max_power": "39.47 bhp",
+      "max_torque": "40 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Guerrilla 450 Dash - Twilight Blue", "price": "₹2,49,194" },
@@ -363,6 +379,8 @@
       "engine_displacement": "648 cc",
       "mileage": "23 kmpl",
       "max_power": "47 bhp",
+      "max_torque": "52.3 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Interceptor 650 Standard", "price": "₹3,35,394" },
@@ -409,6 +427,8 @@
       "engine_displacement": "648 cc",
       "mileage": "25 kmpl",
       "max_power": "47 bhp",
+      "max_torque": "52.3 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Continental GT 650 Standard", "price": "₹3,53,105" },
@@ -453,6 +473,8 @@
       "engine_displacement": "648 cc",
       "mileage": "23.7 kmpl",
       "max_power": "46.3 bhp",
+      "max_torque": "52.3 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Super Meteor 650 Astral", "price": "₹4,02,965" },
@@ -498,6 +520,8 @@
       "engine_displacement": "648 cc",
       "mileage": "22 kmpl",
       "max_power": "46.39 bhp",
+      "max_torque": "52.3 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Shotgun 650 Custom Shed", "price": "₹3,98,017" },
@@ -543,6 +567,8 @@
       "engine_displacement": "648 cc",
       "mileage": "26 kmpl",
       "max_power": "46.39 bhp",
+      "max_torque": "52.3 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Classic 650 Hotrod", "price": "₹3,64,856" },
@@ -586,6 +612,8 @@
       "engine_displacement": "648 cc",
       "mileage": "22 kmpl",
       "max_power": "46.8 bhp",
+      "max_torque": "52.3 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Bear 650 Broadwalk White", "price": "₹3,75,393" },

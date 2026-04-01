@@ -12,6 +12,11 @@
       "colors": [
         "Red/Black",
         "Black/Grey"
+      ],
+      "fuel_type": "Petrol",
+      "max_torque": "22 Nm",
+      "variants": [
+        { "name": "SR250 Standard", "price": "₹1,99,900" }
       ]
     },
     {
@@ -26,6 +31,10 @@
       "colors": [
         "Red/Black",
         "Yellow/Black"
+      ],
+      "fuel_type": "Petrol",
+      "variants": [
+        { "name": "ZW25R Standard", "price": "₹2,19,900" }
       ]
     }
   ]

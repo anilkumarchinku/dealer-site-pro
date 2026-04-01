@@ -10,6 +10,7 @@
       "model": "S1",
       "variant_name": "iVOOMi Energy S1",
       "price": "₹68,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.2 kW",
@@ -19,6 +20,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "42 Nm",
       "colors": ["Ice White", "Midnight Black", "Royal Blue", "Peppy Pink"],
       "variants": [
         { "name": "S1", "price": "₹68,990" }
@@ -29,6 +31,7 @@
       "model": "S1 Pro",
       "variant_name": "iVOOMi Energy S1 Pro",
       "price": "₹75,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.2 kW",
@@ -38,6 +41,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "42 Nm",
       "colors": ["Ice White", "Midnight Black", "Royal Blue", "Peppy Pink"],
       "variants": [
         { "name": "S1 Pro", "price": "₹75,990" }
@@ -48,6 +52,7 @@
       "model": "Energy",
       "variant_name": "iVOOMi Energy Energy",
       "price": "₹79,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -57,6 +62,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "42 Nm",
       "colors": ["Ice White", "Midnight Black", "Royal Blue", "Peppy Pink"],
       "variants": [
         { "name": "Energy", "price": "₹79,990" }

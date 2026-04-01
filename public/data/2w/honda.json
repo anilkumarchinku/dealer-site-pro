@@ -2,7 +2,7 @@
   "brand": "Honda",
   "brandId": "honda",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -16,10 +16,19 @@
       "max_torque": "11.2 Nm",
       "top_speed": "110 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "CB125 Hornet Standard", "price": "₹1,14,423" }
+        {
+          "name": "CB125 Hornet Standard",
+          "price": "₹1,14,423"
+        }
       ],
-      "colors": ["Pearl Siren Blue with Sports Red", "Pearl Siren Blue with Athletic Blue Metallic", "Pearl Igneous Black", "Pearl Siren Blue with Lemon Ice Yellow"],
+      "colors": [
+        "Pearl Siren Blue with Sports Red",
+        "Pearl Siren Blue with Athletic Blue Metallic",
+        "Pearl Igneous Black",
+        "Pearl Siren Blue with Lemon Ice Yellow"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder, Air-cooled",
         "displacement": "123.94 cc",
@@ -50,12 +59,30 @@
       "max_torque": "10.9 Nm",
       "top_speed": "100 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "SP 125 Drum", "price": "₹88,750" },
-        { "name": "SP 125 Disc", "price": "₹92,000" },
-        { "name": "SP 125 25-year Anniversary Edition", "price": "₹95,611" }
+        {
+          "name": "SP 125 Drum",
+          "price": "₹88,750"
+        },
+        {
+          "name": "SP 125 Disc",
+          "price": "₹92,000"
+        },
+        {
+          "name": "SP 125 25-year Anniversary Edition",
+          "price": "₹95,611"
+        }
       ],
-      "colors": ["Matte Marvel Blue Metallic", "Black", "Pearl Siren Blue", "Matte Axis Gray Metallic", "Imperial Red Metallic", "Mat Steel Black Metallic (Anniversary)", "Pearl Siren Blue (Anniversary)"],
+      "colors": [
+        "Matte Marvel Blue Metallic",
+        "Black",
+        "Pearl Siren Blue",
+        "Matte Axis Gray Metallic",
+        "Imperial Red Metallic",
+        "Mat Steel Black Metallic (Anniversary)",
+        "Pearl Siren Blue (Anniversary)"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
         "displacement": "123.94 cc",
@@ -85,12 +112,30 @@
       "max_torque": "11 Nm",
       "top_speed": "102 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Shine Drum", "price": "₹81,794" },
-        { "name": "Shine Disc", "price": "₹84,500" },
-        { "name": "Shine Limited Edition", "price": "₹87,186" }
+        {
+          "name": "Shine Drum",
+          "price": "₹81,794"
+        },
+        {
+          "name": "Shine Disc",
+          "price": "₹84,500"
+        },
+        {
+          "name": "Shine Limited Edition",
+          "price": "₹87,186"
+        }
       ],
-      "colors": ["Pearl Siren Blue", "Pearl Igneous Black", "Decent Blue Metallic", "Genny Grey Metallic", "Matte Axis Gray Metallic", "Rebel Red Metallic", "Pearl Siren Blue - Ltd Edition"],
+      "colors": [
+        "Pearl Siren Blue",
+        "Pearl Igneous Black",
+        "Decent Blue Metallic",
+        "Genny Grey Metallic",
+        "Matte Axis Gray Metallic",
+        "Rebel Red Metallic",
+        "Pearl Siren Blue - Ltd Edition"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
         "displacement": "123.94 cc",
@@ -120,11 +165,28 @@
       "max_torque": "8.05 Nm",
       "top_speed": "85 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Shine 100 Drum", "price": "₹65,557" },
-        { "name": "Shine 100 Drum Alloy", "price": "₹71,511" }
+        {
+          "name": "Shine 100 Drum",
+          "price": "₹65,557"
+        },
+        {
+          "name": "Shine 100 Drum Alloy",
+          "price": "₹71,511"
+        }
       ],
-      "colors": ["Orange with Black", "Green with Black", "Gray with Black", "Blue with Black", "Red with Black", "Geny Gray Metallic", "Athletic Blue Metallic", "Pearl Igneous Black", "Imperial Red Metallic"],
+      "colors": [
+        "Orange with Black",
+        "Green with Black",
+        "Gray with Black",
+        "Blue with Black",
+        "Red with Black",
+        "Geny Gray Metallic",
+        "Athletic Blue Metallic",
+        "Pearl Igneous Black",
+        "Imperial Red Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
         "displacement": "98.98 cc",
@@ -155,10 +217,18 @@
       "max_torque": "14.58 Nm",
       "top_speed": "106 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Unicorn Standard", "price": "₹1,12,898" }
+        {
+          "name": "Unicorn Standard",
+          "price": "₹1,12,898"
+        }
       ],
-      "colors": ["Radiant Red Metallic", "Mat Axis Gray Metallic", "Pearl Igneous Black"],
+      "colors": [
+        "Radiant Red Metallic",
+        "Mat Axis Gray Metallic",
+        "Pearl Igneous Black"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2, Single-cylinder",
         "displacement": "162.71 cc",
@@ -188,11 +258,22 @@
       "max_torque": "9.3 Nm",
       "top_speed": "85 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Livo Drum", "price": "₹80,220" },
-        { "name": "Livo Disc", "price": "₹82,787" }
+        {
+          "name": "Livo Drum",
+          "price": "₹80,220"
+        },
+        {
+          "name": "Livo Disc",
+          "price": "₹82,787"
+        }
       ],
-      "colors": ["Pearl Siren Blue A with Green Stripes", "Pearl Igneous Black with Blue Stripes", "Pearl Igneous Black with Orange Stripes"],
+      "colors": [
+        "Pearl Siren Blue A with Green Stripes",
+        "Pearl Igneous Black with Blue Stripes",
+        "Pearl Igneous Black with Orange Stripes"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
         "displacement": "109.51 cc",
@@ -223,11 +304,23 @@
       "max_torque": "14.58 Nm",
       "top_speed": "110 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "SP160 Single Disc", "price": "₹1,15,556" },
-        { "name": "SP160 Double Disc", "price": "₹1,21,066" }
+        {
+          "name": "SP160 Single Disc",
+          "price": "₹1,15,556"
+        },
+        {
+          "name": "SP160 Double Disc",
+          "price": "₹1,21,066"
+        }
       ],
-      "colors": ["Athletic Blue Metallic", "Radiant Red Metallic", "Pearl Deep Ground Gray", "Pearl Igneous Black"],
+      "colors": [
+        "Athletic Blue Metallic",
+        "Radiant Red Metallic",
+        "Pearl Deep Ground Gray",
+        "Pearl Igneous Black"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2, Single-cylinder",
         "displacement": "162.71 cc",
@@ -257,10 +350,18 @@
       "max_torque": "15.7 Nm",
       "top_speed": "130 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "NX200 Standard", "price": "₹1,57,748" }
+        {
+          "name": "NX200 Standard",
+          "price": "₹1,57,748"
+        }
       ],
-      "colors": ["Pearl Igneous Black", "Radiant Red Metallic", "Athletic Blue Metallic"],
+      "colors": [
+        "Pearl Igneous Black",
+        "Radiant Red Metallic",
+        "Athletic Blue Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
         "displacement": "184.4 cc",
@@ -291,10 +392,18 @@
       "max_torque": "16.1 Nm",
       "top_speed": "120 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Hornet 2.0 Standard", "price": "₹1,28,000" }
+        {
+          "name": "Hornet 2.0 Standard",
+          "price": "₹1,28,000"
+        }
       ],
-      "colors": ["Pearl Igneous Black", "Radiant Red Metallic", "Mat Axis Grey Metallic"],
+      "colors": [
+        "Pearl Igneous Black",
+        "Radiant Red Metallic",
+        "Mat Axis Grey Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2, Single-cylinder",
         "displacement": "184.4 cc",
@@ -323,11 +432,22 @@
       "max_torque": "25.6 Nm",
       "top_speed": "155 kmph",
       "source_section": "Discontinued",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "CB300F Deluxe", "price": "₹1,70,037" },
-        { "name": "CB300F City", "price": "₹1,72,000" }
+        {
+          "name": "CB300F Deluxe",
+          "price": "₹1,70,037"
+        },
+        {
+          "name": "CB300F City",
+          "price": "₹1,72,000"
+        }
       ],
-      "colors": ["Mat Axis Grey Metallic", "Mat Marvel Blue Metallic", "Sports Red"],
+      "colors": [
+        "Mat Axis Grey Metallic",
+        "Mat Marvel Blue Metallic",
+        "Sports Red"
+      ],
       "technical_specifications": {
         "engine_type": "BS6, Single-cylinder, Oil Cooled, 4 Valves, DOHC",
         "displacement": "293.52 cc",
@@ -356,12 +476,27 @@
       "max_torque": "30 Nm",
       "top_speed": "125 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Hness CB350 DLX", "price": "₹1,92,326" },
-        { "name": "Hness CB350 DLX Pro", "price": "₹1,95,000" },
-        { "name": "Hness CB350 DLX Pro Chrome", "price": "₹1,97,414" }
+        {
+          "name": "Hness CB350 DLX",
+          "price": "₹1,92,326"
+        },
+        {
+          "name": "Hness CB350 DLX Pro",
+          "price": "₹1,95,000"
+        },
+        {
+          "name": "Hness CB350 DLX Pro Chrome",
+          "price": "₹1,97,414"
+        }
       ],
-      "colors": ["Pearl Igneous Black", "Pearl Deep Ground Grey", "Rebel Red Metallic", "Athletic Blue Metallic"],
+      "colors": [
+        "Pearl Igneous Black",
+        "Pearl Deep Ground Grey",
+        "Rebel Red Metallic",
+        "Athletic Blue Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
         "displacement": "348.36 cc",
@@ -391,11 +526,25 @@
       "max_torque": "30 Nm",
       "top_speed": "150 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "CB350RS DLX", "price": "₹1,97,414" },
-        { "name": "CB350RS DLX Pro", "price": "₹2,00,155" }
+        {
+          "name": "CB350RS DLX",
+          "price": "₹1,97,414"
+        },
+        {
+          "name": "CB350RS DLX Pro",
+          "price": "₹2,00,155"
+        }
       ],
-      "colors": ["Pearl Igneous Black - Dlx", "Pearl Deep Ground Grey - Dlx", "Rebel Red Metallic - Dlx Pro", "Pearl Igneous Black Yellow - Dlx Pro", "Pearl Deep Ground Grey - Dlx Pro", "Mat Axis Grey Metallic - Dlx Pro"],
+      "colors": [
+        "Pearl Igneous Black - Dlx",
+        "Pearl Deep Ground Grey - Dlx",
+        "Rebel Red Metallic - Dlx Pro",
+        "Pearl Igneous Black Yellow - Dlx Pro",
+        "Pearl Deep Ground Grey - Dlx Pro",
+        "Mat Axis Grey Metallic - Dlx Pro"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
         "displacement": "348.36 cc",
@@ -426,10 +575,18 @@
       "max_torque": "43 Nm",
       "top_speed": "180 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "NX500 Standard", "price": "₹6,32,126" }
+        {
+          "name": "NX500 Standard",
+          "price": "₹6,32,126"
+        }
       ],
-      "colors": ["Pearl Horizon White", "Matte Gunpowder Black Metallic", "Grand Prix Red"],
+      "colors": [
+        "Pearl Horizon White",
+        "Matte Gunpowder Black Metallic",
+        "Grand Prix Red"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2, Parallel-twin",
         "displacement": "471 cc",
@@ -460,10 +617,17 @@
       "max_torque": "63 Nm",
       "top_speed": "210 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "CB650R Standard", "price": "₹10,28,640" }
+        {
+          "name": "CB650R Standard",
+          "price": "₹10,28,640"
+        }
       ],
-      "colors": ["Candy Chromosphere Red", "Matte Gunpowder Black Metallic"],
+      "colors": [
+        "Candy Chromosphere Red",
+        "Matte Gunpowder Black Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Inline-four",
         "displacement": "649 cc",
@@ -492,10 +656,17 @@
       "max_torque": "63 Nm",
       "top_speed": "220 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "CBR650R Standard", "price": "₹11,14,362" }
+        {
+          "name": "CBR650R Standard",
+          "price": "₹11,14,362"
+        }
       ],
-      "colors": ["Matte Gunpowder Black Metallic", "Grand Prix Red"],
+      "colors": [
+        "Matte Gunpowder Black Metallic",
+        "Grand Prix Red"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Inline-four",
         "displacement": "649 cc",
@@ -523,10 +694,17 @@
       "max_torque": "75 Nm",
       "top_speed": "200 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "CB750 Hornet Standard", "price": "₹9,20,954" }
+        {
+          "name": "CB750 Hornet Standard",
+          "price": "₹9,20,954"
+        }
       ],
-      "colors": ["Matte Black Metallic", "Matte Pearl White"],
+      "colors": [
+        "Matte Black Metallic",
+        "Matte Pearl White"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Parallel-twin",
         "displacement": "755 cc",
@@ -556,10 +734,17 @@
       "max_torque": "75 Nm",
       "top_speed": "180 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Transalp XL750 Standard", "price": "₹11,78,649" }
+        {
+          "name": "Transalp XL750 Standard",
+          "price": "₹11,78,649"
+        }
       ],
-      "colors": ["Graphite Black", "Ross White"],
+      "colors": [
+        "Graphite Black",
+        "Ross White"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Parallel-twin",
         "displacement": "755 cc",
@@ -590,10 +775,16 @@
       "max_torque": "107 Nm",
       "top_speed": "240 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "CB1000 Hornet Standard", "price": "₹13,29,329" }
+        {
+          "name": "CB1000 Hornet Standard",
+          "price": "₹13,29,329"
+        }
       ],
-      "colors": ["Matte Black Metallic"],
+      "colors": [
+        "Matte Black Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Inline-four",
         "displacement": "999 cc",
@@ -622,10 +813,16 @@
       "max_torque": "113 Nm",
       "top_speed": "299 kmph",
       "source_section": "Discontinued",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "CBR1000RR-R Fireblade SP", "price": "₹31,18,331" }
+        {
+          "name": "CBR1000RR-R Fireblade SP",
+          "price": "₹31,18,331"
+        }
       ],
-      "colors": ["Grand Prix Red"],
+      "colors": [
+        "Grand Prix Red"
+      ],
       "technical_specifications": {
         "engine_type": "Inline-four, Liquid-cooled, 4-valve",
         "displacement": "1000 cc",
@@ -654,10 +851,16 @@
       "max_torque": "170 Nm",
       "top_speed": "180 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Goldwing Tour DCT", "price": "₹43,12,654" }
+        {
+          "name": "Goldwing Tour DCT",
+          "price": "₹43,12,654"
+        }
       ],
-      "colors": ["Candy Ardent Red"],
+      "colors": [
+        "Candy Ardent Red"
+      ],
       "technical_specifications": {
         "engine_type": "Flat-six, Liquid-cooled",
         "displacement": "1833 cc",
@@ -685,13 +888,33 @@
       "max_torque": "9 Nm",
       "top_speed": "83 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Activa Standard", "price": "₹78,004" },
-        { "name": "Activa Deluxe", "price": "₹80,500" },
-        { "name": "Activa H-Smart", "price": "₹82,000" },
-        { "name": "Activa 25-year Anniversary Edition", "price": "₹83,500" }
+        {
+          "name": "Activa Standard",
+          "price": "₹78,004"
+        },
+        {
+          "name": "Activa Deluxe",
+          "price": "₹80,500"
+        },
+        {
+          "name": "Activa H-Smart",
+          "price": "₹82,000"
+        },
+        {
+          "name": "Activa 25-year Anniversary Edition",
+          "price": "₹83,500"
+        }
       ],
-      "colors": ["Pearl Siren Blue", "Pearl Igneous Black", "Pearl Precious White", "Mat Axis Gray Metallic", "Imperial Red Metallic", "Rebel Red Metallic"],
+      "colors": [
+        "Pearl Siren Blue",
+        "Pearl Igneous Black",
+        "Pearl Precious White",
+        "Mat Axis Gray Metallic",
+        "Imperial Red Metallic",
+        "Rebel Red Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2, Single-cylinder",
         "displacement": "109.51 cc",
@@ -721,12 +944,31 @@
       "max_torque": "10.5 Nm",
       "top_speed": "90 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Activa 125 25-year Anniversary Edition", "price": "₹92,297" },
-        { "name": "Activa 125 DLX", "price": "₹94,800" },
-        { "name": "Activa 125 H-Smart", "price": "₹97,372" }
+        {
+          "name": "Activa 125 25-year Anniversary Edition",
+          "price": "₹92,297"
+        },
+        {
+          "name": "Activa 125 DLX",
+          "price": "₹94,800"
+        },
+        {
+          "name": "Activa 125 H-Smart",
+          "price": "₹97,372"
+        }
       ],
-      "colors": ["Mat Axis Gray Metallic", "Pearl Deep Ground Gray", "Pearl Igneous Black", "Pearl Precious White", "Pearl Siren Blue", "Rebel Red Metallic", "Mat Steel Black Metallic (Anniversary)", "Pearl Siren Blue (Anniversary)"],
+      "colors": [
+        "Mat Axis Gray Metallic",
+        "Pearl Deep Ground Gray",
+        "Pearl Igneous Black",
+        "Pearl Precious White",
+        "Pearl Siren Blue",
+        "Rebel Red Metallic",
+        "Mat Steel Black Metallic (Anniversary)",
+        "Pearl Siren Blue (Anniversary)"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2, Single-cylinder",
         "displacement": "123.92 cc",
@@ -754,14 +996,27 @@
       "engine_displacement": "Electric",
       "mileage": "102 km range",
       "max_power": "6 kW",
-      "max_torque": "",
+      "max_torque": "22 Nm",
       "top_speed": "80 kmph",
       "source_section": "Available",
+      "fuel_type": "Electric",
       "variants": [
-        { "name": "Activa e Standard", "price": "₹1,19,445" },
-        { "name": "Activa e Honda RoadSync Duo", "price": "₹1,52,463" }
+        {
+          "name": "Activa e Standard",
+          "price": "₹1,19,445"
+        },
+        {
+          "name": "Activa e Honda RoadSync Duo",
+          "price": "₹1,52,463"
+        }
       ],
-      "colors": ["Pearl Igneous Black", "Matt Foggy Silver Metallic", "Pearl Serenity Blue", "Pearl Misty White", "Pearl Shallow Blue"],
+      "colors": [
+        "Pearl Igneous Black",
+        "Matt Foggy Silver Metallic",
+        "Pearl Serenity Blue",
+        "Pearl Misty White",
+        "Pearl Shallow Blue"
+      ],
       "technical_specifications": {
         "motor_type": "Electric",
         "power": "6 kW",
@@ -787,11 +1042,24 @@
       "max_torque": "9.03 Nm",
       "top_speed": "83 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Dio Standard", "price": "₹74,136" },
-        { "name": "Dio Deluxe", "price": "₹85,801" }
+        {
+          "name": "Dio Standard",
+          "price": "₹74,136"
+        },
+        {
+          "name": "Dio Deluxe",
+          "price": "₹85,801"
+        }
       ],
-      "colors": ["Pearl Igneous Black + Pearl Deep Ground Gray", "Pearl Igneous Black", "Mat Marvel Blue", "Mat Axis Gray Metallic", "Imperial Red Metallic"],
+      "colors": [
+        "Pearl Igneous Black + Pearl Deep Ground Gray",
+        "Pearl Igneous Black",
+        "Mat Marvel Blue",
+        "Mat Axis Gray Metallic",
+        "Imperial Red Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
         "displacement": "109.51 cc",
@@ -821,12 +1089,30 @@
       "max_torque": "10.5 Nm",
       "top_speed": "95 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "Dio 125 Standard", "price": "₹92,760" },
-        { "name": "Dio 125 X Edition", "price": "₹95,000" },
-        { "name": "Dio 125 H-Smart", "price": "₹97,711" }
+        {
+          "name": "Dio 125 Standard",
+          "price": "₹92,760"
+        },
+        {
+          "name": "Dio 125 X Edition",
+          "price": "₹95,000"
+        },
+        {
+          "name": "Dio 125 H-Smart",
+          "price": "₹97,711"
+        }
       ],
-      "colors": ["Pearl Deep Ground Gray (Stripe)", "Imperial Red", "Pearl Igneous Black", "Pearl Sports Yellow", "Mat Marvel Blue Metallic", "Pearl Deep Ground Gray (Emblem)", "Pearl Siren Blue and Pearl Deep Ground Gray"],
+      "colors": [
+        "Pearl Deep Ground Gray (Stripe)",
+        "Imperial Red",
+        "Pearl Igneous Black",
+        "Pearl Sports Yellow",
+        "Mat Marvel Blue Metallic",
+        "Pearl Deep Ground Gray (Emblem)",
+        "Pearl Siren Blue and Pearl Deep Ground Gray"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
         "displacement": "123.92 cc",
@@ -853,13 +1139,23 @@
       "engine_displacement": "Electric",
       "mileage": "80 km range",
       "max_power": "1.8 kW",
-      "max_torque": "",
+      "max_torque": "8 Nm",
       "top_speed": "50 kmph",
       "source_section": "Available",
+      "fuel_type": "Electric",
       "variants": [
-        { "name": "QC1 Standard", "price": "₹90,001" }
+        {
+          "name": "QC1 Standard",
+          "price": "₹90,001"
+        }
       ],
-      "colors": ["Pearl Igneous Black", "Pearl Misty White", "Matt Foggy Silver Metallic", "Pearl Shallow Blue", "Pearl Serenity Blue"],
+      "colors": [
+        "Pearl Igneous Black",
+        "Pearl Misty White",
+        "Matt Foggy Silver Metallic",
+        "Pearl Shallow Blue",
+        "Pearl Serenity Blue"
+      ],
       "technical_specifications": {
         "motor_type": "Electric",
         "power": "1.8 kW",
@@ -885,10 +1181,17 @@
       "max_torque": "69 Nm",
       "top_speed": "170 kmph",
       "source_section": "Available",
+      "fuel_type": "Petrol",
       "variants": [
-        { "name": "X-ADV 750 Standard", "price": "₹12,50,000" }
+        {
+          "name": "X-ADV 750 Standard",
+          "price": "₹12,50,000"
+        }
       ],
-      "colors": ["Mat Gunpowder Black Metallic", "Grand Prix Red"],
+      "colors": [
+        "Mat Gunpowder Black Metallic",
+        "Grand Prix Red"
+      ],
       "technical_specifications": {
         "engine_type": "Parallel-twin, Liquid-cooled",
         "displacement": "745 cc",

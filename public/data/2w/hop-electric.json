@@ -10,6 +10,7 @@
       "model": "Leo",
       "variant_name": "Hop Electric Leo",
       "price": "₹89,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -19,6 +20,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "38 Nm",
       "colors": ["Sky Blue", "Jet Black", "Pearl White", "Sporty Red"],
       "variants": [
         { "name": "Leo", "price": "₹89,990" }
@@ -29,6 +31,7 @@
       "model": "LYF",
       "variant_name": "Hop Electric LYF",
       "price": "₹79,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -38,6 +41,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "38 Nm",
       "colors": ["Sky Blue", "Jet Black", "Pearl White", "Sporty Red"],
       "variants": [
         { "name": "LYF", "price": "₹79,990" }

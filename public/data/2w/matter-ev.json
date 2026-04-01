@@ -10,6 +10,7 @@
       "model": "Aera 5000+",
       "variant_name": "Matter Aera 5000+",
       "price": "₹1,48,000",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "11.5 kW",
@@ -19,6 +20,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "520 Nm",
       "colors": ["Matte Black", "Vivid Blue", "Aurora Green", "Flash Yellow"],
       "variants": [
         { "name": "Aera 5000+", "price": "₹1,48,000" }
@@ -29,6 +31,7 @@
       "model": "Aera 6000+",
       "variant_name": "Matter Aera 6000+",
       "price": "₹1,73,000",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "11.5 kW",
@@ -38,6 +41,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "520 Nm",
       "colors": ["Matte Black", "Vivid Blue", "Aurora Green", "Flash Yellow"],
       "variants": [
         { "name": "Aera 6000+", "price": "₹1,73,000" }

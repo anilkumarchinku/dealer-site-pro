@@ -10,6 +10,7 @@
       "model": "Faast F4",
       "variant_name": "Okaya EV Faast F4",
       "price": "₹99,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -19,6 +20,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "45 Nm",
       "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
       "variants": [
         { "name": "Faast F4", "price": "₹99,990" }
@@ -29,6 +31,7 @@
       "model": "Faast F2B",
       "variant_name": "Okaya EV Faast F2B",
       "price": "₹89,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -38,6 +41,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "45 Nm",
       "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
       "variants": [
         { "name": "Faast F2B", "price": "₹89,990" }
@@ -48,6 +52,7 @@
       "model": "Classiq Pro",
       "variant_name": "Okaya EV Classiq Pro",
       "price": "₹79,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -57,6 +62,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "30 Nm",
       "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
       "variants": [
         { "name": "Classiq Pro", "price": "₹79,990" }
@@ -67,6 +73,7 @@
       "model": "Ferrato Connect",
       "variant_name": "Okaya EV Ferrato Connect",
       "price": "₹1,09,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -76,6 +83,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "45 Nm",
       "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
       "variants": [
         { "name": "Ferrato Connect", "price": "₹1,09,990" }
@@ -86,6 +94,7 @@
       "model": "Hunk H1",
       "variant_name": "Okaya EV Hunk H1",
       "price": "₹99,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -95,6 +104,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "45 Nm",
       "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
       "variants": [
         { "name": "Hunk H1", "price": "₹99,990" }
@@ -105,6 +115,7 @@
       "model": "Motofaast",
       "variant_name": "Okaya EV Motofaast",
       "price": "₹1,14,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -114,6 +125,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "45 Nm",
       "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
       "variants": [
         { "name": "Motofaast", "price": "₹1,14,990" }

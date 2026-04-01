@@ -10,6 +10,7 @@
       "model": "450 Apex",
       "variant_name": "Ather 450 Apex",
       "price": "₹1,74,490",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "6 kW",
@@ -20,6 +21,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "26 Nm",
       "colors": ["Cosmic Black", "Lunar Grey", "Pearl White", "Salt White", "Aurora Blue"],
       "variants": [
         { "name": "450 Apex 5.4 kWh", "price": "₹1,74,490" }
@@ -30,6 +32,7 @@
       "model": "450X",
       "variant_name": "Ather 450X",
       "price": "₹1,34,990 - ₹1,51,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "6 kW",
@@ -40,6 +43,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "26 Nm",
       "colors": ["Cosmic Black", "Lunar Grey", "Pearl White", "Salt White", "Aurora Blue", "Indigo Blue", "Pop Neon", "Coral", "Turquoise"],
       "variants": [
         { "name": "450X 2.9 kWh", "price": "₹1,34,990" },
@@ -51,6 +55,7 @@
       "model": "450S",
       "variant_name": "Ather 450S",
       "price": "₹1,17,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "5 kW",
@@ -61,6 +66,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "22 Nm",
       "colors": ["Cosmic Black", "Lunar Grey", "Pearl White", "Salt White", "Indigo Blue"],
       "variants": [
         { "name": "450S 2.9 kWh", "price": "₹1,17,990" }
@@ -71,6 +77,7 @@
       "model": "Rizta",
       "variant_name": "Ather Rizta",
       "price": "₹1,09,990 - ₹1,19,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "6 kW",
@@ -81,6 +88,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "22 Nm",
       "colors": ["Cosmic Black", "Lunar Grey", "Pearl White", "Salt White", "Aurora Blue", "Pop Neon", "Coral", "Turquoise"],
       "variants": [
         { "name": "Rizta S 2.9 kWh", "price": "₹1,09,990" },

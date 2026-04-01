@@ -10,6 +10,7 @@
       "model": "Magnus Pro",
       "variant_name": "Ampere Magnus Pro",
       "price": "₹89,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -19,6 +20,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "17 Nm",
       "colors": ["Pearl White", "Midnight Black", "Urban Blue", "Fiery Red"],
       "variants": [
         { "name": "Magnus Pro", "price": "₹89,990" }
@@ -29,6 +31,7 @@
       "model": "Primus",
       "variant_name": "Ampere Primus",
       "price": "₹79,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -38,6 +41,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "17 Nm",
       "colors": ["Pearl White", "Midnight Black", "Urban Blue", "Fiery Red"],
       "variants": [
         { "name": "Primus", "price": "₹79,990" }
@@ -48,6 +52,7 @@
       "model": "Nexus",
       "variant_name": "Ampere Nexus",
       "price": "₹74,990",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "1.5 kW",
@@ -57,6 +62,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "42 Nm",
       "colors": ["Pearl White", "Midnight Black", "Urban Blue", "Fiery Red"],
       "variants": [
         { "name": "Nexus", "price": "₹74,990" }

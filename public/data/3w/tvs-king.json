@@ -14,8 +14,13 @@
         "max_power": "13 bhp",
         "torque": "15.5 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "703 kg" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+      "payload_features": {
+        "gross_vehicle_weight": "703 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      }
     },
     {
       "variant_name": "King LS+ Fi-4S/LPG",
@@ -26,8 +31,13 @@
         "max_power": "13 bhp",
         "torque": "15.5 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "703 kg" },
-      "technical_specifications": { "fuel_type": "LPG", "transmission_type": "Manual" }
+      "payload_features": {
+        "gross_vehicle_weight": "703 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "transmission_type": "Manual"
+      }
     },
     {
       "variant_name": "King GS+ Fi-4S/Petrol",
@@ -38,8 +48,13 @@
         "max_power": "13 bhp",
         "torque": "15.5 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "703 kg" },
-      "technical_specifications": { "fuel_type": "Petrol", "transmission_type": "Manual" }
+      "payload_features": {
+        "gross_vehicle_weight": "703 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      }
     },
     {
       "variant_name": "King Duramax 4S/Diesel",
@@ -50,8 +65,13 @@
         "max_power": "9 bhp",
         "torque": "18 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "785 kg" },
-      "technical_specifications": { "fuel_type": "Diesel", "transmission_type": "Manual" }
+      "payload_features": {
+        "gross_vehicle_weight": "785 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      }
     },
     {
       "variant_name": "King Deluxe Plus/CNG",
@@ -62,8 +82,13 @@
         "max_power": "13 bhp",
         "torque": "15.5 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "720 kg" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+      "payload_features": {
+        "gross_vehicle_weight": "720 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      }
     },
     {
       "variant_name": "King EV Max/Electric",
@@ -72,10 +97,15 @@
       "engine_details": {
         "displacement": "",
         "max_power": "11 kW",
-        "torque": ""
+        "torque": "75 Nm"
       },
-      "payload_features": { "gross_vehicle_weight": "660 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+      "payload_features": {
+        "gross_vehicle_weight": "660 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      }
     }
   ]
 }

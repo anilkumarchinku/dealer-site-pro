@@ -17,49 +17,80 @@ interface Props {
     params: Promise<{ slug: string }>
 }
 
+function generate2WFeatures(v: TwoWheelerVehicle): string[] {
+    const f: string[] = []
+    if (v.fuel_type === 'electric') {
+        f.push('Electric Motor', 'Zero Tailpipe Emissions', 'Low Running Cost')
+        if (v.range_km) f.push(`${v.range_km} km Range`)
+        if (v.battery_kwh) f.push(`${v.battery_kwh} kWh Battery`)
+    } else {
+        f.push('BS6 Compliant')
+        if (v.mileage_kmpl) f.push(`${v.mileage_kmpl} kmpl Mileage`)
+        else f.push('Fuel Efficient')
+    }
+    if (v.engine_cc) f.push(`${v.engine_cc} cc Engine`)
+    if (v.top_speed_kmph) f.push(`${v.top_speed_kmph} kmph Top Speed`)
+    if (v.max_power) f.push(`${v.max_power} Power`)
+    if (v.type === 'scooter') f.push('Under-Seat Storage', 'Comfortable Ride')
+    else if (v.type === 'electric') f.push('Eco-Friendly', 'Smart Connectivity')
+    else f.push('Sporty Design', 'Easy Handling')
+    return [...new Set(f)].slice(0, 8)
+}
+
 function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): Car[] {
-    return vehicles.map(v => ({
-        id: v.id,
-        make: v.brand,
-        model: v.model,
-        variant: v.variant ?? '',
-        year: v.year,
-        bodyType: v.type === 'scooter' ? 'Scooter' : v.type === 'electric' ? 'Electric' : 'Bike',
-        segment: 'B' as Car['segment'],
-        pricing: {
-            exShowroom: {
-                min: v.ex_showroom_price_paise > 0 ? Math.round(v.ex_showroom_price_paise / 100) : null,
-                max: v.ex_showroom_price_paise > 0 ? Math.round(v.ex_showroom_price_paise / 100) : null,
-                currency: 'INR' as const,
+    return vehicles.map(v => {
+        const priceINR = v.ex_showroom_price_paise > 0 ? Math.round(v.ex_showroom_price_paise / 100) : null
+        const fuelLabel = v.fuel_type === 'electric' ? 'Electric' : 'Petrol'
+        return {
+            id: v.id,
+            make: v.brand,
+            model: v.model,
+            variant: v.variant ?? '',
+            year: v.year,
+            bodyType: v.type === 'scooter' ? 'Scooter' : v.type === 'electric' ? 'Electric' : 'Bike',
+            segment: 'B' as Car['segment'],
+            pricing: {
+                exShowroom: { min: priceINR, max: priceINR, currency: 'INR' as const },
             },
-        },
-        engine: {
-            type: v.fuel_type === 'electric' ? 'Electric' : 'Petrol',
-            displacement: v.engine_cc,
-            batteryCapacity: v.battery_kwh,
-            power: '—',
-            torque: '—',
-        },
-        transmission: { type: v.transmission || 'Manual' },
-        performance: {
-            fuelEfficiency: v.mileage_kmpl ?? undefined,
-            topSpeed: v.top_speed_kmph ?? undefined,
-            range: v.range_km ?? undefined,
-        },
-        dimensions: { seatingCapacity: 2 },
-        vehicleCategory: '2w' as const,
-        features: { keyFeatures: v.features ?? [] },
-        images: {
-            hero: v.images?.[0] ?? '',
-            exterior: v.images ?? [],
-            interior: [],
-        },
-        meta: { viewCount: v.views ?? 0 },
-        price: v.ex_showroom_price_paise > 0
-            ? `₹${(v.ex_showroom_price_paise / 100).toLocaleString('en-IN')}`
-            : 'Price on request',
-        condition: 'new' as const,
-    }))
+            engine: {
+                type: fuelLabel,
+                displacement: v.engine_cc,
+                batteryCapacity: v.battery_kwh,
+                power: v.max_power || '',
+                torque: v.torque || '',
+            },
+            transmission: { type: v.transmission || 'Manual' },
+            performance: {
+                fuelEfficiency: v.mileage_kmpl ?? undefined,
+                topSpeed: v.top_speed_kmph ?? undefined,
+                range: v.range_km ?? undefined,
+            },
+            dimensions: { seatingCapacity: 2 },
+            vehicleCategory: '2w' as const,
+            features: { keyFeatures: v.features?.length ? v.features : generate2WFeatures(v) },
+            images: {
+                hero: v.images?.[0] ?? '',
+                exterior: v.images ?? [],
+                interior: [],
+            },
+            variants: [{
+                id: `${v.id}-v1`,
+                name: v.variant || `${v.model} Standard`,
+                price: priceINR ?? 0,
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                transmission: (v.transmission || 'Manual') as any,
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                fuelType: fuelLabel as any,
+                keyFeatures: generate2WFeatures(v).slice(0, 3),
+                isPopular: true,
+            }],
+            meta: { viewCount: v.views ?? 0 },
+            price: priceINR
+                ? `₹${priceINR.toLocaleString('en-IN')}`
+                : 'Price on request',
+            condition: 'new' as const,
+        }
+    })
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

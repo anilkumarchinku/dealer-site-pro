@@ -10,6 +10,7 @@
       "model": "KM3000",
       "variant_name": "Kabira KM3000",
       "price": "₹1,25,000",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "3 kW",
@@ -19,6 +20,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "80 Nm",
       "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
       "variants": [
         { "name": "KM3000", "price": "₹1,25,000" }
@@ -29,6 +31,7 @@
       "model": "KM4000",
       "variant_name": "Kabira KM4000",
       "price": "₹1,40,000",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "4 kW",
@@ -38,6 +41,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "80 Nm",
       "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
       "variants": [
         { "name": "KM4000", "price": "₹1,40,000" }
@@ -48,6 +52,7 @@
       "model": "Intercity Neo",
       "variant_name": "Kabira Intercity Neo",
       "price": "₹1,59,900",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "4 kW",
@@ -57,6 +62,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "80 Nm",
       "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
       "variants": [
         { "name": "Intercity Neo", "price": "₹1,59,900" }
@@ -67,6 +73,7 @@
       "model": "Intercity FS",
       "variant_name": "Kabira Intercity FS",
       "price": "₹1,74,900",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "5 kW",
@@ -76,6 +83,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "100 Nm",
       "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
       "variants": [
         { "name": "Intercity FS", "price": "₹1,74,900" }

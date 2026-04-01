@@ -10,6 +10,7 @@
       "model": "Chetak Premium",
       "variant_name": "Bajaj Chetak Premium",
       "price": "₹1,28,748",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "4.2 kW",
@@ -20,6 +21,7 @@
         "Fast Charging": "No",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "16 Nm",
       "colors": ["Cyber White", "Hazel Brown", "Blazing Black", "Manhattan Red", "Mist Silver", "Indigo Metallic"],
       "variants": [
         { "name": "Chetak Premium 3.8 kWh", "price": "₹1,28,748" }
@@ -30,6 +32,7 @@
       "model": "Chetak Urbane",
       "variant_name": "Bajaj Chetak Urbane",
       "price": "₹1,17,998",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "4.2 kW",
@@ -40,6 +43,7 @@
         "Fast Charging": "No",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "16 Nm",
       "colors": ["Cyber White", "Hazel Brown", "Blazing Black", "Manhattan Red", "Mist Silver"],
       "variants": [
         { "name": "Chetak Urbane 2.9 kWh", "price": "₹1,17,998" }
@@ -50,6 +54,7 @@
       "model": "Chetak Leadr",
       "variant_name": "Bajaj Chetak Leadr",
       "price": "₹1,42,998",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "4.2 kW",
@@ -60,6 +65,7 @@
         "Fast Charging": "No",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "16 Nm",
       "colors": ["Cyber White", "Hazel Brown", "Blazing Black", "Manhattan Red", "Mist Silver", "Indigo Metallic"],
       "variants": [
         { "name": "Chetak Leadr 5.0 kWh", "price": "₹1,42,998" }
@@ -70,6 +76,7 @@
       "model": "Chetak Legacy",
       "variant_name": "Bajaj Chetak Legacy",
       "price": "₹1,28,998",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "4.2 kW",
@@ -80,6 +87,7 @@
         "Fast Charging": "No",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "16 Nm",
       "colors": ["Cyber White", "Hazel Brown", "Blazing Black", "Indigo Metallic"],
       "variants": [
         { "name": "Chetak Legacy 3.8 kWh", "price": "₹1,28,998" }

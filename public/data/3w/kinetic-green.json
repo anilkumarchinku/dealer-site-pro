@@ -10,7 +10,7 @@
       "engine_details": {
         "displacement": "",
         "max_power": "3 kW",
-        "torque": ""
+        "torque": "65 Nm"
       },
       "payload_features": {
         "gross_vehicle_weight": "550 kg"
@@ -27,7 +27,7 @@
       "engine_details": {
         "displacement": "",
         "max_power": "3 kW",
-        "torque": ""
+        "torque": "70 Nm"
       },
       "payload_features": {
         "gross_vehicle_weight": "600 kg"
@@ -44,7 +44,7 @@
       "engine_details": {
         "displacement": "",
         "max_power": "5 kW",
-        "torque": ""
+        "torque": "80 Nm"
       },
       "payload_features": {
         "gross_vehicle_weight": "650 kg"
@@ -61,7 +61,7 @@
       "engine_details": {
         "displacement": "216 cc",
         "max_power": "11 bhp",
-        "torque": ""
+        "torque": "14.5 Nm"
       },
       "payload_features": {
         "gross_vehicle_weight": "630 kg"

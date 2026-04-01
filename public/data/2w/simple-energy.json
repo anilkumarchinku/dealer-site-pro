@@ -10,6 +10,7 @@
       "model": "Simple One",
       "variant_name": "Simple One 5 kWh",
       "price": "₹1,89,900",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "8.5 kW",
@@ -19,6 +20,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes"
       },
+      "max_torque": "72 Nm",
       "colors": ["Namma Red", "Grace White", "Azure Blue", "Pearl Black", "Desert Gold"],
       "variants": [
         { "name": "Simple One 5 kWh", "price": "₹1,89,900" },

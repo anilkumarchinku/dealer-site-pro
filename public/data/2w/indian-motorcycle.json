@@ -13,11 +13,18 @@
       "engine_displacement": "1250 cc",
       "mileage": "21 kmpl",
       "top_speed": "180 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "111 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Scout Bobber Standard", "price": "₹14,95,115" }
+        {
+          "name": "Scout Bobber Standard",
+          "price": "₹14,95,115"
+        }
       ],
-      "colors": ["Black Metallic"],
+      "colors": [
+        "Black Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V-twin",
         "power": "106.46 bhp",
@@ -42,11 +49,18 @@
       "engine_displacement": "1250 cc",
       "mileage": "21 kmpl",
       "top_speed": "180 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "111 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Scout Classic Standard", "price": "₹14,98,321" }
+        {
+          "name": "Scout Classic Standard",
+          "price": "₹14,98,321"
+        }
       ],
-      "colors": ["Black Metallic"],
+      "colors": [
+        "Black Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V-twin",
         "power": "106.46 bhp",
@@ -71,11 +85,17 @@
       "engine_displacement": "1250 cc",
       "mileage": "20 kmpl",
       "top_speed": "190 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Sport Scout Standard", "price": "₹15,05,802" }
+        {
+          "name": "Sport Scout Standard",
+          "price": "₹15,05,802"
+        }
       ],
-      "colors": ["Black Metallic"],
+      "colors": [
+        "Black Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V-twin",
         "power": "106.46 bhp",
@@ -90,7 +110,8 @@
         "wheel_type": "Alloy",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"
-      }
+      },
+      "max_torque": "95 Nm"
     },
     {
       "make": "Indian",
@@ -100,11 +121,18 @@
       "engine_displacement": "1250 cc",
       "mileage": "20 kmpl",
       "top_speed": "185 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "101 Scout Standard", "price": "₹17,08,855" }
+        {
+          "name": "101 Scout Standard",
+          "price": "₹17,08,855"
+        }
       ],
-      "colors": ["Ghost White Metallic with Graphics", "Sunset Red Metallic with Graphics"],
+      "colors": [
+        "Ghost White Metallic with Graphics",
+        "Sunset Red Metallic with Graphics"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V-twin",
         "power": "112.54 bhp",
@@ -120,7 +148,8 @@
         "start_type": "Self Start",
         "emission": "BS6 Phase 2",
         "features": "4-inch touchscreen Ride Command display, Turn-by-turn navigation, Bluetooth, Selectable ride modes, Adjustable piggyback shocks, Inverted front forks"
-      }
+      },
+      "max_torque": "111 Nm"
     },
     {
       "make": "Indian",
@@ -130,11 +159,18 @@
       "engine_displacement": "1250 cc",
       "mileage": "20 kmpl",
       "top_speed": "180 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Super Scout Standard", "price": "₹17,25,954" }
+        {
+          "name": "Super Scout Standard",
+          "price": "₹17,25,954"
+        }
       ],
-      "colors": ["Maroon Metallic with Graphics", "Black Smoke with Graphics"],
+      "colors": [
+        "Maroon Metallic with Graphics",
+        "Black Smoke with Graphics"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V-twin (SpeedPlus)",
         "power": "106.46 bhp",
@@ -150,7 +186,8 @@
         "start_type": "Self Start",
         "emission": "BS6 Phase 2",
         "features": "Cruise control, Selectable ride modes (Rain, Standard, Sport), Quick-release windshield & saddlebags, Two-up seat, Keyless ignition, USB charging, 4-inch touchscreen Ride Command"
-      }
+      },
+      "max_torque": "111 Nm"
     }
   ]
 }

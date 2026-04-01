@@ -13,6 +13,8 @@
       "engine_displacement": "500 cc",
       "mileage": "23 kmpl",
       "top_speed": "170 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "46 Nm",
       "source_section": "Available",
       "variants": [
         { "name": "Leoncino 500 Standard", "price": "₹5,59,894" }
@@ -42,6 +44,8 @@
       "engine_displacement": "500 cc",
       "mileage": "22 kmpl",
       "top_speed": "175 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "46 Nm",
       "source_section": "Available",
       "variants": [
         { "name": "502C Standard", "price": "₹5,79,964" }
@@ -72,6 +76,8 @@
       "engine_displacement": "500 cc",
       "mileage": "25 kmpl",
       "top_speed": "150 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "45.8 Nm",
       "source_section": "Available",
       "variants": [
         { "name": "TRK 502 Standard", "price": "₹6,62,000" }
@@ -101,6 +107,8 @@
       "engine_displacement": "500 cc",
       "mileage": "25 kmpl",
       "top_speed": "160 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "45.8 Nm",
       "source_section": "Available",
       "variants": [
         { "name": "TRK 502X Standard", "price": "₹7,14,000" },

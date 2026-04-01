@@ -13,6 +13,8 @@
       "engine_displacement": "177 cc",
       "mileage": "40 kmpl",
       "top_speed": "110 kmph",
+      "max_torque": "13.2 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "W175 Standard", "price": "₹1,15,006" },
@@ -43,6 +45,8 @@
       "engine_displacement": "451 cc",
       "mileage": "31.45 kmpl",
       "top_speed": "160 kmph",
+      "max_torque": "43 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Eliminator Standard", "price": "₹6,15,965" }
@@ -72,6 +76,8 @@
       "engine_displacement": "296 cc",
       "mileage": "26 kmpl",
       "top_speed": "160 kmph",
+      "max_torque": "27 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Ninja 300 Standard", "price": "₹3,17,000" }
@@ -101,6 +107,8 @@
       "engine_displacement": "451 cc",
       "mileage": "28.7 kmpl",
       "top_speed": "190 kmph",
+      "max_torque": "42.6 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Ninja 500 Standard", "price": "₹5,65,976" }
@@ -132,6 +140,8 @@
       "engine_displacement": "649 cc",
       "mileage": "27 kmpl",
       "top_speed": "201 kmph",
+      "max_torque": "64 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Z650 Standard", "price": "₹7,25,960" }
@@ -162,6 +172,8 @@
       "engine_displacement": "649 cc",
       "mileage": "25 kmpl",
       "top_speed": "195 kmph",
+      "max_torque": "64 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Z650RS Standard", "price": "₹7,83,000" }
@@ -191,6 +203,8 @@
       "engine_displacement": "649 cc",
       "mileage": "25 kmpl",
       "top_speed": "210 kmph",
+      "max_torque": "64 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Ninja 650 Standard", "price": "₹7,91,000" }
@@ -220,6 +234,8 @@
       "engine_displacement": "649 cc",
       "mileage": "19.4 kmpl",
       "top_speed": "199 kmph",
+      "max_torque": "64 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Versys 650 Standard", "price": "₹8,63,000" }
@@ -249,6 +265,8 @@
       "engine_displacement": "649 cc",
       "mileage": "22 kmpl",
       "top_speed": "170 kmph",
+      "max_torque": "61 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Vulcan S Standard", "price": "₹8,13,000" }
@@ -278,6 +296,8 @@
       "engine_displacement": "948 cc",
       "mileage": "21 kmpl",
       "top_speed": "240 kmph",
+      "max_torque": "98.6 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Z900 Standard", "price": "₹9,99,000" }
@@ -308,6 +328,8 @@
       "engine_displacement": "1099 cc",
       "mileage": "17.8 kmpl",
       "top_speed": "249 kmph",
+      "max_torque": "113 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Ninja 1100SX Standard", "price": "₹14,42,000" }
@@ -337,6 +359,8 @@
       "engine_displacement": "998 cc",
       "mileage": "20 kmpl",
       "top_speed": "299 kmph",
+      "max_torque": "114.9 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Ninja ZX-10R Standard", "price": "₹20,79,000" }
@@ -367,6 +391,8 @@
       "engine_displacement": "998 cc",
       "mileage": "18 kmpl",
       "top_speed": "280 kmph",
+      "max_torque": "137 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Z H2 Standard", "price": "₹30,55,818" }
@@ -396,6 +422,8 @@
       "engine_displacement": "998 cc",
       "mileage": "23 kmpl",
       "top_speed": "330 kmph",
+      "max_torque": "137.3 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Ninja H2 SX SE", "price": "₹36,27,783" }

@@ -10,6 +10,7 @@
       "model": "F77 Mach 2",
       "variant_name": "Ultraviolette F77 Mach 2",
       "price": "₹3,80,000",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "31.44 kW peak",
@@ -20,6 +21,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "90 Nm",
       "colors": ["Laser Blue", "Acoustic White", "Ember Orange", "Airstrike Khaki", "Shadow Black"],
       "variants": [
         { "name": "F77 Mach 2 10.3 kWh", "price": "₹3,80,000" }
@@ -30,6 +32,7 @@
       "model": "F77 Recon",
       "variant_name": "Ultraviolette F77 Recon",
       "price": "₹3,23,000",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "31.44 kW peak",
@@ -40,6 +43,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
+      "max_torque": "90 Nm",
       "colors": ["Laser Blue", "Acoustic White", "Ember Orange", "Airstrike Khaki", "Shadow Black"],
       "variants": [
         { "name": "F77 Recon 7.1 kWh", "price": "₹3,23,000" }

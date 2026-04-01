@@ -15,6 +15,7 @@
       "max_power": "8.08 bhp",
       "max_torque": "8.7 Nm",
       "top_speed": "85 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Sport ES", "price": "₹62,143" },
@@ -48,6 +49,7 @@
       "max_power": "8.08 bhp",
       "max_torque": "8.7 Nm",
       "top_speed": "85 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Radeon All Black Edition", "price": "₹70,143" },
@@ -83,6 +85,7 @@
       "max_power": "8.08 bhp",
       "max_torque": "8.7 Nm",
       "top_speed": "85 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Star City Plus Drum", "price": "₹72,025" },
@@ -116,6 +119,7 @@
       "max_power": "11.2 bhp",
       "max_torque": "11.2 Nm",
       "top_speed": "99 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Raider 125 Drum", "price": "₹84,490" },
@@ -157,6 +161,7 @@
       "max_power": "15.82 bhp",
       "max_torque": "13.85 Nm",
       "top_speed": "107 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Apache RTR 160 Single Disc ABS", "price": "₹1,09,036" },
@@ -198,6 +203,7 @@
       "max_power": "17.31 bhp",
       "max_torque": "14.73 Nm",
       "top_speed": "114 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Apache RTR 160 4V Single Disc ABS", "price": "₹1,16,491" },
@@ -240,6 +246,7 @@
       "max_power": "17.3 bhp",
       "max_torque": "15.5 Nm",
       "top_speed": "118 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Discontinued",
       "variants": [
         { "name": "Apache RTR 180 Standard", "price": "₹1,20,000" }
@@ -271,6 +278,7 @@
       "max_power": "20.54 bhp",
       "max_torque": "17.25 Nm",
       "top_speed": "127 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Apache RTR 200 4V Dual Channel ABS with Modes", "price": "₹1,38,407" },
@@ -308,6 +316,7 @@
       "max_power": "35.5 bhp",
       "max_torque": "28.5 Nm",
       "top_speed": "140 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Apache RTX 300 Base", "price": "₹1,99,000" },
@@ -344,6 +353,7 @@
       "max_power": "35.08 bhp",
       "max_torque": "28.5 Nm",
       "top_speed": "150 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Apache RTR 310 Arsenal Black Base without QuickShifter", "price": "₹2,22,804" },
@@ -380,6 +390,7 @@
       "max_power": "37.48 bhp",
       "max_torque": "29 Nm",
       "top_speed": "160 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Apache RR 310 Red (Without Quickshifter) - OBD 2B", "price": "₹2,59,548" },
@@ -416,6 +427,7 @@
       "max_power": "20.1 bhp",
       "max_torque": "19.93 Nm",
       "top_speed": "120 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Ronin Base - Lightning Black", "price": "₹1,26,751" },
@@ -455,6 +467,7 @@
       "max_power": "7.71 bhp",
       "max_torque": "8.7 Nm",
       "top_speed": "78 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Zest 110 Gloss", "price": "₹69,941" },
@@ -489,6 +502,7 @@
       "max_power": "7.91 bhp",
       "max_torque": "8.8 Nm",
       "top_speed": "85 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Jupiter Drum - OBD 2B", "price": "₹76,543" },
@@ -526,6 +540,7 @@
       "max_power": "8.04 bhp",
       "max_torque": "10.5 Nm",
       "top_speed": "90 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Jupiter 125 Drum - Alloy Wheel", "price": "₹83,634" },
@@ -562,6 +577,7 @@
       "max_power": "9.25 bhp",
       "max_torque": "10.5 Nm",
       "top_speed": "95 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Ntorq 125 Disc", "price": "₹87,937" },
@@ -599,6 +615,7 @@
       "max_power": "13 bhp",
       "max_torque": "14.2 Nm",
       "top_speed": "104 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Ntorq 150 Standard", "price": "₹1,09,475" },
@@ -634,6 +651,7 @@
       "max_power": "4.35 bhp",
       "max_torque": "6.5 Nm",
       "top_speed": "60 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "XL100 Heavy Duty Standard", "price": "₹48,000" }
@@ -666,6 +684,7 @@
       "max_power": "4.35 bhp",
       "max_torque": "6.5 Nm",
       "top_speed": "60 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "XL100 Comfort Standard", "price": "₹50,000" }

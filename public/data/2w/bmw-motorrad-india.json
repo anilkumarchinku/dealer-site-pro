@@ -13,11 +13,19 @@
       "engine_displacement": "312 cc",
       "mileage": "30 kmpl",
       "top_speed": "160 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "28 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "G 310 RR Standard", "price": "₹2,84,995" }
+        {
+          "name": "G 310 RR Standard",
+          "price": "₹2,84,995"
+        }
       ],
-      "colors": ["Racing Red", "Cosmic Black"],
+      "colors": [
+        "Racing Red",
+        "Cosmic Black"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Single-cylinder",
         "power": "33.5 bhp",
@@ -42,11 +50,18 @@
       "engine_displacement": "Electric",
       "mileage": "108 km range",
       "top_speed": "95 kmph",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "variants": [
-        { "name": "CE 02 Standard", "price": "₹4,49,900" }
+        {
+          "name": "CE 02 Standard",
+          "price": "₹4,49,900"
+        }
       ],
-      "colors": ["Cosmic Black Two", "Cosmic Black"],
+      "colors": [
+        "Cosmic Black Two",
+        "Cosmic Black"
+      ],
       "technical_specifications": {
         "motor_type": "Electric",
         "power": "11 kW",
@@ -59,7 +74,8 @@
         "abs": "Yes",
         "wheel_type": "Alloy",
         "features": "USB charging port, Reverse gear, Modern instrument cluster"
-      }
+      },
+      "max_torque": "56 Nm"
     },
     {
       "make": "BMW Motorrad",
@@ -69,11 +85,18 @@
       "engine_displacement": "350 cc",
       "mileage": "25 kmpl",
       "top_speed": "139 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "C 400 GT Standard", "price": "₹10,98,979" }
+        {
+          "name": "C 400 GT Standard",
+          "price": "₹10,98,979"
+        }
       ],
-      "colors": ["Alpine White", "Blackstorm Metallic"],
+      "colors": [
+        "Alpine White",
+        "Blackstorm Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Single-cylinder",
         "power": "33.5 bhp",
@@ -88,7 +111,8 @@
         "wheel_type": "Alloy",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"
-      }
+      },
+      "max_torque": "37 Nm"
     },
     {
       "make": "BMW Motorrad",
@@ -98,11 +122,19 @@
       "engine_displacement": "895 cc",
       "mileage": "22.7 kmpl",
       "top_speed": "200 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "92 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "F 900 GS Standard", "price": "₹15,49,915" }
+        {
+          "name": "F 900 GS Standard",
+          "price": "₹15,49,915"
+        }
       ],
-      "colors": ["GS Trophy", "Passion"],
+      "colors": [
+        "GS Trophy",
+        "Passion"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "103.25 bhp",
@@ -127,11 +159,19 @@
       "engine_displacement": "895 cc",
       "mileage": "22 kmpl",
       "top_speed": "200 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "92 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "F 900 GS Adventure Standard", "price": "₹16,99,888" }
+        {
+          "name": "F 900 GS Adventure Standard",
+          "price": "₹16,99,888"
+        }
       ],
-      "colors": ["Light White", "GS Trophy"],
+      "colors": [
+        "Light White",
+        "GS Trophy"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "103.25 bhp",
@@ -156,11 +196,20 @@
       "engine_displacement": "999 cc",
       "mileage": "16 kmpl",
       "top_speed": "200 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "113 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "S 1000 R Standard", "price": "₹21,74,938" }
+        {
+          "name": "S 1000 R Standard",
+          "price": "₹21,74,938"
+        }
       ],
-      "colors": ["Bluefire/Mugiallo Yellow", "Light White/M Motorsport", "Blackstorm Metallic"],
+      "colors": [
+        "Bluefire/Mugiallo Yellow",
+        "Light White/M Motorsport",
+        "Blackstorm Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-four",
         "power": "167.6 bhp",
@@ -185,11 +234,17 @@
       "engine_displacement": "1170 cc",
       "mileage": "19.6 kmpl",
       "top_speed": "215 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "R 12 Standard", "price": "₹21,74,965" }
+        {
+          "name": "R 12 Standard",
+          "price": "₹21,74,965"
+        }
       ],
-      "colors": ["Blackstorm Metallic"],
+      "colors": [
+        "Blackstorm Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "Air/Oil-cooled, Boxer-twin",
         "power": "93.7 bhp",
@@ -204,7 +259,8 @@
         "wheel_type": "Alloy",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"
-      }
+      },
+      "max_torque": "95 Nm"
     },
     {
       "make": "BMW Motorrad",
@@ -214,11 +270,18 @@
       "engine_displacement": "1170 cc",
       "mileage": "19 kmpl",
       "top_speed": "200 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "R 12 nineT Standard", "price": "₹22,74,974" }
+        {
+          "name": "R 12 nineT Standard",
+          "price": "₹22,74,974"
+        }
       ],
-      "colors": ["Option 719 Mineral White Metallic", "Blackstorm Metallic"],
+      "colors": [
+        "Option 719 Mineral White Metallic",
+        "Blackstorm Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "Air/Oil-cooled, Boxer-twin",
         "power": "108 bhp",
@@ -233,7 +296,8 @@
         "wheel_type": "Alloy",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"
-      }
+      },
+      "max_torque": "95 Nm"
     },
     {
       "make": "BMW Motorrad",
@@ -243,12 +307,23 @@
       "engine_displacement": "1300 cc",
       "mileage": "21 kmpl",
       "top_speed": "225 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "143 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "R 1300 GS Pro", "price": "₹23,24,923" },
-        { "name": "R 1300 GS Option 719", "price": "₹26,50,923" }
+        {
+          "name": "R 1300 GS Pro",
+          "price": "₹23,24,923"
+        },
+        {
+          "name": "R 1300 GS Option 719",
+          "price": "₹26,50,923"
+        }
       ],
-      "colors": ["Light White / Light Gray", "Aurelius Green Metallic"],
+      "colors": [
+        "Light White / Light Gray",
+        "Aurelius Green Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Boxer-twin",
         "power": "145 bhp",
@@ -273,11 +348,20 @@
       "engine_displacement": "999 cc",
       "mileage": "16 kmpl",
       "top_speed": "303 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "113.1 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "S 1000 RR Standard", "price": "₹23,24,936" }
+        {
+          "name": "S 1000 RR Standard",
+          "price": "₹23,24,936"
+        }
       ],
-      "colors": ["Black Storm Metallic", "Passion", "Light White"],
+      "colors": [
+        "Black Storm Metallic",
+        "Passion",
+        "Light White"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-four",
         "power": "206.51 bhp",
@@ -303,11 +387,18 @@
       "engine_displacement": "999 cc",
       "mileage": "16 kmpl",
       "top_speed": "250 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "S 1000 XR Standard", "price": "₹24,53,000" }
+        {
+          "name": "S 1000 XR Standard",
+          "price": "₹24,53,000"
+        }
       ],
-      "colors": ["Racing Red", "Blackstorm Metallic"],
+      "colors": [
+        "Racing Red",
+        "Blackstorm Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-four",
         "power": "165 bhp",
@@ -322,7 +413,8 @@
         "wheel_type": "Alloy",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"
-      }
+      },
+      "max_torque": "113 Nm"
     },
     {
       "make": "BMW Motorrad",
@@ -332,11 +424,18 @@
       "engine_displacement": "999 cc",
       "mileage": "15 kmpl",
       "top_speed": "280 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "113 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "M 1000 R Standard", "price": "₹33,50,000" }
+        {
+          "name": "M 1000 R Standard",
+          "price": "₹33,50,000"
+        }
       ],
-      "colors": ["M Motorsport"],
+      "colors": [
+        "M Motorsport"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-four",
         "power": "210 bhp",
@@ -361,11 +460,22 @@
       "engine_displacement": "1802 cc",
       "mileage": "17 kmpl",
       "top_speed": "180 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "158 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "R18 Standard", "price": "₹34,72,855" }
+        {
+          "name": "R18 Standard",
+          "price": "₹34,72,855"
+        }
       ],
-      "colors": ["Manhattan Metallic Matt", "Galaxy Dust Metallic/Titan Silver 2 Metallic", "Black Storm Metallic", "Gravity Blue Metallic", "Mineral White Metallic"],
+      "colors": [
+        "Manhattan Metallic Matt",
+        "Galaxy Dust Metallic/Titan Silver 2 Metallic",
+        "Black Storm Metallic",
+        "Gravity Blue Metallic",
+        "Mineral White Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "Air/Oil-cooled, Boxer-twin",
         "power": "89.84 bhp",
@@ -390,11 +500,18 @@
       "engine_displacement": "1649 cc",
       "mileage": "15 kmpl",
       "top_speed": "200 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "K 1600 GTL Standard", "price": "₹37,49,261" }
+        {
+          "name": "K 1600 GTL Standard",
+          "price": "₹37,49,261"
+        }
       ],
-      "colors": ["Blackstorm Metallic", "Option 719 Mineral White"],
+      "colors": [
+        "Blackstorm Metallic",
+        "Option 719 Mineral White"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-six",
         "power": "160 bhp",
@@ -409,7 +526,8 @@
         "wheel_type": "Alloy",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"
-      }
+      },
+      "max_torque": "175 Nm"
     },
     {
       "make": "BMW Motorrad",
@@ -419,11 +537,19 @@
       "engine_displacement": "Electric",
       "mileage": "130 km range",
       "top_speed": "120 kmph",
+      "fuel_type": "Electric",
+      "max_torque": "56 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "CE 04 Standard", "price": "₹15,25,000" }
+        {
+          "name": "CE 04 Standard",
+          "price": "₹15,25,000"
+        }
       ],
-      "colors": ["Light White", "Magellan Grey Metallic"],
+      "colors": [
+        "Light White",
+        "Magellan Grey Metallic"
+      ],
       "technical_specifications": {
         "motor_type": "Electric",
         "power": "31 kW (42 bhp)",
@@ -446,11 +572,17 @@
       "engine_displacement": "999 cc",
       "mileage": "15 kmpl",
       "top_speed": "278 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "M 1000 XR Standard", "price": "₹48,63,000" }
+        {
+          "name": "M 1000 XR Standard",
+          "price": "₹48,63,000"
+        }
       ],
-      "colors": ["Light Blue, Dark Blue and Red"],
+      "colors": [
+        "Light Blue, Dark Blue and Red"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-four",
         "power": "201 bhp",
@@ -465,7 +597,8 @@
         "wheel_type": "Alloy",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"
-      }
+      },
+      "max_torque": "113 Nm"
     }
   ]
 }

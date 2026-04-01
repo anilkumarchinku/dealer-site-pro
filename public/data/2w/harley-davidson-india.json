@@ -13,12 +13,26 @@
       "engine_displacement": "440 cc",
       "mileage": "35 kmpl",
       "top_speed": "135 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "X440 Vivid", "price": "₹2,34,516" },
-        { "name": "X440 S", "price": "₹2,54,916" }
+        {
+          "name": "X440 Vivid",
+          "price": "₹2,34,516"
+        },
+        {
+          "name": "X440 S",
+          "price": "₹2,54,916"
+        }
       ],
-      "colors": ["Vivid Mustard", "Vivid Metallic Thick Red", "Vivid Metallic Dark Silver", "Vivid Goldfish Silver", "Baja Orange", "Matte Black"],
+      "colors": [
+        "Vivid Mustard",
+        "Vivid Metallic Thick Red",
+        "Vivid Metallic Dark Silver",
+        "Vivid Goldfish Silver",
+        "Baja Orange",
+        "Matte Black"
+      ],
       "technical_specifications": {
         "engine_type": "Air-cooled, Single-cylinder",
         "power": "27 bhp",
@@ -33,7 +47,8 @@
         "wheel_type": "Alloy",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"
-      }
+      },
+      "max_torque": "40 Nm"
     },
     {
       "make": "Harley-Davidson",
@@ -43,12 +58,24 @@
       "engine_displacement": "975 cc",
       "mileage": "18 kmpl",
       "top_speed": "180 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "95 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Nightster Standard", "price": "₹14,54,000" },
-        { "name": "Nightster Premium", "price": "₹14,63,700" }
+        {
+          "name": "Nightster Standard",
+          "price": "₹14,54,000"
+        },
+        {
+          "name": "Nightster Premium",
+          "price": "₹14,63,700"
+        }
       ],
-      "colors": ["Whiskey Fire", "Billiard Gray", "Vivid Black"],
+      "colors": [
+        "Whiskey Fire",
+        "Billiard Gray",
+        "Vivid Black"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V-twin (Revolution Max 975T)",
         "power": "88.5 bhp",
@@ -73,12 +100,25 @@
       "engine_displacement": "975 cc",
       "mileage": "18 kmpl",
       "top_speed": "180 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "95 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Nightster Special Standard", "price": "₹15,38,000" },
-        { "name": "Nightster Special Premium", "price": "₹15,49,000" }
+        {
+          "name": "Nightster Special Standard",
+          "price": "₹15,38,000"
+        },
+        {
+          "name": "Nightster Special Premium",
+          "price": "₹15,49,000"
+        }
       ],
-      "colors": ["Blue Burst", "Whiskey Fire", "Billiard Gray", "Black Denim"],
+      "colors": [
+        "Blue Burst",
+        "Whiskey Fire",
+        "Billiard Gray",
+        "Black Denim"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V-twin (Revolution Max 975T)",
         "power": "88.5 bhp",
@@ -104,12 +144,25 @@
       "engine_displacement": "1252 cc",
       "mileage": "20 kmpl",
       "top_speed": "194 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "96 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Sportster S Standard", "price": "₹18,05,000" },
-        { "name": "Sportster S Premium", "price": "₹18,21,500" }
+        {
+          "name": "Sportster S Standard",
+          "price": "₹18,05,000"
+        },
+        {
+          "name": "Sportster S Premium",
+          "price": "₹18,21,500"
+        }
       ],
-      "colors": ["Mystic Shift", "Brilliant Red", "Billiard Gray", "Vivid Black"],
+      "colors": [
+        "Mystic Shift",
+        "Brilliant Red",
+        "Billiard Gray",
+        "Vivid Black"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V-twin (Revolution Max 1250T)",
         "power": "120.69 bhp",
@@ -135,13 +188,29 @@
       "engine_displacement": "1868 cc",
       "mileage": "18 kmpl",
       "top_speed": "177 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "161 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Fat Boy Standard", "price": "₹28,03,000" },
-        { "name": "Fat Boy 114", "price": "₹28,30,000" },
-        { "name": "Fat Boy Premium", "price": "₹28,56,000" }
+        {
+          "name": "Fat Boy Standard",
+          "price": "₹28,03,000"
+        },
+        {
+          "name": "Fat Boy 114",
+          "price": "₹28,30,000"
+        },
+        {
+          "name": "Fat Boy Premium",
+          "price": "₹28,56,000"
+        }
       ],
-      "colors": ["Blue Burst", "Billiard Gray", "Vivid Black", "Whiskey Fire/Vivid Black"],
+      "colors": [
+        "Blue Burst",
+        "Billiard Gray",
+        "Vivid Black",
+        "Whiskey Fire/Vivid Black"
+      ],
       "technical_specifications": {
         "engine_type": "Air-cooled, V-twin (Milwaukee-Eight 114)",
         "power": "93.87 bhp",
@@ -166,13 +235,30 @@
       "engine_displacement": "1868 cc",
       "mileage": "18 kmpl",
       "top_speed": "177 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "155 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Heritage Classic Standard", "price": "₹25,71,000" },
-        { "name": "Heritage Classic 114", "price": "₹25,95,000" },
-        { "name": "Heritage Classic Premium", "price": "₹26,36,000" }
+        {
+          "name": "Heritage Classic Standard",
+          "price": "₹25,71,000"
+        },
+        {
+          "name": "Heritage Classic 114",
+          "price": "₹25,95,000"
+        },
+        {
+          "name": "Heritage Classic Premium",
+          "price": "₹26,36,000"
+        }
       ],
-      "colors": ["Billiard Gray", "Vivid Black", "Iron Horse Metallic", "White Onyx Pearl", "Whiskey Fire/Vivid Black"],
+      "colors": [
+        "Billiard Gray",
+        "Vivid Black",
+        "Iron Horse Metallic",
+        "White Onyx Pearl",
+        "Whiskey Fire/Vivid Black"
+      ],
       "technical_specifications": {
         "engine_type": "Air-cooled, V-twin (Milwaukee-Eight 114)",
         "power": "93.87 bhp",
@@ -197,12 +283,25 @@
       "engine_displacement": "1923 cc",
       "mileage": "17.8 kmpl",
       "top_speed": "210 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Breakout Standard", "price": "₹34,36,000" },
-        { "name": "Breakout Premium", "price": "₹34,54,000" }
+        {
+          "name": "Breakout Standard",
+          "price": "₹34,36,000"
+        },
+        {
+          "name": "Breakout Premium",
+          "price": "₹34,54,000"
+        }
       ],
-      "colors": ["Midnight Firestorm", "Brilliant Red", "Billiard Gray", "Vivid Black", "Centerline"],
+      "colors": [
+        "Midnight Firestorm",
+        "Brilliant Red",
+        "Billiard Gray",
+        "Vivid Black",
+        "Centerline"
+      ],
       "technical_specifications": {
         "engine_type": "Air-cooled, V-twin (Milwaukee-Eight 117)",
         "power": "101.9 bhp",
@@ -217,7 +316,8 @@
         "wheel_type": "Alloy",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"
-      }
+      },
+      "max_torque": "161 Nm"
     },
     {
       "make": "Harley-Davidson",
@@ -227,12 +327,28 @@
       "engine_displacement": "1923 cc",
       "mileage": "16 kmpl",
       "top_speed": "177 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "171 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Street Glide Standard", "price": "₹42,50,000" },
-        { "name": "Street Glide Premium", "price": "₹43,03,000" }
+        {
+          "name": "Street Glide Standard",
+          "price": "₹42,50,000"
+        },
+        {
+          "name": "Street Glide Premium",
+          "price": "₹43,03,000"
+        }
       ],
-      "colors": ["Mystic Shift", "Billiard Gray", "Vivid Black", "Iron Horse Metallic", "Brilliant Red", "Blue Burst", "Atlas Silver Metallic"],
+      "colors": [
+        "Mystic Shift",
+        "Billiard Gray",
+        "Vivid Black",
+        "Iron Horse Metallic",
+        "Brilliant Red",
+        "Blue Burst",
+        "Atlas Silver Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "Air-cooled, V-twin (Milwaukee-Eight 117)",
         "power": "107.2 bhp",
@@ -258,12 +374,28 @@
       "engine_displacement": "1923 cc",
       "mileage": "16 kmpl",
       "top_speed": "177 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "171 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Road Glide Standard", "price": "₹45,75,000" },
-        { "name": "Road Glide Premium", "price": "₹46,30,000" }
+        {
+          "name": "Road Glide Standard",
+          "price": "₹45,75,000"
+        },
+        {
+          "name": "Road Glide Premium",
+          "price": "₹46,30,000"
+        }
       ],
-      "colors": ["Mystic Shift", "Billiard Gray", "Vivid Black", "Iron Horse Metallic", "Brilliant Red", "Blue Burst", "Atlas Silver Metallic"],
+      "colors": [
+        "Mystic Shift",
+        "Billiard Gray",
+        "Vivid Black",
+        "Iron Horse Metallic",
+        "Brilliant Red",
+        "Blue Burst",
+        "Atlas Silver Metallic"
+      ],
       "technical_specifications": {
         "engine_type": "Air-cooled, V-twin (Milwaukee-Eight 117)",
         "power": "107.2 bhp",
@@ -289,11 +421,19 @@
       "engine_displacement": "1252 cc",
       "mileage": "18.2 kmpl",
       "top_speed": "200 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "128 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "Pan America 1250 Special", "price": "₹27,16,000" }
+        {
+          "name": "Pan America 1250 Special",
+          "price": "₹27,16,000"
+        }
       ],
-      "colors": ["Vivid Black", "Baja Orange"],
+      "colors": [
+        "Vivid Black",
+        "Baja Orange"
+      ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V-twin (Revolution Max 1250)",
         "power": "150.19 bhp",

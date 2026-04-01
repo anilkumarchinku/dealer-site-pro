@@ -7,40 +7,92 @@
       "variant_name": "Terra Motors Y4A",
       "ex_showroom_price": "₹3.35 Lakh",
       "mileage": "100 km range",
-      "engine_details": { "displacement": "", "max_power": "5 kW", "torque": "" },
-      "dimensions": { "length": "", "width": "", "height": "" },
-      "payload_features": { "gross_vehicle_weight": "600 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "engine_details": {
+        "displacement": "",
+        "max_power": "5 kW",
+        "torque": "120 Nm"
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "600 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      },
       "source_url": "https://terramotors.in/"
     },
     {
       "variant_name": "Terra Motors Y4A Pro",
       "ex_showroom_price": "₹3.70 Lakh",
       "mileage": "120 km range",
-      "engine_details": { "displacement": "", "max_power": "7.5 kW", "torque": "" },
-      "dimensions": { "length": "", "width": "", "height": "" },
-      "payload_features": { "gross_vehicle_weight": "700 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "engine_details": {
+        "displacement": "",
+        "max_power": "7.5 kW",
+        "torque": "130 Nm"
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "700 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      },
       "source_url": "https://terramotors.in/"
     },
     {
       "variant_name": "Terra Motors Rizin",
       "ex_showroom_price": "₹4.20 Lakh",
       "mileage": "150 km range",
-      "engine_details": { "displacement": "", "max_power": "10 kW", "torque": "" },
-      "dimensions": { "length": "", "width": "", "height": "" },
-      "payload_features": { "gross_vehicle_weight": "850 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "engine_details": {
+        "displacement": "",
+        "max_power": "10 kW",
+        "torque": "85 Nm"
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "850 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      },
       "source_url": "https://terramotors.in/"
     },
     {
       "variant_name": "Terra Motors Toro",
       "ex_showroom_price": "₹4.50 Lakh",
       "mileage": "160 km range",
-      "engine_details": { "displacement": "", "max_power": "10 kW", "torque": "" },
-      "dimensions": { "length": "", "width": "", "height": "" },
-      "payload_features": { "gross_vehicle_weight": "1000 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" },
+      "engine_details": {
+        "displacement": "",
+        "max_power": "10 kW",
+        "torque": "80 Nm"
+      },
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1000 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      },
       "source_url": "https://terramotors.in/"
     }
   ]

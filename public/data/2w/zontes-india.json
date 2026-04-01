@@ -12,6 +12,11 @@
       "colors": [
         "Black Red",
         "Blue White"
+      ],
+      "fuel_type": "Petrol",
+      "max_torque": "32 Nm",
+      "variants": [
+        { "name": "350R Standard", "price": "₹2,99,900" }
       ]
     },
     {
@@ -26,6 +31,11 @@
       "colors": [
         "Gun Grey",
         "Candy Red"
+      ],
+      "fuel_type": "Petrol",
+      "max_torque": "32 Nm",
+      "variants": [
+        { "name": "350T Standard", "price": "₹2,85,900" }
       ]
     },
     {
@@ -40,6 +50,11 @@
       "colors": [
         "Carbon Black",
         "Silver White"
+      ],
+      "fuel_type": "Petrol",
+      "max_torque": "32 Nm",
+      "variants": [
+        { "name": "350X Standard", "price": "₹3,09,900" }
       ]
     }
   ]

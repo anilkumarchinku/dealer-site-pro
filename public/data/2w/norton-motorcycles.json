@@ -12,6 +12,8 @@
       "mileage": "10 kmpl",
       "top_speed": "260 kmph",
       "max_power": "185 bhp",
+      "fuel_type": "Petrol",
+      "max_torque": "130 Nm",
       "source_section": "Available",
       "colors": ["Silver Carbon", "Brushed Aluminum"],
       "variants": [
@@ -39,6 +41,8 @@
       "mileage": "15 kmpl",
       "top_speed": "185 kmph",
       "max_power": "88 bhp",
+      "fuel_type": "Petrol",
+      "max_torque": "90 Nm",
       "source_section": "Available",
       "colors": ["Manx Silver", "Black Lightning"],
       "variants": [

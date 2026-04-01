@@ -13,11 +13,24 @@
       "engine_displacement": "124.45 cc",
       "mileage": "45 kmpl",
       "top_speed": "90 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "10.5 Nm",
       "source_section": "Available",
       "variants": [
-        { "name": "ZX 125 Standard", "price": "₹1,14,290" }
+        {
+          "name": "ZX 125 Standard",
+          "price": "₹1,14,290"
+        }
       ],
-      "colors": ["Grey", "Black", "White", "Pink", "Red", "Sky Blue", "Yellow"],
+      "colors": [
+        "Grey",
+        "Black",
+        "White",
+        "Pink",
+        "Red",
+        "Sky Blue",
+        "Yellow"
+      ],
       "technical_specifications": {
         "engine_type": "Air-cooled, Single-cylinder",
         "power": "9.76 bhp",
@@ -42,11 +55,22 @@
       "engine_displacement": "124.45 cc",
       "mileage": "45 kmpl",
       "top_speed": "95 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Vespa 125 Standard", "price": "₹1,28,321" }
+        {
+          "name": "Vespa 125 Standard",
+          "price": "₹1,28,321"
+        }
       ],
-      "colors": ["Grey", "Black", "White", "Red", "Blue", "Yellow"],
+      "colors": [
+        "Grey",
+        "Black",
+        "White",
+        "Red",
+        "Blue",
+        "Yellow"
+      ],
       "technical_specifications": {
         "engine_type": "Air-cooled, Single-cylinder",
         "power": "9.76 bhp",
@@ -61,7 +85,8 @@
         "wheel_type": "Alloy",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"
-      }
+      },
+      "max_torque": "10.5 Nm"
     },
     {
       "make": "Vespa",
@@ -71,11 +96,20 @@
       "engine_displacement": "124.45 cc",
       "mileage": "40 kmpl",
       "top_speed": "95 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Vespa S 125 Standard", "price": "₹1,32,606" }
+        {
+          "name": "Vespa S 125 Standard",
+          "price": "₹1,32,606"
+        }
       ],
-      "colors": ["Matte Black", "Midnight Blue", "Matte Red", "Pearl White"],
+      "colors": [
+        "Matte Black",
+        "Midnight Blue",
+        "Matte Red",
+        "Pearl White"
+      ],
       "technical_specifications": {
         "engine_type": "Air-cooled, Single-cylinder",
         "power": "9.9 bhp",
@@ -91,7 +125,8 @@
         "start_type": "Self Start",
         "emission": "BS6 Phase 2",
         "features": "Full-metal body, Rectangular headlamp, Chrome detailing"
-      }
+      },
+      "max_torque": "10.5 Nm"
     },
     {
       "make": "Vespa",
@@ -101,11 +136,22 @@
       "engine_displacement": "149.5 cc",
       "mileage": "41.5 kmpl",
       "top_speed": "100 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Vespa 150 Standard", "price": "₹1,42,356" }
+        {
+          "name": "Vespa 150 Standard",
+          "price": "₹1,42,356"
+        }
       ],
-      "colors": ["Yellow", "White", "Red", "Grey", "Blue", "Black"],
+      "colors": [
+        "Yellow",
+        "White",
+        "Red",
+        "Grey",
+        "Blue",
+        "Black"
+      ],
       "technical_specifications": {
         "engine_type": "Air-cooled, Single-cylinder",
         "power": "11.4 bhp",
@@ -120,7 +166,8 @@
         "wheel_type": "Alloy",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"
-      }
+      },
+      "max_torque": "12.8 Nm"
     },
     {
       "make": "Vespa",
@@ -130,11 +177,20 @@
       "engine_displacement": "149.5 cc",
       "mileage": "35 kmpl",
       "top_speed": "100 kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Vespa S 150 Standard", "price": "₹1,45,424" }
+        {
+          "name": "Vespa S 150 Standard",
+          "price": "₹1,45,424"
+        }
       ],
-      "colors": ["Matte Red", "Matte Black", "Pearl White", "Midnight Blue"],
+      "colors": [
+        "Matte Red",
+        "Matte Black",
+        "Pearl White",
+        "Midnight Blue"
+      ],
       "technical_specifications": {
         "engine_type": "Air-cooled, Single-cylinder",
         "power": "11.4 bhp",
@@ -150,7 +206,8 @@
         "start_type": "Self Start",
         "emission": "BS6 Phase 2",
         "features": "Full-metal body, Rectangular headlamp, Chrome detailing, Matte finish"
-      }
+      },
+      "max_torque": "12.8 Nm"
     }
   ]
 }

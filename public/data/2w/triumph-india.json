@@ -13,6 +13,8 @@
       "engine_displacement": "398 cc",
       "mileage": "29 kmpl",
       "top_speed": "135 kmph",
+      "max_torque": "36 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Speed T4 Standard", "price": "₹1,95,006" }
@@ -42,6 +44,8 @@
       "engine_displacement": "398 cc",
       "mileage": "28 kmpl",
       "top_speed": "160 kmph",
+      "max_torque": "37.5 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Speed 400 Standard", "price": "₹2,39,005" }
@@ -72,6 +76,8 @@
       "engine_displacement": "398 cc",
       "mileage": "27 kmpl",
       "top_speed": "150 kmph",
+      "max_torque": "37.5 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Scrambler 400 X", "price": "₹2,69,976" }
@@ -102,6 +108,8 @@
       "engine_displacement": "398 cc",
       "mileage": "27.5 kmpl",
       "top_speed": "170 kmph",
+      "max_torque": "37.5 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Thruxton 400 Standard", "price": "₹2,76,384" }
@@ -132,6 +140,8 @@
       "engine_displacement": "660 cc",
       "mileage": "15 kmpl",
       "top_speed": "212 kmph",
+      "max_torque": "64 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Trident 660 Standard", "price": "₹8,99,000" }
@@ -162,6 +172,8 @@
       "engine_displacement": "900 cc",
       "mileage": "24 kmpl",
       "top_speed": "185 kmph",
+      "max_torque": "80 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Speed Twin 900 Standard", "price": "₹9,71,300" }
@@ -192,6 +204,8 @@
       "engine_displacement": "900 cc",
       "mileage": "23 kmpl",
       "top_speed": "175 kmph",
+      "max_torque": "80 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Scrambler 900 Standard", "price": "₹10,74,700" }
@@ -222,6 +236,8 @@
       "engine_displacement": "900 cc",
       "mileage": "24 kmpl",
       "top_speed": "185 kmph",
+      "max_torque": "80 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Bonneville T100 Standard", "price": "₹10,85,400" }
@@ -251,6 +267,8 @@
       "engine_displacement": "1200 cc",
       "mileage": "21 kmpl",
       "top_speed": "190 kmph",
+      "max_torque": "105 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Bonneville T120 Standard", "price": "₹12,35,000" }
@@ -280,6 +298,8 @@
       "engine_displacement": "1200 cc",
       "mileage": "21.7 kmpl",
       "top_speed": "150 kmph",
+      "max_torque": "107 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Bonneville Bobber Standard", "price": "₹13,37,500" }
@@ -310,6 +330,8 @@
       "engine_displacement": "1200 cc",
       "mileage": "21 kmpl",
       "top_speed": "160 kmph",
+      "max_torque": "107 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Bonneville Speedmaster Standard", "price": "₹13,37,500" }
@@ -339,6 +361,8 @@
       "engine_displacement": "765 cc",
       "mileage": "18 kmpl",
       "top_speed": "225 kmph",
+      "max_torque": "77 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Street Triple R", "price": "₹11,16,300" }
@@ -369,6 +393,8 @@
       "engine_displacement": "1160 cc",
       "mileage": "16 kmpl",
       "top_speed": "250 kmph",
+      "max_torque": "125 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Speed Triple 1200 RS", "price": "₹21,75,900" }
@@ -398,6 +424,8 @@
       "engine_displacement": "888 cc",
       "mileage": "21.2 kmpl",
       "top_speed": "200 kmph",
+      "max_torque": "87 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Tiger 900 GT", "price": "₹14,40,000" },
@@ -428,6 +456,8 @@
       "engine_displacement": "1160 cc",
       "mileage": "18 kmpl",
       "top_speed": "220 kmph",
+      "max_torque": "130 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Tiger 1200 GT Pro", "price": "₹19,39,000" },
@@ -460,6 +490,8 @@
       "engine_displacement": "2458 cc",
       "mileage": "14.6 kmpl",
       "top_speed": "220 kmph",
+      "max_torque": "221 Nm",
+      "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
         { "name": "Rocket 3 R", "price": "₹24,01,955" },
