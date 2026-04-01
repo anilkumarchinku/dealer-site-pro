@@ -2,7 +2,7 @@
   "brand": "Hop Electric",
   "brandId": "hop-electric",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -23,7 +23,7 @@
       "max_torque": "38 Nm",
       "colors": ["Sky Blue", "Jet Black", "Pearl White", "Sporty Red"],
       "variants": [
-        { "name": "Leo", "price": "₹89,990" }
+        { "name": "Leo 2.5 kWh", "price": "₹89,990" }
       ]
     },
     {
@@ -44,7 +44,30 @@
       "max_torque": "38 Nm",
       "colors": ["Sky Blue", "Jet Black", "Pearl White", "Sporty Red"],
       "variants": [
-        { "name": "LYF", "price": "₹79,990" }
+        { "name": "LYF 2.5 kWh", "price": "₹79,990" }
+      ]
+    },
+    {
+      "make": "Hop Electric",
+      "model": "OXO",
+      "variant_name": "Hop Electric OXO",
+      "price": "₹1,25,000 - ₹1,49,000",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "6 kW",
+        "Range": "150 km",
+        "Battery Capacity": "4.5 kWh",
+        "Top Speed": "110 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "max_torque": "50 Nm",
+      "colors": ["Sky Blue", "Jet Black", "Pearl White", "Sporty Red"],
+      "variants": [
+        { "name": "OXO Standard 3.3 kWh", "price": "₹1,25,000" },
+        { "name": "OXO Pro 4.5 kWh", "price": "₹1,49,000" }
       ]
     }
   ]

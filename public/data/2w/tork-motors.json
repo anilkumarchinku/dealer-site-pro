@@ -2,7 +2,7 @@
   "brand": "Tork Motors",
   "brandId": "tork-motors",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -18,13 +18,35 @@
         "Battery Capacity": "4 kWh",
         "Top Speed": "105 kmph",
         "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
       },
       "max_torque": "38 Nm",
       "colors": ["Volcanic Black", "Snow White", "Carnelian Orange", "Mirage Blue"],
       "variants": [
-        { "name": "Kratos R", "price": "₹1,34,999" },
-        { "name": "Kratos X", "price": "₹1,24,999" }
+        { "name": "Kratos R 4 kWh", "price": "₹1,34,999" }
+      ]
+    },
+    {
+      "make": "Tork Motors",
+      "model": "Kratos X",
+      "variant_name": "Tork Kratos X",
+      "price": "₹1,24,999",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "7.5 kW",
+        "Range": "140 km",
+        "Battery Capacity": "3 kWh",
+        "Top Speed": "100 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "max_torque": "38 Nm",
+      "colors": ["Volcanic Black", "Snow White", "Carnelian Orange", "Mirage Blue"],
+      "variants": [
+        { "name": "Kratos X 3 kWh", "price": "₹1,24,999" }
       ]
     }
   ]

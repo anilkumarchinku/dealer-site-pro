@@ -2,7 +2,7 @@
   "brand": "Harley-Davidson",
   "brandId": "harley-davidson-india",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -182,49 +182,40 @@
     },
     {
       "make": "Harley-Davidson",
-      "model": "Fat Boy",
-      "variant_name": "Harley-Davidson Fat Boy",
-      "price": "₹28,03,000 - ₹28,56,000",
-      "engine_displacement": "1868 cc",
-      "mileage": "18 kmpl",
-      "top_speed": "177 kmph",
+      "model": "Pan America 1250 Special",
+      "variant_name": "Harley-Davidson Pan America 1250 Special",
+      "price": "₹27,16,000",
+      "engine_displacement": "1252 cc",
+      "mileage": "18.2 kmpl",
+      "top_speed": "200 kmph",
       "fuel_type": "Petrol",
-      "max_torque": "161 Nm",
+      "max_torque": "128 Nm",
       "source_section": "Available",
       "variants": [
         {
-          "name": "Fat Boy Standard",
-          "price": "₹28,03,000"
-        },
-        {
-          "name": "Fat Boy 114",
-          "price": "₹28,30,000"
-        },
-        {
-          "name": "Fat Boy Premium",
-          "price": "₹28,56,000"
+          "name": "Pan America 1250 Special",
+          "price": "₹27,16,000"
         }
       ],
       "colors": [
-        "Blue Burst",
-        "Billiard Gray",
         "Vivid Black",
-        "Whiskey Fire/Vivid Black"
+        "Baja Orange"
       ],
       "technical_specifications": {
-        "engine_type": "Air-cooled, V-twin (Milwaukee-Eight 114)",
-        "power": "93.87 bhp",
-        "torque": "155 Nm",
+        "engine_type": "Liquid-cooled, V-twin (Revolution Max 1250)",
+        "power": "150.19 bhp",
+        "torque": "127 Nm",
         "gearbox": "6-Speed Manual",
-        "fuel_tank": "18.9 litres",
-        "seat_height": "675 mm",
-        "kerb_weight": "317 kg",
+        "fuel_tank": "21.2 litres",
+        "seat_height": "807 mm",
+        "kerb_weight": "258 kg",
         "brakes_front": "Disc",
         "brakes_rear": "Disc",
         "abs": "Yes",
-        "wheel_type": "Alloy (Solid Disc)",
+        "wheel_type": "Alloy",
         "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
+        "emission": "BS6 Phase 2",
+        "features": "Top-spec electronics, Adaptive ride height, Multiple ride modes"
       }
     },
     {
@@ -271,6 +262,53 @@
         "brakes_rear": "Disc",
         "abs": "Yes",
         "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Fat Boy",
+      "variant_name": "Harley-Davidson Fat Boy",
+      "price": "₹28,03,000 - ₹28,56,000",
+      "engine_displacement": "1868 cc",
+      "mileage": "18 kmpl",
+      "top_speed": "177 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "161 Nm",
+      "source_section": "Available",
+      "variants": [
+        {
+          "name": "Fat Boy Standard",
+          "price": "₹28,03,000"
+        },
+        {
+          "name": "Fat Boy 114",
+          "price": "₹28,30,000"
+        },
+        {
+          "name": "Fat Boy Premium",
+          "price": "₹28,56,000"
+        }
+      ],
+      "colors": [
+        "Blue Burst",
+        "Billiard Gray",
+        "Vivid Black",
+        "Whiskey Fire/Vivid Black"
+      ],
+      "technical_specifications": {
+        "engine_type": "Air-cooled, V-twin (Milwaukee-Eight 114)",
+        "power": "93.87 bhp",
+        "torque": "155 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "18.9 litres",
+        "seat_height": "675 mm",
+        "kerb_weight": "317 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy (Solid Disc)",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"
       }
@@ -411,44 +449,6 @@
         "start_type": "Self Start",
         "emission": "BS6 Phase 2",
         "features": "Road, Sport, Rain and Custom ride modes, V-Twin 175Nm touring engine"
-      }
-    },
-    {
-      "make": "Harley-Davidson",
-      "model": "Pan America 1250 Special",
-      "variant_name": "Harley-Davidson Pan America 1250 Special",
-      "price": "₹27,16,000",
-      "engine_displacement": "1252 cc",
-      "mileage": "18.2 kmpl",
-      "top_speed": "200 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "128 Nm",
-      "source_section": "Available",
-      "variants": [
-        {
-          "name": "Pan America 1250 Special",
-          "price": "₹27,16,000"
-        }
-      ],
-      "colors": [
-        "Vivid Black",
-        "Baja Orange"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V-twin (Revolution Max 1250)",
-        "power": "150.19 bhp",
-        "torque": "127 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "21.2 litres",
-        "seat_height": "807 mm",
-        "kerb_weight": "258 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "Top-spec electronics, Adaptive ride height, Multiple ride modes"
       }
     }
   ]

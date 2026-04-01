@@ -2,7 +2,7 @@
   "brand": "Oben Electric",
   "brandId": "oben-electric",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -24,7 +24,8 @@
       "max_torque": "140 Nm",
       "colors": ["Nebula Black", "Arctic White", "Titan Orange", "Cosmic Blue"],
       "variants": [
-        { "name": "Rorr EZ 4.4 kWh", "price": "₹1,34,999" }
+        { "name": "Rorr EZ 4.4 kWh", "price": "₹1,34,999" },
+        { "name": "Rorr EZ Pro 4.4 kWh", "price": "₹1,49,999" }
       ]
     }
   ]

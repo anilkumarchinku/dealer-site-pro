@@ -2,9 +2,117 @@
   "brand": "Indian Motorcycle",
   "brandId": "indian-motorcycle",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
+    {
+      "make": "Indian",
+      "model": "Scout Sixty Bobber",
+      "variant_name": "Indian Scout Sixty Bobber",
+      "price": "₹13,88,244",
+      "engine_displacement": "999 cc",
+      "mileage": "21 kmpl",
+      "top_speed": "180 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "87 Nm",
+      "source_section": "Available",
+      "variants": [
+        {
+          "name": "Scout Sixty Bobber Standard",
+          "price": "₹13,88,244"
+        }
+      ],
+      "colors": [
+        "Black Metallic"
+      ],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, V-twin",
+        "power": "86.18 bhp",
+        "torque": "87 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13 litres",
+        "seat_height": "649 mm",
+        "kerb_weight": "243 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Indian",
+      "model": "Sport Scout Sixty",
+      "variant_name": "Indian Sport Scout Sixty",
+      "price": "₹14,19,237",
+      "engine_displacement": "999 cc",
+      "mileage": "20 kmpl",
+      "top_speed": "180 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "88 Nm",
+      "source_section": "Available",
+      "variants": [
+        {
+          "name": "Sport Scout Sixty Standard",
+          "price": "₹14,19,237"
+        }
+      ],
+      "colors": [
+        "Black Smoke"
+      ],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, V-twin",
+        "power": "86.18 bhp",
+        "torque": "88 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13 litres",
+        "seat_height": "654 mm",
+        "kerb_weight": "241 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Indian",
+      "model": "Scout Sixty Classic",
+      "variant_name": "Indian Scout Sixty Classic",
+      "price": "₹14,34,198",
+      "engine_displacement": "999 cc",
+      "mileage": "21 kmpl",
+      "top_speed": "180 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "87 Nm",
+      "source_section": "Available",
+      "variants": [
+        {
+          "name": "Scout Sixty Classic Standard",
+          "price": "₹14,34,198"
+        }
+      ],
+      "colors": [
+        "Frost Silver"
+      ],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, V-twin",
+        "power": "86.18 bhp",
+        "torque": "87 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13 litres",
+        "seat_height": "654 mm",
+        "kerb_weight": "241 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
     {
       "make": "Indian",
       "model": "Scout Bobber",
@@ -188,6 +296,121 @@
         "features": "Cruise control, Selectable ride modes (Rain, Standard, Sport), Quick-release windshield & saddlebags, Two-up seat, Keyless ignition, USB charging, 4-inch touchscreen Ride Command"
       },
       "max_torque": "111 Nm"
+    },
+    {
+      "make": "Indian",
+      "model": "Chief Dark Horse",
+      "variant_name": "Indian Chief Dark Horse",
+      "price": "₹21,58,779",
+      "engine_displacement": "1890 cc",
+      "mileage": "14 kmpl",
+      "top_speed": "185 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "160 Nm",
+      "source_section": "Available",
+      "variants": [
+        {
+          "name": "Chief Dark Horse Standard",
+          "price": "₹21,58,779"
+        }
+      ],
+      "colors": [
+        "Alumina Jade Smoke",
+        "Stealth Gray",
+        "Black Smoke"
+      ],
+      "technical_specifications": {
+        "engine_type": "Air-cooled, V-twin (ThunderStroke 116)",
+        "power": "93 bhp",
+        "torque": "162 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "15.1 litres",
+        "seat_height": "662 mm",
+        "kerb_weight": "304 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Indian",
+      "model": "Chief Bobber Dark Horse",
+      "variant_name": "Indian Chief Bobber Dark Horse",
+      "price": "₹22,86,943",
+      "engine_displacement": "1890 cc",
+      "mileage": "14 kmpl",
+      "top_speed": "185 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "162 Nm",
+      "source_section": "Available",
+      "variants": [
+        {
+          "name": "Chief Bobber Dark Horse Standard",
+          "price": "₹22,86,943"
+        }
+      ],
+      "colors": [
+        "Copper Smoke",
+        "Silver Quartz Smoke",
+        "Titanium Smoke",
+        "Black Smoke"
+      ],
+      "technical_specifications": {
+        "engine_type": "Air-cooled, V-twin (ThunderStroke 116)",
+        "power": "93 bhp",
+        "torque": "162 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "15.1 litres",
+        "seat_height": "662 mm",
+        "kerb_weight": "315 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Indian",
+      "model": "Super Chief Limited",
+      "variant_name": "Indian Super Chief Limited",
+      "price": "₹24,38,944",
+      "engine_displacement": "1890 cc",
+      "mileage": "14 kmpl",
+      "top_speed": "185 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "162 Nm",
+      "source_section": "Available",
+      "variants": [
+        {
+          "name": "Super Chief Limited Standard",
+          "price": "₹24,38,944"
+        }
+      ],
+      "colors": [
+        "Stryker Red Metallic",
+        "Silver Quartz Metallic",
+        "Black Metallic"
+      ],
+      "technical_specifications": {
+        "engine_type": "Air-cooled, V-twin (ThunderStroke 116)",
+        "power": "93 bhp",
+        "torque": "162 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "15.1 litres",
+        "seat_height": "665 mm",
+        "kerb_weight": "335 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     }
   ]
 }

@@ -73,17 +73,29 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): Car[] {
                 exterior: v.images ?? [],
                 interior: [],
             },
-            variants: [{
-                id: `${v.id}-v1`,
-                name: v.variant || `${v.model} Standard`,
-                price: priceINR ?? 0,
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                transmission: (v.transmission || 'Manual') as any,
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                fuelType: fuelLabel as any,
-                keyFeatures: generate2WFeatures(v).slice(0, 3),
-                isPopular: true,
-            }],
+            variants: v.all_variants && v.all_variants.length > 0
+                ? v.all_variants.map((av, i) => ({
+                    id: `${v.id}-v${i + 1}`,
+                    name: av.name,
+                    price: av.price_paise > 0 ? Math.round(av.price_paise / 100) : (priceINR ?? 0),
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    transmission: (v.transmission || 'Manual') as any,
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    fuelType: fuelLabel as any,
+                    keyFeatures: generate2WFeatures(v).slice(0, 3),
+                    isPopular: i === 0,
+                }))
+                : [{
+                    id: `${v.id}-v1`,
+                    name: v.variant || `${v.model} Standard`,
+                    price: priceINR ?? 0,
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    transmission: (v.transmission || 'Manual') as any,
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    fuelType: fuelLabel as any,
+                    keyFeatures: generate2WFeatures(v).slice(0, 3),
+                    isPopular: true,
+                }],
             meta: { viewCount: v.views ?? 0 },
             price: priceINR
                 ? `₹${priceINR.toLocaleString('en-IN')}`

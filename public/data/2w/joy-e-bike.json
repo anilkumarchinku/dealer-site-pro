@@ -2,7 +2,7 @@
   "brand": "Joy e-bike",
   "brandId": "joy-e-bike",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -23,7 +23,7 @@
       "max_torque": "55 Nm",
       "colors": ["Cosmic Black", "Arctic White", "Lava Red", "Ocean Blue"],
       "variants": [
-        { "name": "Wolf Plus", "price": "₹89,399" }
+        { "name": "Wolf Plus 60V 24Ah", "price": "₹89,399" }
       ]
     },
     {
@@ -44,7 +44,7 @@
       "max_torque": "35 Nm",
       "colors": ["Cosmic Black", "Arctic White", "Lava Red", "Ocean Blue"],
       "variants": [
-        { "name": "Mihos", "price": "₹79,999" }
+        { "name": "Mihos 60V 24Ah", "price": "₹79,999" }
       ]
     },
     {
@@ -65,7 +65,28 @@
       "max_torque": "55 Nm",
       "colors": ["Cosmic Black", "Arctic White", "Lava Red", "Ocean Blue"],
       "variants": [
-        { "name": "Monster", "price": "₹95,999" }
+        { "name": "Monster 60V 28Ah", "price": "₹95,999" }
+      ]
+    },
+    {
+      "make": "Joy e-bike",
+      "model": "Glob",
+      "variant_name": "Joy e-bike Glob",
+      "price": "₹64,999",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "250 W",
+        "Range": "60 km",
+        "Battery Capacity": "48V 20Ah",
+        "Top Speed": "25 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "max_torque": "20 Nm",
+      "colors": ["Cosmic Black", "Arctic White", "Lava Red", "Ocean Blue"],
+      "variants": [
+        { "name": "Glob 48V 20Ah", "price": "₹64,999" }
       ]
     }
   ]

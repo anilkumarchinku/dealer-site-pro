@@ -9,7 +9,7 @@
       "make": "Honda",
       "model": "CB125 Hornet",
       "variant_name": "CB125 Hornet Standard",
-      "price": "₹1,14,423",
+      "price": "₹1,14,424",
       "engine_displacement": "123.94 cc",
       "mileage": "55 kmpl",
       "max_power": "10.99 bhp",
@@ -20,7 +20,7 @@
       "variants": [
         {
           "name": "CB125 Hornet Standard",
-          "price": "₹1,14,423"
+          "price": "₹1,14,424"
         }
       ],
       "colors": [
@@ -52,7 +52,7 @@
       "make": "Honda",
       "model": "SP 125",
       "variant_name": "SP 125 Drum",
-      "price": "₹88,750",
+      "price": "₹88,752",
       "engine_displacement": "123.94 cc",
       "mileage": "62 kmpl",
       "max_power": "10.72 bhp",
@@ -63,7 +63,7 @@
       "variants": [
         {
           "name": "SP 125 Drum",
-          "price": "₹88,750"
+          "price": "₹88,752"
         },
         {
           "name": "SP 125 Disc",
@@ -71,7 +71,7 @@
         },
         {
           "name": "SP 125 25-year Anniversary Edition",
-          "price": "₹95,611"
+          "price": "₹95,612"
         }
       ],
       "colors": [
@@ -343,7 +343,7 @@
       "make": "Honda",
       "model": "NX200",
       "variant_name": "NX200 Standard",
-      "price": "₹1,57,748",
+      "price": "₹1,57,750",
       "engine_displacement": "184.4 cc",
       "mileage": "42 kmpl",
       "max_power": "16.76 bhp",
@@ -354,7 +354,7 @@
       "variants": [
         {
           "name": "NX200 Standard",
-          "price": "₹1,57,748"
+          "price": "₹1,57,750"
         }
       ],
       "colors": [
@@ -385,7 +385,7 @@
       "make": "Honda",
       "model": "Hornet 2.0",
       "variant_name": "Hornet 2.0 Standard",
-      "price": "₹1,28,000",
+      "price": "₹1,47,152",
       "engine_displacement": "184.4 cc",
       "mileage": "45 kmpl",
       "max_power": "17.03 bhp",
@@ -396,13 +396,14 @@
       "variants": [
         {
           "name": "Hornet 2.0 Standard",
-          "price": "₹1,28,000"
+          "price": "₹1,47,152"
         }
       ],
       "colors": [
         "Pearl Igneous Black",
         "Radiant Red Metallic",
-        "Mat Axis Grey Metallic"
+        "Mat Axis Grey Metallic",
+        "Grand Prix Red"
       ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2, Single-cylinder",
@@ -936,7 +937,7 @@
     {
       "make": "Honda",
       "model": "Activa 125",
-      "variant_name": "Activa 125 Standard",
+      "variant_name": "Activa 125 25-year Anniversary Edition",
       "price": "₹92,297",
       "engine_displacement": "123.92 cc",
       "mileage": "47 kmpl",
@@ -956,7 +957,7 @@
         },
         {
           "name": "Activa 125 H-Smart",
-          "price": "₹97,372"
+          "price": "₹97,373"
         }
       ],
       "colors": [
@@ -1082,7 +1083,7 @@
       "make": "Honda",
       "model": "Dio 125",
       "variant_name": "Dio 125 Standard",
-      "price": "₹92,760",
+      "price": "₹92,761",
       "engine_displacement": "123.92 cc",
       "mileage": "47 kmpl",
       "max_power": "8.19 bhp",
@@ -1093,7 +1094,7 @@
       "variants": [
         {
           "name": "Dio 125 Standard",
-          "price": "₹92,760"
+          "price": "₹92,761"
         },
         {
           "name": "Dio 125 X Edition",
@@ -1101,7 +1102,7 @@
         },
         {
           "name": "Dio 125 H-Smart",
-          "price": "₹97,711"
+          "price": "₹97,712"
         }
       ],
       "colors": [

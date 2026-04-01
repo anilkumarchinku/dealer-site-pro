@@ -1147,6 +1147,148 @@
         "wheel_type": "Alloy",
         "features": "Keyless start, Bluetooth connectivity, Digital speedometer, USB charging port"
       }
+    },
+    {
+      "make": "Hero",
+      "model": "Maestro Edge 110",
+      "variant_name": "Maestro Edge 110 LX - OBD 2B",
+      "price": "₹74,500",
+      "engine_displacement": "110.9 cc",
+      "mileage": "55 kmpl",
+      "max_power": "8.02 bhp",
+      "max_torque": "8.74 Nm",
+      "top_speed": "85 kmph",
+      "source_section": "Available",
+      "fuel_type": "Petrol",
+      "variants": [
+        { "name": "Maestro Edge 110 LX - OBD 2B", "price": "₹74,500" },
+        { "name": "Maestro Edge 110 VX - OBD 2B", "price": "₹77,500" }
+      ],
+      "colors": ["Pearl Silver White", "Heavy Red", "Panther Black", "Pearl Blue", "Matte Techno Blue"],
+      "technical_specifications": {
+        "engine_type": "BS6 Phase 2B, Single-cylinder, Air-cooled",
+        "displacement": "110.9 cc",
+        "max_power": "8.02 bhp",
+        "max_torque": "8.74 Nm",
+        "transmission": "CVT Automatic",
+        "start_type": "Kick and Self Start",
+        "fuel_tank": "5.1 liters",
+        "mileage_user": "55 kmpl",
+        "top_speed": "85 kmph",
+        "kerb_weight": "108 kg",
+        "seat_height": "778 mm",
+        "front_brake": "Drum",
+        "rear_brake": "Drum",
+        "braking_system": "Combined Braking System",
+        "wheel_type": "Alloy",
+        "features": "External fuel filling, USB charging"
+      }
+    },
+    {
+      "make": "Hero",
+      "model": "Maestro Edge 125",
+      "variant_name": "Maestro Edge 125 VX - OBD 2B",
+      "price": "₹82,000",
+      "engine_displacement": "124.6 cc",
+      "mileage": "45 kmpl",
+      "max_power": "9.1 bhp",
+      "max_torque": "10.4 Nm",
+      "top_speed": "90 kmph",
+      "source_section": "Available",
+      "fuel_type": "Petrol",
+      "variants": [
+        { "name": "Maestro Edge 125 VX - OBD 2B", "price": "₹82,000" },
+        { "name": "Maestro Edge 125 ZX - OBD 2B", "price": "₹88,000" }
+      ],
+      "colors": ["Pearl Silver White", "Candy Blazing Red", "Prismatic Purple", "Prismatic Yellow", "Panther Black"],
+      "technical_specifications": {
+        "engine_type": "BS6 Phase 2B, Single-cylinder, Air-cooled",
+        "displacement": "124.6 cc",
+        "max_power": "9.1 bhp",
+        "max_torque": "10.4 Nm",
+        "transmission": "CVT Automatic",
+        "start_type": "Self Start",
+        "fuel_tank": "5 liters",
+        "mileage_user": "45 kmpl",
+        "top_speed": "90 kmph",
+        "kerb_weight": "110 kg",
+        "seat_height": "775 mm",
+        "front_brake": "Disc",
+        "rear_brake": "Drum",
+        "braking_system": "Combined Braking System",
+        "wheel_type": "Alloy",
+        "features": "External fuel filling, Bluetooth (ZX variant), i3S, USB charging"
+      }
+    },
+    {
+      "make": "Hero",
+      "model": "XPulse 200",
+      "variant_name": "XPulse 200 Standard",
+      "price": "₹1,27,116",
+      "engine_displacement": "199.6 cc",
+      "mileage": "40 kmpl",
+      "max_power": "17.8 bhp",
+      "max_torque": "16.45 Nm",
+      "top_speed": "111 kmph",
+      "source_section": "Discontinued",
+      "fuel_type": "Petrol",
+      "variants": [
+        { "name": "XPulse 200 Standard", "price": "₹1,27,116" }
+      ],
+      "colors": ["Panther Black", "Sports Red", "Matte Grey", "White", "Matte Green"],
+      "technical_specifications": {
+        "engine_type": "BS6, Single-cylinder, Oil-cooled",
+        "displacement": "199.6 cc",
+        "max_power": "17.8 bhp @ 8500 rpm",
+        "max_torque": "16.45 Nm @ 6500 rpm",
+        "transmission": "5-Speed Manual",
+        "start_type": "Kick and Self Start",
+        "fuel_tank": "13 liters",
+        "mileage_user": "40 kmpl",
+        "top_speed": "111 kmph",
+        "kerb_weight": "157 kg",
+        "seat_height": "825 mm",
+        "front_brake": "Disc with ABS",
+        "rear_brake": "Disc with ABS",
+        "braking_system": "Single-channel ABS",
+        "wheel_type": "Alloy",
+        "features": "Long-travel suspension, High ground clearance, LED lights"
+      }
+    },
+    {
+      "make": "Hero",
+      "model": "XPulse 200T",
+      "variant_name": "XPulse 200T Standard",
+      "price": "₹1,24,418",
+      "engine_displacement": "199.6 cc",
+      "mileage": "40 kmpl",
+      "max_power": "17.83 bhp",
+      "max_torque": "16.15 Nm",
+      "top_speed": "115 kmph",
+      "source_section": "Discontinued",
+      "fuel_type": "Petrol",
+      "variants": [
+        { "name": "XPulse 200T Standard", "price": "₹1,24,418" }
+      ],
+      "colors": ["Panther Black", "Sports Red", "Matte Shield Gold"],
+      "technical_specifications": {
+        "engine_type": "BS6, Single-cylinder, Oil-cooled, 2 Valves",
+        "displacement": "199.6 cc",
+        "max_power": "17.83 bhp @ 8500 rpm",
+        "max_torque": "16.15 Nm @ 6500 rpm",
+        "transmission": "5-Speed Manual",
+        "start_type": "Kick and Self Start",
+        "fuel_tank": "13 liters",
+        "mileage_user": "40 kmpl",
+        "top_speed": "115 kmph",
+        "kerb_weight": "154 kg",
+        "seat_height": "825 mm",
+        "front_brake": "Disc with ABS",
+        "rear_brake": "Disc with ABS",
+        "braking_system": "Single-channel ABS",
+        "wheel_type": "Alloy",
+        "features": "Trail-touring styling, Long-travel suspension"
+      }
     }
   ]
 }

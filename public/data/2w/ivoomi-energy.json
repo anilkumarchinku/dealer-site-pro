@@ -2,7 +2,7 @@
   "brand": "iVOOMi Energy",
   "brandId": "ivoomi-energy",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -23,7 +23,7 @@
       "max_torque": "42 Nm",
       "colors": ["Ice White", "Midnight Black", "Royal Blue", "Peppy Pink"],
       "variants": [
-        { "name": "S1", "price": "₹68,990" }
+        { "name": "S1 48V 26Ah", "price": "₹68,990" }
       ]
     },
     {
@@ -44,7 +44,7 @@
       "max_torque": "42 Nm",
       "colors": ["Ice White", "Midnight Black", "Royal Blue", "Peppy Pink"],
       "variants": [
-        { "name": "S1 Pro", "price": "₹75,990" }
+        { "name": "S1 Pro 48V 30Ah", "price": "₹75,990" }
       ]
     },
     {
@@ -65,7 +65,28 @@
       "max_torque": "42 Nm",
       "colors": ["Ice White", "Midnight Black", "Royal Blue", "Peppy Pink"],
       "variants": [
-        { "name": "Energy", "price": "₹79,990" }
+        { "name": "Energy 60V 28Ah", "price": "₹79,990" }
+      ]
+    },
+    {
+      "make": "iVOOMi Energy",
+      "model": "JeetX",
+      "variant_name": "iVOOMi Energy JeetX",
+      "price": "₹1,02,990",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "2.0 kW",
+        "Range": "130 km",
+        "Battery Capacity": "60V 38Ah",
+        "Top Speed": "60 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "max_torque": "42 Nm",
+      "colors": ["Ice White", "Midnight Black", "Royal Blue", "Peppy Pink", "Lime Green"],
+      "variants": [
+        { "name": "JeetX 60V 38Ah", "price": "₹1,02,990" }
       ]
     }
   ]

@@ -2,14 +2,14 @@
   "brand": "Simple Energy",
   "brandId": "simple-energy",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Simple Energy",
       "model": "Simple One",
       "variant_name": "Simple One 5 kWh",
-      "price": "₹1,89,900",
+      "price": "₹1,59,900 - ₹1,89,900",
       "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
@@ -18,13 +18,36 @@
         "Battery Capacity": "5 kWh",
         "Top Speed": "105 kmph",
         "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
       },
       "max_torque": "72 Nm",
       "colors": ["Namma Red", "Grace White", "Azure Blue", "Pearl Black", "Desert Gold"],
       "variants": [
-        { "name": "Simple One 5 kWh", "price": "₹1,89,900" },
-        { "name": "Simple One 4 kWh", "price": "₹1,59,900" }
+        { "name": "Simple One 4 kWh", "price": "₹1,59,900" },
+        { "name": "Simple One 5 kWh", "price": "₹1,89,900" }
+      ]
+    },
+    {
+      "make": "Simple Energy",
+      "model": "Simple Dot One",
+      "variant_name": "Simple Dot One",
+      "price": "₹99,999",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "4.5 kW",
+        "Range": "151 km",
+        "Battery Capacity": "3.3 kWh",
+        "Top Speed": "90 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "max_torque": "50 Nm",
+      "colors": ["Namma Red", "Grace White", "Azure Blue", "Pearl Black"],
+      "variants": [
+        { "name": "Simple Dot One 3.3 kWh", "price": "₹99,999" }
       ]
     }
   ]

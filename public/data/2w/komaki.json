@@ -2,12 +2,12 @@
   "brand": "Komaki",
   "brandId": "komaki",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Komaki",
-      "model": "Komaki Ranger",
+      "model": "Ranger",
       "variant_name": "Komaki Ranger",
       "price": "₹89,999",
       "fuel_type": "Electric",
@@ -23,7 +23,70 @@
       "max_torque": "35 Nm",
       "colors": ["Matte Grey", "Pearl White", "Glossy Black", "Red"],
       "variants": [
-        { "name": "Komaki Ranger", "price": "₹89,999" }
+        { "name": "Ranger 96V 32Ah", "price": "₹89,999" }
+      ]
+    },
+    {
+      "make": "Komaki",
+      "model": "Venice",
+      "variant_name": "Komaki Venice",
+      "price": "₹79,999",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "2 kW",
+        "Range": "180 km",
+        "Battery Capacity": "72V 36Ah",
+        "Top Speed": "60 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "max_torque": "35 Nm",
+      "colors": ["Matte Grey", "Pearl White", "Glossy Black", "Red", "Sky Blue"],
+      "variants": [
+        { "name": "Venice 72V 36Ah", "price": "₹79,999" }
+      ]
+    },
+    {
+      "make": "Komaki",
+      "model": "XGT K5",
+      "variant_name": "Komaki XGT K5",
+      "price": "₹1,09,999",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "4 kW",
+        "Range": "220 km",
+        "Battery Capacity": "96V 40Ah",
+        "Top Speed": "90 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "max_torque": "50 Nm",
+      "colors": ["Matte Grey", "Pearl White", "Glossy Black", "Red"],
+      "variants": [
+        { "name": "XGT K5 96V 40Ah", "price": "₹1,09,999" }
+      ]
+    },
+    {
+      "make": "Komaki",
+      "model": "TN-95",
+      "variant_name": "Komaki TN-95",
+      "price": "₹74,999",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "1.5 kW",
+        "Range": "150 km",
+        "Battery Capacity": "72V 28Ah",
+        "Top Speed": "55 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "max_torque": "35 Nm",
+      "colors": ["Matte Grey", "Pearl White", "Glossy Black", "Red"],
+      "variants": [
+        { "name": "TN-95 72V 28Ah", "price": "₹74,999" }
       ]
     }
   ]

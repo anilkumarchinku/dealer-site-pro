@@ -2,7 +2,7 @@
   "brand": "BGauss",
   "brandId": "bgauss",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -23,7 +23,7 @@
       "max_torque": "42 Nm",
       "colors": ["Coral Orange", "Mystic Blue", "Urban Black", "Snow White"],
       "variants": [
-        { "name": "D15i Neo", "price": "₹99,990" }
+        { "name": "D15i Neo 48V 32Ah", "price": "₹99,990" }
       ]
     },
     {
@@ -44,7 +44,7 @@
       "max_torque": "40 Nm",
       "colors": ["Coral Orange", "Mystic Blue", "Urban Black", "Snow White"],
       "variants": [
-        { "name": "B8 Neo", "price": "₹89,990" }
+        { "name": "B8 Neo 60V 30Ah", "price": "₹89,990" }
       ]
     },
     {
@@ -65,7 +65,7 @@
       "max_torque": "40 Nm",
       "colors": ["Coral Orange", "Mystic Blue", "Urban Black", "Snow White"],
       "variants": [
-        { "name": "A2 Neo", "price": "₹79,990" }
+        { "name": "A2 Neo 48V 30Ah", "price": "₹79,990" }
       ]
     },
     {
@@ -86,7 +86,28 @@
       "max_torque": "42 Nm",
       "colors": ["Coral Orange", "Mystic Blue", "Urban Black", "Snow White"],
       "variants": [
-        { "name": "RUV501", "price": "₹1,09,990" }
+        { "name": "RUV501 60V 34Ah", "price": "₹1,09,990" }
+      ]
+    },
+    {
+      "make": "BGauss",
+      "model": "C3i",
+      "variant_name": "BGauss C3i",
+      "price": "₹1,19,990",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "2.0 kW",
+        "Range": "130 km",
+        "Battery Capacity": "60V 40Ah",
+        "Top Speed": "65 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "max_torque": "42 Nm",
+      "colors": ["Coral Orange", "Mystic Blue", "Urban Black", "Snow White"],
+      "variants": [
+        { "name": "C3i 60V 40Ah", "price": "₹1,19,990" }
       ]
     }
   ]

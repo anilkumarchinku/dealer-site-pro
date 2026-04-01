@@ -2,7 +2,7 @@
   "brand": "Odysse Electric",
   "brandId": "odysse-electric",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -23,7 +23,7 @@
       "max_torque": "35 Nm",
       "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
       "variants": [
-        { "name": "E2", "price": "₹72,999" }
+        { "name": "E2 60V 30Ah", "price": "₹72,999" }
       ]
     },
     {
@@ -44,7 +44,7 @@
       "max_torque": "35 Nm",
       "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
       "variants": [
-        { "name": "E2S", "price": "₹77,999" }
+        { "name": "E2S 60V 30Ah", "price": "₹77,999" }
       ]
     },
     {
@@ -65,7 +65,7 @@
       "max_torque": "35 Nm",
       "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
       "variants": [
-        { "name": "E4", "price": "₹84,999" }
+        { "name": "E4 60V 35Ah", "price": "₹84,999" }
       ]
     },
     {
@@ -86,7 +86,7 @@
       "max_torque": "60 Nm",
       "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
       "variants": [
-        { "name": "Evoqis", "price": "₹89,999" }
+        { "name": "Evoqis 60V 35Ah", "price": "₹89,999" }
       ]
     },
     {
@@ -107,7 +107,7 @@
       "max_torque": "35 Nm",
       "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
       "variants": [
-        { "name": "Rogue", "price": "₹94,999" }
+        { "name": "Rogue 60V 35Ah", "price": "₹94,999" }
       ]
     },
     {
@@ -128,7 +128,7 @@
       "max_torque": "35 Nm",
       "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
       "variants": [
-        { "name": "Stream", "price": "₹69,999" }
+        { "name": "Stream 60V 30Ah", "price": "₹69,999" }
       ]
     }
   ]

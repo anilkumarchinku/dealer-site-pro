@@ -2,7 +2,7 @@
   "brand": "Moto Guzzi",
   "brandId": "moto-guzzi",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -36,21 +36,6 @@
         "emission": "BS6 Phase 2",
         "features": "Safety electronics package"
       }
-    }
-  ],
-  "moto_guzzi_bikes": [
-    {
-      "model_name": "V85 TT",
-      "price": "₹16,00,000",
-      "engine": "853 cc",
-      "mileage": "17 kmpl",
-      "max_power": "80 bhp",
-      "torque": "80 Nm",
-      "top_speed": "200 km/h",
-      "gear_box": "6-speed",
-      "colors": ["Arancione", "Bianco Ghiaccio", "Giallo Mojave", "Rosso Rame"],
-      "fuel_type": "Petrol",
-      "max_torque": "80 Nm"
     }
   ]
 }

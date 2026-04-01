@@ -1,61 +1,138 @@
 {
   "zontes_bikes": [
     {
-      "model_name": "350R",
-      "price": "₹2,99,900",
+      "model_name": "350X",
+      "price": "₹2,37,040",
       "engine": "348 cc",
       "mileage": "25 kmpl",
-      "max_power": "36 bhp",
-      "torque": "32 Nm",
+      "max_power": "38.2 bhp",
+      "torque": "32.8 Nm",
       "top_speed": "150 km/h",
       "gear_box": "6-speed",
       "colors": [
-        "Black Red",
-        "Blue White"
+        "Silver Black",
+        "Green Black",
+        "Silver Orange"
       ],
       "fuel_type": "Petrol",
-      "max_torque": "32 Nm",
+      "max_torque": "32.8 Nm",
       "variants": [
-        { "name": "350R Standard", "price": "₹2,99,900" }
-      ]
+        { "name": "350X Standard", "price": "₹2,37,040" }
+      ],
+      "technical_specifications": {
+        "engine_type": "Single-cylinder, Liquid-cooled, BS6 Phase 2",
+        "fuel_tank": "15 litres",
+        "seat_height": "795 mm",
+        "kerb_weight": "185 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Dual-channel ABS",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "TFT LCD display, Keyless ignition, 4 ride modes, LED lighting, Dual USB charging, TPMS"
+      }
+    },
+    {
+      "model_name": "350R",
+      "price": "₹2,57,014",
+      "engine": "348 cc",
+      "mileage": "34 kmpl",
+      "max_power": "38.2 bhp",
+      "torque": "32.8 Nm",
+      "top_speed": "150 km/h",
+      "gear_box": "6-speed",
+      "colors": [
+        "Blue",
+        "Silver",
+        "Black"
+      ],
+      "fuel_type": "Petrol",
+      "max_torque": "32.8 Nm",
+      "variants": [
+        { "name": "350R Standard", "price": "₹2,57,014" }
+      ],
+      "technical_specifications": {
+        "engine_type": "Single-cylinder, Liquid-cooled, BS6 Phase 2",
+        "fuel_tank": "15 litres",
+        "seat_height": "795 mm",
+        "kerb_weight": "180 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "LED lights, Digital console, Riding modes, TPMS, Keyless ignition"
+      }
     },
     {
       "model_name": "350T",
-      "price": "₹2,85,900",
+      "price": "₹2,75,016 - ₹2,99,017",
       "engine": "348 cc",
-      "mileage": "25 kmpl",
-      "max_power": "36 bhp",
-      "torque": "32 Nm",
-      "top_speed": "145 km/h",
+      "mileage": "29.5 kmpl",
+      "max_power": "38.2 bhp",
+      "torque": "32.8 Nm",
+      "top_speed": "140 km/h",
       "gear_box": "6-speed",
       "colors": [
-        "Gun Grey",
-        "Candy Red"
+        "Orange",
+        "Champagne",
+        "Orange (Adv)",
+        "Black (Adv)"
       ],
       "fuel_type": "Petrol",
-      "max_torque": "32 Nm",
+      "max_torque": "32.8 Nm",
       "variants": [
-        { "name": "350T Standard", "price": "₹2,85,900" }
-      ]
+        { "name": "350T Standard", "price": "₹2,75,016" },
+        { "name": "350T ADV", "price": "₹2,99,017" }
+      ],
+      "technical_specifications": {
+        "engine_type": "Single-cylinder, Liquid-cooled, BS6 Phase 2",
+        "fuel_tank": "19 litres",
+        "seat_height": "830 mm",
+        "kerb_weight": "196 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "TFT LCD display, Keyless ignition, 4 ride modes, LED lighting, Dual USB charging, TPMS"
+      }
     },
     {
-      "model_name": "350X",
-      "price": "₹3,09,900",
+      "model_name": "GK350",
+      "price": "₹3,22,016",
       "engine": "348 cc",
-      "mileage": "25 kmpl",
-      "max_power": "36 bhp",
-      "torque": "32 Nm",
-      "top_speed": "145 km/h",
+      "mileage": "26.7 kmpl",
+      "max_power": "38.2 bhp",
+      "torque": "32.8 Nm",
+      "top_speed": "140 km/h",
       "gear_box": "6-speed",
       "colors": [
-        "Carbon Black",
-        "Silver White"
+        "Silver Orange",
+        "Black Gold",
+        "Black Blue"
       ],
       "fuel_type": "Petrol",
-      "max_torque": "32 Nm",
+      "max_torque": "32.8 Nm",
       "variants": [
-        { "name": "350X Standard", "price": "₹3,09,900" }
-      ]
+        { "name": "GK350 Standard", "price": "₹3,22,016" }
+      ],
+      "technical_specifications": {
+        "engine_type": "Single-cylinder, Liquid-cooled, BS6 Phase 2",
+        "fuel_tank": "17 litres",
+        "seat_height": "795 mm",
+        "kerb_weight": "188 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "Full LED lights, TFT display, Keyless ignition, 4 ride modes, Dual USB charging, TPMS"
+      }
     }
   ]
 }

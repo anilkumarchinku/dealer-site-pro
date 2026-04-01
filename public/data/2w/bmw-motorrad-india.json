@@ -2,14 +2,14 @@
   "brand": "BMW Motorrad",
   "brandId": "bmw-motorrad-india",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "BMW Motorrad",
       "model": "G 310 RR",
       "variant_name": "BMW G 310 RR",
-      "price": "₹2,84,995",
+      "price": "₹2,84,995 - ₹2,99,000",
       "engine_displacement": "312 cc",
       "mileage": "30 kmpl",
       "top_speed": "160 kmph",
@@ -20,11 +20,18 @@
         {
           "name": "G 310 RR Standard",
           "price": "₹2,84,995"
+        },
+        {
+          "name": "G 310 RR Style Sport",
+          "price": "₹2,99,000"
         }
       ],
       "colors": [
-        "Racing Red",
-        "Cosmic Black"
+        "Racing Blue Metallic",
+        "Cosmic Black 2",
+        "Light White Uni / Racing Blue Metallic / Racing Red",
+        "Polar White (LE)",
+        "Cosmic Black (LE)"
       ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Single-cylinder",
@@ -94,8 +101,7 @@
         }
       ],
       "colors": [
-        "Alpine White",
-        "Blackstorm Metallic"
+        "Diamond White Metallic"
       ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Single-cylinder",
@@ -155,7 +161,7 @@
       "make": "BMW Motorrad",
       "model": "F 900 GS Adventure",
       "variant_name": "BMW F 900 GS Adventure",
-      "price": "₹16,99,888",
+      "price": "₹16,99,888 - ₹17,49,858",
       "engine_displacement": "895 cc",
       "mileage": "22 kmpl",
       "top_speed": "200 kmph",
@@ -166,11 +172,15 @@
         {
           "name": "F 900 GS Adventure Standard",
           "price": "₹16,99,888"
+        },
+        {
+          "name": "F 900 GS Adventure Ride Pro",
+          "price": "₹17,49,858"
         }
       ],
       "colors": [
-        "Light White",
-        "GS Trophy"
+        "Blackstorm Metallic",
+        "Ride Pro"
       ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
@@ -186,6 +196,40 @@
         "wheel_type": "Spoke",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "BMW Motorrad",
+      "model": "CE 04",
+      "variant_name": "BMW CE 04",
+      "price": "₹15,25,000",
+      "engine_displacement": "Electric",
+      "mileage": "130 km range",
+      "top_speed": "120 kmph",
+      "fuel_type": "Electric",
+      "max_torque": "56 Nm",
+      "source_section": "Available",
+      "variants": [
+        {
+          "name": "CE 04 Standard",
+          "price": "₹15,25,000"
+        }
+      ],
+      "colors": [
+        "Avantgarde"
+      ],
+      "technical_specifications": {
+        "motor_type": "Electric",
+        "power": "31 kW (42 bhp)",
+        "range": "130 km",
+        "charging_time": "4.2 hours (0-100%)",
+        "seat_height": "780 mm",
+        "kerb_weight": "231 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "features": "10.25-inch TFT display, Navigation, Connectivity"
       }
     },
     {
@@ -206,8 +250,8 @@
         }
       ],
       "colors": [
-        "Bluefire/Mugiallo Yellow",
-        "Light White/M Motorsport",
+        "Bluefire / Mugiallo Yellow",
+        "Light White / M Motorsport",
         "Blackstorm Metallic"
       ],
       "technical_specifications": {
@@ -279,7 +323,6 @@
         }
       ],
       "colors": [
-        "Option 719 Mineral White Metallic",
         "Blackstorm Metallic"
       ],
       "technical_specifications": {
@@ -344,7 +387,7 @@
       "make": "BMW Motorrad",
       "model": "S 1000 RR",
       "variant_name": "BMW S 1000 RR",
-      "price": "₹23,24,936",
+      "price": "₹23,24,936 - ₹28,89,862",
       "engine_displacement": "999 cc",
       "mileage": "16 kmpl",
       "top_speed": "303 kmph",
@@ -355,12 +398,20 @@
         {
           "name": "S 1000 RR Standard",
           "price": "₹23,24,936"
+        },
+        {
+          "name": "S 1000 RR M Package",
+          "price": "₹25,99,000"
+        },
+        {
+          "name": "S 1000 RR M Competition Package",
+          "price": "₹28,89,862"
         }
       ],
       "colors": [
-        "Black Storm Metallic",
-        "Passion",
-        "Light White"
+        "Sport",
+        "Blackstorm Metallic",
+        "Light White / M Motorsport"
       ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-four",
@@ -396,8 +447,9 @@
         }
       ],
       "colors": [
-        "Racing Red",
-        "Blackstorm Metallic"
+        "Light White / M Motorsport",
+        "Gravity Blue Metallic",
+        "Blackstorm Metallic 2"
       ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-four",
@@ -434,7 +486,9 @@
         }
       ],
       "colors": [
-        "M Motorsport"
+        "Blackstorm Metallic",
+        "White Aluminium Metallic Matt",
+        "Light White"
       ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-four",
@@ -471,7 +525,7 @@
       ],
       "colors": [
         "Manhattan Metallic Matt",
-        "Galaxy Dust Metallic/Titan Silver 2 Metallic",
+        "Galaxy Dust Metallic / Titan Silver 2 Metallic",
         "Black Storm Metallic",
         "Gravity Blue Metallic",
         "Mineral White Metallic"
@@ -496,7 +550,7 @@
       "make": "BMW Motorrad",
       "model": "K 1600",
       "variant_name": "BMW K 1600",
-      "price": "₹37,49,261",
+      "price": "₹37,49,261 - ₹37,49,755",
       "engine_displacement": "1649 cc",
       "mileage": "15 kmpl",
       "top_speed": "200 kmph",
@@ -504,13 +558,19 @@
       "source_section": "Available",
       "variants": [
         {
-          "name": "K 1600 GTL Standard",
+          "name": "K 1600 GT",
           "price": "₹37,49,261"
+        },
+        {
+          "name": "K 1600 GTL",
+          "price": "₹37,49,755"
         }
       ],
       "colors": [
         "Blackstorm Metallic",
-        "Option 719 Mineral White"
+        "Style Exclusive",
+        "Blackstorm Metallic (GTL)",
+        "Style Exclusive (GTL)"
       ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-six",
@@ -528,41 +588,6 @@
         "emission": "BS6 Phase 2"
       },
       "max_torque": "175 Nm"
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "CE 04",
-      "variant_name": "BMW CE 04",
-      "price": "₹15,25,000",
-      "engine_displacement": "Electric",
-      "mileage": "130 km range",
-      "top_speed": "120 kmph",
-      "fuel_type": "Electric",
-      "max_torque": "56 Nm",
-      "source_section": "Available",
-      "variants": [
-        {
-          "name": "CE 04 Standard",
-          "price": "₹15,25,000"
-        }
-      ],
-      "colors": [
-        "Light White",
-        "Magellan Grey Metallic"
-      ],
-      "technical_specifications": {
-        "motor_type": "Electric",
-        "power": "31 kW (42 bhp)",
-        "range": "130 km",
-        "charging_time": "4.2 hours (0-100%)",
-        "seat_height": "780 mm",
-        "kerb_weight": "231 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "features": "10.25-inch TFT display, Navigation, Connectivity"
-      }
     },
     {
       "make": "BMW Motorrad",

@@ -2,7 +2,7 @@
   "brand": "Kawasaki",
   "brandId": "kawasaki-india",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -39,8 +39,8 @@
     },
     {
       "make": "Kawasaki",
-      "model": "Eliminator",
-      "variant_name": "Kawasaki Eliminator",
+      "model": "Eliminator 450",
+      "variant_name": "Kawasaki Eliminator 450",
       "price": "₹6,15,965",
       "engine_displacement": "451 cc",
       "mileage": "31.45 kmpl",
@@ -97,6 +97,37 @@
         "wheel_type": "Alloy",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2B"
+      }
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 400",
+      "variant_name": "Kawasaki Ninja 400",
+      "price": "₹5,23,985",
+      "engine_displacement": "399 cc",
+      "mileage": "25 kmpl",
+      "top_speed": "180 kmph",
+      "max_torque": "38 Nm",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "variants": [
+        { "name": "Ninja 400 Standard", "price": "₹5,23,985" }
+      ],
+      "colors": ["Metallic Carbon Gray", "Lime Green"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "44.9 bhp",
+        "torque": "38 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "14 litres",
+        "seat_height": "785 mm",
+        "kerb_weight": "168 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
       }
     },
     {
@@ -290,6 +321,37 @@
     },
     {
       "make": "Kawasaki",
+      "model": "W800",
+      "variant_name": "Kawasaki W800",
+      "price": "₹7,32,773",
+      "engine_displacement": "773 cc",
+      "mileage": "23 kmpl",
+      "top_speed": "185 kmph",
+      "max_torque": "62 Nm",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "variants": [
+        { "name": "W800 Standard", "price": "₹7,32,773" }
+      ],
+      "colors": ["Metallic Flat Spark Black / Metallic Matt Grey"],
+      "technical_specifications": {
+        "engine_type": "Air-cooled, Parallel-twin",
+        "power": "47 bhp",
+        "torque": "62 Nm",
+        "gearbox": "5-Speed Manual",
+        "fuel_tank": "15 litres",
+        "seat_height": "790 mm",
+        "kerb_weight": "221 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6"
+      }
+    },
+    {
+      "make": "Kawasaki",
       "model": "Z900",
       "variant_name": "Kawasaki Z900",
       "price": "₹9,99,000",
@@ -322,8 +384,101 @@
     },
     {
       "make": "Kawasaki",
-      "model": "Ninja 1100SX",
-      "variant_name": "Kawasaki Ninja 1100SX",
+      "model": "Versys 1000",
+      "variant_name": "Kawasaki Versys 1000",
+      "price": "₹12,30,982",
+      "engine_displacement": "1043 cc",
+      "mileage": "18 kmpl",
+      "top_speed": "230 kmph",
+      "max_torque": "102 Nm",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "variants": [
+        { "name": "Versys 1000 Standard", "price": "₹12,30,982" }
+      ],
+      "colors": ["Metallic Matte Graphenesteel Grey / Metallic Spark Black"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-four",
+        "power": "118 bhp",
+        "torque": "102 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "21 litres",
+        "seat_height": "845 mm",
+        "kerb_weight": "249 kg",
+        "brakes_front": "Dual Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6"
+      }
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-4RR",
+      "variant_name": "Kawasaki Ninja ZX-4RR",
+      "price": "₹10,06,676",
+      "engine_displacement": "399 cc",
+      "mileage": "20 kmpl",
+      "top_speed": "200 kmph",
+      "max_torque": "39 Nm",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "variants": [
+        { "name": "Ninja ZX-4RR Standard", "price": "₹10,06,676" }
+      ],
+      "colors": ["Lime Green / Ebony / Pearl Blizzard White"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-four",
+        "power": "76.5 bhp",
+        "torque": "39.5 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "15 litres",
+        "seat_height": "785 mm",
+        "kerb_weight": "185 kg",
+        "brakes_front": "Dual Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes (Cornering ABS)",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-6R",
+      "variant_name": "Kawasaki Ninja ZX-6R",
+      "price": "₹12,48,948",
+      "engine_displacement": "636 cc",
+      "mileage": "20 kmpl",
+      "top_speed": "250 kmph",
+      "max_torque": "70.8 Nm",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Ninja ZX-6R Standard", "price": "₹12,48,948" }
+      ],
+      "colors": ["Lime Green"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-four",
+        "power": "129.9 bhp",
+        "torque": "70.8 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "17 litres",
+        "seat_height": "830 mm",
+        "kerb_weight": "196 kg",
+        "brakes_front": "Dual Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 1000SX",
+      "variant_name": "Kawasaki Ninja 1000SX",
       "price": "₹14,42,000",
       "engine_displacement": "1099 cc",
       "mileage": "17.8 kmpl",
@@ -332,7 +487,7 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Ninja 1100SX Standard", "price": "₹14,42,000" }
+        { "name": "Ninja 1000SX Standard", "price": "₹14,42,000" }
       ],
       "colors": ["Metallic Brilliant Golden Black / Metallic Carbon Gray"],
       "technical_specifications": {

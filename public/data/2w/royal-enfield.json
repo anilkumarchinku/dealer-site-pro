@@ -7,7 +7,7 @@
       "make": "Royal Enfield",
       "model": "Classic 350",
       "variant_name": "Classic 350 Redditch",
-      "price": "₹1,82,658",
+      "price": "₹1,82,667",
       "engine_displacement": "349 cc",
       "mileage": "35 kmpl",
       "max_power": "20.2 bhp",
@@ -15,13 +15,13 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Classic 350 Redditch", "price": "₹1,82,658" },
+        { "name": "Classic 350 Redditch", "price": "₹1,82,667" },
         { "name": "Classic 350 Halcyon", "price": "₹1,84,586" },
         { "name": "Classic 350 Heritage", "price": "₹1,88,415" },
         { "name": "Classic 350 Heritage Premium", "price": "₹1,93,057" },
         { "name": "Classic 350 Signals", "price": "₹1,96,000" },
         { "name": "Classic 350 Dark", "price": "₹1,99,000" },
-        { "name": "Classic 350 Chrome", "price": "₹2,05,000" }
+        { "name": "Classic 350 Chrome", "price": "₹2,17,596" }
       ],
       "colors": [
         "Madras Red",
@@ -56,7 +56,7 @@
       "make": "Royal Enfield",
       "model": "Hunter 350",
       "variant_name": "Hunter 350 Standard",
-      "price": "₹1,37,640",
+      "price": "₹1,37,648",
       "engine_displacement": "349 cc",
       "mileage": "36.2 kmpl",
       "max_power": "20.2 bhp",
@@ -64,7 +64,7 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Hunter 350 Standard", "price": "₹1,37,640" },
+        { "name": "Hunter 350 Standard", "price": "₹1,37,648" },
         { "name": "Hunter 350 Mid", "price": "₹1,51,770" },
         { "name": "Hunter 350 Top", "price": "₹1,66,893" }
       ],
@@ -89,7 +89,7 @@
         "fuel_tank_litres": 13,
         "top_speed_kmph": 130,
         "mileage_kmpl": 36.2,
-        "emission_standard": "BS6 Phase 2",
+        "emission_standard": "BS6 Phase 2B",
         "brakes_front": "Disc",
         "brakes_rear": "Drum",
         "abs": "Single-channel ABS"
@@ -99,15 +99,15 @@
       "make": "Royal Enfield",
       "model": "Bullet 350",
       "variant_name": "Bullet 350 Battalion Black",
-      "price": "₹1,62,025",
+      "price": "₹1,63,503",
       "engine_displacement": "349 cc",
       "mileage": "35 kmpl",
       "max_power": "20.2 bhp",
-      "max_torque": "28 Nm",
+      "max_torque": "27 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Bullet 350 Battalion Black", "price": "₹1,62,025" },
+        { "name": "Bullet 350 Battalion Black", "price": "₹1,63,503" },
         { "name": "Bullet 350 Standard Black", "price": "₹1,75,000" },
         { "name": "Bullet 350 Maroon", "price": "₹1,90,000" },
         { "name": "Bullet 350 Black Gold", "price": "₹2,04,444" }
@@ -154,7 +154,7 @@
         { "name": "Meteor 350 Stellar", "price": "₹2,02,608" },
         { "name": "Meteor 350 Aurora", "price": "₹2,05,733" },
         { "name": "Meteor 350 Supernova", "price": "₹2,16,180" },
-        { "name": "Meteor 350 Sundowner Orange Special Edition", "price": "₹2,19,446" }
+        { "name": "Meteor 350 Sundowner Orange Special Edition", "price": "₹2,18,882" }
       ],
       "colors": [
         "Fireball Grey",
@@ -178,7 +178,7 @@
         "fuel_tank_litres": 15,
         "top_speed_kmph": 120,
         "mileage_kmpl": 32,
-        "emission_standard": "BS6 Phase 2",
+        "emission_standard": "BS6 Phase 2B",
         "brakes_front": "Disc",
         "brakes_rear": "Disc",
         "abs": "Dual-channel ABS",
@@ -204,7 +204,7 @@
       "source_section": "Available",
       "variants": [
         { "name": "Goan Classic 350 Single Tone", "price": "₹2,19,787" },
-        { "name": "Goan Classic 350 Dual Tone", "price": "₹2,21,287" }
+        { "name": "Goan Classic 350 Dual Tone", "price": "₹2,22,593" }
       ],
       "colors": [
         "Purple Haze",
@@ -234,7 +234,7 @@
       "make": "Royal Enfield",
       "model": "Scram 440",
       "variant_name": "Scram 440 Trail",
-      "price": "₹2,23,131",
+      "price": "₹2,23,121",
       "engine_displacement": "443 cc",
       "mileage": "29.5 kmpl",
       "max_power": "25.4 bhp",
@@ -242,8 +242,8 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Scram 440 Trail", "price": "₹2,23,131" },
-        { "name": "Scram 440 Force", "price": "₹2,31,578" }
+        { "name": "Scram 440 Trail", "price": "₹2,23,121" },
+        { "name": "Scram 440 Force", "price": "₹2,30,631" }
       ],
       "colors": [
         "Force Teal",
@@ -274,7 +274,7 @@
       "make": "Royal Enfield",
       "model": "Himalayan 450",
       "variant_name": "Himalayan 450 Base",
-      "price": "₹3,05,736",
+      "price": "₹3,05,722",
       "engine_displacement": "452 cc",
       "mileage": "29 kmpl",
       "max_power": "39.47 bhp",
@@ -282,11 +282,11 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Himalayan 450 Base", "price": "₹3,05,736" },
+        { "name": "Himalayan 450 Base", "price": "₹3,05,722" },
         { "name": "Himalayan 450 Pass", "price": "₹3,09,951" },
         { "name": "Himalayan 450 Summit", "price": "₹3,14,227" },
         { "name": "Himalayan 450 Hanle Black", "price": "₹3,19,553" },
-        { "name": "Himalayan 450 Mana Black", "price": "₹3,37,900" }
+        { "name": "Himalayan 450 Mana Black", "price": "₹3,37,036" }
       ],
       "colors": [
         "Kaza Brown",
@@ -336,7 +336,7 @@
         { "name": "Guerrilla 450 APEX - Red", "price": "₹2,49,194" },
         { "name": "Guerrilla 450 APEX - Black and Green", "price": "₹2,58,919" },
         { "name": "Guerrilla 450 Dash - Shadow Ash / Smoke Silver / Peix Bronze", "price": "₹2,70,042" },
-        { "name": "Guerrilla 450 Flash - Brava Blue", "price": "₹2,75,927" }
+        { "name": "Guerrilla 450 Flash - Brava Blue", "price": "₹2,72,479" }
       ],
       "colors": [
         "Twilight Blue",
@@ -375,7 +375,7 @@
       "make": "Royal Enfield",
       "model": "Interceptor 650",
       "variant_name": "Interceptor 650 Standard",
-      "price": "₹3,35,394",
+      "price": "₹3,34,987",
       "engine_displacement": "648 cc",
       "mileage": "23 kmpl",
       "max_power": "47 bhp",
@@ -383,7 +383,7 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Interceptor 650 Standard", "price": "₹3,35,394" },
+        { "name": "Interceptor 650 Standard", "price": "₹3,34,987" },
         { "name": "Interceptor 650 Custom", "price": "₹3,50,000" },
         { "name": "Interceptor 650 Alloy Wheel", "price": "₹3,55,000" },
         { "name": "Interceptor 650 Chrome", "price": "₹3,65,924" }
@@ -423,7 +423,7 @@
       "make": "Royal Enfield",
       "model": "Continental GT 650",
       "variant_name": "Continental GT 650 Standard",
-      "price": "₹3,53,105",
+      "price": "₹3,52,686",
       "engine_displacement": "648 cc",
       "mileage": "25 kmpl",
       "max_power": "47 bhp",
@@ -431,9 +431,9 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Continental GT 650 Standard", "price": "₹3,53,105" },
+        { "name": "Continental GT 650 Standard", "price": "₹3,52,686" },
         { "name": "Continental GT 650 Alloy Wheel", "price": "₹3,76,527" },
-        { "name": "Continental GT 650 Chrome", "price": "₹3,84,239" }
+        { "name": "Continental GT 650 Chrome", "price": "₹3,81,420" }
       ],
       "colors": [
         "British Racing Green",
@@ -469,7 +469,7 @@
       "make": "Royal Enfield",
       "model": "Super Meteor 650",
       "variant_name": "Super Meteor 650 Astral",
-      "price": "₹4,02,965",
+      "price": "₹4,02,945",
       "engine_displacement": "648 cc",
       "mileage": "23.7 kmpl",
       "max_power": "46.3 bhp",
@@ -477,9 +477,9 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Super Meteor 650 Astral", "price": "₹4,02,965" },
-        { "name": "Super Meteor 650 Interstellar", "price": "₹4,43,234" },
-        { "name": "Super Meteor 650 Celestial", "price": "₹4,61,803" }
+        { "name": "Super Meteor 650 Astral", "price": "₹4,02,945" },
+        { "name": "Super Meteor 650 Interstellar", "price": "₹4,20,000" },
+        { "name": "Super Meteor 650 Celestial", "price": "₹4,36,663" }
       ],
       "colors": [
         "Astral Green",
@@ -516,7 +516,7 @@
       "make": "Royal Enfield",
       "model": "Shotgun 650",
       "variant_name": "Shotgun 650 Custom Shed",
-      "price": "₹3,98,017",
+      "price": "₹3,97,997",
       "engine_displacement": "648 cc",
       "mileage": "22 kmpl",
       "max_power": "46.39 bhp",
@@ -524,9 +524,10 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Shotgun 650 Custom Shed", "price": "₹3,98,017" },
+        { "name": "Shotgun 650 Custom Shed", "price": "₹3,97,997" },
         { "name": "Shotgun 650 Custom Pro", "price": "₹4,10,988" },
-        { "name": "Shotgun 650 Custom Special", "price": "₹4,24,758" }
+        { "name": "Shotgun 650 Custom Special", "price": "₹4,24,758" },
+        { "name": "Shotgun 650 Custom Premium", "price": "₹4,40,000" }
       ],
       "colors": [
         "Sheetmetal Grey",
@@ -563,7 +564,7 @@
       "make": "Royal Enfield",
       "model": "Classic 650",
       "variant_name": "Classic 650 Hotrod",
-      "price": "₹3,64,856",
+      "price": "₹3,64,838",
       "engine_displacement": "648 cc",
       "mileage": "26 kmpl",
       "max_power": "46.39 bhp",
@@ -571,9 +572,10 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Classic 650 Hotrod", "price": "₹3,64,856" },
+        { "name": "Classic 650 Hotrod", "price": "₹3,64,838" },
         { "name": "Classic 650 Classic", "price": "₹3,69,771" },
-        { "name": "Classic 650 Chrome", "price": "₹3,80,259" }
+        { "name": "Classic 650 Chrome", "price": "₹3,80,259" },
+        { "name": "Classic 650 Premium", "price": "₹3,90,000" }
       ],
       "colors": [
         "Vallam Red",
@@ -608,18 +610,18 @@
       "make": "Royal Enfield",
       "model": "Bear 650",
       "variant_name": "Bear 650 Broadwalk White",
-      "price": "₹3,75,393",
+      "price": "₹3,75,374",
       "engine_displacement": "648 cc",
       "mileage": "22 kmpl",
       "max_power": "46.8 bhp",
-      "max_torque": "52.3 Nm",
+      "max_torque": "56.5 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Bear 650 Broadwalk White", "price": "₹3,75,393" },
+        { "name": "Bear 650 Broadwalk White", "price": "₹3,75,374" },
         { "name": "Bear 650 Petrol Green and Wild Honey", "price": "₹3,79,829" },
         { "name": "Bear 650 Golden Shadow", "price": "₹3,85,273" },
-        { "name": "Bear 650 Two Four Nine", "price": "₹3,93,920" }
+        { "name": "Bear 650 Two Four Nine", "price": "₹3,97,518" }
       ],
       "colors": [
         "Boardwalk White",

@@ -2,7 +2,7 @@
   "brand": "Kabira Mobility",
   "brandId": "kabira-mobility",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -18,12 +18,13 @@
         "Battery Capacity": "3.5 kWh",
         "Top Speed": "100 kmph",
         "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
       },
       "max_torque": "80 Nm",
       "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
       "variants": [
-        { "name": "KM3000", "price": "₹1,25,000" }
+        { "name": "KM3000 3.5 kWh", "price": "₹1,25,000" }
       ]
     },
     {
@@ -39,12 +40,35 @@
         "Battery Capacity": "4 kWh",
         "Top Speed": "120 kmph",
         "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
       },
       "max_torque": "80 Nm",
       "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
       "variants": [
-        { "name": "KM4000", "price": "₹1,40,000" }
+        { "name": "KM4000 4 kWh", "price": "₹1,40,000" }
+      ]
+    },
+    {
+      "make": "Kabira Mobility",
+      "model": "KM5000",
+      "variant_name": "Kabira KM5000",
+      "price": "₹1,55,000",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "5 kW",
+        "Range": "175 km",
+        "Battery Capacity": "5 kWh",
+        "Top Speed": "120 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "max_torque": "100 Nm",
+      "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
+      "variants": [
+        { "name": "KM5000 5 kWh", "price": "₹1,55,000" }
       ]
     },
     {
@@ -60,12 +84,13 @@
         "Battery Capacity": "4 kWh",
         "Top Speed": "110 kmph",
         "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
       },
       "max_torque": "80 Nm",
       "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
       "variants": [
-        { "name": "Intercity Neo", "price": "₹1,59,900" }
+        { "name": "Intercity Neo 4 kWh", "price": "₹1,59,900" }
       ]
     },
     {
@@ -81,12 +106,13 @@
         "Battery Capacity": "5 kWh",
         "Top Speed": "120 kmph",
         "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
       },
       "max_torque": "100 Nm",
       "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
       "variants": [
-        { "name": "Intercity FS", "price": "₹1,74,900" }
+        { "name": "Intercity FS 5 kWh", "price": "₹1,74,900" }
       ]
     }
   ]

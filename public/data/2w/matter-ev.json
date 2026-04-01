@@ -2,7 +2,7 @@
   "brand": "Matter",
   "brandId": "matter-ev",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -18,12 +18,13 @@
         "Battery Capacity": "5 kWh",
         "Top Speed": "105 kmph",
         "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
       },
       "max_torque": "520 Nm",
       "colors": ["Matte Black", "Vivid Blue", "Aurora Green", "Flash Yellow"],
       "variants": [
-        { "name": "Aera 5000+", "price": "₹1,48,000" }
+        { "name": "Aera 5000+ 5 kWh", "price": "₹1,48,000" }
       ]
     },
     {
@@ -39,12 +40,35 @@
         "Battery Capacity": "6 kWh",
         "Top Speed": "105 kmph",
         "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
       },
       "max_torque": "520 Nm",
       "colors": ["Matte Black", "Vivid Blue", "Aurora Green", "Flash Yellow"],
       "variants": [
-        { "name": "Aera 6000+", "price": "₹1,73,000" }
+        { "name": "Aera 6000+ 6 kWh", "price": "₹1,73,000" }
+      ]
+    },
+    {
+      "make": "Matter",
+      "model": "Aera 5000",
+      "variant_name": "Matter Aera 5000",
+      "price": "₹1,38,000",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "10 kW",
+        "Range": "105 km",
+        "Battery Capacity": "5 kWh",
+        "Top Speed": "100 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "max_torque": "520 Nm",
+      "colors": ["Matte Black", "Vivid Blue", "Aurora Green", "Flash Yellow"],
+      "variants": [
+        { "name": "Aera 5000 5 kWh", "price": "₹1,38,000" }
       ]
     }
   ]

@@ -2,6 +2,8 @@
   "brand": "CFMoto",
   "brandId": "cfmoto-india",
   "type": "2w",
+  "lastUpdated": "2026-04-01",
+  "source": "BikeWale",
   "vehicles": [
     {
       "make": "CFMoto",
@@ -14,7 +16,7 @@
       "max_power": "26 bhp",
       "fuel_type": "Petrol",
       "max_torque": "25 Nm",
-      "source_section": "Available",
+      "source_section": "Discontinued",
       "colors": [
         "Frost Black",
         "Flame Red",
@@ -22,7 +24,7 @@
       ],
       "variants": [
         {
-          "name": "Standard",
+          "name": "300NK Standard",
           "price": "₹2,29,900"
         }
       ],
@@ -50,14 +52,14 @@
       "max_power": "54 bhp",
       "fuel_type": "Petrol",
       "max_torque": "62 Nm",
-      "source_section": "Available",
+      "source_section": "Discontinued",
       "colors": [
         "Frost Black",
         "Flame Red"
       ],
       "variants": [
         {
-          "name": "Standard",
+          "name": "650NK Standard",
           "price": "₹5,49,900"
         }
       ],
@@ -85,7 +87,7 @@
       "max_power": "54 bhp",
       "fuel_type": "Petrol",
       "max_torque": "62 Nm",
-      "source_section": "Available",
+      "source_section": "Discontinued",
       "colors": [
         "Frost Black",
         "Ocean Blue",
@@ -93,7 +95,7 @@
       ],
       "variants": [
         {
-          "name": "Standard",
+          "name": "650MT Standard",
           "price": "₹6,49,900"
         }
       ],
@@ -120,14 +122,14 @@
       "top_speed": "175 kmph",
       "max_power": "54 bhp",
       "fuel_type": "Petrol",
-      "source_section": "Available",
+      "source_section": "Discontinued",
       "colors": [
         "Pearl White",
         "Midnight Black"
       ],
       "variants": [
         {
-          "name": "Standard",
+          "name": "650GT Standard",
           "price": "₹7,19,900"
         }
       ],

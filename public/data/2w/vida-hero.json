@@ -2,14 +2,14 @@
   "brand": "Vida (Hero)",
   "brandId": "vida-hero",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Vida",
       "model": "V2",
       "variant_name": "Vida V2",
-      "price": "₹1,09,990",
+      "price": "₹1,09,990 - ₹1,19,990",
       "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
@@ -24,15 +24,15 @@
       "max_torque": "26 Nm",
       "colors": ["Matte Nexus Blue", "Gloss Pearl White", "Matte Turbo Green", "Matte Nexus Red", "Gloss Red Zeal"],
       "variants": [
-        { "name": "V2", "price": "₹1,09,990" },
-        { "name": "V2 Plus", "price": "₹1,19,990" }
+        { "name": "V2 3.44 kWh", "price": "₹1,09,990" },
+        { "name": "V2 Plus 3.94 kWh", "price": "₹1,19,990" }
       ]
     },
     {
       "make": "Vida",
       "model": "VX2",
       "variant_name": "Vida VX2",
-      "price": "₹1,29,990",
+      "price": "₹1,29,990 - ₹1,59,990",
       "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
@@ -47,9 +47,9 @@
       "max_torque": "26 Nm",
       "colors": ["Matte Nexus Blue", "Gloss Pearl White", "Matte Turbo Green", "Matte Nexus Red", "Gloss Red Zeal"],
       "variants": [
-        { "name": "VX2", "price": "₹1,29,990" },
-        { "name": "VX2 Pro", "price": "₹1,39,990" },
-        { "name": "VX2+ Pro", "price": "₹1,59,990" }
+        { "name": "VX2 3.94 kWh", "price": "₹1,29,990" },
+        { "name": "VX2 Pro 3.94 kWh", "price": "₹1,39,990" },
+        { "name": "VX2+ Pro 5 kWh", "price": "₹1,59,990" }
       ]
     }
   ]

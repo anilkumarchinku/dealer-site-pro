@@ -2,7 +2,7 @@
   "brand": "Bounce Infinity",
   "brandId": "bounce-infinity",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -24,7 +24,7 @@
       "max_torque": "42 Nm",
       "colors": ["Midnight Black", "Pearl White", "Sport Blue", "Racing Red"],
       "variants": [
-        { "name": "E1", "price": "₹68,999" }
+        { "name": "E1 2.0 kWh", "price": "₹68,999" }
       ]
     },
     {
@@ -46,7 +46,29 @@
       "max_torque": "42 Nm",
       "colors": ["Midnight Black", "Pearl White", "Sport Blue", "Racing Red"],
       "variants": [
-        { "name": "E1+", "price": "₹78,999" }
+        { "name": "E1+ 2.0 kWh", "price": "₹78,999" }
+      ]
+    },
+    {
+      "make": "Bounce Infinity",
+      "model": "E1 Pro",
+      "variant_name": "Bounce Infinity E1 Pro",
+      "price": "₹88,999",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "2.5 kW",
+        "Range": "110 km",
+        "Battery Capacity": "2.9 kWh",
+        "Top Speed": "70 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Swappable Battery": "Yes"
+      },
+      "max_torque": "42 Nm",
+      "colors": ["Midnight Black", "Pearl White", "Sport Blue", "Racing Red"],
+      "variants": [
+        { "name": "E1 Pro 2.9 kWh", "price": "₹88,999" }
       ]
     }
   ]

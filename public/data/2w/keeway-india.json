@@ -1,41 +1,262 @@
 {
   "keeway_bikes": [
     {
+      "model_name": "SR125",
+      "price": "₹1,24,992",
+      "engine": "125 cc",
+      "mileage": "46 kmpl",
+      "max_power": "9.56 bhp",
+      "torque": "8.2 Nm",
+      "top_speed": "100 km/h",
+      "gear_box": "5-speed",
+      "colors": [
+        "Glossy White",
+        "Glossy Black",
+        "Glossy Red"
+      ],
+      "fuel_type": "Petrol",
+      "max_torque": "8.2 Nm",
+      "variants": [
+        { "name": "SR125 Standard", "price": "₹1,24,992" }
+      ],
+      "technical_specifications": {
+        "engine_type": "Single-cylinder, BS6 Phase 2",
+        "fuel_tank": "14.5 litres",
+        "seat_height": "780 mm",
+        "kerb_weight": "120 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "CBS",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
       "model_name": "SR250",
-      "price": "₹1,99,900",
-      "engine": "249 cc",
-      "mileage": "32 kmpl",
-      "max_power": "23 bhp",
-      "torque": "22 Nm",
-      "top_speed": "128 km/h",
+      "price": "₹1,53,992",
+      "engine": "223 cc",
+      "mileage": "35 kmpl",
+      "max_power": "15.78 bhp",
+      "torque": "16 Nm",
+      "top_speed": "120 km/h",
+      "gear_box": "5-speed",
+      "colors": [
+        "Glossy Black",
+        "Glossy Red",
+        "Glossy White"
+      ],
+      "fuel_type": "Petrol",
+      "max_torque": "16 Nm",
+      "variants": [
+        { "name": "SR250 Standard", "price": "₹1,53,992" }
+      ],
+      "technical_specifications": {
+        "engine_type": "Single-cylinder, BS6 Phase 2",
+        "fuel_tank": "14.2 litres",
+        "seat_height": "780 mm",
+        "kerb_weight": "120 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "model_name": "K300 SF",
+      "price": "₹1,57,000",
+      "engine": "292.4 cc",
+      "mileage": "37 kmpl",
+      "max_power": "27.8 bhp",
+      "torque": "25 Nm",
+      "top_speed": "N/A",
       "gear_box": "6-speed",
       "colors": [
-        "Red/Black",
-        "Black/Grey"
+        "Matte Black",
+        "Matte Red",
+        "Matte White"
+      ],
+      "fuel_type": "Petrol",
+      "max_torque": "25 Nm",
+      "variants": [
+        { "name": "K300 SF Standard", "price": "₹1,57,000" }
+      ],
+      "technical_specifications": {
+        "engine_type": "Single-cylinder, BS6 Phase 2",
+        "fuel_tank": "12.5 litres",
+        "seat_height": "795 mm",
+        "kerb_weight": "151 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "model_name": "RR300",
+      "price": "₹1,85,000",
+      "engine": "292.4 cc",
+      "mileage": "37 kmpl",
+      "max_power": "27.88 bhp",
+      "torque": "25 Nm",
+      "top_speed": "139 km/h",
+      "gear_box": "6-speed",
+      "colors": [
+        "Red",
+        "White",
+        "Black"
+      ],
+      "fuel_type": "Petrol",
+      "max_torque": "25 Nm",
+      "variants": [
+        { "name": "RR300 Standard", "price": "₹1,85,000" }
+      ],
+      "technical_specifications": {
+        "engine_type": "Single-cylinder, BS6 Phase 2B",
+        "fuel_tank": "12 litres",
+        "seat_height": "780 mm",
+        "kerb_weight": "165 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B"
+      }
+    },
+    {
+      "model_name": "K-Light 250V",
+      "price": "₹2,50,046",
+      "engine": "249 cc",
+      "mileage": "31.5 kmpl",
+      "max_power": "18.4 bhp",
+      "torque": "19 Nm",
+      "top_speed": "125 km/h",
+      "gear_box": "5-speed",
+      "colors": [
+        "Matte Black",
+        "Matte Dark Grey",
+        "Matte Blue"
+      ],
+      "fuel_type": "Petrol",
+      "max_torque": "19 Nm",
+      "variants": [
+        { "name": "K-Light 250V Standard", "price": "₹2,50,046" }
+      ],
+      "technical_specifications": {
+        "engine_type": "Single-cylinder, BS6 Phase 2",
+        "fuel_tank": "20 litres",
+        "seat_height": "715 mm",
+        "kerb_weight": "179 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "model_name": "Vieste 300",
+      "price": "₹3,02,015",
+      "engine": "278.2 cc",
+      "mileage": "29.5 kmpl",
+      "max_power": "18.4 bhp",
+      "torque": "22 Nm",
+      "top_speed": "125 km/h",
+      "gear_box": "N/A",
+      "colors": [
+        "Matte White",
+        "Matte Black",
+        "Matte Blue"
       ],
       "fuel_type": "Petrol",
       "max_torque": "22 Nm",
       "variants": [
-        { "name": "SR250 Standard", "price": "₹1,99,900" }
-      ]
+        { "name": "Vieste 300 Standard", "price": "₹3,02,015" }
+      ],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, BS6 Phase 2",
+        "fuel_tank": "12 litres",
+        "seat_height": "770 mm",
+        "kerb_weight": "147 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "Keyless ignition, USB charging"
+      }
     },
     {
-      "model_name": "ZW25R",
-      "price": "₹2,19,900",
-      "engine": "249 cc",
-      "mileage": "32 kmpl",
-      "max_power": "23 bhp",
-      "torque": "22 Nm",
-      "top_speed": "128 km/h",
-      "gear_box": "6-speed",
+      "model_name": "Sixties 300i",
+      "price": "₹3,13,011",
+      "engine": "278.2 cc",
+      "mileage": "27.4 kmpl",
+      "max_power": "18.4 bhp",
+      "torque": "23.5 Nm",
+      "top_speed": "120 km/h",
+      "gear_box": "Automatic",
       "colors": [
-        "Red/Black",
-        "Yellow/Black"
+        "Matte Light Blue",
+        "Matte Grey",
+        "Matte White"
       ],
       "fuel_type": "Petrol",
+      "max_torque": "23.5 Nm",
       "variants": [
-        { "name": "ZW25R Standard", "price": "₹2,19,900" }
-      ]
+        { "name": "Sixties 300i Standard", "price": "₹3,13,011" }
+      ],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, BS6 Phase 2",
+        "fuel_tank": "10 litres",
+        "seat_height": "790 mm",
+        "kerb_weight": "146 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Dual-channel ABS",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "USB Charging Port, Liquid-cooled engine"
+      }
+    },
+    {
+      "model_name": "V302C",
+      "price": "₹4,21,995",
+      "engine": "298 cc",
+      "mileage": "36 kmpl",
+      "max_power": "29.09 bhp",
+      "torque": "26.5 Nm",
+      "top_speed": "155 km/h",
+      "gear_box": "6-speed",
+      "colors": [
+        "Glossy Grey",
+        "Glossy Black",
+        "Glossy Red"
+      ],
+      "fuel_type": "Petrol",
+      "max_torque": "26.5 Nm",
+      "variants": [
+        { "name": "V302C Standard", "price": "₹4,21,995" }
+      ],
+      "technical_specifications": {
+        "engine_type": "V-twin, Liquid-cooled, BS6 Phase 2",
+        "fuel_tank": "15 litres",
+        "seat_height": "690 mm",
+        "kerb_weight": "167 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
     }
   ]
 }

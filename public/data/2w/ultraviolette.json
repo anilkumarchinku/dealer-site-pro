@@ -2,7 +2,7 @@
   "brand": "Ultraviolette",
   "brandId": "ultraviolette",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -47,6 +47,30 @@
       "colors": ["Laser Blue", "Acoustic White", "Ember Orange", "Airstrike Khaki", "Shadow Black"],
       "variants": [
         { "name": "F77 Recon 7.1 kWh", "price": "₹3,23,000" }
+      ]
+    },
+    {
+      "make": "Ultraviolette",
+      "model": "F77",
+      "variant_name": "Ultraviolette F77",
+      "price": "₹3,80,000 - ₹5,50,000",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "31.44 kW peak",
+        "Range": "307 km",
+        "Battery Capacity": "10.3 kWh",
+        "Top Speed": "152 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "max_torque": "90 Nm",
+      "colors": ["Laser Blue", "Acoustic White", "Ember Orange", "Airstrike Khaki", "Shadow Black"],
+      "variants": [
+        { "name": "F77 Standard 7.1 kWh", "price": "₹3,80,000" },
+        { "name": "F77 Pro 10.3 kWh", "price": "₹4,55,000" },
+        { "name": "F77 Limited Edition", "price": "₹5,50,000" }
       ]
     }
   ]

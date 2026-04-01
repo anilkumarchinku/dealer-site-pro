@@ -2,7 +2,7 @@
   "brand": "Ather Energy",
   "brandId": "ather-energy",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -54,13 +54,13 @@
       "make": "Ather Energy",
       "model": "450S",
       "variant_name": "Ather 450S",
-      "price": "₹1,17,990",
+      "price": "₹1,17,990 - ₹1,29,990",
       "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
         "Motor Power": "5 kW",
-        "Range": "115 km",
-        "Battery Capacity": "2.9 kWh",
+        "Range": "150 km",
+        "Battery Capacity": "3.7 kWh",
         "Top Speed": "80 kmph",
         "Riding Modes": "Yes",
         "Fast Charging": "Yes",
@@ -69,7 +69,8 @@
       "max_torque": "22 Nm",
       "colors": ["Cosmic Black", "Lunar Grey", "Pearl White", "Salt White", "Indigo Blue"],
       "variants": [
-        { "name": "450S 2.9 kWh", "price": "₹1,17,990" }
+        { "name": "450S 2.9 kWh", "price": "₹1,17,990" },
+        { "name": "450S 3.7 kWh", "price": "₹1,29,990" }
       ]
     },
     {

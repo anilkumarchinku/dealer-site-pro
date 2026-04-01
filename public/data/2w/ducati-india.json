@@ -2,7 +2,7 @@
   "brand": "Ducati",
   "brandId": "ducati-india",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -83,6 +83,42 @@
     },
     {
       "make": "Ducati",
+      "model": "Scrambler Full Throttle",
+      "variant_name": "Ducati Scrambler Full Throttle",
+      "price": "₹13,46,600",
+      "engine_displacement": "803 cc",
+      "mileage": "19 kmpl",
+      "top_speed": "185 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "57 Nm",
+      "source_section": "Available",
+      "variants": [
+        {
+          "name": "Scrambler Full Throttle Standard",
+          "price": "₹13,46,600"
+        }
+      ],
+      "colors": [
+        "Heritage Livery"
+      ],
+      "technical_specifications": {
+        "engine_type": "Air-cooled, L-twin",
+        "power": "71.87 bhp",
+        "torque": "65.2 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13.5 litres",
+        "seat_height": "795 mm",
+        "kerb_weight": "191 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Ducati",
       "model": "Monster",
       "variant_name": "Ducati Monster",
       "price": "₹13,84,000 - ₹17,04,580",
@@ -129,6 +165,42 @@
     },
     {
       "make": "Ducati",
+      "model": "Desmo450 MX",
+      "variant_name": "Ducati Desmo450 MX",
+      "price": "₹17,23,600",
+      "engine_displacement": "449.6 cc",
+      "mileage": "N/A",
+      "top_speed": "N/A",
+      "fuel_type": "Petrol",
+      "max_torque": "53.5 Nm",
+      "source_section": "Available",
+      "variants": [
+        {
+          "name": "Desmo450 MX Standard",
+          "price": "₹17,23,600"
+        }
+      ],
+      "colors": [
+        "Ducati Red"
+      ],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Single-cylinder",
+        "power": "62.62 bhp",
+        "torque": "53.5 Nm",
+        "gearbox": "5-Speed Manual",
+        "fuel_tank": "7.2 litres",
+        "seat_height": "970 mm",
+        "kerb_weight": "N/A",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Spoke",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B"
+      }
+    },
+    {
+      "make": "Ducati",
       "model": "Hypermotard 950",
       "variant_name": "Ducati Hypermotard 950",
       "price": "₹17,10,500 - ₹20,35,878",
@@ -161,6 +233,84 @@
         "fuel_tank": "14.5 litres",
         "seat_height": "870 mm",
         "kerb_weight": "200 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Ducati",
+      "model": "Hypermotard 698 Mono",
+      "variant_name": "Ducati Hypermotard 698 Mono",
+      "price": "₹18,70,300",
+      "engine_displacement": "659 cc",
+      "mileage": "20.8 kmpl",
+      "top_speed": "220 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "63 Nm",
+      "source_section": "Available",
+      "variants": [
+        {
+          "name": "Hypermotard 698 Mono Standard",
+          "price": "₹18,70,300"
+        }
+      ],
+      "colors": [
+        "Ducati Red"
+      ],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Single-cylinder",
+        "power": "76.43 bhp",
+        "torque": "63 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "12 litres",
+        "seat_height": "904 mm",
+        "kerb_weight": "159 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Ducati",
+      "model": "SuperSport",
+      "variant_name": "Ducati SuperSport",
+      "price": "₹17,16,100 - ₹20,10,300",
+      "engine_displacement": "937 cc",
+      "mileage": "17.8 kmpl",
+      "top_speed": "299 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "93 Nm",
+      "source_section": "Available",
+      "variants": [
+        {
+          "name": "SuperSport Standard",
+          "price": "₹17,16,100"
+        },
+        {
+          "name": "SuperSport S",
+          "price": "₹20,10,300"
+        }
+      ],
+      "colors": [
+        "Ducati Red",
+        "Ducati Red - S",
+        "Arctic White"
+      ],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, L-twin",
+        "power": "108.62 bhp",
+        "torque": "93 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "16 litres",
+        "seat_height": "810 mm",
+        "kerb_weight": "210 kg",
         "brakes_front": "Disc",
         "brakes_rear": "Disc",
         "abs": "Yes",
@@ -548,6 +698,79 @@
         "wheel_type": "Alloy",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2B"
+      }
+    },
+    {
+      "make": "Ducati",
+      "model": "Multistrada V4 RS",
+      "variant_name": "Ducati Multistrada V4 RS",
+      "price": "₹43,46,700",
+      "engine_displacement": "1103 cc",
+      "mileage": "15 kmpl",
+      "top_speed": "299 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "118 Nm",
+      "source_section": "Available",
+      "variants": [
+        {
+          "name": "Multistrada V4 RS Standard",
+          "price": "₹43,46,700"
+        }
+      ],
+      "colors": [
+        "Iceberg White Livery and Red"
+      ],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, V4 (Desmosedici Stradale)",
+        "power": "180 bhp",
+        "torque": "118 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "22 litres",
+        "seat_height": "860 mm",
+        "kerb_weight": "260 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Ducati",
+      "model": "Panigale V4 R",
+      "variant_name": "Ducati Panigale V4 R",
+      "price": "₹84,99,000",
+      "engine_displacement": "998 cc",
+      "mileage": "12.5 kmpl",
+      "top_speed": "330 kmph",
+      "fuel_type": "Petrol",
+      "max_torque": "111.3 Nm",
+      "source_section": "Available",
+      "variants": [
+        {
+          "name": "Panigale V4 R Standard",
+          "price": "₹84,99,000"
+        }
+      ],
+      "colors": [
+        "Ducati Red"
+      ],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, V4 (Desmosedici Stradale R)",
+        "power": "221 bhp",
+        "torque": "111.3 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "17 litres",
+        "seat_height": "850 mm",
+        "kerb_weight": "193.5 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B",
+        "features": "Race, Sport and Street modes, Premium Ohlins adjustable suspension"
       }
     }
   ]

@@ -2,14 +2,49 @@
   "brand": "Bajaj",
   "brandId": "bajaj-auto",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Bajaj",
+      "model": "Platina 100",
+      "variant_name": "Platina 100 Standard",
+      "price": "₹67,463",
+      "engine_displacement": "99.59 cc",
+      "mileage": "75 kmpl",
+      "max_power": "7.79 bhp",
+      "max_torque": "8.34 Nm",
+      "top_speed": "90 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Platina 100 Standard", "price": "₹67,463" }
+      ],
+      "colors": ["Black & Blue", "Black & Gold", "Black & Silver", "Black & Red"],
+      "technical_specifications": {
+        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled",
+        "displacement": "99.59 cc",
+        "max_power": "7.79 bhp",
+        "max_torque": "8.34 Nm",
+        "transmission": "4-Speed Manual",
+        "start_type": "Kick and Self Start",
+        "fuel_tank": "11 liters",
+        "mileage_user": "75 kmpl",
+        "top_speed": "90 kmph",
+        "kerb_weight": "117 kg",
+        "seat_height": "807 mm",
+        "front_brake": "Drum",
+        "rear_brake": "Drum",
+        "braking_system": "Combined Braking System",
+        "wheel_type": "Alloy",
+        "features": "High fuel efficiency, Comfortable commuter bike"
+      }
+    },
+    {
+      "make": "Bajaj",
       "model": "CT 110",
       "variant_name": "CT 110 Standard",
-      "price": "₹68,050",
+      "price": "₹68,917",
       "engine_displacement": "115.45 cc",
       "mileage": "70 kmpl",
       "max_power": "8.48 bhp",
@@ -18,7 +53,7 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "CT 110 Standard", "price": "₹68,050" }
+        { "name": "CT 110 Standard", "price": "₹68,917" }
       ],
       "colors": ["Ebony Black - Blue", "Ebony Black - Red", "Matte Wild Green"],
       "technical_specifications": {
@@ -42,9 +77,9 @@
     },
     {
       "make": "Bajaj",
-      "model": "Platina 110",
-      "variant_name": "Platina 110 Standard",
-      "price": "₹69,941",
+      "model": "Platina 110 H-Gear",
+      "variant_name": "Platina 110 H-Gear Standard",
+      "price": "₹70,675",
       "engine_displacement": "115.45 cc",
       "mileage": "70 kmpl",
       "max_power": "8.48 bhp",
@@ -53,7 +88,7 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Platina 110 Standard", "price": "₹69,941" }
+        { "name": "Platina 110 H-Gear Standard", "price": "₹70,675" }
       ],
       "colors": ["Black & White (Drum)", "Cocktail Wine Red - Orange (Drum)", "Ebony Black Red (Drum)", "Ebony Black Blue (Drum)"],
       "technical_specifications": {
@@ -505,6 +540,41 @@
     },
     {
       "make": "Bajaj",
+      "model": "Avenger Street 160",
+      "variant_name": "Avenger Street 160 Standard",
+      "price": "₹1,12,280",
+      "engine_displacement": "160 cc",
+      "mileage": "45 kmpl",
+      "max_power": "14.79 bhp",
+      "max_torque": "13.7 Nm",
+      "top_speed": "105 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Avenger Street 160 Standard", "price": "₹1,12,280" }
+      ],
+      "colors": ["Ebony Black", "Spicy Red"],
+      "technical_specifications": {
+        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled, DTS-i",
+        "displacement": "160 cc",
+        "max_power": "14.79 bhp",
+        "max_torque": "13.7 Nm",
+        "transmission": "5-Speed Manual",
+        "start_type": "Self Start",
+        "fuel_tank": "13 liters",
+        "mileage_user": "45 kmpl",
+        "top_speed": "105 kmph",
+        "kerb_weight": "156 kg",
+        "seat_height": "737 mm",
+        "front_brake": "Disc with ABS",
+        "rear_brake": "Drum",
+        "braking_system": "Single-channel ABS",
+        "wheel_type": "Alloy",
+        "features": "Cruiser styling, Low seat height, Relaxed riding posture"
+      }
+    },
+    {
+      "make": "Bajaj",
       "model": "Avenger Cruise 220",
       "variant_name": "Avenger Cruise 220 Standard",
       "price": "₹1,26,620",
@@ -536,6 +606,75 @@
         "braking_system": "Single-channel ABS",
         "wheel_type": "Spoke",
         "features": "Low-slung cruiser seat, Pillion backrest, Tall windshield, Relaxed riding posture"
+      }
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar F250",
+      "variant_name": "Pulsar F250 Single Channel ABS",
+      "price": "₹1,44,267",
+      "engine_displacement": "249 cc",
+      "mileage": "38 kmpl",
+      "max_power": "24.1 bhp",
+      "max_torque": "21.5 Nm",
+      "top_speed": "132 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "variants": [
+        { "name": "Pulsar F250 Single Channel ABS", "price": "₹1,44,267" }
+      ],
+      "colors": ["Caribbean Blue", "Racing Red", "Techno Grey", "Brooklyn Black"],
+      "technical_specifications": {
+        "engine_type": "BS6 Phase 2, Single-cylinder, Oil-cooled",
+        "displacement": "249 cc",
+        "max_power": "24.1 bhp @ 8750 rpm",
+        "max_torque": "21.5 Nm @ 6500 rpm",
+        "transmission": "5-Speed Manual",
+        "start_type": "Self Start",
+        "fuel_tank": "14 liters",
+        "mileage_arai": "39 kmpl",
+        "mileage_user": "38 kmpl",
+        "top_speed": "132 kmph",
+        "front_brake": "Disc with ABS",
+        "rear_brake": "Disc with ABS",
+        "braking_system": "Single-channel ABS",
+        "wheel_type": "Alloy",
+        "features": "Half-fairing, LED headlamp, Digital console"
+      }
+    },
+    {
+      "make": "Bajaj",
+      "model": "CT 110X",
+      "variant_name": "CT 110X Standard",
+      "price": "₹72,500",
+      "engine_displacement": "115.45 cc",
+      "mileage": "65 kmpl",
+      "max_power": "8.48 bhp",
+      "max_torque": "9.81 Nm",
+      "top_speed": "90 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "variants": [
+        { "name": "CT 110X Standard", "price": "₹72,500" }
+      ],
+      "colors": ["Ebony Black - Blue", "Matte Wild Green", "Ebony Black - Red"],
+      "technical_specifications": {
+        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled",
+        "displacement": "115.45 cc",
+        "max_power": "8.48 bhp",
+        "max_torque": "9.81 Nm",
+        "transmission": "4-Speed Manual",
+        "start_type": "Kick and Self Start",
+        "fuel_tank": "11 liters",
+        "mileage_user": "65 kmpl",
+        "top_speed": "90 kmph",
+        "kerb_weight": "130 kg",
+        "seat_height": "820 mm",
+        "front_brake": "Drum",
+        "rear_brake": "Drum",
+        "braking_system": "Combined Braking System",
+        "wheel_type": "Alloy",
+        "features": "High ground clearance, Cross-country inspired styling, Wide handlebars"
       }
     }
   ]

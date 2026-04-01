@@ -2,7 +2,7 @@
   "brand": "Yulu",
   "brandId": "yulu",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -24,7 +24,51 @@
       "max_torque": "8 Nm",
       "colors": ["Red", "Blue", "White", "Black"],
       "variants": [
-        { "name": "Miracle GR", "price": "₹74,999" }
+        { "name": "Miracle GR Swappable", "price": "₹74,999" }
+      ]
+    },
+    {
+      "make": "Yulu",
+      "model": "Wynn",
+      "variant_name": "Yulu Wynn",
+      "price": "₹84,999",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "250 W",
+        "Range": "80 km",
+        "Battery Capacity": "Swappable",
+        "Top Speed": "45 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Swappable Battery": "Yes"
+      },
+      "max_torque": "12 Nm",
+      "colors": ["Red", "Blue", "White", "Black", "Green"],
+      "variants": [
+        { "name": "Wynn Swappable", "price": "₹84,999" }
+      ]
+    },
+    {
+      "make": "Yulu",
+      "model": "Bike D",
+      "variant_name": "Yulu Bike D",
+      "price": "₹54,999",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "250 W",
+        "Range": "60 km",
+        "Battery Capacity": "Swappable",
+        "Top Speed": "25 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Swappable Battery": "Yes"
+      },
+      "max_torque": "8 Nm",
+      "colors": ["Red", "Blue", "White", "Black"],
+      "variants": [
+        { "name": "Bike D Swappable", "price": "₹54,999" }
       ]
     }
   ]

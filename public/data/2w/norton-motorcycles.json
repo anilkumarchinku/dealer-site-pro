@@ -2,6 +2,8 @@
   "brand": "Norton",
   "brandId": "norton-motorcycles",
   "type": "2w",
+  "lastUpdated": "2026-04-01",
+  "source": "BikeWale",
   "vehicles": [
     {
       "make": "Norton",
@@ -17,7 +19,7 @@
       "source_section": "Available",
       "colors": ["Silver Carbon", "Brushed Aluminum"],
       "variants": [
-        { "name": "Standard", "price": "₹32,00,000" }
+        { "name": "V4CR Standard", "price": "₹32,00,000" }
       ],
       "technical_specifications": {
         "engine_type": "V4, Liquid-cooled",
@@ -43,10 +45,10 @@
       "max_power": "88 bhp",
       "fuel_type": "Petrol",
       "max_torque": "90 Nm",
-      "source_section": "Available",
+      "source_section": "Discontinued",
       "colors": ["Manx Silver", "Black Lightning"],
       "variants": [
-        { "name": "Standard", "price": "₹30,00,000" }
+        { "name": "Commando 961 Standard", "price": "₹30,00,000" }
       ],
       "technical_specifications": {
         "engine_type": "Parallel-twin, Air-cooled",

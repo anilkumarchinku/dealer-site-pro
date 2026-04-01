@@ -2,7 +2,7 @@
   "brand": "Ampere",
   "brandId": "ampere-greaves",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -23,7 +23,28 @@
       "max_torque": "17 Nm",
       "colors": ["Pearl White", "Midnight Black", "Urban Blue", "Fiery Red"],
       "variants": [
-        { "name": "Magnus Pro", "price": "₹89,990" }
+        { "name": "Magnus Pro 60V 30Ah", "price": "₹89,990" }
+      ]
+    },
+    {
+      "make": "Ampere",
+      "model": "Magnus EX",
+      "variant_name": "Ampere Magnus EX",
+      "price": "₹1,12,990",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "2.0 kW",
+        "Range": "120 km",
+        "Battery Capacity": "2.9 kWh",
+        "Top Speed": "60 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "max_torque": "17 Nm",
+      "colors": ["Pearl White", "Midnight Black", "Urban Blue", "Fiery Red", "Sunset Orange"],
+      "variants": [
+        { "name": "Magnus EX 2.9 kWh", "price": "₹1,12,990" }
       ]
     },
     {
@@ -44,7 +65,7 @@
       "max_torque": "17 Nm",
       "colors": ["Pearl White", "Midnight Black", "Urban Blue", "Fiery Red"],
       "variants": [
-        { "name": "Primus", "price": "₹79,990" }
+        { "name": "Primus 60V 30Ah", "price": "₹79,990" }
       ]
     },
     {
@@ -65,7 +86,28 @@
       "max_torque": "42 Nm",
       "colors": ["Pearl White", "Midnight Black", "Urban Blue", "Fiery Red"],
       "variants": [
-        { "name": "Nexus", "price": "₹74,990" }
+        { "name": "Nexus 60V 30Ah", "price": "₹74,990" }
+      ]
+    },
+    {
+      "make": "Ampere",
+      "model": "Zeal EX",
+      "variant_name": "Ampere Zeal EX",
+      "price": "₹99,990",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "2.0 kW",
+        "Range": "129 km",
+        "Battery Capacity": "2.9 kWh",
+        "Top Speed": "60 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes"
+      },
+      "max_torque": "25 Nm",
+      "colors": ["Pearl White", "Midnight Black", "Urban Blue", "Fiery Red", "Sunset Orange"],
+      "variants": [
+        { "name": "Zeal EX 2.9 kWh", "price": "₹99,990" }
       ]
     }
   ]

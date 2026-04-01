@@ -2,7 +2,7 @@
   "brand": "Bajaj Chetak",
   "brandId": "bajaj-chetak-ev",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -24,6 +24,7 @@
       "max_torque": "16 Nm",
       "colors": ["Cyber White", "Hazel Brown", "Blazing Black", "Manhattan Red", "Mist Silver", "Indigo Metallic"],
       "variants": [
+        { "name": "Chetak Premium 3.2 kWh", "price": "₹1,20,990" },
         { "name": "Chetak Premium 3.8 kWh", "price": "₹1,28,748" }
       ]
     },

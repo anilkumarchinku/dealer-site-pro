@@ -2,7 +2,7 @@
   "brand": "Triumph",
   "brandId": "triumph-india",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -82,7 +82,7 @@
       "variants": [
         { "name": "Scrambler 400 X", "price": "₹2,69,976" }
       ],
-      "colors": ["Vanilla White", "Granite", "Racing Yellow"],
+      "colors": ["Pearl Metallic White / Phantom Black", "Phantom Black / Silver Ice", "Volcanic Red / Phantom Black", "Matt Khaki Green / Fusion White"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Single-cylinder",
         "power": "39.5 bhp",
@@ -130,6 +130,38 @@
         "start_type": "Self Start",
         "emission": "BS6 Phase 2B",
         "features": "Switchable traction control, Cafe racer styling with half-fairing, Clip-on handlebars"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Daytona 660",
+      "variant_name": "Triumph Daytona 660",
+      "price": "₹9,88,400",
+      "engine_displacement": "660 cc",
+      "mileage": "18 kmpl",
+      "top_speed": "230 kmph",
+      "max_torque": "69 Nm",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Daytona 660 Standard", "price": "₹9,88,400" }
+      ],
+      "colors": ["Carnival Red / Sapphire Black", "Satin Granite / Satin Jet Black", "Snowdonia White / Sapphire Black"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-triple",
+        "power": "94 bhp",
+        "torque": "69 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "13.8 litres",
+        "seat_height": "820 mm",
+        "kerb_weight": "188 kg",
+        "brakes_front": "Dual Disc (310mm)",
+        "brakes_rear": "Disc (220mm)",
+        "abs": "Dual-channel ABS",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2B",
+        "features": "Traction control, Multiple ride modes, TFT display, Cornering ABS"
       }
     },
     {
@@ -261,6 +293,38 @@
     },
     {
       "make": "Triumph",
+      "model": "Street Triple R",
+      "variant_name": "Triumph Street Triple R",
+      "price": "₹11,16,300",
+      "engine_displacement": "765 cc",
+      "mileage": "18 kmpl",
+      "top_speed": "225 kmph",
+      "max_torque": "77 Nm",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Street Triple R", "price": "₹11,16,300" }
+      ],
+      "colors": ["Phantom Black", "Matt Baja Orange", "Pure White"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-triple",
+        "power": "118 bhp",
+        "torque": "77 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "17.4 litres",
+        "seat_height": "810 mm",
+        "kerb_weight": "166 kg",
+        "brakes_front": "Disc (310mm)",
+        "brakes_rear": "Disc (220mm)",
+        "abs": "Dual-channel ABS",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2",
+        "features": "Showa 41mm USD forks, Monoshock rear"
+      }
+    },
+    {
+      "make": "Triumph",
       "model": "Bonneville T120",
       "variant_name": "Triumph Bonneville T120",
       "price": "₹12,35,000",
@@ -336,7 +400,7 @@
       "variants": [
         { "name": "Bonneville Speedmaster Standard", "price": "₹13,37,500" }
       ],
-      "colors": ["Jet Black", "Cordovan Red"],
+      "colors": ["Pacific Blue / Silver Ice", "Cordovan Red", "Jet Black", "Snowdonia / Cranberry Red"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "76.9 bhp",
@@ -355,72 +419,41 @@
     },
     {
       "make": "Triumph",
-      "model": "Street Triple R",
-      "variant_name": "Triumph Street Triple R",
-      "price": "₹11,16,300",
+      "model": "Street Triple RS",
+      "variant_name": "Triumph Street Triple RS",
+      "price": "₹13,22,800",
       "engine_displacement": "765 cc",
       "mileage": "18 kmpl",
-      "top_speed": "225 kmph",
-      "max_torque": "77 Nm",
+      "top_speed": "240 kmph",
+      "max_torque": "80 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Street Triple R", "price": "₹11,16,300" }
+        { "name": "Street Triple RS", "price": "₹13,22,800" }
       ],
-      "colors": ["Diablo Red", "Sapphire Black"],
+      "colors": ["Granite", "Phantom Black", "Cosmic Yellow", "Silver Ice", "Carnival Red"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-triple",
-        "power": "118 bhp",
-        "torque": "77 Nm",
+        "power": "130 bhp",
+        "torque": "80 Nm",
         "gearbox": "6-Speed Manual",
         "fuel_tank": "17.4 litres",
-        "seat_height": "810 mm",
+        "seat_height": "825 mm",
         "kerb_weight": "166 kg",
-        "brakes_front": "Disc (310mm)",
+        "brakes_front": "Brembo Disc (310mm)",
         "brakes_rear": "Disc (220mm)",
-        "abs": "Dual-channel ABS",
+        "abs": "Cornering ABS",
         "wheel_type": "Alloy",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2",
-        "features": "Showa 41mm USD forks, Monoshock rear"
-      }
-    },
-    {
-      "make": "Triumph",
-      "model": "Speed Triple 1200 RS",
-      "variant_name": "Triumph Speed Triple 1200 RS",
-      "price": "₹21,75,900",
-      "engine_displacement": "1160 cc",
-      "mileage": "16 kmpl",
-      "top_speed": "250 kmph",
-      "max_torque": "125 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "variants": [
-        { "name": "Speed Triple 1200 RS", "price": "₹21,75,900" }
-      ],
-      "colors": ["Sapphire Black", "Storm Grey"],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Inline-triple",
-        "power": "177 bhp",
-        "torque": "125 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "15.5 litres",
-        "seat_height": "830 mm",
-        "kerb_weight": "198 kg",
-        "brakes_front": "Brembo Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes (Cornering ABS)",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
+        "features": "Ohlins rear shock, Traction control, Multiple riding modes, TFT display"
       }
     },
     {
       "make": "Triumph",
       "model": "Tiger 900",
       "variant_name": "Triumph Tiger 900",
-      "price": "₹14,40,000",
+      "price": "₹14,40,000 - ₹16,15,000",
       "engine_displacement": "888 cc",
       "mileage": "21.2 kmpl",
       "top_speed": "200 kmph",
@@ -429,9 +462,9 @@
       "source_section": "Available",
       "variants": [
         { "name": "Tiger 900 GT", "price": "₹14,40,000" },
-        { "name": "Tiger 900 Rally Pro", "price": "₹16,50,000" }
+        { "name": "Tiger 900 Rally Pro", "price": "₹16,15,000" }
       ],
-      "colors": ["Sapphire Black", "Snowdonia White", "Matt Khaki Green"],
+      "colors": ["Carnival Red / Sapphire Black", "Snowdonia White / Sapphire Black", "Graphite / Sapphire Black", "Matt Khaki Green / Matt Phantom Black", "Ash Grey / Intense Orange", "Carbon Black / Sapphire Black"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-triple",
         "power": "94 bhp",
@@ -477,6 +510,38 @@
         "brakes_front": "Disc",
         "brakes_rear": "Disc",
         "abs": "Yes",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Speed Triple 1200 RS",
+      "variant_name": "Triumph Speed Triple 1200 RS",
+      "price": "₹21,75,900 - ₹23,06,900",
+      "engine_displacement": "1160 cc",
+      "mileage": "16 kmpl",
+      "top_speed": "250 kmph",
+      "max_torque": "125 Nm",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "variants": [
+        { "name": "Speed Triple 1200 RS", "price": "₹21,75,900" },
+        { "name": "Speed Triple 1200 RR", "price": "₹23,06,900" }
+      ],
+      "colors": ["Granite / Triumph Performance Yellow", "Granite / Diablo Red", "Jet Black", "Triumph Performance Yellow"],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Inline-triple",
+        "power": "177 bhp",
+        "torque": "125 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "15.5 litres",
+        "seat_height": "830 mm",
+        "kerb_weight": "198 kg",
+        "brakes_front": "Brembo Disc",
+        "brakes_rear": "Disc",
+        "abs": "Yes (Cornering ABS)",
         "wheel_type": "Alloy",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"

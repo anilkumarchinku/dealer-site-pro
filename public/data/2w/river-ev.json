@@ -2,14 +2,14 @@
   "brand": "River",
   "brandId": "river-ev",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "River",
       "model": "Indie",
       "variant_name": "River Indie",
-      "price": "₹1,24,900",
+      "price": "₹1,24,900 - ₹1,34,900",
       "fuel_type": "Electric",
       "source_section": "Available",
       "specifications": {
@@ -18,12 +18,14 @@
         "Battery Capacity": "4 kWh",
         "Top Speed": "90 kmph",
         "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
       },
       "max_torque": "57 Nm",
       "colors": ["Cyan Blue", "Titanium Grey", "Ivory White", "Sunset Orange"],
       "variants": [
-        { "name": "Indie", "price": "₹1,24,900" }
+        { "name": "Indie Standard 4 kWh", "price": "₹1,24,900" },
+        { "name": "Indie Plus 5 kWh", "price": "₹1,34,900" }
       ]
     }
   ]

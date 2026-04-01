@@ -2,7 +2,7 @@
   "brand": "Revolt",
   "brandId": "revolt-motors",
   "type": "2w",
-  "lastUpdated": "2026-03-30",
+  "lastUpdated": "2026-04-01",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -25,6 +25,28 @@
       "colors": ["Cosmic Black", "Rebel Red", "Mist Grey", "Storm White"],
       "variants": [
         { "name": "RV400 BRZ", "price": "₹1,38,999" }
+      ]
+    },
+    {
+      "make": "Revolt",
+      "model": "RV400",
+      "variant_name": "Revolt RV400",
+      "price": "₹1,29,999",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "specifications": {
+        "Motor Power": "4.4 kW peak",
+        "Range": "150 km",
+        "Battery Capacity": "3.24 kWh",
+        "Top Speed": "85 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "max_torque": "85 Nm",
+      "colors": ["Cosmic Black", "Rebel Red", "Mist Grey", "Storm White"],
+      "variants": [
+        { "name": "RV400", "price": "₹1,29,999" }
       ]
     },
     {

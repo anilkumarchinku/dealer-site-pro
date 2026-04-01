@@ -378,15 +378,21 @@ function extractFromFlatItem(item: any): BrandModelEnrichment {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function extractFromVehicle(v: any): BrandModelEnrichment {
-    // Honda format: has variants array
+    // Honda/standard format: has variants array at top level
     if (v.variants && Array.isArray(v.variants) && v.variants.length > 0) {
         const firstVar = v.variants[0]
-        const specs = firstVar.technical_specifications || {}
-        const engine = specs.engine_and_transmission || {}
-        const perf = specs.performance_and_features || {}
+        const varSpecs = firstVar.technical_specifications || {}
+        const engine = varSpecs.engine_and_transmission || {}
+        const perf = varSpecs.performance_and_features || {}
 
-        const colors = (firstVar.colors || []).map((c: string | { value: string }) => {
-            const name = typeof c === 'string' ? c : c.value || ''
+        // Top-level specifications (for EV brands like Ola, Ather, Revolt)
+        const topSpecs = v.specifications || {}
+        const isEVTop = !!(topSpecs['Motor Power'] || topSpecs['Range'] || topSpecs['Battery Capacity'])
+
+        // Colors: prefer top-level v.colors (most brands), fallback to first variant colors
+        const rawColors = (v.colors && v.colors.length > 0 ? v.colors : (firstVar.colors || []))
+        const colors = rawColors.map((c: string | { value: string; name: string }) => {
+            const name = typeof c === 'string' ? c : (c.name || c.value || '')
             return { name, hex: resolveVehicleColorHex(name) }
         })
 
@@ -395,9 +401,11 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
         if (engine['Gear Box']) features.push(`${engine['Gear Box']} Gearbox`)
         if (engine['Cooling System']) features.push(engine['Cooling System'])
         if (engine['Starting']) features.push(engine['Starting'])
-        if (perf['Bluetooth Connectivity']) features.push('Bluetooth Connectivity')
-        if (perf['USB Charging Port'] === 'Yes') features.push('USB Charging Port')
-        if (perf['Navigation'] === 'Yes') features.push('Navigation')
+        if (perf['Bluetooth Connectivity'] || topSpecs['Bluetooth Connectivity'] === 'Yes') features.push('Bluetooth Connectivity')
+        if (perf['USB Charging Port'] === 'Yes' || topSpecs['USB Charging Port'] === 'Yes') features.push('USB Charging Port')
+        if (perf['Navigation'] === 'Yes' || topSpecs['Navigation'] === 'Yes') features.push('Navigation')
+        if (topSpecs['Riding Modes'] === 'Yes') features.push('Riding Modes')
+        if (topSpecs['Fast Charging'] === 'Yes') features.push('Fast Charging')
 
         // Extract all variants with names + prices
         const allVariants = (v.variants || [])
@@ -410,21 +418,21 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
         const dims = firstVar.technical_specifications?.dimensions_and_capacity || {}
 
         return {
-            engine_cc: parseCC(engine['Displacement']) || parseCC(v.engine_displacement),
-            mileage_kmpl: parseMileage(v.mileage) || parseMileage(engine['Mileage']),
-            top_speed_kmph: parseTopSpeed(v.top_speed) || parseTopSpeed(engine['Top Speed']),
+            engine_cc: isEVTop ? null : (parseCC(engine['Displacement']) || parseCC(v.engine_displacement)),
+            mileage_kmpl: isEVTop ? null : (parseMileage(v.mileage) || parseMileage(engine['Mileage'])),
+            top_speed_kmph: parseTopSpeed(v.top_speed) || parseTopSpeed(topSpecs['Top Speed']) || parseTopSpeed(engine['Top Speed']),
             ex_showroom_price_paise: parsePrice(firstVar.price) || parsePrice(v.price),
-            range_km: null,
-            battery_kwh: null,
+            range_km: isEVTop ? (parseRange(topSpecs['Range'] || topSpecs['Claimed Range'] || topSpecs['Range (Eco Mode)'])) : null,
+            battery_kwh: isEVTop ? parseBatteryKwh(topSpecs['Battery Capacity']) : null,
             colors,
             features,
             description: null,
-            max_power: engine['Max Power'] || engine['Power'] || v.max_power || (v.technical_specifications || {}).power || null,
-            torque: engine['Max Torque'] || v.max_torque || (v.technical_specifications || {}).torque || null,
+            max_power: engine['Max Power'] || engine['Power'] || topSpecs['Motor Power'] || topSpecs['Motor Power (Peak)'] || v.max_power || null,
+            torque: engine['Max Torque'] || topSpecs['Torque (Motor)'] || topSpecs['Torque'] || v.max_torque || null,
             variant: firstVar.variant_name || firstVar.name || null,
             all_variants: allVariants,
             stock_status: parseSourceSection(v.source_section),
-            transmission: normalizeTransmission(engine['Gear Box'] || engine['Gearbox']),
+            transmission: isEVTop ? 'Automatic' : normalizeTransmission(engine['Gear Box'] || engine['Gearbox']),
             wheelbase_mm: parseMM(dims['Wheelbase']),
             length_mm: parseMM(dims['Length']),
             width_mm: parseMM(dims['Width']),
@@ -457,9 +465,14 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
             features,
             description: null,
             max_power: specs['Motor Power'] || specs['Motor Power (Peak)'] || null,
-            torque: specs['Torque (Motor)'] || null,
-            variant: null,
-            all_variants: [],
+            torque: specs['Torque (Motor)'] || specs['Torque'] || v.max_torque || null,
+            variant: v.variant_name || null,
+            all_variants: Array.isArray(v.variants)
+                ? (v.variants as any[]).map((vv: any) => ({
+                    name: vv.variant_name || vv.name || '',
+                    price_paise: parsePrice(vv.price),
+                })).filter((vv: { name: string; price_paise: number }) => vv.name && vv.price_paise > 0)
+                : [],
             stock_status: parseSourceSection(v.source_section),
             transmission: 'Automatic',
             wheelbase_mm: null,
@@ -495,9 +508,14 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
         max_power: techEngine['Max Power'] || techEngine['Power']
             || specs.max_power || specs.power || (v.other_performance_metrics || {})['power_bhp']
             || v.max_power || techSpecs.power || null,
-        torque: specs.torque || v.torque || techEngine['Max Torque'] || techSpecs.torque || null,
-        variant: null,
-        all_variants: [],
+        torque: specs.torque || v.torque || v.max_torque || techEngine['Max Torque'] || techSpecs.torque || null,
+        variant: v.variant_name || null,
+        all_variants: Array.isArray(v.variants)
+            ? (v.variants as any[]).map((vv: any) => ({
+                name: vv.variant_name || vv.name || '',
+                price_paise: parsePrice(vv.price),
+            })).filter((vv: { name: string; price_paise: number }) => vv.name && vv.price_paise > 0)
+            : [],
         stock_status: parseSourceSection(v.source_section),
         transmission: normalizeTransmission(techEngine['Gear Box'] || techEngine['Gearbox'] || techEngine['Transmission']
             || techTrans['Gear Box'] || techTrans['Gearbox'] || techTrans['GearBox']
