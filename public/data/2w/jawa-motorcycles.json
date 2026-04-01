@@ -16,6 +16,19 @@
       "fuel_type": "Petrol",
       "max_torque": "18.6 Nm",
       "source_section": "Available",
+      "description": "The Jawa 42 is a neo-classic cruiser motorcycle that combines retro styling with modern performance. It delivers a blend of vintage aesthetics and contemporary engineering suitable for daily commuting and highway cruising, with an engaging exhaust note and smooth power delivery.",
+      "features": [
+        "294.72cc BS6 Phase 2 liquid-cooled engine producing 26.94 bhp",
+        "6-speed manual gearbox with self-start",
+        "Dual disc brakes with ABS",
+        "14 colour options including matte and dual-tone finishes",
+        "13.2-litre fuel tank capacity",
+        "Retro-modern styling with round headlamp and chrome accents",
+        "788mm accessible seat height",
+        "Spoke and alloy wheel options across variants",
+        "32 kmpl user-reported fuel efficiency",
+        "BS6 Phase 2 compliant emission"
+      ],
       "variants": [
         {
           "name": "42 1 Channel Spoke",
@@ -81,6 +94,19 @@
       "fuel_type": "Petrol",
       "max_torque": "28.3 Nm",
       "source_section": "Available",
+      "description": "The Jawa 350 is a classic cruiser motorcycle powered by a 334cc BS6 Phase 2 engine. It combines retro styling with modern engineering, delivering smooth, vibration-free performance ideal for both daily commutes and weekend rides.",
+      "features": [
+        "334cc liquid-cooled single-cylinder engine producing 22.26 bhp",
+        "6-speed manual transmission with self-start",
+        "Dual disc brakes with dual-channel ABS",
+        "Spoke wheels for classic retro look",
+        "13.2-litre fuel tank capacity",
+        "790mm seat height",
+        "Premium build quality with solid, vibration-free performance",
+        "BS6 Phase 2 compliant emission",
+        "8 colour options including Chrome Maroon",
+        "28.5 kmpl fuel efficiency"
+      ],
       "variants": [
         {
           "name": "Jawa 350 Standard",
@@ -131,6 +157,19 @@
       "top_speed": "130 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Jawa 42 FJ is a modern-classic cruiser motorcycle powered by a 334cc BS6 Phase 2 engine delivering smooth and refined performance. It combines the iconic retro Jawa styling with contemporary features, making it suitable for both city commuting and highway riding.",
+      "features": [
+        "334cc liquid-cooled engine producing 28.77 bhp and 29.62 Nm torque",
+        "6-speed manual transmission with self-start",
+        "Dual disc brakes with ABS",
+        "Spoke wheel design with classic retro stance",
+        "12-litre fuel tank capacity",
+        "790mm seat height",
+        "184kg kerb weight for nimble handling",
+        "30 kmpl user-reported fuel efficiency",
+        "5 colour options including matte and dual-tone finishes",
+        "BS6 Phase 2 compliant emission"
+      ],
       "variants": [
         {
           "name": "42 FJ Spoke",
@@ -184,6 +223,19 @@
       "fuel_type": "Petrol",
       "max_torque": "18.6 Nm",
       "source_section": "Available",
+      "description": "The Jawa 42 Bobber is a stylish cruiser motorcycle featuring a distinctive bobber design with a low stance and minimalist body. It prioritises aesthetic appeal with its floating single seat, punchy 334cc engine, and classic cruiser proportions.",
+      "features": [
+        "334cc liquid-cooled BS6 Phase 2 engine producing 29.51 bhp and 32.74 Nm torque",
+        "6-speed manual transmission with slipper clutch",
+        "Dual disc brakes with ABS",
+        "740mm low seat height for easy accessibility",
+        "Floating single seat bobber design",
+        "12.5-litre fuel tank capacity",
+        "Spoke and alloy wheel options across variants",
+        "185kg kerb weight",
+        "30 kmpl user-reported fuel efficiency",
+        "5 colour options including Mystic Copper and Black Mirror"
+      ],
       "variants": [
         {
           "name": "42 Bobber Spoke",
@@ -232,6 +284,19 @@
       "fuel_type": "Petrol",
       "max_torque": "32 Nm",
       "source_section": "Available",
+      "description": "The Jawa Perak is a premium cruiser motorcycle featuring a distinctive bobber design with a classic aesthetic. It delivers a blend of retro styling with modern performance capabilities, appealing to riders seeking individuality and style with a powerful 334cc engine.",
+      "features": [
+        "334cc BS6 Phase 2 liquid-cooled engine producing 30.2 bhp and 32 Nm torque",
+        "6-speed manual transmission",
+        "Dual-channel ABS with front and rear disc brakes",
+        "Alloy wheels for sharp road presence",
+        "12.5-litre fuel tank capacity",
+        "740mm low seat height",
+        "186kg kerb weight",
+        "Classic bobber silhouette with premium finish",
+        "30 kmpl user-reported fuel efficiency",
+        "Available in Mystic Copper, Jasper Red, and Black"
+      ],
       "variants": [
         {
           "name": "Perak Standard",

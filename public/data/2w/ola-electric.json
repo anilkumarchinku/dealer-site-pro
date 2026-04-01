@@ -12,6 +12,24 @@
       "price": "₹1,47,499",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Ola S1 Pro is Ola Electric's flagship electric scooter powered by the Move OS platform, offering one of the highest ranges in its class at up to 242 km. It features a 7-inch TFT touchscreen, 13 kW peak motor, hypercharger network compatibility, and a full suite of smart connected features.",
+      "features": [
+        "7-inch TFT Touchscreen Dashboard",
+        "OTA Updates (Move OS 5)",
+        "4G / Wi-Fi / Bluetooth Connectivity",
+        "GPS Navigation",
+        "4 Riding Modes (Hyper, Sport, Normal, Eco)",
+        "Fast Charging (Ola Hypercharger – 50% in 18 min)",
+        "Keyless Start & Proximity Unlock",
+        "Reverse Mode",
+        "Cruise Control",
+        "Call, SMS & Music Control on Dashboard"
+      ],
+      "colors": ["Stellar Blue", "Porcelain White", "Midnight Blue", "Jet Black", "Industrial Silver"],
+      "variants": [
+        { "name": "S1 Pro 3 kWh", "price": "₹1,39,999" },
+        { "name": "S1 Pro 4 kWh", "price": "₹1,47,499" }
+      ],
       "specifications": {
         "Motor Power": "11 kW peak",
         "Range": "195 km",
@@ -21,11 +39,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
-      "max_torque": "58 Nm",
-      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"],
-      "variants": [
-        { "name": "S1 Pro 4 kWh", "price": "₹1,47,499" }
-      ]
+      "max_torque": "58 Nm"
     },
     {
       "make": "Ola Electric",
@@ -34,6 +48,23 @@
       "price": "₹1,09,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Ola S1 Air is a fully-featured mid-range electric scooter that offers GPS navigation, Bluetooth connectivity, built-in speakers, riding modes, and OTA updates at an accessible price point. It supports Ola's Hypercharger network for fast charging and delivers 151 km of claimed range.",
+      "features": [
+        "TFT Instrument Cluster",
+        "OTA Updates (Move OS)",
+        "GPS Navigation",
+        "Bluetooth Connectivity",
+        "Built-in Speakers & Party Mode",
+        "3 Riding Modes (Sport, Normal, Eco)",
+        "Fast Charging (Ola Hypercharger Compatible)",
+        "Proximity Unlock & Keyless Start",
+        "Reverse Mode",
+        "Document Storage & User Profiles"
+      ],
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"],
+      "variants": [
+        { "name": "S1 Air 2.5 kWh", "price": "₹1,09,999" }
+      ],
       "specifications": {
         "Motor Power": "8.5 kW peak",
         "Range": "150 km",
@@ -43,11 +74,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
-      "max_torque": "50 Nm",
-      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"],
-      "variants": [
-        { "name": "S1 Air 2.5 kWh", "price": "₹1,09,999" }
-      ]
+      "max_torque": "50 Nm"
     },
     {
       "make": "Ola Electric",
@@ -56,6 +83,25 @@
       "price": "₹89,999 - ₹1,14,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Ola S1 X+ is a value-focused electric scooter offering up to 193 km range from its 4 kWh battery pack, with all LED lights, 34-litre underseat storage, and three riding modes. It is compatible with the Ola Hypercharger network and runs on Move OS for OTA updates.",
+      "features": [
+        "TFT Instrument Cluster",
+        "OTA Updates (Move OS)",
+        "3 Riding Modes (Sport, Normal, Eco)",
+        "Fast Charging (Ola Hypercharger Compatible)",
+        "Reverse Mode",
+        "All-LED Lighting",
+        "34-Litre Underseat Storage",
+        "Bluetooth Connectivity",
+        "Digital Document Storage",
+        "USB Charging Port"
+      ],
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"],
+      "variants": [
+        { "name": "S1 X+ 2 kWh", "price": "₹89,999" },
+        { "name": "S1 X+ 3 kWh", "price": "₹1,09,999" },
+        { "name": "S1 X+ 4 kWh", "price": "₹1,14,999" }
+      ],
       "specifications": {
         "Motor Power": "6 kW peak",
         "Range": "151 km",
@@ -65,13 +111,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
-      "max_torque": "50 Nm",
-      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"],
-      "variants": [
-        { "name": "S1 X+ 2 kWh", "price": "₹89,999" },
-        { "name": "S1 X+ 3 kWh", "price": "₹1,09,999" },
-        { "name": "S1 X+ 4 kWh", "price": "₹1,14,999" }
-      ]
+      "max_torque": "50 Nm"
     },
     {
       "make": "Ola Electric",
@@ -80,6 +120,25 @@
       "price": "₹79,999 - ₹99,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Ola S1 X is Ola's entry-level smart electric scooter offering up to 121 km of range, three riding modes, and Move OS connectivity at an entry-friendly price. It delivers practical urban mobility with LED lighting and reverse mode.",
+      "features": [
+        "Digital Instrument Cluster",
+        "OTA Updates (Move OS)",
+        "3 Riding Modes (Sport, Normal, Eco)",
+        "Reverse Mode",
+        "All-LED Lighting",
+        "Bluetooth Connectivity",
+        "USB Charging Port",
+        "Digital Document Storage",
+        "Underseat Storage",
+        "Fast Charging Compatible"
+      ],
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"],
+      "variants": [
+        { "name": "S1 X 2 kWh", "price": "₹79,999" },
+        { "name": "S1 X 3 kWh", "price": "₹89,999" },
+        { "name": "S1 X 4 kWh", "price": "₹99,999" }
+      ],
       "specifications": {
         "Motor Power": "6 kW peak",
         "Range": "121 km",
@@ -89,21 +148,31 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
-      "max_torque": "50 Nm",
-      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow", "Solis Ivory", "Galactic Blue"],
-      "variants": [
-        { "name": "S1 X 2 kWh", "price": "₹79,999" },
-        { "name": "S1 X 3 kWh", "price": "₹89,999" },
-        { "name": "S1 X 4 kWh", "price": "₹99,999" }
-      ]
+      "max_torque": "50 Nm"
     },
     {
       "make": "Ola Electric",
       "model": "S1 Z",
       "variant_name": "Ola Electric S1 Z",
-      "price": "₹79,999",
+      "price": "₹59,999 - ₹79,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Ola S1 Z is Ola Electric's most affordable scooter offering, targeting first-time EV buyers with a lightweight design and essential smart features. It offers 123 km of range in its base configuration with a 73 kmph top speed.",
+      "features": [
+        "Digital Instrument Cluster",
+        "Riding Modes (Normal, Eco)",
+        "Reverse Mode",
+        "All-LED Lighting",
+        "Bluetooth Connectivity",
+        "USB Charging Port",
+        "Underseat Storage",
+        "Anti-theft System"
+      ],
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow"],
+      "variants": [
+        { "name": "S1 Z 2 kWh", "price": "₹59,999" },
+        { "name": "S1 Z+ 2 kWh", "price": "₹64,999" }
+      ],
       "specifications": {
         "Motor Power": "4.5 kW peak",
         "Range": "123 km",
@@ -113,11 +182,7 @@
         "Fast Charging": "No",
         "Bluetooth Connectivity": "Yes"
       },
-      "max_torque": "41 Nm",
-      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Coral Glow"],
-      "variants": [
-        { "name": "S1 Z 2 kWh", "price": "₹79,999" }
-      ]
+      "max_torque": "41 Nm"
     },
     {
       "make": "Ola Electric",
@@ -126,6 +191,25 @@
       "price": "₹1,49,999 - ₹1,99,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Ola Roadster is Ola Electric's first electric motorcycle series, featuring a naked streetfighter design and a world-class 500 km claimed range on the top variant. It runs on Move OS with a large TFT display, multi-mode riding, and fast charging support via the Ola Hypercharger network.",
+      "features": [
+        "Large TFT Touchscreen Dashboard",
+        "OTA Updates (Move OS)",
+        "4G / Wi-Fi / Bluetooth Connectivity",
+        "GPS Navigation",
+        "Multiple Riding Modes",
+        "Fast Charging (Ola Hypercharger)",
+        "Keyless Start & Proximity Unlock",
+        "Regenerative Braking",
+        "ABS (Dual Channel)",
+        "MoveVerse App Connectivity"
+      ],
+      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Galactic Blue"],
+      "variants": [
+        { "name": "Roadster Base (8 kW)", "price": "₹1,49,999" },
+        { "name": "Roadster Ultra (12 kW)", "price": "₹1,69,999" },
+        { "name": "Roadster Pro (16 kW)", "price": "₹1,99,999" }
+      ],
       "specifications": {
         "Motor Power": "16 kW peak",
         "Range": "195 km",
@@ -135,13 +219,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
-      "max_torque": "105 Nm",
-      "colors": ["Neo Mint", "Porcelain White", "Jet Black", "Liquid Silver", "Galactic Blue"],
-      "variants": [
-        { "name": "Roadster Base (8 kW)", "price": "₹1,49,999" },
-        { "name": "Roadster Ultra (12 kW)", "price": "₹1,69,999" },
-        { "name": "Roadster Pro (16 kW)", "price": "₹1,99,999" }
-      ]
+      "max_torque": "105 Nm"
     }
   ]
 }

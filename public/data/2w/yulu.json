@@ -12,6 +12,16 @@
       "price": "₹74,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Yulu Miracle GR is a swappable-battery electric scooter designed for gig economy workers and high-frequency urban riders, offering a unique energy swap model that eliminates charging downtime.",
+      "features": [
+        "Swappable Battery (Yulu Swap Stations)",
+        "Zero Charging Downtime",
+        "Mobile App for Swap Station Locator",
+        "Anti-Theft with Remote Lock",
+        "Digital Speedometer",
+        "Lightweight Compact Design",
+        "Subscription-Based Battery Plans"
+      ],
       "specifications": {
         "Motor Power": "250 W",
         "Range": "70 km",
@@ -24,6 +34,7 @@
       "max_torque": "8 Nm",
       "colors": ["Red", "Blue", "White", "Black"],
       "variants": [
+        { "name": "Miracle GR (Without Battery)", "price": "₹49,999" },
         { "name": "Miracle GR Swappable", "price": "₹74,999" }
       ]
     },
@@ -34,6 +45,16 @@
       "price": "₹84,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Yulu Wynn is an upgraded swappable-battery scooter with 80 km range and a larger motor, designed for longer urban commutes with the operational flexibility of battery swapping via Yulu's network.",
+      "features": [
+        "Swappable Battery Technology",
+        "80 km Range Per Swap",
+        "Yulu App Integration",
+        "Anti-Theft System",
+        "Digital Speedometer",
+        "Larger Body with Better Ergonomics",
+        "Subscription Battery Plans Available"
+      ],
       "specifications": {
         "Motor Power": "250 W",
         "Range": "80 km",
@@ -46,6 +67,7 @@
       "max_torque": "12 Nm",
       "colors": ["Red", "Blue", "White", "Black", "Green"],
       "variants": [
+        { "name": "Wynn (Without Battery)", "price": "₹59,999" },
         { "name": "Wynn Swappable", "price": "₹84,999" }
       ]
     },
@@ -56,6 +78,16 @@
       "price": "₹54,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Yulu Bike D is a low-speed electric cycle-scooter hybrid designed for short-distance last-mile connectivity, ideal for students, delivery riders, and gated community use with no registration requirement.",
+      "features": [
+        "No Registration Required",
+        "No Driving Licence Needed",
+        "Swappable Battery",
+        "Yulu App Connectivity",
+        "Ultra-Lightweight Design",
+        "Anti-Theft Lock",
+        "Suitable for Gated Communities"
+      ],
       "specifications": {
         "Motor Power": "250 W",
         "Range": "60 km",
@@ -68,6 +100,7 @@
       "max_torque": "8 Nm",
       "colors": ["Red", "Blue", "White", "Black"],
       "variants": [
+        { "name": "Bike D (Without Battery)", "price": "₹34,999" },
         { "name": "Bike D Swappable", "price": "₹54,999" }
       ]
     }

@@ -12,6 +12,16 @@
       "price": "₹79,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Battre Electric EM is the flagship scooter from this Delhi-based EV brand, delivering an impressive 130 km range with a comfortable riding posture, ideal for long-distance daily office commuters.",
+      "features": [
+        "130 km Long Range",
+        "Digital Instrument Cluster",
+        "Anti-Theft Alarm",
+        "Ride Modes (Eco/Power)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "130 km",
@@ -33,6 +43,16 @@
       "price": "₹69,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Battre Electric One is a minimalist no-frills electric scooter with 100 km range designed for daily city commuters who want straightforward, reliable electric mobility at an affordable price.",
+      "features": [
+        "Digital Speedometer",
+        "Anti-Theft Alarm",
+        "Ride Modes",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "BLDC Hub Motor",
+        "Easy Home Charging"
+      ],
       "specifications": {
         "Motor Power": "1.2 kW",
         "Range": "100 km",
@@ -54,6 +74,16 @@
       "price": "₹59,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Battre Electric Yelo is the brand's most affordable model, offering 80 km range at under ₹60,000, making it the perfect entry point into electric mobility for students and light-use commuters.",
+      "features": [
+        "Budget-Friendly Pricing",
+        "Lightweight Compact Design",
+        "Digital Speedometer",
+        "Anti-Theft Alarm",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "Low Running Cost"
+      ],
       "specifications": {
         "Motor Power": "1.0 kW",
         "Range": "80 km",
@@ -75,6 +105,16 @@
       "price": "₹64,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Battre Electric Smart is a mid-range commuter with 90 km range and practical convenience features, designed for everyday city riders who want a smart-looking, affordable electric scooter.",
+      "features": [
+        "Sleek Smart Design",
+        "Digital Console",
+        "Anti-Theft Alarm",
+        "Ride Modes",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port"
+      ],
       "specifications": {
         "Motor Power": "1.2 kW",
         "Range": "90 km",

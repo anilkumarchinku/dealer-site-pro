@@ -12,6 +12,16 @@
       "price": "₹89,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Hop Electric Leo is a premium connected scooter from Jaipur-based Hop Electric, featuring IoT-enabled smart features and a 90 km range, designed for the modern urban professional.",
+      "features": [
+        "IoT-Enabled Connected Features",
+        "Mobile App with Remote Monitoring",
+        "GPS Tracking & Anti-Theft",
+        "Digital TFT Cluster",
+        "Fast Charging",
+        "Ride Modes (Eco/City/Sport)",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "90 km",
@@ -33,6 +43,16 @@
       "price": "₹79,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Hop Electric LYF (Live Your Future) is an affordable daily commuter with 90 km range and practical features, designed for value-seeking urban riders who want their first EV from an emerging Indian brand.",
+      "features": [
+        "Digital Instrument Console",
+        "Anti-Theft Alarm",
+        "Ride Modes (Eco/Power)",
+        "Regenerative Braking",
+        "Fast Charging",
+        "USB Charging Port",
+        "Puncture-Resistant Tyres"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "90 km",
@@ -54,6 +74,16 @@
       "price": "₹1,25,000 - ₹1,49,000",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Hop Electric OXO is the brand's flagship electric motorcycle with a 6 kW motor and 110 kmph top speed, targeting performance-seeking riders who want an electric alternative to 150cc-200cc petrol bikes.",
+      "features": [
+        "6 kW High-Performance Motor",
+        "Bluetooth App Connectivity",
+        "GPS Navigation & Anti-Theft",
+        "Full-Color TFT Display",
+        "DC Fast Charging",
+        "Ride Modes (Eco/City/Sport/Race)",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "6 kW",
         "Range": "150 km",

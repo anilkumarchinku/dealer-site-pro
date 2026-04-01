@@ -16,6 +16,17 @@
       "fuel_type": "Petrol",
       "max_torque": "87 Nm",
       "source_section": "Available",
+      "description": "The Indian Scout Sixty Bobber is a stripped-down, minimalist bobber motorcycle built on the Scout Sixty platform with a 999cc V-twin engine. Its low 649 mm seat height, blacked-out components, and bobber styling make it one of the most accessible and stylish entry points into the Indian Motorcycle range.",
+      "features": [
+        "999cc liquid-cooled V-twin engine",
+        "Low 649 mm seat height",
+        "Blacked-out bobber styling",
+        "Dual-channel ABS",
+        "6-speed manual gearbox",
+        "Alloy wheels",
+        "Pull-back handlebar",
+        "Classic single-saddle seat"
+      ],
       "variants": [
         {
           "name": "Scout Sixty Bobber Standard",
@@ -52,6 +63,17 @@
       "fuel_type": "Petrol",
       "max_torque": "88 Nm",
       "source_section": "Available",
+      "description": "The Indian Sport Scout Sixty is a performance-oriented roadster built on the Scout Sixty frame with a 999cc engine and sporty ergonomics including a lowered handlebar and rear-set footpegs for a more aggressive riding position. It delivers crisp, responsive engine performance with excellent quality and finish.",
+      "features": [
+        "999cc liquid-cooled V-twin engine",
+        "Sporty lowered handlebar",
+        "Rear-set footpegs",
+        "Dual-channel ABS",
+        "6-speed manual gearbox",
+        "Alloy wheels",
+        "Minimalist instrumentation",
+        "Low 654 mm seat height"
+      ],
       "variants": [
         {
           "name": "Sport Scout Sixty Standard",
@@ -88,6 +110,17 @@
       "fuel_type": "Petrol",
       "max_torque": "87 Nm",
       "source_section": "Available",
+      "description": "The Indian Scout Sixty Classic is a timeless cruiser motorcycle with classic fender styling, a padded two-up seat, and chrome detailing built on the Scout Sixty platform. It offers comfortable riding ergonomics with the proven 999cc V-twin engine for relaxed everyday cruising.",
+      "features": [
+        "999cc liquid-cooled V-twin engine",
+        "Classic fender styling",
+        "Padded two-up seat",
+        "Chrome detailing",
+        "Dual-channel ABS",
+        "6-speed manual gearbox",
+        "Spoke wheels",
+        "654 mm seat height"
+      ],
       "variants": [
         {
           "name": "Scout Sixty Classic Standard",
@@ -124,6 +157,17 @@
       "fuel_type": "Petrol",
       "max_torque": "111 Nm",
       "source_section": "Available",
+      "description": "The Indian Scout Bobber is a premium bobber motorcycle powered by the new 1250cc SpeedPlus V-twin engine delivering 106 bhp and 108 Nm for a strong, purposeful ride. It features a minimalist bobber aesthetic with a single-saddle seat, blacked-out components, and a low 665 mm seat height.",
+      "features": [
+        "1250cc SpeedPlus V-twin engine, 106.46 bhp",
+        "Bobber single-saddle seat",
+        "Blacked-out components",
+        "Dual-channel ABS",
+        "6-speed manual gearbox",
+        "Alloy wheels",
+        "Low 665 mm seat height",
+        "Short rear fender"
+      ],
       "variants": [
         {
           "name": "Scout Bobber Standard",
@@ -160,6 +204,17 @@
       "fuel_type": "Petrol",
       "max_torque": "111 Nm",
       "source_section": "Available",
+      "description": "The Indian Scout Classic is a classic cruiser powered by the new 1250cc SpeedPlus V-twin, featuring spoke wheels, classic fender styling, and a padded two-up seat for comfortable long rides. It offers timeless American cruiser design with modern reliability and safety features.",
+      "features": [
+        "1250cc SpeedPlus V-twin engine, 106.46 bhp",
+        "Classic fender styling",
+        "Padded two-up seat",
+        "Spoke wheels",
+        "Dual-channel ABS",
+        "6-speed manual gearbox",
+        "Low 680 mm seat height",
+        "Chrome detailing"
+      ],
       "variants": [
         {
           "name": "Scout Classic Standard",
@@ -195,6 +250,17 @@
       "top_speed": "190 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Indian Sport Scout is a performance-focused roadster with the new 1250cc SpeedPlus V-twin, sporty ergonomics, and a minimalist design that emphasises the motorcycle's athletic proportions. Its crisp, responsive engine and agile chassis deliver an effortless riding experience despite its size.",
+      "features": [
+        "1250cc SpeedPlus V-twin engine, 106.46 bhp",
+        "Sporty ergonomics with lowered handlebar",
+        "Dual-channel ABS",
+        "6-speed manual gearbox",
+        "Alloy wheels",
+        "Minimalist design",
+        "680 mm seat height",
+        "LED lighting"
+      ],
       "variants": [
         {
           "name": "Sport Scout Standard",
@@ -231,6 +297,17 @@
       "top_speed": "185 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Indian 101 Scout is inspired by the legendary 1928 Indian 101 Scout racer, featuring performance-focused components including Brembo brakes, inverted front forks, and a 4-inch Ride Command touchscreen. It is the most premium Scout model with the highest specification level.",
+      "features": [
+        "1250cc SpeedPlus V-twin engine, 112.54 bhp",
+        "4-inch touchscreen Ride Command display",
+        "Turn-by-turn navigation",
+        "Bluetooth connectivity",
+        "Brembo front brakes",
+        "Inverted front forks",
+        "Selectable ride modes",
+        "Adjustable piggyback shocks"
+      ],
       "variants": [
         {
           "name": "101 Scout Standard",
@@ -269,6 +346,17 @@
       "top_speed": "180 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Indian Super Scout is a modern-classic adventure-touring Scout with spoke wheels, a quick-release windshield, saddlebags, and a two-up seat for comfortable long-distance riding. It blends the Scout's cruiser DNA with practical touring features including cruise control and a 4-inch Ride Command display.",
+      "features": [
+        "1250cc SpeedPlus V-twin engine, 106.46 bhp",
+        "4-inch touchscreen Ride Command display",
+        "Cruise control",
+        "Selectable ride modes (Rain, Standard, Sport)",
+        "Quick-release windshield and saddlebags",
+        "Spoke wheels with Pirelli MT60RS tyres",
+        "Keyless ignition",
+        "USB charging port"
+      ],
       "variants": [
         {
           "name": "Super Scout Standard",
@@ -308,6 +396,17 @@
       "fuel_type": "Petrol",
       "max_torque": "160 Nm",
       "source_section": "Available",
+      "description": "The Indian Chief Dark Horse is a blacked-out premium cruiser powered by the massive ThunderStroke 116 air-cooled V-twin delivering 162 Nm of torque for effortless highway cruising. Its all-black aesthetic, blacked-out engine, and 662 mm seat height create a bold and purposeful cruiser presence.",
+      "features": [
+        "ThunderStroke 116 V-twin engine, 162 Nm torque",
+        "All-black blacked-out aesthetic",
+        "Dual-channel ABS",
+        "6-speed manual gearbox",
+        "Low 662 mm seat height",
+        "LED lighting",
+        "Classic cruiser ergonomics",
+        "Alloy wheels"
+      ],
       "variants": [
         {
           "name": "Chief Dark Horse Standard",
@@ -346,6 +445,17 @@
       "fuel_type": "Petrol",
       "max_torque": "162 Nm",
       "source_section": "Available",
+      "description": "The Indian Chief Bobber Dark Horse is a stripped-down, aggressive bobber version of the Chief with spoke wheels and a solo seat, powered by the ThunderStroke 116 engine. Its dark, minimalist styling and low-slung stance make it one of the most dramatic looking bobbers available.",
+      "features": [
+        "ThunderStroke 116 V-twin, 162 Nm torque",
+        "Solo bobber seat",
+        "Spoke wheels",
+        "Blacked-out components",
+        "Dual-channel ABS",
+        "Low 662 mm seat height",
+        "6-speed manual gearbox",
+        "LED lighting"
+      ],
       "variants": [
         {
           "name": "Chief Bobber Dark Horse Standard",
@@ -385,6 +495,17 @@
       "fuel_type": "Petrol",
       "max_torque": "162 Nm",
       "source_section": "Available",
+      "description": "The Indian Super Chief Limited is a touring-equipped version of the Chief with factory-fitted windscreen, leather-appointed saddlebags, and premium chrome detailing, powered by the ThunderStroke 116 engine. It blends touring functionality with the elegant, heritage styling of the classic Indian Chief.",
+      "features": [
+        "ThunderStroke 116 V-twin, 162 Nm torque",
+        "Factory-fitted windscreen",
+        "Leather-appointed saddlebags",
+        "Premium chrome detailing",
+        "Dual-channel ABS",
+        "Spoke wheels",
+        "Low 665 mm seat height",
+        "6-speed manual gearbox"
+      ],
       "variants": [
         {
           "name": "Super Chief Limited Standard",

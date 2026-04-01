@@ -12,6 +12,16 @@
       "price": "₹79,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Quantum Energy Elko is a feature-packed budget electric scooter offering 110 km range and 60 kmph top speed, targeting value-conscious urban commuters who want performance without stretching their budget.",
+      "features": [
+        "Digital Instrument Cluster",
+        "Anti-Theft Alarm",
+        "Ride Modes (Eco/Sport)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "BLDC Hub Motor"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "110 km",
@@ -33,6 +43,16 @@
       "price": "₹74,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Quantum Energy Hum Se Honda is a bold entry-level electric scooter with a provocative name, designed to directly compete with popular petrol scooters by offering comparable performance at a lower running cost.",
+      "features": [
+        "Petrol-Scooter Design Aesthetics",
+        "Digital Speedometer",
+        "Anti-Theft Alarm",
+        "Ride Modes",
+        "Fast Charging",
+        "Regenerative Braking",
+        "Low Running Cost vs Petrol"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "100 km",
@@ -54,6 +74,16 @@
       "price": "₹84,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Quantum Energy Miles 52 is a practical mid-range commuter with 110 km range and a reliable 1.5 kW motor, suited for daily riders in Indian cities who need an efficient and affordable electric scooter.",
+      "features": [
+        "Digital Instrument Cluster",
+        "Anti-Theft System",
+        "Ride Modes (Eco/Normal/Sport)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "Tubeless Alloy Wheels"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "110 km",
@@ -75,6 +105,16 @@
       "price": "₹89,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Quantum Energy Miles 60 is the brand's top-end model with a 72V 32Ah battery offering 130 km range and 65 kmph top speed, designed for performance-oriented commuters who need longer daily range.",
+      "features": [
+        "72V High-Voltage Battery",
+        "Digital TFT Display",
+        "GPS Anti-Theft",
+        "Ride Modes (Eco/Normal/Sport)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "130 km",

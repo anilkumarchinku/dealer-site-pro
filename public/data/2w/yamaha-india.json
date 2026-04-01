@@ -14,8 +14,24 @@
       "max_torque": "13.3 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Yamaha FZ V3 is a 149cc street bike designed for city commuters and beginners, offering a blend of style, comfort, and fuel efficiency with its fuel-injected engine and modern features. It features single-channel ABS, disc brakes on both ends, and a comfortable upright riding posture.",
+      "features": [
+        "149cc fuel-injected BS6 Phase 2 engine with 12.2 bhp",
+        "5-speed manual transmission",
+        "Single-channel ABS with front and rear disc brakes",
+        "LED headlamp",
+        "Digital instrument cluster",
+        "Excellent fuel efficiency at 46 kmpl",
+        "13-litre fuel tank capacity",
+        "Lightweight at 135 kg",
+        "790mm seat height",
+        "Self-start ignition"
+      ],
       "variants": [
-        { "name": "FZ FI Standard", "price": "₹1,09,924" }
+        {
+          "name": "FZ FI Standard",
+          "price": "₹1,09,924"
+        }
       ],
       "colors": [
         "Matte Cyan",
@@ -55,7 +71,10 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "FZ Rave Standard", "price": "₹1,20,060" }
+        {
+          "name": "FZ Rave Standard",
+          "price": "₹1,20,060"
+        }
       ],
       "colors": [
         "Metallic Black",
@@ -82,7 +101,18 @@
           "Disc brakes front and rear",
           "ABS"
         ]
-      }
+      },
+      "description": "The Yamaha FZ Rave is a stylish naked streetfighter designed for the urban rider who wants head-turning looks with everyday practicality. Based on the FZ platform, it features aggressive LED lighting, bold graphics, and a sporty silhouette. Powered by a 149cc fuel-injected engine, the FZ Rave offers reliable city performance with a distinctive visual identity that stands out from the crowd.",
+      "features": [
+        "149cc Fuel-Injected Engine",
+        "ABS",
+        "LED Lighting",
+        "Digital Instrument Cluster",
+        "USB Charging",
+        "Split Seat Design",
+        "Tubeless Tyres",
+        "Sporty Ergonomics"
+      ]
     },
     {
       "make": "Yamaha",
@@ -95,9 +125,28 @@
       "max_torque": "13.3 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Yamaha FZ S FI is a street bike that blends sporty styling with refined performance and everyday practicality, featuring a smooth 149cc engine designed for economical daily commuting. It features front and rear disc brakes with ABS, a negative LCD display, and an eco indicator.",
+      "features": [
+        "149cc BS6 Phase 2 engine with 12.2 bhp",
+        "5-speed manual transmission",
+        "Front and rear disc brakes with single-channel ABS",
+        "45 kmpl user-reported mileage",
+        "Negative LCD display with eco indicator",
+        "LED headlamp",
+        "13-litre fuel tank capacity",
+        "135 kg kerb weight",
+        "790mm seat height",
+        "Alloy wheels"
+      ],
       "variants": [
-        { "name": "FZ S FI Standard", "price": "₹1,13,256" },
-        { "name": "FZ S FI Deluxe", "price": "₹1,14,173" }
+        {
+          "name": "FZ S FI Standard",
+          "price": "₹1,13,256"
+        },
+        {
+          "name": "FZ S FI Deluxe",
+          "price": "₹1,14,173"
+        }
       ],
       "colors": [
         "Matte Red",
@@ -138,10 +187,32 @@
       "max_torque": "13.3 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Yamaha FZS FI V4 is a 149cc street bike offering smooth performance, excellent fuel efficiency of 57.4 kmpl, and modern features including Bluetooth connectivity and traction control for comfortable city commuting. It features LED lighting, a digital instrument cluster, and Y-Connect app support.",
+      "features": [
+        "149cc BS6 Phase 2 engine with 12.2 bhp",
+        "57.4 kmpl expert-reported mileage",
+        "Front and rear disc brakes with ABS",
+        "Traction control system",
+        "Bluetooth connectivity via Y-Connect app",
+        "LED lighting and digital instrument cluster",
+        "13-litre fuel tank capacity",
+        "136 kg kerb weight",
+        "790mm seat height",
+        "Alloy wheels"
+      ],
       "variants": [
-        { "name": "FZS FI V4 Standard", "price": "₹1,20,409" },
-        { "name": "FZS FI V4 Deluxe", "price": "₹1,23,241" },
-        { "name": "FZS FI V4 Standard - OBD 2B", "price": "₹1,26,074" }
+        {
+          "name": "FZS FI V4 Standard",
+          "price": "₹1,20,409"
+        },
+        {
+          "name": "FZS FI V4 Deluxe",
+          "price": "₹1,23,241"
+        },
+        {
+          "name": "FZS FI V4 Standard - OBD 2B",
+          "price": "₹1,26,074"
+        }
       ],
       "colors": [
         "Ice Fluo-Vermillion",
@@ -189,7 +260,10 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "FZ S Hybrid Standard", "price": "₹1,35,174" }
+        {
+          "name": "FZ S Hybrid Standard",
+          "price": "₹1,35,174"
+        }
       ],
       "colors": [
         "Matte Black",
@@ -218,7 +292,18 @@
           "LED headlight",
           "Hybrid assist"
         ]
-      }
+      },
+      "description": "The Yamaha FZ-S Fi Hybrid is India's first 150cc hybrid motorcycle, combining a 149cc petrol engine with an integrated starter generator (ISG) that provides a mild hybrid boost. This innovative technology improves fuel efficiency and reduces emissions while maintaining the sporty performance the FZ-S is known for. It features premium components and advanced electronics making it a future-ready commuter-sport motorcycle.",
+      "features": [
+        "149cc Hybrid Engine",
+        "Integrated Starter Generator",
+        "ABS",
+        "LED Lighting",
+        "Digital Console",
+        "USB Charging",
+        "Improved Fuel Efficiency",
+        "Eco-Friendly Technology"
+      ]
     },
     {
       "make": "Yamaha",
@@ -232,8 +317,14 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "FZ X Standard", "price": "₹1,21,667" },
-        { "name": "FZ X Dark Matte Blue Purple", "price": "₹1,30,054" }
+        {
+          "name": "FZ X Standard",
+          "price": "₹1,21,667"
+        },
+        {
+          "name": "FZ X Dark Matte Blue Purple",
+          "price": "₹1,30,054"
+        }
       ],
       "colors": [
         "Metallic Black",
@@ -262,7 +353,18 @@
           "Traction control",
           "Neo-retro design"
         ]
-      }
+      },
+      "description": "The Yamaha FZ-X is a crossover motorcycle that bridges the gap between a naked streetbike and an adventure bike. Featuring a raised front mudguard, upswept beak-style design, and adventure-touring aesthetics, it is built on the FZ platform with a 149cc engine. The FZ-X is perfect for urban commuters who want the look and feel of an adventure bike with city-friendly dimensions and practicality.",
+      "features": [
+        "149cc Fuel-Injected Engine",
+        "ABS",
+        "LED Lighting",
+        "Bluetooth Connectivity",
+        "USB Charging",
+        "Adventure Styling",
+        "Digital Display",
+        "Crossover Design"
+      ]
     },
     {
       "make": "Yamaha",
@@ -275,8 +377,24 @@
       "max_torque": "20 Nm",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
+      "description": "The Yamaha FZ25 is a discontinued 249cc street bike that delivered 20.3 bhp, 39 kmpl mileage, and a sharp riding experience with its digital instrument cluster and disc brakes on both ends. It was offered in a single BS4-compliant variant.",
+      "features": [
+        "249cc single-cylinder air-cooled engine with 20.3 bhp",
+        "5-speed manual transmission",
+        "Front disc (282mm) and rear disc (220mm) brakes",
+        "17-inch alloy wheels with tubeless tyres",
+        "Digital instrument cluster with gear shift light",
+        "Low fuel indicator",
+        "14-litre fuel tank capacity",
+        "795mm seat height",
+        "160mm ground clearance",
+        "148 kg kerb weight"
+      ],
       "variants": [
-        { "name": "FZ25 Standard", "price": "₹1,33,749" }
+        {
+          "name": "FZ25 Standard",
+          "price": "₹1,33,749"
+        }
       ],
       "colors": [
         "Racing Blue",
@@ -313,10 +431,32 @@
       "max_torque": "14.1 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Yamaha MT-15 V2 is a 155cc street fighter featuring a liquid-cooled engine with Variable Valve Actuation technology, delivering a blend of fuel efficiency and performance suitable for urban commuting and city riding. It features upside-down front forks, an aluminium Deltabox chassis, and Bluetooth connectivity.",
+      "features": [
+        "155cc BS6 Phase 2 liquid-cooled engine with VVA technology",
+        "18.1 bhp power and 14.1 Nm torque",
+        "6-speed manual transmission with assist and slipper clutch",
+        "Upside-down front forks and aluminium Deltabox chassis",
+        "Dual disc brakes with single-channel ABS",
+        "Digital instrument cluster with Bluetooth connectivity",
+        "LED headlight",
+        "Expert-reported mileage of 53 kmpl",
+        "10-litre fuel tank capacity",
+        "Lightweight at 141 kg"
+      ],
       "variants": [
-        { "name": "MT 15 V2 Standard [2024]", "price": "₹1,58,200" },
-        { "name": "MT 15 V2 Standard", "price": "₹1,59,197" },
-        { "name": "MT 15 V2 Deluxe", "price": "₹1,68,507" }
+        {
+          "name": "MT 15 V2 Standard [2024]",
+          "price": "₹1,58,200"
+        },
+        {
+          "name": "MT 15 V2 Standard",
+          "price": "₹1,59,197"
+        },
+        {
+          "name": "MT 15 V2 Deluxe",
+          "price": "₹1,68,507"
+        }
       ],
       "colors": [
         "Metallic Black",
@@ -362,13 +502,44 @@
       "max_torque": "14.2 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Yamaha R15 V4 is a 155cc sports bike featuring a BS6 Phase 2 liquid-cooled engine that delivers strong performance in a lightweight, aerodynamic package designed for enthusiasts. It features a traction control system, quick shifter, and Variable Valve Actuation (VVA) technology for impressive performance.",
+      "features": [
+        "155cc BS6 Phase 2 liquid-cooled engine with 18.1 bhp and 14.2 Nm torque",
+        "6-speed manual transmission with quickshifter",
+        "Traction control system",
+        "Dual disc brakes with dual-channel ABS",
+        "Variable Valve Actuation (VVA) technology",
+        "USD front forks with Deltabox frame",
+        "51.4 kmpl expert-reported mileage",
+        "11-litre fuel tank capacity",
+        "141 kg kerb weight",
+        "815mm seat height"
+      ],
       "variants": [
-        { "name": "R15 V4 Standard", "price": "₹1,67,085" },
-        { "name": "R15 V4 Dark Knight", "price": "₹1,72,000" },
-        { "name": "R15 V4 Dual Tone", "price": "₹1,76,000" },
-        { "name": "R15 V4 M", "price": "₹1,85,000" },
-        { "name": "R15 V4 M - MotoGP Edition", "price": "₹1,90,000" },
-        { "name": "R15 V4 M - Carbon Fibre", "price": "₹1,92,100" }
+        {
+          "name": "R15 V4 Standard",
+          "price": "₹1,67,085"
+        },
+        {
+          "name": "R15 V4 Dark Knight",
+          "price": "₹1,72,000"
+        },
+        {
+          "name": "R15 V4 Dual Tone",
+          "price": "₹1,76,000"
+        },
+        {
+          "name": "R15 V4 M",
+          "price": "₹1,85,000"
+        },
+        {
+          "name": "R15 V4 M - MotoGP Edition",
+          "price": "₹1,90,000"
+        },
+        {
+          "name": "R15 V4 M - Carbon Fibre",
+          "price": "₹1,92,100"
+        }
       ],
       "colors": [
         "Metallic Grey",
@@ -417,8 +588,24 @@
       "max_torque": "14.2 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Yamaha R15S is a sports motorcycle powered by a 155cc BS6 Phase 2 liquid-cooled engine, delivering 18.1 bhp and 14.2 Nm torque with impressive fuel efficiency of 46 kmpl. It features a comfortable single-piece seat and sharp handling for an engaging riding experience.",
+      "features": [
+        "155cc BS6 Phase 2 liquid-cooled engine with 18.1 bhp",
+        "6-speed manual transmission",
+        "Front and rear disc brakes with dual-channel ABS",
+        "Traction control system",
+        "Quick shifter",
+        "LED headlamps",
+        "Single-piece comfortable seat",
+        "11-litre fuel tank capacity",
+        "142 kg kerb weight",
+        "136 kmph top speed"
+      ],
       "variants": [
-        { "name": "R15S Standard", "price": "₹1,51,597" }
+        {
+          "name": "R15S Standard",
+          "price": "₹1,51,597"
+        }
       ],
       "colors": [
         "Matte Black (New)",
@@ -459,10 +646,32 @@
       "max_torque": "14.2 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Yamaha R15M is the premium M Edition of the R15 V4, featuring exclusive graphics, traction control, a quick shifter, and USD front forks in a lightweight 155cc sports package. It is available in MotoGP Edition and Carbon Fibre special editions for performance-oriented riders.",
+      "features": [
+        "155cc BS6 Phase 2 liquid-cooled engine with 18.1 bhp and 14.2 Nm torque",
+        "6-speed manual transmission with quick shifter",
+        "Traction control system",
+        "Dual-channel ABS",
+        "Variable Valve Actuation (VVA) technology",
+        "USD front forks and Deltabox frame",
+        "Premium M Edition graphics",
+        "51.4 kmpl expert-reported mileage",
+        "141 kg kerb weight",
+        "815mm seat height"
+      ],
       "variants": [
-        { "name": "R15M Standard", "price": "₹1,85,000" },
-        { "name": "R15M MotoGP Edition", "price": "₹1,90,000" },
-        { "name": "R15M Carbon Fibre", "price": "₹1,92,100" }
+        {
+          "name": "R15M Standard",
+          "price": "₹1,85,000"
+        },
+        {
+          "name": "R15M MotoGP Edition",
+          "price": "₹1,90,000"
+        },
+        {
+          "name": "R15M Carbon Fibre",
+          "price": "₹1,92,100"
+        }
       ],
       "colors": [
         "Icon Performance",
@@ -507,8 +716,24 @@
       "max_torque": "29.6 Nm",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
+      "description": "The Yamaha YZF R3 is a discontinued 321cc sports bike that delivered 40.8 bhp with a 6-speed manual transmission and liquid-cooled parallel-twin engine, designed as an entry-level sportbike with full aerodynamic fairing. It featured dual-channel ABS and a diamond chassis design.",
+      "features": [
+        "321cc liquid-cooled 2-cylinder engine with 40.8 bhp",
+        "29.6 Nm torque at 9000 rpm",
+        "6-speed manual transmission with assist and slipper clutch",
+        "Dual-channel ABS",
+        "17-inch alloy wheels with tubeless tyres",
+        "Diamond chassis design",
+        "Preload-adjustable rear monoshock",
+        "Digital speedometer with odometer and fuel gauge",
+        "14-litre fuel tank capacity",
+        "169 kg kerb weight"
+      ],
       "variants": [
-        { "name": "YZF-R3 Standard", "price": "₹3,51,928" }
+        {
+          "name": "YZF-R3 Standard",
+          "price": "₹3,51,928"
+        }
       ],
       "colors": [
         "Magma Black",
@@ -544,10 +769,22 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "XSR 155 Metallic Blue", "price": "₹1,50,957" },
-        { "name": "XSR 155 Vivid Red", "price": "₹1,54,000" },
-        { "name": "XSR 155 Metallic Grey", "price": "₹1,57,000" },
-        { "name": "XSR 155 Metallic Black and Greyish Green Metallic", "price": "₹1,59,990" }
+        {
+          "name": "XSR 155 Metallic Blue",
+          "price": "₹1,50,957"
+        },
+        {
+          "name": "XSR 155 Vivid Red",
+          "price": "₹1,54,000"
+        },
+        {
+          "name": "XSR 155 Metallic Grey",
+          "price": "₹1,57,000"
+        },
+        {
+          "name": "XSR 155 Metallic Black and Greyish Green Metallic",
+          "price": "₹1,59,990"
+        }
       ],
       "colors": [
         "Metallic Blue",
@@ -577,7 +814,18 @@
           "VVA engine",
           "Neo-retro design"
         ]
-      }
+      },
+      "description": "The Yamaha XSR155 is a neo-retro sport motorcycle that combines classic café racer styling with modern performance and technology. Powered by the same VVA-equipped 155cc engine found in the R15 V4, it delivers impressive performance packaged in a retro-modern design. The XSR155 features a round headlamp, café racer seat unit, spoke wheels, and premium components that appeal to riders who appreciate timeless aesthetics with contemporary performance.",
+      "features": [
+        "155cc VVA Engine",
+        "Dual Channel ABS",
+        "Traction Control",
+        "LED Lighting",
+        "Quickshifter",
+        "Bluetooth Connectivity",
+        "Retro Styling",
+        "Spoke Wheels"
+      ]
     },
     {
       "make": "Yamaha",
@@ -590,11 +838,36 @@
       "max_torque": "10.3 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Yamaha Ray ZR 125 is a retro-styled 125cc scooter with a refined BS6 Phase 2B engine and sporty design, achieving 49 kmpl ARAI mileage with kick and self-start options. It is available in 4 variants and 12 colour options including drum and disc brake configurations.",
+      "features": [
+        "125cc BS6 Phase 2B engine with 8.04 bhp and 10.3 Nm torque",
+        "49 kmpl ARAI mileage",
+        "Drum and disc brake options with combined braking system",
+        "Alloy wheels",
+        "5.2-litre fuel tank capacity",
+        "99 kg kerb weight",
+        "Kick and self-start options",
+        "90 kmph top speed",
+        "785mm seat height",
+        "Retro design with rally variant"
+      ],
       "variants": [
-        { "name": "Ray ZR 125 Drum - Hybrid", "price": "₹76,235" },
-        { "name": "Ray ZR 125 Disc Hybrid", "price": "₹82,000" },
-        { "name": "Ray ZR 125 Disc - Racing Blue and Dark Matte Blue", "price": "₹85,000" },
-        { "name": "Ray ZR 125 Street Rally - Hybrid", "price": "₹88,425" }
+        {
+          "name": "Ray ZR 125 Drum - Hybrid",
+          "price": "₹76,235"
+        },
+        {
+          "name": "Ray ZR 125 Disc Hybrid",
+          "price": "₹82,000"
+        },
+        {
+          "name": "Ray ZR 125 Disc - Racing Blue and Dark Matte Blue",
+          "price": "₹85,000"
+        },
+        {
+          "name": "Ray ZR 125 Street Rally - Hybrid",
+          "price": "₹88,425"
+        }
       ],
       "colors": [
         "Silver White Cocktail",
@@ -643,8 +916,24 @@
       "max_torque": "10.3 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Yamaha Ray ZR Street Rally is a rally-inspired 125cc scooter variant with aggressive street rally styling and hybrid technology, delivering practical urban performance with 49 kmpl mileage. It features disc brakes, alloy wheels, and a sporty design differentiated from the standard Ray ZR.",
+      "features": [
+        "125cc BS6 Phase 2B engine with 8.04 bhp",
+        "49 kmpl ARAI mileage",
+        "Front disc and rear drum brakes with CBS",
+        "Hybrid technology",
+        "Rally-inspired street design",
+        "Alloy wheels",
+        "5.2-litre fuel tank capacity",
+        "100 kg kerb weight",
+        "Kick and self-start",
+        "785mm seat height"
+      ],
       "variants": [
-        { "name": "Ray ZR Street Rally Hybrid", "price": "₹88,425" }
+        {
+          "name": "Ray ZR Street Rally Hybrid",
+          "price": "₹88,425"
+        }
       ],
       "colors": [
         "Cyber Green",
@@ -687,16 +976,56 @@
       "max_torque": "10.3 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Yamaha Fascino 125 is a retro-styled scooter with a 125cc BS6 Phase 2B engine delivering smooth performance and excellent fuel efficiency of 50 kmpl, designed for urban commuting and daily use. It features chrome accents, an elegant design, kick and self-start options, and is available in 9 variants.",
+      "features": [
+        "125cc BS6 Phase 2B engine with 8.04 bhp",
+        "50 kmpl user-reported mileage",
+        "Retro design with chrome accents",
+        "Drum and disc brake options with CBS",
+        "Alloy wheels",
+        "5.2-litre fuel tank capacity",
+        "Lightweight at 99 kg",
+        "Kick and self-start options",
+        "780mm seat height",
+        "90 kmph top speed"
+      ],
       "variants": [
-        { "name": "Fascino 125 Drum", "price": "₹77,091" },
-        { "name": "Fascino 125 Drum Deluxe", "price": "₹77,091" },
-        { "name": "Fascino 125 Drum - Hybrid", "price": "₹77,091" },
-        { "name": "Fascino 125 Disc", "price": "₹86,088" },
-        { "name": "Fascino 125 S - Hybrid", "price": "₹87,385" },
-        { "name": "Fascino 125 Disc Deluxe", "price": "₹88,466" },
-        { "name": "Fascino 125 Disc Special Edition", "price": "₹89,305" },
-        { "name": "Fascino 125 Disc - Dark Matte Blue Special Edition", "price": "₹90,005" },
-        { "name": "Fascino 125 S - Hybrid (Colour TFT/ TBT)", "price": "₹96,555" }
+        {
+          "name": "Fascino 125 Drum",
+          "price": "₹77,091"
+        },
+        {
+          "name": "Fascino 125 Drum Deluxe",
+          "price": "₹77,091"
+        },
+        {
+          "name": "Fascino 125 Drum - Hybrid",
+          "price": "₹77,091"
+        },
+        {
+          "name": "Fascino 125 Disc",
+          "price": "₹86,088"
+        },
+        {
+          "name": "Fascino 125 S - Hybrid",
+          "price": "₹87,385"
+        },
+        {
+          "name": "Fascino 125 Disc Deluxe",
+          "price": "₹88,466"
+        },
+        {
+          "name": "Fascino 125 Disc Special Edition",
+          "price": "₹89,305"
+        },
+        {
+          "name": "Fascino 125 Disc - Dark Matte Blue Special Edition",
+          "price": "₹90,005"
+        },
+        {
+          "name": "Fascino 125 S - Hybrid (Colour TFT/ TBT)",
+          "price": "₹96,555"
+        }
       ],
       "colors": [
         "Metallic White",
@@ -743,9 +1072,28 @@
       "max_torque": "13.9 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Yamaha Aerox 155 is a 155cc maxi-scooter powered by a BS6 Phase 2B liquid-cooled engine delivering 14.75 bhp and 13.9 Nm torque with an expert-reported mileage of 46 kmpl. It features a keyless start, digital console with Bluetooth, and aggressive maxi-scooter styling.",
+      "features": [
+        "155cc BS6 Phase 2B liquid-cooled engine with 14.75 bhp",
+        "Front disc and rear drum brakes with ABS",
+        "Keyless start functionality",
+        "Digital console with Bluetooth connectivity",
+        "LED headlamp",
+        "Alloy wheels",
+        "5.5-litre fuel tank capacity",
+        "126 kg kerb weight",
+        "790mm seat height",
+        "115 kmph top speed"
+      ],
       "variants": [
-        { "name": "Aerox 155 Standard", "price": "₹1,40,445" },
-        { "name": "Aerox 155 S", "price": "₹1,43,464" }
+        {
+          "name": "Aerox 155 Standard",
+          "price": "₹1,40,445"
+        },
+        {
+          "name": "Aerox 155 S",
+          "price": "₹1,43,464"
+        }
       ],
       "colors": [
         "Metallic Black",
@@ -789,8 +1137,24 @@
       "max_torque": "29.5 Nm",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
+      "description": "The Yamaha MT-03 is a street bike powered by a 321cc liquid-cooled parallel-twin engine delivering 41.4 bhp with 6-speed transmission and assist and slipper clutch, achieving approximately 35 kmpl mileage. It features dual-channel ABS, USD telescopic front suspension, and a diamond-type chassis frame.",
+      "features": [
+        "321cc 2-cylinder liquid-cooled engine with 41.4 bhp",
+        "6-speed manual transmission with assist and slipper clutch",
+        "Dual-channel ABS",
+        "USD telescopic front suspension",
+        "LCD digital instrument cluster with gear indicator",
+        "17-inch alloy wheels with tubeless tyres",
+        "160mm ground clearance",
+        "14-litre fuel tank capacity",
+        "Diamond-type chassis frame",
+        "167 kg kerb weight with 780mm seat height"
+      ],
       "variants": [
-        { "name": "MT-03 Standard", "price": "₹3,29,908" }
+        {
+          "name": "MT-03 Standard",
+          "price": "₹3,29,908"
+        }
       ],
       "colors": [
         "Midnight Black",

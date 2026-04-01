@@ -12,6 +12,16 @@
       "price": "₹68,490",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Lectrix EV LXS G3.0 is the third-generation model from India's KPIT-backed EV brand, offering a 90 km range and reliable daily commuting performance with a feature-rich package at an attractive price.",
+      "features": [
+        "Digital Instrument Cluster",
+        "Anti-Theft Alarm with Remote",
+        "Ride Modes (Eco/Power)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "Park Assist"
+      ],
       "specifications": {
         "Motor Power": "1.2 kW",
         "Range": "90 km",
@@ -33,6 +43,16 @@
       "price": "₹59,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Lectrix EV SX25 is an entry-level electric scooter with an 85 km range designed for budget-conscious buyers seeking their first EV for short daily commutes.",
+      "features": [
+        "Digital Speedometer",
+        "Anti-Theft Alarm",
+        "Ride Modes",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "BLDC Hub Motor",
+        "Maintenance-Free Battery"
+      ],
       "specifications": {
         "Motor Power": "1.2 kW",
         "Range": "85 km",
@@ -54,6 +74,16 @@
       "price": "₹64,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Lectrix EV SX25+ is an upgraded version of the SX25, adding better range and convenience features for commuters who need slightly more capability for their daily routes.",
+      "features": [
+        "Enhanced Digital Display",
+        "Anti-Theft Alarm",
+        "Ride Modes (Eco/Power)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "Boot Space 17L"
+      ],
       "specifications": {
         "Motor Power": "1.2 kW",
         "Range": "90 km",
@@ -75,6 +105,16 @@
       "price": "₹72,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Lectrix EV SX Flex offers the brand's best range in the SX lineup at 100 km, providing flexible everyday commuting for urban and semi-urban riders who need more miles per charge.",
+      "features": [
+        "Flexible Battery Configuration",
+        "Digital Console",
+        "Anti-Theft System",
+        "Ride Modes",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port"
+      ],
       "specifications": {
         "Motor Power": "1.2 kW",
         "Range": "100 km",
@@ -96,6 +136,16 @@
       "price": "₹64,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Lectrix EV Cafe is a retro-inspired electric scooter with a cafe-racer aesthetic, offering an 85 km range and stylish appeal for design-conscious riders who want to stand out in the city.",
+      "features": [
+        "Retro Cafe Racer Styling",
+        "Digital Instrument Cluster",
+        "Anti-Theft Alarm",
+        "Ride Modes",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "Alloy Wheels"
+      ],
       "specifications": {
         "Motor Power": "1.2 kW",
         "Range": "85 km",
@@ -117,6 +167,16 @@
       "price": "₹54,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Lectrix EV Loop is one of the most affordable electric scooters under ₹55,000, perfect for students and first-time EV buyers looking for reliable short-distance urban mobility.",
+      "features": [
+        "Compact & Lightweight Design",
+        "Digital Speedometer",
+        "Anti-Theft Alarm",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "Easy Home Charging",
+        "Low Running Cost"
+      ],
       "specifications": {
         "Motor Power": "1.2 kW",
         "Range": "80 km",
@@ -138,6 +198,16 @@
       "price": "₹49,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Lectrix EV City is Lectrix's most affordable model, making electric mobility accessible at under ₹50,000 for daily city commuters seeking a low-cost, low-maintenance transport solution.",
+      "features": [
+        "Ultra-Affordable Pricing",
+        "Digital Speedometer",
+        "Anti-Theft Alarm",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "Minimal Maintenance",
+        "Plug-In Home Charging"
+      ],
       "specifications": {
         "Motor Power": "1.2 kW",
         "Range": "75 km",
@@ -159,6 +229,16 @@
       "price": "₹52,490",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Lectrix EV Electric Scooter is a no-frills commuter with a 75 km range and simple operation, ideal for buyers transitioning from petrol to electric on a tight budget.",
+      "features": [
+        "Simple Digital Display",
+        "Anti-Theft Alarm",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "Home Charge Compatible",
+        "BLDC Hub Motor",
+        "Low Cost Per Km"
+      ],
       "specifications": {
         "Motor Power": "1.2 kW",
         "Range": "75 km",

@@ -12,6 +12,16 @@
       "price": "₹82,998",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Okinawa PraisePro is a value-for-money electric scooter offering 120 km range and practical city features, targeted at budget-conscious commuters seeking a reliable daily rider.",
+      "features": [
+        "Digital Speedometer with Trip Meter",
+        "Anti-Theft Alarm",
+        "Ride Modes (Eco/Sport)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "Under-Seat Storage with Low Floor"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "120 km",
@@ -33,6 +43,16 @@
       "price": "₹1,29,500",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Okinawa Okhi-90 is a performance-focused electric scooter capable of reaching 90 kmph, designed for riders who want highway capability with a generous 160 km range.",
+      "features": [
+        "TFT Digital Console",
+        "GPS Navigation Support",
+        "Remote Monitoring via App",
+        "Anti-Theft with Geo-Fencing",
+        "Fast Charging",
+        "Dual Riding Modes",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "160 km",
@@ -54,6 +74,16 @@
       "price": "₹79,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Okinawa Ridge+ delivers an impressive 150 km range at a sub-₹80,000 price point, making it one of the best value electric scooters for daily city and semi-urban commuting.",
+      "features": [
+        "Digital Instrument Cluster",
+        "Anti-Theft Alarm",
+        "Ride Modes (Normal/Sport)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "Tubeless Tyres"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "150 km",
@@ -75,6 +105,16 @@
       "price": "₹1,16,437",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Okinawa iPraise+ is a mid-range connected electric scooter with a 3.3 kW motor and 139 km range, aimed at urban professionals looking for smart features and spirited performance.",
+      "features": [
+        "Okinawa App Connectivity",
+        "GPS Tracking & Anti-Theft",
+        "TFT Digital Display",
+        "Fast Charging",
+        "Ride Modes (Eco/Normal/Sport)",
+        "Regenerative Braking",
+        "Bluetooth Music Control"
+      ],
       "specifications": {
         "Motor Power": "3.3 kW",
         "Range": "139 km",

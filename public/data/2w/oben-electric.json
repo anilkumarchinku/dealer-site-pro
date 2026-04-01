@@ -12,6 +12,16 @@
       "price": "₹1,34,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Oben Rorr EZ is a high-performance electric motorcycle from Bengaluru-based Oben Electric, delivering 187 km range and 140 Nm torque from a 10 kW motor, targeting riders who want a true petrol-bike replacement.",
+      "features": [
+        "10 kW Peak Power Motor",
+        "187 km Certified Range",
+        "Bluetooth App Connectivity",
+        "GPS Tracking & Anti-Theft",
+        "DC Fast Charging",
+        "Ride Modes (Eco/Boost/Performance)",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "10 kW",
         "Range": "187 km",

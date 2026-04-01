@@ -12,6 +12,16 @@
       "price": "₹68,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Bounce Infinity E1 is India's first electric scooter with swappable battery technology, letting riders swap a drained battery at Bounce stations instead of waiting for a charge — ideal for high-usage urban commuters.",
+      "features": [
+        "Swappable Battery Technology",
+        "Bounce Battery Swap Network Access",
+        "Digital Instrument Cluster",
+        "Anti-Theft Alarm",
+        "Ride Modes (Eco/Sport)",
+        "Regenerative Braking",
+        "USB Charging Port"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "85 km",
@@ -24,7 +34,8 @@
       "max_torque": "42 Nm",
       "colors": ["Midnight Black", "Pearl White", "Sport Blue", "Racing Red"],
       "variants": [
-        { "name": "E1 2.0 kWh", "price": "₹68,999" }
+        { "name": "E1 2.0 kWh (Without Battery)", "price": "₹45,099" },
+        { "name": "E1 2.0 kWh (With Battery)", "price": "₹68,999" }
       ]
     },
     {
@@ -34,6 +45,16 @@
       "price": "₹78,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Bounce Infinity E1+ is an upgraded version offering 100 km range and enhanced comfort features, retaining the innovative swappable battery concept that sets Bounce apart from conventional EV brands.",
+      "features": [
+        "Swappable Battery Technology",
+        "100 km Certified Range",
+        "Digital Console",
+        "Anti-Theft System",
+        "Ride Modes",
+        "Regenerative Braking",
+        "USB Charging Port"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "100 km",
@@ -46,7 +67,8 @@
       "max_torque": "42 Nm",
       "colors": ["Midnight Black", "Pearl White", "Sport Blue", "Racing Red"],
       "variants": [
-        { "name": "E1+ 2.0 kWh", "price": "₹78,999" }
+        { "name": "E1+ 2.0 kWh (Without Battery)", "price": "₹52,099" },
+        { "name": "E1+ 2.0 kWh (With Battery)", "price": "₹78,999" }
       ]
     },
     {
@@ -56,6 +78,16 @@
       "price": "₹88,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Bounce Infinity E1 Pro is the performance flagship with a 2.5 kW motor delivering 70 kmph top speed and 110 km range, combining swappable battery convenience with spirited performance.",
+      "features": [
+        "2.5 kW Performance Motor",
+        "Swappable Battery Technology",
+        "TFT Digital Display",
+        "GPS Anti-Theft",
+        "Fast Charging",
+        "Ride Modes (Eco/City/Sport)",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "2.5 kW",
         "Range": "110 km",
@@ -68,7 +100,8 @@
       "max_torque": "42 Nm",
       "colors": ["Midnight Black", "Pearl White", "Sport Blue", "Racing Red"],
       "variants": [
-        { "name": "E1 Pro 2.9 kWh", "price": "₹88,999" }
+        { "name": "E1 Pro 2.9 kWh (Without Battery)", "price": "₹59,099" },
+        { "name": "E1 Pro 2.9 kWh (With Battery)", "price": "₹88,999" }
       ]
     }
   ]

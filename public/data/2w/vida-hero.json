@@ -12,6 +12,24 @@
       "price": "₹1,09,990 - ₹1,19,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Hero Vida V2 is an electric scooter from Hero MotoCorp's Vida brand, offering a removable dual-battery system for convenient home charging and a 4.3-inch TFT display. It delivers up to 143 km of IDC range with a 5.3 kW motor, three riding modes, and cloud connectivity with remote immobilisation.",
+      "features": [
+        "4.3-inch TFT Display",
+        "Removable Dual Battery System",
+        "Cloud Connectivity with Remote Immobilisation",
+        "Turn-by-Turn Navigation",
+        "3 Riding Modes (Eco, Ride, Sport)",
+        "Cruise Control",
+        "Hill Assist & Reverse Mode",
+        "Fast Charging Compatible",
+        "Anti-theft System",
+        "USB Charging Port"
+      ],
+      "colors": ["Matte Cyan", "Matte White", "Glossy Black", "Glossy Sports Red", "Matte Abrax Orange", "Matte Nexus Blue"],
+      "variants": [
+        { "name": "V2 3.44 kWh", "price": "₹1,09,990" },
+        { "name": "V2 Plus 3.94 kWh", "price": "₹1,19,990" }
+      ],
       "specifications": {
         "Motor Power": "5.3 kW",
         "Range": "143 km",
@@ -21,36 +39,44 @@
         "Bluetooth Connectivity": "Yes",
         "Fast Charging": "Yes"
       },
-      "max_torque": "26 Nm",
-      "colors": ["Matte Nexus Blue", "Gloss Pearl White", "Matte Turbo Green", "Matte Nexus Red", "Gloss Red Zeal"],
-      "variants": [
-        { "name": "V2 3.44 kWh", "price": "₹1,09,990" },
-        { "name": "V2 Plus 3.94 kWh", "price": "₹1,19,990" }
-      ]
+      "max_torque": "26 Nm"
     },
     {
       "make": "Vida",
       "model": "VX2",
       "variant_name": "Vida VX2",
-      "price": "₹1,29,990 - ₹1,59,990",
+      "price": "₹99,490 - ₹1,20,440",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Hero Vida VX2 is an affordable electric scooter range featuring a removable battery system and practical urban-focused design with up to 142 km of IDC range. It is the only electric scooter in its segment with cloud connectivity and remote immobilisation, and is available under a Battery-as-a-Service (BaaS) model for lower upfront cost.",
+      "features": [
+        "Cloud Connectivity with Remote Immobilisation",
+        "Battery-as-a-Service (BaaS) Option",
+        "Removable Battery (Portable Charging)",
+        "Turn-by-Turn Navigation",
+        "Riding Modes (Eco, Ride)",
+        "LED Lighting",
+        "USB Charging Port (Front)",
+        "Anti-theft System",
+        "12-inch Alloy Wheels",
+        "Mono-shock Rear Suspension"
+      ],
+      "colors": ["Metallic Grey", "Pearl Black", "Nexus Blue", "Pearl Red", "Matte White", "Matte Lime", "Autumn Orange"],
+      "variants": [
+        { "name": "VX2 Go 2.2 kWh", "price": "₹99,490" },
+        { "name": "VX2 Go 3.4 kWh", "price": "₹1,10,493" },
+        { "name": "VX2 Plus 3.4 kWh", "price": "₹1,20,440" }
+      ],
       "specifications": {
         "Motor Power": "6 kW",
-        "Range": "165 km",
-        "Battery Capacity": "3.94 kWh",
+        "Range": "142 km",
+        "Battery Capacity": "3.4 kWh",
         "Top Speed": "80 kmph",
         "Riding Modes": "Yes",
         "Bluetooth Connectivity": "Yes",
         "Fast Charging": "Yes"
       },
-      "max_torque": "26 Nm",
-      "colors": ["Matte Nexus Blue", "Gloss Pearl White", "Matte Turbo Green", "Matte Nexus Red", "Gloss Red Zeal"],
-      "variants": [
-        { "name": "VX2 3.94 kWh", "price": "₹1,29,990" },
-        { "name": "VX2 Pro 3.94 kWh", "price": "₹1,39,990" },
-        { "name": "VX2+ Pro 5 kWh", "price": "₹1,59,990" }
-      ]
+      "max_torque": "26 Nm"
     }
   ]
 }

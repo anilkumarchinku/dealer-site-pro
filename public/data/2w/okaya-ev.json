@@ -12,6 +12,16 @@
       "price": "₹99,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Okaya EV Faast F4 is a feature-rich electric scooter with 140 km range and connected features, designed for urban professionals seeking performance and smart technology under ₹1 lakh.",
+      "features": [
+        "Mobile App Connectivity",
+        "GPS Tracking & Anti-Theft",
+        "TFT Digital Display",
+        "Fast Charging (0-80% in 3 hrs)",
+        "Ride Modes (Eco/City/Sport)",
+        "Regenerative Braking",
+        "Remote Diagnostics"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "140 km",
@@ -33,6 +43,16 @@
       "price": "₹89,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Okaya EV Faast F2B offers 120 km range at a budget price with essential smart features, making it a practical choice for daily commuters in metro and Tier-2 cities.",
+      "features": [
+        "Digital Instrument Cluster",
+        "Anti-Theft Alarm",
+        "Ride Modes (Eco/Sport)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "Bluetooth Connectivity"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "120 km",
@@ -54,6 +74,16 @@
       "price": "₹79,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Okaya EV Classiq Pro is an entry-level electric scooter with a retro-inspired design and 100 km range, well-suited for cost-conscious buyers wanting a stylish and economical commuter.",
+      "features": [
+        "Classic Retro Design",
+        "Digital Speedometer",
+        "Anti-Theft Alarm",
+        "Ride Modes",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "BLDC Hub Motor"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "100 km",
@@ -75,6 +105,16 @@
       "price": "₹1,09,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Okaya EV Ferrato Connect is a connected electric scooter with 150 km range and a suite of smart features, positioned for tech-forward riders who want full IoT integration.",
+      "features": [
+        "IoT-Enabled Mobile App",
+        "GPS Tracking & Geo-Fencing",
+        "Remote Monitoring",
+        "TFT Display with Navigation",
+        "Fast Charging",
+        "Ride Modes (Eco/Normal/Sport)",
+        "Anti-Theft with Mobile Alert"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "150 km",
@@ -96,6 +136,16 @@
       "price": "₹99,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Okaya EV Hunk H1 is a sporty-looking electric scooter with 150 km range and muscular styling, targeting young riders who want aggressive aesthetics with practical long-range capability.",
+      "features": [
+        "Sporty Aggressive Design",
+        "Digital Instrument Cluster",
+        "Anti-Theft with Remote Lock",
+        "Ride Modes (Eco/Sport)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "Large Under-Seat Storage"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "150 km",
@@ -117,6 +167,16 @@
       "price": "₹1,14,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Okaya EV Motofaast is the brand's performance flagship with an impressive 85 kmph top speed and 160 km range, catering to riders who need rapid intercity capability from an electric scooter.",
+      "features": [
+        "High-Speed Mode (85 kmph)",
+        "TFT Digital Console",
+        "GPS & Anti-Theft System",
+        "Fast Charging",
+        "Ride Modes (Eco/City/Sport)",
+        "Regenerative Braking",
+        "Mobile App Connectivity"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "160 km",

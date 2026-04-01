@@ -16,6 +16,19 @@
       "fuel_type": "Petrol",
       "max_torque": "80 Nm",
       "source_section": "Available",
+      "description": "The Moto Guzzi V85 TT is a premium adventure-tourer powered by an 853cc transverse V-twin engine with classic Italian styling and modern safety electronics. It delivers 75.09 bhp with a distinctive V-twin character and excellent long-distance touring capability.",
+      "features": [
+        "853cc air-cooled transverse V-twin engine producing 75.09 bhp and 82 Nm torque",
+        "6-speed manual transmission with self-start",
+        "Dual disc brakes with ABS",
+        "Spoke wheels for premium adventure stance",
+        "23-litre large fuel tank for extended touring",
+        "Safety electronics package with riding modes",
+        "828mm seat height",
+        "230kg kerb weight",
+        "165 kmph top speed",
+        "Classic Italian design with modern technology"
+      ],
       "variants": [
         { "name": "V85 TT Standard", "price": "₹16,45,802" }
       ],

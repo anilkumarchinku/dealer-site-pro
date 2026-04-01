@@ -17,6 +17,19 @@
       "fuel_type": "Petrol",
       "max_torque": "25 Nm",
       "source_section": "Discontinued",
+      "description": "The CFMoto 300NK was the brand's smallest and most affordable offering in India, featuring aggressive streetfighter styling with a full-LED headlamp. This 292cc naked street bike delivered strong performance at an accessible price point before being discontinued.",
+      "features": [
+        "292.4cc BS6 engine producing 27.49 bhp",
+        "6-speed manual transmission with dual-channel ABS",
+        "Full-LED headlamp with aggressive streetfighter design",
+        "Split-seat setup with upswept rear section",
+        "Five-spoke alloy wheels",
+        "Underbelly exhaust system",
+        "Disc brakes on both front and rear",
+        "12.5-litre fuel tank capacity",
+        "Low-slung, muscular design",
+        "Discontinued from India market"
+      ],
       "colors": [
         "Frost Black",
         "Flame Red",
@@ -53,6 +66,19 @@
       "fuel_type": "Petrol",
       "max_torque": "62 Nm",
       "source_section": "Discontinued",
+      "description": "The CFMoto 650NK was a BS6-compliant middleweight naked bike featuring a 649.3cc parallel-twin engine with aggressive styling. It delivered strong performance at a competitive price point in the middleweight segment before being discontinued from the Indian market.",
+      "features": [
+        "649.3cc BS6 parallel-twin engine producing 55.65 bhp",
+        "6-speed manual transmission with self-start",
+        "Dual disc brakes with ABS",
+        "Full digital instrument cluster",
+        "Alloy wheels",
+        "17-litre fuel tank capacity",
+        "815mm seat height",
+        "180 kmph top speed",
+        "BS6 emission compliance",
+        "Discontinued from India market"
+      ],
       "colors": [
         "Frost Black",
         "Flame Red"
@@ -88,6 +114,19 @@
       "fuel_type": "Petrol",
       "max_torque": "62 Nm",
       "source_section": "Discontinued",
+      "description": "The CFMoto 650MT was a middleweight street bike offering comfortable riding ergonomics and substantial mid-range torque. It combined touring capability with everyday usability through its 649cc parallel-twin engine, though it has since been discontinued from the Indian market.",
+      "features": [
+        "649cc BS6 parallel-twin engine producing 55.65 bhp",
+        "6-speed manual transmission with self-start",
+        "Dual disc brakes with ABS",
+        "Adjustable front and rear suspension",
+        "18-litre fuel tank capacity",
+        "840mm seat height for comfortable touring",
+        "218kg kerb weight",
+        "Alloy wheels",
+        "180 kmph top speed",
+        "Discontinued from India market"
+      ],
       "colors": [
         "Frost Black",
         "Ocean Blue",
@@ -123,6 +162,19 @@
       "max_power": "54 bhp",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
+      "description": "The CFMoto 650GT was a full-fairing sports tourer with modern technology including an adjustable windscreen, digital instrument cluster, and USB charging port. It competed in the middleweight segment with its 649.3cc parallel-twin engine before being discontinued in India.",
+      "features": [
+        "649.3cc BS6 parallel-twin engine producing 55.65 bhp",
+        "6-speed manual transmission with self-start",
+        "Dual disc brakes with ABS",
+        "Full-fairing aerodynamic design",
+        "Adjustable windscreen",
+        "Full-LED lighting system",
+        "Digital instrument cluster",
+        "USB charging port and 12V socket",
+        "Alloy wheels",
+        "Discontinued from India market"
+      ],
       "colors": [
         "Pearl White",
         "Midnight Black"

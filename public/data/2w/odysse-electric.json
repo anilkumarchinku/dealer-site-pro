@@ -12,6 +12,16 @@
       "price": "₹72,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Odysse Electric E2 is an entry-level electric scooter with 100 km range backed by Odysse's wide dealer network, targeting daily office commuters in Indian metro and Tier-2 cities.",
+      "features": [
+        "Digital Instrument Cluster",
+        "Anti-Theft Alarm",
+        "Ride Modes (Eco/Sport)",
+        "Regenerative Braking",
+        "Fast Charging",
+        "USB Charging Port",
+        "BLDC Hub Motor"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "100 km",
@@ -33,6 +43,16 @@
       "price": "₹77,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Odysse Electric E2S is an upgraded version of the E2 with enhanced features and a sleeker design, ideal for urban commuters who want additional convenience without a premium price tag.",
+      "features": [
+        "Enhanced Digital Display",
+        "Anti-Theft with Remote Lock",
+        "Ride Modes (Eco/Power)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "Alloy Wheels"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "100 km",
@@ -54,6 +74,16 @@
       "price": "₹84,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Odysse Electric E4 steps up to 120 km range with a larger 60V 35Ah battery, offering longer-range capability for commuters who need to cover more ground on a single charge.",
+      "features": [
+        "Large 60V 35Ah Battery",
+        "Digital Console with Odometer",
+        "Anti-Theft Alarm",
+        "Ride Modes (Eco/Normal/Sport)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "120 km",
@@ -75,6 +105,16 @@
       "price": "₹89,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Odysse Electric Evoqis is the brand's sporty connected scooter with 60 Nm torque and 120 km range, designed for performance-seeking urban riders who also want smart connectivity features.",
+      "features": [
+        "High Torque 60 Nm Motor",
+        "Mobile App Connectivity",
+        "GPS Anti-Theft",
+        "TFT Display",
+        "Fast Charging",
+        "Ride Modes",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "120 km",
@@ -96,6 +136,16 @@
       "price": "₹94,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Odysse Electric Rogue is a premium commuter scooter with bold styling, 120 km range, and a full set of smart features, targeting young urban professionals who want a head-turning electric ride.",
+      "features": [
+        "Bold Premium Design",
+        "Digital Instrument Console",
+        "GPS Tracking & Anti-Theft",
+        "Ride Modes (Eco/Normal/Sport)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "Bluetooth Connectivity"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "120 km",
@@ -117,6 +167,16 @@
       "price": "₹69,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Odysse Electric Stream is an affordable daily commuter with 90 km range and a slim city-friendly design, ideal for budget buyers seeking a reliable and economical first EV.",
+      "features": [
+        "Slim City-Friendly Design",
+        "Digital Speedometer",
+        "Anti-Theft Alarm",
+        "Ride Modes",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "90 km",

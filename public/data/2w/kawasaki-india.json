@@ -16,11 +16,29 @@
       "max_torque": "13.2 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Kawasaki W175 is a retro-styled commuter motorcycle powered by a 177cc air-cooled single-cylinder engine, offering classic aesthetics combined with modern reliability at an accessible price point.",
+      "features": [
+        "ABS braking system",
+        "Front disc and rear drum brakes",
+        "5-speed manual transmission",
+        "Spoke-type wheels for classic aesthetics",
+        "Air-cooled engine for low maintenance",
+        "12-liter fuel tank capacity",
+        "Self-start ignition",
+        "Upright relaxed riding posture"
+      ],
+      "colors": [
+        "Ebony",
+        "Candy Persimmon Red",
+        "Metallic Moondust Gray",
+        "Candy Emerald Green",
+        "Metallic Graphite Grey",
+        "Metallic Ocean Blue"
+      ],
       "variants": [
         { "name": "W175 Standard", "price": "₹1,15,006" },
         { "name": "W175 Alloy Wheel", "price": "₹1,25,007" }
       ],
-      "colors": ["Ebony", "Candy Persimmon Red", "Metallic Moondust Gray", "Candy Emerald Green", "Metallic Graphite Grey", "Metallic Ocean Blue"],
       "technical_specifications": {
         "engine_type": "Air-cooled, Single-cylinder",
         "power": "12.8 bhp",
@@ -48,10 +66,23 @@
       "max_torque": "43 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Kawasaki Eliminator is a cruiser bike powered by a 451cc BS6 Phase 2 liquid-cooled parallel-twin engine, delivering 44.7 bhp and 42.6 Nm of torque. It offers a low seat height of 735mm and weighs 176 kg, making it accessible for riders of varying heights.",
+      "features": [
+        "ABS braking system with front and rear disc brakes",
+        "Liquid-cooled 451cc parallel-twin engine",
+        "6-speed manual transmission",
+        "Self-start ignition system",
+        "Alloy wheels",
+        "13-liter fuel tank capacity",
+        "Low 735mm seat height for comfort and accessibility",
+        "Expert-reported mileage of 31.45 kmpl"
+      ],
+      "colors": [
+        "Metallic Flat Black"
+      ],
       "variants": [
         { "name": "Eliminator Standard", "price": "₹6,15,965" }
       ],
-      "colors": ["Metallic Flat Black"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "44.7 bhp",
@@ -79,10 +110,24 @@
       "max_torque": "27 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Kawasaki Ninja 300 is a lightweight parallel-twin sports bike powered by a 296cc liquid-cooled engine producing 38.88 bhp, designed as an accessible entry into the Kawasaki supersport lineup.",
+      "features": [
+        "Dual-channel ABS braking system",
+        "Front and rear disc brakes",
+        "6-speed manual transmission with assist and slipper clutch",
+        "Alloy 17-inch wheels with tubeless tyres",
+        "Full-fairing aerodynamic bodywork",
+        "17-liter fuel tank capacity",
+        "Self-start ignition",
+        "LED headlamp"
+      ],
+      "colors": [
+        "Candy Lime Green / Ebony",
+        "Lime Green"
+      ],
       "variants": [
         { "name": "Ninja 300 Standard", "price": "₹3,17,000" }
       ],
-      "colors": ["Candy Lime Green / Ebony", "Lime Green"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "38.88 bhp",
@@ -110,10 +155,24 @@
       "max_torque": "38 Nm",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
+      "description": "The Kawasaki Ninja 400 is a sports bike powered by a 399cc liquid-cooled parallel-twin engine delivering 44.7 bhp, offering sporty ergonomics suitable for both daily riding and track use with a slip and assist clutch for urban traffic ease.",
+      "features": [
+        "Dual-channel ABS braking system",
+        "Assist and slipper clutch",
+        "Semi-digital instrument cluster with digital speedometer and tachometer",
+        "Gear indicator and shift light",
+        "Distance to empty display",
+        "Telescopic front suspension with 120mm travel",
+        "Adjustable rear suspension preload",
+        "Tubeless tyres on 17-inch alloy wheels"
+      ],
+      "colors": [
+        "Metallic Carbon Gray",
+        "Lime Green"
+      ],
       "variants": [
         { "name": "Ninja 400 Standard", "price": "₹5,23,985" }
       ],
-      "colors": ["Metallic Carbon Gray", "Lime Green"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "44.9 bhp",
@@ -141,10 +200,23 @@
       "max_torque": "42.6 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Kawasaki Ninja 500 is a middleweight sports bike powered by a 451cc liquid-cooled parallel-twin engine delivering 44.7 bhp, balancing accessible performance with full-fairing styling.",
+      "features": [
+        "ABS braking system with front and rear disc brakes",
+        "6-speed manual transmission",
+        "TFT display with smartphone connectivity",
+        "LED headlamp",
+        "Alloy wheels",
+        "14-liter fuel tank capacity",
+        "Self-start ignition",
+        "Sporty full-fairing bodywork"
+      ],
+      "colors": [
+        "Metallic Carbon Gray"
+      ],
       "variants": [
         { "name": "Ninja 500 Standard", "price": "₹5,65,976" }
       ],
-      "colors": ["Metallic Carbon Gray"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "44.7 bhp",
@@ -174,10 +246,23 @@
       "max_torque": "64 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Kawasaki Z650 is a street bike that combines aggressive styling with approachable handling, featuring a refined 649cc parallel-twin BS6 Phase 2 engine suitable for both daily commuting and weekend rides.",
+      "features": [
+        "Dual disc brakes with ABS",
+        "649cc parallel-twin BS6 Phase 2 engine",
+        "6-speed manual transmission",
+        "Full TFT instrument console with smartphone connectivity",
+        "Lightweight trellis frame design",
+        "Low 790mm seat height for accessibility",
+        "LED headlamp",
+        "Alloy wheels"
+      ],
+      "colors": [
+        "Metallic Matte Dark Gray / Metallic Spark Black"
+      ],
       "variants": [
         { "name": "Z650 Standard", "price": "₹7,25,960" }
       ],
-      "colors": ["Metallic Matte Dark Gray / Metallic Spark Black"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "67.31 bhp",
@@ -206,10 +291,23 @@
       "max_torque": "64 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Kawasaki Z650RS is a retro-styled sports bike that blends classic aesthetics with modern performance, featuring a 649cc engine with linear torque delivery suitable for both city commuting and open-road riding.",
+      "features": [
+        "649cc BS6 Phase 2 engine producing 67.07 bhp and 62.1 Nm torque",
+        "6-speed manual transmission",
+        "Dual front and rear disc brakes with ABS",
+        "Upright relaxed riding position with wide handlebars",
+        "Alloy wheels for improved handling",
+        "12-liter fuel tank capacity",
+        "Well-controlled vibration levels",
+        "Retro-inspired round headlamp design"
+      ],
+      "colors": [
+        "Metallic Ocean Blue"
+      ],
       "variants": [
         { "name": "Z650RS Standard", "price": "₹7,83,000" }
       ],
-      "colors": ["Metallic Ocean Blue"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "67.07 bhp",
@@ -237,10 +335,23 @@
       "max_torque": "64 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Kawasaki Ninja 650 is a sports bike featuring a 649cc BS6 Phase 2B parallel-twin engine delivering 67.3 bhp and 64 Nm torque, with comfortable ergonomics suited for touring and daily commuting.",
+      "features": [
+        "ABS braking system with front and rear disc brakes",
+        "649cc BS6 Phase 2B parallel-twin engine",
+        "6-speed manual transmission with assist and slipper clutch",
+        "Alloy wheels",
+        "15-liter fuel tank capacity",
+        "790mm seat height",
+        "Self-start ignition",
+        "Full-fairing aerodynamic design"
+      ],
+      "colors": [
+        "Lime Green"
+      ],
       "variants": [
         { "name": "Ninja 650 Standard", "price": "₹7,91,000" }
       ],
-      "colors": ["Lime Green"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "67.3 bhp",
@@ -268,10 +379,23 @@
       "max_torque": "64 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Kawasaki Versys 650 is a sport-tourer motorcycle powered by a 649cc BS6 Phase 2B parallel-twin engine delivering 65.7 bhp and 61 Nm torque, offering a blend of comfort and performance for long-distance adventure riding.",
+      "features": [
+        "ABS braking system with front and rear disc brakes",
+        "6-speed manual transmission",
+        "Long-travel suspension for planted handling on rough terrain",
+        "Upright seating position with broad handlebars",
+        "Large 21-liter fuel tank for long range",
+        "Alloy wheels",
+        "Self-start ignition",
+        "Wind protection with tall windscreen"
+      ],
+      "colors": [
+        "Metallic Graphite Gray / Metallic Spark Black"
+      ],
       "variants": [
         { "name": "Versys 650 Standard", "price": "₹8,63,000" }
       ],
-      "colors": ["Metallic Graphite Gray / Metallic Spark Black"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "65.7 bhp",
@@ -299,10 +423,23 @@
       "max_torque": "61 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Kawasaki Vulcan S is a cruiser motorcycle powered by a 649cc liquid-cooled parallel-twin engine producing 59.94 bhp, featuring an Ergo-Fit system that allows adjustment of the handlebar, footpeg, and seat positions to suit a wide range of riders.",
+      "features": [
+        "ABS braking system with front and rear disc brakes",
+        "Ergo-Fit three-position adjustable rider ergonomics",
+        "6-speed manual transmission",
+        "Alloy wheels",
+        "14-liter fuel tank capacity",
+        "Low 705mm seat height",
+        "Self-start ignition",
+        "Classic cruiser styling with modern underpinnings"
+      ],
+      "colors": [
+        "Metallic Flat Spark Black"
+      ],
       "variants": [
         { "name": "Vulcan S Standard", "price": "₹8,13,000" }
       ],
-      "colors": ["Metallic Flat Spark Black"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "59.94 bhp",
@@ -330,10 +467,23 @@
       "max_torque": "62 Nm",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
+      "description": "The Kawasaki W800 is a discontinued retro cruiser motorcycle featuring a 773cc air-cooled parallel-twin engine producing 50.95 bhp, combining classic styling with modern technology for a unique riding experience in the premium cruiser segment.",
+      "features": [
+        "Dual-channel ABS for enhanced braking safety",
+        "LED headlamp and LED brake/tail lights",
+        "Assist and slipper clutch for smooth operation",
+        "Digital fuel gauge and low fuel indicator",
+        "Analogue speedometer with digital odometer",
+        "Twin shock rear suspension with spring preload adjustability",
+        "Self-start ignition system with kill switch",
+        "5-speed manual transmission with chain drive"
+      ],
+      "colors": [
+        "Metallic Flat Spark Black / Metallic Matt Grey"
+      ],
       "variants": [
         { "name": "W800 Standard", "price": "₹7,32,773" }
       ],
-      "colors": ["Metallic Flat Spark Black / Metallic Matt Grey"],
       "technical_specifications": {
         "engine_type": "Air-cooled, Parallel-twin",
         "power": "47 bhp",
@@ -361,10 +511,24 @@
       "max_torque": "98.6 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Kawasaki Z900 is a middleweight naked sportbike featuring a 948cc inline-four BS6 Phase 2B engine producing 123.6 bhp, delivering smooth yet thrilling acceleration suitable for both highway and urban riding through its refined handling and modern technology.",
+      "features": [
+        "Six-axis IMU with cornering ABS and traction control",
+        "5-inch TFT display with Bluetooth connectivity",
+        "Bi-directional quickshifter for seamless gear changes",
+        "Multiple riding modes and cruise control",
+        "Front and rear disc brakes with ABS",
+        "Upside-down front forks and rear monoshock suspension",
+        "17-liter fuel tank capacity",
+        "Aggressive 'Sugomi' styling with sharp lines"
+      ],
+      "colors": [
+        "Metallic Matte Graphenesteel Gray / Metallic Spark Black",
+        "Candy Lime Green / Metallic Carbon Gray"
+      ],
       "variants": [
         { "name": "Z900 Standard", "price": "₹9,99,000" }
       ],
-      "colors": ["Metallic Matte Graphenesteel Gray / Metallic Spark Black", "Candy Lime Green / Metallic Carbon Gray"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-four",
         "power": "123.6 bhp",
@@ -393,10 +557,23 @@
       "max_torque": "102 Nm",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
+      "description": "The Kawasaki Versys 1000 is a discontinued super sport-touring motorcycle featuring a 1043cc liquid-cooled inline-four engine producing 118.27 bhp, combining performance with practicality through advanced technology and comfortable ergonomics for long-distance riding.",
+      "features": [
+        "Dual-channel ABS with 310mm front and 250mm rear disc brakes",
+        "Semi-digital instrument cluster with GPS navigation and mobile connectivity",
+        "Multiple riding modes: Sport, Road, Rain, and Rider-selectable",
+        "Assist and slipper clutch with 6-speed manual transmission",
+        "Traction control and cruise control",
+        "Inverted front fork suspension with adjustable preload",
+        "Horizontal back-link rear suspension with remote preload adjustment",
+        "TFT display with call/SMS alerts"
+      ],
+      "colors": [
+        "Metallic Matte Graphenesteel Grey / Metallic Spark Black"
+      ],
       "variants": [
         { "name": "Versys 1000 Standard", "price": "₹12,30,982" }
       ],
-      "colors": ["Metallic Matte Graphenesteel Grey / Metallic Spark Black"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-four",
         "power": "118 bhp",
@@ -424,10 +601,23 @@
       "max_torque": "39 Nm",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
+      "description": "The Kawasaki Ninja ZX-4RR is a discontinued sports bike powered by a 399cc BS6 Phase 2 inline-four engine delivering 78.7 bhp, offering a 4.3-inch TFT display and four riding modes in a compact supersport package.",
+      "features": [
+        "4.3-inch TFT colour instrument cluster with smartphone connectivity",
+        "Dual-channel cornering ABS with 290mm front and 220mm rear disc brakes",
+        "LED headlamp with daytime running lights",
+        "6-speed manual transmission with quickshifter",
+        "Four riding modes: Sport, Road, Rain, and Rider",
+        "USB charging port",
+        "Digital speedometer, odometer, fuel gauge and tachometer",
+        "Gear indicator and shift light"
+      ],
+      "colors": [
+        "Lime Green / Ebony / Pearl Blizzard White"
+      ],
       "variants": [
         { "name": "Ninja ZX-4RR Standard", "price": "₹10,06,676" }
       ],
-      "colors": ["Lime Green / Ebony / Pearl Blizzard White"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-four",
         "power": "76.5 bhp",
@@ -455,10 +645,23 @@
       "max_torque": "70.8 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-6R is a high-performance 636cc supersport motorcycle delivering thrilling performance with sharp handling and modern electronics, designed for track-focused riders seeking speed and precision.",
+      "features": [
+        "ABS braking system with dual 310mm front disc brakes",
+        "636cc BS6 Phase 2B inline-four engine",
+        "Traction control and quickshifter",
+        "TFT display with smartphone connectivity",
+        "Multiple riding modes and adjustable Showa suspension",
+        "6-speed manual transmission",
+        "Alloy wheels with full-fairing design",
+        "Self-start ignition"
+      ],
+      "colors": [
+        "Lime Green"
+      ],
       "variants": [
         { "name": "Ninja ZX-6R Standard", "price": "₹12,48,948" }
       ],
-      "colors": ["Lime Green"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-four",
         "power": "129.9 bhp",
@@ -486,10 +689,23 @@
       "max_torque": "113 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Kawasaki Ninja 1000SX is a sport-touring motorcycle powered by a 1099cc inline-four BS6 Phase 2B engine delivering 134.1 bhp, combining aggressive sports bike performance with touring comfort and an extensive electronics package.",
+      "features": [
+        "ABS braking system with front and rear disc brakes",
+        "1099cc BS6 Phase 2B inline-four engine with 134.1 bhp",
+        "Multiple riding modes: Sport, Road, Rain, Rider",
+        "Kawasaki Cornering Management Function (KCMF)",
+        "6-speed manual transmission with assist and slipper clutch",
+        "TFT colour display with smartphone connectivity",
+        "Cruise control for long-distance touring",
+        "19-liter fuel tank capacity"
+      ],
+      "colors": [
+        "Metallic Brilliant Golden Black / Metallic Carbon Gray"
+      ],
       "variants": [
         { "name": "Ninja 1000SX Standard", "price": "₹14,42,000" }
       ],
-      "colors": ["Metallic Brilliant Golden Black / Metallic Carbon Gray"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-four",
         "power": "134.1 bhp",
@@ -517,10 +733,24 @@
       "max_torque": "114.9 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-10R is a 998cc superbike delivering explosive acceleration and razor-sharp performance through its 193 bhp inline-four engine, designed for both track dominance and road riding with a comprehensive electronics package.",
+      "features": [
+        "998cc BS6 Phase 2B inline-four engine producing 193 bhp and 114.9 Nm",
+        "Advanced electronics: traction control, cornering management, and launch control",
+        "Fully adjustable Showa suspension with lightweight aluminium twin-spar frame",
+        "Dual Brembo disc brakes with cornering ABS",
+        "Full-colour TFT display with Bluetooth connectivity",
+        "6-speed manual transmission with bi-directional quickshifter",
+        "Aerodynamic design with integrated winglets for downforce",
+        "Multiple riding modes for different conditions"
+      ],
+      "colors": [
+        "Metallic Graphite Gray / Metallic Diablo Black",
+        "Lime Green / Ebony / Pearl Blizzard White"
+      ],
       "variants": [
         { "name": "Ninja ZX-10R Standard", "price": "₹20,79,000" }
       ],
-      "colors": ["Metallic Graphite Gray / Metallic Diablo Black", "Lime Green / Ebony / Pearl Blizzard White"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-four",
         "power": "193 bhp (213 hp with ram air)",
@@ -535,7 +765,7 @@
         "wheel_type": "Alloy",
         "start_type": "Self Start",
         "emission": "BS6 Phase 2B",
-        "features": "Traction control, Cornering management, Launch control, Engine braking control, Full-color TFT with Bluetooth, Integrated aerodynamic winglets"
+        "features": "Traction control, Cornering management, Launch control, Full-color TFT with Bluetooth, Integrated aerodynamic winglets"
       }
     },
     {
@@ -549,10 +779,23 @@
       "max_torque": "137 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Kawasaki Z H2 is a high-performance supercharged naked superbike with a 998cc inline-four engine delivering 197.26 bhp and 137 Nm torque, combining aggressive styling with advanced rider aids and exceptional performance capabilities.",
+      "features": [
+        "Supercharged 998cc BS6 Phase 2 engine producing 197.26 bhp and 137 Nm",
+        "ABS braking system with front and rear disc brakes",
+        "Advanced rider aids and electronics suite",
+        "6-speed manual transmission",
+        "Alloy wheels",
+        "19-liter fuel tank capacity",
+        "830mm seat height",
+        "Top speed of 280 kmph"
+      ],
+      "colors": [
+        "Metallic Matte Graphenesteel Grey / Ebony"
+      ],
       "variants": [
         { "name": "Z H2 Standard", "price": "₹30,55,818" }
       ],
-      "colors": ["Metallic Matte Graphenesteel Grey / Ebony"],
       "technical_specifications": {
         "engine_type": "Supercharged, Liquid-cooled, Inline-four",
         "power": "197.26 bhp",
@@ -580,10 +823,23 @@
       "max_torque": "137.3 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Kawasaki Ninja H2 SX SE is the ultimate supercharged sport-tourer powered by a 998cc inline-four engine delivering 197.2 bhp, featuring an extensive electronics suite including GPS navigation, keyless ignition, and a 6.5-inch TFT display.",
+      "features": [
+        "Supercharged 998cc engine producing 197.2 bhp and 137.3 Nm",
+        "6.5-inch TFT display with Bluetooth and GPS navigation",
+        "Keyless ignition system",
+        "Quickshifter for smooth gear changes",
+        "Dual-channel ABS with dual front disc brakes",
+        "Traction control and cruise control",
+        "6-speed manual transmission",
+        "19-liter fuel tank for extended range"
+      ],
+      "colors": [
+        "Metallic Diablo Black"
+      ],
       "variants": [
         { "name": "Ninja H2 SX SE", "price": "₹36,27,783" }
       ],
-      "colors": ["Metallic Diablo Black"],
       "technical_specifications": {
         "engine_type": "Supercharged, Liquid-cooled, Inline-four",
         "power": "197.2 bhp",

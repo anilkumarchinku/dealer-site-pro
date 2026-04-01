@@ -15,6 +15,17 @@
       "top_speed": "135 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Harley-Davidson X440 is a jointly developed motorcycle with Hero MotoCorp, bringing the Harley-Davidson brand ethos to the accessible mid-segment with a 440cc air-cooled single-cylinder engine and classic styling. It offers ABS, a 6-speed gearbox, and multiple colour options at an accessible price point for first-time Harley buyers.",
+      "features": [
+        "440cc air-cooled single-cylinder engine",
+        "Dual-channel ABS",
+        "6-speed manual transmission",
+        "Dual disc brakes",
+        "LED lighting",
+        "Classic Harley-Davidson styling",
+        "Multiple colour variants",
+        "Self-start ignition"
+      ],
       "variants": [
         {
           "name": "X440 Vivid",
@@ -61,6 +72,17 @@
       "fuel_type": "Petrol",
       "max_torque": "95 Nm",
       "source_section": "Available",
+      "description": "The Harley-Davidson Nightster is a modern Sportster-lineage motorcycle powered by the liquid-cooled Revolution Max 975T V-twin engine making 88.5 bhp. It introduces a new era of performance-focused Harley-Davidson motorcycles with a low 705 mm seat height and modern rider assistance electronics.",
+      "features": [
+        "Revolution Max 975T V-twin engine, 88.5 bhp",
+        "Liquid-cooled engine for better performance",
+        "Dual-channel ABS",
+        "Selectable riding modes (Road, Sport, Rain)",
+        "Drag-style handlebar",
+        "Low 705 mm seat height",
+        "TFT display with Bluetooth",
+        "Assist and slipper clutch"
+      ],
       "variants": [
         {
           "name": "Nightster Standard",
@@ -103,6 +125,17 @@
       "fuel_type": "Petrol",
       "max_torque": "95 Nm",
       "source_section": "Available",
+      "description": "The Harley-Davidson Nightster Special is a step up from the Nightster with Showa front forks, a higher specification suspension setup, and additional colour options. It retains the same Revolution Max 975T engine but adds sportier ergonomics and a firmer suspension tune for more dynamic riding.",
+      "features": [
+        "Revolution Max 975T V-twin engine, 88.5 bhp",
+        "Showa front forks",
+        "Assist and slipper clutch",
+        "Belt drive",
+        "Adjustable traction control",
+        "Multiple ride modes",
+        "Dual-channel ABS",
+        "TFT display"
+      ],
       "variants": [
         {
           "name": "Nightster Special Standard",
@@ -147,6 +180,17 @@
       "fuel_type": "Petrol",
       "max_torque": "96 Nm",
       "source_section": "Available",
+      "description": "The Harley-Davidson Sportster S is a performance-focused neo-retro motorcycle powered by the Revolution Max 1250T V-twin engine producing 120.69 bhp. It features a TFT display with Bluetooth, multiple ride modes, and a low centre of gravity for dynamic handling.",
+      "features": [
+        "Revolution Max 1250T V-twin, 120.69 bhp",
+        "TFT display with Bluetooth connectivity",
+        "Multiple ride modes (Sport, Road, Rain, Custom)",
+        "Cornering-enhanced ABS and traction control",
+        "Assist and slipper clutch",
+        "Belt drive",
+        "Low 765 mm seat height",
+        "Inverted front forks"
+      ],
       "variants": [
         {
           "name": "Sportster S Standard",
@@ -191,6 +235,17 @@
       "fuel_type": "Petrol",
       "max_torque": "128 Nm",
       "source_section": "Available",
+      "description": "The Harley-Davidson Pan America 1250 Special is a full-featured adventure motorcycle powered by the Revolution Max 1250 engine producing 150 bhp with an innovative Adaptive Ride Height system that lowers the bike at standstill. It is Harley-Davidson's most technologically advanced motorcycle for on and off-road adventures.",
+      "features": [
+        "Revolution Max 1250 V-twin, 150.19 bhp",
+        "Adaptive Ride Height (ARH) system",
+        "Cornering ABS",
+        "Multiple ride modes including Off-Road",
+        "5-inch TFT display with navigation",
+        "Adjustable front and rear suspension",
+        "Traction control",
+        "21.2-litre fuel tank"
+      ],
       "variants": [
         {
           "name": "Pan America 1250 Special",
@@ -229,6 +284,17 @@
       "fuel_type": "Petrol",
       "max_torque": "155 Nm",
       "source_section": "Available",
+      "description": "The Harley-Davidson Heritage Classic is a timeless cruiser inspired by Harley's classic FL touring bikes of the 1950s, powered by the Milwaukee-Eight 114 air-cooled V-twin engine delivering 155 Nm of torque. It features classic fender styling, a comfortable two-up seat, and chrome detailing for authentic nostalgic riding.",
+      "features": [
+        "Milwaukee-Eight 114 V-twin engine",
+        "Classic 1950s-inspired styling",
+        "Dual-channel ABS",
+        "Chrome detailing throughout",
+        "Comfortable two-up touring seat",
+        "Spoke wheels",
+        "Low 680 mm seat height",
+        "Multiple riding modes"
+      ],
       "variants": [
         {
           "name": "Heritage Classic Standard",
@@ -277,6 +343,17 @@
       "fuel_type": "Petrol",
       "max_torque": "161 Nm",
       "source_section": "Available",
+      "description": "The Harley-Davidson Fat Boy is an iconic American cruiser instantly recognisable by its solid-disc alloy wheels and wide, muscular stance, powered by the Milwaukee-Eight 114 engine delivering massive low-end torque. It was famously featured in Terminator 2 and remains one of Harley's most recognisable icons.",
+      "features": [
+        "Milwaukee-Eight 114 V-twin engine",
+        "Iconic solid-disc alloy wheels",
+        "Wide, muscular cruiser stance",
+        "Dual-channel ABS",
+        "Chrome engine, exhaust and controls",
+        "Low 675 mm seat height",
+        "Multiple riding modes",
+        "LED lighting"
+      ],
       "variants": [
         {
           "name": "Fat Boy Standard",
@@ -323,6 +400,17 @@
       "top_speed": "210 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Harley-Davidson Breakout is a long, low drag-style chopper powered by the Milwaukee-Eight 117 engine producing a massive 168 Nm of torque. Its elongated design, very low 665 mm seat height, and wide rear tyre create a bold, drag-race-inspired aesthetic.",
+      "features": [
+        "Milwaukee-Eight 117 V-twin engine, 168 Nm torque",
+        "Very low 665 mm seat height",
+        "Drag-style chopper design",
+        "Dual-channel ABS",
+        "Wide rear tyre",
+        "Chrome detailing",
+        "Multiple riding modes",
+        "18.9-litre fuel tank"
+      ],
       "variants": [
         {
           "name": "Breakout Standard",
@@ -368,6 +456,17 @@
       "fuel_type": "Petrol",
       "max_torque": "171 Nm",
       "source_section": "Available",
+      "description": "The Harley-Davidson Street Glide is a premium batwing-faired touring motorcycle powered by the Milwaukee-Eight 117 engine with a full infotainment system, large windscreen, and integrated luggage. It is designed for long-distance cross-country touring with exceptional comfort and connectivity.",
+      "features": [
+        "Milwaukee-Eight 117 V-twin, 175 Nm torque",
+        "Batwing fairing with integrated stereo",
+        "Full infotainment with Bluetooth and navigation",
+        "Multiple ride modes",
+        "Dual-channel ABS",
+        "Comfortable touring ergonomics",
+        "22.7-litre fuel tank",
+        "Heated grips (available)"
+      ],
       "variants": [
         {
           "name": "Street Glide Standard",
@@ -415,6 +514,17 @@
       "fuel_type": "Petrol",
       "max_torque": "171 Nm",
       "source_section": "Available",
+      "description": "The Harley-Davidson Road Glide is the shark-nose faired flagship tourer with a frame-mounted fairing that eliminates wind buffeting at high speeds and features a premium infotainment system. The Road Glide's distinct shark-nose fairing and larger windscreen make it the preferred choice for serious long-haul riders.",
+      "features": [
+        "Milwaukee-Eight 117 V-twin, 175 Nm torque",
+        "Frame-mounted shark-nose fairing",
+        "Full infotainment with Bluetooth and navigation",
+        "Road, Sport, Rain and Custom ride modes",
+        "Dual-channel ABS",
+        "Comfortable two-up touring seat",
+        "22.7-litre fuel tank",
+        "LED lighting"
+      ],
       "variants": [
         {
           "name": "Road Glide Standard",

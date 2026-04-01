@@ -17,6 +17,8 @@
       "top_speed": "110 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda CB125 Hornet is a street bike available at a starting price of Rs. 1,14,424 in India. It combines aggressive streetbike styling with practical commuting capability and delivers excellent fuel economy for daily urban riding.",
+      "features": ["Single-channel ABS", "Full Color TFT Touchscreen Display", "Bluetooth Connectivity", "USB Charging Port", "LED Headlamp", "USD Front Forks", "Alloy Wheels", "Monoshock Rear Suspension"],
       "variants": [
         {
           "name": "CB125 Hornet Standard",
@@ -60,6 +62,8 @@
       "top_speed": "100 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda SP 125 is a commuter bike offering excellent refinement with a 123.94 cc BS6 Phase 2B engine, delivering great fuel efficiency and a comfortable riding experience suited for daily commuting.",
+      "features": ["Combined Braking System", "Alloy Wheels", "Kick and Self Start", "5-Speed Manual Transmission", "Digital Instrument Cluster", "E20 Fuel Compatible"],
       "variants": [
         {
           "name": "SP 125 Drum",
@@ -71,7 +75,7 @@
         },
         {
           "name": "SP 125 25-year Anniversary Edition",
-          "price": "₹95,612"
+          "price": "₹95,613"
         }
       ],
       "colors": [
@@ -105,7 +109,7 @@
       "make": "Honda",
       "model": "Shine",
       "variant_name": "Shine Drum",
-      "price": "₹81,794",
+      "price": "₹81,796",
       "engine_displacement": "123.94 cc",
       "mileage": "55 kmpl",
       "max_power": "10.59 bhp",
@@ -113,10 +117,12 @@
       "top_speed": "102 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda Shine is a commuter bike available at Rs. 81,796 - Rs. 87,188 in India with a user reported mileage of 55 kmpl and a refined 123.94cc engine designed for daily city riding and highway cruising.",
+      "features": ["Combined Braking System", "Alloy Wheels", "Kick and Self Start", "5-Speed Manual Transmission", "BS6 Phase 2B Compliant", "LED Tail Lamp"],
       "variants": [
         {
           "name": "Shine Drum",
-          "price": "₹81,794"
+          "price": "₹81,796"
         },
         {
           "name": "Shine Disc",
@@ -124,7 +130,7 @@
         },
         {
           "name": "Shine Limited Edition",
-          "price": "₹87,186"
+          "price": "₹87,188"
         }
       ],
       "colors": [
@@ -166,14 +172,16 @@
       "top_speed": "85 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda Shine 100 is a commuter bike available at a price range of Rs. 65,557 - Rs. 71,512 in India. It combines fuel efficiency with reliability, featuring a smooth engine and practical design suited for daily commuting.",
+      "features": ["Combined Braking System", "Digital Meter", "E20 Fuel Compatible", "Kick and Self Start", "4-Speed Manual Transmission", "Alloy Wheels (tubeless)", "BS6 Phase 2B Compliant"],
       "variants": [
         {
           "name": "Shine 100 Drum",
           "price": "₹65,557"
         },
         {
-          "name": "Shine 100 Drum Alloy",
-          "price": "₹71,511"
+          "name": "Shine 100 DX",
+          "price": "₹71,512"
         }
       ],
       "colors": [
@@ -210,7 +218,7 @@
       "make": "Honda",
       "model": "Unicorn",
       "variant_name": "Unicorn Standard",
-      "price": "₹1,12,898",
+      "price": "₹1,12,900",
       "engine_displacement": "162.71 cc",
       "mileage": "50 kmpl",
       "max_power": "13 bhp",
@@ -218,10 +226,12 @@
       "top_speed": "106 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda Unicorn is a street bike available at a starting price of Rs. 1,12,900 in India. It emphasizes comfort, fuel efficiency, and durability for daily commuting with a reliable 162.71cc engine.",
+      "features": ["Single-channel ABS", "Front Disc Brake", "Alloy Wheels", "Kick and Self Start", "5-Speed Manual Transmission", "BS6 Phase 2 Compliant", "LED Tail Lamp"],
       "variants": [
         {
           "name": "Unicorn Standard",
-          "price": "₹1,12,898"
+          "price": "₹1,12,900"
         }
       ],
       "colors": [
@@ -251,7 +261,7 @@
       "make": "Honda",
       "model": "Livo",
       "variant_name": "Livo Drum",
-      "price": "₹80,220",
+      "price": "₹80,222",
       "engine_displacement": "109.51 cc",
       "mileage": "60 kmpl",
       "max_power": "8.67 bhp",
@@ -259,14 +269,16 @@
       "top_speed": "85 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda Livo is a commuter bike offering a smooth 110cc engine with excellent fuel efficiency around 60 kmpl and reliable performance suitable for daily urban commuting and occasional longer rides.",
+      "features": ["Combined Braking System", "5-Step Adjustable Rear Suspension", "Alloy Wheels", "Kick and Self Start", "4-Speed Manual Transmission", "BS6 Phase 2B Compliant"],
       "variants": [
         {
           "name": "Livo Drum",
-          "price": "₹80,220"
+          "price": "₹80,222"
         },
         {
           "name": "Livo Disc",
-          "price": "₹82,787"
+          "price": "₹82,788"
         }
       ],
       "colors": [
@@ -297,7 +309,7 @@
       "make": "Honda",
       "model": "SP160",
       "variant_name": "SP160 Single Disc",
-      "price": "₹1,15,556",
+      "price": "₹1,15,557",
       "engine_displacement": "162.71 cc",
       "mileage": "50 kmpl",
       "max_power": "13.27 bhp",
@@ -305,14 +317,16 @@
       "top_speed": "110 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda SP160 is a premium commuter motorcycle designed for daily use and short rides. It combines good performance and refinement with stylish design and offers excellent fuel efficiency at an affordable price point in the 160cc segment.",
+      "features": ["Single-channel ABS", "Front Disc Brake", "Alloy Wheels", "Self Start", "5-Speed Manual Transmission", "Digital Instrument Cluster", "LED Headlamp"],
       "variants": [
         {
           "name": "SP160 Single Disc",
-          "price": "₹1,15,556"
+          "price": "₹1,15,557"
         },
         {
           "name": "SP160 Double Disc",
-          "price": "₹1,21,066"
+          "price": "₹1,21,068"
         }
       ],
       "colors": [
@@ -351,6 +365,8 @@
       "top_speed": "130 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda NX200 is a street bike available at a starting price of Rs. 1,57,750 in India with aspirational styling and upright ergonomics suited for daily commuting and highway cruising.",
+      "features": ["Dual-channel ABS", "USD Front Forks", "Assist & Slipper Clutch", "Alloy Wheels", "Front and Rear Disc Brakes", "Honda RoadSync Connectivity", "TFT Display", "LED Headlamp"],
       "variants": [
         {
           "name": "NX200 Standard",
@@ -373,7 +389,8 @@
         "mileage_user": "42 kmpl",
         "top_speed": "130 kmph",
         "kerb_weight": "148 kg",
-        "seat_height": "Not specified",
+        "seat_height": "810 mm",
+        "ground_clearance": "167 mm",
         "front_brake": "Disc with ABS",
         "rear_brake": "Disc with ABS",
         "braking_system": "Dual-channel ABS",
@@ -385,36 +402,39 @@
       "make": "Honda",
       "model": "Hornet 2.0",
       "variant_name": "Hornet 2.0 Standard",
-      "price": "₹1,47,152",
+      "price": "₹1,47,153",
       "engine_displacement": "184.4 cc",
       "mileage": "45 kmpl",
       "max_power": "17.03 bhp",
-      "max_torque": "16.1 Nm",
-      "top_speed": "120 kmph",
+      "max_torque": "15.9 Nm",
+      "top_speed": "130 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda Hornet 2.0 is a street bike with a 184.4cc engine delivering smooth and refined performance. It combines sporty and muscular styling with excellent fuel efficiency, making it suitable for daily commuting with athletic appeal.",
+      "features": ["Dual-channel ABS", "Full Digital TFT Instrument Cluster", "Bluetooth Connectivity", "LED Headlamps", "USD Front Forks", "Alloy Wheels", "Self Start", "5-Speed Manual Transmission"],
       "variants": [
         {
           "name": "Hornet 2.0 Standard",
-          "price": "₹1,47,152"
+          "price": "₹1,47,153"
         }
       ],
       "colors": [
-        "Pearl Igneous Black",
         "Radiant Red Metallic",
-        "Mat Axis Grey Metallic",
-        "Grand Prix Red"
+        "Athletic Blue Metallic",
+        "Pearl Igneous Black",
+        "Matte Axis Grey Metallic"
       ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2, Single-cylinder",
         "displacement": "184.4 cc",
         "max_power": "17.03 bhp",
-        "max_torque": "16.1 Nm",
+        "max_torque": "15.9 Nm",
         "transmission": "5-Speed Manual",
         "start_type": "Self Start",
         "fuel_tank": "12 liters",
+        "mileage_arai": "42.3 kmpl",
         "mileage_user": "45 kmpl",
-        "top_speed": "120 kmph",
+        "top_speed": "130 kmph",
         "kerb_weight": "142 kg",
         "front_brake": "Disc with ABS",
         "rear_brake": "Disc",
@@ -434,6 +454,8 @@
       "top_speed": "155 kmph",
       "source_section": "Discontinued",
       "fuel_type": "Petrol",
+      "description": "The Honda CB300F is a discontinued super bike powered by a 293.52cc BS6 engine, offering a balance of performance and efficiency with reported mileage of 35.5 kmpl. It features USD suspension and mobile connectivity.",
+      "features": ["Dual-channel ABS", "Mobile Phone Connectivity", "6-Speed Manual Transmission", "17-inch Alloy Wheels", "USD Front Suspension", "Monoshock Rear Suspension", "Front and Rear Disc Brakes"],
       "variants": [
         {
           "name": "CB300F Deluxe",
@@ -478,6 +500,8 @@
       "top_speed": "125 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda Hness CB350 is a street bike offering comfort, refinement, and classic styling ideal for daily commuting and long-distance cruising. It combines premium retro design with modern reliability and a refined 348cc engine.",
+      "features": ["Dual-channel ABS", "Front and Rear Disc Brakes", "Slip-Assist Clutch", "Torque Control", "Alloy Wheels", "Self Start", "5-Speed Manual Transmission", "Chrome Finish", "LED Headlamp"],
       "variants": [
         {
           "name": "Hness CB350 DLX",
@@ -493,10 +517,14 @@
         }
       ],
       "colors": [
-        "Pearl Igneous Black",
-        "Pearl Deep Ground Grey",
-        "Rebel Red Metallic",
-        "Athletic Blue Metallic"
+        "Pearl Igneous Black - Dlx",
+        "Pearl Deep Ground Grey - Dlx",
+        "Rebel Red Metallic - Dlx Pro",
+        "Pearl Deep Ground Grey - Dlx Pro",
+        "Pearl Igneous Black - Dlx Pro",
+        "Pearl Igneous Black - Dlx Pro Chrome",
+        "Pearl Deep Ground Grey - Dlx Pro Chrome",
+        "Athletic Blue Metallic - Dlx Pro Chrome"
       ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder",
@@ -509,6 +537,7 @@
         "mileage_user": "35 kmpl",
         "top_speed": "125 kmph",
         "kerb_weight": "181 kg",
+        "seat_height": "800 mm",
         "front_brake": "Disc with ABS",
         "rear_brake": "Disc with ABS",
         "braking_system": "Dual-channel ABS",
@@ -528,6 +557,8 @@
       "top_speed": "150 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda CB350RS is a neo-retro scrambler-style motorcycle available in India with a refined 348cc engine delivering smooth performance suitable for both city commuting and highway cruising.",
+      "features": ["Dual-channel ABS", "Front and Rear Disc Brakes", "Slipper Clutch", "Road Sync App Connectivity", "Alloy Wheels", "Self Start", "5-Speed Manual Transmission", "LED Headlamp"],
       "variants": [
         {
           "name": "CB350RS DLX",
@@ -577,6 +608,8 @@
       "top_speed": "180 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda NX500 is an adventure bike available at Rs. 6,32,126 with a 471cc BS6 Phase 2 engine delivering smooth, refined performance. It combines touring capability with daily commuting practicality, earning strong user ratings.",
+      "features": ["Dual-channel ABS", "Front and Rear Disc Brakes", "LED Lighting", "LCD Display", "Alloy Wheels", "Showa Suspension", "6-Speed Manual Transmission", "Self Start"],
       "variants": [
         {
           "name": "NX500 Standard",
@@ -619,6 +652,8 @@
       "top_speed": "210 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda CB650R is a sports bike available at Rs. 10,28,640 in India. It features a 649cc BS6 Phase 2B inline-four engine with 93.8 bhp power output and comes equipped with both front and rear disc brakes with anti-locking braking system.",
+      "features": ["Dual-channel ABS", "Front and Rear Disc Brakes", "Alloy Wheels", "Self Start", "6-Speed Manual Transmission", "Inline-Four Engine", "Traction Control"],
       "variants": [
         {
           "name": "CB650R Standard",
@@ -658,6 +693,8 @@
       "top_speed": "220 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda CBR650R is a sports bike that combines inline-four smoothness with sharp sport styling. It delivers precision performance suitable for both daily commuting and weekend riding, offering refined yet exciting performance characteristics.",
+      "features": ["Dual-channel ABS", "Front and Rear Disc Brakes", "Alloy Wheels", "Self Start", "6-Speed Manual Transmission", "Inline-Four Engine", "Sport-Touring Fairing"],
       "variants": [
         {
           "name": "CBR650R Standard",
@@ -677,6 +714,7 @@
         "start_type": "Self Start",
         "fuel_tank": "15.4 liters",
         "kerb_weight": "209 kg",
+        "seat_height": "810 mm",
         "front_brake": "Disc with ABS",
         "rear_brake": "Disc with ABS",
         "braking_system": "Dual-channel ABS",
@@ -696,6 +734,8 @@
       "top_speed": "200 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda CB750 Hornet is a street bike that delivers refined performance with a strong mid-range engine. It offers a super refined experience with excellent comfort levels for both city riding and long-distance touring.",
+      "features": ["Dual-channel ABS", "Front and Rear Disc Brakes", "Alloy Wheels", "Self Start", "6-Speed Manual Transmission", "Parallel-Twin Engine", "LED Headlamp"],
       "variants": [
         {
           "name": "CB750 Hornet Standard",
@@ -736,6 +776,8 @@
       "top_speed": "180 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda Transalp XL750 is an adventure bike available at a starting price of Rs. 11,78,649 in India. It features a 755cc engine designed for both on-road and light off-road capability with smooth mid-range performance.",
+      "features": ["Dual-channel ABS", "Front and Rear Disc Brakes", "Spoke Wheels", "Self Start", "6-Speed Manual Transmission", "Throttle-by-Wire", "Six Ride Modes", "E-Clutch (2026)", "LED Headlamp"],
       "variants": [
         {
           "name": "Transalp XL750 Standard",
@@ -777,6 +819,8 @@
       "top_speed": "240 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda CB1000 Hornet is a street bike powered by a 999cc engine producing 155 bhp. It combines aggressive streetfighter styling with reliable Honda engineering and premium suspension components for dynamic handling.",
+      "features": ["Dual-channel ABS", "Showa SFF-BP Fork Suspension", "Ohlins TTX36 Monoshock", "Front and Rear Disc Brakes", "Alloy Wheels", "Self Start", "6-Speed Manual Transmission", "LED Headlamp"],
       "variants": [
         {
           "name": "CB1000 Hornet Standard",
@@ -815,6 +859,8 @@
       "top_speed": "299 kmph",
       "source_section": "Discontinued",
       "fuel_type": "Petrol",
+      "description": "The Honda CBR1000RR-R Fireblade is a high-performance sports bike featuring a 1000cc engine with advanced technology. It combines racing-derived engineering with electronic controls for track and road use, and was last priced at ₹31,18,331.",
+      "features": ["Switchable ABS", "5-inch TFT Display", "Bluetooth Connectivity", "USB Charging Port", "LED Headlamp and DRLs", "Quickshifter", "Traction Control", "Wheelie Control", "Ohlins Electronic Suspension", "300mm Front Disc"],
       "variants": [
         {
           "name": "CBR1000RR-R Fireblade SP",
@@ -834,8 +880,8 @@
         "fuel_tank": "16.5 liters",
         "kerb_weight": "201 kg",
         "seat_height": "830 mm",
-        "front_brake": "Dual Disc with ABS",
-        "rear_brake": "Disc with ABS",
+        "front_brake": "Dual Disc with ABS (300mm)",
+        "rear_brake": "Disc with ABS (220mm)",
         "braking_system": "Switchable ABS",
         "wheel_type": "Alloy",
         "features": "5-inch TFT display, Bluetooth, Ohlins electronic suspension, Traction control, Wheelie control, Quickshifter, USB charging port"
@@ -844,38 +890,43 @@
     {
       "make": "Honda",
       "model": "Goldwing Tour",
-      "variant_name": "Goldwing Tour DCT",
+      "variant_name": "Goldwing Tour DCT With Airbag",
       "price": "₹43,12,654",
       "engine_displacement": "1833 cc",
-      "mileage": "15 kmpl",
-      "max_power": "122.5 bhp",
+      "mileage": "16 kmpl",
+      "max_power": "124.7 bhp",
       "max_torque": "170 Nm",
-      "top_speed": "180 kmph",
+      "top_speed": "230 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda Goldwing Tour is a luxury touring motorcycle engineered for long-distance comfort and performance. This premium bike delivers top-class performance with advanced technology and rider-focused features designed for extended journeys.",
+      "features": ["Dual-channel ABS", "Airbag System", "Cruise Control", "GPS Navigation", "TFT Instrument Cluster", "7-Speed DCT Automatic", "Mobile Connectivity", "USB Charging Port", "Front and Rear Disc Brakes", "Pillion Backrest"],
       "variants": [
         {
-          "name": "Goldwing Tour DCT",
+          "name": "Goldwing Tour DCT With Airbag",
           "price": "₹43,12,654"
         }
       ],
       "colors": [
-        "Candy Ardent Red"
+        "Gunmetal Black Metallic"
       ],
       "technical_specifications": {
         "engine_type": "Flat-six, Liquid-cooled",
         "displacement": "1833 cc",
-        "max_power": "122.5 bhp @ 5500 rpm",
+        "max_power": "124.7 bhp @ 5500 rpm",
         "max_torque": "170 Nm @ 4500 rpm",
         "transmission": "7-Speed DCT (Dual Clutch Transmission)",
         "start_type": "Self Start",
         "fuel_tank": "21.1 liters",
+        "mileage_user": "16 kmpl",
+        "top_speed": "230 kmph",
         "kerb_weight": "390 kg",
+        "seat_height": "745 mm",
         "front_brake": "Dual Disc with ABS",
         "rear_brake": "Disc with ABS",
         "braking_system": "Dual-channel ABS",
         "wheel_type": "Alloy",
-        "features": "GPS Navigation, Mobile connectivity, Digital instrument cluster, USB charging port, Pillion backrest"
+        "features": "GPS Navigation, Mobile connectivity, TFT instrument cluster, USB charging port, Pillion backrest, Airbag, Cruise control"
       }
     },
     {
@@ -886,10 +937,12 @@
       "engine_displacement": "109.51 cc",
       "mileage": "47 kmpl",
       "max_power": "7.88 bhp",
-      "max_torque": "9 Nm",
-      "top_speed": "83 kmph",
+      "max_torque": "9.05 Nm",
+      "top_speed": "85 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda Activa is a 110cc scooter priced between Rs. 78,004 - Rs. 91,451, offering excellent refinement with good fuel efficiency and reliability for daily city commuting. It is India's best-selling two-wheeler.",
+      "features": ["Combined Braking System", "Kick and Self Start", "USB Charging Port (H-Smart)", "BS6 Phase 2B Compliant", "Telescopic Front Suspension", "LED Headlamp (H-Smart)", "Digital Instrument Cluster"],
       "variants": [
         {
           "name": "Activa Standard",
@@ -905,29 +958,31 @@
         },
         {
           "name": "Activa 25-year Anniversary Edition",
-          "price": "₹83,500"
+          "price": "₹91,451"
         }
       ],
       "colors": [
+        "Rebel Red Metallic",
         "Pearl Siren Blue",
-        "Pearl Igneous Black",
         "Pearl Precious White",
+        "Pearl Igneous Black",
         "Mat Axis Gray Metallic",
-        "Imperial Red Metallic",
-        "Rebel Red Metallic"
+        "Decent Blue Metallic",
+        "Mat Steel Black Metallic (Anniversary)",
+        "Pearl Siren Blue (Anniversary)"
       ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2, Single-cylinder",
         "displacement": "109.51 cc",
         "max_power": "7.88 bhp @ 8000 rpm",
-        "max_torque": "9 Nm",
+        "max_torque": "9.05 Nm",
         "transmission": "CVT Automatic",
         "start_type": "Kick and Self Start",
         "fuel_tank": "5.3 liters",
         "mileage_user": "47 kmpl",
-        "top_speed": "83 kmph",
-        "kerb_weight": "107 kg",
-        "seat_height": "765 mm",
+        "top_speed": "85 kmph",
+        "kerb_weight": "106 kg",
+        "seat_height": "764 mm",
         "front_brake": "Drum",
         "rear_brake": "Drum",
         "braking_system": "Combined Braking System",
@@ -946,6 +1001,8 @@
       "top_speed": "90 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda Activa 125 is a scooter available at a price range of Rs. 92,297 - Rs. 97,373 in India with a smooth 125cc engine and strong build quality suited for daily urban commuting.",
+      "features": ["Combined Braking System", "Front Disc Brake", "USB Charging Port", "CVT Automatic Transmission", "Alloy Wheels", "Digital Instrument Cluster", "Kick and Self Start", "LED Headlamp"],
       "variants": [
         {
           "name": "Activa 125 25-year Anniversary Edition",
@@ -1001,6 +1058,8 @@
       "top_speed": "80 kmph",
       "source_section": "Available",
       "fuel_type": "Electric",
+      "description": "The Honda Activa e is an electric scooter available at a price range of Rs. 1,19,445 - Rs. 1,52,463 in India. It delivers a silent, smooth riding experience with a 102 km riding range on a single charge and dual battery option.",
+      "features": ["TFT Digital Display", "USB Charging Port (Type-C)", "Front Disc Brake", "LED Lights", "Dual Battery Option", "Swappable Battery", "Combined Braking System", "Eco and Power Ride Modes"],
       "variants": [
         {
           "name": "Activa e Standard",
@@ -1018,13 +1077,24 @@
         "Pearl Misty White",
         "Pearl Shallow Blue"
       ],
+      "specifications": {
+        "Motor Power": "6 kW",
+        "Range": "102 km",
+        "Battery Capacity": "1.5 kWh x2 (Swappable)",
+        "Top Speed": "80 kmph",
+        "Charging": "USB Type-C charging port",
+        "Kerb Weight": "118 kg",
+        "Front Brake": "Disc",
+        "Rear Brake": "Drum",
+        "Braking System": "Combined Braking System"
+      },
       "technical_specifications": {
         "motor_type": "Electric",
         "power": "6 kW",
         "range": "102 km",
         "top_speed": "80 kmph",
-        "battery": "Dual battery option",
-        "charging": "USB + C-type charging port",
+        "battery": "Dual swappable battery option",
+        "charging": "USB Type-C charging port",
         "kerb_weight": "118 kg",
         "front_brake": "Disc",
         "rear_brake": "Drum",
@@ -1044,6 +1114,8 @@
       "top_speed": "83 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda Dio is a scooter priced between Rs. 74,136 - Rs. 85,803 in India, featuring a 109.51cc BS6 Phase 2B engine with good mileage and easy to maintain characteristics. It is designed for young urban riders.",
+      "features": ["Combined Braking System", "Kick and Self Start", "USB Charging Port (Deluxe)", "Steel Wheels", "Lightweight Design (106 kg)", "BS6 Phase 2B Compliant"],
       "variants": [
         {
           "name": "Dio Standard",
@@ -1051,7 +1123,7 @@
         },
         {
           "name": "Dio Deluxe",
-          "price": "₹85,801"
+          "price": "₹85,803"
         }
       ],
       "colors": [
@@ -1083,7 +1155,7 @@
       "make": "Honda",
       "model": "Dio 125",
       "variant_name": "Dio 125 Standard",
-      "price": "₹92,761",
+      "price": "₹92,762",
       "engine_displacement": "123.92 cc",
       "mileage": "47 kmpl",
       "max_power": "8.19 bhp",
@@ -1091,10 +1163,12 @@
       "top_speed": "95 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda Dio 125 is a scooter available at a price range of Rs. 92,762 - Rs. 97,712 in India with a refined 123.92cc engine designed for city commuting and youth-oriented riders.",
+      "features": ["Combined Braking System", "Front Disc Brake", "Alloy Wheels", "ACG Silent Start System", "USB Charging Port", "Kick and Self Start", "BS6 Phase 2B Compliant", "LED Headlamp"],
       "variants": [
         {
           "name": "Dio 125 Standard",
-          "price": "₹92,761"
+          "price": "₹92,762"
         },
         {
           "name": "Dio 125 X Edition",
@@ -1144,6 +1218,8 @@
       "top_speed": "50 kmph",
       "source_section": "Available",
       "fuel_type": "Electric",
+      "description": "The Honda QC1 is an electric scooter available at a starting price of Rs. 90,001 in India. It features combined braking on both wheels and comes with a practical design for daily urban commuting with a 5-year warranty.",
+      "features": ["5-inch LCD Instrument Panel", "LED Headlights", "USB Type-C Charging Port", "Combined Braking System", "12-inch Front and 10-inch Rear Alloy Wheels", "Under-seat Luggage Compartment", "5-Year Warranty", "Telescopic Front Forks"],
       "variants": [
         {
           "name": "QC1 Standard",
@@ -1157,6 +1233,13 @@
         "Pearl Shallow Blue",
         "Pearl Serenity Blue"
       ],
+      "specifications": {
+        "Motor Power": "1.8 kW",
+        "Range": "80 km",
+        "Battery Capacity": "1.5 kWh (fixed)",
+        "Top Speed": "50 kmph",
+        "Charging Time": "6.5 hours (0-100%)"
+      },
       "technical_specifications": {
         "motor_type": "Electric",
         "power": "1.8 kW",
@@ -1175,38 +1258,41 @@
       "make": "Honda",
       "model": "X-ADV 750",
       "variant_name": "X-ADV 750 Standard",
-      "price": "₹12,50,000",
+      "price": "₹13,20,563",
       "engine_displacement": "745 cc",
       "mileage": "22 kmpl",
-      "max_power": "58.6 bhp",
+      "max_power": "57.79 bhp",
       "max_torque": "69 Nm",
       "top_speed": "170 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Honda X-ADV is an adventure bike available at a starting price of Rs. 13,20,563 in India that blends scooter practicality with adventure bike capabilities. This hybrid vehicle offers weather protection and rugged suspension for both commuting and off-road exploration.",
+      "features": ["Dual-channel ABS", "6-Speed DCT Automatic Transmission", "Smart Key System", "5-inch TFT Display with Phone Connectivity", "LED Under-seat Storage Lighting", "Long-travel Suspension", "Front and Rear Disc Brakes", "Honda Selectable Torque Control"],
       "variants": [
         {
           "name": "X-ADV 750 Standard",
-          "price": "₹12,50,000"
+          "price": "₹13,20,563"
         }
       ],
       "colors": [
-        "Mat Gunpowder Black Metallic",
-        "Grand Prix Red"
+        "Graphite Black",
+        "Pearl Glare White"
       ],
       "technical_specifications": {
-        "engine_type": "Parallel-twin, Liquid-cooled",
+        "engine_type": "Parallel-twin, Liquid-cooled, BS6 Phase 2B",
         "displacement": "745 cc",
-        "max_power": "58.6 bhp",
+        "max_power": "57.79 bhp",
         "max_torque": "69 Nm",
-        "transmission": "DCT Automatic",
+        "transmission": "6-Speed DCT Automatic",
         "start_type": "Self Start",
         "fuel_tank": "13.2 liters",
-        "kerb_weight": "238 kg",
+        "kerb_weight": "237 kg",
+        "seat_height": "820 mm",
         "front_brake": "Dual Disc with ABS",
         "rear_brake": "Disc with ABS",
         "braking_system": "Dual-channel ABS",
         "wheel_type": "Alloy",
-        "features": "Adventure scooter, DCT automatic, TFT display, Honda Selectable Torque Control"
+        "features": "Adventure scooter, DCT automatic, TFT display, Honda Selectable Torque Control, Smart Key"
       }
     }
   ]

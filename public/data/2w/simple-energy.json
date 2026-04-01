@@ -8,47 +8,73 @@
     {
       "make": "Simple Energy",
       "model": "Simple One",
-      "variant_name": "Simple One 5 kWh",
-      "price": "₹1,59,900 - ₹1,89,900",
+      "variant_name": "Simple One Gen 2",
+      "price": "₹1,69,999 - ₹1,77,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Simple One Gen 2 is a high-performance electric scooter offering up to 265 km of ARAI-certified range, a 7-inch TFT touchscreen with Google Maps, and a 6 riding mode system. It features 5G eSIM with LTE, Wi-Fi, Bluetooth, OTA updates, and the Simple Connect app for a fully connected riding experience.",
+      "features": [
+        "7-inch TFT Touchscreen with Google Maps Navigation",
+        "5G eSIM / LTE / Wi-Fi / Bluetooth Connectivity",
+        "OTA Software Updates",
+        "6 Riding Modes (Eco X, Eco, Ride, Air, Sonic, Sonic X)",
+        "Fast Charging",
+        "TPMS (Tyre Pressure Monitoring System)",
+        "Geo-fencing & Time-fencing",
+        "Super Share (Live Location Sharing)",
+        "Find My Vehicle & Park Assist",
+        "35-litre Underseat Storage"
+      ],
+      "colors": ["Brazen X", "Aero X", "Light X", "Asphalt X", "Aero Grey", "Grace White", "Azure Blue", "Brazen Black", "Sonic Red"],
+      "variants": [
+        { "name": "Simple One 4.5 kWh", "price": "₹1,69,999" },
+        { "name": "Simple One 5 kWh", "price": "₹1,77,999" }
+      ],
       "specifications": {
-        "Motor Power": "8.5 kW",
-        "Range": "203 km",
+        "Motor Power": "8.5 kW peak",
+        "Range": "265 km",
         "Battery Capacity": "5 kWh",
-        "Top Speed": "105 kmph",
+        "Top Speed": "115 kmph",
         "Riding Modes": "Yes",
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
-      "max_torque": "72 Nm",
-      "colors": ["Namma Red", "Grace White", "Azure Blue", "Pearl Black", "Desert Gold"],
-      "variants": [
-        { "name": "Simple One 4 kWh", "price": "₹1,59,900" },
-        { "name": "Simple One 5 kWh", "price": "₹1,89,900" }
-      ]
+      "max_torque": "72 Nm"
     },
     {
       "make": "Simple Energy",
-      "model": "Simple Dot One",
-      "variant_name": "Simple Dot One",
-      "price": "₹99,999",
+      "model": "Simple OneS",
+      "variant_name": "Simple OneS",
+      "price": "₹1,39,000",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Simple OneS is Simple Energy's value-focused electric scooter featuring a 7-inch TFT display, 5G eSIM connectivity, and 181 km of range. It offers four riding modes, Bluetooth with call management, geo-fencing, and OTA updates at a more accessible price point.",
+      "features": [
+        "7-inch TFT Touchscreen Dashboard",
+        "5G eSIM / Bluetooth Connectivity",
+        "OTA Software Updates",
+        "4 Riding Modes (Eco, Ride, Dash, Sonic)",
+        "GPS Navigation",
+        "Geo-fencing & Anti-theft Alerts",
+        "Call Management via Dashboard",
+        "Find My Vehicle & Park Assist",
+        "Fast Charging",
+        "35-litre Underseat Storage"
+      ],
+      "colors": ["Brazen X", "Aero X", "Light X", "Asphalt X", "Grace White", "Azure Blue", "Brazen Black"],
+      "variants": [
+        { "name": "Simple OneS 3.7 kWh", "price": "₹1,39,000" }
+      ],
       "specifications": {
-        "Motor Power": "4.5 kW",
-        "Range": "151 km",
-        "Battery Capacity": "3.3 kWh",
+        "Motor Power": "6.4 kW peak",
+        "Range": "181 km",
+        "Battery Capacity": "3.7 kWh",
         "Top Speed": "90 kmph",
         "Riding Modes": "Yes",
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
-      "max_torque": "50 Nm",
-      "colors": ["Namma Red", "Grace White", "Azure Blue", "Pearl Black"],
-      "variants": [
-        { "name": "Simple Dot One 3.3 kWh", "price": "₹99,999" }
-      ]
+      "max_torque": "52 Nm"
     }
   ]
 }

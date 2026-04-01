@@ -9,11 +9,29 @@
       "make": "Tork Motors",
       "model": "Kratos R",
       "variant_name": "Tork Kratos R",
-      "price": "₹1,34,999",
+      "price": "₹1,30,832 - ₹1,67,884",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Tork Kratos R is a performance-oriented electric motorcycle offering 180 km of range and a 105 kmph top speed with a 9 kW peak motor. It features a Track mode activatable via Bluetooth, OTA updates, geo-fencing, crash alerts, and turn-by-turn navigation, making it one of the most connected electric motorcycles in India.",
+      "features": [
+        "Fully Digital Instrument Cluster with Navigation",
+        "Bluetooth Connectivity & Tork App",
+        "OTA Software Updates",
+        "Geo-fencing & Find My Vehicle",
+        "4 Riding Modes (Eco, City, Sport, Track)",
+        "Track Mode via Bluetooth",
+        "Fast Charging",
+        "Crash Alert",
+        "Reverse Mode",
+        "USB Charging Port & Anti-theft"
+      ],
+      "colors": ["Jet Black", "Innocent White", "Streaky Red", "Midnight Black", "Oceanic Blue"],
+      "variants": [
+        { "name": "Kratos R Standard", "price": "₹1,30,832" },
+        { "name": "Kratos R (Top Variant)", "price": "₹1,67,884" }
+      ],
       "specifications": {
-        "Motor Power": "9 kW",
+        "Motor Power": "9 kW peak",
         "Range": "180 km",
         "Battery Capacity": "4 kWh",
         "Top Speed": "105 kmph",
@@ -21,11 +39,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
-      "max_torque": "38 Nm",
-      "colors": ["Volcanic Black", "Snow White", "Carnelian Orange", "Mirage Blue"],
-      "variants": [
-        { "name": "Kratos R 4 kWh", "price": "₹1,34,999" }
-      ]
+      "max_torque": "38 Nm"
     },
     {
       "make": "Tork Motors",
@@ -34,8 +48,25 @@
       "price": "₹1,24,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Tork Kratos X is the standard variant of the Kratos electric motorcycle, featuring a 7.5 kW motor, 140 km of range, and a top speed of 100 kmph. It includes a digital instrument cluster, riding modes, Bluetooth connectivity, and OTA updates for a connected riding experience.",
+      "features": [
+        "Fully Digital Instrument Cluster",
+        "Bluetooth Connectivity",
+        "OTA Software Updates",
+        "3 Riding Modes (Eco, City, Sport)",
+        "Reverse Mode",
+        "USB Charging Port",
+        "Disc Brakes (Front & Rear)",
+        "LED Lighting",
+        "Anti-theft System",
+        "Regenerative Braking"
+      ],
+      "colors": ["Volcanic Black", "Snow White", "Carnelian Orange", "Mirage Blue"],
+      "variants": [
+        { "name": "Kratos X 3 kWh", "price": "₹1,24,999" }
+      ],
       "specifications": {
-        "Motor Power": "7.5 kW",
+        "Motor Power": "7.5 kW peak",
         "Range": "140 km",
         "Battery Capacity": "3 kWh",
         "Top Speed": "100 kmph",
@@ -43,11 +74,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
-      "max_torque": "38 Nm",
-      "colors": ["Volcanic Black", "Snow White", "Carnelian Orange", "Mirage Blue"],
-      "variants": [
-        { "name": "Kratos X 3 kWh", "price": "₹1,24,999" }
-      ]
+      "max_torque": "38 Nm"
     }
   ]
 }

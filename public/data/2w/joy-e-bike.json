@@ -12,6 +12,16 @@
       "price": "₹89,399",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Joy e-bike Wolf Plus is a sporty commuter electric scooter from Wardwizard Innovations, offering 90 km range and a sharp design for young urban riders in India.",
+      "features": [
+        "Digital Instrument Cluster",
+        "Anti-Theft Alarm",
+        "Reverse Mode",
+        "Ride Modes (Eco/Sport)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "90 km",
@@ -33,6 +43,16 @@
       "price": "₹79,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Joy e-bike Mihos is a budget-friendly electric scooter designed for hassle-free city commuting, offering 90 km range with practical features at an attractive price point.",
+      "features": [
+        "Digital Speedometer",
+        "Anti-Theft Alarm",
+        "Ride Modes (Eco/Power)",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "BLDC Hub Motor",
+        "Low Maintenance Design"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "90 km",
@@ -54,6 +74,16 @@
       "price": "₹95,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Joy e-bike Monster lives up to its name with bold aggressive styling, a 100 km range, and strong 55 Nm torque, making it Joy's premium offering for performance-seeking urban riders.",
+      "features": [
+        "Aggressive Muscular Design",
+        "Digital Console with Speedometer",
+        "Anti-Theft with Remote Immobilizer",
+        "Reverse Mode",
+        "Ride Modes (Eco/Sport)",
+        "Fast Charging",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "100 km",
@@ -75,6 +105,16 @@
       "price": "₹64,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Joy e-bike Glob is an ultra-affordable low-speed electric scooter ideal for short-distance urban trips, senior citizens, and those seeking a no-licence commuter option under ₹65,000.",
+      "features": [
+        "No Driving Licence Required",
+        "Lightweight & Compact",
+        "Digital Speedometer",
+        "Anti-Theft Alarm",
+        "USB Charging Port",
+        "Regenerative Braking",
+        "Easy Park Assist"
+      ],
       "specifications": {
         "Motor Power": "250 W",
         "Range": "60 km",

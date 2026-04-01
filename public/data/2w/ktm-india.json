@@ -2,6 +2,8 @@
   "brand": "KTM",
   "brandId": "ktm-india",
   "type": "2w",
+  "lastUpdated": "2026-04-01",
+  "source": "BikeWale",
   "vehicles": [
     {
       "make": "KTM",
@@ -14,12 +16,23 @@
       "max_torque": "12 Nm",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "variants": [
-        { "name": "RC 125 Standard", "price": "₹1,88,074" }
+      "description": "The KTM RC 125 is a discontinued sports bike powered by a 124.7cc BS6 liquid-cooled engine. It delivered 14.34 bhp and achieved an owner-reported mileage of 38 kmpl, with a top speed of 120 kmph.",
+      "features": [
+        "Switchable ABS braking system",
+        "Front and rear disc brakes (320mm front, 230mm rear)",
+        "Digital instrument cluster with speedometer, odometer, fuel gauge, and tachometer",
+        "WP APEX suspension (43mm USD front forks, rear monoshock)",
+        "6-speed manual transmission with chain drive",
+        "Alloy 17-inch wheels with tubeless tyres",
+        "Self-start ignition with kill switch",
+        "Stand alarm and gear shift light indicators"
       ],
       "colors": [
         "Black",
         "Blue"
+      ],
+      "variants": [
+        { "name": "RC 125 Standard [2022]", "price": "₹1,88,074" }
       ],
       "technical_specifications": {
         "engine_displacement_cc": 124.7,
@@ -56,13 +69,24 @@
       "max_torque": "15.5 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "variants": [
-        { "name": "RC 160 Standard", "price": "₹1,84,998" }
+      "description": "The KTM RC 160 is a sports bike featuring a 164.2cc BS6 Phase 2B engine that delivers 18.73 bhp and 15.5 Nm torque. It weighs 155 kg with a 13.7-liter fuel tank capacity and achieves a top speed of 118 kmph.",
+      "features": [
+        "Single-channel ABS braking system",
+        "Front and rear disc brakes",
+        "6-speed manual transmission",
+        "LCD instrument cluster with Bluetooth connectivity",
+        "Full fairing aerodynamic bodywork",
+        "Alloy 17-inch wheels with tubeless tyres",
+        "Self-start ignition",
+        "WP APEX suspension"
       ],
       "colors": [
         "Ceramic White Matte",
         "Electronic Orange Matte",
         "Black"
+      ],
+      "variants": [
+        { "name": "RC 160 Standard", "price": "₹1,84,998" }
       ],
       "technical_specifications": {
         "engine_displacement_cc": 164.2,
@@ -98,12 +122,25 @@
       "max_torque": "12 Nm",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "variants": [
-        { "name": "125 Duke Standard", "price": "₹1,77,253" }
+      "description": "The KTM 125 Duke is a street bike featuring a 124.9cc BS6 Phase 2 compliant engine, representing the most powerful option in its segment with modern styling and contemporary features.",
+      "features": [
+        "Single-channel ABS braking system",
+        "Front and rear disc brakes",
+        "6-speed manual transmission",
+        "LCD instrument cluster",
+        "LED headlamp",
+        "Alloy wheels",
+        "Self-start ignition",
+        "Trellis frame with WP suspension"
       ],
       "colors": [
         "Ceramic White",
-        "Electronic Orange"
+        "Electronic Orange",
+        "Atlantic Blue",
+        "Electronic Orange Metallic"
+      ],
+      "variants": [
+        { "name": "125 Duke Standard", "price": "₹1,77,253" }
       ],
       "technical_specifications": {
         "engine_displacement_cc": 124.7,
@@ -140,14 +177,25 @@
       "max_torque": "15.5 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "variants": [
-        { "name": "160 Duke LCD Cluster", "price": "₹1,70,875" },
-        { "name": "160 Duke TFT Cluster", "price": "₹1,78,756" }
+      "description": "The KTM 160 Duke is a lightweight street bike powered by a 164.2cc BS6 Phase 2B liquid-cooled engine producing 18.73 bhp. It offers sharp naked-bike styling and is available with either LCD or TFT instrument cluster options.",
+      "features": [
+        "Single-channel ABS braking system",
+        "Front and rear disc brakes",
+        "6-speed manual transmission",
+        "LCD or TFT instrument cluster options",
+        "LED headlamp",
+        "Alloy wheels",
+        "WP upside-down front forks",
+        "Self-start ignition"
       ],
       "colors": [
         "Silver Metallic Matt",
         "Atlantic Blue",
         "Electronic Orange"
+      ],
+      "variants": [
+        { "name": "160 Duke LCD Cluster", "price": "₹1,70,875" },
+        { "name": "160 Duke TFT Cluster", "price": "₹1,78,756" }
       ],
       "technical_specifications": {
         "engine_displacement_cc": 164.2,
@@ -184,15 +232,26 @@
       "max_torque": "19.2 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "variants": [
-        { "name": "RC 200 Standard", "price": "₹2,16,777" },
-        { "name": "RC 200 GP Edition", "price": "₹2,16,777" }
+      "description": "The KTM RC 200 is a sports bike with a 199.5 cc BS6 Phase 2B engine, delivering 24.6 bhp and achieving 43.5 kmpl mileage. It features both front and rear disc brakes with ABS and a full-fairing race-inspired design.",
+      "features": [
+        "Single-channel ABS braking system",
+        "Front and rear disc brakes",
+        "6-speed manual transmission",
+        "Full-fairing aerodynamic bodywork",
+        "Alloy 17-inch wheels with tubeless tyres",
+        "Self-start ignition",
+        "WP APEX USD front forks",
+        "LED headlamp"
       ],
       "colors": [
         "GP Edition",
         "Metallic Grey",
         "Black",
         "Blue"
+      ],
+      "variants": [
+        { "name": "RC 200 Standard", "price": "₹2,16,777" },
+        { "name": "RC 200 GP Edition", "price": "₹2,16,777" }
       ],
       "technical_specifications": {
         "engine_displacement_cc": 199.5,
@@ -229,15 +288,26 @@
       "max_torque": "19.3 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "variants": [
-        { "name": "200 Duke Standard", "price": "₹1,91,570" },
-        { "name": "200 Duke Standard [2026]", "price": "₹1,94,003" }
+      "description": "The KTM 200 Duke is a lightweight street bike with aggressive styling and sporty performance, powered by a 199.5cc liquid-cooled engine producing 24.67 bhp and 19.3 Nm torque.",
+      "features": [
+        "Dual-channel ABS braking system",
+        "Front and rear disc brakes",
+        "WP upside-down front forks and monoshock rear suspension",
+        "LED headlamp with TFT display",
+        "6-speed manual transmission",
+        "Split trellis frame design",
+        "Alloy wheels",
+        "13.4-liter fuel tank capacity"
       ],
       "colors": [
         "Dark Galvano",
         "Metallic Silver",
         "Electronic Orange",
         "Atlantic Blue"
+      ],
+      "variants": [
+        { "name": "200 Duke Standard", "price": "₹1,91,570" },
+        { "name": "200 Duke Standard [2026]", "price": "₹1,94,003" }
       ],
       "technical_specifications": {
         "engine_displacement_cc": 199.5,
@@ -275,14 +345,25 @@
       "max_torque": "25 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "variants": [
-        { "name": "250 Duke Standard", "price": "₹2,13,970" }
+      "description": "The KTM 250 Duke is a street bike powered by a 249cc BS6 Phase 2B liquid-cooled engine delivering 30.57 bhp, with a 6-speed assist and slipper clutch gearbox and WP APEX adjustable suspension.",
+      "features": [
+        "Dual-channel ABS braking system",
+        "Front and rear disc brakes (320mm front, 230mm rear)",
+        "WP APEX USD 43mm front forks with 10-step adjustable monoshock",
+        "TFT instrument cluster",
+        "6-speed manual transmission with assist and slipper clutch",
+        "Split trellis tubular steel frame",
+        "Alloy 17-inch wheels with tubeless tyres",
+        "Bi-directional quickshifter"
       ],
       "colors": [
         "Metallic Silver",
         "Atlantic Blue",
         "Ebony Black",
         "Electronic Orange"
+      ],
+      "variants": [
+        { "name": "250 Duke Standard", "price": "₹2,13,970" }
       ],
       "technical_specifications": {
         "engine_displacement_cc": 249,
@@ -319,12 +400,23 @@
       "max_torque": "25 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "variants": [
-        { "name": "250 Adventure Standard", "price": "₹2,42,135" }
+      "description": "The KTM 250 Adventure is an entry-level adventure touring motorcycle powered by a 248.76cc BS6 Phase 2 engine, offering a blend of performance and off-road capability with a lightweight trellis frame design.",
+      "features": [
+        "Dual-channel ABS on both front and rear disc brakes",
+        "5-inch color TFT display with Bluetooth connectivity",
+        "Bi-directional quickshifter for smooth gear changes",
+        "WP Apex suspension for off-road and highway performance",
+        "Rally-inspired bodywork with LED lighting",
+        "6-speed manual transmission",
+        "Ride-by-wire engine management",
+        "Off-road capable with long-travel suspension"
       ],
       "colors": [
         "Ceramic White",
         "Electronic Orange"
+      ],
+      "variants": [
+        { "name": "250 Adventure Standard", "price": "₹2,42,135" }
       ],
       "technical_specifications": {
         "engine_displacement_cc": 249,
@@ -362,14 +454,25 @@
       "max_torque": "37 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "variants": [
-        { "name": "RC 390 GP Edition", "price": "₹3,23,068" },
-        { "name": "RC 390 Standard", "price": "₹3,23,497" }
+      "description": "The KTM RC 390 is a lightweight sports bike powered by a 373cc liquid-cooled engine delivering 42.9 bhp, combining sharp race-inspired styling with advanced technology and responsive handling suitable for both track and street riding.",
+      "features": [
+        "Dual-channel ABS with 320mm front and 230mm rear disc brakes",
+        "WP Apex adjustable USD front forks and rear monoshock suspension",
+        "Full LED lighting with full-colour TFT display",
+        "Slipper clutch and quickshifter technology",
+        "Smartphone connectivity via KTM My Ride app",
+        "Ride-by-wire with multiple riding modes",
+        "Metzeler high-performance tyres",
+        "Lightweight trellis frame at 172 kg"
       ],
       "colors": [
         "GP Edition",
         "Orange",
         "Blue"
+      ],
+      "variants": [
+        { "name": "RC 390 GP Edition", "price": "₹3,23,068" },
+        { "name": "RC 390 Standard", "price": "₹3,23,497" }
       ],
       "technical_specifications": {
         "engine_displacement_cc": 373,
@@ -410,13 +513,24 @@
       "max_torque": "39 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "variants": [
-        { "name": "390 Duke Standard", "price": "₹2,99,896" }
+      "description": "The KTM 390 Duke is a street bike featuring a 398.63cc liquid-cooled engine delivering 45.3 bhp and 39 Nm torque, designed for riders seeking sharp performance and aggressive styling.",
+      "features": [
+        "Ride-by-wire system with multiple riding modes (Street, Rain, Track)",
+        "Cornering ABS and traction control for advanced safety",
+        "Full-colour TFT display with Bluetooth connectivity",
+        "WP USD front forks and rear monoshock suspension",
+        "Front and rear disc brakes with dual-channel ABS",
+        "6-speed manual transmission",
+        "Alloy wheels with 820mm seat height",
+        "Quickshifter+ for seamless gear changes"
       ],
       "colors": [
         "Grey",
         "Atlantic Blue",
         "Electronic Orange"
+      ],
+      "variants": [
+        { "name": "390 Duke Standard", "price": "₹2,99,896" }
       ],
       "technical_specifications": {
         "engine_displacement_cc": 399,
@@ -456,12 +570,23 @@
       "max_torque": "39 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "variants": [
-        { "name": "390 Adventure Standard", "price": "₹3,97,316" }
+      "description": "The KTM 390 Adventure is an adventure motorcycle powered by a 398.63 cc BS6 Phase 2 engine delivering 45.3 bhp and 39 Nm torque, weighing 182 kg with a 14.5-liter fuel tank capacity.",
+      "features": [
+        "Cornering ABS with off-road mode",
+        "Front and rear disc brakes",
+        "5-inch TFT display with Bluetooth connectivity",
+        "Adjustable front and rear WP suspension (230mm travel)",
+        "Riding modes: Street, Rain, and Off-road",
+        "Quickshifter+ for seamless gear changes",
+        "Cruise control functionality",
+        "Spoke wheels with tubeless tyres"
       ],
       "colors": [
         "Ceramic White",
         "Electronic Orange"
+      ],
+      "variants": [
+        { "name": "390 Adventure Standard", "price": "₹3,97,316" }
       ],
       "technical_specifications": {
         "engine_displacement_cc": 399,
@@ -501,11 +626,22 @@
       "max_torque": "39 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "variants": [
-        { "name": "390 Adventure R Standard", "price": "₹3,78,524" }
+      "description": "The KTM 390 Adventure R is an adventure motorcycle featuring a 398.7cc BS6 Phase 2B engine that produces 44.2 bhp and 39 Nm of torque, combining off-road capability with road comfort in an entry-level adventure machine.",
+      "features": [
+        "Off-road ABS with rear ABS disable option",
+        "Front and rear disc brakes",
+        "6-speed manual transmission",
+        "Spoke-type wheels for off-road performance",
+        "Preload-adjustable WP front suspension",
+        "TFT display with electronics suite",
+        "14-liter fuel tank capacity",
+        "High ground clearance with 880mm seat height"
       ],
       "colors": [
         "Orange"
+      ],
+      "variants": [
+        { "name": "390 Adventure R Standard", "price": "₹3,78,524" }
       ],
       "technical_specifications": {
         "engine_displacement_cc": 399,
@@ -542,12 +678,23 @@
       "max_torque": "39 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "variants": [
-        { "name": "390 Adventure X Standard", "price": "₹3,28,615" }
+      "description": "The KTM 390 Adventure X is a street-focused adventure bike powered by a 398.63cc BS6 Phase 2B engine delivering 45.3 bhp and 39 Nm of torque, offering strong performance for touring and highway riding.",
+      "features": [
+        "Dual-channel ABS with off-road mode",
+        "Front and rear disc brakes",
+        "6-speed manual transmission",
+        "TFT display with connectivity",
+        "Alloy wheels",
+        "14.5-liter fuel tank capacity",
+        "825mm seat height",
+        "Cruise control"
       ],
       "colors": [
         "Ceramic White",
         "Electronic Orange"
+      ],
+      "variants": [
+        { "name": "390 Adventure X Standard", "price": "₹3,28,615" }
       ],
       "technical_specifications": {
         "engine_displacement_cc": 399,
@@ -584,12 +731,23 @@
       "max_torque": "39 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "variants": [
-        { "name": "390 Enduro R Standard", "price": "₹3,42,191" },
-        { "name": "390 Enduro R Global Spec", "price": "₹3,54,938" }
+      "description": "The KTM 390 Enduro R is a street bike designed for both road and off-road riding, powered by a 398.63cc BS6 Phase 2B engine delivering 45.37 bhp and 39 Nm torque with enduro-specific hardware.",
+      "features": [
+        "Off-road ABS with supermoto mode (rear ABS switchoff)",
+        "Front and rear disc brakes",
+        "6-speed manual transmission with quickshifter",
+        "Spoke-type wheels for off-road capability",
+        "9-liter compact fuel tank",
+        "860mm seat height for stand-up riding",
+        "Enduro-specific long-travel suspension",
+        "Lightweight at 177 kg"
       ],
       "colors": [
         "Orange"
+      ],
+      "variants": [
+        { "name": "390 Enduro R Standard", "price": "₹3,42,191" },
+        { "name": "390 Enduro R Global Spec", "price": "₹3,54,938" }
       ],
       "technical_specifications": {
         "engine_displacement_cc": 399,
@@ -626,11 +784,22 @@
       "max_torque": "99 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "variants": [
-        { "name": "890 Duke R Standard", "price": "₹14,50,000" }
+      "description": "The KTM 890 Duke R is a naked street bike powered by an 889cc BS6 Phase 2 engine delivering 119 bhp and 99 Nm torque, with an ARAI mileage rating of 21 kmpl and a top speed of 230 kmph.",
+      "features": [
+        "Cornering ABS with dual disc front brakes",
+        "TFT display with smartphone connectivity",
+        "Multiple riding modes and traction control",
+        "Quickshifter+ for bidirectional gear changes",
+        "WP Apex fully adjustable suspension",
+        "6-speed manual transmission",
+        "Alloy wheels",
+        "Lightweight 180 kg kerb weight"
       ],
       "colors": [
         "Orange"
+      ],
+      "variants": [
+        { "name": "890 Duke R Standard", "price": "₹14,50,000" }
       ],
       "technical_specifications": {
         "engine_displacement_cc": 889,
@@ -669,11 +838,22 @@
       "max_torque": "145 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "variants": [
-        { "name": "1390 Super Duke R Standard", "price": "₹22,95,800" }
+      "description": "The KTM 1390 Super Duke R is a premium naked streetfighter powered by a 1350cc engine delivering 187.7 bhp, featuring advanced electronics and excellent handling characteristics for experienced riders.",
+      "features": [
+        "Cornering ABS for enhanced braking performance",
+        "Advanced electronics with multiple riding modes",
+        "Traction control and launch control",
+        "Quickshifter for seamless gear changes",
+        "TFT display with clear informative readouts",
+        "Fully adjustable front and rear suspension",
+        "Dual disc front brakes",
+        "6-speed manual transmission"
       ],
       "colors": [
         "Orange"
+      ],
+      "variants": [
+        { "name": "1390 Super Duke R Standard", "price": "₹22,95,800" }
       ],
       "technical_specifications": {
         "engine_displacement_cc": 1350,

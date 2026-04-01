@@ -16,6 +16,17 @@
       "fuel_type": "Petrol",
       "max_torque": "28 Nm",
       "source_section": "Available",
+      "description": "The BMW G 310 RR is a supersport-styled motorcycle that combines aggressive design with everyday usability, powered by a compact 312cc engine. It delivers an authentic riding experience with multiple ride modes, gold USD forks, and premium LED lighting, making it accessible performance at an accessible price point.",
+      "features": [
+        "Full digital TFT instrument cluster",
+        "Multiple riding modes (Track, Urban, Rain, Sport)",
+        "Gold USD front forks",
+        "Full LED lighting setup",
+        "Dual-channel ABS",
+        "6-speed manual transmission",
+        "Alloy wheels",
+        "Self-start ignition"
+      ],
       "variants": [
         {
           "name": "G 310 RR Standard",
@@ -59,6 +70,17 @@
       "top_speed": "95 kmph",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The BMW CE 02 is an urban electric scooter with a bold, modern design aimed at young city riders. It offers a 108 km range per charge, a top speed of 95 kmph, and includes a USB charging port and a distinctive minimalist instrument cluster.",
+      "features": [
+        "108 km riding range",
+        "USB charging port",
+        "Reverse gear",
+        "Modern digital instrument cluster",
+        "Disc brakes front and rear with ABS",
+        "Lightweight alloy wheels",
+        "Eco and Sport riding modes",
+        "Connected app support"
+      ],
       "variants": [
         {
           "name": "CE 02 Standard",
@@ -94,6 +116,17 @@
       "top_speed": "139 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The BMW C 400 GT is a premium mid-size maxi-scooter designed for comfortable city and highway commuting with a large windscreen for excellent wind protection. It features under-seat storage, a USB charging port, and BMW's signature quality finishing for a premium daily rider experience.",
+      "features": [
+        "Large windscreen for wind protection",
+        "Spacious under-seat storage",
+        "USB charging port",
+        "Front and rear disc brakes with ABS",
+        "CVT automatic transmission",
+        "TFT instrument display",
+        "Keyless ignition",
+        "Alloy wheels"
+      ],
       "variants": [
         {
           "name": "C 400 GT Standard",
@@ -131,6 +164,17 @@
       "fuel_type": "Petrol",
       "max_torque": "92 Nm",
       "source_section": "Available",
+      "description": "The BMW F 900 GS is a capable mid-size adventure motorcycle powered by a 895cc parallel-twin engine delivering 103 bhp, making it ideal for both on-road touring and moderate off-road adventures. It offers a balanced combination of lightweight construction and adventure-ready spoke wheels.",
+      "features": [
+        "895cc parallel-twin engine",
+        "Spoke wheels for off-road capability",
+        "Dual-channel ABS with off-road mode",
+        "Multiple riding modes",
+        "6-speed manual gearbox",
+        "TFT instrument cluster",
+        "LED lighting",
+        "14.5-litre fuel tank"
+      ],
       "variants": [
         {
           "name": "F 900 GS Standard",
@@ -168,6 +212,17 @@
       "fuel_type": "Petrol",
       "max_torque": "92 Nm",
       "source_section": "Available",
+      "description": "The BMW F 900 GS Adventure is the long-distance touring variant of the F 900 GS, featuring a massive 23-litre fuel tank and higher wind protection for extended journeys. The Ride Pro variant adds advanced electronics including Dynamic ESA semi-active suspension and additional riding modes.",
+      "features": [
+        "23-litre large fuel tank",
+        "Spoke wheels",
+        "Dual-channel ABS with off-road mode",
+        "Multiple riding modes (Road, Rain, Enduro, Enduro Pro on Ride Pro)",
+        "Dynamic ESA semi-active suspension (Ride Pro)",
+        "TFT instrument cluster",
+        "6-speed manual gearbox",
+        "LED lighting"
+      ],
       "variants": [
         {
           "name": "F 900 GS Adventure Standard",
@@ -209,6 +264,17 @@
       "fuel_type": "Electric",
       "max_torque": "56 Nm",
       "source_section": "Available",
+      "description": "The BMW CE 04 is a futuristic premium electric scooter with a bold design featuring a 10.25-inch TFT display and built-in navigation. It offers a 130 km real-world range, top speed of 120 kmph, and comprehensive connectivity with multiple riding modes.",
+      "features": [
+        "10.25-inch TFT touchscreen display",
+        "Built-in navigation",
+        "130 km riding range",
+        "Multiple riding modes (Road, Dynamic, Rain, Eco)",
+        "USB charging port",
+        "Disc brakes front and rear with ABS",
+        "Reverse gear",
+        "Smartphone connectivity"
+      ],
       "variants": [
         {
           "name": "CE 04 Standard",
@@ -243,6 +309,17 @@
       "fuel_type": "Petrol",
       "max_torque": "113 Nm",
       "source_section": "Available",
+      "description": "The BMW S 1000 R is a high-performance naked streetfighter powered by the same 999cc inline-four engine as the S 1000 RR superbike, delivering 167 bhp in a more upright, versatile package. It combines ballistic performance with sophisticated electronics and a dynamic riding position.",
+      "features": [
+        "999cc inline-four engine, 167.6 bhp",
+        "Multiple riding modes (Rain, Road, Dynamic, Race)",
+        "Dynamic traction control (DTC)",
+        "Launch control",
+        "Cornering ABS",
+        "TFT display with Bluetooth connectivity",
+        "Quickshifter Pro (optional)",
+        "Alloy wheels"
+      ],
       "variants": [
         {
           "name": "S 1000 R Standard",
@@ -280,6 +357,17 @@
       "top_speed": "215 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The BMW R 12 is a modern heritage cruiser with a classic silhouette built around BMW's iconic air/oil-cooled boxer-twin engine producing 93.7 bhp. It combines timeless styling with modern technology including ABS and a refined chassis for relaxed, engaging rides.",
+      "features": [
+        "Air/oil-cooled boxer-twin engine",
+        "Classic heritage cruiser styling",
+        "Dual-channel ABS",
+        "6-speed manual transmission",
+        "Alloy wheels",
+        "LED lighting",
+        "Analogue-style instrument cluster with digital info",
+        "Low seat height of 754 mm"
+      ],
       "variants": [
         {
           "name": "R 12 Standard",
@@ -316,6 +404,17 @@
       "top_speed": "200 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The BMW R 12 nineT is a cafe racer-styled heritage motorcycle powered by a 1170cc air/oil-cooled boxer-twin making 107.5 bhp and 115 Nm. It blends classic aesthetics with modern electronics for riders who value personality and customisation alongside performance.",
+      "features": [
+        "Air/oil-cooled boxer-twin engine",
+        "Cafe racer styling",
+        "Dual-channel ABS",
+        "6-speed manual transmission",
+        "Alloy wheels",
+        "LED lighting",
+        "Top-spec electronics package",
+        "Customisation-friendly platform"
+      ],
       "variants": [
         {
           "name": "R 12 nineT Standard",
@@ -353,6 +452,17 @@
       "fuel_type": "Petrol",
       "max_torque": "143 Nm",
       "source_section": "Available",
+      "description": "The BMW R 1300 GS is the latest generation of the world's most iconic adventure motorcycle, now with a 1300cc boxer engine delivering 145 bhp and 149 Nm. It features advanced electronics including radar-assisted riding, ASA automatic transmission option, and comprehensive connectivity.",
+      "features": [
+        "1300cc boxer-twin engine, 145 bhp",
+        "Cornering ABS",
+        "Dynamic ESA semi-active suspension",
+        "Multiple riding modes (Rain, Road, Dynamic, Enduro, Enduro Pro)",
+        "10.25-inch TFT display with navigation",
+        "Radar-assisted riding (optional)",
+        "Shift assistant Pro (quickshifter)",
+        "Hill start control"
+      ],
       "variants": [
         {
           "name": "R 1300 GS Pro",
@@ -394,6 +504,17 @@
       "fuel_type": "Petrol",
       "max_torque": "113.1 Nm",
       "source_section": "Available",
+      "description": "The BMW S 1000 RR is a flagship superbike with a 999cc inline-four engine producing 206.51 bhp, combining track-level performance with advanced rider assistance electronics. It features multiple riding modes, dynamic traction control, and is available in M Package and M Competition Package variants with upgraded components.",
+      "features": [
+        "999cc inline-four engine, 206.51 bhp",
+        "Riding modes (Rain, Road, Dynamic, Race, Race Pro)",
+        "Dynamic traction control (DTC)",
+        "Cornering ABS Pro",
+        "Launch control",
+        "Quickshifter Pro",
+        "TFT display with GPS/navigation",
+        "M Package with Akrapovic exhaust (higher trims)"
+      ],
       "variants": [
         {
           "name": "S 1000 RR Standard",
@@ -440,6 +561,17 @@
       "top_speed": "250 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The BMW S 1000 XR is a sport-touring adventure bike combining the high-revving 999cc inline-four engine with a comfortable, upright riding position and longer travel suspension for all-day touring. It bridges the gap between the S 1000 RR superbike and a versatile adventure tourer.",
+      "features": [
+        "999cc inline-four engine, 165 bhp",
+        "Multiple riding modes",
+        "Cornering ABS",
+        "Dynamic traction control",
+        "TFT display",
+        "Keyless ignition",
+        "20-litre fuel tank for long range",
+        "Quickshifter Pro"
+      ],
       "variants": [
         {
           "name": "S 1000 XR Standard",
@@ -479,6 +611,17 @@
       "fuel_type": "Petrol",
       "max_torque": "113 Nm",
       "source_section": "Available",
+      "description": "The BMW M 1000 R is the ultimate naked streetfighter from BMW Motorrad's M division, featuring the race-derived 999cc inline-four producing 206.5 bhp with a full carbon aerodynamic package. It comes equipped with fully adjustable Showa suspension, revised traction control, and launch control for ultimate performance.",
+      "features": [
+        "999cc inline-four engine, 206.5 bhp",
+        "Carbon aerodynamic winglets",
+        "Fully adjustable Showa suspension",
+        "Revised traction control and launch control",
+        "Cornering ABS Pro",
+        "Multiple riding modes including Race Pro",
+        "Quickshifter Pro",
+        "M Endurance chain"
+      ],
       "variants": [
         {
           "name": "M 1000 R Standard",
@@ -517,6 +660,17 @@
       "fuel_type": "Petrol",
       "max_torque": "158 Nm",
       "source_section": "Available",
+      "description": "The BMW R18 is a premium big cruiser powered by the world's largest boxer engine at 1802cc, delivering a massive 158 Nm of torque for effortless cruising. It combines neo-retro styling with modern comfort and technology, featuring a classic chrome-laden design inspired by BMW's 1930s machines.",
+      "features": [
+        "1802cc boxer-twin, world's largest",
+        "Massive 158 Nm torque",
+        "Ride modes (Rock, Roll, Rain, Classic)",
+        "Dual-channel ABS",
+        "24-litre fuel tank",
+        "Chrome detailing and premium finish",
+        "6-speed manual transmission",
+        "Reverse gear"
+      ],
       "variants": [
         {
           "name": "R18 Standard",
@@ -556,6 +710,17 @@
       "top_speed": "200 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The BMW K 1600 GT is a flagship long-distance touring motorcycle powered by a smooth 1649cc inline-six engine delivering 160 bhp and 180 Nm, with class-leading refinement and comfort. The K 1600 GT and GTL variants offer comprehensive touring features including integrated luggage, full infotainment, and advanced electronic suspension.",
+      "features": [
+        "1649cc inline-six engine, 160 bhp",
+        "Dynamic ESA semi-active suspension",
+        "Full infotainment with navigation and Bluetooth",
+        "Integral ABS Pro with cornering function",
+        "Multiple riding modes",
+        "Electrically adjustable windscreen",
+        "Hill start control",
+        "Heated grips and seat"
+      ],
       "variants": [
         {
           "name": "K 1600 GT",
@@ -599,6 +764,17 @@
       "top_speed": "278 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The BMW M 1000 XR is the most powerful sport-tourer from BMW Motorrad's M division, packing the race-derived 201 bhp inline-four into a comfortable adventure touring package. It features a full M aerodynamic package with winglets, M-spec Brembo brakes, and the most advanced electronics suite available on any BMW.",
+      "features": [
+        "999cc inline-four engine, 201 bhp",
+        "M aerodynamic package with winglets",
+        "M-spec Brembo brakes",
+        "Fully adjustable suspension",
+        "Multiple riding modes including Race Pro",
+        "Cornering ABS Pro",
+        "Shift assistant Pro",
+        "M Endurance chain"
+      ],
       "variants": [
         {
           "name": "M 1000 XR Standard",

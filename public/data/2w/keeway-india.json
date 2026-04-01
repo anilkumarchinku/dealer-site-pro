@@ -9,6 +9,19 @@
       "torque": "8.2 Nm",
       "top_speed": "100 km/h",
       "gear_box": "5-speed",
+      "description": "The Keeway SR125 is an entry-level retro-styled commuter motorcycle powered by a 125cc BS6 Phase 2 engine. It offers a practical combination of classic aesthetics, fuel efficiency, and affordable pricing suitable for city commuters.",
+      "features": [
+        "125cc BS6 Phase 2 single-cylinder engine producing 9.56 bhp",
+        "5-speed manual transmission with self-start",
+        "CBS braking system with front and rear disc brakes",
+        "Spoke wheels for classic retro appearance",
+        "14.5-litre fuel tank capacity",
+        "780mm accessible seat height",
+        "120kg lightweight kerb weight",
+        "46 kmpl fuel efficiency",
+        "Available in Glossy White, Black, and Red",
+        "100 kmph top speed"
+      ],
       "colors": [
         "Glossy White",
         "Glossy Black",
@@ -41,6 +54,19 @@
       "torque": "16 Nm",
       "top_speed": "120 km/h",
       "gear_box": "5-speed",
+      "description": "The Keeway SR250 is a retro-styled commuter motorcycle that delivers a good balance of features and performance with a 223cc engine. It combines classic aesthetics with modern engineering for city riding and daily commutes.",
+      "features": [
+        "223cc BS6 Phase 2 single-cylinder engine producing 15.78 bhp and 16 Nm torque",
+        "5-speed manual transmission with self-start",
+        "Dual disc brakes with ABS",
+        "Spoke wheels for retro look",
+        "14.2-litre fuel tank capacity",
+        "780mm seat height",
+        "120kg lightweight kerb weight",
+        "35 kmpl user-reported fuel efficiency",
+        "120 kmph top speed",
+        "Available in Glossy Black, Red, and White"
+      ],
       "colors": [
         "Glossy Black",
         "Glossy Red",
@@ -73,6 +99,19 @@
       "torque": "25 Nm",
       "top_speed": "N/A",
       "gear_box": "6-speed",
+      "description": "The Keeway K300 SF is a 300cc street bike combining modern aesthetics with practical daily-use capability. It offers light and nimble handling with upside-down front forks and a liquid-cooled engine, suitable for both city commuting and highway cruising.",
+      "features": [
+        "292.4cc liquid-cooled single-cylinder engine producing 27.8 bhp and 25 Nm torque",
+        "6-speed manual transmission",
+        "Dual-channel ABS with front and rear disc brakes",
+        "Upside-down front forks",
+        "Preload-adjustable monoshock rear suspension",
+        "LED headlamp with aggressive street-bike stance",
+        "151kg kerb weight",
+        "795mm seat height",
+        "12.5-litre fuel tank capacity",
+        "37 kmpl user-reported fuel efficiency"
+      ],
       "colors": [
         "Matte Black",
         "Matte Red",
@@ -105,6 +144,19 @@
       "torque": "25 Nm",
       "top_speed": "139 km/h",
       "gear_box": "6-speed",
+      "description": "The Keeway RR300 is a sports bike powered by a 292.4cc BS6 Phase 2B engine delivering 27.88 bhp. It combines sporty full-fairing design with impressive 37 kmpl fuel efficiency, making it an excellent choice for budget-conscious performance enthusiasts.",
+      "features": [
+        "292.4cc BS6 Phase 2B single-cylinder engine producing 27.88 bhp and 25 Nm torque",
+        "6-speed manual transmission with self-start",
+        "Dual disc brakes with ABS",
+        "Alloy wheels",
+        "12-litre fuel tank capacity",
+        "165kg kerb weight",
+        "780mm seat height",
+        "139 kmph top speed",
+        "37 kmpl user-reported fuel efficiency",
+        "Available in Red, White, and Black"
+      ],
       "colors": [
         "Red",
         "White",
@@ -137,6 +189,19 @@
       "torque": "19 Nm",
       "top_speed": "125 km/h",
       "gear_box": "5-speed",
+      "description": "The Keeway K-Light 250V is a cruiser motorcycle with a 249cc BS6 Phase 2 engine delivering smooth, refined performance for both city and highway riding. It comes equipped with the Keeway Connect module featuring integrated GPS, remote engine cut-off, and ride tracking.",
+      "features": [
+        "249cc BS6 Phase 2 single-cylinder engine producing 18.4 bhp and 19 Nm torque",
+        "5-speed manual transmission with self-start",
+        "Dual disc brakes with ABS",
+        "Keeway Connect module with GPS and remote engine cut-off",
+        "Ride tracking technology",
+        "Alloy wheels",
+        "20-litre large fuel tank capacity",
+        "715mm low seat height for cruiser accessibility",
+        "179kg kerb weight",
+        "31.5 kmpl user-reported fuel efficiency"
+      ],
       "colors": [
         "Matte Black",
         "Matte Dark Grey",
@@ -169,6 +234,19 @@
       "torque": "22 Nm",
       "top_speed": "125 km/h",
       "gear_box": "N/A",
+      "description": "The Keeway Vieste 300 is a 278.2cc maxi-scooter designed for both commuting and highway riding. It features a liquid-cooled engine, keyless ignition, and ABS braking system in a stylish premium scooter package.",
+      "features": [
+        "278.2cc BS6 Phase 2 liquid-cooled engine producing 18.4 bhp and 22 Nm torque",
+        "Dual disc brakes with ABS",
+        "Keyless ignition system",
+        "USB charging port",
+        "Alloy wheels",
+        "12-litre fuel tank capacity",
+        "770mm seat height",
+        "147kg lightweight kerb weight",
+        "29.5 kmpl ARAI-certified fuel efficiency",
+        "Available in Matte White, Black, and Blue"
+      ],
       "colors": [
         "Matte White",
         "Matte Black",
@@ -202,6 +280,19 @@
       "torque": "23.5 Nm",
       "top_speed": "120 km/h",
       "gear_box": "Automatic",
+      "description": "The Keeway Sixties 300i is a modern retro-styled automatic scooter featuring a 278.2cc liquid-cooled engine with dual-channel ABS. It blends vintage 1960s aesthetics with contemporary technology including a USB charging port and disc brakes.",
+      "features": [
+        "278.2cc BS6 Phase 2 liquid-cooled engine producing 18.4 bhp and 23.5 Nm torque",
+        "Automatic transmission for easy city riding",
+        "Dual-channel ABS braking system",
+        "Front and rear disc brakes",
+        "USB charging port",
+        "Alloy wheels with retro styling",
+        "10-litre fuel tank capacity",
+        "790mm seat height",
+        "146kg lightweight kerb weight",
+        "27.4 kmpl user-reported fuel efficiency"
+      ],
       "colors": [
         "Matte Light Blue",
         "Matte Grey",
@@ -235,6 +326,19 @@
       "torque": "26.5 Nm",
       "top_speed": "155 km/h",
       "gear_box": "6-speed",
+      "description": "The Keeway V302C is a cruiser motorcycle powered by a 298cc V-twin liquid-cooled engine with good mid-range performance and great road presence. It features a low 690mm seat height and strong ABS braking, making it accessible for a range of riders.",
+      "features": [
+        "298cc V-twin liquid-cooled BS6 Phase 2 engine producing 29.09 bhp and 26.5 Nm torque",
+        "6-speed manual transmission with self-start",
+        "Dual disc brakes with ABS",
+        "V-twin engine for signature cruiser soundtrack",
+        "15-litre fuel tank capacity",
+        "690mm low seat height for accessibility",
+        "167kg kerb weight",
+        "Alloy wheels",
+        "155 kmph top speed",
+        "36 kmpl ARAI-certified fuel efficiency"
+      ],
       "colors": [
         "Glossy Grey",
         "Glossy Black",

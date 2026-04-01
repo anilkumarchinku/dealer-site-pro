@@ -16,6 +16,17 @@
       "fuel_type": "Petrol",
       "max_torque": "10.4 Nm",
       "source_section": "Available",
+      "description": "The Aprilia SR 125 is a sporty Italian scooter for urban commuting featuring a 124.45cc engine, front disc brake, and a distinctive aggressive design with angular headlamps. It delivers Italian scooter character at an accessible price point with a USB charging port and comfortable 780 mm seat height.",
+      "features": [
+        "Sporty Italian design language",
+        "Front disc brake with CBS",
+        "USB charging port",
+        "Kick and self-start",
+        "Alloy wheels",
+        "6-litre fuel tank",
+        "780 mm seat height",
+        "Multiple colour options"
+      ],
       "variants": [
         {
           "name": "SR 125 Standard",
@@ -62,6 +73,17 @@
       "top_speed": "90 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Aprilia Storm 125 is a rugged, off-road-inspired scooter with a higher ground clearance and knobby tyres compared to the standard SR 125, designed for riders who want a crossover scooter for light trails and city use. It features the same 124.45cc engine with a front disc brake and CBS.",
+      "features": [
+        "Off-road inspired crossover styling",
+        "Higher ground clearance than SR 125",
+        "Front disc brake with CBS",
+        "USB charging port",
+        "Kick and self-start",
+        "Alloy wheels",
+        "6-litre fuel tank",
+        "Knobby tyres"
+      ],
       "variants": [
         {
           "name": "Storm 125 Standard",
@@ -100,6 +122,17 @@
       "top_speed": "190 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Aprilia Tuono 457 is a naked streetfighter sibling to the RS 457, sharing the same 457cc parallel-twin engine but with an upright riding position and aggressive naked styling. It features a 5-inch TFT display, Bluetooth connectivity, traction control, and multiple riding modes for an accessible but feature-rich performance experience.",
+      "features": [
+        "457cc parallel-twin engine, 46.9 bhp",
+        "5-inch TFT display",
+        "Bluetooth connectivity",
+        "Turn-by-turn navigation",
+        "3 levels of traction control",
+        "Multiple riding modes",
+        "Dual-channel ABS",
+        "Comfortable naked bike ergonomics"
+      ],
       "variants": [
         {
           "name": "Tuono 457 Standard",
@@ -138,6 +171,17 @@
       "top_speed": "190 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Aprilia RS 457 is a fully-faired supersport motorcycle with a 457cc parallel-twin engine delivering 46.9 bhp, featuring segment-leading electronics including traction control, ride modes, and a 5-inch TFT display. The GP Replica variant pays homage to Aprilia's MotoGP heritage with exclusive livery.",
+      "features": [
+        "457cc parallel-twin engine, 46.9 bhp",
+        "Full fairing with aggressive sportbike styling",
+        "5-inch TFT colour display",
+        "Bluetooth connectivity",
+        "Traction control and ABS",
+        "Multiple riding modes",
+        "Lightweight 175 kg kerb weight",
+        "GP Replica livery option"
+      ],
       "variants": [
         {
           "name": "RS 457 Standard",
@@ -184,6 +228,17 @@
       "fuel_type": "Petrol",
       "max_torque": "67 Nm",
       "source_section": "Available",
+      "description": "The Aprilia Tuono 660 is a mid-capacity naked streetfighter with a 659cc parallel-twin engine producing 93.87 bhp, delivering an exhilarating riding experience with full Aprilia electronic aids. It is the naked counterpart to the RS 660 with a more upright and comfortable riding position.",
+      "features": [
+        "659cc parallel-twin engine, 93.87 bhp",
+        "Cornering ABS",
+        "Aprilia Traction Control (APTC)",
+        "Multiple riding modes (Commute, Dynamic, Individual, Track)",
+        "Quickshifter up and down",
+        "TFT colour display",
+        "Wheelie control",
+        "Lightweight 183 kg"
+      ],
       "variants": [
         {
           "name": "Tuono 660 Standard",
@@ -220,6 +275,17 @@
       "top_speed": "230 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Aprilia RS 660 is a fully-faired middleweight sportbike with a 659cc parallel-twin engine producing 98.56 bhp in a lightweight 183 kg chassis, delivering exceptional power-to-weight ratio. It features comprehensive electronics including cornering ABS, multiple ride modes, and a quickshifter for track and road performance.",
+      "features": [
+        "659cc parallel-twin engine, 98.56 bhp",
+        "Full fairing with RS racing lineage",
+        "Cornering ABS",
+        "Multiple riding modes",
+        "Quickshifter up and down",
+        "Aprilia Traction Control (APTC)",
+        "Lightweight 183 kg kerb weight",
+        "TFT display"
+      ],
       "variants": [
         {
           "name": "RS 660 Standard",
@@ -259,6 +325,17 @@
       "fuel_type": "Petrol",
       "max_torque": "125 Nm",
       "source_section": "Available",
+      "description": "The Aprilia RSV4 1100 Factory is a superbike masterpiece powered by a 1099cc V4 engine producing 213 bhp with a comprehensive electronics package derived directly from Aprilia's WSBK racing programme. It comes with Ohlins Smart EC 2.0 semi-active suspension, Brembo Stylema brakes, and cornering ABS for ultimate track and road performance.",
+      "features": [
+        "1099cc V4 engine, 213.89 bhp",
+        "Cornering ABS Pro",
+        "Ohlins Smart EC 2.0 semi-active suspension",
+        "Brembo Stylema dual disc brakes",
+        "Aprilia Traction Control EVO 2 (APRC)",
+        "Multiple riding modes including Track EVO",
+        "Quickshifter up and down",
+        "WSBK-derived electronics"
+      ],
       "variants": [
         {
           "name": "RSV4 1100 Factory",

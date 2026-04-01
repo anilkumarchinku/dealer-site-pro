@@ -16,6 +16,17 @@
       "fuel_type": "Petrol",
       "max_torque": "10.5 Nm",
       "source_section": "Available",
+      "description": "The Vespa ZX 125 is the entry-level offering in the Vespa India lineup, bringing Italian scooter styling at an accessible price with a 124.45cc engine and a lightweight 115 kg kerb weight. It features drum brakes front and rear with a combined braking system for safe, predictable stopping in city traffic.",
+      "features": [
+        "All-metal steel unibody frame",
+        "Classic Vespa round headlamp",
+        "Drum brakes with CBS",
+        "Lightweight 115 kg",
+        "45 kmpl fuel efficiency",
+        "7-litre fuel tank",
+        "770 mm seat height",
+        "7 colour options"
+      ],
       "variants": [
         {
           "name": "ZX 125 Standard",
@@ -57,6 +68,17 @@
       "top_speed": "95 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Vespa 125 is the iconic Italian scooter with a steel unibody frame, step-through design, and front disc brake, offering premium heritage styling at a mid-level price. The Tech variant adds a TFT display and Bluetooth connectivity for a modern, connected experience.",
+      "features": [
+        "Steel unibody frame construction",
+        "Front disc brake with CBS",
+        "Classic Italian design",
+        "Self-start mechanism",
+        "USB charging port",
+        "Alloy wheels",
+        "TFT display with Bluetooth (Tech variant)",
+        "9 colour options"
+      ],
       "variants": [
         {
           "name": "Vespa 125 Single Tone",
@@ -113,6 +135,17 @@
       "top_speed": "95 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Vespa S 125 features a rectangular headlamp and a more sporty, retro-modern design compared to the classic Vespa 125, with chrome detailing and full-metal body construction. The Tech variant adds a TFT display with Bluetooth for connected riding.",
+      "features": [
+        "Rectangular headlamp for sporty look",
+        "Full-metal steel body",
+        "Chrome detailing",
+        "Front disc brake with CBS",
+        "USB charging port",
+        "Alloy wheels",
+        "TFT display with Bluetooth (Tech variant)",
+        "10 colour options"
+      ],
       "variants": [
         {
           "name": "Vespa S 125 Standard",
@@ -163,6 +196,17 @@
       "top_speed": "100 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Vespa 150 is the classic Vespa styling with a more powerful 149.5cc engine for improved highway performance, featuring a front disc brake and generous 8-litre fuel tank. The Tech variant adds a TFT display with Bluetooth for a premium connected experience.",
+      "features": [
+        "149.5cc engine for better performance",
+        "Front disc brake with CBS",
+        "Classic Vespa Italian design",
+        "USB charging port",
+        "8-litre fuel tank",
+        "Alloy wheels",
+        "TFT display with Bluetooth (Tech variant)",
+        "8 colour options"
+      ],
       "variants": [
         {
           "name": "Vespa 150 Single Tone",
@@ -218,6 +262,17 @@
       "top_speed": "100 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Vespa S 150 combines the sporty rectangular headlamp design of the S series with the more powerful 149.5cc engine, chrome detailing, and full-metal construction for a premium, sporty riding experience. The Tech variant adds a TFT display and Bluetooth for full connectivity.",
+      "features": [
+        "149.5cc engine, 11.4 bhp",
+        "Rectangular headlamp for modern sporty look",
+        "Full-metal steel body",
+        "Chrome detailing throughout",
+        "Front disc brake with CBS",
+        "USB charging port",
+        "TFT display with Bluetooth (Tech variant)",
+        "10 colour options"
+      ],
       "variants": [
         {
           "name": "Vespa S 150 Standard",

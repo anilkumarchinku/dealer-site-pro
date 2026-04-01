@@ -15,6 +15,19 @@
       "top_speed": "135 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The QJ Motor SRC 250 is a retro cruiser-style motorcycle powered by a 249cc BS6 Phase 2 engine delivering 17.16 bhp. It combines classic styling with modern features including ABS braking and achieves an impressive 39 kmpl fuel efficiency.",
+      "features": [
+        "249cc BS6 Phase 2 air-cooled single-cylinder engine producing 17.16 bhp and 17 Nm torque",
+        "5-speed manual transmission with self-start",
+        "Dual disc brakes with ABS",
+        "Spoke wheels for classic retro appearance",
+        "14-litre fuel tank capacity",
+        "163kg kerb weight",
+        "780mm seat height",
+        "135 kmph top speed",
+        "39 kmpl impressive fuel efficiency",
+        "Available in Silver, Red, and Black"
+      ],
       "variants": [
         {
           "name": "SRC 250 Standard",
@@ -53,6 +66,19 @@
       "top_speed": "145 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The QJ Motor SRC 500 is a classic retro cruiser motorcycle combining traditional styling with modern performance. It features a 480cc engine and comes in 2 variants with a distinctive blend of vintage design and contemporary reliability.",
+      "features": [
+        "480cc BS6 Phase 2 single-cylinder engine producing 25.15 bhp and 36 Nm torque",
+        "5-speed manual transmission with self-start",
+        "Dual disc brakes with ABS",
+        "Alloy wheels",
+        "15.5-litre fuel tank capacity",
+        "205kg kerb weight",
+        "800mm seat height",
+        "145 kmph top speed",
+        "34.8 kmpl expert-reported fuel efficiency",
+        "Available in Silver Black, Red & White, and Golden Black"
+      ],
       "variants": [
         {
           "name": "SRC 500 Standard",
@@ -91,6 +117,19 @@
       "top_speed": "135 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The QJ Motor SRV 300 is a cruiser-style motorcycle powered by a 296cc liquid-cooled V-twin engine. It delivers 29.88 bhp with an accessible 700mm seat height and strong mid-range performance, making it ideal for city rides and short highway trips.",
+      "features": [
+        "296cc BS6 Phase 2 liquid-cooled V-twin engine producing 29.88 bhp and 26 Nm torque",
+        "6-speed manual transmission with self-start",
+        "Dual disc brakes with ABS",
+        "Alloy wheels",
+        "13.5-litre fuel tank capacity",
+        "700mm low seat height for easy access",
+        "164kg lightweight kerb weight",
+        "V-twin engine for smooth power delivery",
+        "29 kmpl fuel efficiency",
+        "Available in Green, Red, Orange, and Black"
+      ],
       "variants": [
         {
           "name": "SRV 300 Standard",
@@ -131,6 +170,19 @@
       "fuel_type": "Petrol",
       "max_torque": "37 Nm",
       "source_section": "Available",
+      "description": "The QJ Motor SRK 400 is a middleweight street bike with a 400cc liquid-cooled parallel-twin engine delivering competitive performance. It features a TFT instrument cluster, sporty styling, and impressive handling characteristics for daily and weekend riding.",
+      "features": [
+        "400cc BS6 Phase 2 liquid-cooled parallel-twin engine producing 40.34 bhp and 37 Nm torque",
+        "6-speed manual transmission with self-start",
+        "Dual disc brakes with ABS",
+        "TFT instrument cluster",
+        "Alloy wheels",
+        "13.5-litre fuel tank capacity",
+        "785mm seat height",
+        "186kg kerb weight",
+        "160 kmph top speed",
+        "Available in White, Red and Black, and Red"
+      ],
       "variants": [
         {
           "name": "SRK 400 Standard",

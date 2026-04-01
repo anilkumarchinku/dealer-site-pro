@@ -12,6 +12,16 @@
       "price": "₹1,25,000",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Kabira KM3000 is a performance electric motorcycle with a 3 kW motor and 100 kmph top speed, designed for riders who want ICE-like performance with the efficiency of an electric powertrain.",
+      "features": [
+        "3 kW BLDC Motor",
+        "Bluetooth Connectivity",
+        "Digital TFT Display",
+        "Anti-Theft with GPS Tracking",
+        "Fast Charging",
+        "Ride Modes (Eco/City/Sport)",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "3 kW",
         "Range": "120 km",
@@ -34,6 +44,16 @@
       "price": "₹1,40,000",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Kabira KM4000 is a mid-range electric motorcycle with a 4 kW motor offering 150 km range and 120 kmph top speed, making it one of the most capable electric bikes for highway touring.",
+      "features": [
+        "4 kW High-Performance Motor",
+        "Bluetooth App Integration",
+        "GPS Anti-Theft",
+        "TFT Digital Cluster",
+        "Fast Charging",
+        "Multiple Ride Modes",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "4 kW",
         "Range": "150 km",
@@ -56,6 +76,16 @@
       "price": "₹1,55,000",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Kabira KM5000 is a flagship electric motorcycle delivering 175 km range and 100 Nm torque, targeting performance enthusiasts who want the thrill of a sports bike with zero emissions.",
+      "features": [
+        "5 kW Peak Performance Motor",
+        "Mobile App with Remote Diagnostics",
+        "GPS Tracking & Geo-Fencing",
+        "Full-Color TFT Display",
+        "DC Fast Charging",
+        "Ride Modes (Eco/City/Sport/Race)",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "5 kW",
         "Range": "175 km",
@@ -78,6 +108,16 @@
       "price": "₹1,59,900",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Kabira Intercity Neo is a long-range electric motorcycle with 180 km range and 110 kmph top speed, purpose-built for intercity travel and highway commuting without range anxiety.",
+      "features": [
+        "Long-Range 4 kWh Battery",
+        "Bluetooth App Connectivity",
+        "GPS with Geo-Fencing",
+        "TFT Navigation Display",
+        "Fast Charging (0-80% in 2 hrs)",
+        "Ride Modes",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "4 kW",
         "Range": "180 km",
@@ -100,6 +140,16 @@
       "price": "₹1,74,900",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Kabira Intercity FS is the brand's premium long-distance electric motorcycle with a 200 km range and 5 kW motor, designed for touring riders who refuse to compromise on range or performance.",
+      "features": [
+        "200 km Certified Range",
+        "5 kW Motor with 100 Nm Torque",
+        "Advanced GPS Navigation",
+        "Mobile App Remote Monitoring",
+        "DC Fast Charging",
+        "Multiple Ride Modes",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "5 kW",
         "Range": "200 km",

@@ -12,6 +12,16 @@
       "price": "₹89,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Komaki Ranger is a long-range electric scooter with an exceptional 200 km range claim at under ₹90,000, designed for daily commuters who prioritize maximum distance per charge over top speed.",
+      "features": [
+        "200 km Claimed Range",
+        "Digital Instrument Cluster",
+        "Anti-Theft Alarm",
+        "Ride Modes (Eco/Normal/Sport)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port"
+      ],
       "specifications": {
         "Motor Power": "2 kW",
         "Range": "200 km",
@@ -33,6 +43,16 @@
       "price": "₹79,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Komaki Venice is a retro-styled electric scooter with a 180 km range and classic Italian-inspired design, targeting riders who want vintage aesthetics combined with modern electric performance.",
+      "features": [
+        "Retro Italian-Inspired Design",
+        "Digital Speedometer",
+        "Anti-Theft Alarm",
+        "Ride Modes",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port"
+      ],
       "specifications": {
         "Motor Power": "2 kW",
         "Range": "180 km",
@@ -54,6 +74,16 @@
       "price": "₹1,09,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Komaki XGT K5 is the brand's performance flagship with a 4 kW motor and a remarkable 220 km range, targeting performance-seeking riders who want maximum range and spirited 90 kmph performance.",
+      "features": [
+        "4 kW Performance Motor",
+        "220 km Claimed Range",
+        "Digital TFT Display",
+        "GPS Anti-Theft",
+        "Fast Charging",
+        "Ride Modes (Eco/City/Sport)",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "4 kW",
         "Range": "220 km",
@@ -75,6 +105,16 @@
       "price": "₹74,999",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Komaki TN-95 is a practical budget electric scooter with 150 km range and a straightforward design, ideal for daily commuters who want reliable electric mobility without unnecessary premium features.",
+      "features": [
+        "150 km Range",
+        "Digital Instrument Cluster",
+        "Anti-Theft Alarm",
+        "Ride Modes",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "150 km",

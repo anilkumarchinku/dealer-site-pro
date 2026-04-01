@@ -12,6 +12,16 @@
       "price": "₹68,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The iVOOMi S1 is a budget electric scooter from the Jaipur-based iVOOMi Energy brand, offering 100 km range and essential features for urban commuters who are switching to electric for the first time.",
+      "features": [
+        "Digital Speedometer",
+        "Anti-Theft Alarm",
+        "Ride Modes (Eco/Power)",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "BLDC Hub Motor",
+        "Home Charging Compatible"
+      ],
       "specifications": {
         "Motor Power": "1.2 kW",
         "Range": "100 km",
@@ -33,6 +43,16 @@
       "price": "₹75,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The iVOOMi S1 Pro upgrades the S1 with a larger 48V 30Ah battery for extended range, delivering 100 km on a single charge with improved performance suited for daily workplace commutes.",
+      "features": [
+        "Enhanced 48V 30Ah Battery",
+        "Digital Instrument Cluster",
+        "Anti-Theft Alarm",
+        "Ride Modes",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port"
+      ],
       "specifications": {
         "Motor Power": "1.2 kW",
         "Range": "100 km",
@@ -54,6 +74,16 @@
       "price": "₹79,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The iVOOMi Energy scooter is a mid-range commuter with a 60V 28Ah battery delivering 90 km range, designed for urban riders who need a balance of performance and affordability.",
+      "features": [
+        "60V BLDC Motor",
+        "Digital Speedometer",
+        "Anti-Theft Alarm",
+        "Ride Modes (Eco/Power)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "90 km",
@@ -75,6 +105,16 @@
       "price": "₹1,02,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The iVOOMi JeetX is the flagship scooter with a 60V 38Ah battery and 130 km range, featuring connected tech and a sporty design that appeals to performance-oriented urban professionals.",
+      "features": [
+        "130 km Long Range",
+        "Mobile App Connectivity",
+        "GPS Tracking & Anti-Theft",
+        "TFT Digital Display",
+        "Fast Charging",
+        "Ride Modes (Eco/Normal/Sport)",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "2.0 kW",
         "Range": "130 km",

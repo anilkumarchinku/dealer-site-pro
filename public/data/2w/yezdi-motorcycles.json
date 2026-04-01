@@ -16,6 +16,19 @@
       "fuel_type": "Petrol",
       "max_torque": "28.2 Nm",
       "source_section": "Available",
+      "description": "The Yezdi Roadster is a neo-retro street bike powered by a 334cc BS6 Phase 2B engine that combines proportionate neo-retro styling with practical urban usability. It delivers sporty engine performance with strong torque delivery and genuinely handsome aesthetics.",
+      "features": [
+        "334cc BS6 Phase 2B engine producing 28.7 bhp and 29.62 Nm torque",
+        "6-speed manual transmission with self-start",
+        "Dual disc brakes with ABS",
+        "Alloy wheels for enhanced stability",
+        "12.5-litre fuel tank capacity",
+        "795mm accessible seat height",
+        "184kg kerb weight",
+        "30 kmpl user-reported fuel efficiency",
+        "Neo-retro styling with round headlamp",
+        "6 colour options including Savage Green and Sharkskin Blue"
+      ],
       "variants": [
         { "name": "Roadster Standard", "price": "₹1,98,916" },
         { "name": "Roadster Dual Tone", "price": "₹2,06,916" },
@@ -49,6 +62,19 @@
       "fuel_type": "Petrol",
       "max_torque": "28.2 Nm",
       "source_section": "Available",
+      "description": "The Yezdi Scrambler is a modern scrambler motorcycle that blends vintage scrambler spirit with a modern twist and 334cc engine. It delivers contemporary performance suitable for both city commuting and off-road capability with a switchable ABS system.",
+      "features": [
+        "334cc BS6 Phase 2 engine producing 28.7 bhp and 28.2 Nm torque",
+        "6-speed manual transmission",
+        "Dual disc brakes with switchable ABS",
+        "Spoke wheels for off-road-ready stance",
+        "12.5-litre fuel tank capacity",
+        "800mm seat height",
+        "192kg kerb weight",
+        "140 kmph top speed",
+        "7 colour options including Yelling Yellow and Outlaw Olive",
+        "BS6 Phase 2 compliant emission"
+      ],
       "variants": [
         { "name": "Scrambler Standard", "price": "₹1,97,499" },
         { "name": "Scrambler Dual Tone", "price": "₹2,01,187" }
@@ -81,6 +107,19 @@
       "fuel_type": "Petrol",
       "max_torque": "32 Nm",
       "source_section": "Available",
+      "description": "The Yezdi Adventure is an adventure-touring motorcycle powered by a 334cc BS6 Phase 2B engine with strong performance for touring and soft off-roading. It features an asymmetric headlamp, dual trail lights, and a generous 15.5-litre fuel tank for long-distance riding.",
+      "features": [
+        "334cc BS6 Phase 2B engine producing 29.16 bhp and 29.56 Nm torque",
+        "6-speed manual transmission with self-start",
+        "Dual disc brakes with switchable ABS",
+        "Spoke wheels for off-road capability",
+        "15.5-litre large fuel tank for touring",
+        "815mm seat height",
+        "Asymmetric headlamp and dual trail lights",
+        "187kg kerb weight",
+        "31 kmpl user-reported fuel efficiency",
+        "6 colour options including Forest Green White and Nebula Blue White"
+      ],
       "variants": [
         { "name": "Adventure Standard", "price": "₹2,00,108" },
         { "name": "Adventure Dual Tone", "price": "₹2,05,108" },

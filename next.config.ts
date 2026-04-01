@@ -35,10 +35,25 @@ const nextConfig: NextConfig = {
                 protocol: 'https',
                 hostname: 'storage.googleapis.com',
             },
-            // CardDekho CDN (car catalog images)
+            // CardDekho CDN (4W/3W car catalog images)
             {
                 protocol: 'https',
                 hostname: 'stimg.cardekho.com',
+            },
+            // BikeWale / AEPLCloud CDN (2W bike catalog images)
+            {
+                protocol: 'https',
+                hostname: 'imgd.aeplcdn.com',
+            },
+            // BikeDekho CDN (2W bike catalog images — fallback)
+            {
+                protocol: 'https',
+                hostname: 'cdn.bikedekho.com',
+            },
+            // CardDekho Trucks CDN (3W vehicle catalog images)
+            {
+                protocol: 'https',
+                hostname: 'truckcdn.cardekho.com',
             },
         ],
     },
@@ -60,7 +75,7 @@ const nextConfig: NextConfig = {
                     "default-src 'self'",
                     "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://checkout.razorpay.com",
                     "style-src 'self' 'unsafe-inline'",
-                    "img-src 'self' data: blob: https://*.supabase.co https://*.cyepro.com https://lh3.googleusercontent.com https://images.unsplash.com https://storage.googleapis.com https://maps.googleapis.com",
+                    "img-src 'self' data: blob: https://*.supabase.co https://*.cyepro.com https://lh3.googleusercontent.com https://images.unsplash.com https://storage.googleapis.com https://maps.googleapis.com https://stimg.cardekho.com https://truckcdn.cardekho.com https://imgd.aeplcdn.com https://cdn.bikedekho.com",
                     "font-src 'self' data:",
                     "connect-src 'self' https://*.supabase.co https://api.cyepro.com https://checkout.razorpay.com wss://*.supabase.co",
                     "frame-src https://api.razorpay.com https://checkout.razorpay.com",

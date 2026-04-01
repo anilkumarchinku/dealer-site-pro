@@ -12,6 +12,16 @@
       "price": "₹99,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The BGauss D15i Neo is a feature-rich electric scooter from RR Global's EV arm, offering connected riding experience with 80 km range and a full IoT suite, targeting urban professionals in Indian metros.",
+      "features": [
+        "BGauss App Connectivity",
+        "Remote Diagnostics",
+        "GPS Tracking & Anti-Theft",
+        "Digital TFT Display",
+        "Fast Charging",
+        "Ride Modes (Eco/Power)",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "1.2 kW",
         "Range": "80 km",
@@ -33,6 +43,16 @@
       "price": "₹89,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The BGauss B8 Neo is a mid-range connected scooter with 110 km range and a 1.5 kW motor, designed for daily office goers in Indian cities who want reliability and smart features from a trusted brand.",
+      "features": [
+        "Mobile App with Remote Control",
+        "GPS Anti-Theft System",
+        "Digital Instrument Cluster",
+        "Fast Charging",
+        "Ride Modes (Eco/Normal/Sport)",
+        "Regenerative Braking",
+        "USB Charging Port"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "110 km",
@@ -54,6 +74,16 @@
       "price": "₹79,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The BGauss A2 Neo is an entry-level EV from BGauss offering 80 km range and essential smart connectivity, positioned as an affordable upgrade from petrol scooters for first-time EV buyers.",
+      "features": [
+        "Digital Speedometer",
+        "Anti-Theft Alarm",
+        "App Connectivity (Basic)",
+        "Ride Modes (Eco/Power)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port"
+      ],
       "specifications": {
         "Motor Power": "1.2 kW",
         "Range": "80 km",
@@ -75,6 +105,16 @@
       "price": "₹1,09,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The BGauss RUV501 is a rugged utility electric scooter with 120 km range and a practical design, suitable for commuters in urban and semi-urban India who prioritize durability and practicality.",
+      "features": [
+        "Rugged Build for Urban Use",
+        "Digital TFT Display",
+        "GPS Tracking & Anti-Theft",
+        "Fast Charging",
+        "Ride Modes",
+        "Regenerative Braking",
+        "Large Under-Seat Storage"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "120 km",
@@ -96,6 +136,16 @@
       "price": "₹1,19,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The BGauss C3i is the brand's flagship connected scooter with a 2 kW motor and 130 km range, featuring a full suite of IoT and smart features for tech-savvy urban commuters.",
+      "features": [
+        "Full IoT Suite with App",
+        "GPS Navigation & Geo-Fencing",
+        "Remote Diagnostics",
+        "7-inch TFT Touchscreen Display",
+        "DC Fast Charging",
+        "Ride Modes (Eco/City/Sport)",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "2.0 kW",
         "Range": "130 km",

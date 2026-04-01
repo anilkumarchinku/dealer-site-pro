@@ -16,6 +16,19 @@
       "fuel_type": "Petrol",
       "max_torque": "55 Nm",
       "source_section": "Available",
+      "description": "The BSA Gold Star 650 is a classic British cruiser motorcycle blending timeless styling with modern engineering. It features a 652cc single-cylinder liquid-cooled engine with an assist and slipper clutch, delivering smooth, reliable power with strong low-end torque.",
+      "features": [
+        "652cc BS6 Phase 2 liquid-cooled single-cylinder engine producing 45.6 bhp and 55 Nm torque",
+        "5-speed manual transmission with self-start",
+        "Dual disc brakes with ABS",
+        "Assist and slipper clutch across all variants",
+        "Spoke wheels for classic British styling",
+        "12-litre fuel tank capacity",
+        "782mm accessible seat height",
+        "201kg kerb weight",
+        "26 kmpl user-reported fuel efficiency",
+        "6 colour options including Highland Green and Insignia Red"
+      ],
       "variants": [
         { "name": "Gold Star 650 Standard", "price": "₹3,24,633" },
         { "name": "Gold Star 650 Chrome", "price": "₹3,42,381" },

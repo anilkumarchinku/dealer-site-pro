@@ -16,6 +16,17 @@
       "fuel_type": "Petrol",
       "max_torque": "57 Nm",
       "source_section": "Available",
+      "description": "The Ducati Scrambler Icon is the entry point into the Ducati Scrambler family, featuring an 803cc air-cooled L-twin engine delivering 71.87 bhp with a comfortable riding position and light clutch pull. It blends retro scrambler styling with modern practicality, making it ideal for city riding and weekend adventures.",
+      "features": [
+        "803cc air-cooled L-twin engine",
+        "Comfortable upright riding position",
+        "Dual-channel ABS",
+        "Full LED lighting",
+        "6-speed manual gearbox",
+        "Light clutch pull",
+        "Alloy wheels",
+        "Analogue instrument cluster with digital info"
+      ],
       "variants": [
         {
           "name": "Scrambler Icon Standard",
@@ -54,6 +65,17 @@
       "top_speed": "185 kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Ducati Scrambler Nightshift is a dark, cafe racer-inspired variant of the Scrambler 800 with a blacked-out aesthetic and spoke wheels. It features a TFT instrument cluster, full LED lighting, and a single-tone dark colour scheme for a distinctly moody personality.",
+      "features": [
+        "TFT display",
+        "Spoke wheels",
+        "Full LED lighting",
+        "Blacked-out aesthetic",
+        "Dual-channel ABS",
+        "6-speed manual gearbox",
+        "Lowered footpegs for cafe racer ergonomics",
+        "803cc air-cooled L-twin engine"
+      ],
       "variants": [
         {
           "name": "Scrambler Nightshift",
@@ -88,10 +110,21 @@
       "price": "₹13,46,600",
       "engine_displacement": "803 cc",
       "mileage": "19 kmpl",
-      "top_speed": "185 kmph",
+      "top_speed": "185 kmpl",
       "fuel_type": "Petrol",
       "max_torque": "57 Nm",
       "source_section": "Available",
+      "description": "The Ducati Scrambler Full Throttle is a flat-track racing inspired variant featuring a distinctive heritage livery and sporty ergonomics. It draws inspiration from Ducati's racing heritage with a number plate holder, flat-track style handlebar, and performance-focused aesthetic.",
+      "features": [
+        "Flat-track racing inspired styling",
+        "Heritage race livery",
+        "Sporty flat handlebar",
+        "Dual-channel ABS",
+        "6-speed manual gearbox",
+        "Full LED lighting",
+        "Alloy wheels",
+        "803cc air-cooled L-twin"
+      ],
       "variants": [
         {
           "name": "Scrambler Full Throttle Standard",
@@ -128,6 +161,17 @@
       "fuel_type": "Petrol",
       "max_torque": "92 Nm",
       "source_section": "Available",
+      "description": "The Ducati Monster is an iconic naked streetfighter powered by a 937cc liquid-cooled L-twin delivering nearly 110 bhp in an aggressive, lightweight package. The latest generation features a dramatically reduced weight, advanced electronics suite, and a new monocoque frame for improved handling.",
+      "features": [
+        "937cc liquid-cooled L-twin engine",
+        "Lightweight monocoque frame",
+        "Cornering ABS",
+        "Traction control (DTC)",
+        "Multiple riding modes (Sport, Touring, Urban)",
+        "TFT colour display",
+        "Bosch IMU (inertial measurement unit)",
+        "Brembo brakes (Monster SP)"
+      ],
       "variants": [
         {
           "name": "Monster Standard",
@@ -174,6 +218,17 @@
       "fuel_type": "Petrol",
       "max_torque": "53.5 Nm",
       "source_section": "Available",
+      "description": "The Ducati Desmo450 MX is Ducati's first purpose-built motocross bike, featuring a 449.6cc Desmodromic single-cylinder engine delivering 62.62 bhp for elite off-road competition. It represents Ducati's full commitment to off-road racing with a purpose-built MX platform.",
+      "features": [
+        "449.6cc Desmodromic single-cylinder engine",
+        "Purpose-built motocross frame",
+        "Disc brakes front and rear",
+        "5-speed gearbox",
+        "Long-travel suspension",
+        "970 mm seat height for standing riding",
+        "Spoke wheels",
+        "Lightweight construction"
+      ],
       "variants": [
         {
           "name": "Desmo450 MX Standard",
@@ -210,6 +265,17 @@
       "fuel_type": "Petrol",
       "max_torque": "96 Nm",
       "source_section": "Available",
+      "description": "The Ducati Hypermotard 950 is a high-performance supermoto motorcycle combining the 937cc Testastretta engine with an extremely agile chassis for an exhilarating riding experience on both road and track. The SP variant adds Ohlins suspension and Brembo brakes for track-focused performance.",
+      "features": [
+        "937cc Testastretta L-twin engine",
+        "Cornering ABS",
+        "Bosch 6-axis IMU",
+        "Multiple riding modes",
+        "Traction control (DTC)",
+        "Wheelie control",
+        "TFT colour display",
+        "Ohlins suspension (SP variant)"
+      ],
       "variants": [
         {
           "name": "Hypermotard 950 RVE",
@@ -252,6 +318,17 @@
       "fuel_type": "Petrol",
       "max_torque": "63 Nm",
       "source_section": "Available",
+      "description": "The Ducati Hypermotard 698 Mono is a single-cylinder supermoto that showcases Ducati's engineering excellence in a compact, featherweight package weighing just 159 kg. Its 659cc single-cylinder engine delivers 76 bhp with a thrilling power-to-weight ratio.",
+      "features": [
+        "659cc single-cylinder engine",
+        "Featherweight 159 kg kerb weight",
+        "Cornering ABS",
+        "Traction control",
+        "TFT colour display",
+        "Wheelie control",
+        "6-speed gearbox",
+        "High 904 mm seat height"
+      ],
       "variants": [
         {
           "name": "Hypermotard 698 Mono Standard",
@@ -288,6 +365,17 @@
       "fuel_type": "Petrol",
       "max_torque": "93 Nm",
       "source_section": "Available",
+      "description": "The Ducati SuperSport is a sport-touring motorcycle combining the 937cc Testastretta engine with a comfortable half-faired body and practical ergonomics for everyday riding. The S variant adds Ohlins suspension and a larger windscreen for enhanced touring capability.",
+      "features": [
+        "937cc Testastretta L-twin engine",
+        "Half-fairing with adjustable windscreen",
+        "Cornering ABS",
+        "Traction control (DTC)",
+        "Multiple riding modes",
+        "TFT display",
+        "Ohlins suspension (S variant)",
+        "6-speed gearbox"
+      ],
       "variants": [
         {
           "name": "SuperSport Standard",
@@ -330,6 +418,17 @@
       "fuel_type": "Petrol",
       "max_torque": "100 Nm",
       "source_section": "Available",
+      "description": "The Ducati Streetfighter V2 is a naked streetfighter derived from the Panigale V2 superbike, featuring an 890cc Superquadro V-twin engine producing 118 bhp in a light, agile package. It delivers strong midrange torque with a light kerb weight, making it feel agile everywhere.",
+      "features": [
+        "890cc Superquadro V-twin engine, 118 bhp",
+        "Derived from Panigale V2 superbike",
+        "Cornering ABS",
+        "Traction control (DTC)",
+        "Multiple riding modes",
+        "TFT colour display",
+        "Ohlins suspension (S variant)",
+        "6-speed gearbox with quickshifter"
+      ],
       "variants": [
         {
           "name": "Streetfighter V2 Standard",
@@ -371,6 +470,17 @@
       "fuel_type": "Petrol",
       "max_torque": "96 Nm",
       "source_section": "Available",
+      "description": "The Ducati Multistrada V2 is a versatile adventure tourer powered by an 890cc Superquadro V-twin engine with four riding modes for all conditions. The S variant adds Ducati Skyhook Suspension semi-active technology and cornering lights for enhanced all-weather touring capability.",
+      "features": [
+        "890cc Superquadro V-twin engine",
+        "Four riding modes (Sport, Touring, Urban, Enduro)",
+        "Cornering ABS",
+        "Bosch 6-axis IMU",
+        "Traction control (DTC)",
+        "Ducati Skyhook Suspension (S variant)",
+        "19-litre fuel tank",
+        "TFT colour display"
+      ],
       "variants": [
         {
           "name": "Multistrada V2 Standard",
@@ -416,6 +526,17 @@
       "fuel_type": "Petrol",
       "max_torque": "100 Nm",
       "source_section": "Available",
+      "description": "The Ducati Panigale V2 is a fully-faired superbike with an 890cc Superquadro V-twin engine producing 118 bhp, featuring a monocoque frame and cooling ducts to reduce rider heat. It offers track-level performance in a manageable package with comprehensive electronic aids.",
+      "features": [
+        "890cc Superquadro V-twin, 118 bhp",
+        "Monocoque frame construction",
+        "Cornering ABS",
+        "Bosch 6-axis IMU",
+        "Traction control (DTC)",
+        "Multiple riding modes",
+        "TFT colour display",
+        "Brembo brakes"
+      ],
       "variants": [
         {
           "name": "Panigale V2 Standard",
@@ -457,6 +578,17 @@
       "fuel_type": "Petrol",
       "max_torque": "75 Nm",
       "source_section": "Available",
+      "description": "The Ducati DesertX is an adventure motorcycle inspired by the legendary Paris-Dakar machines of the 1980s, powered by a 937cc Testastretta L-twin tuned for off-road performance with spoke wheels and long-travel suspension. The Rally and Discovery variants build upon the base model with enhanced off-road and touring equipment.",
+      "features": [
+        "937cc Testastretta L-twin engine",
+        "Long-travel off-road suspension",
+        "Spoke wheels (21-inch front, 18-inch rear)",
+        "Cornering ABS with off-road mode",
+        "Multiple riding modes (Rally, Enduro, Sport, Road, Wet)",
+        "21-litre large fuel tank",
+        "TFT colour display",
+        "Bosch 6-axis IMU"
+      ],
       "variants": [
         {
           "name": "DesertX Standard",
@@ -503,6 +635,17 @@
       "fuel_type": "Petrol",
       "max_torque": "125 Nm",
       "source_section": "Available",
+      "description": "The Ducati Multistrada V4 is a flagship adventure tourer with a 1158cc V4 Granturismo engine delivering 170 bhp, featuring the world's first motorcycle with front and rear radar for adaptive cruise control and blind spot detection. It represents the pinnacle of adventure touring technology.",
+      "features": [
+        "1158cc V4 Granturismo engine, 170 bhp",
+        "Front and rear radar (adaptive cruise control, blind spot detection)",
+        "Ducati Skyhook Suspension Evolution",
+        "Cornering ABS with off-road mode",
+        "Multiple riding modes (Sport, Touring, Urban, Enduro)",
+        "TFT display with full connectivity",
+        "Bosch 6-axis IMU",
+        "22-litre fuel tank"
+      ],
       "variants": [
         {
           "name": "Multistrada V4 Standard",
@@ -520,7 +663,8 @@
       "colors": [
         "Ducati Red",
         "Arctic White",
-        "Thrilling Black"
+        "Thrilling Black",
+        "Red and Black"
       ],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, V4 (Granturismo)",
@@ -550,6 +694,17 @@
       "fuel_type": "Petrol",
       "max_torque": "124 Nm",
       "source_section": "Available",
+      "description": "The Ducati Streetfighter V4 is the world's most powerful naked motorcycle, powered by the 1103cc Desmosedici Stradale V4 engine producing 205 bhp, derived directly from the Panigale V4 superbike. It features aerodynamic winglets, a large TFT display with navigation, and the most comprehensive electronics suite in the naked segment.",
+      "features": [
+        "1103cc Desmosedici Stradale V4, 205 bhp",
+        "Aerodynamic winglets for high-speed stability",
+        "Large TFT display with navigation and Bluetooth",
+        "Cornering ABS Pro",
+        "Bosch 6-axis IMU",
+        "Multiple riding modes (Race, Sport, Street, Urban, Wet)",
+        "Launch control",
+        "Quickshifter up and down"
+      ],
       "variants": [
         {
           "name": "Streetfighter V4 Standard",
@@ -590,6 +745,17 @@
       "fuel_type": "Petrol",
       "max_torque": "115 Nm",
       "source_section": "Available",
+      "description": "The Ducati Diavel V4 is a high-performance muscle cruiser powered by the 1158cc V4 Granturismo engine delivering 166 bhp with a low 790 mm seat height for easy reach. It blends sports bike performance with cruiser comfort and a comprehensive electronics package.",
+      "features": [
+        "1158cc V4 Granturismo engine, 166.28 bhp",
+        "Low 790 mm seat height",
+        "Riding modes (Sport, Touring, Urban, Wet, Race)",
+        "Cornering ABS",
+        "Bosch 6-axis IMU",
+        "TFT display with connectivity",
+        "Brembo brakes",
+        "20-litre fuel tank"
+      ],
       "variants": [
         {
           "name": "Diavel V4 Standard",
@@ -627,6 +793,17 @@
       "fuel_type": "Petrol",
       "max_torque": "129 Nm",
       "source_section": "Available",
+      "description": "The Ducati XDiavel V4 is a power cruiser with a very low 755 mm seat height and forward foot controls, powered by a 1158cc V4 Granturismo engine making 168 bhp. It combines the comfort of a cruiser with the performance of a superbike in a distinctly Italian design.",
+      "features": [
+        "1158cc V4 Granturismo engine, 168 bhp",
+        "Very low 755 mm seat height",
+        "Forward foot controls",
+        "LED headlamp with DRL",
+        "Digital cluster with GPS/navigation",
+        "Riding modes (Sport, Touring, Urban)",
+        "Dual-channel ABS",
+        "20-litre fuel tank"
+      ],
       "variants": [
         {
           "name": "XDiavel V4 Standard",
@@ -665,6 +842,17 @@
       "fuel_type": "Petrol",
       "max_torque": "124 Nm",
       "source_section": "Available",
+      "description": "The Ducati Panigale V4 is an Italian engineering masterpiece powered by the 1103cc Desmosedici Stradale V4 producing 219 bhp, directly derived from Ducati's MotoGP machines. The Tricolore special edition delivers the same performance in a stunning Italian tricolour livery.",
+      "features": [
+        "1103cc Desmosedici Stradale V4, 219 bhp",
+        "Full racing electronics suite",
+        "Cornering ABS Pro",
+        "Bosch 6-axis IMU",
+        "Multiple riding modes including Race Pro 1/2/3",
+        "Ducati Quick Shift (DQS) up and down",
+        "Launch control",
+        "Ohlins suspension (S variant)"
+      ],
       "variants": [
         {
           "name": "Panigale V4 Standard",
@@ -711,6 +899,17 @@
       "fuel_type": "Petrol",
       "max_torque": "118 Nm",
       "source_section": "Available",
+      "description": "The Ducati Multistrada V4 RS is the ultimate adventure motorcycle, combining the Panigale V4's 1103cc Desmosedici Stradale engine with the Multistrada's versatile adventure chassis for unprecedented performance. It targets the track while remaining supremely capable on road and gravel.",
+      "features": [
+        "1103cc Desmosedici Stradale V4, 180 bhp",
+        "Race-derived engine in adventure package",
+        "Ohlins TTX36 semi-active suspension",
+        "Brembo Stylema brakes",
+        "Full racing electronics",
+        "Multiple riding modes including Race",
+        "Quickshifter up and down",
+        "22-litre fuel tank"
+      ],
       "variants": [
         {
           "name": "Multistrada V4 RS Standard",
@@ -747,6 +946,17 @@
       "fuel_type": "Petrol",
       "max_torque": "111.3 Nm",
       "source_section": "Available",
+      "description": "The Ducati Panigale V4 R is a homologation-special superbike with a 998cc race-spec Desmosedici Stradale R engine producing 221 bhp, built to comply with World Superbike Championship regulations. It is the closest you can get to Ducati's WSBK racecar on public roads.",
+      "features": [
+        "998cc race-spec V4 R engine, 221 bhp",
+        "WSBK homologation specification",
+        "Ohlins EC-30 electronically controlled suspension",
+        "Brembo Hypure brakes",
+        "Ducati Quick Shift Evo 2 up and down",
+        "Multiple riding modes (Race, Sport, Street, Wet)",
+        "Premium Ohlins adjustable suspension",
+        "Full carbon fairing components"
+      ],
       "variants": [
         {
           "name": "Panigale V4 R Standard",

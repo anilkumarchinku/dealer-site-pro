@@ -14,13 +14,44 @@
       "max_torque": "10.2 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Suzuki Access 125 is a 124cc scooter featuring a BS6 Phase 2B engine with refined performance and impressive fuel efficiency, making it ideal for daily commuting and occasional long rides. It features a USB charging port, combined braking system, and a wide comfortable seat.",
+      "features": [
+        "124cc BS6 Phase 2B engine with 8.3 bhp and 10.2 Nm torque",
+        "47 kmpl user-reported mileage",
+        "Combined braking system on drum brakes",
+        "USB charging port",
+        "5.3-litre fuel tank capacity",
+        "Lightweight at 106 kg",
+        "Wide comfortable seat",
+        "Kick and self-start options",
+        "90 kmph top speed",
+        "Ride Connect TFT edition with Bluetooth"
+      ],
       "variants": [
-        { "name": "Access 125 Standard", "price": "₹80,643" },
-        { "name": "Access 125 Special Edition", "price": "₹85,216" },
-        { "name": "Access 125 Ride Connect Edition", "price": "₹89,718" },
-        { "name": "Access 125 Ride Connect ABS Edition", "price": "₹93,683" },
-        { "name": "Access 125 Ride Connect TFT Edition", "price": "₹95,363" },
-        { "name": "Access 125 Ride Connect TFT ABS Edition", "price": "₹1,00,836" }
+        {
+          "name": "Access 125 Standard",
+          "price": "₹80,643"
+        },
+        {
+          "name": "Access 125 Special Edition",
+          "price": "₹85,216"
+        },
+        {
+          "name": "Access 125 Ride Connect Edition",
+          "price": "₹89,718"
+        },
+        {
+          "name": "Access 125 Ride Connect ABS Edition",
+          "price": "₹93,683"
+        },
+        {
+          "name": "Access 125 Ride Connect TFT Edition",
+          "price": "₹95,363"
+        },
+        {
+          "name": "Access 125 Ride Connect TFT ABS Edition",
+          "price": "₹1,00,836"
+        }
       ],
       "colors": [
         "Metallic Mat Black",
@@ -64,10 +95,32 @@
       "max_torque": "10 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Suzuki Avenis 125 is a sporty scooter designed for young riders, featuring aggressive design lines and a reliable 124.3cc BS6 Phase 2B engine that delivers 49.6 kmpl mileage and an energetic performance. It features alloy wheels, front disc brakes, USB charging port, and a 780mm seat height.",
+      "features": [
+        "124.3cc BS6 Phase 2B engine with 8.58 bhp",
+        "49.6 kmpl expert-reported mileage",
+        "Front disc and rear drum brakes with CBS",
+        "Alloy wheels",
+        "USB charging port",
+        "5.2-litre fuel tank capacity",
+        "Lightweight at 106 kg",
+        "Kick and self-start",
+        "90 kmph top speed",
+        "780mm seat height"
+      ],
       "variants": [
-        { "name": "Avenis 125 Standard", "price": "₹86,262" },
-        { "name": "Avenis 125 Race Edition", "price": "₹87,500" },
-        { "name": "Avenis 125 Special Edition", "price": "₹88,645" }
+        {
+          "name": "Avenis 125 Standard",
+          "price": "₹86,262"
+        },
+        {
+          "name": "Avenis 125 Race Edition",
+          "price": "₹87,500"
+        },
+        {
+          "name": "Avenis 125 Special Edition",
+          "price": "₹88,645"
+        }
       ],
       "colors": [
         "Metallic Matte Platinum Silver and Glass Sparkle Black",
@@ -112,10 +165,32 @@
       "max_torque": "10 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Suzuki Burgman Street 125 is a maxi-scooter with a 124cc BS6 Phase 2B engine offering refined performance and stylish premium design, delivering up to 58.5 kmpl ARAI mileage. It features a fully-digital instrument console with Bluetooth connectivity, silent start, and auto engine start/stop.",
+      "features": [
+        "124cc BS6 Phase 2B engine with 8.58 bhp",
+        "Fully-digital instrument console with Bluetooth connectivity",
+        "Front disc and rear drum brakes with CBS",
+        "Silent start and auto engine start/stop",
+        "Suzuki Eco Performance Alpha technology",
+        "Premium maxi-scooter styling with alloy wheels",
+        "5.5-litre fuel tank capacity",
+        "110 kg kerb weight",
+        "Self-start mechanism",
+        "95 kmph top speed"
+      ],
       "variants": [
-        { "name": "Burgman Street 125 Standard - OBD 2B", "price": "₹96,250" },
-        { "name": "Burgman Street 125 Ride Connect Edition - OBD 2B", "price": "₹1,07,715" },
-        { "name": "Burgman Street 125 EX - OBD 2B", "price": "₹1,10,366" }
+        {
+          "name": "Burgman Street 125 Standard - OBD 2B",
+          "price": "₹96,250"
+        },
+        {
+          "name": "Burgman Street 125 Ride Connect Edition - OBD 2B",
+          "price": "₹1,07,715"
+        },
+        {
+          "name": "Burgman Street 125 EX - OBD 2B",
+          "price": "₹1,10,366"
+        }
       ],
       "colors": [
         "Pearl Mirage White",
@@ -164,9 +239,28 @@
       "max_torque": "13.8 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Suzuki Gixxer is a street bike with a 155cc BS6 Phase 2B engine delivering smooth performance and excellent fuel efficiency, making it an ideal commuter and weekend ride. It features a Bluetooth-connected instrument cluster, alloy wheels, and front and rear disc brakes with ABS.",
+      "features": [
+        "155cc BS6 Phase 2B air-cooled engine with 13.41 bhp",
+        "13.8 Nm torque",
+        "5-speed manual transmission",
+        "Front and rear disc brakes with single-channel ABS",
+        "Bluetooth-connected instrument cluster",
+        "Alloy wheels",
+        "LED headlamp",
+        "12-litre fuel tank capacity",
+        "141 kg kerb weight",
+        "795mm seat height"
+      ],
       "variants": [
-        { "name": "Gixxer Ride Connect - OBD 2B", "price": "₹1,28,892" },
-        { "name": "Gixxer Ride Connect Special Edition - OBD 2B", "price": "₹1,29,345" }
+        {
+          "name": "Gixxer Ride Connect - OBD 2B",
+          "price": "₹1,28,892"
+        },
+        {
+          "name": "Gixxer Ride Connect Special Edition - OBD 2B",
+          "price": "₹1,29,345"
+        }
       ],
       "colors": [
         "Pearl Mira Red",
@@ -210,9 +304,28 @@
       "max_torque": "13.8 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Suzuki Gixxer SF is a fully-faired sports bike powered by a 155cc BS6 Phase 2B engine, offering stylish design with practical daily usability and reliable performance. It features a Bluetooth-connected instrument cluster, ABS, and disc brakes on both ends within a sporty full-fairing package.",
+      "features": [
+        "155cc BS6 Phase 2B air-cooled engine with 13.4 bhp",
+        "5-speed manual transmission",
+        "Full aerodynamic fairing",
+        "Front and rear disc brakes with single-channel ABS",
+        "Bluetooth-connected instrument cluster",
+        "Alloy wheels",
+        "45 kmpl user-reported mileage",
+        "12-litre fuel tank capacity",
+        "148 kg kerb weight",
+        "125 kmph top speed"
+      ],
       "variants": [
-        { "name": "Gixxer SF Ride Connect - OBD 2B", "price": "₹1,37,594" },
-        { "name": "Gixxer SF Ride Connect Special Edition - OBD 2B", "price": "₹1,38,061" }
+        {
+          "name": "Gixxer SF Ride Connect - OBD 2B",
+          "price": "₹1,37,594"
+        },
+        {
+          "name": "Gixxer SF Ride Connect Special Edition - OBD 2B",
+          "price": "₹1,38,061"
+        }
       ],
       "colors": [
         "Pearl Mira Red",
@@ -256,9 +369,28 @@
       "max_torque": "22.2 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Suzuki Gixxer 250 is a street bike powered by a 249cc BS6 Phase 2B oil-cooled engine delivering 26.13 bhp and 22.2 Nm of torque with approximately 35 kmpl mileage. It features dual-channel ABS, a digital instrument cluster, and alloy wheels for confident urban and highway riding.",
+      "features": [
+        "249cc BS6 Phase 2B oil-cooled engine with 26.13 bhp",
+        "22.2 Nm torque",
+        "6-speed manual transmission",
+        "Dual-channel ABS with front and rear disc brakes",
+        "Digital instrument cluster",
+        "LED headlamp",
+        "Alloy wheels",
+        "12-litre fuel tank capacity",
+        "156 kg kerb weight",
+        "130 kmph top speed"
+      ],
       "variants": [
-        { "name": "Gixxer 250 Standard", "price": "₹1,83,994" },
-        { "name": "Gixxer 250 Special Edition", "price": "₹1,84,451" }
+        {
+          "name": "Gixxer 250 Standard",
+          "price": "₹1,83,994"
+        },
+        {
+          "name": "Gixxer 250 Special Edition",
+          "price": "₹1,84,451"
+        }
       ],
       "colors": [
         "Met. Triton Blue / Pearl Glacier White",
@@ -301,9 +433,28 @@
       "max_torque": "22.2 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Suzuki Gixxer SF 250 is a sports bike featuring a 249cc BS6 Phase 2B oil-cooled engine delivering highly tractable performance with a supremely comfortable riding posture, suitable for city commuting and weekend rides. It offers full aerodynamic fairing, dual-channel ABS, and a 150 kmph top speed.",
+      "features": [
+        "249cc BS6 Phase 2B oil-cooled engine with 26.13 bhp",
+        "6-speed manual transmission",
+        "Full aerodynamic fairing",
+        "Dual-channel ABS with front and rear disc brakes",
+        "LED headlamp",
+        "Digital instrument cluster",
+        "Alloy wheels",
+        "36 kmpl user-reported mileage",
+        "12-litre fuel tank capacity",
+        "150 kmph top speed"
+      ],
       "variants": [
-        { "name": "Gixxer SF 250 Standard", "price": "₹1,92,245" },
-        { "name": "Gixxer SF 250 Special Edition", "price": "₹1,92,703" }
+        {
+          "name": "Gixxer SF 250 Standard",
+          "price": "₹1,92,245"
+        },
+        {
+          "name": "Gixxer SF 250 Special Edition",
+          "price": "₹1,92,703"
+        }
       ],
       "colors": [
         "Met Triton Blue / Pearl Glacier White",
@@ -348,7 +499,10 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Gixxer SF 250 Flex Fuel Standard", "price": "₹2,00,791" }
+        {
+          "name": "Gixxer SF 250 Flex Fuel Standard",
+          "price": "₹2,00,791"
+        }
       ],
       "colors": [
         "Met Matt Black",
@@ -376,7 +530,18 @@
           "LED headlamp",
           "Digital instrument cluster"
         ]
-      }
+      },
+      "description": "The Suzuki Gixxer SF 250 Flex Fuel is India's first flex-fuel supersport motorcycle, capable of running on E20 ethanol-blended petrol. Featuring a full aerodynamic fairing with aggressive supersport styling, it is powered by a 249cc fuel-injected engine. The flex-fuel capability makes it more economical and eco-friendly while retaining the sporty character the Gixxer SF is known for.",
+      "features": [
+        "249cc Fuel-Injected Engine",
+        "Flex-Fuel E20 Compatible",
+        "ABS",
+        "Full Fairing",
+        "LED Lighting",
+        "USB Charging",
+        "Digital Instrument Cluster",
+        "Sporty Ergonomics"
+      ]
     },
     {
       "make": "Suzuki",
@@ -389,8 +554,24 @@
       "max_torque": "22.2 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Suzuki V-Strom SX is a 249cc adventure motorcycle offering comfortable ergonomics, good suspension travel, and reliable performance for both city commuting and highway touring. It features a Bluetooth-enabled instrument cluster, dual-channel ABS, and adventure tourer styling.",
+      "features": [
+        "249cc BS6 Phase 2B oil-cooled engine with 26.1 bhp",
+        "6-speed manual transmission",
+        "Dual-channel ABS with front and rear disc brakes",
+        "Bluetooth-enabled instrument cluster",
+        "Adventure tourer styling with good suspension travel",
+        "Alloy wheels",
+        "36 kmpl ARAI mileage",
+        "12-litre fuel tank capacity",
+        "167 kg kerb weight",
+        "140 kmph top speed"
+      ],
       "variants": [
-        { "name": "V-Strom SX Standard", "price": "₹2,00,382" }
+        {
+          "name": "V-Strom SX Standard",
+          "price": "₹2,00,382"
+        }
       ],
       "colors": [
         "Glass Sparkle Black (YVB)",
@@ -436,7 +617,10 @@
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
       "variants": [
-        { "name": "V-Strom 650 XT ABS", "price": "₹7,55,161" }
+        {
+          "name": "V-Strom 650 XT ABS",
+          "price": "₹7,55,161"
+        }
       ],
       "colors": [
         "Pearl White Glacier",
@@ -458,7 +642,18 @@
         "brakes_front": "Disc (310mm)",
         "brakes_rear": "Disc (260mm)",
         "abs": "Dual-channel ABS"
-      }
+      },
+      "description": "The Suzuki V-Strom 650 XT is a versatile adventure-touring motorcycle powered by a 645cc parallel-twin V-Twin engine. Built for long-distance touring with off-road capability, it features wire-spoke wheels, adjustable suspension, and comprehensive electronics including traction control and multiple riding modes. The V-Strom 650 XT is ideal for riders seeking adventure touring at a reasonable price point.",
+      "features": [
+        "645cc V-Twin Engine",
+        "Traction Control",
+        "ABS",
+        "Spoke Wheels",
+        "Multiple Riding Modes",
+        "Adjustable Suspension",
+        "Touring Windscreen",
+        "Knuckle Guards"
+      ]
     },
     {
       "make": "Suzuki",
@@ -472,7 +667,10 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "GSX-8R Standard", "price": "₹9,89,328" }
+        {
+          "name": "GSX-8R Standard",
+          "price": "₹9,89,328"
+        }
       ],
       "colors": [
         "Metallic Matt Black",
@@ -502,7 +700,18 @@
           "Traction control",
           "Multiple riding modes"
         ]
-      }
+      },
+      "description": "The Suzuki GSX-8R is a middleweight supersport motorcycle powered by a new 776cc parallel-twin engine borrowed from the GSX-S800. Featuring full aerodynamic fairing, aggressive styling, and advanced electronics package, it offers a compelling blend of performance and everyday usability. The GSX-8R targets performance-oriented riders looking for a refined and capable supersport experience.",
+      "features": [
+        "776cc Parallel Twin Engine",
+        "Cornering ABS",
+        "Traction Control",
+        "Full Fairing",
+        "TFT Display",
+        "Multiple Riding Modes",
+        "Slipper Clutch",
+        "LED Lighting"
+      ]
     },
     {
       "make": "Suzuki",
@@ -516,7 +725,10 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "V-Strom 800 DE Standard", "price": "₹11,01,541" }
+        {
+          "name": "V-Strom 800 DE Standard",
+          "price": "₹11,01,541"
+        }
       ],
       "colors": [
         "Glass Sparkle Black",
@@ -546,7 +758,18 @@
           "Traction control",
           "Cruise control"
         ]
-      }
+      },
+      "description": "The Suzuki V-Strom 800 DE is a dedicated off-road adventure motorcycle with a new 776cc parallel-twin engine and serious off-road credentials. Featuring a 21-inch front spoke wheel, long-travel suspension, and comprehensive electronics suite, it can tackle challenging terrain with confidence. The V-Strom 800 DE is equipped with multiple riding modes, cornering ABS, and hill hold control for complete adventure readiness.",
+      "features": [
+        "776cc Parallel Twin Engine",
+        "Cornering ABS",
+        "Hill Hold Control",
+        "21-inch Spoke Wheel",
+        "Long Travel Suspension",
+        "Multiple Riding Modes",
+        "TFT Display",
+        "Knuckle Guards"
+      ]
     },
     {
       "make": "Suzuki",
@@ -559,8 +782,24 @@
       "max_torque": "142 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Suzuki Hayabusa is a legendary hypersport motorcycle featuring a potent 1340cc inline-four engine producing 190 bhp, delivering blistering performance with advanced electronics and aerodynamic design. It features the Suzuki Intelligent Ride System (S.I.R.S.) with lean-angle-sensitive traction control, cornering ABS, and bi-directional quickshifter.",
+      "features": [
+        "1340cc BS6 Phase 2B inline-four engine with 190 bhp and 142 Nm torque",
+        "Electronically limited top speed of 300 kmph",
+        "Suzuki Intelligent Ride System (S.I.R.S.)",
+        "Lean-angle-sensitive traction control with IMU",
+        "Cornering ABS and bi-directional quickshifter",
+        "6-speed manual transmission",
+        "Front and rear disc brakes",
+        "20-litre fuel tank capacity",
+        "266 kg kerb weight",
+        "Multiple riding modes and launch control"
+      ],
       "variants": [
-        { "name": "Hayabusa Standard", "price": "₹18,06,885" }
+        {
+          "name": "Hayabusa Standard",
+          "price": "₹18,06,885"
+        }
       ],
       "colors": [
         "Metallic Mystic Silver / Pearl Vigor Blue",
@@ -605,7 +844,10 @@
       "fuel_type": "Petrol",
       "source_section": "Available",
       "variants": [
-        { "name": "Katana Standard", "price": "₹13,61,000" }
+        {
+          "name": "Katana Standard",
+          "price": "₹13,61,000"
+        }
       ],
       "colors": [
         "Metallic Mystic Silver",
@@ -633,7 +875,18 @@
           "LED headlamp",
           "Traction control"
         ]
-      }
+      },
+      "description": "The Suzuki Katana is a neo-retro naked sportbike with iconic styling inspired by the legendary original Katana of the 1980s. Powered by the same 999cc engine as the GSX-R1000, it delivers superb performance in a more approachable naked format. The Katana's distinctive angular design, premium suspension, and electronics package make it a collector's item and an exciting everyday performance machine.",
+      "features": [
+        "999cc Inline-Four Engine",
+        "ABS",
+        "Traction Control",
+        "Multiple Riding Modes",
+        "Inverted Forks",
+        "Monoshock Rear",
+        "LED Lighting",
+        "Quick Shifter"
+      ]
     }
   ]
 }

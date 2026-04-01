@@ -16,10 +16,27 @@
       "max_torque": "36 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Speed T4 is a street bike featuring a 398.15cc BS6 Phase 2B engine that delivers excellent low and mid-range torque, offering comfortable seating and a stylish retro-modern design suitable for daily commutes and occasional touring.",
+      "features": [
+        "ABS braking system with front and rear disc brakes",
+        "6-speed manual transmission with self-start",
+        "Alloy wheels for improved durability and aesthetics",
+        "Comfortable upright riding posture for relaxed city riding",
+        "13-liter fuel tank capacity",
+        "806mm seat height with 180 kg kerb weight",
+        "Telescopic front fork suspension",
+        "Retro-modern design with classic Triumph styling"
+      ],
+      "colors": [
+        "Baja Orange",
+        "Phantom Black / Pearl Metallic White",
+        "Phantom Black / Storm Grey",
+        "Caspian Blue / Pearl Metallic White",
+        "Lava Red Gloss / Pearl Metallic White"
+      ],
       "variants": [
         { "name": "Speed T4 Standard", "price": "₹1,95,006" }
       ],
-      "colors": ["Baja Orange", "Phantom Black / Pearl Metallic White", "Phantom Black / Storm Grey", "Caspian Blue / Pearl Metallic White", "Lava Red Gloss / Pearl Metallic White"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Single-cylinder",
         "power": "30.6 bhp",
@@ -47,10 +64,26 @@
       "max_torque": "37.5 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Speed 400 is a street bike featuring a 398.15cc BS6 Phase 2B engine delivering 39.5 bhp and 37.5 Nm torque, achieving approximately 28 kmpl mileage with a 179 kg kerb weight and modern-classic design styling.",
+      "features": [
+        "Dual-channel ABS with front and rear disc brakes",
+        "6-speed manual transmission",
+        "Traction control system",
+        "Alloy wheels",
+        "13-liter fuel tank capacity",
+        "803mm seat height",
+        "Self-start ignition",
+        "Modern-classic Triumph design language"
+      ],
+      "colors": [
+        "Racing Red / Pearl Metallic White",
+        "Pearl Metallic White / Pewter Grey",
+        "Phantom Black / Pewter Grey",
+        "Racing Yellow / Pearl Metallic White"
+      ],
       "variants": [
         { "name": "Speed 400 Standard", "price": "₹2,39,005" }
       ],
-      "colors": ["Racing Red / Pearl Metallic White", "Pearl Metallic White / Pewter Grey", "Phantom Black / Pewter Grey", "Racing Yellow / Pearl Metallic White"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Single-cylinder",
         "power": "39.5 bhp",
@@ -79,10 +112,26 @@
       "max_torque": "37.5 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Scrambler 400 X is a purpose-built scrambler motorcycle powered by a 398.15 cc BS6 Phase 2B engine delivering 39.5 bhp, featuring an upright riding posture, good ground clearance, and strong mid-range performance suitable for both city commuting and off-road adventures.",
+      "features": [
+        "ABS braking system with front and rear disc brakes",
+        "Switchable traction control",
+        "6-speed manual transmission",
+        "Cross-spoke tubeless wheels for off-road capability",
+        "Anti-theft system",
+        "Good suspension for rough roads and potholes",
+        "Upright ergonomic riding posture",
+        "Scrambler-specific high-mount exhaust"
+      ],
+      "colors": [
+        "Pearl Metallic White / Phantom Black",
+        "Phantom Black / Silver Ice",
+        "Volcanic Red / Phantom Black",
+        "Matt Khaki Green / Fusion White"
+      ],
       "variants": [
         { "name": "Scrambler 400 X", "price": "₹2,69,976" }
       ],
-      "colors": ["Pearl Metallic White / Phantom Black", "Phantom Black / Silver Ice", "Volcanic Red / Phantom Black", "Matt Khaki Green / Fusion White"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Single-cylinder",
         "power": "39.5 bhp",
@@ -111,10 +160,26 @@
       "max_torque": "37.5 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Thruxton 400 is a retro cafe racer motorcycle powered by a 398.15cc liquid-cooled single-cylinder engine producing 41.4 bhp, combining classic British cafe racer styling with modern performance and safety features.",
+      "features": [
+        "Dual-channel ABS with front and rear disc brakes",
+        "Switchable traction control",
+        "6-speed manual transmission",
+        "Cafe racer styling with half-fairing",
+        "Clip-on handlebars for sporty riding posture",
+        "Alloy wheels",
+        "13-liter fuel tank capacity",
+        "795mm seat height"
+      ],
+      "colors": [
+        "Pearl Metallic White / Storm Grey",
+        "Phantom Black / Aluminium Silver",
+        "Lava Red Gloss / Aluminium Silver",
+        "Metallic Racing Yellow / Aluminium Silver"
+      ],
       "variants": [
         { "name": "Thruxton 400 Standard", "price": "₹2,76,384" }
       ],
-      "colors": ["Pearl Metallic White/Storm Grey", "Phantom Black/Aluminium Silver", "Lava Red Gloss/Aluminium Silver", "Metallic Racing Yellow/Aluminium Silver"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Single-cylinder",
         "power": "41.4 bhp",
@@ -143,10 +208,25 @@
       "max_torque": "69 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Daytona 660 reimagines the iconic nameplate with a modern approach, combining aggressive styling with a refined 660cc inline-triple engine that balances docile commuting characteristics with thrilling high-rev performance.",
+      "features": [
+        "Dual disc brakes (310mm front, 220mm rear) with cornering ABS",
+        "Three riding modes: Rain, Road, and Sport",
+        "660cc BS6 Phase 2 inline-triple engine producing 93.87 bhp",
+        "6-speed manual transmission",
+        "Showa suspension with non-adjustable front and preload-adjustable rear",
+        "TFT display",
+        "Alloy wheels",
+        "14-liter fuel tank capacity"
+      ],
+      "colors": [
+        "Carnival Red / Sapphire Black",
+        "Satin Granite / Satin Jet Black",
+        "Snowdonia White / Sapphire Black"
+      ],
       "variants": [
         { "name": "Daytona 660 Standard", "price": "₹9,88,400" }
       ],
-      "colors": ["Carnival Red / Sapphire Black", "Satin Granite / Satin Jet Black", "Snowdonia White / Sapphire Black"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-triple",
         "power": "94 bhp",
@@ -175,10 +255,26 @@
       "max_torque": "64 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Trident 660 is a street bike featuring a 660cc BS6 Phase 2B inline-triple engine with 80 bhp power output, delivering engaging performance with smooth power delivery and nimble handling suitable for both new and experienced riders.",
+      "features": [
+        "ABS braking system with front and rear disc brakes",
+        "Traction control system for enhanced stability",
+        "Multiple riding modes for varied conditions",
+        "Cruise control (2025 models)",
+        "Showa suspension for premium ride quality",
+        "Michelin Road 5 tyres for confident cornering grip",
+        "6-speed manual transmission",
+        "Triple-cylinder engine with refined smoothness"
+      ],
+      "colors": [
+        "Cobalt Blue / Sapphire Black",
+        "Cosmic Yellow / Sapphire Black",
+        "Diablo Red / Sapphire Black",
+        "Jet Black"
+      ],
       "variants": [
         { "name": "Trident 660 Standard", "price": "₹8,99,000" }
       ],
-      "colors": ["Cobalt Blue / Sapphire Black", "Cosmic Yellow / Sapphire Black", "Diablo Red / Sapphire Black", "Jet Black"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-triple",
         "power": "80 bhp",
@@ -207,10 +303,26 @@
       "max_torque": "80 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Speed Twin 900 is a modern classic roadster powered by a 900cc liquid-cooled parallel-twin engine producing 64 bhp and 80 Nm torque, blending heritage styling with contemporary performance and ride quality.",
+      "features": [
+        "Dual-channel ABS with front and rear disc brakes",
+        "6-speed manual transmission",
+        "USD Marzocchi front forks",
+        "Semi-digital instrument cluster",
+        "14.5-liter fuel tank capacity",
+        "809mm seat height",
+        "Alloy wheels",
+        "Self-start ignition"
+      ],
+      "colors": [
+        "Matt Storm Grey",
+        "Red Hopper",
+        "Matt Baja Orange",
+        "Jet Black"
+      ],
       "variants": [
         { "name": "Speed Twin 900 Standard", "price": "₹9,71,300" }
       ],
-      "colors": ["Matt Storm Grey", "Red Hopper", "Matt Baja Orange", "Jet Black"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "64 bhp",
@@ -239,10 +351,25 @@
       "max_torque": "80 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Scrambler 900 is a classic scrambler motorcycle powered by a 900cc liquid-cooled parallel-twin engine producing 64.1 bhp, offering a versatile blend of on-road capability and light off-road adventure with heritage Triumph styling.",
+      "features": [
+        "Switchable ABS with front and rear disc brakes",
+        "Ride-by-Wire throttle system",
+        "Traction control with two riding modes (Road, Rain)",
+        "5-speed manual transmission",
+        "Spoke-type wheels for classic scrambler look",
+        "12-liter fuel tank capacity",
+        "Self-start ignition",
+        "High-mount twin exhausts"
+      ],
+      "colors": [
+        "Carnival Red / Jet Black",
+        "Matt Khaki",
+        "Jet Black"
+      ],
       "variants": [
         { "name": "Scrambler 900 Standard", "price": "₹10,74,700" }
       ],
-      "colors": ["Carnival Red / Jet Black", "Matt Khaki", "Jet Black"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "64.1 bhp",
@@ -271,10 +398,26 @@
       "max_torque": "80 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Bonneville T100 is a cruiser motorcycle powered by a 900cc BS6 Phase 2 parallel-twin engine, offering smooth performance with good low-end torque and easy city handling in a classic British styling package.",
+      "features": [
+        "ABS braking system with front and rear disc brakes",
+        "5-speed manual transmission",
+        "Spoke-type wheels for classic aesthetics",
+        "ARAI-rated fuel efficiency of 24 kmpl",
+        "14.5-liter fuel tank capacity",
+        "790mm seat height",
+        "Self-start ignition",
+        "Classic Bonneville heritage styling"
+      ],
+      "colors": [
+        "Competition Green / Ironstone",
+        "Carnival Red Fusion White",
+        "Jet Black",
+        "Aluminium / Baja Orange"
+      ],
       "variants": [
         { "name": "Bonneville T100 Standard", "price": "₹10,85,400" }
       ],
-      "colors": ["Competition Green / Ironstone", "Carnival Red Fusion White", "Jet Black", "Aluminium / Baja Orange"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "64.1 bhp",
@@ -302,10 +445,25 @@
       "max_torque": "77 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Street Triple R is a street bike featuring a 765cc BS6 Phase 2 inline-triple engine delivering 118 bhp and 80 Nm torque, with a lightweight 168 kg kerb weight offering an exhilarating naked riding experience.",
+      "features": [
+        "Dual-channel ABS with 310mm front and 220mm rear disc brakes",
+        "765cc BS6 Phase 2 inline-triple engine",
+        "6-speed manual transmission",
+        "Showa 41mm USD front forks and monoshock rear",
+        "Multiple riding modes",
+        "Alloy wheels",
+        "17.4-liter fuel tank capacity",
+        "Self-start ignition"
+      ],
+      "colors": [
+        "Phantom Black",
+        "Matt Baja Orange",
+        "Pure White"
+      ],
       "variants": [
         { "name": "Street Triple R", "price": "₹11,16,300" }
       ],
-      "colors": ["Phantom Black", "Matt Baja Orange", "Pure White"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-triple",
         "power": "118 bhp",
@@ -334,10 +492,26 @@
       "max_torque": "105 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Bonneville T120 is a cruiser motorcycle powered by a 1200cc parallel-twin BS6 Phase 2 engine delivering 78.9 bhp and 105 Nm torque, blending classic Bonneville styling with modern reliability and smooth performance.",
+      "features": [
+        "ABS braking system with front and rear disc brakes",
+        "6-speed manual transmission",
+        "Spoke-type wheels for classic aesthetics",
+        "ARAI-rated fuel efficiency of 21 kmpl",
+        "14.5-liter fuel tank capacity",
+        "790mm seat height",
+        "Self-start ignition",
+        "Iconic Bonneville heritage design"
+      ],
+      "colors": [
+        "Jet Black / Fusion White",
+        "Cordovan Red Silver Ice",
+        "Jet Black",
+        "Crystal White / Cranberry Red"
+      ],
       "variants": [
         { "name": "Bonneville T120 Standard", "price": "₹12,35,000" }
       ],
-      "colors": ["Jet Black / Fusion White", "Cordovan Red Silver Ice", "Jet Black", "Crystal White / Cranberry Red"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "78.9 bhp",
@@ -365,10 +539,27 @@
       "max_torque": "107 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Bonneville Bobber is a cruiser motorcycle powered by a 1200cc BS6 Phase 2 parallel-twin engine delivering 76.9 bhp, featuring a distinctive bobber silhouette with a low 690mm seat height and torquey motor with a distinctive exhaust sound.",
+      "features": [
+        "ABS braking system with front and rear disc brakes",
+        "6-speed manual transmission",
+        "Spoke-type wheels with classic bobber styling",
+        "Highly usable riding modes",
+        "12-liter fuel tank capacity",
+        "Ultra-low 690mm seat height",
+        "Self-start ignition",
+        "Torquey 1200cc motor with distinctive exhaust note"
+      ],
+      "colors": [
+        "Jet Black / Ash Gray",
+        "Stealth Edition - Phantom Purple / Silver Purple",
+        "Red Hopper",
+        "Jet Black",
+        "Matt Storm Grey / Matt Ironstone"
+      ],
       "variants": [
         { "name": "Bonneville Bobber Standard", "price": "₹13,37,500" }
       ],
-      "colors": ["Jet Black / Ash Gray", "Stealth Edition - Phantom Purple / Silver Purple", "Red Hopper", "Jet Black", "Matt Storm Grey / Matt Ironstone"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "76.9 bhp",
@@ -397,10 +588,26 @@
       "max_torque": "107 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Bonneville Speedmaster is a cruiser motorcycle powered by a 1200cc BS6 Phase 2 parallel-twin engine delivering 76.9 bhp and 106 Nm torque, offering a comfortable relaxed riding stance with advanced safety features and usable riding modes.",
+      "features": [
+        "ABS braking system with front and rear disc brakes",
+        "6-speed manual transmission",
+        "Highly usable riding modes",
+        "21.7 kmpl ARAI mileage rating",
+        "Spoke-type wheels",
+        "12-liter fuel tank capacity",
+        "Low 705mm seat height",
+        "Self-start ignition"
+      ],
+      "colors": [
+        "Pacific Blue / Silver Ice",
+        "Cordovan Red",
+        "Jet Black",
+        "Snowdonia / Cranberry Red"
+      ],
       "variants": [
         { "name": "Bonneville Speedmaster Standard", "price": "₹13,37,500" }
       ],
-      "colors": ["Pacific Blue / Silver Ice", "Cordovan Red", "Jet Black", "Snowdonia / Cranberry Red"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Parallel-twin",
         "power": "76.9 bhp",
@@ -428,10 +635,27 @@
       "max_torque": "80 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Street Triple RS is a lightweight, high-performance naked street bike powered by a 765cc inline-triple engine delivering 130 bhp, combining excellent handling with sophisticated electronics and top-spec cycle parts.",
+      "features": [
+        "Cornering ABS with Brembo 310mm front disc brakes",
+        "Ohlins rear shock absorber",
+        "Multiple riding modes with traction control",
+        "TFT display",
+        "6-speed manual transmission",
+        "Alloy wheels",
+        "17.4-liter fuel tank",
+        "Lightweight 166 kg kerb weight"
+      ],
+      "colors": [
+        "Granite",
+        "Phantom Black",
+        "Cosmic Yellow",
+        "Silver Ice",
+        "Carnival Red"
+      ],
       "variants": [
         { "name": "Street Triple RS", "price": "₹13,22,800" }
       ],
-      "colors": ["Granite", "Phantom Black", "Cosmic Yellow", "Silver Ice", "Carnival Red"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-triple",
         "power": "130 bhp",
@@ -451,6 +675,53 @@
     },
     {
       "make": "Triumph",
+      "model": "Thruxton RS",
+      "variant_name": "Triumph Thruxton RS",
+      "price": "₹12,13,004",
+      "engine_displacement": "1200 cc",
+      "mileage": "20 kmpl",
+      "top_speed": "195 kmph",
+      "max_torque": "112 Nm",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Triumph Thruxton RS is a premium cafe racer motorcycle powered by a 1200cc liquid-cooled parallel-twin engine producing 96 bhp, combining retro British styling with modern performance and fully adjustable premium suspension.",
+      "features": [
+        "Dual-channel ABS with front and rear disc brakes",
+        "Showa 43mm USD big piston forks with full adjustability",
+        "Ohlins twin shocks with piggyback reservoir",
+        "Digital odometer and fuel gauge",
+        "Analogue speedometer and tachometer",
+        "Self-start ignition system with kill switch",
+        "Low fuel and low oil indicators",
+        "Tubeless tyres with 17-inch wheels"
+      ],
+      "colors": [
+        "Matt Jet Black",
+        "Crystal White",
+        "Silver Ice",
+        "Diablo Red"
+      ],
+      "variants": [
+        { "name": "Thruxton RS Standard", "price": "₹12,13,004" }
+      ],
+      "technical_specifications": {
+        "engine_type": "Liquid-cooled, Parallel-twin",
+        "power": "96 bhp",
+        "torque": "112 Nm",
+        "gearbox": "6-Speed Manual",
+        "fuel_tank": "14.5 litres",
+        "seat_height": "815 mm",
+        "kerb_weight": "232 kg",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "abs": "Dual-channel ABS",
+        "wheel_type": "Alloy",
+        "start_type": "Self Start",
+        "emission": "BS6 Phase 2"
+      }
+    },
+    {
+      "make": "Triumph",
       "model": "Tiger 900",
       "variant_name": "Triumph Tiger 900",
       "price": "₹14,40,000 - ₹16,15,000",
@@ -460,11 +731,29 @@
       "max_torque": "87 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Tiger 900 is an adventure bike powered by an 888cc BS6 Phase 2 inline-triple engine delivering 106.5 bhp and 87 Nm torque, combining on-road and off-road capability with top-spec electronics and adventure-focused ergonomics.",
+      "features": [
+        "ABS braking system with front and rear disc brakes",
+        "Multiple riding modes with cornering ABS",
+        "888cc inline-triple engine with 94 bhp output",
+        "6-speed manual transmission",
+        "Full-colour TFT display with connectivity",
+        "20-liter fuel tank for long range",
+        "Alloy or spoke wheel options by variant",
+        "Extremely capable off-road performance"
+      ],
+      "colors": [
+        "Carnival Red / Sapphire Black",
+        "Snowdonia White / Sapphire Black",
+        "Graphite / Sapphire Black",
+        "Matt Khaki Green / Matt Phantom Black",
+        "Ash Grey / Intense Orange",
+        "Carbon Black / Sapphire Black"
+      ],
       "variants": [
         { "name": "Tiger 900 GT", "price": "₹14,40,000" },
         { "name": "Tiger 900 Rally Pro", "price": "₹16,15,000" }
       ],
-      "colors": ["Carnival Red / Sapphire Black", "Snowdonia White / Sapphire Black", "Graphite / Sapphire Black", "Matt Khaki Green / Matt Phantom Black", "Ash Grey / Intense Orange", "Carbon Black / Sapphire Black"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-triple",
         "power": "94 bhp",
@@ -492,13 +781,29 @@
       "max_torque": "130 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Tiger 1200 is a flagship adventure bike powered by a 1160cc BS6 Phase 2 inline-triple engine delivering 148 bhp and 130 Nm torque, offering world-class adventure touring capability across four distinct variants.",
+      "features": [
+        "ABS braking system with front and rear disc brakes",
+        "Multiple riding modes for road and off-road use",
+        "1160cc inline-triple engine with 148 bhp",
+        "6-speed manual transmission",
+        "Full-colour TFT display with smartphone connectivity",
+        "20-liter fuel tank for extended range",
+        "850mm seat height with tall windscreen",
+        "Semi-active suspension on GT Explorer and Rally Explorer"
+      ],
+      "colors": [
+        "Lucerne Blue",
+        "Sapphire Black",
+        "Snowdonia White",
+        "Matt Khaki Green"
+      ],
       "variants": [
         { "name": "Tiger 1200 GT Pro", "price": "₹19,39,000" },
         { "name": "Tiger 1200 GT Explorer", "price": "₹20,50,000" },
         { "name": "Tiger 1200 Rally Pro", "price": "₹21,29,000" },
         { "name": "Tiger 1200 Rally Explorer", "price": "₹22,29,000" }
       ],
-      "colors": ["Lucerne Blue", "Sapphire Black", "Snowdonia White", "Matt Khaki Green"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-triple",
         "power": "148 bhp",
@@ -526,11 +831,27 @@
       "max_torque": "125 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Speed Triple 1200 RS is a high-performance sports bike with a 1160cc inline-triple engine delivering 177 bhp, designed for track and road use with modern electronics and premium Brembo braking systems.",
+      "features": [
+        "Cornering ABS with Brembo front disc brakes",
+        "1160cc BS6 Phase 2 inline-triple producing 177 bhp and 125 Nm",
+        "Multiple riding modes and traction control",
+        "6-speed manual transmission",
+        "TFT display with electronics suite",
+        "Fully adjustable suspension",
+        "Alloy wheels",
+        "Self-start ignition"
+      ],
+      "colors": [
+        "Granite / Triumph Performance Yellow",
+        "Granite / Diablo Red",
+        "Jet Black",
+        "Triumph Performance Yellow"
+      ],
       "variants": [
         { "name": "Speed Triple 1200 RS", "price": "₹21,75,900" },
         { "name": "Speed Triple 1200 RR", "price": "₹23,06,900" }
       ],
-      "colors": ["Granite / Triumph Performance Yellow", "Granite / Diablo Red", "Jet Black", "Triumph Performance Yellow"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-triple",
         "power": "177 bhp",
@@ -558,11 +879,28 @@
       "max_torque": "221 Nm",
       "fuel_type": "Petrol",
       "source_section": "Available",
+      "description": "The Triumph Rocket 3 is a powerful cruiser motorcycle featuring a massive 2458cc triple engine that delivers 165 bhp and a class-leading 221 Nm of torque, making it one of the largest displacement production motorcycles available.",
+      "features": [
+        "Cornering ABS with front and rear disc brakes",
+        "Advanced electronics including traction control and multiple riding modes",
+        "TFT display with Bluetooth connectivity",
+        "6-speed manual transmission",
+        "Alloy wheels",
+        "18-liter fuel tank capacity",
+        "Self-start ignition",
+        "Class-leading 221 Nm torque output"
+      ],
+      "colors": [
+        "Silver Ice Cranberry Red",
+        "Phantom Black",
+        "Korosi Red",
+        "Sapphire Black (GT)",
+        "Silver Ice and Storm Grey (GT)"
+      ],
       "variants": [
         { "name": "Rocket 3 R", "price": "₹24,01,955" },
         { "name": "Rocket 3 GT", "price": "₹24,66,008" }
       ],
-      "colors": ["Silver Ice Cranberry Red", "Phantom Black", "Korosi Red", "Sapphire Black (GT)", "Silver Ice and Storm Grey (GT)"],
       "technical_specifications": {
         "engine_type": "Liquid-cooled, Inline-triple",
         "power": "165 bhp",

@@ -17,6 +17,19 @@
       "fuel_type": "Petrol",
       "max_torque": "130 Nm",
       "source_section": "Available",
+      "description": "The Norton V4CR is a handcrafted British café racer powered by a 1200cc V4 liquid-cooled engine delivering 185 bhp. It blends premium engineering with striking design, representing the pinnacle of Norton's motorcycling heritage for the modern era.",
+      "features": [
+        "1200cc V4 liquid-cooled engine producing 185 bhp and 130 Nm torque",
+        "6-speed manual transmission",
+        "Dual disc brakes with ABS",
+        "Premium handcrafted British build quality",
+        "17-litre fuel tank capacity",
+        "198kg kerb weight",
+        "260 kmph top speed",
+        "Carbon fibre body panels",
+        "Advanced electronics package",
+        "Available in Silver Carbon and Brushed Aluminum"
+      ],
       "colors": ["Silver Carbon", "Brushed Aluminum"],
       "variants": [
         { "name": "V4CR Standard", "price": "₹32,00,000" }
@@ -46,9 +59,22 @@
       "fuel_type": "Petrol",
       "max_torque": "90 Nm",
       "source_section": "Discontinued",
-      "colors": ["Manx Silver", "Black Lightning"],
+      "description": "The Norton Commando 961 is a handcrafted British café racer blending classic motorcycle heritage with modern performance components. It features a 961cc air/oil-cooled parallel-twin engine paired with Brembo braking and fully adjustable premium suspension, though the bike has since been discontinued.",
+      "features": [
+        "961cc air/oil-cooled parallel-twin engine producing 79 bhp and 90 Nm torque",
+        "5-speed manual transmission",
+        "Brembo braking system with monobloc radially-mounted calipers",
+        "Upside-down front forks with fully adjustable suspension",
+        "Anti-lock braking system (ABS)",
+        "Analogue instrumentation",
+        "810mm seat height",
+        "236kg kerb weight",
+        "199 kmph maximum speed",
+        "Discontinued from production"
+      ],
+      "colors": ["English White", "Steel Green", "Manx Silver", "Royal Red", "Titanium Grey", "Galactic Black"],
       "variants": [
-        { "name": "Commando 961 Standard", "price": "₹30,00,000" }
+        { "name": "Commando 961 Sport MK II", "price": "₹20,99,000" }
       ],
       "technical_specifications": {
         "engine_type": "Parallel-twin, Air-cooled",

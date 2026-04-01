@@ -11,9 +11,28 @@
       "model_name": "TVS iQube",
       "model_name_citation": "https://www.bikedekho.com/tvs/iqube-electric",
       "variant_name": "TVS iQube",
-      "price": "₹1,11,422 - ₹1,32,043",
+      "price": "₹1,09,319 - ₹1,62,314",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The TVS iQube is TVS Motor Company's flagship electric scooter range, offering a modern design with a feature-packed SmartXonnect suite including Bluetooth, navigation, and OTA updates. Available across three battery variants, it delivers practical urban range and a comprehensive digital experience via a 5-inch or 7-inch TFT display.",
+      "features": [
+        "5-inch / 7-inch TFT Digital Display",
+        "SmartXonnect Bluetooth Connectivity",
+        "Turn-by-Turn Navigation",
+        "OTA Software Updates",
+        "Geo-fencing & Anti-theft Alerts",
+        "Riding Modes (Eco, City, Power)",
+        "Regenerative Braking",
+        "Reverse Assist",
+        "Crash & Fall Alert",
+        "USB Charging Port"
+      ],
+      "colors": ["Pearl White", "Walnut Brown", "Titanium Grey", "Copper Brown Beige", "Starlight Blue Beige", "Celebration Orange", "Mint Blue", "Mercury Grey"],
+      "variants": [
+        { "name": "iQube 2.2 kWh", "price": "₹1,09,319" },
+        { "name": "iQube 3.1 kWh", "price": "₹1,21,232" },
+        { "name": "iQube 3.5 kWh", "price": "₹1,32,043" }
+      ],
       "max_torque": "33 Nm",
       "specifications": {
         "Motor Power": "4.4 kW",
@@ -54,13 +73,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
-      },
-      "colors": ["Pearl White", "Breeze Blue", "Titanium Grey", "Fiery Red", "Midnight Black"],
-      "variants": [
-        { "name": "iQube 2.2 kWh", "price": "₹1,11,422" },
-        { "name": "iQube 3.1 kWh", "price": "₹1,21,232" },
-        { "name": "iQube 3.5 kWh", "price": "₹1,32,043" }
-      ]
+      }
     },
     {
       "make": "TVS",
@@ -71,6 +84,23 @@
       "price": "₹1,39,642",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The TVS iQube S is a premium variant of the iQube range featuring a 7-inch TFT display with voice assist, a larger 3.5 kWh battery for 145 km range, and the advanced SmartXonnect connectivity suite. It includes HMI joystick controls, incognito mode, and crash alerts for a sophisticated urban riding experience.",
+      "features": [
+        "7-inch TFT Digital Display with Voice Assist",
+        "SmartXonnect Bluetooth Connectivity",
+        "Turn-by-Turn Navigation",
+        "OTA Software Updates",
+        "Geo-fencing & Anti-theft Alerts",
+        "HMI Joystick Controls",
+        "Music & Call Control",
+        "Crash & Fall Alert",
+        "Incognito Mode",
+        "Riding Modes (Eco, City, Power)"
+      ],
+      "colors": ["Pearl White", "Breeze Blue", "Titanium Grey", "Fiery Red", "Midnight Black"],
+      "variants": [
+        { "name": "iQube S 3.5 kWh", "price": "₹1,39,642" }
+      ],
       "max_torque": "33 Nm",
       "specifications": {
         "Motor Power": "4.4 kW",
@@ -104,11 +134,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
-      },
-      "colors": ["Pearl White", "Breeze Blue", "Titanium Grey", "Fiery Red", "Midnight Black"],
-      "variants": [
-        { "name": "iQube S 3.5 kWh", "price": "₹1,39,642" }
-      ]
+      }
     },
     {
       "make": "TVS",
@@ -119,6 +145,23 @@
       "price": "₹1,61,984",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The TVS iQube ST is the top-of-the-range variant with a 5.3 kWh battery delivering an industry-leading 212 km range for an electric scooter. It features a 7-inch TFT display, TPMS, social media notifications, custom themes, and the complete SmartXonnect connected experience.",
+      "features": [
+        "7-inch TFT Digital Display",
+        "SmartXonnect Bluetooth Connectivity",
+        "Turn-by-Turn Navigation with Voice Assist",
+        "OTA Software Updates",
+        "TPMS (Tyre Pressure Monitoring System)",
+        "Geo-fencing & Vehicle Location Tracking",
+        "Social Media & Custom Theme Notifications",
+        "HMI Joystick Controls",
+        "Crash & Fall Alert",
+        "Riding Modes (Eco, City, Power)"
+      ],
+      "colors": ["Pearl White", "Breeze Blue", "Titanium Grey", "Fiery Red", "Midnight Black"],
+      "variants": [
+        { "name": "iQube ST 5.3 kWh", "price": "₹1,61,984" }
+      ],
       "max_torque": "33 Nm",
       "specifications": {
         "Motor Power": "4.4 kW",
@@ -154,11 +197,7 @@
         "Riding Modes": "Yes",
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
-      },
-      "colors": ["Pearl White", "Breeze Blue", "Titanium Grey", "Fiery Red", "Midnight Black"],
-      "variants": [
-        { "name": "iQube ST 5.3 kWh", "price": "₹1,61,984" }
-      ]
+      }
     }
   ]
 }

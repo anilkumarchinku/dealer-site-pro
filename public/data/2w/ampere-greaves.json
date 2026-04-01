@@ -12,6 +12,16 @@
       "price": "₹89,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Ampere Magnus Pro is a premium electric scooter from Greaves-backed Ampere, designed for urban commuters who need reliable range and smart connectivity features at an accessible price.",
+      "features": [
+        "Remote Diagnostics via Mobile App",
+        "Anti-Theft Alarm",
+        "Digital Instrument Cluster",
+        "Regenerative Braking",
+        "Fast Charging (0-80% in 4 hrs)",
+        "Multiple Riding Modes",
+        "USB Charging Port"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "120 km",
@@ -33,6 +43,16 @@
       "price": "₹1,12,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Ampere Magnus EX is the flagship variant of the Magnus range, offering enhanced battery capacity and a connected riding experience ideal for daily office commuters in Tier-1 and Tier-2 cities.",
+      "features": [
+        "Ampere App Connectivity",
+        "Remote Diagnostics",
+        "Anti-Theft with GPS Tracking",
+        "Fast Charging",
+        "Digital Display with Navigation Support",
+        "Regenerative Braking",
+        "Multiple Riding Modes"
+      ],
       "specifications": {
         "Motor Power": "2.0 kW",
         "Range": "120 km",
@@ -54,6 +74,16 @@
       "price": "₹79,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Ampere Primus is an entry-level electric scooter offering a solid 109 km range with practical everyday features, making it an ideal choice for budget-conscious first-time EV buyers.",
+      "features": [
+        "Digital Speedometer",
+        "Anti-Theft Alarm",
+        "Regenerative Braking",
+        "Ride Modes (Eco/Power)",
+        "Fast Charging",
+        "USB Charging Port",
+        "Low Maintenance Hub Motor"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "109 km",
@@ -75,6 +105,16 @@
       "price": "₹74,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Ampere Nexus is an affordable urban electric scooter with a practical 75 km range, designed for short-distance city commutes and last-mile connectivity needs.",
+      "features": [
+        "Digital Instrument Cluster",
+        "Anti-Theft Alarm",
+        "Ride Modes",
+        "Regenerative Braking",
+        "Fast Charging",
+        "USB Charging Port",
+        "Low-Speed Reverse Assist"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "75 km",
@@ -96,6 +136,16 @@
       "price": "₹99,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Ampere Zeal EX is a connected electric scooter offering 129 km range with smart features, targeting tech-savvy urban riders who want a balance of performance and affordability.",
+      "features": [
+        "Ampere App with Remote Monitoring",
+        "GPS Tracking & Anti-Theft",
+        "Fast Charging (0-80% in 4 hrs)",
+        "Digital TFT Display",
+        "Ride Modes (Eco/City/Power)",
+        "Regenerative Braking",
+        "Over-the-Air Updates"
+      ],
       "specifications": {
         "Motor Power": "2.0 kW",
         "Range": "129 km",

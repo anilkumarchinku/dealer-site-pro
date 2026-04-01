@@ -9,6 +9,19 @@
       "torque": "32.8 Nm",
       "top_speed": "150 km/h",
       "gear_box": "6-speed",
+      "description": "The Zontes 350X is a semi-faired motorcycle powered by a 348cc liquid-cooled engine delivering 38.2 bhp. It offers excellent value in the mid-range segment with modern technology including a TFT display, keyless ignition, and TPMS.",
+      "features": [
+        "348cc BS6 Phase 2 liquid-cooled single-cylinder engine producing 38.2 bhp and 32.8 Nm torque",
+        "6-speed manual transmission with self-start",
+        "Dual-channel ABS with front and rear disc brakes",
+        "TFT LCD instrument display",
+        "Keyless ignition system",
+        "4 riding modes",
+        "Full LED lighting",
+        "Dual USB charging ports",
+        "Tyre pressure monitoring system (TPMS)",
+        "15-litre fuel tank capacity"
+      ],
       "colors": [
         "Silver Black",
         "Green Black",
@@ -42,6 +55,19 @@
       "torque": "32.8 Nm",
       "top_speed": "150 km/h",
       "gear_box": "6-speed",
+      "description": "The Zontes 350R is a sporty street bike powered by a 348cc liquid-cooled engine combining responsive performance with modern features. It delivers both city riding capability and highway cruising comfort through its digital console with riding modes and keyless ignition.",
+      "features": [
+        "348cc BS6 Phase 2 liquid-cooled single-cylinder engine producing 38.2 bhp and 32.8 Nm torque",
+        "6-speed manual transmission with self-start",
+        "ABS braking system with front and rear disc brakes",
+        "Digital console with riding modes",
+        "Keyless ignition system",
+        "Full LED lighting throughout",
+        "Alloy wheels",
+        "15-litre fuel tank capacity",
+        "34 kmpl user-reported fuel efficiency",
+        "795mm seat height"
+      ],
       "colors": [
         "Blue",
         "Silver",
@@ -75,6 +101,19 @@
       "torque": "32.8 Nm",
       "top_speed": "140 km/h",
       "gear_box": "6-speed",
+      "description": "The Zontes 350T is an adventure-touring motorcycle with a 348cc liquid-cooled engine and a generous 19-litre fuel tank for extended touring range. It features electronically adjustable windscreen, full-colour TFT display, and TPMS for a technology-rich riding experience.",
+      "features": [
+        "348cc BS6 Phase 2 liquid-cooled single-cylinder engine producing 38.2 bhp and 32.8 Nm torque",
+        "6-speed manual transmission with self-start",
+        "ABS braking system with front and rear disc brakes",
+        "Full-colour TFT display with tyre pressure monitoring",
+        "Keyless ignition system",
+        "Electronically adjustable windscreen",
+        "All LED lighting throughout",
+        "19-litre large fuel tank for touring",
+        "Alloy wheels",
+        "Road-biased ergonomics for comfortable touring"
+      ],
       "colors": [
         "Orange",
         "Champagne",
@@ -110,6 +149,19 @@
       "torque": "32.8 Nm",
       "top_speed": "140 km/h",
       "gear_box": "6-speed",
+      "description": "The Zontes GK350 is a neo-retro street bike with a 348cc liquid-cooled engine that competes directly in the 350cc segment. It features tubeless spoke wheels, a full LED setup, TFT display, and multiple ride modes for a comprehensive modern riding package.",
+      "features": [
+        "348cc BS6 Phase 2 liquid-cooled single-cylinder engine producing 38.2 bhp and 32.8 Nm torque",
+        "6-speed manual transmission with self-start",
+        "Dual disc brakes with ABS on both front and rear",
+        "Full LED lighting setup",
+        "Tubeless spoke wheels for neo-retro aesthetics",
+        "TFT display with multiple ride modes",
+        "Keyless ignition system",
+        "Dual USB charging",
+        "17-litre fuel tank capacity",
+        "26.7 kmpl ARAI-rated fuel efficiency"
+      ],
       "colors": [
         "Silver Orange",
         "Black Gold",

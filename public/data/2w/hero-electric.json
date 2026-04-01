@@ -12,6 +12,16 @@
       "price": "₹74,490",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Hero Electric Optima CX is a trusted entry-level electric scooter backed by Hero's extensive service network, offering 82 km range and reliable daily commuting performance for price-sensitive buyers.",
+      "features": [
+        "Digital Speedometer",
+        "Anti-Theft Alarm System",
+        "Ride Modes (Eco/Power)",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "Low Maintenance BLDC Motor",
+        "Tubeless Tyres"
+      ],
       "specifications": {
         "Motor Power": "1.1 kW",
         "Range": "82 km",
@@ -33,6 +43,16 @@
       "price": "₹83,490",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Hero Electric Optima Plus upgrades the base Optima CX with additional comfort and convenience features, ideal for daily office commuters who need a dependable and low-cost electric scooter.",
+      "features": [
+        "Digital Instrument Console",
+        "Anti-Theft Alarm",
+        "Ride Modes (Eco/Power)",
+        "Fast Charging Ready",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "Extended Warranty Support"
+      ],
       "specifications": {
         "Motor Power": "1.1 kW",
         "Range": "82 km",
@@ -54,6 +74,16 @@
       "price": "₹81,490",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Hero Electric Photon CX features a sleeker body design compared to the Optima series, catering to style-conscious urban commuters who also want the reliability of Hero's after-sales support.",
+      "features": [
+        "Stylish Body Design",
+        "Digital Instrument Cluster",
+        "Anti-Theft Alarm",
+        "Ride Modes",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "BLDC Hub Motor"
+      ],
       "specifications": {
         "Motor Power": "1.1 kW",
         "Range": "82 km",
@@ -75,6 +105,16 @@
       "price": "₹89,490",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Hero Electric Nyx HX is Hero's higher-capacity scooter with a 60V 30Ah battery delivering 100 km range and 55 kmph top speed, suited for riders with longer daily commutes.",
+      "features": [
+        "Digital Display with Gear Indicator",
+        "Anti-Theft Alarm",
+        "Ride Modes (Eco/City/Power)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "BLDC Motor with Silent Operation"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "100 km",
@@ -96,6 +136,16 @@
       "price": "₹64,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Hero Electric Dash is a low-speed electric scooter designed for short urban trips and last-mile connectivity, requiring no driving licence and making it perfect for senior citizens and students.",
+      "features": [
+        "No Licence Required (25 kmph cap)",
+        "Lightweight & Easy to Handle",
+        "Digital Speedometer",
+        "Anti-Theft Alarm",
+        "USB Charging Port",
+        "Regenerative Braking",
+        "Low Maintenance Cost"
+      ],
       "specifications": {
         "Motor Power": "250 W",
         "Range": "70 km",

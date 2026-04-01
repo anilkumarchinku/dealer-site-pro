@@ -9,24 +9,36 @@
       "make": "River",
       "model": "Indie",
       "variant_name": "River Indie",
-      "price": "₹1,24,900 - ₹1,34,900",
+      "price": "₹1,46,124",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The River Indie is a rugged, utility-focused electric scooter dubbed the 'SUV of electric scooters,' featuring the largest combined storage in its class at 55 litres (43L underseat + 12L glovebox). It offers 161 km of IDC-certified range from a 4 kWh battery, 6.7 kW peak motor, and a boxy adventure-inspired design with two USB ports and reverse parking assist.",
+      "features": [
+        "6-inch Digital Colour LCD Display",
+        "55-litre Total Storage (43L underseat + 12L front glovebox)",
+        "Dual USB Charging Ports",
+        "Reverse Parking Assist",
+        "3 Riding Modes (Eco, Ride, Rush)",
+        "Disc Brakes (Front 240mm / Rear 200mm) with CBS",
+        "14-inch Alloy Wheels",
+        "LED Headlamp (Dual Square)",
+        "Integrated Crash Guards",
+        "App Connectivity (Upcoming)"
+      ],
+      "colors": ["Storm Grey", "Winter White", "Spring Yellow", "Monsoon Blue", "Summer Red"],
+      "variants": [
+        { "name": "Indie Standard 4 kWh", "price": "₹1,46,124" }
+      ],
       "specifications": {
-        "Motor Power": "4.5 kW",
-        "Range": "120 km",
+        "Motor Power": "6.7 kW peak",
+        "Range": "161 km",
         "Battery Capacity": "4 kWh",
         "Top Speed": "90 kmph",
         "Riding Modes": "Yes",
         "Fast Charging": "Yes",
-        "Bluetooth Connectivity": "Yes"
+        "Bluetooth Connectivity": "No"
       },
-      "max_torque": "57 Nm",
-      "colors": ["Cyan Blue", "Titanium Grey", "Ivory White", "Sunset Orange"],
-      "variants": [
-        { "name": "Indie Standard 4 kWh", "price": "₹1,24,900" },
-        { "name": "Indie Plus 5 kWh", "price": "₹1,34,900" }
-      ]
+      "max_torque": "57 Nm"
     }
   ]
 }

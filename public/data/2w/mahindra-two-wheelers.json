@@ -17,10 +17,24 @@
       "fuel_type": "Petrol",
       "max_torque": "30 Nm",
       "source_section": "Discontinued",
+      "description": "The Mahindra Mojo 300 ABS is a street-cum-touring motorcycle designed for comfort and long-distance capability. It features a 295cc liquid-cooled engine with a 21-litre fuel tank, USD front forks, slipper clutch, and twin exhaust system for a premium touring experience.",
+      "features": [
+        "294.73cc liquid-cooled single-cylinder engine producing 27.2 bhp and 30 Nm torque",
+        "6-speed manual transmission",
+        "Dual-channel ABS braking system",
+        "USD front forks for improved handling",
+        "Slipper clutch for smooth gear transitions",
+        "21-litre large fuel tank for touring",
+        "Twin exhaust system",
+        "Long wheelbase for highway stability",
+        "Well-cushioned wide seat for comfort",
+        "Discontinued from production"
+      ],
       "colors": [
-        "Black",
-        "Red",
-        "Blue"
+        "Black Pearl",
+        "Garnet Black",
+        "Ruby Red",
+        "Red Agate"
       ],
       "variants": [
         {
@@ -46,6 +60,17 @@
       "max_power": "8.0 bhp",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
+      "description": "The Mahindra Centuro N1 was a 106cc commuter motorcycle offering exceptional fuel efficiency of up to 70 kmpl and practical everyday usability. It provided an affordable entry-level option for daily commuters before being discontinued.",
+      "features": [
+        "106cc air-cooled single-cylinder engine producing 8.0 bhp and 8.5 Nm torque",
+        "4-speed manual transmission",
+        "70 kmpl exceptional fuel efficiency",
+        "8-litre fuel tank capacity",
+        "Lightweight and easy to handle",
+        "90 kmph top speed",
+        "Practical commuter ergonomics",
+        "Discontinued from production"
+      ],
       "colors": [
         "Red",
         "White",
@@ -77,6 +102,17 @@
       "max_power": "8.2 bhp",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
+      "description": "The Mahindra Gusto 110 was a practical 109cc scooter designed for urban commuting with stylish dual-tone paint options. It offered comfortable ergonomics and practical fuel efficiency for everyday city use before being discontinued.",
+      "features": [
+        "109cc air-cooled single-cylinder engine producing 8.2 bhp and 9 Nm torque",
+        "CVT automatic transmission for easy city riding",
+        "45 kmpl fuel efficiency",
+        "5.5-litre fuel tank capacity",
+        "Comfortable urban commuter ergonomics",
+        "85 kmph top speed",
+        "Lightweight and manoeuvrable design",
+        "Discontinued from production"
+      ],
       "colors": [
         "White",
         "Red",

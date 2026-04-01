@@ -9,23 +9,38 @@
       "make": "Ultraviolette",
       "model": "F77 Mach 2",
       "variant_name": "Ultraviolette F77 Mach 2",
-      "price": "₹3,80,000",
+      "price": "₹2,99,000 - ₹4,28,883",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Ultraviolette F77 Mach 2 is a flagship performance electric motorcycle featuring a 10.3 kWh battery delivering up to 307 km of range and a 155 kmph top speed. Powered by Violette AI that processes 3,000+ data points per second, it offers 10-level regenerative braking, dual-channel ABS, and LTE/Wi-Fi connectivity for a premium connected riding experience.",
+      "features": [
+        "Violette AI (3,000+ data points/sec)",
+        "5-inch TFT Dashboard with UV App",
+        "LTE (eSIM) & Wi-Fi Connectivity",
+        "3 Riding Modes (Glide, Combat, Ballistic) + Ballistic+",
+        "10-Level Regenerative Braking",
+        "3-Level Traction Control",
+        "Dynamic Stability Control",
+        "Hill Hold Control",
+        "OTA Software Updates",
+        "Dual-Channel ABS"
+      ],
+      "colors": ["Airstrike – Supersonic Silver", "Airstrike – Stellar White", "Airstrike – Lightning Blue", "Shadow – Stealth Grey", "Shadow – Asteroid Grey", "Shadow – Cosmic Black", "Laser – Turbo Red", "Laser – Afterburner Yellow", "Laser – Plasma Red"],
+      "variants": [
+        { "name": "F77 Mach 2 Standard", "price": "₹2,99,000" },
+        { "name": "F77 Mach 2 10.3 kWh", "price": "₹3,80,000" },
+        { "name": "F77 Mach 2 (Top Variant)", "price": "₹4,28,883" }
+      ],
       "specifications": {
-        "Motor Power": "31.44 kW peak",
+        "Motor Power": "27 kW peak",
         "Range": "307 km",
         "Battery Capacity": "10.3 kWh",
-        "Top Speed": "152 kmph",
+        "Top Speed": "155 kmph",
         "Riding Modes": "Yes",
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
-      "max_torque": "90 Nm",
-      "colors": ["Laser Blue", "Acoustic White", "Ember Orange", "Airstrike Khaki", "Shadow Black"],
-      "variants": [
-        { "name": "F77 Mach 2 10.3 kWh", "price": "₹3,80,000" }
-      ]
+      "max_torque": "90 Nm"
     },
     {
       "make": "Ultraviolette",
@@ -34,44 +49,69 @@
       "price": "₹3,23,000",
       "fuel_type": "Electric",
       "source_section": "Available",
-      "specifications": {
-        "Motor Power": "31.44 kW peak",
-        "Range": "206 km",
-        "Battery Capacity": "7.1 kWh",
-        "Top Speed": "152 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "90 Nm",
+      "description": "The Ultraviolette F77 Recon is a mid-spec variant of the F77 platform featuring a 7.1 kWh battery with 206 km of range and the same 27 kW motor delivering 155 kmph top speed. It retains the full Violette AI connectivity suite and ABS braking for a premium sport riding experience.",
+      "features": [
+        "Violette AI (3,000+ data points/sec)",
+        "5-inch TFT Dashboard with UV App",
+        "LTE (eSIM) & Wi-Fi Connectivity",
+        "3 Riding Modes (Glide, Combat, Ballistic)",
+        "10-Level Regenerative Braking",
+        "3-Level Traction Control",
+        "Dynamic Stability Control",
+        "Hill Hold Control",
+        "OTA Software Updates",
+        "Dual-Channel ABS"
+      ],
       "colors": ["Laser Blue", "Acoustic White", "Ember Orange", "Airstrike Khaki", "Shadow Black"],
       "variants": [
         { "name": "F77 Recon 7.1 kWh", "price": "₹3,23,000" }
-      ]
-    },
-    {
-      "make": "Ultraviolette",
-      "model": "F77",
-      "variant_name": "Ultraviolette F77",
-      "price": "₹3,80,000 - ₹5,50,000",
-      "fuel_type": "Electric",
-      "source_section": "Available",
+      ],
       "specifications": {
-        "Motor Power": "31.44 kW peak",
-        "Range": "307 km",
-        "Battery Capacity": "10.3 kWh",
-        "Top Speed": "152 kmph",
+        "Motor Power": "27 kW peak",
+        "Range": "206 km",
+        "Battery Capacity": "7.1 kWh",
+        "Top Speed": "155 kmph",
         "Riding Modes": "Yes",
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
-      "max_torque": "90 Nm",
-      "colors": ["Laser Blue", "Acoustic White", "Ember Orange", "Airstrike Khaki", "Shadow Black"],
+      "max_torque": "90 Nm"
+    },
+    {
+      "make": "Ultraviolette",
+      "model": "F77 SuperStreet",
+      "variant_name": "Ultraviolette F77 SuperStreet",
+      "price": "₹2,99,000 - ₹4,22,597",
+      "fuel_type": "Electric",
+      "source_section": "Available",
+      "description": "The Ultraviolette F77 SuperStreet is a street-focused performance electric motorcycle with a 10.3 kWh SRB10 battery delivering up to 323 km of range and 155 kmph top speed. It features the full Violette AI platform, adjustable regenerative braking, ABS, and LTE connectivity for a data-rich riding experience.",
+      "features": [
+        "Violette AI Platform",
+        "5-inch TFT Dashboard with UV App",
+        "LTE (eSIM) & Wi-Fi Connectivity",
+        "3 Riding Modes (Glide, Combat, Ballistic)",
+        "Adjustable Regenerative Braking",
+        "Traction Control",
+        "Hill Hold Control",
+        "OTA Software Updates",
+        "Dual-Channel ABS",
+        "USB Charging Port"
+      ],
+      "colors": ["Turbo Red", "Afterburner Yellow", "Stellar White", "Cosmic Black"],
       "variants": [
-        { "name": "F77 Standard 7.1 kWh", "price": "₹3,80,000" },
-        { "name": "F77 Pro 10.3 kWh", "price": "₹4,55,000" },
-        { "name": "F77 Limited Edition", "price": "₹5,50,000" }
-      ]
+        { "name": "F77 SuperStreet Base", "price": "₹2,99,000" },
+        { "name": "F77 SuperStreet (Top Variant)", "price": "₹4,22,597" }
+      ],
+      "specifications": {
+        "Motor Power": "27 kW peak",
+        "Range": "323 km",
+        "Battery Capacity": "10.3 kWh",
+        "Top Speed": "155 kmph",
+        "Riding Modes": "Yes",
+        "Fast Charging": "Yes",
+        "Bluetooth Connectivity": "Yes"
+      },
+      "max_torque": "90 Nm"
     }
   ]
 }

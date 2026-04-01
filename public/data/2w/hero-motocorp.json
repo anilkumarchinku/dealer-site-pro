@@ -17,6 +17,17 @@
       "top_speed": "85 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero HF Deluxe is a budget commuter motorcycle known for its rock-solid reliability and exceptional fuel efficiency. With a no-frills design and a proven 97.2cc engine, it is one of India's most trusted entry-level two-wheelers for daily urban commuting.",
+      "features": [
+        "Alloy Wheels",
+        "Self Start",
+        "Kick Start",
+        "Combined Braking System",
+        "Side Stand Indicator",
+        "i3S Technology (select variants)",
+        "4-Speed Manual Transmission",
+        "BS6 Phase 2B Compliant"
+      ],
       "variants": [
         {
           "name": "HF Deluxe HF 100 - Drum Kick Alloy - OBD 2B",
@@ -86,6 +97,16 @@
       "top_speed": "87 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Splendor Plus is a cultural icon of reliability and thrift in the Indian motorcycle market. One of the world's best-selling two-wheelers, it prioritises utility and low ownership costs with a robust 97.2cc engine, wide service network, and excellent fuel efficiency.",
+      "features": [
+        "i3S Technology (Idle Start-Stop System)",
+        "Self Start",
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Side Stand Indicator",
+        "4-Speed Manual Transmission",
+        "BS6 Phase 2B Compliant"
+      ],
       "variants": [
         {
           "name": "Splendor Plus Drum Brake - OBD 2B",
@@ -144,6 +165,18 @@
       "top_speed": "87 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Splendor Plus Xtec blends the legendary Splendor's reliability with modern-day essentials. It adds a fully digital console, Bluetooth alerts, and a USB charger to the proven commuter formula, delivering both practicality and contemporary connectivity for everyday riders.",
+      "features": [
+        "Fully Digital Console",
+        "Bluetooth Alerts",
+        "USB Charger",
+        "Self Start",
+        "Combined Braking System",
+        "Alloy Wheels",
+        "LED Lighting",
+        "i3S Technology (select variants)",
+        "BS6 Phase 2B Compliant"
+      ],
       "variants": [
         {
           "name": "Splendor Plus Xtec Drum - OBD 2B",
@@ -189,43 +222,57 @@
       "variant_name": "Super Splendor Xtec",
       "price": "₹82,876",
       "engine_displacement": "124.7 cc",
-      "mileage": "58 kmpl",
-      "max_power": "9 bhp",
-      "max_torque": "10.35 Nm",
-      "top_speed": "95 kmph",
+      "mileage": "61 kmpl",
+      "max_power": "10.72 bhp",
+      "max_torque": "10.6 Nm",
+      "top_speed": "90 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Super Splendor Xtec is a 125cc commuter motorcycle that brings modern conveniences to a reliable platform. It features Bluetooth connectivity, a USB charger, and a fuel-efficient engine with i3S start-stop technology, making it a practical and tech-forward choice for daily commuters.",
+      "features": [
+        "Bluetooth Connectivity",
+        "USB Charger",
+        "i3S Technology (Idle Start-Stop System)",
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Self Start",
+        "5-Speed Manual Transmission",
+        "BS6 Phase 2B Compliant"
+      ],
       "variants": [
         {
           "name": "Super Splendor Xtec",
           "price": "₹82,876"
+        },
+        {
+          "name": "Super Splendor Xtec Top",
+          "price": "₹86,611"
         }
       ],
       "colors": [
-        "Black and Accent",
-        "Black Sports Red",
-        "Candy Blazing Red",
-        "Metallic Nexus Blue",
-        "Black Silver Str"
+        "Matt Nexus Blue",
+        "Matt Grey",
+        "Black",
+        "Candy Blazing Red"
       ],
       "technical_specifications": {
-        "engine_type": "Single-cylinder, Air Cooled, 2 Valves",
+        "engine_type": "Single-cylinder, Air Cooled, BS6 Phase 2B",
         "displacement": "124.7 cc",
-        "max_power": "9 bhp @ 7000 rpm",
-        "max_torque": "10.35 Nm @ 4000 rpm",
-        "transmission": "4-Speed Manual",
-        "start_type": "Electric Start",
-        "fuel_tank": "11 liters",
-        "mileage_arai": "75 kmpl",
-        "mileage_user": "58 kmpl",
-        "top_speed": "95 kmph",
-        "kerb_weight": "Not specified",
-        "seat_height": "Not specified",
-        "front_brake": "Drum (130 mm)",
-        "rear_brake": "Drum (130 mm)",
+        "max_power": "10.72 bhp",
+        "max_torque": "10.6 Nm",
+        "transmission": "5-Speed Manual",
+        "start_type": "Kick and Self Start",
+        "fuel_tank": "12 liters",
+        "mileage_arai": "69 kmpl",
+        "mileage_user": "61 kmpl",
+        "top_speed": "90 kmph",
+        "kerb_weight": "122 kg",
+        "seat_height": "793 mm",
+        "front_brake": "Drum",
+        "rear_brake": "Drum",
         "braking_system": "IBS",
-        "wheel_type": "18-inch Alloy (tubeless)",
-        "features": "Real-time Mileage Indicator, Start-Stop System, USB Charger"
+        "wheel_type": "Alloy",
+        "features": "Bluetooth connectivity, USB Charger, Real-time Mileage Indicator, Start-Stop System"
       }
     },
     {
@@ -240,6 +287,15 @@
       "top_speed": "85 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Passion Plus is a trusted commuter motorcycle designed for students and office-goers who require affordable and dependable daily transportation. It delivers consistent 97.2cc performance with excellent fuel economy and low maintenance costs, backed by Hero's extensive service network.",
+      "features": [
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Kick and Self Start",
+        "4-Speed Manual Transmission",
+        "Side Stand Indicator",
+        "BS6 Phase 2B Compliant"
+      ],
       "variants": [
         {
           "name": "Passion Plus Drum Brake - OBD 2B",
@@ -285,6 +341,15 @@
       "top_speed": "95 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Glamour is a stylish 125cc commuter motorcycle that balances modern design with practical performance. It offers smooth power delivery for city commuting and short highway trips with a 5-speed gearbox, dependable engineering, and a smart aesthetic that stands out in the segment.",
+      "features": [
+        "5-Speed Manual Transmission",
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Kick and Self Start",
+        "BS6 Phase 2B Compliant",
+        "Disc Brake Option (higher variant)"
+      ],
       "variants": [
         {
           "name": "Glamour Drum Brake - OBD 2B",
@@ -332,6 +397,16 @@
       "top_speed": "95 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Glamour Xtec upgrades the standard Glamour with technology-focused additions including i3S idle stop-start system and a more refined engine output. It combines the commuter reliability of the Glamour with enhanced fuel efficiency features for tech-savvy daily riders.",
+      "features": [
+        "i3S Technology (Idle Start-Stop System)",
+        "5-Speed Manual Transmission",
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Kick and Self Start",
+        "Disc Brake Option (higher variant)",
+        "BS6 Phase 2 Compliant"
+      ],
       "variants": [
         {
           "name": "Glamour Xtec Drum Brake",
@@ -379,6 +454,19 @@
       "top_speed": "105 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Glamour X 125 is a segment-first commuter motorcycle featuring cruise control, three ride modes (Eco/Road/Power), and a colour TFT display with Bluetooth and turn-by-turn navigation. It represents a major leap in technology for the 125cc segment, combining ride-by-wire technology with all-LED lighting and everyday practicality.",
+      "features": [
+        "Cruise Control (Segment First)",
+        "Three Ride Modes (Eco/Road/Power)",
+        "Colour TFT Display",
+        "Bluetooth Connectivity",
+        "Turn-by-Turn Navigation",
+        "Ride-by-Wire Technology",
+        "All-LED Lighting",
+        "Combined Braking System",
+        "Alloy Wheels",
+        "5-Speed Manual Transmission"
+      ],
       "variants": [
         {
           "name": "Glamour X 125 Base",
@@ -428,6 +516,17 @@
       "top_speed": "100 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Xtreme 125R is a sporty street commuter that combines sharp styling with capable performance in the 125cc segment. It features projector LED headlamps, a front disc brake with ABS on higher variants, and responsive handling — making it a premium choice for young urban riders.",
+      "features": [
+        "Projector LED Headlamps",
+        "Front Disc Brake",
+        "Single-Channel ABS (select variants)",
+        "5-Speed Manual Transmission",
+        "Alloy Wheels",
+        "Combined Braking System",
+        "Self Start",
+        "BS6 Phase 2B Compliant"
+      ],
       "variants": [
         {
           "name": "Xtreme 125R IBS - OBD 2B",
@@ -487,6 +586,16 @@
       "top_speed": "107 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Xtreme 160R is a naked street bike that delivers impressive performance with a 163.2cc engine and aggressive styling. It balances sporty handling with practical everyday usability, featuring a front disc with ABS and LED lighting, making it appealing for both young riders and daily commuters.",
+      "features": [
+        "Front Disc Brake with ABS",
+        "LED Lighting",
+        "5-Speed Manual Transmission",
+        "Alloy Wheels",
+        "Self Start",
+        "Sporty Naked Street Bike Design",
+        "BS6 Phase 2B Compliant"
+      ],
       "variants": [
         {
           "name": "Xtreme 160R Standard",
@@ -528,6 +637,19 @@
       "top_speed": "115 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Xtreme 160R 4V is a performance-oriented naked street bike equipped with segment-first features including ride-by-wire, cruise control, and USD front forks. Its 4-valve 163.2cc engine delivers sharper performance, while dual disc brakes with ABS and a premium digital display round out its comprehensive tech package.",
+      "features": [
+        "Ride-by-Wire Technology",
+        "Cruise Control (Segment First)",
+        "USD Front Forks",
+        "Dual Disc Brakes with ABS",
+        "Digital Display",
+        "LED Lighting",
+        "5-Speed Manual Transmission",
+        "Alloy Wheels",
+        "Self Start",
+        "BS6 Phase 2B Compliant"
+      ],
       "variants": [
         {
           "name": "Xtreme 160R 4V Double Disc",
@@ -581,6 +703,16 @@
       "top_speed": "130 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Xtreme 250R is an aggressive naked street bike powered by a 249cc engine producing 29.5 bhp. It features an all-LED setup, digital console, dual disc brakes with ABS, and a 6-speed gearbox — delivering punchy acceleration and balanced dynamics for both city riding and highway cruising.",
+      "features": [
+        "LED Headlamp",
+        "Digital Console",
+        "Dual Disc Brakes with ABS",
+        "6-Speed Manual Transmission",
+        "Alloy Wheels",
+        "Self Start",
+        "BS6 Phase 2 Compliant"
+      ],
       "variants": [
         {
           "name": "Xtreme 250R Standard",
@@ -623,6 +755,18 @@
       "top_speed": "115 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero XPulse 200 4V is a capable adventure motorcycle designed for both city commuting and serious off-road exploration. With a 4-valve 199.6cc engine, long-travel suspension, high ground clearance, and a digital instrument cluster with navigation, it offers exceptional off-road capability and trail-ready performance.",
+      "features": [
+        "Dual-Channel ABS",
+        "Digital Instrument Cluster with Navigation",
+        "Long-Travel Suspension",
+        "High Ground Clearance",
+        "Front and Rear Disc Brakes",
+        "LED Lighting",
+        "5-Speed Manual Transmission",
+        "Kick and Self Start",
+        "BS6 Phase 2 Compliant"
+      ],
       "variants": [
         {
           "name": "XPulse 200 4V Standard",
@@ -679,6 +823,19 @@
       "top_speed": "130 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero XPulse 210 is a liquid-cooled adventure motorcycle built for both road and off-road performance. With long-travel suspension, high ground clearance, a slipper clutch, and dual disc brakes with ABS, it offers a serious adventure riding package for riders seeking versatile all-terrain capability.",
+      "features": [
+        "Dual-Channel ABS",
+        "Slipper Clutch",
+        "Long-Travel Suspension",
+        "High Ground Clearance",
+        "Front and Rear Disc Brakes",
+        "Digital Display",
+        "6-Speed Manual Transmission",
+        "Spoke Wheels",
+        "Liquid-Cooled Engine",
+        "BS6 Phase 2 Compliant"
+      ],
       "variants": [
         {
           "name": "XPulse 210 Base",
@@ -727,6 +884,18 @@
       "top_speed": "130 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Karizma XMR is a sports motorcycle with aerodynamic bodywork and a liquid-cooled 210cc engine. It features ride-by-wire, Bluetooth connectivity with turn-by-turn navigation, and dual-channel ABS — delivering a tech-rich and performance-oriented package for sport-focused riders.",
+      "features": [
+        "Dual-Channel ABS",
+        "Bluetooth Connectivity",
+        "Turn-by-Turn Navigation",
+        "Ride-by-Wire Technology",
+        "Liquid-Cooled Engine",
+        "Front and Rear Disc Brakes",
+        "6-Speed Manual Transmission",
+        "Alloy Wheels",
+        "BS6 Phase 2B Compliant"
+      ],
       "variants": [
         {
           "name": "Karizma XMR Top",
@@ -775,6 +944,16 @@
       "top_speed": "150 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Mavrick 440 is a retro-modern street bike powered by a 440cc single-cylinder engine with strong 36 Nm of torque. It features spoke wheels, dual disc brakes with ABS, a 6-speed gearbox, and a comfortable ergonomic setup — delivering effortless cruising performance at an accessible price point.",
+      "features": [
+        "ABS",
+        "Front and Rear Disc Brakes",
+        "Spoke Wheels",
+        "6-Speed Manual Transmission",
+        "Self Start",
+        "440cc Single-Cylinder Engine",
+        "BS6 Phase 2 Compliant"
+      ],
       "variants": [
         {
           "name": "Mavrick 440 Base",
@@ -826,6 +1005,15 @@
       "top_speed": "75 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Pleasure Plus is a lightweight and easy-to-ride scooter designed for everyday urban commuting. With a 110.9cc engine, USB charging port, combined braking system, and practical storage, it offers reliable performance and convenience for daily riders at an affordable price.",
+      "features": [
+        "USB Charging Port",
+        "Combined Braking System",
+        "Kick and Self Start",
+        "Automatic Transmission (CVT)",
+        "Under-Seat Storage",
+        "BS6 Phase 2 Compliant"
+      ],
       "variants": [
         {
           "name": "Pleasure Plus LX - OBD 2B",
@@ -876,6 +1064,18 @@
       "top_speed": "75 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Pleasure Plus Xtec is a feature-rich urban scooter that upgrades the Pleasure Plus with an LED projector headlamp, digital console with Bluetooth connectivity, and a side-stand engine cut-off for safety. It is ideal for modern city commuters who want smart technology in a lightweight, easy-to-ride package.",
+      "features": [
+        "LED Projector Headlamp",
+        "Digital Console with Bluetooth",
+        "USB Charging Port",
+        "Call Alerts",
+        "Side-Stand Engine Cut-Off",
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Kick and Self Start",
+        "BS6 Phase 2B Compliant"
+      ],
       "variants": [
         {
           "name": "Pleasure Plus Xtec",
@@ -919,6 +1119,18 @@
       "top_speed": "85 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Destini 125 is a practical 125cc scooter that delivers smooth and reliable performance for both city rides and longer commutes. Featuring i3S start-stop technology, USB charging, external fuel filling, and a boot light, it offers strong value-for-money in the 125cc scooter segment.",
+      "features": [
+        "i3S Technology (Idle Start-Stop System)",
+        "USB Charging Port",
+        "External Fuel Filling",
+        "Boot Light",
+        "Alloy Wheels",
+        "Combined Braking System",
+        "Kick and Self Start",
+        "Under-Seat Storage",
+        "BS6 Phase 2B Compliant"
+      ],
       "variants": [
         {
           "name": "Destini 125 VX - OBD 2B",
@@ -972,6 +1184,19 @@
       "top_speed": "85 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Destini Prime is a budget-friendly 125cc scooter with smooth acceleration and decent power for daily commuting. It features i3S start-stop technology, USB charging, external fuel cap, a boot light, and LED position lamps — making it a well-equipped entry into the 125cc segment.",
+      "features": [
+        "i3S Technology (Idle Start-Stop System)",
+        "USB Charging Port",
+        "External Fuel Cap",
+        "Boot Light",
+        "LED Position Lamps",
+        "Semi-Digital Instrument Cluster",
+        "Service Reminder",
+        "Combined Braking System",
+        "Kick and Self Start",
+        "BS6 Phase 2B Compliant"
+      ],
       "variants": [
         {
           "name": "Destini Prime Standard",
@@ -1015,6 +1240,18 @@
       "top_speed": "87 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Xoom 110 is a sporty 110cc scooter with attractive design and city-friendly performance. It features a cornering bending light, USB charging port, digital meter, and i3S idle stop-start mode — delivering nimble city riding with crisp acceleration and practical everyday convenience.",
+      "features": [
+        "Cornering Bending Light",
+        "USB Charging Port",
+        "Digital Meter",
+        "i3S Mode (Idle Stop-Start System)",
+        "Alloy Wheels",
+        "Combined Braking System",
+        "Kick and Self Start",
+        "Automatic Transmission (CVT)",
+        "BS6 Phase 2B Compliant"
+      ],
       "variants": [
         {
           "name": "Xoom 110 VX - Drum - OBD 2B",
@@ -1069,6 +1306,19 @@
       "top_speed": "95 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Xoom 125 is a performance-oriented 125cc scooter that rides almost like a motorcycle but retains scooter convenience. Segment-first sequential LED turn indicators, connected navigation technology, 14-inch alloy wheels for highway stability, and a refined engine make it a standout in the 125cc scooter category.",
+      "features": [
+        "Sequential LED Turn Indicators (Segment First)",
+        "Connected Technology with Navigation",
+        "14-Inch Alloy Wheels",
+        "Boot Light",
+        "Multifunction Key Slot",
+        "USB Charging Port",
+        "Combined Braking System",
+        "Kick and Self Start",
+        "Automatic Transmission (CVT)",
+        "BS6 Phase 2 Compliant"
+      ],
       "variants": [
         {
           "name": "Xoom 125 VX",
@@ -1117,6 +1367,18 @@
       "top_speed": "110 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Xoom 160 is a premium maxi-scooter with one of the best-looking designs in its segment. It features keyless start with Bluetooth connectivity, a front disc brake with ABS, USB charging port, and a 156cc engine — offering a compelling blend of style, comfort, and modern technology.",
+      "features": [
+        "Keyless Start",
+        "Bluetooth Connectivity",
+        "Front Disc Brake with ABS",
+        "USB Charging Port",
+        "Digital Speedometer",
+        "LED Lighting",
+        "Alloy Wheels",
+        "Automatic Transmission (CVT)",
+        "BS6 Phase 2 Compliant"
+      ],
       "variants": [
         {
           "name": "Xoom 160 Standard",
@@ -1160,11 +1422,31 @@
       "top_speed": "85 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Maestro Edge 110 is a practical and comfortable 110cc scooter with a refined engine that performs well over bad roads. It offers external fuel filling, USB charging, alloy wheels, and a combined braking system — making it a reliable and feature-packed everyday commuter scooter.",
+      "features": [
+        "External Fuel Filling",
+        "USB Charging Port",
+        "Alloy Wheels",
+        "Combined Braking System",
+        "Multi-Function Ignition Key",
+        "Kick and Self Start",
+        "Automatic Transmission (CVT)",
+        "BS6 Phase 2B Compliant"
+      ],
       "variants": [
         { "name": "Maestro Edge 110 LX - OBD 2B", "price": "₹74,500" },
         { "name": "Maestro Edge 110 VX - OBD 2B", "price": "₹77,500" }
       ],
-      "colors": ["Pearl Silver White", "Heavy Red", "Panther Black", "Pearl Blue", "Matte Techno Blue"],
+      "colors": [
+        "Pearl Silver White",
+        "Heavy Red",
+        "Panther Black",
+        "Pearl Blue",
+        "Matte Techno Blue",
+        "Midnight Blue",
+        "Seal Silver",
+        "Candy Blazing Red"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder, Air-cooled",
         "displacement": "110.9 cc",
@@ -1173,6 +1455,7 @@
         "transmission": "CVT Automatic",
         "start_type": "Kick and Self Start",
         "fuel_tank": "5.1 liters",
+        "mileage_arai": "51 kmpl",
         "mileage_user": "55 kmpl",
         "top_speed": "85 kmph",
         "kerb_weight": "108 kg",
@@ -1196,11 +1479,29 @@
       "top_speed": "90 kmph",
       "source_section": "Available",
       "fuel_type": "Petrol",
+      "description": "The Hero Maestro Edge 125 is Hero's flagship 125cc scooter offering a refined engine and practical daily-use features. It comes with a front disc brake, external fuel filler cap, i3S start-stop technology, and Bluetooth on the ZX variant — sitting as a premium offering above the Destini 125.",
+      "features": [
+        "Front Disc Brake",
+        "External Fuel Filler Cap",
+        "i3S Technology (Idle Start-Stop System)",
+        "Bluetooth Connectivity (ZX variant)",
+        "USB Charging Port",
+        "Alloy Wheels",
+        "Self Start",
+        "Automatic Transmission (CVT)",
+        "BS6 Phase 2B Compliant"
+      ],
       "variants": [
         { "name": "Maestro Edge 125 VX - OBD 2B", "price": "₹82,000" },
         { "name": "Maestro Edge 125 ZX - OBD 2B", "price": "₹88,000" }
       ],
-      "colors": ["Pearl Silver White", "Candy Blazing Red", "Prismatic Purple", "Prismatic Yellow", "Panther Black"],
+      "colors": [
+        "Pearl Silver White",
+        "Candy Blazing Red",
+        "Prismatic Purple",
+        "Prismatic Yellow",
+        "Panther Black"
+      ],
       "technical_specifications": {
         "engine_type": "BS6 Phase 2B, Single-cylinder, Air-cooled",
         "displacement": "124.6 cc",
@@ -1232,6 +1533,16 @@
       "top_speed": "111 kmph",
       "source_section": "Discontinued",
       "fuel_type": "Petrol",
+      "description": "The Hero XPulse 200 is an adventure-touring motorcycle designed for explorers who need a capable off-road machine. With long-travel suspension, high ground clearance, LED lighting, and dual disc brakes with single-channel ABS, it was a popular choice for riders seeking adventure at an accessible price.",
+      "features": [
+        "Single-Channel ABS",
+        "Long-Travel Suspension",
+        "High Ground Clearance",
+        "Front and Rear Disc Brakes",
+        "LED Lighting",
+        "5-Speed Manual Transmission",
+        "Kick and Self Start"
+      ],
       "variants": [
         { "name": "XPulse 200 Standard", "price": "₹1,27,116" }
       ],
@@ -1267,6 +1578,15 @@
       "top_speed": "115 kmph",
       "source_section": "Discontinued",
       "fuel_type": "Petrol",
+      "description": "The Hero XPulse 200T is a trail-touring variant of the XPulse series, blending off-road DNA with touring-friendly ergonomics. It features long-travel suspension, dual disc brakes with single-channel ABS, and a road-biased setup suited for riders who want adventure capability on daily commutes.",
+      "features": [
+        "Single-Channel ABS",
+        "Long-Travel Suspension",
+        "Front and Rear Disc Brakes",
+        "Trail-Touring Styling",
+        "5-Speed Manual Transmission",
+        "Kick and Self Start"
+      ],
       "variants": [
         { "name": "XPulse 200T Standard", "price": "₹1,24,418" }
       ],

@@ -12,6 +12,16 @@
       "price": "₹1,14,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Pure EV EPluto 7G is the top-selling electric scooter from IIT Hyderabad incubated Pure EV, offering an exceptional 171 km range backed by a 72V 45Ah battery and multiple smart features for long-range urban commuting.",
+      "features": [
+        "171 km Exceptional Range",
+        "Mobile App Connectivity",
+        "GPS Tracking & Anti-Theft",
+        "Digital TFT Display",
+        "Fast Charging",
+        "Ride Modes (Eco/Normal/Sport)",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "171 km",
@@ -34,6 +44,16 @@
       "price": "₹78,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Pure EV eTrance Neo is an affordable entry-level electric scooter with 120 km range, designed for daily commuters seeking a reliable and cost-effective electric two-wheeler from a research-backed Indian brand.",
+      "features": [
+        "Digital Instrument Cluster",
+        "Anti-Theft Alarm",
+        "Ride Modes (Eco/Power)",
+        "Fast Charging",
+        "Regenerative Braking",
+        "USB Charging Port",
+        "Lightweight BLDC Motor"
+      ],
       "specifications": {
         "Motor Power": "1.5 kW",
         "Range": "120 km",
@@ -55,6 +75,16 @@
       "price": "₹1,29,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Pure EV ecoDryft 350 is a performance-oriented electric motorcycle with a 3.5 kW motor, 75 kmph top speed, and 171 km range, targeting riders who want a capable electric alternative to 150-200cc petrol bikes.",
+      "features": [
+        "3.5 kW High-Performance Motor",
+        "171 km Long Range",
+        "Mobile App with Remote Monitoring",
+        "GPS Tracking & Anti-Theft",
+        "DC Fast Charging",
+        "Ride Modes (Eco/Normal/Sport)",
+        "Regenerative Braking"
+      ],
       "specifications": {
         "Motor Power": "3.5 kW",
         "Range": "171 km",

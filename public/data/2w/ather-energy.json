@@ -12,20 +12,33 @@
       "price": "₹1,74,490",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Ather 450 Apex is Ather's top-of-the-line flagship electric scooter featuring a transparent side panel design and the most advanced version of AtherStack 6. It delivers class-leading performance with a 7 kW peak motor, 0-40 kmph in under 3 seconds, and a 157 km IDC range, with exclusive features like Alexa integration and MagicTwist regenerative braking.",
+      "features": [
+        "7-inch TFT Touchscreen with Google Maps Navigation",
+        "MagicTwist Regenerative Braking",
+        "Alexa Integration",
+        "OTA Updates (AtherStack 6)",
+        "WhatsApp Notifications on Dashboard",
+        "5 Riding Modes (Eco, Ride, Sport, Warp, Custom)",
+        "Multi-Mode Traction Control (Rain, Road, Rally)",
+        "Fast Charging (Ather Grid compatible)",
+        "Bluetooth Connectivity & Live Location Sharing",
+        "Reverse Mode with Park Assist"
+      ],
+      "colors": ["Cosmic Black", "Lunar Grey", "Pearl White", "Salt White", "Aurora Blue"],
+      "variants": [
+        { "name": "450 Apex 5.4 kWh", "price": "₹1,74,490" }
+      ],
       "specifications": {
-        "Motor Power": "6 kW",
-        "Range": "151 km",
+        "Motor Power": "7 kW peak",
+        "Range": "157 km",
         "Battery Capacity": "5.4 kWh",
-        "Top Speed": "90 kmph",
+        "Top Speed": "100 kmph",
         "Riding Modes": "Yes",
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
-      "max_torque": "26 Nm",
-      "colors": ["Cosmic Black", "Lunar Grey", "Pearl White", "Salt White", "Aurora Blue"],
-      "variants": [
-        { "name": "450 Apex 5.4 kWh", "price": "₹1,74,490" }
-      ]
+      "max_torque": "26 Nm"
     },
     {
       "make": "Ather Energy",
@@ -34,8 +47,26 @@
       "price": "₹1,34,990 - ₹1,51,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Ather 450X is India's most advanced performance electric scooter, offering a 6 kW peak motor with a top speed of 90 kmph and the full AtherStack 6 software suite. It features the world's only scooter with Google Maps built in, along with OTA updates, Alexa, and MagicTwist regenerative braking for a truly connected ride.",
+      "features": [
+        "7-inch TFT Touchscreen with Google Maps Navigation",
+        "MagicTwist Regenerative Braking",
+        "Alexa Integration",
+        "OTA Updates (AtherStack 6)",
+        "5 Riding Modes (Eco, Ride, Sport, Warp, Custom)",
+        "Multi-Mode Traction Control (Rain, Road, Rally)",
+        "Fast Charging (0-80% in 1 hr via Ather Grid)",
+        "Bluetooth Connectivity & Live Location Sharing",
+        "Reverse Mode with Park Assist",
+        "WhatsApp & Call Notifications on Dashboard"
+      ],
+      "colors": ["Cosmic Black", "Lunar Grey", "Pearl White", "Salt White", "Aurora Blue", "Stealth Blue", "Hyper Sand", "True Red", "Salt Green"],
+      "variants": [
+        { "name": "450X 2.9 kWh", "price": "₹1,34,990" },
+        { "name": "450X 3.7 kWh Gen 3", "price": "₹1,51,990" }
+      ],
       "specifications": {
-        "Motor Power": "6 kW",
+        "Motor Power": "6 kW peak",
         "Range": "157 km",
         "Battery Capacity": "3.7 kWh",
         "Top Speed": "90 kmph",
@@ -43,12 +74,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
-      "max_torque": "26 Nm",
-      "colors": ["Cosmic Black", "Lunar Grey", "Pearl White", "Salt White", "Aurora Blue", "Indigo Blue", "Pop Neon", "Coral", "Turquoise"],
-      "variants": [
-        { "name": "450X 2.9 kWh", "price": "₹1,34,990" },
-        { "name": "450X 3.7 kWh Gen 3", "price": "₹1,51,990" }
-      ]
+      "max_torque": "26 Nm"
     },
     {
       "make": "Ather Energy",
@@ -57,21 +83,34 @@
       "price": "₹1,17,990 - ₹1,29,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Ather 450S is a feature-rich mid-range electric scooter offering a balance of performance and affordability. It runs on a 5 kW motor with a top speed of 90 kmph, comes with Ather's Deepview display with OTA updates, and supports the Ather fast-charging network.",
+      "features": [
+        "Deepview Display (Non-Touchscreen TFT)",
+        "OTA Updates (AtherStack 6)",
+        "Riding Modes (Eco, Ride, Sport)",
+        "Fast Charging (Ather Grid Compatible)",
+        "Bluetooth Connectivity",
+        "Reverse Mode with Park Assist",
+        "Combined Braking System (CBS)",
+        "USB Charging Port",
+        "Anti-theft & Vehicle Tracking",
+        "Live Location Sharing"
+      ],
+      "colors": ["Cosmic Black", "Lunar Grey", "Pearl White", "Salt White", "Stealth Blue", "Still White", "Space Grey"],
+      "variants": [
+        { "name": "450S 2.9 kWh", "price": "₹1,17,990" },
+        { "name": "450S 3.7 kWh", "price": "₹1,29,990" }
+      ],
       "specifications": {
-        "Motor Power": "5 kW",
+        "Motor Power": "5 kW peak",
         "Range": "150 km",
         "Battery Capacity": "3.7 kWh",
-        "Top Speed": "80 kmph",
+        "Top Speed": "90 kmph",
         "Riding Modes": "Yes",
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
-      "max_torque": "22 Nm",
-      "colors": ["Cosmic Black", "Lunar Grey", "Pearl White", "Salt White", "Indigo Blue"],
-      "variants": [
-        { "name": "450S 2.9 kWh", "price": "₹1,17,990" },
-        { "name": "450S 3.7 kWh", "price": "₹1,29,990" }
-      ]
+      "max_torque": "22 Nm"
     },
     {
       "make": "Ather Energy",
@@ -80,8 +119,27 @@
       "price": "₹1,09,990 - ₹1,19,990",
       "fuel_type": "Electric",
       "source_section": "Available",
+      "description": "The Ather Rizta is a family-oriented electric scooter designed for comfort and practicality, featuring a spacious seat and large underseat storage. It is powered by a 6 kW motor, offers a range of up to 160 km, and brings Ather's smart connectivity features to a more affordable segment.",
+      "features": [
+        "7-inch TFT Touchscreen (Rizta Z) / Deepview Display (Rizta S)",
+        "OTA Updates (AtherStack 6)",
+        "MagicTwist Regenerative Braking (Rizta Z)",
+        "Riding Modes (Eco, Ride, Sport)",
+        "Fast Charging (Ather Grid Compatible)",
+        "Bluetooth Connectivity & Navigation",
+        "Reverse Mode with Park Assist",
+        "Large Underseat Storage (34 L)",
+        "Anti-theft & Vehicle Tracking",
+        "Call & SMS Alerts"
+      ],
+      "colors": ["Cosmic Black", "Lunar Grey", "Pearl White", "Salt White", "Aurora Blue", "Pop Neon", "Coral", "Turquoise"],
+      "variants": [
+        { "name": "Rizta S 2.9 kWh", "price": "₹1,09,990" },
+        { "name": "Rizta Z 2.9 kWh", "price": "₹1,14,990" },
+        { "name": "Rizta Z 3.7 kWh", "price": "₹1,19,990" }
+      ],
       "specifications": {
-        "Motor Power": "6 kW",
+        "Motor Power": "6 kW peak",
         "Range": "160 km",
         "Battery Capacity": "3.7 kWh",
         "Top Speed": "80 kmph",
@@ -89,13 +147,7 @@
         "Fast Charging": "Yes",
         "Bluetooth Connectivity": "Yes"
       },
-      "max_torque": "22 Nm",
-      "colors": ["Cosmic Black", "Lunar Grey", "Pearl White", "Salt White", "Aurora Blue", "Pop Neon", "Coral", "Turquoise"],
-      "variants": [
-        { "name": "Rizta S 2.9 kWh", "price": "₹1,09,990" },
-        { "name": "Rizta Z 2.9 kWh", "price": "₹1,14,990" },
-        { "name": "Rizta Z 3.7 kWh", "price": "₹1,19,990" }
-      ]
+      "max_torque": "22 Nm"
     }
   ]
 }
