@@ -1,76 +1,14 @@
 {
-  "brand": "VIDA",
-  "brandId": "vida-hero",
+  "brand": "QJ Motor",
+  "brandId": "qjmotor",
   "type": "2w",
   "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "VIDA",
-      "model": "VX2",
-      "variant_name": "VX2",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "70 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The VIDA VX2 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Go - 2.2kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "Go - 3.4kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "Plus - 3.4 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "Plus - KKR Limited Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "VIDA",
-      "model": "V2",
-      "variant_name": "V2",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "85 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The VIDA V2 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Plus",
-          "price": "N/A"
-        },
-        {
-          "name": "Pro",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "VIDA",
-      "model": "VXZ",
-      "variant_name": "VXZ",
+      "make": "QJ Motor",
+      "model": "SRV 300",
+      "variant_name": "SRV 300",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -78,12 +16,16 @@
       "max_torque": "N/A",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The VIDA VXZ is a two-wheeler available in India.",
+      "source_section": "Discontinued",
+      "description": "The QJ Motor SRV 300 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
+          "name": "Green",
+          "price": "N/A"
+        },
+        {
+          "name": "Black - Orange - Red",
           "price": "N/A"
         }
       ],
@@ -91,9 +33,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "VIDA",
-      "model": "V1",
-      "variant_name": "V1",
+      "make": "QJ Motor",
+      "model": "SRC 500",
+      "variant_name": "SRC 500",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -101,20 +43,70 @@
       "max_torque": "N/A",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The VIDA V1 is a two-wheeler available in India.",
+      "source_section": "Discontinued",
+      "description": "The QJ Motor SRC 500 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Plus [2022-2023]",
+          "name": "Silver Black",
           "price": "N/A"
         },
         {
-          "name": "Pro",
+          "name": "Gold Black and Red White",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "QJ Motor",
+      "model": "SRC 250",
+      "variant_name": "SRC 250",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The QJ Motor SRC 250 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Silver",
           "price": "N/A"
         },
         {
-          "name": "Plus",
+          "name": "Red and Black",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "QJ Motor",
+      "model": "SRK 400",
+      "variant_name": "SRK 400",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The QJ Motor SRK 400 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "White",
+          "price": "N/A"
+        },
+        {
+          "name": "Red and Black",
           "price": "N/A"
         }
       ],

@@ -1,27 +1,27 @@
 {
-  "brand": "Quantum Energy",
-  "brandId": "quantum-energy",
+  "brand": "Evolet",
+  "brandId": "evolet",
   "type": "2w",
   "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "Quantum Energy",
-      "model": "Milan",
-      "variant_name": "Milan",
+      "make": "Evolet",
+      "model": "Pony",
+      "variant_name": "Pony",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
       "max_power": "N/A bhp",
       "max_torque": "N/A",
-      "top_speed": "60 kmph",
+      "top_speed": "25 kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Quantum Energy Milan is a two-wheeler available in India.",
+      "description": "The Evolet Pony is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
+          "name": "Classic",
           "price": "N/A"
         }
       ],
@@ -29,49 +29,49 @@
       "technical_specifications": {}
     },
     {
-      "make": "Quantum Energy",
-      "model": "Plasma",
-      "variant_name": "Plasma",
+      "make": "Evolet",
+      "model": "Derby",
+      "variant_name": "Derby",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
       "max_power": "N/A bhp",
       "max_torque": "N/A",
-      "top_speed": "60 kmph",
+      "top_speed": "25 kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Quantum Energy Plasma is a two-wheeler available in India.",
+      "description": "The Evolet Derby is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "XR",
+          "name": "Classic",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Evolet",
+      "model": "Polo",
+      "variant_name": "Polo",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Evolet Polo is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Classic",
           "price": "N/A"
         },
         {
-          "name": "X",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Quantum Energy",
-      "model": "Bziness",
-      "variant_name": "Bziness",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "60 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Quantum Energy Bziness is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "X",
+          "name": "EZ",
           "price": "N/A"
         }
       ],

@@ -1,42 +1,90 @@
 {
-  "brand": "Oben Electric",
+  "brand": "Oben",
   "brandId": "oben-electric",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "Oben Electric",
-      "model": "Rorr EZ",
-      "variant_name": "Oben Rorr EZ",
-      "price": "₹1,34,999",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Oben Rorr EZ is a high-performance electric motorcycle from Bengaluru-based Oben Electric, delivering 187 km range and 140 Nm torque from a 10 kW motor, targeting riders who want a true petrol-bike replacement.",
-      "features": [
-        "10 kW Peak Power Motor",
-        "187 km Certified Range",
-        "Bluetooth App Connectivity",
-        "GPS Tracking & Anti-Theft",
-        "DC Fast Charging",
-        "Ride Modes (Eco/Boost/Performance)",
-        "Regenerative Braking"
-      ],
-      "specifications": {
-        "Motor Power": "10 kW",
-        "Range": "187 km",
-        "Battery Capacity": "4.4 kWh",
-        "Top Speed": "100 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "140 Nm",
-      "colors": ["Nebula Black", "Arctic White", "Titan Orange", "Cosmic Blue"],
+      "make": "Oben",
+      "model": "Rorr EZ Sigma",
+      "variant_name": "Rorr EZ Sigma",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "95 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Oben Rorr EZ Sigma is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Rorr EZ 4.4 kWh", "price": "₹1,34,999" },
-        { "name": "Rorr EZ Pro 4.4 kWh", "price": "₹1,49,999" }
-      ]
+        {
+          "name": "3.4 kWh",
+          "price": "N/A"
+        },
+        {
+          "name": "4.4 kWh",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Oben",
+      "model": "Rorr",
+      "variant_name": "Rorr",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "100 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Oben Rorr is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Oben",
+      "model": "Rorr EZ",
+      "variant_name": "Rorr EZ",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "95 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Oben Rorr EZ is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "2.6 kWh",
+          "price": "N/A"
+        },
+        {
+          "name": "3.4 kWh",
+          "price": "N/A"
+        },
+        {
+          "name": "4.4 kWh",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

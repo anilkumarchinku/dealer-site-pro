@@ -2,43 +2,31 @@
   "brand": "River",
   "brandId": "river-ev",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "River",
       "model": "Indie",
-      "variant_name": "River Indie",
-      "price": "₹1,46,124",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The River Indie is a rugged, utility-focused electric scooter dubbed the 'SUV of electric scooters,' featuring the largest combined storage in its class at 55 litres (43L underseat + 12L glovebox). It offers 161 km of IDC-certified range from a 4 kWh battery, 6.7 kW peak motor, and a boxy adventure-inspired design with two USB ports and reverse parking assist.",
-      "features": [
-        "6-inch Digital Colour LCD Display",
-        "55-litre Total Storage (43L underseat + 12L front glovebox)",
-        "Dual USB Charging Ports",
-        "Reverse Parking Assist",
-        "3 Riding Modes (Eco, Ride, Rush)",
-        "Disc Brakes (Front 240mm / Rear 200mm) with CBS",
-        "14-inch Alloy Wheels",
-        "LED Headlamp (Dual Square)",
-        "Integrated Crash Guards",
-        "App Connectivity (Upcoming)"
-      ],
-      "colors": ["Storm Grey", "Winter White", "Spring Yellow", "Monsoon Blue", "Summer Red"],
+      "variant_name": "Indie",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "90 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The River Indie is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Indie Standard 4 kWh", "price": "₹1,46,124" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "specifications": {
-        "Motor Power": "6.7 kW peak",
-        "Range": "161 km",
-        "Battery Capacity": "4 kWh",
-        "Top Speed": "90 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes",
-        "Bluetooth Connectivity": "No"
-      },
-      "max_torque": "57 Nm"
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

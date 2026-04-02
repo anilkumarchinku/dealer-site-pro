@@ -1,537 +1,634 @@
 {
-  "brand": "Indian Motorcycle",
+  "brand": "Indian",
   "brandId": "indian-motorcycle",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Indian",
-      "model": "Scout Sixty Bobber",
-      "variant_name": "Indian Scout Sixty Bobber",
-      "price": "₹13,88,244",
-      "engine_displacement": "999 cc",
-      "mileage": "21 kmpl",
-      "top_speed": "180 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "87 Nm",
-      "source_section": "Available",
-      "description": "The Indian Scout Sixty Bobber is a stripped-down, minimalist bobber motorcycle built on the Scout Sixty platform with a 999cc V-twin engine. Its low 649 mm seat height, blacked-out components, and bobber styling make it one of the most accessible and stylish entry points into the Indian Motorcycle range.",
-      "features": [
-        "999cc liquid-cooled V-twin engine",
-        "Low 649 mm seat height",
-        "Blacked-out bobber styling",
-        "Dual-channel ABS",
-        "6-speed manual gearbox",
-        "Alloy wheels",
-        "Pull-back handlebar",
-        "Classic single-saddle seat"
-      ],
-      "variants": [
-        {
-          "name": "Scout Sixty Bobber Standard",
-          "price": "₹13,88,244"
-        }
-      ],
-      "colors": [
-        "Black Metallic"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V-twin",
-        "power": "86.18 bhp",
-        "torque": "87 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13 litres",
-        "seat_height": "649 mm",
-        "kerb_weight": "243 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Indian",
-      "model": "Sport Scout Sixty",
-      "variant_name": "Indian Sport Scout Sixty",
-      "price": "₹14,19,237",
-      "engine_displacement": "999 cc",
-      "mileage": "20 kmpl",
-      "top_speed": "180 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "88 Nm",
-      "source_section": "Available",
-      "description": "The Indian Sport Scout Sixty is a performance-oriented roadster built on the Scout Sixty frame with a 999cc engine and sporty ergonomics including a lowered handlebar and rear-set footpegs for a more aggressive riding position. It delivers crisp, responsive engine performance with excellent quality and finish.",
-      "features": [
-        "999cc liquid-cooled V-twin engine",
-        "Sporty lowered handlebar",
-        "Rear-set footpegs",
-        "Dual-channel ABS",
-        "6-speed manual gearbox",
-        "Alloy wheels",
-        "Minimalist instrumentation",
-        "Low 654 mm seat height"
-      ],
-      "variants": [
-        {
-          "name": "Sport Scout Sixty Standard",
-          "price": "₹14,19,237"
-        }
-      ],
-      "colors": [
-        "Black Smoke"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V-twin",
-        "power": "86.18 bhp",
-        "torque": "88 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13 litres",
-        "seat_height": "654 mm",
-        "kerb_weight": "241 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Indian",
-      "model": "Scout Sixty Classic",
-      "variant_name": "Indian Scout Sixty Classic",
-      "price": "₹14,34,198",
-      "engine_displacement": "999 cc",
-      "mileage": "21 kmpl",
-      "top_speed": "180 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "87 Nm",
-      "source_section": "Available",
-      "description": "The Indian Scout Sixty Classic is a timeless cruiser motorcycle with classic fender styling, a padded two-up seat, and chrome detailing built on the Scout Sixty platform. It offers comfortable riding ergonomics with the proven 999cc V-twin engine for relaxed everyday cruising.",
-      "features": [
-        "999cc liquid-cooled V-twin engine",
-        "Classic fender styling",
-        "Padded two-up seat",
-        "Chrome detailing",
-        "Dual-channel ABS",
-        "6-speed manual gearbox",
-        "Spoke wheels",
-        "654 mm seat height"
-      ],
-      "variants": [
-        {
-          "name": "Scout Sixty Classic Standard",
-          "price": "₹14,34,198"
-        }
-      ],
-      "colors": [
-        "Frost Silver"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V-twin",
-        "power": "86.18 bhp",
-        "torque": "87 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13 litres",
-        "seat_height": "654 mm",
-        "kerb_weight": "241 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Indian",
       "model": "Scout Bobber",
-      "variant_name": "Indian Scout Bobber",
-      "price": "₹14,95,115",
-      "engine_displacement": "1250 cc",
-      "mileage": "21 kmpl",
-      "top_speed": "180 kmph",
+      "variant_name": "Scout Bobber",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "111 Nm",
-      "source_section": "Available",
-      "description": "The Indian Scout Bobber is a premium bobber motorcycle powered by the new 1250cc SpeedPlus V-twin engine delivering 106 bhp and 108 Nm for a strong, purposeful ride. It features a minimalist bobber aesthetic with a single-saddle seat, blacked-out components, and a low 665 mm seat height.",
-      "features": [
-        "1250cc SpeedPlus V-twin engine, 106.46 bhp",
-        "Bobber single-saddle seat",
-        "Blacked-out components",
-        "Dual-channel ABS",
-        "6-speed manual gearbox",
-        "Alloy wheels",
-        "Low 665 mm seat height",
-        "Short rear fender"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Indian Scout Bobber is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Scout Bobber Standard",
-          "price": "₹14,95,115"
+          "name": "Standard",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Black Metallic"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V-twin",
-        "power": "106.46 bhp",
-        "torque": "108 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13 litres",
-        "seat_height": "665 mm",
-        "kerb_weight": "246 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Indian",
-      "model": "Scout Classic",
-      "variant_name": "Indian Scout Classic",
-      "price": "₹14,98,321",
-      "engine_displacement": "1250 cc",
-      "mileage": "21 kmpl",
-      "top_speed": "180 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "111 Nm",
-      "source_section": "Available",
-      "description": "The Indian Scout Classic is a classic cruiser powered by the new 1250cc SpeedPlus V-twin, featuring spoke wheels, classic fender styling, and a padded two-up seat for comfortable long rides. It offers timeless American cruiser design with modern reliability and safety features.",
-      "features": [
-        "1250cc SpeedPlus V-twin engine, 106.46 bhp",
-        "Classic fender styling",
-        "Padded two-up seat",
-        "Spoke wheels",
-        "Dual-channel ABS",
-        "6-speed manual gearbox",
-        "Low 680 mm seat height",
-        "Chrome detailing"
-      ],
-      "variants": [
-        {
-          "name": "Scout Classic Standard",
-          "price": "₹14,98,321"
-        }
-      ],
-      "colors": [
-        "Black Metallic"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V-twin",
-        "power": "106.46 bhp",
-        "torque": "108 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13 litres",
-        "seat_height": "680 mm",
-        "kerb_weight": "252 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Indian",
-      "model": "Sport Scout",
-      "variant_name": "Indian Sport Scout",
-      "price": "₹15,05,802",
-      "engine_displacement": "1250 cc",
-      "mileage": "20 kmpl",
-      "top_speed": "190 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Indian Sport Scout is a performance-focused roadster with the new 1250cc SpeedPlus V-twin, sporty ergonomics, and a minimalist design that emphasises the motorcycle's athletic proportions. Its crisp, responsive engine and agile chassis deliver an effortless riding experience despite its size.",
-      "features": [
-        "1250cc SpeedPlus V-twin engine, 106.46 bhp",
-        "Sporty ergonomics with lowered handlebar",
-        "Dual-channel ABS",
-        "6-speed manual gearbox",
-        "Alloy wheels",
-        "Minimalist design",
-        "680 mm seat height",
-        "LED lighting"
-      ],
-      "variants": [
-        {
-          "name": "Sport Scout Standard",
-          "price": "₹15,05,802"
-        }
-      ],
-      "colors": [
-        "Black Metallic"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V-twin",
-        "power": "106.46 bhp",
-        "torque": "108 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13 litres",
-        "seat_height": "680 mm",
-        "kerb_weight": "248 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      },
-      "max_torque": "95 Nm"
-    },
-    {
-      "make": "Indian",
-      "model": "101 Scout",
-      "variant_name": "Indian 101 Scout",
-      "price": "₹17,08,855",
-      "engine_displacement": "1250 cc",
-      "mileage": "20 kmpl",
-      "top_speed": "185 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Indian 101 Scout is inspired by the legendary 1928 Indian 101 Scout racer, featuring performance-focused components including Brembo brakes, inverted front forks, and a 4-inch Ride Command touchscreen. It is the most premium Scout model with the highest specification level.",
-      "features": [
-        "1250cc SpeedPlus V-twin engine, 112.54 bhp",
-        "4-inch touchscreen Ride Command display",
-        "Turn-by-turn navigation",
-        "Bluetooth connectivity",
-        "Brembo front brakes",
-        "Inverted front forks",
-        "Selectable ride modes",
-        "Adjustable piggyback shocks"
-      ],
-      "variants": [
-        {
-          "name": "101 Scout Standard",
-          "price": "₹17,08,855"
-        }
-      ],
-      "colors": [
-        "Ghost White Metallic with Graphics",
-        "Sunset Red Metallic with Graphics"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V-twin",
-        "power": "112.54 bhp",
-        "torque": "109 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13 litres",
-        "seat_height": "680 mm",
-        "kerb_weight": "249 kg",
-        "brakes_front": "Brembo Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "4-inch touchscreen Ride Command display, Turn-by-turn navigation, Bluetooth, Selectable ride modes, Adjustable piggyback shocks, Inverted front forks"
-      },
-      "max_torque": "111 Nm"
-    },
-    {
-      "make": "Indian",
-      "model": "Super Scout",
-      "variant_name": "Indian Super Scout",
-      "price": "₹17,25,954",
-      "engine_displacement": "1250 cc",
-      "mileage": "20 kmpl",
-      "top_speed": "180 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Indian Super Scout is a modern-classic adventure-touring Scout with spoke wheels, a quick-release windshield, saddlebags, and a two-up seat for comfortable long-distance riding. It blends the Scout's cruiser DNA with practical touring features including cruise control and a 4-inch Ride Command display.",
-      "features": [
-        "1250cc SpeedPlus V-twin engine, 106.46 bhp",
-        "4-inch touchscreen Ride Command display",
-        "Cruise control",
-        "Selectable ride modes (Rain, Standard, Sport)",
-        "Quick-release windshield and saddlebags",
-        "Spoke wheels with Pirelli MT60RS tyres",
-        "Keyless ignition",
-        "USB charging port"
-      ],
-      "variants": [
-        {
-          "name": "Super Scout Standard",
-          "price": "₹17,25,954"
-        }
-      ],
-      "colors": [
-        "Maroon Metallic with Graphics",
-        "Black Smoke with Graphics"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V-twin (SpeedPlus)",
-        "power": "106.46 bhp",
-        "torque": "108 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13 litres",
-        "seat_height": "680 mm",
-        "kerb_weight": "268 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke (16-inch with Pirelli MT60RS)",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "Cruise control, Selectable ride modes (Rain, Standard, Sport), Quick-release windshield & saddlebags, Two-up seat, Keyless ignition, USB charging, 4-inch touchscreen Ride Command"
-      },
-      "max_torque": "111 Nm"
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Indian",
       "model": "Chief Dark Horse",
-      "variant_name": "Indian Chief Dark Horse",
-      "price": "₹21,58,779",
-      "engine_displacement": "1890 cc",
-      "mileage": "14 kmpl",
-      "top_speed": "185 kmph",
+      "variant_name": "Chief Dark Horse",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "160 Nm",
-      "source_section": "Available",
-      "description": "The Indian Chief Dark Horse is a blacked-out premium cruiser powered by the massive ThunderStroke 116 air-cooled V-twin delivering 162 Nm of torque for effortless highway cruising. Its all-black aesthetic, blacked-out engine, and 662 mm seat height create a bold and purposeful cruiser presence.",
-      "features": [
-        "ThunderStroke 116 V-twin engine, 162 Nm torque",
-        "All-black blacked-out aesthetic",
-        "Dual-channel ABS",
-        "6-speed manual gearbox",
-        "Low 662 mm seat height",
-        "LED lighting",
-        "Classic cruiser ergonomics",
-        "Alloy wheels"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Indian Chief Dark Horse is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Chief Dark Horse Standard",
-          "price": "₹21,58,779"
+          "name": "Standard",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Alumina Jade Smoke",
-        "Stealth Gray",
-        "Black Smoke"
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Scout Sixty Bobber",
+      "variant_name": "Scout Sixty Bobber",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Indian Scout Sixty Bobber is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Air-cooled, V-twin (ThunderStroke 116)",
-        "power": "93 bhp",
-        "torque": "162 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "15.1 litres",
-        "seat_height": "662 mm",
-        "kerb_weight": "304 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Scout Classic",
+      "variant_name": "Scout Classic",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Indian Scout Classic is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Indian",
       "model": "Chief Bobber Dark Horse",
-      "variant_name": "Indian Chief Bobber Dark Horse",
-      "price": "₹22,86,943",
-      "engine_displacement": "1890 cc",
-      "mileage": "14 kmpl",
-      "top_speed": "185 kmph",
+      "variant_name": "Chief Bobber Dark Horse",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "162 Nm",
-      "source_section": "Available",
-      "description": "The Indian Chief Bobber Dark Horse is a stripped-down, aggressive bobber version of the Chief with spoke wheels and a solo seat, powered by the ThunderStroke 116 engine. Its dark, minimalist styling and low-slung stance make it one of the most dramatic looking bobbers available.",
-      "features": [
-        "ThunderStroke 116 V-twin, 162 Nm torque",
-        "Solo bobber seat",
-        "Spoke wheels",
-        "Blacked-out components",
-        "Dual-channel ABS",
-        "Low 662 mm seat height",
-        "6-speed manual gearbox",
-        "LED lighting"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Indian Chief Bobber Dark Horse is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Chief Bobber Dark Horse Standard",
-          "price": "₹22,86,943"
+          "name": "Standard",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Copper Smoke",
-        "Silver Quartz Smoke",
-        "Titanium Smoke",
-        "Black Smoke"
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Scout Sixty Classic",
+      "variant_name": "Scout Sixty Classic",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Indian Scout Sixty Classic is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Limited",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Air-cooled, V-twin (ThunderStroke 116)",
-        "power": "93 bhp",
-        "torque": "162 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "15.1 litres",
-        "seat_height": "662 mm",
-        "kerb_weight": "315 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Sport Scout Sixty",
+      "variant_name": "Sport Scout Sixty",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Indian Sport Scout Sixty is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Limited",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Indian",
       "model": "Super Chief Limited",
-      "variant_name": "Indian Super Chief Limited",
-      "price": "₹24,38,944",
-      "engine_displacement": "1890 cc",
-      "mileage": "14 kmpl",
-      "top_speed": "185 kmph",
+      "variant_name": "Super Chief Limited",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "162 Nm",
-      "source_section": "Available",
-      "description": "The Indian Super Chief Limited is a touring-equipped version of the Chief with factory-fitted windscreen, leather-appointed saddlebags, and premium chrome detailing, powered by the ThunderStroke 116 engine. It blends touring functionality with the elegant, heritage styling of the classic Indian Chief.",
-      "features": [
-        "ThunderStroke 116 V-twin, 162 Nm torque",
-        "Factory-fitted windscreen",
-        "Leather-appointed saddlebags",
-        "Premium chrome detailing",
-        "Dual-channel ABS",
-        "Spoke wheels",
-        "Low 665 mm seat height",
-        "6-speed manual gearbox"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Indian Super Chief Limited is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Super Chief Limited Standard",
-          "price": "₹24,38,944"
+          "name": "Standard",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Stryker Red Metallic",
-        "Silver Quartz Metallic",
-        "Black Metallic"
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Sport Scout",
+      "variant_name": "Sport Scout",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Indian Sport Scout is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Air-cooled, V-twin (ThunderStroke 116)",
-        "power": "93 bhp",
-        "torque": "162 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "15.1 litres",
-        "seat_height": "665 mm",
-        "kerb_weight": "335 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "101 Scout",
+      "variant_name": "101 Scout",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Indian 101 Scout is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Super Scout",
+      "variant_name": "Super Scout",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Indian Super Scout is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "FTR 1200",
+      "variant_name": "FTR 1200",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Indian FTR 1200 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Chief Classic",
+      "variant_name": "Chief Classic",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Indian Chief Classic is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Chief Vintage",
+      "variant_name": "Chief Vintage",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Indian Chief Vintage is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Chieftain",
+      "variant_name": "Chieftain",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Indian Chieftain is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Scout",
+      "variant_name": "Scout",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Indian Scout is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Roadmaster",
+      "variant_name": "Roadmaster",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Indian Roadmaster is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Chief Dark Horse [2019-2020]",
+      "variant_name": "Chief Dark Horse [2019-2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Indian Chief Dark Horse [2019-2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Springfield",
+      "variant_name": "Springfield",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Indian Springfield is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Scout Sixty",
+      "variant_name": "Scout Sixty",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Indian Scout Sixty is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Chieftain Dark Horse",
+      "variant_name": "Chieftain Dark Horse",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Indian Chieftain Dark Horse is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Roadmaster Classic",
+      "variant_name": "Roadmaster Classic",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Indian Roadmaster Classic is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Scout Bobber [2017-2020]",
+      "variant_name": "Scout Bobber [2017-2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Indian Scout Bobber [2017-2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Roadmaster Elite [2018-2019]",
+      "variant_name": "Roadmaster Elite [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Indian Roadmaster Elite [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Chieftain Elite",
+      "variant_name": "Chieftain Elite",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Indian Chieftain Elite is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "FTR 1200 [2019-2020]",
+      "variant_name": "FTR 1200 [2019-2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Indian FTR 1200 [2019-2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "S",
+          "price": "N/A"
+        },
+        {
+          "name": "Race Replica",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Indian",
+      "model": "Roadmaster Elite",
+      "variant_name": "Roadmaster Elite",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Indian Roadmaster Elite is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

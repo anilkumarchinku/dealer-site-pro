@@ -1,14 +1,14 @@
 {
-  "brand": "Suzuki",
-  "brandId": "suzuki-motorcycle",
+  "brand": "Harley-Davidson",
+  "brandId": "harleydavidson",
   "type": "2w",
   "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "Suzuki",
-      "model": "Access 125",
-      "variant_name": "Access 125",
+      "make": "Harley-Davidson",
+      "model": "X440",
+      "variant_name": "X440",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -17,31 +17,15 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki Access 125 is a two-wheeler available in India.",
+      "description": "The Harley-Davidson X440 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
+          "name": "Vivid",
           "price": "N/A"
         },
         {
-          "name": "Special Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect ABS Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect TFT Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect TFT ABS Edition",
+          "name": "S",
           "price": "N/A"
         }
       ],
@@ -49,9 +33,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Burgman Street 125",
-      "variant_name": "Burgman Street 125",
+      "make": "Harley-Davidson",
+      "model": "X440 T",
+      "variant_name": "X440 T",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -60,19 +44,11 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki Burgman Street 125 is a two-wheeler available in India.",
+      "description": "The Harley-Davidson X440 T is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard - OBD 2B",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect Edition - OBD 2B",
-          "price": "N/A"
-        },
-        {
-          "name": "EX - OBD 2B",
+          "name": "Standard",
           "price": "N/A"
         }
       ],
@@ -80,9 +56,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "V-Strom SX",
-      "variant_name": "V-Strom SX",
+      "make": "Harley-Davidson",
+      "model": "Fat Boy",
+      "variant_name": "Fat Boy",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -91,11 +67,19 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki V-Strom SX is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Fat Boy is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard - OBD 2B",
+          "name": "Billiard Gray and Blue Burst",
+          "price": "N/A"
+        },
+        {
+          "name": "Vivid Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Whiskey Fire and Vivid Black",
           "price": "N/A"
         }
       ],
@@ -103,9 +87,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Gixxer SF",
-      "variant_name": "Gixxer SF",
+      "make": "Harley-Davidson",
+      "model": "Sportster S",
+      "variant_name": "Sportster S",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -114,15 +98,15 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki Gixxer SF is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Sportster S is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Ride Connect - OBD 2B",
+          "name": "Billiard Gray Brilliant Red and Mystic Shift",
           "price": "N/A"
         },
         {
-          "name": "Ride Connect Special Edition - OBD 2B",
+          "name": "Vivid Black",
           "price": "N/A"
         }
       ],
@@ -130,9 +114,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Gixxer",
-      "variant_name": "Gixxer",
+      "make": "Harley-Davidson",
+      "model": "Nightster",
+      "variant_name": "Nightster",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -141,15 +125,15 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki Gixxer is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Nightster is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Ride Connect - OBD 2B",
+          "name": "Billiard Gray and Whiskey Fire",
           "price": "N/A"
         },
         {
-          "name": "Ride Connect Special Edition - OBD 2B",
+          "name": "Vivid Black",
           "price": "N/A"
         }
       ],
@@ -157,9 +141,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Avenis 125",
-      "variant_name": "Avenis 125",
+      "make": "Harley-Davidson",
+      "model": "Street Bob",
+      "variant_name": "Street Bob",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -168,19 +152,23 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki Avenis 125 is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Street Bob is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
+          "name": "Billiard Gray",
           "price": "N/A"
         },
         {
-          "name": "Race Edition",
+          "name": "Vivid Black",
           "price": "N/A"
         },
         {
-          "name": "Special Edition",
+          "name": "Centerline",
+          "price": "N/A"
+        },
+        {
+          "name": "Iron Horse Metallic and Purple Abyss Denim",
           "price": "N/A"
         }
       ],
@@ -188,9 +176,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Hayabusa",
-      "variant_name": "Hayabusa",
+      "make": "Harley-Davidson",
+      "model": "Road Glide",
+      "variant_name": "Road Glide",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -199,11 +187,19 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki Hayabusa is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Road Glide is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
+          "name": "Billiard Gray and Mystic Shift",
+          "price": "N/A"
+        },
+        {
+          "name": "Vivid Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Silver Blue Red and Iron Horse",
           "price": "N/A"
         }
       ],
@@ -211,32 +207,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "E Access",
-      "variant_name": "E Access",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "71 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki E Access is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Gixxer SF 250",
-      "variant_name": "Gixxer SF 250",
+      "make": "Harley-Davidson",
+      "model": "Breakout",
+      "variant_name": "Breakout",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -245,15 +218,19 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki Gixxer SF 250 is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Breakout is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
+          "name": "Billiard Gray Red and Midnight Firestorm",
           "price": "N/A"
         },
         {
-          "name": "Special Edition",
+          "name": "Vivid Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Centerline",
           "price": "N/A"
         }
       ],
@@ -261,9 +238,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "GSX-8R",
-      "variant_name": "GSX-8R",
+      "make": "Harley-Davidson",
+      "model": "Nightster Special",
+      "variant_name": "Nightster Special",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -272,11 +249,15 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki GSX-8R is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Nightster Special is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
+          "name": "Billiard Gray Whiskey Fire and Blue Burst",
+          "price": "N/A"
+        },
+        {
+          "name": "Black Denim",
           "price": "N/A"
         }
       ],
@@ -284,9 +265,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Gixxer 250",
-      "variant_name": "Gixxer 250",
+      "make": "Harley-Davidson",
+      "model": "Street Glide",
+      "variant_name": "Street Glide",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -295,15 +276,19 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki Gixxer 250 is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Street Glide is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
+          "name": "Billiard Gray and Mystic Shift",
           "price": "N/A"
         },
         {
-          "name": "Special Edition",
+          "name": "Vivid Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Silver Blue Red  and Iron Horse",
           "price": "N/A"
         }
       ],
@@ -311,9 +296,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Gixxer SF 250 Flex Fuel",
-      "variant_name": "Gixxer SF 250 Flex Fuel",
+      "make": "Harley-Davidson",
+      "model": "PAN America 1250 Special",
+      "variant_name": "PAN America 1250 Special",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -322,11 +307,15 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki Gixxer SF 250 Flex Fuel is a two-wheeler available in India.",
+      "description": "The Harley-Davidson PAN America 1250 Special is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
+          "name": "Billiard Gray Blue Burst and Whiskey Fire and Raven",
+          "price": "N/A"
+        },
+        {
+          "name": "Vivid Black",
           "price": "N/A"
         }
       ],
@@ -334,9 +323,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "V-Strom 800 DE",
-      "variant_name": "V-Strom 800 DE",
+      "make": "Harley-Davidson",
+      "model": "Heritage Classic",
+      "variant_name": "Heritage Classic",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -345,184 +334,23 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki V-Strom 800 DE is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Heritage Classic is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Burgman Street 125 2026",
-      "variant_name": "Burgman Street 125 2026",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Burgman Street 125 2026 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX-8S",
-      "variant_name": "GSX-8S",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX-8S is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Burgman Street Electric",
-      "variant_name": "Burgman Street Electric",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Burgman Street Electric is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Katana",
-      "variant_name": "Katana",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Katana is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Intruder 150",
-      "variant_name": "Intruder 150",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Intruder 150 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard - BS IV",
+          "name": "Billiard Gray",
           "price": "N/A"
         },
         {
-          "name": "SP - BS IV",
+          "name": "Vivid Black",
           "price": "N/A"
         },
         {
-          "name": "Standard - BS VI",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "V-Strom 650 XT [2017-2018]",
-      "variant_name": "V-Strom 650 XT [2017-2018]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki V-Strom 650 XT [2017-2018] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Zeus DU",
-      "variant_name": "Zeus DU",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Zeus DU is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Kick",
+          "name": "White Onyx Pearl and Iron Horse Metallic",
           "price": "N/A"
         },
         {
-          "name": "Self",
+          "name": "Whiskey Fire and Vivid",
           "price": "N/A"
         }
       ],
@@ -530,9 +358,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Zeus EU",
-      "variant_name": "Zeus EU",
+      "make": "Harley-Davidson",
+      "model": "Sportster S [2024]",
+      "variant_name": "Sportster S [2024]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -541,7 +369,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Zeus EU is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Sportster S [2024] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -553,9 +381,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "V-Strom 1000",
-      "variant_name": "V-Strom 1000",
+      "make": "Harley-Davidson",
+      "model": "Fat Bob",
+      "variant_name": "Fat Bob",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -564,7 +392,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki V-Strom 1000 is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Fat Bob is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -576,9 +404,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Gixxer SF [2015-2018]",
-      "variant_name": "Gixxer SF [2015-2018]",
+      "make": "Harley-Davidson",
+      "model": "Fat Boy [2024]",
+      "variant_name": "Fat Boy [2024]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -587,7 +415,30 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Gixxer SF [2015-2018] is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Fat Boy [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Nightster [2024]",
+      "variant_name": "Nightster [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Nightster [2024] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -595,23 +446,7 @@
           "price": "N/A"
         },
         {
-          "name": "Special MOTOGP Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Rear Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "Special MOTOGP Edition Rear Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "SP Rear Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "ABS",
+          "name": "Special",
           "price": "N/A"
         }
       ],
@@ -619,9 +454,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Swish 125 facelift",
-      "variant_name": "Swish 125 facelift",
+      "make": "Harley-Davidson",
+      "model": "Road Glide [2024]",
+      "variant_name": "Road Glide [2024]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -630,7 +465,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Swish 125 facelift is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Road Glide [2024] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -642,9 +477,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "GSX-S1000 [2019-2020]",
-      "variant_name": "GSX-S1000 [2019-2020]",
+      "make": "Harley-Davidson",
+      "model": "Iron 883",
+      "variant_name": "Iron 883",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -653,7 +488,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki GSX-S1000 [2019-2020] is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Iron 883 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -665,9 +500,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "GSX-S1000F",
-      "variant_name": "GSX-S1000F",
+      "make": "Harley-Davidson",
+      "model": "Breakout [2024]",
+      "variant_name": "Breakout [2024]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -676,7 +511,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki GSX-S1000F is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Breakout [2024] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -688,9 +523,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Access [2024]",
-      "variant_name": "Access [2024]",
+      "make": "Harley-Davidson",
+      "model": "Street 750",
+      "variant_name": "Street 750",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -699,106 +534,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Access [2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Drum [2019]",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc [2019]",
-          "price": "N/A"
-        },
-        {
-          "name": "Special Edition - Drum",
-          "price": "N/A"
-        },
-        {
-          "name": "Special Edition - Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc - CBS",
-          "price": "N/A"
-        },
-        {
-          "name": "SE - Disc CBS",
-          "price": "N/A"
-        },
-        {
-          "name": "Steel Wheel - Drum - CBS",
-          "price": "N/A"
-        },
-        {
-          "name": "Alloy Wheel - Drum -CBS",
-          "price": "N/A"
-        },
-        {
-          "name": "SE - Alloy Wheel - Drum CBS",
-          "price": "N/A"
-        },
-        {
-          "name": "Steel Wheel - Drum - CBS -Fi",
-          "price": "N/A"
-        },
-        {
-          "name": "Alloy Wheel - Drum -CBS Fi",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum Cast - SE - Fi",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc - CBS - Fi",
-          "price": "N/A"
-        },
-        {
-          "name": "SE - Disc CBS - Fi",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum Alloy - Bluetooth",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc Alloy - Bluetooth",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "Special Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayate EP",
-      "variant_name": "Hayate EP",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayate EP is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Street 750 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -810,9 +546,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Gixxer SF Fi",
-      "variant_name": "Gixxer SF Fi",
+      "make": "Harley-Davidson",
+      "model": "PAN America 1250 Special [2024]",
+      "variant_name": "PAN America 1250 Special [2024]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -821,7 +557,237 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Gixxer SF Fi is a two-wheeler available in India.",
+      "description": "The Harley-Davidson PAN America 1250 Special [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Street Glide [2024]",
+      "variant_name": "Street Glide [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Street Glide [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Forty Eight",
+      "variant_name": "Forty Eight",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Forty Eight is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Heritage Classic [2024]",
+      "variant_name": "Heritage Classic [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Heritage Classic [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Heritage Classic [2018-2019]",
+      "variant_name": "Heritage Classic [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Heritage Classic [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Forty Eight Special",
+      "variant_name": "Forty Eight Special",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Forty Eight Special is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Street Rod",
+      "variant_name": "Street Rod",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Street Rod is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Low Rider S",
+      "variant_name": "Low Rider S",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Low Rider S is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Forty Eight Special-2019",
+      "variant_name": "Forty Eight Special-2019",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Forty Eight Special-2019 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Street Glide Special [2019]",
+      "variant_name": "Street Glide Special [2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Street Glide Special [2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "PAN America 1250 [2022]",
+      "variant_name": "PAN America 1250 [2022]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson PAN America 1250 [2022] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -829,11 +795,7 @@
           "price": "N/A"
         },
         {
-          "name": "ABS",
-          "price": "N/A"
-        },
-        {
-          "name": "SP ABS",
+          "name": "Special",
           "price": "N/A"
         }
       ],
@@ -841,9 +803,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "GSX-R1000",
-      "variant_name": "GSX-R1000",
+      "make": "Harley-Davidson",
+      "model": "Custom 1250",
+      "variant_name": "Custom 1250",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -852,34 +814,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki GSX-R1000 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "R",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX-S750 [2017-2018]",
-      "variant_name": "GSX-S750 [2017-2018]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX-S750 [2017-2018] is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Custom 1250 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -891,9 +826,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Intruder 150 Fi",
-      "variant_name": "Intruder 150 Fi",
+      "make": "Harley-Davidson",
+      "model": "Fat Boy 114",
+      "variant_name": "Fat Boy 114",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -902,34 +837,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Intruder 150 Fi is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "SP",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Zeus CD",
-      "variant_name": "Zeus CD",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Zeus CD is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Fat Boy 114 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -941,9 +849,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "RM-Z250",
-      "variant_name": "RM-Z250",
+      "make": "Harley-Davidson",
+      "model": "Deluxe",
+      "variant_name": "Deluxe",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -952,7 +860,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki RM-Z250 is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Deluxe is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -964,9 +872,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "RM-Z450",
-      "variant_name": "RM-Z450",
+      "make": "Harley-Davidson",
+      "model": "Low Rider [2018-2019]",
+      "variant_name": "Low Rider [2018-2019]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -975,7 +883,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki RM-Z450 is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Low Rider [2018-2019] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -987,9 +895,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "V-Strom 650 XT [2018-2019]",
-      "variant_name": "V-Strom 650 XT [2018-2019]",
+      "make": "Harley-Davidson",
+      "model": "Fat Bob [2018-2019]",
+      "variant_name": "Fat Bob [2018-2019]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -998,30 +906,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki V-Strom 650 XT [2018-2019] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "ABS",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "DR-Z50",
-      "variant_name": "DR-Z50",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki DR-Z50 is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Fat Bob [2018-2019] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1033,9 +918,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "GSX S750",
-      "variant_name": "GSX S750",
+      "make": "Harley-Davidson",
+      "model": "1200 Custom",
+      "variant_name": "1200 Custom",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1044,7 +929,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki GSX S750 is a two-wheeler available in India.",
+      "description": "The Harley-Davidson 1200 Custom is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1056,9 +941,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Hayabusa [2019-2020]",
-      "variant_name": "Hayabusa [2019-2020]",
+      "make": "Harley-Davidson",
+      "model": "Low Rider",
+      "variant_name": "Low Rider",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1067,7 +952,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Hayabusa [2019-2020] is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Low Rider is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1079,9 +964,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "V-Strom 650 XT",
-      "variant_name": "V-Strom 650 XT",
+      "make": "Harley-Davidson",
+      "model": "Fat Boy [2022]",
+      "variant_name": "Fat Boy [2022]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1090,7 +975,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki V-Strom 650 XT is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Fat Boy [2022] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1102,9 +987,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Hayabusa [2022]",
-      "variant_name": "Hayabusa [2022]",
+      "make": "Harley-Davidson",
+      "model": "Fat Boy Special",
+      "variant_name": "Fat Boy Special",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1113,7 +998,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Hayabusa [2022] is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Fat Boy Special is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1125,9 +1010,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "V-Strom 800DE [2024]",
-      "variant_name": "V-Strom 800DE [2024]",
+      "make": "Harley-Davidson",
+      "model": "Softail",
+      "variant_name": "Softail",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1136,7 +1021,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki V-Strom 800DE [2024] is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Softail is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1148,9 +1033,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Hayabusa [2024]",
-      "variant_name": "Hayabusa [2024]",
+      "make": "Harley-Davidson",
+      "model": "Street Bob [2021-2023]",
+      "variant_name": "Street Bob [2021-2023]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1159,34 +1044,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Hayabusa [2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "25th Anniversary Celebration Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Burgman 650",
-      "variant_name": "Burgman 650",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Burgman 650 is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Street Bob [2021-2023] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1198,9 +1056,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "GSX-8R [2024]",
-      "variant_name": "GSX-8R [2024]",
+      "make": "Harley-Davidson",
+      "model": "Fat Bob [2022]",
+      "variant_name": "Fat Bob [2022]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1209,7 +1067,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki GSX-8R [2024] is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Fat Bob [2022] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1221,9 +1079,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Fiero",
-      "variant_name": "Fiero",
+      "make": "Harley-Davidson",
+      "model": "Electra Glide",
+      "variant_name": "Electra Glide",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1232,7 +1090,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Fiero is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Electra Glide is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1244,9 +1102,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Swish [2012-2015]",
-      "variant_name": "Swish [2012-2015]",
+      "make": "Harley-Davidson",
+      "model": "Heritage Classic [2022]",
+      "variant_name": "Heritage Classic [2022]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1255,84 +1113,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Swish [2012-2015] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "125",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "SlingShot Plus",
-      "variant_name": "SlingShot Plus",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki SlingShot Plus is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "SEU",
-          "price": "N/A"
-        },
-        {
-          "name": "SCD",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayate [2013-2016]",
-      "variant_name": "Hayate [2013-2016]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayate [2013-2016] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Kick Start",
-          "price": "N/A"
-        },
-        {
-          "name": "Electric Start",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GS150R",
-      "variant_name": "GS150R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GS150R is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Heritage Classic [2022] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1344,9 +1125,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "M800",
-      "variant_name": "M800",
+      "make": "Harley-Davidson",
+      "model": "Road King",
+      "variant_name": "Road King",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1355,165 +1136,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki M800 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Intruder",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "M1800RZ",
-      "variant_name": "M1800RZ",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki M1800RZ is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Intruder",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Intruder M1800R",
-      "variant_name": "Intruder M1800R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Intruder M1800R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "B.O.S.S. Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayabusa [2018-2019]",
-      "variant_name": "Hayabusa [2018-2019]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayabusa [2018-2019] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "GSX1300R",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Bandit",
-      "variant_name": "Bandit",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Bandit is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "1250SA",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX-R1000 [2016]",
-      "variant_name": "GSX-R1000 [2016]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX-R1000 [2016] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "400F",
-          "price": "N/A"
-        },
-        {
-          "name": "R600",
-          "price": "N/A"
-        },
-        {
-          "name": "R750",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Inazuma 250",
-      "variant_name": "Inazuma 250",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Inazuma 250 is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Road King is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1525,9 +1148,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Heat",
-      "variant_name": "Heat",
+      "make": "Harley-Davidson",
+      "model": "Road Glide Special [2022]",
+      "variant_name": "Road Glide Special [2022]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1536,34 +1159,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Heat is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "125",
-          "price": "N/A"
-        },
-        {
-          "name": "Alloys",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Zeus",
-      "variant_name": "Zeus",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Zeus is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Road Glide Special [2022] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1575,9 +1171,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "DS80",
-      "variant_name": "DS80",
+      "make": "Harley-Davidson",
+      "model": "Street Glide Special [2022]",
+      "variant_name": "Street Glide Special [2022]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1586,7 +1182,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki DS80 is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Street Glide Special [2022] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1598,9 +1194,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Access 125 old generation 2007",
-      "variant_name": "Access 125 old generation 2007",
+      "make": "Harley-Davidson",
+      "model": "Sportster S [2022]",
+      "variant_name": "Sportster S [2022]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1609,7 +1205,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Access 125 old generation 2007 is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Sportster S [2022] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1621,9 +1217,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "GS",
-      "variant_name": "GS",
+      "make": "Harley-Davidson",
+      "model": "Nightster [2022]",
+      "variant_name": "Nightster [2022]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1632,53 +1228,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki GS is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "450",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Katana [2013-2014]",
-      "variant_name": "Katana [2013-2014]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Katana [2013-2014] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "750",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "MAX100",
-      "variant_name": "MAX100",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki MAX100 is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Nightster [2022] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1690,9 +1240,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Samurai",
-      "variant_name": "Samurai",
+      "make": "Harley-Davidson",
+      "model": "Heritage Softail Classic",
+      "variant_name": "Heritage Softail Classic",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1701,7 +1251,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Samurai is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Heritage Softail Classic is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1713,9 +1263,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Shaolin",
-      "variant_name": "Shaolin",
+      "make": "Harley-Davidson",
+      "model": "Heritage Classic [2011-2012]",
+      "variant_name": "Heritage Classic [2011-2012]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1724,7 +1274,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Shaolin is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Heritage Classic [2011-2012] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1736,9 +1286,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Shogun",
-      "variant_name": "Shogun",
+      "make": "Harley-Davidson",
+      "model": "CVO",
+      "variant_name": "CVO",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1747,138 +1297,34 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Shogun is a two-wheeler available in India.",
+      "description": "The Harley-Davidson CVO is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Electra Glide",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Street 750 [2018-2019]",
+      "variant_name": "Street 750 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Street 750 [2018-2019] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
           "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "TC90",
-      "variant_name": "TC90",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki TC90 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "AX 100",
-      "variant_name": "AX 100",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki AX 100 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX R1000Z",
-      "variant_name": "GSX R1000Z",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX R1000Z is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayabusa Limited Edition",
-      "variant_name": "Hayabusa Limited Edition",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayabusa Limited Edition is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "GSX1300R",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Gixxer [2014-2018]",
-      "variant_name": "Gixxer [2014-2018]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Gixxer [2014-2018] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Rear Drum",
-          "price": "N/A"
-        },
-        {
-          "name": "Dual Tone",
-          "price": "N/A"
-        },
-        {
-          "name": "Dual Tone Rear Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "SP Rear Disc",
           "price": "N/A"
         },
         {
@@ -1886,7 +1332,7 @@
           "price": "N/A"
         },
         {
-          "name": "SP ABS",
+          "name": "10th Anniversary Edition",
           "price": "N/A"
         }
       ],
@@ -1894,9 +1340,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Lets",
-      "variant_name": "Lets",
+      "make": "Harley-Davidson",
+      "model": "Fat Bob [2016-2017]",
+      "variant_name": "Fat Bob [2016-2017]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1905,7 +1351,99 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Lets is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Fat Bob [2016-2017] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Ultra Classic Electra Glide",
+      "variant_name": "Ultra Classic Electra Glide",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Ultra Classic Electra Glide is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Street Glide",
+      "variant_name": "Street Glide",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Street Glide is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Road King [2017-2018]",
+      "variant_name": "Road King [2017-2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Road King [2017-2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "V Rod",
+      "variant_name": "V Rod",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson V Rod is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -1913,7 +1451,7 @@
           "price": "N/A"
         },
         {
-          "name": "Dual Tone",
+          "name": "Night Rod Special",
           "price": "N/A"
         }
       ],
@@ -1921,9 +1459,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "SlingShot",
-      "variant_name": "SlingShot",
+      "make": "Harley-Davidson",
+      "model": "Fat Boy Special [2017-2018]",
+      "variant_name": "Fat Boy Special [2017-2018]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -1932,31 +1470,632 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki SlingShot is a two-wheeler available in India.",
+      "description": "The Harley-Davidson Fat Boy Special [2017-2018] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Drum Alloy",
+          "name": "Standard",
           "price": "N/A"
-        },
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Night Rod",
+      "variant_name": "Night Rod",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Night Rod is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
         {
-          "name": "Disc Alloy",
+          "name": "Special",
           "price": "N/A"
-        },
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Fat Boy [2016-2017]",
+      "variant_name": "Fat Boy [2016-2017]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Fat Boy [2016-2017] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
         {
-          "name": "Disc Alloy Self",
+          "name": "Standard",
           "price": "N/A"
-        },
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Super Glide Custom",
+      "variant_name": "Super Glide Custom",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Super Glide Custom is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
         {
-          "name": "Drum Alloy Kick",
+          "name": "Standard",
           "price": "N/A"
-        },
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Street Bob [2016-2017]",
+      "variant_name": "Street Bob [2016-2017]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Street Bob [2016-2017] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
         {
-          "name": "Drum Alloy Self",
+          "name": "Standard",
           "price": "N/A"
-        },
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "XR1200X",
+      "variant_name": "XR1200X",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson XR1200X is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
         {
-          "name": "Spoke",
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Nightster [2012]",
+      "variant_name": "Nightster [2012]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Nightster [2012] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Forty Eight [2018-2019]",
+      "variant_name": "Forty Eight [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Forty Eight [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "883 Roadster",
+      "variant_name": "883 Roadster",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson 883 Roadster is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Iron 883 [2018-2019]",
+      "variant_name": "Iron 883 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Iron 883 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "CVO Limited",
+      "variant_name": "CVO Limited",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson CVO Limited is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Fat Boy [2018-2019]",
+      "variant_name": "Fat Boy [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Fat Boy [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Street Bob [2018-2019]",
+      "variant_name": "Street Bob [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Street Bob [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Street Rod [2018-2019]",
+      "variant_name": "Street Rod [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Street Rod [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Road Glide Special [2018-2019]",
+      "variant_name": "Road Glide Special [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Road Glide Special [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Roadster",
+      "variant_name": "Roadster",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Roadster is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "1200 Custom [2018-2019]",
+      "variant_name": "1200 Custom [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson 1200 Custom [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Road King [2018-2019]",
+      "variant_name": "Road King [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Road King [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Street Glide Special [2018]",
+      "variant_name": "Street Glide Special [2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Street Glide Special [2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "SuperLow",
+      "variant_name": "SuperLow",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson SuperLow is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Breakout [2014-2023]",
+      "variant_name": "Breakout [2014-2023]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Breakout [2014-2023] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Sportster XR 1200X",
+      "variant_name": "Sportster XR 1200X",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Sportster XR 1200X is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Sportster XL883 R",
+      "variant_name": "Sportster XL883 R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Sportster XL883 R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Sportster XL883 L",
+      "variant_name": "Sportster XL883 L",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Sportster XL883 L is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Sportster XL 1200 N",
+      "variant_name": "Sportster XL 1200 N",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Sportster XL 1200 N is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Sportster",
+      "variant_name": "Sportster",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Sportster is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "XL 883 L",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Softtail Fatboy",
+      "variant_name": "Softtail Fatboy",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Softtail Fatboy is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "Roadster XL 883 R",
+      "variant_name": "Roadster XL 883 R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Harley-Davidson Roadster XL 883 R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "STD",
           "price": "N/A"
         }
       ],

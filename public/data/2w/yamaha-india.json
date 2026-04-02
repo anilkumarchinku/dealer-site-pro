@@ -2,1181 +2,2682 @@
   "brand": "Yamaha",
   "brandId": "yamaha-india",
   "type": "2w",
+  "lastUpdated": "2026-04-02",
+  "source": "BikeWale",
   "vehicles": [
     {
       "make": "Yamaha",
-      "model": "FZ-Fi",
-      "variant_name": "FZ FI Standard",
-      "price": "₹1,09,924",
-      "engine_displacement": "149 cc",
-      "mileage": "46 kmpl",
-      "max_power": "12.2 bhp",
-      "max_torque": "13.3 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yamaha FZ V3 is a 149cc street bike designed for city commuters and beginners, offering a blend of style, comfort, and fuel efficiency with its fuel-injected engine and modern features. It features single-channel ABS, disc brakes on both ends, and a comfortable upright riding posture.",
-      "features": [
-        "149cc fuel-injected BS6 Phase 2 engine with 12.2 bhp",
-        "5-speed manual transmission",
-        "Single-channel ABS with front and rear disc brakes",
-        "LED headlamp",
-        "Digital instrument cluster",
-        "Excellent fuel efficiency at 46 kmpl",
-        "13-litre fuel tank capacity",
-        "Lightweight at 135 kg",
-        "790mm seat height",
-        "Self-start ignition"
-      ],
-      "variants": [
-        {
-          "name": "FZ FI Standard",
-          "price": "₹1,09,924"
-        }
-      ],
-      "colors": [
-        "Matte Cyan",
-        "Metallic Black"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 149,
-        "max_power_bhp": 12.2,
-        "max_torque_nm": 13.3,
-        "cooling": "Air-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "5 Speed Manual",
-        "kerb_weight_kg": 135,
-        "fuel_tank_litres": 13,
-        "top_speed_kmph": 115,
-        "mileage_kmpl": 46,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Single-channel ABS",
-        "features": [
-          "LED headlamp",
-          "Digital instrument cluster"
-        ]
-      }
-    },
-    {
-      "make": "Yamaha",
-      "model": "FZ Rave",
-      "variant_name": "FZ Rave Standard",
-      "price": "₹1,20,060",
-      "engine_displacement": "149 cc",
-      "mileage": "51 kmpl",
-      "max_power": "12.2 bhp",
-      "max_torque": "13.3 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "variants": [
-        {
-          "name": "FZ Rave Standard",
-          "price": "₹1,20,060"
-        }
-      ],
-      "colors": [
-        "Metallic Black",
-        "Matte Titan"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 149,
-        "max_power_bhp": 12.2,
-        "max_torque_nm": 13.3,
-        "cooling": "Air-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "5 Speed Manual",
-        "kerb_weight_kg": 136,
-        "fuel_tank_litres": 13,
-        "top_speed_kmph": 115,
-        "mileage_kmpl": 51,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Single-channel ABS",
-        "features": [
-          "LED headlamp",
-          "Disc brakes front and rear",
-          "ABS"
-        ]
-      },
-      "description": "The Yamaha FZ Rave is a stylish naked streetfighter designed for the urban rider who wants head-turning looks with everyday practicality. Based on the FZ platform, it features aggressive LED lighting, bold graphics, and a sporty silhouette. Powered by a 149cc fuel-injected engine, the FZ Rave offers reliable city performance with a distinctive visual identity that stands out from the crowd.",
-      "features": [
-        "149cc Fuel-Injected Engine",
-        "ABS",
-        "LED Lighting",
-        "Digital Instrument Cluster",
-        "USB Charging",
-        "Split Seat Design",
-        "Tubeless Tyres",
-        "Sporty Ergonomics"
-      ]
-    },
-    {
-      "make": "Yamaha",
-      "model": "FZ-S Fi",
-      "variant_name": "FZ S FI Standard",
-      "price": "₹1,13,256",
-      "engine_displacement": "149 cc",
-      "mileage": "45 kmpl",
-      "max_power": "12.2 bhp",
-      "max_torque": "13.3 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yamaha FZ S FI is a street bike that blends sporty styling with refined performance and everyday practicality, featuring a smooth 149cc engine designed for economical daily commuting. It features front and rear disc brakes with ABS, a negative LCD display, and an eco indicator.",
-      "features": [
-        "149cc BS6 Phase 2 engine with 12.2 bhp",
-        "5-speed manual transmission",
-        "Front and rear disc brakes with single-channel ABS",
-        "45 kmpl user-reported mileage",
-        "Negative LCD display with eco indicator",
-        "LED headlamp",
-        "13-litre fuel tank capacity",
-        "135 kg kerb weight",
-        "790mm seat height",
-        "Alloy wheels"
-      ],
-      "variants": [
-        {
-          "name": "FZ S FI Standard",
-          "price": "₹1,13,256"
-        },
-        {
-          "name": "FZ S FI Deluxe",
-          "price": "₹1,14,173"
-        }
-      ],
-      "colors": [
-        "Matte Red",
-        "Matte Grey",
-        "Dark Knight"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 149,
-        "max_power_bhp": 12.2,
-        "max_torque_nm": 13.3,
-        "cooling": "Air-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "5 Speed Manual",
-        "kerb_weight_kg": 135,
-        "fuel_tank_litres": 13,
-        "top_speed_kmph": 115,
-        "mileage_kmpl": 45,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Single-channel ABS",
-        "features": [
-          "LCD display",
-          "Eco indicator",
-          "LED headlamp"
-        ]
-      }
-    },
-    {
-      "make": "Yamaha",
-      "model": "FZ-S Fi V4",
-      "variant_name": "FZS FI V4 Standard",
-      "price": "₹1,20,409",
-      "engine_displacement": "149 cc",
-      "mileage": "57.4 kmpl",
-      "max_power": "12.2 bhp",
-      "max_torque": "13.3 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yamaha FZS FI V4 is a 149cc street bike offering smooth performance, excellent fuel efficiency of 57.4 kmpl, and modern features including Bluetooth connectivity and traction control for comfortable city commuting. It features LED lighting, a digital instrument cluster, and Y-Connect app support.",
-      "features": [
-        "149cc BS6 Phase 2 engine with 12.2 bhp",
-        "57.4 kmpl expert-reported mileage",
-        "Front and rear disc brakes with ABS",
-        "Traction control system",
-        "Bluetooth connectivity via Y-Connect app",
-        "LED lighting and digital instrument cluster",
-        "13-litre fuel tank capacity",
-        "136 kg kerb weight",
-        "790mm seat height",
-        "Alloy wheels"
-      ],
-      "variants": [
-        {
-          "name": "FZS FI V4 Standard",
-          "price": "₹1,20,409"
-        },
-        {
-          "name": "FZS FI V4 Deluxe",
-          "price": "₹1,23,241"
-        },
-        {
-          "name": "FZS FI V4 Standard - OBD 2B",
-          "price": "₹1,26,074"
-        }
-      ],
-      "colors": [
-        "Ice Fluo-Vermillion",
-        "Cyber Green",
-        "Matte Black Dlx",
-        "Racing Blue",
-        "Majesty Red",
-        "Metallic Grey",
-        "Matte Black",
-        "Dark Matte Blue"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 149,
-        "max_power_bhp": 12.2,
-        "max_torque_nm": 13.3,
-        "cooling": "Air-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "5 Speed Manual",
-        "kerb_weight_kg": 136,
-        "fuel_tank_litres": 13,
-        "top_speed_kmph": 115,
-        "mileage_kmpl": 57.4,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Single-channel ABS",
-        "features": [
-          "LED lighting",
-          "Digital instrument cluster",
-          "Bluetooth connectivity",
-          "Traction control"
-        ]
-      }
-    },
-    {
-      "make": "Yamaha",
-      "model": "FZ-S Fi Hybrid",
-      "variant_name": "FZ S Hybrid Standard",
-      "price": "₹1,35,174",
-      "engine_displacement": "149 cc",
-      "mileage": "53 kmpl",
-      "max_power": "12.2 bhp",
-      "max_torque": "13.3 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "variants": [
-        {
-          "name": "FZ S Hybrid Standard",
-          "price": "₹1,35,174"
-        }
-      ],
-      "colors": [
-        "Matte Black",
-        "Racing Blue",
-        "Cyan Metallic Grey"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 149,
-        "max_power_bhp": 12.2,
-        "max_torque_nm": 13.3,
-        "cooling": "Air-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "5 Speed Manual",
-        "kerb_weight_kg": 136,
-        "fuel_tank_litres": 13,
-        "top_speed_kmph": 100,
-        "mileage_kmpl": 53,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Single-channel ABS",
-        "features": [
-          "Bluetooth TFT console",
-          "Traction control system",
-          "LED headlight",
-          "Hybrid assist"
-        ]
-      },
-      "description": "The Yamaha FZ-S Fi Hybrid is India's first 150cc hybrid motorcycle, combining a 149cc petrol engine with an integrated starter generator (ISG) that provides a mild hybrid boost. This innovative technology improves fuel efficiency and reduces emissions while maintaining the sporty performance the FZ-S is known for. It features premium components and advanced electronics making it a future-ready commuter-sport motorcycle.",
-      "features": [
-        "149cc Hybrid Engine",
-        "Integrated Starter Generator",
-        "ABS",
-        "LED Lighting",
-        "Digital Console",
-        "USB Charging",
-        "Improved Fuel Efficiency",
-        "Eco-Friendly Technology"
-      ]
-    },
-    {
-      "make": "Yamaha",
-      "model": "FZ-X",
-      "variant_name": "FZ X Standard",
-      "price": "₹1,21,667",
-      "engine_displacement": "149 cc",
-      "mileage": "47 kmpl",
-      "max_power": "12.2 bhp",
-      "max_torque": "13.3 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "variants": [
-        {
-          "name": "FZ X Standard",
-          "price": "₹1,21,667"
-        },
-        {
-          "name": "FZ X Dark Matte Blue Purple",
-          "price": "₹1,30,054"
-        }
-      ],
-      "colors": [
-        "Metallic Black",
-        "Dark Matte Blue"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 149,
-        "max_power_bhp": 12.2,
-        "max_torque_nm": 13.3,
-        "cooling": "Air-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "5 Speed Manual",
-        "kerb_weight_kg": 139,
-        "fuel_tank_litres": 10,
-        "top_speed_kmph": 115,
-        "mileage_kmpl": 47,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Single-channel ABS",
-        "seat_height_mm": 810,
-        "features": [
-          "LED headlamp",
-          "Digital console",
-          "Traction control",
-          "Neo-retro design"
-        ]
-      },
-      "description": "The Yamaha FZ-X is a crossover motorcycle that bridges the gap between a naked streetbike and an adventure bike. Featuring a raised front mudguard, upswept beak-style design, and adventure-touring aesthetics, it is built on the FZ platform with a 149cc engine. The FZ-X is perfect for urban commuters who want the look and feel of an adventure bike with city-friendly dimensions and practicality.",
-      "features": [
-        "149cc Fuel-Injected Engine",
-        "ABS",
-        "LED Lighting",
-        "Bluetooth Connectivity",
-        "USB Charging",
-        "Adventure Styling",
-        "Digital Display",
-        "Crossover Design"
-      ]
-    },
-    {
-      "make": "Yamaha",
-      "model": "FZ25",
-      "variant_name": "FZ25 Standard",
-      "price": "₹1,33,749",
-      "engine_displacement": "249 cc",
-      "mileage": "39 kmpl",
-      "max_power": "20.3 bhp",
-      "max_torque": "20 Nm",
+      "model": "MT 15 V2",
+      "variant_name": "MT 15 V2",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Yamaha FZ25 is a discontinued 249cc street bike that delivered 20.3 bhp, 39 kmpl mileage, and a sharp riding experience with its digital instrument cluster and disc brakes on both ends. It was offered in a single BS4-compliant variant.",
-      "features": [
-        "249cc single-cylinder air-cooled engine with 20.3 bhp",
-        "5-speed manual transmission",
-        "Front disc (282mm) and rear disc (220mm) brakes",
-        "17-inch alloy wheels with tubeless tyres",
-        "Digital instrument cluster with gear shift light",
-        "Low fuel indicator",
-        "14-litre fuel tank capacity",
-        "795mm seat height",
-        "160mm ground clearance",
-        "148 kg kerb weight"
-      ],
+      "description": "The Yamaha MT 15 V2 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "FZ25 Standard",
-          "price": "₹1,33,749"
-        }
-      ],
-      "colors": [
-        "Racing Blue",
-        "Metallic Black",
-        "Matte Black",
-        "Matte Copper"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 249,
-        "max_power_bhp": 20.3,
-        "max_torque_nm": 20,
-        "cooling": "Air-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "5 Speed Manual",
-        "kerb_weight_kg": 153,
-        "fuel_tank_litres": 14,
-        "top_speed_kmph": 130,
-        "mileage_kmpl": 39,
-        "emission_standard": "BS4",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Single-channel ABS"
-      }
-    },
-    {
-      "make": "Yamaha",
-      "model": "MT-15 V2.0",
-      "variant_name": "MT 15 V2 Standard",
-      "price": "₹1,59,197",
-      "engine_displacement": "155 cc",
-      "mileage": "47 kmpl",
-      "max_power": "18.1 bhp",
-      "max_torque": "14.1 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yamaha MT-15 V2 is a 155cc street fighter featuring a liquid-cooled engine with Variable Valve Actuation technology, delivering a blend of fuel efficiency and performance suitable for urban commuting and city riding. It features upside-down front forks, an aluminium Deltabox chassis, and Bluetooth connectivity.",
-      "features": [
-        "155cc BS6 Phase 2 liquid-cooled engine with VVA technology",
-        "18.1 bhp power and 14.1 Nm torque",
-        "6-speed manual transmission with assist and slipper clutch",
-        "Upside-down front forks and aluminium Deltabox chassis",
-        "Dual disc brakes with single-channel ABS",
-        "Digital instrument cluster with Bluetooth connectivity",
-        "LED headlight",
-        "Expert-reported mileage of 53 kmpl",
-        "10-litre fuel tank capacity",
-        "Lightweight at 141 kg"
-      ],
-      "variants": [
-        {
-          "name": "MT 15 V2 Standard [2024]",
-          "price": "₹1,58,200"
+          "name": "Standard [2024]",
+          "price": "N/A"
         },
         {
-          "name": "MT 15 V2 Standard",
-          "price": "₹1,59,197"
+          "name": "Standard",
+          "price": "N/A"
         },
         {
-          "name": "MT 15 V2 Deluxe",
-          "price": "₹1,68,507"
+          "name": "Deluxe",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Metallic Black",
-        "Metallic Silver Cyan",
-        "Ice Storm",
-        "Vivid Violet Metallic",
-        "Metallic Black DLX"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 155,
-        "max_power_bhp": 18.1,
-        "max_torque_nm": 14.1,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 141,
-        "fuel_tank_litres": 10,
-        "top_speed_kmph": 130,
-        "mileage_kmpl": 47,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Single-channel ABS",
-        "seat_height_mm": 810,
-        "features": [
-          "LED headlight",
-          "Digital instrument cluster with Bluetooth",
-          "Upside-down forks",
-          "Aluminium chassis",
-          "Assist and slipper clutch"
-        ]
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Yamaha",
       "model": "R15 V4",
-      "variant_name": "R15 V4 Standard",
-      "price": "₹1,67,085",
-      "engine_displacement": "155 cc",
-      "mileage": "51.4 kmpl",
-      "max_power": "18.1 bhp",
-      "max_torque": "14.2 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yamaha R15 V4 is a 155cc sports bike featuring a BS6 Phase 2 liquid-cooled engine that delivers strong performance in a lightweight, aerodynamic package designed for enthusiasts. It features a traction control system, quick shifter, and Variable Valve Actuation (VVA) technology for impressive performance.",
-      "features": [
-        "155cc BS6 Phase 2 liquid-cooled engine with 18.1 bhp and 14.2 Nm torque",
-        "6-speed manual transmission with quickshifter",
-        "Traction control system",
-        "Dual disc brakes with dual-channel ABS",
-        "Variable Valve Actuation (VVA) technology",
-        "USD front forks with Deltabox frame",
-        "51.4 kmpl expert-reported mileage",
-        "11-litre fuel tank capacity",
-        "141 kg kerb weight",
-        "815mm seat height"
-      ],
-      "variants": [
-        {
-          "name": "R15 V4 Standard",
-          "price": "₹1,67,085"
-        },
-        {
-          "name": "R15 V4 Dark Knight",
-          "price": "₹1,72,000"
-        },
-        {
-          "name": "R15 V4 Dual Tone",
-          "price": "₹1,76,000"
-        },
-        {
-          "name": "R15 V4 M",
-          "price": "₹1,85,000"
-        },
-        {
-          "name": "R15 V4 M - MotoGP Edition",
-          "price": "₹1,90,000"
-        },
-        {
-          "name": "R15 V4 M - Carbon Fibre",
-          "price": "₹1,92,100"
-        }
-      ],
-      "colors": [
-        "Metallic Grey",
-        "Dark Knight",
-        "Metallic Black",
-        "Intensity White",
-        "Metallic Red",
-        "Matte White Pearl",
-        "Racing Blue",
-        "Icon Performance",
-        "MotoGP Edition"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 155,
-        "max_power_bhp": 18.1,
-        "max_torque_nm": 14.2,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 141,
-        "fuel_tank_litres": 11,
-        "top_speed_kmph": 140,
-        "mileage_kmpl": 51.4,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "features": [
-          "Traction control system",
-          "Quick shifter",
-          "USD front forks",
-          "Deltabox frame",
-          "Variable Valve Actuation (VVA)"
-        ]
-      }
-    },
-    {
-      "make": "Yamaha",
-      "model": "R15S",
-      "variant_name": "R15S Standard",
-      "price": "₹1,51,597",
-      "engine_displacement": "155 cc",
-      "mileage": "46 kmpl",
-      "max_power": "18.1 bhp",
-      "max_torque": "14.2 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yamaha R15S is a sports motorcycle powered by a 155cc BS6 Phase 2 liquid-cooled engine, delivering 18.1 bhp and 14.2 Nm torque with impressive fuel efficiency of 46 kmpl. It features a comfortable single-piece seat and sharp handling for an engaging riding experience.",
-      "features": [
-        "155cc BS6 Phase 2 liquid-cooled engine with 18.1 bhp",
-        "6-speed manual transmission",
-        "Front and rear disc brakes with dual-channel ABS",
-        "Traction control system",
-        "Quick shifter",
-        "LED headlamps",
-        "Single-piece comfortable seat",
-        "11-litre fuel tank capacity",
-        "142 kg kerb weight",
-        "136 kmph top speed"
-      ],
-      "variants": [
-        {
-          "name": "R15S Standard",
-          "price": "₹1,51,597"
-        }
-      ],
-      "colors": [
-        "Matte Black (New)",
-        "Matte Black",
-        "Racing Blue"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 155,
-        "max_power_bhp": 18.1,
-        "max_torque_nm": 14.2,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 142,
-        "fuel_tank_litres": 11,
-        "top_speed_kmph": 136,
-        "mileage_kmpl": 46,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "features": [
-          "Traction control system",
-          "Quickshifter",
-          "LED headlamps"
-        ]
-      }
-    },
-    {
-      "make": "Yamaha",
-      "model": "R15M",
-      "variant_name": "R15M Standard",
-      "price": "₹1,85,000",
-      "engine_displacement": "155 cc",
-      "mileage": "51.4 kmpl",
-      "max_power": "18.1 bhp",
-      "max_torque": "14.2 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yamaha R15M is the premium M Edition of the R15 V4, featuring exclusive graphics, traction control, a quick shifter, and USD front forks in a lightweight 155cc sports package. It is available in MotoGP Edition and Carbon Fibre special editions for performance-oriented riders.",
-      "features": [
-        "155cc BS6 Phase 2 liquid-cooled engine with 18.1 bhp and 14.2 Nm torque",
-        "6-speed manual transmission with quick shifter",
-        "Traction control system",
-        "Dual-channel ABS",
-        "Variable Valve Actuation (VVA) technology",
-        "USD front forks and Deltabox frame",
-        "Premium M Edition graphics",
-        "51.4 kmpl expert-reported mileage",
-        "141 kg kerb weight",
-        "815mm seat height"
-      ],
-      "variants": [
-        {
-          "name": "R15M Standard",
-          "price": "₹1,85,000"
-        },
-        {
-          "name": "R15M MotoGP Edition",
-          "price": "₹1,90,000"
-        },
-        {
-          "name": "R15M Carbon Fibre",
-          "price": "₹1,92,100"
-        }
-      ],
-      "colors": [
-        "Icon Performance",
-        "MotoGP Edition",
-        "Carbon Fibre"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 155,
-        "max_power_bhp": 18.1,
-        "max_torque_nm": 14.2,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 141,
-        "fuel_tank_litres": 11,
-        "top_speed_kmph": 140,
-        "mileage_kmpl": 51.4,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "seat_height_mm": 815,
-        "features": [
-          "Traction control system",
-          "Quick shifter",
-          "USD front forks",
-          "Deltabox frame",
-          "Variable Valve Actuation (VVA)",
-          "Premium M Edition graphics"
-        ]
-      }
-    },
-    {
-      "make": "Yamaha",
-      "model": "YZF-R3",
-      "variant_name": "YZF-R3 Standard",
-      "price": "₹3,51,928",
-      "engine_displacement": "321 cc",
-      "mileage": "25 kmpl",
-      "max_power": "40.8 bhp",
-      "max_torque": "29.6 Nm",
+      "variant_name": "R15 V4",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Yamaha YZF R3 is a discontinued 321cc sports bike that delivered 40.8 bhp with a 6-speed manual transmission and liquid-cooled parallel-twin engine, designed as an entry-level sportbike with full aerodynamic fairing. It featured dual-channel ABS and a diamond chassis design.",
-      "features": [
-        "321cc liquid-cooled 2-cylinder engine with 40.8 bhp",
-        "29.6 Nm torque at 9000 rpm",
-        "6-speed manual transmission with assist and slipper clutch",
-        "Dual-channel ABS",
-        "17-inch alloy wheels with tubeless tyres",
-        "Diamond chassis design",
-        "Preload-adjustable rear monoshock",
-        "Digital speedometer with odometer and fuel gauge",
-        "14-litre fuel tank capacity",
-        "169 kg kerb weight"
-      ],
+      "description": "The Yamaha R15 V4 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "YZF-R3 Standard",
-          "price": "₹3,51,928"
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Dark Knight",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Tone",
+          "price": "N/A"
+        },
+        {
+          "name": "M",
+          "price": "N/A"
+        },
+        {
+          "name": "M - MotoGP Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "M - Carbon Fibre",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Magma Black",
-        "Racing Blue"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 321,
-        "max_power_bhp": 40.8,
-        "max_torque_nm": 29.6,
-        "cooling": "Liquid-cooled",
-        "cylinders": 2,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 169,
-        "fuel_tank_litres": 14,
-        "top_speed_kmph": 180,
-        "mileage_kmpl": 25,
-        "emission_standard": "BS4",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Yamaha",
-      "model": "XSR155",
-      "variant_name": "XSR 155 Metallic Blue",
-      "price": "₹1,50,957",
-      "engine_displacement": "155 cc",
-      "mileage": "46 kmpl",
-      "max_power": "18.1 bhp",
-      "max_torque": "14.2 Nm",
+      "model": "XSR 155",
+      "variant_name": "XSR 155",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
+      "source_section": "Discontinued",
+      "description": "The Yamaha XSR 155 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "XSR 155 Metallic Blue",
-          "price": "₹1,50,957"
+          "name": "Metallic Blue",
+          "price": "N/A"
         },
         {
-          "name": "XSR 155 Vivid Red",
-          "price": "₹1,54,000"
+          "name": "Vivid Red",
+          "price": "N/A"
         },
         {
-          "name": "XSR 155 Metallic Grey",
-          "price": "₹1,57,000"
+          "name": "Metallic Grey",
+          "price": "N/A"
         },
         {
-          "name": "XSR 155 Metallic Black and Greyish Green Metallic",
-          "price": "₹1,59,990"
+          "name": "Metallic Black and Greyish Green Metallic",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Metallic Blue",
-        "Vivid Red",
-        "Metallic Grey",
-        "Metallic Black",
-        "Greyish Green Metallic"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 155,
-        "max_power_bhp": 18.1,
-        "max_torque_nm": 14.2,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 137,
-        "fuel_tank_litres": 10,
-        "top_speed_kmph": 130,
-        "mileage_kmpl": 46,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "features": [
-          "LED headlamp",
-          "VVA engine",
-          "Neo-retro design"
-        ]
-      },
-      "description": "The Yamaha XSR155 is a neo-retro sport motorcycle that combines classic café racer styling with modern performance and technology. Powered by the same VVA-equipped 155cc engine found in the R15 V4, it delivers impressive performance packaged in a retro-modern design. The XSR155 features a round headlamp, café racer seat unit, spoke wheels, and premium components that appeal to riders who appreciate timeless aesthetics with contemporary performance.",
-      "features": [
-        "155cc VVA Engine",
-        "Dual Channel ABS",
-        "Traction Control",
-        "LED Lighting",
-        "Quickshifter",
-        "Bluetooth Connectivity",
-        "Retro Styling",
-        "Spoke Wheels"
-      ]
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Yamaha",
-      "model": "Ray ZR 125 Fi",
-      "variant_name": "Ray ZR 125 Drum - Hybrid",
-      "price": "₹76,235",
-      "engine_displacement": "125 cc",
-      "mileage": "49 kmpl",
-      "max_power": "8.04 bhp",
-      "max_torque": "10.3 Nm",
+      "model": "FZ S Hybrid",
+      "variant_name": "FZ S Hybrid",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yamaha Ray ZR 125 is a retro-styled 125cc scooter with a refined BS6 Phase 2B engine and sporty design, achieving 49 kmpl ARAI mileage with kick and self-start options. It is available in 4 variants and 12 colour options including drum and disc brake configurations.",
-      "features": [
-        "125cc BS6 Phase 2B engine with 8.04 bhp and 10.3 Nm torque",
-        "49 kmpl ARAI mileage",
-        "Drum and disc brake options with combined braking system",
-        "Alloy wheels",
-        "5.2-litre fuel tank capacity",
-        "99 kg kerb weight",
-        "Kick and self-start options",
-        "90 kmph top speed",
-        "785mm seat height",
-        "Retro design with rally variant"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Yamaha FZ S Hybrid is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Ray ZR 125 Drum - Hybrid",
-          "price": "₹76,235"
-        },
-        {
-          "name": "Ray ZR 125 Disc Hybrid",
-          "price": "₹82,000"
-        },
-        {
-          "name": "Ray ZR 125 Disc - Racing Blue and Dark Matte Blue",
-          "price": "₹85,000"
-        },
-        {
-          "name": "Ray ZR 125 Street Rally - Hybrid",
-          "price": "₹88,425"
+          "name": "Standard",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Silver White Cocktail",
-        "Matte Red",
-        "Cyan Blue",
-        "Metallic Black",
-        "Dark Matte Blue",
-        "Racing Blue",
-        "Matte Grey Metallic",
-        "Matte Black",
-        "Cyber Green",
-        "Ice Fluo-Vermillion"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 125,
-        "max_power_bhp": 8.04,
-        "max_torque_nm": 10.3,
-        "cooling": "Air-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "CVT",
-        "kerb_weight_kg": 99,
-        "fuel_tank_litres": 5.2,
-        "top_speed_kmph": 90,
-        "mileage_kmpl": 49,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Drum / Disc",
-        "brakes_rear": "Drum",
-        "abs": "Combined Braking System",
-        "seat_height_mm": 785,
-        "features": [
-          "Hybrid technology",
-          "Kick and self start",
-          "Alloy wheels"
-        ]
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Yamaha",
-      "model": "Ray ZR Street Rally",
-      "variant_name": "Ray ZR Street Rally Hybrid",
-      "price": "₹88,425",
-      "engine_displacement": "125 cc",
-      "mileage": "49 kmpl",
-      "max_power": "8.04 bhp",
-      "max_torque": "10.3 Nm",
+      "model": "Ray ZR 125",
+      "variant_name": "Ray ZR 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yamaha Ray ZR Street Rally is a rally-inspired 125cc scooter variant with aggressive street rally styling and hybrid technology, delivering practical urban performance with 49 kmpl mileage. It features disc brakes, alloy wheels, and a sporty design differentiated from the standard Ray ZR.",
-      "features": [
-        "125cc BS6 Phase 2B engine with 8.04 bhp",
-        "49 kmpl ARAI mileage",
-        "Front disc and rear drum brakes with CBS",
-        "Hybrid technology",
-        "Rally-inspired street design",
-        "Alloy wheels",
-        "5.2-litre fuel tank capacity",
-        "100 kg kerb weight",
-        "Kick and self-start",
-        "785mm seat height"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Yamaha Ray ZR 125 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Ray ZR Street Rally Hybrid",
-          "price": "₹88,425"
+          "name": "Drum - Hybrid",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Hybrid",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc - Racing Blue and Dark Matte Blue",
+          "price": "N/A"
+        },
+        {
+          "name": "Street Rally - Hybrid",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Cyber Green",
-        "Ice Fluo-Vermillion",
-        "Matte Grey Metallic",
-        "Matte Black"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 125,
-        "max_power_bhp": 8.04,
-        "max_torque_nm": 10.3,
-        "cooling": "Air-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "CVT",
-        "kerb_weight_kg": 100,
-        "fuel_tank_litres": 5.2,
-        "top_speed_kmph": 90,
-        "mileage_kmpl": 49,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Drum",
-        "abs": "Combined Braking System",
-        "seat_height_mm": 785,
-        "features": [
-          "Street rally design",
-          "Hybrid technology",
-          "Alloy wheels"
-        ]
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Yamaha",
-      "model": "Fascino 125 Fi",
-      "variant_name": "Fascino 125 Drum - Hybrid",
-      "price": "₹77,091",
-      "engine_displacement": "125 cc",
-      "mileage": "50 kmpl",
-      "max_power": "8.04 bhp",
-      "max_torque": "10.3 Nm",
+      "model": "FZS FI V4",
+      "variant_name": "FZS FI V4",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yamaha Fascino 125 is a retro-styled scooter with a 125cc BS6 Phase 2B engine delivering smooth performance and excellent fuel efficiency of 50 kmpl, designed for urban commuting and daily use. It features chrome accents, an elegant design, kick and self-start options, and is available in 9 variants.",
-      "features": [
-        "125cc BS6 Phase 2B engine with 8.04 bhp",
-        "50 kmpl user-reported mileage",
-        "Retro design with chrome accents",
-        "Drum and disc brake options with CBS",
-        "Alloy wheels",
-        "5.2-litre fuel tank capacity",
-        "Lightweight at 99 kg",
-        "Kick and self-start options",
-        "780mm seat height",
-        "90 kmph top speed"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Yamaha FZS FI V4 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Fascino 125 Drum",
-          "price": "₹77,091"
+          "name": "Standard",
+          "price": "N/A"
         },
         {
-          "name": "Fascino 125 Drum Deluxe",
-          "price": "₹77,091"
+          "name": "Deluxe",
+          "price": "N/A"
         },
         {
-          "name": "Fascino 125 Drum - Hybrid",
-          "price": "₹77,091"
-        },
-        {
-          "name": "Fascino 125 Disc",
-          "price": "₹86,088"
-        },
-        {
-          "name": "Fascino 125 S - Hybrid",
-          "price": "₹87,385"
-        },
-        {
-          "name": "Fascino 125 Disc Deluxe",
-          "price": "₹88,466"
-        },
-        {
-          "name": "Fascino 125 Disc Special Edition",
-          "price": "₹89,305"
-        },
-        {
-          "name": "Fascino 125 Disc - Dark Matte Blue Special Edition",
-          "price": "₹90,005"
-        },
-        {
-          "name": "Fascino 125 S - Hybrid (Colour TFT/ TBT)",
-          "price": "₹96,555"
+          "name": "Standard - OBD 2B",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Metallic White",
-        "Matte Copper",
-        "Silver",
-        "Dark Matte Blue",
-        "Cool Blue Metallic",
-        "Metallic Black",
-        "Cyan Blue",
-        "Vivid Red",
-        "Matte Grey Special"
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "FZ X",
+      "variant_name": "FZ X",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Yamaha FZ X is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Dark Matte Blue Purple",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_displacement_cc": 125,
-        "max_power_bhp": 8.04,
-        "max_torque_nm": 10.3,
-        "cooling": "Air-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "CVT",
-        "kerb_weight_kg": 99,
-        "fuel_tank_litres": 5.2,
-        "top_speed_kmph": 90,
-        "mileage_kmpl": 50,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Drum / Disc",
-        "brakes_rear": "Drum",
-        "abs": "Combined Braking System",
-        "features": [
-          "Hybrid technology",
-          "Kick and self start",
-          "Alloy wheels"
-        ]
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Yamaha",
       "model": "Aerox 155",
-      "variant_name": "Aerox 155 Standard",
-      "price": "₹1,40,445",
-      "engine_displacement": "155 cc",
-      "mileage": "40 kmpl",
-      "max_power": "14.75 bhp",
-      "max_torque": "13.9 Nm",
+      "variant_name": "Aerox 155",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yamaha Aerox 155 is a 155cc maxi-scooter powered by a BS6 Phase 2B liquid-cooled engine delivering 14.75 bhp and 13.9 Nm torque with an expert-reported mileage of 46 kmpl. It features a keyless start, digital console with Bluetooth, and aggressive maxi-scooter styling.",
-      "features": [
-        "155cc BS6 Phase 2B liquid-cooled engine with 14.75 bhp",
-        "Front disc and rear drum brakes with ABS",
-        "Keyless start functionality",
-        "Digital console with Bluetooth connectivity",
-        "LED headlamp",
-        "Alloy wheels",
-        "5.5-litre fuel tank capacity",
-        "126 kg kerb weight",
-        "790mm seat height",
-        "115 kmph top speed"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Yamaha Aerox 155 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Aerox 155 Standard",
-          "price": "₹1,40,445"
+          "name": "Standard",
+          "price": "N/A"
         },
         {
-          "name": "Aerox 155 S",
-          "price": "₹1,43,464"
+          "name": "S",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Metallic Black",
-        "Grey Vermillion",
-        "Ice Fluo Vermillion",
-        "Racing Blue"
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "FZ S FI",
+      "variant_name": "FZ S FI",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Yamaha FZ S FI is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Deluxe",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_displacement_cc": 155,
-        "max_power_bhp": 14.75,
-        "max_torque_nm": 13.9,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "CVT",
-        "kerb_weight_kg": 126,
-        "fuel_tank_litres": 5.5,
-        "top_speed_kmph": 115,
-        "mileage_kmpl": 40,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Drum",
-        "abs": "Single-channel ABS",
-        "seat_height_mm": 790,
-        "features": [
-          "Maxi-scooter design",
-          "LED headlamp",
-          "Digital console with Bluetooth",
-          "Alloy wheels"
-        ]
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "R15S",
+      "variant_name": "R15S",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Yamaha R15S is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "FZ X Hybrid",
+      "variant_name": "FZ X Hybrid",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Yamaha FZ X Hybrid is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "EC 06",
+      "variant_name": "EC 06",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "79 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Yamaha EC 06 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Fascino 125",
+      "variant_name": "Fascino 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Yamaha Fascino 125 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum - Hybrid",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum Deluxe",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Deluxe",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Special Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "S - Hybrid",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc - Dark Matte Blue Special Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "S - Hybrid (Colour TFT/ TBT)",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "FZ FI",
+      "variant_name": "FZ FI",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Yamaha FZ FI is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "FZ Rave",
+      "variant_name": "FZ Rave",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Yamaha FZ Rave is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Aerox E",
+      "variant_name": "Aerox E",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Aerox E is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "YZF-R7",
+      "variant_name": "YZF-R7",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha YZF-R7 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "MT-07",
+      "variant_name": "MT-07",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha MT-07 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Tenere 700",
+      "variant_name": "Tenere 700",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Tenere 700 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Lander 250",
+      "variant_name": "Lander 250",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Lander 250 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "MT-09",
+      "variant_name": "MT-09",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha MT-09 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Nmax 155",
+      "variant_name": "Nmax 155",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Nmax 155 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "YZF R9",
+      "variant_name": "YZF R9",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha YZF R9 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "RX 100",
+      "variant_name": "RX 100",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha RX 100 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "R3",
+      "variant_name": "R3",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha R3 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Yamaha",
       "model": "MT-03",
-      "variant_name": "MT-03 Standard",
-      "price": "₹3,29,908",
-      "engine_displacement": "321 cc",
-      "mileage": "35 kmpl",
-      "max_power": "41.4 bhp",
-      "max_torque": "29.5 Nm",
+      "variant_name": "MT-03",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Yamaha MT-03 is a street bike powered by a 321cc liquid-cooled parallel-twin engine delivering 41.4 bhp with 6-speed transmission and assist and slipper clutch, achieving approximately 35 kmpl mileage. It features dual-channel ABS, USD telescopic front suspension, and a diamond-type chassis frame.",
-      "features": [
-        "321cc 2-cylinder liquid-cooled engine with 41.4 bhp",
-        "6-speed manual transmission with assist and slipper clutch",
-        "Dual-channel ABS",
-        "USD telescopic front suspension",
-        "LCD digital instrument cluster with gear indicator",
-        "17-inch alloy wheels with tubeless tyres",
-        "160mm ground clearance",
-        "14-litre fuel tank capacity",
-        "Diamond-type chassis frame",
-        "167 kg kerb weight with 780mm seat height"
-      ],
+      "source_section": "Available",
+      "description": "The Yamaha MT-03 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "MT-03 Standard",
-          "price": "₹3,29,908"
+          "name": "Standard",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Midnight Black",
-        "Midnight Cyan"
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "YZF R15 V3",
+      "variant_name": "YZF R15 V3",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha YZF R15 V3 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Motogp Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "DarkNight - ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Monster Energy Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Channel ABS - BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "DarkNight - ABS BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Racing Blue - ABS BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Metallic Red - BS VI",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_displacement_cc": 321,
-        "max_power_bhp": 41.4,
-        "max_torque_nm": 29.5,
-        "cooling": "Liquid-cooled",
-        "cylinders": 2,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 168,
-        "fuel_tank_litres": 14,
-        "top_speed_kmph": 170,
-        "mileage_kmpl": 35,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "YZF R1",
+      "variant_name": "YZF R1",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha YZF R1 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "FZ25",
+      "variant_name": "FZ25",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha FZ25 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard BS4",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Monster Energy Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard BS6",
+          "price": "N/A"
+        },
+        {
+          "name": "S [2021]",
+          "price": "N/A"
+        },
+        {
+          "name": "MotoGP Edition [2022]",
+          "price": "N/A"
+        },
+        {
+          "name": "S",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "MT 15 [2020-2021]",
+      "variant_name": "MT 15 [2020-2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha MT 15 [2020-2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Single Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Special Edition - BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Monster Energy",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "R6",
+      "variant_name": "R6",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha R6 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "RD",
+      "variant_name": "RD",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha RD is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "350",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Libero LX G-5",
+      "variant_name": "Libero LX G-5",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Libero LX G-5 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "YZ250",
+      "variant_name": "YZ250",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha YZ250 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Libero LX",
+      "variant_name": "Libero LX",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Libero LX is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Fazer Dlx",
+      "variant_name": "Fazer Dlx",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Fazer Dlx is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Enticer DLX",
+      "variant_name": "Enticer DLX",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Enticer DLX is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Crux S",
+      "variant_name": "Crux S",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Crux S is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Crux R",
+      "variant_name": "Crux R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Crux R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Alba",
+      "variant_name": "Alba",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Alba is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "G5",
+          "price": "N/A"
+        },
+        {
+          "name": "Kick",
+          "price": "N/A"
+        },
+        {
+          "name": "Self",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Alpha",
+      "variant_name": "Alpha",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Alpha is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Ltd. Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum - UBS",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc - UBS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "YZF-R3 [2016-2017]",
+      "variant_name": "YZF-R3 [2016-2017]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha YZF-R3 [2016-2017] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Crux",
+      "variant_name": "Crux",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Crux is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "SZ-RR",
+      "variant_name": "SZ-RR",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha SZ-RR is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "SZ-S",
+      "variant_name": "SZ-S",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha SZ-S is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Ray Z",
+      "variant_name": "Ray Z",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Ray Z is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "UBS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "YBX",
+      "variant_name": "YBX",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha YBX is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "YZF-R1M [2016-2017]",
+      "variant_name": "YZF-R1M [2016-2017]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha YZF-R1M [2016-2017] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "MT 09 [2020]",
+      "variant_name": "MT 09 [2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha MT 09 [2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "YZF R3",
+      "variant_name": "YZF R3",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha YZF R3 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "MT-09 [2017-2018]",
+      "variant_name": "MT-09 [2017-2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha MT-09 [2017-2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Fazer 25",
+      "variant_name": "Fazer 25",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Fazer 25 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Channel ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Saluto RX",
+      "variant_name": "Saluto RX",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Saluto RX is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "DarkNight",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard - UBS",
+          "price": "N/A"
+        },
+        {
+          "name": "DarkNight - UBS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Cygnus Ray ZR",
+      "variant_name": "Cygnus Ray ZR",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Cygnus Ray ZR is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "DarkNight",
+          "price": "N/A"
+        },
+        {
+          "name": "Street Rally",
+          "price": "N/A"
+        },
+        {
+          "name": "Street Rally - UBS",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum - UBS",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc - UBS",
+          "price": "N/A"
+        },
+        {
+          "name": "DarkNight - UBS",
+          "price": "N/A"
+        },
+        {
+          "name": "Monster Energy Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "MT-09 [2016-2017]",
+      "variant_name": "MT-09 [2016-2017]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha MT-09 [2016-2017] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "YZF R15 S [2015]",
+      "variant_name": "YZF R15 S [2015]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha YZF R15 S [2015] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "SZ [2013-2014]",
+      "variant_name": "SZ [2013-2014]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha SZ [2013-2014] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Fascino 110",
+      "variant_name": "Fascino 110",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Fascino 110 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "BS III",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "UBS",
+          "price": "N/A"
+        },
+        {
+          "name": "Darknight - UBS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Saluto",
+      "variant_name": "Saluto",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Saluto is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum Special Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Special Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum - UBS",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc - UBS",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum Special Edition - UBS",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Special Edition - UBS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "YZF-R1 [2016-2017]",
+      "variant_name": "YZF-R1 [2016-2017]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha YZF-R1 [2016-2017] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "SZ RR V 2.0",
+      "variant_name": "SZ RR V 2.0",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha SZ RR V 2.0 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Ltd Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Fazer FI V 2.0 [2016-2018]",
+      "variant_name": "Fazer FI V 2.0 [2016-2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Fazer FI V 2.0 [2016-2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "FZ V 2.0",
+      "variant_name": "FZ V 2.0",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha FZ V 2.0 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "FZ S V 2.0",
+      "variant_name": "FZ S V 2.0",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha FZ S V 2.0 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Ltd Edition-Rear Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "DarkNight-Rear Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Rear Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "DarkNight-Rear Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Ltd Edition-Rear Disc",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "FZ1",
+      "variant_name": "FZ1",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha FZ1 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "FZR600",
+      "variant_name": "FZR600",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha FZR600 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "FZR400",
+      "variant_name": "FZR400",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha FZR400 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "FZ6",
+      "variant_name": "FZ6",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha FZ6 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Enticer",
+      "variant_name": "Enticer",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Enticer is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Yd",
+      "variant_name": "Yd",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Yd is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "125",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Rx",
+      "variant_name": "Rx",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Rx is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "135",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Ray [2016]",
+      "variant_name": "Ray [2016]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Ray [2016] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Vmax",
+      "variant_name": "Vmax",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Vmax is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "YZF R1 [2012]",
+      "variant_name": "YZF R1 [2012]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha YZF R1 [2012] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Gladiator",
+      "variant_name": "Gladiator",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Gladiator is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "DX",
+          "price": "N/A"
+        },
+        {
+          "name": "Type RS",
+          "price": "N/A"
+        },
+        {
+          "name": "Type SS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "YZF R15 [2011-2018]",
+      "variant_name": "YZF R15 [2011-2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha YZF R15 [2011-2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "V 2.0",
+          "price": "N/A"
+        },
+        {
+          "name": "V1",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Fazer [2009-2016]",
+      "variant_name": "Fazer [2009-2016]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Fazer [2009-2016] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "FZ S [2012-2016]",
+      "variant_name": "FZ S [2012-2016]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha FZ S [2012-2016] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "FZ16",
+      "variant_name": "FZ16",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha FZ16 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "SZ R",
+      "variant_name": "SZ R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha SZ R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "SZ X",
+      "variant_name": "SZ X",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha SZ X is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "SS 125",
+      "variant_name": "SS 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha SS 125 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "YBR 125",
+      "variant_name": "YBR 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha YBR 125 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "RX135",
+      "variant_name": "RX135",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha RX135 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "XS2",
+      "variant_name": "XS2",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha XS2 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "XJ750 Seca",
+      "variant_name": "XJ750 Seca",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha XJ750 Seca is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "V-Star",
+      "variant_name": "V-Star",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha V-Star is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "TZR250",
+      "variant_name": "TZR250",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha TZR250 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Star Warrior",
+      "variant_name": "Star Warrior",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Star Warrior is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "RZ350",
+      "variant_name": "RZ350",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha RZ350 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "RZ250",
+      "variant_name": "RZ250",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha RZ250 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "RXZ",
+      "variant_name": "RXZ",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha RXZ is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "RXG",
+      "variant_name": "RXG",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha RXG is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "YBR 110",
+      "variant_name": "YBR 110",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha YBR 110 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "RX100 [1985-1996]",
+      "variant_name": "RX100 [1985-1996]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha RX100 [1985-1996] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "R1 [1998-1999]",
+      "variant_name": "R1 [1998-1999]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha R1 [1998-1999] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "PW80",
+      "variant_name": "PW80",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha PW80 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "PW50",
+      "variant_name": "PW50",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha PW50 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Pearl",
+      "variant_name": "Pearl",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Pearl is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "MT01",
+      "variant_name": "MT01",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha MT01 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "Libero",
+      "variant_name": "Libero",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha Libero is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yamaha",
+      "model": "GTS 1000",
+      "variant_name": "GTS 1000",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yamaha GTS 1000 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

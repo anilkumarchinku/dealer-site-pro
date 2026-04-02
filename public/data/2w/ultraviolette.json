@@ -2,116 +2,306 @@
   "brand": "Ultraviolette",
   "brandId": "ultraviolette",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Ultraviolette",
-      "model": "F77 Mach 2",
-      "variant_name": "Ultraviolette F77 Mach 2",
-      "price": "₹2,99,000 - ₹4,28,883",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Ultraviolette F77 Mach 2 is a flagship performance electric motorcycle featuring a 10.3 kWh battery delivering up to 307 km of range and a 155 kmph top speed. Powered by Violette AI that processes 3,000+ data points per second, it offers 10-level regenerative braking, dual-channel ABS, and LTE/Wi-Fi connectivity for a premium connected riding experience.",
-      "features": [
-        "Violette AI (3,000+ data points/sec)",
-        "5-inch TFT Dashboard with UV App",
-        "LTE (eSIM) & Wi-Fi Connectivity",
-        "3 Riding Modes (Glide, Combat, Ballistic) + Ballistic+",
-        "10-Level Regenerative Braking",
-        "3-Level Traction Control",
-        "Dynamic Stability Control",
-        "Hill Hold Control",
-        "OTA Software Updates",
-        "Dual-Channel ABS"
-      ],
-      "colors": ["Airstrike – Supersonic Silver", "Airstrike – Stellar White", "Airstrike – Lightning Blue", "Shadow – Stealth Grey", "Shadow – Asteroid Grey", "Shadow – Cosmic Black", "Laser – Turbo Red", "Laser – Afterburner Yellow", "Laser – Plasma Red"],
+      "model": "Tesseract",
+      "variant_name": "Tesseract",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "125 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ultraviolette Tesseract is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "F77 Mach 2 Standard", "price": "₹2,99,000" },
-        { "name": "F77 Mach 2 10.3 kWh", "price": "₹3,80,000" },
-        { "name": "F77 Mach 2 (Top Variant)", "price": "₹4,28,883" }
+        {
+          "name": "3.5 kWh",
+          "price": "N/A"
+        },
+        {
+          "name": "5 kWh",
+          "price": "N/A"
+        },
+        {
+          "name": "6 kWh",
+          "price": "N/A"
+        }
       ],
-      "specifications": {
-        "Motor Power": "27 kW peak",
-        "Range": "307 km",
-        "Battery Capacity": "10.3 kWh",
-        "Top Speed": "155 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "90 Nm"
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Ultraviolette",
-      "model": "F77 Recon",
-      "variant_name": "Ultraviolette F77 Recon",
-      "price": "₹3,23,000",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Ultraviolette F77 Recon is a mid-spec variant of the F77 platform featuring a 7.1 kWh battery with 206 km of range and the same 27 kW motor delivering 155 kmph top speed. It retains the full Violette AI connectivity suite and ABS braking for a premium sport riding experience.",
-      "features": [
-        "Violette AI (3,000+ data points/sec)",
-        "5-inch TFT Dashboard with UV App",
-        "LTE (eSIM) & Wi-Fi Connectivity",
-        "3 Riding Modes (Glide, Combat, Ballistic)",
-        "10-Level Regenerative Braking",
-        "3-Level Traction Control",
-        "Dynamic Stability Control",
-        "Hill Hold Control",
-        "OTA Software Updates",
-        "Dual-Channel ABS"
-      ],
-      "colors": ["Laser Blue", "Acoustic White", "Ember Orange", "Airstrike Khaki", "Shadow Black"],
+      "model": "X47 Crossover",
+      "variant_name": "X47 Crossover",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "145 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ultraviolette X47 Crossover is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "F77 Recon 7.1 kWh", "price": "₹3,23,000" }
+        {
+          "name": "Original - Cosmic Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Original - Stellar White",
+          "price": "N/A"
+        },
+        {
+          "name": "Original - Turbo Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Original + Cosmic Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Original + Stellar White",
+          "price": "N/A"
+        },
+        {
+          "name": "Original + Turbo Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon - Cosmic Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon - Stellar White",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon - Turbo Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon + Cosmic Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon + Stellar White",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon + Turbo Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Desert Wing",
+          "price": "N/A"
+        }
       ],
-      "specifications": {
-        "Motor Power": "27 kW peak",
-        "Range": "206 km",
-        "Battery Capacity": "7.1 kWh",
-        "Top Speed": "155 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "90 Nm"
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ultraviolette",
+      "model": "F77 Mach 2",
+      "variant_name": "F77 Mach 2",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "155 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ultraviolette F77 Mach 2 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Std - Supersonic Silver",
+          "price": "N/A"
+        },
+        {
+          "name": "Std - Turbo Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Std - Stealth Grey",
+          "price": "N/A"
+        },
+        {
+          "name": "Std - Asteroid Grey",
+          "price": "N/A"
+        },
+        {
+          "name": "Std - Lightning Blue",
+          "price": "N/A"
+        },
+        {
+          "name": "Std - Afterburner Yellow",
+          "price": "N/A"
+        },
+        {
+          "name": "Std - Plasma Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Std - Stellar White",
+          "price": "N/A"
+        },
+        {
+          "name": "Std - Cosmic Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon - Supersonic Silver",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon - Turbo Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon - Stealth Grey",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon - Asteroid Grey",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon - Lightning Blue",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon - Afterburner Yellow",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon - Plasma Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon - Stellar White",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon - Cosmic Black",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ultraviolette",
+      "model": "Shockwave",
+      "variant_name": "Shockwave",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "120 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ultraviolette Shockwave is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Ultraviolette",
       "model": "F77 SuperStreet",
-      "variant_name": "Ultraviolette F77 SuperStreet",
-      "price": "₹2,99,000 - ₹4,22,597",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Ultraviolette F77 SuperStreet is a street-focused performance electric motorcycle with a 10.3 kWh SRB10 battery delivering up to 323 km of range and 155 kmph top speed. It features the full Violette AI platform, adjustable regenerative braking, ABS, and LTE connectivity for a data-rich riding experience.",
-      "features": [
-        "Violette AI Platform",
-        "5-inch TFT Dashboard with UV App",
-        "LTE (eSIM) & Wi-Fi Connectivity",
-        "3 Riding Modes (Glide, Combat, Ballistic)",
-        "Adjustable Regenerative Braking",
-        "Traction Control",
-        "Hill Hold Control",
-        "OTA Software Updates",
-        "Dual-Channel ABS",
-        "USB Charging Port"
-      ],
-      "colors": ["Turbo Red", "Afterburner Yellow", "Stellar White", "Cosmic Black"],
+      "variant_name": "F77 SuperStreet",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "155 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ultraviolette F77 SuperStreet is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "F77 SuperStreet Base", "price": "₹2,99,000" },
-        { "name": "F77 SuperStreet (Top Variant)", "price": "₹4,22,597" }
+        {
+          "name": "Standard - Turbo Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard - Afterburner Yellow",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard - Stellar White",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard - Cosmic Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon - Turbo Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon - Afterburner Yellow",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon - Stellar White",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon - Cosmic Black",
+          "price": "N/A"
+        }
       ],
-      "specifications": {
-        "Motor Power": "27 kW peak",
-        "Range": "323 km",
-        "Battery Capacity": "10.3 kWh",
-        "Top Speed": "155 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "90 Nm"
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ultraviolette",
+      "model": "F77 2022",
+      "variant_name": "F77 2022",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ultraviolette F77 2022 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Original",
+          "price": "N/A"
+        },
+        {
+          "name": "Recon",
+          "price": "N/A"
+        },
+        {
+          "name": "Space Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

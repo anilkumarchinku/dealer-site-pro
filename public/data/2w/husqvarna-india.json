@@ -2,108 +2,146 @@
   "brand": "Husqvarna",
   "brandId": "husqvarna-india",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Husqvarna",
-      "model": "Vitpilen 250",
-      "variant_name": "Husqvarna Vitpilen 250",
-      "price": "₹2,12,976",
-      "engine_displacement": "249 cc",
-      "mileage": "37 kmpl",
-      "top_speed": "150 kmph",
+      "model": "Svartpilen 401",
+      "variant_name": "Svartpilen 401",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Husqvarna Vitpilen 250 is a café racer motorcycle that combines minimalist Swedish design with Austrian engineering. It features a 249cc liquid-cooled engine with modern amenities and responsive handling, making it suitable for both city commuting and occasional highway rides.",
-      "features": [
-        "249cc BS6 Phase 2B single-cylinder engine producing 30.57 bhp and 25 Nm torque",
-        "6-speed manual transmission",
-        "Dual disc brakes with ABS and switchable Supermoto mode",
-        "WP APEX suspension with 43mm USD forks and adjustable monoshock",
-        "5-inch LCD instrument cluster with all-LED lighting",
-        "Type-C USB charging port",
-        "Traction control system",
-        "Lightweight steel trellis frame",
-        "13.5-litre fuel tank with 34.8 kmpl mileage",
-        "820mm seat height"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Husqvarna Svartpilen 401 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Vitpilen 250 Standard",
-          "price": "₹2,12,976"
+          "name": "Standard",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "White"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Single-cylinder SOHC",
-        "power": "30.57 bhp",
-        "torque": "25 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13.5 litres",
-        "seat_height": "820 mm",
-        "kerb_weight": "163.8 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS with Supermoto mode",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B",
-        "features": "5-inch LCD display, Type-C USB charging, Traction control, Bi-directional quickshifter, All-LED lighting, 43mm USD forks"
-      },
-      "max_torque": "24 Nm"
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Husqvarna",
-      "model": "Svartpilen 401",
-      "variant_name": "Husqvarna Svartpilen 401",
-      "price": "₹2,97,733",
-      "engine_displacement": "399 cc",
-      "mileage": "29 kmpl",
-      "top_speed": "160 kmph",
+      "model": "Vitpilen 250",
+      "variant_name": "Vitpilen 250",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "37 Nm",
-      "source_section": "Available",
-      "description": "The Husqvarna Svartpilen 401 is a modern scrambler-style street bike with performance-oriented engineering and advanced technology. Powered by a 399cc engine, it features a fully digital console, multiple riding modes, and traction control for a versatile riding experience.",
-      "features": [
-        "399cc BS6 Phase 2B single-cylinder engine producing 42.9 bhp and 39 Nm torque",
-        "6-speed manual transmission",
-        "Dual disc brakes with ABS",
-        "Fully digital console with multiple riding modes",
-        "Traction control system",
-        "Spoke wheels for scrambler stance",
-        "Lightweight chassis at 171.2 kg",
-        "13.5-litre fuel tank capacity",
-        "820mm seat height",
-        "160 kmph top speed"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Husqvarna Vitpilen 250 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Svartpilen 401 Standard",
-          "price": "₹2,97,733"
+          "name": "Standard",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Black"
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Husqvarna",
+      "model": "Vitpilen 401",
+      "variant_name": "Vitpilen 401",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Husqvarna Vitpilen 401 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Single-cylinder",
-        "power": "42.9 bhp",
-        "torque": "39 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13.5 litres",
-        "seat_height": "820 mm",
-        "kerb_weight": "171.2 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B",
-        "features": "Fully digital console with riding modes, Traction control"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Husqvarna",
+      "model": "Nuda",
+      "variant_name": "Nuda",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Husqvarna Nuda is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "900R",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Husqvarna",
+      "model": "Svartpilen 250",
+      "variant_name": "Svartpilen 250",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Husqvarna Svartpilen 250 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Husqvarna",
+      "model": "Vitpilen 250 [2019-2023]",
+      "variant_name": "Vitpilen 250 [2019-2023]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Husqvarna Vitpilen 250 [2019-2023] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

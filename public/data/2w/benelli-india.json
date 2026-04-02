@@ -2,186 +2,553 @@
   "brand": "Benelli",
   "brandId": "benelli-india",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Benelli",
-      "model": "Leoncino 500",
-      "variant_name": "Benelli Leoncino 500",
-      "price": "₹5,59,894",
-      "engine_displacement": "500 cc",
-      "mileage": "23 kmpl",
-      "top_speed": "170 kmph",
+      "model": "TRK 502X",
+      "variant_name": "TRK 502X",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "46 Nm",
-      "source_section": "Available",
-      "description": "The Benelli Leoncino 500 is a retro-styled scrambler motorcycle with premium appeal and an upright riding position. It features a 500cc parallel-twin BS6 Phase 2 engine producing 46.8 bhp, suitable for both on-road and light off-road use.",
-      "features": [
-        "500cc BS6 Phase 2 parallel-twin engine producing 46.8 bhp and 46 Nm torque",
-        "6-speed manual transmission with self-start",
-        "Dual disc brakes with switchable dual-channel ABS",
-        "Alloy wheels",
-        "12.7-litre fuel tank capacity",
-        "810mm seat height for upright riding stance",
-        "207kg kerb weight",
-        "170 kmph top speed",
-        "Comfortable ergonomics for on-road and off-road use",
-        "Available in Red and Silver"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Benelli TRK 502X is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Leoncino 500 Standard", "price": "₹5,59,894" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Limited Edition",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Red", "Silver"],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Parallel-twin",
-        "power": "46.8 bhp",
-        "torque": "46 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "12.7 litres",
-        "seat_height": "810 mm",
-        "kerb_weight": "207 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Switchable Dual-channel ABS",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Benelli",
       "model": "502C",
-      "variant_name": "Benelli 502C",
-      "price": "₹5,79,964",
-      "engine_displacement": "500 cc",
-      "mileage": "22 kmpl",
-      "top_speed": "175 kmph",
+      "variant_name": "502C",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "46 Nm",
-      "source_section": "Available",
-      "description": "The Benelli 502C is a classic cruiser motorcycle delivering a relaxed, low-slung riding experience with a 500cc parallel-twin engine. It features USD forks, Pirelli tyres, a TFT screen, and a spacious 21-litre fuel tank for comfortable long-distance touring.",
-      "features": [
-        "500cc BS6 Phase 2 parallel-twin engine producing 46.8 bhp and 46 Nm torque",
-        "6-speed manual transmission with self-start",
-        "Dual disc brakes with ABS",
-        "USD front forks for improved handling",
-        "Pirelli tyres for superior grip",
-        "TFT instrument display",
-        "21-litre large fuel tank",
-        "750mm low seat height for cruiser stance",
-        "216kg kerb weight",
-        "Available in Glossy Black, Purple, and Matte Black"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Benelli 502C is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "502C Standard", "price": "₹5,79,964" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Glossy Black", "Purple", "Matte Black"],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Parallel-twin",
-        "power": "46.8 bhp",
-        "torque": "46 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "21 litres",
-        "seat_height": "750 mm",
-        "kerb_weight": "216 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "USD forks, Pirelli tires, TFT screen"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Benelli",
       "model": "TRK 502",
-      "variant_name": "Benelli TRK 502",
-      "price": "₹6,62,000",
-      "engine_displacement": "500 cc",
-      "mileage": "25 kmpl",
-      "top_speed": "150 kmph",
+      "variant_name": "TRK 502",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "45.8 Nm",
-      "source_section": "Available",
-      "description": "The Benelli TRK 502 is a capable adventure motorcycle with a 500cc parallel-twin engine designed for long-distance touring. It offers excellent highway comfort with an upright ergonomic riding position and a generous 20-litre fuel tank.",
-      "features": [
-        "500cc BS6 Phase 2B parallel-twin engine producing 46.8 bhp and 46 Nm torque",
-        "6-speed manual transmission with self-start",
-        "Dual disc brakes with ABS",
-        "Alloy wheels",
-        "20-litre fuel tank for extended touring range",
-        "800mm seat height for commanding riding position",
-        "228kg kerb weight",
-        "25 kmpl ARAI mileage rating",
-        "Adventure-oriented ergonomics for highway comfort",
-        "Available in White and Black"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Benelli TRK 502 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "TRK 502 Standard", "price": "₹6,62,000" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "colors": ["White", "Black"],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Parallel-twin",
-        "power": "46.8 bhp",
-        "torque": "46 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "20 litres",
-        "seat_height": "800 mm",
-        "kerb_weight": "228 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Benelli",
-      "model": "TRK 502X",
-      "variant_name": "Benelli TRK 502X",
-      "price": "₹7,14,000 - ₹7,42,740",
-      "engine_displacement": "500 cc",
-      "mileage": "25 kmpl",
-      "top_speed": "160 kmph",
+      "model": "Leoncino 500",
+      "variant_name": "Leoncino 500",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "45.8 Nm",
-      "source_section": "Available",
-      "description": "The Benelli TRK 502X is a premium adventure motorcycle that delivers excellent highway comfort with a tall screen, upright ergonomics, and spoke wheels for off-road capability. It is ideal for touring with its smooth power delivery and strong road presence.",
-      "features": [
-        "500cc BS6 Phase 2B parallel-twin engine producing 46.8 bhp and 46 Nm torque",
-        "6-speed manual transmission with self-start",
-        "Dual disc brakes with ABS",
-        "Spoke wheels for off-road readiness",
-        "20-litre fuel tank for extended touring",
-        "830mm seat height",
-        "235kg kerb weight",
-        "Tall windscreen for wind protection",
-        "160 kmph top speed",
-        "Available in White, Green, and Yellow"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Benelli Leoncino 500 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "TRK 502X Standard", "price": "₹7,14,000" },
-        { "name": "TRK 502X Adventure", "price": "₹7,42,740" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "colors": ["White", "Green", "Yellow"],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Parallel-twin",
-        "power": "46.8 bhp",
-        "torque": "46 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "20 litres",
-        "seat_height": "830 mm",
-        "kerb_weight": "235 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "TNT600i",
+      "variant_name": "TNT600i",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli TNT600i is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "TNT 300",
+      "variant_name": "TNT 300",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli TNT 300 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "Leoncino 800",
+      "variant_name": "Leoncino 800",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli Leoncino 800 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "752S",
+      "variant_name": "752S",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli 752S is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "Imperiale 400",
+      "variant_name": "Imperiale 400",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli Imperiale 400 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Dual Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "TNT 300 [2020]",
+      "variant_name": "TNT 300 [2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli TNT 300 [2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "TNT 600GT",
+      "variant_name": "TNT 600GT",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli TNT 600GT is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "TNT600i [2020]",
+      "variant_name": "TNT600i [2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli TNT600i [2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "TNT 899",
+      "variant_name": "TNT 899",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli TNT 899 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "TNT R",
+      "variant_name": "TNT R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli TNT R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "TNT 25",
+      "variant_name": "TNT 25",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli TNT 25 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Premium",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "302R",
+      "variant_name": "302R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli 302R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "Leoncino 500 BS4",
+      "variant_name": "Leoncino 500 BS4",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli Leoncino 500 BS4 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "TRK 502 BS4",
+      "variant_name": "TRK 502 BS4",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli TRK 502 BS4 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "TRK 251",
+      "variant_name": "TRK 251",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli TRK 251 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "TRK 502X BS4",
+      "variant_name": "TRK 502X BS4",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli TRK 502X BS4 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "Leoncino 250 [2020]",
+      "variant_name": "Leoncino 250 [2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli Leoncino 250 [2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "TRK 502X [2020-2024]",
+      "variant_name": "TRK 502X [2020-2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli TRK 502X [2020-2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Benelli",
+      "model": "TRK 502 [2020-2024]",
+      "variant_name": "TRK 502 [2020-2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Benelli TRK 502 [2020-2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

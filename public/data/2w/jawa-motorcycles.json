@@ -2,327 +2,301 @@
   "brand": "Jawa",
   "brandId": "jawa-motorcycles",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Jawa",
-      "model": "Jawa 42",
-      "variant_name": "Jawa 42",
-      "price": "₹1,61,265 - ₹1,86,786",
-      "engine_displacement": "294.72 cc",
-      "mileage": "32 kmpl",
-      "top_speed": "130 kmph",
+      "model": "42 Bobber",
+      "variant_name": "42 Bobber",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "18.6 Nm",
-      "source_section": "Available",
-      "description": "The Jawa 42 is a neo-classic cruiser motorcycle that combines retro styling with modern performance. It delivers a blend of vintage aesthetics and contemporary engineering suitable for daily commuting and highway cruising, with an engaging exhaust note and smooth power delivery.",
-      "features": [
-        "294.72cc BS6 Phase 2 liquid-cooled engine producing 26.94 bhp",
-        "6-speed manual gearbox with self-start",
-        "Dual disc brakes with ABS",
-        "14 colour options including matte and dual-tone finishes",
-        "13.2-litre fuel tank capacity",
-        "Retro-modern styling with round headlamp and chrome accents",
-        "788mm accessible seat height",
-        "Spoke and alloy wheel options across variants",
-        "32 kmpl user-reported fuel efficiency",
-        "BS6 Phase 2 compliant emission"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Jawa 42 Bobber is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "42 1 Channel Spoke",
-          "price": "₹1,61,265"
+          "name": "Moonstone White",
+          "price": "N/A"
         },
         {
-          "name": "42 2 Channel Spoke",
-          "price": "₹1,66,265"
+          "name": "Mystic Copper - Spoke Wheel",
+          "price": "N/A"
         },
         {
-          "name": "42 2 Channel Alloy",
-          "price": "₹1,72,786"
+          "name": "Jasper Red - Spoke Wheel",
+          "price": "N/A"
         },
         {
-          "name": "42 Alloy Dual Tone",
-          "price": "₹1,82,786"
+          "name": "Mystic Copper and Jasper Red - Alloy Wheel",
+          "price": "N/A"
         },
         {
-          "name": "42 Ivory Edition",
-          "price": "₹1,86,786"
+          "name": "Black Mirror and Red Sheen - Alloy Wheel",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Vega White",
-        "Voyager Red",
-        "Asteroid Grey",
-        "Odyssey Black",
-        "Nebula Blue",
-        "Celestial Copper Matte",
-        "Orion Red Matte",
-        "Sirius White Matte",
-        "All Star Black Matte",
-        "Cosmic Rock DT",
-        "Celestial Copper Matte DT",
-        "Starship Blue DT",
-        "Infinity Black Matte DT",
-        "Ivory"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Single-cylinder",
-        "power": "26.94 bhp",
-        "torque": "26.84 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13.2 litres",
-        "seat_height": "788 mm",
-        "kerb_weight": "184 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke / Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Jawa",
-      "model": "Jawa 350",
-      "variant_name": "Jawa 350",
-      "price": "₹1,82,531 - ₹2,21,458",
-      "engine_displacement": "334 cc",
-      "mileage": "28.5 kmpl",
-      "top_speed": "125 kmph",
+      "model": "42",
+      "variant_name": "42",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "28.3 Nm",
-      "source_section": "Available",
-      "description": "The Jawa 350 is a classic cruiser motorcycle powered by a 334cc BS6 Phase 2 engine. It combines retro styling with modern engineering, delivering smooth, vibration-free performance ideal for both daily commutes and weekend rides.",
-      "features": [
-        "334cc liquid-cooled single-cylinder engine producing 22.26 bhp",
-        "6-speed manual transmission with self-start",
-        "Dual disc brakes with dual-channel ABS",
-        "Spoke wheels for classic retro look",
-        "13.2-litre fuel tank capacity",
-        "790mm seat height",
-        "Premium build quality with solid, vibration-free performance",
-        "BS6 Phase 2 compliant emission",
-        "8 colour options including Chrome Maroon",
-        "28.5 kmpl fuel efficiency"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Jawa 42 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Jawa 350 Standard",
-          "price": "₹1,82,531"
+          "name": "1 Channel - Spoke - Vega White",
+          "price": "N/A"
         },
         {
-          "name": "Jawa 350 Chrome",
-          "price": "₹2,05,458"
+          "name": "1 Channel - Spoke - Voyager Red - Asteroid Grey - Odyssey Black",
+          "price": "N/A"
         },
         {
-          "name": "Jawa 350 Premium",
-          "price": "₹2,21,458"
+          "name": "2 Channel - Spoke - Vega White",
+          "price": "N/A"
+        },
+        {
+          "name": "2 Channel - Spoke - Voyager Red - Asteroid Grey - Odyssey Black",
+          "price": "N/A"
+        },
+        {
+          "name": "2 Channel - Alloy - Sirius White Matte",
+          "price": "N/A"
+        },
+        {
+          "name": "2 Channel - Alloy - Nebula Blue - Celestial Copper Matte",
+          "price": "N/A"
+        },
+        {
+          "name": "2 Channel - Alloy - Orion Red Matte",
+          "price": "N/A"
+        },
+        {
+          "name": "2 Channel - Alloy - All Star Black Matte",
+          "price": "N/A"
+        },
+        {
+          "name": "2 Channel - Alloy - Dual Tone",
+          "price": "N/A"
+        },
+        {
+          "name": "Ivory Edition",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "White",
-        "Black",
-        "Orange",
-        "Maroon",
-        "Deep Forest",
-        "Grey",
-        "Obsidian Black",
-        "Chrome Maroon"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Single-cylinder",
-        "power": "22.26 bhp",
-        "torque": "28.1 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13.2 litres",
-        "seat_height": "790 mm",
-        "kerb_weight": "194 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Jawa",
-      "model": "Jawa 42 FJ",
-      "variant_name": "Jawa 42 FJ",
-      "price": "₹1,83,595 - ₹2,06,740",
-      "engine_displacement": "334 cc",
-      "mileage": "30 kmpl",
-      "top_speed": "130 kmph",
+      "model": "42 FJ",
+      "variant_name": "42 FJ",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Jawa 42 FJ is a modern-classic cruiser motorcycle powered by a 334cc BS6 Phase 2 engine delivering smooth and refined performance. It combines the iconic retro Jawa styling with contemporary features, making it suitable for both city commuting and highway riding.",
-      "features": [
-        "334cc liquid-cooled engine producing 28.77 bhp and 29.62 Nm torque",
-        "6-speed manual transmission with self-start",
-        "Dual disc brakes with ABS",
-        "Spoke wheel design with classic retro stance",
-        "12-litre fuel tank capacity",
-        "790mm seat height",
-        "184kg kerb weight for nimble handling",
-        "30 kmpl user-reported fuel efficiency",
-        "5 colour options including matte and dual-tone finishes",
-        "BS6 Phase 2 compliant emission"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Jawa 42 FJ is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "42 FJ Spoke",
-          "price": "₹1,83,595"
+          "name": "Aurora Green Matte - Spoke",
+          "price": "N/A"
         },
         {
-          "name": "42 FJ Alloy",
-          "price": "₹1,93,595"
+          "name": "Aurora Green Matte - Alloy",
+          "price": "N/A"
         },
         {
-          "name": "42 FJ Alloy Dual Tone",
-          "price": "₹2,01,740"
+          "name": "Cosmo Blue Matte and Mystique Copper",
+          "price": "N/A"
         },
         {
-          "name": "42 FJ Premium",
-          "price": "₹2,06,740"
+          "name": "Deep Black - Matte Red and Matte Black",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Cosmo Blue Matte",
-        "Mystique Copper",
-        "Deep Black Matte Black Clad",
-        "Deep Black Matte Red Clad",
-        "Aurora Green Matte"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Single-cylinder",
-        "power": "28.77 bhp",
-        "torque": "29.62 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "12 litres",
-        "seat_height": "790 mm",
-        "kerb_weight": "184 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      },
-      "max_torque": "18.6 Nm"
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Jawa",
-      "model": "Jawa 42 Bobber",
-      "variant_name": "Jawa 42 Bobber",
-      "price": "₹1,95,305 - ₹2,22,048",
-      "engine_displacement": "334 cc",
-      "mileage": "30 kmpl",
-      "top_speed": "130 kmph",
+      "model": "Perak",
+      "variant_name": "Perak",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "18.6 Nm",
-      "source_section": "Available",
-      "description": "The Jawa 42 Bobber is a stylish cruiser motorcycle featuring a distinctive bobber design with a low stance and minimalist body. It prioritises aesthetic appeal with its floating single seat, punchy 334cc engine, and classic cruiser proportions.",
-      "features": [
-        "334cc liquid-cooled BS6 Phase 2 engine producing 29.51 bhp and 32.74 Nm torque",
-        "6-speed manual transmission with slipper clutch",
-        "Dual disc brakes with ABS",
-        "740mm low seat height for easy accessibility",
-        "Floating single seat bobber design",
-        "12.5-litre fuel tank capacity",
-        "Spoke and alloy wheel options across variants",
-        "185kg kerb weight",
-        "30 kmpl user-reported fuel efficiency",
-        "5 colour options including Mystic Copper and Black Mirror"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Jawa Perak is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "42 Bobber Spoke",
-          "price": "₹1,95,305"
-        },
-        {
-          "name": "42 Bobber Alloy",
-          "price": "₹2,10,305"
-        },
-        {
-          "name": "42 Bobber Premium",
-          "price": "₹2,22,048"
+          "name": "Standard",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Mystic Copper",
-        "Moonstone White",
-        "Jasper Red",
-        "Red Sheen",
-        "Black Mirror"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Single-cylinder",
-        "power": "29.51 bhp",
-        "torque": "32.74 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "12.5 litres",
-        "seat_height": "740 mm",
-        "kerb_weight": "185 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke / Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Jawa",
-      "model": "Jawa Perak",
-      "variant_name": "Jawa Perak",
-      "price": "₹2,21,804",
-      "engine_displacement": "334 cc",
-      "mileage": "28 kmpl",
-      "top_speed": "130 kmph",
+      "model": "350",
+      "variant_name": "350",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "32 Nm",
-      "source_section": "Available",
-      "description": "The Jawa Perak is a premium cruiser motorcycle featuring a distinctive bobber design with a classic aesthetic. It delivers a blend of retro styling with modern performance capabilities, appealing to riders seeking individuality and style with a powerful 334cc engine.",
-      "features": [
-        "334cc BS6 Phase 2 liquid-cooled engine producing 30.2 bhp and 32 Nm torque",
-        "6-speed manual transmission",
-        "Dual-channel ABS with front and rear disc brakes",
-        "Alloy wheels for sharp road presence",
-        "12.5-litre fuel tank capacity",
-        "740mm low seat height",
-        "186kg kerb weight",
-        "Classic bobber silhouette with premium finish",
-        "30 kmpl user-reported fuel efficiency",
-        "Available in Mystic Copper, Jasper Red, and Black"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Jawa 350 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Perak Standard",
-          "price": "₹2,21,804"
+          "name": "Legacy Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard - Spoke",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard - Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "Chrome - Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "Chrome - Spoke",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Mystic Copper",
-        "Jasper Red",
-        "Black"
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "Standard",
+      "variant_name": "Standard",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Jawa Standard is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Single Channel ABS - BS IV",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Channel ABS - BS IV",
+          "price": "N/A"
+        },
+        {
+          "name": "Single Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Khakhi & Midnight Grey",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Single-cylinder",
-        "power": "30.2 bhp",
-        "torque": "32 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "12.5 litres",
-        "seat_height": "740 mm",
-        "kerb_weight": "186 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Jawa",
+      "model": "42 [2018-2023]",
+      "variant_name": "42 [2018-2023]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Jawa 42 [2018-2023] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Single Channel ABS - BS IV",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Channel ABS - BS IV",
+          "price": "N/A"
+        },
+        {
+          "name": "Single Channel ABS - BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Channel ABS - BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Version 2.1",
+          "price": "N/A"
+        },
+        {
+          "name": "Tawang Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Orion Red - Sirius White",
+          "price": "N/A"
+        },
+        {
+          "name": "Allstar Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Cosmic Carbon",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Tone",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

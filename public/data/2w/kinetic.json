@@ -1,39 +1,47 @@
 {
-  "brand": "VIDA",
-  "brandId": "vida-hero",
+  "brand": "Kinetic Green",
+  "brandId": "kinetic",
   "type": "2w",
   "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "VIDA",
-      "model": "VX2",
-      "variant_name": "VX2",
+      "make": "Kinetic Green",
+      "model": "E Luna",
+      "variant_name": "E Luna",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
       "max_power": "N/A bhp",
       "max_torque": "N/A",
-      "top_speed": "70 kmph",
+      "top_speed": "50 kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The VIDA VX2 is a two-wheeler available in India.",
+      "description": "The Kinetic Green E Luna is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Go - 2.2kWh",
+          "name": "X2",
           "price": "N/A"
         },
         {
-          "name": "Go - 3.4kWh",
+          "name": "X3 Go",
           "price": "N/A"
         },
         {
-          "name": "Plus - 3.4 kWh",
+          "name": "X3",
           "price": "N/A"
         },
         {
-          "name": "Plus - KKR Limited Edition",
+          "name": "X3 Plus",
+          "price": "N/A"
+        },
+        {
+          "name": "X3 Pro",
+          "price": "N/A"
+        },
+        {
+          "name": "X3 Prime",
           "price": "N/A"
         }
       ],
@@ -41,26 +49,26 @@
       "technical_specifications": {}
     },
     {
-      "make": "VIDA",
-      "model": "V2",
-      "variant_name": "V2",
+      "make": "Kinetic Green",
+      "model": "Zing",
+      "variant_name": "Zing",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
       "max_power": "N/A bhp",
       "max_torque": "N/A",
-      "top_speed": "85 kmph",
+      "top_speed": "25 kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The VIDA V2 is a two-wheeler available in India.",
+      "description": "The Kinetic Green Zing is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Plus",
+          "name": "Standard",
           "price": "N/A"
         },
         {
-          "name": "Pro",
+          "name": "Big B",
           "price": "N/A"
         }
       ],
@@ -68,18 +76,18 @@
       "technical_specifications": {}
     },
     {
-      "make": "VIDA",
-      "model": "VXZ",
-      "variant_name": "VXZ",
+      "make": "Kinetic Green",
+      "model": "Flex",
+      "variant_name": "Flex",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
       "max_power": "N/A bhp",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "top_speed": "72 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The VIDA VXZ is a two-wheeler available in India.",
+      "source_section": "Discontinued",
+      "description": "The Kinetic Green Flex is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -91,30 +99,22 @@
       "technical_specifications": {}
     },
     {
-      "make": "VIDA",
-      "model": "V1",
-      "variant_name": "V1",
+      "make": "Kinetic Green",
+      "model": "Zulu",
+      "variant_name": "Zulu",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
       "max_power": "N/A bhp",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "top_speed": "60 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The VIDA V1 is a two-wheeler available in India.",
+      "source_section": "Discontinued",
+      "description": "The Kinetic Green Zulu is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Plus [2022-2023]",
-          "price": "N/A"
-        },
-        {
-          "name": "Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "Plus",
+          "name": "Standard",
           "price": "N/A"
         }
       ],

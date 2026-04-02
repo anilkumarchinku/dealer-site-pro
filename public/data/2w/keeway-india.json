@@ -1,366 +1,263 @@
 {
-  "keeway_bikes": [
+  "brand": "Keeway",
+  "brandId": "keeway-india",
+  "type": "2w",
+  "lastUpdated": "2026-04-02",
+  "source": "BikeWale",
+  "vehicles": [
     {
-      "model_name": "SR125",
-      "price": "₹1,24,992",
-      "engine": "125 cc",
-      "mileage": "46 kmpl",
-      "max_power": "9.56 bhp",
-      "torque": "8.2 Nm",
-      "top_speed": "100 km/h",
-      "gear_box": "5-speed",
-      "description": "The Keeway SR125 is an entry-level retro-styled commuter motorcycle powered by a 125cc BS6 Phase 2 engine. It offers a practical combination of classic aesthetics, fuel efficiency, and affordable pricing suitable for city commuters.",
-      "features": [
-        "125cc BS6 Phase 2 single-cylinder engine producing 9.56 bhp",
-        "5-speed manual transmission with self-start",
-        "CBS braking system with front and rear disc brakes",
-        "Spoke wheels for classic retro appearance",
-        "14.5-litre fuel tank capacity",
-        "780mm accessible seat height",
-        "120kg lightweight kerb weight",
-        "46 kmpl fuel efficiency",
-        "Available in Glossy White, Black, and Red",
-        "100 kmph top speed"
-      ],
-      "colors": [
-        "Glossy White",
-        "Glossy Black",
-        "Glossy Red"
-      ],
+      "make": "Keeway",
+      "model": "V302C",
+      "variant_name": "V302C",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "8.2 Nm",
+      "source_section": "Discontinued",
+      "description": "The Keeway V302C is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "SR125 Standard", "price": "₹1,24,992" }
+        {
+          "name": "Glossy Grey",
+          "price": "N/A"
+        },
+        {
+          "name": "Glossy Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Glossy Red",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Single-cylinder, BS6 Phase 2",
-        "fuel_tank": "14.5 litres",
-        "seat_height": "780 mm",
-        "kerb_weight": "120 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "CBS",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "model_name": "SR250",
-      "price": "₹1,53,992",
-      "engine": "223 cc",
-      "mileage": "35 kmpl",
-      "max_power": "15.78 bhp",
-      "torque": "16 Nm",
-      "top_speed": "120 km/h",
-      "gear_box": "5-speed",
-      "description": "The Keeway SR250 is a retro-styled commuter motorcycle that delivers a good balance of features and performance with a 223cc engine. It combines classic aesthetics with modern engineering for city riding and daily commutes.",
-      "features": [
-        "223cc BS6 Phase 2 single-cylinder engine producing 15.78 bhp and 16 Nm torque",
-        "5-speed manual transmission with self-start",
-        "Dual disc brakes with ABS",
-        "Spoke wheels for retro look",
-        "14.2-litre fuel tank capacity",
-        "780mm seat height",
-        "120kg lightweight kerb weight",
-        "35 kmpl user-reported fuel efficiency",
-        "120 kmph top speed",
-        "Available in Glossy Black, Red, and White"
-      ],
-      "colors": [
-        "Glossy Black",
-        "Glossy Red",
-        "Glossy White"
-      ],
+      "make": "Keeway",
+      "model": "RR300",
+      "variant_name": "RR300",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "16 Nm",
+      "source_section": "Discontinued",
+      "description": "The Keeway RR300 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "SR250 Standard", "price": "₹1,53,992" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Single-cylinder, BS6 Phase 2",
-        "fuel_tank": "14.2 litres",
-        "seat_height": "780 mm",
-        "kerb_weight": "120 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "model_name": "K300 SF",
-      "price": "₹1,57,000",
-      "engine": "292.4 cc",
-      "mileage": "37 kmpl",
-      "max_power": "27.8 bhp",
-      "torque": "25 Nm",
-      "top_speed": "N/A",
-      "gear_box": "6-speed",
-      "description": "The Keeway K300 SF is a 300cc street bike combining modern aesthetics with practical daily-use capability. It offers light and nimble handling with upside-down front forks and a liquid-cooled engine, suitable for both city commuting and highway cruising.",
-      "features": [
-        "292.4cc liquid-cooled single-cylinder engine producing 27.8 bhp and 25 Nm torque",
-        "6-speed manual transmission",
-        "Dual-channel ABS with front and rear disc brakes",
-        "Upside-down front forks",
-        "Preload-adjustable monoshock rear suspension",
-        "LED headlamp with aggressive street-bike stance",
-        "151kg kerb weight",
-        "795mm seat height",
-        "12.5-litre fuel tank capacity",
-        "37 kmpl user-reported fuel efficiency"
-      ],
-      "colors": [
-        "Matte Black",
-        "Matte Red",
-        "Matte White"
-      ],
+      "make": "Keeway",
+      "model": "SR125",
+      "variant_name": "SR125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "25 Nm",
+      "source_section": "Discontinued",
+      "description": "The Keeway SR125 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "K300 SF Standard", "price": "₹1,57,000" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Single-cylinder, BS6 Phase 2",
-        "fuel_tank": "12.5 litres",
-        "seat_height": "795 mm",
-        "kerb_weight": "151 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "model_name": "RR300",
-      "price": "₹1,85,000",
-      "engine": "292.4 cc",
-      "mileage": "37 kmpl",
-      "max_power": "27.88 bhp",
-      "torque": "25 Nm",
-      "top_speed": "139 km/h",
-      "gear_box": "6-speed",
-      "description": "The Keeway RR300 is a sports bike powered by a 292.4cc BS6 Phase 2B engine delivering 27.88 bhp. It combines sporty full-fairing design with impressive 37 kmpl fuel efficiency, making it an excellent choice for budget-conscious performance enthusiasts.",
-      "features": [
-        "292.4cc BS6 Phase 2B single-cylinder engine producing 27.88 bhp and 25 Nm torque",
-        "6-speed manual transmission with self-start",
-        "Dual disc brakes with ABS",
-        "Alloy wheels",
-        "12-litre fuel tank capacity",
-        "165kg kerb weight",
-        "780mm seat height",
-        "139 kmph top speed",
-        "37 kmpl user-reported fuel efficiency",
-        "Available in Red, White, and Black"
-      ],
-      "colors": [
-        "Red",
-        "White",
-        "Black"
-      ],
+      "make": "Keeway",
+      "model": "K300 SF",
+      "variant_name": "K300 SF",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "25 Nm",
+      "source_section": "Discontinued",
+      "description": "The Keeway K300 SF is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "RR300 Standard", "price": "₹1,85,000" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Single-cylinder, BS6 Phase 2B",
-        "fuel_tank": "12 litres",
-        "seat_height": "780 mm",
-        "kerb_weight": "165 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "model_name": "K-Light 250V",
-      "price": "₹2,50,046",
-      "engine": "249 cc",
-      "mileage": "31.5 kmpl",
-      "max_power": "18.4 bhp",
-      "torque": "19 Nm",
-      "top_speed": "125 km/h",
-      "gear_box": "5-speed",
-      "description": "The Keeway K-Light 250V is a cruiser motorcycle with a 249cc BS6 Phase 2 engine delivering smooth, refined performance for both city and highway riding. It comes equipped with the Keeway Connect module featuring integrated GPS, remote engine cut-off, and ride tracking.",
-      "features": [
-        "249cc BS6 Phase 2 single-cylinder engine producing 18.4 bhp and 19 Nm torque",
-        "5-speed manual transmission with self-start",
-        "Dual disc brakes with ABS",
-        "Keeway Connect module with GPS and remote engine cut-off",
-        "Ride tracking technology",
-        "Alloy wheels",
-        "20-litre large fuel tank capacity",
-        "715mm low seat height for cruiser accessibility",
-        "179kg kerb weight",
-        "31.5 kmpl user-reported fuel efficiency"
-      ],
-      "colors": [
-        "Matte Black",
-        "Matte Dark Grey",
-        "Matte Blue"
-      ],
+      "make": "Keeway",
+      "model": "K-Light 250V",
+      "variant_name": "K-Light 250V",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "19 Nm",
+      "source_section": "Discontinued",
+      "description": "The Keeway K-Light 250V is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "K-Light 250V Standard", "price": "₹2,50,046" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Single-cylinder, BS6 Phase 2",
-        "fuel_tank": "20 litres",
-        "seat_height": "715 mm",
-        "kerb_weight": "179 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "model_name": "Vieste 300",
-      "price": "₹3,02,015",
-      "engine": "278.2 cc",
-      "mileage": "29.5 kmpl",
-      "max_power": "18.4 bhp",
-      "torque": "22 Nm",
-      "top_speed": "125 km/h",
-      "gear_box": "N/A",
-      "description": "The Keeway Vieste 300 is a 278.2cc maxi-scooter designed for both commuting and highway riding. It features a liquid-cooled engine, keyless ignition, and ABS braking system in a stylish premium scooter package.",
-      "features": [
-        "278.2cc BS6 Phase 2 liquid-cooled engine producing 18.4 bhp and 22 Nm torque",
-        "Dual disc brakes with ABS",
-        "Keyless ignition system",
-        "USB charging port",
-        "Alloy wheels",
-        "12-litre fuel tank capacity",
-        "770mm seat height",
-        "147kg lightweight kerb weight",
-        "29.5 kmpl ARAI-certified fuel efficiency",
-        "Available in Matte White, Black, and Blue"
-      ],
-      "colors": [
-        "Matte White",
-        "Matte Black",
-        "Matte Blue"
-      ],
+      "make": "Keeway",
+      "model": "SR250",
+      "variant_name": "SR250",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "22 Nm",
+      "source_section": "Discontinued",
+      "description": "The Keeway SR250 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Vieste 300 Standard", "price": "₹3,02,015" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, BS6 Phase 2",
-        "fuel_tank": "12 litres",
-        "seat_height": "770 mm",
-        "kerb_weight": "147 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "Keyless ignition, USB charging"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "model_name": "Sixties 300i",
-      "price": "₹3,13,011",
-      "engine": "278.2 cc",
-      "mileage": "27.4 kmpl",
-      "max_power": "18.4 bhp",
-      "torque": "23.5 Nm",
-      "top_speed": "120 km/h",
-      "gear_box": "Automatic",
-      "description": "The Keeway Sixties 300i is a modern retro-styled automatic scooter featuring a 278.2cc liquid-cooled engine with dual-channel ABS. It blends vintage 1960s aesthetics with contemporary technology including a USB charging port and disc brakes.",
-      "features": [
-        "278.2cc BS6 Phase 2 liquid-cooled engine producing 18.4 bhp and 23.5 Nm torque",
-        "Automatic transmission for easy city riding",
-        "Dual-channel ABS braking system",
-        "Front and rear disc brakes",
-        "USB charging port",
-        "Alloy wheels with retro styling",
-        "10-litre fuel tank capacity",
-        "790mm seat height",
-        "146kg lightweight kerb weight",
-        "27.4 kmpl user-reported fuel efficiency"
-      ],
-      "colors": [
-        "Matte Light Blue",
-        "Matte Grey",
-        "Matte White"
-      ],
+      "make": "Keeway",
+      "model": "Vieste 300",
+      "variant_name": "Vieste 300",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "23.5 Nm",
+      "source_section": "Discontinued",
+      "description": "The Keeway Vieste 300 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Sixties 300i Standard", "price": "₹3,13,011" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, BS6 Phase 2",
-        "fuel_tank": "10 litres",
-        "seat_height": "790 mm",
-        "kerb_weight": "146 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "USB Charging Port, Liquid-cooled engine"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "model_name": "V302C",
-      "price": "₹4,21,995",
-      "engine": "298 cc",
-      "mileage": "36 kmpl",
-      "max_power": "29.09 bhp",
-      "torque": "26.5 Nm",
-      "top_speed": "155 km/h",
-      "gear_box": "6-speed",
-      "description": "The Keeway V302C is a cruiser motorcycle powered by a 298cc V-twin liquid-cooled engine with good mid-range performance and great road presence. It features a low 690mm seat height and strong ABS braking, making it accessible for a range of riders.",
-      "features": [
-        "298cc V-twin liquid-cooled BS6 Phase 2 engine producing 29.09 bhp and 26.5 Nm torque",
-        "6-speed manual transmission with self-start",
-        "Dual disc brakes with ABS",
-        "V-twin engine for signature cruiser soundtrack",
-        "15-litre fuel tank capacity",
-        "690mm low seat height for accessibility",
-        "167kg kerb weight",
-        "Alloy wheels",
-        "155 kmph top speed",
-        "36 kmpl ARAI-certified fuel efficiency"
-      ],
-      "colors": [
-        "Glossy Grey",
-        "Glossy Black",
-        "Glossy Red"
-      ],
+      "make": "Keeway",
+      "model": "Sixties 300i",
+      "variant_name": "Sixties 300i",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "26.5 Nm",
+      "source_section": "Discontinued",
+      "description": "The Keeway Sixties 300i is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "V302C Standard", "price": "₹4,21,995" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "V-twin, Liquid-cooled, BS6 Phase 2",
-        "fuel_tank": "15 litres",
-        "seat_height": "690 mm",
-        "kerb_weight": "167 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Keeway",
+      "model": "K300 R",
+      "variant_name": "K300 R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Keeway K300 R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Glossy White",
+          "price": "N/A"
+        },
+        {
+          "name": "Glossy Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Glossy Black",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Keeway",
+      "model": "K300 N",
+      "variant_name": "K300 N",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Keeway K300 N is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Matte White",
+          "price": "N/A"
+        },
+        {
+          "name": "Matte Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Matte Black",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

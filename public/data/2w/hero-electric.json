@@ -1,164 +1,2355 @@
 {
-  "brand": "Hero Electric",
+  "brand": "Hero",
   "brandId": "hero-electric",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "Hero Electric",
-      "model": "Optima CX",
-      "variant_name": "Hero Electric Optima CX",
-      "price": "₹74,490",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Hero Electric Optima CX is a trusted entry-level electric scooter backed by Hero's extensive service network, offering 82 km range and reliable daily commuting performance for price-sensitive buyers.",
-      "features": [
-        "Digital Speedometer",
-        "Anti-Theft Alarm System",
-        "Ride Modes (Eco/Power)",
-        "Regenerative Braking",
-        "USB Charging Port",
-        "Low Maintenance BLDC Motor",
-        "Tubeless Tyres"
-      ],
-      "specifications": {
-        "Motor Power": "1.1 kW",
-        "Range": "82 km",
-        "Battery Capacity": "48V 36Ah",
-        "Top Speed": "45 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "42 Nm",
-      "colors": ["Fiery Red", "Ivory White", "Midnight Black", "Ocean Blue"],
+      "make": "Hero",
+      "model": "Xtreme 125R",
+      "variant_name": "Xtreme 125R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Xtreme 125R is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Optima CX 48V 36Ah", "price": "₹74,490" }
-      ]
+        {
+          "name": "IBS - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "Single Seat ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Single Seat ABS - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Channel ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "Hero Electric",
-      "model": "Optima Plus",
-      "variant_name": "Hero Electric Optima Plus",
-      "price": "₹83,490",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Hero Electric Optima Plus upgrades the base Optima CX with additional comfort and convenience features, ideal for daily office commuters who need a dependable and low-cost electric scooter.",
-      "features": [
-        "Digital Instrument Console",
-        "Anti-Theft Alarm",
-        "Ride Modes (Eco/Power)",
-        "Fast Charging Ready",
-        "Regenerative Braking",
-        "USB Charging Port",
-        "Extended Warranty Support"
-      ],
-      "specifications": {
-        "Motor Power": "1.1 kW",
-        "Range": "82 km",
-        "Battery Capacity": "48V 36Ah",
-        "Top Speed": "45 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "42 Nm",
-      "colors": ["Fiery Red", "Ivory White", "Midnight Black", "Ocean Blue"],
+      "make": "Hero",
+      "model": "Splendor Plus",
+      "variant_name": "Splendor Plus",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Splendor Plus is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Optima Plus 48V 36Ah", "price": "₹83,490" }
-      ]
+        {
+          "name": "Drum Brake - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "I3S - Black and Accent Edition - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum Brake I3S - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "Million Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "Hero Electric",
-      "model": "Photon CX",
-      "variant_name": "Hero Electric Photon CX",
-      "price": "₹81,490",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Hero Electric Photon CX features a sleeker body design compared to the Optima series, catering to style-conscious urban commuters who also want the reliability of Hero's after-sales support.",
-      "features": [
-        "Stylish Body Design",
-        "Digital Instrument Cluster",
-        "Anti-Theft Alarm",
-        "Ride Modes",
-        "Regenerative Braking",
-        "USB Charging Port",
-        "BLDC Hub Motor"
-      ],
-      "specifications": {
-        "Motor Power": "1.1 kW",
-        "Range": "82 km",
-        "Battery Capacity": "48V 36Ah",
-        "Top Speed": "45 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "42 Nm",
-      "colors": ["Fiery Red", "Ivory White", "Midnight Black", "Ocean Blue"],
+      "make": "Hero",
+      "model": "HF Deluxe",
+      "variant_name": "HF Deluxe",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero HF Deluxe is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Photon CX 48V 36Ah", "price": "₹81,490" }
-      ]
+        {
+          "name": "HF 100 - Drum Kick Alloy - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "Kick Alloy - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "Self Alloy - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "All Black - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "I3S Alloy - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "I3S Pro - OBD 2B",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "Hero Electric",
-      "model": "Nyx HX",
-      "variant_name": "Hero Electric Nyx HX",
-      "price": "₹89,490",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Hero Electric Nyx HX is Hero's higher-capacity scooter with a 60V 30Ah battery delivering 100 km range and 55 kmph top speed, suited for riders with longer daily commutes.",
-      "features": [
-        "Digital Display with Gear Indicator",
-        "Anti-Theft Alarm",
-        "Ride Modes (Eco/City/Power)",
-        "Fast Charging",
-        "Regenerative Braking",
-        "USB Charging Port",
-        "BLDC Motor with Silent Operation"
-      ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "100 km",
-        "Battery Capacity": "60V 30Ah",
-        "Top Speed": "55 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "42 Nm",
-      "colors": ["Fiery Red", "Ivory White", "Midnight Black", "Ocean Blue", "Turquoise Blue"],
+      "make": "Hero",
+      "model": "Xtreme 250R",
+      "variant_name": "Xtreme 250R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Xtreme 250R is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Nyx HX 60V 30Ah", "price": "₹89,490" }
-      ]
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "Hero Electric",
-      "model": "Dash",
-      "variant_name": "Hero Electric Dash",
-      "price": "₹64,990",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Hero Electric Dash is a low-speed electric scooter designed for short urban trips and last-mile connectivity, requiring no driving licence and making it perfect for senior citizens and students.",
-      "features": [
-        "No Licence Required (25 kmph cap)",
-        "Lightweight & Easy to Handle",
-        "Digital Speedometer",
-        "Anti-Theft Alarm",
-        "USB Charging Port",
-        "Regenerative Braking",
-        "Low Maintenance Cost"
-      ],
-      "specifications": {
-        "Motor Power": "250 W",
-        "Range": "70 km",
-        "Battery Capacity": "48V 26Ah",
-        "Top Speed": "25 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "20 Nm",
-      "colors": ["Fiery Red", "Ivory White", "Midnight Black", "Ocean Blue"],
+      "make": "Hero",
+      "model": "Xpulse 200 4V",
+      "variant_name": "Xpulse 200 4V",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Xpulse 200 4V is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Dash 48V 26Ah", "price": "₹64,990" }
-      ]
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro Dakar Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Xpulse 210",
+      "variant_name": "Xpulse 210",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Xpulse 210 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Base",
+          "price": "N/A"
+        },
+        {
+          "name": "Top",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Splendor Plus Xtec",
+      "variant_name": "Splendor Plus Xtec",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Splendor Plus Xtec is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum Brake - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "2.0 - Drum Brake - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Brake - OBD 2B",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Glamour X 125",
+      "variant_name": "Glamour X 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Glamour X 125 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme 160R 4V",
+      "variant_name": "Xtreme 160R 4V",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Xtreme 160R 4V is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Double Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Cruise Control",
+          "price": "N/A"
+        },
+        {
+          "name": "Combat-Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Pleasure Plus",
+      "variant_name": "Pleasure Plus",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Pleasure Plus is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "LX - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "VX - OBD 2B",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme 160R",
+      "variant_name": "Xtreme 160R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Xtreme 160R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Single Disc - OBD 2B",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Passion Plus",
+      "variant_name": "Passion Plus",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Passion Plus is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum Brake - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "Million Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Xoom 125",
+      "variant_name": "Xoom 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Xoom 125 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "VX",
+          "price": "N/A"
+        },
+        {
+          "name": "ZX",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Super Splendor Xtec",
+      "variant_name": "Super Splendor Xtec",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Super Splendor Xtec is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum Brake - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Brake - OBD 2B",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Xoom 160",
+      "variant_name": "Xoom 160",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Xoom 160 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "ZX",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Xoom 110",
+      "variant_name": "Xoom 110",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Xoom 110 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "VX - Drum - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "ZX - Disc - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "Combat Edition - OBD 2B",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Glamour",
+      "variant_name": "Glamour",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Glamour is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum Brake - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Brake - OBD 2B",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Destini 125",
+      "variant_name": "Destini 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Destini 125 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "VX - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "ZX - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "ZX+ - OBD 2B",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Destini 110",
+      "variant_name": "Destini 110",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Destini 110 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "VX",
+          "price": "N/A"
+        },
+        {
+          "name": "ZX",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Karizma XMR",
+      "variant_name": "Karizma XMR",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Karizma XMR is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Top",
+          "price": "N/A"
+        },
+        {
+          "name": "Combat Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Mavrick 440",
+      "variant_name": "Mavrick 440",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Mavrick 440 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Base",
+          "price": "N/A"
+        },
+        {
+          "name": "Mid",
+          "price": "N/A"
+        },
+        {
+          "name": "Top",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Glamour Xtec",
+      "variant_name": "Glamour Xtec",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Glamour Xtec is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum Brake",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Brake",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Destini Prime",
+      "variant_name": "Destini Prime",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Destini Prime is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard - OBD 2B",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Pleasure Plus Xtec",
+      "variant_name": "Pleasure Plus Xtec",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Hero Pleasure Plus Xtec is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "ZX - OBD 2B",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Karizma 400",
+      "variant_name": "Karizma 400",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Karizma 400 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Scrambler 440",
+      "variant_name": "Scrambler 440",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Scrambler 440 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Karizma XMR 250",
+      "variant_name": "Karizma XMR 250",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Karizma XMR 250 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Xpulse 421",
+      "variant_name": "Xpulse 421",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Xpulse 421 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Super Splendor",
+      "variant_name": "Super Splendor",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Super Splendor is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Electric Start",
+          "price": "N/A"
+        },
+        {
+          "name": "Kick Start",
+          "price": "N/A"
+        },
+        {
+          "name": "Self-Drum Alloy - BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Self-Disc Alloy - BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum - Black and Accent",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc - Black and Accent",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Old Generation Passion Pro 2018",
+      "variant_name": "Old Generation Passion Pro 2018",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Old Generation Passion Pro 2018 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum - IBS",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum - BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc - BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum - 100 Million Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc - 100 Million Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Splendor Pro Classic",
+      "variant_name": "Splendor Pro Classic",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Splendor Pro Classic is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Mavrick 440 [2025]",
+      "variant_name": "Mavrick 440 [2025]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Mavrick 440 [2025] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Maestro Edge 125",
+      "variant_name": "Maestro Edge 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Maestro Edge 125 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Disc i3S- Carburetor",
+          "price": "N/A"
+        },
+        {
+          "name": "Fi",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum i3S- Carburetor",
+          "price": "N/A"
+        },
+        {
+          "name": "Alloy Wheel - Drum - BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Alloy Wheel - Disc - BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Alloy Disc Prismatic",
+          "price": "N/A"
+        },
+        {
+          "name": "Stealth Edition BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Alloy Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Alloy Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Alloy Disc Prismatic Connected",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Splendor PRO",
+      "variant_name": "Splendor PRO",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Splendor PRO is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Kick Drum Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "Self Drum Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "Kick Drum Spoke",
+          "price": "N/A"
+        },
+        {
+          "name": "Self Drum Spoke",
+          "price": "N/A"
+        },
+        {
+          "name": "Self Drum Black Alloy",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Hunk",
+      "variant_name": "Hunk",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Hunk is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Rear Drum Brake",
+          "price": "N/A"
+        },
+        {
+          "name": "Rear Disc Brake",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme 200S",
+      "variant_name": "Xtreme 200S",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Xtreme 200S is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "BS4",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "HF Dawn",
+      "variant_name": "HF Dawn",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero HF Dawn is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "CD Deluxe",
+      "variant_name": "CD Deluxe",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero CD Deluxe is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Self Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "Spoke",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Glamour 125",
+      "variant_name": "Glamour 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Glamour 125 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum Brake",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Brake",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "HF Deluxe Eco",
+      "variant_name": "HF Deluxe Eco",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero HF Deluxe Eco is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Passion PRO TR",
+      "variant_name": "Passion PRO TR",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Passion PRO TR is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Duet",
+      "variant_name": "Duet",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Duet is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "LX",
+          "price": "N/A"
+        },
+        {
+          "name": "VX",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Splendor iSmart 110",
+      "variant_name": "Splendor iSmart 110",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Splendor iSmart 110 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum - BS-VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc - BS-VI",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme 200R",
+      "variant_name": "Xtreme 200R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Xtreme 200R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Achiever 150",
+      "variant_name": "Achiever 150",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Achiever 150 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Splendor Plus i3s",
+      "variant_name": "Splendor Plus i3s",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Splendor Plus i3s is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "IBS",
+          "price": "N/A"
+        },
+        {
+          "name": "Special Edition IBS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Passion XPro",
+      "variant_name": "Passion XPro",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Passion XPro is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum - IBS",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc - IBS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Passion PRO i3s",
+      "variant_name": "Passion PRO i3s",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Passion PRO i3s is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Self Drum Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "Self Disc Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "Kick Drum Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "Self Drum Spoke",
+          "price": "N/A"
+        },
+        {
+          "name": "Kick Drum Spoke",
+          "price": "N/A"
+        },
+        {
+          "name": "Self Drum Alloy - IBS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Super Splendor 2018",
+      "variant_name": "Super Splendor 2018",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Super Splendor 2018 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "IBS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "CD Dawn",
+      "variant_name": "CD Dawn",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero CD Dawn is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Splendor NXG",
+      "variant_name": "Splendor NXG",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Splendor NXG is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Electric Start",
+          "price": "N/A"
+        },
+        {
+          "name": "Kick Spoke",
+          "price": "N/A"
+        },
+        {
+          "name": "Kick Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "Self Spoke",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "2016 Karizma ZMR",
+      "variant_name": "2016 Karizma ZMR",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero 2016 Karizma ZMR is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Tone",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Destini 125 [2018-2023]",
+      "variant_name": "Destini 125 [2018-2023]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Destini 125 [2018-2023] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "VX",
+          "price": "N/A"
+        },
+        {
+          "name": "LX",
+          "price": "N/A"
+        },
+        {
+          "name": "LX - BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "VX - BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "100 Million Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Platinum",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Xpulse 200T",
+      "variant_name": "Xpulse 200T",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Xpulse 200T is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard - BS4",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard - BS6",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Passion Xtec",
+      "variant_name": "Passion Xtec",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Passion Xtec is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Alloy",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Destini 125 Xtec",
+      "variant_name": "Destini 125 Xtec",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Destini 125 Xtec is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "LX",
+          "price": "N/A"
+        },
+        {
+          "name": "VX - Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Xpulse 200T 4V",
+      "variant_name": "Xpulse 200T 4V",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Xpulse 200T 4V is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme 200S 4V",
+      "variant_name": "Xtreme 200S 4V",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Xtreme 200S 4V is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "HF Dawn [2015]",
+      "variant_name": "HF Dawn [2015]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero HF Dawn [2015] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "CBZ",
+      "variant_name": "CBZ",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero CBZ is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "X-Treme ES",
+          "price": "N/A"
+        },
+        {
+          "name": "X-Treme Rear Disc",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Achiever 150 [2005-2016]",
+      "variant_name": "Achiever 150 [2005-2016]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Achiever 150 [2005-2016] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Disc Self",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme [2013-2014]",
+      "variant_name": "Xtreme [2013-2014]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Xtreme [2013-2014] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Rear Drum Brake",
+          "price": "N/A"
+        },
+        {
+          "name": "Rear Disc Brake",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "[2003-2014] Karizma",
+      "variant_name": "[2003-2014] Karizma",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero [2003-2014] Karizma is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "R",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Maestro",
+      "variant_name": "Maestro",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Maestro is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Special Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Pleasure [2005-2015]",
+      "variant_name": "Pleasure [2005-2015]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Pleasure [2005-2015] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Ignitor",
+      "variant_name": "Ignitor",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Ignitor is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum Brake",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Brake",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Street Smart",
+      "variant_name": "Street Smart",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Street Smart is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Kick Start",
+          "price": "N/A"
+        },
+        {
+          "name": "Electric Start",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Winner",
+      "variant_name": "Winner",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Winner is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Passion X Pro [2016-2017]",
+      "variant_name": "Passion X Pro [2016-2017]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Passion X Pro [2016-2017] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum Kick Spoke",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum Kick Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum Self Spoke",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum Self Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Self Alloy",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "[2009-2014] Karizma ZMR",
+      "variant_name": "[2009-2014] Karizma ZMR",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero [2009-2014] Karizma ZMR is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Optima",
+      "variant_name": "Optima",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Optima is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Plus",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Impulse",
+      "variant_name": "Impulse",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Impulse is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Ambition",
+      "variant_name": "Ambition",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Ambition is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Glamour FI",
+      "variant_name": "Glamour FI",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Glamour FI is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "IBS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "[2014] Karizma ZMR",
+      "variant_name": "[2014] Karizma ZMR",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero [2014] Karizma ZMR is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Splendor iSmart",
+      "variant_name": "Splendor iSmart",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Splendor iSmart is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Self Drum Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "Self Drum Spoke",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme 2014",
+      "variant_name": "Xtreme 2014",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Xtreme 2014 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Self Start Disc Brake Alloy Wheel",
+          "price": "N/A"
+        },
+        {
+          "name": "Self Start Double Disc Brake Alloy Wheel",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Pleasure",
+      "variant_name": "Pleasure",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Pleasure is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum Brake Alloy Wheel",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum Brake",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "2014 Karizma",
+      "variant_name": "2014 Karizma",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero 2014 Karizma is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "R",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Old Generation Xpulse 200 2019",
+      "variant_name": "Old Generation Xpulse 200 2019",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Old Generation Xpulse 200 2019 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Carb",
+          "price": "N/A"
+        },
+        {
+          "name": "Fuel Injection",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Maestro Edge 110",
+      "variant_name": "Maestro Edge 110",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Maestro Edge 110 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "LX",
+          "price": "N/A"
+        },
+        {
+          "name": "VX [2020]",
+          "price": "N/A"
+        },
+        {
+          "name": "ZX",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum Brake Alloy Wheel - VX",
+          "price": "N/A"
+        },
+        {
+          "name": "Alloy Wheel - ZX",
+          "price": "N/A"
+        },
+        {
+          "name": "100 Million Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "VX",
+          "price": "N/A"
+        },
+        {
+          "name": "ZX Disc",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Hero",
+      "model": "Xtreme Sports",
+      "variant_name": "Xtreme Sports",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Hero Xtreme Sports is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Front Disc Self",
+          "price": "N/A"
+        },
+        {
+          "name": "Rear Disc Self",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

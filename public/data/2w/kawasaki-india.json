@@ -2,860 +2,3165 @@
   "brand": "Kawasaki",
   "brandId": "kawasaki-india",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Kawasaki",
-      "model": "W175",
-      "variant_name": "Kawasaki W175",
-      "price": "₹1,15,006 - ₹1,25,007",
-      "engine_displacement": "177 cc",
-      "mileage": "40 kmpl",
-      "top_speed": "110 kmph",
-      "max_torque": "13.2 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Kawasaki W175 is a retro-styled commuter motorcycle powered by a 177cc air-cooled single-cylinder engine, offering classic aesthetics combined with modern reliability at an accessible price point.",
-      "features": [
-        "ABS braking system",
-        "Front disc and rear drum brakes",
-        "5-speed manual transmission",
-        "Spoke-type wheels for classic aesthetics",
-        "Air-cooled engine for low maintenance",
-        "12-liter fuel tank capacity",
-        "Self-start ignition",
-        "Upright relaxed riding posture"
-      ],
-      "colors": [
-        "Ebony",
-        "Candy Persimmon Red",
-        "Metallic Moondust Gray",
-        "Candy Emerald Green",
-        "Metallic Graphite Grey",
-        "Metallic Ocean Blue"
-      ],
-      "variants": [
-        { "name": "W175 Standard", "price": "₹1,15,006" },
-        { "name": "W175 Alloy Wheel", "price": "₹1,25,007" }
-      ],
-      "technical_specifications": {
-        "engine_type": "Air-cooled, Single-cylinder",
-        "power": "12.8 bhp",
-        "torque": "13.2 Nm",
-        "gearbox": "5-Speed Manual",
-        "fuel_tank": "12 litres",
-        "seat_height": "790 mm",
-        "kerb_weight": "135 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Drum",
-        "abs": "Yes",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Kawasaki",
-      "model": "Eliminator 450",
-      "variant_name": "Kawasaki Eliminator 450",
-      "price": "₹6,15,965",
-      "engine_displacement": "451 cc",
-      "mileage": "31.45 kmpl",
-      "top_speed": "160 kmph",
-      "max_torque": "43 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Kawasaki Eliminator is a cruiser bike powered by a 451cc BS6 Phase 2 liquid-cooled parallel-twin engine, delivering 44.7 bhp and 42.6 Nm of torque. It offers a low seat height of 735mm and weighs 176 kg, making it accessible for riders of varying heights.",
-      "features": [
-        "ABS braking system with front and rear disc brakes",
-        "Liquid-cooled 451cc parallel-twin engine",
-        "6-speed manual transmission",
-        "Self-start ignition system",
-        "Alloy wheels",
-        "13-liter fuel tank capacity",
-        "Low 735mm seat height for comfort and accessibility",
-        "Expert-reported mileage of 31.45 kmpl"
-      ],
-      "colors": [
-        "Metallic Flat Black"
-      ],
-      "variants": [
-        { "name": "Eliminator Standard", "price": "₹6,15,965" }
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Parallel-twin",
-        "power": "44.7 bhp",
-        "torque": "42.6 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13 litres",
-        "seat_height": "735 mm",
-        "kerb_weight": "176 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Kawasaki",
-      "model": "Ninja 300",
-      "variant_name": "Kawasaki Ninja 300",
-      "price": "₹3,17,000",
-      "engine_displacement": "296 cc",
-      "mileage": "26 kmpl",
-      "top_speed": "160 kmph",
-      "max_torque": "27 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Kawasaki Ninja 300 is a lightweight parallel-twin sports bike powered by a 296cc liquid-cooled engine producing 38.88 bhp, designed as an accessible entry into the Kawasaki supersport lineup.",
-      "features": [
-        "Dual-channel ABS braking system",
-        "Front and rear disc brakes",
-        "6-speed manual transmission with assist and slipper clutch",
-        "Alloy 17-inch wheels with tubeless tyres",
-        "Full-fairing aerodynamic bodywork",
-        "17-liter fuel tank capacity",
-        "Self-start ignition",
-        "LED headlamp"
-      ],
-      "colors": [
-        "Candy Lime Green / Ebony",
-        "Lime Green"
-      ],
-      "variants": [
-        { "name": "Ninja 300 Standard", "price": "₹3,17,000" }
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Parallel-twin",
-        "power": "38.88 bhp",
-        "torque": "26.1 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "17 litres",
-        "seat_height": "780 mm",
-        "kerb_weight": "179 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B"
-      }
-    },
-    {
-      "make": "Kawasaki",
-      "model": "Ninja 400",
-      "variant_name": "Kawasaki Ninja 400",
-      "price": "₹5,23,985",
-      "engine_displacement": "399 cc",
-      "mileage": "25 kmpl",
-      "top_speed": "180 kmph",
-      "max_torque": "38 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Kawasaki Ninja 400 is a sports bike powered by a 399cc liquid-cooled parallel-twin engine delivering 44.7 bhp, offering sporty ergonomics suitable for both daily riding and track use with a slip and assist clutch for urban traffic ease.",
-      "features": [
-        "Dual-channel ABS braking system",
-        "Assist and slipper clutch",
-        "Semi-digital instrument cluster with digital speedometer and tachometer",
-        "Gear indicator and shift light",
-        "Distance to empty display",
-        "Telescopic front suspension with 120mm travel",
-        "Adjustable rear suspension preload",
-        "Tubeless tyres on 17-inch alloy wheels"
-      ],
-      "colors": [
-        "Metallic Carbon Gray",
-        "Lime Green"
-      ],
-      "variants": [
-        { "name": "Ninja 400 Standard", "price": "₹5,23,985" }
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Parallel-twin",
-        "power": "44.9 bhp",
-        "torque": "38 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "14 litres",
-        "seat_height": "785 mm",
-        "kerb_weight": "168 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Kawasaki",
-      "model": "Ninja 500",
-      "variant_name": "Kawasaki Ninja 500",
-      "price": "₹5,65,976",
-      "engine_displacement": "451 cc",
-      "mileage": "28.7 kmpl",
-      "top_speed": "190 kmph",
-      "max_torque": "42.6 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Kawasaki Ninja 500 is a middleweight sports bike powered by a 451cc liquid-cooled parallel-twin engine delivering 44.7 bhp, balancing accessible performance with full-fairing styling.",
-      "features": [
-        "ABS braking system with front and rear disc brakes",
-        "6-speed manual transmission",
-        "TFT display with smartphone connectivity",
-        "LED headlamp",
-        "Alloy wheels",
-        "14-liter fuel tank capacity",
-        "Self-start ignition",
-        "Sporty full-fairing bodywork"
-      ],
-      "colors": [
-        "Metallic Carbon Gray"
-      ],
-      "variants": [
-        { "name": "Ninja 500 Standard", "price": "₹5,65,976" }
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Parallel-twin",
-        "power": "44.7 bhp",
-        "torque": "42.6 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "14 litres",
-        "seat_height": "785 mm",
-        "kerb_weight": "171 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B",
-        "instrument_cluster": "TFT Display",
-        "lighting": "LED Headlight"
-      }
-    },
-    {
-      "make": "Kawasaki",
-      "model": "Z650",
-      "variant_name": "Kawasaki Z650",
-      "price": "₹7,25,960",
-      "engine_displacement": "649 cc",
-      "mileage": "27 kmpl",
-      "top_speed": "201 kmph",
-      "max_torque": "64 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Kawasaki Z650 is a street bike that combines aggressive styling with approachable handling, featuring a refined 649cc parallel-twin BS6 Phase 2 engine suitable for both daily commuting and weekend rides.",
-      "features": [
-        "Dual disc brakes with ABS",
-        "649cc parallel-twin BS6 Phase 2 engine",
-        "6-speed manual transmission",
-        "Full TFT instrument console with smartphone connectivity",
-        "Lightweight trellis frame design",
-        "Low 790mm seat height for accessibility",
-        "LED headlamp",
-        "Alloy wheels"
-      ],
-      "colors": [
-        "Metallic Matte Dark Gray / Metallic Spark Black"
-      ],
-      "variants": [
-        { "name": "Z650 Standard", "price": "₹7,25,960" }
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Parallel-twin",
-        "power": "67.31 bhp",
-        "torque": "64 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "15 litres",
-        "seat_height": "790 mm",
-        "kerb_weight": "191 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "instrument_cluster": "TFT Display with Bluetooth"
-      }
-    },
-    {
-      "make": "Kawasaki",
-      "model": "Z650RS",
-      "variant_name": "Kawasaki Z650RS",
-      "price": "₹7,83,000",
-      "engine_displacement": "649 cc",
-      "mileage": "25 kmpl",
-      "top_speed": "195 kmph",
-      "max_torque": "64 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Kawasaki Z650RS is a retro-styled sports bike that blends classic aesthetics with modern performance, featuring a 649cc engine with linear torque delivery suitable for both city commuting and open-road riding.",
-      "features": [
-        "649cc BS6 Phase 2 engine producing 67.07 bhp and 62.1 Nm torque",
-        "6-speed manual transmission",
-        "Dual front and rear disc brakes with ABS",
-        "Upright relaxed riding position with wide handlebars",
-        "Alloy wheels for improved handling",
-        "12-liter fuel tank capacity",
-        "Well-controlled vibration levels",
-        "Retro-inspired round headlamp design"
-      ],
-      "colors": [
-        "Metallic Ocean Blue"
-      ],
-      "variants": [
-        { "name": "Z650RS Standard", "price": "₹7,83,000" }
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Parallel-twin",
-        "power": "67.07 bhp",
-        "torque": "62.1 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "12 litres",
-        "seat_height": "800 mm",
-        "kerb_weight": "192 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Kawasaki",
-      "model": "Ninja 650",
-      "variant_name": "Kawasaki Ninja 650",
-      "price": "₹7,91,000",
-      "engine_displacement": "649 cc",
-      "mileage": "25 kmpl",
-      "top_speed": "210 kmph",
-      "max_torque": "64 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Kawasaki Ninja 650 is a sports bike featuring a 649cc BS6 Phase 2B parallel-twin engine delivering 67.3 bhp and 64 Nm torque, with comfortable ergonomics suited for touring and daily commuting.",
-      "features": [
-        "ABS braking system with front and rear disc brakes",
-        "649cc BS6 Phase 2B parallel-twin engine",
-        "6-speed manual transmission with assist and slipper clutch",
-        "Alloy wheels",
-        "15-liter fuel tank capacity",
-        "790mm seat height",
-        "Self-start ignition",
-        "Full-fairing aerodynamic design"
-      ],
-      "colors": [
-        "Lime Green"
-      ],
-      "variants": [
-        { "name": "Ninja 650 Standard", "price": "₹7,91,000" }
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Parallel-twin",
-        "power": "67.3 bhp",
-        "torque": "64 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "15 litres",
-        "seat_height": "790 mm",
-        "kerb_weight": "196 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B"
-      }
-    },
-    {
-      "make": "Kawasaki",
-      "model": "Versys 650",
-      "variant_name": "Kawasaki Versys 650",
-      "price": "₹8,63,000",
-      "engine_displacement": "649 cc",
-      "mileage": "19.4 kmpl",
-      "top_speed": "199 kmph",
-      "max_torque": "64 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Kawasaki Versys 650 is a sport-tourer motorcycle powered by a 649cc BS6 Phase 2B parallel-twin engine delivering 65.7 bhp and 61 Nm torque, offering a blend of comfort and performance for long-distance adventure riding.",
-      "features": [
-        "ABS braking system with front and rear disc brakes",
-        "6-speed manual transmission",
-        "Long-travel suspension for planted handling on rough terrain",
-        "Upright seating position with broad handlebars",
-        "Large 21-liter fuel tank for long range",
-        "Alloy wheels",
-        "Self-start ignition",
-        "Wind protection with tall windscreen"
-      ],
-      "colors": [
-        "Metallic Graphite Gray / Metallic Spark Black"
-      ],
-      "variants": [
-        { "name": "Versys 650 Standard", "price": "₹8,63,000" }
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Parallel-twin",
-        "power": "65.7 bhp",
-        "torque": "61 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "21 litres",
-        "seat_height": "845 mm",
-        "kerb_weight": "218 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B"
-      }
-    },
-    {
-      "make": "Kawasaki",
-      "model": "Vulcan S",
-      "variant_name": "Kawasaki Vulcan S",
-      "price": "₹8,13,000",
-      "engine_displacement": "649 cc",
-      "mileage": "22 kmpl",
-      "top_speed": "170 kmph",
-      "max_torque": "61 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Kawasaki Vulcan S is a cruiser motorcycle powered by a 649cc liquid-cooled parallel-twin engine producing 59.94 bhp, featuring an Ergo-Fit system that allows adjustment of the handlebar, footpeg, and seat positions to suit a wide range of riders.",
-      "features": [
-        "ABS braking system with front and rear disc brakes",
-        "Ergo-Fit three-position adjustable rider ergonomics",
-        "6-speed manual transmission",
-        "Alloy wheels",
-        "14-liter fuel tank capacity",
-        "Low 705mm seat height",
-        "Self-start ignition",
-        "Classic cruiser styling with modern underpinnings"
-      ],
-      "colors": [
-        "Metallic Flat Spark Black"
-      ],
-      "variants": [
-        { "name": "Vulcan S Standard", "price": "₹8,13,000" }
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Parallel-twin",
-        "power": "59.94 bhp",
-        "torque": "61 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "14 litres",
-        "seat_height": "705 mm",
-        "kerb_weight": "226 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Kawasaki",
-      "model": "W800",
-      "variant_name": "Kawasaki W800",
-      "price": "₹7,32,773",
-      "engine_displacement": "773 cc",
-      "mileage": "23 kmpl",
-      "top_speed": "185 kmph",
-      "max_torque": "62 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Kawasaki W800 is a discontinued retro cruiser motorcycle featuring a 773cc air-cooled parallel-twin engine producing 50.95 bhp, combining classic styling with modern technology for a unique riding experience in the premium cruiser segment.",
-      "features": [
-        "Dual-channel ABS for enhanced braking safety",
-        "LED headlamp and LED brake/tail lights",
-        "Assist and slipper clutch for smooth operation",
-        "Digital fuel gauge and low fuel indicator",
-        "Analogue speedometer with digital odometer",
-        "Twin shock rear suspension with spring preload adjustability",
-        "Self-start ignition system with kill switch",
-        "5-speed manual transmission with chain drive"
-      ],
-      "colors": [
-        "Metallic Flat Spark Black / Metallic Matt Grey"
-      ],
-      "variants": [
-        { "name": "W800 Standard", "price": "₹7,32,773" }
-      ],
-      "technical_specifications": {
-        "engine_type": "Air-cooled, Parallel-twin",
-        "power": "47 bhp",
-        "torque": "62 Nm",
-        "gearbox": "5-Speed Manual",
-        "fuel_tank": "15 litres",
-        "seat_height": "790 mm",
-        "kerb_weight": "221 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6"
-      }
-    },
-    {
-      "make": "Kawasaki",
       "model": "Z900",
-      "variant_name": "Kawasaki Z900",
-      "price": "₹9,99,000",
-      "engine_displacement": "948 cc",
-      "mileage": "21 kmpl",
-      "top_speed": "240 kmph",
-      "max_torque": "98.6 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Kawasaki Z900 is a middleweight naked sportbike featuring a 948cc inline-four BS6 Phase 2B engine producing 123.6 bhp, delivering smooth yet thrilling acceleration suitable for both highway and urban riding through its refined handling and modern technology.",
-      "features": [
-        "Six-axis IMU with cornering ABS and traction control",
-        "5-inch TFT display with Bluetooth connectivity",
-        "Bi-directional quickshifter for seamless gear changes",
-        "Multiple riding modes and cruise control",
-        "Front and rear disc brakes with ABS",
-        "Upside-down front forks and rear monoshock suspension",
-        "17-liter fuel tank capacity",
-        "Aggressive 'Sugomi' styling with sharp lines"
-      ],
-      "colors": [
-        "Metallic Matte Graphenesteel Gray / Metallic Spark Black",
-        "Candy Lime Green / Metallic Carbon Gray"
-      ],
-      "variants": [
-        { "name": "Z900 Standard", "price": "₹9,99,000" }
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Inline-four",
-        "power": "123.6 bhp",
-        "torque": "98.6 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "17 litres",
-        "seat_height": "830 mm",
-        "kerb_weight": "212 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes (Cornering ABS)",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B",
-        "features": "6-axis IMU, Bi-directional quickshifter, 5-inch TFT with Bluetooth, Traction control, Ride modes, Cruise control"
-      }
-    },
-    {
-      "make": "Kawasaki",
-      "model": "Versys 1000",
-      "variant_name": "Kawasaki Versys 1000",
-      "price": "₹12,30,982",
-      "engine_displacement": "1043 cc",
-      "mileage": "18 kmpl",
-      "top_speed": "230 kmph",
-      "max_torque": "102 Nm",
+      "variant_name": "Z900",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Kawasaki Versys 1000 is a discontinued super sport-touring motorcycle featuring a 1043cc liquid-cooled inline-four engine producing 118.27 bhp, combining performance with practicality through advanced technology and comfortable ergonomics for long-distance riding.",
-      "features": [
-        "Dual-channel ABS with 310mm front and 250mm rear disc brakes",
-        "Semi-digital instrument cluster with GPS navigation and mobile connectivity",
-        "Multiple riding modes: Sport, Road, Rain, and Rider-selectable",
-        "Assist and slipper clutch with 6-speed manual transmission",
-        "Traction control and cruise control",
-        "Inverted front fork suspension with adjustable preload",
-        "Horizontal back-link rear suspension with remote preload adjustment",
-        "TFT display with call/SMS alerts"
-      ],
-      "colors": [
-        "Metallic Matte Graphenesteel Grey / Metallic Spark Black"
-      ],
+      "description": "The Kawasaki Z900 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Versys 1000 Standard", "price": "₹12,30,982" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Inline-four",
-        "power": "118 bhp",
-        "torque": "102 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "21 litres",
-        "seat_height": "845 mm",
-        "kerb_weight": "249 kg",
-        "brakes_front": "Dual Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6"
-      }
-    },
-    {
-      "make": "Kawasaki",
-      "model": "Ninja ZX-4RR",
-      "variant_name": "Kawasaki Ninja ZX-4RR",
-      "price": "₹10,06,676",
-      "engine_displacement": "399 cc",
-      "mileage": "20 kmpl",
-      "top_speed": "200 kmph",
-      "max_torque": "39 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Kawasaki Ninja ZX-4RR is a discontinued sports bike powered by a 399cc BS6 Phase 2 inline-four engine delivering 78.7 bhp, offering a 4.3-inch TFT display and four riding modes in a compact supersport package.",
-      "features": [
-        "4.3-inch TFT colour instrument cluster with smartphone connectivity",
-        "Dual-channel cornering ABS with 290mm front and 220mm rear disc brakes",
-        "LED headlamp with daytime running lights",
-        "6-speed manual transmission with quickshifter",
-        "Four riding modes: Sport, Road, Rain, and Rider",
-        "USB charging port",
-        "Digital speedometer, odometer, fuel gauge and tachometer",
-        "Gear indicator and shift light"
-      ],
-      "colors": [
-        "Lime Green / Ebony / Pearl Blizzard White"
-      ],
-      "variants": [
-        { "name": "Ninja ZX-4RR Standard", "price": "₹10,06,676" }
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Inline-four",
-        "power": "76.5 bhp",
-        "torque": "39.5 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "15 litres",
-        "seat_height": "785 mm",
-        "kerb_weight": "185 kg",
-        "brakes_front": "Dual Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes (Cornering ABS)",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Kawasaki",
-      "model": "Ninja ZX-6R",
-      "variant_name": "Kawasaki Ninja ZX-6R",
-      "price": "₹12,48,948",
-      "engine_displacement": "636 cc",
-      "mileage": "20 kmpl",
-      "top_speed": "250 kmph",
-      "max_torque": "70.8 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Kawasaki Ninja ZX-6R is a high-performance 636cc supersport motorcycle delivering thrilling performance with sharp handling and modern electronics, designed for track-focused riders seeking speed and precision.",
-      "features": [
-        "ABS braking system with dual 310mm front disc brakes",
-        "636cc BS6 Phase 2B inline-four engine",
-        "Traction control and quickshifter",
-        "TFT display with smartphone connectivity",
-        "Multiple riding modes and adjustable Showa suspension",
-        "6-speed manual transmission",
-        "Alloy wheels with full-fairing design",
-        "Self-start ignition"
-      ],
-      "colors": [
-        "Lime Green"
-      ],
-      "variants": [
-        { "name": "Ninja ZX-6R Standard", "price": "₹12,48,948" }
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Inline-four",
-        "power": "129.9 bhp",
-        "torque": "70.8 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "17 litres",
-        "seat_height": "830 mm",
-        "kerb_weight": "196 kg",
-        "brakes_front": "Dual Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Kawasaki",
-      "model": "Ninja 1000SX",
-      "variant_name": "Kawasaki Ninja 1000SX",
-      "price": "₹14,42,000",
-      "engine_displacement": "1099 cc",
-      "mileage": "17.8 kmpl",
-      "top_speed": "249 kmph",
-      "max_torque": "113 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Kawasaki Ninja 1000SX is a sport-touring motorcycle powered by a 1099cc inline-four BS6 Phase 2B engine delivering 134.1 bhp, combining aggressive sports bike performance with touring comfort and an extensive electronics package.",
-      "features": [
-        "ABS braking system with front and rear disc brakes",
-        "1099cc BS6 Phase 2B inline-four engine with 134.1 bhp",
-        "Multiple riding modes: Sport, Road, Rain, Rider",
-        "Kawasaki Cornering Management Function (KCMF)",
-        "6-speed manual transmission with assist and slipper clutch",
-        "TFT colour display with smartphone connectivity",
-        "Cruise control for long-distance touring",
-        "19-liter fuel tank capacity"
-      ],
-      "colors": [
-        "Metallic Brilliant Golden Black / Metallic Carbon Gray"
-      ],
-      "variants": [
-        { "name": "Ninja 1000SX Standard", "price": "₹14,42,000" }
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Inline-four",
-        "power": "134.1 bhp",
-        "torque": "113 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "19 litres",
-        "seat_height": "820 mm",
-        "kerb_weight": "238 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Kawasaki",
       "model": "Ninja ZX-10R",
-      "variant_name": "Kawasaki Ninja ZX-10R",
-      "price": "₹20,79,000",
-      "engine_displacement": "998 cc",
-      "mileage": "20 kmpl",
-      "top_speed": "299 kmph",
-      "max_torque": "114.9 Nm",
+      "variant_name": "Ninja ZX-10R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Kawasaki Ninja ZX-10R is a 998cc superbike delivering explosive acceleration and razor-sharp performance through its 193 bhp inline-four engine, designed for both track dominance and road riding with a comprehensive electronics package.",
-      "features": [
-        "998cc BS6 Phase 2B inline-four engine producing 193 bhp and 114.9 Nm",
-        "Advanced electronics: traction control, cornering management, and launch control",
-        "Fully adjustable Showa suspension with lightweight aluminium twin-spar frame",
-        "Dual Brembo disc brakes with cornering ABS",
-        "Full-colour TFT display with Bluetooth connectivity",
-        "6-speed manual transmission with bi-directional quickshifter",
-        "Aerodynamic design with integrated winglets for downforce",
-        "Multiple riding modes for different conditions"
-      ],
-      "colors": [
-        "Metallic Graphite Gray / Metallic Diablo Black",
-        "Lime Green / Ebony / Pearl Blizzard White"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Ninja ZX-10R is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Ninja ZX-10R Standard", "price": "₹20,79,000" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Inline-four",
-        "power": "193 bhp (213 hp with ram air)",
-        "torque": "114.9 Nm",
-        "gearbox": "6-Speed Manual with Bi-directional Quickshifter",
-        "fuel_tank": "17 litres",
-        "seat_height": "835 mm",
-        "kerb_weight": "207 kg",
-        "brakes_front": "Brembo Dual Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes (Cornering ABS)",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B",
-        "features": "Traction control, Cornering management, Launch control, Full-color TFT with Bluetooth, Integrated aerodynamic winglets"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Kawasaki",
-      "model": "Z H2",
-      "variant_name": "Kawasaki Z H2",
-      "price": "₹30,55,818",
-      "engine_displacement": "998 cc",
-      "mileage": "18 kmpl",
-      "top_speed": "280 kmph",
-      "max_torque": "137 Nm",
+      "model": "Ninja 300",
+      "variant_name": "Ninja 300",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Kawasaki Z H2 is a high-performance supercharged naked superbike with a 998cc inline-four engine delivering 197.26 bhp and 137 Nm torque, combining aggressive styling with advanced rider aids and exceptional performance capabilities.",
-      "features": [
-        "Supercharged 998cc BS6 Phase 2 engine producing 197.26 bhp and 137 Nm",
-        "ABS braking system with front and rear disc brakes",
-        "Advanced rider aids and electronics suite",
-        "6-speed manual transmission",
-        "Alloy wheels",
-        "19-liter fuel tank capacity",
-        "830mm seat height",
-        "Top speed of 280 kmph"
-      ],
-      "colors": [
-        "Metallic Matte Graphenesteel Grey / Ebony"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Ninja 300 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Z H2 Standard", "price": "₹30,55,818" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Supercharged, Liquid-cooled, Inline-four",
-        "power": "197.26 bhp",
-        "torque": "137 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "19 litres",
-        "seat_height": "830 mm",
-        "kerb_weight": "240 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-6R",
+      "variant_name": "Ninja ZX-6R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Ninja ZX-6R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "W175",
+      "variant_name": "W175",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki W175 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Candy Persimmon Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Ebony",
+          "price": "N/A"
+        },
+        {
+          "name": "Metallic",
+          "price": "N/A"
+        },
+        {
+          "name": "Alloy Wheel",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z650",
+      "variant_name": "Z650",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Z650 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 500",
+      "variant_name": "Ninja 500",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Ninja 500 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KLX230",
+      "variant_name": "KLX230",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki KLX230 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 650",
+      "variant_name": "Ninja 650",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Ninja 650 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Kawasaki",
       "model": "Ninja H2 SX SE",
-      "variant_name": "Kawasaki Ninja H2 SX SE",
-      "price": "₹36,27,783",
-      "engine_displacement": "998 cc",
-      "mileage": "23 kmpl",
-      "top_speed": "330 kmph",
-      "max_torque": "137.3 Nm",
+      "variant_name": "Ninja H2 SX SE",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Ninja H2 SX SE is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Eliminator",
+      "variant_name": "Eliminator",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Eliminator is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z1100",
+      "variant_name": "Z1100",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Z1100 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z H2",
+      "variant_name": "Z H2",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Z H2 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "SE",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Versys-X 300",
+      "variant_name": "Versys-X 300",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Versys-X 300 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Vulcan S",
+      "variant_name": "Vulcan S",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Vulcan S is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z650RS",
+      "variant_name": "Z650RS",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Z650RS is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 1100SX",
+      "variant_name": "Ninja 1100SX",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Ninja 1100SX is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KLX230R",
+      "variant_name": "KLX230R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki KLX230R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "S",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Versys 650",
+      "variant_name": "Versys 650",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Versys 650 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 650 [2025]",
+      "variant_name": "Ninja 650 [2025]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Ninja 650 [2025] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z650RS [2025]",
+      "variant_name": "Z650RS [2025]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Z650RS [2025] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Versys-X 300 [2025]",
+      "variant_name": "Versys-X 300 [2025]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Versys-X 300 [2025] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KLX230 [2024]",
+      "variant_name": "KLX230 [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki KLX230 [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 1100SX [2025]",
+      "variant_name": "Ninja 1100SX [2025]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Ninja 1100SX [2025] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KLX230RS",
+      "variant_name": "KLX230RS",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki KLX230RS is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KLX450R",
+      "variant_name": "KLX450R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki KLX450R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Versys 1100",
+      "variant_name": "Versys 1100",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Versys 1100 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KX250",
+      "variant_name": "KX250",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki KX250 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KX450",
+      "variant_name": "KX450",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki KX450 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Versys 1100 [2025]",
+      "variant_name": "Versys 1100 [2025]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki Versys 1100 [2025] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KX 85",
+      "variant_name": "KX 85",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki KX 85 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KLX110R L",
+      "variant_name": "KLX110R L",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki KLX110R L is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KLX 140R F",
+      "variant_name": "KLX 140R F",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki KLX 140R F is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KX112",
+      "variant_name": "KX112",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Kawasaki KX112 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja H2R",
+      "variant_name": "Ninja H2R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Kawasaki Ninja H2 SX SE is the ultimate supercharged sport-tourer powered by a 998cc inline-four engine delivering 197.2 bhp, featuring an extensive electronics suite including GPS navigation, keyless ignition, and a 6.5-inch TFT display.",
-      "features": [
-        "Supercharged 998cc engine producing 197.2 bhp and 137.3 Nm",
-        "6.5-inch TFT display with Bluetooth and GPS navigation",
-        "Keyless ignition system",
-        "Quickshifter for smooth gear changes",
-        "Dual-channel ABS with dual front disc brakes",
-        "Traction control and cruise control",
-        "6-speed manual transmission",
-        "19-liter fuel tank for extended range"
-      ],
-      "colors": [
-        "Metallic Diablo Black"
-      ],
+      "description": "The Kawasaki Ninja H2R is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Ninja H2 SX SE", "price": "₹36,27,783" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Supercharged, Liquid-cooled, Inline-four",
-        "power": "197.2 bhp",
-        "torque": "137.3 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "19 litres",
-        "seat_height": "820 mm",
-        "kerb_weight": "268 kg",
-        "brakes_front": "Dual Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes (Dual-channel)",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "6.5-inch TFT Display, Bluetooth, GPS Navigation, Quickshifter, Traction control, Cruise control, Keyless ignition"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-6R [2024]",
+      "variant_name": "Ninja ZX-6R [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-6R [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-4R",
+      "variant_name": "Ninja ZX-4R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-4R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja H2 SX",
+      "variant_name": "Ninja H2 SX",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja H2 SX is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z900 [2025]",
+      "variant_name": "Z900 [2025]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Z900 [2025] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 300 [2025]",
+      "variant_name": "Ninja 300 [2025]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 300 [2025] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 400",
+      "variant_name": "Ninja 400",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 400 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-4RR",
+      "variant_name": "Ninja ZX-4RR",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-4RR is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-14R",
+      "variant_name": "Ninja ZX-14R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-14R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-10R [2024]",
+      "variant_name": "Ninja ZX-10R [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-10R [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z1000",
+      "variant_name": "Z1000",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Z1000 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "R",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z900RS [2024]",
+      "variant_name": "Z900RS [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Z900RS [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Vulcan S [2025]",
+      "variant_name": "Vulcan S [2025]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Vulcan S [2025] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z800",
+      "variant_name": "Z800",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Z800 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KX65",
+      "variant_name": "KX65",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki KX65 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KLX 300R",
+      "variant_name": "KLX 300R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki KLX 300R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Versys 650 [2025]",
+      "variant_name": "Versys 650 [2025]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Versys 650 [2025] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 250R",
+      "variant_name": "Ninja 250R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 250R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 650 [2016]",
+      "variant_name": "Ninja 650 [2016]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 650 [2016] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 300 [2018-2019]",
+      "variant_name": "Ninja 300 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 300 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Eliminator [2013]",
+      "variant_name": "Eliminator [2013]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Eliminator [2013] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "GPZ 900R",
+      "variant_name": "GPZ 900R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki GPZ 900R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja GPX400",
+      "variant_name": "Ninja GPX400",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja GPX400 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-6",
+      "variant_name": "Ninja ZX-6",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-6 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "ZR-7",
+      "variant_name": "ZR-7",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki ZR-7 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-9R",
+      "variant_name": "Ninja ZX-9R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-9R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-12R",
+      "variant_name": "Ninja ZX-12R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-12R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "ZZR1200",
+      "variant_name": "ZZR1200",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki ZZR1200 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "ZZR1400",
+      "variant_name": "ZZR1400",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki ZZR1400 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "ZX14R",
+      "variant_name": "ZX14R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki ZX14R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-10R [2015]",
+      "variant_name": "Ninja ZX-10R [2015]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-10R [2015] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-14R [2015]",
+      "variant_name": "Ninja ZX-14R [2015]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-14R [2015] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 1000 [2016]",
+      "variant_name": "Ninja 1000 [2016]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 1000 [2016] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Versys 1000 [2017-2018]",
+      "variant_name": "Versys 1000 [2017-2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Versys 1000 [2017-2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "ER-6n",
+      "variant_name": "ER-6n",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki ER-6n is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z250",
+      "variant_name": "Z250",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Z250 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja H2 [2018-2019]",
+      "variant_name": "Ninja H2 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja H2 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Carbon",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Versys 650 [2017-2018]",
+      "variant_name": "Versys 650 [2017-2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Versys 650 [2017-2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KLX 110",
+      "variant_name": "KLX 110",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki KLX 110 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-10R [2018-2019]",
+      "variant_name": "Ninja ZX-10R [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-10R [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z650 [2018-2019]",
+      "variant_name": "Z650 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Z650 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z900 [2017-2018]",
+      "variant_name": "Z900 [2017-2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Z900 [2017-2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Accessories",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Versys X-300 [2018-2019]",
+      "variant_name": "Versys X-300 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Versys X-300 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 650 [2018-2019]",
+      "variant_name": "Ninja 650 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 650 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "KRT Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja H2R [2018-2019]",
+      "variant_name": "Ninja H2R [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja H2R [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KX250F [2016]",
+      "variant_name": "KX250F [2016]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki KX250F [2016] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KX100F",
+      "variant_name": "KX100F",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki KX100F is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KLX 140G [2017-2018]",
+      "variant_name": "KLX 140G [2017-2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki KLX 140G [2017-2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-10RR",
+      "variant_name": "Ninja ZX-10RR",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-10RR is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 1000 [2018]",
+      "variant_name": "Ninja 1000 [2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 1000 [2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KX250F [2017-2018]",
+      "variant_name": "KX250F [2017-2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki KX250F [2017-2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KLX450R [2017-2018]",
+      "variant_name": "KLX450R [2017-2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki KLX450R [2017-2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KX450F [2017-2018]",
+      "variant_name": "KX450F [2017-2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki KX450F [2017-2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 400",
+      "variant_name": "Ninja 400",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 400 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "KRT Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z900 RS [2018-2019]",
+      "variant_name": "Z900 RS [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Z900 RS [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja H2 SX [2018-2019]",
+      "variant_name": "Ninja H2 SX [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja H2 SX [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Vulcan S [2018-2019]",
+      "variant_name": "Vulcan S [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Vulcan S [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Orange",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja H2 SX SE [2018-2019]",
+      "variant_name": "Ninja H2 SX SE [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja H2 SX SE [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 1000 [2018-2019]",
+      "variant_name": "Ninja 1000 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 1000 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Versys 650 [2018-2019]",
+      "variant_name": "Versys 650 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Versys 650 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z900 [2018-2019]",
+      "variant_name": "Z900 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Z900 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Special Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-6R [2018-2019]",
+      "variant_name": "Ninja ZX-6R [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-6R [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Versys 1000 [2018-2019]",
+      "variant_name": "Versys 1000 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Versys 1000 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KLX 450R",
+      "variant_name": "KLX 450R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki KLX 450R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KX250F",
+      "variant_name": "KX250F",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki KX250F is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KX450F",
+      "variant_name": "KX450F",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki KX450F is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KLX 140G",
+      "variant_name": "KLX 140G",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki KLX 140G is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-10R [2019-2020]",
+      "variant_name": "Ninja ZX-10R [2019-2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-10R [2019-2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "W800 [2018-2019]",
+      "variant_name": "W800 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki W800 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Street",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 650 [2020-2021]",
+      "variant_name": "Ninja 650 [2020-2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 650 [2020-2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Versys 1000 [2019-2021]",
+      "variant_name": "Versys 1000 [2019-2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Versys 1000 [2019-2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "BS IV",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 1000 [2020-2021]",
+      "variant_name": "Ninja 1000 [2020-2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 1000 [2020-2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "SX",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z650 [2020-2021]",
+      "variant_name": "Z650 [2020-2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Z650 [2020-2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z900 [2020-2021]",
+      "variant_name": "Z900 [2020-2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Z900 [2020-2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "W800",
+      "variant_name": "W800",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki W800 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 300 [2021]",
+      "variant_name": "Ninja 300 [2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 300 [2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Vulcan S [2020-2021]",
+      "variant_name": "Vulcan S [2020-2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Vulcan S [2020-2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-10R [2020-2021]",
+      "variant_name": "Ninja ZX-10R [2020-2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-10R [2020-2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Versys 650 [2020-2021]",
+      "variant_name": "Versys 650 [2020-2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Versys 650 [2020-2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z H2 [2022]",
+      "variant_name": "Z H2 [2022]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Z H2 [2022] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "SE",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 650 [2022]",
+      "variant_name": "Ninja 650 [2022]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 650 [2022] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Vulcan S [2022]",
+      "variant_name": "Vulcan S [2022]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Vulcan S [2022] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "KX250 [2021]",
+      "variant_name": "KX250 [2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki KX250 [2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z900 [2021]",
+      "variant_name": "Z900 [2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Z900 [2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Versys 1000 [2021-2022]",
+      "variant_name": "Versys 1000 [2021-2022]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Versys 1000 [2021-2022] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z650RS [2021-2023]",
+      "variant_name": "Z650RS [2021-2023]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Z650RS [2021-2023] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Anniversary Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 1000",
+      "variant_name": "Ninja 1000",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 1000 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "SX",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-10R [2021]",
+      "variant_name": "Ninja ZX-10R [2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-10R [2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 300 [2022]",
+      "variant_name": "Ninja 300 [2022]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 300 [2022] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Versys 650 [2023-2024]",
+      "variant_name": "Versys 650 [2023-2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Versys 650 [2023-2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z900 [2022-2023]",
+      "variant_name": "Z900 [2022-2023]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Z900 [2022-2023] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 650 [2023]",
+      "variant_name": "Ninja 650 [2023]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 650 [2023] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Versys 1000",
+      "variant_name": "Versys 1000",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Versys 1000 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z900RS [2023]",
+      "variant_name": "Z900RS [2023]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Z900RS [2023] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Vulcan S [2023]",
+      "variant_name": "Vulcan S [2023]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Vulcan S [2023] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 300 [2024]",
+      "variant_name": "Ninja 300 [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 300 [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 650 [2023-2024]",
+      "variant_name": "Ninja 650 [2023-2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 650 [2023-2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 500 [2024-2025]",
+      "variant_name": "Ninja 500 [2024-2025]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 500 [2024-2025] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z900 [2024]",
+      "variant_name": "Z900 [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Z900 [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-4RR [2023]",
+      "variant_name": "Ninja ZX-4RR [2023]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-4RR [2023] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja 500 [2024]",
+      "variant_name": "Ninja 500 [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja 500 [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

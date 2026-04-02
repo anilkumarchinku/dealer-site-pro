@@ -2,316 +2,666 @@
   "brand": "Vespa",
   "brandId": "vespa-india",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Vespa",
-      "model": "Vespa ZX 125",
-      "variant_name": "Vespa ZX 125",
-      "price": "₹1,14,290",
-      "engine_displacement": "124.45 cc",
-      "mileage": "45 kmpl",
-      "top_speed": "90 kmph",
+      "model": "ZX 125",
+      "variant_name": "ZX 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "10.5 Nm",
-      "source_section": "Available",
-      "description": "The Vespa ZX 125 is the entry-level offering in the Vespa India lineup, bringing Italian scooter styling at an accessible price with a 124.45cc engine and a lightweight 115 kg kerb weight. It features drum brakes front and rear with a combined braking system for safe, predictable stopping in city traffic.",
-      "features": [
-        "All-metal steel unibody frame",
-        "Classic Vespa round headlamp",
-        "Drum brakes with CBS",
-        "Lightweight 115 kg",
-        "45 kmpl fuel efficiency",
-        "7-litre fuel tank",
-        "770 mm seat height",
-        "7 colour options"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Vespa ZX 125 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "ZX 125 Standard",
-          "price": "₹1,14,290"
+          "name": "Premium",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Yellow",
-        "Glossy Red",
-        "Vibrant Red",
-        "Pearl White",
-        "Matt Black",
-        "Grey",
-        "Azure Blue"
-      ],
-      "technical_specifications": {
-        "engine_type": "Air-cooled, Single-cylinder",
-        "power": "9.76 bhp",
-        "torque": "9.6 Nm",
-        "gearbox": "CVT",
-        "fuel_tank": "7 litres",
-        "seat_height": "770 mm",
-        "kerb_weight": "114 kg",
-        "brakes_front": "Drum",
-        "brakes_rear": "Drum",
-        "abs": "No",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Vespa",
-      "model": "Vespa 125",
-      "variant_name": "Vespa 125",
-      "price": "₹1,28,321 - ₹1,81,880",
-      "engine_displacement": "124.45 cc",
-      "mileage": "45 kmpl",
-      "top_speed": "95 kmph",
+      "model": "S 125",
+      "variant_name": "S 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Vespa 125 is the iconic Italian scooter with a steel unibody frame, step-through design, and front disc brake, offering premium heritage styling at a mid-level price. The Tech variant adds a TFT display and Bluetooth connectivity for a modern, connected experience.",
-      "features": [
-        "Steel unibody frame construction",
-        "Front disc brake with CBS",
-        "Classic Italian design",
-        "Self-start mechanism",
-        "USB charging port",
-        "Alloy wheels",
-        "TFT display with Bluetooth (Tech variant)",
-        "9 colour options"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Vespa S 125 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Vespa 125 Single Tone",
-          "price": "₹1,28,321"
+          "name": "Standard",
+          "price": "N/A"
         },
         {
-          "name": "Vespa 125 Dual Tone",
-          "price": "₹1,30,000"
-        },
-        {
-          "name": "Vespa Officina 8 125",
-          "price": "₹1,34,000"
-        },
-        {
-          "name": "Vespa 125 Tech",
-          "price": "₹1,81,880"
+          "name": "Tech 125",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Blue & White",
-        "Nero Black",
-        "Pearl White",
-        "Azzuro Provenza",
-        "Rosso Red",
-        "Verde Amabile",
-        "Grigio Grey - Tech",
-        "Blue Energico - Tech",
-        "Qala Edition"
-      ],
-      "technical_specifications": {
-        "engine_type": "Air-cooled, Single-cylinder",
-        "power": "9.76 bhp",
-        "torque": "9.6 Nm",
-        "gearbox": "CVT",
-        "fuel_tank": "7 litres",
-        "seat_height": "770 mm",
-        "kerb_weight": "114 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Drum",
-        "abs": "No",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      },
-      "max_torque": "10.5 Nm"
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Vespa",
-      "model": "Vespa S 125",
-      "variant_name": "Vespa S 125",
-      "price": "₹1,32,606 - ₹1,85,428",
-      "engine_displacement": "124.45 cc",
-      "mileage": "40 kmpl",
-      "top_speed": "95 kmph",
+      "model": "150",
+      "variant_name": "150",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Vespa S 125 features a rectangular headlamp and a more sporty, retro-modern design compared to the classic Vespa 125, with chrome detailing and full-metal body construction. The Tech variant adds a TFT display with Bluetooth for connected riding.",
-      "features": [
-        "Rectangular headlamp for sporty look",
-        "Full-metal steel body",
-        "Chrome detailing",
-        "Front disc brake with CBS",
-        "USB charging port",
-        "Alloy wheels",
-        "TFT display with Bluetooth (Tech variant)",
-        "10 colour options"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Vespa 150 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Vespa S 125 Standard",
-          "price": "₹1,32,606"
+          "name": "Standard",
+          "price": "N/A"
         },
         {
-          "name": "Vespa S 125 Tech",
-          "price": "₹1,85,428"
+          "name": "Tech 150",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Oro",
-        "Black & White",
-        "Red & White",
-        "Nero Black",
-        "Pearl White",
-        "Giallo Yellow",
-        "Arancio Impulsivo",
-        "Verde Ambizioso",
-        "Pearl White - Tech",
-        "Nero Black - Tech"
-      ],
-      "technical_specifications": {
-        "engine_type": "Air-cooled, Single-cylinder",
-        "power": "9.9 bhp",
-        "torque": "9.6 Nm",
-        "gearbox": "CVT",
-        "fuel_tank": "8 litres",
-        "seat_height": "770 mm",
-        "kerb_weight": "114 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Drum",
-        "abs": "No",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "Full-metal body, Rectangular headlamp, Chrome detailing"
-      },
-      "max_torque": "10.5 Nm"
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Vespa",
-      "model": "Vespa 150",
-      "variant_name": "Vespa 150",
-      "price": "₹1,42,356 - ₹1,94,287",
-      "engine_displacement": "149.5 cc",
-      "mileage": "41.5 kmpl",
-      "top_speed": "100 kmph",
+      "model": "125",
+      "variant_name": "125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Vespa 150 is the classic Vespa styling with a more powerful 149.5cc engine for improved highway performance, featuring a front disc brake and generous 8-litre fuel tank. The Tech variant adds a TFT display with Bluetooth for a premium connected experience.",
-      "features": [
-        "149.5cc engine for better performance",
-        "Front disc brake with CBS",
-        "Classic Vespa Italian design",
-        "USB charging port",
-        "8-litre fuel tank",
-        "Alloy wheels",
-        "TFT display with Bluetooth (Tech variant)",
-        "8 colour options"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Vespa 125 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Vespa 150 Single Tone",
-          "price": "₹1,42,356"
+          "name": "Standard",
+          "price": "N/A"
         },
         {
-          "name": "Vespa 150 Dual Tone",
-          "price": "₹1,44,477"
+          "name": "Tech 125",
+          "price": "N/A"
         },
         {
-          "name": "Vespa Officina 8 150",
-          "price": "₹1,49,000"
-        },
-        {
-          "name": "Vespa 150 Tech",
-          "price": "₹1,94,287"
+          "name": "Qala Edition",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Blue & White",
-        "Nero Black",
-        "Pearl White",
-        "Azzuro Provenza",
-        "Rosso Red",
-        "Verde Amabile",
-        "Blue Energico - Tech",
-        "Grigio Grey - Tech"
-      ],
-      "technical_specifications": {
-        "engine_type": "Air-cooled, Single-cylinder",
-        "power": "11.4 bhp",
-        "torque": "10.6 Nm",
-        "gearbox": "CVT",
-        "fuel_tank": "8 litres",
-        "seat_height": "770 mm",
-        "kerb_weight": "114 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Drum",
-        "abs": "No",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      },
-      "max_torque": "12.8 Nm"
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Vespa",
-      "model": "Vespa S 150",
-      "variant_name": "Vespa S 150",
-      "price": "₹1,45,424 - ₹1,98,320",
-      "engine_displacement": "149.5 cc",
-      "mileage": "35 kmpl",
-      "top_speed": "100 kmph",
+      "model": "S 150",
+      "variant_name": "S 150",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Vespa S 150 combines the sporty rectangular headlamp design of the S series with the more powerful 149.5cc engine, chrome detailing, and full-metal construction for a premium, sporty riding experience. The Tech variant adds a TFT display and Bluetooth for full connectivity.",
-      "features": [
-        "149.5cc engine, 11.4 bhp",
-        "Rectangular headlamp for modern sporty look",
-        "Full-metal steel body",
-        "Chrome detailing throughout",
-        "Front disc brake with CBS",
-        "USB charging port",
-        "TFT display with Bluetooth (Tech variant)",
-        "10 colour options"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Vespa S 150 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Vespa S 150 Standard",
-          "price": "₹1,45,424"
+          "name": "Standard",
+          "price": "N/A"
         },
         {
-          "name": "Vespa S 150 Tech",
-          "price": "₹1,98,320"
+          "name": "Tech 150",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Oro",
-        "Black & White",
-        "Red & White",
-        "Nero Black",
-        "Pearl White",
-        "Giallo Yellow",
-        "Arancio Impulsivo",
-        "Verde Ambizioso",
-        "Nero Black - Tech",
-        "Pearl White - Tech"
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Vespa",
+      "model": "Officina 8",
+      "variant_name": "Officina 8",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Vespa Officina 8 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Air-cooled, Single-cylinder",
-        "power": "11.4 bhp",
-        "torque": "10.6 Nm",
-        "gearbox": "CVT",
-        "fuel_tank": "8 litres",
-        "seat_height": "770 mm",
-        "kerb_weight": "114 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Drum",
-        "abs": "No",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "Full-metal body, Rectangular headlamp, Chrome detailing, Matte finish"
-      },
-      "max_torque": "12.8 Nm"
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Vespa",
+      "model": "VXL 125",
+      "variant_name": "VXL 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Vespa VXL 125 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "CBS",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Premium",
+          "price": "N/A"
+        },
+        {
+          "name": "75th Anniversary Limited Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Vespa",
+      "model": "SXL 125",
+      "variant_name": "SXL 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Vespa SXL 125 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "BS IV - Carb",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI - FI",
+          "price": "N/A"
+        },
+        {
+          "name": "Candy Red - BS - VI - FI",
+          "price": "N/A"
+        },
+        {
+          "name": "Premium",
+          "price": "N/A"
+        },
+        {
+          "name": "Racing Sixties",
+          "price": "N/A"
+        },
+        {
+          "name": "Sport",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Vespa",
+      "model": "SXL 150",
+      "variant_name": "SXL 150",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Vespa SXL 150 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Connectivity",
+          "price": "N/A"
+        },
+        {
+          "name": "Matt Red - Connectivity",
+          "price": "N/A"
+        },
+        {
+          "name": "BS - IV - Carb",
+          "price": "N/A"
+        },
+        {
+          "name": "Matt Red - ABS - BS - IV",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI - FI",
+          "price": "N/A"
+        },
+        {
+          "name": "Candy Red - ABS - BS - VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Premium",
+          "price": "N/A"
+        },
+        {
+          "name": "Racing Sixties",
+          "price": "N/A"
+        },
+        {
+          "name": "Sport",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Vespa",
+      "model": "VXL 150",
+      "variant_name": "VXL 150",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Vespa VXL 150 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Connectivity",
+          "price": "N/A"
+        },
+        {
+          "name": "Connectivity - ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Premium",
+          "price": "N/A"
+        },
+        {
+          "name": "75th Anniversary Limited Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Vespa",
+      "model": "LX",
+      "variant_name": "LX",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Vespa LX is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "125",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Vespa",
+      "model": "VX 125",
+      "variant_name": "VX 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Vespa VX 125 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Vespa",
+      "model": "946",
+      "variant_name": "946",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Vespa 946 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Vespa",
+      "model": "S",
+      "variant_name": "S",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Vespa S is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Vespa",
+      "model": "Elegante 125",
+      "variant_name": "Elegante 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Vespa Elegante 125 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "CBS",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Vespa",
+      "model": "LX 125",
+      "variant_name": "LX 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Vespa LX 125 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Vespa",
+      "model": "VXL 150 Anniversary Edition",
+      "variant_name": "VXL 150 Anniversary Edition",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Vespa VXL 150 Anniversary Edition is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Vespa",
+      "model": "Elegante 150",
+      "variant_name": "Elegante 150",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Vespa Elegante 150 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Connectivity",
+          "price": "N/A"
+        },
+        {
+          "name": "BS IV - Carb",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI - FI",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Vespa",
+      "model": "RED",
+      "variant_name": "RED",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Vespa RED is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Vespa",
+      "model": "Notte",
+      "variant_name": "Notte",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Vespa Notte is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Vespa",
+      "model": "Urban Club",
+      "variant_name": "Urban Club",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Vespa Urban Club is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "BS IV",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Vespa",
+      "model": "946 Dragon",
+      "variant_name": "946 Dragon",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Vespa 946 Dragon is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

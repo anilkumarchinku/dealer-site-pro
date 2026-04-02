@@ -1,14 +1,14 @@
 {
-  "brand": "Zontes",
-  "brandId": "zontes-india",
+  "brand": "Brixton Motorcycles",
+  "brandId": "brixton-motorcycles",
   "type": "2w",
   "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "Zontes",
-      "model": "350R",
-      "variant_name": "350R",
+      "make": "Brixton Motorcycles",
+      "model": "Crossfire 500 X",
+      "variant_name": "Crossfire 500 X",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -17,7 +17,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Zontes 350R is a two-wheeler available in India.",
+      "description": "The Brixton Motorcycles Crossfire 500 X is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -29,9 +29,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Zontes",
-      "model": "350T",
-      "variant_name": "350T",
+      "make": "Brixton Motorcycles",
+      "model": "Crossfire 500 XC",
+      "variant_name": "Crossfire 500 XC",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -40,34 +40,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Zontes 350T is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Adv",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Zontes",
-      "model": "350X",
-      "variant_name": "350X",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Zontes 350X is a two-wheeler available in India.",
+      "description": "The Brixton Motorcycles Crossfire 500 XC is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -79,9 +52,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Zontes",
-      "model": "GK350",
-      "variant_name": "GK350",
+      "make": "Brixton Motorcycles",
+      "model": "Cromwell 1200",
+      "variant_name": "Cromwell 1200",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -90,7 +63,53 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Zontes GK350 is a two-wheeler available in India.",
+      "description": "The Brixton Motorcycles Cromwell 1200 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Brixton Motorcycles",
+      "model": "Cromwell 1200 X",
+      "variant_name": "Cromwell 1200 X",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Brixton Motorcycles Cromwell 1200 X is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Brixton Motorcycles",
+      "model": "Crossfire 500 Storr",
+      "variant_name": "Crossfire 500 Storr",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Brixton Motorcycles Crossfire 500 Storr is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {

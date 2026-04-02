@@ -1,805 +1,1761 @@
 {
-  "brand": "BMW Motorrad",
+  "brand": "BMW",
   "brandId": "bmw-motorrad-india",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "BMW Motorrad",
-      "model": "G 310 RR",
-      "variant_name": "BMW G 310 RR",
-      "price": "₹2,84,995 - ₹2,99,000",
-      "engine_displacement": "312 cc",
-      "mileage": "30 kmpl",
-      "top_speed": "160 kmph",
+      "make": "BMW",
+      "model": "G310 RR",
+      "variant_name": "G310 RR",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "28 Nm",
-      "source_section": "Available",
-      "description": "The BMW G 310 RR is a supersport-styled motorcycle that combines aggressive design with everyday usability, powered by a compact 312cc engine. It delivers an authentic riding experience with multiple ride modes, gold USD forks, and premium LED lighting, making it accessible performance at an accessible price point.",
-      "features": [
-        "Full digital TFT instrument cluster",
-        "Multiple riding modes (Track, Urban, Rain, Sport)",
-        "Gold USD front forks",
-        "Full LED lighting setup",
-        "Dual-channel ABS",
-        "6-speed manual transmission",
-        "Alloy wheels",
-        "Self-start ignition"
-      ],
+      "source_section": "Discontinued",
+      "description": "The BMW G310 RR is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "G 310 RR Standard",
-          "price": "₹2,84,995"
+          "name": "Standard",
+          "price": "N/A"
         },
         {
-          "name": "G 310 RR Style Sport",
-          "price": "₹2,99,000"
-        }
-      ],
-      "colors": [
-        "Racing Blue Metallic",
-        "Cosmic Black 2",
-        "Light White Uni / Racing Blue Metallic / Racing Red",
-        "Polar White (LE)",
-        "Cosmic Black (LE)"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Single-cylinder",
-        "power": "33.5 bhp",
-        "torque": "27.3 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "11 litres",
-        "seat_height": "811 mm",
-        "kerb_weight": "174 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "CE 02",
-      "variant_name": "BMW CE 02",
-      "price": "₹4,49,900",
-      "engine_displacement": "Electric",
-      "mileage": "108 km range",
-      "top_speed": "95 kmph",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The BMW CE 02 is an urban electric scooter with a bold, modern design aimed at young city riders. It offers a 108 km range per charge, a top speed of 95 kmph, and includes a USB charging port and a distinctive minimalist instrument cluster.",
-      "features": [
-        "108 km riding range",
-        "USB charging port",
-        "Reverse gear",
-        "Modern digital instrument cluster",
-        "Disc brakes front and rear with ABS",
-        "Lightweight alloy wheels",
-        "Eco and Sport riding modes",
-        "Connected app support"
-      ],
-      "variants": [
-        {
-          "name": "CE 02 Standard",
-          "price": "₹4,49,900"
-        }
-      ],
-      "colors": [
-        "Cosmic Black Two",
-        "Cosmic Black"
-      ],
-      "technical_specifications": {
-        "motor_type": "Electric",
-        "power": "11 kW",
-        "range": "108 km",
-        "charging_time": "5.12 hours (0-100%)",
-        "seat_height": "745 mm",
-        "kerb_weight": "142 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "features": "USB charging port, Reverse gear, Modern instrument cluster"
-      },
-      "max_torque": "56 Nm"
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "C 400 GT",
-      "variant_name": "BMW C 400 GT",
-      "price": "₹10,98,979",
-      "engine_displacement": "350 cc",
-      "mileage": "25 kmpl",
-      "top_speed": "139 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The BMW C 400 GT is a premium mid-size maxi-scooter designed for comfortable city and highway commuting with a large windscreen for excellent wind protection. It features under-seat storage, a USB charging port, and BMW's signature quality finishing for a premium daily rider experience.",
-      "features": [
-        "Large windscreen for wind protection",
-        "Spacious under-seat storage",
-        "USB charging port",
-        "Front and rear disc brakes with ABS",
-        "CVT automatic transmission",
-        "TFT instrument display",
-        "Keyless ignition",
-        "Alloy wheels"
-      ],
-      "variants": [
-        {
-          "name": "C 400 GT Standard",
-          "price": "₹10,98,979"
-        }
-      ],
-      "colors": [
-        "Diamond White Metallic"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Single-cylinder",
-        "power": "33.5 bhp",
-        "torque": "35 Nm",
-        "gearbox": "CVT",
-        "fuel_tank": "12.8 litres",
-        "seat_height": "775 mm",
-        "kerb_weight": "214 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      },
-      "max_torque": "37 Nm"
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "F 900 GS",
-      "variant_name": "BMW F 900 GS",
-      "price": "₹15,49,915",
-      "engine_displacement": "895 cc",
-      "mileage": "22.7 kmpl",
-      "top_speed": "200 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "92 Nm",
-      "source_section": "Available",
-      "description": "The BMW F 900 GS is a capable mid-size adventure motorcycle powered by a 895cc parallel-twin engine delivering 103 bhp, making it ideal for both on-road touring and moderate off-road adventures. It offers a balanced combination of lightweight construction and adventure-ready spoke wheels.",
-      "features": [
-        "895cc parallel-twin engine",
-        "Spoke wheels for off-road capability",
-        "Dual-channel ABS with off-road mode",
-        "Multiple riding modes",
-        "6-speed manual gearbox",
-        "TFT instrument cluster",
-        "LED lighting",
-        "14.5-litre fuel tank"
-      ],
-      "variants": [
-        {
-          "name": "F 900 GS Standard",
-          "price": "₹15,49,915"
-        }
-      ],
-      "colors": [
-        "GS Trophy",
-        "Passion"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Parallel-twin",
-        "power": "103.25 bhp",
-        "torque": "93 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "14.5 litres",
-        "seat_height": "870 mm",
-        "kerb_weight": "219 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "F 900 GS Adventure",
-      "variant_name": "BMW F 900 GS Adventure",
-      "price": "₹16,99,888 - ₹17,49,858",
-      "engine_displacement": "895 cc",
-      "mileage": "22 kmpl",
-      "top_speed": "200 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "92 Nm",
-      "source_section": "Available",
-      "description": "The BMW F 900 GS Adventure is the long-distance touring variant of the F 900 GS, featuring a massive 23-litre fuel tank and higher wind protection for extended journeys. The Ride Pro variant adds advanced electronics including Dynamic ESA semi-active suspension and additional riding modes.",
-      "features": [
-        "23-litre large fuel tank",
-        "Spoke wheels",
-        "Dual-channel ABS with off-road mode",
-        "Multiple riding modes (Road, Rain, Enduro, Enduro Pro on Ride Pro)",
-        "Dynamic ESA semi-active suspension (Ride Pro)",
-        "TFT instrument cluster",
-        "6-speed manual gearbox",
-        "LED lighting"
-      ],
-      "variants": [
-        {
-          "name": "F 900 GS Adventure Standard",
-          "price": "₹16,99,888"
+          "name": "Style Sport",
+          "price": "N/A"
         },
         {
-          "name": "F 900 GS Adventure Ride Pro",
-          "price": "₹17,49,858"
+          "name": "Limited Edition",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Blackstorm Metallic",
-        "Ride Pro"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Parallel-twin",
-        "power": "103.25 bhp",
-        "torque": "93 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "23 litres",
-        "seat_height": "875 mm",
-        "kerb_weight": "234 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "BMW Motorrad",
-      "model": "CE 04",
-      "variant_name": "BMW CE 04",
-      "price": "₹15,25,000",
-      "engine_displacement": "Electric",
-      "mileage": "130 km range",
-      "top_speed": "120 kmph",
-      "fuel_type": "Electric",
-      "max_torque": "56 Nm",
-      "source_section": "Available",
-      "description": "The BMW CE 04 is a futuristic premium electric scooter with a bold design featuring a 10.25-inch TFT display and built-in navigation. It offers a 130 km real-world range, top speed of 120 kmph, and comprehensive connectivity with multiple riding modes.",
-      "features": [
-        "10.25-inch TFT touchscreen display",
-        "Built-in navigation",
-        "130 km riding range",
-        "Multiple riding modes (Road, Dynamic, Rain, Eco)",
-        "USB charging port",
-        "Disc brakes front and rear with ABS",
-        "Reverse gear",
-        "Smartphone connectivity"
-      ],
-      "variants": [
-        {
-          "name": "CE 04 Standard",
-          "price": "₹15,25,000"
-        }
-      ],
-      "colors": [
-        "Avantgarde"
-      ],
-      "technical_specifications": {
-        "motor_type": "Electric",
-        "power": "31 kW (42 bhp)",
-        "range": "130 km",
-        "charging_time": "4.2 hours (0-100%)",
-        "seat_height": "780 mm",
-        "kerb_weight": "231 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "features": "10.25-inch TFT display, Navigation, Connectivity"
-      }
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "S 1000 R",
-      "variant_name": "BMW S 1000 R",
-      "price": "₹21,74,938",
-      "engine_displacement": "999 cc",
-      "mileage": "16 kmpl",
-      "top_speed": "200 kmph",
+      "make": "BMW",
+      "model": "S1000RR",
+      "variant_name": "S1000RR",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "113 Nm",
-      "source_section": "Available",
-      "description": "The BMW S 1000 R is a high-performance naked streetfighter powered by the same 999cc inline-four engine as the S 1000 RR superbike, delivering 167 bhp in a more upright, versatile package. It combines ballistic performance with sophisticated electronics and a dynamic riding position.",
-      "features": [
-        "999cc inline-four engine, 167.6 bhp",
-        "Multiple riding modes (Rain, Road, Dynamic, Race)",
-        "Dynamic traction control (DTC)",
-        "Launch control",
-        "Cornering ABS",
-        "TFT display with Bluetooth connectivity",
-        "Quickshifter Pro (optional)",
-        "Alloy wheels"
-      ],
+      "source_section": "Discontinued",
+      "description": "The BMW S1000RR is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "S 1000 R Standard",
-          "price": "₹21,74,938"
-        }
-      ],
-      "colors": [
-        "Bluefire / Mugiallo Yellow",
-        "Light White / M Motorsport",
-        "Blackstorm Metallic"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Inline-four",
-        "power": "167.6 bhp",
-        "torque": "114 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "16.5 litres",
-        "seat_height": "830 mm",
-        "kerb_weight": "199 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "R 12",
-      "variant_name": "BMW R 12",
-      "price": "₹21,74,965",
-      "engine_displacement": "1170 cc",
-      "mileage": "19.6 kmpl",
-      "top_speed": "215 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The BMW R 12 is a modern heritage cruiser with a classic silhouette built around BMW's iconic air/oil-cooled boxer-twin engine producing 93.7 bhp. It combines timeless styling with modern technology including ABS and a refined chassis for relaxed, engaging rides.",
-      "features": [
-        "Air/oil-cooled boxer-twin engine",
-        "Classic heritage cruiser styling",
-        "Dual-channel ABS",
-        "6-speed manual transmission",
-        "Alloy wheels",
-        "LED lighting",
-        "Analogue-style instrument cluster with digital info",
-        "Low seat height of 754 mm"
-      ],
-      "variants": [
-        {
-          "name": "R 12 Standard",
-          "price": "₹21,74,965"
-        }
-      ],
-      "colors": [
-        "Blackstorm Metallic"
-      ],
-      "technical_specifications": {
-        "engine_type": "Air/Oil-cooled, Boxer-twin",
-        "power": "93.7 bhp",
-        "torque": "109.8 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "14 litres",
-        "seat_height": "754 mm",
-        "kerb_weight": "227 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      },
-      "max_torque": "95 Nm"
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "R 12 nineT",
-      "variant_name": "BMW R 12 nineT",
-      "price": "₹22,74,974",
-      "engine_displacement": "1170 cc",
-      "mileage": "19 kmpl",
-      "top_speed": "200 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The BMW R 12 nineT is a cafe racer-styled heritage motorcycle powered by a 1170cc air/oil-cooled boxer-twin making 107.5 bhp and 115 Nm. It blends classic aesthetics with modern electronics for riders who value personality and customisation alongside performance.",
-      "features": [
-        "Air/oil-cooled boxer-twin engine",
-        "Cafe racer styling",
-        "Dual-channel ABS",
-        "6-speed manual transmission",
-        "Alloy wheels",
-        "LED lighting",
-        "Top-spec electronics package",
-        "Customisation-friendly platform"
-      ],
-      "variants": [
-        {
-          "name": "R 12 nineT Standard",
-          "price": "₹22,74,974"
-        }
-      ],
-      "colors": [
-        "Blackstorm Metallic"
-      ],
-      "technical_specifications": {
-        "engine_type": "Air/Oil-cooled, Boxer-twin",
-        "power": "108 bhp",
-        "torque": "115 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "16 litres",
-        "seat_height": "795 mm",
-        "kerb_weight": "223 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      },
-      "max_torque": "95 Nm"
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "R 1300 GS",
-      "variant_name": "BMW R 1300 GS",
-      "price": "₹23,24,923 - ₹26,50,923",
-      "engine_displacement": "1300 cc",
-      "mileage": "21 kmpl",
-      "top_speed": "225 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "143 Nm",
-      "source_section": "Available",
-      "description": "The BMW R 1300 GS is the latest generation of the world's most iconic adventure motorcycle, now with a 1300cc boxer engine delivering 145 bhp and 149 Nm. It features advanced electronics including radar-assisted riding, ASA automatic transmission option, and comprehensive connectivity.",
-      "features": [
-        "1300cc boxer-twin engine, 145 bhp",
-        "Cornering ABS",
-        "Dynamic ESA semi-active suspension",
-        "Multiple riding modes (Rain, Road, Dynamic, Enduro, Enduro Pro)",
-        "10.25-inch TFT display with navigation",
-        "Radar-assisted riding (optional)",
-        "Shift assistant Pro (quickshifter)",
-        "Hill start control"
-      ],
-      "variants": [
-        {
-          "name": "R 1300 GS Pro",
-          "price": "₹23,24,923"
+          "name": "Standard",
+          "price": "N/A"
         },
         {
-          "name": "R 1300 GS Option 719",
-          "price": "₹26,50,923"
-        }
-      ],
-      "colors": [
-        "Light White / Light Gray",
-        "Aurelius Green Metallic"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Boxer-twin",
-        "power": "145 bhp",
-        "torque": "149 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "19 litres",
-        "seat_height": "850 mm",
-        "kerb_weight": "237 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "S 1000 RR",
-      "variant_name": "BMW S 1000 RR",
-      "price": "₹23,24,936 - ₹28,89,862",
-      "engine_displacement": "999 cc",
-      "mileage": "16 kmpl",
-      "top_speed": "303 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "113.1 Nm",
-      "source_section": "Available",
-      "description": "The BMW S 1000 RR is a flagship superbike with a 999cc inline-four engine producing 206.51 bhp, combining track-level performance with advanced rider assistance electronics. It features multiple riding modes, dynamic traction control, and is available in M Package and M Competition Package variants with upgraded components.",
-      "features": [
-        "999cc inline-four engine, 206.51 bhp",
-        "Riding modes (Rain, Road, Dynamic, Race, Race Pro)",
-        "Dynamic traction control (DTC)",
-        "Cornering ABS Pro",
-        "Launch control",
-        "Quickshifter Pro",
-        "TFT display with GPS/navigation",
-        "M Package with Akrapovic exhaust (higher trims)"
-      ],
-      "variants": [
-        {
-          "name": "S 1000 RR Standard",
-          "price": "₹23,24,936"
+          "name": "Pro",
+          "price": "N/A"
         },
         {
-          "name": "S 1000 RR M Package",
-          "price": "₹25,99,000"
-        },
-        {
-          "name": "S 1000 RR M Competition Package",
-          "price": "₹28,89,862"
+          "name": "M Sport",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Sport",
-        "Blackstorm Metallic",
-        "Light White / M Motorsport"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Inline-four",
-        "power": "206.51 bhp",
-        "torque": "113 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "16.5 litres",
-        "seat_height": "832 mm",
-        "kerb_weight": "197 kg",
-        "brakes_front": "Dual Disc (320mm)",
-        "brakes_rear": "Disc (220mm)",
-        "abs": "Dual-channel ABS",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "Ride modes (Rain, Road, Dynamic, Race), Digital cluster with GPS/navigation, Mobile connectivity"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "BMW Motorrad",
-      "model": "S 1000 XR",
-      "variant_name": "BMW S 1000 XR",
-      "price": "₹24,53,000",
-      "engine_displacement": "999 cc",
-      "mileage": "16 kmpl",
-      "top_speed": "250 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The BMW S 1000 XR is a sport-touring adventure bike combining the high-revving 999cc inline-four engine with a comfortable, upright riding position and longer travel suspension for all-day touring. It bridges the gap between the S 1000 RR superbike and a versatile adventure tourer.",
-      "features": [
-        "999cc inline-four engine, 165 bhp",
-        "Multiple riding modes",
-        "Cornering ABS",
-        "Dynamic traction control",
-        "TFT display",
-        "Keyless ignition",
-        "20-litre fuel tank for long range",
-        "Quickshifter Pro"
-      ],
-      "variants": [
-        {
-          "name": "S 1000 XR Standard",
-          "price": "₹24,53,000"
-        }
-      ],
-      "colors": [
-        "Light White / M Motorsport",
-        "Gravity Blue Metallic",
-        "Blackstorm Metallic 2"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Inline-four",
-        "power": "165 bhp",
-        "torque": "114 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "20 litres",
-        "seat_height": "840 mm",
-        "kerb_weight": "220 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      },
-      "max_torque": "113 Nm"
-    },
-    {
-      "make": "BMW Motorrad",
+      "make": "BMW",
       "model": "M 1000 R",
-      "variant_name": "BMW M 1000 R",
-      "price": "₹33,50,000",
-      "engine_displacement": "999 cc",
-      "mileage": "15 kmpl",
-      "top_speed": "280 kmph",
+      "variant_name": "M 1000 R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "113 Nm",
-      "source_section": "Available",
-      "description": "The BMW M 1000 R is the ultimate naked streetfighter from BMW Motorrad's M division, featuring the race-derived 999cc inline-four producing 206.5 bhp with a full carbon aerodynamic package. It comes equipped with fully adjustable Showa suspension, revised traction control, and launch control for ultimate performance.",
-      "features": [
-        "999cc inline-four engine, 206.5 bhp",
-        "Carbon aerodynamic winglets",
-        "Fully adjustable Showa suspension",
-        "Revised traction control and launch control",
-        "Cornering ABS Pro",
-        "Multiple riding modes including Race Pro",
-        "Quickshifter Pro",
-        "M Endurance chain"
-      ],
+      "source_section": "Discontinued",
+      "description": "The BMW M 1000 R is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "M 1000 R Standard",
-          "price": "₹33,50,000"
+          "name": "Standard",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Blackstorm Metallic",
-        "White Aluminium Metallic Matt",
-        "Light White"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Inline-four",
-        "power": "210 bhp",
-        "torque": "113 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "16.5 litres",
-        "seat_height": "830 mm",
-        "kerb_weight": "199 kg",
-        "brakes_front": "Brembo Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "BMW Motorrad",
-      "model": "R18",
-      "variant_name": "BMW R18",
-      "price": "₹34,72,855",
-      "engine_displacement": "1802 cc",
-      "mileage": "17 kmpl",
-      "top_speed": "180 kmph",
+      "make": "BMW",
+      "model": "R 1300 GS",
+      "variant_name": "R 1300 GS",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "158 Nm",
-      "source_section": "Available",
-      "description": "The BMW R18 is a premium big cruiser powered by the world's largest boxer engine at 1802cc, delivering a massive 158 Nm of torque for effortless cruising. It combines neo-retro styling with modern comfort and technology, featuring a classic chrome-laden design inspired by BMW's 1930s machines.",
-      "features": [
-        "1802cc boxer-twin, world's largest",
-        "Massive 158 Nm torque",
-        "Ride modes (Rock, Roll, Rain, Classic)",
-        "Dual-channel ABS",
-        "24-litre fuel tank",
-        "Chrome detailing and premium finish",
-        "6-speed manual transmission",
-        "Reverse gear"
-      ],
+      "source_section": "Discontinued",
+      "description": "The BMW R 1300 GS is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "R18 Standard",
-          "price": "₹34,72,855"
-        }
-      ],
-      "colors": [
-        "Manhattan Metallic Matt",
-        "Galaxy Dust Metallic / Titan Silver 2 Metallic",
-        "Black Storm Metallic",
-        "Gravity Blue Metallic",
-        "Mineral White Metallic"
-      ],
-      "technical_specifications": {
-        "engine_type": "Air/Oil-cooled, Boxer-twin",
-        "power": "89.84 bhp",
-        "torque": "158 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "24 litres",
-        "seat_height": "740 mm",
-        "kerb_weight": "427 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "BMW Motorrad",
-      "model": "K 1600",
-      "variant_name": "BMW K 1600",
-      "price": "₹37,49,261 - ₹37,49,755",
-      "engine_displacement": "1649 cc",
-      "mileage": "15 kmpl",
-      "top_speed": "200 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The BMW K 1600 GT is a flagship long-distance touring motorcycle powered by a smooth 1649cc inline-six engine delivering 160 bhp and 180 Nm, with class-leading refinement and comfort. The K 1600 GT and GTL variants offer comprehensive touring features including integrated luggage, full infotainment, and advanced electronic suspension.",
-      "features": [
-        "1649cc inline-six engine, 160 bhp",
-        "Dynamic ESA semi-active suspension",
-        "Full infotainment with navigation and Bluetooth",
-        "Integral ABS Pro with cornering function",
-        "Multiple riding modes",
-        "Electrically adjustable windscreen",
-        "Hill start control",
-        "Heated grips and seat"
-      ],
-      "variants": [
-        {
-          "name": "K 1600 GT",
-          "price": "₹37,49,261"
+          "name": "Pro",
+          "price": "N/A"
         },
         {
-          "name": "K 1600 GTL",
-          "price": "₹37,49,755"
+          "name": "Option 719",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Blackstorm Metallic",
-        "Style Exclusive",
-        "Blackstorm Metallic (GTL)",
-        "Style Exclusive (GTL)"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Inline-six",
-        "power": "160 bhp",
-        "torque": "180 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "26.5 litres",
-        "seat_height": "810 mm",
-        "kerb_weight": "348 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      },
-      "max_torque": "175 Nm"
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "BMW Motorrad",
-      "model": "M 1000 XR",
-      "variant_name": "BMW M 1000 XR",
-      "price": "₹48,63,000",
-      "engine_displacement": "999 cc",
-      "mileage": "15 kmpl",
-      "top_speed": "278 kmph",
+      "make": "BMW",
+      "model": "CE 02",
+      "variant_name": "CE 02",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "95 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The BMW M 1000 XR is the most powerful sport-tourer from BMW Motorrad's M division, packing the race-derived 201 bhp inline-four into a comfortable adventure touring package. It features a full M aerodynamic package with winglets, M-spec Brembo brakes, and the most advanced electronics suite available on any BMW.",
-      "features": [
-        "999cc inline-four engine, 201 bhp",
-        "M aerodynamic package with winglets",
-        "M-spec Brembo brakes",
-        "Fully adjustable suspension",
-        "Multiple riding modes including Race Pro",
-        "Cornering ABS Pro",
-        "Shift assistant Pro",
-        "M Endurance chain"
-      ],
+      "source_section": "Discontinued",
+      "description": "The BMW CE 02 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "M 1000 XR Standard",
-          "price": "₹48,63,000"
+          "name": "Standard",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Light Blue, Dark Blue and Red"
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "C 400 GT",
+      "variant_name": "C 400 GT",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The BMW C 400 GT is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Inline-four",
-        "power": "201 bhp",
-        "torque": "113 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "20 litres",
-        "seat_height": "850 mm",
-        "kerb_weight": "223 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      },
-      "max_torque": "113 Nm"
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R 1300 GS Adventure",
+      "variant_name": "R 1300 GS Adventure",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The BMW R 1300 GS Adventure is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Style Triple Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Style GS Trophy",
+          "price": "N/A"
+        },
+        {
+          "name": "Style Option 719",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "S 1000 R",
+      "variant_name": "S 1000 R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The BMW S 1000 R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "F 900 GS Adventure",
+      "variant_name": "F 900 GS Adventure",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The BMW F 900 GS Adventure is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Ride Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "M 1000 XR",
+      "variant_name": "M 1000 XR",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The BMW M 1000 XR is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Competiton",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "F 900 GS",
+      "variant_name": "F 900 GS",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The BMW F 900 GS is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R 12 nine T",
+      "variant_name": "R 12 nine T",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The BMW R 12 nine T is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "K 1600",
+      "variant_name": "K 1600",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The BMW K 1600 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Bagger",
+          "price": "N/A"
+        },
+        {
+          "name": "GTL",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "CE 04",
+      "variant_name": "CE 04",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "120 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The BMW CE 04 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R 12",
+      "variant_name": "R 12",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The BMW R 12 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "S 1000 XR",
+      "variant_name": "S 1000 XR",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The BMW S 1000 XR is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R18",
+      "variant_name": "R18",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The BMW R18 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Transcontinental",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R 1250 RT",
+      "variant_name": "R 1250 RT",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The BMW R 1250 RT is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "F 450 GS",
+      "variant_name": "F 450 GS",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW F 450 GS is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R nineT Racer",
+      "variant_name": "R nineT Racer",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R nineT Racer is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R 1300 R",
+      "variant_name": "R 1300 R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R 1300 R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "M 1000 RR",
+      "variant_name": "M 1000 RR",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW M 1000 RR is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Competition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "G 310 GS",
+      "variant_name": "G 310 GS",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW G 310 GS is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard [2022-2023]",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R 1250 GS",
+      "variant_name": "R 1250 GS",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R 1250 GS is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "G 310 R",
+      "variant_name": "G 310 R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW G 310 R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard [2022-2023]",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R 1250 GS Adventure",
+      "variant_name": "R 1250 GS Adventure",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R 1250 GS Adventure is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "S 1000 R [2024]",
+      "variant_name": "S 1000 R [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW S 1000 R [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro M Sport",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "F850 GS",
+      "variant_name": "F850 GS",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW F850 GS is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard - Pro",
+          "price": "N/A"
+        },
+        {
+          "name": "Adventure - Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "M 1000 R [2023-2025]",
+      "variant_name": "M 1000 R [2023-2025]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW M 1000 R [2023-2025] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Competition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "F900XR",
+      "variant_name": "F900XR",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW F900XR is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R nineT",
+      "variant_name": "R nineT",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R nineT is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "100 Years Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R Nine T Scrambler",
+      "variant_name": "R Nine T Scrambler",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R Nine T Scrambler is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "Old Generation C 400 GT 2021 [2021-2025]",
+      "variant_name": "Old Generation C 400 GT 2021 [2021-2025]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW Old Generation C 400 GT 2021 [2021-2025] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "S 1000 RR [2022-2024]",
+      "variant_name": "S 1000 RR [2022-2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW S 1000 RR [2022-2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro M Sport",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "S1000 RR [2021]",
+      "variant_name": "S1000 RR [2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW S1000 RR [2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro M Sport",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "G 310 GS [2021]",
+      "variant_name": "G 310 GS [2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW G 310 GS [2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "G 310 R [2021]",
+      "variant_name": "G 310 R [2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW G 310 R [2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R 1250 RT [2018-2019]",
+      "variant_name": "R 1250 RT [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R 1250 RT [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "S 1000 XR [2021-2023]",
+      "variant_name": "S 1000 XR [2021-2023]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW S 1000 XR [2021-2023] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "F900XR [2021]",
+      "variant_name": "F900XR [2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW F900XR [2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "F900R",
+      "variant_name": "F900R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW F900R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "F 850 GS Adventure [2018-2019]",
+      "variant_name": "F 850 GS Adventure [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW F 850 GS Adventure [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "S1000 RR [2018-2019]",
+      "variant_name": "S1000 RR [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW S1000 RR [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro M Sport",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R 1250 R [2018-2019]",
+      "variant_name": "R 1250 R [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R 1250 R [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R 1250 GS Adventure [2019]",
+      "variant_name": "R 1250 GS Adventure [2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R 1250 GS Adventure [2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R1200 GS",
+      "variant_name": "R1200 GS",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R1200 GS is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Dynamic",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "S1000 RR [2017-2018]",
+      "variant_name": "S1000 RR [2017-2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW S1000 RR [2017-2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "HP2",
+          "price": "N/A"
+        },
+        {
+          "name": "HP4",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R1200 R",
+      "variant_name": "R1200 R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R1200 R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Exclusive",
+          "price": "N/A"
+        },
+        {
+          "name": "Style",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R1300",
+      "variant_name": "R1300",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R1300 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "R",
+          "price": "N/A"
+        },
+        {
+          "name": "S",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "K1600 GT",
+      "variant_name": "K1600 GT",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW K1600 GT is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "K1300 S",
+      "variant_name": "K1300 S",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW K1300 S is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "S 1000 R [2018-2019]",
+      "variant_name": "S 1000 R [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW S 1000 R [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Sport",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R nineT [2018-2019]",
+      "variant_name": "R nineT [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R nineT [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "G 310 R [2018-2019]",
+      "variant_name": "G 310 R [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW G 310 R [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "G310GS [2018-2019]",
+      "variant_name": "G310GS [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW G310GS [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "K1600 GTL [2018-2019]",
+      "variant_name": "K1600 GTL [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW K1600 GTL [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R1200 RT",
+      "variant_name": "R1200 RT",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R1200 RT is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "F650",
+      "variant_name": "F650",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW F650 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "GS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R1200 GS Adventure",
+      "variant_name": "R1200 GS Adventure",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R1200 GS Adventure is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Dynamic",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "K1300 R",
+      "variant_name": "K1300 R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW K1300 R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R Nine T Scrambler [2019]",
+      "variant_name": "R Nine T Scrambler [2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R Nine T Scrambler [2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R 1200 RS",
+      "variant_name": "R 1200 RS",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R 1200 RS is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Dynamic",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "S 1000 XR [2018-2019]",
+      "variant_name": "S 1000 XR [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW S 1000 XR [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "K 1600 B [2018-2019]",
+      "variant_name": "K 1600 B [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW K 1600 B [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R nineT Racer [2018-2019]",
+      "variant_name": "R nineT Racer [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R nineT Racer [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "F750 GS [2018-2019]",
+      "variant_name": "F750 GS [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW F750 GS [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro Low Suspension",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "F850 GS [2018-2019]",
+      "variant_name": "F850 GS [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW F850 GS [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro Low Suspension",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BMW",
+      "model": "R 1250 GS [2018-2019]",
+      "variant_name": "R 1250 GS [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BMW R 1250 GS [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

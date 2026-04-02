@@ -2,885 +2,1166 @@
   "brand": "KTM",
   "brandId": "ktm-india",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "KTM",
-      "model": "RC 125",
-      "variant_name": "RC 125 Standard",
-      "price": "₹1,88,074",
-      "engine_displacement": "125 cc",
-      "mileage": "38 kmpl",
-      "max_power": "14.34 bhp",
-      "max_torque": "12 Nm",
+      "model": "250 Duke",
+      "variant_name": "250 Duke",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The KTM RC 125 is a discontinued sports bike powered by a 124.7cc BS6 liquid-cooled engine. It delivered 14.34 bhp and achieved an owner-reported mileage of 38 kmpl, with a top speed of 120 kmph.",
-      "features": [
-        "Switchable ABS braking system",
-        "Front and rear disc brakes (320mm front, 230mm rear)",
-        "Digital instrument cluster with speedometer, odometer, fuel gauge, and tachometer",
-        "WP APEX suspension (43mm USD front forks, rear monoshock)",
-        "6-speed manual transmission with chain drive",
-        "Alloy 17-inch wheels with tubeless tyres",
-        "Self-start ignition with kill switch",
-        "Stand alarm and gear shift light indicators"
-      ],
-      "colors": [
-        "Black",
-        "Blue"
-      ],
+      "description": "The KTM 250 Duke is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "RC 125 Standard [2022]", "price": "₹1,88,074" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_displacement_cc": 124.7,
-        "max_power_bhp": 14.34,
-        "max_torque_nm": 12,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 160,
-        "fuel_tank_litres": 13.7,
-        "top_speed_kmph": 100,
-        "mileage_kmpl": 38,
-        "emission_standard": "BS6",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Single-channel ABS",
-        "seat_height_mm": 824,
-        "features": [
-          "Full fairing",
-          "Alloy wheels",
-          "LED headlamp"
-        ]
-      }
-    },
-    {
-      "make": "KTM",
-      "model": "RC 160",
-      "variant_name": "RC 160 Standard",
-      "price": "₹1,84,998",
-      "engine_displacement": "164 cc",
-      "mileage": "36 kmpl",
-      "max_power": "18.73 bhp",
-      "max_torque": "15.5 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The KTM RC 160 is a sports bike featuring a 164.2cc BS6 Phase 2B engine that delivers 18.73 bhp and 15.5 Nm torque. It weighs 155 kg with a 13.7-liter fuel tank capacity and achieves a top speed of 118 kmph.",
-      "features": [
-        "Single-channel ABS braking system",
-        "Front and rear disc brakes",
-        "6-speed manual transmission",
-        "LCD instrument cluster with Bluetooth connectivity",
-        "Full fairing aerodynamic bodywork",
-        "Alloy 17-inch wheels with tubeless tyres",
-        "Self-start ignition",
-        "WP APEX suspension"
-      ],
-      "colors": [
-        "Ceramic White Matte",
-        "Electronic Orange Matte",
-        "Black"
-      ],
-      "variants": [
-        { "name": "RC 160 Standard", "price": "₹1,84,998" }
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 164.2,
-        "max_power_bhp": 18.73,
-        "max_torque_nm": 15.5,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 155,
-        "fuel_tank_litres": 13.7,
-        "top_speed_kmph": 118,
-        "mileage_kmpl": 36,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Single-channel ABS",
-        "features": [
-          "Bluetooth connectivity LCD",
-          "Full fairing",
-          "Alloy wheels"
-        ]
-      }
-    },
-    {
-      "make": "KTM",
-      "model": "125 Duke",
-      "variant_name": "125 Duke Standard",
-      "price": "₹1,77,253",
-      "engine_displacement": "125 cc",
-      "mileage": "40 kmpl",
-      "max_power": "14.3 bhp",
-      "max_torque": "12 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The KTM 125 Duke is a street bike featuring a 124.9cc BS6 Phase 2 compliant engine, representing the most powerful option in its segment with modern styling and contemporary features.",
-      "features": [
-        "Single-channel ABS braking system",
-        "Front and rear disc brakes",
-        "6-speed manual transmission",
-        "LCD instrument cluster",
-        "LED headlamp",
-        "Alloy wheels",
-        "Self-start ignition",
-        "Trellis frame with WP suspension"
-      ],
-      "colors": [
-        "Ceramic White",
-        "Electronic Orange",
-        "Atlantic Blue",
-        "Electronic Orange Metallic"
-      ],
-      "variants": [
-        { "name": "125 Duke Standard", "price": "₹1,77,253" }
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 124.7,
-        "max_power_bhp": 14.3,
-        "max_torque_nm": 12,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 150,
-        "fuel_tank_litres": 10.2,
-        "top_speed_kmph": 110,
-        "mileage_kmpl": 40,
-        "emission_standard": "BS6",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Single-channel ABS",
-        "seat_height_mm": 820,
-        "features": [
-          "LED headlamp",
-          "LCD instrument cluster",
-          "Alloy wheels"
-        ]
-      }
-    },
-    {
-      "make": "KTM",
-      "model": "160 Duke",
-      "variant_name": "160 Duke LCD Cluster",
-      "price": "₹1,70,875",
-      "engine_displacement": "164 cc",
-      "mileage": "36 kmpl",
-      "max_power": "18.73 bhp",
-      "max_torque": "15.5 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The KTM 160 Duke is a lightweight street bike powered by a 164.2cc BS6 Phase 2B liquid-cooled engine producing 18.73 bhp. It offers sharp naked-bike styling and is available with either LCD or TFT instrument cluster options.",
-      "features": [
-        "Single-channel ABS braking system",
-        "Front and rear disc brakes",
-        "6-speed manual transmission",
-        "LCD or TFT instrument cluster options",
-        "LED headlamp",
-        "Alloy wheels",
-        "WP upside-down front forks",
-        "Self-start ignition"
-      ],
-      "colors": [
-        "Silver Metallic Matt",
-        "Atlantic Blue",
-        "Electronic Orange"
-      ],
-      "variants": [
-        { "name": "160 Duke LCD Cluster", "price": "₹1,70,875" },
-        { "name": "160 Duke TFT Cluster", "price": "₹1,78,756" }
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 164.2,
-        "max_power_bhp": 18.73,
-        "max_torque_nm": 15.5,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 147,
-        "fuel_tank_litres": 10.1,
-        "top_speed_kmph": 120,
-        "mileage_kmpl": 36,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Single-channel ABS",
-        "seat_height_mm": 815,
-        "features": [
-          "LCD / TFT instrument cluster",
-          "LED headlamp",
-          "Alloy wheels"
-        ]
-      }
-    },
-    {
-      "make": "KTM",
-      "model": "RC 200",
-      "variant_name": "RC 200 Standard",
-      "price": "₹2,16,777",
-      "engine_displacement": "200 cc",
-      "mileage": "43.5 kmpl",
-      "max_power": "24.6 bhp",
-      "max_torque": "19.2 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The KTM RC 200 is a sports bike with a 199.5 cc BS6 Phase 2B engine, delivering 24.6 bhp and achieving 43.5 kmpl mileage. It features both front and rear disc brakes with ABS and a full-fairing race-inspired design.",
-      "features": [
-        "Single-channel ABS braking system",
-        "Front and rear disc brakes",
-        "6-speed manual transmission",
-        "Full-fairing aerodynamic bodywork",
-        "Alloy 17-inch wheels with tubeless tyres",
-        "Self-start ignition",
-        "WP APEX USD front forks",
-        "LED headlamp"
-      ],
-      "colors": [
-        "GP Edition",
-        "Metallic Grey",
-        "Black",
-        "Blue"
-      ],
-      "variants": [
-        { "name": "RC 200 Standard", "price": "₹2,16,777" },
-        { "name": "RC 200 GP Edition", "price": "₹2,16,777" }
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 199.5,
-        "max_power_bhp": 24.6,
-        "max_torque_nm": 19.2,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 160,
-        "fuel_tank_litres": 13.7,
-        "top_speed_kmph": 140,
-        "mileage_kmpl": 43.5,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Single-channel ABS",
-        "seat_height_mm": 835,
-        "features": [
-          "Full fairing",
-          "LED headlamp",
-          "Alloy wheels"
-        ]
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "KTM",
       "model": "200 Duke",
-      "variant_name": "200 Duke Standard",
-      "price": "₹1,91,570",
-      "engine_displacement": "200 cc",
-      "mileage": "35 kmpl",
-      "max_power": "24.67 bhp",
-      "max_torque": "19.3 Nm",
+      "variant_name": "200 Duke",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The KTM 200 Duke is a lightweight street bike with aggressive styling and sporty performance, powered by a 199.5cc liquid-cooled engine producing 24.67 bhp and 19.3 Nm torque.",
-      "features": [
-        "Dual-channel ABS braking system",
-        "Front and rear disc brakes",
-        "WP upside-down front forks and monoshock rear suspension",
-        "LED headlamp with TFT display",
-        "6-speed manual transmission",
-        "Split trellis frame design",
-        "Alloy wheels",
-        "13.4-liter fuel tank capacity"
-      ],
-      "colors": [
-        "Dark Galvano",
-        "Metallic Silver",
-        "Electronic Orange",
-        "Atlantic Blue"
-      ],
+      "source_section": "Discontinued",
+      "description": "The KTM 200 Duke is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "200 Duke Standard", "price": "₹1,91,570" },
-        { "name": "200 Duke Standard [2026]", "price": "₹1,94,003" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard [2026]",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_displacement_cc": 199.5,
-        "max_power_bhp": 24.67,
-        "max_torque_nm": 19.3,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 159,
-        "fuel_tank_litres": 13.4,
-        "top_speed_kmph": 140,
-        "mileage_kmpl": 35,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Single-channel ABS",
-        "seat_height_mm": 822,
-        "features": [
-          "LED headlamp",
-          "TFT display",
-          "Upside-down front forks",
-          "Monoshock rear suspension"
-        ]
-      }
-    },
-    {
-      "make": "KTM",
-      "model": "250 Duke",
-      "variant_name": "250 Duke Standard",
-      "price": "₹2,13,970",
-      "engine_displacement": "249 cc",
-      "mileage": "31 kmpl",
-      "max_power": "30.57 bhp",
-      "max_torque": "25 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The KTM 250 Duke is a street bike powered by a 249cc BS6 Phase 2B liquid-cooled engine delivering 30.57 bhp, with a 6-speed assist and slipper clutch gearbox and WP APEX adjustable suspension.",
-      "features": [
-        "Dual-channel ABS braking system",
-        "Front and rear disc brakes (320mm front, 230mm rear)",
-        "WP APEX USD 43mm front forks with 10-step adjustable monoshock",
-        "TFT instrument cluster",
-        "6-speed manual transmission with assist and slipper clutch",
-        "Split trellis tubular steel frame",
-        "Alloy 17-inch wheels with tubeless tyres",
-        "Bi-directional quickshifter"
-      ],
-      "colors": [
-        "Metallic Silver",
-        "Atlantic Blue",
-        "Ebony Black",
-        "Electronic Orange"
-      ],
-      "variants": [
-        { "name": "250 Duke Standard", "price": "₹2,13,970" }
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 249,
-        "max_power_bhp": 30.57,
-        "max_torque_nm": 25,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 162.8,
-        "fuel_tank_litres": 15,
-        "top_speed_kmph": 148,
-        "mileage_kmpl": 31,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "seat_height_mm": 800,
-        "features": [
-          "LED headlamp",
-          "TFT display",
-          "Bi-directional quickshifter"
-        ]
-      }
-    },
-    {
-      "make": "KTM",
-      "model": "250 Adventure",
-      "variant_name": "250 Adventure Standard",
-      "price": "₹2,42,135",
-      "engine_displacement": "249 cc",
-      "mileage": "32 kmpl",
-      "max_power": "30.5 bhp",
-      "max_torque": "25 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The KTM 250 Adventure is an entry-level adventure touring motorcycle powered by a 248.76cc BS6 Phase 2 engine, offering a blend of performance and off-road capability with a lightweight trellis frame design.",
-      "features": [
-        "Dual-channel ABS on both front and rear disc brakes",
-        "5-inch color TFT display with Bluetooth connectivity",
-        "Bi-directional quickshifter for smooth gear changes",
-        "WP Apex suspension for off-road and highway performance",
-        "Rally-inspired bodywork with LED lighting",
-        "6-speed manual transmission",
-        "Ride-by-wire engine management",
-        "Off-road capable with long-travel suspension"
-      ],
-      "colors": [
-        "Ceramic White",
-        "Electronic Orange"
-      ],
-      "variants": [
-        { "name": "250 Adventure Standard", "price": "₹2,42,135" }
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 249,
-        "max_power_bhp": 30.5,
-        "max_torque_nm": 25,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection (Ride-by-wire)",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 177,
-        "fuel_tank_litres": 14.5,
-        "top_speed_kmph": 140,
-        "mileage_kmpl": 32,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS (Off-road mode)",
-        "seat_height_mm": 825,
-        "features": [
-          "5-inch TFT display with Bluetooth",
-          "Bi-directional quickshifter",
-          "WP Apex suspension",
-          "Rally-inspired bodywork"
-        ]
-      }
-    },
-    {
-      "make": "KTM",
-      "model": "RC 390",
-      "variant_name": "RC 390 Standard",
-      "price": "₹3,23,497",
-      "engine_displacement": "373 cc",
-      "mileage": "29 kmpl",
-      "max_power": "42.9 bhp",
-      "max_torque": "37 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The KTM RC 390 is a lightweight sports bike powered by a 373cc liquid-cooled engine delivering 42.9 bhp, combining sharp race-inspired styling with advanced technology and responsive handling suitable for both track and street riding.",
-      "features": [
-        "Dual-channel ABS with 320mm front and 230mm rear disc brakes",
-        "WP Apex adjustable USD front forks and rear monoshock suspension",
-        "Full LED lighting with full-colour TFT display",
-        "Slipper clutch and quickshifter technology",
-        "Smartphone connectivity via KTM My Ride app",
-        "Ride-by-wire with multiple riding modes",
-        "Metzeler high-performance tyres",
-        "Lightweight trellis frame at 172 kg"
-      ],
-      "colors": [
-        "GP Edition",
-        "Orange",
-        "Blue"
-      ],
-      "variants": [
-        { "name": "RC 390 GP Edition", "price": "₹3,23,068" },
-        { "name": "RC 390 Standard", "price": "₹3,23,497" }
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 373,
-        "max_power_bhp": 42.9,
-        "max_torque_nm": 37,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Electronic Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 172,
-        "fuel_tank_litres": 13.7,
-        "top_speed_kmph": 160,
-        "mileage_kmpl": 29,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "seat_height_mm": 835,
-        "features": [
-          "TFT display",
-          "All-LED lighting",
-          "Slipper clutch",
-          "Quickshifter",
-          "Ride-by-wire",
-          "Traction control",
-          "WP suspension"
-        ]
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "KTM",
       "model": "390 Duke",
-      "variant_name": "390 Duke Standard",
-      "price": "₹2,99,896",
-      "engine_displacement": "399 cc",
-      "mileage": "28.4 kmpl",
-      "max_power": "45.3 bhp",
-      "max_torque": "39 Nm",
+      "variant_name": "390 Duke",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The KTM 390 Duke is a street bike featuring a 398.63cc liquid-cooled engine delivering 45.3 bhp and 39 Nm torque, designed for riders seeking sharp performance and aggressive styling.",
-      "features": [
-        "Ride-by-wire system with multiple riding modes (Street, Rain, Track)",
-        "Cornering ABS and traction control for advanced safety",
-        "Full-colour TFT display with Bluetooth connectivity",
-        "WP USD front forks and rear monoshock suspension",
-        "Front and rear disc brakes with dual-channel ABS",
-        "6-speed manual transmission",
-        "Alloy wheels with 820mm seat height",
-        "Quickshifter+ for seamless gear changes"
-      ],
-      "colors": [
-        "Grey",
-        "Atlantic Blue",
-        "Electronic Orange"
-      ],
+      "source_section": "Discontinued",
+      "description": "The KTM 390 Duke is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "390 Duke Standard", "price": "₹2,99,896" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_displacement_cc": 399,
-        "max_power_bhp": 45.3,
-        "max_torque_nm": 39,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection (Ride-by-wire)",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 168.3,
-        "fuel_tank_litres": 15,
-        "top_speed_kmph": 167,
-        "mileage_kmpl": 28.4,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Cornering ABS",
-        "seat_height_mm": 820,
-        "features": [
-          "Full-colour TFT display with Bluetooth",
-          "Multiple riding modes (Street, Rain, Track)",
-          "Cornering ABS",
-          "Traction control",
-          "LED headlamp",
-          "Quickshifter+"
-        ]
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "160 Duke",
+      "variant_name": "160 Duke",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The KTM 160 Duke is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "LCD Cluster",
+          "price": "N/A"
+        },
+        {
+          "name": "TFT Cluster",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "250 Adventure",
+      "variant_name": "250 Adventure",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The KTM 250 Adventure is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "RC 160",
+      "variant_name": "RC 160",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The KTM RC 160 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "KTM",
       "model": "390 Adventure",
-      "variant_name": "390 Adventure Standard",
-      "price": "₹3,97,316",
-      "engine_displacement": "399 cc",
-      "mileage": "27 kmpl",
-      "max_power": "45.3 bhp",
-      "max_torque": "39 Nm",
+      "variant_name": "390 Adventure",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The KTM 390 Adventure is an adventure motorcycle powered by a 398.63 cc BS6 Phase 2 engine delivering 45.3 bhp and 39 Nm torque, weighing 182 kg with a 14.5-liter fuel tank capacity.",
-      "features": [
-        "Cornering ABS with off-road mode",
-        "Front and rear disc brakes",
-        "5-inch TFT display with Bluetooth connectivity",
-        "Adjustable front and rear WP suspension (230mm travel)",
-        "Riding modes: Street, Rain, and Off-road",
-        "Quickshifter+ for seamless gear changes",
-        "Cruise control functionality",
-        "Spoke wheels with tubeless tyres"
-      ],
-      "colors": [
-        "Ceramic White",
-        "Electronic Orange"
-      ],
+      "source_section": "Discontinued",
+      "description": "The KTM 390 Adventure is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "390 Adventure Standard", "price": "₹3,97,316" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_displacement_cc": 399,
-        "max_power_bhp": 45.3,
-        "max_torque_nm": 39,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 182,
-        "fuel_tank_litres": 14.5,
-        "top_speed_kmph": 165,
-        "mileage_kmpl": 27,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Cornering ABS",
-        "seat_height_mm": 830,
-        "features": [
-          "5-inch TFT display",
-          "Riding modes (Street, Rain, Off-road)",
-          "Cruise control",
-          "Quickshifter+",
-          "Adjustable front and rear suspension",
-          "Traction control"
-        ]
-      }
-    },
-    {
-      "make": "KTM",
-      "model": "390 Adventure R",
-      "variant_name": "390 Adventure R Standard",
-      "price": "₹3,78,524",
-      "engine_displacement": "399 cc",
-      "mileage": "27 kmpl",
-      "max_power": "44.2 bhp",
-      "max_torque": "39 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The KTM 390 Adventure R is an adventure motorcycle featuring a 398.7cc BS6 Phase 2B engine that produces 44.2 bhp and 39 Nm of torque, combining off-road capability with road comfort in an entry-level adventure machine.",
-      "features": [
-        "Off-road ABS with rear ABS disable option",
-        "Front and rear disc brakes",
-        "6-speed manual transmission",
-        "Spoke-type wheels for off-road performance",
-        "Preload-adjustable WP front suspension",
-        "TFT display with electronics suite",
-        "14-liter fuel tank capacity",
-        "High ground clearance with 880mm seat height"
-      ],
-      "colors": [
-        "Orange"
-      ],
-      "variants": [
-        { "name": "390 Adventure R Standard", "price": "₹3,78,524" }
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 399,
-        "max_power_bhp": 44.2,
-        "max_torque_nm": 39,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 183,
-        "fuel_tank_litres": 14,
-        "top_speed_kmph": 160,
-        "mileage_kmpl": 27,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Off-road ABS",
-        "seat_height_mm": 880,
-        "features": [
-          "Spoke wheels",
-          "Rally-oriented suspension",
-          "TFT display"
-        ]
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "KTM",
       "model": "390 Adventure X",
-      "variant_name": "390 Adventure X Standard",
-      "price": "₹3,28,615",
-      "engine_displacement": "399 cc",
-      "mileage": "29 kmpl",
-      "max_power": "45.3 bhp",
-      "max_torque": "39 Nm",
+      "variant_name": "390 Adventure X",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The KTM 390 Adventure X is a street-focused adventure bike powered by a 398.63cc BS6 Phase 2B engine delivering 45.3 bhp and 39 Nm of torque, offering strong performance for touring and highway riding.",
-      "features": [
-        "Dual-channel ABS with off-road mode",
-        "Front and rear disc brakes",
-        "6-speed manual transmission",
-        "TFT display with connectivity",
-        "Alloy wheels",
-        "14.5-liter fuel tank capacity",
-        "825mm seat height",
-        "Cruise control"
-      ],
-      "colors": [
-        "Ceramic White",
-        "Electronic Orange"
-      ],
+      "source_section": "Discontinued",
+      "description": "The KTM 390 Adventure X is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "390 Adventure X Standard", "price": "₹3,28,615" }
+        {
+          "name": "Cruise Control",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_displacement_cc": 399,
-        "max_power_bhp": 45.3,
-        "max_torque_nm": 39,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Electronic Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 181,
-        "fuel_tank_litres": 14.5,
-        "top_speed_kmph": 160,
-        "mileage_kmpl": 29,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS (Off-road mode)",
-        "seat_height_mm": 825,
-        "features": [
-          "Cruise control",
-          "Alloy wheels",
-          "TFT display"
-        ]
-      }
-    },
-    {
-      "make": "KTM",
-      "model": "390 Enduro R",
-      "variant_name": "390 Enduro R Standard",
-      "price": "₹3,42,191",
-      "engine_displacement": "399 cc",
-      "mileage": "27 kmpl",
-      "max_power": "45.37 bhp",
-      "max_torque": "39 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The KTM 390 Enduro R is a street bike designed for both road and off-road riding, powered by a 398.63cc BS6 Phase 2B engine delivering 45.37 bhp and 39 Nm torque with enduro-specific hardware.",
-      "features": [
-        "Off-road ABS with supermoto mode (rear ABS switchoff)",
-        "Front and rear disc brakes",
-        "6-speed manual transmission with quickshifter",
-        "Spoke-type wheels for off-road capability",
-        "9-liter compact fuel tank",
-        "860mm seat height for stand-up riding",
-        "Enduro-specific long-travel suspension",
-        "Lightweight at 177 kg"
-      ],
-      "colors": [
-        "Orange"
-      ],
-      "variants": [
-        { "name": "390 Enduro R Standard", "price": "₹3,42,191" },
-        { "name": "390 Enduro R Global Spec", "price": "₹3,54,938" }
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 399,
-        "max_power_bhp": 45.37,
-        "max_torque_nm": 39,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 177,
-        "fuel_tank_litres": 9,
-        "top_speed_kmph": 150,
-        "mileage_kmpl": 27,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Off-road ABS",
-        "seat_height_mm": 860,
-        "features": [
-          "Spoke wheels",
-          "Enduro-specific suspension",
-          "Compact fuel tank"
-        ]
-      }
-    },
-    {
-      "make": "KTM",
-      "model": "890 Duke R",
-      "variant_name": "890 Duke R Standard",
-      "price": "₹14,50,000",
-      "engine_displacement": "889 cc",
-      "mileage": "21 kmpl",
-      "max_power": "119 bhp",
-      "max_torque": "99 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The KTM 890 Duke R is a naked street bike powered by an 889cc BS6 Phase 2 engine delivering 119 bhp and 99 Nm torque, with an ARAI mileage rating of 21 kmpl and a top speed of 230 kmph.",
-      "features": [
-        "Cornering ABS with dual disc front brakes",
-        "TFT display with smartphone connectivity",
-        "Multiple riding modes and traction control",
-        "Quickshifter+ for bidirectional gear changes",
-        "WP Apex fully adjustable suspension",
-        "6-speed manual transmission",
-        "Alloy wheels",
-        "Lightweight 180 kg kerb weight"
-      ],
-      "colors": [
-        "Orange"
-      ],
-      "variants": [
-        { "name": "890 Duke R Standard", "price": "₹14,50,000" }
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 889,
-        "max_power_bhp": 119,
-        "max_torque_nm": 99,
-        "cooling": "Liquid-cooled",
-        "cylinders": 2,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 180,
-        "fuel_tank_litres": 14,
-        "top_speed_kmph": 230,
-        "mileage_kmpl": 21,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc (Dual)",
-        "brakes_rear": "Disc",
-        "abs": "Cornering ABS",
-        "seat_height_mm": 834,
-        "features": [
-          "TFT display",
-          "Multiple riding modes",
-          "Traction control",
-          "Quickshifter+",
-          "WP Apex suspension"
-        ]
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "KTM",
       "model": "1390 Super Duke R",
-      "variant_name": "1390 Super Duke R Standard",
-      "price": "₹22,95,800",
-      "engine_displacement": "1350 cc",
-      "mileage": "29 kmpl",
-      "max_power": "187.7 bhp",
-      "max_torque": "145 Nm",
+      "variant_name": "1390 Super Duke R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The KTM 1390 Super Duke R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "RC 200",
+      "variant_name": "RC 200",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The KTM RC 200 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "GP Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "RC 390",
+      "variant_name": "RC 390",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The KTM RC 390 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "GP Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "390 Enduro R",
+      "variant_name": "390 Enduro R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The KTM 390 Enduro R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Global Spec",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "890 Duke R",
+      "variant_name": "890 Duke R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The KTM 890 Duke R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "390 Adventure R",
+      "variant_name": "390 Adventure R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The KTM 390 Adventure R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "1290 Super Adventure S",
+      "variant_name": "1290 Super Adventure S",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The KTM 1290 Super Adventure S is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "890 Adventure R",
+      "variant_name": "890 Adventure R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The KTM 890 Adventure R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "85 SX",
+      "variant_name": "85 SX",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The KTM 85 SX is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "50 SX",
+      "variant_name": "50 SX",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The KTM 50 SX is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "450 SX-F",
+      "variant_name": "450 SX-F",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The KTM 450 SX-F is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "250 SX-F",
+      "variant_name": "250 SX-F",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The KTM 250 SX-F is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "350 EXC-F",
+      "variant_name": "350 EXC-F",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The KTM 350 EXC-F is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "65 SX",
+      "variant_name": "65 SX",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The KTM 65 SX is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "390 SMC R",
+      "variant_name": "390 SMC R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The KTM 1390 Super Duke R is a premium naked streetfighter powered by a 1350cc engine delivering 187.7 bhp, featuring advanced electronics and excellent handling characteristics for experienced riders.",
-      "features": [
-        "Cornering ABS for enhanced braking performance",
-        "Advanced electronics with multiple riding modes",
-        "Traction control and launch control",
-        "Quickshifter for seamless gear changes",
-        "TFT display with clear informative readouts",
-        "Fully adjustable front and rear suspension",
-        "Dual disc front brakes",
-        "6-speed manual transmission"
-      ],
-      "colors": [
-        "Orange"
-      ],
+      "description": "The KTM 390 SMC R is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "1390 Super Duke R Standard", "price": "₹22,95,800" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_displacement_cc": 1350,
-        "max_power_bhp": 187.7,
-        "max_torque_nm": 145,
-        "cooling": "Liquid-cooled",
-        "cylinders": 2,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 210,
-        "fuel_tank_litres": 17.5,
-        "top_speed_kmph": 250,
-        "mileage_kmpl": 29,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc (Dual)",
-        "brakes_rear": "Disc",
-        "abs": "Cornering ABS",
-        "features": [
-          "TFT display",
-          "Multiple riding modes",
-          "Cornering ABS",
-          "Traction control",
-          "Quickshifter",
-          "Adjustable front and rear suspension",
-          "Launch control"
-        ]
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "890 Duke",
+      "variant_name": "890 Duke",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM 890 Duke is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "125 Duke",
+      "variant_name": "125 Duke",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM 125 Duke is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "650 Duke",
+      "variant_name": "650 Duke",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM 650 Duke is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "Old Generation 125 Duke 2022",
+      "variant_name": "Old Generation 125 Duke 2022",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM Old Generation 125 Duke 2022 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard [2022]",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "390 Adventure X Plus",
+      "variant_name": "390 Adventure X Plus",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM 390 Adventure X Plus is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "250 Adventure [2024]",
+      "variant_name": "250 Adventure [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM 250 Adventure [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard [2022]",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Low Seat",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "390 Duke [2022-2023]",
+      "variant_name": "390 Duke [2022-2023]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM 390 Duke [2022-2023] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard [2022]",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "390 Adventure X [2024]",
+      "variant_name": "390 Adventure X [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM 390 Adventure X [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "390 Adventure [2024]",
+      "variant_name": "390 Adventure [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM 390 Adventure [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard [2022]",
+          "price": "N/A"
+        },
+        {
+          "name": "Alloy Wheel",
+          "price": "N/A"
+        },
+        {
+          "name": "Spoke Wheel",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "RC 125",
+      "variant_name": "RC 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM RC 125 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard [2022]",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "RC 125 [2020]",
+      "variant_name": "RC 125 [2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM RC 125 [2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Single Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "Old Generation 250 Duke 2022",
+      "variant_name": "Old Generation 250 Duke 2022",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM Old Generation 250 Duke 2022 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard [2022]",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "250 Adventure [2021]",
+      "variant_name": "250 Adventure [2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM 250 Adventure [2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "200 Duke [2021]",
+      "variant_name": "200 Duke [2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM 200 Duke [2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "125 Duke [2021]",
+      "variant_name": "125 Duke [2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM 125 Duke [2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI (2020)",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "790 Duke",
+      "variant_name": "790 Duke",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM 790 Duke is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "250 Duke [2021]",
+      "variant_name": "250 Duke [2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM 250 Duke [2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "RC 390 [2020]",
+      "variant_name": "RC 390 [2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM RC 390 [2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "390 Duke [2021]",
+      "variant_name": "390 Duke [2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM 390 Duke [2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "RC 200 [2020]",
+      "variant_name": "RC 200 [2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM RC 200 [2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard [2014-2016]",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "390 Adventure [2021]",
+      "variant_name": "390 Adventure [2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM 390 Adventure [2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "RC390 [2014-2016]",
+      "variant_name": "RC390 [2014-2016]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM RC390 [2014-2016] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "KTM",
+      "model": "390 Duke ABS [2013-2016]",
+      "variant_name": "390 Duke ABS [2013-2016]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The KTM 390 Duke ABS [2013-2016] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

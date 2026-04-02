@@ -2,148 +2,143 @@
   "brand": "Revolt",
   "brandId": "revolt-motors",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Revolt",
-      "model": "RV400 BRZ",
-      "variant_name": "Revolt RV400 BRZ",
-      "price": "₹1,38,999",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Revolt RV400 BRZ is a street-focused electric motorcycle offering the RV400's core performance at an accessible price point. It features a 3.24 kWh battery delivering 150 km of range, three riding modes, and Combined Braking System, though without the smartphone app connectivity of the standard RV400.",
-      "features": [
-        "Digital Instrument Cluster",
-        "3 Riding Modes (Eco, Normal, Sport)",
-        "Combined Braking System (CBS)",
-        "Regenerative Braking",
-        "Sidestand Motor Cutoff",
-        "Disc Brakes (Front & Rear)",
-        "LED Headlight & Tail Lamp",
-        "Artificial Engine Sound (MyRevolt App on Standard)",
-        "USB Charging Port",
-        "Anti-theft System"
-      ],
-      "colors": ["Lunar Green", "Pacific Blue", "Dark Silver", "Rebel Red", "Cosmic Black"],
-      "variants": [
-        { "name": "RV400 BRZ", "price": "₹1,38,999" }
-      ],
-      "specifications": {
-        "Motor Power": "4.4 kW peak",
-        "Range": "160 km",
-        "Battery Capacity": "3.24 kWh",
-        "Top Speed": "85 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "No",
-        "Bluetooth Connectivity": "No"
-      },
-      "max_torque": "85 Nm"
-    },
-    {
-      "make": "Revolt",
       "model": "RV400",
-      "variant_name": "Revolt RV400",
-      "price": "₹1,42,934 - ₹1,49,941",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Revolt RV400 is India's first AI-enabled electric motorcycle, offering a unique artificial engine sound experience via the MyRevolt app and swappable battery technology. It delivers 150 km of range with smartphone connectivity for ride data, geo-fencing, OTA updates, and remote features.",
-      "features": [
-        "MyRevolt App Connectivity",
-        "Artificial Engine Sound (AI-enabled)",
-        "OTA Software Updates",
-        "Geo-fencing & Find My Vehicle",
-        "3 Riding Modes (Eco, Normal, Sport)",
-        "Fast Charging (0-75% in 3 hrs)",
-        "Swappable Battery Technology",
-        "Disc Brakes (Front & Rear)",
-        "Combined Braking System (CBS)",
-        "Crash Alert & Ride Analytics"
-      ],
-      "colors": ["Lightning Yellow", "Mist Grey", "Cosmic Black", "Rebel Red", "Pacific Blue", "Dark Silver", "Dark Lunar Green"],
+      "variant_name": "RV400",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "85 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Revolt RV400 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "RV400", "price": "₹1,42,934" },
-        { "name": "RV400 (Top Variant)", "price": "₹1,49,941" }
+        {
+          "name": "BRZ",
+          "price": "N/A"
+        },
+        {
+          "name": "Premium",
+          "price": "N/A"
+        }
       ],
-      "specifications": {
-        "Motor Power": "4.4 kW peak",
-        "Range": "150 km",
-        "Battery Capacity": "3.24 kWh",
-        "Top Speed": "85 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "85 Nm"
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Revolt",
       "model": "RV1",
-      "variant_name": "Revolt RV1",
-      "price": "₹99,983 - ₹1,12,983",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Revolt RV1 is Revolt Motors' entry-level electric commuter motorcycle, targeting first-time EV buyers with a lightweight design and essential features. It offers 100 km of range, disc brakes on both ends, and a compact form factor ideal for city commuting.",
-      "features": [
-        "Digital Instrument Cluster",
-        "3 Riding Modes (Eco, Normal, Sport)",
-        "Disc Brakes (Front & Rear)",
-        "Combined Braking System (CBS)",
-        "Regenerative Braking",
-        "LED Headlight",
-        "USB Charging Port",
-        "Anti-theft System",
-        "Sidestand Motor Cutoff"
-      ],
-      "colors": ["Black Midnight Blue", "Black Neon Green", "Cosmic Black Red", "Titan Red Silver"],
+      "variant_name": "RV1",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "70 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Revolt RV1 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "RV1", "price": "₹99,983" },
-        { "name": "RV1 (Top Variant)", "price": "₹1,12,983" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard - Titan Red Silver",
+          "price": "N/A"
+        },
+        {
+          "name": "Plus",
+          "price": "N/A"
+        },
+        {
+          "name": "Plus - Titan Red Silver",
+          "price": "N/A"
+        }
       ],
-      "specifications": {
-        "Motor Power": "2.8 kW",
-        "Range": "100 km",
-        "Battery Capacity": "3.24 kWh",
-        "Top Speed": "70 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "No",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "85 Nm"
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Revolt",
-      "model": "RV1+",
-      "variant_name": "Revolt RV1+",
-      "price": "₹1,09,999",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Revolt RV1+ is the upgraded version of the RV1, offering similar urban commuter performance with slight enhancements. It features a 3.24 kWh battery, 100 km range, disc brakes, and riding modes at an accessible price point.",
-      "features": [
-        "Digital Instrument Cluster",
-        "3 Riding Modes (Eco, Normal, Sport)",
-        "Disc Brakes (Front & Rear)",
-        "Combined Braking System (CBS)",
-        "Regenerative Braking",
-        "LED Headlight",
-        "USB Charging Port",
-        "Anti-theft System",
-        "Sidestand Motor Cutoff"
-      ],
-      "colors": ["Red", "Black", "White"],
+      "model": "RV BlazeX",
+      "variant_name": "RV BlazeX",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "85 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Revolt RV BlazeX is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "RV1+", "price": "₹1,09,999" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "specifications": {
-        "Motor Power": "1.5 kW continuous",
-        "Range": "100 km",
-        "Battery Capacity": "3.24 kWh",
-        "Top Speed": "65 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "No",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "85 Nm"
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Revolt",
+      "model": "RV 300",
+      "variant_name": "RV 300",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Revolt RV 300 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Revolt",
+      "model": "AW1",
+      "variant_name": "AW1",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Revolt AW1 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "V1 - 2.2 Kwh",
+          "price": "N/A"
+        },
+        {
+          "name": "V2 - 3.24 Kwh",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

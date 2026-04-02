@@ -1,35 +1,27 @@
 {
-  "brand": "Bounce",
-  "brandId": "bounce-infinity",
+  "brand": "Ferrato",
+  "brandId": "ferrato",
   "type": "2w",
   "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "Bounce",
-      "model": "Infinity E1",
-      "variant_name": "Infinity E1",
+      "make": "Ferrato",
+      "model": "Disruptor",
+      "variant_name": "Disruptor",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
       "max_power": "N/A bhp",
       "max_torque": "N/A",
-      "top_speed": "65 kmph",
+      "top_speed": "95 kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Bounce Infinity E1 is a two-wheeler available in India.",
+      "description": "The Ferrato Disruptor is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Plus",
-          "price": "N/A"
-        },
-        {
           "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Limited Edition",
           "price": "N/A"
         }
       ],

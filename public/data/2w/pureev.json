@@ -1,14 +1,130 @@
 {
-  "brand": "Norton",
-  "brandId": "norton-motorcycles",
+  "brand": "PURE EV",
+  "brandId": "pureev",
   "type": "2w",
   "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "Norton",
-      "model": "V4",
-      "variant_name": "V4",
+      "make": "PURE EV",
+      "model": "EcoDryft",
+      "variant_name": "EcoDryft",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "75 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The PURE EV EcoDryft is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "350",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "PURE EV",
+      "model": "Etryst 350",
+      "variant_name": "Etryst 350",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "94 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The PURE EV Etryst 350 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "X",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "PURE EV",
+      "model": "EPluto 7G",
+      "variant_name": "EPluto 7G",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "47 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The PURE EV EPluto 7G is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "CX",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        },
+        {
+          "name": "Max",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "PURE EV",
+      "model": "ETrance Neo",
+      "variant_name": "ETrance Neo",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "47 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The PURE EV ETrance Neo is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "SX",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Plus",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "PURE EV",
+      "model": "EPluto",
+      "variant_name": "EPluto",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -17,7 +133,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Norton V4 is a two-wheeler available in India.",
+      "description": "The PURE EV EPluto is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -29,9 +145,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Norton",
-      "model": "Manx R",
-      "variant_name": "Manx R",
+      "make": "PURE EV",
+      "model": "ETrance",
+      "variant_name": "ETrance",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -40,126 +156,11 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Norton Manx R is a two-wheeler available in India.",
+      "description": "The PURE EV ETrance is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
           "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Norton",
-      "model": "Atlas GT",
-      "variant_name": "Atlas GT",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Norton Atlas GT is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Norton",
-      "model": "Manx",
-      "variant_name": "Manx",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Norton Manx is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Norton",
-      "model": "Atlas",
-      "variant_name": "Atlas",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Norton Atlas is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Norton",
-      "model": "Dominator",
-      "variant_name": "Dominator",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Norton Dominator is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Norton",
-      "model": "Commando 961",
-      "variant_name": "Commando 961",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Norton Commando 961 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Sport MK II",
           "price": "N/A"
         }
       ],

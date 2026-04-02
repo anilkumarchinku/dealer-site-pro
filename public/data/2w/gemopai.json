@@ -1,23 +1,23 @@
 {
-  "brand": "Quantum Energy",
-  "brandId": "quantum-energy",
+  "brand": "Gemopai",
+  "brandId": "gemopai",
   "type": "2w",
   "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "Quantum Energy",
-      "model": "Milan",
-      "variant_name": "Milan",
+      "make": "Gemopai",
+      "model": "Ryder",
+      "variant_name": "Ryder",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
       "max_power": "N/A bhp",
       "max_torque": "N/A",
-      "top_speed": "60 kmph",
+      "top_speed": "25 kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Quantum Energy Milan is a two-wheeler available in India.",
+      "description": "The Gemopai Ryder is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -29,26 +29,30 @@
       "technical_specifications": {}
     },
     {
-      "make": "Quantum Energy",
-      "model": "Plasma",
-      "variant_name": "Plasma",
+      "make": "Gemopai",
+      "model": "Astrid Lite",
+      "variant_name": "Astrid Lite",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
       "max_power": "N/A bhp",
       "max_torque": "N/A",
-      "top_speed": "60 kmph",
+      "top_speed": "65 kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Quantum Energy Plasma is a two-wheeler available in India.",
+      "description": "The Gemopai Astrid Lite is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "XR",
+          "name": "1.7 kWh",
           "price": "N/A"
         },
         {
-          "name": "X",
+          "name": "2.16 kWh",
+          "price": "N/A"
+        },
+        {
+          "name": "2.88 kWh",
           "price": "N/A"
         }
       ],
@@ -56,9 +60,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Quantum Energy",
-      "model": "Bziness",
-      "variant_name": "Bziness",
+      "make": "Gemopai",
+      "model": "Ryder SuperMax",
+      "variant_name": "Ryder SuperMax",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -67,11 +71,11 @@
       "top_speed": "60 kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Quantum Energy Bziness is a two-wheeler available in India.",
+      "description": "The Gemopai Ryder SuperMax is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "X",
+          "name": "Standard",
           "price": "N/A"
         }
       ],

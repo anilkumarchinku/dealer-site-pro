@@ -2,986 +2,2711 @@
   "brand": "Ducati",
   "brandId": "ducati-india",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Ducati",
-      "model": "Scrambler Icon",
-      "variant_name": "Ducati Scrambler Icon",
-      "price": "₹10,65,200",
-      "engine_displacement": "803 cc",
-      "mileage": "19 kmpl",
-      "top_speed": "185 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "57 Nm",
-      "source_section": "Available",
-      "description": "The Ducati Scrambler Icon is the entry point into the Ducati Scrambler family, featuring an 803cc air-cooled L-twin engine delivering 71.87 bhp with a comfortable riding position and light clutch pull. It blends retro scrambler styling with modern practicality, making it ideal for city riding and weekend adventures.",
-      "features": [
-        "803cc air-cooled L-twin engine",
-        "Comfortable upright riding position",
-        "Dual-channel ABS",
-        "Full LED lighting",
-        "6-speed manual gearbox",
-        "Light clutch pull",
-        "Alloy wheels",
-        "Analogue instrument cluster with digital info"
-      ],
-      "variants": [
-        {
-          "name": "Scrambler Icon Standard",
-          "price": "₹10,65,200"
-        }
-      ],
-      "colors": [
-        "Matte Black",
-        "Ducati Red",
-        "Yellow",
-        "Stone White and Metal Rose"
-      ],
-      "technical_specifications": {
-        "engine_type": "Air-cooled, L-twin",
-        "power": "71.87 bhp",
-        "torque": "65.2 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13.5 litres",
-        "seat_height": "795 mm",
-        "kerb_weight": "185 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B"
-      }
-    },
-    {
-      "make": "Ducati",
-      "model": "Scrambler Nightshift",
-      "variant_name": "Ducati Scrambler Nightshift",
-      "price": "₹13,46,600",
-      "engine_displacement": "803 cc",
-      "mileage": "19 kmpl",
-      "top_speed": "185 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Ducati Scrambler Nightshift is a dark, cafe racer-inspired variant of the Scrambler 800 with a blacked-out aesthetic and spoke wheels. It features a TFT instrument cluster, full LED lighting, and a single-tone dark colour scheme for a distinctly moody personality.",
-      "features": [
-        "TFT display",
-        "Spoke wheels",
-        "Full LED lighting",
-        "Blacked-out aesthetic",
-        "Dual-channel ABS",
-        "6-speed manual gearbox",
-        "Lowered footpegs for cafe racer ergonomics",
-        "803cc air-cooled L-twin engine"
-      ],
-      "variants": [
-        {
-          "name": "Scrambler Nightshift",
-          "price": "₹13,46,600"
-        }
-      ],
-      "colors": [
-        "Nebula Blue"
-      ],
-      "technical_specifications": {
-        "engine_type": "Air-cooled, L-twin",
-        "power": "71.87 bhp",
-        "torque": "65.2 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13.5 litres",
-        "seat_height": "795 mm",
-        "kerb_weight": "191 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "TFT display, LED lighting"
-      },
-      "max_torque": "57 Nm"
-    },
-    {
-      "make": "Ducati",
-      "model": "Scrambler Full Throttle",
-      "variant_name": "Ducati Scrambler Full Throttle",
-      "price": "₹13,46,600",
-      "engine_displacement": "803 cc",
-      "mileage": "19 kmpl",
-      "top_speed": "185 kmpl",
-      "fuel_type": "Petrol",
-      "max_torque": "57 Nm",
-      "source_section": "Available",
-      "description": "The Ducati Scrambler Full Throttle is a flat-track racing inspired variant featuring a distinctive heritage livery and sporty ergonomics. It draws inspiration from Ducati's racing heritage with a number plate holder, flat-track style handlebar, and performance-focused aesthetic.",
-      "features": [
-        "Flat-track racing inspired styling",
-        "Heritage race livery",
-        "Sporty flat handlebar",
-        "Dual-channel ABS",
-        "6-speed manual gearbox",
-        "Full LED lighting",
-        "Alloy wheels",
-        "803cc air-cooled L-twin"
-      ],
-      "variants": [
-        {
-          "name": "Scrambler Full Throttle Standard",
-          "price": "₹13,46,600"
-        }
-      ],
-      "colors": [
-        "Heritage Livery"
-      ],
-      "technical_specifications": {
-        "engine_type": "Air-cooled, L-twin",
-        "power": "71.87 bhp",
-        "torque": "65.2 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13.5 litres",
-        "seat_height": "795 mm",
-        "kerb_weight": "191 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Ducati",
-      "model": "Monster",
-      "variant_name": "Ducati Monster",
-      "price": "₹13,84,000 - ₹17,04,580",
-      "engine_displacement": "937 cc",
-      "mileage": "19 kmpl",
-      "top_speed": "200 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "92 Nm",
-      "source_section": "Available",
-      "description": "The Ducati Monster is an iconic naked streetfighter powered by a 937cc liquid-cooled L-twin delivering nearly 110 bhp in an aggressive, lightweight package. The latest generation features a dramatically reduced weight, advanced electronics suite, and a new monocoque frame for improved handling.",
-      "features": [
-        "937cc liquid-cooled L-twin engine",
-        "Lightweight monocoque frame",
-        "Cornering ABS",
-        "Traction control (DTC)",
-        "Multiple riding modes (Sport, Touring, Urban)",
-        "TFT colour display",
-        "Bosch IMU (inertial measurement unit)",
-        "Brembo brakes (Monster SP)"
-      ],
-      "variants": [
-        {
-          "name": "Monster Standard",
-          "price": "₹13,84,000"
-        },
-        {
-          "name": "Monster Plus",
-          "price": "₹15,44,000"
-        },
-        {
-          "name": "Monster SP",
-          "price": "₹17,04,580"
-        }
-      ],
-      "colors": [
-        "Dark Stealth",
-        "Aviator Grey",
-        "Ducati Red"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, L-twin",
-        "power": "109.96 bhp",
-        "torque": "93 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "14 litres",
-        "seat_height": "820 mm",
-        "kerb_weight": "188 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Ducati",
-      "model": "Desmo450 MX",
-      "variant_name": "Ducati Desmo450 MX",
-      "price": "₹17,23,600",
-      "engine_displacement": "449.6 cc",
-      "mileage": "N/A",
-      "top_speed": "N/A",
-      "fuel_type": "Petrol",
-      "max_torque": "53.5 Nm",
-      "source_section": "Available",
-      "description": "The Ducati Desmo450 MX is Ducati's first purpose-built motocross bike, featuring a 449.6cc Desmodromic single-cylinder engine delivering 62.62 bhp for elite off-road competition. It represents Ducati's full commitment to off-road racing with a purpose-built MX platform.",
-      "features": [
-        "449.6cc Desmodromic single-cylinder engine",
-        "Purpose-built motocross frame",
-        "Disc brakes front and rear",
-        "5-speed gearbox",
-        "Long-travel suspension",
-        "970 mm seat height for standing riding",
-        "Spoke wheels",
-        "Lightweight construction"
-      ],
-      "variants": [
-        {
-          "name": "Desmo450 MX Standard",
-          "price": "₹17,23,600"
-        }
-      ],
-      "colors": [
-        "Ducati Red"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Single-cylinder",
-        "power": "62.62 bhp",
-        "torque": "53.5 Nm",
-        "gearbox": "5-Speed Manual",
-        "fuel_tank": "7.2 litres",
-        "seat_height": "970 mm",
-        "kerb_weight": "N/A",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B"
-      }
-    },
-    {
-      "make": "Ducati",
-      "model": "Hypermotard 950",
-      "variant_name": "Ducati Hypermotard 950",
-      "price": "₹17,10,500 - ₹20,35,878",
-      "engine_displacement": "937 cc",
-      "mileage": "19.6 kmpl",
-      "top_speed": "220 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "96 Nm",
-      "source_section": "Available",
-      "description": "The Ducati Hypermotard 950 is a high-performance supermoto motorcycle combining the 937cc Testastretta engine with an extremely agile chassis for an exhilarating riding experience on both road and track. The SP variant adds Ohlins suspension and Brembo brakes for track-focused performance.",
-      "features": [
-        "937cc Testastretta L-twin engine",
-        "Cornering ABS",
-        "Bosch 6-axis IMU",
-        "Multiple riding modes",
-        "Traction control (DTC)",
-        "Wheelie control",
-        "TFT colour display",
-        "Ohlins suspension (SP variant)"
-      ],
-      "variants": [
-        {
-          "name": "Hypermotard 950 RVE",
-          "price": "₹17,10,500"
-        },
-        {
-          "name": "Hypermotard 950 SP",
-          "price": "₹20,35,878"
-        }
-      ],
-      "colors": [
-        "Graffiti Evo",
-        "Graffiti",
-        "SP Livery"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, L-twin",
-        "power": "112.6 bhp",
-        "torque": "96 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "14.5 litres",
-        "seat_height": "870 mm",
-        "kerb_weight": "200 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Ducati",
-      "model": "Hypermotard 698 Mono",
-      "variant_name": "Ducati Hypermotard 698 Mono",
-      "price": "₹18,70,300",
-      "engine_displacement": "659 cc",
-      "mileage": "20.8 kmpl",
-      "top_speed": "220 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "63 Nm",
-      "source_section": "Available",
-      "description": "The Ducati Hypermotard 698 Mono is a single-cylinder supermoto that showcases Ducati's engineering excellence in a compact, featherweight package weighing just 159 kg. Its 659cc single-cylinder engine delivers 76 bhp with a thrilling power-to-weight ratio.",
-      "features": [
-        "659cc single-cylinder engine",
-        "Featherweight 159 kg kerb weight",
-        "Cornering ABS",
-        "Traction control",
-        "TFT colour display",
-        "Wheelie control",
-        "6-speed gearbox",
-        "High 904 mm seat height"
-      ],
-      "variants": [
-        {
-          "name": "Hypermotard 698 Mono Standard",
-          "price": "₹18,70,300"
-        }
-      ],
-      "colors": [
-        "Ducati Red"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Single-cylinder",
-        "power": "76.43 bhp",
-        "torque": "63 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "12 litres",
-        "seat_height": "904 mm",
-        "kerb_weight": "159 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Ducati",
-      "model": "SuperSport",
-      "variant_name": "Ducati SuperSport",
-      "price": "₹17,16,100 - ₹20,10,300",
-      "engine_displacement": "937 cc",
-      "mileage": "17.8 kmpl",
-      "top_speed": "299 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "93 Nm",
-      "source_section": "Available",
-      "description": "The Ducati SuperSport is a sport-touring motorcycle combining the 937cc Testastretta engine with a comfortable half-faired body and practical ergonomics for everyday riding. The S variant adds Ohlins suspension and a larger windscreen for enhanced touring capability.",
-      "features": [
-        "937cc Testastretta L-twin engine",
-        "Half-fairing with adjustable windscreen",
-        "Cornering ABS",
-        "Traction control (DTC)",
-        "Multiple riding modes",
-        "TFT display",
-        "Ohlins suspension (S variant)",
-        "6-speed gearbox"
-      ],
-      "variants": [
-        {
-          "name": "SuperSport Standard",
-          "price": "₹17,16,100"
-        },
-        {
-          "name": "SuperSport S",
-          "price": "₹20,10,300"
-        }
-      ],
-      "colors": [
-        "Ducati Red",
-        "Ducati Red - S",
-        "Arctic White"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, L-twin",
-        "power": "108.62 bhp",
-        "torque": "93 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "16 litres",
-        "seat_height": "810 mm",
-        "kerb_weight": "210 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Ducati",
-      "model": "Streetfighter V2",
-      "variant_name": "Ducati Streetfighter V2",
-      "price": "₹17,50,200 - ₹19,48,900",
-      "engine_displacement": "890 cc",
-      "mileage": "17 kmpl",
-      "top_speed": "270 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "100 Nm",
-      "source_section": "Available",
-      "description": "The Ducati Streetfighter V2 is a naked streetfighter derived from the Panigale V2 superbike, featuring an 890cc Superquadro V-twin engine producing 118 bhp in a light, agile package. It delivers strong midrange torque with a light kerb weight, making it feel agile everywhere.",
-      "features": [
-        "890cc Superquadro V-twin engine, 118 bhp",
-        "Derived from Panigale V2 superbike",
-        "Cornering ABS",
-        "Traction control (DTC)",
-        "Multiple riding modes",
-        "TFT colour display",
-        "Ohlins suspension (S variant)",
-        "6-speed gearbox with quickshifter"
-      ],
-      "variants": [
-        {
-          "name": "Streetfighter V2 Standard",
-          "price": "₹17,50,200"
-        },
-        {
-          "name": "Streetfighter V2 S",
-          "price": "₹19,48,900"
-        }
-      ],
-      "colors": [
-        "Ducati Red",
-        "Ducati Red - S"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V-twin (Superquadro)",
-        "power": "118 bhp",
-        "torque": "93.3 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "15 litres",
-        "seat_height": "838 mm",
-        "kerb_weight": "200 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B"
-      }
-    },
-    {
-      "make": "Ducati",
-      "model": "Multistrada V2",
-      "variant_name": "Ducati Multistrada V2",
-      "price": "₹18,88,000 - ₹21,29,700",
-      "engine_displacement": "890 cc",
-      "mileage": "17 kmpl",
-      "top_speed": "182 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "96 Nm",
-      "source_section": "Available",
-      "description": "The Ducati Multistrada V2 is a versatile adventure tourer powered by an 890cc Superquadro V-twin engine with four riding modes for all conditions. The S variant adds Ducati Skyhook Suspension semi-active technology and cornering lights for enhanced all-weather touring capability.",
-      "features": [
-        "890cc Superquadro V-twin engine",
-        "Four riding modes (Sport, Touring, Urban, Enduro)",
-        "Cornering ABS",
-        "Bosch 6-axis IMU",
-        "Traction control (DTC)",
-        "Ducati Skyhook Suspension (S variant)",
-        "19-litre fuel tank",
-        "TFT colour display"
-      ],
-      "variants": [
-        {
-          "name": "Multistrada V2 Standard",
-          "price": "₹18,88,000"
-        },
-        {
-          "name": "Multistrada V2 S",
-          "price": "₹20,09,000"
-        },
-        {
-          "name": "Multistrada V2 S Storm Green",
-          "price": "₹21,29,700"
-        }
-      ],
-      "colors": [
-        "Ducati Red",
-        "Storm Green"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V-twin (Superquadro)",
-        "power": "113.98 bhp",
-        "torque": "92.1 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "19 litres",
-        "seat_height": "830 mm",
-        "kerb_weight": "222 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B"
-      }
-    },
-    {
-      "make": "Ducati",
-      "model": "Panigale V2",
-      "variant_name": "Ducati Panigale V2",
-      "price": "₹19,11,900 - ₹21,09,900",
-      "engine_displacement": "890 cc",
-      "mileage": "16.6 kmpl",
-      "top_speed": "299 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "100 Nm",
-      "source_section": "Available",
-      "description": "The Ducati Panigale V2 is a fully-faired superbike with an 890cc Superquadro V-twin engine producing 118 bhp, featuring a monocoque frame and cooling ducts to reduce rider heat. It offers track-level performance in a manageable package with comprehensive electronic aids.",
-      "features": [
-        "890cc Superquadro V-twin, 118 bhp",
-        "Monocoque frame construction",
-        "Cornering ABS",
-        "Bosch 6-axis IMU",
-        "Traction control (DTC)",
-        "Multiple riding modes",
-        "TFT colour display",
-        "Brembo brakes"
-      ],
-      "variants": [
-        {
-          "name": "Panigale V2 Standard",
-          "price": "₹19,11,900"
-        },
-        {
-          "name": "Panigale V2 S",
-          "price": "₹21,09,900"
-        }
-      ],
-      "colors": [
-        "Ducati Red",
-        "S - Ducati Red"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V-twin (Superquadro)",
-        "power": "118 bhp",
-        "torque": "93.3 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "15 litres",
-        "seat_height": "837 mm",
-        "kerb_weight": "200 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B"
-      }
-    },
-    {
-      "make": "Ducati",
-      "model": "DesertX",
-      "variant_name": "Ducati DesertX",
-      "price": "₹19,59,200 - ₹25,33,700",
-      "engine_displacement": "937 cc",
-      "mileage": "17.8 kmpl",
-      "top_speed": "209 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "75 Nm",
-      "source_section": "Available",
-      "description": "The Ducati DesertX is an adventure motorcycle inspired by the legendary Paris-Dakar machines of the 1980s, powered by a 937cc Testastretta L-twin tuned for off-road performance with spoke wheels and long-travel suspension. The Rally and Discovery variants build upon the base model with enhanced off-road and touring equipment.",
-      "features": [
-        "937cc Testastretta L-twin engine",
-        "Long-travel off-road suspension",
-        "Spoke wheels (21-inch front, 18-inch rear)",
-        "Cornering ABS with off-road mode",
-        "Multiple riding modes (Rally, Enduro, Sport, Road, Wet)",
-        "21-litre large fuel tank",
-        "TFT colour display",
-        "Bosch 6-axis IMU"
-      ],
-      "variants": [
-        {
-          "name": "DesertX Standard",
-          "price": "₹19,59,200"
-        },
-        {
-          "name": "DesertX Rally",
-          "price": "₹22,46,000"
-        },
-        {
-          "name": "DesertX Discovery",
-          "price": "₹25,33,700"
-        }
-      ],
-      "colors": [
-        "Star White Silk",
-        "Rally",
-        "Thrilling Black and Ducati Red"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, L-twin",
-        "power": "108.6 bhp",
-        "torque": "92 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "21 litres",
-        "seat_height": "875 mm",
-        "kerb_weight": "223 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Ducati",
-      "model": "Multistrada V4",
-      "variant_name": "Ducati Multistrada V4",
-      "price": "₹24,56,300 - ₹36,16,700",
-      "engine_displacement": "1158 cc",
-      "mileage": "15 kmpl",
-      "top_speed": "180 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "125 Nm",
-      "source_section": "Available",
-      "description": "The Ducati Multistrada V4 is a flagship adventure tourer with a 1158cc V4 Granturismo engine delivering 170 bhp, featuring the world's first motorcycle with front and rear radar for adaptive cruise control and blind spot detection. It represents the pinnacle of adventure touring technology.",
-      "features": [
-        "1158cc V4 Granturismo engine, 170 bhp",
-        "Front and rear radar (adaptive cruise control, blind spot detection)",
-        "Ducati Skyhook Suspension Evolution",
-        "Cornering ABS with off-road mode",
-        "Multiple riding modes (Sport, Touring, Urban, Enduro)",
-        "TFT display with full connectivity",
-        "Bosch 6-axis IMU",
-        "22-litre fuel tank"
-      ],
-      "variants": [
-        {
-          "name": "Multistrada V4 Standard",
-          "price": "₹24,56,300"
-        },
-        {
-          "name": "Multistrada V4 S",
-          "price": "₹30,36,000"
-        },
-        {
-          "name": "Multistrada V4 Pikes Peak",
-          "price": "₹36,16,700"
-        }
-      ],
-      "colors": [
-        "Ducati Red",
-        "Arctic White",
-        "Thrilling Black",
-        "Red and Black"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V4 (Granturismo)",
-        "power": "170 bhp",
-        "torque": "123.8 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "22 litres",
-        "seat_height": "840 mm",
-        "kerb_weight": "240 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B",
-        "features": "Radar-based cruise control"
-      }
-    },
-    {
-      "make": "Ducati",
-      "model": "Streetfighter V4",
-      "variant_name": "Ducati Streetfighter V4",
-      "price": "₹28,68,600 - ₹32,38,400",
-      "engine_displacement": "1103 cc",
-      "mileage": "13.15 kmpl",
-      "top_speed": "299 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "124 Nm",
-      "source_section": "Available",
-      "description": "The Ducati Streetfighter V4 is the world's most powerful naked motorcycle, powered by the 1103cc Desmosedici Stradale V4 engine producing 205 bhp, derived directly from the Panigale V4 superbike. It features aerodynamic winglets, a large TFT display with navigation, and the most comprehensive electronics suite in the naked segment.",
-      "features": [
-        "1103cc Desmosedici Stradale V4, 205 bhp",
-        "Aerodynamic winglets for high-speed stability",
-        "Large TFT display with navigation and Bluetooth",
-        "Cornering ABS Pro",
-        "Bosch 6-axis IMU",
-        "Multiple riding modes (Race, Sport, Street, Urban, Wet)",
-        "Launch control",
-        "Quickshifter up and down"
-      ],
-      "variants": [
-        {
-          "name": "Streetfighter V4 Standard",
-          "price": "₹28,68,600"
-        },
-        {
-          "name": "Streetfighter V4 S",
-          "price": "₹32,38,400"
-        }
-      ],
-      "colors": [
-        "Red"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V4 (Desmosedici Stradale)",
-        "power": "205 bhp",
-        "torque": "123 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "16 litres",
-        "seat_height": "845 mm",
-        "kerb_weight": "201 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Ducati",
-      "model": "Diavel V4",
-      "variant_name": "Ducati Diavel V4",
-      "price": "₹29,07,600",
-      "engine_displacement": "1158 cc",
-      "mileage": "15.6 kmpl",
-      "top_speed": "299 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "115 Nm",
-      "source_section": "Available",
-      "description": "The Ducati Diavel V4 is a high-performance muscle cruiser powered by the 1158cc V4 Granturismo engine delivering 166 bhp with a low 790 mm seat height for easy reach. It blends sports bike performance with cruiser comfort and a comprehensive electronics package.",
-      "features": [
-        "1158cc V4 Granturismo engine, 166.28 bhp",
-        "Low 790 mm seat height",
-        "Riding modes (Sport, Touring, Urban, Wet, Race)",
-        "Cornering ABS",
-        "Bosch 6-axis IMU",
-        "TFT display with connectivity",
-        "Brembo brakes",
-        "20-litre fuel tank"
-      ],
-      "variants": [
-        {
-          "name": "Diavel V4 Standard",
-          "price": "₹29,07,600"
-        }
-      ],
-      "colors": [
-        "Thrilling Black",
-        "Ducati Red"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V4 (Granturismo)",
-        "power": "166.28 bhp",
-        "torque": "126 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "20 litres",
-        "seat_height": "790 mm",
-        "kerb_weight": "236 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "Ducati",
-      "model": "XDiavel V4",
-      "variant_name": "Ducati XDiavel V4",
-      "price": "₹30,88,700",
-      "engine_displacement": "1158 cc",
-      "mileage": "15 kmpl",
-      "top_speed": "250 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "129 Nm",
-      "source_section": "Available",
-      "description": "The Ducati XDiavel V4 is a power cruiser with a very low 755 mm seat height and forward foot controls, powered by a 1158cc V4 Granturismo engine making 168 bhp. It combines the comfort of a cruiser with the performance of a superbike in a distinctly Italian design.",
-      "features": [
-        "1158cc V4 Granturismo engine, 168 bhp",
-        "Very low 755 mm seat height",
-        "Forward foot controls",
-        "LED headlamp with DRL",
-        "Digital cluster with GPS/navigation",
-        "Riding modes (Sport, Touring, Urban)",
-        "Dual-channel ABS",
-        "20-litre fuel tank"
-      ],
-      "variants": [
-        {
-          "name": "XDiavel V4 Standard",
-          "price": "₹30,88,700"
-        }
-      ],
-      "colors": [
-        "Thrilling Black",
-        "Ducati Red"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V4 (Granturismo)",
-        "power": "168 bhp",
-        "torque": "126 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "20 litres",
-        "seat_height": "755 mm",
-        "kerb_weight": "247 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "LED headlamp with DRL, Digital cluster with GPS/navigation, Riding modes (Sport, Touring, Urban)"
-      }
-    },
-    {
-      "make": "Ducati",
       "model": "Panigale V4",
-      "variant_name": "Ducati Panigale V4",
-      "price": "₹32,05,100 - ₹77,00,000",
-      "engine_displacement": "1103 cc",
-      "mileage": "12 kmpl",
-      "top_speed": "299 kmph",
+      "variant_name": "Panigale V4",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "124 Nm",
-      "source_section": "Available",
-      "description": "The Ducati Panigale V4 is an Italian engineering masterpiece powered by the 1103cc Desmosedici Stradale V4 producing 219 bhp, directly derived from Ducati's MotoGP machines. The Tricolore special edition delivers the same performance in a stunning Italian tricolour livery.",
-      "features": [
-        "1103cc Desmosedici Stradale V4, 219 bhp",
-        "Full racing electronics suite",
-        "Cornering ABS Pro",
-        "Bosch 6-axis IMU",
-        "Multiple riding modes including Race Pro 1/2/3",
-        "Ducati Quick Shift (DQS) up and down",
-        "Launch control",
-        "Ohlins suspension (S variant)"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Ducati Panigale V4 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Panigale V4 Standard",
-          "price": "₹32,05,100"
+          "name": "Standard",
+          "price": "N/A"
         },
         {
-          "name": "Panigale V4 S",
-          "price": "₹42,05,100"
+          "name": "S",
+          "price": "N/A"
         },
         {
-          "name": "Panigale V4 Tricolore",
-          "price": "₹77,00,000"
+          "name": "Tricolore",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Ducati Red",
-        "Ducati Red S",
-        "Tricolore Livery"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V4 (Desmosedici Stradale)",
-        "power": "219 bhp",
-        "torque": "120.9 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "17 litres",
-        "seat_height": "850 mm",
-        "kerb_weight": "191 kg",
-        "brakes_front": "Brembo Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B"
-      }
-    },
-    {
-      "make": "Ducati",
-      "model": "Multistrada V4 RS",
-      "variant_name": "Ducati Multistrada V4 RS",
-      "price": "₹43,46,700",
-      "engine_displacement": "1103 cc",
-      "mileage": "15 kmpl",
-      "top_speed": "299 kmph",
-      "fuel_type": "Petrol",
-      "max_torque": "118 Nm",
-      "source_section": "Available",
-      "description": "The Ducati Multistrada V4 RS is the ultimate adventure motorcycle, combining the Panigale V4's 1103cc Desmosedici Stradale engine with the Multistrada's versatile adventure chassis for unprecedented performance. It targets the track while remaining supremely capable on road and gravel.",
-      "features": [
-        "1103cc Desmosedici Stradale V4, 180 bhp",
-        "Race-derived engine in adventure package",
-        "Ohlins TTX36 semi-active suspension",
-        "Brembo Stylema brakes",
-        "Full racing electronics",
-        "Multiple riding modes including Race",
-        "Quickshifter up and down",
-        "22-litre fuel tank"
-      ],
-      "variants": [
-        {
-          "name": "Multistrada V4 RS Standard",
-          "price": "₹43,46,700"
-        }
-      ],
-      "colors": [
-        "Iceberg White Livery and Red"
-      ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V4 (Desmosedici Stradale)",
-        "power": "180 bhp",
-        "torque": "118 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "22 litres",
-        "seat_height": "860 mm",
-        "kerb_weight": "260 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Ducati",
       "model": "Panigale V4 R",
-      "variant_name": "Ducati Panigale V4 R",
-      "price": "₹84,99,000",
-      "engine_displacement": "998 cc",
-      "mileage": "12.5 kmpl",
-      "top_speed": "330 kmph",
+      "variant_name": "Panigale V4 R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "111.3 Nm",
-      "source_section": "Available",
-      "description": "The Ducati Panigale V4 R is a homologation-special superbike with a 998cc race-spec Desmosedici Stradale R engine producing 221 bhp, built to comply with World Superbike Championship regulations. It is the closest you can get to Ducati's WSBK racecar on public roads.",
-      "features": [
-        "998cc race-spec V4 R engine, 221 bhp",
-        "WSBK homologation specification",
-        "Ohlins EC-30 electronically controlled suspension",
-        "Brembo Hypure brakes",
-        "Ducati Quick Shift Evo 2 up and down",
-        "Multiple riding modes (Race, Sport, Street, Wet)",
-        "Premium Ohlins adjustable suspension",
-        "Full carbon fairing components"
-      ],
+      "source_section": "Discontinued",
+      "description": "The Ducati Panigale V4 R is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "Panigale V4 R Standard",
-          "price": "₹84,99,000"
+          "name": "Standard",
+          "price": "N/A"
         }
       ],
-      "colors": [
-        "Ducati Red"
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Panigale V2",
+      "variant_name": "Panigale V2",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ducati Panigale V2 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "S",
+          "price": "N/A"
+        }
       ],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, V4 (Desmosedici Stradale R)",
-        "power": "221 bhp",
-        "torque": "111.3 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "17 litres",
-        "seat_height": "850 mm",
-        "kerb_weight": "193.5 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2B",
-        "features": "Race, Sport and Street modes, Premium Ohlins adjustable suspension"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "SuperSport",
+      "variant_name": "SuperSport",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ducati SuperSport is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "S",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Monster",
+      "variant_name": "Monster",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ducati Monster is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Plus",
+          "price": "N/A"
+        },
+        {
+          "name": "SP",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Streetfighter V4",
+      "variant_name": "Streetfighter V4",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ducati Streetfighter V4 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "S",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Diavel V4",
+      "variant_name": "Diavel V4",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ducati Diavel V4 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Icon",
+      "variant_name": "Scrambler Icon",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ducati Scrambler Icon is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Dark",
+          "price": "N/A"
+        },
+        {
+          "name": "Base",
+          "price": "N/A"
+        },
+        {
+          "name": "10 Anniversario Rizoma Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Streetfighter V2",
+      "variant_name": "Streetfighter V2",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ducati Streetfighter V2 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "S",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Desmo450 MX",
+      "variant_name": "Desmo450 MX",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ducati Desmo450 MX is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "XDiavel V4",
+      "variant_name": "XDiavel V4",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ducati XDiavel V4 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Multistrada V4",
+      "variant_name": "Multistrada V4",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ducati Multistrada V4 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "S",
+          "price": "N/A"
+        },
+        {
+          "name": "Pikes Peak",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Hypermotard 950",
+      "variant_name": "Hypermotard 950",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ducati Hypermotard 950 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "RVE",
+          "price": "N/A"
+        },
+        {
+          "name": "SP",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "DesertX",
+      "variant_name": "DesertX",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ducati DesertX is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Discovery",
+          "price": "N/A"
+        },
+        {
+          "name": "Rally",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Nightshift",
+      "variant_name": "Scrambler Nightshift",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ducati Scrambler Nightshift is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Multistrada V4 RS",
+      "variant_name": "Multistrada V4 RS",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ducati Multistrada V4 RS is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Full Throttle",
+      "variant_name": "Scrambler Full Throttle",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ducati Scrambler Full Throttle is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Multistrada V2",
+      "variant_name": "Multistrada V2",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ducati Multistrada V2 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "S - Ducati Red",
+          "price": "N/A"
+        },
+        {
+          "name": "S - Storm Green",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Hypermotard 698 Mono",
+      "variant_name": "Hypermotard 698 Mono",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Ducati Hypermotard 698 Mono is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Old Generation Panigale V4 R [2024]",
+      "variant_name": "Old Generation Panigale V4 R [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Old Generation Panigale V4 R [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Streetfighter V4 [2024]",
+      "variant_name": "Streetfighter V4 [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Streetfighter V4 [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "S",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Panigale V2 [2024]",
+      "variant_name": "Panigale V2 [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Panigale V2 [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Bayliss",
+          "price": "N/A"
+        },
+        {
+          "name": "Black",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Multistrada V4 [2024]",
+      "variant_name": "Multistrada V4 [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Multistrada V4 [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "S",
+          "price": "N/A"
+        },
+        {
+          "name": "Pikes Peak",
+          "price": "N/A"
+        },
+        {
+          "name": "Rally",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Streetfighter V2 [2024]",
+      "variant_name": "Streetfighter V2 [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Streetfighter V2 [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler 1100",
+      "variant_name": "Scrambler 1100",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler 1100 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Pro",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro Sport",
+          "price": "N/A"
+        },
+        {
+          "name": "Dark Pro",
+          "price": "N/A"
+        },
+        {
+          "name": "Tribute Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Multistrada V2 [2024]",
+      "variant_name": "Multistrada V2 [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Multistrada V2 [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Ducati Red",
+          "price": "N/A"
+        },
+        {
+          "name": "S - Ducati Red",
+          "price": "N/A"
+        },
+        {
+          "name": "S - Street Grey",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Desert Sled [2019]",
+      "variant_name": "Scrambler Desert Sled [2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Desert Sled [2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Desert Sled [2018]",
+      "variant_name": "Scrambler Desert Sled [2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Desert Sled [2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "White",
+          "price": "N/A"
+        },
+        {
+          "name": "Black",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Cafe Racer [2019]",
+      "variant_name": "Scrambler Cafe Racer [2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Cafe Racer [2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Panigale V4 R [2018-2019]",
+      "variant_name": "Panigale V4 R [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Panigale V4 R [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Diavel 1260 [2018-2019]",
+      "variant_name": "Diavel 1260 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Diavel 1260 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "S",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Monster 821 [2018-2019]",
+      "variant_name": "Monster 821 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Monster 821 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Multistrada 1260 [2018-2019]",
+      "variant_name": "Multistrada 1260 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Multistrada 1260 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "S",
+          "price": "N/A"
+        },
+        {
+          "name": "Pikes Peak",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler 1100 [2018-2019]",
+      "variant_name": "Scrambler 1100 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler 1100 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Special",
+          "price": "N/A"
+        },
+        {
+          "name": "Sport",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Panigale V4 S [2018-2019]",
+      "variant_name": "Panigale V4 S [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Panigale V4 S [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Panigale V4 [2018-2019]",
+      "variant_name": "Panigale V4 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Panigale V4 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Mach 2.0 [2018-2019]",
+      "variant_name": "Scrambler Mach 2.0 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Mach 2.0 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "1299 Panigale R Final Edition",
+      "variant_name": "1299 Panigale R Final Edition",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati 1299 Panigale R Final Edition is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "SuperSport [2018-2019]",
+      "variant_name": "SuperSport [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati SuperSport [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "S",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "1299 Superleggera",
+      "variant_name": "1299 Superleggera",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati 1299 Superleggera is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Multistrada 1200 Pikes Peak",
+      "variant_name": "Multistrada 1200 Pikes Peak",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Multistrada 1200 Pikes Peak is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Monster 1200 R",
+      "variant_name": "Monster 1200 R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Monster 1200 R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Black",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Monster 1200 S 2018",
+      "variant_name": "Monster 1200 S 2018",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Monster 1200 S 2018 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Grey",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Cafe Racer [2018]",
+      "variant_name": "Scrambler Cafe Racer [2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Cafe Racer [2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Cafe Racer",
+      "variant_name": "Scrambler Cafe Racer",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Cafe Racer is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Full Throttle [2023-2024]",
+      "variant_name": "Scrambler Full Throttle [2023-2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Full Throttle [2023-2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Icon [2024]",
+      "variant_name": "Scrambler Icon [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Icon [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Panigale V4 [2022-2024]",
+      "variant_name": "Panigale V4 [2022-2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Panigale V4 [2022-2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "S",
+          "price": "N/A"
+        },
+        {
+          "name": "SP2",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Urban Motard",
+      "variant_name": "Scrambler Urban Motard",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Urban Motard is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Nightshift [2021-2022]",
+      "variant_name": "Scrambler Nightshift [2021-2022]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Nightshift [2021-2022] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Diavel 1260",
+      "variant_name": "Diavel 1260",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Diavel 1260 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "S",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Panigale V4 [2021]",
+      "variant_name": "Panigale V4 [2021]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Panigale V4 [2021] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "S",
+          "price": "N/A"
+        },
+        {
+          "name": "SP",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Multistrada 950",
+      "variant_name": "Multistrada 950",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Multistrada 950 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "S",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Full Throttle [2019]",
+      "variant_name": "Scrambler Full Throttle [2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Full Throttle [2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Desert Sled",
+      "variant_name": "Scrambler Desert Sled",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Desert Sled is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Fasthouse",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Icon [2020-2022]",
+      "variant_name": "Scrambler Icon [2020-2022]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Icon [2020-2022] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Dark",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Mach 2.0",
+      "variant_name": "Scrambler Mach 2.0",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Mach 2.0 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "XDiavel",
+      "variant_name": "XDiavel",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati XDiavel is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Black Star",
+          "price": "N/A"
+        },
+        {
+          "name": "Dark",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Streetfighter V4 [2019-2023]",
+      "variant_name": "Streetfighter V4 [2019-2023]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Streetfighter V4 [2019-2023] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "S",
+          "price": "N/A"
+        },
+        {
+          "name": "SP",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Multistrada 1260 Enduro [2019]",
+      "variant_name": "Multistrada 1260 Enduro [2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Multistrada 1260 Enduro [2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Hypermotard 950 [2018-2019]",
+      "variant_name": "Hypermotard 950 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Hypermotard 950 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Icon [2018-2019]",
+      "variant_name": "Scrambler Icon [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Icon [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Monster 20th Anniversary",
+      "variant_name": "Monster 20th Anniversary",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Monster 20th Anniversary is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "899 Panigale",
+      "variant_name": "899 Panigale",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati 899 Panigale is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "White",
+          "price": "N/A"
+        },
+        {
+          "name": "Red",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Icon [2017-2018]",
+      "variant_name": "Scrambler Icon [2017-2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Icon [2017-2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Yellow",
+          "price": "N/A"
+        },
+        {
+          "name": "Silver",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Monster 1200 S [2017]",
+      "variant_name": "Monster 1200 S [2017]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Monster 1200 S [2017] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Sport Classic",
+      "variant_name": "Sport Classic",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Sport Classic is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "GT1000",
+          "price": "N/A"
+        },
+        {
+          "name": "GT1000 Bicolore",
+          "price": "N/A"
+        },
+        {
+          "name": "GT1000 Touring",
+          "price": "N/A"
+        },
+        {
+          "name": "Sport 1000 S",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "1198 S",
+      "variant_name": "1198 S",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati 1198 S is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "1198 R",
+      "variant_name": "1198 R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati 1198 R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "1098 R TB",
+      "variant_name": "1098 R TB",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati 1098 R TB is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "1198",
+      "variant_name": "1198",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati 1198 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "848",
+      "variant_name": "848",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati 848 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Monster 1100 Evo",
+      "variant_name": "Monster 1100 Evo",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Monster 1100 Evo is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "XDiavel [2018-2019]",
+      "variant_name": "XDiavel [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati XDiavel [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "S",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Monster Diesel",
+      "variant_name": "Monster Diesel",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Monster Diesel is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Monster 696",
+      "variant_name": "Monster 696",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Monster 696 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Hyperstrada 821",
+      "variant_name": "Hyperstrada 821",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Hyperstrada 821 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Monster 795",
+      "variant_name": "Monster 795",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Monster 795 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Monster 796",
+      "variant_name": "Monster 796",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Monster 796 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "1199 Panigale",
+      "variant_name": "1199 Panigale",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati 1199 Panigale is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "848 Evo",
+      "variant_name": "848 Evo",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati 848 Evo is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Streetfighter",
+      "variant_name": "Streetfighter",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Streetfighter is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "S",
+          "price": "N/A"
+        },
+        {
+          "name": "848",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Multistrada 1200",
+      "variant_name": "Multistrada 1200",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Multistrada 1200 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "1200 S Sport",
+          "price": "N/A"
+        },
+        {
+          "name": "1200 S Touring",
+          "price": "N/A"
+        },
+        {
+          "name": "1200 S Granturismo",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Hypermotard 821",
+      "variant_name": "Hypermotard 821",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Hypermotard 821 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Sp",
+          "price": "N/A"
+        },
+        {
+          "name": "1100",
+          "price": "N/A"
+        },
+        {
+          "name": "1100 S",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "1299 Panigale",
+      "variant_name": "1299 Panigale",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati 1299 Panigale is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Multistrada 950 [2018-2019]",
+      "variant_name": "Multistrada 950 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Multistrada 950 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Spoke Wheels",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Monster 797 [2018-2019]",
+      "variant_name": "Monster 797 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Monster 797 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Plus",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Hypermotard 939",
+      "variant_name": "Hypermotard 939",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Hypermotard 939 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "SP",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Hyperstrada 939",
+      "variant_name": "Hyperstrada 939",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Hyperstrada 939 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "959 Panigale",
+      "variant_name": "959 Panigale",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati 959 Panigale is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Corse",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Urban Enduro",
+      "variant_name": "Scrambler Urban Enduro",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Urban Enduro is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Full Throttle [2018]",
+      "variant_name": "Scrambler Full Throttle [2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Full Throttle [2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Scrambler Classic [2018-2019]",
+      "variant_name": "Scrambler Classic [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Classic [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Panigale R",
+      "variant_name": "Panigale R",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Panigale R is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "1299 Panigale S",
+      "variant_name": "1299 Panigale S",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati 1299 Panigale S is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Diavel Carbon",
+      "variant_name": "Diavel Carbon",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Diavel Carbon is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Star White",
+          "price": "N/A"
+        },
+        {
+          "name": "Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Cromo",
+          "price": "N/A"
+        },
+        {
+          "name": "Strada",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Multistrada 1200 S",
+      "variant_name": "Multistrada 1200 S",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Multistrada 1200 S is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Monster 1200 S Stripe",
+      "variant_name": "Monster 1200 S Stripe",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Monster 1200 S Stripe is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Monster 1200 [2018-2019]",
+      "variant_name": "Monster 1200 [2018-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Monster 1200 [2018-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Monster 821 [2017]",
+      "variant_name": "Monster 821 [2017]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Monster 821 [2017] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Monster 821 Dark",
+      "variant_name": "Monster 821 Dark",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Monster 821 Dark is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Hypermotard SP 821",
+      "variant_name": "Hypermotard SP 821",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Hypermotard SP 821 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Diavel Titanium",
+      "variant_name": "Diavel Titanium",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Diavel Titanium is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Diavel",
+      "variant_name": "Diavel",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Diavel is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Diesel",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Ducati",
+      "model": "Multistrada 1200 Enduro",
+      "variant_name": "Multistrada 1200 Enduro",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Ducati Multistrada 1200 Enduro is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Grey",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

@@ -1,0 +1,55 @@
+{
+  "brand": "VLF",
+  "brandId": "vlf",
+  "type": "2w",
+  "lastUpdated": "2026-04-02",
+  "source": "BikeWale",
+  "vehicles": [
+    {
+      "make": "VLF",
+      "model": "Mobster",
+      "variant_name": "Mobster",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The VLF Mobster is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "VLF",
+      "model": "Tennis 1500",
+      "variant_name": "Tennis 1500",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "65 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The VLF Tennis 1500 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    }
+  ]
+}

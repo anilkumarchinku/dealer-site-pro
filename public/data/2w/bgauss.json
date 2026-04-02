@@ -2,163 +2,201 @@
   "brand": "BGauss",
   "brandId": "bgauss",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "BGauss",
-      "model": "D15i Neo",
-      "variant_name": "BGauss D15i Neo",
-      "price": "₹99,990",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The BGauss D15i Neo is a feature-rich electric scooter from RR Global's EV arm, offering connected riding experience with 80 km range and a full IoT suite, targeting urban professionals in Indian metros.",
-      "features": [
-        "BGauss App Connectivity",
-        "Remote Diagnostics",
-        "GPS Tracking & Anti-Theft",
-        "Digital TFT Display",
-        "Fast Charging",
-        "Ride Modes (Eco/Power)",
-        "Regenerative Braking"
-      ],
-      "specifications": {
-        "Motor Power": "1.2 kW",
-        "Range": "80 km",
-        "Battery Capacity": "48V 32Ah",
-        "Top Speed": "48 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "42 Nm",
-      "colors": ["Coral Orange", "Mystic Blue", "Urban Black", "Snow White"],
+      "model": "BG RUV 350",
+      "variant_name": "BG RUV 350",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "75 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The BGauss BG RUV 350 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "D15i Neo 48V 32Ah", "price": "₹99,990" }
-      ]
+        {
+          "name": "i EX",
+          "price": "N/A"
+        },
+        {
+          "name": "Max",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "BGauss",
-      "model": "B8 Neo",
-      "variant_name": "BGauss B8 Neo",
-      "price": "₹89,990",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The BGauss B8 Neo is a mid-range connected scooter with 110 km range and a 1.5 kW motor, designed for daily office goers in Indian cities who want reliability and smart features from a trusted brand.",
-      "features": [
-        "Mobile App with Remote Control",
-        "GPS Anti-Theft System",
-        "Digital Instrument Cluster",
-        "Fast Charging",
-        "Ride Modes (Eco/Normal/Sport)",
-        "Regenerative Braking",
-        "USB Charging Port"
-      ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "110 km",
-        "Battery Capacity": "60V 30Ah",
-        "Top Speed": "60 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "40 Nm",
-      "colors": ["Coral Orange", "Mystic Blue", "Urban Black", "Snow White"],
+      "model": "C12",
+      "variant_name": "C12",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "60 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The BGauss C12 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "B8 Neo 60V 30Ah", "price": "₹89,990" }
-      ]
+        {
+          "name": "i Ex",
+          "price": "N/A"
+        },
+        {
+          "name": "i Max 2.0",
+          "price": "N/A"
+        },
+        {
+          "name": "MAX 3.0",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "BGauss",
-      "model": "A2 Neo",
-      "variant_name": "BGauss A2 Neo",
-      "price": "₹79,990",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The BGauss A2 Neo is an entry-level EV from BGauss offering 80 km range and essential smart connectivity, positioned as an affordable upgrade from petrol scooters for first-time EV buyers.",
-      "features": [
-        "Digital Speedometer",
-        "Anti-Theft Alarm",
-        "App Connectivity (Basic)",
-        "Ride Modes (Eco/Power)",
-        "Fast Charging",
-        "Regenerative Braking",
-        "USB Charging Port"
-      ],
-      "specifications": {
-        "Motor Power": "1.2 kW",
-        "Range": "80 km",
-        "Battery Capacity": "48V 30Ah",
-        "Top Speed": "50 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "40 Nm",
-      "colors": ["Coral Orange", "Mystic Blue", "Urban Black", "Snow White"],
+      "model": "Oowah",
+      "variant_name": "Oowah",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "60 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The BGauss Oowah is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "A2 Neo 48V 30Ah", "price": "₹79,990" }
-      ]
+        {
+          "name": "EX",
+          "price": "N/A"
+        },
+        {
+          "name": "MAX",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "BGauss",
-      "model": "RUV501",
-      "variant_name": "BGauss RUV501",
-      "price": "₹1,09,990",
-      "fuel_type": "Electric",
+      "model": "B8",
+      "variant_name": "B8",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The BGauss RUV501 is a rugged utility electric scooter with 120 km range and a practical design, suitable for commuters in urban and semi-urban India who prioritize durability and practicality.",
-      "features": [
-        "Rugged Build for Urban Use",
-        "Digital TFT Display",
-        "GPS Tracking & Anti-Theft",
-        "Fast Charging",
-        "Ride Modes",
-        "Regenerative Braking",
-        "Large Under-Seat Storage"
-      ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "120 km",
-        "Battery Capacity": "60V 34Ah",
-        "Top Speed": "60 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "42 Nm",
-      "colors": ["Coral Orange", "Mystic Blue", "Urban Black", "Snow White"],
+      "description": "The BGauss B8 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "RUV501 60V 34Ah", "price": "₹1,09,990" }
-      ]
+        {
+          "name": "Lead Acid",
+          "price": "N/A"
+        },
+        {
+          "name": "Lithium",
+          "price": "N/A"
+        },
+        {
+          "name": "Li Technology",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "BGauss",
-      "model": "C3i",
-      "variant_name": "BGauss C3i",
-      "price": "₹1,19,990",
-      "fuel_type": "Electric",
+      "model": "A2",
+      "variant_name": "A2",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The BGauss C3i is the brand's flagship connected scooter with a 2 kW motor and 130 km range, featuring a full suite of IoT and smart features for tech-savvy urban commuters.",
-      "features": [
-        "Full IoT Suite with App",
-        "GPS Navigation & Geo-Fencing",
-        "Remote Diagnostics",
-        "7-inch TFT Touchscreen Display",
-        "DC Fast Charging",
-        "Ride Modes (Eco/City/Sport)",
-        "Regenerative Braking"
-      ],
-      "specifications": {
-        "Motor Power": "2.0 kW",
-        "Range": "130 km",
-        "Battery Capacity": "60V 40Ah",
-        "Top Speed": "65 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "42 Nm",
-      "colors": ["Coral Orange", "Mystic Blue", "Urban Black", "Snow White"],
+      "description": "The BGauss A2 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "C3i 60V 40Ah", "price": "₹1,19,990" }
-      ]
+        {
+          "name": "Lead Acid",
+          "price": "N/A"
+        },
+        {
+          "name": "Lithium",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BGauss",
+      "model": "D15",
+      "variant_name": "D15",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BGauss D15 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "i",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BGauss",
+      "model": "C12 [2023]",
+      "variant_name": "C12 [2023]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BGauss C12 [2023] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

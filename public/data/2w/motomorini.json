@@ -1,0 +1,63 @@
+{
+  "brand": "Moto Morini",
+  "brandId": "motomorini",
+  "type": "2w",
+  "lastUpdated": "2026-04-02",
+  "source": "BikeWale",
+  "vehicles": [
+    {
+      "make": "Moto Morini",
+      "model": "Seiemmezzo",
+      "variant_name": "Seiemmezzo",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Moto Morini Seiemmezzo is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Retro Street",
+          "price": "N/A"
+        },
+        {
+          "name": "Scrambler",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Moto Morini",
+      "model": "X-Cape",
+      "variant_name": "X-Cape",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Moto Morini X-Cape is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "X",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    }
+  ]
+}

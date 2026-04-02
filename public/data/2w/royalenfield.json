@@ -1,14 +1,14 @@
 {
-  "brand": "Suzuki",
-  "brandId": "suzuki-motorcycle",
+  "brand": "Royal Enfield",
+  "brandId": "royalenfield",
   "type": "2w",
   "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "Suzuki",
-      "model": "Access 125",
-      "variant_name": "Access 125",
+      "make": "Royal Enfield",
+      "model": "Guerrilla 450",
+      "variant_name": "Guerrilla 450",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -17,7 +17,46 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki Access 125 is a two-wheeler available in India.",
+      "description": "The Royal Enfield Guerrilla 450 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Dash - Twilight Blue",
+          "price": "N/A"
+        },
+        {
+          "name": "APEX - Red",
+          "price": "N/A"
+        },
+        {
+          "name": "APEX - Black and Green",
+          "price": "N/A"
+        },
+        {
+          "name": "Dash - Shadow Ash - Smoke Silver - Peix Bronze",
+          "price": "N/A"
+        },
+        {
+          "name": "Flash - Brava Blue",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Hunter 350",
+      "variant_name": "Hunter 350",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Royal Enfield Hunter 350 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -25,23 +64,11 @@
           "price": "N/A"
         },
         {
-          "name": "Special Edition",
+          "name": "Mid",
           "price": "N/A"
         },
         {
-          "name": "Ride Connect Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect ABS Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect TFT Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect TFT ABS Edition",
+          "name": "Top",
           "price": "N/A"
         }
       ],
@@ -49,9 +76,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Burgman Street 125",
-      "variant_name": "Burgman Street 125",
+      "make": "Royal Enfield",
+      "model": "Classic 350",
+      "variant_name": "Classic 350",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -60,19 +87,35 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki Burgman Street 125 is a two-wheeler available in India.",
+      "description": "The Royal Enfield Classic 350 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard - OBD 2B",
+          "name": "Redditch",
           "price": "N/A"
         },
         {
-          "name": "Ride Connect Edition - OBD 2B",
+          "name": "Halcyon",
           "price": "N/A"
         },
         {
-          "name": "EX - OBD 2B",
+          "name": "Heritage",
+          "price": "N/A"
+        },
+        {
+          "name": "Heritage Premium",
+          "price": "N/A"
+        },
+        {
+          "name": "Signals",
+          "price": "N/A"
+        },
+        {
+          "name": "Dark",
+          "price": "N/A"
+        },
+        {
+          "name": "Chrome",
           "price": "N/A"
         }
       ],
@@ -80,9 +123,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "V-Strom SX",
-      "variant_name": "V-Strom SX",
+      "make": "Royal Enfield",
+      "model": "Bullet 350",
+      "variant_name": "Bullet 350",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -91,65 +134,23 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki V-Strom SX is a two-wheeler available in India.",
+      "description": "The Royal Enfield Bullet 350 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard - OBD 2B",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Gixxer SF",
-      "variant_name": "Gixxer SF",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki Gixxer SF is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Ride Connect - OBD 2B",
+          "name": "Battalion Black",
           "price": "N/A"
         },
         {
-          "name": "Ride Connect Special Edition - OBD 2B",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Gixxer",
-      "variant_name": "Gixxer",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki Gixxer is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Ride Connect - OBD 2B",
+          "name": "Base",
           "price": "N/A"
         },
         {
-          "name": "Ride Connect Special Edition - OBD 2B",
+          "name": "Mid",
+          "price": "N/A"
+        },
+        {
+          "name": "Top",
           "price": "N/A"
         }
       ],
@@ -157,9 +158,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Avenis 125",
-      "variant_name": "Avenis 125",
+      "make": "Royal Enfield",
+      "model": "Continental GT 650",
+      "variant_name": "Continental GT 650",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -168,7 +169,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki Avenis 125 is a two-wheeler available in India.",
+      "description": "The Royal Enfield Continental GT 650 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -176,11 +177,11 @@
           "price": "N/A"
         },
         {
-          "name": "Race Edition",
+          "name": "Alloy Wheel",
           "price": "N/A"
         },
         {
-          "name": "Special Edition",
+          "name": "Chrome",
           "price": "N/A"
         }
       ],
@@ -188,9 +189,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Hayabusa",
-      "variant_name": "Hayabusa",
+      "make": "Royal Enfield",
+      "model": "Meteor 350",
+      "variant_name": "Meteor 350",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -199,11 +200,27 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki Hayabusa is a two-wheeler available in India.",
+      "description": "The Royal Enfield Meteor 350 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
+          "name": "Fireball",
+          "price": "N/A"
+        },
+        {
+          "name": "Stellar",
+          "price": "N/A"
+        },
+        {
+          "name": "Aurora",
+          "price": "N/A"
+        },
+        {
+          "name": "Supernova",
+          "price": "N/A"
+        },
+        {
+          "name": "Sundowner Orange Special Edition",
           "price": "N/A"
         }
       ],
@@ -211,32 +228,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "E Access",
-      "variant_name": "E Access",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "71 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki E Access is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Gixxer SF 250",
-      "variant_name": "Gixxer SF 250",
+      "make": "Royal Enfield",
+      "model": "Himalayan 450",
+      "variant_name": "Himalayan 450",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -245,7 +239,112 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki Gixxer SF 250 is a two-wheeler available in India.",
+      "description": "The Royal Enfield Himalayan 450 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Base",
+          "price": "N/A"
+        },
+        {
+          "name": "Pass",
+          "price": "N/A"
+        },
+        {
+          "name": "Summit",
+          "price": "N/A"
+        },
+        {
+          "name": "Hanle Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Mana Black",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Super Meteor 650",
+      "variant_name": "Super Meteor 650",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Royal Enfield Super Meteor 650 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Astral",
+          "price": "N/A"
+        },
+        {
+          "name": "Interstellar",
+          "price": "N/A"
+        },
+        {
+          "name": "Celestial",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Shotgun 650",
+      "variant_name": "Shotgun 650",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Royal Enfield Shotgun 650 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Custom Shed",
+          "price": "N/A"
+        },
+        {
+          "name": "Custom Pro",
+          "price": "N/A"
+        },
+        {
+          "name": "Custom Special",
+          "price": "N/A"
+        },
+        {
+          "name": "X Rough Crafts",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Interceptor 650",
+      "variant_name": "Interceptor 650",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Royal Enfield Interceptor 650 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -253,57 +352,15 @@
           "price": "N/A"
         },
         {
-          "name": "Special Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX-8R",
-      "variant_name": "GSX-8R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki GSX-8R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Gixxer 250",
-      "variant_name": "Gixxer 250",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki Gixxer 250 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
+          "name": "Custom",
           "price": "N/A"
         },
         {
-          "name": "Special Edition",
+          "name": "Alloy Wheel",
+          "price": "N/A"
+        },
+        {
+          "name": "Chrome",
           "price": "N/A"
         }
       ],
@@ -311,9 +368,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Gixxer SF 250 Flex Fuel",
-      "variant_name": "Gixxer SF 250 Flex Fuel",
+      "make": "Royal Enfield",
+      "model": "Classic 650",
+      "variant_name": "Classic 650",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -322,11 +379,23 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki Gixxer SF 250 Flex Fuel is a two-wheeler available in India.",
+      "description": "The Royal Enfield Classic 650 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
+          "name": "Hotrod",
+          "price": "N/A"
+        },
+        {
+          "name": "Classic",
+          "price": "N/A"
+        },
+        {
+          "name": "Chrome",
+          "price": "N/A"
+        },
+        {
+          "name": "125th Anniversary Edition",
           "price": "N/A"
         }
       ],
@@ -334,9 +403,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "V-Strom 800 DE",
-      "variant_name": "V-Strom 800 DE",
+      "make": "Royal Enfield",
+      "model": "Goan Classic 350",
+      "variant_name": "Goan Classic 350",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -345,11 +414,15 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Suzuki V-Strom 800 DE is a two-wheeler available in India.",
+      "description": "The Royal Enfield Goan Classic 350 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
+          "name": "Single Tone",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Tone",
           "price": "N/A"
         }
       ],
@@ -357,9 +430,71 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Burgman Street 125 2026",
-      "variant_name": "Burgman Street 125 2026",
+      "make": "Royal Enfield",
+      "model": "Scram 440",
+      "variant_name": "Scram 440",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Royal Enfield Scram 440 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Trail",
+          "price": "N/A"
+        },
+        {
+          "name": "Force",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Bear 650",
+      "variant_name": "Bear 650",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Royal Enfield Bear 650 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Broadwalk White",
+          "price": "N/A"
+        },
+        {
+          "name": "Petrol Green and Wild Honey",
+          "price": "N/A"
+        },
+        {
+          "name": "Golden Shadow",
+          "price": "N/A"
+        },
+        {
+          "name": "Two Four Nine",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Flying Flea C6",
+      "variant_name": "Flying Flea C6",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -368,7 +503,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Burgman Street 125 2026 is a two-wheeler available in India.",
+      "description": "The Royal Enfield Flying Flea C6 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -380,9 +515,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "GSX-8S",
-      "variant_name": "GSX-8S",
+      "make": "Royal Enfield",
+      "model": "Bullet 650",
+      "variant_name": "Bullet 650",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -391,7 +526,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki GSX-8S is a two-wheeler available in India.",
+      "description": "The Royal Enfield Bullet 650 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -403,9 +538,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Burgman Street Electric",
-      "variant_name": "Burgman Street Electric",
+      "make": "Royal Enfield",
+      "model": "Continental GT 450",
+      "variant_name": "Continental GT 450",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -414,7 +549,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Burgman Street Electric is a two-wheeler available in India.",
+      "description": "The Royal Enfield Continental GT 450 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -426,9 +561,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Katana",
-      "variant_name": "Katana",
+      "make": "Royal Enfield",
+      "model": "Scrambler 450",
+      "variant_name": "Scrambler 450",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -437,7 +572,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Katana is a two-wheeler available in India.",
+      "description": "The Royal Enfield Scrambler 450 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -449,9 +584,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Intruder 150",
-      "variant_name": "Intruder 150",
+      "make": "Royal Enfield",
+      "model": "Continental GT 750",
+      "variant_name": "Continental GT 750",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -460,29 +595,570 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Intruder 150 is a two-wheeler available in India.",
+      "description": "The Royal Enfield Continental GT 750 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard - BS IV",
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Himalayan 750",
+      "variant_name": "Himalayan 750",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Himalayan 750 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Himalayan Electric",
+      "variant_name": "Himalayan Electric",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Himalayan Electric is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Flying Flea S6 Scrambler",
+      "variant_name": "Flying Flea S6 Scrambler",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Flying Flea S6 Scrambler is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Himalayan Raid 450",
+      "variant_name": "Himalayan Raid 450",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Himalayan Raid 450 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Meteor 350 [2024]",
+      "variant_name": "Meteor 350 [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Meteor 350 [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Fireball",
           "price": "N/A"
         },
         {
-          "name": "SP - BS IV",
+          "name": "Stellar",
+          "price": "N/A"
+        },
+        {
+          "name": "Supernova",
+          "price": "N/A"
+        },
+        {
+          "name": "Aurora",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Guerrilla 450 [2024-2026]",
+      "variant_name": "Guerrilla 450 [2024-2026]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Guerrilla 450 [2024-2026] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Flash",
+          "price": "N/A"
+        },
+        {
+          "name": "Dash",
+          "price": "N/A"
+        },
+        {
+          "name": "Analogue",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Scram 411",
+      "variant_name": "Scram 411",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Scram 411 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Graphite Blue - Graphite Red - Graphite Yellow",
+          "price": "N/A"
+        },
+        {
+          "name": "Blazing Black and Skyline Blue",
+          "price": "N/A"
+        },
+        {
+          "name": "White Flame and Silver Spirit",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Thunderbird 350",
+      "variant_name": "Thunderbird 350",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Thunderbird 350 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Self",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Himalayan [2015-2023]",
+      "variant_name": "Himalayan [2015-2023]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Himalayan [2015-2023] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Carburetor",
+          "price": "N/A"
+        },
+        {
+          "name": "Fi",
+          "price": "N/A"
+        },
+        {
+          "name": "Sleet",
+          "price": "N/A"
+        },
+        {
+          "name": "Fi ABS - BS IV",
+          "price": "N/A"
+        },
+        {
+          "name": "Sleet ABS - BS IV",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard - BS VI [2020]",
+          "price": "N/A"
+        },
+        {
+          "name": "Sleet and Gravel Grey [2020]",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Tone - BS VI [2020]",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Tone - BS VI [2021]",
+          "price": "N/A"
+        },
+        {
+          "name": "Pine Green and Granite Black [2021]",
+          "price": "N/A"
+        },
+        {
+          "name": "Pine Green and Dune Brown",
+          "price": "N/A"
+        },
+        {
+          "name": "Glacier Blue and Granite Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Sleet Black",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Classic Signals",
+      "variant_name": "Classic Signals",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Classic Signals is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Classic Stealth Black",
+      "variant_name": "Classic Stealth Black",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Classic Stealth Black is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Classic 500",
+      "variant_name": "Classic 500",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Classic 500 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Desert Storm",
+          "price": "N/A"
+        },
+        {
+          "name": "Chrome",
+          "price": "N/A"
+        },
+        {
+          "name": "Single Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Thunderbird 350X",
+      "variant_name": "Thunderbird 350X",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Thunderbird 350X is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Bullet 350 [2012-2023]",
+      "variant_name": "Bullet 350 [2012-2023]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Bullet 350 [2012-2023] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Twinspark",
+          "price": "N/A"
+        },
+        {
+          "name": "Electra Twinspark",
+          "price": "N/A"
+        },
+        {
+          "name": "Twinspark Double Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Electra Twinspark Double Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "KS - ABS BS IV",
+          "price": "N/A"
+        },
+        {
+          "name": "ES - ABS BS IV",
+          "price": "N/A"
+        },
+        {
+          "name": "ES - ABS (New Colour Edition)",
+          "price": "N/A"
+        },
+        {
+          "name": "KS - ABS (New Colour Edition) ",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "KS",
+          "price": "N/A"
+        },
+        {
+          "name": "ES",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Classic 350 [2020]",
+      "variant_name": "Classic 350 [2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Classic 350 [2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Redditch Edition - Single Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Redditch Edition - Dual Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Redditch Ed- Dual Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard - Dual Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Single Channel ABS",
           "price": "N/A"
         },
         {
           "name": "Standard - BS VI",
           "price": "N/A"
+        },
+        {
+          "name": "Gun Metal Grey - BS VI (Spoke)",
+          "price": "N/A"
+        },
+        {
+          "name": "Chrome and Stealth - BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Sandstone and Airborne - BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Single Channel ABS - BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "Gun Metal Grey - BS VI (Alloy)",
+          "price": "N/A"
+        },
+        {
+          "name": "Orange Ember & Metallo Silver",
+          "price": "N/A"
         }
       ],
       "colors": [],
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "V-Strom 650 XT [2017-2018]",
-      "variant_name": "V-Strom 650 XT [2017-2018]",
+      "make": "Royal Enfield",
+      "model": "Bullet 500",
+      "variant_name": "Bullet 500",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -491,7 +1167,127 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki V-Strom 650 XT [2017-2018] is a two-wheeler available in India.",
+      "description": "The Royal Enfield Bullet 500 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Rear Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Rear Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Hunter 350 [2024]",
+      "variant_name": "Hunter 350 [2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Hunter 350 [2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Metro Dapper",
+          "price": "N/A"
+        },
+        {
+          "name": "Retro Factory",
+          "price": "N/A"
+        },
+        {
+          "name": "Metro Rebel",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Electra [1995-1997]",
+      "variant_name": "Electra [1995-1997]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Electra [1995-1997] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "5s",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Machismo",
+      "variant_name": "Machismo",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Machismo is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "350",
+          "price": "N/A"
+        },
+        {
+          "name": "500",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Thunderbird Twinspark",
+      "variant_name": "Thunderbird Twinspark",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Thunderbird Twinspark is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -503,9 +1299,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Zeus DU",
-      "variant_name": "Zeus DU",
+      "make": "Royal Enfield",
+      "model": "Old Generation Classic 350 2021",
+      "variant_name": "Old Generation Classic 350 2021",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -514,7 +1310,362 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Zeus DU is a two-wheeler available in India.",
+      "description": "The Royal Enfield Old Generation Classic 350 2021 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Halcyon - Dual Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Redditch - Single Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Classic Chrome - Dual Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Classic Dark - Dual Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Classic Signals - Dual Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Halcyon - Single Channel ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Thunderbird 500",
+      "variant_name": "Thunderbird 500",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Thunderbird 500 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Bullet Trials 500",
+      "variant_name": "Bullet Trials 500",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Bullet Trials 500 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Dual Channel ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Bullet Trials 350",
+      "variant_name": "Bullet Trials 350",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Bullet Trials 350 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Dual Channel ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Classic 500 Pegasus",
+      "variant_name": "Classic 500 Pegasus",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Classic 500 Pegasus is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Thunderbird 500X",
+      "variant_name": "Thunderbird 500X",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Thunderbird 500X is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Continental GT [2013 - 2018]",
+      "variant_name": "Continental GT [2013 - 2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Continental GT [2013 - 2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Lightning",
+      "variant_name": "Lightning",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Lightning is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Classic Gunmetal Grey",
+      "variant_name": "Classic Gunmetal Grey",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Classic Gunmetal Grey is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Redditch Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Classic Squadron Blue",
+      "variant_name": "Classic Squadron Blue",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Classic Squadron Blue is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Single Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Crusader",
+      "variant_name": "Crusader",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Crusader is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Electra Twinspark",
+      "variant_name": "Electra Twinspark",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Electra Twinspark is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Electra 5 S",
+      "variant_name": "Electra 5 S",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Electra 5 S is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Disc Kick",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Self",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum Kick",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum Self",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Electra 4 S",
+      "variant_name": "Electra 4 S",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Royal Enfield Electra 4 S is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -530,9 +1681,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Zeus EU",
-      "variant_name": "Zeus EU",
+      "make": "Royal Enfield",
+      "model": "Bullet 350 [2007-2011]",
+      "variant_name": "Bullet 350 [2007-2011]",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -541,7 +1692,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Zeus EU is a two-wheeler available in India.",
+      "description": "The Royal Enfield Bullet 350 [2007-2011] is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -553,9 +1704,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "V-Strom 1000",
-      "variant_name": "V-Strom 1000",
+      "make": "Royal Enfield",
+      "model": "Classic Chrome",
+      "variant_name": "Classic Chrome",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -564,50 +1715,15 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki V-Strom 1000 is a two-wheeler available in India.",
+      "description": "The Royal Enfield Classic Chrome is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Gixxer SF [2015-2018]",
-      "variant_name": "Gixxer SF [2015-2018]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Gixxer SF [2015-2018] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
+          "name": "Single Disc",
           "price": "N/A"
         },
         {
-          "name": "Special MOTOGP Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Rear Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "Special MOTOGP Edition Rear Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "SP Rear Disc",
+          "name": "Dual Disc",
           "price": "N/A"
         },
         {
@@ -619,9 +1735,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Swish 125 facelift",
-      "variant_name": "Swish 125 facelift",
+      "make": "Royal Enfield",
+      "model": "Classic Desert Storm",
+      "variant_name": "Classic Desert Storm",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -630,220 +1746,29 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Swish 125 facelift is a two-wheeler available in India.",
+      "description": "The Royal Enfield Classic Desert Storm is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX-S1000 [2019-2020]",
-      "variant_name": "GSX-S1000 [2019-2020]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX-S1000 [2019-2020] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX-S1000F",
-      "variant_name": "GSX-S1000F",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX-S1000F is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Access [2024]",
-      "variant_name": "Access [2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Access [2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Drum [2019]",
+          "name": "Single Disc",
           "price": "N/A"
         },
         {
-          "name": "Disc [2019]",
-          "price": "N/A"
-        },
-        {
-          "name": "Special Edition - Drum",
-          "price": "N/A"
-        },
-        {
-          "name": "Special Edition - Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc - CBS",
-          "price": "N/A"
-        },
-        {
-          "name": "SE - Disc CBS",
-          "price": "N/A"
-        },
-        {
-          "name": "Steel Wheel - Drum - CBS",
-          "price": "N/A"
-        },
-        {
-          "name": "Alloy Wheel - Drum -CBS",
-          "price": "N/A"
-        },
-        {
-          "name": "SE - Alloy Wheel - Drum CBS",
-          "price": "N/A"
-        },
-        {
-          "name": "Steel Wheel - Drum - CBS -Fi",
-          "price": "N/A"
-        },
-        {
-          "name": "Alloy Wheel - Drum -CBS Fi",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum Cast - SE - Fi",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc - CBS - Fi",
-          "price": "N/A"
-        },
-        {
-          "name": "SE - Disc CBS - Fi",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum Alloy - Bluetooth",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc Alloy - Bluetooth",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "Special Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayate EP",
-      "variant_name": "Hayate EP",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayate EP is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Gixxer SF Fi",
-      "variant_name": "Gixxer SF Fi",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Gixxer SF Fi is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
+          "name": "Dual Disc",
           "price": "N/A"
         },
         {
           "name": "ABS",
           "price": "N/A"
-        },
-        {
-          "name": "SP ABS",
-          "price": "N/A"
         }
       ],
       "colors": [],
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "GSX-R1000",
-      "variant_name": "GSX-R1000",
+      "make": "Royal Enfield",
+      "model": "Superstar",
+      "variant_name": "Superstar",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -852,34 +1777,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki GSX-R1000 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "R",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX-S750 [2017-2018]",
-      "variant_name": "GSX-S750 [2017-2018]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX-S750 [2017-2018] is a two-wheeler available in India.",
+      "description": "The Royal Enfield Superstar is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -891,9 +1789,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Suzuki",
-      "model": "Intruder 150 Fi",
-      "variant_name": "Intruder 150 Fi",
+      "make": "Royal Enfield",
+      "model": "Mini Bullet",
+      "variant_name": "Mini Bullet",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -902,1061 +1800,11 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Suzuki Intruder 150 Fi is a two-wheeler available in India.",
+      "description": "The Royal Enfield Mini Bullet is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
           "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "SP",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Zeus CD",
-      "variant_name": "Zeus CD",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Zeus CD is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "RM-Z250",
-      "variant_name": "RM-Z250",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki RM-Z250 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "RM-Z450",
-      "variant_name": "RM-Z450",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki RM-Z450 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "V-Strom 650 XT [2018-2019]",
-      "variant_name": "V-Strom 650 XT [2018-2019]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki V-Strom 650 XT [2018-2019] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "ABS",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "DR-Z50",
-      "variant_name": "DR-Z50",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki DR-Z50 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX S750",
-      "variant_name": "GSX S750",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX S750 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayabusa [2019-2020]",
-      "variant_name": "Hayabusa [2019-2020]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayabusa [2019-2020] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "V-Strom 650 XT",
-      "variant_name": "V-Strom 650 XT",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki V-Strom 650 XT is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayabusa [2022]",
-      "variant_name": "Hayabusa [2022]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayabusa [2022] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "V-Strom 800DE [2024]",
-      "variant_name": "V-Strom 800DE [2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki V-Strom 800DE [2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayabusa [2024]",
-      "variant_name": "Hayabusa [2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayabusa [2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "25th Anniversary Celebration Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Burgman 650",
-      "variant_name": "Burgman 650",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Burgman 650 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX-8R [2024]",
-      "variant_name": "GSX-8R [2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX-8R [2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Fiero",
-      "variant_name": "Fiero",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Fiero is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Swish [2012-2015]",
-      "variant_name": "Swish [2012-2015]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Swish [2012-2015] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "125",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "SlingShot Plus",
-      "variant_name": "SlingShot Plus",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki SlingShot Plus is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "SEU",
-          "price": "N/A"
-        },
-        {
-          "name": "SCD",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayate [2013-2016]",
-      "variant_name": "Hayate [2013-2016]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayate [2013-2016] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Kick Start",
-          "price": "N/A"
-        },
-        {
-          "name": "Electric Start",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GS150R",
-      "variant_name": "GS150R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GS150R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "M800",
-      "variant_name": "M800",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki M800 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Intruder",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "M1800RZ",
-      "variant_name": "M1800RZ",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki M1800RZ is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Intruder",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Intruder M1800R",
-      "variant_name": "Intruder M1800R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Intruder M1800R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "B.O.S.S. Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayabusa [2018-2019]",
-      "variant_name": "Hayabusa [2018-2019]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayabusa [2018-2019] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "GSX1300R",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Bandit",
-      "variant_name": "Bandit",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Bandit is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "1250SA",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX-R1000 [2016]",
-      "variant_name": "GSX-R1000 [2016]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX-R1000 [2016] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "400F",
-          "price": "N/A"
-        },
-        {
-          "name": "R600",
-          "price": "N/A"
-        },
-        {
-          "name": "R750",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Inazuma 250",
-      "variant_name": "Inazuma 250",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Inazuma 250 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Heat",
-      "variant_name": "Heat",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Heat is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "125",
-          "price": "N/A"
-        },
-        {
-          "name": "Alloys",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Zeus",
-      "variant_name": "Zeus",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Zeus is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "DS80",
-      "variant_name": "DS80",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki DS80 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Access 125 old generation 2007",
-      "variant_name": "Access 125 old generation 2007",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Access 125 old generation 2007 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GS",
-      "variant_name": "GS",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GS is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "450",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Katana [2013-2014]",
-      "variant_name": "Katana [2013-2014]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Katana [2013-2014] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "750",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "MAX100",
-      "variant_name": "MAX100",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki MAX100 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Samurai",
-      "variant_name": "Samurai",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Samurai is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Shaolin",
-      "variant_name": "Shaolin",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Shaolin is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Shogun",
-      "variant_name": "Shogun",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Shogun is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "TC90",
-      "variant_name": "TC90",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki TC90 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "AX 100",
-      "variant_name": "AX 100",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki AX 100 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX R1000Z",
-      "variant_name": "GSX R1000Z",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX R1000Z is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayabusa Limited Edition",
-      "variant_name": "Hayabusa Limited Edition",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayabusa Limited Edition is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "GSX1300R",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Gixxer [2014-2018]",
-      "variant_name": "Gixxer [2014-2018]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Gixxer [2014-2018] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Rear Drum",
-          "price": "N/A"
-        },
-        {
-          "name": "Dual Tone",
-          "price": "N/A"
-        },
-        {
-          "name": "Dual Tone Rear Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "SP Rear Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "ABS",
-          "price": "N/A"
-        },
-        {
-          "name": "SP ABS",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Lets",
-      "variant_name": "Lets",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Lets is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Dual Tone",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "SlingShot",
-      "variant_name": "SlingShot",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki SlingShot is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Drum Alloy",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc Alloy",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc Alloy Self",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum Alloy Kick",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum Alloy Self",
-          "price": "N/A"
-        },
-        {
-          "name": "Spoke",
           "price": "N/A"
         }
       ],

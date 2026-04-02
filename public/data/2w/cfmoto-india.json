@@ -2,202 +2,215 @@
   "brand": "CFMoto",
   "brandId": "cfmoto-india",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "CFMoto",
-      "model": "300NK",
-      "variant_name": "CFMoto 300NK",
-      "price": "₹2,29,900",
-      "engine_displacement": "292 cc",
-      "mileage": "30 kmpl",
-      "top_speed": "168 kmph",
-      "max_power": "26 bhp",
+      "model": "450 MT",
+      "variant_name": "450 MT",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "25 Nm",
-      "source_section": "Discontinued",
-      "description": "The CFMoto 300NK was the brand's smallest and most affordable offering in India, featuring aggressive streetfighter styling with a full-LED headlamp. This 292cc naked street bike delivered strong performance at an accessible price point before being discontinued.",
-      "features": [
-        "292.4cc BS6 engine producing 27.49 bhp",
-        "6-speed manual transmission with dual-channel ABS",
-        "Full-LED headlamp with aggressive streetfighter design",
-        "Split-seat setup with upswept rear section",
-        "Five-spoke alloy wheels",
-        "Underbelly exhaust system",
-        "Disc brakes on both front and rear",
-        "12.5-litre fuel tank capacity",
-        "Low-slung, muscular design",
-        "Discontinued from India market"
-      ],
-      "colors": [
-        "Frost Black",
-        "Flame Red",
-        "Storm Grey"
-      ],
+      "source_section": "Available",
+      "description": "The CFMoto 450 MT is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "300NK Standard",
-          "price": "₹2,29,900"
+          "name": "Standard",
+          "price": "N/A"
         }
       ],
-      "technical_specifications": {
-        "engine_type": "Single-cylinder, Liquid-cooled",
-        "power": "26 bhp",
-        "torque": "28 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13.5 litres",
-        "kerb_weight": "165 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "CFMoto",
+      "model": "650NK [2019-2020]",
+      "variant_name": "650NK [2019-2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The CFMoto 650NK [2019-2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "CFMoto",
+      "model": "650MT [2019-2020]",
+      "variant_name": "650MT [2019-2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The CFMoto 650MT [2019-2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "CFMoto",
+      "model": "300NK [2019-2020]",
+      "variant_name": "300NK [2019-2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The CFMoto 300NK [2019-2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "CFMoto",
+      "model": "650GT [2019-2020]",
+      "variant_name": "650GT [2019-2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The CFMoto 650GT [2019-2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "CFMoto",
+      "model": "300NK",
+      "variant_name": "300NK",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The CFMoto 300NK is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "CFMoto",
       "model": "650NK",
-      "variant_name": "CFMoto 650NK",
-      "price": "₹5,49,900",
-      "engine_displacement": "649 cc",
-      "mileage": "22 kmpl",
-      "top_speed": "160 kmph",
-      "max_power": "54 bhp",
+      "variant_name": "650NK",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "62 Nm",
-      "source_section": "Discontinued",
-      "description": "The CFMoto 650NK was a BS6-compliant middleweight naked bike featuring a 649.3cc parallel-twin engine with aggressive styling. It delivered strong performance at a competitive price point in the middleweight segment before being discontinued from the Indian market.",
-      "features": [
-        "649.3cc BS6 parallel-twin engine producing 55.65 bhp",
-        "6-speed manual transmission with self-start",
-        "Dual disc brakes with ABS",
-        "Full digital instrument cluster",
-        "Alloy wheels",
-        "17-litre fuel tank capacity",
-        "815mm seat height",
-        "180 kmph top speed",
-        "BS6 emission compliance",
-        "Discontinued from India market"
-      ],
-      "colors": [
-        "Frost Black",
-        "Flame Red"
-      ],
+      "source_section": "Available",
+      "description": "The CFMoto 650NK is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "650NK Standard",
-          "price": "₹5,49,900"
+          "name": "Standard",
+          "price": "N/A"
         }
       ],
-      "technical_specifications": {
-        "engine_type": "Parallel-twin, Liquid-cooled",
-        "power": "54 bhp",
-        "torque": "55 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "17 litres",
-        "kerb_weight": "210 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "emission": "BS6 Phase 2"
-      }
-    },
-    {
-      "make": "CFMoto",
-      "model": "650MT",
-      "variant_name": "CFMoto 650MT",
-      "price": "₹6,49,900",
-      "engine_displacement": "649 cc",
-      "mileage": "22 kmpl",
-      "top_speed": "180 kmph",
-      "max_power": "54 bhp",
-      "fuel_type": "Petrol",
-      "max_torque": "62 Nm",
-      "source_section": "Discontinued",
-      "description": "The CFMoto 650MT was a middleweight street bike offering comfortable riding ergonomics and substantial mid-range torque. It combined touring capability with everyday usability through its 649cc parallel-twin engine, though it has since been discontinued from the Indian market.",
-      "features": [
-        "649cc BS6 parallel-twin engine producing 55.65 bhp",
-        "6-speed manual transmission with self-start",
-        "Dual disc brakes with ABS",
-        "Adjustable front and rear suspension",
-        "18-litre fuel tank capacity",
-        "840mm seat height for comfortable touring",
-        "218kg kerb weight",
-        "Alloy wheels",
-        "180 kmph top speed",
-        "Discontinued from India market"
-      ],
-      "colors": [
-        "Frost Black",
-        "Ocean Blue",
-        "Adventure Orange"
-      ],
-      "variants": [
-        {
-          "name": "650MT Standard",
-          "price": "₹6,49,900"
-        }
-      ],
-      "technical_specifications": {
-        "engine_type": "Parallel-twin, Liquid-cooled",
-        "power": "54 bhp",
-        "torque": "55 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "17 litres",
-        "kerb_weight": "218 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "emission": "BS6 Phase 2"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "CFMoto",
       "model": "650GT",
-      "variant_name": "CFMoto 650GT",
-      "price": "₹7,19,900",
-      "engine_displacement": "649 cc",
-      "mileage": "22 kmpl",
-      "top_speed": "175 kmph",
-      "max_power": "54 bhp",
+      "variant_name": "650GT",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The CFMoto 650GT was a full-fairing sports tourer with modern technology including an adjustable windscreen, digital instrument cluster, and USB charging port. It competed in the middleweight segment with its 649.3cc parallel-twin engine before being discontinued in India.",
-      "features": [
-        "649.3cc BS6 parallel-twin engine producing 55.65 bhp",
-        "6-speed manual transmission with self-start",
-        "Dual disc brakes with ABS",
-        "Full-fairing aerodynamic design",
-        "Adjustable windscreen",
-        "Full-LED lighting system",
-        "Digital instrument cluster",
-        "USB charging port and 12V socket",
-        "Alloy wheels",
-        "Discontinued from India market"
-      ],
-      "colors": [
-        "Pearl White",
-        "Midnight Black"
-      ],
+      "source_section": "Available",
+      "description": "The CFMoto 650GT is a two-wheeler available in India.",
+      "features": [],
       "variants": [
         {
-          "name": "650GT Standard",
-          "price": "₹7,19,900"
+          "name": "Standard",
+          "price": "N/A"
         }
       ],
-      "technical_specifications": {
-        "engine_type": "Parallel-twin, Liquid-cooled",
-        "power": "54 bhp",
-        "torque": "55 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "17 litres",
-        "kerb_weight": "228 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "emission": "BS6 Phase 2"
-      },
-      "max_torque": "62 Nm"
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "CFMoto",
+      "model": "650MT",
+      "variant_name": "650MT",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The CFMoto 650MT is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

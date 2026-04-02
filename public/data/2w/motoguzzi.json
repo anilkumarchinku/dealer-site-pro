@@ -1,114 +1,14 @@
 {
-  "brand": "Ampere",
-  "brandId": "ampere-greaves",
+  "brand": "Moto Guzzi",
+  "brandId": "motoguzzi",
   "type": "2w",
   "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "Ampere",
-      "model": "Reo",
-      "variant_name": "Reo",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "25 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Ampere Reo is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "80",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ampere",
-      "model": "Nexus",
-      "variant_name": "Nexus",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "93 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Ampere Nexus is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "EX",
-          "price": "N/A"
-        },
-        {
-          "name": "ST",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ampere",
-      "model": "Magnus",
-      "variant_name": "Magnus",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "65 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Ampere Magnus is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "NEO",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ampere",
-      "model": "Magnus Grand",
-      "variant_name": "Magnus Grand",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "65 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Ampere Magnus Grand is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Max",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ampere",
-      "model": "Zeal EX",
-      "variant_name": "Zeal EX",
+      "make": "Moto Guzzi",
+      "model": "V85 TT",
+      "variant_name": "V85 TT",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -116,8 +16,8 @@
       "max_torque": "N/A",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Ampere Zeal EX is a two-wheeler available in India.",
+      "source_section": "Discontinued",
+      "description": "The Moto Guzzi V85 TT is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -129,9 +29,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Ampere",
-      "model": "Reo Elite",
-      "variant_name": "Reo Elite",
+      "make": "Moto Guzzi",
+      "model": "Griso 1200 8V SE",
+      "variant_name": "Griso 1200 8V SE",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -140,138 +40,7 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Ampere Reo Elite is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Lead Acid Battery",
-          "price": "N/A"
-        },
-        {
-          "name": "Li Battery",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ampere",
-      "model": "V 48",
-      "variant_name": "V 48",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Ampere V 48 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Lead Acid Battery",
-          "price": "N/A"
-        },
-        {
-          "name": "Li Battery",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ampere",
-      "model": "REO [2019-2023]",
-      "variant_name": "REO [2019-2023]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Ampere REO [2019-2023] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Lead Acid Battery",
-          "price": "N/A"
-        },
-        {
-          "name": "Li Battery",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ampere",
-      "model": "Magnus Pro",
-      "variant_name": "Magnus Pro",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Ampere Magnus Pro is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Lead Acid Battery",
-          "price": "N/A"
-        },
-        {
-          "name": "Pro - Li Battery",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ampere",
-      "model": "Zeal",
-      "variant_name": "Zeal",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Ampere Zeal is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Ex - Li Battery",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ampere",
-      "model": "Primus",
-      "variant_name": "Primus",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Ampere Primus is a two-wheeler available in India.",
+      "description": "The Moto Guzzi Griso 1200 8V SE is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -283,9 +52,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Ampere",
-      "model": "Magnus LT",
-      "variant_name": "Magnus LT",
+      "make": "Moto Guzzi",
+      "model": "Bellagio",
+      "variant_name": "Bellagio",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -294,7 +63,272 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Ampere Magnus LT is a two-wheeler available in India.",
+      "description": "The Moto Guzzi Bellagio is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "940",
+          "price": "N/A"
+        },
+        {
+          "name": "Black Eagle",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Moto Guzzi",
+      "model": "California 1400 ABS Tour Full",
+      "variant_name": "California 1400 ABS Tour Full",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Moto Guzzi California 1400 ABS Tour Full is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Moto Guzzi",
+      "model": "California 1400",
+      "variant_name": "California 1400",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Moto Guzzi California 1400 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Custom",
+          "price": "N/A"
+        },
+        {
+          "name": "Touring",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Moto Guzzi",
+      "model": "Sports 8V Corsa",
+      "variant_name": "Sports 8V Corsa",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Moto Guzzi Sports 8V Corsa is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Moto Guzzi",
+      "model": "Sports 8V",
+      "variant_name": "Sports 8V",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Moto Guzzi Sports 8V is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Corsa",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Moto Guzzi",
+      "model": "Bellagio Black Eagle",
+      "variant_name": "Bellagio Black Eagle",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Moto Guzzi Bellagio Black Eagle is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Moto Guzzi",
+      "model": "V9 Bobber",
+      "variant_name": "V9 Bobber",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Moto Guzzi V9 Bobber is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Moto Guzzi",
+      "model": "V9 Roamer",
+      "variant_name": "V9 Roamer",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Moto Guzzi V9 Roamer is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Moto Guzzi",
+      "model": "Eldorado",
+      "variant_name": "Eldorado",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Moto Guzzi Eldorado is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Moto Guzzi",
+      "model": "Audace",
+      "variant_name": "Audace",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Moto Guzzi Audace is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Moto Guzzi",
+      "model": "MGX-21",
+      "variant_name": "MGX-21",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Moto Guzzi MGX-21 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Moto Guzzi",
+      "model": "V85",
+      "variant_name": "V85",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Moto Guzzi V85 is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {

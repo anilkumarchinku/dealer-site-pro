@@ -1,14 +1,37 @@
 {
-  "brand": "Okinawa",
-  "brandId": "okinawa-autotech",
+  "brand": "OPG Mobility",
+  "brandId": "opg-mobility",
   "type": "2w",
   "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "Okinawa",
-      "model": "R30",
-      "variant_name": "R30",
+      "make": "OPG Mobility",
+      "model": "Faast F4",
+      "variant_name": "Faast F4",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "70 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The OPG Mobility Faast F4 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "F4",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "OPG Mobility",
+      "model": "Freedum",
+      "variant_name": "Freedum",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -17,199 +40,15 @@
       "top_speed": "25 kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Okinawa R30 is a two-wheeler available in India.",
+      "description": "The OPG Mobility Freedum is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Okinawa",
-      "model": "Lite",
-      "variant_name": "Lite",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "25 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Okinawa Lite is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Okinawa",
-      "model": "Praise",
-      "variant_name": "Praise",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "58 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Okinawa Praise is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Pro",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Okinawa",
-      "model": "OKHI-90",
-      "variant_name": "OKHI-90",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "90 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Okinawa OKHI-90 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Okinawa",
-      "model": "Ridge Plus",
-      "variant_name": "Ridge Plus",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "45 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Okinawa Ridge Plus is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Okinawa",
-      "model": "i-Praise",
-      "variant_name": "i-Praise",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "58 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Okinawa i-Praise is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Plus",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Okinawa",
-      "model": "Dual 100",
-      "variant_name": "Dual 100",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "60 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Okinawa Dual 100 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Okinawa",
-      "model": "Ridge 100",
-      "variant_name": "Ridge 100",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "50 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Okinawa Ridge 100 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Okinawa",
-      "model": "Ridge",
-      "variant_name": "Ridge",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Okinawa Ridge is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
+          "name": "LI",
           "price": "N/A"
         },
         {
-          "name": "Ridge 30",
+          "name": "LA",
           "price": "N/A"
         }
       ],
@@ -217,9 +56,124 @@
       "technical_specifications": {}
     },
     {
-      "make": "Okinawa",
-      "model": "Raise",
-      "variant_name": "Raise",
+      "make": "OPG Mobility",
+      "model": "Faast F2B",
+      "variant_name": "Faast F2B",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "70 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The OPG Mobility Faast F2B is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "OPG Mobility",
+      "model": "Faast F2T",
+      "variant_name": "Faast F2T",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "70 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The OPG Mobility Faast F2T is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "OPG Mobility",
+      "model": "Faast F2F",
+      "variant_name": "Faast F2F",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "55 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The OPG Mobility Faast F2F is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "OPG Mobility",
+      "model": "Faast F3",
+      "variant_name": "Faast F3",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "70 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The OPG Mobility Faast F3 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "OPG Mobility",
+      "model": "Motofaast",
+      "variant_name": "Motofaast",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "70 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The OPG Mobility Motofaast is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "OPG Mobility",
+      "model": "ClassIQ",
+      "variant_name": "ClassIQ",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -228,9 +182,13 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Okinawa Raise is a two-wheeler available in India.",
+      "description": "The OPG Mobility ClassIQ is a two-wheeler available in India.",
       "features": [],
       "variants": [
+        {
+          "name": "100+",
+          "price": "N/A"
+        },
         {
           "name": "Standard",
           "price": "N/A"

@@ -2,722 +2,2253 @@
   "brand": "Bajaj",
   "brandId": "bajaj-auto",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Bajaj",
-      "model": "Platina 100",
-      "variant_name": "Platina 100 Standard",
-      "price": "₹67,463",
-      "engine_displacement": "99.59 cc",
-      "mileage": "75 kmpl",
-      "max_power": "7.79 bhp",
-      "max_torque": "8.34 Nm",
-      "top_speed": "90 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Bajaj Platina 100 is a no-frills commuter bike built for maximum fuel efficiency and low ownership cost. With a 99.59cc BS6 Phase 2 engine and Combined Braking System, it is perfect for daily city commuting and short highway journeys on a tight budget.",
-      "features": ["Combined Braking System", "Alloy Wheels", "Kick and Self Start", "4-Speed Manual Transmission", "BS6 Phase 2 Compliant"],
-      "variants": [
-        { "name": "Platina 100 Standard", "price": "₹67,463" }
-      ],
-      "colors": ["Black & Blue", "Black & Gold", "Black & Silver", "Black & Red"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled",
-        "displacement": "99.59 cc",
-        "max_power": "7.79 bhp",
-        "max_torque": "8.34 Nm",
-        "transmission": "4-Speed Manual",
-        "start_type": "Kick and Self Start",
-        "fuel_tank": "11 liters",
-        "mileage_user": "75 kmpl",
-        "top_speed": "90 kmph",
-        "kerb_weight": "117 kg",
-        "seat_height": "807 mm",
-        "front_brake": "Drum",
-        "rear_brake": "Drum",
-        "braking_system": "Combined Braking System",
-        "wheel_type": "Alloy",
-        "features": "High fuel efficiency, Comfortable commuter bike"
-      }
-    },
-    {
-      "make": "Bajaj",
-      "model": "Platina 110 H-Gear",
-      "variant_name": "Platina 110 H-Gear Standard",
-      "price": "₹70,675",
-      "engine_displacement": "115.45 cc",
-      "mileage": "70 kmpl",
-      "max_power": "8.48 bhp",
-      "max_torque": "9.81 Nm",
-      "top_speed": "90 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Bajaj Platina 110 H-Gear is a commuter motorcycle featuring a 115.45cc BS6 Phase 2 engine with impressive fuel efficiency. Its H-Gear (5th gear) optimises the engine for highway cruising, making it an economical choice for long-distance daily commuters.",
-      "features": ["H-Gear (5th Gear) for Highway Efficiency", "Combined Braking System", "Alloy Wheels", "Self Start", "4-Speed Manual Transmission", "BS6 Phase 2 Compliant"],
-      "variants": [
-        { "name": "Platina 110 H-Gear Standard", "price": "₹70,675" }
-      ],
-      "colors": ["Black & White (Drum)", "Cocktail Wine Red - Orange (Drum)", "Ebony Black Red (Drum)", "Ebony Black Blue (Drum)"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled",
-        "displacement": "115.45 cc",
-        "max_power": "8.48 bhp",
-        "max_torque": "9.81 Nm",
-        "transmission": "4-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "11 liters",
-        "mileage_user": "70 kmpl",
-        "top_speed": "90 kmph",
-        "kerb_weight": "119 kg",
-        "seat_height": "807 mm",
-        "front_brake": "Drum",
-        "rear_brake": "Drum",
-        "braking_system": "Combined Braking System",
-        "wheel_type": "Alloy"
-      }
-    },
-    {
-      "make": "Bajaj",
-      "model": "CT 110",
-      "variant_name": "CT 110 Standard",
-      "price": "₹68,917",
-      "engine_displacement": "115.45 cc",
-      "mileage": "70 kmpl",
-      "max_power": "8.48 bhp",
-      "max_torque": "9.81 Nm",
-      "top_speed": "90 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Bajaj CT 110 is a tough and dependable entry-level commuter motorcycle designed for both city and rural terrain. It delivers excellent fuel efficiency with a rugged build, comfortable long seat, and high ground clearance for varied road conditions.",
-      "features": ["High Ground Clearance", "Long Comfortable Seat", "Combined Braking System", "Alloy Wheels", "Kick and Self Start", "BS6 Phase 2 Compliant"],
-      "variants": [
-        { "name": "CT 110 Standard", "price": "₹68,917" }
-      ],
-      "colors": ["Ebony Black - Blue", "Ebony Black - Red", "Matte Wild Green"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled",
-        "displacement": "115.45 cc",
-        "max_power": "8.48 bhp",
-        "max_torque": "9.81 Nm",
-        "transmission": "4-Speed Manual",
-        "start_type": "Kick and Self Start",
-        "fuel_tank": "11 liters",
-        "mileage_user": "70 kmpl",
-        "top_speed": "90 kmph",
-        "kerb_weight": "127 kg",
-        "seat_height": "810 mm",
-        "front_brake": "Drum",
-        "rear_brake": "Drum",
-        "braking_system": "Combined Braking System",
-        "wheel_type": "Alloy",
-        "features": "High fuel efficiency, Comfortable long seat, Excellent ground clearance"
-      }
-    },
-    {
-      "make": "Bajaj",
-      "model": "CT 110X",
-      "variant_name": "CT 110X Standard",
-      "price": "₹72,500",
-      "engine_displacement": "115.45 cc",
-      "mileage": "65 kmpl",
-      "max_power": "8.48 bhp",
-      "max_torque": "9.81 Nm",
-      "top_speed": "90 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Bajaj CT 110X is an adventure-inspired commuter bike with cross-country styling and practical everyday usability. It features higher ground clearance, wide handlebars, and rugged aesthetics suited for riders tackling mixed urban and off-road conditions.",
-      "features": ["High Ground Clearance (185 mm)", "Wide Handlebars", "Cross-Country Inspired Styling", "Combined Braking System", "Alloy Wheels", "Kick and Self Start", "BS6 Phase 2 Compliant"],
-      "variants": [
-        { "name": "CT 110X Standard", "price": "₹72,500" }
-      ],
-      "colors": ["Ebony Black - Blue", "Matte Wild Green", "Ebony Black - Red"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled",
-        "displacement": "115.45 cc",
-        "max_power": "8.48 bhp",
-        "max_torque": "9.81 Nm",
-        "transmission": "4-Speed Manual",
-        "start_type": "Kick and Self Start",
-        "fuel_tank": "11 liters",
-        "mileage_user": "65 kmpl",
-        "top_speed": "90 kmph",
-        "kerb_weight": "130 kg",
-        "seat_height": "820 mm",
-        "front_brake": "Drum",
-        "rear_brake": "Drum",
-        "braking_system": "Combined Braking System",
-        "wheel_type": "Alloy",
-        "features": "High ground clearance, Cross-country inspired styling, Wide handlebars"
-      }
-    },
-    {
-      "make": "Bajaj",
-      "model": "Pulsar 125",
-      "variant_name": "Pulsar 125 Neon Single Seat",
-      "price": "₹82,420",
-      "engine_displacement": "124.4 cc",
-      "mileage": "50 kmpl",
-      "max_power": "11.64 bhp",
-      "max_torque": "10.8 Nm",
-      "top_speed": "100 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Bajaj Pulsar 125 brings the iconic Pulsar sporty styling to the 125cc segment, making it an attractive entry point for young riders. It offers a punchy engine, disc brake option, and Pulsar DNA styling at an affordable price point.",
-      "features": ["Front Disc Brake", "Combined Braking System", "Alloy Wheels", "LED Tail Lamp", "Digital-Analogue Console", "Kick and Self Start", "5-Speed Manual Transmission"],
-      "variants": [
-        { "name": "Pulsar 125 Neon Single Seat", "price": "₹82,420" },
-        { "name": "Pulsar 125 Carbon Disc Single Seat LED", "price": "₹85,000" },
-        { "name": "Pulsar 125 Carbon Disc Split Seat LED", "price": "₹87,000" }
-      ],
-      "colors": ["Black Race Red", "Black Cyan Blue", "Black Dark Grey", "Racing Red with Tan Beige", "Racing Red Tan Beige (Split Seat)", "Black Race Red (Split Seat)", "Black Dark Grey (Split Seat)", "Black Cyan Blue (Split Seat)"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled",
-        "displacement": "124.4 cc",
-        "max_power": "11.64 bhp",
-        "max_torque": "10.8 Nm",
-        "transmission": "5-Speed Manual",
-        "start_type": "Kick and Self Start",
-        "fuel_tank": "11.5 liters",
-        "mileage_arai": "50 kmpl",
-        "top_speed": "100 kmph",
-        "kerb_weight": "140 kg",
-        "seat_height": "790 mm",
-        "front_brake": "Disc",
-        "rear_brake": "Drum",
-        "braking_system": "Combined Braking System",
-        "wheel_type": "Alloy"
-      }
-    },
-    {
-      "make": "Bajaj",
-      "model": "Pulsar N125",
-      "variant_name": "Pulsar N125 Disc - Bluetooth",
-      "price": "₹93,668",
-      "engine_displacement": "124.4 cc",
-      "mileage": "60 kmpl",
-      "max_power": "11.83 bhp",
-      "max_torque": "11 Nm",
-      "top_speed": "107 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Bajaj Pulsar N125 is a naked street bike in the 125cc segment featuring modern N-series styling with advanced connectivity. It offers Bluetooth integration, LED headlamp, and disc brakes, delivering a premium experience at an entry-level price.",
-      "features": ["Bluetooth Connectivity", "LED Headlamp", "Digital Console", "Front Disc Brake", "Combined Braking System", "Alloy Wheels", "Self Start"],
-      "variants": [
-        { "name": "Pulsar N125 Disc - Bluetooth", "price": "₹93,668" },
-        { "name": "Pulsar N125 LED Disc", "price": "₹96,000" }
-      ],
-      "colors": ["Brooklyn Black", "Pearl Metallic White", "Cocktail Wine Red", "Ebony Black Blue"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled",
-        "displacement": "124.4 cc",
-        "max_power": "11.83 bhp",
-        "max_torque": "11 Nm",
-        "transmission": "5-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "10 liters",
-        "mileage_user": "60 kmpl",
-        "top_speed": "107 kmph",
-        "kerb_weight": "139 kg",
-        "front_brake": "Disc",
-        "rear_brake": "Drum",
-        "braking_system": "Combined Braking System",
-        "wheel_type": "Alloy",
-        "features": "Bluetooth connectivity, Digital console, LED headlamp"
-      }
-    },
-    {
-      "make": "Bajaj",
-      "model": "Pulsar NS125",
-      "variant_name": "Pulsar NS125 Standard",
-      "price": "₹92,671",
-      "engine_displacement": "124.4 cc",
-      "mileage": "46.9 kmpl",
-      "max_power": "11.8 bhp",
-      "max_torque": "11 Nm",
-      "top_speed": "105 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Bajaj Pulsar NS125 is a naked sport bike bringing the NS streetfighter styling to the 125cc class. It features a muscular perimeter-inspired design, LED headlamp, and Bluetooth connectivity in higher variants, catering to young sport-oriented riders.",
-      "features": ["Naked Sport Styling", "LED Headlamp", "Bluetooth Connectivity (Higher Variant)", "Front Disc Brake", "CBS/ABS (Variant Dependent)", "Alloy Wheels", "Self Start"],
-      "variants": [
-        { "name": "Pulsar NS125 Standard", "price": "₹92,671" },
-        { "name": "Pulsar NS125 LED Bluetooth", "price": "₹95,000" },
-        { "name": "Pulsar NS125 LED Bluetooth - ABS", "price": "₹98,000" }
-      ],
-      "colors": ["Pewter Grey", "Pearl Metallic White", "Ebony Black"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled",
-        "displacement": "124.4 cc",
-        "max_power": "11.8 bhp",
-        "max_torque": "11 Nm",
-        "transmission": "5-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "10 liters",
-        "mileage_arai": "46.9 kmpl",
-        "top_speed": "105 kmph",
-        "kerb_weight": "144 kg",
-        "front_brake": "Disc",
-        "rear_brake": "Drum",
-        "braking_system": "CBS / ABS (variant dependent)",
-        "wheel_type": "Alloy",
-        "features": "Naked sport styling, LED headlamp, Bluetooth (higher variant)"
-      }
-    },
-    {
-      "make": "Bajaj",
-      "model": "Pulsar 150",
-      "variant_name": "Pulsar 150 Single Disc [2026]",
-      "price": "₹1,10,120",
-      "engine_displacement": "149 cc",
-      "mileage": "48 kmpl",
-      "max_power": "13.8 bhp",
-      "max_torque": "13.25 Nm",
-      "top_speed": "112 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Bajaj Pulsar 150 is the iconic entry point of the Pulsar family, offering a perfect blend of sporty styling and daily practicality. With its DTS-i engine, disc brake option, and Bluetooth-enabled variants, it remains a top choice in the 150cc commuter-sport segment.",
-      "features": ["Single-Channel ABS", "Front Disc Brake", "LED Headlamp", "Digital Console", "Bluetooth (Higher Variants)", "Alloy Wheels", "Self Start", "5-Speed Manual Transmission"],
-      "variants": [
-        { "name": "Pulsar 150 Single Disc [2026]", "price": "₹1,10,120" },
-        { "name": "Pulsar 150 Single Disc - Bluetooth [2026]", "price": "₹1,13,000" },
-        { "name": "Pulsar 150 Twin Disc - Bluetooth [2026]", "price": "₹1,16,000" }
-      ],
-      "colors": ["Black Silver", "Black Red", "Black Blue", "Ebony Black"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled, DTS-i",
-        "displacement": "149 cc",
-        "max_power": "13.8 bhp",
-        "max_torque": "13.25 Nm",
-        "transmission": "5-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "15 liters",
-        "mileage_user": "48 kmpl",
-        "top_speed": "112 kmph",
-        "kerb_weight": "148 kg",
-        "front_brake": "Disc",
-        "rear_brake": "Drum / Disc",
-        "braking_system": "Single-channel ABS",
-        "wheel_type": "Alloy"
-      }
-    },
-    {
-      "make": "Bajaj",
       "model": "Pulsar N160",
-      "variant_name": "Pulsar N160 Single Seat Twin Disc",
-      "price": "₹1,14,840",
-      "engine_displacement": "164.82 cc",
-      "mileage": "51.6 kmpl",
-      "max_power": "15.68 bhp",
-      "max_torque": "14.65 Nm",
-      "top_speed": "120 kmph",
+      "variant_name": "Pulsar N160",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Bajaj Pulsar N160 is a stylish naked street bike featuring aggressive N-series design with an oil-cooled engine delivering strong mid-range performance. It comes equipped with dual-channel ABS, LED projector headlamp with DRLs, and Bluetooth connectivity in select variants.",
-      "features": ["Dual-Channel ABS", "LED Projector Headlamp with DRLs", "Front and Rear Disc Brakes", "Bluetooth Connectivity (Select Variants)", "Oil-Cooled Engine", "Digital Console", "Alloy Wheels", "Self Start"],
+      "source_section": "Discontinued",
+      "description": "The Bajaj Pulsar N160 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Pulsar N160 Single Seat Twin Disc", "price": "₹1,14,840" },
-        { "name": "Pulsar N160 Dual Channel ABS", "price": "₹1,18,000" },
-        { "name": "Pulsar N160 Single Seat - USD Forks", "price": "₹1,22,000" },
-        { "name": "Pulsar N160 USD Forks", "price": "₹1,27,333" }
+        {
+          "name": "Single Seat Twin Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Single Seat - USD Forks",
+          "price": "N/A"
+        },
+        {
+          "name": "USD Forks",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Harbor Grey & Silver", "Racing Red & Rush Red", "Ebony Black & Charcoal Black", "Pearl Metallic White & Silver", "Polar Sky Blue", "Brooklyn Black", "Glossy Racing Red (Bluetooth)", "Pearl Metallic White (Bluetooth)", "Polar Sky Blue (Bluetooth)", "Brooklyn Black (Bluetooth)"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Oil-cooled",
-        "displacement": "164.82 cc",
-        "max_power": "15.68 bhp",
-        "max_torque": "14.65 Nm",
-        "transmission": "5-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "14 liters",
-        "mileage_arai": "51.6 kmpl",
-        "mileage_user": "46 kmpl",
-        "top_speed": "120 kmph",
-        "kerb_weight": "148 kg",
-        "seat_height": "795 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Disc",
-        "braking_system": "Single / Dual-channel ABS",
-        "wheel_type": "Alloy",
-        "features": "USD forks (higher variant), Digital console, Bluetooth"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Bajaj",
-      "model": "Pulsar NS160",
-      "variant_name": "Pulsar NS160 Standard",
-      "price": "₹1,21,837",
-      "engine_displacement": "160.3 cc",
-      "mileage": "44 kmpl",
-      "max_power": "17.03 bhp",
-      "max_torque": "14.6 Nm",
-      "top_speed": "120 kmph",
+      "model": "Chetak",
+      "variant_name": "Chetak",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "63 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Bajaj Pulsar NS160 is a naked streetfighter with an oil-cooled engine delivering 17 bhp, making it one of the most powerful bikes in its class. It features dual-channel ABS, digital instrument cluster with Bluetooth connectivity, turn-by-turn navigation, and TPMS.",
-      "features": ["Dual-Channel ABS", "Turn-by-Turn Navigation", "Bluetooth Connectivity", "Digital Instrument Cluster", "TPMS", "LED Headlamp", "Anti-theft System", "Alloy Wheels", "Self Start"],
+      "source_section": "Discontinued",
+      "description": "The Bajaj Chetak is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Pulsar NS160 Standard", "price": "₹1,21,837" }
+        {
+          "name": "3001",
+          "price": "N/A"
+        },
+        {
+          "name": "3503",
+          "price": "N/A"
+        },
+        {
+          "name": "3502",
+          "price": "N/A"
+        },
+        {
+          "name": "3501",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Cocktail Wine Red", "Pearl Metallic White", "Ebony Black", "Pewter Grey"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Oil-cooled",
-        "displacement": "160.3 cc",
-        "max_power": "17.03 bhp",
-        "max_torque": "14.6 Nm",
-        "transmission": "5-Speed Manual",
-        "start_type": "Kick and Self Start",
-        "fuel_tank": "12 liters",
-        "mileage_arai": "52.2 kmpl",
-        "mileage_user": "44 kmpl",
-        "top_speed": "120 kmph",
-        "kerb_weight": "152 kg",
-        "seat_height": "805 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Disc with ABS",
-        "braking_system": "Dual-channel ABS",
-        "wheel_type": "Alloy",
-        "features": "Digital instrument cluster, Turn-by-turn navigation, Bluetooth, TPMS, Anti-theft system"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Bajaj",
       "model": "Pulsar NS200",
-      "variant_name": "Pulsar NS200 Standard",
-      "price": "₹1,34,162",
-      "engine_displacement": "199.5 cc",
-      "mileage": "36 kmpl",
-      "max_power": "24.13 bhp",
-      "max_torque": "18.74 Nm",
-      "top_speed": "130 kmph",
+      "variant_name": "Pulsar NS200",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Bajaj Pulsar NS200 is a liquid-cooled naked streetfighter delivering 24 bhp with aggressive styling and a perimeter frame. It features dual-channel ABS, USD front suspension, Bluetooth connectivity, and LED lighting, offering a powerful yet accessible performance motorcycle.",
-      "features": ["Dual-Channel ABS", "USD Front Suspension", "LED Headlight with DRLs", "Bluetooth Connectivity", "Digital Display", "Dual Disc Brakes", "Liquid-Cooled Engine", "Alloy Wheels", "Self Start", "6-Speed Manual Transmission"],
+      "source_section": "Discontinued",
+      "description": "The Bajaj Pulsar NS200 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Pulsar NS200 Standard", "price": "₹1,34,162" },
-        { "name": "Pulsar NS200 Higher Variant", "price": "₹1,44,136" }
+        {
+          "name": "Bluetooth",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Channel USD",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Pewter Grey", "Metallic Pearl White", "Glossy Ebony Black", "Cocktail Wine Red"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Liquid-cooled",
-        "displacement": "199.5 cc",
-        "max_power": "24.13 bhp",
-        "max_torque": "18.74 Nm",
-        "transmission": "6-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "12 liters",
-        "mileage_user": "36 kmpl",
-        "top_speed": "130 kmph",
-        "kerb_weight": "158 kg",
-        "seat_height": "805 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Disc with ABS",
-        "braking_system": "Dual-channel ABS",
-        "wheel_type": "Alloy",
-        "features": "LED headlight with DRLs, Digital display, Bluetooth connectivity, USD suspension"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Bajaj",
-      "model": "Pulsar 220F",
-      "variant_name": "Pulsar 220F Single Disc",
-      "price": "₹1,27,478",
-      "engine_displacement": "220 cc",
-      "mileage": "40 kmpl",
-      "max_power": "20.11 bhp",
-      "max_torque": "18.55 Nm",
-      "top_speed": "136 kmph",
+      "model": "Pulsar 125",
+      "variant_name": "Pulsar 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Bajaj Pulsar 220F is a semi-faired motorcycle that has been an icon of the Indian performance bike segment for over a decade. Featuring a projector headlamp, twin disc brakes with ABS, and an oil-cooled 220cc DTS-i engine, it delivers a comfortable highway cruising experience with sporty character.",
-      "features": ["ABS", "Semi-Fairing", "Projector Headlamp", "Twin Disc Brakes", "Oil-Cooled Engine", "Alloy Wheels", "Self Start", "5-Speed Manual Transmission"],
+      "source_section": "Discontinued",
+      "description": "The Bajaj Pulsar 125 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Pulsar 220F Single Disc", "price": "₹1,27,478" },
-        { "name": "Pulsar 220F Twin Disc", "price": "₹1,29,924" }
+        {
+          "name": "Neon Single Seat",
+          "price": "N/A"
+        },
+        {
+          "name": "Neon Single Seat LED",
+          "price": "N/A"
+        },
+        {
+          "name": "Carbon Disc Single Seat LED",
+          "price": "N/A"
+        },
+        {
+          "name": "Carbon Disc Split Seat LED",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Black Silver", "Black Red", "Black Blue", "Green Light Copper", "Black Copper Beige", "Black Ink Blue", "Black Cherry Red"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Oil-cooled, DTS-i",
-        "displacement": "220 cc",
-        "max_power": "20.11 bhp",
-        "max_torque": "18.55 Nm",
-        "transmission": "5-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "15 liters",
-        "mileage_user": "40 kmpl",
-        "top_speed": "136 kmph",
-        "kerb_weight": "160 kg",
-        "seat_height": "795 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Disc with ABS",
-        "braking_system": "ABS",
-        "wheel_type": "Alloy",
-        "features": "Semi-fairing, Projector headlamp"
-      }
-    },
-    {
-      "make": "Bajaj",
-      "model": "Pulsar N250",
-      "variant_name": "Pulsar N250 Standard",
-      "price": "₹1,34,758",
-      "engine_displacement": "249 cc",
-      "mileage": "40 kmpl",
-      "max_power": "24.1 bhp",
-      "max_torque": "21.5 Nm",
-      "top_speed": "132 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Bajaj Pulsar N250 is an attention-grabbing streetfighter with 37mm USD forks, traction control, and slip-and-assist clutch at a segment-competitive price. It features a fully digital Bluetooth console with turn-by-turn navigation and LED projector headlight, offering premium technology in the 250cc class.",
-      "features": ["Dual-Channel ABS", "Traction Control", "USD Forks (37mm)", "Slip and Assist Clutch", "Bluetooth Connectivity", "Turn-by-Turn Navigation", "LED Projector Headlight", "Digital Console", "Dual Disc Brakes"],
-      "variants": [
-        { "name": "Pulsar N250 Dual Channel ABS", "price": "₹1,34,758" }
-      ],
-      "colors": ["Pearl Metallic White", "Brooklyn Black", "Glossy Racing Red"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Oil-cooled",
-        "displacement": "249 cc",
-        "max_power": "24.1 bhp",
-        "max_torque": "21.5 Nm",
-        "transmission": "5-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "14 liters",
-        "mileage_arai": "44 kmpl",
-        "mileage_user": "40 kmpl",
-        "top_speed": "132 kmph",
-        "kerb_weight": "162 kg",
-        "seat_height": "795 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Disc with ABS",
-        "braking_system": "Dual-channel ABS (Road/Rain/Off-road modes)",
-        "wheel_type": "Alloy",
-        "features": "Traction control, 37mm USD forks, Bluetooth connectivity, Turn-by-turn navigation, LED projector headlight, Slip and assist clutch"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Bajaj",
       "model": "Pulsar NS400Z",
-      "variant_name": "Pulsar NS400Z Standard",
-      "price": "₹1,94,061",
-      "engine_displacement": "373 cc",
-      "mileage": "32 kmpl",
-      "max_power": "42.41 bhp",
-      "max_torque": "35 Nm",
-      "top_speed": "157 kmph",
+      "variant_name": "Pulsar NS400Z",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Bajaj Pulsar NS400Z is a raw, powerful streetfighter blending muscular styling with serious performance from its 373cc liquid-cooled engine delivering 42.41 bhp. It features a quickshifter (2025 update), sintered brake pads, traction control, and Apollo Alpha H1 tyres for an exhilarating riding experience.",
-      "features": ["Dual-Channel ABS", "Traction Control", "Quickshifter (2025)", "Sintered Brake Pads", "Apollo Alpha H1 Tyres", "Lightning Bolt DRL", "Dual Disc Brakes", "Liquid-Cooled Engine", "6-Speed Manual Transmission", "Self Start"],
+      "source_section": "Discontinued",
+      "description": "The Bajaj Pulsar NS400Z is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Pulsar NS400Z Standard", "price": "₹1,94,061" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Pewter Grey", "Pearl Metallic White", "Glossy Racing Red", "Brooklyn Black"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2B, Single-cylinder, Liquid-cooled",
-        "displacement": "373 cc",
-        "max_power": "42.41 bhp",
-        "max_torque": "35 Nm",
-        "transmission": "6-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "12 liters",
-        "mileage_user": "32 kmpl",
-        "top_speed": "157 kmph",
-        "kerb_weight": "174 kg",
-        "seat_height": "807 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Disc with ABS",
-        "braking_system": "Dual-channel ABS",
-        "wheel_type": "Alloy",
-        "features": "Traction Control, Lightning bolt DRL, Sintered brake pads, Muscular streetfighter styling"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar NS125",
+      "variant_name": "Pulsar NS125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Bajaj Pulsar NS125 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "LED Bluetooth",
+          "price": "N/A"
+        },
+        {
+          "name": "LED Bluetooth - ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar NS160",
+      "variant_name": "Pulsar NS160",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Bajaj Pulsar NS160 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Bluetooth",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar N250",
+      "variant_name": "Pulsar N250",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Bajaj Pulsar N250 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Dual Channel ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar 150",
+      "variant_name": "Pulsar 150",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Bajaj Pulsar 150 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Single Disc [2026]",
+          "price": "N/A"
+        },
+        {
+          "name": "Single Disc - Bluetooth [2026]",
+          "price": "N/A"
+        },
+        {
+          "name": "Twin Disc - Bluetooth [2026]",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar RS 200",
+      "variant_name": "Pulsar RS 200",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Bajaj Pulsar RS 200 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar 220 F",
+      "variant_name": "Pulsar 220 F",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Bajaj Pulsar 220 F is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Single Channel ABS [2024]",
+          "price": "N/A"
+        },
+        {
+          "name": "Single Channel ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Bajaj",
       "model": "Dominar 250",
-      "variant_name": "Dominar 250 Standard",
-      "price": "₹1,78,273",
-      "engine_displacement": "248.8 cc",
-      "mileage": "32 kmpl",
-      "max_power": "26.63 bhp",
-      "max_torque": "23.5 Nm",
-      "top_speed": "132 kmph",
+      "variant_name": "Dominar 250",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Bajaj Dominar 250 is a touring-ready motorcycle featuring a DOHC liquid-cooled 248.8cc engine with impressive power output. With USD front forks, perimeter frame, monoshock rear suspension, and split seating, it is designed for comfortable long-distance riding at an accessible price.",
-      "features": ["Dual-Channel ABS", "USD Front Forks", "Monoshock Rear Suspension", "Perimeter Frame", "Full LED Lighting", "Split Seating", "6-Speed Manual Transmission", "DOHC Liquid-Cooled Engine"],
+      "source_section": "Discontinued",
+      "description": "The Bajaj Dominar 250 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Dominar 250 Standard", "price": "₹1,78,273" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Citrus Rush", "Sparkling Black", "Racing Red"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2B, Single-cylinder, DOHC, Liquid-cooled",
-        "displacement": "248.8 cc",
-        "max_power": "26.63 bhp",
-        "max_torque": "23.5 Nm",
-        "transmission": "6-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "13 liters",
-        "mileage_arai": "35 kmpl",
-        "mileage_user": "32 kmpl",
-        "top_speed": "132 kmph",
-        "kerb_weight": "180 kg",
-        "seat_height": "800 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Disc with ABS",
-        "braking_system": "Dual-channel ABS",
-        "wheel_type": "Alloy",
-        "features": "USD front forks, Monoshock rear, Perimeter frame, Split seating"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Chetak C25",
+      "variant_name": "Chetak C25",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "55 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Bajaj Chetak C25 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Bajaj",
       "model": "Dominar 400",
-      "variant_name": "Dominar 400 Standard",
-      "price": "₹2,38,873",
-      "engine_displacement": "373.3 cc",
-      "mileage": "29 kmpl",
-      "max_power": "39.42 bhp",
-      "max_torque": "35 Nm",
-      "top_speed": "155 kmph",
+      "variant_name": "Dominar 400",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Bajaj Dominar 400 is a flagship power-touring motorcycle with a 373.3cc DOHC liquid-cooled engine producing nearly 40 bhp. It features a slipper clutch, full-LED lighting, dual-channel ABS, and is compatible with touring accessories like windscreen, sump guard, and luggage rack.",
-      "features": ["Dual-Channel ABS", "Slipper Clutch", "Full LED Lighting", "USD Front Forks", "Touring Accessories Compatible", "DOHC Liquid-Cooled Engine", "6-Speed Manual Transmission", "Self Start"],
+      "source_section": "Discontinued",
+      "description": "The Bajaj Dominar 400 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Dominar 400 Standard", "price": "₹2,38,873" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Charcoal Black", "Aurora Green"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2B, Single-cylinder, DOHC, Liquid-cooled",
-        "displacement": "373.3 cc",
-        "max_power": "39.42 bhp",
-        "max_torque": "35 Nm",
-        "transmission": "6-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "13 liters",
-        "mileage_arai": "30 kmpl",
-        "mileage_user": "29 kmpl",
-        "top_speed": "155 kmph",
-        "kerb_weight": "193 kg",
-        "seat_height": "800 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Disc with ABS",
-        "braking_system": "Dual-channel ABS",
-        "wheel_type": "Alloy",
-        "features": "Slipper clutch, Full-LED lighting, Touring accessories available"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Bajaj",
-      "model": "Avenger Street 160",
-      "variant_name": "Avenger Street 160 Standard",
-      "price": "₹1,12,280",
-      "engine_displacement": "160 cc",
-      "mileage": "45 kmpl",
-      "max_power": "14.79 bhp",
-      "max_torque": "13.7 Nm",
-      "top_speed": "105 kmph",
+      "model": "Pulsar N125",
+      "variant_name": "Pulsar N125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Bajaj Avenger Street 160 is an accessible cruiser motorcycle with a low-slung design, relaxed riding posture, and a 160cc air-cooled engine. It features single-channel ABS, a front disc brake, and alloy wheels, making it ideal for daily commuting with a cruiser feel.",
-      "features": ["Single-Channel ABS", "Front Disc Brake", "Cruiser Styling", "Low Seat Height (737 mm)", "Relaxed Riding Posture", "Alloy Wheels", "Self Start", "5-Speed Manual Transmission"],
+      "source_section": "Discontinued",
+      "description": "The Bajaj Pulsar N125 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Avenger Street 160 Standard", "price": "₹1,12,280" }
+        {
+          "name": "Disc - Bluetooth",
+          "price": "N/A"
+        },
+        {
+          "name": "LED Disc",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Ebony Black", "Spicy Red"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled, DTS-i",
-        "displacement": "160 cc",
-        "max_power": "14.79 bhp",
-        "max_torque": "13.7 Nm",
-        "transmission": "5-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "13 liters",
-        "mileage_user": "45 kmpl",
-        "top_speed": "105 kmph",
-        "kerb_weight": "156 kg",
-        "seat_height": "737 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Drum",
-        "braking_system": "Single-channel ABS",
-        "wheel_type": "Alloy",
-        "features": "Cruiser styling, Low seat height, Relaxed riding posture"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Freedom",
+      "variant_name": "Freedom",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Bajaj Freedom is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum LED",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc LED",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Bajaj",
       "model": "Avenger Cruise 220",
-      "variant_name": "Avenger Cruise 220 Standard",
-      "price": "₹1,26,620",
-      "engine_displacement": "220 cc",
-      "mileage": "39 kmpl",
-      "max_power": "18.76 bhp",
-      "max_torque": "17.55 Nm",
-      "top_speed": "120 kmph",
+      "variant_name": "Avenger Cruise 220",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Bajaj Avenger Cruise 220 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Platina 100",
+      "variant_name": "Platina 100",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Bajaj Platina 100 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "ES Drum",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Platina 110",
+      "variant_name": "Platina 110",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Bajaj Platina 110 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Avenger Street 160",
+      "variant_name": "Avenger Street 160",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Bajaj Avenger Street 160 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "CT 110",
+      "variant_name": "CT 110",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Bajaj CT 110 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "X",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Dominar 350",
+      "variant_name": "Dominar 350",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Bajaj Avenger Cruise 220 is a classic cruiser motorcycle featuring a 220cc oil-cooled engine and a long, low-slung profile with spoke wheels. Its pillion backrest, tall windshield, and relaxed forward riding posture make it an excellent choice for long-distance touring on a budget.",
-      "features": ["Single-Channel ABS", "Front Disc Brake", "Pillion Backrest", "Tall Windshield", "Spoke Wheels", "Low-Slung Cruiser Seat", "Relaxed Riding Posture", "Self Start"],
+      "description": "The Bajaj Dominar 350 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Avenger Cruise 220 Standard", "price": "₹1,26,620" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Auburn Black", "Moon White"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Oil-cooled",
-        "displacement": "220 cc",
-        "max_power": "18.76 bhp",
-        "max_torque": "17.55 Nm",
-        "transmission": "5-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "13 liters",
-        "mileage_user": "39 kmpl",
-        "top_speed": "120 kmph",
-        "kerb_weight": "163 kg",
-        "seat_height": "737 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Drum",
-        "braking_system": "Single-channel ABS",
-        "wheel_type": "Spoke",
-        "features": "Low-slung cruiser seat, Pillion backrest, Tall windshield, Relaxed riding posture"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar 350",
+      "variant_name": "Pulsar 350",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Pulsar 350 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar N150",
+      "variant_name": "Pulsar N150",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Pulsar N150 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Single Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Twin Disc",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "CT 100",
+      "variant_name": "CT 100",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj CT 100 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Spoke",
+          "price": "N/A"
+        },
+        {
+          "name": "KS Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "B",
+          "price": "N/A"
+        },
+        {
+          "name": "ES Alloy",
+          "price": "N/A"
+        },
+        {
+          "name": "B - CBS - BS IV",
+          "price": "N/A"
+        },
+        {
+          "name": "KS Alloy - CBS BS IV",
+          "price": "N/A"
+        },
+        {
+          "name": "ES Alloy - CBS BS IV",
+          "price": "N/A"
+        },
+        {
+          "name": "ES Alloy - BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "KS Alloy - BS VI",
+          "price": "N/A"
+        },
+        {
+          "name": "KS Alloy - BS VI - Facelift",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Avenger Street 220",
+      "variant_name": "Avenger Street 220",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Avenger Street 220 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar 180",
+      "variant_name": "Pulsar 180",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Pulsar 180 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Bikini Fairing",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Discover 125",
+      "variant_name": "Discover 125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Discover 125 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum - CBS",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc - CBS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "CT 125X",
+      "variant_name": "CT 125X",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj CT 125X is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "V15",
+      "variant_name": "V15",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj V15 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Power Up",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Chetak [2020-2024]",
+      "variant_name": "Chetak [2020-2024]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Chetak [2020-2024] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Urbane [2019-2022]",
+          "price": "N/A"
+        },
+        {
+          "name": "Premium [2020-2022]",
+          "price": "N/A"
+        },
+        {
+          "name": "Premium Edition [2023-2024]",
+          "price": "N/A"
+        },
+        {
+          "name": "Urbane",
+          "price": "N/A"
+        },
+        {
+          "name": "Urbane TecPac",
+          "price": "N/A"
+        },
+        {
+          "name": "Premium",
+          "price": "N/A"
+        },
+        {
+          "name": "Premium TecPac",
+          "price": "N/A"
+        },
+        {
+          "name": "2901 Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "2901 Edition TecPac",
+          "price": "N/A"
+        },
+        {
+          "name": "Blue 3202",
+          "price": "N/A"
+        },
+        {
+          "name": "Blue 3202 TecPac",
+          "price": "N/A"
+        },
+        {
+          "name": "2903",
+          "price": "N/A"
+        },
+        {
+          "name": "2903 TecPac",
+          "price": "N/A"
+        },
+        {
+          "name": "3201 Special Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar 150 [2001-2011]",
+      "variant_name": "Pulsar 150 [2001-2011]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Pulsar 150 [2001-2011] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Kick Start",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar 220 Fi",
+      "variant_name": "Pulsar 220 Fi",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Pulsar 220 Fi is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Discover 150F",
+      "variant_name": "Discover 150F",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Discover 150F is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Discover 150S",
+      "variant_name": "Discover 150S",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Discover 150S is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Discover 125 M",
+      "variant_name": "Discover 125 M",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Discover 125 M is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Dominar 400 [2018]",
+      "variant_name": "Dominar 400 [2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Dominar 400 [2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar 220 DTS-i",
+      "variant_name": "Pulsar 220 DTS-i",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Pulsar 220 DTS-i is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Byk",
+      "variant_name": "Byk",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Byk is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "M",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Discover 100 M",
+      "variant_name": "Discover 100 M",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Discover 100 M is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Discover 125T",
+      "variant_name": "Discover 125T",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Discover 125T is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Priya",
+      "variant_name": "Priya",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Priya is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar AS200",
+      "variant_name": "Pulsar AS200",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Pulsar AS200 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar AS150",
+      "variant_name": "Pulsar AS150",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Pulsar AS150 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Avenger Street 150 [2018]",
+      "variant_name": "Avenger Street 150 [2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Avenger Street 150 [2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Avenger Street 220 [2015-2020]",
+      "variant_name": "Avenger Street 220 [2015-2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Avenger Street 220 [2015-2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "V12",
+      "variant_name": "V12",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj V12 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Discover 110",
+      "variant_name": "Discover 110",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Discover 110 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum CBS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Avenger Street 180",
+      "variant_name": "Avenger Street 180",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Avenger Street 180 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Platina 110 [2018-2020]",
+      "variant_name": "Platina 110 [2018-2020]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Platina 110 [2018-2020] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "ES Alloy CBS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar 180F",
+      "variant_name": "Pulsar 180F",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Pulsar 180F is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Neon - ABS - BS IV",
+          "price": "N/A"
+        },
+        {
+          "name": "Neon - ABS - BS VI",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
       "make": "Bajaj",
       "model": "Pulsar F250",
-      "variant_name": "Pulsar F250 Single Channel ABS",
-      "price": "₹1,44,267",
-      "engine_displacement": "249 cc",
-      "mileage": "38 kmpl",
-      "max_power": "24.1 bhp",
-      "max_torque": "21.5 Nm",
-      "top_speed": "132 kmph",
+      "variant_name": "Pulsar F250",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Bajaj Pulsar F250 is a half-faired motorcycle built on the 249cc platform, offering sporty aerodynamic styling with a LED headlamp and digital console. With an assist and slipper clutch, gear shift indicator, and 17-inch alloy wheels with tubeless tyres, it offered excellent value in the faired segment before being discontinued.",
-      "features": ["Single-Channel ABS", "Assist and Slipper Clutch", "Half-Fairing", "LED Headlamp", "Semi-Digital Instrument Cluster", "Gear Shift Light", "Tubeless Tyres", "17-inch Alloy Wheels"],
+      "source_section": "Available",
+      "description": "The Bajaj Pulsar F250 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Pulsar F250 Single Channel ABS", "price": "₹1,44,267" }
+        {
+          "name": "Single Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Channel ABS [2024]",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Caribbean Blue", "Racing Red", "Techno Grey", "Brooklyn Black"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Oil-cooled",
-        "displacement": "249 cc",
-        "max_power": "24.1 bhp @ 8750 rpm",
-        "max_torque": "21.5 Nm @ 6500 rpm",
-        "transmission": "5-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "14 liters",
-        "mileage_arai": "39 kmpl",
-        "mileage_user": "38 kmpl",
-        "top_speed": "132 kmph",
-        "kerb_weight": "164 kg",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Disc with ABS",
-        "braking_system": "Single-channel ABS",
-        "wheel_type": "Alloy",
-        "features": "Half-fairing, LED headlamp, Digital console"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar P150",
+      "variant_name": "Pulsar P150",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Pulsar P150 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Single Disc - Single Seat",
+          "price": "N/A"
+        },
+        {
+          "name": "Twin Disc - Split Seat",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar 180 [2001-2019]",
+      "variant_name": "Pulsar 180 [2001-2019]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Pulsar 180 [2001-2019] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Ct",
+      "variant_name": "Ct",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Ct is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "100",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Sunny Spice",
+      "variant_name": "Sunny Spice",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Sunny Spice is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "150",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "M80",
+      "variant_name": "M80",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj M80 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "4 Stroke",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Saffire",
+      "variant_name": "Saffire",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Saffire is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Zi",
+          "price": "N/A"
+        },
+        {
+          "name": "Ug",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Classic 1994",
+      "variant_name": "Classic 1994",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Classic 1994 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Sl",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Chetak [1972-2006]",
+      "variant_name": "Chetak [1972-2006]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Chetak [1972-2006] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Metallic",
+          "price": "N/A"
+        },
+        {
+          "name": "4-Stroke",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Caliber",
+      "variant_name": "Caliber",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Caliber is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "115",
+          "price": "N/A"
+        },
+        {
+          "name": "Croma",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Boxer",
+      "variant_name": "Boxer",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Boxer is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "150",
+          "price": "N/A"
+        },
+        {
+          "name": "100",
+          "price": "N/A"
+        },
+        {
+          "name": "AR",
+          "price": "N/A"
+        },
+        {
+          "name": "AT",
+          "price": "N/A"
+        },
+        {
+          "name": "CT 100",
+          "price": "N/A"
+        },
+        {
+          "name": "CT Deluxe",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Spirit",
+      "variant_name": "Spirit",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Spirit is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Self",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Rave",
+      "variant_name": "Rave",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Rave is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Bravo",
+      "variant_name": "Bravo",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Bravo is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Legend",
+      "variant_name": "Legend",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Legend is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Xcd",
+      "variant_name": "Xcd",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Xcd is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "125 cc",
+          "price": "N/A"
+        },
+        {
+          "name": "135",
+          "price": "N/A"
+        },
+        {
+          "name": "125 Self",
+          "price": "N/A"
+        },
+        {
+          "name": "135 Disc",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar 135 LS",
+      "variant_name": "Pulsar 135 LS",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Pulsar 135 LS is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Avenger [2015]",
+      "variant_name": "Avenger [2015]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Avenger [2015] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "220 DTS- i",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar 220 F [2022]",
+      "variant_name": "Pulsar 220 F [2022]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Pulsar 220 F [2022] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "ABS - BS IV",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Discover 100",
+      "variant_name": "Discover 100",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Discover 100 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "4 Speed",
+          "price": "N/A"
+        },
+        {
+          "name": "5 Speed",
+          "price": "N/A"
+        },
+        {
+          "name": "5 Speed Self",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Discover125",
+      "variant_name": "Discover125",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Discover125 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum Brake",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Brake",
+          "price": "N/A"
+        },
+        {
+          "name": "Kick",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Discover 125 ST",
+      "variant_name": "Discover 125 ST",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Discover 125 ST is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Discover 150",
+      "variant_name": "Discover 150",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Discover 150 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Discover 100 T",
+      "variant_name": "Discover 100 T",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Discover 100 T is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum Brake",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc Brake",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Discover 135",
+      "variant_name": "Discover 135",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Discover 135 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar 220S",
+      "variant_name": "Pulsar 220S",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Pulsar 220S is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Pulsar 200",
+      "variant_name": "Pulsar 200",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Pulsar 200 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Wave",
+      "variant_name": "Wave",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Wave is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "DTS-i",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Wind",
+      "variant_name": "Wind",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Wind is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "125",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Kristal",
+      "variant_name": "Kristal",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Kristal is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "95",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Super",
+      "variant_name": "Super",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Super is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Bajaj",
+      "model": "Cub",
+      "variant_name": "Cub",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Bajaj Cub is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

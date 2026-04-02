@@ -1,56 +1,90 @@
 {
-  "brand": "BSA Motorcycles",
+  "brand": "BSA",
   "brandId": "bsa",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "BSA",
       "model": "Gold Star 650",
-      "variant_name": "BSA Gold Star 650",
-      "price": "₹3,24,633 - ₹3,62,381",
-      "engine_displacement": "652 cc",
-      "mileage": "26 kmpl",
-      "top_speed": "160 kmph",
+      "variant_name": "Gold Star 650",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "max_torque": "55 Nm",
-      "source_section": "Available",
-      "description": "The BSA Gold Star 650 is a classic British cruiser motorcycle blending timeless styling with modern engineering. It features a 652cc single-cylinder liquid-cooled engine with an assist and slipper clutch, delivering smooth, reliable power with strong low-end torque.",
-      "features": [
-        "652cc BS6 Phase 2 liquid-cooled single-cylinder engine producing 45.6 bhp and 55 Nm torque",
-        "5-speed manual transmission with self-start",
-        "Dual disc brakes with ABS",
-        "Assist and slipper clutch across all variants",
-        "Spoke wheels for classic British styling",
-        "12-litre fuel tank capacity",
-        "782mm accessible seat height",
-        "201kg kerb weight",
-        "26 kmpl user-reported fuel efficiency",
-        "6 colour options including Highland Green and Insignia Red"
-      ],
+      "source_section": "Discontinued",
+      "description": "The BSA Gold Star 650 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Gold Star 650 Standard", "price": "₹3,24,633" },
-        { "name": "Gold Star 650 Chrome", "price": "₹3,42,381" },
-        { "name": "Gold Star 650 Premium", "price": "₹3,62,381" }
+        {
+          "name": "Midnight Black and Dawn Silver",
+          "price": "N/A"
+        },
+        {
+          "name": "Insignia Red and Highland Green",
+          "price": "N/A"
+        },
+        {
+          "name": "Shadow Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Legacy Edition",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Highland Green", "Insignia Red", "Dawn Silver", "Midnight Black", "Shadow Black", "Silver Sheen"],
-      "technical_specifications": {
-        "engine_type": "Liquid-cooled, Single-cylinder",
-        "power": "45.6 bhp",
-        "torque": "55 Nm",
-        "gearbox": "5-Speed Manual",
-        "fuel_tank": "12 litres",
-        "seat_height": "782 mm",
-        "kerb_weight": "201 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "Assist and slipper clutch"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BSA",
+      "model": "Thunderbolt",
+      "variant_name": "Thunderbolt",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BSA Thunderbolt is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "BSA",
+      "model": "Scrambler 650",
+      "variant_name": "Scrambler 650",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The BSA Scrambler 650 is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

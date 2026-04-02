@@ -2,78 +2,35 @@
   "brand": "Matter",
   "brandId": "matter-ev",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Matter",
-      "model": "Aera 5000+",
-      "variant_name": "Matter Aera 5000+",
-      "price": "₹1,93,826",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Matter Aera 5000+ is India's first geared electric motorcycle featuring a patented 4-speed manual gearbox (Hypershift) that delivers 12 unique riding configurations. It combines a 5 kWh liquid-cooled motor producing 10.5 kW with a 7-inch touchscreen, MatterVerse app, OTA updates, and dual disc ABS for an unprecedented performance experience.",
-      "features": [
-        "4-Speed Manual Gearbox (Hypershift Technology)",
-        "7-inch Touchscreen with Navigation",
-        "MatterVerse App Connectivity",
-        "OTA Software Updates",
-        "3 Riding Modes (Eco, City, Sport)",
-        "Liquid-Cooled Motor",
-        "Dual Disc Brakes with ABS",
-        "Keyless Start (Passive Lock)",
-        "Geo-fencing & Live Location Tracking",
-        "Smart Park Assist (Forward & Reverse)"
-      ],
-      "colors": ["Cosmic Blue", "Cosmic Black", "Nord Grey", "Blaze Red", "Glacier White"],
+      "model": "AERA",
+      "variant_name": "AERA",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "105 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Matter AERA is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Aera 5000+ 5 kWh", "price": "₹1,93,826" }
+        {
+          "name": "5000",
+          "price": "N/A"
+        },
+        {
+          "name": "5000+",
+          "price": "N/A"
+        }
       ],
-      "specifications": {
-        "Motor Power": "11.5 kW peak",
-        "Range": "172 km",
-        "Battery Capacity": "5 kWh",
-        "Top Speed": "105 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "520 Nm"
-    },
-    {
-      "make": "Matter",
-      "model": "Aera 5000",
-      "variant_name": "Matter Aera 5000",
-      "price": "₹1,82,784",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Matter Aera 5000 is the base variant of India's first geared electric motorcycle, featuring the unique 4-speed Hypershift gearbox and a 5 kWh battery with 172 km of range. It includes a 7-inch touchscreen, ABS, and smart connected features via the MatterVerse app.",
-      "features": [
-        "4-Speed Manual Gearbox (Hypershift Technology)",
-        "7-inch Touchscreen with Navigation",
-        "MatterVerse App Connectivity",
-        "OTA Software Updates",
-        "3 Riding Modes (Eco, City, Sport)",
-        "Liquid-Cooled Motor",
-        "Dual Disc Brakes with ABS",
-        "Keyless Start",
-        "Geo-fencing & Anti-theft",
-        "Smart Park Assist"
-      ],
-      "colors": ["Cosmic Blue", "Cosmic Black", "Nord Grey", "Blaze Red", "Glacier White"],
-      "variants": [
-        { "name": "Aera 5000 5 kWh", "price": "₹1,82,784" }
-      ],
-      "specifications": {
-        "Motor Power": "10 kW peak",
-        "Range": "172 km",
-        "Battery Capacity": "5 kWh",
-        "Top Speed": "105 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "520 Nm"
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

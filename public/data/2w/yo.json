@@ -1,14 +1,14 @@
 {
-  "brand": "Okinawa",
-  "brandId": "okinawa-autotech",
+  "brand": "Yo",
+  "brandId": "yo",
   "type": "2w",
   "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "Okinawa",
-      "model": "R30",
-      "variant_name": "R30",
+      "make": "Yo",
+      "model": "Edge",
+      "variant_name": "Edge",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -17,11 +17,11 @@
       "top_speed": "25 kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Okinawa R30 is a two-wheeler available in India.",
+      "description": "The Yo Edge is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
+          "name": "DX",
           "price": "N/A"
         }
       ],
@@ -29,9 +29,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Okinawa",
-      "model": "Lite",
-      "variant_name": "Lite",
+      "make": "Yo",
+      "model": "Drift",
+      "variant_name": "Drift",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -40,11 +40,11 @@
       "top_speed": "25 kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The Okinawa Lite is a two-wheeler available in India.",
+      "description": "The Yo Drift is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
-          "name": "Standard",
+          "name": "DX",
           "price": "N/A"
         }
       ],
@@ -52,147 +52,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Okinawa",
-      "model": "Praise",
-      "variant_name": "Praise",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "58 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Okinawa Praise is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Pro",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Okinawa",
-      "model": "OKHI-90",
-      "variant_name": "OKHI-90",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "90 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Okinawa OKHI-90 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Okinawa",
-      "model": "Ridge Plus",
-      "variant_name": "Ridge Plus",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "45 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Okinawa Ridge Plus is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Okinawa",
-      "model": "i-Praise",
-      "variant_name": "i-Praise",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "58 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Okinawa i-Praise is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Plus",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Okinawa",
-      "model": "Dual 100",
-      "variant_name": "Dual 100",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "60 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Okinawa Dual 100 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Okinawa",
-      "model": "Ridge 100",
-      "variant_name": "Ridge 100",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "50 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Okinawa Ridge 100 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Okinawa",
-      "model": "Ridge",
-      "variant_name": "Ridge",
+      "make": "Yo",
+      "model": "EXL",
+      "variant_name": "EXL",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -201,7 +63,53 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Okinawa Ridge is a two-wheeler available in India.",
+      "description": "The Yo EXL is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yo",
+      "model": "Xplor",
+      "variant_name": "Xplor",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yo Xplor is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yo",
+      "model": "Style",
+      "variant_name": "Style",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yo Style is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
@@ -209,7 +117,7 @@
           "price": "N/A"
         },
         {
-          "name": "Ridge 30",
+          "name": "ER",
           "price": "N/A"
         }
       ],
@@ -217,9 +125,9 @@
       "technical_specifications": {}
     },
     {
-      "make": "Okinawa",
-      "model": "Raise",
-      "variant_name": "Raise",
+      "make": "Yo",
+      "model": "Spark",
+      "variant_name": "Spark",
       "price": "N/A",
       "engine_displacement": "N/A cc",
       "mileage": "N/A kmpl",
@@ -228,11 +136,61 @@
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The Okinawa Raise is a two-wheeler available in India.",
+      "description": "The Yo Spark is a two-wheeler available in India.",
       "features": [],
       "variants": [
         {
           "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yo",
+      "model": "Electron [2012-2018]",
+      "variant_name": "Electron [2012-2018]",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yo Electron [2012-2018] is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Yo",
+      "model": "Electron",
+      "variant_name": "Electron",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The Yo Electron is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Color",
           "price": "N/A"
         }
       ],

@@ -1,0 +1,63 @@
+{
+  "brand": "Numeros",
+  "brandId": "numeros",
+  "type": "2w",
+  "lastUpdated": "2026-04-02",
+  "source": "BikeWale",
+  "vehicles": [
+    {
+      "make": "Numeros",
+      "model": "Diplos",
+      "variant_name": "Diplos",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "70 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Numeros Diplos is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Max +",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Numeros",
+      "model": "n-First",
+      "variant_name": "n-First",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "55 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Numeros n-First is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Max",
+          "price": "N/A"
+        },
+        {
+          "name": "iMax",
+          "price": "N/A"
+        },
+        {
+          "name": "iMax Plus",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    }
+  ]
+}

@@ -1,133 +1,140 @@
 {
-  "brand": "iVOOMi Energy",
+  "brand": "iVOOMi",
   "brandId": "ivoomi-energy",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "iVOOMi Energy",
+      "make": "iVOOMi",
       "model": "S1",
-      "variant_name": "iVOOMi Energy S1",
-      "price": "₹68,990",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The iVOOMi S1 is a budget electric scooter from the Jaipur-based iVOOMi Energy brand, offering 100 km range and essential features for urban commuters who are switching to electric for the first time.",
-      "features": [
-        "Digital Speedometer",
-        "Anti-Theft Alarm",
-        "Ride Modes (Eco/Power)",
-        "Regenerative Braking",
-        "USB Charging Port",
-        "BLDC Hub Motor",
-        "Home Charging Compatible"
-      ],
-      "specifications": {
-        "Motor Power": "1.2 kW",
-        "Range": "100 km",
-        "Battery Capacity": "48V 26Ah",
-        "Top Speed": "45 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "42 Nm",
-      "colors": ["Ice White", "Midnight Black", "Royal Blue", "Peppy Pink"],
+      "variant_name": "S1",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "58 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The iVOOMi S1 is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "S1 48V 26Ah", "price": "₹68,990" }
-      ]
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "iVOOMi Energy",
-      "model": "S1 Pro",
-      "variant_name": "iVOOMi Energy S1 Pro",
-      "price": "₹75,990",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The iVOOMi S1 Pro upgrades the S1 with a larger 48V 30Ah battery for extended range, delivering 100 km on a single charge with improved performance suited for daily workplace commutes.",
-      "features": [
-        "Enhanced 48V 30Ah Battery",
-        "Digital Instrument Cluster",
-        "Anti-Theft Alarm",
-        "Ride Modes",
-        "Fast Charging",
-        "Regenerative Braking",
-        "USB Charging Port"
-      ],
-      "specifications": {
-        "Motor Power": "1.2 kW",
-        "Range": "100 km",
-        "Battery Capacity": "48V 30Ah",
-        "Top Speed": "45 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "42 Nm",
-      "colors": ["Ice White", "Midnight Black", "Royal Blue", "Peppy Pink"],
+      "make": "iVOOMi",
+      "model": "Jeet X",
+      "variant_name": "Jeet X",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "61 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The iVOOMi Jeet X is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "S1 Pro 48V 30Ah", "price": "₹75,990" }
-      ]
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "ZE - 2.5 Kwh",
+          "price": "N/A"
+        },
+        {
+          "name": "ZE - 3 Kwh",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "iVOOMi Energy",
-      "model": "Energy",
-      "variant_name": "iVOOMi Energy Energy",
-      "price": "₹79,990",
-      "fuel_type": "Electric",
+      "make": "iVOOMi",
+      "model": "City",
+      "variant_name": "City",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The iVOOMi Energy scooter is a mid-range commuter with a 60V 28Ah battery delivering 90 km range, designed for urban riders who need a balance of performance and affordability.",
-      "features": [
-        "60V BLDC Motor",
-        "Digital Speedometer",
-        "Anti-Theft Alarm",
-        "Ride Modes (Eco/Power)",
-        "Fast Charging",
-        "Regenerative Braking",
-        "USB Charging Port"
-      ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "90 km",
-        "Battery Capacity": "60V 28Ah",
-        "Top Speed": "50 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "42 Nm",
-      "colors": ["Ice White", "Midnight Black", "Royal Blue", "Peppy Pink"],
+      "description": "The iVOOMi City is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Energy 60V 28Ah", "price": "₹79,990" }
-      ]
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "iVOOMi Energy",
-      "model": "JeetX",
-      "variant_name": "iVOOMi Energy JeetX",
-      "price": "₹1,02,990",
-      "fuel_type": "Electric",
+      "make": "iVOOMi",
+      "model": "Eco",
+      "variant_name": "Eco",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The iVOOMi JeetX is the flagship scooter with a 60V 38Ah battery and 130 km range, featuring connected tech and a sporty design that appeals to performance-oriented urban professionals.",
-      "features": [
-        "130 km Long Range",
-        "Mobile App Connectivity",
-        "GPS Tracking & Anti-Theft",
-        "TFT Digital Display",
-        "Fast Charging",
-        "Ride Modes (Eco/Normal/Sport)",
-        "Regenerative Braking"
-      ],
-      "specifications": {
-        "Motor Power": "2.0 kW",
-        "Range": "130 km",
-        "Battery Capacity": "60V 38Ah",
-        "Top Speed": "60 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "42 Nm",
-      "colors": ["Ice White", "Midnight Black", "Royal Blue", "Peppy Pink", "Lime Green"],
+      "description": "The iVOOMi Eco is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "JeetX 60V 38Ah", "price": "₹1,02,990" }
-      ]
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Plus",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "iVOOMi",
+      "model": "Jeet",
+      "variant_name": "Jeet",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The iVOOMi Jeet is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Pro",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

@@ -1,195 +1,151 @@
 {
-  "brand": "Odysse Electric",
+  "brand": "Odysse",
   "brandId": "odysse-electric",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "Odysse Electric",
-      "model": "E2",
-      "variant_name": "Odysse Electric E2",
-      "price": "₹72,999",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Odysse Electric E2 is an entry-level electric scooter with 100 km range backed by Odysse's wide dealer network, targeting daily office commuters in Indian metro and Tier-2 cities.",
-      "features": [
-        "Digital Instrument Cluster",
-        "Anti-Theft Alarm",
-        "Ride Modes (Eco/Sport)",
-        "Regenerative Braking",
-        "Fast Charging",
-        "USB Charging Port",
-        "BLDC Hub Motor"
-      ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "100 km",
-        "Battery Capacity": "60V 30Ah",
-        "Top Speed": "55 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "35 Nm",
-      "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
-      "variants": [
-        { "name": "E2 60V 30Ah", "price": "₹72,999" }
-      ]
-    },
-    {
-      "make": "Odysse Electric",
-      "model": "E2S",
-      "variant_name": "Odysse Electric E2S",
-      "price": "₹77,999",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Odysse Electric E2S is an upgraded version of the E2 with enhanced features and a sleeker design, ideal for urban commuters who want additional convenience without a premium price tag.",
-      "features": [
-        "Enhanced Digital Display",
-        "Anti-Theft with Remote Lock",
-        "Ride Modes (Eco/Power)",
-        "Fast Charging",
-        "Regenerative Braking",
-        "USB Charging Port",
-        "Alloy Wheels"
-      ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "100 km",
-        "Battery Capacity": "60V 30Ah",
-        "Top Speed": "55 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "35 Nm",
-      "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
-      "variants": [
-        { "name": "E2S 60V 30Ah", "price": "₹77,999" }
-      ]
-    },
-    {
-      "make": "Odysse Electric",
-      "model": "E4",
-      "variant_name": "Odysse Electric E4",
-      "price": "₹84,999",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Odysse Electric E4 steps up to 120 km range with a larger 60V 35Ah battery, offering longer-range capability for commuters who need to cover more ground on a single charge.",
-      "features": [
-        "Large 60V 35Ah Battery",
-        "Digital Console with Odometer",
-        "Anti-Theft Alarm",
-        "Ride Modes (Eco/Normal/Sport)",
-        "Fast Charging",
-        "Regenerative Braking",
-        "USB Charging Port"
-      ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "120 km",
-        "Battery Capacity": "60V 35Ah",
-        "Top Speed": "60 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "35 Nm",
-      "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
-      "variants": [
-        { "name": "E4 60V 35Ah", "price": "₹84,999" }
-      ]
-    },
-    {
-      "make": "Odysse Electric",
+      "make": "Odysse",
       "model": "Evoqis",
-      "variant_name": "Odysse Electric Evoqis",
-      "price": "₹89,999",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Odysse Electric Evoqis is the brand's sporty connected scooter with 60 Nm torque and 120 km range, designed for performance-seeking urban riders who also want smart connectivity features.",
-      "features": [
-        "High Torque 60 Nm Motor",
-        "Mobile App Connectivity",
-        "GPS Anti-Theft",
-        "TFT Display",
-        "Fast Charging",
-        "Ride Modes",
-        "Regenerative Braking"
-      ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "120 km",
-        "Battery Capacity": "60V 35Ah",
-        "Top Speed": "60 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "60 Nm",
-      "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
+      "variant_name": "Evoqis",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "75 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Odysse Evoqis is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Evoqis 60V 35Ah", "price": "₹89,999" }
-      ]
+        {
+          "name": "Lite",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "Odysse Electric",
-      "model": "Rogue",
-      "variant_name": "Odysse Electric Rogue",
-      "price": "₹94,999",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Odysse Electric Rogue is a premium commuter scooter with bold styling, 120 km range, and a full set of smart features, targeting young urban professionals who want a head-turning electric ride.",
-      "features": [
-        "Bold Premium Design",
-        "Digital Instrument Console",
-        "GPS Tracking & Anti-Theft",
-        "Ride Modes (Eco/Normal/Sport)",
-        "Fast Charging",
-        "Regenerative Braking",
-        "Bluetooth Connectivity"
-      ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "120 km",
-        "Battery Capacity": "60V 35Ah",
-        "Top Speed": "60 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "35 Nm",
-      "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
+      "make": "Odysse",
+      "model": "Vader",
+      "variant_name": "Vader",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "85 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Odysse Vader is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Rogue 60V 35Ah", "price": "₹94,999" }
-      ]
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "Odysse Electric",
-      "model": "Stream",
-      "variant_name": "Odysse Electric Stream",
-      "price": "₹69,999",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Odysse Electric Stream is an affordable daily commuter with 90 km range and a slim city-friendly design, ideal for budget buyers seeking a reliable and economical first EV.",
-      "features": [
-        "Slim City-Friendly Design",
-        "Digital Speedometer",
-        "Anti-Theft Alarm",
-        "Ride Modes",
-        "Fast Charging",
-        "Regenerative Braking",
-        "USB Charging Port"
-      ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "90 km",
-        "Battery Capacity": "60V 30Ah",
-        "Top Speed": "55 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "35 Nm",
-      "colors": ["Ocean Blue", "Pearl White", "Midnight Black", "Vibrant Orange"],
+      "make": "Odysse",
+      "model": "E2Go",
+      "variant_name": "E2Go",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "25 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Odysse E2Go is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Stream 60V 30Ah", "price": "₹69,999" }
-      ]
+        {
+          "name": "Lite - Lithium-ion",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Odysse",
+      "model": "Hawk",
+      "variant_name": "Hawk",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "45 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Odysse Hawk is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Lite",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Odysse",
+      "model": "Racer",
+      "variant_name": "Racer",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "45 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Odysse Racer is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Lite",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "Odysse",
+      "model": "Trot",
+      "variant_name": "Trot",
+      "price": "N/A",
+      "engine_displacement": "N/A cc",
+      "mileage": "N/A kmpl",
+      "max_power": "N/A bhp",
+      "max_torque": "N/A",
+      "top_speed": "25 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The Odysse Trot is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }

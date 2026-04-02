@@ -2,770 +2,1715 @@
   "brand": "TVS",
   "brandId": "tvs-motor",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-02",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "TVS",
-      "model": "Sport",
-      "variant_name": "Sport ES",
-      "price": "₹62,143",
-      "engine_displacement": "110 cc",
-      "mileage": "80 kmpl",
-      "max_power": "8.08 bhp",
-      "max_torque": "8.7 Nm",
-      "top_speed": "90 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The TVS Sport is an ultra-fuel-efficient commuter motorcycle with a 109.7cc BS6 Phase 2 engine achieving up to 80 kmpl ARAI mileage. Its combination of affordability, reliability, and low running costs makes it a top choice for budget-conscious daily commuters.",
-      "features": ["Fuel Gauge and Eco Meter", "Combined Braking System", "Alloy Wheels", "Kick and Self Start", "4-Speed Manual Transmission", "BS6 Phase 2 Compliant"],
-      "variants": [
-        { "name": "Sport ES", "price": "₹62,143" },
-        { "name": "Sport ES+", "price": "₹63,630" }
-      ],
-      "colors": ["Metallic Blue", "Black Blue", "White Purple", "Black Red", "Starlight Blue", "All Red", "All Grey", "All Black", "Grey Red", "Black Neon"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled",
-        "displacement": "109.7 cc",
-        "max_power": "8.08 bhp",
-        "max_torque": "8.7 Nm",
-        "transmission": "4-Speed Manual",
-        "start_type": "Electric Start",
-        "fuel_tank": "10 liters",
-        "mileage_arai": "80 kmpl",
-        "mileage_user": "70 kmpl",
-        "top_speed": "90 kmph",
-        "kerb_weight": "112 kg",
-        "seat_height": "790 mm",
-        "front_brake": "Drum",
-        "rear_brake": "Drum",
-        "braking_system": "Combined Braking System",
-        "wheel_type": "Alloy"
-      }
-    },
-    {
-      "make": "TVS",
-      "model": "Radeon",
-      "variant_name": "Radeon Drum",
-      "price": "₹70,143",
-      "engine_displacement": "110 cc",
-      "mileage": "63 kmpl",
-      "max_power": "8.08 bhp",
-      "max_torque": "8.7 Nm",
-      "top_speed": "90 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The TVS Radeon is a feature-rich commuter motorcycle that combines good fuel efficiency with a comfortable city-friendly riding position and practical design. Available in disc brake and digital console variants, it offers a step-up experience over basic commuters at an affordable price.",
-      "features": ["Combined Braking System", "Alloy Wheels", "Kick and Self Start", "4-Speed Manual Transmission", "Disc Brake Option (Higher Variant)", "Digital Console (Higher Variant)", "BS6 Phase 2 Compliant"],
-      "variants": [
-        { "name": "Radeon All Black Edition", "price": "₹70,143" },
-        { "name": "Radeon Drum", "price": "₹71,000" },
-        { "name": "Radeon Digital - Drum", "price": "₹72,500" },
-        { "name": "Radeon Digital - Disc", "price": "₹80,881" }
-      ],
-      "colors": ["Metal Black", "All Black", "Titanium Grey", "Royal Purple", "Starlight Blue", "Black", "Blue and Black", "Red and Black"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled",
-        "displacement": "109.7 cc",
-        "max_power": "8.08 bhp",
-        "max_torque": "8.7 Nm",
-        "transmission": "4-Speed Manual",
-        "start_type": "Kick and Self Start",
-        "fuel_tank": "10 liters",
-        "mileage_user": "63 kmpl",
-        "top_speed": "90 kmph",
-        "kerb_weight": "113 kg",
-        "front_brake": "Drum",
-        "rear_brake": "Drum",
-        "braking_system": "Combined Braking System",
-        "wheel_type": "Alloy"
-      }
-    },
-    {
-      "make": "TVS",
-      "model": "Star City Plus",
-      "variant_name": "Star City Plus Drum",
-      "price": "₹72,022",
-      "engine_displacement": "110 cc",
-      "mileage": "70 kmpl",
-      "max_power": "8.08 bhp",
-      "max_torque": "8.7 Nm",
-      "top_speed": "90 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The TVS Star City Plus is a commuter motorcycle designed for effortless daily city riding with good mileage and practical features. It comes with an LED headlamp and is available in both drum and disc brake variants, offering modern lighting at an affordable price.",
-      "features": ["LED Headlamp", "Combined Braking System", "Alloy Wheels", "Kick and Self Start", "Disc Brake Option", "4-Speed Manual Transmission", "BS6 Phase 2 Compliant"],
-      "variants": [
-        { "name": "Star City Plus Drum", "price": "₹72,022" },
-        { "name": "Star City Plus Disc", "price": "₹75,544" }
-      ],
-      "colors": ["Black Green (Drum)", "Black Red (Drum)", "Grey Black (Drum)", "Black Blue (Drum)", "Black Green (Disc)", "Black Red (Disc)"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled",
-        "displacement": "109.7 cc",
-        "max_power": "8.08 bhp",
-        "max_torque": "8.7 Nm",
-        "transmission": "4-Speed Manual",
-        "start_type": "Kick and Self Start",
-        "fuel_tank": "10 liters",
-        "mileage_arai": "62.7 kmpl",
-        "mileage_user": "70 kmpl",
-        "top_speed": "90 kmph",
-        "kerb_weight": "115 kg",
-        "seat_height": "785 mm",
-        "front_brake": "Drum",
-        "rear_brake": "Drum",
-        "braking_system": "Combined Braking System",
-        "wheel_type": "Alloy"
-      }
-    },
-    {
-      "make": "TVS",
-      "model": "Raider 125",
-      "variant_name": "Raider 125 Drum",
-      "price": "₹84,489",
-      "engine_displacement": "124.8 cc",
-      "mileage": "56 kmpl",
-      "max_power": "11.2 bhp",
-      "max_torque": "11.2 Nm",
-      "top_speed": "99 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The TVS Raider 125 is a sporty commuter motorcycle with a modern design, featuring an iGO battery assist technology and a digital console in higher trims. Available in special Marvel superhero editions, it appeals to young riders seeking personality and performance in the 125cc segment.",
-      "features": ["Digital Console", "iGO Battery Assist Technology (Higher Variants)", "Combined Braking System", "Alloy Wheels", "Kick and Self Start", "5-Speed Manual Transmission", "Special Edition Variants"],
-      "variants": [
-        { "name": "Raider 125 Drum", "price": "₹84,489" },
-        { "name": "Raider 125 Disc", "price": "₹87,000" },
-        { "name": "Raider 125 Disc Single Seat", "price": "₹89,000" },
-        { "name": "Raider 125 Super Squad Edition", "price": "₹91,000" },
-        { "name": "Raider 125 iGO", "price": "₹93,000" },
-        { "name": "Raider 125 iGO Nardo Grey", "price": "₹95,000" },
-        { "name": "Raider 125 Top", "price": "₹97,718" }
-      ],
-      "colors": ["Forza Blue", "Wicked Black", "Striking Red", "Fiery Yellow", "Blazing Blue", "Wicked Black (Single Seat)", "Striking Red (Single Seat)", "Wolverine", "Deadpool", "Iron Man", "Black Panther", "Wicked Black (iGO)", "Nardo Grey (iGO)"],
-      "technical_specifications": {
-        "engine_type": "BS6, Single-cylinder, Air-cooled",
-        "displacement": "124.8 cc",
-        "max_power": "11.2 bhp",
-        "max_torque": "11.2 Nm",
-        "transmission": "5-Speed Manual",
-        "start_type": "Kick and Self Start",
-        "fuel_tank": "10 liters",
-        "mileage_arai": "56.7 kmpl",
-        "mileage_user": "56 kmpl",
-        "top_speed": "99 kmph",
-        "kerb_weight": "123 kg",
-        "seat_height": "780 mm",
-        "front_brake": "Drum",
-        "rear_brake": "Drum",
-        "braking_system": "Combined Braking System",
-        "wheel_type": "Alloy",
-        "features": "Digital meter display"
-      }
-    },
-    {
-      "make": "TVS",
-      "model": "Apache RTR 160",
-      "variant_name": "Apache RTR 160 Single Disc ABS",
-      "price": "₹1,09,029",
-      "engine_displacement": "159.7 cc",
-      "mileage": "45 kmpl",
-      "max_power": "15.82 bhp",
-      "max_torque": "13.85 Nm",
-      "top_speed": "107 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The TVS Apache RTR 160 is a street motorcycle delivering quick and linear acceleration with sharp sporty styling and daily usability. It features ABS, LED headlamp with DRLs, Bluetooth connectivity, Glide Through Technology for low-speed manoeuvring, and three riding modes.",
-      "features": ["ABS", "LED Headlamp with DRLs", "Bluetooth Connectivity (Higher Trims)", "Glide Through Technology (GTT)", "Three Riding Modes (Urban/Rain/Sport)", "Front Disc Brake", "Alloy Wheels", "Self Start"],
-      "variants": [
-        { "name": "Apache RTR 160 Single Disc ABS", "price": "₹1,09,029" },
-        { "name": "Apache RTR 160 Single Disc ABS - Black Edition", "price": "₹1,12,000" },
-        { "name": "Apache RTR 160 Dual Disc ABS", "price": "₹1,15,000" },
-        { "name": "Apache RTR 160 Dual Disc ABS - BT", "price": "₹1,18,000" },
-        { "name": "Apache RTR 160 Special Edition", "price": "₹1,20,000" },
-        { "name": "Apache RTR 160 Black Champagne Gold", "price": "₹1,24,000" },
-        { "name": "Apache RTR 160 Anniversary Edition", "price": "₹1,26,747" }
-      ],
-      "colors": ["Racing Red", "T Grey", "Gloss Black", "Pearl White", "Matte Blue", "Glossy Black (BE)", "Matte Black", "Black Champagne Gold Livery"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled",
-        "displacement": "159.7 cc",
-        "max_power": "15.82 bhp",
-        "max_torque": "13.85 Nm",
-        "transmission": "5-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "12 liters",
-        "mileage_arai": "61 kmpl",
-        "mileage_user": "45 kmpl",
-        "top_speed": "107 kmph",
-        "kerb_weight": "137 kg",
-        "seat_height": "790 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Drum",
-        "braking_system": "Single-channel ABS",
-        "wheel_type": "Alloy",
-        "features": "LED headlamp with DRLs, Bluetooth connectivity, Glide Through Technology, Three riding modes"
-      }
-    },
-    {
-      "make": "TVS",
-      "model": "Apache RTR 160 4V",
-      "variant_name": "Apache RTR 160 4V Single Disc ABS",
-      "price": "₹1,16,491",
-      "engine_displacement": "159.7 cc",
-      "mileage": "41.4 kmpl",
-      "max_power": "17.31 bhp",
-      "max_torque": "14.73 Nm",
-      "top_speed": "114 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The TVS Apache RTR 160 4V is a performance-focused street bike featuring 4-valve engine technology, SmartXConnect Bluetooth, oil cooling, and multiple ride modes. With USD fork option and TFT display in top trims, it delivers a premium riding experience in the 160cc segment.",
-      "features": ["ABS (Single/Dual Channel)", "4-Valve Engine", "SmartXConnect Bluetooth", "Ride Modes (Urban/Rain/Sport)", "LED Headlamp", "TFT Display (Top Variant)", "USD Forks (Higher Variant)", "Glide Through Technology", "Alloy Wheels", "Self Start"],
-      "variants": [
-        { "name": "Apache RTR 160 4V Single Disc ABS", "price": "₹1,16,491" },
-        { "name": "Apache RTR 160 4V Single Disc ABS - Black Edition", "price": "₹1,19,000" },
-        { "name": "Apache RTR 160 4V Dual Disc - ABS", "price": "₹1,22,000" },
-        { "name": "Apache RTR 160 4V Dual Disc - ABS - Bluetooth", "price": "₹1,25,000" },
-        { "name": "Apache RTR 160 4V Dual Channel ABS", "price": "₹1,28,000" },
-        { "name": "Apache RTR 160 4V Dual Channel ABS - USD Forks", "price": "₹1,31,000" },
-        { "name": "Apache RTR 160 4V TFT Cluster", "price": "₹1,34,000" },
-        { "name": "Apache RTR 160 4V Special Edition", "price": "₹1,36,000" },
-        { "name": "Apache RTR 160 4V Anniversary Special Edition", "price": "₹1,38,689" }
-      ],
-      "colors": ["Metallic Blue", "Knight Black", "Racing Red", "Pearl White", "Matte Black", "Lightning Blue", "Glossy Black (BE)", "Granite Grey", "Black Champagne Gold Livery", "Racing Red (New)", "Marine Blue"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, 4-Valve, Single-cylinder, Oil-cooled",
-        "displacement": "159.7 cc",
-        "max_power": "17.31 bhp",
-        "max_torque": "14.73 Nm",
-        "transmission": "5-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "12 liters",
-        "mileage_arai": "41.4 kmpl",
-        "mileage_user": "45 kmpl",
-        "top_speed": "114 kmph",
-        "kerb_weight": "144 kg",
-        "seat_height": "800 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Disc / Drum",
-        "braking_system": "Single / Dual-channel ABS",
-        "wheel_type": "Alloy",
-        "features": "SmartXConnect with Bluetooth, LED headlamp, Ride modes, Glide Through Technology"
-      }
-    },
-    {
-      "make": "TVS",
-      "model": "Apache RTR 180",
-      "variant_name": "Apache RTR 180 Standard",
-      "price": "₹1,20,000",
-      "engine_displacement": "177 cc",
-      "mileage": "42 kmpl",
-      "max_power": "17.3 bhp",
-      "max_torque": "15.5 Nm",
-      "top_speed": "118 kmph",
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "75 kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
-      "description": "The TVS Apache RTR 180 was a popular 177cc sports commuter that delivered strong 17.3 bhp performance with ABS and disc brakes on both wheels. It featured a digital instrument console and double cradle chassis before being discontinued in favour of the 160 4V and 200 4V variants.",
-      "features": ["ABS", "Front and Rear Disc Brakes", "Digital Instrument Console", "Double Cradle Chassis", "5-Speed Manual Transmission", "Self Start", "Alloy Wheels with Tubeless Tyres"],
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Apache RTR 180 Standard", "price": "₹1,20,000" }
+        {
+          "name": "2.2 kWh",
+          "price": "N/A"
+        },
+        {
+          "name": "3.1 kWh",
+          "price": "N/A"
+        },
+        {
+          "name": "3.5 kWh",
+          "price": "N/A"
+        },
+        {
+          "name": "S 3.5 kWh",
+          "price": "N/A"
+        },
+        {
+          "name": "ST 3.5 kWh",
+          "price": "N/A"
+        },
+        {
+          "name": "ST 5.3 kWh",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Gloss Black", "Racing Red", "Titanium Grey", "Pearl White", "Matte Blue"],
-      "technical_specifications": {
-        "engine_type": "Single-cylinder, Air-cooled, 2 Valves",
-        "displacement": "177 cc",
-        "max_power": "17.3 bhp @ 8500 rpm",
-        "max_torque": "15.5 Nm @ 6500 rpm",
-        "transmission": "5-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "16 liters",
-        "mileage_user": "42 kmpl",
-        "top_speed": "118 kmph",
-        "front_brake": "Disc (270 mm)",
-        "rear_brake": "Disc (200 mm)",
-        "braking_system": "ABS",
-        "wheel_type": "17-inch Alloy"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "TVS",
-      "model": "Apache RTR 200 4V",
-      "variant_name": "Apache RTR 200 4V Dual Channel ABS with Modes",
-      "price": "₹1,38,407",
-      "engine_displacement": "197.75 cc",
-      "mileage": "38 kmpl",
-      "max_power": "20.54 bhp",
-      "max_torque": "17.25 Nm",
-      "top_speed": "127 kmph",
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The TVS Apache RTR 200 4V is a performance street bike with a 197.75cc oil-cooled 4-valve engine featuring multiple ride modes, slipper clutch, and SmartXConnect smartphone connectivity. Higher variants add USD forks and a TFT instrument cluster for an enhanced technology package.",
-      "features": ["Dual-Channel ABS", "Ride Modes (Rain/Urban/Sport/Track)", "SmartXConnect Bluetooth", "Slipper Clutch", "USD Forks (Higher Variant)", "TFT Cluster (Higher Variant)", "LED DRLs", "Dual Disc Brakes", "Alloy Wheels", "Self Start"],
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Apache RTR 200 4V Dual Channel ABS with Modes", "price": "₹1,38,407" },
-        { "name": "Apache RTR 200 4V USD Forks - OBD - 2B", "price": "₹1,42,000" },
-        { "name": "Apache RTR 200 4V TFT Cluster", "price": "₹1,45,000" },
-        { "name": "Apache RTR 200 4V Anniversary Special Edition", "price": "₹1,49,686" }
+        {
+          "name": "RM Drum - Black Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "RM Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "RM Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "RM Disc Bluetooth",
+          "price": "N/A"
+        },
+        {
+          "name": "Racing Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Anniversary Special Edition",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Matte Blue", "Pearl White", "Gloss Black", "Matte Black", "Granite Grey", "Glossy Black", "Black Champagne Gold Livery"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, 4-Valve, Single-cylinder, Oil-cooled",
-        "displacement": "197.75 cc",
-        "max_power": "20.54 bhp",
-        "max_torque": "17.25 Nm",
-        "transmission": "5-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "12 liters",
-        "mileage_arai": "41.9 kmpl",
-        "mileage_user": "38 kmpl",
-        "top_speed": "127 kmph",
-        "kerb_weight": "152 kg",
-        "seat_height": "800 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Disc with ABS",
-        "braking_system": "Dual-channel ABS",
-        "wheel_type": "Alloy",
-        "features": "Ride Modes (Rain/Urban/Sport/Track), SmartXConnect, Slipper Clutch, USD Forks"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "TVS",
-      "model": "Apache RTX 300",
-      "variant_name": "Apache RTX 300 Base",
-      "price": "₹1,99,000",
-      "engine_displacement": "299 cc",
-      "mileage": "32 kmpl",
-      "max_power": "35.5 bhp",
-      "max_torque": "28.5 Nm",
-      "top_speed": "140 kmph",
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The TVS Apache RTX 300 is an adventure-touring motorcycle that blends sporty performance with touring comfort from its 299cc engine. It features a TFT display with navigation, 4 ride modes, traction control, and advanced suspension to handle both city streets and highway touring.",
-      "features": ["Dual-Channel ABS", "TFT Display with Navigation", "4 Ride Modes", "Traction Control", "Bluetooth Connectivity", "Dual Disc Brakes", "6-Speed Manual Transmission", "Self Start", "BS6 Phase 2B Compliant"],
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Apache RTX 300 Base", "price": "₹1,99,000" },
-        { "name": "Apache RTX 300 Mid", "price": "₹2,16,000" },
-        { "name": "Apache RTX 300 Top", "price": "₹2,34,058" }
+        {
+          "name": "Base - Lightning Black",
+          "price": "N/A"
+        },
+        {
+          "name": "Base - Magma Red",
+          "price": "N/A"
+        },
+        {
+          "name": "Agonda",
+          "price": "N/A"
+        },
+        {
+          "name": "Mid - Glacier Silver",
+          "price": "N/A"
+        },
+        {
+          "name": "Mid - Charcoal Ember",
+          "price": "N/A"
+        },
+        {
+          "name": "Top",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Pearl White", "Lightning Black", "Metallic Blue", "Tarn Bronze", "Viper Green"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2B, Single-cylinder",
-        "displacement": "299 cc",
-        "max_power": "35.5 bhp",
-        "max_torque": "28.5 Nm",
-        "transmission": "6-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "12.5 liters",
-        "mileage_user": "32 kmpl",
-        "top_speed": "140 kmph",
-        "kerb_weight": "180 kg",
-        "seat_height": "835 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Disc with ABS",
-        "braking_system": "Dual-channel ABS",
-        "wheel_type": "Alloy",
-        "features": "TFT display with navigation, Bluetooth connectivity, 4 ride modes, Advanced suspension"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "TVS",
-      "model": "Apache RTR 310",
-      "variant_name": "Apache RTR 310 Arsenal Black Base without QuickShifter",
-      "price": "₹2,22,804",
-      "engine_displacement": "312.12 cc",
-      "mileage": "30 kmpl",
-      "max_power": "35.08 bhp",
-      "max_torque": "28.7 Nm",
-      "top_speed": "150 kmph",
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The TVS Apache RTR 310 is a high-performance naked streetfighter with a 312cc liquid-cooled engine, featuring an optional quickshifter, 5-inch TFT display with 5 ride modes, cruise control, TPMS, and launch control. The innovative climatic control seat with heating and cooling sets it apart in the performance segment.",
-      "features": ["Dual-Channel ABS", "QuickShifter (Optional)", "5-Inch TFT Display", "5 Ride Modes", "Cruise Control", "TPMS", "Launch Control", "Drag Torque Control", "Climatic Control Seat (Heating/Cooling)", "LED Headlights with DRLs", "SmartXConnect Bluetooth"],
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Apache RTR 310 Arsenal Black Base without QuickShifter", "price": "₹2,22,804" },
-        { "name": "Apache RTR 310 Arsenal Black and Fury Yellow Base", "price": "₹2,26,000" },
-        { "name": "Apache RTR 310 Fiery Red Base", "price": "₹2,28,000" },
-        { "name": "Apache RTR 310 Anniversary Special Edition", "price": "₹2,88,254" }
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Single Seat - Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Split Seat - Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "iGO - Boost Mode",
+          "price": "N/A"
+        },
+        {
+          "name": "Super Squad Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "SXC - Single Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "TFT - Single Channel ABS",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Arsenal Black", "Fury Yellow", "Black Champagne Gold Livery", "Fiery Red"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2B, Single-cylinder, Liquid-cooled",
-        "displacement": "312.12 cc",
-        "max_power": "35.08 bhp",
-        "max_torque": "28.7 Nm",
-        "transmission": "6-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "11 liters",
-        "mileage_arai": "30 kmpl",
-        "mileage_user": "32 kmpl",
-        "top_speed": "150 kmph",
-        "kerb_weight": "169 kg",
-        "seat_height": "800 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Disc with ABS",
-        "braking_system": "Dual-channel ABS",
-        "wheel_type": "Alloy",
-        "features": "QuickShifter (optional), TFT display, Ride modes, SmartXConnect"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "TVS",
-      "model": "Apache RR 310",
-      "variant_name": "Apache RR 310 Red (Without Quickshifter) - OBD 2B",
-      "price": "₹2,59,548",
-      "engine_displacement": "312.2 cc",
-      "mileage": "34.7 kmpl",
-      "max_power": "37.48 bhp",
-      "max_torque": "29 Nm",
-      "top_speed": "160 kmph",
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The TVS Apache RR 310 is a fully-faired supersport motorcycle that strikes a rare balance between everyday usability and genuine sport-bike character. It features ride-by-wire technology, multiple riding modes, TFT display with Bluetooth, a slipper clutch, and an optional quickshifter for track-ready performance.",
-      "features": ["Dual-Channel ABS", "Ride-by-Wire Technology", "Multiple Riding Modes (Urban/Rain/Sport/Track)", "TFT Display with Bluetooth", "Slipper Clutch", "QuickShifter (Optional)", "Full Fairing", "Liquid-Cooled Engine", "Dual Disc Brakes", "6-Speed Manual Transmission"],
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Apache RR 310 Red (Without Quickshifter) - OBD 2B", "price": "₹2,59,548" },
-        { "name": "Apache RR 310 Red (With Quickshifter) - OBD 2B", "price": "₹2,65,000" },
-        { "name": "Apache RR 310 Bomber Grey - OBD 2B", "price": "₹2,68,000" },
-        { "name": "Apache RR 310 Anniversary Special Edition", "price": "₹3,12,700" }
+        {
+          "name": "Single Disc ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Single Disc ABS - Black Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Disc - ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Disc - ABS - Bluetooth",
+          "price": "N/A"
+        },
+        {
+          "name": "Special Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Single Channel ABS [2026]",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Channel ABS",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Channel ABS - USD Forks",
+          "price": "N/A"
+        },
+        {
+          "name": "Dual Channel ABS with USD [2026]",
+          "price": "N/A"
+        },
+        {
+          "name": "USD with TFT [2026]",
+          "price": "N/A"
+        },
+        {
+          "name": "TFT Cluster",
+          "price": "N/A"
+        },
+        {
+          "name": "Anniversary Special Edition",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Sepang Blue", "Racing Red", "Bomber Grey", "Black Champagne Gold Livery"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Liquid-cooled, DOHC",
-        "displacement": "312.2 cc",
-        "max_power": "37.48 bhp",
-        "max_torque": "29 Nm",
-        "transmission": "6-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "11 liters",
-        "mileage_arai": "34.7 kmpl",
-        "mileage_user": "32 kmpl",
-        "top_speed": "160 kmph",
-        "kerb_weight": "174 kg",
-        "seat_height": "810 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Disc with ABS",
-        "braking_system": "Dual-channel ABS",
-        "wheel_type": "Alloy",
-        "features": "QuickShifter (optional), Full-fairing, TFT display, Ride modes, Slipper clutch"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "TVS",
-      "model": "Ronin",
-      "variant_name": "Ronin Base - Lightning Black",
-      "price": "₹1,26,751",
-      "engine_displacement": "225.9 cc",
-      "mileage": "40 kmpl",
-      "max_power": "20.1 bhp",
-      "max_torque": "19.93 Nm",
-      "top_speed": "120 kmph",
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The TVS Ronin is a modern-retro cruiser motorcycle featuring aspirational styling with a distinctive LED 'T' DRL headlight and a versatile 225.9cc oil-cooled engine. It offers Bluetooth connectivity, riding modes, USD front forks, and dual-channel ABS in higher trims, bridging the gap between daily commuting and weekend touring.",
-      "features": ["Dual-Channel ABS (Top Variants)", "Single-Channel ABS (Base)", "LED Headlight with T DRL Pattern", "Bluetooth Connectivity (Top Variant)", "Ride Modes (Rain/Urban)", "USD Front Forks", "All-Disc Braking", "Glide Through Technology", "Self Start"],
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Ronin Base - Lightning Black", "price": "₹1,26,751" },
-        { "name": "Ronin Base - Magma Red", "price": "₹1,28,000" },
-        { "name": "Ronin Agonda", "price": "₹1,32,000" },
-        { "name": "Ronin Mid - Glacier Silver", "price": "₹1,35,000" },
-        { "name": "Ronin Mid - Charcoal Ember", "price": "₹1,37,000" },
-        { "name": "Ronin Top", "price": "₹1,60,217" }
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Race Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Super Squad Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Race XP",
+          "price": "N/A"
+        },
+        {
+          "name": "XT",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Lightning Black", "Midnight Blue", "Nimbus Grey", "Magma Red", "Glacier Silver", "Charcoal Ember", "White"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Oil-cooled",
-        "displacement": "225.9 cc",
-        "max_power": "20.1 bhp",
-        "max_torque": "19.93 Nm",
-        "transmission": "5-Speed Manual",
-        "start_type": "Self Start",
-        "fuel_tank": "14 liters",
-        "mileage_arai": "42 kmpl",
-        "mileage_user": "40 kmpl",
-        "top_speed": "120 kmph",
-        "kerb_weight": "159 kg",
-        "seat_height": "795 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Disc with ABS",
-        "braking_system": "Dual-channel ABS",
-        "wheel_type": "Alloy",
-        "features": "Modern-retro styling, TFT display (top variant), Bluetooth"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "TVS",
-      "model": "Zest 110",
-      "variant_name": "Zest 110 Gloss",
-      "price": "₹69,940",
-      "engine_displacement": "110 cc",
-      "mileage": "45 kmpl",
-      "max_power": "7.71 bhp",
-      "max_torque": "8.8 Nm",
-      "top_speed": "80 kmph",
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The TVS Zest 110 is a lightweight and nimble scooter designed for effortless city commuting with a peppy 109.7cc engine and practical storage solutions. It features a USB charging port inside the boot and a combined braking system, offering convenience at an affordable price.",
-      "features": ["USB Charging Port (Inside Boot)", "Combined Braking System", "Self Start", "BS6 Phase 2 Compliant", "CVT Automatic Transmission", "Front Storage"],
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Zest 110 Gloss", "price": "₹69,940" },
-        { "name": "Zest 110 Matte", "price": "₹71,500" },
-        { "name": "Zest 110 SXC", "price": "₹75,296" }
+        {
+          "name": "Drum - Alloy Wheel",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc - Alloy Wheel",
+          "price": "N/A"
+        },
+        {
+          "name": "DT SXC",
+          "price": "N/A"
+        },
+        {
+          "name": "SmartXonnect",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Pearl White", "Turquoise Blue", "Matte Red", "Purple", "Matte Black", "Matte Blue", "Bold Black", "Graphite Grey"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder",
-        "displacement": "109.7 cc",
-        "max_power": "7.71 bhp",
-        "max_torque": "8.8 Nm",
-        "transmission": "CVT Automatic",
-        "start_type": "Kick and Self Start",
-        "fuel_tank": "5 liters",
-        "mileage_user": "45 kmpl",
-        "top_speed": "80 kmph",
-        "kerb_weight": "103 kg",
-        "seat_height": "760 mm",
-        "front_brake": "Drum",
-        "rear_brake": "Drum",
-        "braking_system": "Combined Braking System",
-        "wheel_type": "Alloy"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "TVS",
-      "model": "Jupiter",
-      "variant_name": "Jupiter Drum - OBD 2B",
-      "price": "₹76,542",
-      "engine_displacement": "113.3 cc",
-      "mileage": "53.84 kmpl",
-      "max_power": "7.91 bhp",
-      "max_torque": "9.8 Nm",
-      "top_speed": "82 kmph",
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The TVS Jupiter is a popular family scooter engineered for reliable, comfortable, and practical daily commuting with a 113.3cc BS6 Phase 2B engine and impressive fuel efficiency. SmartXonnect variants offer Bluetooth-enabled digital cluster connectivity, spacious under-seat storage, and an external fuel fill for added convenience.",
-      "features": ["SmartXonnect Bluetooth (Higher Variants)", "External Fuel Fill", "USB Charging Port (Front)", "Spacious Under-Seat Storage", "Combined Braking System", "Disc Brake Option", "Self Start", "BS6 Phase 2B Compliant", "CVT Automatic Transmission"],
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Jupiter Drum - OBD 2B", "price": "₹76,542" },
-        { "name": "Jupiter Drum Alloy - OBD 2B", "price": "₹78,500" },
-        { "name": "Jupiter SmartXonnect Drum - OBD 2B", "price": "₹80,500" },
-        { "name": "Jupiter SmartXonnect Disc - OBD 2B", "price": "₹83,000" },
-        { "name": "Jupiter Special Edition", "price": "₹89,489" }
+        {
+          "name": "Red (Without Quickshifter) - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "Red (With Quickshifter) - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "Bomber Grey - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "Anniversary Special Edition",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Galactic Copper Matte", "Dawn Blue Matte", "Starlight Blue Gloss", "Titanium Grey Matte", "Lunar White Gloss", "Stardust Black"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2B, Single-cylinder",
-        "displacement": "113.3 cc",
-        "max_power": "7.91 bhp",
-        "max_torque": "9.8 Nm",
-        "transmission": "CVT Automatic",
-        "start_type": "Kick and Self Start",
-        "fuel_tank": "5.1 liters",
-        "mileage_arai": "53.84 kmpl",
-        "mileage_user": "49 kmpl",
-        "top_speed": "82 kmph",
-        "kerb_weight": "105 kg",
-        "seat_height": "770 mm",
-        "front_brake": "Drum",
-        "rear_brake": "Drum",
-        "braking_system": "Combined Braking System",
-        "wheel_type": "Steel / Alloy",
-        "features": "SmartXonnect (higher variants), External fuel cap"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "TVS",
-      "model": "Jupiter 125",
-      "variant_name": "Jupiter 125 Drum - Alloy Wheel",
-      "price": "₹83,630",
-      "engine_displacement": "124.8 cc",
-      "mileage": "50 kmpl",
-      "max_power": "8.04 bhp",
-      "max_torque": "10.5 Nm",
-      "top_speed": "95 kmph",
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The TVS Jupiter 125 is a refined and feature-packed 125cc scooter offering a 124.8cc engine with excellent build quality and generous under-seat storage. It features an external fuel filling system, digital display, and SmartXonnect Bluetooth connectivity in higher variants for a connected riding experience.",
-      "features": ["External Fuel Filling", "Large Under-Seat Storage", "Digital Display", "SmartXonnect Bluetooth (Higher Variants)", "Combined Braking System", "Disc Brake Option", "Self Start", "CVT Automatic Transmission", "BS6 Phase 2 Compliant"],
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Jupiter 125 Drum - Alloy Wheel", "price": "₹83,630" },
-        { "name": "Jupiter 125 Disc - Alloy Wheel", "price": "₹86,000" },
-        { "name": "Jupiter 125 DT SXC", "price": "₹89,000" },
-        { "name": "Jupiter 125 SmartXonnect", "price": "₹93,950" }
+        {
+          "name": "Drum- OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum Alloy- OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "SmartXonnect Drum- OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "SmartXonnect Disc - OBD 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "Special Edition",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Titanium Grey Drum", "IndiBlue Drum", "Pristine White", "Sparkling Black", "White", "Titanium Grey", "IndiBlue", "Dawn Orange", "Elite Green", "Matte Copper Bronze", "Elegant Red", "Ivory Grey", "Ivory Brown"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder",
-        "displacement": "124.8 cc",
-        "max_power": "8.04 bhp",
-        "max_torque": "10.5 Nm",
-        "transmission": "CVT Automatic",
-        "start_type": "Kick and Self Start",
-        "fuel_tank": "5.1 liters",
-        "mileage_arai": "50 kmpl",
-        "mileage_user": "48 kmpl",
-        "top_speed": "95 kmph",
-        "kerb_weight": "108 kg",
-        "seat_height": "765 mm",
-        "front_brake": "Drum",
-        "rear_brake": "Drum",
-        "braking_system": "Combined Braking System",
-        "wheel_type": "Alloy",
-        "features": "SmartXonnect, External fuel cap"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "TVS",
-      "model": "Ntorq 125",
-      "variant_name": "Ntorq 125 Disc",
-      "price": "₹87,935",
-      "engine_displacement": "124.8 cc",
-      "mileage": "48.5 kmpl",
-      "max_power": "9.25 bhp",
-      "max_torque": "10.5 Nm",
-      "top_speed": "95 kmph",
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The TVS Ntorq 125 is a sporty 125cc scooter known for its Bluetooth-enabled SmartXConnect instrument cluster with navigation and performance-oriented Race variants. With dual ride modes, digital console, USB charging, and front disc brake, it delivers fun, style, and tech at an accessible price point.",
-      "features": ["SmartXConnect Bluetooth with Navigation", "USB Charging Port", "Front Disc Brake", "Dual Ride Modes (Street/Race on Race Variants)", "LED Headlamp", "Digital Console with Modern Technology", "Combined Braking System", "Self Start", "CVT Automatic Transmission"],
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Ntorq 125 Disc", "price": "₹87,935" },
-        { "name": "Ntorq 125 Race Edition", "price": "₹91,000" },
-        { "name": "Ntorq 125 Super Squad Edition", "price": "₹93,000" },
-        { "name": "Ntorq 125 Race XP", "price": "₹95,857" },
-        { "name": "Ntorq 125 XT", "price": "₹1,03,778" }
+        {
+          "name": "Base",
+          "price": "N/A"
+        },
+        {
+          "name": "Top",
+          "price": "N/A"
+        },
+        {
+          "name": "Built To Order",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Harlequin Blue", "Nardo Gray", "Turquoise Blue", "Race Edition Marine Blue", "Race Edition Red", "Super Soldier", "Lightning Gray", "Amazing Red", "Stealth Black", "Combat Blue", "Dark Black", "Race Red Black", "Neon"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder",
-        "displacement": "124.8 cc",
-        "max_power": "9.25 bhp",
-        "max_torque": "10.5 Nm",
-        "transmission": "CVT Automatic",
-        "start_type": "Self Start",
-        "fuel_tank": "5.8 liters",
-        "mileage_arai": "48.5 kmpl",
-        "mileage_user": "42 kmpl",
-        "top_speed": "95 kmph",
-        "kerb_weight": "118 kg",
-        "seat_height": "770 mm",
-        "front_brake": "Disc",
-        "rear_brake": "Drum",
-        "braking_system": "Combined Braking System",
-        "wheel_type": "Alloy",
-        "features": "SmartXConnect with Bluetooth, Navigation, LED headlamp"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "TVS",
-      "model": "Ntorq 150",
-      "variant_name": "Ntorq 150 Standard",
-      "price": "₹1,09,475",
-      "engine_displacement": "149.7 cc",
-      "mileage": "40 kmpl",
-      "max_power": "13 bhp",
-      "max_torque": "14.2 Nm",
-      "top_speed": "104 kmph",
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The TVS Ntorq 150 is a feature-packed performance scooter with a 149.7cc engine, quad projector LED headlight, and a TFT screen offering 50+ smart features including Alexa integration, GPS navigation, and vehicle tracking. It also includes ABS and traction control, making it the most technology-rich scooter in its segment.",
-      "features": ["ABS", "Traction Control", "Quad Projector LED Headlight", "TFT Screen with 50+ Smart Features", "Alexa Integration", "GPS Navigation", "Vehicle Tracking", "Bluetooth Connectivity", "USB Charging Port", "Self Start", "CVT Automatic Transmission"],
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "Ntorq 150 Standard", "price": "₹1,09,475" },
-        { "name": "Ntorq 150 Top", "price": "₹1,18,479" }
+        {
+          "name": "Arsenal Black Base without QuickShifter",
+          "price": "N/A"
+        },
+        {
+          "name": "Arsenal Black and Fury Yellow Base",
+          "price": "N/A"
+        },
+        {
+          "name": "Fiery Red Base",
+          "price": "N/A"
+        },
+        {
+          "name": "Anniversary Special Edition",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Nitro Green", "Racing Red", "Turbo Blue", "Stealth Silver"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2B, Single-cylinder",
-        "displacement": "149.7 cc",
-        "max_power": "13 bhp",
-        "max_torque": "14.2 Nm",
-        "transmission": "CVT Automatic",
-        "start_type": "Self Start",
-        "fuel_tank": "5.8 liters",
-        "mileage_user": "40 kmpl",
-        "top_speed": "104 kmph",
-        "kerb_weight": "115 kg",
-        "seat_height": "770 mm",
-        "front_brake": "Disc with ABS",
-        "rear_brake": "Drum",
-        "braking_system": "ABS",
-        "wheel_type": "Alloy",
-        "features": "Quad projector headlight, TFT screen with 50+ smart features, Alexa integration, GPS navigation, Vehicle tracking, Traction control, USB charging"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "TVS",
-      "model": "XL100 Heavy Duty",
-      "variant_name": "XL100 Heavy Duty Standard",
-      "price": "₹43,989",
-      "engine_displacement": "99.7 cc",
-      "mileage": "55 kmpl",
-      "max_power": "4.3 bhp",
-      "max_torque": "6.5 Nm",
-      "top_speed": "58 kmph",
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The TVS XL100 Heavy Duty is a workhorse moped designed for exceptional load-carrying capability and commercial utility. With its lightweight build, automatic transmission, and BS6-compliant engine, it remains the go-to choice for last-mile delivery and utility purposes across India.",
-      "features": ["Load-Carrying Capability", "Combined Braking System", "Spoke Wheels", "Kick Start", "Automatic Transmission", "BS6 Phase 2 Compliant", "Lightweight Construction (88 kg)"],
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "XL100 Heavy Duty Kick", "price": "₹43,989" },
-        { "name": "XL100 Heavy Duty Self", "price": "₹50,000" },
-        { "name": "XL100 Heavy Duty Alloy", "price": "₹55,000" },
-        { "name": "XL100 Heavy Duty Top", "price": "₹60,654" }
+        {
+          "name": "Dual Channel ABS with Modes",
+          "price": "N/A"
+        },
+        {
+          "name": "USD Forks - OBD - 2B",
+          "price": "N/A"
+        },
+        {
+          "name": "TFT Cluster",
+          "price": "N/A"
+        },
+        {
+          "name": "Anniversary Special Edition",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Blue", "Mineral Purple", "Red", "Green", "Black", "Black (Kick)", "Green (Kick)", "Delight Blue", "Beaver Brown", "Grey (Alloy)", "Blue (Alloy)", "Red (Alloy)"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled",
-        "displacement": "99.7 cc",
-        "max_power": "4.3 bhp",
-        "max_torque": "6.5 Nm",
-        "transmission": "Single-speed Automatic",
-        "start_type": "Kick Start",
-        "fuel_tank": "4 liters",
-        "mileage_user": "55 kmpl",
-        "top_speed": "58 kmph",
-        "kerb_weight": "88 kg",
-        "front_brake": "Drum",
-        "rear_brake": "Drum",
-        "wheel_type": "Spoke",
-        "features": "Moped, Load-carrying capability"
-      }
+      "colors": [],
+      "technical_specifications": {}
     },
     {
-      "make": "TVS",
-      "model": "XL100 Comfort",
-      "variant_name": "XL100 Comfort Standard",
-      "price": "₹58,987",
-      "engine_displacement": "99.7 cc",
-      "mileage": "55 kmpl",
-      "max_power": "4.29 bhp",
-      "max_torque": "6.5 Nm",
-      "top_speed": "58 kmph",
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "TFT",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "68 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "V1",
+          "price": "N/A"
+        },
+        {
+          "name": "V2",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Kick Start",
+          "price": "N/A"
+        },
+        {
+          "name": "i-Touch Start",
+          "price": "N/A"
+        },
+        {
+          "name": "Winner Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Alloy Wheel",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "ES",
+          "price": "N/A"
+        },
+        {
+          "name": "ES+",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "All Black Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Digital - Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Digital - Disc",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Disc Bluetooth",
+          "price": "N/A"
+        },
+        {
+          "name": "Anniversary Special Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Gloss",
+          "price": "N/A"
+        },
+        {
+          "name": "Matte",
+          "price": "N/A"
+        },
+        {
+          "name": "SXC",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "105 kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Discontinued",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "i-Touch Start",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
       "fuel_type": "Petrol",
       "source_section": "Available",
-      "description": "The TVS XL100 Comfort is an upgraded variant of the XL moped featuring a comfortable seat, LED headlight, self-start mechanism, and a front basket for cargo. It combines the workhorse utility of the XL100 with added convenience features for daily commuting and light load carrying.",
-      "features": ["LED Headlight", "Self Start", "Front Basket for Cargo", "Side Stand Sensor", "Combined Braking System", "Automatic Transmission", "BS6 Phase 2 Compliant"],
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
       "variants": [
-        { "name": "XL100 Comfort Standard", "price": "₹58,987" }
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
       ],
-      "colors": ["Sparkling Silver", "Coral Silk", "Luster Gold", "Mint Blue"],
-      "technical_specifications": {
-        "engine_type": "BS6 Phase 2, Single-cylinder, Air-cooled",
-        "displacement": "99.7 cc",
-        "max_power": "4.29 bhp",
-        "max_torque": "6.5 Nm",
-        "transmission": "Single-speed Automatic",
-        "start_type": "Self Start",
-        "fuel_tank": "4 liters",
-        "mileage_user": "55 kmpl",
-        "top_speed": "58 kmph",
-        "kerb_weight": "89 kg",
-        "seat_height": "781 mm",
-        "front_brake": "Drum",
-        "rear_brake": "Drum",
-        "wheel_type": "Alloy",
-        "features": "Moped, Comfort seat, Better suspension"
-      }
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Arsenal Black Without Quick Shifter",
+          "price": "N/A"
+        },
+        {
+          "name": "Arsenal Black with Quick Shifter",
+          "price": "N/A"
+        },
+        {
+          "name": "Fury Yellow",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard - BS4",
+          "price": "N/A"
+        },
+        {
+          "name": "Teens",
+          "price": "N/A"
+        },
+        {
+          "name": "Teens Electric",
+          "price": "N/A"
+        },
+        {
+          "name": "SBT - BS IV",
+          "price": "N/A"
+        },
+        {
+          "name": "Matte Edition - SBT - BS IV",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Matte Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "Mudhal Kadhal",
+          "price": "N/A"
+        },
+        {
+          "name": "Princess Pink",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Kick",
+          "price": "N/A"
+        },
+        {
+          "name": "Self",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Premium",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum - SBT",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc - SBT",
+          "price": "N/A"
+        },
+        {
+          "name": "Premium - SBT",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Special Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard - BS4",
+          "price": "N/A"
+        },
+        {
+          "name": "Slipper Clutch",
+          "price": "N/A"
+        },
+        {
+          "name": "BS VI [2020]",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "Disc",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Dual Channel ABS",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "125 Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "125 Drum",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "100",
+          "price": "N/A"
+        },
+        {
+          "name": "100R",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Spoke Wheels",
+          "price": "N/A"
+        },
+        {
+          "name": "Alloy wheels",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Special Edition",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "F2 Drum",
+          "price": "N/A"
+        },
+        {
+          "name": "F2 Disc",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Ex",
+          "price": "N/A"
+        },
+        {
+          "name": "Dx",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "SR 125 KS",
+          "price": "N/A"
+        },
+        {
+          "name": "SR 125 ES",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard - SBT",
+          "price": "N/A"
+        },
+        {
+          "name": "ZX - SBT",
+          "price": "N/A"
+        },
+        {
+          "name": "ZX Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Classic Edition",
+          "price": "N/A"
+        },
+        {
+          "name": "ZX Disc - SBT",
+          "price": "N/A"
+        },
+        {
+          "name": "Classic - SBT",
+          "price": "N/A"
+        },
+        {
+          "name": "Grande Disc SBT",
+          "price": "N/A"
+        },
+        {
+          "name": "Classic ET-Fi",
+          "price": "N/A"
+        },
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Drum ZX",
+          "price": "N/A"
+        },
+        {
+          "name": "ZX Disc",
+          "price": "N/A"
+        },
+        {
+          "name": "Sheet Metal Wheel",
+          "price": "N/A"
+        },
+        {
+          "name": "ZX Drum - AOL",
+          "price": "N/A"
+        },
+        {
+          "name": "ZX Disc - SmartXonnect",
+          "price": "N/A"
+        },
+        {
+          "name": "Classic",
+          "price": "N/A"
+        },
+        {
+          "name": "ZX Drum - SmartXonnect",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "engine_displacement": "undefined cc",
+      "mileage": "undefined kmpl",
+      "max_power": "undefined bhp",
+      "max_torque": "",
+      "top_speed": "undefined kmph",
+      "fuel_type": "Petrol",
+      "source_section": "Available",
+      "description": "The undefined undefined is a two-wheeler available in India.",
+      "features": [],
+      "variants": [
+        {
+          "name": "Standard",
+          "price": "N/A"
+        },
+        {
+          "name": "Matte Red",
+          "price": "N/A"
+        },
+        {
+          "name": "STD R 2.0",
+          "price": "N/A"
+        }
+      ],
+      "colors": [],
+      "technical_specifications": {}
     }
   ]
 }
