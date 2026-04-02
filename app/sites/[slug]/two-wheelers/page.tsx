@@ -39,8 +39,8 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): Car[] {
             type: v.fuel_type === 'electric' ? 'Electric' : 'Petrol',
             displacement: v.engine_cc,
             batteryCapacity: v.battery_kwh,
-            power: '—',
-            torque: '—',
+            power: v.max_power ?? '—',
+            torque: v.torque ?? '—',
         },
         transmission: { type: v.transmission || 'Manual' },
         performance: {
@@ -51,6 +51,23 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): Car[] {
         dimensions: { seatingCapacity: 2 },
         vehicleCategory: '2w' as const,
         features: { keyFeatures: v.features ?? [] },
+        // Pass colors so the Colors tab works in the modal
+        colors: (v.colors ?? []).map(c => ({
+            name: c.name,
+            type: 'Solid' as const,
+            hex: c.hex,
+            extraCost: 0,
+        })),
+        // Map all_variants so the Variants tab shows the full list
+        variants: (v.all_variants ?? []).map(av => ({
+            id: av.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+            name: av.name,
+            price: av.price_paise > 0 ? Math.round(av.price_paise / 100) : 0,
+            transmission: v.transmission || 'Manual',
+            fuelType: (v.fuel_type === 'electric' ? 'Electric' : 'Petrol') as string,
+            keyFeatures: [],
+        })),
+        description: v.description ?? undefined,
         images: {
             hero: v.images?.[0] ?? '',
             exterior: v.images ?? [],
@@ -61,6 +78,7 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): Car[] {
             ? `₹${(v.ex_showroom_price_paise / 100).toLocaleString('en-IN')}`
             : 'Price on request',
         condition: 'new' as const,
+
     }))
 }
 

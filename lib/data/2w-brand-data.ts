@@ -413,7 +413,7 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
                 name: variantItem.variant_name || variantItem.name || '',
                 price_paise: parsePrice(variantItem.price),
             }))
-            .filter((vv: { name: string; price_paise: number }) => vv.name && vv.price_paise > 0)
+            .filter((vv: { name: string; price_paise: number }) => vv.name)
 
         const dims = firstVar.technical_specifications?.dimensions_and_capacity || {}
 
@@ -471,7 +471,7 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
                 ? (v.variants as any[]).map((vv: any) => ({
                     name: vv.variant_name || vv.name || '',
                     price_paise: parsePrice(vv.price),
-                })).filter((vv: { name: string; price_paise: number }) => vv.name && vv.price_paise > 0)
+                })).filter((vv: { name: string; price_paise: number }) => vv.name)
                 : [],
             stock_status: parseSourceSection(v.source_section),
             transmission: 'Automatic',
@@ -514,7 +514,7 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
             ? (v.variants as any[]).map((vv: any) => ({
                 name: vv.variant_name || vv.name || '',
                 price_paise: parsePrice(vv.price),
-            })).filter((vv: { name: string; price_paise: number }) => vv.name && vv.price_paise > 0)
+            })).filter((vv: { name: string; price_paise: number }) => vv.name)
             : [],
         stock_status: parseSourceSection(v.source_section),
         transmission: normalizeTransmission(techEngine['Gear Box'] || techEngine['Gearbox'] || techEngine['Transmission']
