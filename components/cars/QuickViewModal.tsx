@@ -118,12 +118,24 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
     const [selVariant, setSelVariant] = useState<DetailedCarInfo | null>(null);
 
     useEffect(() => {
-        if (!open || !car) return;
-        setLoading(true);
-        getDetailedCarInfo(car.make, car.model)
-            .then(info => { setDetailedInfo(info); setSelVariant(info[0] ?? null); })
-            .catch(() => { })
-            .finally(() => setLoading(false));
+        let isMounted = true;
+        const fetchDetails = async () => {
+            if (!open || !car) return;
+            setLoading(true);
+            try {
+                const info = await getDetailedCarInfo(car.make, car.model, car.vehicleCategory);
+                if (isMounted) {
+                    setDetailedInfo(info);
+                    setSelVariant(info[0] ?? null);
+                }
+            } catch (e) {
+                // Handle error
+            } finally {
+                if (isMounted) setLoading(false);
+            }
+        };
+        fetchDetails();
+        return () => { isMounted = false; };
     }, [open, car]);
 
     if (!car) return null;

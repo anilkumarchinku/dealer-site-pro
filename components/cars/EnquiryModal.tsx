@@ -62,7 +62,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
     // Fetch detailed car info when modal opens
     useEffect(() => {
         if (open && car) {
-            getDetailedCarInfo(car.make, car.model)
+            getDetailedCarInfo(car.make, car.model, car.vehicleCategory)
                 .then((info) => {
                     setDetailedInfo(info);
                 })

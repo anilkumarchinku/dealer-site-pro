@@ -59,8 +59,50 @@ export async function fetchCarInfoData(): Promise<any> {
  */
 export async function getDetailedCarInfo(
     make: string,
-    model: string
+    model: string,
+    vehicleCategory?: string
 ): Promise<DetailedCarInfo[]> {
+    if (vehicleCategory === '2w') {
+        try {
+            const { brandNameToId } = await import('./brand-model-images');
+            const brandId = brandNameToId(make, '2w');
+            const response = await fetch(`/data/2w/${brandId}.json`);
+            if (response.ok) {
+                const data = await response.json();
+                if (data && data.vehicles) {
+                    const normalizedSearchModel = model.toLowerCase().trim();
+                    const matchingVehicle = data.vehicles.find((vh: any) => {
+                        const m = (vh.model || '').toLowerCase().trim();
+                        return m === normalizedSearchModel || m.includes(normalizedSearchModel) || normalizedSearchModel.includes(m);
+                    });
+
+                    if (matchingVehicle && matchingVehicle.variants && Array.isArray(matchingVehicle.variants)) {
+                        return matchingVehicle.variants.map((v: any) => ({
+                            make: matchingVehicle.make || data.brand || make,
+                            model: matchingVehicle.model || model,
+                            variant_name: v.name,
+                            ex_showroom_price_min_inr: typeof v.price === 'number' ? v.price : (v.price_paise ? Math.round(v.price_paise / 100) : parseInt((v.price||'').replace(/[^0-9]/g, '')) || 0),
+                            fuel_type: matchingVehicle.fuel_type === 'electric' ? 'Electric' : 'Petrol',
+                            transmission: matchingVehicle.transmission || 'Manual',
+                            engine_displacement_cc: matchingVehicle.engine_cc || matchingVehicle.engine_displacement_cc || 0,
+                            power_bhp: matchingVehicle.max_power || 0,
+                            torque_nm: matchingVehicle.max_torque || matchingVehicle.torque || 0,
+                            mileage_kmpl_or_ev_range: matchingVehicle.fuel_type === 'electric' ? matchingVehicle.range_km : (matchingVehicle.mileage_kmpl || matchingVehicle.mileage || 0),
+                            seating_capacity: 2,
+                            key_features: matchingVehicle.features?.join(', ') || '',
+                            safety_features: '',
+                            image_urls: matchingVehicle.colors?.map((c: any) => ({ value: c.hex })) || [],
+                            launch_year: matchingVehicle.year || undefined
+                        }));
+                    }
+                }
+            }
+        } catch (e) {
+            console.error('Failed to fetch 2w data in getDetailedCarInfo:', e);
+        }
+        return [];
+    }
+
     const carData = await fetchCarInfoData();
 
     if (!carData) return [];
