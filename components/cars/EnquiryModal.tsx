@@ -64,6 +64,26 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
         if (open && car) {
             getDetailedCarInfo(car.make, car.model, car.vehicleCategory)
                 .then((info) => {
+                    // Fallback for missing/corrupted JSON data: Use the grid's rigorous data!
+                    if (!info || info.length === 0) {
+                        info = [{
+                            make: car.make,
+                            model: car.model,
+                            variant_name: car.variant || 'Standard',
+                            ex_showroom_price_min_inr: car.pricing.exShowroom.min || 0,
+                            fuel_type: car.engine?.type || 'Petrol',
+                            transmission: car.transmission?.type || 'Manual',
+                            engine_displacement_cc: car.engine?.displacement || 0,
+                            power_bhp: parseInt(car.engine?.power) || 0,
+                            torque_nm: parseInt(car.engine?.torque) || 0,
+                            mileage_kmpl_or_ev_range: String(car.performance?.fuelEfficiency || car.performance?.range || ''),
+                            seating_capacity: car.dimensions?.seatingCapacity || 2,
+                            key_features: car.features?.keyFeatures?.join(', ') || '',
+                            safety_features: car.features?.safetyFeatures?.join(', ') || '',
+                            image_urls: car.colors?.map(c => ({ value: c.hex })) || [],
+                            launch_year: car.year
+                        }];
+                    }
                     setDetailedInfo(info);
                 })
                 .catch((error) => {
