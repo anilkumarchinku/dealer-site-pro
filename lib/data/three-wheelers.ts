@@ -2080,7 +2080,7 @@ const TERRA_MOTORS: CatalogEntry[] = [
     {
         brand: 'Terra Motors', model: 'Y4A/Electric', variant: 'Standard',
         type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
-        engine_cc: null, mileage_kmpl: null, range_km: null, max_speed_kmph: null,
+        engine_cc: null, mileage_kmpl: null, range_km: 80, max_speed_kmph: null,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 13000000, on_road_price_paise: Math.round(13000000 * 1.12), emi_starting_paise: 400000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -2090,7 +2090,7 @@ const TERRA_MOTORS: CatalogEntry[] = [
     {
         brand: 'Terra Motors', model: 'Pace-E Cargo/Electric', variant: 'Standard',
         type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
-        engine_cc: null, mileage_kmpl: null, range_km: null, max_speed_kmph: null,
+        engine_cc: null, mileage_kmpl: null, range_km: 100, max_speed_kmph: null,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 13500000, on_road_price_paise: Math.round(13500000 * 1.12), emi_starting_paise: 400000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -2100,7 +2100,7 @@ const TERRA_MOTORS: CatalogEntry[] = [
     {
         brand: 'Terra Motors', model: 'Sumo/Electric', variant: 'Standard',
         type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
-        engine_cc: null, mileage_kmpl: null, range_km: null, max_speed_kmph: null,
+        engine_cc: null, mileage_kmpl: null, range_km: 100, max_speed_kmph: null,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 14100000, on_road_price_paise: Math.round(14100000 * 1.12), emi_starting_paise: 400000,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,
@@ -2110,7 +2110,7 @@ const TERRA_MOTORS: CatalogEntry[] = [
     {
         brand: 'Terra Motors', model: 'Kyoro L5/Electric', variant: 'Standard',
         type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
-        engine_cc: null, mileage_kmpl: null, range_km: null, max_speed_kmph: null,
+        engine_cc: null, mileage_kmpl: null, range_km: 120, max_speed_kmph: null,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 0, on_road_price_paise: 0, emi_starting_paise: 0,
         stock_status: 'available', bs6_compliant: true, fame_subsidy_eligible: true,

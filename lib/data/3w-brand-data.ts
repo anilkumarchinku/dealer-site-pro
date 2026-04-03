@@ -147,18 +147,23 @@ function extractAtulFormat(v: any): ThreeWheelerEnrichment {
 function extractBajajFormat(v: any): ThreeWheelerEnrichment {
     const eng = v.engine_details || {}
     const tech = v.technical_specifications || {}
-    // Parse mileage from top-level "mileage" field (e.g. "32 kmpl" or "35 km/kg")
+    // Parse mileage from top-level "mileage" field (e.g. "32 kmpl", "35 km/kg", or "80 km range")
     const mileageStr = toStr(v.mileage)
+    const isRange = /\brange\b/i.test(mileageStr) || /km range/i.test(mileageStr)
     let mileageKmpl: number | null = null
+    let rangeKm: number | null = null
     if (mileageStr) {
         const m = mileageStr.match(/([\d.]+)/)
-        if (m) mileageKmpl = parseFloat(m[1])
+        if (m) {
+            if (isRange) rangeKm = Math.round(parseFloat(m[1]))
+            else mileageKmpl = parseFloat(m[1])
+        }
     }
     return {
         engine_cc:   parseCC(eng.displacement),
         fuel_type:   tech.fuel_type || null,
         mileage_kmpl: mileageKmpl,
-        range_km:    null,
+        range_km:    rangeKm,
         max_power:   eng.max_power || null,
         torque:      eng.torque || null,
         gvw_kg:      parseKg(v.payload_features?.gross_vehicle_weight),
