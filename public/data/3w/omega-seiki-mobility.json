@@ -2,75 +2,96 @@
   "brand": "Omega Seiki Mobility",
   "brandId": "omega-seiki-mobility",
   "type": "3w",
+  "lastUpdated": "2026-04-03",
+  "source": "TrucksDekho",
   "vehicles": [
     {
-      "variant_name": "OSM Stream City",
-      "ex_showroom_price": "₹3.95 Lakh",
-      "mileage": "161 km range",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "11.1 kW",
-        "torque": "80 Nm"
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "900 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Automatic"
-      },
-      "source_url": "https://omegaseikimobility.com/"
+      "variant_name": "Stream City/Electric",
+      "ex_showroom_price": "₹3.01 Lakh",
+      "mileage": "117 km range",
+      "engine_details": { "displacement": "", "max_power": "", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "533 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "8.5 kWh", "range": "117 km" }
     },
     {
-      "variant_name": "OSM Stream City 2.0",
-      "ex_showroom_price": "₹4.20 Lakh",
-      "mileage": "161 km range",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "11.1 kW",
-        "torque": "85 Nm"
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "950 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Automatic"
-      },
-      "source_url": "https://omegaseikimobility.com/"
+      "variant_name": "Stream City Qik/Electric",
+      "ex_showroom_price": "₹3.30 Lakh",
+      "mileage": "126 km range",
+      "engine_details": { "displacement": "", "max_power": "", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "533 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "8.8 kWh", "range": "126 km" }
     },
     {
-      "variant_name": "OSM Rage Plus",
-      "ex_showroom_price": "₹4.80 Lakh",
-      "mileage": "180 km range",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "16 kW",
-        "torque": "90 Nm"
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "1200 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Automatic"
-      },
-      "source_url": "https://omegaseikimobility.com/"
+      "variant_name": "Stream/Electric",
+      "ex_showroom_price": "₹3.45 Lakh",
+      "mileage": "160 km range",
+      "engine_details": { "displacement": "", "max_power": "", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "10.5 kWh", "range": "160 km" }
+    },
+    {
+      "variant_name": "Rage Plus/Electric",
+      "ex_showroom_price": "₹3.70 Lakh",
+      "mileage": "147 km range",
+      "engine_details": { "displacement": "", "max_power": "", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "565 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "10.5 kWh", "range": "147 km" }
+    },
+    {
+      "variant_name": "Rage Plus ATR/Electric",
+      "ex_showroom_price": "₹2.92 Lakh",
+      "mileage": "113 km range",
+      "engine_details": { "displacement": "", "max_power": "", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "550 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "6.3 kWh", "battery_type": "Swappable", "range": "113 km" }
+    },
+    {
+      "variant_name": "Rage Plus RapidEv Pro/Electric",
+      "ex_showroom_price": "₹4.06 Lakh",
+      "mileage": "90 km range",
+      "engine_details": { "displacement": "", "max_power": "", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "565 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "6 kWh", "range": "90 km" }
+    },
+    {
+      "variant_name": "Rage Plus Frost/Electric",
+      "ex_showroom_price": "₹8.11 Lakh",
+      "mileage": "80 km range",
+      "engine_details": { "displacement": "", "max_power": "", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "400 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "10.8 kWh", "range": "80 km", "body_type": "Refrigerated" }
+    },
+    {
+      "variant_name": "Rage Plus Garbage Tipper/Electric",
+      "ex_showroom_price": "₹4.95 Lakh",
+      "mileage": "120 km range",
+      "engine_details": { "displacement": "", "max_power": "", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "500 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "10.8 kWh", "range": "120 km", "body_type": "Tipper" }
+    },
+    {
+      "variant_name": "Swayamgati Cargo/Electric",
+      "ex_showroom_price": "₹4.15 Lakh",
+      "mileage": "120 km range",
+      "engine_details": { "displacement": "", "max_power": "", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "120 km" }
+    },
+    {
+      "variant_name": "Swayamgati/Electric",
+      "ex_showroom_price": "₹4.00 Lakh",
+      "mileage": "120 km range",
+      "engine_details": { "displacement": "", "max_power": "", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "10.3 kWh", "range": "120 km", "seating_capacity": "Driver + 3" }
+    },
+    {
+      "variant_name": "NRG/Electric",
+      "ex_showroom_price": "₹3.55 Lakh",
+      "mileage": "300 km range",
+      "engine_details": { "displacement": "", "max_power": "", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "15 kWh", "battery_type": "LFP", "range": "300 km" }
     }
   ]
 }

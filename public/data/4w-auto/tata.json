@@ -1,0 +1,562 @@
+{
+  "brand": "Tata",
+  "brandId": "tata",
+  "type": "4w-auto",
+  "lastUpdated": "2026-04-03",
+  "source": "TrucksDekho (trucks.cardekho.com)",
+  "vehicles": [
+    {
+      "model": "Ace Pro",
+      "variant_name": "Ace Pro 1800/Petrol",
+      "ex_showroom_price": "₹3.99 Lakh",
+      "mileage": "21-22 kmpl",
+      "engine_details": {
+        "displacement": "694 cc",
+        "max_power": "22 kW (30 hp)",
+        "torque": "55 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1460 kg",
+        "payload_capacity": "750 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual",
+        "wheelbase": "1800 mm",
+        "fuel_tank_capacity": "26 L",
+        "gradeability": "35%",
+        "body_type": "Mini Truck / Deck Body",
+        "cabin_type": "Day Cabin"
+      }
+    },
+    {
+      "model": "Ace Gold",
+      "variant_name": "Ace Gold 2100/Petrol CX",
+      "ex_showroom_price": "₹4.50 Lakh",
+      "mileage": "15 kmpl",
+      "engine_details": {
+        "displacement": "694 cc",
+        "max_power": "22.21 kW (30 hp)",
+        "torque": "55 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1835 kg",
+        "payload_capacity": "900 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual",
+        "wheelbase": "2100 mm",
+        "fuel_tank_capacity": "26 L",
+        "gradeability": "35%",
+        "body_type": "Mini Truck / Deck Body",
+        "cabin_type": "Day Cabin",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Ace Gold",
+      "variant_name": "Ace Gold 2100/Petrol",
+      "ex_showroom_price": "₹4.80 Lakh",
+      "mileage": "22 kmpl",
+      "engine_details": {
+        "displacement": "694 cc",
+        "max_power": "22.21 kW (30 hp)",
+        "torque": "55 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1835 kg",
+        "payload_capacity": "900 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual",
+        "wheelbase": "2100 mm",
+        "fuel_tank_capacity": "26 L",
+        "gradeability": "35%",
+        "body_type": "Mini Truck / Deck Body",
+        "cabin_type": "Day Cabin",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Ace Gold",
+      "variant_name": "Ace Gold 2100/Diesel",
+      "ex_showroom_price": "₹5.10 Lakh",
+      "mileage": "22 kmpl",
+      "engine_details": {
+        "displacement": "694 cc",
+        "max_power": "22.21 kW (30 hp)",
+        "torque": "55 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1835 kg",
+        "payload_capacity": "750 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual",
+        "wheelbase": "2100 mm",
+        "fuel_tank_capacity": "26 L",
+        "gradeability": "35%",
+        "body_type": "Mini Truck / Deck Body",
+        "cabin_type": "Day Cabin",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Ace Gold",
+      "variant_name": "Ace Gold 2100/Diesel Plus",
+      "ex_showroom_price": "₹5.40 Lakh",
+      "mileage": "22 kmpl",
+      "engine_details": {
+        "displacement": "694 cc",
+        "max_power": "22.21 kW (30 hp)",
+        "torque": "55 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1835 kg",
+        "payload_capacity": "750 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual",
+        "wheelbase": "2100 mm",
+        "fuel_tank_capacity": "26 L",
+        "gradeability": "35%",
+        "body_type": "Mini Truck / Deck Body",
+        "cabin_type": "Day Cabin",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Ace Gold",
+      "variant_name": "Ace Gold 2250/CNG",
+      "ex_showroom_price": "₹5.80 Lakh",
+      "mileage": "21.4 kmpl",
+      "engine_details": {
+        "displacement": "694 cc",
+        "max_power": "22.21 kW (30 hp)",
+        "torque": "55 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1835 kg",
+        "payload_capacity": "660 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual",
+        "wheelbase": "2250 mm",
+        "fuel_tank_capacity": "26 L",
+        "gradeability": "35%",
+        "body_type": "Mini Truck / Deck Body",
+        "cabin_type": "Day Cabin",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Ace Gold",
+      "variant_name": "Ace Gold 2250/CNG Plus",
+      "ex_showroom_price": "₹6.10 Lakh",
+      "mileage": "21.4 kmpl",
+      "engine_details": {
+        "displacement": "694 cc",
+        "max_power": "22.21 kW (30 hp)",
+        "torque": "55 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1835 kg",
+        "payload_capacity": "615 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual",
+        "wheelbase": "2250 mm",
+        "fuel_tank_capacity": "26 L",
+        "gradeability": "35%",
+        "body_type": "Mini Truck / Deck Body",
+        "cabin_type": "Day Cabin",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Ace Gold",
+      "variant_name": "Ace Gold 2250/HT Plus",
+      "ex_showroom_price": "₹6.69 Lakh",
+      "mileage": "18 kmpl",
+      "engine_details": {
+        "displacement": "694 cc",
+        "max_power": "22.21 kW (30 hp)",
+        "torque": "55 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1835 kg",
+        "payload_capacity": "900 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual",
+        "wheelbase": "2250 mm",
+        "fuel_tank_capacity": "26 L",
+        "gradeability": "35%",
+        "body_type": "Mini Truck / High Deck",
+        "cabin_type": "Day Cabin",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Ace EV",
+      "variant_name": "Ace EV 2100/Electric",
+      "ex_showroom_price": "₹10.51 Lakh",
+      "mileage": "N/A (Electric)",
+      "engine_details": {
+        "displacement": "N/A",
+        "max_power": "27 kW (36.3 hp)",
+        "torque": "130 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1840 kg",
+        "payload_capacity": "600 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "wheelbase": "2100 mm",
+        "gradeability": "22%",
+        "body_type": "Mini Truck / Deck Body",
+        "cabin_type": "Day Cabin",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Ace HT+",
+      "variant_name": "Ace HT+ 2250/Diesel",
+      "ex_showroom_price": "₹7.19 Lakh",
+      "mileage": "16-18 kmpl",
+      "engine_details": {
+        "displacement": "798 cc",
+        "max_power": "26 kW (35 hp)",
+        "torque": "85 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2120 kg",
+        "payload_capacity": "1100 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual",
+        "wheelbase": "2250 mm",
+        "fuel_tank_capacity": "30 L",
+        "gradeability": "36%",
+        "body_type": "Mini Truck / Deck Body",
+        "cabin_type": "Day Cabin",
+        "cargo_dimensions": "2520 x 1490 x 300 mm (L x W x H)",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Intra V10",
+      "variant_name": "Intra V10 CLB Non-AC",
+      "ex_showroom_price": "₹6.75 Lakh",
+      "mileage": "18-20 kmpl",
+      "engine_details": {
+        "displacement": "798 cc",
+        "max_power": "33 kW (44 hp)",
+        "torque": "110 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2120 kg",
+        "payload_capacity": "1000 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual",
+        "wheelbase": "2250 mm",
+        "fuel_tank_capacity": "35 L",
+        "gradeability": "32%",
+        "body_type": "Closed Load Body (CLB)",
+        "cabin_type": "Day Cabin",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Intra V10",
+      "variant_name": "Intra V10 CLB AC",
+      "ex_showroom_price": "₹7.51 Lakh",
+      "mileage": "18-20 kmpl",
+      "engine_details": {
+        "displacement": "798 cc",
+        "max_power": "33 kW (44 hp)",
+        "torque": "110 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2120 kg",
+        "payload_capacity": "1000 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual",
+        "wheelbase": "2250 mm",
+        "fuel_tank_capacity": "35 L",
+        "gradeability": "32%",
+        "body_type": "Closed Load Body (CLB) with AC",
+        "cabin_type": "Day Cabin",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Intra V20",
+      "variant_name": "Intra V20 2450/CNG (Bi-Fuel)",
+      "ex_showroom_price": "₹8.55 Lakh",
+      "mileage": "22-25 km/kg (CNG)",
+      "engine_details": {
+        "displacement": "1199 cc",
+        "max_power": "39 kW (52 hp)",
+        "torque": "95 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2275 kg",
+        "payload_capacity": "1000 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG + Petrol (Bi-Fuel)",
+        "transmission_type": "Manual",
+        "wheelbase": "2450 mm",
+        "fuel_tank_capacity": "CNG 80 L / Petrol 2.5 L",
+        "gradeability": "28%",
+        "body_type": "Pickup / Deck Body",
+        "cabin_type": "Day Cabin",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Intra V20 Gold",
+      "variant_name": "Intra V20 Gold CAB/AC/CNG",
+      "ex_showroom_price": "₹8.15 Lakh",
+      "mileage": "18-22 kmpl",
+      "engine_details": {
+        "displacement": "1199 cc",
+        "max_power": "43 kW (58 hp)",
+        "torque": "106 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2275 kg",
+        "payload_capacity": "1200 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual",
+        "wheelbase": "2450 mm",
+        "fuel_tank_capacity": "35 L",
+        "gradeability": "30%",
+        "body_type": "Pickup / Deck Body",
+        "cabin_type": "Day Cabin",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Intra V20 Gold",
+      "variant_name": "Intra V20 Gold (Top Variant)",
+      "ex_showroom_price": "₹9.50 Lakh",
+      "mileage": "18-22 kmpl",
+      "engine_details": {
+        "displacement": "1199 cc",
+        "max_power": "43 kW (58 hp)",
+        "torque": "106 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2275 kg",
+        "payload_capacity": "1200 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual",
+        "wheelbase": "2450 mm",
+        "fuel_tank_capacity": "35 L",
+        "gradeability": "30%",
+        "body_type": "Pickup / Deck Body",
+        "cabin_type": "Day Cabin",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Intra V30",
+      "variant_name": "Intra V30 2450/High Deck Body",
+      "ex_showroom_price": "₹8.31 Lakh",
+      "mileage": "14 kmpl",
+      "engine_details": {
+        "displacement": "1496 cc",
+        "max_power": "51 kW (69 hp)",
+        "torque": "140 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2565 kg",
+        "payload_capacity": "1300 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual (5-Speed)",
+        "wheelbase": "2450 mm",
+        "fuel_tank_capacity": "35 L",
+        "gradeability": "41%",
+        "body_type": "High Deck Body",
+        "cabin_type": "Day Cabin",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Intra V30",
+      "variant_name": "Intra V30 CLB AC",
+      "ex_showroom_price": "₹8.76 Lakh",
+      "mileage": "14 kmpl",
+      "engine_details": {
+        "displacement": "1496 cc",
+        "max_power": "51 kW (69 hp)",
+        "torque": "140 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2565 kg",
+        "payload_capacity": "1300 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual (5-Speed)",
+        "wheelbase": "2450 mm",
+        "fuel_tank_capacity": "35 L",
+        "gradeability": "41%",
+        "body_type": "Closed Load Body (CLB) with AC",
+        "cabin_type": "Day Cabin",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Intra V30",
+      "variant_name": "Intra V30 CBC/2450",
+      "ex_showroom_price": "₹9.21 Lakh",
+      "mileage": "14 kmpl",
+      "engine_details": {
+        "displacement": "1496 cc",
+        "max_power": "51 kW (69 hp)",
+        "torque": "140 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2565 kg",
+        "payload_capacity": "1300 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual (5-Speed)",
+        "wheelbase": "2450 mm",
+        "fuel_tank_capacity": "35 L",
+        "gradeability": "41%",
+        "body_type": "Chassis with Body (CBC)",
+        "cabin_type": "Day Cabin",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Yodha Pickup",
+      "variant_name": "Yodha 3150 (1700 kg Payload)",
+      "ex_showroom_price": "₹9.66 Lakh",
+      "mileage": "17-22 kmpl",
+      "engine_details": {
+        "displacement": "2200 cc",
+        "max_power": "73 kW (98 hp) @ 3750 rpm",
+        "torque": "250 Nm @ 1000-2500 rpm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "3490 kg",
+        "payload_capacity": "1700 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual",
+        "wheelbase": "3150 mm",
+        "fuel_tank_capacity": "45 L",
+        "gradeability": "34%",
+        "body_type": "Pickup / Deck Body",
+        "cabin_type": "Day Cabin",
+        "engine_type": "VARICOR Intercooled Turbocharged BS6 DI",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Yodha Pickup",
+      "variant_name": "Yodha 3150 (Top Variant 1700)",
+      "ex_showroom_price": "₹10.16 Lakh",
+      "mileage": "17-22 kmpl",
+      "engine_details": {
+        "displacement": "2200 cc",
+        "max_power": "73 kW (98 hp) @ 3750 rpm",
+        "torque": "250 Nm @ 1000-2500 rpm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "3490 kg",
+        "payload_capacity": "1700 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual",
+        "wheelbase": "3150 mm",
+        "fuel_tank_capacity": "45 L",
+        "gradeability": "34%",
+        "body_type": "Pickup / Deck Body",
+        "cabin_type": "Day Cabin",
+        "engine_type": "VARICOR Intercooled Turbocharged BS6 DI",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Yodha 2.0",
+      "variant_name": "Yodha 2.0 3150 (1700 kg) - Base",
+      "ex_showroom_price": "₹10.00 Lakh",
+      "mileage": "17-22 kmpl",
+      "engine_details": {
+        "displacement": "2200 cc",
+        "max_power": "74.5 kW (100 hp)",
+        "torque": "250 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "3840 kg",
+        "payload_capacity": "2000 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual",
+        "wheelbase": "3150 mm",
+        "fuel_tank_capacity": "45 L",
+        "gradeability": "40%",
+        "body_type": "Pickup / Deck Body",
+        "cabin_type": "Day Cabin",
+        "engine_type": "VARICOR 2.2L Turbocharged Common Rail BS6 Phase-2",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Yodha 2.0",
+      "variant_name": "Yodha 2.0 3150/Crew Cabin",
+      "ex_showroom_price": "₹10.40 Lakh",
+      "mileage": "17-22 kmpl",
+      "engine_details": {
+        "displacement": "2200 cc",
+        "max_power": "74.5 kW (100 hp)",
+        "torque": "250 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2990 kg",
+        "payload_capacity": "2000 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual",
+        "wheelbase": "3150 mm",
+        "fuel_tank_capacity": "45 L",
+        "gradeability": "40%",
+        "body_type": "Pickup / Crew Cabin",
+        "cabin_type": "Crew Cabin (2+1 seating)",
+        "engine_type": "VARICOR 2.2L Turbocharged Common Rail BS6 Phase-2",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    }
+  ]
+}

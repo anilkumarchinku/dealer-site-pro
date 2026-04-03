@@ -1,0 +1,177 @@
+{
+  "brand": "YOUDHA",
+  "brandId": "youdha",
+  "type": "3w",
+  "lastUpdated": "2026-04-03",
+  "source": "TrucksDekho",
+  "vehicles": [
+    {
+      "variant_name": "YOUDHA Trevo Cargo",
+      "ex_showroom_price": "₹3.50 Lakh",
+      "mileage": "100 km range",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "7.5 kW",
+        "torque": "38 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "950 kg",
+        "payload_capacity": "500 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "7.68 kWh",
+        "range": "100 km",
+        "top_speed": "45 kmph"
+      }
+    },
+    {
+      "variant_name": "YOUDHA Trevo Cargo Plus",
+      "ex_showroom_price": "₹3.99 Lakh",
+      "mileage": "140 km range",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "7.5 kW",
+        "torque": "38 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "950 kg",
+        "payload_capacity": "500 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "10.24 kWh",
+        "range": "140 km",
+        "top_speed": "45 kmph"
+      }
+    },
+    {
+      "variant_name": "YOUDHA EPOD Cargo",
+      "ex_showroom_price": "₹2.99 Lakh",
+      "mileage": "80 km range",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "5 kW",
+        "torque": "25 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "750 kg",
+        "payload_capacity": "350 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "5.12 kWh",
+        "range": "80 km",
+        "top_speed": "40 kmph"
+      }
+    },
+    {
+      "variant_name": "YOUDHA EPOD Cargo Plus",
+      "ex_showroom_price": "₹3.45 Lakh",
+      "mileage": "120 km range",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "5 kW",
+        "torque": "25 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "750 kg",
+        "payload_capacity": "350 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "7.68 kWh",
+        "range": "120 km",
+        "top_speed": "40 kmph"
+      }
+    },
+    {
+      "variant_name": "YOUDHA G-Van Cargo",
+      "ex_showroom_price": "₹4.25 Lakh",
+      "mileage": "130 km range",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "10 kW",
+        "torque": "50 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1100 kg",
+        "payload_capacity": "650 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "10.24 kWh",
+        "range": "130 km",
+        "top_speed": "50 kmph"
+      }
+    },
+    {
+      "variant_name": "YOUDHA G-Van Cargo Plus",
+      "ex_showroom_price": "₹4.75 Lakh",
+      "mileage": "180 km range",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "10 kW",
+        "torque": "50 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1100 kg",
+        "payload_capacity": "650 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "14.34 kWh",
+        "range": "180 km",
+        "top_speed": "50 kmph"
+      }
+    },
+    {
+      "variant_name": "YOUDHA Passenger E-Rickshaw Standard",
+      "ex_showroom_price": "₹2.50 Lakh",
+      "mileage": "90 km range",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "1.2 kW",
+        "torque": "40 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "600 kg",
+        "payload_capacity": "250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "4.4 kWh",
+        "range": "90 km",
+        "top_speed": "25 kmph"
+      }
+    },
+    {
+      "variant_name": "YOUDHA Passenger E-Rickshaw Deluxe",
+      "ex_showroom_price": "₹2.85 Lakh",
+      "mileage": "110 km range",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "1.2 kW",
+        "torque": "40 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "600 kg",
+        "payload_capacity": "250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "6.4 kWh",
+        "range": "110 km",
+        "top_speed": "25 kmph"
+      }
+    }
+  ]
+}

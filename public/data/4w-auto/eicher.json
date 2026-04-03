@@ -1,0 +1,49 @@
+{
+  "brand": "Eicher",
+  "brandId": "eicher",
+  "type": "4w-auto",
+  "lastUpdated": "2026-04-03",
+  "source": "TrucksDekho",
+  "vehicles": [
+    {
+      "variant_name": "Pro X 2610/Diesel 3T CBC",
+      "ex_showroom_price": "₹8.85 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "80 bhp", "torque": "230 Nm" },
+      "payload_features": { "gross_vehicle_weight": "2995 kg", "payload_capacity": "1358 kg" },
+      "technical_specifications": { "fuel_type": "Diesel", "transmission_type": "Manual" }
+    },
+    {
+      "variant_name": "Pro X 2730/Electric 3.5T",
+      "ex_showroom_price": "₹16.99 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "80 kW", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "2995 kg", "payload_capacity": "1445 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+    },
+    {
+      "variant_name": "Pro X MSC 3.0T/Electric",
+      "ex_showroom_price": "Price Coming Soon",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "80 bhp", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "3490 kg", "payload_capacity": "1760 kg" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+    },
+    {
+      "variant_name": "Pro 2049 2580/CBC Diesel",
+      "ex_showroom_price": "₹12.16 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "2000 cc", "max_power": "100 bhp", "torque": "285 Nm" },
+      "payload_features": { "gross_vehicle_weight": "4995 kg", "payload_capacity": "2241 kg" },
+      "technical_specifications": { "fuel_type": "Diesel", "transmission_type": "Manual" }
+    },
+    {
+      "variant_name": "Pro 2049/CNG",
+      "ex_showroom_price": "₹13.32 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "3298 cc", "max_power": "95 bhp", "torque": "245 Nm" },
+      "payload_features": { "gross_vehicle_weight": "4995 kg", "payload_capacity": "2187 kg" },
+      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+    }
+  ]
+}

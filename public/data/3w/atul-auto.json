@@ -1,21 +1,112 @@
 {
-  "brand": "Atul",
+  "brand": "Atul Auto",
   "brandId": "atul-auto",
   "type": "3w",
-  "lastUpdated": "2026-03-30",
-  "source": "CardDekho",
+  "lastUpdated": "2026-04-03",
+  "source": "TrucksDekho",
   "vehicles": [
+    {
+      "variant_name": "Shakti Cargo/Diesel",
+      "ex_showroom_price": "₹2.50 Lakh",
+      "mileage": "36 kmpl",
+      "engine_details": {
+        "displacement": "598 cc",
+        "max_power": "9.38 bhp",
+        "torque": "23.5 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg",
+        "payload_capacity": "540 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      }
+    },
+    {
+      "variant_name": "Shakti Cargo XD/Diesel",
+      "ex_showroom_price": "₹2.85 Lakh",
+      "mileage": "36 kmpl",
+      "engine_details": {
+        "displacement": "598 cc",
+        "max_power": "9.38 bhp",
+        "torque": "23.5 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg",
+        "payload_capacity": "540 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      }
+    },
+    {
+      "variant_name": "GEM Cargo/Diesel",
+      "ex_showroom_price": "₹2.66 Lakh",
+      "mileage": "22-24 kmpl",
+      "engine_details": {
+        "displacement": "598 cc",
+        "max_power": "9 bhp",
+        "torque": "23.6 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1020 kg",
+        "payload_capacity": "500 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      }
+    },
+    {
+      "variant_name": "GEM Cargo/CNG",
+      "ex_showroom_price": "₹2.66 Lakh",
+      "mileage": "35-40 km/kg",
+      "engine_details": {
+        "displacement": "395 cc",
+        "max_power": "9 bhp",
+        "torque": "23 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "886 kg",
+        "payload_capacity": "500 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      }
+    },
     {
       "variant_name": "Gem Paxx 3-Seater/CNG",
       "ex_showroom_price": "₹2.50 Lakh",
-      "mileage": "32 km/kg",
+      "mileage": "36 km/kg",
       "engine_details": {
-        "displacement": "198.9 cc",
-        "max_power": "8.8 bhp",
-        "torque": "12.5 Nm"
+        "displacement": "198.6 cc",
+        "max_power": "9.85 bhp",
+        "torque": "14.7 Nm"
       },
       "payload_features": {
-        "gross_vehicle_weight": "645 kg"
+        "gross_vehicle_weight": "810 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      }
+    },
+    {
+      "variant_name": "Gem Paxx 3-Seater/CNG Aqua 3P",
+      "ex_showroom_price": "₹2.50 Lakh",
+      "mileage": "36 km/kg",
+      "engine_details": {
+        "displacement": "395 cc",
+        "max_power": "9.38 bhp",
+        "torque": "23 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "849 kg",
+        "payload_capacity": ""
       },
       "technical_specifications": {
         "fuel_type": "CNG",
@@ -24,15 +115,16 @@
     },
     {
       "variant_name": "Gem Paxx 3-Seater/Petrol",
-      "ex_showroom_price": "₹2.35 Lakh",
-      "mileage": "32 kmpl",
+      "ex_showroom_price": "₹2.66 Lakh",
+      "mileage": "25 kmpl",
       "engine_details": {
-        "displacement": "198.9 cc",
-        "max_power": "8.8 bhp",
-        "torque": "12.5 Nm"
+        "displacement": "198.6 cc",
+        "max_power": "11.53 bhp",
+        "torque": "15.8 Nm"
       },
       "payload_features": {
-        "gross_vehicle_weight": "645 kg"
+        "gross_vehicle_weight": "734 kg",
+        "payload_capacity": ""
       },
       "technical_specifications": {
         "fuel_type": "Petrol",
@@ -40,16 +132,35 @@
       }
     },
     {
-      "variant_name": "Gem Paxx 3-Seater/LPG",
-      "ex_showroom_price": "₹2.42 Lakh",
-      "mileage": "28 km/kg",
+      "variant_name": "Gem Paxx 3-Seater/Diesel",
+      "ex_showroom_price": "₹2.66 Lakh",
+      "mileage": "25 kmpl",
       "engine_details": {
-        "displacement": "198.9 cc",
-        "max_power": "8.8 bhp",
-        "torque": "12.5 Nm"
+        "displacement": "598 cc",
+        "max_power": "9.5 bhp",
+        "torque": "23.6 Nm"
       },
       "payload_features": {
-        "gross_vehicle_weight": "645 kg"
+        "gross_vehicle_weight": "814 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual"
+      }
+    },
+    {
+      "variant_name": "Gem Paxx 3-Seater/LPG",
+      "ex_showroom_price": "₹2.66 Lakh",
+      "mileage": "36 km/kg",
+      "engine_details": {
+        "displacement": "198.6 cc",
+        "max_power": "10.46 bhp",
+        "torque": "15.8 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "789 kg",
+        "payload_capacity": ""
       },
       "technical_specifications": {
         "fuel_type": "LPG",
@@ -57,16 +168,107 @@
       }
     },
     {
-      "variant_name": "Smart 3-Seater/CNG",
-      "ex_showroom_price": "₹2.85 Lakh",
-      "mileage": "34 km/kg",
+      "variant_name": "Rik 3-Seater/Petrol",
+      "ex_showroom_price": "₹1.94 Lakh",
+      "mileage": "25 kmpl",
       "engine_details": {
-        "displacement": "198.9 cc",
-        "max_power": "8.8 bhp",
-        "torque": "12.5 Nm"
+        "displacement": "198.6 cc",
+        "max_power": "11.5 bhp",
+        "torque": "15.8 Nm"
       },
       "payload_features": {
-        "gross_vehicle_weight": "700 kg"
+        "gross_vehicle_weight": "700 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      }
+    },
+    {
+      "variant_name": "Rik 3-Seater/LPG",
+      "ex_showroom_price": "₹1.88 Lakh",
+      "mileage": "30 km/kg",
+      "engine_details": {
+        "displacement": "198.6 cc",
+        "max_power": "9.59 bhp",
+        "torque": "14.22 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "727 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "transmission_type": "Manual"
+      }
+    },
+    {
+      "variant_name": "Rik 3-Seater/CNG",
+      "ex_showroom_price": "₹1.75 Lakh",
+      "mileage": "45 km/kg",
+      "engine_details": {
+        "displacement": "198.6 cc",
+        "max_power": "9.86 bhp",
+        "torque": "14.7 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "748 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      }
+    },
+    {
+      "variant_name": "Gemini Passenger/Petrol",
+      "ex_showroom_price": "₹2.15 Lakh",
+      "mileage": "25 kmpl",
+      "engine_details": {
+        "displacement": "198.6 cc",
+        "max_power": "7 bhp",
+        "torque": "11.70 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "665 kg",
+        "payload_capacity": "500 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      }
+    },
+    {
+      "variant_name": "Gemini Passenger/CNG",
+      "ex_showroom_price": "₹2.15 Lakh",
+      "mileage": "36 km/kg",
+      "engine_details": {
+        "displacement": "198.6 cc",
+        "max_power": "9 bhp",
+        "torque": "13.6 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "688 kg",
+        "payload_capacity": "500 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      }
+    },
+    {
+      "variant_name": "Gemini Plus/CNG",
+      "ex_showroom_price": "Coming Soon",
+      "mileage": "45-55 km/kg",
+      "engine_details": {
+        "displacement": "198.6 cc",
+        "max_power": "9.05 bhp",
+        "torque": "12.90 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "730 kg",
+        "payload_capacity": "320 kg"
       },
       "technical_specifications": {
         "fuel_type": "CNG",
@@ -75,15 +277,16 @@
     },
     {
       "variant_name": "Smart Cargo/CNG",
-      "ex_showroom_price": "₹2.75 Lakh",
-      "mileage": "34 km/kg",
+      "ex_showroom_price": "₹2.77 Lakh",
+      "mileage": "35-40 km/kg",
       "engine_details": {
-        "displacement": "198.9 cc",
-        "max_power": "8.8 bhp",
-        "torque": "12.5 Nm"
+        "displacement": "395 cc",
+        "max_power": "9.38 bhp",
+        "torque": "23 Nm"
       },
       "payload_features": {
-        "gross_vehicle_weight": "720 kg"
+        "gross_vehicle_weight": "1066 kg",
+        "payload_capacity": "500 kg"
       },
       "technical_specifications": {
         "fuel_type": "CNG",
@@ -91,54 +294,103 @@
       }
     },
     {
-      "variant_name": "Elite 3-Seater/CNG",
-      "ex_showroom_price": "₹3.10 Lakh",
-      "mileage": "34 km/kg",
+      "variant_name": "Elite Cargo/Electric",
+      "ex_showroom_price": "₹1.04 Lakh",
+      "mileage": "80 km range",
       "engine_details": {
-        "displacement": "216 cc",
-        "max_power": "9.9 bhp",
-        "torque": "14 Nm"
+        "displacement": "",
+        "max_power": "1 kW",
+        "torque": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "750 kg"
+        "gross_vehicle_weight": "699 kg",
+        "payload_capacity": "400 kg"
       },
       "technical_specifications": {
-        "fuel_type": "CNG",
-        "transmission_type": "Manual"
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery": "12V 100 Ah Lead-Acid",
+        "charging_time": "8-10 hours"
       }
     },
     {
-      "variant_name": "Rik/Electric",
-      "ex_showroom_price": "₹3.50 Lakh",
+      "variant_name": "Elite Plus Cargo/Electric",
+      "ex_showroom_price": "₹1.55 Lakh",
       "mileage": "100 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "12 kW",
-        "torque": "25 Nm"
+        "max_power": "1 kW",
+        "torque": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "620 kg"
+        "gross_vehicle_weight": "699 kg",
+        "payload_capacity": "350 kg"
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Automatic"
+        "transmission_type": "Automatic",
+        "battery": "100 Ah Li-ion",
+        "charging_time": "3-4 hours"
       }
     },
     {
-      "variant_name": "E-Rik/Electric",
-      "ex_showroom_price": "₹3.80 Lakh",
-      "mileage": "130 km range",
+      "variant_name": "Elite Plus Passenger/Electric",
+      "ex_showroom_price": "₹1.12 Lakh",
+      "mileage": "80-100 km range",
       "engine_details": {
         "displacement": "",
-        "max_power": "15 kW",
-        "torque": "40 Nm"
+        "max_power": "1 kW",
+        "torque": ""
       },
       "payload_features": {
-        "gross_vehicle_weight": "680 kg"
+        "gross_vehicle_weight": "699 kg",
+        "payload_capacity": "400 kg"
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Automatic"
+        "transmission_type": "Automatic",
+        "battery": "12V 100 Ah Lead-Acid",
+        "charging_time": "8-10 hours"
+      }
+    },
+    {
+      "variant_name": "Mobili/Electric",
+      "ex_showroom_price": "₹3.55 Lakh",
+      "mileage": "110 km range",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "AC Synchromesh Motor",
+        "torque": "44 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "766 kg",
+        "payload_capacity": "350 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery": "6.6 kWh Li-ion",
+        "charging_time": "4 hours"
+      }
+    },
+    {
+      "variant_name": "Energie/Electric",
+      "ex_showroom_price": "₹3.72 Lakh",
+      "mileage": "195 km range",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "9.92 kW",
+        "torque": ""
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "995 kg",
+        "payload_capacity": "500 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery": "13.2 kWh Li-ion",
+        "charging_time": "6-7 hours"
       }
     }
   ]

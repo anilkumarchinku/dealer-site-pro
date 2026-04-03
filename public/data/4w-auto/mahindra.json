@@ -1,0 +1,489 @@
+{
+  "brand": "Mahindra",
+  "brandId": "mahindra",
+  "type": "4w-auto",
+  "lastUpdated": "2026-04-03",
+  "source": "TrucksDekho (trucks.cardekho.com)",
+  "vehicles": [
+    {
+      "model": "Jeeto",
+      "variant_name": "Jeeto Plus Petrol",
+      "ex_showroom_price": "₹3.15 Lakh",
+      "mileage": "21.2 kmpl",
+      "engine_details": {
+        "displacement": "625 cc",
+        "max_power": "17.3 kW (23 hp)",
+        "torque": "48 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1350 kg",
+        "payload_capacity": "715 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual (4-Speed)",
+        "wheelbase": "2500 mm",
+        "fuel_tank_capacity": "20 L",
+        "top_speed": "80 km/h",
+        "body_type": "Mini Truck / Deck Body",
+        "cabin_type": "Day Cabin",
+        "warranty": "3 years / 72,000 km",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Jeeto",
+      "variant_name": "Jeeto Plus CNG BS-VI",
+      "ex_showroom_price": "₹4.29 Lakh",
+      "mileage": "37 km/kg",
+      "engine_details": {
+        "displacement": "625 cc",
+        "max_power": "17.3 kW (23 hp)",
+        "torque": "48 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1350 kg",
+        "payload_capacity": "650 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual (4-Speed)",
+        "wheelbase": "2500 mm",
+        "fuel_tank_capacity": "20 L",
+        "top_speed": "80 km/h",
+        "body_type": "Mini Truck / Deck Body",
+        "cabin_type": "Day Cabin",
+        "warranty": "3 years / 72,000 km",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Jeeto",
+      "variant_name": "Jeeto Strong CNG",
+      "ex_showroom_price": "₹4.68 Lakh",
+      "mileage": "35 km/kg",
+      "engine_details": {
+        "displacement": "625 cc",
+        "max_power": "17.3 kW (20 hp)",
+        "torque": "44 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1605 kg",
+        "payload_capacity": "750 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG (4-Stroke)",
+        "transmission_type": "Manual (4-Speed)",
+        "wheelbase": "2500 mm",
+        "fuel_tank_capacity": "20 L",
+        "top_speed": "80 km/h",
+        "body_type": "Mini Truck / Deck Body",
+        "cabin_type": "Day Cabin",
+        "warranty": "3 years / 72,000 km",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Jeeto",
+      "variant_name": "Jeeto Strong Diesel",
+      "ex_showroom_price": "₹5.09 Lakh",
+      "mileage": "32 kmpl",
+      "engine_details": {
+        "displacement": "670 cc",
+        "max_power": "11.9 kW (16 hp) @ 3600 rpm",
+        "torque": "42 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1605 kg",
+        "payload_capacity": "815 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel (DI Water-Cooled)",
+        "transmission_type": "Manual (4-Speed)",
+        "wheelbase": "2500 mm",
+        "fuel_tank_capacity": "10.5 L",
+        "top_speed": "80 km/h",
+        "body_type": "Mini Truck / Deck Body",
+        "cabin_type": "Day Cabin",
+        "warranty": "3 years / 72,000 km",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Jeeto",
+      "variant_name": "Jeeto (Top Variant)",
+      "ex_showroom_price": "₹5.08 Lakh",
+      "mileage": "32 kmpl",
+      "engine_details": {
+        "displacement": "670 cc",
+        "max_power": "11.9 kW (16 hp)",
+        "torque": "38 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1450 kg",
+        "payload_capacity": "715 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual (4-Speed)",
+        "wheelbase": "2500 mm",
+        "fuel_tank_capacity": "20 L",
+        "top_speed": "80 km/h",
+        "body_type": "Mini Truck / Deck Body",
+        "cabin_type": "Day Cabin",
+        "warranty": "3 years / 72,000 km",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Supro Profit Truck Mini",
+      "variant_name": "Supro Profit Truck Mini 1950/LX",
+      "ex_showroom_price": "₹5.72 Lakh",
+      "mileage": "23.30 kmpl",
+      "engine_details": {
+        "displacement": "909 cc",
+        "max_power": "19.4 kW (26 hp)",
+        "torque": "55 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1802 kg",
+        "payload_capacity": "900 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual (4-Speed)",
+        "wheelbase": "1950 mm",
+        "fuel_tank_capacity": "30 L",
+        "gradeability": "40%",
+        "cargo_dimensions": "2205 x 1540 x 330 mm (L x W x H)",
+        "body_type": "Mini Truck / Deck Body",
+        "cabin_type": "Day Cabin",
+        "engine_type": "2-Cylinder Diesel",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Supro Profit Truck Mini",
+      "variant_name": "Supro Profit Truck Mini 1950/VX",
+      "ex_showroom_price": "₹5.95 Lakh",
+      "mileage": "23.30 kmpl",
+      "engine_details": {
+        "displacement": "909 cc",
+        "max_power": "19.4 kW (26 hp)",
+        "torque": "55 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1802 kg",
+        "payload_capacity": "900 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual (4-Speed)",
+        "wheelbase": "1950 mm",
+        "fuel_tank_capacity": "30 L",
+        "gradeability": "40%",
+        "cargo_dimensions": "2205 x 1540 x 330 mm (L x W x H)",
+        "body_type": "Mini Truck / Deck Body",
+        "cabin_type": "Day Cabin",
+        "engine_type": "2-Cylinder Diesel",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Supro Profit Truck Mini",
+      "variant_name": "Supro Profit Truck Mini 1950/LX CBC",
+      "ex_showroom_price": "₹6.14 Lakh",
+      "mileage": "23.30 kmpl",
+      "engine_details": {
+        "displacement": "909 cc",
+        "max_power": "19.4 kW (26 hp)",
+        "torque": "55 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1802 kg",
+        "payload_capacity": "900 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual (4-Speed)",
+        "wheelbase": "1950 mm",
+        "fuel_tank_capacity": "30 L",
+        "gradeability": "40%",
+        "body_type": "Chassis Body (CBC)",
+        "cabin_type": "Day Cabin",
+        "engine_type": "2-Cylinder Diesel",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Supro Profit Truck Mini",
+      "variant_name": "Supro Profit Truck Mini 1950/VX CBC",
+      "ex_showroom_price": "₹6.38 Lakh",
+      "mileage": "23.35 km/kg",
+      "engine_details": {
+        "displacement": "909 cc",
+        "max_power": "20.1 kW (27 hp)",
+        "torque": "55 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1850 kg",
+        "payload_capacity": "750 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG (Spark Ignition)",
+        "transmission_type": "Manual (4-Speed)",
+        "wheelbase": "1950 mm",
+        "fuel_tank_capacity": "45 L",
+        "gradeability": "40%",
+        "body_type": "Chassis Body (CBC)",
+        "cabin_type": "Day Cabin",
+        "engine_type": "2-Cylinder CNG",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Veero",
+      "variant_name": "Veero 1.5 XXL SD V6",
+      "ex_showroom_price": "₹7.82 Lakh",
+      "mileage": "16-18 kmpl",
+      "engine_details": {
+        "displacement": "1498 cc",
+        "max_power": "59.7 kW (80 hp)",
+        "torque": "210 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2999 kg",
+        "payload_capacity": "1550 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual",
+        "wheelbase": "2550 mm",
+        "fuel_tank_capacity": "40 L",
+        "gradeability": "32%",
+        "body_type": "Pickup / Deck Body",
+        "cabin_type": "Day Cabin",
+        "product_type": "L5N (High Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Veero",
+      "variant_name": "Veero (Top Variant)",
+      "ex_showroom_price": "₹8.80 Lakh",
+      "mileage": "16-18 kmpl",
+      "engine_details": {
+        "displacement": "1498 cc",
+        "max_power": "59.7 kW (80 hp)",
+        "torque": "210 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2999 kg",
+        "payload_capacity": "1550 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual",
+        "wheelbase": "2550 mm",
+        "fuel_tank_capacity": "40 L",
+        "gradeability": "32%",
+        "body_type": "Pickup / Deck Body",
+        "cabin_type": "Day Cabin",
+        "product_type": "L5N (High Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Bolero Pik-Up",
+      "variant_name": "Bolero Pik-Up 3264/2WD/Power Steering",
+      "ex_showroom_price": "₹9.19 Lakh",
+      "mileage": "17 kmpl",
+      "engine_details": {
+        "displacement": "2523 cc",
+        "max_power": "59.7 kW (80 hp) @ 3200 rpm",
+        "torque": "220 Nm @ 1400-2200 rpm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2950 kg",
+        "payload_capacity": "1010 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual (5-Speed Synchromesh)",
+        "wheelbase": "3264 mm",
+        "fuel_tank_capacity": "57 L",
+        "gradeability": "40%",
+        "body_type": "Pickup / Deck Body",
+        "cabin_type": "Day Cabin",
+        "drive_type": "2WD",
+        "overall_dimensions": "5219 x 1700 mm (L x W)",
+        "engine_type": "m2Di, 4-Cylinder",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Bolero Pik-Up",
+      "variant_name": "Bolero Pik-Up 3014/4WD",
+      "ex_showroom_price": "₹9.99 Lakh",
+      "mileage": "17 kmpl",
+      "engine_details": {
+        "displacement": "2523 cc",
+        "max_power": "59.7 kW (80 hp) @ 3200 rpm",
+        "torque": "220 Nm @ 1400-2200 rpm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2735 kg",
+        "payload_capacity": "1010 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual (5-Speed Synchromesh)",
+        "wheelbase": "3014 mm",
+        "fuel_tank_capacity": "57 L",
+        "gradeability": "40%",
+        "body_type": "Pickup / Deck Body",
+        "cabin_type": "Day Cabin",
+        "drive_type": "4WD",
+        "overall_dimensions": "4859 x 1700 mm (L x W)",
+        "engine_type": "m2Di, 4-Cylinder",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Bolero Maxx Pik-Up HD",
+      "variant_name": "Bolero Maxx Pik-Up HD 2.0L VXi",
+      "ex_showroom_price": "₹9.17 Lakh",
+      "mileage": "15-17 kmpl",
+      "engine_details": {
+        "displacement": "2523 cc",
+        "max_power": "59.7 kW (80 hp)",
+        "torque": "220 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2970 kg",
+        "payload_capacity": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual",
+        "wheelbase": "3290 mm",
+        "fuel_tank_capacity": "60 L",
+        "gradeability": "40%",
+        "body_type": "Pickup / Deck Body (High Deck)",
+        "cabin_type": "Day Cabin",
+        "drive_type": "2WD",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Bolero Maxx Pik-Up HD",
+      "variant_name": "Bolero Maxx Pik-Up HD (Top Variant)",
+      "ex_showroom_price": "₹10.52 Lakh",
+      "mileage": "15-17 kmpl",
+      "engine_details": {
+        "displacement": "2523 cc",
+        "max_power": "59.7 kW (80 hp)",
+        "torque": "220 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2970 kg",
+        "payload_capacity": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual",
+        "wheelbase": "3290 mm",
+        "fuel_tank_capacity": "60 L",
+        "gradeability": "40%",
+        "body_type": "Pickup / Deck Body (High Deck)",
+        "cabin_type": "Day Cabin",
+        "drive_type": "2WD",
+        "product_type": "L3N (Low Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Bolero Camper Gold",
+      "variant_name": "Bolero Camper Gold VX 2WD Non-AC",
+      "ex_showroom_price": "₹9.22 Lakh",
+      "mileage": "15.1 kmpl",
+      "engine_details": {
+        "displacement": "2523 cc",
+        "max_power": "59.7 kW (80 hp)",
+        "torque": "200 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2735 kg",
+        "payload_capacity": "1000 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "All Synchromesh",
+        "wheelbase": "3014 mm",
+        "fuel_tank_capacity": "57 L",
+        "gradeability": "10%",
+        "body_type": "Pickup / Deck Body",
+        "cabin_type": "Day Cabin",
+        "drive_type": "2WD",
+        "engine_type": "m2DiCR 4-Cylinder 2.5L TB BS6",
+        "seating": "1+4",
+        "product_type": "L5N (High Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Bolero Camper Gold",
+      "variant_name": "Bolero Camper Gold ZX 2WD",
+      "ex_showroom_price": "₹9.92 Lakh",
+      "mileage": "15.1 kmpl",
+      "engine_details": {
+        "displacement": "2523 cc",
+        "max_power": "59.7 kW (80 hp)",
+        "torque": "200 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2735 kg",
+        "payload_capacity": "1000 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "All Synchromesh",
+        "wheelbase": "3014 mm",
+        "fuel_tank_capacity": "57 L",
+        "gradeability": "10%",
+        "body_type": "Pickup / Deck Body",
+        "cabin_type": "Day Cabin",
+        "drive_type": "2WD",
+        "engine_type": "m2DiCR 4-Cylinder 2.5L TB BS6",
+        "seating": "1+4",
+        "features_highlight": "AC, Power Windows, Central Locking, Premium Interiors",
+        "product_type": "L5N (High Speed Goods Carrier)"
+      }
+    },
+    {
+      "model": "Bolero Camper Gold",
+      "variant_name": "Bolero Camper Gold ZX 4WD",
+      "ex_showroom_price": "₹10.20 Lakh",
+      "mileage": "15.1 kmpl",
+      "engine_details": {
+        "displacement": "2523 cc",
+        "max_power": "59.7 kW (80 hp)",
+        "torque": "200 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2735 kg",
+        "payload_capacity": "1000 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "All Synchromesh",
+        "wheelbase": "3014 mm",
+        "fuel_tank_capacity": "57 L",
+        "gradeability": "10%",
+        "body_type": "Pickup / Deck Body",
+        "cabin_type": "Day Cabin",
+        "drive_type": "4WD",
+        "engine_type": "m2DiCR 4-Cylinder 2.5L TB BS6",
+        "seating": "1+4",
+        "features_highlight": "AC, Power Windows, Central Locking, Premium Interiors",
+        "product_type": "L5N (High Speed Goods Carrier)"
+      }
+    }
+  ]
+}

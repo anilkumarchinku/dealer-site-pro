@@ -1,0 +1,41 @@
+{
+  "brand": "Force Motors",
+  "brandId": "force",
+  "type": "4w-auto",
+  "lastUpdated": "2026-04-03",
+  "source": "TrucksDekho",
+  "vehicles": [
+    {
+      "variant_name": "Trump 40/Diesel Regular Deck",
+      "ex_showroom_price": "₹4.37 Lakh",
+      "mileage": "21 kmpl",
+      "engine_details": { "displacement": "1947 cc", "max_power": "39 bhp", "torque": "124 Nm" },
+      "payload_features": { "gross_vehicle_weight": "2500 kg", "payload_capacity": "1150 kg" },
+      "technical_specifications": { "fuel_type": "Diesel", "transmission_type": "Manual" }
+    },
+    {
+      "variant_name": "Trump 40/Diesel Hi-Deck",
+      "ex_showroom_price": "₹4.69 Lakh",
+      "mileage": "21 kmpl",
+      "engine_details": { "displacement": "1947 cc", "max_power": "39 bhp", "torque": "124 Nm" },
+      "payload_features": { "gross_vehicle_weight": "2500 kg", "payload_capacity": "1070 kg" },
+      "technical_specifications": { "fuel_type": "Diesel", "transmission_type": "Manual" }
+    },
+    {
+      "variant_name": "Trump 40/CNG Hi-Deck",
+      "ex_showroom_price": "₹5.49 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "1947 cc", "max_power": "41 bhp", "torque": "124 Nm" },
+      "payload_features": { "gross_vehicle_weight": "2500 kg", "payload_capacity": "990 kg" },
+      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+    },
+    {
+      "variant_name": "Traveller Delivery Van 4020WB/Diesel",
+      "ex_showroom_price": "₹13.98 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "2596 cc", "max_power": "85 kW", "torque": "350 Nm" },
+      "payload_features": { "gross_vehicle_weight": "3960 kg", "payload_capacity": "1540 kg" },
+      "technical_specifications": { "fuel_type": "Diesel", "transmission_type": "Manual", "wheelbase": "4020 mm" }
+    }
+  ]
+}

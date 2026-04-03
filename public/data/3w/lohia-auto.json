@@ -2,50 +2,56 @@
   "brand": "Lohia Auto",
   "brandId": "lohia-auto",
   "type": "3w",
-  "lastUpdated": "2026-03-30",
-  "source": "CardDekho",
+  "lastUpdated": "2026-04-03",
+  "source": "TrucksDekho",
   "vehicles": [
     {
-      "make": "Lohia",
-      "model": "Humsafar",
-      "fuel_type": "Electric",
-      "engine_cc": null,
-      "range_km": 120,
-      "mileage_kmpl": null,
-      "max_power": "8 kW",
-      "torque": "80 Nm",
-      "gvw_kg": 660,
-      "passenger_capacity": 3,
-      "ex_showroom_price": "₹3.20 Lakh",
-      "transmission_type": "Automatic"
+      "variant_name": "Narain Plus/Electric",
+      "ex_showroom_price": "₹1.55 Lakh",
+      "mileage": "100-120 km range",
+      "engine_details": { "displacement": "", "max_power": "1.4 kW", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "733 kg", "payload_capacity": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "100-120 km", "top_speed": "25 kmph" }
     },
     {
-      "make": "Lohia",
-      "model": "Comfort",
-      "fuel_type": "CNG",
-      "engine_cc": 198.9,
-      "range_km": null,
-      "mileage_kmpl": 33,
-      "max_power": "8.8 bhp",
-      "torque": "14.5 Nm",
-      "gvw_kg": 650,
-      "passenger_capacity": 3,
-      "ex_showroom_price": "₹2.85 Lakh",
-      "transmission_type": "Manual"
+      "variant_name": "Narain SLC/Electric",
+      "ex_showroom_price": "₹1.32 Lakh",
+      "mileage": "100 km range",
+      "engine_details": { "displacement": "", "max_power": "1.36 kW", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "752 kg", "payload_capacity": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "100 km", "top_speed": "25 kmph" }
     },
     {
-      "make": "Lohia",
-      "model": "Comfort",
-      "fuel_type": "Petrol",
-      "engine_cc": 198.9,
-      "range_km": null,
-      "mileage_kmpl": 33,
-      "max_power": "8.8 bhp",
-      "torque": "14.5 Nm",
-      "gvw_kg": 650,
-      "passenger_capacity": 3,
-      "ex_showroom_price": "₹2.65 Lakh",
-      "transmission_type": "Manual"
+      "variant_name": "Narain LC/Electric",
+      "ex_showroom_price": "₹0.90 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+    },
+    {
+      "variant_name": "Humsafar IAQ/Electric",
+      "ex_showroom_price": "₹1.85 Lakh",
+      "mileage": "110 km range",
+      "engine_details": { "displacement": "", "max_power": "10 kW", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "990 kg", "payload_capacity": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "110 km", "top_speed": "55 kmph" }
+    },
+    {
+      "variant_name": "Comfort F2F Plus/Electric",
+      "ex_showroom_price": "₹1.75 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "1 bhp", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "732 kg", "payload_capacity": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+    },
+    {
+      "variant_name": "E-Tipper/Electric",
+      "ex_showroom_price": "₹1.35 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "", "max_power": "1 bhp", "torque": "" },
+      "payload_features": { "gross_vehicle_weight": "720 kg", "payload_capacity": "" },
+      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "body_type": "Tipper" }
     }
   ]
 }

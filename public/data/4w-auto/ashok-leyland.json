@@ -1,0 +1,57 @@
+{
+  "brand": "Ashok Leyland",
+  "brandId": "ashok-leyland",
+  "type": "4w-auto",
+  "lastUpdated": "2026-04-03",
+  "source": "TrucksDekho",
+  "vehicles": [
+    {
+      "variant_name": "Saathi FSD/Diesel",
+      "ex_showroom_price": "₹6.54 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "1478 cc", "max_power": "45 bhp", "torque": "110 Nm" },
+      "payload_features": { "gross_vehicle_weight": "2288 kg", "payload_capacity": "1120 kg" },
+      "technical_specifications": { "fuel_type": "Diesel", "transmission_type": "Manual" }
+    },
+    {
+      "variant_name": "Dost+/Diesel",
+      "ex_showroom_price": "₹8.25 Lakh",
+      "mileage": "19.6 kmpl",
+      "engine_details": { "displacement": "1478 cc", "max_power": "80 bhp", "torque": "190 Nm" },
+      "payload_features": { "gross_vehicle_weight": "2805 kg", "payload_capacity": "1500 kg" },
+      "technical_specifications": { "fuel_type": "Diesel", "transmission_type": "Manual" }
+    },
+    {
+      "variant_name": "Bada Dost i2 2510/Diesel",
+      "ex_showroom_price": "₹8.59 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "1478 cc", "max_power": "70 bhp", "torque": "190 Nm" },
+      "payload_features": { "gross_vehicle_weight": "2880 kg", "payload_capacity": "1425 kg" },
+      "technical_specifications": { "fuel_type": "Diesel", "transmission_type": "Manual" }
+    },
+    {
+      "variant_name": "Bada Dost i3+ 2590/LX Diesel",
+      "ex_showroom_price": "₹9.69 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "1478 cc", "max_power": "80 bhp", "torque": "190 Nm" },
+      "payload_features": { "gross_vehicle_weight": "2990 kg", "payload_capacity": "1325 kg" },
+      "technical_specifications": { "fuel_type": "Diesel", "transmission_type": "Manual" }
+    },
+    {
+      "variant_name": "Bada Dost i4 2590/LX Diesel",
+      "ex_showroom_price": "₹9.54 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "1478 cc", "max_power": "80 bhp", "torque": "190 Nm" },
+      "payload_features": { "gross_vehicle_weight": "2990 kg", "payload_capacity": "1860 kg" },
+      "technical_specifications": { "fuel_type": "Diesel", "transmission_type": "Manual" }
+    },
+    {
+      "variant_name": "Bada Dost i5 2590/LX Diesel",
+      "ex_showroom_price": "₹9.63 Lakh",
+      "mileage": "",
+      "engine_details": { "displacement": "1478 cc", "max_power": "79.12 bhp", "torque": "190 Nm" },
+      "payload_features": { "gross_vehicle_weight": "3490 kg", "payload_capacity": "1817 kg" },
+      "technical_specifications": { "fuel_type": "Diesel", "transmission_type": "Manual" }
+    }
+  ]
+}

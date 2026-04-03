@@ -1,115 +1,158 @@
 {
-  "brand": "Piaggio Ape",
+  "brand": "Piaggio",
   "brandId": "piaggio-ape",
   "type": "3w",
-  "lastUpdated": "2026-03-30",
-  "source": "CardDekho",
+  "lastUpdated": "2026-04-03",
+  "source": "TrucksDekho",
   "vehicles": [
     {
-      "make": "Piaggio",
-      "model": "Ape City Plus",
-      "fuel_type": "CNG",
-      "engine_cc": 218,
-      "mileage_kmpl": null,
-      "max_power": "9.58 bhp",
-      "torque": "12 Nm",
-      "gvw_kg": 720,
-      "passenger_capacity": 3,
-      "ex_showroom_price": "₹3.45 Lakh",
-      "transmission_type": "Manual"
+      "make": "Piaggio", "model": "Ape Auto Plus", "variant": "5-Seater/2100/Diesel",
+      "fuel_type": "Diesel", "engine_cc": 597, "max_power": "9.4 bhp", "torque": "23.5 Nm",
+      "gvw_kg": 974, "passenger_capacity": 6, "transmission_type": "Manual", "wheelbase_mm": 2100,
+      "ex_showroom_price": "₹2.07 Lakh", "vehicle_category": "passenger"
     },
     {
-      "make": "Piaggio",
-      "model": "Ape City Plus",
-      "fuel_type": "LPG",
-      "engine_cc": 218,
-      "mileage_kmpl": null,
-      "max_power": "9.58 bhp",
-      "torque": "12 Nm",
-      "gvw_kg": 720,
-      "passenger_capacity": 3,
-      "ex_showroom_price": "₹3.35 Lakh",
-      "transmission_type": "Manual"
+      "make": "Piaggio", "model": "Ape NXT Plus", "variant": "3-Seater/1920/CNG",
+      "fuel_type": "CNG", "engine_cc": 230, "max_power": "9.61 bhp", "torque": "17.10 Nm",
+      "gvw_kg": 694, "passenger_capacity": 4, "transmission_type": "Manual", "wheelbase_mm": 1920,
+      "ex_showroom_price": "₹2.41 Lakh", "vehicle_category": "passenger"
     },
     {
-      "make": "Piaggio",
-      "model": "Ape City Plus",
-      "fuel_type": "Petrol",
-      "engine_cc": 218,
-      "mileage_kmpl": null,
-      "max_power": "9.58 bhp",
-      "torque": "12 Nm",
-      "gvw_kg": 720,
-      "passenger_capacity": 3,
-      "ex_showroom_price": "₹3.25 Lakh",
-      "transmission_type": "Manual"
+      "make": "Piaggio", "model": "Ape NXT Plus", "variant": "3-Seater/1920/LPG",
+      "fuel_type": "LPG", "engine_cc": 230, "max_power": "9.34 bhp", "torque": "18.85 Nm",
+      "gvw_kg": 694, "passenger_capacity": 4, "transmission_type": "Manual", "wheelbase_mm": 1920,
+      "ex_showroom_price": "₹2.28 Lakh", "vehicle_category": "passenger"
     },
     {
-      "make": "Piaggio",
-      "model": "Ape Xtra LD",
-      "fuel_type": "Diesel",
-      "engine_cc": 422,
-      "mileage_kmpl": null,
-      "max_power": "12 bhp",
-      "torque": "30 Nm",
-      "gvw_kg": 1380,
-      "passenger_capacity": null,
-      "ex_showroom_price": "₹4.20 Lakh",
-      "transmission_type": "Manual"
+      "make": "Piaggio", "model": "Ape NXT Plus", "variant": "3-Seater/1920/Petrol",
+      "fuel_type": "Petrol", "engine_cc": 230, "max_power": "9.78 bhp", "torque": "17.94 Nm",
+      "gvw_kg": 694, "passenger_capacity": 4, "transmission_type": "Manual", "wheelbase_mm": 1920,
+      "ex_showroom_price": "₹2.12 Lakh", "vehicle_category": "passenger"
     },
     {
-      "make": "Piaggio",
-      "model": "Ape Xtra LD",
-      "fuel_type": "CNG",
-      "engine_cc": 422,
-      "mileage_kmpl": null,
-      "max_power": "12 bhp",
-      "torque": "30 Nm",
-      "gvw_kg": 1380,
-      "passenger_capacity": null,
-      "ex_showroom_price": "₹4.40 Lakh",
-      "transmission_type": "Manual"
+      "make": "Piaggio", "model": "Ape City Plus", "variant": "3-Seater/1920/CNG",
+      "fuel_type": "CNG", "engine_cc": 230, "max_power": "9.17 bhp", "torque": "17 Nm",
+      "gvw_kg": 780, "passenger_capacity": 4, "transmission_type": "Manual", "wheelbase_mm": 1920,
+      "ex_showroom_price": "₹2.37 Lakh", "vehicle_category": "passenger"
     },
     {
-      "make": "Piaggio",
-      "model": "Ape E-City FX",
-      "fuel_type": "Electric",
-      "engine_cc": null,
-      "mileage_kmpl": null,
-      "range_km": 120,
-      "max_power": "7 kW",
-      "torque": "50 Nm",
-      "gvw_kg": 750,
-      "passenger_capacity": 3,
-      "ex_showroom_price": "₹4.40 Lakh",
-      "transmission_type": "Automatic"
+      "make": "Piaggio", "model": "Ape City Plus", "variant": "3-Seater/1920/LPG",
+      "fuel_type": "LPG", "engine_cc": 230, "max_power": "9.9 bhp", "torque": "17.8 Nm",
+      "gvw_kg": 691, "passenger_capacity": 4, "transmission_type": "Manual", "wheelbase_mm": 1920,
+      "ex_showroom_price": "₹2.35 Lakh", "vehicle_category": "passenger"
     },
     {
-      "make": "Piaggio",
-      "model": "Ape E-City FX Max",
-      "fuel_type": "Electric",
-      "engine_cc": null,
-      "mileage_kmpl": null,
-      "range_km": 150,
-      "max_power": "10 kW",
-      "torque": "75 Nm",
-      "gvw_kg": 800,
-      "passenger_capacity": 3,
-      "ex_showroom_price": "₹5.10 Lakh",
-      "transmission_type": "Automatic"
+      "make": "Piaggio", "model": "Ape City Metro", "variant": "3-Seater/1920/CNG",
+      "fuel_type": "CNG", "engine_cc": 230, "max_power": "9.25 bhp", "torque": "16.30 Nm",
+      "gvw_kg": 780, "passenger_capacity": 4, "transmission_type": "Automatic", "wheelbase_mm": 1920,
+      "mileage_kmpl": 45, "ex_showroom_price": "₹2.22 Lakh", "vehicle_category": "passenger"
     },
     {
-      "make": "Piaggio",
-      "model": "Ape Truk Plus",
-      "fuel_type": "Diesel",
-      "engine_cc": 422,
-      "mileage_kmpl": null,
-      "max_power": "12 bhp",
-      "torque": "30 Nm",
-      "gvw_kg": 1380,
-      "passenger_capacity": null,
-      "ex_showroom_price": "₹4.65 Lakh",
-      "transmission_type": "Manual"
+      "make": "Piaggio", "model": "Ape Auto DX", "variant": "3-Seater/1920/Diesel",
+      "fuel_type": "Diesel", "engine_cc": 598, "max_power": "9.39 bhp", "torque": "23.5 Nm",
+      "gvw_kg": 780, "passenger_capacity": 4, "transmission_type": "Manual", "wheelbase_mm": 1920,
+      "mileage_kmpl": 35, "ex_showroom_price": "₹3.54 Lakh", "vehicle_category": "passenger"
+    },
+    {
+      "make": "Piaggio", "model": "Ape Auto DX", "variant": "3-Seater/1920/CNG",
+      "fuel_type": "CNG", "engine_cc": 230, "max_power": "9.58 bhp", "torque": "16.54 Nm",
+      "gvw_kg": 792, "passenger_capacity": 4, "transmission_type": "Manual", "wheelbase_mm": 1920,
+      "ex_showroom_price": "₹3.53 Lakh", "vehicle_category": "passenger"
+    },
+    {
+      "make": "Piaggio", "model": "Ape Auto DX", "variant": "3-Seater/1920/LPG",
+      "fuel_type": "LPG", "engine_cc": 230, "max_power": "10.05 bhp", "torque": "18.7 Nm",
+      "gvw_kg": 753, "passenger_capacity": 4, "transmission_type": "Manual", "wheelbase_mm": 1920,
+      "ex_showroom_price": "₹3.52 Lakh", "vehicle_category": "passenger"
+    },
+    {
+      "make": "Piaggio", "model": "Ape Auto HT DX", "variant": "3-Seater/1920/CNG",
+      "fuel_type": "CNG", "engine_cc": 230, "max_power": "11.47 bhp", "torque": "22.49 Nm",
+      "passenger_capacity": 4, "transmission_type": "Manual", "wheelbase_mm": 1920,
+      "ex_showroom_price": "₹2.60 Lakh", "vehicle_category": "passenger"
+    },
+    {
+      "make": "Piaggio", "model": "Ape Xtra LDX", "variant": "2100/Diesel",
+      "fuel_type": "Diesel", "engine_cc": 599, "max_power": "9.4 bhp", "torque": "23.5 Nm",
+      "gvw_kg": 975, "payload_capacity": "496 kg", "transmission_type": "Manual", "wheelbase_mm": 2100,
+      "mileage_kmpl": 40, "ex_showroom_price": "₹2.88 Lakh", "vehicle_category": "cargo"
+    },
+    {
+      "make": "Piaggio", "model": "Ape Xtra LDX", "variant": "2100/CNG",
+      "fuel_type": "CNG", "engine_cc": 599, "max_power": "9.4 bhp", "torque": "23.5 Nm",
+      "gvw_kg": 975, "payload_capacity": "496 kg", "transmission_type": "Manual", "wheelbase_mm": 2100,
+      "ex_showroom_price": "₹2.45 Lakh", "vehicle_category": "cargo"
+    },
+    {
+      "make": "Piaggio", "model": "Ape Xtra LDX Plus", "variant": "2100/Diesel",
+      "fuel_type": "Diesel", "engine_cc": 305, "max_power": "11.9 bhp", "torque": "24 Nm",
+      "gvw_kg": 975, "payload_capacity": "532 kg", "transmission_type": "Manual", "wheelbase_mm": 2100,
+      "ex_showroom_price": "₹2.66 Lakh", "vehicle_category": "cargo"
+    },
+    {
+      "make": "Piaggio", "model": "Ape Xtra LDX Plus", "variant": "2100/CNG",
+      "fuel_type": "CNG", "engine_cc": 305, "max_power": "11.9 bhp", "torque": "24 Nm",
+      "gvw_kg": 975, "payload_capacity": "532 kg", "transmission_type": "Manual", "wheelbase_mm": 2100,
+      "ex_showroom_price": "₹3.09 Lakh", "vehicle_category": "cargo"
+    },
+    {
+      "make": "Piaggio", "model": "Ape Xtra Classic", "variant": "2100/Diesel",
+      "fuel_type": "Diesel", "engine_cc": 435, "max_power": "7.65 bhp", "torque": "19 Nm",
+      "gvw_kg": 975, "payload_capacity": "511 kg", "transmission_type": "Manual", "wheelbase_mm": 2100,
+      "ex_showroom_price": "₹2.45 Lakh", "vehicle_category": "cargo"
+    },
+    {
+      "make": "Piaggio", "model": "Ape Xtra Bada 700", "variant": "Diesel",
+      "fuel_type": "Diesel", "engine_cc": 700, "payload_capacity": "750 kg",
+      "transmission_type": "Manual", "ex_showroom_price": "₹3.45 Lakh", "vehicle_category": "cargo"
+    },
+    {
+      "make": "Piaggio", "model": "Ape Xtra 600", "variant": "Diesel",
+      "fuel_type": "Diesel", "engine_cc": 600, "transmission_type": "Manual",
+      "ex_showroom_price": "₹2.88 Lakh", "vehicle_category": "cargo"
+    },
+    {
+      "make": "Piaggio", "model": "Ape E Xtra FX", "variant": "2100/Electric",
+      "fuel_type": "Electric", "transmission_type": "Automatic", "wheelbase_mm": 2100,
+      "range_km": 118, "battery_kwh": 9.55, "charging_time": "3 hrs 45 min",
+      "payload_capacity": "506 kg", "ex_showroom_price": "₹3.20 Lakh", "vehicle_category": "cargo"
+    },
+    {
+      "make": "Piaggio", "model": "Ape E Xtra FX Max", "variant": "2100/Electric",
+      "fuel_type": "Electric", "transmission_type": "Automatic", "wheelbase_mm": 2100,
+      "range_km": 120, "battery_kwh": 8.0, "charging_time": "3 hrs 45 min",
+      "payload_capacity": "390 kg", "ex_showroom_price": "₹3.49 Lakh", "vehicle_category": "cargo"
+    },
+    {
+      "make": "Piaggio", "model": "Ape E City", "variant": "1920/Electric",
+      "fuel_type": "Electric", "transmission_type": "Automatic", "wheelbase_mm": 1920,
+      "range_km": 110, "battery_kwh": 4.5, "charging_time": "3 hrs 45 min",
+      "passenger_capacity": 3, "ex_showroom_price": "₹2.89 Lakh", "vehicle_category": "passenger"
+    },
+    {
+      "make": "Piaggio", "model": "Ape E City FX", "variant": "1920/Electric",
+      "fuel_type": "Electric", "max_power": "7 kW", "torque": "50 Nm", "gvw_kg": 750,
+      "transmission_type": "Automatic", "wheelbase_mm": 1920,
+      "range_km": 110, "battery_kwh": 7.5, "charging_time": "3 hrs 45 min",
+      "passenger_capacity": 3, "ex_showroom_price": "₹2.84 Lakh", "vehicle_category": "passenger"
+    },
+    {
+      "make": "Piaggio", "model": "Ape E City FX New Max", "variant": "1920/Electric",
+      "fuel_type": "Electric", "transmission_type": "Automatic", "wheelbase_mm": 1920,
+      "range_km": 174, "battery_kwh": 8.0, "charging_time": "4 hrs 45 min",
+      "passenger_capacity": 3, "ex_showroom_price": "₹3.30 Lakh", "vehicle_category": "passenger"
+    },
+    {
+      "make": "Piaggio", "model": "Ape E City Ultra", "variant": "1920/Electric",
+      "fuel_type": "Electric", "max_power": "9.5 kW", "transmission_type": "Automatic", "wheelbase_mm": 1920,
+      "range_km": 236, "battery_kwh": 10.2, "charging_time": "3 hrs 45 min",
+      "passenger_capacity": 3, "ex_showroom_price": "₹3.88 Lakh", "vehicle_category": "passenger"
+    },
+    {
+      "make": "Piaggio", "model": "Ape Truk Plus", "variant": "Diesel",
+      "fuel_type": "Diesel", "engine_cc": 422, "max_power": "12 bhp", "torque": "30 Nm",
+      "gvw_kg": 1380, "transmission_type": "Manual",
+      "ex_showroom_price": "₹4.65 Lakh", "vehicle_category": "cargo"
     }
   ]
 }

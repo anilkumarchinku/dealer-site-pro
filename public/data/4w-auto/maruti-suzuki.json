@@ -1,0 +1,41 @@
+{
+  "brand": "Maruti Suzuki",
+  "brandId": "maruti-suzuki",
+  "type": "4w-auto",
+  "lastUpdated": "2026-04-03",
+  "source": "TrucksDekho",
+  "vehicles": [
+    {
+      "variant_name": "Super Carry/Petrol Standard",
+      "ex_showroom_price": "₹5.16 Lakh",
+      "mileage": "18 kmpl",
+      "engine_details": { "displacement": "1197 cc", "max_power": "72.41 bhp", "torque": "98 Nm" },
+      "payload_features": { "gross_vehicle_weight": "1620 kg", "payload_capacity": "740 kg" },
+      "technical_specifications": { "fuel_type": "Petrol", "transmission_type": "Manual" }
+    },
+    {
+      "variant_name": "Super Carry/Petrol Cab Chassis",
+      "ex_showroom_price": "₹5.06 Lakh",
+      "mileage": "18 kmpl",
+      "engine_details": { "displacement": "1197 cc", "max_power": "72.41 bhp", "torque": "98 Nm" },
+      "payload_features": { "gross_vehicle_weight": "1620 kg", "payload_capacity": "740 kg" },
+      "technical_specifications": { "fuel_type": "Petrol", "transmission_type": "Manual" }
+    },
+    {
+      "variant_name": "Super Carry/CNG Standard",
+      "ex_showroom_price": "₹6.12 Lakh",
+      "mileage": "23.24 km/kg",
+      "engine_details": { "displacement": "1197 cc", "max_power": "64 bhp", "torque": "85 Nm" },
+      "payload_features": { "gross_vehicle_weight": "1620 kg", "payload_capacity": "625 kg" },
+      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+    },
+    {
+      "variant_name": "Super Carry/CNG Cab Chassis",
+      "ex_showroom_price": "₹5.99 Lakh",
+      "mileage": "23.24 km/kg",
+      "engine_details": { "displacement": "1197 cc", "max_power": "64 bhp", "torque": "85 Nm" },
+      "payload_features": { "gross_vehicle_weight": "1620 kg", "payload_capacity": "625 kg" },
+      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+    }
+  ]
+}

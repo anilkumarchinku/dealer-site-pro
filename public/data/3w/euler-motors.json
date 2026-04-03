@@ -1,352 +1,425 @@
 {
-  "brand": "Euler",
+  "brand": "Euler Motors",
   "brandId": "euler-motors",
   "type": "3w",
+  "lastUpdated": "2026-04-03",
+  "source": "TrucksDekho",
   "vehicles": [
     {
-      "variant_name": "Euler Motors HiLoad EV",
-      "ex_showroom_price": "₹5.00 Lakh",
-      "mileage": "157 km range",
+      "model": "HiLoad EV",
+      "variant_name": "HiLoad EV PV (Open Body)",
+      "ex_showroom_price": "₹3.94 Lakh",
+      "mileage": "135 km range (ARAI certified)",
       "engine_details": {
         "displacement": "",
-        "max_power": "14.8 kW",
-        "torque": "185 Nm"
+        "max_power": "11.7 kW",
+        "torque": "88.55 Nm",
+        "motor_type": "AC Induction Motor"
       },
       "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
+        "load_body_length": "6.1 ft",
+        "load_body_width": "4.6 ft",
+        "load_body_height": "Open",
+        "wheelbase": "2200 mm"
       },
       "payload_features": {
-        "gross_vehicle_weight": "1450 kg"
+        "gross_vehicle_weight": "1495 kg",
+        "payload_capacity": "727 kg"
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Automatic"
+        "transmission_type": "Automatic",
+        "battery_capacity": "13.44 kWh",
+        "battery_voltage": "67.2 V / 200 Ah",
+        "range": "135 km",
+        "top_speed": "55 kmph (Thunder Mode)",
+        "charging_time": "4.5–5 hrs (3.3 kW AC)",
+        "gradeability": "",
+        "body_type": "Open Load Body (3-Wheeler Cargo)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hi-load"
     },
     {
-      "variant_name": "2200/TR (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "157 km range",
+      "model": "HiLoad EV",
+      "variant_name": "HiLoad EV DV (Container Body)",
+      "ex_showroom_price": "₹4.20 Lakh",
+      "mileage": "135 km range (ARAI certified)",
       "engine_details": {
         "displacement": "",
-        "max_power": "14.8 kW",
-        "torque": "185 Nm"
+        "max_power": "11.7 kW",
+        "torque": "88.55 Nm",
+        "motor_type": "AC Induction Motor"
       },
       "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
+        "load_body_length": "6.1 ft",
+        "load_body_width": "4.6 ft",
+        "load_body_height": "4.4 ft (Container)",
+        "wheelbase": "2200 mm"
       },
       "payload_features": {
-        "gross_vehicle_weight": "1495 kg"
+        "gross_vehicle_weight": "1495 kg",
+        "payload_capacity": "688 kg"
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Automatic"
+        "transmission_type": "Automatic",
+        "battery_capacity": "13.44 kWh",
+        "battery_voltage": "67.2 V / 200 Ah",
+        "range": "135 km",
+        "top_speed": "55 kmph (Thunder Mode)",
+        "charging_time": "4.5–5 hrs (3.3 kW AC)",
+        "gradeability": "",
+        "body_type": "Container Load Body (3-Wheeler Cargo)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hi-load"
     },
     {
-      "variant_name": "2200/XR (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "157 km range",
+      "model": "HiLoad EV",
+      "variant_name": "HiLoad EV HD (High Deck)",
+      "ex_showroom_price": "₹4.32 Lakh",
+      "mileage": "135 km range (ARAI certified)",
       "engine_details": {
         "displacement": "",
-        "max_power": "14.8 kW",
-        "torque": "185 Nm"
+        "max_power": "11.7 kW",
+        "torque": "88.55 Nm",
+        "motor_type": "AC Induction Motor"
       },
       "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
+        "load_body_length": "6.1 ft",
+        "load_body_width": "4.6 ft",
+        "load_body_height": "Open",
+        "wheelbase": "2200 mm"
       },
       "payload_features": {
-        "gross_vehicle_weight": "1495 kg"
+        "gross_vehicle_weight": "1495 kg",
+        "payload_capacity": "645 kg"
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Automatic"
+        "transmission_type": "Automatic",
+        "battery_capacity": "13.44 kWh",
+        "battery_voltage": "67.2 V / 200 Ah",
+        "range": "135 km",
+        "top_speed": "55 kmph (Thunder Mode)",
+        "charging_time": "4.5–5 hrs (3.3 kW AC)",
+        "gradeability": "",
+        "body_type": "High Deck Open Body (3-Wheeler Cargo)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hi-load"
     },
     {
-      "variant_name": "T1500 (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "157 km range",
+      "model": "NEO HiRANGE",
+      "variant_name": "NEO HiRANGE (Base)",
+      "ex_showroom_price": "₹3.10 Lakh",
+      "mileage": "171 km range (ARAI certified) / ~130 km real-world",
       "engine_details": {
         "displacement": "",
-        "max_power": "14.8 kW",
-        "torque": "185 Nm"
+        "max_power": "9 kW",
+        "torque": "65 Nm",
+        "motor_type": "LV AC PMSM"
       },
       "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
+        "wheelbase": "2200 mm"
       },
       "payload_features": {
-        "gross_vehicle_weight": "1495 kg"
+        "gross_vehicle_weight": "900 kg",
+        "payload_capacity": ""
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Automatic"
+        "transmission_type": "Automatic",
+        "battery_capacity": "9.6 kWh",
+        "range": "171 km (certified)",
+        "top_speed": "60 kmph (Thunder Mode) / 45 kmph (Eco Mode)",
+        "charging_time": "3.5 hrs",
+        "gradeability": "30%",
+        "body_type": "Auto Rickshaw (3-Wheeler Passenger)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/neo-hirange"
     },
     {
-      "variant_name": "LongRange 200 (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "157 km range",
+      "model": "NEO HiRANGE",
+      "variant_name": "NEO HiRANGE PLUS",
+      "ex_showroom_price": "₹3.60 Lakh",
+      "mileage": "205 km range (ARAI certified) / ~170 km real-world",
       "engine_details": {
         "displacement": "",
-        "max_power": "14.8 kW",
-        "torque": "185 Nm"
+        "max_power": "9 kW",
+        "torque": "65 Nm",
+        "motor_type": "LV AC PMSM"
       },
       "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
+        "wheelbase": "2200 mm"
       },
       "payload_features": {
-        "gross_vehicle_weight": "1495 kg"
+        "gross_vehicle_weight": "900 kg",
+        "payload_capacity": ""
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Automatic"
+        "transmission_type": "Automatic",
+        "battery_capacity": "11.56 kWh",
+        "range": "205 km (certified)",
+        "top_speed": "60 kmph (Thunder Mode) / 45 kmph (Eco Mode)",
+        "charging_time": "3.5 hrs",
+        "gradeability": "30%",
+        "body_type": "Auto Rickshaw (3-Wheeler Passenger)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/neo-hirange"
     },
     {
-      "variant_name": "2080/City (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "157 km range",
+      "model": "NEO HiRANGE",
+      "variant_name": "NEO HiRANGE MAXX",
+      "ex_showroom_price": "₹4.08 Lakh",
+      "mileage": "261 km range (ARAI certified) / ~200 km real-world",
       "engine_details": {
         "displacement": "",
-        "max_power": "14.8 kW",
-        "torque": "185 Nm"
+        "max_power": "9 kW",
+        "torque": "65 Nm",
+        "motor_type": "LV AC PMSM"
       },
       "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
+        "wheelbase": "2200 mm"
       },
       "payload_features": {
-        "gross_vehicle_weight": "1495 kg"
+        "gross_vehicle_weight": "900 kg",
+        "payload_capacity": ""
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Automatic"
+        "transmission_type": "Automatic",
+        "battery_capacity": "13.44 kWh",
+        "range": "261 km (certified)",
+        "top_speed": "60 kmph (Thunder Mode) / 45 kmph (Eco Mode)",
+        "charging_time": "3.5 hrs",
+        "gradeability": "30%",
+        "body_type": "Auto Rickshaw (3-Wheeler Passenger)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/neo-hirange"
     },
     {
-      "variant_name": "2180/Fast Charge (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "157 km range",
+      "model": "NEO HiCity",
+      "variant_name": "NEO HiCity MAXX",
+      "ex_showroom_price": "₹3.63 Lakh",
+      "mileage": "171 km range (ARAI certified)",
       "engine_details": {
         "displacement": "",
-        "max_power": "14.8 kW",
-        "torque": "185 Nm"
+        "max_power": "11.7 kW",
+        "torque": "72 Nm",
+        "motor_type": "PMSM Motor"
       },
       "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
+        "wheelbase": "2185 mm"
       },
       "payload_features": {
-        "gross_vehicle_weight": "1495 kg"
+        "gross_vehicle_weight": "1495 kg",
+        "payload_capacity": ""
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Automatic"
+        "transmission_type": "Automatic",
+        "battery_capacity": "11.5 kWh",
+        "battery_voltage": "58 V / 200 Ah",
+        "range": "171 km",
+        "top_speed": "60 kmph (Thunder Mode) / 45 kmph (Range Mode)",
+        "charging_time": "4.5–5 hrs",
+        "gradeability": "22%",
+        "body_type": "Auto Rickshaw (3-Wheeler Passenger, 3+1 seating)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/neo-hicity"
     },
     {
-      "variant_name": "2180/Maxx (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "157 km range",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "14.8 kW",
-        "torque": "185 Nm"
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "1495 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Automatic"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
-    },
-    {
-      "variant_name": "2200/MAXX (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "157 km range",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "14.8 kW",
-        "torque": "185 Nm"
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "1495 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Automatic"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
-    },
-    {
-      "variant_name": "2200/PLUS (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "157 km range",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "14.8 kW",
-        "torque": "185 Nm"
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "1495 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Automatic"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
-    },
-    {
-      "variant_name": "2200/SR (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "157 km range",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "14.8 kW",
-        "torque": "185 Nm"
-      },
-      "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "1495 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Automatic"
-      },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
-    },
-    {
-      "variant_name": "Euler Motors NEO HiCity",
+      "model": "NEO HiCity",
+      "variant_name": "NEO HiCity PLUS",
       "ex_showroom_price": "₹4.30 Lakh",
-      "mileage": "157 km range",
+      "mileage": "171 km range (ARAI certified)",
       "engine_details": {
         "displacement": "",
-        "max_power": "14.8 kW",
-        "torque": "185 Nm"
+        "max_power": "11.7 kW",
+        "torque": "72 Nm",
+        "motor_type": "PMSM Motor"
       },
       "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
+        "wheelbase": "2185 mm"
       },
       "payload_features": {
-        "gross_vehicle_weight": "1495 kg"
+        "gross_vehicle_weight": "1495 kg",
+        "payload_capacity": ""
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Automatic"
+        "transmission_type": "Automatic",
+        "battery_capacity": "11.5 kWh",
+        "battery_voltage": "58 V / 200 Ah",
+        "range": "171 km",
+        "top_speed": "60 kmph (Thunder Mode) / 45 kmph (Range Mode)",
+        "charging_time": "4.5–5 hrs",
+        "gradeability": "22%",
+        "body_type": "Auto Rickshaw (3-Wheeler Passenger, 3+1 seating)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/neo-hicity"
     },
     {
-      "variant_name": "MAXX (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "157 km range",
+      "model": "Turbo EV 1000",
+      "variant_name": "Turbo EV 1000 City",
+      "ex_showroom_price": "₹5.99 Lakh",
+      "mileage": "135+ km range (real-world)",
       "engine_details": {
         "displacement": "",
-        "max_power": "14.8 kW",
-        "torque": "185 Nm"
+        "max_power": "15 kW",
+        "torque": "120 Nm",
+        "motor_type": "LV AC PMSM"
       },
       "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
+        "wheelbase": "2080 mm",
+        "ground_clearance": "130 mm",
+        "turning_radius": "4.4 m"
       },
       "payload_features": {
-        "gross_vehicle_weight": "1495 kg"
+        "gross_vehicle_weight": "1900 kg",
+        "payload_capacity": "1000 kg"
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Automatic"
+        "transmission_type": "Automatic",
+        "battery_capacity": "15.36 kWh",
+        "battery_voltage": "76.8 V",
+        "range": "135–197 km",
+        "top_speed": "65–70 kmph (Thunder Mode)",
+        "charging_time": "4–4.5 hrs (AC)",
+        "gradeability": "30%",
+        "body_type": "Mini Truck / Deck Body (SCV)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/turbo-ev-1000"
     },
     {
-      "variant_name": "PLUS (Electric)",
-      "ex_showroom_price": "",
-      "mileage": "157 km range",
+      "model": "Turbo EV 1000",
+      "variant_name": "Turbo EV 1000 Fast Charge",
+      "ex_showroom_price": "₹8.19 Lakh",
+      "mileage": "140+ km range (real-world)",
       "engine_details": {
         "displacement": "",
-        "max_power": "14.8 kW",
-        "torque": "185 Nm"
+        "max_power": "15 kW",
+        "torque": "125 Nm",
+        "motor_type": "LV AC PMSM"
       },
       "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
+        "wheelbase": "2180 mm",
+        "turning_radius": "4.6 m"
       },
       "payload_features": {
-        "gross_vehicle_weight": "1495 kg"
+        "gross_vehicle_weight": "1900 kg",
+        "payload_capacity": "1000 kg"
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Automatic"
+        "transmission_type": "Automatic",
+        "battery_capacity": "16 kWh",
+        "battery_voltage": "320 V",
+        "range": "140+ km",
+        "top_speed": "65–70 kmph (Thunder Mode)",
+        "charging_time": "4–5.5 hrs (3.3 kW AC) / 50 km in 15 min (CCS2 DC fast)",
+        "fast_charging": "CCS2 DC fast charging supported",
+        "gradeability": "30%",
+        "body_type": "Mini Truck / Deck Body (SCV)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/turbo-ev-1000"
     },
     {
-      "variant_name": "HiCity",
-      "ex_showroom_price": "",
-      "mileage": "157 km range",
+      "model": "Turbo EV 1000",
+      "variant_name": "Turbo EV 1000 Maxx",
+      "ex_showroom_price": "₹8.35 Lakh",
+      "mileage": "180 km range (real-world)",
       "engine_details": {
         "displacement": "",
-        "max_power": "14.8 kW",
-        "torque": "185 Nm"
+        "max_power": "30 kW",
+        "torque": "140 Nm",
+        "motor_type": "LV AC PMSM"
       },
       "dimensions": {
-        "length": "",
-        "width": "",
-        "height": ""
+        "wheelbase": "2180 mm"
       },
       "payload_features": {
-        "gross_vehicle_weight": "1495 kg"
+        "gross_vehicle_weight": "1900 kg",
+        "payload_capacity": "1000 kg"
       },
       "technical_specifications": {
         "fuel_type": "Electric",
-        "transmission_type": "Automatic"
+        "transmission_type": "Automatic",
+        "battery_capacity": "19.2 kWh",
+        "battery_voltage": "320 V",
+        "range": "180 km",
+        "top_speed": "65–70 kmph (Thunder Mode)",
+        "charging_time": "5–6 hrs (AC)",
+        "gradeability": "30%",
+        "body_type": "Mini Truck / Deck Body (SCV)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hiload"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/turbo-ev-1000"
+    },
+    {
+      "model": "Storm EV",
+      "variant_name": "Storm EV T1250",
+      "ex_showroom_price": "₹8.99 Lakh",
+      "mileage": "140 km range (real-world)",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "30 kW",
+        "torque": "140 Nm",
+        "motor_type": "IPM (Internal Permanent Magnet)"
+      },
+      "dimensions": {
+        "load_body_length": "8.2 ft",
+        "wheelbase": "2170 mm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2800 kg",
+        "payload_capacity": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual",
+        "battery_capacity": "6.6 kWh",
+        "range": "140 km",
+        "top_speed": "70 kmph",
+        "charging_time": "6 hrs (3.3 kW AC) / 4 hrs (6.6 kW AC) / 100 km in 30 min (DC001 fast charge)",
+        "gradeability": "22%",
+        "body_type": "Mini Truck / High Speed Goods Carrier (L5N)",
+        "load_volume_options": "220 cu ft / 260 cu ft"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/storm-ev"
+    },
+    {
+      "model": "Storm EV",
+      "variant_name": "Storm EV LongRange 200",
+      "ex_showroom_price": "₹12.99 Lakh",
+      "mileage": "200 km range (real-world)",
+      "engine_details": {
+        "displacement": "",
+        "max_power": "30 kW",
+        "torque": "140 Nm",
+        "motor_type": "IPM (Internal Permanent Magnet)"
+      },
+      "dimensions": {
+        "load_body_length": "10 ft",
+        "wheelbase": "2170 mm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "2800 kg",
+        "payload_capacity": "1250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Manual",
+        "battery_capacity": "30 kWh",
+        "battery_type": "Liquid-cooled",
+        "range": "200 km",
+        "top_speed": "70 kmph",
+        "charging_time": "6 hrs (3.3 kW AC) / 4 hrs (6.6 kW AC) / 100 km in 15 min (CCS fast charge)",
+        "gradeability": "22%",
+        "body_type": "Mini Truck / High Speed Goods Carrier (L5N)",
+        "load_volume": "330 cu ft"
+      },
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/storm-ev"
     }
   ]
 }
