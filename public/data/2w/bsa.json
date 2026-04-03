@@ -21,7 +21,12 @@
       "description": "The BSA Gold Star 650 is a premium classic motorcycle from the revived British BSA brand (owned by Classic Legends/Mahindra), featuring a 652cc single-cylinder engine, retro styling, chrome accents, and spoke wheels. Rated 4.6/5 by owners.",
       "features": ["Chrome Accents", "Spoke Wheels", "Disc Brakes", "ABS", "LED Headlamp", "Self Start"],
       "variants": [
-        {"name": "Gold Star 650 Standard", "price": "₹3,24,633"}
+        {"name": "Midnight Black", "price": "₹3,24,633"},
+        {"name": "Dawn Silver", "price": "₹3,24,633"},
+        {"name": "Insignia Red", "price": "₹3,37,190"},
+        {"name": "Highland Green", "price": "₹3,37,190"},
+        {"name": "Shadow Black", "price": "₹3,48,284"},
+        {"name": "Legacy Edition", "price": "₹3,62,381"}
       ],
       "colors": [
         {"name": "Black", "hex": "#1A1A1A"},
