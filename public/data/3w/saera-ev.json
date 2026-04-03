@@ -9,7 +9,7 @@
       "variant_name": "Mayuri Grand/Electric",
       "ex_showroom_price": "₹1.15 Lakh",
       "mileage": "80 km range",
-      "engine_details": { "displacement": "", "max_power": "1.2 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1.2 kW", "torque": "55 Nm" },
       "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "130 Ah / 48V", "range": "80 km", "top_speed": "25 kmph" }
     },
@@ -17,7 +17,7 @@
       "variant_name": "Mayuri Star/Electric",
       "ex_showroom_price": "₹0.93 Lakh",
       "mileage": "100 km range",
-      "engine_details": { "displacement": "", "max_power": "1 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1 kW", "torque": "55 Nm" },
       "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "130 Ah", "range": "100 km", "top_speed": "25 kmph" }
     },
@@ -25,7 +25,7 @@
       "variant_name": "Mayuri Pro Star/Electric",
       "ex_showroom_price": "₹1.35 Lakh",
       "mileage": "80 km range",
-      "engine_details": { "displacement": "", "max_power": "1.2 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1.2 kW", "torque": "55 Nm" },
       "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "130 Ah", "range": "80 km", "top_speed": "25 kmph" }
     },
@@ -33,7 +33,7 @@
       "variant_name": "Mayuri Auto Shape/Electric",
       "ex_showroom_price": "₹1.35 Lakh",
       "mileage": "90 km range",
-      "engine_details": { "displacement": "", "max_power": "1 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1 kW", "torque": "55 Nm" },
       "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "130 Ah", "range": "80-100 km", "top_speed": "25 kmph" }
     },
@@ -41,7 +41,7 @@
       "variant_name": "Mayuri E Cart Loader/Electric",
       "ex_showroom_price": "₹1.75 Lakh",
       "mileage": "75 km range",
-      "engine_details": { "displacement": "", "max_power": "1.2 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1.2 kW", "torque": "55 Nm" },
       "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "400 kg" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "48V", "range": "75 km", "top_speed": "25 kmph" }
     },
@@ -49,7 +49,7 @@
       "variant_name": "Mayuri DV/Electric",
       "ex_showroom_price": "₹4.00 Lakh",
       "mileage": "100 km range",
-      "engine_details": { "displacement": "", "max_power": "", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1.5 kW", "torque": "55 Nm" },
       "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "500 kg" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "100 km" }
     },
@@ -57,7 +57,7 @@
       "variant_name": "Mayuri Pro 1000/Electric",
       "ex_showroom_price": "₹2.50 Lakh",
       "mileage": "80 km range",
-      "engine_details": { "displacement": "", "max_power": "1 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1 kW", "torque": "55 Nm" },
       "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "48V", "range": "80 km", "top_speed": "25 kmph" }
     }

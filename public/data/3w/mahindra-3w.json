@@ -65,7 +65,7 @@
       "variant_name": "e-Alfa Cargo/Electric",
       "ex_showroom_price": "₹1.56 Lakh",
       "mileage": "95 km range",
-      "engine_details": { "displacement": "", "max_power": "1.6 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1.6 kW", "torque": "48 Nm" },
       "payload_features": { "gross_vehicle_weight": "793 kg", "payload_capacity": "310 kg" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Constant Mesh", "wheelbase": "2168 mm", "top_speed": "25 kmph" }
     },
@@ -73,7 +73,7 @@
       "variant_name": "e-Alfa Mini/Electric",
       "ex_showroom_price": "₹1.45 Lakh",
       "mileage": "80 km range",
-      "engine_details": { "displacement": "", "max_power": "1.56 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1.56 kW", "torque": "48 Nm" },
       "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "48V 120 Ah", "range": "80 km", "top_speed": "25 kmph", "seating_capacity": "Driver + 4 Passenger" }
     },
@@ -105,7 +105,7 @@
       "variant_name": "Treo Yaari Cargo/Electric",
       "ex_showroom_price": "Price Coming Soon",
       "mileage": "125 km range",
-      "engine_details": { "displacement": "", "max_power": "1.95 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1.95 kW", "torque": "42 Nm" },
       "payload_features": { "gross_vehicle_weight": "665 kg", "payload_capacity": "348 kg" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "48V 3.69 kWh", "range": "125 km", "wheelbase": "2166 mm" }
     },
@@ -137,7 +137,7 @@
       "variant_name": "Zor Grand/Electric",
       "ex_showroom_price": "₹4.12 Lakh",
       "mileage": "158 km range",
-      "engine_details": { "displacement": "", "max_power": "12 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "12 kW", "torque": "42 Nm" },
       "payload_features": { "gross_vehicle_weight": "998 kg", "payload_capacity": "400 kg" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "10.24 kWh", "range": "158 km", "charging_time": "4 hours 30 min", "wheelbase": "2200 mm" }
     },
@@ -145,7 +145,7 @@
       "variant_name": "Zor Grand Range Plus/Electric",
       "ex_showroom_price": "₹4.12 Lakh",
       "mileage": "158 km range",
-      "engine_details": { "displacement": "", "max_power": "16 bhp", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "16 bhp", "torque": "42 Nm" },
       "payload_features": { "gross_vehicle_weight": "998 kg", "payload_capacity": "418 kg" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "10.24 kWh", "range": "158 km", "wheelbase": "2200 mm", "gradeability": "20.34%" }
     },

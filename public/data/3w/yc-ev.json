@@ -9,7 +9,7 @@
       "variant_name": "YC Electric Yatri/Electric",
       "ex_showroom_price": "₹1.30 Lakh",
       "mileage": "90 km range",
-      "engine_details": { "displacement": "", "max_power": "1.5 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1.5 kW", "torque": "48 Nm" },
       "payload_features": { "gross_vehicle_weight": "693 kg", "payload_capacity": "" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "26 Ah", "range": "90 km", "top_speed": "25 kmph" }
     },
@@ -17,7 +17,7 @@
       "variant_name": "YC Electric Yatri Deluxe/Electric",
       "ex_showroom_price": "₹1.40 Lakh",
       "mileage": "90 km range",
-      "engine_details": { "displacement": "", "max_power": "1.4 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1.4 kW", "torque": "48 Nm" },
       "payload_features": { "gross_vehicle_weight": "693 kg", "payload_capacity": "" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "140 Ah", "range": "90 km", "top_speed": "25 kmph" }
     },
@@ -25,7 +25,7 @@
       "variant_name": "YC Electric Yatri Super/Electric",
       "ex_showroom_price": "₹1.73 Lakh",
       "mileage": "90 km range",
-      "engine_details": { "displacement": "", "max_power": "1.5 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1.5 kW", "torque": "48 Nm" },
       "payload_features": { "gross_vehicle_weight": "693 kg", "payload_capacity": "" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "41.7 Ah", "range": "75-90 km", "top_speed": "25 kmph" }
     },
@@ -33,7 +33,7 @@
       "variant_name": "YC Electric Yatri Plus/Electric",
       "ex_showroom_price": "₹1.80 Lakh",
       "mileage": "90 km range",
-      "engine_details": { "displacement": "", "max_power": "1 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1 kW", "torque": "48 Nm" },
       "payload_features": { "gross_vehicle_weight": "693 kg", "payload_capacity": "" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "90 km", "top_speed": "25 kmph" }
     },
@@ -41,7 +41,7 @@
       "variant_name": "YC Electric Yatri Cart/Electric",
       "ex_showroom_price": "₹1.67 Lakh",
       "mileage": "90 km range",
-      "engine_details": { "displacement": "", "max_power": "1.4 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1.4 kW", "torque": "48 Nm" },
       "payload_features": { "gross_vehicle_weight": "742 kg", "payload_capacity": "400 kg" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "100 Ah", "range": "90 km", "top_speed": "25 kmph" }
     },
@@ -49,7 +49,7 @@
       "variant_name": "YC Electric E Loader/Electric",
       "ex_showroom_price": "₹1.35 Lakh",
       "mileage": "90 km range",
-      "engine_details": { "displacement": "", "max_power": "1.4 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1.4 kW", "torque": "55 Nm" },
       "payload_features": { "gross_vehicle_weight": "742 kg", "payload_capacity": "400 kg" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "150 Ah / 48V", "range": "75-90 km", "top_speed": "25 kmph" }
     }

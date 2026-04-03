@@ -103,29 +103,29 @@
     },
     {
       "make": "Piaggio", "model": "Ape Xtra Bada 700", "variant": "Diesel",
-      "fuel_type": "Diesel", "engine_cc": 700, "payload_capacity": "750 kg",
+      "fuel_type": "Diesel", "engine_cc": 700, "max_power": "8.4 hp", "torque": "18.5 Nm", "payload_capacity": "750 kg",
       "transmission_type": "Manual", "ex_showroom_price": "₹3.45 Lakh", "vehicle_category": "cargo"
     },
     {
       "make": "Piaggio", "model": "Ape Xtra 600", "variant": "Diesel",
-      "fuel_type": "Diesel", "engine_cc": 600, "transmission_type": "Manual",
+      "fuel_type": "Diesel", "engine_cc": 600, "max_power": "7.2 hp", "torque": "16 Nm", "transmission_type": "Manual",
       "ex_showroom_price": "₹2.88 Lakh", "vehicle_category": "cargo"
     },
     {
       "make": "Piaggio", "model": "Ape E Xtra FX", "variant": "2100/Electric",
-      "fuel_type": "Electric", "transmission_type": "Automatic", "wheelbase_mm": 2100,
+      "fuel_type": "Electric", "max_power": "2.2 kW", "torque": "22 Nm", "transmission_type": "Automatic", "wheelbase_mm": 2100,
       "range_km": 118, "battery_kwh": 9.55, "charging_time": "3 hrs 45 min",
       "payload_capacity": "506 kg", "ex_showroom_price": "₹3.20 Lakh", "vehicle_category": "cargo"
     },
     {
       "make": "Piaggio", "model": "Ape E Xtra FX Max", "variant": "2100/Electric",
-      "fuel_type": "Electric", "transmission_type": "Automatic", "wheelbase_mm": 2100,
+      "fuel_type": "Electric", "max_power": "2.2 kW", "torque": "22 Nm", "transmission_type": "Automatic", "wheelbase_mm": 2100,
       "range_km": 120, "battery_kwh": 8.0, "charging_time": "3 hrs 45 min",
       "payload_capacity": "390 kg", "ex_showroom_price": "₹3.49 Lakh", "vehicle_category": "cargo"
     },
     {
       "make": "Piaggio", "model": "Ape E City", "variant": "1920/Electric",
-      "fuel_type": "Electric", "transmission_type": "Automatic", "wheelbase_mm": 1920,
+      "fuel_type": "Electric", "max_power": "3 kW", "torque": "25 Nm", "transmission_type": "Automatic", "wheelbase_mm": 1920,
       "range_km": 110, "battery_kwh": 4.5, "charging_time": "3 hrs 45 min",
       "passenger_capacity": 3, "ex_showroom_price": "₹2.89 Lakh", "vehicle_category": "passenger"
     },
@@ -138,13 +138,13 @@
     },
     {
       "make": "Piaggio", "model": "Ape E City FX New Max", "variant": "1920/Electric",
-      "fuel_type": "Electric", "transmission_type": "Automatic", "wheelbase_mm": 1920,
+      "fuel_type": "Electric", "torque": "25 Nm", "transmission_type": "Automatic", "wheelbase_mm": 1920,
       "range_km": 174, "battery_kwh": 8.0, "charging_time": "4 hrs 45 min",
       "passenger_capacity": 3, "ex_showroom_price": "₹3.30 Lakh", "vehicle_category": "passenger"
     },
     {
       "make": "Piaggio", "model": "Ape E City Ultra", "variant": "1920/Electric",
-      "fuel_type": "Electric", "max_power": "9.5 kW", "transmission_type": "Automatic", "wheelbase_mm": 1920,
+      "fuel_type": "Electric", "max_power": "9.5 kW", "torque": "28 Nm", "transmission_type": "Automatic", "wheelbase_mm": 1920,
       "range_km": 236, "battery_kwh": 10.2, "charging_time": "3 hrs 45 min",
       "passenger_capacity": 3, "ex_showroom_price": "₹3.88 Lakh", "vehicle_category": "passenger"
     },

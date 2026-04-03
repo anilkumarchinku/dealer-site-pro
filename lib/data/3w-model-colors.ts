@@ -326,4 +326,296 @@ export const THREE_WHEELER_MODEL_COLORS: Record<string, ThreeWheelerModelColor[]
         { name: "Sky Blue",         hex: "#5B9BD5" },
         { name: "Silver",           hex: "#C0C0C0" },
     ],
+
+    // ── ETrio ────────────────────────────────────────────────────────────────
+    "ETrio Touro Mini Cargo/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Orange",           hex: "#FF5722" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+    ],
+    "ETrio Touro Max Cargo L5N/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Orange",           hex: "#FF5722" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+    ],
+    "ETrio Touro Max Passenger L5M/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "ETrio Touro Max++/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+
+    // ── Terra Motors ─────────────────────────────────────────────────────────
+    "Terra Motors Y4A/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+    ],
+    "Terra Motors Pace-E Cargo/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Silver",           hex: "#C0C0C0" },
+    ],
+    "Terra Motors Sumo/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+    ],
+    "Terra Motors Kyoro L5/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "Terra Motors Kyoro Plus/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+
+    // ── OSM ──────────────────────────────────────────────────────────────────
+    "OSM OSM Rage+ Frost": [
+        { name: "OSM Orange",       hex: "#FF5722" },
+        { name: "Silver",           hex: "#C0C0C0" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+    ],
+    "OSM OSM Rage+ Flame": [
+        { name: "OSM Orange",       hex: "#FF5722" },
+        { name: "Silver",           hex: "#C0C0C0" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+    ],
+    "OSM OSM Rage+ Blaze": [
+        { name: "OSM Orange",       hex: "#FF5722" },
+        { name: "Silver",           hex: "#C0C0C0" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+    ],
+    "OSM OSM Stream City": [
+        { name: "OSM Orange",       hex: "#FF5722" },
+        { name: "Silver",           hex: "#C0C0C0" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+    ],
+    "OSM OSM Stream Highway": [
+        { name: "OSM Orange",       hex: "#FF5722" },
+        { name: "Silver",           hex: "#C0C0C0" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+    ],
+    "OSM OSM Swayamgati Cargo": [
+        { name: "OSM Orange",       hex: "#FF5722" },
+        { name: "Silver",           hex: "#C0C0C0" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+    ],
+    "OSM OSM Swayamgati Cargo Plus": [
+        { name: "OSM Orange",       hex: "#FF5722" },
+        { name: "Silver",           hex: "#C0C0C0" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+    ],
+
+    // ── YC Electric ──────────────────────────────────────────────────────────
+    "YC Electric Yatri/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "YC Electric Yatri Deluxe/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "YC Electric Yatri Super/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "YC Electric Yatri Plus/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "YC Electric Yatri Cart/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "YC Electric E Loader/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+    ],
+
+    // ── Saera Electric (Mayuri) ───────────────────────────────────────────────
+    "Saera Electric (Mayuri) Mayuri Grand/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "Saera Electric (Mayuri) Mayuri Star/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "Saera Electric (Mayuri) Mayuri Pro Star/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "Saera Electric (Mayuri) Mayuri Auto Shape/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "Saera Electric (Mayuri) Mayuri Pro 1000/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "Saera Electric (Mayuri) Mayuri E Cart Loader/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+    ],
+    "Saera Electric (Mayuri) Mayuri DV/Electric": [
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+
+    // ── Montra Electric ───────────────────────────────────────────────────────
+    "Montra Electric Super Auto ePL 2.0 R/Electric": [
+        { name: "Montra Orange",    hex: "#FF6B35" },
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+    ],
+    "Montra Electric Super Cargo eCx d+/Electric": [
+        { name: "Montra Orange",    hex: "#FF6B35" },
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+    ],
+    "Montra Electric Eviator E-350L/Electric": [
+        { name: "Montra Orange",    hex: "#FF6B35" },
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+    ],
+    "Montra Electric Eviator E-350X/Electric": [
+        { name: "Montra Orange",    hex: "#FF6B35" },
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Lime Green",       hex: "#5DB85D" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+    ],
+
+    // ── Altigreen ─────────────────────────────────────────────────────────────
+    "Altigreen neEV TEZ/Electric": [
+        { name: "Altigreen Green",  hex: "#1E8B3C" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "Altigreen neEV High Deck/Electric": [
+        { name: "Altigreen Green",  hex: "#1E8B3C" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "Altigreen neEV Low Deck/Electric": [
+        { name: "Altigreen Green",  hex: "#1E8B3C" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "Altigreen neEV Bhai Low Deck/Electric": [
+        { name: "Altigreen Green",  hex: "#1E8B3C" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "Altigreen neEV Bhai Flatbed/Electric": [
+        { name: "Altigreen Green",  hex: "#1E8B3C" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "Altigreen neEV Rahi/Electric": [
+        { name: "Altigreen Green",  hex: "#1E8B3C" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+    "Altigreen NEEV Flatbed/Electric": [
+        { name: "Altigreen Green",  hex: "#1E8B3C" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+    ],
+
+    // ── Omega Seiki Mobility ──────────────────────────────────────────────────
+    "Omega Seiki Mobility Stream City/Electric": [
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+    ],
+    "Omega Seiki Mobility Stream City Qik/Electric": [
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+    ],
+    "Omega Seiki Mobility Stream/Electric": [
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+    ],
+    "Omega Seiki Mobility Rage Plus/Electric": [
+        { name: "Midnight Blue",    hex: "#1B3A6B" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Silver",           hex: "#C0C0C0" },
+    ],
+    "Omega Seiki Mobility Rage Plus ATR/Electric": [
+        { name: "Midnight Blue",    hex: "#1B3A6B" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Silver",           hex: "#C0C0C0" },
+    ],
+    "Omega Seiki Mobility Rage Plus RapidEv Pro/Electric": [
+        { name: "Midnight Blue",    hex: "#1B3A6B" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Silver",           hex: "#C0C0C0" },
+    ],
+    "Omega Seiki Mobility Rage Plus Frost/Electric": [
+        { name: "Midnight Blue",    hex: "#1B3A6B" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Silver",           hex: "#C0C0C0" },
+    ],
+    "Omega Seiki Mobility Rage Plus Garbage Tipper/Electric": [
+        { name: "Midnight Blue",    hex: "#1B3A6B" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Silver",           hex: "#C0C0C0" },
+    ],
+    "Omega Seiki Mobility Swayamgati Cargo/Electric": [
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+    ],
+    "Omega Seiki Mobility Swayamgati/Electric": [
+        { name: "Sky Blue",         hex: "#5B9BD5" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+    ],
+    "Omega Seiki Mobility NRG/Electric": [
+        { name: "Midnight Blue",    hex: "#1B3A6B" },
+        { name: "Pearl White",      hex: "#F5F5F0" },
+        { name: "Yellow",           hex: "#FFD700" },
+        { name: "Silver",           hex: "#C0C0C0" },
+    ],
 }

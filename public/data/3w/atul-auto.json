@@ -300,7 +300,7 @@
       "engine_details": {
         "displacement": "",
         "max_power": "1 kW",
-        "torque": ""
+        "torque": "42 Nm"
       },
       "payload_features": {
         "gross_vehicle_weight": "699 kg",
@@ -320,7 +320,7 @@
       "engine_details": {
         "displacement": "",
         "max_power": "1 kW",
-        "torque": ""
+        "torque": "42 Nm"
       },
       "payload_features": {
         "gross_vehicle_weight": "699 kg",
@@ -340,7 +340,7 @@
       "engine_details": {
         "displacement": "",
         "max_power": "1 kW",
-        "torque": ""
+        "torque": "42 Nm"
       },
       "payload_features": {
         "gross_vehicle_weight": "699 kg",
@@ -380,7 +380,7 @@
       "engine_details": {
         "displacement": "",
         "max_power": "9.92 kW",
-        "torque": ""
+        "torque": "42 Nm"
       },
       "payload_features": {
         "gross_vehicle_weight": "995 kg",

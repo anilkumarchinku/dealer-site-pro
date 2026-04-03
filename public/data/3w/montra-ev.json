@@ -17,7 +17,7 @@
       "variant_name": "Super Cargo eCx d+/Electric",
       "ex_showroom_price": "₹4.37 Lakh",
       "mileage": "200 km range",
-      "engine_details": { "displacement": "", "max_power": "12 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "12 kW", "torque": "42 Nm" },
       "payload_features": { "gross_vehicle_weight": "1200 kg", "payload_capacity": "580 kg" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "200 km" }
     },

@@ -9,7 +9,7 @@
       "variant_name": "Touro Mini Cargo/Electric",
       "ex_showroom_price": "₹1.70 Lakh",
       "mileage": "75-105 km range",
-      "engine_details": { "displacement": "", "max_power": "", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1.5 kW", "torque": "14.5 Nm" },
       "payload_features": { "gross_vehicle_weight": "648 kg", "payload_capacity": "350 kg" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "75-105 km" }
     },
@@ -17,7 +17,7 @@
       "variant_name": "Touro Max Cargo L5N/Electric",
       "ex_showroom_price": "Price Coming Soon",
       "mileage": "157 km range",
-      "engine_details": { "displacement": "", "max_power": "9.5 kW", "torque": "63 Nm" },
+      "engine_details": { "displacement": "", "max_power": "9.5 kW", "torque": "19 Nm" },
       "payload_features": { "gross_vehicle_weight": "950 kg", "payload_capacity": "550 kg" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "157 km" }
     },
@@ -25,7 +25,7 @@
       "variant_name": "Touro Max Passenger L5M/Electric",
       "ex_showroom_price": "₹1.87 Lakh",
       "mileage": "85 km range",
-      "engine_details": { "displacement": "", "max_power": "", "torque": "63 Nm" },
+      "engine_details": { "displacement": "", "max_power": "3 kW", "torque": "19 Nm" },
       "payload_features": { "gross_vehicle_weight": "1100 kg", "payload_capacity": "" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "85 km" }
     },
@@ -33,7 +33,7 @@
       "variant_name": "Touro Max++/Electric",
       "ex_showroom_price": "₹4.10 Lakh",
       "mileage": "100 km range",
-      "engine_details": { "displacement": "", "max_power": "11 kW", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "11 kW", "torque": "30 Nm" },
       "payload_features": { "gross_vehicle_weight": "900 kg", "payload_capacity": "550 kg" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "100 km" }
     }
