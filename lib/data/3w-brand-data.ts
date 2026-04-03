@@ -96,6 +96,8 @@ let altigreenData: any = null
 let montraData: any = null
 let terraData: any = null
 let etrioData: any = null
+let osmData: any = null
+let youdhaData: any = null
 
 /* eslint-disable @typescript-eslint/no-require-imports */
 try { atulData      = require('@/public/data/3w/atul-auto.json')            } catch { /* optional */ }
@@ -114,6 +116,8 @@ try { altigreenData = require('@/public/data/3w/altigreen.json')            } ca
 try { montraData    = require('@/public/data/3w/montra-ev.json')            } catch { /* optional */ }
 try { terraData     = require('@/public/data/3w/terra-motors.json')         } catch { /* optional */ }
 try { etrioData     = require('@/public/data/3w/etrio.json')                } catch { /* optional */ }
+try { osmData       = require('@/public/data/3w/osm.json')                  } catch { /* optional */ }
+try { youdhaData    = require('@/public/data/3w/youdha.json')               } catch { /* optional */ }
 /* eslint-enable @typescript-eslint/no-require-imports */
 
 // ── Extractors for different JSON formats ────────────────────────
@@ -218,6 +222,8 @@ const BRAND_FILES: BrandFile[] = ([
     { data: montraData,   brandId: 'montra-ev',            format: 'bajaj',      modelKey: 'variant_name' },
     { data: terraData,    brandId: 'terra-motors',         format: 'bajaj',      modelKey: 'variant_name' },
     { data: etrioData,    brandId: 'etrio',                format: 'bajaj',      modelKey: 'variant_name' },
+    { data: osmData,      brandId: 'osm',                  format: 'bajaj',      modelKey: 'variant_name' },
+    { data: youdhaData,   brandId: 'youdha',               format: 'bajaj',      modelKey: 'variant_name' },
 ] as BrandFile[]).filter(b => b.data)
 
 const enrichmentCache = new Map<string, ThreeWheelerEnrichment>()
