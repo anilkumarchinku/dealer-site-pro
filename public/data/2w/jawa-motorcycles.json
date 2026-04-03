@@ -136,8 +136,11 @@
       "description": "The Jawa 42 Bobber is a retro-styled bobber motorcycle with fender-less rear design, stepped seat, and chopped exhaust. Its 334cc engine produces 29.51 bhp, making it the most popular Jawa model in India.",
       "features": ["Bobber Design", "Fender-less Rear", "Stepped Seat", "Disc Brakes", "ABS", "Self Start", "LED Headlamp"],
       "variants": [
-        {"name": "42 Bobber Standard", "price": "₹1,95,305"},
-        {"name": "42 Bobber Dual Channel ABS", "price": "₹2,07,000"}
+        {"name": "42 Bobber Moonstone White - Spoke Wheel", "price": "₹1,95,305"},
+        {"name": "42 Bobber Mystic Copper - Spoke Wheel", "price": "₹2,04,113"},
+        {"name": "42 Bobber Jasper Red - Spoke Wheel", "price": "₹2,04,888"},
+        {"name": "42 Bobber Mystic Copper - Alloy Wheel", "price": "₹2,13,050"},
+        {"name": "42 Bobber Black Mirror and Red Sheen - Alloy Wheel", "price": "₹2,22,048"}
       ],
       "colors": [
         {"name": "Jasper Red", "hex": "#C41E3A"},
