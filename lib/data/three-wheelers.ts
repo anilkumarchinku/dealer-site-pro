@@ -31,11 +31,31 @@ const BRAND_IMG_FOLDER: Record<string, string> = {
 function get3WImageUrl(brand: string, model: string): string | null {
     const folder = BRAND_IMG_FOLDER[brand]
     if (!folder) return null
-    // Strip fuel type suffix e.g. "Maxima C/CNG" → "Maxima C", "King Kargo CNG HD/PF" → "King Kargo CNG HD"
+    const urls = vehicleImageUrls as Record<string, string>
+    // Strip fuel/body suffix e.g. "Maxima C/CNG" → "Maxima C", "King Kargo CNG HD/PF" → "King Kargo CNG HD"
     const baseName = model.split('/')[0].trim()
-    const slug = baseName.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')
-    const key = `3w/${folder}/${slug}.jpg`
-    return (vehicleImageUrls as Record<string, string>)[key] ?? null
+    const toSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')
+    const slug = toSlug(baseName)
+
+    // 1. Exact match
+    if (urls[`3w/${folder}/${slug}.jpg`]) return urls[`3w/${folder}/${slug}.jpg`]
+
+    // 2. Progressive prefix: "gem-paxx-3-seater" → try "gem-paxx-3" → "gem-paxx" → "gem"
+    const parts = slug.split('-')
+    for (let i = parts.length - 1; i >= 2; i--) {
+        const shorter = parts.slice(0, i).join('-')
+        if (urls[`3w/${folder}/${shorter}.jpg`]) return urls[`3w/${folder}/${shorter}.jpg`]
+    }
+
+    // 3. Substring match: find any stored key whose slug is contained in ours or vice versa
+    const prefix = `3w/${folder}/`
+    for (const key of Object.keys(urls)) {
+        if (!key.startsWith(prefix)) continue
+        const stored = key.slice(prefix.length, -4)
+        if (slug.startsWith(stored) || stored.startsWith(slug)) return urls[key]
+    }
+
+    return null
 }
 
 function lookup3WColors(brand: string, model: string) {
