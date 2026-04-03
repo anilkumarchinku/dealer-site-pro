@@ -211,7 +211,7 @@ const BRAND_FILES: BrandFile[] = ([
     { data: eulerData,    brandId: 'euler-motors',         format: 'bajaj',      modelKey: 'variant_name' },
     { data: greavesData,  brandId: 'greaves-electric-3w',  format: 'bajaj',      modelKey: 'variant_name' },
     { data: kineticData,  brandId: 'kinetic-green',        format: 'bajaj',      modelKey: 'variant_name' },
-    { data: lohiaData,    brandId: 'lohia-auto',           format: 'make-model', modelKey: 'model'        },
+    { data: lohiaData,    brandId: 'lohia-auto',           format: 'bajaj',      modelKey: 'variant_name' },
     { data: mahindraData, brandId: 'mahindra-3w',          format: 'bajaj',      modelKey: 'variant_name' },
     { data: piaggioData,  brandId: 'piaggio-ape',          format: 'make-model', modelKey: 'model'        },
     { data: tvsKingData,  brandId: 'tvs-king',             format: 'bajaj',      modelKey: 'variant_name' },
