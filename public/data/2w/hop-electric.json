@@ -2,91 +2,99 @@
   "brand": "Hop Electric",
   "brandId": "hop-electric",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Hop Electric",
       "model": "OXO",
       "variant_name": "OXO",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹1,33,995",
+      "engine_displacement": "N/A",
+      "mileage": "140 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
       "top_speed": "88 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Hop Electric OXO is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Hop Electric OXO is a high-speed electric motorcycle with 140km range, 88 kmph top speed, and 5-hour charging. Available across 86 Indian cities, it targets urban performance commuters.",
+      "features": ["LED Headlamp", "Digital Display", "Multiple Ride Modes", "USB Charging"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "X",
-          "price": "N/A"
-        }
+        {"name": "OXO Standard", "price": "₹1,33,995"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "White", "hex": "#F5F5F0"},
+        {"name": "Red", "hex": "#C41E3A"},
+        {"name": "Blue", "hex": "#1A4A8B"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "140 km",
+        "charging_time": "5 hrs",
+        "top_speed": "88 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "kerb_weight": "140 kg",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Hop Electric",
       "model": "LEO",
       "variant_name": "LEO",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹84,360",
+      "engine_displacement": "N/A",
+      "mileage": "95 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
       "top_speed": "25 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Hop Electric LEO is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Hop Electric LEO is an affordable low-speed electric scooter with 95km range, 25 kmph top speed, and 3.5-hour charging. It is well-suited for short city commutes.",
+      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Lightweight Design"],
       "variants": [
-        {
-          "name": "Basic",
-          "price": "N/A"
-        },
-        {
-          "name": "Extended",
-          "price": "N/A"
-        },
-        {
-          "name": "Hi-Speed",
-          "price": "N/A"
-        }
+        {"name": "LEO Standard", "price": "₹84,360"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "White", "hex": "#F5F5F0"},
+        {"name": "Red", "hex": "#C41E3A"},
+        {"name": "Blue", "hex": "#1A4A8B"},
+        {"name": "Black", "hex": "#1A1A1A"}
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "95 km",
+        "charging_time": "3.5 hrs",
+        "top_speed": "25 kmph",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "77 kg",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Hop Electric",
       "model": "LYF",
       "variant_name": "LYF",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "engine_displacement": "N/A",
+      "mileage": "N/A",
+      "max_power": "N/A",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Hop Electric LYF is a two-wheeler available in India.",
+      "top_speed": "N/A",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Discontinued",
+      "description": "The Hop Electric LYF has been discontinued. Hop Electric currently offers the OXO and LEO models.",
       "features": [],
-      "variants": [
-        {
-          "name": "Basic",
-          "price": "N/A"
-        },
-        {
-          "name": "Extended",
-          "price": "N/A"
-        }
-      ],
+      "variants": [],
       "colors": [],
       "technical_specifications": {}
     }

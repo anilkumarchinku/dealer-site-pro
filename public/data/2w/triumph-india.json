@@ -2,2244 +2,794 @@
   "brand": "Triumph",
   "brandId": "triumph-india",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Triumph",
-      "model": "Speed 400",
-      "variant_name": "Speed 400",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "model": "Speed T4",
+      "variant_name": "Speed T4",
+      "price": "₹1,95,006",
+      "engine_displacement": "398 cc",
+      "mileage": "29 kmpl",
+      "max_power": "30.6 bhp",
+      "max_torque": "36 Nm",
+      "top_speed": "135 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Speed 400 is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Speed T4 is the entry-level 398cc Triumph made in India with 30.6 bhp, liquid cooling, ABS, 13L tank, and 180kg weight. Available in 5 colors at ₹1,95,006 — the most affordable Triumph.",
+      "features": ["398cc Single Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Self Start", "BS6 Phase 2B"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Speed T4 Standard", "price": "₹1,95,006"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Baja Orange", "hex": "#E8600A"},
+        {"name": "Phantom Black/Pearl Metallic White", "hex": "#1A1A1A"},
+        {"name": "Phantom Black/Storm Grey", "hex": "#1A1A1A"},
+        {"name": "Caspian Blue/Pearl Metallic White", "hex": "#1A4A8B"},
+        {"name": "Lava Red Gloss/Pearl Metallic White", "hex": "#CC2200"}
+      ],
+      "technical_specifications": {
+        "engine": "398 cc, Single Cylinder, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "30.6 bhp",
+        "max_torque": "36 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "180 kg",
+        "fuel_tank_capacity": "13 L",
+        "seat_height": "806 mm"
+      }
     },
     {
       "make": "Triumph",
-      "model": "Speed T4",
-      "variant_name": "Speed T4",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "model": "Speed 400",
+      "variant_name": "Speed 400",
+      "price": "₹2,39,005",
+      "engine_displacement": "398 cc",
+      "mileage": "28 kmpl",
+      "max_power": "39.5 bhp",
+      "max_torque": "37.5 Nm",
+      "top_speed": "160 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Speed T4 is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Speed 400 is a 398cc neo-retro roadster made in India with 39.5 bhp, smooth power delivery, ABS, 13L tank, and 179kg weight. Available in 4 colors at ₹2,39,005.",
+      "features": ["398cc Single Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Neo-Retro Styling", "Self Start", "BS6 Phase 2B"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Speed 400 Standard", "price": "₹2,39,005"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Racing Red/Pearl Metallic White", "hex": "#CC0000"},
+        {"name": "Pearl Metallic White/Pewter Grey", "hex": "#F5F5F0"},
+        {"name": "Phantom Black/Pewter Grey", "hex": "#1A1A1A"},
+        {"name": "Racing Yellow/Pearl Metallic White", "hex": "#FFD700"}
+      ],
+      "technical_specifications": {
+        "engine": "398 cc, Single Cylinder, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "39.5 bhp",
+        "max_torque": "37.5 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "179 kg",
+        "fuel_tank_capacity": "13 L",
+        "seat_height": "803 mm"
+      }
     },
     {
       "make": "Triumph",
       "model": "Scrambler 400 X",
       "variant_name": "Scrambler 400 X",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹2,69,976",
+      "engine_displacement": "398 cc",
+      "mileage": "27 kmpl",
+      "max_power": "39.5 bhp",
+      "max_torque": "37.5 Nm",
+      "top_speed": "160 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Scrambler 400 X is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Scrambler 400 X is a 398cc scrambler with 39.5 bhp, good ground clearance, spoke wheels (tubeless cross-spoke), ABS, 13L tank, and 185kg weight. Available in 4 colors at ₹2,69,976.",
+      "features": ["398cc Single Engine", "Liquid Cooled", "ABS", "Cross-Spoke Wheels", "Scrambler Styling", "Good Ground Clearance", "Self Start", "BS6 Phase 2B"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Scrambler 400 X Standard", "price": "₹2,69,976"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Pearl Metallic White/Phantom Black", "hex": "#F5F5F0"},
+        {"name": "Phantom Black/Silver Ice", "hex": "#1A1A1A"},
+        {"name": "Volcanic Red/Phantom Black", "hex": "#CC2200"},
+        {"name": "Matt Khaki Green/Fusion White", "hex": "#6B6B3A"}
+      ],
+      "technical_specifications": {
+        "engine": "398 cc, Single Cylinder, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "39.5 bhp",
+        "max_torque": "37.5 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "185 kg",
+        "fuel_tank_capacity": "13 L",
+        "seat_height": "835 mm"
+      }
     },
     {
       "make": "Triumph",
       "model": "Thruxton 400",
       "variant_name": "Thruxton 400",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹2,76,384",
+      "engine_displacement": "398 cc",
+      "mileage": "27.5 kmpl",
+      "max_power": "41.4 bhp",
+      "max_torque": "37.5 Nm",
+      "top_speed": "N/A",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Thruxton 400 is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Thruxton 400 is a 398cc café-racer with 41.4 bhp, classic 1960s racer styling, round headlamp, teardrop tank, half-fairing, clip-on handlebars, traction control, and dual-channel ABS. Rated 4.4/5. Available in 4 colors at ₹2,76,384.",
+      "features": ["398cc Single Engine", "Liquid Cooled", "Dual-Channel ABS", "Traction Control", "Café Racer Styling", "Clip-On Handlebars", "Self Start", "BS6 Phase 2B"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Thruxton 400 Standard", "price": "₹2,76,384"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Pearl Metallic White/Storm Grey", "hex": "#F5F5F0"},
+        {"name": "Phantom Black/Aluminium Silver", "hex": "#1A1A1A"},
+        {"name": "Lava Red Gloss/Aluminium Silver", "hex": "#CC2200"},
+        {"name": "Metallic Racing Yellow/Aluminium Silver", "hex": "#FFD700"}
+      ],
+      "technical_specifications": {
+        "engine": "398 cc, Single Cylinder, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "41.4 bhp",
+        "max_torque": "37.5 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "183 kg",
+        "fuel_tank_capacity": "13 L",
+        "seat_height": "795 mm"
+      }
     },
     {
       "make": "Triumph",
       "model": "Scrambler 400 XC",
       "variant_name": "Scrambler 400 XC",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹2,96,916",
+      "engine_displacement": "398 cc",
+      "mileage": "27 kmpl",
+      "max_power": "39.5 bhp",
+      "max_torque": "37.5 Nm",
+      "top_speed": "N/A",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Scrambler 400 XC is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Scrambler 400 XC is the premium 398cc scrambler with 39.5 bhp, aspirational scrambler styling, punchy performance, tubeless cross-spoke wheels, ABS, and 190kg weight. Available in 3 colors at ₹2,96,916.",
+      "features": ["398cc Single Engine", "Liquid Cooled", "ABS", "Cross-Spoke Wheels (Tubeless)", "Scrambler Styling", "Self Start", "BS6 Phase 2B"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Scrambler 400 XC Standard", "price": "₹2,96,916"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Street Triple RS",
-      "variant_name": "Street Triple RS",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Street Triple RS is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Vanilla White", "hex": "#F5F5F0"},
+        {"name": "Granite", "hex": "#6A6A6A"},
+        {"name": "Racing Yellow", "hex": "#FFD700"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Rocket 3",
-      "variant_name": "Rocket 3",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Rocket 3 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "R",
-          "price": "N/A"
-        },
-        {
-          "name": "GT",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Daytona 660",
-      "variant_name": "Daytona 660",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Daytona 660 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville T120",
-      "variant_name": "Bonneville T120",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Bonneville T120 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "engine": "398 cc, Single Cylinder, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "39.5 bhp",
+        "max_torque": "37.5 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "190 kg",
+        "fuel_tank_capacity": "13 L",
+        "seat_height": "835 mm"
+      }
     },
     {
       "make": "Triumph",
       "model": "Trident 660",
       "variant_name": "Trident 660",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹8,99,000",
+      "engine_displacement": "660 cc",
+      "mileage": "15 kmpl",
+      "max_power": "80 bhp",
+      "max_torque": "64 Nm",
+      "top_speed": "212 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Trident 660 is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Trident 660 is a 660cc triple-cylinder roadster with 80 bhp, Michelin Road 5 tyres, Showa suspension, traction control, ABS, 14L tank, and 189kg weight. Available in 4 colors at ₹8,99,000.",
+      "features": ["660cc Triple Engine", "Liquid Cooled", "ABS", "Traction Control", "Disc Brakes", "Michelin Road 5 Tyres", "Showa Suspension", "Self Start", "BS6 Phase 2B"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Trident 660 Standard", "price": "₹8,99,000"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville Bobber",
-      "variant_name": "Bonneville Bobber",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Bonneville Bobber is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Cobalt Blue/Sapphire Black", "hex": "#1A4A8B"},
+        {"name": "Cosmic Yellow/Sapphire Black", "hex": "#FFD700"},
+        {"name": "Diablo Red/Sapphire Black", "hex": "#CC0000"},
+        {"name": "Jet Black", "hex": "#1A1A1A"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Street Triple R",
-      "variant_name": "Street Triple R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Street Triple R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 900",
-      "variant_name": "Tiger 900",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Tiger 900 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "GT",
-          "price": "N/A"
-        },
-        {
-          "name": "Rally Pro",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Speed Twin 900",
-      "variant_name": "Speed Twin 900",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Speed Twin 900 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Speed Triple 1200 RS",
-      "variant_name": "Speed Triple 1200 RS",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Speed Triple 1200 RS is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "RX Limited Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Speed Twin 1200",
-      "variant_name": "Speed Twin 1200",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Speed Twin 1200 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "RS",
-          "price": "N/A"
-        },
-        {
-          "name": "Cafe Racer Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville T100",
-      "variant_name": "Bonneville T100",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Bonneville T100 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 1200",
-      "variant_name": "Tiger 1200",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Tiger 1200 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "GT Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "Rally Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "GT Explorer",
-          "price": "N/A"
-        },
-        {
-          "name": "Rally Explorer",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Scrambler 900",
-      "variant_name": "Scrambler 900",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Scrambler 900 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "engine": "660 cc, Inline-Triple, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "80 bhp",
+        "max_torque": "64 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "189 kg",
+        "fuel_tank_capacity": "14 L",
+        "seat_height": "805 mm"
+      }
     },
     {
       "make": "Triumph",
       "model": "Tiger Sport 660",
       "variant_name": "Tiger Sport 660",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹9,45,000",
+      "engine_displacement": "660 cc",
+      "mileage": "22 kmpl",
+      "max_power": "80 bhp",
+      "max_torque": "64 Nm",
+      "top_speed": "220 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Tiger Sport 660 is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Tiger Sport 660 is a 660cc adventure sports-tourer with 80 bhp, ABS, 17.2L tank, 206kg weight, and 835mm seat height. An accessible entry to Triumph's adventure lineup at ₹9,45,000.",
+      "features": ["660cc Triple Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Adventure Ergonomics", "Large Fuel Tank", "Self Start", "BS6 Phase 2"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Tiger Sport 660 Standard", "price": "₹9,45,000"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Graphite/Sapphire Black", "hex": "#5A5A5A"},
+        {"name": "Korosi Red/Graphite", "hex": "#CC2200"},
+        {"name": "Lucerne Blue/Sapphire Black", "hex": "#1A4A8B"}
+      ],
+      "technical_specifications": {
+        "engine": "660 cc, Inline-Triple, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "80 bhp",
+        "max_torque": "64 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "206 kg",
+        "fuel_tank_capacity": "17.2 L",
+        "seat_height": "835 mm"
+      }
     },
     {
       "make": "Triumph",
-      "model": "Bonneville Speedmaster",
-      "variant_name": "Bonneville Speedmaster",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "model": "Speed Twin 900",
+      "variant_name": "Speed Twin 900",
+      "price": "₹9,71,300",
+      "engine_displacement": "900 cc",
+      "mileage": "24 kmpl",
+      "max_power": "64 bhp",
+      "max_torque": "80 Nm",
+      "top_speed": "180 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Bonneville Speedmaster is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Speed Twin 900 is a 900cc retro-modern roadster with 64 bhp, TFT display, 12L tank, 216kg weight, and 780mm seat height. Comfortable neo-classic styling. Available in 3 colors at ₹9,71,300.",
+      "features": ["900cc Parallel-Twin Engine", "Liquid Cooled", "ABS", "TFT Display", "Disc Brakes", "Retro Styling", "Self Start", "BS6 Phase 2"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Speed Twin 900 Standard", "price": "₹9,71,300"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Phantom Black/Aurum Gold", "hex": "#1A1A1A"},
+        {"name": "Pure White/Maui Blue", "hex": "#F5F5F0"},
+        {"name": "Aluminium Silver/Carnival Red", "hex": "#C8C8C8"}
+      ],
+      "technical_specifications": {
+        "engine": "900 cc, Parallel-Twin, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "64 bhp",
+        "max_torque": "80 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "216 kg",
+        "fuel_tank_capacity": "12 L",
+        "seat_height": "780 mm"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Daytona 660",
+      "variant_name": "Daytona 660",
+      "price": "₹9,88,400",
+      "engine_displacement": "660 cc",
+      "mileage": "20 kmpl",
+      "max_power": "93.87 bhp",
+      "max_torque": "69 Nm",
+      "top_speed": "N/A",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Daytona 660 is a 660cc faired supersport with 93.87 bhp, triple-cylinder sound, 3 riding modes (Rain, Road, Sport), ABS, 14L tank, 201kg weight, and 810mm seat height at ₹9,88,400.",
+      "features": ["660cc Triple Engine", "Liquid Cooled", "ABS", "3 Riding Modes", "Faired Sports Styling", "Self Start", "BS6 Phase 2"],
+      "variants": [
+        {"name": "Daytona 660 Standard", "price": "₹9,88,400"}
+      ],
+      "colors": [
+        {"name": "Carnival Red/Sapphire Black", "hex": "#CC0000"},
+        {"name": "Satin Granite/Satin Jet Black", "hex": "#5A5A5A"},
+        {"name": "Snowdonia White/Sapphire Black", "hex": "#F5F5F0"}
+      ],
+      "technical_specifications": {
+        "engine": "660 cc, Inline-Triple, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "93.87 bhp",
+        "max_torque": "69 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "201 kg",
+        "fuel_tank_capacity": "14 L",
+        "seat_height": "810 mm"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Bonneville T100",
+      "variant_name": "Bonneville T100",
+      "price": "₹10,85,400",
+      "engine_displacement": "900 cc",
+      "mileage": "24 kmpl",
+      "max_power": "64.1 bhp",
+      "max_torque": "80 Nm",
+      "top_speed": "185 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Bonneville T100 is a 900cc classic with 64.1 bhp, spoke wheels, 14.5L tank, 228kg weight, 790mm seat height, and smooth parallel-twin engine. Available in 4 colors at ₹10,85,400.",
+      "features": ["900cc Parallel-Twin Engine", "Liquid Cooled", "ABS", "Spoke Wheels", "Classic Styling", "Self Start", "BS6 Phase 2"],
+      "variants": [
+        {"name": "Bonneville T100 Standard", "price": "₹10,85,400"}
+      ],
+      "colors": [
+        {"name": "Competition Green/Ironstone", "hex": "#2D6A4F"},
+        {"name": "Carnival Red/Fusion White", "hex": "#CC0000"},
+        {"name": "Jet Black", "hex": "#1A1A1A"},
+        {"name": "Aluminium/Baja Orange", "hex": "#C8C8C8"}
+      ],
+      "technical_specifications": {
+        "engine": "900 cc, Parallel-Twin, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "64.1 bhp",
+        "max_torque": "80 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "228 kg",
+        "fuel_tank_capacity": "14.5 L",
+        "seat_height": "790 mm"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Street Triple R",
+      "variant_name": "Street Triple R",
+      "price": "₹11,16,300",
+      "engine_displacement": "765 cc",
+      "mileage": "19 kmpl",
+      "max_power": "118.4 bhp",
+      "max_torque": "80 Nm",
+      "top_speed": "220 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Street Triple R is a 765cc triple-cylinder naked with 118.4 bhp, lightweight 168kg, ABS, 15L tank, and 826mm seat height. Available in 3 colors at ₹11,16,300.",
+      "features": ["765cc Triple Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Lightweight Build", "Self Start", "BS6 Phase 2"],
+      "variants": [
+        {"name": "Street Triple R Standard", "price": "₹11,16,300"}
+      ],
+      "colors": [
+        {"name": "Phantom Black", "hex": "#1A1A1A"},
+        {"name": "Matt Baja Orange", "hex": "#E8600A"},
+        {"name": "Pure White", "hex": "#F5F5F0"}
+      ],
+      "technical_specifications": {
+        "engine": "765 cc, Inline-Triple, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "118.4 bhp",
+        "max_torque": "80 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "168 kg",
+        "fuel_tank_capacity": "15 L",
+        "seat_height": "826 mm"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Bonneville T120",
+      "variant_name": "Bonneville T120",
+      "price": "₹12,35,000",
+      "engine_displacement": "1200 cc",
+      "mileage": "21 kmpl",
+      "max_power": "78.9 bhp",
+      "max_torque": "105 Nm",
+      "top_speed": "190 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Bonneville T120 is a 1200cc premium classic with 78.9 bhp, spoke wheels, 14.5L tank, 236kg weight, and iconic Bonneville styling. Available in 4 colors at ₹12,35,000.",
+      "features": ["1200cc Parallel-Twin Engine", "Liquid Cooled", "ABS", "Spoke Wheels", "Classic Styling", "Self Start", "BS6 Phase 2"],
+      "variants": [
+        {"name": "Bonneville T120 Standard", "price": "₹12,35,000"}
+      ],
+      "colors": [
+        {"name": "Jet Black/Fusion White", "hex": "#1A1A1A"},
+        {"name": "Cordovan Red/Silver Ice", "hex": "#882200"},
+        {"name": "Jet Black", "hex": "#1A1A1A"},
+        {"name": "Crystal White/Cranberry Red", "hex": "#F5F5F0"}
+      ],
+      "technical_specifications": {
+        "engine": "1200 cc, Parallel-Twin, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "78.9 bhp",
+        "max_torque": "105 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "236 kg",
+        "fuel_tank_capacity": "14.5 L",
+        "seat_height": "790 mm"
+      }
     },
     {
       "make": "Triumph",
       "model": "Scrambler 1200",
       "variant_name": "Scrambler 1200",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Triumph Scrambler 1200 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "X",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Speed T4 350",
-      "variant_name": "Speed T4 350",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Speed T4 350 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Speed 350",
-      "variant_name": "Speed 350",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Speed 350 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Scrambler 350 X",
-      "variant_name": "Scrambler 350 X",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Scrambler 350 X is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Scrambler 350 XC",
-      "variant_name": "Scrambler 350 XC",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Scrambler 350 XC is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Thruxton 350",
-      "variant_name": "Thruxton 350",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Thruxton 350 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tracker 400",
-      "variant_name": "Tracker 400",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Tracker 400 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville 350",
-      "variant_name": "Bonneville 350",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Bonneville 350 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger Sport 800",
-      "variant_name": "Tiger Sport 800",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Tiger Sport 800 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Daytona 675R",
-      "variant_name": "Daytona 675R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Daytona 675R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Thruxton R",
-      "variant_name": "Thruxton R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Thruxton R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville T120 [2021-2022]",
-      "variant_name": "Bonneville T120 [2021-2022]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Bonneville T120 [2021-2022] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Black",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard - Gold Lines Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Black - Gold Lines Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville Speedmaster [2021]",
-      "variant_name": "Bonneville Speedmaster [2021]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Bonneville Speedmaster [2021] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Gold Lines Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville T100 [2021]",
-      "variant_name": "Bonneville T100 [2021]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Bonneville T100 [2021] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Gold Lines Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Street Twin",
-      "variant_name": "Street Twin",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Street Twin is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Gold Line Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "EC1 Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Speed Triple 1200 RS [2021]",
-      "variant_name": "Speed Triple 1200 RS [2021]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Speed Triple 1200 RS [2021] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 850 Sport",
-      "variant_name": "Tiger 850 Sport",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Tiger 850 Sport is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Trident 660 [2020-2021]",
-      "variant_name": "Trident 660 [2020-2021]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Trident 660 [2020-2021] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Street Twin [2019-2020]",
-      "variant_name": "Street Twin [2019-2020]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Street Twin [2019-2020] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville Speedmaster [2020]",
-      "variant_name": "Bonneville Speedmaster [2020]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Bonneville Speedmaster [2020] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Street Triple R [2022]",
-      "variant_name": "Street Triple R [2022]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Street Triple R [2022] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Street Triple RS [2020-2021]",
-      "variant_name": "Street Triple RS [2020-2021]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Street Triple RS [2020-2021] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 900 [2020-2022]",
-      "variant_name": "Tiger 900 [2020-2022]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Tiger 900 [2020-2022] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "GT",
-          "price": "N/A"
-        },
-        {
-          "name": "Rally",
-          "price": "N/A"
-        },
-        {
-          "name": "Rally Pro",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Street Scrambler [2019-2020]",
-      "variant_name": "Street Scrambler [2019-2020]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Street Scrambler [2019-2020] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Street Twin [2018-2019]",
-      "variant_name": "Street Twin [2018-2019]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Street Twin [2018-2019] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Speed Twin [2019-2020]",
-      "variant_name": "Speed Twin [2019-2020]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Speed Twin [2019-2020] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 800 XCA",
-      "variant_name": "Tiger 800 XCA",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Tiger 800 XCA is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville Bobber [2021]",
-      "variant_name": "Bonneville Bobber [2021]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Bonneville Bobber [2021] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Gold Lines Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Street Scrambler",
-      "variant_name": "Street Scrambler",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Street Scrambler is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Sandstorm Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Gold Lines Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Scrambler 1200 [2021-2022]",
-      "variant_name": "Scrambler 1200 [2021-2022]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Scrambler 1200 [2021-2022] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Steve McQueen Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Speed Twin [2021]",
-      "variant_name": "Speed Twin [2021]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Speed Twin [2021] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Speed Triple 1200 RS [2024]",
-      "variant_name": "Speed Triple 1200 RS [2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Speed Triple 1200 RS [2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Trident 660 [2022-2024]",
-      "variant_name": "Trident 660 [2022-2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Trident 660 [2022-2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Street Triple RS [2022]",
-      "variant_name": "Street Triple RS [2022]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Street Triple RS [2022] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Speed Twin 900 [2022-2024]",
-      "variant_name": "Speed Twin 900 [2022-2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Speed Twin 900 [2022-2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Chrome Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville T100 [2022-2024]",
-      "variant_name": "Bonneville T100 [2022-2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Bonneville T100 [2022-2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Chrome Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Speed Twin",
-      "variant_name": "Speed Twin",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Speed Twin is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville T120 [2022-2024]",
-      "variant_name": "Bonneville T120 [2022-2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Bonneville T120 [2022-2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Black",
-          "price": "N/A"
-        },
-        {
-          "name": "Chrome Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville Speedmaster [2022-2024]",
-      "variant_name": "Bonneville Speedmaster [2022-2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Bonneville Speedmaster [2022-2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Chrome Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Old Generation Speed 400 2023 [2023-2024]",
-      "variant_name": "Old Generation Speed 400 2023 [2023-2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Old Generation Speed 400 2023 [2023-2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 900 [2022-2023]",
-      "variant_name": "Tiger 900 [2022-2023]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Tiger 900 [2022-2023] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "GT",
-          "price": "N/A"
-        },
-        {
-          "name": "Rally Pro",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville T120 [2019-2020]",
-      "variant_name": "Bonneville T120 [2019-2020]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Bonneville T120 [2019-2020] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard - BS4",
-          "price": "N/A"
-        },
-        {
-          "name": "Black",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Street Triple 675 ABS",
-      "variant_name": "Street Triple 675 ABS",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Street Triple 675 ABS is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Speed Triple ABS",
-      "variant_name": "Speed Triple ABS",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Speed Triple ABS is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Daytona 675 ABS",
-      "variant_name": "Daytona 675 ABS",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Daytona 675 ABS is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 800 XC",
-      "variant_name": "Tiger 800 XC",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Tiger 800 XC is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Thunderbird Storm",
-      "variant_name": "Thunderbird Storm",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Thunderbird Storm is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Rocket III Roadster",
-      "variant_name": "Rocket III Roadster",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Rocket III Roadster is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger Explorer [2016]",
-      "variant_name": "Tiger Explorer [2016]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Tiger Explorer [2016] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville T100 [2013-2016]",
-      "variant_name": "Bonneville T100 [2013-2016]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Bonneville T100 [2013-2016] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Thruxton",
-      "variant_name": "Thruxton",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Thruxton is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Thunderbird LT",
-      "variant_name": "Thunderbird LT",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Thunderbird LT is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 800 XRx [2017]",
-      "variant_name": "Tiger 800 XRx [2017]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Tiger 800 XRx [2017] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 800 XCx [2017]",
-      "variant_name": "Tiger 800 XCx [2017]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Tiger 800 XCx [2017] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 800 XR [2017]",
-      "variant_name": "Tiger 800 XR [2017]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Tiger 800 XR [2017] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 800 XCA [2017]",
-      "variant_name": "Tiger 800 XCA [2017]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Tiger 800 XCA [2017] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Scrambler 1200 [2019-2020]",
-      "variant_name": "Scrambler 1200 [2019-2020]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Scrambler 1200 [2019-2020] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "XC",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "2016 Thruxton",
-      "variant_name": "2016 Thruxton",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph 2016 Thruxton is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Street Twin [2018]",
-      "variant_name": "Street Twin [2018]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Street Twin [2018] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville T100 [2019-2020]",
-      "variant_name": "Bonneville T100 [2019-2020]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Bonneville T100 [2019-2020] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard - BS4",
-          "price": "N/A"
-        },
-        {
-          "name": "Black",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Street Triple 765",
-      "variant_name": "Street Triple 765",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Street Triple 765 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "S",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville Bobber [2019-2020]",
-      "variant_name": "Bonneville Bobber [2019-2020]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Bonneville Bobber [2019-2020] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger Explorer XCx",
-      "variant_name": "Tiger Explorer XCx",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Tiger Explorer XCx is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Street Scrambler [2018]",
-      "variant_name": "Street Scrambler [2018]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Street Scrambler [2018] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Street Triple RS [2018-2019]",
-      "variant_name": "Street Triple RS [2018-2019]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Street Triple RS [2018-2019] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville Speedmaster [2019]",
-      "variant_name": "Bonneville Speedmaster [2019]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Bonneville Speedmaster [2019] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 1200 [2018-2019]",
-      "variant_name": "Tiger 1200 [2018-2019]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Tiger 1200 [2018-2019] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "XCx",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 800 XR",
-      "variant_name": "Tiger 800 XR",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Tiger 800 XR is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 800 XRx",
-      "variant_name": "Tiger 800 XRx",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Tiger 800 XRx is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Tiger 800 XCx",
-      "variant_name": "Tiger 800 XCx",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Tiger 800 XCx is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Triumph",
-      "model": "Bonneville [2017]",
-      "variant_name": "Bonneville [2017]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Triumph Bonneville [2017] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "price": "₹12,64,100",
+      "engine_displacement": "1200 cc",
+      "mileage": "N/A",
+      "max_power": "89 bhp",
+      "max_torque": "110 Nm",
+      "top_speed": "N/A",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Scrambler 1200 is a 1200cc premium scrambler with 89 bhp, excellent ground clearance, spoke wheels, 15L tank, 228kg weight, good electronics, and extremely versatile on/off-road capability at ₹12,64,100.",
+      "features": ["1200cc Parallel-Twin Engine", "Liquid Cooled", "ABS", "Spoke Wheels", "High Ground Clearance", "Good Electronics", "Scrambler Styling", "Self Start", "BS6 Phase 2"],
+      "variants": [
+        {"name": "Scrambler 1200 Standard", "price": "₹12,64,100"}
+      ],
+      "colors": [
+        {"name": "Carnival Red", "hex": "#CC0000"},
+        {"name": "Ash Grey", "hex": "#9A9A9A"},
+        {"name": "Sapphire Black", "hex": "#1A1A3A"}
+      ],
+      "technical_specifications": {
+        "engine": "1200 cc, Parallel-Twin, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "89 bhp",
+        "max_torque": "110 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "228 kg",
+        "fuel_tank_capacity": "15 L",
+        "seat_height": "820 mm"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Bonneville Bobber",
+      "variant_name": "Bonneville Bobber",
+      "price": "₹13,37,500",
+      "engine_displacement": "1200 cc",
+      "mileage": "21.7 kmpl",
+      "max_power": "76.9 bhp",
+      "max_torque": "106 Nm",
+      "top_speed": "150 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Bonneville Bobber is a 1200cc classic bobber with 76.9 bhp, torquey motor, 690mm ultra-low seat, spoke wheels, 12L tank, and 251kg weight. Available in 5 colors at ₹13,37,500.",
+      "features": ["1200cc Parallel-Twin Engine", "Liquid Cooled", "ABS", "Spoke Wheels", "Ultra-Low Seat", "Bobber Styling", "Riding Modes", "Self Start", "BS6 Phase 2"],
+      "variants": [
+        {"name": "Bonneville Bobber Standard", "price": "₹13,37,500"}
+      ],
+      "colors": [
+        {"name": "Jet Black/Ash Gray", "hex": "#1A1A1A"},
+        {"name": "Stealth Edition Phantom Purple", "hex": "#3A1A6A"},
+        {"name": "Red Hopper", "hex": "#CC2200"},
+        {"name": "Jet Black", "hex": "#1A1A1A"},
+        {"name": "Matt Storm Grey/Matt Ironstone", "hex": "#5A5A5A"}
+      ],
+      "technical_specifications": {
+        "engine": "1200 cc, Parallel-Twin, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "76.9 bhp",
+        "max_torque": "106 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "251 kg",
+        "fuel_tank_capacity": "12 L",
+        "seat_height": "690 mm"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Bonneville Speedmaster",
+      "variant_name": "Bonneville Speedmaster",
+      "price": "₹13,37,500",
+      "engine_displacement": "1200 cc",
+      "mileage": "21.7 kmpl",
+      "max_power": "76.9 bhp",
+      "max_torque": "106 Nm",
+      "top_speed": "161 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Bonneville Speedmaster is a 1200cc cruiser with 76.9 bhp, torquey parallel-twin, 705mm low seat, spoke wheels, 12L tank, 263kg weight, comfortable riding stance, and highly usable riding modes at ₹13,37,500.",
+      "features": ["1200cc Parallel-Twin Engine", "Liquid Cooled", "ABS", "Spoke Wheels", "Low Seat Height", "Cruiser Styling", "Riding Modes", "Self Start", "BS6 Phase 2"],
+      "variants": [
+        {"name": "Bonneville Speedmaster Standard", "price": "₹13,37,500"}
+      ],
+      "colors": [
+        {"name": "Pacific Blue/Silver Ice", "hex": "#1A4A8B"},
+        {"name": "Cordovan Red", "hex": "#882200"},
+        {"name": "Jet Black", "hex": "#1A1A1A"},
+        {"name": "Snowdonia/Cranberry Red", "hex": "#F5F5F0"}
+      ],
+      "technical_specifications": {
+        "engine": "1200 cc, Parallel-Twin, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "76.9 bhp",
+        "max_torque": "106 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "263 kg",
+        "fuel_tank_capacity": "12 L",
+        "seat_height": "705 mm"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Street Triple RS",
+      "variant_name": "Street Triple RS",
+      "price": "₹13,22,800",
+      "engine_displacement": "765 cc",
+      "mileage": "18.5 kmpl",
+      "max_power": "128.2 bhp",
+      "max_torque": "80 Nm",
+      "top_speed": "220 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Street Triple RS is the flagship 765cc triple with 128.2 bhp, track-oriented handling, top-spec cycle components, 188kg weight, 15L tank, and 836mm seat height. Available in 5 colors at ₹13,22,800.",
+      "features": ["765cc Triple Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Track-Oriented Electronics", "Lightweight Build", "Self Start", "BS6 Phase 2"],
+      "variants": [
+        {"name": "Street Triple RS Standard", "price": "₹13,22,800"}
+      ],
+      "colors": [
+        {"name": "Granite", "hex": "#6A6A6A"},
+        {"name": "Phantom Black", "hex": "#1A1A1A"},
+        {"name": "Cosmic Yellow", "hex": "#FFD700"},
+        {"name": "Silver Ice", "hex": "#C8C8C8"},
+        {"name": "Carnival Red", "hex": "#CC0000"}
+      ],
+      "technical_specifications": {
+        "engine": "765 cc, Inline-Triple, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "128.2 bhp",
+        "max_torque": "80 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "188 kg",
+        "fuel_tank_capacity": "15 L",
+        "seat_height": "836 mm"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Speed Twin 1200",
+      "variant_name": "Speed Twin 1200",
+      "price": "₹13,83,800",
+      "engine_displacement": "1200 cc",
+      "mileage": "N/A",
+      "max_power": "103.5 bhp",
+      "max_torque": "112 Nm",
+      "top_speed": "N/A",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Speed Twin 1200 is a 1200cc modern-classic with 103.5 bhp, premium suspension, fun in city and highway, 14.5L tank, 216kg weight, 805mm seat height. Available in 3 variants from ₹13,83,800 to ₹16,77,600 with 5 color choices.",
+      "features": ["1200cc Parallel-Twin Engine", "Liquid Cooled", "ABS", "Premium Suspension", "Disc Brakes", "Self Start", "BS6 Phase 2"],
+      "variants": [
+        {"name": "Speed Twin 1200 Standard", "price": "₹13,83,800"},
+        {"name": "Speed Twin 1200 S", "price": "₹15,50,000"},
+        {"name": "Speed Twin 1200 RS", "price": "₹16,77,600"}
+      ],
+      "colors": [
+        {"name": "Carnival Red/Sapphire Black", "hex": "#CC0000"},
+        {"name": "Crystal White/Sapphire Black", "hex": "#F5F5F0"},
+        {"name": "Aluminium Silver", "hex": "#C8C8C8"},
+        {"name": "Baja Orange/Sapphire Black", "hex": "#E8600A"},
+        {"name": "Sapphire Black", "hex": "#1A1A3A"}
+      ],
+      "technical_specifications": {
+        "engine": "1200 cc, Parallel-Twin, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "103.5 bhp",
+        "max_torque": "112 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "216 kg",
+        "fuel_tank_capacity": "14.5 L",
+        "seat_height": "805 mm"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Tiger 900",
+      "variant_name": "Tiger 900",
+      "price": "₹14,40,000",
+      "engine_displacement": "888 cc",
+      "mileage": "21.2 kmpl",
+      "max_power": "106.5 bhp",
+      "max_torque": "90 Nm",
+      "top_speed": "N/A",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Tiger 900 is a 888cc adventure motorcycle with 106.5 bhp, top-spec electronics, excellent off-road capability, 20L tank, 219kg weight, 820mm seat height. Available in 2 variants from ₹14,40,000 to ₹16,15,000 with 6 color options.",
+      "features": ["888cc Triple Engine", "Liquid Cooled", "ABS", "Top-Spec Electronics", "Off-Road Capability", "20L Fuel Tank", "Adventure Ergonomics", "Self Start", "BS6 Phase 2"],
+      "variants": [
+        {"name": "Tiger 900 GT", "price": "₹14,40,000"},
+        {"name": "Tiger 900 Rally", "price": "₹16,15,000"}
+      ],
+      "colors": [
+        {"name": "Carnival Red/Sapphire Black", "hex": "#CC0000"},
+        {"name": "Snowdonia White/Sapphire Black", "hex": "#F5F5F0"},
+        {"name": "Graphite/Sapphire Black", "hex": "#5A5A5A"},
+        {"name": "Matt Khaki Green/Matt Phantom Black", "hex": "#6B6B3A"},
+        {"name": "Ash Grey/Intense Orange", "hex": "#9A9A9A"},
+        {"name": "Carbon Black/Sapphire Black", "hex": "#1A1A1A"}
+      ],
+      "technical_specifications": {
+        "engine": "888 cc, Inline-Triple, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "106.5 bhp",
+        "max_torque": "90 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "219 kg",
+        "fuel_tank_capacity": "20 L",
+        "seat_height": "820 mm"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Tiger 1200",
+      "variant_name": "Tiger 1200",
+      "price": "₹19,39,000",
+      "engine_displacement": "1160 cc",
+      "mileage": "18 kmpl",
+      "max_power": "148 bhp",
+      "max_torque": "130 Nm",
+      "top_speed": "220 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Tiger 1200 is a 1160cc flagship adventure bike with 148 bhp, 20L tank, 245kg weight, 850mm seat height. Available in 4 variants from ₹19,39,000 to ₹22,29,000 — Pro, Explorer, Rally Pro, Rally Explorer.",
+      "features": ["1160cc Triple Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Adventure Electronics", "20L Fuel Tank", "Multiple Variants", "Self Start", "BS6 Phase 2"],
+      "variants": [
+        {"name": "Tiger 1200 Pro", "price": "₹19,39,000"},
+        {"name": "Tiger 1200 Explorer", "price": "₹20,50,000"},
+        {"name": "Tiger 1200 Rally Pro", "price": "₹21,50,000"},
+        {"name": "Tiger 1200 Rally Explorer", "price": "₹22,29,000"}
+      ],
+      "colors": [
+        {"name": "Lucerne Blue", "hex": "#1A4A8B"},
+        {"name": "Sapphire Black", "hex": "#1A1A3A"},
+        {"name": "Snowdonia White", "hex": "#F5F5F0"},
+        {"name": "Matt Khaki Green", "hex": "#6B6B3A"}
+      ],
+      "technical_specifications": {
+        "engine": "1160 cc, Inline-Triple, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "148 bhp",
+        "max_torque": "130 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "245 kg",
+        "fuel_tank_capacity": "20 L",
+        "seat_height": "850 mm"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Speed Triple 1200 RS",
+      "variant_name": "Speed Triple 1200 RS",
+      "price": "₹21,75,900",
+      "engine_displacement": "1160 cc",
+      "mileage": "18 kmpl",
+      "max_power": "180.5 bhp",
+      "max_torque": "128 Nm",
+      "top_speed": "230 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Speed Triple 1200 RS is a 1160cc hyper-naked with 180.5 bhp, race-track performance, top-spec electronics, 15.5L tank, 199kg weight. Available in 2 variants from ₹21,75,900 to ₹23,06,900 with 4 color options.",
+      "features": ["1160cc Triple Engine", "Liquid Cooled", "ABS", "Race Track Capable", "Top-Spec Electronics", "Lightweight Build", "Self Start", "BS6 Phase 2B"],
+      "variants": [
+        {"name": "Speed Triple 1200 RS Standard", "price": "₹21,75,900"},
+        {"name": "Speed Triple 1200 RS Carbon", "price": "₹23,06,900"}
+      ],
+      "colors": [
+        {"name": "Granite/Triumph Performance Yellow", "hex": "#6A6A6A"},
+        {"name": "Granite/Diablo Red", "hex": "#6A6A6A"},
+        {"name": "Jet Black", "hex": "#1A1A1A"},
+        {"name": "Triumph Performance Yellow", "hex": "#FFD700"}
+      ],
+      "technical_specifications": {
+        "engine": "1160 cc, Inline-Triple, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "180.5 bhp",
+        "max_torque": "128 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "199 kg",
+        "fuel_tank_capacity": "15.5 L",
+        "seat_height": "830 mm"
+      }
+    },
+    {
+      "make": "Triumph",
+      "model": "Rocket 3",
+      "variant_name": "Rocket 3",
+      "price": "₹24,01,955",
+      "engine_displacement": "2458 cc",
+      "mileage": "14.6 kmpl",
+      "max_power": "165 bhp",
+      "max_torque": "221 Nm",
+      "top_speed": "220 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Triumph Rocket 3 is the world's largest production engine — 2458cc triple with 165 bhp, massive 221 Nm torque, 18L tank, 304kg weight, 773mm seat, ABS, traction control, TFT display. Available in 2 variants from ₹24,01,955 to ₹24,66,008.",
+      "features": ["2458cc Inline-Triple Engine", "World's Largest Production Engine", "Liquid Cooled", "ABS", "Traction Control", "TFT Display", "Bluetooth", "Cruiser Styling", "Self Start", "BS6 Phase 2"],
+      "variants": [
+        {"name": "Rocket 3 R", "price": "₹24,01,955"},
+        {"name": "Rocket 3 GT", "price": "₹24,66,008"}
+      ],
+      "colors": [
+        {"name": "Silver Ice/Cranberry Red", "hex": "#C8C8C8"},
+        {"name": "Phantom Black", "hex": "#1A1A1A"},
+        {"name": "Korosi Red", "hex": "#CC2200"},
+        {"name": "Sapphire Black (GT)", "hex": "#1A1A3A"},
+        {"name": "Silver Ice and Storm Grey (GT)", "hex": "#C8C8C8"}
+      ],
+      "technical_specifications": {
+        "engine": "2458 cc, Inline-Triple, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "165 bhp",
+        "max_torque": "221 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "304 kg",
+        "fuel_tank_capacity": "18 L",
+        "seat_height": "773 mm"
+      }
     }
   ]
 }

@@ -2,121 +2,26 @@
   "brand": "CFMoto",
   "brandId": "cfmoto-india",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
+  "note": "CFMoto currently has no active models in India. Previously offered 300NK, 650NK, 650MT, 650GT (all discontinued). CFMoto 450 MT expected June 2026.",
   "vehicles": [
     {
       "make": "CFMoto",
       "model": "450 MT",
       "variant_name": "450 MT",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹4,25,000",
+      "engine_displacement": "N/A",
+      "mileage": "N/A",
+      "max_power": "N/A",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "top_speed": "N/A",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The CFMoto 450 MT is a two-wheeler available in India.",
+      "transmission": "Manual",
+      "source_section": "Upcoming",
+      "description": "The CFMoto 450 MT is an upcoming mid-size adventure motorcycle expected to launch in India in mid-2026 at an estimated price of ₹4,00,000 - ₹4,50,000. CFMoto is a Chinese manufacturer with partnership with AMW Motorcycles.",
       "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "CFMoto",
-      "model": "650NK [2019-2020]",
-      "variant_name": "650NK [2019-2020]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The CFMoto 650NK [2019-2020] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "CFMoto",
-      "model": "650MT [2019-2020]",
-      "variant_name": "650MT [2019-2020]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The CFMoto 650MT [2019-2020] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "CFMoto",
-      "model": "300NK [2019-2020]",
-      "variant_name": "300NK [2019-2020]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The CFMoto 300NK [2019-2020] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "CFMoto",
-      "model": "650GT [2019-2020]",
-      "variant_name": "650GT [2019-2020]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The CFMoto 650GT [2019-2020] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
+      "variants": [],
       "colors": [],
       "technical_specifications": {}
     },
@@ -125,21 +30,17 @@
       "model": "300NK",
       "variant_name": "300NK",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "engine_displacement": "292.4 cc",
+      "mileage": "N/A",
+      "max_power": "N/A",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "top_speed": "130 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The CFMoto 300NK is a two-wheeler available in India.",
+      "transmission": "6-Speed Manual",
+      "source_section": "Discontinued",
+      "description": "The CFMoto 300NK was a 292cc naked street motorcycle. Discontinued in India.",
       "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
+      "variants": [],
       "colors": [],
       "technical_specifications": {}
     },
@@ -148,44 +49,17 @@
       "model": "650NK",
       "variant_name": "650NK",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "engine_displacement": "649 cc",
+      "mileage": "N/A",
+      "max_power": "N/A",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "top_speed": "165 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The CFMoto 650NK is a two-wheeler available in India.",
+      "transmission": "6-Speed Manual",
+      "source_section": "Discontinued",
+      "description": "The CFMoto 650NK was a 649cc parallel-twin naked street motorcycle. Discontinued in India.",
       "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "CFMoto",
-      "model": "650GT",
-      "variant_name": "650GT",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The CFMoto 650GT is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
+      "variants": [],
       "colors": [],
       "technical_specifications": {}
     },
@@ -194,21 +68,36 @@
       "model": "650MT",
       "variant_name": "650MT",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "engine_displacement": "649 cc",
+      "mileage": "N/A",
+      "max_power": "N/A",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "top_speed": "165 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The CFMoto 650MT is a two-wheeler available in India.",
+      "transmission": "6-Speed Manual",
+      "source_section": "Discontinued",
+      "description": "The CFMoto 650MT was a 649cc adventure-touring motorcycle. Discontinued in India.",
       "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
+      "variants": [],
+      "colors": [],
+      "technical_specifications": {}
+    },
+    {
+      "make": "CFMoto",
+      "model": "650GT",
+      "variant_name": "650GT",
+      "price": "N/A",
+      "engine_displacement": "649 cc",
+      "mileage": "N/A",
+      "max_power": "N/A",
+      "max_torque": "N/A",
+      "top_speed": "165 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Discontinued",
+      "description": "The CFMoto 650GT was a 649cc grand touring motorcycle. Discontinued in India.",
+      "features": [],
+      "variants": [],
       "colors": [],
       "technical_specifications": {}
     }

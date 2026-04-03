@@ -2,1048 +2,530 @@
   "brand": "Royal Enfield",
   "brandId": "royal-enfield",
   "type": "2w",
+  "lastUpdated": "2026-04-03",
+  "source": "BikeWale",
   "vehicles": [
     {
       "make": "Royal Enfield",
-      "model": "Classic 350",
-      "variant_name": "Classic 350 Redditch",
-      "price": "₹1,82,667",
-      "engine_displacement": "349 cc",
-      "mileage": "35 kmpl",
-      "max_power": "20.2 bhp",
-      "max_torque": "27 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Royal Enfield Classic 350 is a cruiser motorcycle featuring retro styling with modern refinement, powered by a 349cc BS6 Phase 2 engine ideal for city commuting and relaxed highway cruising. It combines timeless aesthetics with contemporary reliability, offering a wide choice of 7 variants and 9 colour options.",
-      "features": [
-        "349cc BS6 Phase 2 engine with 20.2 bhp",
-        "27 Nm torque for smooth low-end performance",
-        "Front disc and rear drum brakes with ABS",
-        "5-speed manual transmission",
-        "Tripper navigation pod",
-        "USB-C charging port",
-        "13-litre fuel tank capacity",
-        "Spoke wheels with self-start",
-        "Semi-digital instrument cluster"
-      ],
-      "variants": [
-        {
-          "name": "Classic 350 Redditch",
-          "price": "₹1,82,667"
-        },
-        {
-          "name": "Classic 350 Halcyon",
-          "price": "₹1,84,586"
-        },
-        {
-          "name": "Classic 350 Heritage",
-          "price": "₹1,88,415"
-        },
-        {
-          "name": "Classic 350 Heritage Premium",
-          "price": "₹1,93,057"
-        },
-        {
-          "name": "Classic 350 Signals",
-          "price": "₹1,96,000"
-        },
-        {
-          "name": "Classic 350 Dark",
-          "price": "₹1,99,000"
-        },
-        {
-          "name": "Classic 350 Chrome",
-          "price": "₹2,17,596"
-        }
-      ],
-      "colors": [
-        "Madras Red",
-        "Jodhpur Blue",
-        "Medallion Bronze",
-        "Commando Sand",
-        "Stealth Black",
-        "Gun Grey",
-        "Emerald",
-        "Redditch Red",
-        "Halcyon Black"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 349,
-        "max_power_bhp": 20.2,
-        "max_torque_nm": 27,
-        "cooling": "Air-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "5 Speed Manual",
-        "kerb_weight_kg": 195,
-        "fuel_tank_litres": 13,
-        "top_speed_kmph": 115,
-        "mileage_kmpl": 35,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Drum",
-        "abs": "Dual-channel ABS"
-      }
-    },
-    {
-      "make": "Royal Enfield",
-      "model": "Hunter 350",
-      "variant_name": "Hunter 350 Standard",
-      "price": "₹1,37,648",
-      "engine_displacement": "349 cc",
-      "mileage": "36.2 kmpl",
-      "max_power": "20.2 bhp",
-      "max_torque": "27 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Royal Enfield Hunter 350 is a street bike featuring a 349.34cc BS6 Phase 2B engine, combining retro-modern styling with practical city commuting capabilities. It is the most accessible and lightweight bike in Royal Enfield's lineup, featuring a slip and assist clutch for reduced fatigue.",
-      "features": [
-        "349.34cc BS6 Phase 2B engine with 20.2 bhp",
-        "36.22 kmpl expert-reported mileage",
-        "Front disc and rear drum brakes with ABS",
-        "5-speed manual transmission",
-        "Slip and assist clutch",
-        "13-litre fuel tank capacity",
-        "181 kg kerb weight",
-        "790mm seat height",
-        "17-inch wheels"
-      ],
-      "variants": [
-        {
-          "name": "Hunter 350 Standard",
-          "price": "₹1,37,648"
-        },
-        {
-          "name": "Hunter 350 Mid",
-          "price": "₹1,51,770"
-        },
-        {
-          "name": "Hunter 350 Top",
-          "price": "₹1,66,893"
-        }
-      ],
-      "colors": [
-        "Factory Black",
-        "Graphite Grey",
-        "Dapper Grey",
-        "Rio White",
-        "Tokyo Black",
-        "London Red",
-        "Rebel Blue"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 349,
-        "max_power_bhp": 20.2,
-        "max_torque_nm": 27,
-        "cooling": "Air-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "5 Speed Manual",
-        "kerb_weight_kg": 181,
-        "fuel_tank_litres": 13,
-        "top_speed_kmph": 130,
-        "mileage_kmpl": 36.2,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Drum",
-        "abs": "Single-channel ABS"
-      }
-    },
-    {
-      "make": "Royal Enfield",
       "model": "Bullet 350",
-      "variant_name": "Bullet 350 Battalion Black",
+      "variant_name": "Bullet 350",
       "price": "₹1,63,503",
       "engine_displacement": "349 cc",
       "mileage": "35 kmpl",
       "max_power": "20.2 bhp",
       "max_torque": "27 Nm",
+      "top_speed": "110 kmph",
       "fuel_type": "Petrol",
+      "transmission": "5-Speed Manual",
       "source_section": "Available",
-      "description": "The Royal Enfield Bullet 350 is a classic street bike featuring a 349cc BS6 Phase 2 engine with authentic retro styling and modern reliability. It is one of the longest-running motorcycle models in the world, revered for its distinctive thump and iconic character.",
-      "features": [
-        "349cc BS6 Phase 2 engine with 20.2 bhp",
-        "27 Nm torque delivery",
-        "Front disc and rear drum brakes with ABS",
-        "5-speed manual transmission",
-        "35 kmpl user-reported mileage",
-        "13-litre fuel tank capacity",
-        "Spoke wheels with self-start",
-        "195 kg kerb weight",
-        "805mm seat height"
-      ],
+      "description": "The Royal Enfield Bullet 350 is an iconic 349cc motorcycle with J-series engine, disc brake with ABS, spoke wheels, classic styling, and authentic old-school design.",
+      "features": ["Disc Brake with ABS", "Spoke Wheels", "Classic Styling", "Self Start"],
       "variants": [
-        {
-          "name": "Bullet 350 Battalion Black",
-          "price": "₹1,63,503"
-        },
-        {
-          "name": "Bullet 350 Standard Black",
-          "price": "₹1,75,000"
-        },
-        {
-          "name": "Bullet 350 Maroon",
-          "price": "₹1,90,000"
-        },
-        {
-          "name": "Bullet 350 Black Gold",
-          "price": "₹2,04,444"
-        }
+        {"name": "Military Black", "price": "₹1,63,503"},
+        {"name": "Standard", "price": "₹1,75,000"},
+        {"name": "Black Gold", "price": "₹1,90,000"},
+        {"name": "Battalion Black", "price": "₹2,04,444"}
       ],
       "colors": [
-        "Military Black",
-        "Military Red",
-        "Maroon",
-        "Standard Black",
-        "Black Gold",
-        "Battalion Black"
+        {"name": "Military Black", "hex": "#1A1A1A"},
+        {"name": "Maroon", "hex": "#6B1A1A"},
+        {"name": "Standard Black", "hex": "#1A1A1A"},
+        {"name": "Black Gold", "hex": "#1A1A1A"},
+        {"name": "Battalion Black", "hex": "#2A2A2A"}
       ],
       "technical_specifications": {
-        "engine_displacement_cc": 349,
-        "max_power_bhp": 20.2,
-        "max_torque_nm": 27,
-        "cooling": "Air-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "5 Speed Manual",
-        "kerb_weight_kg": 195,
-        "fuel_tank_litres": 13,
-        "top_speed_kmph": 110,
-        "mileage_kmpl": 35,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
+        "engine": "349 cc, Single Cylinder, BS6 Phase 2",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
         "brakes_rear": "Drum",
-        "abs": "Single-channel ABS"
+        "kerb_weight": "195 kg",
+        "fuel_tank_capacity": "13 L",
+        "seat_height": "805 mm"
+      }
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Hunter 350",
+      "variant_name": "Hunter 350",
+      "price": "₹1,37,648",
+      "engine_displacement": "349.34 cc",
+      "mileage": "35 kmpl",
+      "max_power": "20.2 bhp",
+      "max_torque": "27 Nm",
+      "top_speed": "130 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Royal Enfield Hunter 350 is a compact and lightweight 349cc roadster with J-series engine, slip and assist clutch, spoke wheels, ABS, and 181 kg kerb weight for nimble city riding.",
+      "features": ["Slip and Assist Clutch", "Spoke Wheels", "Disc Brake with ABS", "Self Start"],
+      "variants": [
+        {"name": "Retro", "price": "₹1,37,648"},
+        {"name": "Metro", "price": "₹1,52,000"},
+        {"name": "Metro Rebel", "price": "₹1,66,893"}
+      ],
+      "colors": [
+        {"name": "Factory Black", "hex": "#1A1A1A"},
+        {"name": "Graphite Grey", "hex": "#6B6B6B"},
+        {"name": "Dapper Grey", "hex": "#8A8A8A"},
+        {"name": "Rio White", "hex": "#F5F5F0"},
+        {"name": "Tokyo Black", "hex": "#2A2A2A"},
+        {"name": "London Red", "hex": "#CC2020"},
+        {"name": "Rebel Blue", "hex": "#1A4A8B"}
+      ],
+      "technical_specifications": {
+        "engine": "349.34 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air-Oil Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Drum",
+        "kerb_weight": "181 kg",
+        "fuel_tank_capacity": "13 L",
+        "seat_height": "790 mm"
+      }
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Classic 350",
+      "variant_name": "Classic 350",
+      "price": "₹1,82,667",
+      "engine_displacement": "349 cc",
+      "mileage": "35 kmpl",
+      "max_power": "20.2 bhp",
+      "max_torque": "27 Nm",
+      "top_speed": "115 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Royal Enfield Classic 350 is a timeless retro motorcycle with 349cc J-series engine, disc brake with ABS, spoke wheels, and 9 color options including the iconic Madras Red and Jodhpur Blue.",
+      "features": ["Disc Brake with ABS", "Spoke Wheels", "Classic Retro Styling", "Self Start"],
+      "variants": [
+        {"name": "Halcyon", "price": "₹1,82,667"},
+        {"name": "Standard", "price": "₹1,90,000"},
+        {"name": "Signals", "price": "₹1,97,000"},
+        {"name": "Dark", "price": "₹2,04,000"},
+        {"name": "Chrome Bronze", "price": "₹2,08,000"},
+        {"name": "Chrome Red", "price": "₹2,12,000"},
+        {"name": "Special Edition", "price": "₹2,17,596"}
+      ],
+      "colors": [
+        {"name": "Madras Red", "hex": "#A52020"},
+        {"name": "Jodhpur Blue", "hex": "#1A3A6B"},
+        {"name": "Medallion Bronze", "hex": "#7A5A3A"},
+        {"name": "Commando Sand", "hex": "#C8B88A"},
+        {"name": "Stealth Black", "hex": "#1A1A1A"},
+        {"name": "Gun Grey", "hex": "#4A4A4A"},
+        {"name": "Emerald", "hex": "#2A5A2A"},
+        {"name": "Redditch Red", "hex": "#8B0000"},
+        {"name": "Halcyon Black", "hex": "#2A2A2A"}
+      ],
+      "technical_specifications": {
+        "engine": "349 cc, Single Cylinder, BS6 Phase 2",
+        "cooling": "Air-Oil Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Drum",
+        "kerb_weight": "195 kg",
+        "fuel_tank_capacity": "13 L",
+        "seat_height": "805 mm"
       }
     },
     {
       "make": "Royal Enfield",
       "model": "Meteor 350",
-      "variant_name": "Meteor 350 Fireball",
+      "variant_name": "Meteor 350",
       "price": "₹1,95,762",
-      "engine_displacement": "349 cc",
+      "engine_displacement": "349.34 cc",
       "mileage": "32 kmpl",
       "max_power": "20.2 bhp",
       "max_torque": "27 Nm",
+      "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
+      "transmission": "5-Speed Manual",
       "source_section": "Available",
-      "description": "The Royal Enfield Meteor 350 is a cruiser motorcycle powered by a 349.34cc BS6 Phase 2B engine, delivering 20.2 bhp and 27 Nm torque designed for comfortable long-distance touring with a relaxed cruiser-style seating position. It achieves approximately 32 kmpl mileage and features the Tripper navigation pod for seamless journey planning.",
-      "features": [
-        "349.34cc BS6 Phase 2B engine with 20.2 bhp and 27 Nm torque",
-        "5-speed manual transmission with self-start",
-        "Dual-channel ABS with disc brakes front and rear",
-        "Tripper navigation pod with USB-C charging",
-        "Semi-digital instrument cluster with LED indicators",
-        "15-litre fuel tank capacity",
-        "Alloy wheels",
-        "191 kg kerb weight with 765mm seat height"
-      ],
+      "description": "The Royal Enfield Meteor 350 is a relaxed cruiser with Tripper navigation, USB-C port, dual-channel ABS, LED headlamp, and alloy wheels. Low 765mm seat height for comfortable touring.",
+      "features": ["Tripper Navigation", "USB-C Port", "Dual Channel ABS", "LED Indicators", "LED Headlamp", "Alloy Wheels", "Self Start"],
       "variants": [
-        {
-          "name": "Meteor 350 Fireball",
-          "price": "₹1,95,762"
-        },
-        {
-          "name": "Meteor 350 Stellar",
-          "price": "₹2,02,608"
-        },
-        {
-          "name": "Meteor 350 Aurora",
-          "price": "₹2,05,733"
-        },
-        {
-          "name": "Meteor 350 Supernova",
-          "price": "₹2,16,180"
-        },
-        {
-          "name": "Meteor 350 Sundowner Orange Special Edition",
-          "price": "₹2,18,882"
-        }
+        {"name": "Fireball", "price": "₹1,95,762"},
+        {"name": "Stellar", "price": "₹2,05,000"},
+        {"name": "Aurora", "price": "₹2,10,000"},
+        {"name": "Supernova", "price": "₹2,14,000"},
+        {"name": "Limited Edition", "price": "₹2,18,882"}
       ],
       "colors": [
-        "Fireball Grey",
-        "Fireball Orange",
-        "Stellar Marine Blue",
-        "Stellar Matt Grey",
-        "Aurora Red",
-        "Aurora Retro Green",
-        "Supernova Black",
-        "Sundowner Orange"
+        {"name": "Fireball Grey", "hex": "#6B6B6B"},
+        {"name": "Fireball Orange", "hex": "#E8600A"},
+        {"name": "Stellar Marine Blue", "hex": "#1A4A8B"},
+        {"name": "Stellar Matt Grey", "hex": "#4A4A4A"},
+        {"name": "Aurora Red", "hex": "#CC2020"},
+        {"name": "Aurora Retro Green", "hex": "#2A5A2A"},
+        {"name": "Supernova Black", "hex": "#1A1A1A"},
+        {"name": "Sundowner Orange", "hex": "#D8600A"}
       ],
       "technical_specifications": {
-        "engine_displacement_cc": 349,
-        "max_power_bhp": 20.2,
-        "max_torque_nm": 27,
-        "cooling": "Air-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "5 Speed Manual",
-        "kerb_weight_kg": 191,
-        "fuel_tank_litres": 15,
-        "top_speed_kmph": 120,
-        "mileage_kmpl": 32,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "features": [
-          "Tripper navigation pod",
-          "USB-C charging",
-          "Semi-digital cluster",
-          "LED indicators",
-          "Alloy wheels"
-        ]
+        "engine": "349.34 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air-Oil Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "191 kg",
+        "fuel_tank_capacity": "15 L",
+        "seat_height": "765 mm"
       }
     },
     {
       "make": "Royal Enfield",
       "model": "Goan Classic 350",
-      "variant_name": "Goan Classic 350 Single Tone",
+      "variant_name": "Goan Classic 350",
       "price": "₹2,19,787",
       "engine_displacement": "349 cc",
       "mileage": "36.2 kmpl",
       "max_power": "20.2 bhp",
       "max_torque": "27 Nm",
+      "top_speed": "115 kmph",
       "fuel_type": "Petrol",
+      "transmission": "5-Speed Manual",
       "source_section": "Available",
+      "description": "The Royal Enfield Goan Classic 350 is a bobber-styled motorcycle with ape-hanger handlebars, solo seat, white-walled tubeless tyres, 19/16-inch spoke wheels, and classic cruiser design.",
+      "features": ["Disc Brakes", "ABS", "White-walled Tubeless Tyres", "Spoke Wheels", "Solo Seat (Pillion Optional)", "Self Start"],
       "variants": [
-        {
-          "name": "Goan Classic 350 Single Tone",
-          "price": "₹2,19,787"
-        },
-        {
-          "name": "Goan Classic 350 Dual Tone",
-          "price": "₹2,22,593"
-        }
+        {"name": "Standard", "price": "₹2,19,787"},
+        {"name": "Special", "price": "₹2,22,593"}
       ],
       "colors": [
-        "Purple Haze",
-        "Shack Black",
-        "Trip Teal",
-        "Rave Red"
+        {"name": "Purple Haze", "hex": "#5A2A7A"},
+        {"name": "Shack Black", "hex": "#1A1A1A"},
+        {"name": "Trip Teal", "hex": "#2A7A7A"},
+        {"name": "Rave Red", "hex": "#CC2020"}
       ],
       "technical_specifications": {
-        "engine_displacement_cc": 349,
-        "max_power_bhp": 20.2,
-        "max_torque_nm": 27,
-        "cooling": "Air-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "5 Speed Manual",
-        "kerb_weight_kg": 197,
-        "fuel_tank_litres": 13,
-        "top_speed_kmph": 105,
-        "mileage_kmpl": 36.2,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS"
-      },
-      "description": "The Royal Enfield Goan Classic 350 is a limited-edition retro cruiser inspired by Goa's laid-back coastal culture. Featuring a distinctive chrome-accented design with wide handlebars and a relaxed riding posture, it blends classic Royal Enfield aesthetics with modern reliability. Powered by the proven J-series 349cc engine, it offers smooth power delivery perfect for leisurely coastal rides and everyday commuting.",
-      "features": [
-        "349cc J-Series Engine",
-        "Tripper Navigation",
-        "USB Charging",
-        "Dual Channel ABS",
-        "LED Tail Lamp",
-        "Chrome Accents",
-        "Retro Styling",
-        "Halogen Headlamp"
-      ]
+        "engine": "349 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air-Oil Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc (300mm) with ABS",
+        "brakes_rear": "Disc (270mm) with ABS",
+        "suspension_front": "Telescopic Forks",
+        "suspension_rear": "Twin Gas-charged Shocks",
+        "tyres_front": "19-inch",
+        "tyres_rear": "16-inch",
+        "kerb_weight": "197 kg",
+        "fuel_tank_capacity": "13 L",
+        "seat_height": "750 mm"
+      }
     },
     {
       "make": "Royal Enfield",
       "model": "Scram 440",
-      "variant_name": "Scram 440 Trail",
+      "variant_name": "Scram 440",
       "price": "₹2,23,121",
       "engine_displacement": "443 cc",
-      "mileage": "29.5 kmpl",
+      "mileage": "30 kmpl",
       "max_power": "25.4 bhp",
       "max_torque": "34 Nm",
+      "top_speed": "120 kmph",
       "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
+      "description": "The Royal Enfield Scram 440 is a scrambler-adventure motorcycle with 443cc engine, switchable rear ABS, spoke wheels, disc brakes, and upright ergonomics for on and off-road riding.",
+      "features": ["Switchable Rear ABS", "Spoke Wheels", "Disc Brakes", "Upright Ergonomics", "Self Start"],
       "variants": [
-        {
-          "name": "Scram 440 Trail",
-          "price": "₹2,23,121"
-        },
-        {
-          "name": "Scram 440 Force",
-          "price": "₹2,30,631"
-        }
+        {"name": "Standard", "price": "₹2,23,121"},
+        {"name": "Special", "price": "₹2,30,631"}
       ],
       "colors": [
-        "Force Teal",
-        "Force Grey",
-        "Force Blue",
-        "Trail Green",
-        "Trail Blue"
+        {"name": "Force Teal", "hex": "#2A7A7A"},
+        {"name": "Force Grey", "hex": "#6B6B6B"},
+        {"name": "Force Blue", "hex": "#1A4A8B"},
+        {"name": "Trail Green", "hex": "#2A5A2A"},
+        {"name": "Trail Blue", "hex": "#1A3A6B"}
       ],
       "technical_specifications": {
-        "engine_displacement_cc": 443,
-        "max_power_bhp": 25.4,
-        "max_torque_nm": 34,
-        "cooling": "Air-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 196,
-        "fuel_tank_litres": 15,
-        "top_speed_kmph": 120,
-        "mileage_kmpl": 29.5,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS (switchable rear)"
-      },
-      "description": "The Royal Enfield Scram 440 is a scrambler-styled adventure motorcycle built for both on-road and light off-road use. Powered by the new 443cc single-cylinder engine, it delivers improved performance over its predecessor. With its upright riding posture, spoked wheels, and rugged design, the Scram 440 is ideal for riders who want versatility and adventure in an accessible package.",
-      "features": [
-        "443cc Single-Cylinder Engine",
-        "Dual Channel ABS",
-        "Tripper Navigation",
-        "USB-C Charging",
-        "Spoke Wheels",
-        "Upswept Exhaust",
-        "Scrambler Design",
-        "Adventure Ready"
-      ]
-    },
-    {
-      "make": "Royal Enfield",
-      "model": "Himalayan 450",
-      "variant_name": "Himalayan 450 Base",
-      "price": "₹3,05,722",
-      "engine_displacement": "452 cc",
-      "mileage": "29 kmpl",
-      "max_power": "39.47 bhp",
-      "max_torque": "40 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Royal Enfield Himalayan 450 is an adventure bike powered by a 451.65cc liquid-cooled BS6 Phase 2B engine, designed for long-distance touring and off-road capability with a 17-litre fuel tank and user-reported mileage of 30 kmpl. It features a TFT display with navigation support and a top speed of 165 kmph.",
-      "features": [
-        "451.65cc liquid-cooled BS6 Phase 2B engine",
-        "39.47 bhp power and 40 Nm torque",
-        "6-speed manual transmission",
-        "Dual-channel ABS with front and rear disc brakes",
-        "TFT display with navigation support",
-        "Spoke wheels for off-road capability",
-        "17-litre fuel tank capacity",
-        "825mm seat height",
-        "196 kg kerb weight",
-        "165 kmph top speed"
-      ],
-      "variants": [
-        {
-          "name": "Himalayan 450 Base",
-          "price": "₹3,05,722"
-        },
-        {
-          "name": "Himalayan 450 Pass",
-          "price": "₹3,09,951"
-        },
-        {
-          "name": "Himalayan 450 Summit",
-          "price": "₹3,14,227"
-        },
-        {
-          "name": "Himalayan 450 Hanle Black",
-          "price": "₹3,19,553"
-        },
-        {
-          "name": "Himalayan 450 Mana Black",
-          "price": "₹3,37,036"
-        }
-      ],
-      "colors": [
-        "Kaza Brown",
-        "Slate Poppy Blue",
-        "Slate Himalayan Salt",
-        "Kamet White",
-        "Hanle Black",
-        "Mana Black"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 452,
-        "max_power_bhp": 39.47,
-        "max_torque_nm": 40,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 196,
-        "fuel_tank_litres": 17,
-        "top_speed_kmph": 165,
-        "mileage_kmpl": 29,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "features": [
-          "TFT display",
-          "Navigation support",
-          "Spoke wheels",
-          "LED lighting"
-        ]
+        "engine": "443 cc, Single Cylinder, BS6 Phase 2",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with Switchable ABS",
+        "kerb_weight": "196 kg",
+        "fuel_tank_capacity": "15 L",
+        "seat_height": "795 mm"
       }
     },
     {
       "make": "Royal Enfield",
       "model": "Guerrilla 450",
-      "variant_name": "Guerrilla 450 Dash",
+      "variant_name": "Guerrilla 450",
       "price": "₹2,49,194",
       "engine_displacement": "452 cc",
       "mileage": "29 kmpl",
       "max_power": "39.47 bhp",
       "max_torque": "40 Nm",
+      "top_speed": "140 kmph",
       "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Royal Enfield Guerrilla 450 is a cruiser motorcycle powered by a 452cc BS6 Phase 2B liquid-cooled engine, delivering 39.47 bhp and 40 Nm torque with impressive performance and highway stability. It features a TFT display, alloy wheels, and weighs just 185 kg with a top speed of 140 kmph.",
-      "features": [
-        "452cc liquid-cooled BS6 Phase 2B engine",
-        "39.47 bhp and 40 Nm torque",
-        "6-speed manual transmission",
-        "Dual-channel ABS with front and rear disc brakes",
-        "TFT display with Bluetooth",
-        "Alloy wheels",
-        "11-litre fuel tank capacity",
-        "185 kg kerb weight",
-        "780mm seat height",
-        "140 kmph top speed"
-      ],
+      "description": "The Royal Enfield Guerrilla 450 is a roadster motorcycle with 452cc liquid-cooled engine, ABS, alloy wheels, and aggressive muscular design for highway and city performance.",
+      "features": ["ABS", "Alloy Wheels", "Liquid-Cooled Engine", "Self Start"],
       "variants": [
-        {
-          "name": "Guerrilla 450 Dash - Twilight Blue",
-          "price": "₹2,49,194"
-        },
-        {
-          "name": "Guerrilla 450 APEX - Red",
-          "price": "₹2,49,194"
-        },
-        {
-          "name": "Guerrilla 450 APEX - Black and Green",
-          "price": "₹2,58,919"
-        },
-        {
-          "name": "Guerrilla 450 Dash - Shadow Ash / Smoke Silver / Peix Bronze",
-          "price": "₹2,70,042"
-        },
-        {
-          "name": "Guerrilla 450 Flash - Brava Blue",
-          "price": "₹2,72,479"
-        }
+        {"name": "Flash", "price": "₹2,49,194"},
+        {"name": "Trailblazer", "price": "₹2,60,000"},
+        {"name": "S", "price": "₹2,72,479"}
       ],
       "colors": [
-        "Twilight Blue",
-        "Brava Blue",
-        "Peix Bronze",
-        "Smoke Silver",
-        "Shadow Ash",
-        "Red",
-        "Green",
-        "Black"
+        {"name": "Twilight Blue", "hex": "#1A2A5A"},
+        {"name": "Brava Blue", "hex": "#1A4A8B"},
+        {"name": "Peix Bronze", "hex": "#7A5A3A"},
+        {"name": "Smoke Silver", "hex": "#C8C8C8"},
+        {"name": "Shadow Ash", "hex": "#6B6B6B"},
+        {"name": "Red", "hex": "#CC2020"},
+        {"name": "Green", "hex": "#2A5A2A"},
+        {"name": "Black", "hex": "#1A1A1A"}
       ],
       "technical_specifications": {
-        "engine_displacement_cc": 452,
-        "max_power_bhp": 39.47,
-        "max_torque_nm": 40,
-        "cooling": "Liquid-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 185,
-        "fuel_tank_litres": 11,
-        "top_speed_kmph": 140,
-        "mileage_kmpl": 29,
-        "emission_standard": "BS6 Phase 2B",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "features": [
-          "Alloy wheels",
-          "TFT display",
-          "LED lighting"
-        ]
+        "engine": "452 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "185 kg",
+        "fuel_tank_capacity": "11 L",
+        "seat_height": "780 mm"
       }
     },
     {
       "make": "Royal Enfield",
-      "model": "Scram 411",
-      "variant_name": "Scram 411 Graphite",
-      "price": "₹2,05,997",
-      "engine_displacement": "411 cc",
-      "mileage": "29.6 kmpl",
-      "max_power": "24.3 bhp",
-      "max_torque": "32 Nm",
+      "model": "Himalayan 450",
+      "variant_name": "Himalayan 450",
+      "price": "₹3,05,722",
+      "engine_displacement": "451.65 cc",
+      "mileage": "29 kmpl",
+      "max_power": "39.47 bhp",
+      "max_torque": "40 Nm",
+      "top_speed": "165 kmph",
       "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Royal Enfield Scram 411 is a scrambler-style motorcycle powered by a 411cc air-cooled engine delivering 24.3 bhp with ARAI-certified mileage of 29.6 kmpl. It features dual-channel ABS, disc brakes on both ends, and spoke wheels with tubed tyres for urban and mild off-road adventures.",
-      "features": [
-        "411cc single-cylinder air-cooled engine with 24.3 bhp",
-        "5-speed manual transmission",
-        "Dual-channel ABS with front and rear disc brakes",
-        "Telescopic front forks with 190mm travel",
-        "19-inch front and 17-inch rear spoke wheels",
-        "Semi-digital instrument cluster with mobile connectivity",
-        "15-litre fuel tank with 200mm ground clearance",
-        "Half-duplex split cradle frame",
-        "138 kmph top speed"
-      ],
+      "description": "The Royal Enfield Himalayan 450 is a premium adventure motorcycle with 452cc liquid-cooled engine, TFT display with navigation, spoke wheels, disc brakes with ABS, and 17L fuel tank for serious touring.",
+      "features": ["TFT Display with Navigation", "Spoke Wheels", "Disc Brakes with ABS", "Large 17L Tank", "Liquid-Cooled Engine", "Self Start"],
       "variants": [
-        {
-          "name": "Scram 411 Graphite",
-          "price": "₹2,05,997"
-        }
+        {"name": "Base", "price": "₹3,05,722"},
+        {"name": "Sherpa", "price": "₹3,15,000"},
+        {"name": "Pack", "price": "₹3,22,000"},
+        {"name": "Explore", "price": "₹3,29,000"},
+        {"name": "Summit", "price": "₹3,37,036"}
       ],
       "colors": [
-        "Graphite Yellow",
-        "Graphite Red",
-        "Graphite Blue",
-        "Skyline Blue",
-        "Blazing Black",
-        "Silver Spirit",
-        "White Flame"
+        {"name": "Kaza Brown", "hex": "#7A5A3A"},
+        {"name": "Slate Poppy Blue", "hex": "#1A4A8B"},
+        {"name": "Himalayan Salt", "hex": "#F0EDE8"},
+        {"name": "Kamet White", "hex": "#F5F5F0"},
+        {"name": "Hanle Black", "hex": "#1A1A1A"},
+        {"name": "Mana Black", "hex": "#2A2A2A"}
       ],
       "technical_specifications": {
-        "engine_displacement_cc": 411,
-        "max_power_bhp": 24.3,
-        "max_torque_nm": 32,
-        "cooling": "Air-cooled",
-        "cylinders": 1,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "5 Speed Manual",
-        "kerb_weight_kg": 185,
-        "fuel_tank_litres": 15,
-        "top_speed_kmph": 138,
-        "mileage_kmpl": 29.6,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS"
+        "engine": "451.65 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "196 kg",
+        "fuel_tank_capacity": "17 L",
+        "seat_height": "825 mm"
       }
     },
     {
       "make": "Royal Enfield",
       "model": "Interceptor 650",
-      "variant_name": "Interceptor 650 Standard",
+      "variant_name": "Interceptor 650",
       "price": "₹3,34,987",
       "engine_displacement": "648 cc",
-      "mileage": "23 kmpl",
+      "mileage": "24 kmpl",
       "max_power": "47 bhp",
-      "max_torque": "52.3 Nm",
+      "max_torque": "52 Nm",
+      "top_speed": "169 kmph",
       "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Royal Enfield Interceptor 650 is a retro-styled cruiser bike featuring a smooth 648cc parallel-twin engine, combining classic 1960s British design with modern engineering for both city and highway riding. It features a double-cradle frame developed with Harris Performance and comes equipped with Pirelli Phantom tyres.",
-      "features": [
-        "648cc BS6 Phase 2 parallel-twin engine with 47 bhp and 52 Nm torque",
-        "6-speed manual transmission with slip-assist clutch",
-        "Double-cradle frame developed with Harris Performance",
-        "Telescopic front forks and twin gas-charged rear shocks",
-        "Dual disc brakes with dual-channel ABS",
-        "13.7-litre fuel tank capacity",
-        "Pirelli Phantom tyres",
-        "Retro round headlamp design",
-        "804mm seat height",
-        "169 kmph top speed"
-      ],
+      "description": "The Royal Enfield Interceptor 650 is a retro roadster with 648cc parallel-twin engine, slip-assist clutch, Pirelli Phantom tyres, twin-pod analog cluster, and classic 1960s British roadster design.",
+      "features": ["Slip and Assist Clutch", "Pirelli Phantom Tyres", "Twin-Pod Analog Cluster", "Spoke Wheels", "Disc Brakes with ABS", "Self Start"],
       "variants": [
-        {
-          "name": "Interceptor 650 Standard",
-          "price": "₹3,34,987"
-        },
-        {
-          "name": "Interceptor 650 Custom",
-          "price": "₹3,50,000"
-        },
-        {
-          "name": "Interceptor 650 Alloy Wheel",
-          "price": "₹3,55,000"
-        },
-        {
-          "name": "Interceptor 650 Chrome",
-          "price": "₹3,65,924"
-        }
+        {"name": "Standard", "price": "₹3,34,987"},
+        {"name": "Chrome", "price": "₹3,47,000"},
+        {"name": "Mark 2", "price": "₹3,56,000"},
+        {"name": "Special Edition", "price": "₹3,65,924"}
       ],
       "colors": [
-        "Cali Green",
-        "Canyon Red",
-        "Sunset Strip",
-        "Mark 2",
-        "Barcelona Blue",
-        "Black Ray"
+        {"name": "Cali Green", "hex": "#2A5A2A"},
+        {"name": "Canyon Red", "hex": "#CC2020"},
+        {"name": "Sunset Strip", "hex": "#E8600A"},
+        {"name": "Mark 2", "hex": "#1A1A1A"},
+        {"name": "Barcelona Blue", "hex": "#1A4A8B"},
+        {"name": "Black Ray", "hex": "#2A2A2A"}
       ],
       "technical_specifications": {
-        "engine_displacement_cc": 648,
-        "max_power_bhp": 47,
-        "max_torque_nm": 52,
-        "cooling": "Air-oil cooled",
-        "cylinders": 2,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 218,
-        "fuel_tank_litres": 13.7,
-        "top_speed_kmph": 169,
-        "mileage_kmpl": 23,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "features": [
-          "Parallel-twin engine",
-          "Slip-assist clutch",
-          "Retro design"
-        ]
+        "engine": "648 cc, Parallel-Twin, BS6 Phase 2",
+        "cooling": "Air-Oil Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "suspension_front": "Telescopic Forks",
+        "suspension_rear": "Twin Gas-Charged Shocks",
+        "kerb_weight": "218 kg",
+        "fuel_tank_capacity": "13.7 L",
+        "seat_height": "804 mm"
       }
     },
     {
       "make": "Royal Enfield",
       "model": "Continental GT 650",
-      "variant_name": "Continental GT 650 Standard",
+      "variant_name": "Continental GT 650",
       "price": "₹3,52,686",
       "engine_displacement": "648 cc",
       "mileage": "25 kmpl",
       "max_power": "47 bhp",
-      "max_torque": "52.3 Nm",
+      "max_torque": "52 Nm",
+      "top_speed": "169 kmph",
       "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Royal Enfield Continental GT 650 is a café racer motorcycle featuring a 648cc parallel-twin engine delivering refined performance ideal for highway cruising and spirited rides with its classic retro styling. It offers spoke wheels, 12.5-litre fuel tank, and a top speed of 169 kmph.",
-      "features": [
-        "648cc BS6 Phase 2 parallel-twin engine with 47 bhp and 52 Nm torque",
-        "6-speed manual transmission",
-        "Disc brakes front and rear with dual-channel ABS",
-        "Spoke-type wheels with self-start",
-        "12.5-litre fuel tank capacity",
-        "25 kmpl owner-reported mileage",
-        "211 kg kerb weight",
-        "804mm seat height",
-        "169 kmph top speed",
-        "Classic café racer ergonomics"
-      ],
+      "description": "The Royal Enfield Continental GT 650 is a classic cafe racer with 648cc parallel-twin engine, clip-ons, rear-set footpegs, sculpted tank, spoke wheels, and ABS disc brakes.",
+      "features": ["Clip-on Handlebars", "Rear-Set Footpegs", "Spoke Wheels", "Disc Brakes with ABS", "Slip and Assist Clutch", "Self Start"],
       "variants": [
-        {
-          "name": "Continental GT 650 Standard",
-          "price": "₹3,52,686"
-        },
-        {
-          "name": "Continental GT 650 Alloy Wheel",
-          "price": "₹3,76,527"
-        },
-        {
-          "name": "Continental GT 650 Chrome",
-          "price": "₹3,81,420"
-        }
+        {"name": "Standard", "price": "₹3,52,686"},
+        {"name": "Chrome", "price": "₹3,65,000"},
+        {"name": "Special Edition", "price": "₹3,81,420"}
       ],
       "colors": [
-        "British Racing Green",
-        "Rocker Red",
-        "Mr Clean",
-        "Apex Grey",
-        "Slipstream Blue"
+        {"name": "British Racing Green", "hex": "#1A4A1A"},
+        {"name": "Rocker Red", "hex": "#CC2020"},
+        {"name": "Mr Clean", "hex": "#F5F5F0"},
+        {"name": "Apex Grey", "hex": "#6B6B6B"},
+        {"name": "Slipstream Blue", "hex": "#1A4A8B"}
       ],
       "technical_specifications": {
-        "engine_displacement_cc": 648,
-        "max_power_bhp": 47,
-        "max_torque_nm": 52,
-        "cooling": "Air-oil cooled",
-        "cylinders": 2,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 211,
-        "fuel_tank_litres": 12.5,
-        "top_speed_kmph": 169,
-        "mileage_kmpl": 25,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "features": [
-          "Cafe racer design",
-          "Spoke wheels",
-          "Slip-assist clutch"
-        ]
-      }
-    },
-    {
-      "make": "Royal Enfield",
-      "model": "Super Meteor 650",
-      "variant_name": "Super Meteor 650 Astral",
-      "price": "₹4,02,945",
-      "engine_displacement": "648 cc",
-      "mileage": "23.7 kmpl",
-      "max_power": "46.3 bhp",
-      "max_torque": "52.3 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Royal Enfield Super Meteor 650 is a cruiser bike powered by a 648cc parallel-twin engine that delivers smooth, refined performance suitable for long-distance touring and highway riding. It features alloy wheels, a 15.7-litre fuel tank, and a relaxed 740mm seat height for cruiser comfort.",
-      "features": [
-        "648cc BS6 Phase 2 parallel-twin engine with 46.3 bhp and 52.3 Nm torque",
-        "6-speed manual transmission",
-        "Dual disc brakes with dual-channel ABS",
-        "Alloy wheels",
-        "15.7-litre fuel tank capacity",
-        "23.7 kmpl ARAI mileage",
-        "Relaxed cruiser seating with 740mm seat height",
-        "241 kg kerb weight",
-        "150 kmph top speed",
-        "Self-start ignition"
-      ],
-      "variants": [
-        {
-          "name": "Super Meteor 650 Astral",
-          "price": "₹4,02,945"
-        },
-        {
-          "name": "Super Meteor 650 Interstellar",
-          "price": "₹4,19,804"
-        },
-        {
-          "name": "Super Meteor 650 Celestial",
-          "price": "₹4,36,663"
-        }
-      ],
-      "colors": [
-        "Astral Green",
-        "Astral Black",
-        "Interstellar Grey",
-        "Interstellar Green",
-        "Celestial Blue",
-        "Celestial Red"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 648,
-        "max_power_bhp": 46.3,
-        "max_torque_nm": 52.3,
-        "cooling": "Air-oil cooled",
-        "cylinders": 2,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 241,
-        "fuel_tank_litres": 15.7,
-        "top_speed_kmph": 150,
-        "mileage_kmpl": 23.7,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "features": [
-          "Alloy wheels",
-          "Cruiser design",
-          "LED lighting"
-        ]
+        "engine": "648 cc, Parallel-Twin 270° Crank, BS6 Phase 2",
+        "cooling": "Air-Oil Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "211 kg",
+        "fuel_tank_capacity": "12.5 L",
+        "seat_height": "804 mm"
       }
     },
     {
       "make": "Royal Enfield",
       "model": "Shotgun 650",
-      "variant_name": "Shotgun 650 Custom Shed",
+      "variant_name": "Shotgun 650",
       "price": "₹3,97,997",
       "engine_displacement": "648 cc",
-      "mileage": "22 kmpl",
+      "mileage": "23 kmpl",
       "max_power": "46.39 bhp",
       "max_torque": "52.3 Nm",
+      "top_speed": "170 kmph",
       "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Royal Enfield Shotgun 650 is a cruiser bike featuring bold, custom-inspired bobber styling with a 648cc twin-cylinder engine that delivers smooth performance ideal for highway cruising and city riding. It features LED lighting, Tripper navigation, and alloy wheels with a 795mm seat height.",
-      "features": [
-        "648cc BS6 Phase 2 twin-cylinder engine with 46.39 bhp and 52.3 Nm torque",
-        "6-speed manual transmission",
-        "Front and rear disc brakes with dual-channel ABS",
-        "LED lighting with semi-digital instrument cluster",
-        "Tripper navigation",
-        "Alloy wheels",
-        "13.8-litre fuel tank capacity",
-        "23.72 kmpl expert-reported mileage",
-        "795mm seat height",
-        "240 kg kerb weight"
-      ],
+      "description": "The Royal Enfield Shotgun 650 is a bobber-style cruiser with 648cc parallel-twin engine, LED lighting, Tripper navigation, USB charging, and semi-digital instrument cluster.",
+      "features": ["LED Lighting", "Tripper Navigation", "USB Charging", "Semi-Digital Cluster", "Disc Brakes with ABS", "Self Start"],
       "variants": [
-        {
-          "name": "Shotgun 650 Custom Shed",
-          "price": "₹3,97,997"
-        },
-        {
-          "name": "Shotgun 650 Custom Pro",
-          "price": "₹4,10,988"
-        },
-        {
-          "name": "Shotgun 650 Custom Special",
-          "price": "₹4,24,758"
-        },
-        {
-          "name": "Shotgun 650 Custom Premium",
-          "price": "₹4,40,000"
-        }
+        {"name": "Standard", "price": "₹3,97,997"},
+        {"name": "Special", "price": "₹4,20,000"},
+        {"name": "Limited", "price": "₹4,40,000"}
       ],
       "colors": [
-        "Sheetmetal Grey",
-        "Plasma Blue",
-        "Green Drill",
-        "Stencil White"
+        {"name": "Sheetmetal Grey", "hex": "#6B6B6B"},
+        {"name": "Plasma Blue", "hex": "#1A4A8B"},
+        {"name": "Green Drill", "hex": "#2A5A2A"},
+        {"name": "Stencil White", "hex": "#F5F5F0"}
       ],
       "technical_specifications": {
-        "engine_displacement_cc": 648,
-        "max_power_bhp": 46.39,
-        "max_torque_nm": 52.3,
-        "cooling": "Air-oil cooled",
-        "cylinders": 2,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 240,
-        "fuel_tank_litres": 13.8,
-        "top_speed_kmph": 170,
-        "mileage_kmpl": 22,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "features": [
-          "LED lighting",
-          "Semi-digital instrument cluster",
-          "Tripper navigation",
-          "USB charging",
-          "Customisation options"
-        ]
+        "engine": "648 cc, Parallel-Twin, BS6 Phase 2",
+        "cooling": "Air-Oil Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "240 kg",
+        "fuel_tank_capacity": "13.8 L",
+        "seat_height": "795 mm"
+      }
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Super Meteor 650",
+      "variant_name": "Super Meteor 650",
+      "price": "₹4,02,945",
+      "engine_displacement": "648 cc",
+      "mileage": "25 kmpl",
+      "max_power": "46.3 bhp",
+      "max_torque": "52.3 Nm",
+      "top_speed": "150 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Royal Enfield Super Meteor 650 is a premium cruiser with 648cc parallel-twin engine, dual-channel ABS, alloy wheels, 15.7L fuel tank, and ultra-low 740mm seat height for relaxed touring.",
+      "features": ["Dual Channel ABS", "Alloy Wheels", "Large 15.7L Fuel Tank", "Ultra-Low Seat", "Slip and Assist Clutch", "Self Start"],
+      "variants": [
+        {"name": "Astral", "price": "₹4,02,945"},
+        {"name": "Interstellar", "price": "₹4,18,000"},
+        {"name": "Celestial", "price": "₹4,25,000"},
+        {"name": "Special Edition", "price": "₹4,36,663"}
+      ],
+      "colors": [
+        {"name": "Astral Green", "hex": "#2A5A2A"},
+        {"name": "Astral Black", "hex": "#1A1A1A"},
+        {"name": "Interstellar Grey", "hex": "#6B6B6B"},
+        {"name": "Interstellar Green", "hex": "#2A4A2A"},
+        {"name": "Celestial Blue", "hex": "#1A4A8B"},
+        {"name": "Celestial Red", "hex": "#CC2020"}
+      ],
+      "technical_specifications": {
+        "engine": "648 cc, Parallel-Twin, BS6 Phase 2",
+        "cooling": "Air-Oil Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "241 kg",
+        "fuel_tank_capacity": "15.7 L",
+        "seat_height": "740 mm"
       }
     },
     {
       "make": "Royal Enfield",
       "model": "Classic 650",
-      "variant_name": "Classic 650 Hotrod",
+      "variant_name": "Classic 650",
       "price": "₹3,64,838",
-      "engine_displacement": "648 cc",
-      "mileage": "26 kmpl",
+      "engine_displacement": "647.95 cc",
+      "mileage": "25.5 kmpl",
       "max_power": "46.39 bhp",
       "max_torque": "52.3 Nm",
+      "top_speed": "157 kmph",
       "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
+      "description": "The Royal Enfield Classic 650 is a premium retro motorcycle with 648cc parallel-twin engine, dual-channel ABS, spoke wheels with tube tyres, chrome detailing, and classic styling.",
+      "features": ["Dual Channel ABS", "Spoke Wheels", "Chrome Detailing", "Classic Styling", "Self Start"],
       "variants": [
-        {
-          "name": "Classic 650 Hotrod",
-          "price": "₹3,64,838"
-        },
-        {
-          "name": "Classic 650 Classic",
-          "price": "₹3,69,771"
-        },
-        {
-          "name": "Classic 650 Chrome",
-          "price": "₹3,80,259"
-        },
-        {
-          "name": "Classic 650 Premium",
-          "price": "₹3,90,000"
-        }
+        {"name": "Standard", "price": "₹3,64,838"},
+        {"name": "Chrome", "price": "₹3,75,000"},
+        {"name": "Special", "price": "₹3,82,000"},
+        {"name": "Limited", "price": "₹3,90,000"}
       ],
       "colors": [
-        "Vallam Red",
-        "Bruntingthorpe Blue",
-        "Teal",
-        "Black Chrome"
+        {"name": "Vallam Red", "hex": "#A52020"},
+        {"name": "Bruntingthorpe Blue", "hex": "#1A3A6B"},
+        {"name": "Teal", "hex": "#2A7A7A"},
+        {"name": "Black Chrome", "hex": "#2A2A2A"}
       ],
       "technical_specifications": {
-        "engine_displacement_cc": 648,
-        "max_power_bhp": 46.39,
-        "max_torque_nm": 52.3,
-        "cooling": "Air-oil cooled",
-        "cylinders": 2,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 243,
-        "fuel_tank_litres": 14.7,
-        "top_speed_kmph": 157,
-        "mileage_kmpl": 26,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "features": [
-          "Classic styling",
-          "Spoke wheels",
-          "Upright seating posture"
-        ]
-      },
-      "description": "The Royal Enfield Classic 650 is the iconic twin-cylinder cruiser that blends timeless British heritage with modern engineering. Powered by a 648cc parallel-twin engine, it produces smooth, torquey power perfect for long-distance touring. The Classic 650 features premium components including dual channel ABS, Tripper navigation, and a refined chassis that offers unmatched riding comfort in the retro-cruiser segment.",
-      "features": [
-        "648cc Parallel Twin Engine",
-        "Dual Channel ABS",
-        "Tripper Navigation",
-        "USB-C Charging",
-        "Slipper Clutch",
-        "Classic Styling",
-        "Twin Exhaust",
-        "Long Distance Comfort"
-      ]
-    },
-    {
-      "make": "Royal Enfield",
-      "model": "Bear 650",
-      "variant_name": "Bear 650 Broadwalk White",
-      "price": "₹3,75,374",
-      "engine_displacement": "648 cc",
-      "mileage": "22 kmpl",
-      "max_power": "46.8 bhp",
-      "max_torque": "56.5 Nm",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "variants": [
-        {
-          "name": "Bear 650 Broadwalk White",
-          "price": "₹3,75,374"
-        },
-        {
-          "name": "Bear 650 Petrol Green and Wild Honey",
-          "price": "₹3,79,829"
-        },
-        {
-          "name": "Bear 650 Golden Shadow",
-          "price": "₹3,85,273"
-        },
-        {
-          "name": "Bear 650 Two Four Nine",
-          "price": "₹3,97,518"
-        }
-      ],
-      "colors": [
-        "Boardwalk White",
-        "Wild Honey",
-        "Petrol Green",
-        "Golden Shadow",
-        "Two Four Nine"
-      ],
-      "technical_specifications": {
-        "engine_displacement_cc": 648,
-        "max_power_bhp": 46.8,
-        "max_torque_nm": 56.5,
-        "cooling": "Air-oil cooled",
-        "cylinders": 2,
-        "fuel_system": "Fuel Injection",
-        "gearbox": "6 Speed Manual",
-        "kerb_weight_kg": 216,
-        "fuel_tank_litres": 13.7,
-        "top_speed_kmph": 165,
-        "mileage_kmpl": 22,
-        "emission_standard": "BS6 Phase 2",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Dual-channel ABS",
-        "seat_height_mm": 830,
-        "features": [
-          "Scrambler design",
-          "Spoke wheels with dual-purpose tyres",
-          "Improved suspension",
-          "Versatile off-road capability"
-        ]
-      },
-      "description": "The Royal Enfield Bear 650 is a neo-retro scrambler powered by the acclaimed 648cc parallel-twin engine. Designed for urban adventures and weekend escapes, it combines aggressive scrambler styling with the power and refinement of the twin-cylinder motor. The Bear 650 features wire-spoke wheels, high-mounted exhausts, and premium suspension for a capable yet characterful riding experience.",
-      "features": [
-        "648cc Parallel Twin Engine",
-        "Dual Channel ABS",
-        "Tripper Navigation",
-        "Spoke Wheels",
-        "High-Mount Exhaust",
-        "Scrambler Styling",
-        "USB-C Charging",
-        "Slipper Clutch"
-      ]
+        "engine": "647.95 cc, Parallel-Twin, BS6 Phase 2B",
+        "cooling": "Air-Oil Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "243 kg",
+        "fuel_tank_capacity": "14.7 L",
+        "seat_height": "800 mm"
+      }
     }
   ]
 }

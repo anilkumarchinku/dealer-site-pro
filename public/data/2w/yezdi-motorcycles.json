@@ -2,300 +2,124 @@
   "brand": "Yezdi",
   "brandId": "yezdi-motorcycles",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Yezdi",
+      "model": "Scrambler",
+      "variant_name": "Scrambler",
+      "price": "₹1,97,499",
+      "engine_displacement": "334 cc",
+      "mileage": "26 kmpl",
+      "max_power": "28.7 bhp",
+      "max_torque": "28.2 Nm",
+      "top_speed": "140 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Yezdi Scrambler is a retro-inspired scrambler motorcycle revived by Classic Legends (Mahindra), powered by a 334cc liquid-cooled engine, disc brakes with ABS, spoke wheels, and flat handlebar ergonomics suited for both on-road and light off-road riding.",
+      "features": ["Disc Brakes Front & Rear", "ABS", "Spoke Wheels", "Flat Handlebar", "LED Headlamp", "Self Start"],
+      "variants": [
+        {"name": "Scrambler Standard", "price": "₹1,97,499"},
+        {"name": "Scrambler Dual Channel ABS", "price": "₹2,01,187"}
+      ],
+      "colors": [
+        {"name": "Mean Green", "hex": "#4CAF50"},
+        {"name": "Midnight Blue", "hex": "#1A4A8B"},
+        {"name": "Rebel Red", "hex": "#C41E3A"},
+        {"name": "Fire Orange", "hex": "#E8600A"},
+        {"name": "Bold Black", "hex": "#1A1A1A"},
+        {"name": "Outlaw Olive", "hex": "#556B2F"},
+        {"name": "Yelling Yellow", "hex": "#FFD700"}
+      ],
+      "technical_specifications": {
+        "engine": "334 cc, Single Cylinder, BS6 Phase 2",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "192 kg",
+        "fuel_tank_capacity": "12.5 L",
+        "seat_height": "800 mm"
+      }
+    },
+    {
+      "make": "Yezdi",
       "model": "Roadster",
       "variant_name": "Roadster",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹1,98,916",
+      "engine_displacement": "334 cc",
+      "mileage": "30 kmpl",
+      "max_power": "28.7 bhp",
+      "max_torque": "28.2 Nm",
+      "top_speed": "140 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Yezdi Roadster is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Yezdi Roadster is a classic roadster motorcycle with 334cc engine, upright riding position, alloy wheels, and timeless cruiser-style design. It targets riders who want a retro-modern roadster at an accessible price.",
+      "features": ["Disc Brakes Front & Rear", "ABS", "Alloy Wheels", "Upright Riding Position", "LED Headlamp", "Self Start"],
       "variants": [
-        {
-          "name": "Sharkskin Blue",
-          "price": "N/A"
-        },
-        {
-          "name": "Smoke Grey",
-          "price": "N/A"
-        },
-        {
-          "name": "Bloodrush Maroon",
-          "price": "N/A"
-        },
-        {
-          "name": "Savage Green",
-          "price": "N/A"
-        },
-        {
-          "name": "Red Wolf",
-          "price": "N/A"
-        },
-        {
-          "name": "Shadow Black",
-          "price": "N/A"
-        }
+        {"name": "Roadster Standard", "price": "₹1,98,916"},
+        {"name": "Roadster Dual Channel ABS", "price": "₹2,07,000"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Gloss Black", "hex": "#1A1A1A"},
+        {"name": "Gloss Red", "hex": "#C41E3A"},
+        {"name": "Gloss Blue", "hex": "#1A4A8B"},
+        {"name": "Matte Grey", "hex": "#6B6B6B"},
+        {"name": "Matte White", "hex": "#F0F0F0"}
+      ],
+      "technical_specifications": {
+        "engine": "334 cc, Single Cylinder, BS6 Phase 2",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "194 kg",
+        "fuel_tank_capacity": "14.5 L",
+        "seat_height": "795 mm"
+      }
     },
     {
       "make": "Yezdi",
       "model": "Adventure",
       "variant_name": "Adventure",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹2,00,108",
+      "engine_displacement": "334 cc",
+      "mileage": "31 kmpl",
+      "max_power": "29.16 bhp",
+      "max_torque": "29.56 Nm",
+      "top_speed": "140 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Yezdi Adventure is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Forest Green White",
-          "price": "N/A"
-        },
-        {
-          "name": "Khaki White and Nebula Blue White",
-          "price": "N/A"
-        },
-        {
-          "name": "Tornado Black",
-          "price": "N/A"
-        },
-        {
-          "name": "Grey Black and Gloss White",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yezdi",
-      "model": "Scrambler",
-      "variant_name": "Scrambler",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Yezdi Scrambler is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Single Tone - Bold Black - Yelling Yellow - Outlaw Olive",
-          "price": "N/A"
-        },
-        {
-          "name": "Single Tone - Fire Orange",
-          "price": "N/A"
-        },
-        {
-          "name": "Dual Tone",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yezdi",
-      "model": "Roadking",
-      "variant_name": "Roadking",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Yezdi Roadking is a two-wheeler available in India.",
-      "features": [],
+      "description": "The Yezdi Adventure is a mid-range adventure motorcycle with 334cc BS6 Phase 2B engine, 29.16 bhp, spoke wheels, long-travel suspension, 15.5L fuel tank, and off-road friendly ergonomics. It is the most fuel-efficient Yezdi model at 31 kmpl.",
+      "features": ["Long-travel Suspension", "Spoke Wheels", "Disc Brakes", "ABS", "15.5L Fuel Tank", "LED Headlamp", "Self Start"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Adventure Standard", "price": "₹2,00,108"},
+        {"name": "Adventure Dual Channel ABS", "price": "₹2,05,800"},
+        {"name": "Adventure STD BS6 Phase 2B", "price": "₹2,08,500"},
+        {"name": "Adventure Top Variant", "price": "₹2,11,200"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yezdi",
-      "model": "Streetfighter",
-      "variant_name": "Streetfighter",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yezdi Streetfighter is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Forest Green White", "hex": "#2D6A4F"},
+        {"name": "Nebula Blue White", "hex": "#1A4A8B"},
+        {"name": "Khaki White", "hex": "#9B9B6F"},
+        {"name": "Gloss White", "hex": "#F5F5F0"},
+        {"name": "Grey Black", "hex": "#2A2A2A"},
+        {"name": "Matt Black", "hex": "#1A1A1A"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yezdi",
-      "model": "Scrambler [2026]",
-      "variant_name": "Scrambler [2026]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yezdi Scrambler [2026] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yezdi",
-      "model": "Roadster [2024]",
-      "variant_name": "Roadster [2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yezdi Roadster [2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Dark Smoke Grey - Inferno Red - Glacial White [2022]",
-          "price": "N/A"
-        },
-        {
-          "name": "Dark - Steel Blue",
-          "price": "N/A"
-        },
-        {
-          "name": "Dark - Hunter Green and Shadow Grey",
-          "price": "N/A"
-        },
-        {
-          "name": "Chrome - Gallant Grey",
-          "price": "N/A"
-        },
-        {
-          "name": "Chrome - Sin Silver",
-          "price": "N/A"
-        },
-        {
-          "name": "Crimson Dual Tone 2022]",
-          "price": "N/A"
-        },
-        {
-          "name": "Dark - Smoke Grey and Glacial White",
-          "price": "N/A"
-        },
-        {
-          "name": "Dual Tone",
-          "price": "N/A"
-        },
-        {
-          "name": "Dark - Inferno Red",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yezdi",
-      "model": "Adventure [2024]",
-      "variant_name": "Adventure [2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yezdi Adventure [2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Slick Silver [2022]",
-          "price": "N/A"
-        },
-        {
-          "name": "Mambo Black [2022]",
-          "price": "N/A"
-        },
-        {
-          "name": "Ranger Camo",
-          "price": "N/A"
-        },
-        {
-          "name": "Gloss Whiteout [2022]",
-          "price": "N/A"
-        },
-        {
-          "name": "Slick Silver",
-          "price": "N/A"
-        },
-        {
-          "name": "Mambo Black",
-          "price": "N/A"
-        },
-        {
-          "name": "Whiteout",
-          "price": "N/A"
-        },
-        {
-          "name": "Magnite Maroon and Tornado Black",
-          "price": "N/A"
-        },
-        {
-          "name": "Gloss - Glacier White",
-          "price": "N/A"
-        },
-        {
-          "name": "Gloss - Wolf Grey",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "engine": "334 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "187 kg",
+        "fuel_tank_capacity": "15.5 L",
+        "seat_height": "815 mm"
+      }
     }
   ]
 }

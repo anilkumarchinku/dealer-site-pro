@@ -2,54 +2,76 @@
   "brand": "VLF",
   "brandId": "vlf",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "VLF",
-      "model": "Mobster",
-      "variant_name": "Mobster",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "model": "Tennis 1500",
+      "variant_name": "Tennis 1500",
+      "price": "₹1,00,038",
+      "engine_displacement": "N/A",
+      "mileage": "130 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The VLF Mobster is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "top_speed": "65 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The VLF Tennis 1500 is an affordable electric scooter from Italian brand VLF with 130km range, 65 kmph top speed, and 3-hour charging. The brand positions itself with vintage Italian styling.",
+      "features": ["LED Headlamp", "Digital Display", "USB Charging"],
+      "variants": [{"name": "Tennis 1500 Standard", "price": "₹1,00,038"}],
+      "colors": [
+        {"name": "White", "hex": "#F5F5F0"},
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "Red", "hex": "#C41E3A"},
+        {"name": "Blue", "hex": "#1A4A8B"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "130 km",
+        "charging_time": "3 hrs",
+        "top_speed": "65 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "88 kg",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "VLF",
-      "model": "Tennis 1500",
-      "variant_name": "Tennis 1500",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "model": "Mobster",
+      "variant_name": "Mobster",
+      "price": "₹1,30,000",
+      "engine_displacement": "125 cc",
+      "mileage": "42 kmpl",
+      "max_power": "11.93 bhp",
       "max_torque": "N/A",
-      "top_speed": "65 kmph",
+      "top_speed": "90 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The VLF Tennis 1500 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The VLF Mobster is a 125cc petrol scooter from Italian brand VLF with vintage-inspired styling, 42 kmpl mileage, and 11.93 bhp power. It blends Italian design with practical commuting.",
+      "features": ["LED Headlamp", "Self Start", "Digital Display", "Vintage Italian Styling"],
+      "variants": [{"name": "Mobster Standard", "price": "₹1,30,000"}],
+      "colors": [
+        {"name": "Cream White", "hex": "#FEFAE0"},
+        {"name": "Matte Black", "hex": "#1A1A1A"},
+        {"name": "Italian Red", "hex": "#C41E3A"},
+        {"name": "Olive Green", "hex": "#556B2F"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "engine": "125 cc, Single Cylinder",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "122 kg",
+        "fuel_tank_capacity": "N/A",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

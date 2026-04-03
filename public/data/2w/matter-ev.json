@@ -2,35 +2,47 @@
   "brand": "Matter",
   "brandId": "matter-ev",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Matter",
       "model": "AERA",
       "variant_name": "AERA",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹1,82,784",
+      "engine_displacement": "N/A",
+      "mileage": "172 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
       "top_speed": "105 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Matter AERA is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "4-Speed Manual (Geared EV)",
+      "source_section": "Available",
+      "description": "The Matter AERA is India's first geared electric motorcycle from Ahmedabad-based Matter. It uniquely features a 4-speed gearbox in an electric motorcycle, 172km claimed range (110-120km real-world), 105 kmph top speed, and 6-hour charging. Available in 14 Indian cities.",
+      "features": ["India's First Geared EV", "4-Speed Manual Gearbox", "Disc Brakes Front & Rear", "ABS", "LED Headlamp", "Digital Display", "Multiple Ride Modes"],
       "variants": [
-        {
-          "name": "5000",
-          "price": "N/A"
-        },
-        {
-          "name": "5000+",
-          "price": "N/A"
-        }
+        {"name": "AERA 5000", "price": "₹1,82,784"},
+        {"name": "AERA 5000+", "price": "₹1,99,000"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Cosmic Black", "hex": "#1A1A1A"},
+        {"name": "Stellar Grey", "hex": "#6B6B6B"},
+        {"name": "Nexus Blue", "hex": "#1A4A8B"},
+        {"name": "Lava Red", "hex": "#C41E3A"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "172 km (claimed) / ~110 km (real-world)",
+        "charging_time": "6 hrs",
+        "top_speed": "105 kmph",
+        "transmission": "4-Speed Manual",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "168 kg",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

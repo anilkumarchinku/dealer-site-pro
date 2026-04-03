@@ -2,123 +2,136 @@
   "brand": "Brixton Motorcycles",
   "brandId": "brixton-motorcycles",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Brixton Motorcycles",
-      "model": "Crossfire 500 X",
-      "variant_name": "Crossfire 500 X",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "model": "Crossfire 500 XC",
+      "variant_name": "Crossfire 500 XC",
+      "price": "₹3,99,000",
+      "engine_displacement": "486 cc",
+      "mileage": "N/A",
+      "max_power": "46.9 bhp",
+      "max_torque": "43 Nm",
+      "top_speed": "165 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Brixton Motorcycles Crossfire 500 X is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Brixton Crossfire 500 XC is an entry-level 486cc roadster motorcycle from Austrian brand Brixton Motorcycles with 46.9 bhp, disc brakes, and classic British-inspired styling. Available at 5 Indian dealerships.",
+      "features": ["486cc Engine", "Disc Brakes", "ABS", "LED Headlamp", "Self Start"],
+      "variants": [{"name": "Crossfire 500 XC Standard", "price": "₹3,99,000"}],
+      "colors": [
+        {"name": "Chrome Black", "hex": "#1A1A1A"},
+        {"name": "Chrome Silver", "hex": "#C8C8C8"},
+        {"name": "British Racing Green", "hex": "#2D6A4F"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "engine": "486 cc, Parallel-Twin",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "195 kg",
+        "fuel_tank_capacity": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Brixton Motorcycles",
-      "model": "Crossfire 500 XC",
-      "variant_name": "Crossfire 500 XC",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "model": "Crossfire 500 X",
+      "variant_name": "Crossfire 500 X",
+      "price": "₹5,06,565",
+      "engine_displacement": "486 cc",
+      "mileage": "N/A",
+      "max_power": "46.9 bhp",
+      "max_torque": "43 Nm",
+      "top_speed": "168 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Brixton Motorcycles Crossfire 500 XC is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Brixton Crossfire 500 X is the premium 486cc scrambler variant with 46.9 bhp, spoke wheels, and off-road inspired ergonomics for adventure touring.",
+      "features": ["486cc Engine", "Spoke Wheels", "Disc Brakes", "ABS", "LED Headlamp", "Self Start", "Adventure Ergonomics"],
+      "variants": [{"name": "Crossfire 500 X Standard", "price": "₹5,06,565"}],
+      "colors": [
+        {"name": "Khaki", "hex": "#9B9B6F"},
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "Sand", "hex": "#C2B280"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "engine": "486 cc, Parallel-Twin",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "190 kg",
+        "fuel_tank_capacity": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Brixton Motorcycles",
       "model": "Cromwell 1200",
       "variant_name": "Cromwell 1200",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹8,37,863",
+      "engine_displacement": "1222 cc",
+      "mileage": "N/A",
+      "max_power": "81.8 bhp",
+      "max_torque": "105 Nm",
+      "top_speed": "185 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Brixton Motorcycles Cromwell 1200 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Brixton Cromwell 1200 is a premium 1222cc cruiser motorcycle with 81.8 bhp, classic British cruiser styling, disc brakes with ABS, and comfortable long-distance touring ergonomics.",
+      "features": ["1222cc Engine", "Cruiser Styling", "Disc Brakes", "ABS", "LED Headlamp", "Self Start"],
+      "variants": [{"name": "Cromwell 1200 Standard", "price": "₹8,37,863"}],
+      "colors": [
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Chrome Silver", "hex": "#C8C8C8"},
+        {"name": "British Racing Green", "hex": "#2D6A4F"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "engine": "1222 cc, Parallel-Twin",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "235 kg",
+        "fuel_tank_capacity": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Brixton Motorcycles",
       "model": "Cromwell 1200 X",
       "variant_name": "Cromwell 1200 X",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹9,72,519",
+      "engine_displacement": "1222 cc",
+      "mileage": "N/A",
+      "max_power": "81.8 bhp",
+      "max_torque": "105 Nm",
+      "top_speed": "185 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Brixton Motorcycles Cromwell 1200 X is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Brixton Motorcycles",
-      "model": "Crossfire 500 Storr",
-      "variant_name": "Crossfire 500 Storr",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Brixton Motorcycles Crossfire 500 Storr is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "description": "The Brixton Cromwell 1200 X is the flagship 1222cc cruiser with additional premium features, spoke wheels, and adventure-ready ergonomics. The most expensive Brixton model at ₹9,72,519.",
+      "features": ["1222cc Engine", "Spoke Wheels", "Disc Brakes", "ABS", "LED Headlamp", "Self Start", "Premium Finish"],
+      "variants": [{"name": "Cromwell 1200 X Standard", "price": "₹9,72,519"}],
+      "colors": [
+        {"name": "Chrome Black", "hex": "#1A1A1A"},
+        {"name": "Sand", "hex": "#C2B280"},
+        {"name": "British Green", "hex": "#2D6A4F"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "engine": "1222 cc, Parallel-Twin",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "235 kg",
+        "fuel_tank_capacity": "N/A",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

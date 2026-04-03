@@ -1,484 +1,247 @@
 {
-  "brand": "OLA",
+  "brand": "OLA Electric",
   "brandId": "ola-electric",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "OLA",
+      "make": "OLA Electric",
       "model": "S1 X",
       "variant_name": "S1 X",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹89,957",
+      "engine_displacement": "N/A",
+      "mileage": "108 km (range)",
+      "max_power": "7 kW",
       "max_torque": "N/A",
       "top_speed": "101 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The OLA S1 X is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Ola S1 X is an affordable entry-level electric scooter starting at ₹89,957 with 108km ARAI range, 101 kmph top speed, 7kW motor, and 5-hour charging. It offers a practical and economical EV option for daily commuters.",
+      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Reverse Mode", "Multiple Ride Modes", "Self Start"],
       "variants": [
-        {
-          "name": "2 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "3 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "4 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "Plus",
-          "price": "N/A"
-        }
+        {"name": "S1 X 2 kWh", "price": "₹89,957"},
+        {"name": "S1 X 3 kWh", "price": "₹1,04,806"},
+        {"name": "S1 X 4 kWh", "price": "₹1,14,806"},
+        {"name": "S1 X Plus", "price": "₹1,24,806"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Liquid Silver", "hex": "#C8C8C8"},
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Pearl White", "hex": "#F5F5F0"},
+        {"name": "Neo Mint", "hex": "#B2D8C8"},
+        {"name": "Coral Glam", "hex": "#D94F3D"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "5.5 kW rated / 7 kW peak",
+        "battery": "2 kWh / 3 kWh / 4 kWh",
+        "range": "108 km (ARAI, 4 kWh variant)",
+        "charging_time": "5 hrs (standard charger)",
+        "top_speed": "101 kmph",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "105 kg",
+        "seat_height": "N/A"
+      }
     },
     {
-      "make": "OLA",
+      "make": "OLA Electric",
       "model": "S1 Pro",
       "variant_name": "S1 Pro",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹1,29,863",
+      "engine_displacement": "N/A",
+      "mileage": "176 km (range)",
+      "max_power": "11 kW",
       "max_torque": "N/A",
       "top_speed": "117 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The OLA S1 Pro is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Ola S1 Pro is a premium electric scooter with 176km range, 117 kmph top speed, 11kW peak power, dual disc brakes, 7-inch touchscreen, MoveOS, and over-the-air updates. It is the flagship scooter from Ola Electric.",
+      "features": ["7-inch Touchscreen", "MoveOS", "OTA Updates", "Multiple Ride Modes", "Disc Brake Front", "Disc Brake Rear", "LED Headlamp", "USB Charging", "Reverse Mode", "Bluetooth Connectivity"],
       "variants": [
-        {
-          "name": "3 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "4 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "Sport",
-          "price": "N/A"
-        },
-        {
-          "name": "Plus 4 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "Plus 5.2 kWh",
-          "price": "N/A"
-        }
+        {"name": "S1 Pro 4 kWh", "price": "₹1,29,863"},
+        {"name": "S1 Pro 5.3 kWh", "price": "₹1,44,972"},
+        {"name": "S1 Pro 6.3 kWh", "price": "₹1,59,963"},
+        {"name": "S1 Pro Plus 8.5 kWh", "price": "₹1,74,976"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Pearl White", "hex": "#F5F5F0"},
+        {"name": "Liquid Silver", "hex": "#C8C8C8"},
+        {"name": "Neo Mint", "hex": "#B2D8C8"},
+        {"name": "Coral Glam", "hex": "#D94F3D"},
+        {"name": "Porcelain", "hex": "#E8E0D8"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "5.5 kW rated / 11 kW peak",
+        "battery": "4 kWh / 5.3 kWh / 6.3 kWh / 8.5 kWh",
+        "range": "176 km (ARAI)",
+        "charging_time": "6.5 hrs (standard charger)",
+        "top_speed": "117 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "kerb_weight": "109 kg",
+        "seat_height": "N/A"
+      }
     },
     {
-      "make": "OLA",
+      "make": "OLA Electric",
       "model": "Roadster",
       "variant_name": "Roadster",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹1,04,999",
+      "engine_displacement": "N/A",
+      "mileage": "151 km (range)",
+      "max_power": "13 kW",
       "max_torque": "N/A",
       "top_speed": "116 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The OLA Roadster is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Ola Roadster is an electric motorcycle with 13kW peak power, 151km base range, 116 kmph top speed, dual disc brakes with ABS, 7-inch TFT display, MoveOS, and sporty design. It marks Ola Electric's entry into the electric motorcycle segment.",
+      "features": ["7-inch TFT Display", "MoveOS", "Dual Disc Brakes", "ABS", "OTA Updates", "Multiple Ride Modes", "LED Lighting", "USB Charging", "Bluetooth Connectivity"],
       "variants": [
-        {
-          "name": "3.5 kwh",
-          "price": "N/A"
-        },
-        {
-          "name": "4.5 kwh",
-          "price": "N/A"
-        },
-        {
-          "name": "6 kwh",
-          "price": "N/A"
-        }
+        {"name": "Roadster 3.5 kWh", "price": "₹1,04,999"},
+        {"name": "Roadster 4.5 kWh", "price": "₹1,24,999"},
+        {"name": "Roadster 5.6 kWh", "price": "₹1,39,999"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Pearl White", "hex": "#F5F5F0"},
+        {"name": "Industrial Silver", "hex": "#C8C8C8"},
+        {"name": "Pine Green", "hex": "#2D6A4F"},
+        {"name": "Stellar Blue", "hex": "#1A4A8B"}
+      ],
+      "technical_specifications": {
+        "motor": "Mid-drive PMSM Motor",
+        "motor_power": "13 kW peak",
+        "battery": "3.5 kWh / 4.5 kWh / 5.6 kWh",
+        "range": "151 km base / 249 km (top variant)",
+        "charging_time": "7.9 hrs (standard charger)",
+        "top_speed": "116 kmph",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
-      "make": "OLA",
+      "make": "OLA Electric",
       "model": "Roadster X",
       "variant_name": "Roadster X",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹1,04,480",
+      "engine_displacement": "N/A",
+      "mileage": "140 km (range)",
+      "max_power": "7 kW",
       "max_torque": "N/A",
       "top_speed": "105 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The OLA Roadster X is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Ola Roadster X is an entry-level electric motorcycle with 7kW motor, 140km range, 105 kmph top speed, combined braking system, and sporty styling at an accessible price starting at ₹1,04,480.",
+      "features": ["LED Lighting", "Digital Display", "USB Charging", "Combined Braking System", "Multiple Ride Modes", "Reverse Mode"],
       "variants": [
-        {
-          "name": "2.5 kwh",
-          "price": "N/A"
-        },
-        {
-          "name": "3.5 kwh",
-          "price": "N/A"
-        },
-        {
-          "name": "4.5 kwh",
-          "price": "N/A"
-        }
+        {"name": "Roadster X 2 kWh", "price": "₹1,04,480"},
+        {"name": "Roadster X 3 kWh", "price": "₹1,16,830"},
+        {"name": "Roadster X 4 kWh", "price": "₹1,29,350"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Ceramic White", "hex": "#F5F5F0"},
+        {"name": "Pine Green", "hex": "#2D6A4F"},
+        {"name": "Stellar Blue", "hex": "#1A4A8B"},
+        {"name": "Anthracite", "hex": "#2A2A2A"},
+        {"name": "Industrial Silver", "hex": "#C8C8C8"}
+      ],
+      "technical_specifications": {
+        "motor": "Mid-drive PMSM Motor",
+        "motor_power": "7 kW peak",
+        "battery": "2 kWh / 3 kWh / 4 kWh",
+        "range": "140 km",
+        "charging_time": "5.9 hrs",
+        "top_speed": "105 kmph",
+        "brakes_front": "Drum with CBS",
+        "brakes_rear": "Drum with CBS",
+        "kerb_weight": "127 kg",
+        "seat_height": "777 mm"
+      }
     },
     {
-      "make": "OLA",
-      "model": "Roadster Pro",
-      "variant_name": "Roadster Pro",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "154 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The OLA Roadster Pro is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "8 kwh",
-          "price": "N/A"
-        },
-        {
-          "name": "16 kwh",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "OLA",
+      "make": "OLA Electric",
       "model": "Roadster X Plus",
       "variant_name": "Roadster X Plus",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹1,34,480",
+      "engine_displacement": "N/A",
+      "mileage": "252 km (range)",
+      "max_power": "11 kW",
       "max_torque": "N/A",
       "top_speed": "125 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The OLA Roadster X Plus is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Ola Roadster X Plus is a mid-range electric motorcycle with 11kW mid-drive motor, 252km range (top variant), 125 kmph top speed, front disc brake, and sporty design bridging the gap between Roadster X and Roadster.",
+      "features": ["Disc Brake Front", "Drum Brake Rear", "LED Lighting", "Digital Display", "USB Charging", "Multiple Ride Modes", "Combined Braking System"],
       "variants": [
-        {
-          "name": "4.5 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "9.1 kWh",
-          "price": "N/A"
-        }
+        {"name": "Roadster X Plus 4.5 kWh", "price": "₹1,34,480"},
+        {"name": "Roadster X Plus 11 kWh", "price": "₹1,89,999"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Industrial Silver", "hex": "#C8C8C8"},
+        {"name": "Anthracite", "hex": "#2A2A2A"},
+        {"name": "Stellar Blue", "hex": "#1A4A8B"},
+        {"name": "Pine Green", "hex": "#2D6A4F"},
+        {"name": "Ceramic White", "hex": "#F5F5F0"},
+        {"name": "Champions Edition", "hex": "#F5C518"}
+      ],
+      "technical_specifications": {
+        "motor": "Mid-drive PMSM Motor",
+        "motor_power": "11 kW peak",
+        "battery": "4.5 kWh / 11 kWh",
+        "range": "252 km (top variant)",
+        "charging_time": "N/A",
+        "top_speed": "125 kmph",
+        "brakes_front": "Disc with CBS",
+        "brakes_rear": "Drum with CBS",
+        "kerb_weight": "131.4 kg",
+        "seat_height": "777 mm"
+      }
     },
     {
-      "make": "OLA",
-      "model": "S1 Z",
-      "variant_name": "S1 Z",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "make": "OLA Electric",
+      "model": "Roadster Pro",
+      "variant_name": "Roadster Pro",
+      "price": "₹1,99,999",
+      "engine_displacement": "N/A",
+      "mileage": "316 km (range)",
+      "max_power": "52 kW",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
+      "top_speed": "154 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
-      "description": "The OLA S1 Z is a two-wheeler available in India.",
-      "features": [],
+      "description": "The Ola Roadster Pro is a flagship performance electric motorcycle with 52kW peak power, 316km range, 154 kmph top speed, dual disc brakes with ABS, fast 3.7-hour charging, and premium features. It is Ola Electric's most powerful and range-focused model.",
+      "features": ["Dual Disc Brakes", "ABS", "Fast Charging 3.7 hrs", "Multiple Ride Modes", "TFT Display", "OTA Updates", "LED Lighting", "USB Charging", "Bluetooth Connectivity"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Plus",
-          "price": "N/A"
-        }
+        {"name": "Roadster Pro Standard", "price": "₹1,99,999"},
+        {"name": "Roadster Pro Max", "price": "₹2,49,999"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "OLA",
-      "model": "S1 Air",
-      "variant_name": "S1 Air",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The OLA S1 Air is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "2 kWH",
-          "price": "N/A"
-        },
-        {
-          "name": "3 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "4 kWH",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Pro Black", "hex": "#1A1A1A"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "OLA",
-      "model": "S1 X Gen 2",
-      "variant_name": "S1 X Gen 2",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The OLA S1 X Gen 2 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "3 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "Plus 3 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "2 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "4 kWh",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "OLA",
-      "model": "S1 Pro Gen 2",
-      "variant_name": "S1 Pro Gen 2",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The OLA S1 Pro Gen 2 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "OLA",
-      "model": "Gig",
-      "variant_name": "Gig",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The OLA Gig is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "OLA",
-      "model": "Cruiser",
-      "variant_name": "Cruiser",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The OLA Cruiser is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "OLA",
-      "model": "Gig+",
-      "variant_name": "Gig+",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The OLA Gig+ is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "OLA",
-      "model": "Diamondhead",
-      "variant_name": "Diamondhead",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The OLA Diamondhead is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "OLA",
-      "model": "Adventure",
-      "variant_name": "Adventure",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The OLA Adventure is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "OLA",
-      "model": "Old Generation S1 2021",
-      "variant_name": "Old Generation S1 2021",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The OLA Old Generation S1 2021 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "2 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "3 kWh",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "OLA",
-      "model": "S1 Pro [2021-2023]",
-      "variant_name": "S1 Pro [2021-2023]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The OLA S1 Pro [2021-2023] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "Mid-drive PMSM Motor",
+        "motor_power": "52 kW peak",
+        "battery": "N/A",
+        "range": "316 km",
+        "charging_time": "3.7 hrs",
+        "top_speed": "154 kmph",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

@@ -2,7 +2,7 @@
   "brand": "Okaya EV",
   "brandId": "okaya-ev",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -10,7 +10,13 @@
       "model": "Faast F4",
       "variant_name": "Okaya EV Faast F4",
       "price": "₹99,990",
+      "engine_displacement": "N/A",
+      "mileage": "140 km (range)",
+      "max_power": "1.5 kW",
+      "max_torque": "45 Nm",
+      "top_speed": "65 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Okaya EV Faast F4 is a feature-rich electric scooter with 140 km range and connected features, designed for urban professionals seeking performance and smart technology under ₹1 lakh.",
       "features": [
@@ -22,26 +28,55 @@
         "Regenerative Braking",
         "Remote Diagnostics"
       ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "140 km",
-        "Battery Capacity": "2.5 kWh",
-        "Top Speed": "65 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "45 Nm",
-      "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
       "variants": [
-        { "name": "Faast F4", "price": "₹99,990" }
-      ]
+        {
+          "name": "Faast F4",
+          "price": "₹99,990"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Ocean Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Pearlescent White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Matte Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Cherry Red",
+          "hex": "#C41E3A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "1.5 kW",
+        "battery": "2.5 kWh",
+        "range": "140 km km",
+        "charging_time": "N/A",
+        "top_speed": "65 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Okaya EV",
       "model": "Faast F2B",
       "variant_name": "Okaya EV Faast F2B",
       "price": "₹89,990",
+      "engine_displacement": "N/A",
+      "mileage": "120 km (range)",
+      "max_power": "1.5 kW",
+      "max_torque": "45 Nm",
+      "top_speed": "60 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Okaya EV Faast F2B offers 120 km range at a budget price with essential smart features, making it a practical choice for daily commuters in metro and Tier-2 cities.",
       "features": [
@@ -53,26 +88,55 @@
         "USB Charging Port",
         "Bluetooth Connectivity"
       ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "120 km",
-        "Battery Capacity": "2.5 kWh",
-        "Top Speed": "60 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "45 Nm",
-      "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
       "variants": [
-        { "name": "Faast F2B", "price": "₹89,990" }
-      ]
+        {
+          "name": "Faast F2B",
+          "price": "₹89,990"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Ocean Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Pearlescent White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Matte Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Cherry Red",
+          "hex": "#C41E3A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "1.5 kW",
+        "battery": "2.5 kWh",
+        "range": "120 km km",
+        "charging_time": "N/A",
+        "top_speed": "60 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Okaya EV",
       "model": "Classiq Pro",
       "variant_name": "Okaya EV Classiq Pro",
       "price": "₹79,990",
+      "engine_displacement": "N/A",
+      "mileage": "100 km (range)",
+      "max_power": "1.5 kW",
+      "max_torque": "30 Nm",
+      "top_speed": "50 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Okaya EV Classiq Pro is an entry-level electric scooter with a retro-inspired design and 100 km range, well-suited for cost-conscious buyers wanting a stylish and economical commuter.",
       "features": [
@@ -84,26 +148,55 @@
         "USB Charging Port",
         "BLDC Hub Motor"
       ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "100 km",
-        "Battery Capacity": "1.8 kWh",
-        "Top Speed": "50 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "30 Nm",
-      "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
       "variants": [
-        { "name": "Classiq Pro", "price": "₹79,990" }
-      ]
+        {
+          "name": "Classiq Pro",
+          "price": "₹79,990"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Ocean Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Pearlescent White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Matte Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Cherry Red",
+          "hex": "#C41E3A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "1.5 kW",
+        "battery": "1.8 kWh",
+        "range": "100 km km",
+        "charging_time": "N/A",
+        "top_speed": "50 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Okaya EV",
       "model": "Ferrato Connect",
       "variant_name": "Okaya EV Ferrato Connect",
       "price": "₹1,09,990",
+      "engine_displacement": "N/A",
+      "mileage": "150 km (range)",
+      "max_power": "1.5 kW",
+      "max_torque": "45 Nm",
+      "top_speed": "65 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Okaya EV Ferrato Connect is a connected electric scooter with 150 km range and a suite of smart features, positioned for tech-forward riders who want full IoT integration.",
       "features": [
@@ -115,26 +208,55 @@
         "Ride Modes (Eco/Normal/Sport)",
         "Anti-Theft with Mobile Alert"
       ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "150 km",
-        "Battery Capacity": "2.5 kWh",
-        "Top Speed": "65 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "45 Nm",
-      "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
       "variants": [
-        { "name": "Ferrato Connect", "price": "₹1,09,990" }
-      ]
+        {
+          "name": "Ferrato Connect",
+          "price": "₹1,09,990"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Ocean Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Pearlescent White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Matte Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Cherry Red",
+          "hex": "#C41E3A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "1.5 kW",
+        "battery": "2.5 kWh",
+        "range": "150 km km",
+        "charging_time": "N/A",
+        "top_speed": "65 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Okaya EV",
       "model": "Hunk H1",
       "variant_name": "Okaya EV Hunk H1",
       "price": "₹99,990",
+      "engine_displacement": "N/A",
+      "mileage": "150 km (range)",
+      "max_power": "1.5 kW",
+      "max_torque": "45 Nm",
+      "top_speed": "65 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Okaya EV Hunk H1 is a sporty-looking electric scooter with 150 km range and muscular styling, targeting young riders who want aggressive aesthetics with practical long-range capability.",
       "features": [
@@ -146,26 +268,55 @@
         "Regenerative Braking",
         "Large Under-Seat Storage"
       ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "150 km",
-        "Battery Capacity": "2.5 kWh",
-        "Top Speed": "65 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "45 Nm",
-      "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
       "variants": [
-        { "name": "Hunk H1", "price": "₹99,990" }
-      ]
+        {
+          "name": "Hunk H1",
+          "price": "₹99,990"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Ocean Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Pearlescent White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Matte Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Cherry Red",
+          "hex": "#C41E3A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "1.5 kW",
+        "battery": "2.5 kWh",
+        "range": "150 km km",
+        "charging_time": "N/A",
+        "top_speed": "65 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Okaya EV",
       "model": "Motofaast",
       "variant_name": "Okaya EV Motofaast",
       "price": "₹1,14,990",
+      "engine_displacement": "N/A",
+      "mileage": "160 km (range)",
+      "max_power": "1.5 kW",
+      "max_torque": "45 Nm",
+      "top_speed": "85 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Okaya EV Motofaast is the brand's performance flagship with an impressive 85 kmph top speed and 160 km range, catering to riders who need rapid intercity capability from an electric scooter.",
       "features": [
@@ -177,19 +328,42 @@
         "Regenerative Braking",
         "Mobile App Connectivity"
       ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "160 km",
-        "Battery Capacity": "2.5 kWh",
-        "Top Speed": "85 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "45 Nm",
-      "colors": ["Ocean Blue", "Pearlescent White", "Matte Black", "Cherry Red"],
       "variants": [
-        { "name": "Motofaast", "price": "₹1,14,990" }
-      ]
+        {
+          "name": "Motofaast",
+          "price": "₹1,14,990"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Ocean Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Pearlescent White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Matte Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Cherry Red",
+          "hex": "#C41E3A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "1.5 kW",
+        "battery": "2.5 kWh",
+        "range": "160 km km",
+        "charging_time": "N/A",
+        "top_speed": "85 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

@@ -489,6 +489,35 @@
         "models": {
           "motorcycles": []
         }
+      },
+      {
+        "brandId": "brixton-motorcycles",
+        "brand": "Brixton Motorcycles",
+        "models": {
+          "motorcycles": [
+            "Crossfire 500 X",
+            "Crossfire 500 XC",
+            "Cromwell 1200",
+            "Cromwell 1200 X"
+          ]
+        }
+      },
+      {
+        "brandId": "motomorini",
+        "brand": "Moto Morini",
+        "models": {
+          "motorcycles": [
+            "Seiemmezzo",
+            "X-Cape"
+          ]
+        }
+      },
+      {
+        "brandId": "mahindra-two-wheelers",
+        "brand": "Mahindra",
+        "models": {
+          "motorcycles": []
+        }
       }
     ],
     "electric": [
@@ -806,6 +835,136 @@
         "models": {
           "scooters": [
             "Wynn"
+          ]
+        }
+      },
+      {
+        "brandId": "hero-electric",
+        "brand": "Hero Electric",
+        "models": {
+          "scooters": [
+            "Optima CX",
+            "Atria LX",
+            "NYX HX",
+            "Photon HX"
+          ]
+        }
+      },
+      {
+        "brandId": "kabira-mobility",
+        "brand": "Kabira Mobility",
+        "models": {
+          "motorcycles": [
+            "KM3000",
+            "KM4000",
+            "KM5000",
+            "Intercity Neo",
+            "Intercity FS"
+          ]
+        }
+      },
+      {
+        "brandId": "kinetic",
+        "brand": "Kinetic Green",
+        "models": {
+          "scooters": [
+            "DX",
+            "E Luna"
+          ]
+        }
+      },
+      {
+        "brandId": "evolet",
+        "brand": "Evolet",
+        "models": {
+          "scooters": [
+            "Pony",
+            "Derby"
+          ]
+        }
+      },
+      {
+        "brandId": "ferrato",
+        "brand": "Ferrato",
+        "models": {
+          "scooters": [
+            "Disruptor"
+          ]
+        }
+      },
+      {
+        "brandId": "gemopai",
+        "brand": "Gemopai",
+        "models": {
+          "scooters": [
+            "Ryder",
+            "Ryder SuperMax",
+            "Astrid Lite"
+          ]
+        }
+      },
+      {
+        "brandId": "opg-mobility",
+        "brand": "OPG Mobility",
+        "models": {
+          "scooters": [
+            "Freedum",
+            "Faast F2F",
+            "Faast F2B",
+            "Faast F2T",
+            "Faast F3",
+            "Faast F4",
+            "Motofaast",
+            "Classiq"
+          ]
+        }
+      },
+      {
+        "brandId": "raptee",
+        "brand": "Raptee HV",
+        "models": {
+          "motorcycles": [
+            "T30"
+          ]
+        }
+      },
+      {
+        "brandId": "tork-motors",
+        "brand": "Tork Motors",
+        "models": {
+          "motorcycles": [
+            "Kratos",
+            "Kratos R"
+          ]
+        }
+      },
+      {
+        "brandId": "vlf",
+        "brand": "VLF",
+        "models": {
+          "scooters": [
+            "Tennis 1500",
+            "Mobster"
+          ]
+        }
+      },
+      {
+        "brandId": "yo",
+        "brand": "Yo Electric",
+        "models": {
+          "scooters": [
+            "Edge",
+            "Drift"
+          ]
+        }
+      },
+      {
+        "brandId": "numeros",
+        "brand": "Numeros",
+        "models": {
+          "scooters": [
+            "n-First",
+            "Diplos"
           ]
         }
       }

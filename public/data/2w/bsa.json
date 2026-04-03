@@ -2,64 +2,60 @@
   "brand": "BSA",
   "brandId": "bsa",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "BSA",
       "model": "Gold Star 650",
       "variant_name": "Gold Star 650",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹3,24,633",
+      "engine_displacement": "652 cc",
+      "mileage": "26 kmpl",
+      "max_power": "45.6 bhp",
+      "max_torque": "55 Nm",
+      "top_speed": "165 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The BSA Gold Star 650 is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The BSA Gold Star 650 is a premium classic motorcycle from the revived British BSA brand (owned by Classic Legends/Mahindra), featuring a 652cc single-cylinder engine, retro styling, chrome accents, and spoke wheels. Rated 4.6/5 by owners.",
+      "features": ["Chrome Accents", "Spoke Wheels", "Disc Brakes", "ABS", "LED Headlamp", "Self Start"],
       "variants": [
-        {
-          "name": "Midnight Black and Dawn Silver",
-          "price": "N/A"
-        },
-        {
-          "name": "Insignia Red and Highland Green",
-          "price": "N/A"
-        },
-        {
-          "name": "Shadow Black",
-          "price": "N/A"
-        },
-        {
-          "name": "Legacy Edition",
-          "price": "N/A"
-        }
+        {"name": "Gold Star 650 Standard", "price": "₹3,24,633"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "Chrome Silver", "hex": "#C8C8C8"},
+        {"name": "British Green", "hex": "#2D6A4F"},
+        {"name": "Burgundy Red", "hex": "#800000"}
+      ],
+      "technical_specifications": {
+        "engine": "652 cc, Single Cylinder",
+        "cooling": "Air/Oil Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "201 kg",
+        "fuel_tank_capacity": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "BSA",
       "model": "Thunderbolt",
       "variant_name": "Thunderbolt",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹2,65,000",
+      "engine_displacement": "N/A",
+      "mileage": "N/A",
+      "max_power": "N/A",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "top_speed": "N/A",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The BSA Thunderbolt is a two-wheeler available in India.",
+      "transmission": "Manual",
+      "source_section": "Upcoming",
+      "description": "The BSA Thunderbolt is an upcoming motorcycle from BSA, expected to launch in mid-2026 at an estimated price of ₹2,60,000 - ₹2,70,000.",
       "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
+      "variants": [],
       "colors": [],
       "technical_specifications": {}
     },
@@ -68,21 +64,17 @@
       "model": "Scrambler 650",
       "variant_name": "Scrambler 650",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "engine_displacement": "652 cc",
+      "mileage": "N/A",
+      "max_power": "N/A",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "top_speed": "N/A",
       "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The BSA Scrambler 650 is a two-wheeler available in India.",
+      "transmission": "Manual",
+      "source_section": "Upcoming",
+      "description": "The BSA Scrambler 650 is an upcoming scrambler motorcycle expected to launch by October 2026, at an estimated price of ₹3,40,000 - ₹3,60,000.",
       "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
+      "variants": [],
       "colors": [],
       "technical_specifications": {}
     }

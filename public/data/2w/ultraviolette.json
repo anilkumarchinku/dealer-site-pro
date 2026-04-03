@@ -2,306 +2,188 @@
   "brand": "Ultraviolette",
   "brandId": "ultraviolette",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Ultraviolette",
       "model": "Tesseract",
       "variant_name": "Tesseract",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹1,45,000",
+      "engine_displacement": "N/A",
+      "mileage": "162 km (range)",
+      "max_power": "14.9 kW",
       "max_torque": "N/A",
       "top_speed": "125 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Ultraviolette Tesseract is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Ultraviolette Tesseract is an entry-level electric motorcycle from Bengaluru-based Ultraviolette, backed by TVS Motor, offering 162km range, 14.9kW motor, and 125 kmph top speed at ₹1,45,000.",
+      "features": ["LED Lighting", "Digital Display", "Multiple Ride Modes", "Regenerative Braking", "Mobile App Connectivity"],
       "variants": [
-        {
-          "name": "3.5 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "5 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "6 kWh",
-          "price": "N/A"
-        }
+        {"name": "Tesseract Standard", "price": "₹1,45,000"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ultraviolette",
-      "model": "X47 Crossover",
-      "variant_name": "X47 Crossover",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "145 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Ultraviolette X47 Crossover is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Original - Cosmic Black",
-          "price": "N/A"
-        },
-        {
-          "name": "Original - Stellar White",
-          "price": "N/A"
-        },
-        {
-          "name": "Original - Turbo Red",
-          "price": "N/A"
-        },
-        {
-          "name": "Original + Cosmic Black",
-          "price": "N/A"
-        },
-        {
-          "name": "Original + Stellar White",
-          "price": "N/A"
-        },
-        {
-          "name": "Original + Turbo Red",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon - Cosmic Black",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon - Stellar White",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon - Turbo Red",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon + Cosmic Black",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon + Stellar White",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon + Turbo Red",
-          "price": "N/A"
-        },
-        {
-          "name": "Desert Wing",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Neutron Black", "hex": "#1A1A1A"},
+        {"name": "Prism White", "hex": "#F5F5F0"},
+        {"name": "Kinetic Grey", "hex": "#6B6B6B"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ultraviolette",
-      "model": "F77 Mach 2",
-      "variant_name": "F77 Mach 2",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "155 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Ultraviolette F77 Mach 2 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Std - Supersonic Silver",
-          "price": "N/A"
-        },
-        {
-          "name": "Std - Turbo Red",
-          "price": "N/A"
-        },
-        {
-          "name": "Std - Stealth Grey",
-          "price": "N/A"
-        },
-        {
-          "name": "Std - Asteroid Grey",
-          "price": "N/A"
-        },
-        {
-          "name": "Std - Lightning Blue",
-          "price": "N/A"
-        },
-        {
-          "name": "Std - Afterburner Yellow",
-          "price": "N/A"
-        },
-        {
-          "name": "Std - Plasma Red",
-          "price": "N/A"
-        },
-        {
-          "name": "Std - Stellar White",
-          "price": "N/A"
-        },
-        {
-          "name": "Std - Cosmic Black",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon - Supersonic Silver",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon - Turbo Red",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon - Stealth Grey",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon - Asteroid Grey",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon - Lightning Blue",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon - Afterburner Yellow",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon - Plasma Red",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon - Stellar White",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon - Cosmic Black",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "14.9 kW peak",
+        "battery": "N/A",
+        "range": "162 km",
+        "charging_time": "N/A",
+        "top_speed": "125 kmph",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Ultraviolette",
       "model": "Shockwave",
       "variant_name": "Shockwave",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹1,75,000",
+      "engine_displacement": "N/A",
+      "mileage": "165 km (range)",
+      "max_power": "10.8 kW",
       "max_torque": "N/A",
       "top_speed": "120 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Ultraviolette Shockwave is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Ultraviolette Shockwave is a mid-range electric motorcycle with 10.8kW motor, 165km range, 120 kmph top speed, and 120kg kerb weight. It is designed for urban performance riding.",
+      "features": ["LED Lighting", "Digital Display", "Multiple Ride Modes", "Regenerative Braking", "Mobile App Connectivity"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Shockwave Standard", "price": "₹1,75,000"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Cosmic Black", "hex": "#1A1A1A"},
+        {"name": "Arctic White", "hex": "#F5F5F0"},
+        {"name": "Storm Grey", "hex": "#6B6B6B"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "10.8 kW peak",
+        "battery": "N/A",
+        "range": "165 km",
+        "charging_time": "N/A",
+        "top_speed": "120 kmph",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc",
+        "kerb_weight": "120 kg",
+        "seat_height": "N/A"
+      }
+    },
+    {
+      "make": "Ultraviolette",
+      "model": "X47 Crossover",
+      "variant_name": "X47 Crossover",
+      "price": "₹2,49,000",
+      "engine_displacement": "N/A",
+      "mileage": "211 km (range)",
+      "max_power": "27 kW",
+      "max_torque": "N/A",
+      "top_speed": "145 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Ultraviolette X47 Crossover is a high-performance electric motorcycle with 27kW motor, 211km range, 145 kmph top speed, and adventure-crossover styling. It features Ultraviolette's most powerful powertrain shared with the F77 lineup.",
+      "features": ["27 kW Motor", "LED Lighting", "TFT Display", "Multiple Ride Modes", "Regenerative Braking", "ABS", "Mobile App Connectivity", "DC Fast Charging Compatible"],
+      "variants": [
+        {"name": "X47 Crossover Standard", "price": "₹2,49,000"}
+      ],
+      "colors": [
+        {"name": "Shadow Black", "hex": "#1A1A1A"},
+        {"name": "Photon Silver", "hex": "#C8C8C8"},
+        {"name": "Ion Blue", "hex": "#1A4A8B"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "27 kW peak",
+        "battery": "N/A",
+        "range": "211 km",
+        "charging_time": "N/A",
+        "top_speed": "145 kmph",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "197 kg",
+        "seat_height": "N/A"
+      }
+    },
+    {
+      "make": "Ultraviolette",
+      "model": "F77 Mach 2",
+      "variant_name": "F77 Mach 2",
+      "price": "₹2,99,000",
+      "engine_displacement": "N/A",
+      "mileage": "211 km (range)",
+      "max_power": "27 kW",
+      "max_torque": "N/A",
+      "top_speed": "155 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Ultraviolette F77 Mach 2 is a flagship sports electric motorcycle with 27kW motor, 211km range, 155 kmph top speed, and aggressive sports fairing. It is one of the fastest electric motorcycles available in India, backed by TVS Motor.",
+      "features": ["27 kW Motor", "Full Sports Fairing", "TFT Display", "Multiple Ride Modes", "ABS", "Regenerative Braking", "Mobile App Connectivity", "DC Fast Charging Compatible", "DC 100+ Fast Charging Network"],
+      "variants": [
+        {"name": "F77 Mach 2 Standard", "price": "₹2,99,000"}
+      ],
+      "colors": [
+        {"name": "Airstrike Edition", "hex": "#1A1A1A"},
+        {"name": "Ion White", "hex": "#F5F5F0"},
+        {"name": "Shadow Black", "hex": "#2A2A2A"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "27 kW peak",
+        "battery": "N/A",
+        "range": "211 km",
+        "charging_time": "N/A",
+        "top_speed": "155 kmph",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "197 kg",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Ultraviolette",
       "model": "F77 SuperStreet",
       "variant_name": "F77 SuperStreet",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹2,99,000",
+      "engine_displacement": "N/A",
+      "mileage": "211 km (range)",
+      "max_power": "27 kW",
       "max_torque": "N/A",
       "top_speed": "155 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Ultraviolette F77 SuperStreet is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard - Turbo Red",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard - Afterburner Yellow",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard - Stellar White",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard - Cosmic Black",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon - Turbo Red",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon - Afterburner Yellow",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon - Stellar White",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon - Cosmic Black",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ultraviolette",
-      "model": "F77 2022",
-      "variant_name": "F77 2022",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
-      "description": "The Ultraviolette F77 2022 is a two-wheeler available in India.",
-      "features": [],
+      "description": "The Ultraviolette F77 SuperStreet is the naked streetfighter variant of the F77 with 27kW motor, 211km range, 155 kmph top speed, and aggressive streetfighter styling without full fairing.",
+      "features": ["27 kW Motor", "Naked Streetfighter Styling", "TFT Display", "Multiple Ride Modes", "ABS", "Regenerative Braking", "Mobile App Connectivity", "DC Fast Charging Compatible"],
       "variants": [
-        {
-          "name": "Original",
-          "price": "N/A"
-        },
-        {
-          "name": "Recon",
-          "price": "N/A"
-        },
-        {
-          "name": "Space Edition",
-          "price": "N/A"
-        }
+        {"name": "F77 SuperStreet Standard", "price": "₹2,99,000"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Shadow Black", "hex": "#1A1A1A"},
+        {"name": "Arctic Silver", "hex": "#C8C8C8"},
+        {"name": "Electric Blue", "hex": "#1A4A8B"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "27 kW peak",
+        "battery": "N/A",
+        "range": "211 km",
+        "charging_time": "N/A",
+        "top_speed": "155 kmph",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "197 kg",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

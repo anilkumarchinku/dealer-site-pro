@@ -2,7 +2,7 @@
   "brand": "Battre Electric",
   "brandId": "battre-ev",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -31,9 +31,17 @@
         "Fast Charging": "Yes"
       },
       "max_torque": "40 Nm",
-      "colors": ["Gloss Black", "Ivory White", "Marine Blue", "Burgundy Red"],
+      "colors": [
+        "Gloss Black",
+        "Ivory White",
+        "Marine Blue",
+        "Burgundy Red"
+      ],
       "variants": [
-        { "name": "EM", "price": "₹79,999" }
+        {
+          "name": "EM",
+          "price": "₹79,999"
+        }
       ]
     },
     {
@@ -62,9 +70,17 @@
         "Fast Charging": "Yes"
       },
       "max_torque": "40 Nm",
-      "colors": ["Gloss Black", "Ivory White", "Marine Blue", "Burgundy Red"],
+      "colors": [
+        "Gloss Black",
+        "Ivory White",
+        "Marine Blue",
+        "Burgundy Red"
+      ],
       "variants": [
-        { "name": "One", "price": "₹69,999" }
+        {
+          "name": "One",
+          "price": "₹69,999"
+        }
       ]
     },
     {
@@ -93,9 +109,17 @@
         "Fast Charging": "Yes"
       },
       "max_torque": "40 Nm",
-      "colors": ["Gloss Black", "Ivory White", "Marine Blue", "Burgundy Red"],
+      "colors": [
+        "Gloss Black",
+        "Ivory White",
+        "Marine Blue",
+        "Burgundy Red"
+      ],
       "variants": [
-        { "name": "Yelo", "price": "₹59,999" }
+        {
+          "name": "Yelo",
+          "price": "₹59,999"
+        }
       ]
     },
     {
@@ -124,9 +148,17 @@
         "Fast Charging": "Yes"
       },
       "max_torque": "40 Nm",
-      "colors": ["Gloss Black", "Ivory White", "Marine Blue", "Burgundy Red"],
+      "colors": [
+        "Gloss Black",
+        "Ivory White",
+        "Marine Blue",
+        "Burgundy Red"
+      ],
       "variants": [
-        { "name": "Smart", "price": "₹64,999" }
+        {
+          "name": "Smart",
+          "price": "₹64,999"
+        }
       ]
     }
   ]

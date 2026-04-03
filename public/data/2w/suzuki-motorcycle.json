@@ -2,1966 +2,449 @@
   "brand": "Suzuki",
   "brandId": "suzuki-motorcycle",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Suzuki",
       "model": "Access 125",
       "variant_name": "Access 125",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹81,455",
+      "engine_displacement": "124 cc",
+      "mileage": "47 kmpl",
+      "max_power": "8.3 bhp",
+      "max_torque": "10.2 Nm",
+      "top_speed": "90 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki Access 125 is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "Automatic CVT",
+      "source_section": "Available",
+      "description": "The Suzuki Access 125 is a popular 124cc scooter with combined braking system, USB charging port, external fuel filling, wide seat, and 106 kg lightweight design.",
+      "features": ["USB Charging Port", "Combined Braking System", "External Fuel Filling", "Kick Start", "Self Start"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Special Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect ABS Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect TFT Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect TFT ABS Edition",
-          "price": "N/A"
-        }
+        {"name": "Drum", "price": "₹81,455"},
+        {"name": "Disc CBS", "price": "₹88,000"},
+        {"name": "Disc CBS Special Edition", "price": "₹93,000"},
+        {"name": "Bluetooth", "price": "₹96,000"},
+        {"name": "Bluetooth Special Edition", "price": "₹98,000"},
+        {"name": "Ride Connect", "price": "₹1,01,749"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Burgman Street 125",
-      "variant_name": "Burgman Street 125",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki Burgman Street 125 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard - OBD 2B",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect Edition - OBD 2B",
-          "price": "N/A"
-        },
-        {
-          "name": "EX - OBD 2B",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Metallic Mat Black", "hex": "#2A2A2A"},
+        {"name": "Pearl Grace White", "hex": "#F5F5F0"},
+        {"name": "Metallic Mat Stellar Blue", "hex": "#1A4A8B"},
+        {"name": "Solid Ice Green", "hex": "#5A8A5A"},
+        {"name": "Pearl Shiny Beige", "hex": "#C8B88A"},
+        {"name": "Pearl Mat Aqua Silver", "hex": "#9ABBC8"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "V-Strom SX",
-      "variant_name": "V-Strom SX",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki V-Strom SX is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard - OBD 2B",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Gixxer SF",
-      "variant_name": "Gixxer SF",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki Gixxer SF is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Ride Connect - OBD 2B",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect Special Edition - OBD 2B",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Gixxer",
-      "variant_name": "Gixxer",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki Gixxer is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Ride Connect - OBD 2B",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect Special Edition - OBD 2B",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "engine": "124 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Kick and Self Start",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "106 kg",
+        "fuel_tank_capacity": "5.3 L",
+        "seat_height": "773 mm"
+      }
     },
     {
       "make": "Suzuki",
       "model": "Avenis 125",
       "variant_name": "Avenis 125",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹86,769",
+      "engine_displacement": "124.3 cc",
+      "mileage": "49.6 kmpl",
+      "max_power": "8.58 bhp",
+      "max_torque": "10 Nm",
+      "top_speed": "90 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki Avenis 125 is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "Automatic CVT",
+      "source_section": "Available",
+      "description": "The Suzuki Avenis 125 is a sporty 124cc scooter with Bluetooth connectivity, navigation, disc brake with CBS, USB charging port, and 106 kg lightweight build.",
+      "features": ["Bluetooth Connectivity", "Navigation", "Disc Brake", "CBS", "USB Charging Port", "Alloy Wheels", "Kick Start", "Self Start"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Race Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Special Edition",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹86,769"},
+        {"name": "Limited Edition", "price": "₹87,500"},
+        {"name": "Special", "price": "₹89,155"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Metallic Matte Platinum Silver & Glass Sparkle Black", "hex": "#C8C8C8"},
+        {"name": "Glossy Sparkle Black", "hex": "#1A1A1A"},
+        {"name": "Glossy Sparkle Black Pearl Mira Red", "hex": "#8B0000"},
+        {"name": "Glossy Sparkle Black Pearl Glacier White", "hex": "#F5F5F0"},
+        {"name": "Champion Yellow No 2 Glossy Sparkle Black", "hex": "#E8C200"},
+        {"name": "Metallic Mat Black & Metallic Mat Titanium Silver", "hex": "#2A2A2A"}
+      ],
+      "technical_specifications": {
+        "engine": "124.3 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Kick and Self Start",
+        "brakes_front": "Disc with CBS",
+        "brakes_rear": "Drum",
+        "kerb_weight": "106 kg",
+        "fuel_tank_capacity": "5.2 L",
+        "seat_height": "780 mm"
+      }
     },
     {
       "make": "Suzuki",
-      "model": "Hayabusa",
-      "variant_name": "Hayabusa",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "model": "Burgman Street 125",
+      "variant_name": "Burgman Street 125",
+      "price": "₹1,01,944",
+      "engine_displacement": "124 cc",
+      "mileage": "50 kmpl",
+      "max_power": "8.31 bhp",
+      "max_torque": "10.2 Nm",
+      "top_speed": "95 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki Hayabusa is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "Automatic CVT",
+      "source_section": "Available",
+      "description": "The Suzuki Burgman Street 125 is a maxi-style scooter with 58.5 kmpl ARAI mileage, disc brake with CBS, alloy wheels, and stylish maxi-scooter design at 114 kg.",
+      "features": ["Disc Brake", "CBS", "Alloy Wheels", "Kick Start", "Self Start"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹1,01,944"},
+        {"name": "Bluetooth", "price": "₹1,07,000"},
+        {"name": "EX", "price": "₹1,10,000"},
+        {"name": "EX Bluetooth", "price": "₹1,13,220"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Met Mat Stellar Blue", "hex": "#1A4A8B"},
+        {"name": "Met Mat Black", "hex": "#2A2A2A"},
+        {"name": "Pearl Grace White", "hex": "#F5F5F0"},
+        {"name": "Pearl Mat Shadow Green", "hex": "#4A6B4A"},
+        {"name": "Met Royal Bronze", "hex": "#7A5A3A"}
+      ],
+      "technical_specifications": {
+        "engine": "124 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Kick and Self Start",
+        "brakes_front": "Disc with CBS",
+        "brakes_rear": "Drum",
+        "kerb_weight": "114 kg",
+        "fuel_tank_capacity": "5.5 L",
+        "seat_height": "775 mm"
+      }
     },
     {
       "make": "Suzuki",
-      "model": "E Access",
-      "variant_name": "E Access",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "71 kmph",
+      "model": "Gixxer",
+      "variant_name": "Gixxer",
+      "price": "₹1,28,892",
+      "engine_displacement": "155 cc",
+      "mileage": "45 kmpl",
+      "max_power": "13.41 bhp",
+      "max_torque": "13.8 Nm",
+      "top_speed": "115 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki E Access is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Suzuki Gixxer is a naked 155cc street motorcycle with smooth engine, comfortable ergonomics, disc brakes, and ABS offering reliable performance for city riding.",
+      "features": ["Disc Brakes", "ABS", "Alloy Wheels", "Self Start"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹1,28,892"},
+        {"name": "Special Edition", "price": "₹1,29,345"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Pearl Mira Red", "hex": "#CC2020"},
+        {"name": "Glass Sparkle Black", "hex": "#1A1A1A"},
+        {"name": "Metallic Triton Blue", "hex": "#1A4A8B"},
+        {"name": "Met Oort Gray and Met Lush Green", "hex": "#6B6B6B"}
+      ],
+      "technical_specifications": {
+        "engine": "155 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "141 kg",
+        "fuel_tank_capacity": "12 L",
+        "seat_height": "795 mm"
+      }
     },
     {
       "make": "Suzuki",
-      "model": "Gixxer SF 250",
-      "variant_name": "Gixxer SF 250",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "model": "Gixxer SF",
+      "variant_name": "Gixxer SF",
+      "price": "₹1,37,594",
+      "engine_displacement": "155 cc",
+      "mileage": "45 kmpl",
+      "max_power": "13.4 bhp",
+      "max_torque": "13.8 Nm",
+      "top_speed": "125 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki Gixxer SF 250 is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Suzuki Gixxer SF is a fully-faired 155cc sports motorcycle with disc brakes, single-channel ABS, and refined engine delivery for sporty daily commuting.",
+      "features": ["Full Fairing", "Disc Brakes", "Single-Channel ABS", "Alloy Wheels", "Self Start"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Special Edition",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹1,37,594"},
+        {"name": "Special Edition", "price": "₹1,38,061"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX-8R",
-      "variant_name": "GSX-8R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki GSX-8R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Pearl Mira Red", "hex": "#CC2020"},
+        {"name": "Metallic Triton Blue", "hex": "#1A4A8B"},
+        {"name": "Glass Sparkle Black", "hex": "#1A1A1A"},
+        {"name": "Met Triton Blue with Pearl Glacier White", "hex": "#1A4A8B"},
+        {"name": "Grey and Red", "hex": "#6B6B6B"},
+        {"name": "Met Oort Gray with Met Lush Green", "hex": "#4A6B4A"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "engine": "155 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc",
+        "kerb_weight": "148 kg",
+        "fuel_tank_capacity": "12 L",
+        "seat_height": "795 mm"
+      }
     },
     {
       "make": "Suzuki",
       "model": "Gixxer 250",
       "variant_name": "Gixxer 250",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹1,83,994",
+      "engine_displacement": "249 cc",
+      "mileage": "35 kmpl",
+      "max_power": "26.13 bhp",
+      "max_torque": "22.2 Nm",
+      "top_speed": "130 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki Gixxer 250 is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Suzuki Gixxer 250 is a naked 250cc street motorcycle with digital cluster, TBT navigation, ABS disc brakes, and Suzuki's legendary build quality and reliability.",
+      "features": ["Digital Cluster with TBT Navigation", "Disc Brakes", "ABS", "Alloy Wheels", "Self Start"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Special Edition",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹1,83,994"},
+        {"name": "Special Edition", "price": "₹1,84,451"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Met Triton Blue / Pearl Glacier White", "hex": "#1A4A8B"},
+        {"name": "Pearl Glacier White / Metallic Mat Platinum Silver", "hex": "#F5F5F0"},
+        {"name": "Glass Sparkle Black", "hex": "#1A1A1A"},
+        {"name": "Metallic Matte Black", "hex": "#2A2A2A"},
+        {"name": "Met Mat Black / Met Mat Bordeaux Red", "hex": "#2A2A2A"}
+      ],
+      "technical_specifications": {
+        "engine": "249 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Oil Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "156 kg",
+        "fuel_tank_capacity": "12 L",
+        "seat_height": "800 mm"
+      }
+    },
+    {
+      "make": "Suzuki",
+      "model": "Gixxer SF 250",
+      "variant_name": "Gixxer SF 250",
+      "price": "₹1,92,245",
+      "engine_displacement": "249 cc",
+      "mileage": "35 kmpl",
+      "max_power": "26.13 bhp",
+      "max_torque": "22.2 Nm",
+      "top_speed": "150 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Suzuki Gixxer SF 250 is a fully-faired 250cc sports bike with 150 kmph top speed, ABS disc brakes, excellent stability at high speeds, and 35 kmpl ARAI mileage.",
+      "features": ["Full Fairing", "Disc Brakes", "ABS", "Alloy Wheels", "Self Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹1,92,245"},
+        {"name": "Special Edition", "price": "₹1,92,703"}
+      ],
+      "colors": [
+        {"name": "Met Triton Blue / Pearl Glacier White", "hex": "#1A4A8B"},
+        {"name": "Pearl Glacier White / Metallic Mat Platinum Silver", "hex": "#F5F5F0"},
+        {"name": "Glass Sparkle Black", "hex": "#1A1A1A"},
+        {"name": "Metallic Matte Black", "hex": "#2A2A2A"},
+        {"name": "Met Mat Black / Met Mat Bordeaux Red", "hex": "#2A2A2A"}
+      ],
+      "technical_specifications": {
+        "engine": "249 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Oil Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "161 kg",
+        "fuel_tank_capacity": "12 L",
+        "seat_height": "800 mm"
+      }
+    },
+    {
+      "make": "Suzuki",
+      "model": "V-Strom SX",
+      "variant_name": "V-Strom SX",
+      "price": "₹2,00,382",
+      "engine_displacement": "249 cc",
+      "mileage": "37 kmpl",
+      "max_power": "26.1 bhp",
+      "max_torque": "22.2 Nm",
+      "top_speed": "140 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Suzuki V-Strom SX is a 250cc adventure-touring motorcycle with Bluetooth instrument cluster, disc brakes with ABS, comfortable ergonomics, and excellent fuel economy.",
+      "features": ["Bluetooth Instrument Cluster", "Disc Brakes", "ABS", "Adventure Ergonomics", "Alloy Wheels", "Self Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹2,00,382"}
+      ],
+      "colors": [
+        {"name": "Glass Sparkle Black", "hex": "#1A1A1A"},
+        {"name": "Pearl Glacier White & Metallic Mat Stellar Blue", "hex": "#F5F5F0"},
+        {"name": "Champion Yellow", "hex": "#E8C200"},
+        {"name": "Champion Blue", "hex": "#1A4A8B"},
+        {"name": "Met Sonoma Red", "hex": "#CC2020"}
+      ],
+      "technical_specifications": {
+        "engine": "249 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Oil Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "167 kg",
+        "fuel_tank_capacity": "12 L",
+        "seat_height": "835 mm"
+      }
     },
     {
       "make": "Suzuki",
       "model": "Gixxer SF 250 Flex Fuel",
       "variant_name": "Gixxer SF 250 Flex Fuel",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki Gixxer SF 250 Flex Fuel is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "V-Strom 800 DE",
-      "variant_name": "V-Strom 800 DE",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Suzuki V-Strom 800 DE is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Burgman Street 125 2026",
-      "variant_name": "Burgman Street 125 2026",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
+      "price": "₹2,00,791",
+      "engine_displacement": "249 cc",
+      "mileage": "35 kmpl",
+      "max_power": "26.13 bhp",
+      "max_torque": "22.2 Nm",
+      "top_speed": "150 kmph",
+      "fuel_type": "Flex Fuel (Petrol + Ethanol)",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Suzuki Burgman Street 125 2026 is a two-wheeler available in India.",
-      "features": [],
+      "description": "The Suzuki Gixxer SF 250 Flex Fuel is India's flex-fuel sports bike compatible with ethanol blends, featuring full fairing, ABS disc brakes, and 35 kmpl ARAI mileage.",
+      "features": ["Flex Fuel Compatible", "Full Fairing", "Disc Brakes", "ABS", "Alloy Wheels", "Self Start"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹2,00,791"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Met Matt Black", "hex": "#2A2A2A"},
+        {"name": "Met Matt Black and Met Mat Bordeaux Red", "hex": "#2A2A2A"}
+      ],
+      "technical_specifications": {
+        "engine": "249 cc, Single Cylinder, BS6 Phase 2B, Flex Fuel",
+        "cooling": "Oil Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "161 kg",
+        "fuel_tank_capacity": "12 L",
+        "seat_height": "800 mm"
+      }
     },
     {
       "make": "Suzuki",
-      "model": "GSX-8S",
-      "variant_name": "GSX-8S",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "model": "E Access",
+      "variant_name": "E Access",
+      "price": "₹1,90,665",
+      "engine_displacement": "N/A",
+      "mileage": "95 km (range)",
+      "max_power": "4.1 kW",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
+      "top_speed": "71 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
-      "description": "The Suzuki GSX-8S is a two-wheeler available in India.",
-      "features": [],
+      "description": "The Suzuki E Access is an electric scooter with LFP battery for longevity, 95 km range, color TFT with Bluetooth, disc brake with CBS, and 6.42-hour charging time.",
+      "features": ["LFP Battery", "Color TFT Display", "Bluetooth", "Disc Brake", "CBS", "USB Charging Port", "Self Start"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹1,90,665"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Metallic Mat Stellar Blue / Mat Fibroin Gray", "hex": "#1A4A8B"},
+        {"name": "Pearl Jade Green and Mat Fibroin Gray", "hex": "#4A6B4A"},
+        {"name": "Pearl Grace White and Mat Fibroin Gray", "hex": "#F5F5F0"},
+        {"name": "Metallic Mat Black and Mat Bordeaux Red", "hex": "#2A2A2A"}
+      ],
+      "technical_specifications": {
+        "engine": "Electric Motor, 4.1 kW",
+        "battery": "LFP (Lithium Iron Phosphate)",
+        "range": "95 km",
+        "charging_time": "6.42 hours",
+        "starting": "Self Start",
+        "brakes_front": "Disc with CBS",
+        "brakes_rear": "Drum",
+        "kerb_weight": "122 kg",
+        "seat_height": "765 mm"
+      }
     },
     {
       "make": "Suzuki",
-      "model": "Burgman Street Electric",
-      "variant_name": "Burgman Street Electric",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "model": "GSX-8R",
+      "variant_name": "GSX-8R",
+      "price": "₹9,89,328",
+      "engine_displacement": "776 cc",
+      "mileage": "23.8 kmpl",
+      "max_power": "81.8 bhp",
+      "max_torque": "78 Nm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Suzuki Burgman Street Electric is a two-wheeler available in India.",
-      "features": [],
+      "description": "The Suzuki GSX-8R is a mid-size fully-faired sports tourer with 776cc parallel-twin engine, dual-channel ABS, and capability for both city and highway performance.",
+      "features": ["Full Fairing", "Dual Channel ABS", "Alloy Wheels", "Self Start"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹9,89,328"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Metallic Matt Black", "hex": "#2A2A2A"},
+        {"name": "Metallic Matt Sword Silver", "hex": "#C8C8C8"},
+        {"name": "Metallic Triton Blue", "hex": "#1A4A8B"}
+      ],
+      "technical_specifications": {
+        "engine": "776 cc, Parallel-Twin, BS6 Phase 2B",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "205 kg",
+        "fuel_tank_capacity": "14 L",
+        "seat_height": "810 mm"
+      }
     },
     {
       "make": "Suzuki",
-      "model": "Katana",
-      "variant_name": "Katana",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "model": "Hayabusa",
+      "variant_name": "Hayabusa",
+      "price": "₹18,06,885",
+      "engine_displacement": "1340 cc",
+      "mileage": "17 kmpl",
+      "max_power": "190 bhp",
+      "max_torque": "142 Nm",
+      "top_speed": "300 kmph",
       "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Suzuki Katana is a two-wheeler available in India.",
-      "features": [],
+      "description": "The Suzuki Hayabusa is a legendary superbike with 1340cc inline-4 engine, Suzuki Intelligent Ride System (S.I.R.S.), lean-angle-sensitive traction control, cornering ABS, and bi-directional quickshifter.",
+      "features": ["S.I.R.S. (Suzuki Intelligent Ride System)", "Lean-angle Traction Control", "Cornering ABS", "Bi-directional Quickshifter", "IMU", "Alloy Wheels", "Self Start"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹18,06,885"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Intruder 150",
-      "variant_name": "Intruder 150",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Intruder 150 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard - BS IV",
-          "price": "N/A"
-        },
-        {
-          "name": "SP - BS IV",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard - BS VI",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Metallic Mystic Silver / Pearl Vigor Blue", "hex": "#C8C8C8"},
+        {"name": "Glass Sparkle Black / Metallic Mat Titanium Silver", "hex": "#1A1A1A"},
+        {"name": "Metallic Mat Steel Green / Glass Sparkle Black", "hex": "#2A4A2A"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "V-Strom 650 XT [2017-2018]",
-      "variant_name": "V-Strom 650 XT [2017-2018]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki V-Strom 650 XT [2017-2018] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Zeus DU",
-      "variant_name": "Zeus DU",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Zeus DU is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Kick",
-          "price": "N/A"
-        },
-        {
-          "name": "Self",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Zeus EU",
-      "variant_name": "Zeus EU",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Zeus EU is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "V-Strom 1000",
-      "variant_name": "V-Strom 1000",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki V-Strom 1000 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Gixxer SF [2015-2018]",
-      "variant_name": "Gixxer SF [2015-2018]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Gixxer SF [2015-2018] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Special MOTOGP Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Rear Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "Special MOTOGP Edition Rear Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "SP Rear Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "ABS",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Swish 125 facelift",
-      "variant_name": "Swish 125 facelift",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Swish 125 facelift is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX-S1000 [2019-2020]",
-      "variant_name": "GSX-S1000 [2019-2020]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX-S1000 [2019-2020] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX-S1000F",
-      "variant_name": "GSX-S1000F",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX-S1000F is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Access [2024]",
-      "variant_name": "Access [2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Access [2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Drum [2019]",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc [2019]",
-          "price": "N/A"
-        },
-        {
-          "name": "Special Edition - Drum",
-          "price": "N/A"
-        },
-        {
-          "name": "Special Edition - Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc - CBS",
-          "price": "N/A"
-        },
-        {
-          "name": "SE - Disc CBS",
-          "price": "N/A"
-        },
-        {
-          "name": "Steel Wheel - Drum - CBS",
-          "price": "N/A"
-        },
-        {
-          "name": "Alloy Wheel - Drum -CBS",
-          "price": "N/A"
-        },
-        {
-          "name": "SE - Alloy Wheel - Drum CBS",
-          "price": "N/A"
-        },
-        {
-          "name": "Steel Wheel - Drum - CBS -Fi",
-          "price": "N/A"
-        },
-        {
-          "name": "Alloy Wheel - Drum -CBS Fi",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum Cast - SE - Fi",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc - CBS - Fi",
-          "price": "N/A"
-        },
-        {
-          "name": "SE - Disc CBS - Fi",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum Alloy - Bluetooth",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc Alloy - Bluetooth",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "Special Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Ride Connect Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayate EP",
-      "variant_name": "Hayate EP",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayate EP is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Gixxer SF Fi",
-      "variant_name": "Gixxer SF Fi",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Gixxer SF Fi is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "ABS",
-          "price": "N/A"
-        },
-        {
-          "name": "SP ABS",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX-R1000",
-      "variant_name": "GSX-R1000",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX-R1000 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "R",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX-S750 [2017-2018]",
-      "variant_name": "GSX-S750 [2017-2018]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX-S750 [2017-2018] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Intruder 150 Fi",
-      "variant_name": "Intruder 150 Fi",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Intruder 150 Fi is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "SP",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Zeus CD",
-      "variant_name": "Zeus CD",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Zeus CD is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "RM-Z250",
-      "variant_name": "RM-Z250",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki RM-Z250 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "RM-Z450",
-      "variant_name": "RM-Z450",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki RM-Z450 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "V-Strom 650 XT [2018-2019]",
-      "variant_name": "V-Strom 650 XT [2018-2019]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki V-Strom 650 XT [2018-2019] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "ABS",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "DR-Z50",
-      "variant_name": "DR-Z50",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki DR-Z50 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX S750",
-      "variant_name": "GSX S750",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX S750 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayabusa [2019-2020]",
-      "variant_name": "Hayabusa [2019-2020]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayabusa [2019-2020] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "V-Strom 650 XT",
-      "variant_name": "V-Strom 650 XT",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki V-Strom 650 XT is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayabusa [2022]",
-      "variant_name": "Hayabusa [2022]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayabusa [2022] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "V-Strom 800DE [2024]",
-      "variant_name": "V-Strom 800DE [2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki V-Strom 800DE [2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayabusa [2024]",
-      "variant_name": "Hayabusa [2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayabusa [2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "25th Anniversary Celebration Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Burgman 650",
-      "variant_name": "Burgman 650",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Burgman 650 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX-8R [2024]",
-      "variant_name": "GSX-8R [2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX-8R [2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Fiero",
-      "variant_name": "Fiero",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Fiero is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Swish [2012-2015]",
-      "variant_name": "Swish [2012-2015]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Swish [2012-2015] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "125",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "SlingShot Plus",
-      "variant_name": "SlingShot Plus",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki SlingShot Plus is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "SEU",
-          "price": "N/A"
-        },
-        {
-          "name": "SCD",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayate [2013-2016]",
-      "variant_name": "Hayate [2013-2016]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayate [2013-2016] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Kick Start",
-          "price": "N/A"
-        },
-        {
-          "name": "Electric Start",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GS150R",
-      "variant_name": "GS150R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GS150R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "M800",
-      "variant_name": "M800",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki M800 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Intruder",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "M1800RZ",
-      "variant_name": "M1800RZ",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki M1800RZ is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Intruder",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Intruder M1800R",
-      "variant_name": "Intruder M1800R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Intruder M1800R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "B.O.S.S. Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayabusa [2018-2019]",
-      "variant_name": "Hayabusa [2018-2019]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayabusa [2018-2019] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "GSX1300R",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Bandit",
-      "variant_name": "Bandit",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Bandit is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "1250SA",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX-R1000 [2016]",
-      "variant_name": "GSX-R1000 [2016]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX-R1000 [2016] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "400F",
-          "price": "N/A"
-        },
-        {
-          "name": "R600",
-          "price": "N/A"
-        },
-        {
-          "name": "R750",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Inazuma 250",
-      "variant_name": "Inazuma 250",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Inazuma 250 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Heat",
-      "variant_name": "Heat",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Heat is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "125",
-          "price": "N/A"
-        },
-        {
-          "name": "Alloys",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Zeus",
-      "variant_name": "Zeus",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Zeus is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "DS80",
-      "variant_name": "DS80",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki DS80 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Access 125 old generation 2007",
-      "variant_name": "Access 125 old generation 2007",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Access 125 old generation 2007 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GS",
-      "variant_name": "GS",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GS is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "450",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Katana [2013-2014]",
-      "variant_name": "Katana [2013-2014]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Katana [2013-2014] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "750",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "MAX100",
-      "variant_name": "MAX100",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki MAX100 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Samurai",
-      "variant_name": "Samurai",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Samurai is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Shaolin",
-      "variant_name": "Shaolin",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Shaolin is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Shogun",
-      "variant_name": "Shogun",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Shogun is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "TC90",
-      "variant_name": "TC90",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki TC90 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "AX 100",
-      "variant_name": "AX 100",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki AX 100 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "GSX R1000Z",
-      "variant_name": "GSX R1000Z",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki GSX R1000Z is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Hayabusa Limited Edition",
-      "variant_name": "Hayabusa Limited Edition",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Hayabusa Limited Edition is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "GSX1300R",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Gixxer [2014-2018]",
-      "variant_name": "Gixxer [2014-2018]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Gixxer [2014-2018] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Rear Drum",
-          "price": "N/A"
-        },
-        {
-          "name": "Dual Tone",
-          "price": "N/A"
-        },
-        {
-          "name": "Dual Tone Rear Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "SP Rear Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "ABS",
-          "price": "N/A"
-        },
-        {
-          "name": "SP ABS",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "Lets",
-      "variant_name": "Lets",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki Lets is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Dual Tone",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Suzuki",
-      "model": "SlingShot",
-      "variant_name": "SlingShot",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Suzuki SlingShot is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Drum Alloy",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc Alloy",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc Alloy Self",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum Alloy Kick",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum Alloy Self",
-          "price": "N/A"
-        },
-        {
-          "name": "Spoke",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "engine": "1340 cc, Inline-4, BS6 Phase 2B",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "266 kg",
+        "fuel_tank_capacity": "20 L",
+        "seat_height": "800 mm"
+      }
     }
   ]
 }

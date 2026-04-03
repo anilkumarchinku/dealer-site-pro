@@ -2,154 +2,149 @@
   "brand": "Lectrix",
   "brandId": "lectrix-ev",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Lectrix",
       "model": "SX25",
       "variant_name": "SX25",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹54,999",
+      "engine_displacement": "N/A",
+      "mileage": "60 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
       "top_speed": "25 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Lectrix SX25 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Lead Acid Battery",
-          "price": "N/A"
-        },
-        {
-          "name": "Lithium Ion Battery",
-          "price": "N/A"
-        }
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Lectrix SX25 is Lectrix's most affordable low-speed electric scooter with 60km range, 25 kmph top speed, lightweight design, and availability across 91 Indian cities. Rated 4.6/5 by owners.",
+      "features": ["LED Headlamp", "Digital Speedometer", "Compact Design"],
+      "variants": [{"name": "SX25 Standard", "price": "₹54,999"}],
+      "colors": [
+        {"name": "Red", "hex": "#C41E3A"},
+        {"name": "Blue", "hex": "#1A4A8B"},
+        {"name": "White", "hex": "#F5F5F0"},
+        {"name": "Black", "hex": "#1A1A1A"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Lectrix",
-      "model": "Nduro",
-      "variant_name": "Nduro",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "65 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Lectrix Nduro is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "2.0",
-          "price": "N/A"
-        },
-        {
-          "name": "3.0",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Lectrix",
-      "model": "LXS 3.0",
-      "variant_name": "LXS 3.0",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "54 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Lectrix LXS 3.0 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "60 km",
+        "charging_time": "N/A",
+        "top_speed": "25 kmph",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "70 kg",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Lectrix",
       "model": "LXS 2.0",
       "variant_name": "LXS 2.0",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹84,993",
+      "engine_displacement": "N/A",
+      "mileage": "98 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
       "top_speed": "55 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Lectrix LXS 2.0 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Lectrix LXS 2.0 is a high-speed electric scooter with 98km range, 55 kmph top speed, and 3-hour fast charging.",
+      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Fast 3-Hour Charging"],
+      "variants": [{"name": "LXS 2.0 Standard", "price": "₹84,993"}],
+      "colors": [
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "White", "hex": "#F5F5F0"},
+        {"name": "Red", "hex": "#C41E3A"},
+        {"name": "Blue", "hex": "#1A4A8B"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "98 km",
+        "charging_time": "3 hrs",
+        "top_speed": "55 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Lectrix",
-      "model": "LXS G2.0",
-      "variant_name": "LXS G2.0",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "model": "LXS 3.0",
+      "variant_name": "LXS 3.0",
+      "price": "₹91,997",
+      "engine_displacement": "N/A",
+      "mileage": "120 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
+      "top_speed": "54 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
-      "description": "The Lectrix LXS G2.0 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "description": "The Lectrix LXS 3.0 is a premium long-range electric scooter with 120km range, 54 kmph top speed, and 3.5-hour charging. Rated 4.7/5 by owners.",
+      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Long Range"],
+      "variants": [{"name": "LXS 3.0 Standard", "price": "₹91,997"}],
+      "colors": [
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Pearl White", "hex": "#F5F5F0"},
+        {"name": "Fiery Red", "hex": "#C41E3A"},
+        {"name": "Ocean Blue", "hex": "#1A4A8B"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "120 km",
+        "charging_time": "3.5 hrs",
+        "top_speed": "54 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Lectrix",
-      "model": "LXS",
-      "variant_name": "LXS",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "model": "Nduro",
+      "variant_name": "Nduro",
+      "price": "₹95,350",
+      "engine_displacement": "N/A",
+      "mileage": "90 km (range)",
+      "max_power": "1.2 kW",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
+      "top_speed": "65 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
-      "description": "The Lectrix LXS is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "description": "The Lectrix Nduro is a premium electric scooter with 90km range, 65 kmph top speed, 1.2kW motor, and rugged design. Rated 4.6/5 by owners.",
+      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Disc Brakes", "Rugged Design"],
+      "variants": [{"name": "Nduro Standard", "price": "₹95,350"}],
+      "colors": [
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "White", "hex": "#F5F5F0"},
+        {"name": "Red", "hex": "#C41E3A"},
+        {"name": "Orange", "hex": "#E8600A"},
+        {"name": "Green", "hex": "#2D6A4F"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "1.2 kW",
+        "battery": "N/A",
+        "range": "90 km",
+        "charging_time": "4 hrs",
+        "top_speed": "65 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "117 kg",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

@@ -2,124 +2,91 @@
   "brand": "VIDA",
   "brandId": "vida-hero",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "VIDA",
       "model": "VX2",
       "variant_name": "VX2",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹99,490",
+      "engine_displacement": "N/A",
+      "mileage": "92 km (range)",
+      "max_power": "6 kW",
       "max_torque": "N/A",
       "top_speed": "70 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The VIDA VX2 is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The VIDA VX2 is Hero MotoCorp's affordable entry-level electric scooter with 92km range, 70 kmph top speed, 6kW motor, removable 3.4kWh battery, and 3.53-hour fast charging. It features Battery-as-a-Service (BaaS) option and 7 colour choices.",
+      "features": ["Removable Battery", "Battery-as-a-Service (BaaS)", "Drum Brake Front", "Drum Brake Rear", "Combined Braking System", "Digital Display", "USB Charging", "Multiple Ride Modes", "Reverse Parking Mode", "Mobile App Connectivity", "LED Headlamp"],
       "variants": [
-        {
-          "name": "Go - 2.2kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "Go - 3.4kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "Plus - 3.4 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "Plus - KKR Limited Edition",
-          "price": "N/A"
-        }
+        {"name": "VX2 2 kWh", "price": "₹99,490"},
+        {"name": "VX2 2.5 kWh", "price": "₹1,07,490"},
+        {"name": "VX2 3 kWh", "price": "₹1,14,490"},
+        {"name": "VX2 3.4 kWh", "price": "₹1,20,440"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Metallic Grey", "hex": "#6B6B6B"},
+        {"name": "Pearl Black", "hex": "#1A1A1A"},
+        {"name": "Nexus Blue", "hex": "#1A4A8B"},
+        {"name": "Pearl Red", "hex": "#C41E3A"},
+        {"name": "Matte White", "hex": "#F0F0F0"},
+        {"name": "Matte Lime", "hex": "#BFD900"},
+        {"name": "Autumn Orange", "hex": "#E8600A"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "6 kW peak",
+        "battery": "3.4 kWh (removable)",
+        "range": "92 km",
+        "charging_time": "3.53 hrs",
+        "top_speed": "70 kmph",
+        "brakes_front": "Drum with CBS",
+        "brakes_rear": "Drum with CBS",
+        "kerb_weight": "N/A",
+        "seat_height": "777 mm"
+      }
     },
     {
       "make": "VIDA",
       "model": "V2",
       "variant_name": "V2",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹1,29,566",
+      "engine_displacement": "N/A",
+      "mileage": "143 km (range)",
+      "max_power": "6 kW",
       "max_torque": "N/A",
       "top_speed": "85 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The VIDA V2 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Plus",
-          "price": "N/A"
-        },
-        {
-          "name": "Pro",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "VIDA",
-      "model": "VXZ",
-      "variant_name": "VXZ",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
-      "description": "The VIDA VXZ is a two-wheeler available in India.",
-      "features": [],
+      "description": "The VIDA V2 is Hero MotoCorp's premium electric scooter with 143km range, 85 kmph top speed, 6kW motor, TFT instrument cluster, cruise control, front disc brake, and 50,000km battery warranty. It bridges the gap between VX2 and performance EVs.",
+      "features": ["TFT Instrument Cluster", "Cruise Control", "Front Disc Brake", "Drum Brake Rear", "Removable Battery", "Multiple Ride Modes", "LED Headlamp", "USB Charging", "Mobile App Connectivity", "50,000 km Battery Warranty"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "V2 Plus", "price": "₹1,29,566"},
+        {"name": "V2 Pro", "price": "₹1,44,495"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "VIDA",
-      "model": "V1",
-      "variant_name": "V1",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The VIDA V1 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Plus [2022-2023]",
-          "price": "N/A"
-        },
-        {
-          "name": "Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "Plus",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Matte Cyan", "hex": "#00CED1"},
+        {"name": "Matte White", "hex": "#F0F0F0"},
+        {"name": "Glossy Black", "hex": "#1A1A1A"},
+        {"name": "Glossy Sports Red", "hex": "#C41E3A"},
+        {"name": "Matte Abrax Orange", "hex": "#E8600A"},
+        {"name": "Matte Nexus Blue", "hex": "#1A4A8B"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "3.9 kW rated / 6 kW peak",
+        "battery": "N/A",
+        "range": "143 km",
+        "charging_time": "N/A",
+        "top_speed": "85 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "124 kg",
+        "seat_height": "777 mm"
+      }
     }
   ]
 }

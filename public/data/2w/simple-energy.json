@@ -2,154 +2,83 @@
   "brand": "Simple Energy",
   "brandId": "simple-energy",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Simple Energy",
-      "model": "One Gen 2",
-      "variant_name": "One Gen 2",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "90 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Simple Energy One Gen 2 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "4.5 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "5 kWh",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Simple Energy",
       "model": "One S Gen 2",
       "variant_name": "One S Gen 2",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹1,59,965",
+      "engine_displacement": "N/A",
+      "mileage": "190 km (range)",
+      "max_power": "6.5 kW",
       "max_torque": "N/A",
       "top_speed": "90 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Simple Energy One S Gen 2 is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Simple Energy One S Gen 2 is an affordable high-range electric scooter from Bengaluru-based Simple Energy, offering 190km range, 90 kmph top speed, and 6.5kW motor at ₹1,59,965. It is manufactured at Hosur, Tamil Nadu.",
+      "features": ["LED Headlamp", "Digital Display", "Multiple Ride Modes", "Regenerative Braking", "USB Charging", "Mobile App Connectivity"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "One S Gen 2 Standard", "price": "₹1,59,965"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Electric Blue", "hex": "#1A4A8B"},
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Pearl White", "hex": "#F5F5F0"},
+        {"name": "Racing Red", "hex": "#C41E3A"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "6.5 kW peak",
+        "battery": "N/A",
+        "range": "190 km",
+        "charging_time": "N/A",
+        "top_speed": "90 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "118 kg",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Simple Energy",
-      "model": "Ultra",
-      "variant_name": "Ultra",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "model": "One Gen 2",
+      "variant_name": "One Gen 2",
+      "price": "₹1,74,991",
+      "engine_displacement": "N/A",
+      "mileage": "265 km (range)",
+      "max_power": "6.4 kW",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
+      "top_speed": "90 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
-      "description": "The Simple Energy Ultra is a two-wheeler available in India.",
-      "features": [],
+      "description": "The Simple Energy One Gen 2 is the flagship electric scooter from Simple Energy with a class-leading 265km range, 5kWh battery, 6.4kW motor, 90 kmph top speed, and premium features. It offers one of the highest ranges in the Indian electric scooter segment.",
+      "features": ["5 kWh Battery", "LED Headlamp", "TFT Display", "Multiple Ride Modes", "Regenerative Braking", "USB Charging", "Mobile App Connectivity", "Fast Charging Compatible"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "One Gen 2 Standard", "price": "₹1,74,991"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Simple Energy",
-      "model": "Old Generation One 2025",
-      "variant_name": "Old Generation One 2025",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Simple Energy Old Generation One 2025 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "S",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Electric Blue", "hex": "#1A4A8B"},
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Pearl White", "hex": "#F5F5F0"},
+        {"name": "Racing Red", "hex": "#C41E3A"},
+        {"name": "Matte Grey", "hex": "#6B6B6B"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Simple Energy",
-      "model": "One [2023-2025]",
-      "variant_name": "One [2023-2025]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Simple Energy One [2023-2025] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Simple Energy",
-      "model": "Dot One",
-      "variant_name": "Dot One",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Simple Energy Dot One is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "6.4 kW peak",
+        "battery": "5 kWh",
+        "range": "265 km",
+        "charging_time": "N/A",
+        "top_speed": "90 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "129 kg",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

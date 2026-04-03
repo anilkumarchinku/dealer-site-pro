@@ -2,198 +2,115 @@
   "brand": "Yo",
   "brandId": "yo",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Yo",
       "model": "Edge",
-      "variant_name": "Edge",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "variant_name": "YO Edge",
+      "price": "₹67,484",
+      "engine_displacement": "N/A",
+      "mileage": "60 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
       "top_speed": "25 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Yo Edge is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "DX",
-          "price": "N/A"
-        }
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The YO Edge is an affordable low-speed electric scooter with 60km range, 25 kmph top speed, lightweight 59kg design, and 7-8 hour charging. Available across 90 Indian cities. Rated 4.1/5 by owners.",
+      "features": ["LED Headlamp", "Digital Speedometer", "Lightweight Design"],
+      "variants": [{"name": "Edge Standard", "price": "₹67,484"}],
+      "colors": [
+        {"name": "Red", "hex": "#C41E3A"},
+        {"name": "Blue", "hex": "#1A4A8B"},
+        {"name": "White", "hex": "#F5F5F0"},
+        {"name": "Black", "hex": "#1A1A1A"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "60 km",
+        "charging_time": "7-8 hrs",
+        "top_speed": "25 kmph",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "59 kg",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Yo",
       "model": "Drift",
-      "variant_name": "Drift",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "variant_name": "YO Drift",
+      "price": "₹71,283",
+      "engine_displacement": "N/A",
+      "mileage": "60 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
       "top_speed": "25 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Yo Drift is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "DX",
-          "price": "N/A"
-        }
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The YO Drift is the premium variant of YO scooters with 60km range, 25 kmph top speed, and sporty styling. Slightly higher price than the Edge.",
+      "features": ["LED Headlamp", "Digital Speedometer", "Sporty Design"],
+      "variants": [{"name": "Drift Standard", "price": "₹71,283"}],
+      "colors": [
+        {"name": "Red", "hex": "#C41E3A"},
+        {"name": "Blue", "hex": "#1A4A8B"},
+        {"name": "White", "hex": "#F5F5F0"},
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "Green", "hex": "#4CAF50"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "60 km",
+        "charging_time": "7-8 hrs",
+        "top_speed": "25 kmph",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "59 kg",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Yo",
       "model": "EXL",
-      "variant_name": "EXL",
+      "variant_name": "YO EXL",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "engine_displacement": "N/A",
+      "mileage": "N/A",
+      "max_power": "N/A",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yo EXL is a two-wheeler available in India.",
+      "top_speed": "N/A",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Discontinued",
+      "description": "The YO EXL was a discontinued electric scooter from YO! Bykes.",
       "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
+      "variants": [],
       "colors": [],
       "technical_specifications": {}
     },
     {
       "make": "Yo",
       "model": "Xplor",
-      "variant_name": "Xplor",
+      "variant_name": "YO Xplor",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "engine_displacement": "N/A",
+      "mileage": "N/A",
+      "max_power": "N/A",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yo Xplor is a two-wheeler available in India.",
+      "top_speed": "N/A",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Discontinued",
+      "description": "The YO Xplor was a discontinued electric scooter from YO! Bykes.",
       "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yo",
-      "model": "Style",
-      "variant_name": "Style",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yo Style is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "ER",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yo",
-      "model": "Spark",
-      "variant_name": "Spark",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yo Spark is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yo",
-      "model": "Electron [2012-2018]",
-      "variant_name": "Electron [2012-2018]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yo Electron [2012-2018] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Yo",
-      "model": "Electron",
-      "variant_name": "Electron",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Yo Electron is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Dual Color",
-          "price": "N/A"
-        }
-      ],
+      "variants": [],
       "colors": [],
       "technical_specifications": {}
     }

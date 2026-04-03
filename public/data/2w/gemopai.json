@@ -2,85 +2,113 @@
   "brand": "Gemopai",
   "brandId": "gemopai",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Gemopai",
       "model": "Ryder",
       "variant_name": "Ryder",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹70,822",
+      "engine_displacement": "N/A",
+      "mileage": "90 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
       "top_speed": "25 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Gemopai Ryder is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Gemopai Ryder is an affordable low-speed electric scooter from the Goreen Electric Mobility and Opai Electric joint venture. It offers 90km range, 25 kmph top speed, and lightweight 80kg design.",
+      "features": ["LED Headlamp", "Digital Speedometer", "Compact Design"],
+      "variants": [{"name": "Ryder Standard", "price": "₹70,822"}],
+      "colors": [
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "White", "hex": "#F5F5F0"},
+        {"name": "Red", "hex": "#C41E3A"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Gemopai",
-      "model": "Astrid Lite",
-      "variant_name": "Astrid Lite",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "65 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Gemopai Astrid Lite is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "1.7 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "2.16 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "2.88 kWh",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "90 km",
+        "charging_time": "3-4 hrs",
+        "top_speed": "25 kmph",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "80 kg",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Gemopai",
       "model": "Ryder SuperMax",
       "variant_name": "Ryder SuperMax",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹79,999",
+      "engine_displacement": "N/A",
+      "mileage": "100 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
       "top_speed": "60 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Gemopai Ryder SuperMax is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Gemopai Ryder SuperMax is a high-speed variant of the Ryder with 100km range, 60 kmph top speed, and 6-hour charging.",
+      "features": ["LED Headlamp", "Digital Display", "USB Charging"],
+      "variants": [{"name": "Ryder SuperMax Standard", "price": "₹79,999"}],
+      "colors": [
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "White", "hex": "#F5F5F0"},
+        {"name": "Red", "hex": "#C41E3A"},
+        {"name": "Blue", "hex": "#1A4A8B"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "100 km",
+        "charging_time": "6 hrs",
+        "top_speed": "60 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "80 kg",
+        "seat_height": "N/A"
+      }
+    },
+    {
+      "make": "Gemopai",
+      "model": "Astrid Lite",
+      "variant_name": "Astrid Lite",
+      "price": "₹92,290",
+      "engine_displacement": "N/A",
+      "mileage": "90 km (range)",
+      "max_power": "N/A",
+      "max_torque": "N/A",
+      "top_speed": "65 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Gemopai Astrid Lite is the flagship electric scooter from Gemopai with 90km range, 65 kmph top speed, and 4-hour charging. It is Gemopai's most premium offering.",
+      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Alloy Wheels"],
+      "variants": [{"name": "Astrid Lite Standard", "price": "₹92,290"}],
+      "colors": [
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Pearl White", "hex": "#F5F5F0"},
+        {"name": "Sports Red", "hex": "#C41E3A"},
+        {"name": "Space Blue", "hex": "#1A4A8B"},
+        {"name": "Matte Grey", "hex": "#6B6B6B"}
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "90 km",
+        "charging_time": "4 hrs",
+        "top_speed": "65 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "95 kg",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

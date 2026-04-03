@@ -2,7 +2,7 @@
   "brand": "Komaki",
   "brandId": "komaki",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -10,7 +10,13 @@
       "model": "Ranger",
       "variant_name": "Komaki Ranger",
       "price": "₹89,999",
+      "engine_displacement": "N/A",
+      "mileage": "200 km (range)",
+      "max_power": "2 kW",
+      "max_torque": "35 Nm",
+      "top_speed": "65 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Komaki Ranger is a long-range electric scooter with an exceptional 200 km range claim at under ₹90,000, designed for daily commuters who prioritize maximum distance per charge over top speed.",
       "features": [
@@ -22,26 +28,55 @@
         "Regenerative Braking",
         "USB Charging Port"
       ],
-      "specifications": {
-        "Motor Power": "2 kW",
-        "Range": "200 km",
-        "Battery Capacity": "96V 32Ah",
-        "Top Speed": "65 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "35 Nm",
-      "colors": ["Matte Grey", "Pearl White", "Glossy Black", "Red"],
       "variants": [
-        { "name": "Ranger 96V 32Ah", "price": "₹89,999" }
-      ]
+        {
+          "name": "Ranger 96V 32Ah",
+          "price": "₹89,999"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Matte Grey",
+          "hex": "#888888"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Glossy Black",
+          "hex": "#888888"
+        },
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "2 kW",
+        "battery": "96V 32Ah",
+        "range": "200 km km",
+        "charging_time": "N/A",
+        "top_speed": "65 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Komaki",
       "model": "Venice",
       "variant_name": "Komaki Venice",
       "price": "₹79,999",
+      "engine_displacement": "N/A",
+      "mileage": "180 km (range)",
+      "max_power": "2 kW",
+      "max_torque": "35 Nm",
+      "top_speed": "60 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Komaki Venice is a retro-styled electric scooter with a 180 km range and classic Italian-inspired design, targeting riders who want vintage aesthetics combined with modern electric performance.",
       "features": [
@@ -53,26 +88,59 @@
         "Regenerative Braking",
         "USB Charging Port"
       ],
-      "specifications": {
-        "Motor Power": "2 kW",
-        "Range": "180 km",
-        "Battery Capacity": "72V 36Ah",
-        "Top Speed": "60 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "35 Nm",
-      "colors": ["Matte Grey", "Pearl White", "Glossy Black", "Red", "Sky Blue"],
       "variants": [
-        { "name": "Venice 72V 36Ah", "price": "₹79,999" }
-      ]
+        {
+          "name": "Venice 72V 36Ah",
+          "price": "₹79,999"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Matte Grey",
+          "hex": "#888888"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Glossy Black",
+          "hex": "#888888"
+        },
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Sky Blue",
+          "hex": "#888888"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "2 kW",
+        "battery": "72V 36Ah",
+        "range": "180 km km",
+        "charging_time": "N/A",
+        "top_speed": "60 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Komaki",
       "model": "XGT K5",
       "variant_name": "Komaki XGT K5",
       "price": "₹1,09,999",
+      "engine_displacement": "N/A",
+      "mileage": "220 km (range)",
+      "max_power": "4 kW",
+      "max_torque": "50 Nm",
+      "top_speed": "90 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Komaki XGT K5 is the brand's performance flagship with a 4 kW motor and a remarkable 220 km range, targeting performance-seeking riders who want maximum range and spirited 90 kmph performance.",
       "features": [
@@ -84,26 +152,55 @@
         "Ride Modes (Eco/City/Sport)",
         "Regenerative Braking"
       ],
-      "specifications": {
-        "Motor Power": "4 kW",
-        "Range": "220 km",
-        "Battery Capacity": "96V 40Ah",
-        "Top Speed": "90 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "50 Nm",
-      "colors": ["Matte Grey", "Pearl White", "Glossy Black", "Red"],
       "variants": [
-        { "name": "XGT K5 96V 40Ah", "price": "₹1,09,999" }
-      ]
+        {
+          "name": "XGT K5 96V 40Ah",
+          "price": "₹1,09,999"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Matte Grey",
+          "hex": "#888888"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Glossy Black",
+          "hex": "#888888"
+        },
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "4 kW",
+        "battery": "96V 40Ah",
+        "range": "220 km km",
+        "charging_time": "N/A",
+        "top_speed": "90 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Komaki",
       "model": "TN-95",
       "variant_name": "Komaki TN-95",
       "price": "₹74,999",
+      "engine_displacement": "N/A",
+      "mileage": "150 km (range)",
+      "max_power": "1.5 kW",
+      "max_torque": "35 Nm",
+      "top_speed": "55 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Komaki TN-95 is a practical budget electric scooter with 150 km range and a straightforward design, ideal for daily commuters who want reliable electric mobility without unnecessary premium features.",
       "features": [
@@ -115,19 +212,42 @@
         "Regenerative Braking",
         "USB Charging Port"
       ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "150 km",
-        "Battery Capacity": "72V 28Ah",
-        "Top Speed": "55 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "35 Nm",
-      "colors": ["Matte Grey", "Pearl White", "Glossy Black", "Red"],
       "variants": [
-        { "name": "TN-95 72V 28Ah", "price": "₹74,999" }
-      ]
+        {
+          "name": "TN-95 72V 28Ah",
+          "price": "₹74,999"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Matte Grey",
+          "hex": "#888888"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Glossy Black",
+          "hex": "#888888"
+        },
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "1.5 kW",
+        "battery": "72V 28Ah",
+        "range": "150 km km",
+        "charging_time": "N/A",
+        "top_speed": "55 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

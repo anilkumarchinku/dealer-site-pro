@@ -2,7 +2,7 @@
   "brand": "Kabira Mobility",
   "brandId": "kabira-mobility",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -10,7 +10,13 @@
       "model": "KM3000",
       "variant_name": "Kabira KM3000",
       "price": "₹1,25,000",
+      "engine_displacement": "N/A",
+      "mileage": "120 km (range)",
+      "max_power": "3 kW",
+      "max_torque": "80 Nm",
+      "top_speed": "100 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Kabira KM3000 is a performance electric motorcycle with a 3 kW motor and 100 kmph top speed, designed for riders who want ICE-like performance with the efficiency of an electric powertrain.",
       "features": [
@@ -22,27 +28,55 @@
         "Ride Modes (Eco/City/Sport)",
         "Regenerative Braking"
       ],
-      "specifications": {
-        "Motor Power": "3 kW",
-        "Range": "120 km",
-        "Battery Capacity": "3.5 kWh",
-        "Top Speed": "100 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "80 Nm",
-      "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
       "variants": [
-        { "name": "KM3000 3.5 kWh", "price": "₹1,25,000" }
-      ]
+        {
+          "name": "KM3000 3.5 kWh",
+          "price": "₹1,25,000"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Matte Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Electric Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Racing Red",
+          "hex": "#C41E3A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "3 kW",
+        "battery": "3.5 kWh",
+        "range": "120 km km",
+        "charging_time": "N/A",
+        "top_speed": "100 kmph",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Kabira Mobility",
       "model": "KM4000",
       "variant_name": "Kabira KM4000",
       "price": "₹1,40,000",
+      "engine_displacement": "N/A",
+      "mileage": "150 km (range)",
+      "max_power": "4 kW",
+      "max_torque": "80 Nm",
+      "top_speed": "120 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Kabira KM4000 is a mid-range electric motorcycle with a 4 kW motor offering 150 km range and 120 kmph top speed, making it one of the most capable electric bikes for highway touring.",
       "features": [
@@ -54,27 +88,55 @@
         "Multiple Ride Modes",
         "Regenerative Braking"
       ],
-      "specifications": {
-        "Motor Power": "4 kW",
-        "Range": "150 km",
-        "Battery Capacity": "4 kWh",
-        "Top Speed": "120 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "80 Nm",
-      "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
       "variants": [
-        { "name": "KM4000 4 kWh", "price": "₹1,40,000" }
-      ]
+        {
+          "name": "KM4000 4 kWh",
+          "price": "₹1,40,000"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Matte Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Electric Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Racing Red",
+          "hex": "#C41E3A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "4 kW",
+        "battery": "4 kWh",
+        "range": "150 km km",
+        "charging_time": "N/A",
+        "top_speed": "120 kmph",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Kabira Mobility",
       "model": "KM5000",
       "variant_name": "Kabira KM5000",
       "price": "₹1,55,000",
+      "engine_displacement": "N/A",
+      "mileage": "175 km (range)",
+      "max_power": "5 kW",
+      "max_torque": "100 Nm",
+      "top_speed": "120 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Kabira KM5000 is a flagship electric motorcycle delivering 175 km range and 100 Nm torque, targeting performance enthusiasts who want the thrill of a sports bike with zero emissions.",
       "features": [
@@ -86,27 +148,55 @@
         "Ride Modes (Eco/City/Sport/Race)",
         "Regenerative Braking"
       ],
-      "specifications": {
-        "Motor Power": "5 kW",
-        "Range": "175 km",
-        "Battery Capacity": "5 kWh",
-        "Top Speed": "120 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "100 Nm",
-      "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
       "variants": [
-        { "name": "KM5000 5 kWh", "price": "₹1,55,000" }
-      ]
+        {
+          "name": "KM5000 5 kWh",
+          "price": "₹1,55,000"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Matte Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Electric Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Racing Red",
+          "hex": "#C41E3A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "5 kW",
+        "battery": "5 kWh",
+        "range": "175 km km",
+        "charging_time": "N/A",
+        "top_speed": "120 kmph",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Kabira Mobility",
       "model": "Intercity Neo",
       "variant_name": "Kabira Intercity Neo",
       "price": "₹1,59,900",
+      "engine_displacement": "N/A",
+      "mileage": "180 km (range)",
+      "max_power": "4 kW",
+      "max_torque": "80 Nm",
+      "top_speed": "110 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Kabira Intercity Neo is a long-range electric motorcycle with 180 km range and 110 kmph top speed, purpose-built for intercity travel and highway commuting without range anxiety.",
       "features": [
@@ -118,27 +208,55 @@
         "Ride Modes",
         "Regenerative Braking"
       ],
-      "specifications": {
-        "Motor Power": "4 kW",
-        "Range": "180 km",
-        "Battery Capacity": "4 kWh",
-        "Top Speed": "110 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "80 Nm",
-      "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
       "variants": [
-        { "name": "Intercity Neo 4 kWh", "price": "₹1,59,900" }
-      ]
+        {
+          "name": "Intercity Neo 4 kWh",
+          "price": "₹1,59,900"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Matte Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Electric Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Racing Red",
+          "hex": "#C41E3A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "4 kW",
+        "battery": "4 kWh",
+        "range": "180 km km",
+        "charging_time": "N/A",
+        "top_speed": "110 kmph",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Kabira Mobility",
       "model": "Intercity FS",
       "variant_name": "Kabira Intercity FS",
       "price": "₹1,74,900",
+      "engine_displacement": "N/A",
+      "mileage": "200 km (range)",
+      "max_power": "5 kW",
+      "max_torque": "100 Nm",
+      "top_speed": "120 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Kabira Intercity FS is the brand's premium long-distance electric motorcycle with a 200 km range and 5 kW motor, designed for touring riders who refuse to compromise on range or performance.",
       "features": [
@@ -150,20 +268,42 @@
         "Multiple Ride Modes",
         "Regenerative Braking"
       ],
-      "specifications": {
-        "Motor Power": "5 kW",
-        "Range": "200 km",
-        "Battery Capacity": "5 kWh",
-        "Top Speed": "120 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "100 Nm",
-      "colors": ["Matte Black", "Pearl White", "Electric Blue", "Racing Red"],
       "variants": [
-        { "name": "Intercity FS 5 kWh", "price": "₹1,74,900" }
-      ]
+        {
+          "name": "Intercity FS 5 kWh",
+          "price": "₹1,74,900"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Matte Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Electric Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Racing Red",
+          "hex": "#C41E3A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "5 kW",
+        "battery": "5 kWh",
+        "range": "200 km km",
+        "charging_time": "N/A",
+        "top_speed": "120 kmph",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

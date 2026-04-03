@@ -2,81 +2,112 @@
   "brand": "Quantum Energy",
   "brandId": "quantum-energy",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Quantum Energy",
       "model": "Milan",
       "variant_name": "Milan",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹80,003",
+      "engine_displacement": "N/A",
+      "mileage": "100 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
       "top_speed": "60 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Quantum Energy Milan is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Quantum Energy Milan is an entry-level high-speed electric scooter with 100km range, 60 kmph top speed, and 4-hour charging.",
+      "features": ["LED Headlamp", "Digital Display", "USB Charging"],
+      "variants": [{"name": "Milan Standard", "price": "₹80,003"}],
+      "colors": [
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "White", "hex": "#F5F5F0"},
+        {"name": "Red", "hex": "#C41E3A"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "100 km",
+        "charging_time": "4 hrs",
+        "top_speed": "60 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "86 kg",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Quantum Energy",
       "model": "Plasma",
       "variant_name": "Plasma",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹89,998",
+      "engine_displacement": "N/A",
+      "mileage": "100 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
       "top_speed": "60 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Quantum Energy Plasma is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "XR",
-          "price": "N/A"
-        },
-        {
-          "name": "X",
-          "price": "N/A"
-        }
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Quantum Energy Plasma is a mid-range electric scooter with 100km range, 60 kmph top speed, and 4-hour charging. Heavier than the Milan at 98kg with a premium build.",
+      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Alloy Wheels"],
+      "variants": [{"name": "Plasma Standard", "price": "₹89,998"}],
+      "colors": [
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "White", "hex": "#F5F5F0"},
+        {"name": "Red", "hex": "#C41E3A"},
+        {"name": "Blue", "hex": "#1A4A8B"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "100 km",
+        "charging_time": "4 hrs",
+        "top_speed": "60 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "98 kg",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Quantum Energy",
       "model": "Bziness",
       "variant_name": "Bziness",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹95,009",
+      "engine_displacement": "N/A",
+      "mileage": "105 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
       "top_speed": "60 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Quantum Energy Bziness is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "X",
-          "price": "N/A"
-        }
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Quantum Energy Bziness is the flagship electric scooter from Quantum Energy with 105km range, 60 kmph top speed, and 4.2-hour charging. It targets business and commercial use cases.",
+      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Alloy Wheels", "Anti-theft Alarm"],
+      "variants": [{"name": "Bziness Standard", "price": "₹95,009"}],
+      "colors": [
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Pearl White", "hex": "#F5F5F0"},
+        {"name": "Business Blue", "hex": "#1A4A8B"},
+        {"name": "Corporate Grey", "hex": "#6B6B6B"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "105 km",
+        "charging_time": "4.2 hrs",
+        "top_speed": "60 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "104 kg",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

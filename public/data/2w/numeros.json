@@ -2,62 +2,78 @@
   "brand": "Numeros",
   "brandId": "numeros",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Numeros",
-      "model": "Diplos",
-      "variant_name": "Diplos",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "model": "n-First",
+      "variant_name": "n-First",
+      "price": "₹77,943",
+      "engine_displacement": "N/A",
+      "mileage": "91 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
-      "top_speed": "70 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Numeros Diplos is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Max +",
-          "price": "N/A"
-        }
+      "top_speed": "55 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Numeros n-First is the entry-level electric scooter from Numeros with 91km range, 55 kmph top speed, and 6-hour charging. It is the most affordable Numeros model.",
+      "features": ["LED Headlamp", "Digital Display", "USB Charging"],
+      "variants": [{"name": "n-First Standard", "price": "₹77,943"}],
+      "colors": [
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "White", "hex": "#F5F5F0"},
+        {"name": "Red", "hex": "#C41E3A"},
+        {"name": "Blue", "hex": "#1A4A8B"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "91 km",
+        "charging_time": "6 hrs",
+        "top_speed": "55 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "112 kg",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Numeros",
-      "model": "n-First",
-      "variant_name": "n-First",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "model": "Diplos",
+      "variant_name": "Diplos",
+      "price": "₹1,17,507",
+      "engine_displacement": "N/A",
+      "mileage": "156 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
-      "top_speed": "55 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Numeros n-First is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Max",
-          "price": "N/A"
-        },
-        {
-          "name": "iMax",
-          "price": "N/A"
-        },
-        {
-          "name": "iMax Plus",
-          "price": "N/A"
-        }
+      "top_speed": "70 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Numeros Diplos is the flagship electric scooter from Numeros with an impressive 156km range, 70 kmph top speed, and 4-hour charging. Rated 4.8/5 by owners.",
+      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Disc Brakes"],
+      "variants": [{"name": "Diplos Standard", "price": "₹1,17,507"}],
+      "colors": [
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Pearl White", "hex": "#F5F5F0"},
+        {"name": "Electric Blue", "hex": "#1A4A8B"},
+        {"name": "Fire Red", "hex": "#C41E3A"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "156 km",
+        "charging_time": "4 hrs",
+        "top_speed": "70 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "140 kg",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

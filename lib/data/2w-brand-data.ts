@@ -67,7 +67,7 @@ function parseMileage(str: string | null | undefined): number | null {
 
 function parseTopSpeed(str: string | null | undefined): number | null {
     if (!str) return null
-    const match = str.match(/([\d.]+)\s*km\/?h/i)
+    const match = str.match(/([\d.]+)\s*km\/?p?h/i)
     if (!match) return null
     return Math.round(parseFloat(match[1]))
 }
@@ -243,12 +243,34 @@ let qjMotorData:      any = null
 let bgaussData:       any = null
 let battreData:       any = null
 let ivoomiData:       any = null
+let brixtonData:      any = null
+let evoletData:       any = null
+let ferratoData:      any = null
+let gemopaiData:      any = null
+let kineticData:      any = null
+let motomoriniData:   any = null
+let numerosData:      any = null
+let opgData:          any = null
+let rapteeData:       any = null
+let vlfData:          any = null
+let yoData:           any = null
 try { nortonData        = require('@/public/data/2w/norton-motorcycles.json') } catch { /* optional */ }
 try { bsaData           = require('@/public/data/2w/bsa.json')               } catch { /* optional */ }
 try { qjMotorData       = require('@/public/data/2w/qj-motor-india.json')    } catch { /* optional */ }
 try { bgaussData        = require('@/public/data/2w/bgauss.json')            } catch { /* optional */ }
 try { battreData        = require('@/public/data/2w/battre-ev.json')         } catch { /* optional */ }
 try { ivoomiData        = require('@/public/data/2w/ivoomi-energy.json')     } catch { /* optional */ }
+try { brixtonData       = require('@/public/data/2w/brixton-motorcycles.json') } catch { /* optional */ }
+try { evoletData        = require('@/public/data/2w/evolet.json')            } catch { /* optional */ }
+try { ferratoData       = require('@/public/data/2w/ferrato.json')           } catch { /* optional */ }
+try { gemopaiData       = require('@/public/data/2w/gemopai.json')           } catch { /* optional */ }
+try { kineticData       = require('@/public/data/2w/kinetic.json')           } catch { /* optional */ }
+try { motomoriniData    = require('@/public/data/2w/motomorini.json')        } catch { /* optional */ }
+try { numerosData       = require('@/public/data/2w/numeros.json')           } catch { /* optional */ }
+try { opgData           = require('@/public/data/2w/opg-mobility.json')      } catch { /* optional */ }
+try { rapteeData        = require('@/public/data/2w/raptee.json')            } catch { /* optional */ }
+try { vlfData           = require('@/public/data/2w/vlf.json')               } catch { /* optional */ }
+try { yoData            = require('@/public/data/2w/yo.json')                } catch { /* optional */ }
 /* eslint-enable @typescript-eslint/no-require-imports */
 
 // Standard-format files (have brand/brandId/vehicles at root)
@@ -261,6 +283,8 @@ const STANDARD_BRAND_FILES: any[] = [
     odysseData, okayaData, pureEvData, quantumData, riverData,
     simpleData, torkData, tvsMotorData, ultravioletteData, vespaData, yuluData,
     nortonData, bsaData, qjMotorData, bgaussData, battreData, ivoomiData,
+    brixtonData, evoletData, ferratoData, gemopaiData, kineticData,
+    motomoriniData, numerosData, opgData, rapteeData, vlfData, yoData,
 ].filter(Boolean)
 
 // Flat-format files: non-standard root key, flat item schema
@@ -388,24 +412,37 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
         // Top-level specifications (for EV brands like Ola, Ather, Revolt)
         const topSpecs = v.specifications || {}
         const isEVTop = !!(topSpecs['Motor Power'] || topSpecs['Range'] || topSpecs['Battery Capacity'])
+        // Also detect EV via fuel_type field (new scraped format)
+        const isEV = isEVTop || /electric/i.test(v.fuel_type || '')
+
+        // New scraped format: flat technical_specifications object
+        const newTech = v.technical_specifications || {}
 
         // Colors: prefer top-level v.colors (most brands), fallback to first variant colors
+        // Use stored hex when available, otherwise resolve by name
         const rawColors = (v.colors && v.colors.length > 0 ? v.colors : (firstVar.colors || []))
-        const colors = rawColors.map((c: string | { value: string; name: string }) => {
+        const colors = rawColors.map((c: string | { value?: string; name?: string; hex?: string }) => {
             const name = typeof c === 'string' ? c : (c.name || c.value || '')
-            return { name, hex: resolveVehicleColorHex(name) }
+            const hex = (typeof c !== 'string' && c.hex) ? c.hex : resolveVehicleColorHex(name)
+            return { name, hex }
         })
 
-        const features: string[] = []
-        if (perf['Additional Features Of Variant']) features.push(perf['Additional Features Of Variant'])
-        if (engine['Gear Box']) features.push(`${engine['Gear Box']} Gearbox`)
-        if (engine['Cooling System']) features.push(engine['Cooling System'])
-        if (engine['Starting']) features.push(engine['Starting'])
-        if (perf['Bluetooth Connectivity'] || topSpecs['Bluetooth Connectivity'] === 'Yes') features.push('Bluetooth Connectivity')
-        if (perf['USB Charging Port'] === 'Yes' || topSpecs['USB Charging Port'] === 'Yes') features.push('USB Charging Port')
-        if (perf['Navigation'] === 'Yes' || topSpecs['Navigation'] === 'Yes') features.push('Navigation')
-        if (topSpecs['Riding Modes'] === 'Yes') features.push('Riding Modes')
-        if (topSpecs['Fast Charging'] === 'Yes') features.push('Fast Charging')
+        // Features: prefer v.features array (new scraped format) over spec-derived features
+        const features: string[] = Array.isArray(v.features) && v.features.length > 0
+            ? v.features
+            : (() => {
+                const derived: string[] = []
+                if (perf['Additional Features Of Variant']) derived.push(perf['Additional Features Of Variant'])
+                if (engine['Gear Box']) derived.push(`${engine['Gear Box']} Gearbox`)
+                if (engine['Cooling System']) derived.push(engine['Cooling System'])
+                if (engine['Starting']) derived.push(engine['Starting'])
+                if (perf['Bluetooth Connectivity'] || topSpecs['Bluetooth Connectivity'] === 'Yes') derived.push('Bluetooth Connectivity')
+                if (perf['USB Charging Port'] === 'Yes' || topSpecs['USB Charging Port'] === 'Yes') derived.push('USB Charging Port')
+                if (perf['Navigation'] === 'Yes' || topSpecs['Navigation'] === 'Yes') derived.push('Navigation')
+                if (topSpecs['Riding Modes'] === 'Yes') derived.push('Riding Modes')
+                if (topSpecs['Fast Charging'] === 'Yes') derived.push('Fast Charging')
+                return derived
+            })()
 
         // Extract all variants with names + prices
         const allVariants = (v.variants || [])
@@ -417,26 +454,40 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
 
         const dims = firstVar.technical_specifications?.dimensions_and_capacity || {}
 
+        // Range: new format stores in mileage "123 km (range)" or technical_specifications.range
+        const rangeStr = isEV
+            ? (newTech.range || topSpecs['Range'] || topSpecs['Claimed Range'] || topSpecs['Range (Eco Mode)']
+                || (parseMileage(v.mileage) === null ? v.mileage : null))
+            : null
+
+        // Battery: new format stores in technical_specifications.battery
+        const batteryStr = isEV
+            ? (newTech.battery || topSpecs['Battery Capacity'])
+            : null
+
         return {
-            engine_cc: isEVTop ? null : (parseCC(engine['Displacement']) || parseCC(v.engine_displacement)),
-            mileage_kmpl: isEVTop ? null : (parseMileage(v.mileage) || parseMileage(engine['Mileage'])),
-            top_speed_kmph: parseTopSpeed(v.top_speed) || parseTopSpeed(topSpecs['Top Speed']) || parseTopSpeed(engine['Top Speed']),
+            engine_cc: isEV ? null : (parseCC(engine['Displacement']) || parseCC(v.engine_displacement)),
+            mileage_kmpl: isEV ? null : (parseMileage(v.mileage) || parseMileage(engine['Mileage'])),
+            top_speed_kmph: parseTopSpeed(v.top_speed) || parseTopSpeed(newTech.top_speed)
+                || parseTopSpeed(topSpecs['Top Speed']) || parseTopSpeed(engine['Top Speed']),
             ex_showroom_price_paise: parsePrice(firstVar.price) || parsePrice(v.price),
-            range_km: isEVTop ? (parseRange(topSpecs['Range'] || topSpecs['Claimed Range'] || topSpecs['Range (Eco Mode)'])) : null,
-            battery_kwh: isEVTop ? parseBatteryKwh(topSpecs['Battery Capacity']) : null,
+            range_km: parseRange(rangeStr),
+            battery_kwh: parseBatteryKwh(batteryStr),
             colors,
             features,
-            description: null,
-            max_power: engine['Max Power'] || engine['Power'] || topSpecs['Motor Power'] || topSpecs['Motor Power (Peak)'] || v.max_power || null,
+            description: v.description || null,
+            max_power: engine['Max Power'] || engine['Power'] || topSpecs['Motor Power'] || topSpecs['Motor Power (Peak)']
+                || newTech.motor_power || v.max_power || null,
             torque: engine['Max Torque'] || topSpecs['Torque (Motor)'] || topSpecs['Torque'] || v.max_torque || null,
             variant: firstVar.variant_name || firstVar.name || null,
             all_variants: allVariants,
             stock_status: parseSourceSection(v.source_section),
-            transmission: isEVTop ? 'Automatic' : normalizeTransmission(engine['Gear Box'] || engine['Gearbox']),
-            wheelbase_mm: parseMM(dims['Wheelbase']),
-            length_mm: parseMM(dims['Length']),
-            width_mm: parseMM(dims['Width']),
-            height_mm: parseMM(dims['Height']),
+            transmission: isEV ? 'Automatic'
+                : normalizeTransmission(engine['Gear Box'] || engine['Gearbox'] || v.transmission),
+            wheelbase_mm: parseMM(dims['Wheelbase']) || parseMM(newTech.wheelbase),
+            length_mm: parseMM(dims['Length']) || parseMM(newTech.length),
+            width_mm: parseMM(dims['Width']) || parseMM(newTech.width),
+            height_mm: parseMM(dims['Height']) || parseMM(newTech.height),
         }
     }
 

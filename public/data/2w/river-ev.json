@@ -2,31 +2,45 @@
   "brand": "River",
   "brandId": "river-ev",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "River",
       "model": "Indie",
       "variant_name": "Indie",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "price": "₹1,46,124",
+      "engine_displacement": "N/A",
+      "mileage": "161 km (range)",
+      "max_power": "6.7 kW",
+      "max_torque": "26 Nm",
       "top_speed": "90 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The River Indie is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The River Indie is a premium electric scooter from Bengaluru-based River with 161km IDC range, 6.7kW motor, 4kWh battery, 90 kmph top speed, and a segment-leading 55L total lockable storage (43L under-seat + 12L front glove box). 0-40 kmph in 3.7 seconds.",
+      "features": ["55L Total Lockable Storage", "43L Under-seat Storage", "12L Front Glove Box", "Disc Brake Front", "Drum Brake Rear", "LED Headlamp", "Digital Display", "Multiple Ride Modes", "Mobile App Connectivity"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Indie Standard", "price": "₹1,46,124"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Pearl White", "hex": "#F5F5F0"},
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Cobalt Blue", "hex": "#1A4A8B"},
+        {"name": "Pebble Grey", "hex": "#9B9B9B"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "6.7 kW peak",
+        "battery": "4 kWh",
+        "range": "161 km (IDC) / ~120 km (real-world)",
+        "charging_time": "6 hrs",
+        "top_speed": "90 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "143 kg",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

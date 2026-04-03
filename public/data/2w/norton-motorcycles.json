@@ -2,7 +2,7 @@
   "brand": "Norton",
   "brandId": "norton-motorcycles",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -10,13 +10,13 @@
       "model": "V4",
       "variant_name": "V4",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
+      "engine_displacement": "N/A",
+      "mileage": "N/A",
       "max_power": "N/A bhp",
       "max_torque": "N/A",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
+      "source_section": "Upcoming",
       "description": "The Norton V4 is a two-wheeler available in India.",
       "features": [],
       "variants": [
@@ -26,20 +26,21 @@
         }
       ],
       "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {},
+      "transmission": "Manual"
     },
     {
       "make": "Norton",
       "model": "Manx R",
       "variant_name": "Manx R",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
+      "engine_displacement": "N/A",
+      "mileage": "N/A",
       "max_power": "N/A bhp",
       "max_torque": "N/A",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
+      "source_section": "Upcoming",
       "description": "The Norton Manx R is a two-wheeler available in India.",
       "features": [],
       "variants": [
@@ -49,20 +50,21 @@
         }
       ],
       "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {},
+      "transmission": "Manual"
     },
     {
       "make": "Norton",
       "model": "Atlas GT",
       "variant_name": "Atlas GT",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
+      "engine_displacement": "N/A",
+      "mileage": "N/A",
       "max_power": "N/A bhp",
       "max_torque": "N/A",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
+      "source_section": "Upcoming",
       "description": "The Norton Atlas GT is a two-wheeler available in India.",
       "features": [],
       "variants": [
@@ -72,20 +74,21 @@
         }
       ],
       "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {},
+      "transmission": "Manual"
     },
     {
       "make": "Norton",
       "model": "Manx",
       "variant_name": "Manx",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
+      "engine_displacement": "N/A",
+      "mileage": "N/A",
       "max_power": "N/A bhp",
       "max_torque": "N/A",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
+      "source_section": "Upcoming",
       "description": "The Norton Manx is a two-wheeler available in India.",
       "features": [],
       "variants": [
@@ -95,20 +98,21 @@
         }
       ],
       "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {},
+      "transmission": "Manual"
     },
     {
       "make": "Norton",
       "model": "Atlas",
       "variant_name": "Atlas",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
+      "engine_displacement": "N/A",
+      "mileage": "N/A",
       "max_power": "N/A bhp",
       "max_torque": "N/A",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
+      "source_section": "Upcoming",
       "description": "The Norton Atlas is a two-wheeler available in India.",
       "features": [],
       "variants": [
@@ -118,20 +122,21 @@
         }
       ],
       "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {},
+      "transmission": "Manual"
     },
     {
       "make": "Norton",
       "model": "Dominator",
       "variant_name": "Dominator",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
+      "engine_displacement": "N/A",
+      "mileage": "N/A",
       "max_power": "N/A bhp",
       "max_torque": "N/A",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
+      "source_section": "Discontinued",
       "description": "The Norton Dominator is a two-wheeler available in India.",
       "features": [],
       "variants": [
@@ -148,13 +153,13 @@
       "model": "Commando 961",
       "variant_name": "Commando 961",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
+      "engine_displacement": "N/A",
+      "mileage": "N/A",
       "max_power": "N/A bhp",
       "max_torque": "N/A",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
+      "source_section": "Discontinued",
       "description": "The Norton Commando 961 is a two-wheeler available in India.",
       "features": [],
       "variants": [

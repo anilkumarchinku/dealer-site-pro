@@ -2,136 +2,93 @@
   "brand": "Mahindra",
   "brandId": "mahindra-two-wheelers",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
+  "note": "Mahindra has discontinued all two-wheeler production in India. Models listed are discontinued.",
   "vehicles": [
     {
       "make": "Mahindra",
-      "model": "Mojo 300 ABS",
-      "variant_name": "Mojo 300 ABS",
-      "price": "₹1,53,000",
-      "engine_displacement": "294.73 cc",
+      "model": "Mojo XT300",
+      "variant_name": "Mojo XT300",
+      "price": "N/A",
+      "engine_displacement": "294.7 cc",
       "mileage": "30 kmpl",
-      "top_speed": "147 kmph",
-      "max_power": "27.2 bhp",
-      "fuel_type": "Petrol",
+      "max_power": "27 bhp",
       "max_torque": "30 Nm",
+      "top_speed": "140 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
       "source_section": "Discontinued",
-      "description": "The Mahindra Mojo 300 ABS is a street-cum-touring motorcycle designed for comfort and long-distance capability. It features a 295cc liquid-cooled engine with a 21-litre fuel tank, USD front forks, slipper clutch, and twin exhaust system for a premium touring experience.",
-      "features": [
-        "294.73cc liquid-cooled single-cylinder engine producing 27.2 bhp and 30 Nm torque",
-        "6-speed manual transmission",
-        "Dual-channel ABS braking system",
-        "USD front forks for improved handling",
-        "Slipper clutch for smooth gear transitions",
-        "21-litre large fuel tank for touring",
-        "Twin exhaust system",
-        "Long wheelbase for highway stability",
-        "Well-cushioned wide seat for comfort",
-        "Discontinued from production"
-      ],
-      "colors": [
-        "Black Pearl",
-        "Garnet Black",
-        "Ruby Red",
-        "Red Agate"
-      ],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "₹1,53,000"
-        }
-      ],
+      "description": "The Mahindra Mojo XT300 was a 295cc adventure-touring motorcycle with upside-down forks, dual-channel ABS, dual exhaust, and 21-litre fuel tank. Mahindra has discontinued all two-wheeler production in India.",
+      "features": ["USD Front Forks", "Dual Channel ABS", "Dual Exhaust", "21L Fuel Tank", "Self Start"],
+      "variants": [],
+      "colors": [],
       "technical_specifications": {
-        "power": "27.2 bhp",
-        "torque": "30 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "21 litres"
+        "engine": "294.7 cc, Single Cylinder, FI",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "180 kg",
+        "fuel_tank_capacity": "21 L",
+        "seat_height": "800 mm"
       }
     },
     {
       "make": "Mahindra",
       "model": "Centuro N1",
       "variant_name": "Centuro N1",
-      "price": "₹52,500",
-      "engine_displacement": "106 cc",
-      "mileage": "70 kmpl",
+      "price": "N/A",
+      "engine_displacement": "106.7 cc",
+      "mileage": "68 kmpl",
+      "max_power": "8.4 bhp",
+      "max_torque": "8.5 Nm",
       "top_speed": "90 kmph",
-      "max_power": "8.0 bhp",
       "fuel_type": "Petrol",
+      "transmission": "4-Speed Manual",
       "source_section": "Discontinued",
-      "description": "The Mahindra Centuro N1 was a 106cc commuter motorcycle offering exceptional fuel efficiency of up to 70 kmpl and practical everyday usability. It provided an affordable entry-level option for daily commuters before being discontinued.",
-      "features": [
-        "106cc air-cooled single-cylinder engine producing 8.0 bhp and 8.5 Nm torque",
-        "4-speed manual transmission",
-        "70 kmpl exceptional fuel efficiency",
-        "8-litre fuel tank capacity",
-        "Lightweight and easy to handle",
-        "90 kmph top speed",
-        "Practical commuter ergonomics",
-        "Discontinued from production"
-      ],
-      "colors": [
-        "Red",
-        "White",
-        "Black",
-        "Blue"
-      ],
-      "variants": [
-        {
-          "name": "N1",
-          "price": "₹52,500"
-        }
-      ],
+      "description": "The Mahindra Centuro N1 was an entry-level commuter motorcycle with 106.7cc engine, 68 kmpl claimed mileage, and innovative Find Me Lamps feature. Mahindra has discontinued all two-wheeler production in India.",
+      "features": ["Find Me Lamps", "Engine Immobilizer", "Self Start"],
+      "variants": [],
+      "colors": [],
       "technical_specifications": {
-        "power": "8.0 bhp",
-        "torque": "8.5 Nm",
-        "gearbox": "4-Speed Manual",
-        "fuel_tank": "8 litres"
-      },
-      "max_torque": "8.5 Nm"
+        "engine": "106.7 cc, Single Cylinder",
+        "cooling": "Air Cooled",
+        "starting": "Self Start / Kick Start",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "131 kg",
+        "fuel_tank_capacity": "12 L",
+        "seat_height": "800 mm"
+      }
     },
     {
       "make": "Mahindra",
-      "model": "Gusto 110",
-      "variant_name": "Gusto 110",
-      "price": "₹54,000",
-      "engine_displacement": "109 cc",
-      "mileage": "45 kmpl",
+      "model": "Gusto 125",
+      "variant_name": "Gusto 125",
+      "price": "N/A",
+      "engine_displacement": "124.6 cc",
+      "mileage": "50 kmpl",
+      "max_power": "8.4 bhp",
+      "max_torque": "10.5 Nm",
       "top_speed": "85 kmph",
-      "max_power": "8.2 bhp",
       "fuel_type": "Petrol",
+      "transmission": "Automatic",
       "source_section": "Discontinued",
-      "description": "The Mahindra Gusto 110 was a practical 109cc scooter designed for urban commuting with stylish dual-tone paint options. It offered comfortable ergonomics and practical fuel efficiency for everyday city use before being discontinued.",
-      "features": [
-        "109cc air-cooled single-cylinder engine producing 8.2 bhp and 9 Nm torque",
-        "CVT automatic transmission for easy city riding",
-        "45 kmpl fuel efficiency",
-        "5.5-litre fuel tank capacity",
-        "Comfortable urban commuter ergonomics",
-        "85 kmph top speed",
-        "Lightweight and manoeuvrable design",
-        "Discontinued from production"
-      ],
-      "colors": [
-        "White",
-        "Red",
-        "Blue",
-        "Black"
-      ],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "₹54,000"
-        }
-      ],
+      "description": "The Mahindra Gusto 125 was a 125cc scooter with height-adjustable seat, Find Me Lamps, and practical features. Mahindra has discontinued all two-wheeler production in India.",
+      "features": ["Height-Adjustable Seat", "Find Me Lamps", "Self Start", "LED DRL"],
+      "variants": [],
+      "colors": [],
       "technical_specifications": {
-        "power": "8.2 bhp",
-        "torque": "9 Nm",
-        "gearbox": "CVT Automatic",
-        "fuel_tank": "5.5 litres"
-      },
-      "max_torque": "8.5 Nm"
+        "engine": "124.6 cc, Single Cylinder",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "116 kg",
+        "fuel_tank_capacity": "5.6 L",
+        "seat_height": "Adjustable"
+      }
     }
   ]
 }

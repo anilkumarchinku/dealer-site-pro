@@ -2,31 +2,44 @@
   "brand": "Ferrato",
   "brandId": "ferrato",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Ferrato",
       "model": "Disruptor",
       "variant_name": "Disruptor",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "price": "₹1,54,999",
+      "engine_displacement": "N/A",
+      "mileage": "129 km (range)",
+      "max_power": "N/A",
+      "max_torque": "228 Nm (instant)",
       "top_speed": "95 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Ferrato Disruptor is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Ferrato Disruptor is a petrol-bike-styled electric motorcycle with 129km range, 95 kmph top speed, 228Nm instant torque, and 3 ride modes (Eco, City, Sport). Rated 4.7/5 by owners for its aggressive styling and linear power delivery.",
+      "features": ["3 Ride Modes (Eco, City, Sport)", "Instant 228Nm Torque", "LED Headlamp", "Digital Display", "Disc Brakes", "Petrol-Bike Style Design"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Disruptor Standard", "price": "₹1,54,999"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Cosmic Black", "hex": "#1A1A1A"},
+        {"name": "Mars Red", "hex": "#C41E3A"},
+        {"name": "Lunar Grey", "hex": "#6B6B6B"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "129 km",
+        "charging_time": "5 hrs",
+        "top_speed": "95 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "kerb_weight": "164 kg",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

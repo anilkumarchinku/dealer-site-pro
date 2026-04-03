@@ -2,15 +2,21 @@
   "brand": "Bajaj Chetak",
   "brandId": "bajaj-chetak-ev",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Bajaj Chetak",
       "model": "Chetak Premium",
       "variant_name": "Bajaj Chetak Premium",
-      "price": "₹1,20,990 - ₹1,28,748",
+      "price": "₹1,20,990",
+      "engine_displacement": "N/A",
+      "mileage": "126 km (range)",
+      "max_power": "4.2 kW",
+      "max_torque": "16 Nm",
+      "top_speed": "73 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Bajaj Chetak Premium revives the iconic Chetak scooter legacy with a modern all-metal body and a premium electric powertrain. It features a 5-inch colour TFT display with turn-by-turn navigation, Bluetooth connectivity, hill-hold assist, and sequential LED blinkers for an upmarket urban commuting experience.",
       "features": [
@@ -25,28 +31,79 @@
         "Remote Immobilisation",
         "Accident Detection & Guide-Me-Home Lights"
       ],
-      "colors": ["Cyber White", "Hazel Brown", "Blazing Black", "Manhattan Red", "Mist Silver", "Indigo Metallic", "Pista Green", "Lime Yellow", "Azure Blue"],
       "variants": [
-        { "name": "Chetak Premium 3.2 kWh", "price": "₹1,20,990" },
-        { "name": "Chetak Premium 3.8 kWh", "price": "₹1,28,748" }
+        {
+          "name": "Chetak Premium 3.2 kWh",
+          "price": "₹1,20,990"
+        },
+        {
+          "name": "Chetak Premium 3.8 kWh",
+          "price": "₹1,28,748"
+        }
       ],
-      "specifications": {
-        "Motor Power": "4.2 kW",
-        "Range": "126 km",
-        "Battery Capacity": "3.8 kWh",
-        "Top Speed": "73 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "No",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "16 Nm"
+      "colors": [
+        {
+          "name": "Cyber White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Hazel Brown",
+          "hex": "#8B6914"
+        },
+        {
+          "name": "Blazing Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Manhattan Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Mist Silver",
+          "hex": "#C8C8C8"
+        },
+        {
+          "name": "Indigo Metallic",
+          "hex": "#3B4F7A"
+        },
+        {
+          "name": "Pista Green",
+          "hex": "#90EE90"
+        },
+        {
+          "name": "Lime Yellow",
+          "hex": "#BFD900"
+        },
+        {
+          "name": "Azure Blue",
+          "hex": "#1A4A8B"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "4.2 kW",
+        "battery": "3.8 kWh",
+        "range": "126 km km",
+        "charging_time": "N/A",
+        "top_speed": "73 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Bajaj Chetak",
       "model": "Chetak Urbane",
       "variant_name": "Bajaj Chetak Urbane",
       "price": "₹1,17,998",
+      "engine_displacement": "N/A",
+      "mileage": "108 km (range)",
+      "max_power": "4.2 kW",
+      "max_torque": "16 Nm",
+      "top_speed": "73 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Bajaj Chetak Urbane is the entry-level variant of the Chetak range, featuring an LCD instrument cluster and a 2.9 kWh battery for 108 km of practical urban range. It retains the Chetak's iconic all-metal body and offers Bluetooth connectivity and riding modes at an accessible price.",
       "features": [
@@ -61,27 +118,59 @@
         "35-litre Underseat Storage",
         "Hill-Hold Assist"
       ],
-      "colors": ["Cyber White", "Hazel Brown", "Blazing Black", "Manhattan Red", "Mist Silver"],
       "variants": [
-        { "name": "Chetak Urbane 2.9 kWh", "price": "₹1,17,998" }
+        {
+          "name": "Chetak Urbane 2.9 kWh",
+          "price": "₹1,17,998"
+        }
       ],
-      "specifications": {
-        "Motor Power": "4.2 kW",
-        "Range": "108 km",
-        "Battery Capacity": "2.9 kWh",
-        "Top Speed": "73 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "No",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "16 Nm"
+      "colors": [
+        {
+          "name": "Cyber White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Hazel Brown",
+          "hex": "#8B6914"
+        },
+        {
+          "name": "Blazing Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Manhattan Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Mist Silver",
+          "hex": "#C8C8C8"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "4.2 kW",
+        "battery": "2.9 kWh",
+        "range": "108 km km",
+        "charging_time": "N/A",
+        "top_speed": "73 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Bajaj Chetak",
       "model": "Chetak Leadr",
       "variant_name": "Bajaj Chetak Leadr",
       "price": "₹1,42,998",
+      "engine_displacement": "N/A",
+      "mileage": "170 km (range)",
+      "max_power": "4.2 kW",
+      "max_torque": "16 Nm",
+      "top_speed": "73 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Bajaj Chetak Leadr is the top-of-the-line variant in the Chetak range, powered by a larger 5.0 kWh battery delivering an impressive 170 km of claimed range. It combines the Chetak's premium all-metal body with the full suite of connected features including 5-inch TFT display, navigation, and Bluetooth app integration.",
       "features": [
@@ -96,27 +185,63 @@
         "Remote Immobilisation & Accident Detection",
         "Auto Hazard Lights"
       ],
-      "colors": ["Cyber White", "Hazel Brown", "Blazing Black", "Manhattan Red", "Mist Silver", "Indigo Metallic"],
       "variants": [
-        { "name": "Chetak Leadr 5.0 kWh", "price": "₹1,42,998" }
+        {
+          "name": "Chetak Leadr 5.0 kWh",
+          "price": "₹1,42,998"
+        }
       ],
-      "specifications": {
-        "Motor Power": "4.2 kW",
-        "Range": "170 km",
-        "Battery Capacity": "5.0 kWh",
-        "Top Speed": "73 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "No",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "16 Nm"
+      "colors": [
+        {
+          "name": "Cyber White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Hazel Brown",
+          "hex": "#8B6914"
+        },
+        {
+          "name": "Blazing Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Manhattan Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Mist Silver",
+          "hex": "#C8C8C8"
+        },
+        {
+          "name": "Indigo Metallic",
+          "hex": "#3B4F7A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "4.2 kW",
+        "battery": "5.0 kWh",
+        "range": "170 km km",
+        "charging_time": "N/A",
+        "top_speed": "73 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Bajaj Chetak",
       "model": "Chetak Legacy",
       "variant_name": "Bajaj Chetak Legacy",
       "price": "₹1,28,998",
+      "engine_displacement": "N/A",
+      "mileage": "126 km (range)",
+      "max_power": "4.2 kW",
+      "max_torque": "16 Nm",
+      "top_speed": "73 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Bajaj Chetak Legacy is a special heritage-inspired variant celebrating the iconic Chetak name, featuring a retro-modern design with contemporary electric underpinnings. It offers a 3.8 kWh battery with 126 km range and the full TFT connectivity suite.",
       "features": [
@@ -131,20 +256,42 @@
         "Remote Immobilisation",
         "Accident Detection"
       ],
-      "colors": ["Cyber White", "Hazel Brown", "Blazing Black", "Indigo Metallic"],
       "variants": [
-        { "name": "Chetak Legacy 3.8 kWh", "price": "₹1,28,998" }
+        {
+          "name": "Chetak Legacy 3.8 kWh",
+          "price": "₹1,28,998"
+        }
       ],
-      "specifications": {
-        "Motor Power": "4.2 kW",
-        "Range": "126 km",
-        "Battery Capacity": "3.8 kWh",
-        "Top Speed": "73 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "No",
-        "Bluetooth Connectivity": "Yes"
-      },
-      "max_torque": "16 Nm"
+      "colors": [
+        {
+          "name": "Cyber White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Hazel Brown",
+          "hex": "#8B6914"
+        },
+        {
+          "name": "Blazing Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Indigo Metallic",
+          "hex": "#3B4F7A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "4.2 kW",
+        "battery": "3.8 kWh",
+        "range": "126 km km",
+        "charging_time": "N/A",
+        "top_speed": "73 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

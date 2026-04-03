@@ -2,31 +2,44 @@
   "brand": "Raptee HV",
   "brandId": "raptee",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Raptee HV",
       "model": "T30",
       "variant_name": "T30",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹2,39,000",
+      "engine_displacement": "N/A",
+      "mileage": "200 km (range)",
+      "max_power": "22 kW",
       "max_torque": "N/A",
       "top_speed": "135 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Raptee HV T30 is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Raptee HV T30 is a premium electric motorcycle from Chennai-based Raptee HV, featuring India's first segment-level CCS2 fast charging, 240V high-voltage battery architecture, 22kW motor, 200km range, 135 kmph top speed, and dual disc ABS brakes.",
+      "features": ["CCS2 Fast Charging (Segment-First)", "240V High-Voltage Architecture", "Dual Disc ABS Brakes", "3 Ride Modes", "LED Lighting", "Digital Display", "Mobile App Connectivity"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "T30 Standard", "price": "₹2,39,000"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Mercury Grey", "hex": "#9E9E9E"},
+        {"name": "Eclipse Black", "hex": "#1A1A1A"},
+        {"name": "Arctic White", "hex": "#F5F5F0"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "22 kW peak",
+        "battery": "240V system",
+        "range": "200 km",
+        "charging_time": "N/A (CCS2 fast charge capable)",
+        "top_speed": "135 kmph",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "177 kg",
+        "seat_height": "790 mm"
+      }
     }
   ]
 }

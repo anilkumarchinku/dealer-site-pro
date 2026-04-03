@@ -2,139 +2,79 @@
   "brand": "iVOOMi",
   "brandId": "ivoomi-energy",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "iVOOMi",
       "model": "S1",
       "variant_name": "S1",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹79,999",
+      "engine_displacement": "N/A",
+      "mileage": "110 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
       "top_speed": "58 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The iVOOMi S1 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The iVOOMi S1 is an affordable high-speed electric scooter with 110km range, 58 kmph top speed, and 5-hour charging. Compact at 84kg, it is designed for city commuting. Available across 30 Indian cities.",
+      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Compact Design"],
+      "variants": [{"name": "S1 Standard", "price": "₹79,999"}],
+      "colors": [
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "White", "hex": "#F5F5F0"},
+        {"name": "Red", "hex": "#C41E3A"},
+        {"name": "Blue", "hex": "#1A4A8B"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "110 km",
+        "charging_time": "5 hrs",
+        "top_speed": "58 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "84 kg",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "iVOOMi",
       "model": "Jeet X",
       "variant_name": "Jeet X",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹84,999",
+      "engine_displacement": "N/A",
+      "mileage": "120 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
       "top_speed": "61 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The iVOOMi Jeet X is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "ZE - 2.5 Kwh",
-          "price": "N/A"
-        },
-        {
-          "name": "ZE - 3 Kwh",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "iVOOMi",
-      "model": "City",
-      "variant_name": "City",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
-      "description": "The iVOOMi City is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "description": "The iVOOMi Jeet X is the flagship electric scooter from iVOOMi with 120km range, 61 kmph top speed, and 5-hour charging. It offers marginally better performance over the S1.",
+      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Alloy Wheels"],
+      "variants": [{"name": "Jeet X Standard", "price": "₹84,999"}],
+      "colors": [
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Pearl White", "hex": "#F5F5F0"},
+        {"name": "Fiery Red", "hex": "#C41E3A"},
+        {"name": "Ocean Blue", "hex": "#1A4A8B"},
+        {"name": "Galaxy Grey", "hex": "#6B6B6B"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "iVOOMi",
-      "model": "Eco",
-      "variant_name": "Eco",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The iVOOMi Eco is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Plus",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "iVOOMi",
-      "model": "Jeet",
-      "variant_name": "Jeet",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The iVOOMi Jeet is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Pro",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "120 km",
+        "charging_time": "5 hrs",
+        "top_speed": "61 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "94 kg",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

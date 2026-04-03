@@ -2,89 +2,119 @@
   "brand": "Oben",
   "brandId": "oben-electric",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Oben",
-      "model": "Rorr EZ Sigma",
-      "variant_name": "Rorr EZ Sigma",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "model": "Rorr EZ",
+      "variant_name": "Rorr EZ",
+      "price": "₹99,992",
+      "engine_displacement": "N/A",
+      "mileage": "110 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
       "top_speed": "95 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Oben Rorr EZ Sigma is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Oben Rorr EZ is the entry-level electric motorcycle from Oben, priced at ₹99,992 with 110km range, 95 kmph top speed, and 4-hour charging. It is the most affordable option in Oben's lineup for budget-conscious EV buyers.",
+      "features": ["LED Headlamp", "Digital Display", "Multiple Ride Modes", "Regenerative Braking"],
       "variants": [
-        {
-          "name": "3.4 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "4.4 kWh",
-          "price": "N/A"
-        }
+        {"name": "Rorr EZ Standard", "price": "₹99,992"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Galaxy Grey", "hex": "#6B6B6B"},
+        {"name": "Solar White", "hex": "#F5F5F0"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "110 km",
+        "charging_time": "4 hrs",
+        "top_speed": "95 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "kerb_weight": "138 kg",
+        "seat_height": "N/A"
+      }
+    },
+    {
+      "make": "Oben",
+      "model": "Rorr EZ Sigma",
+      "variant_name": "Rorr EZ Sigma",
+      "price": "₹1,10,004",
+      "engine_displacement": "N/A",
+      "mileage": "140 km (range)",
+      "max_power": "N/A",
+      "max_torque": "N/A",
+      "top_speed": "95 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Oben Rorr EZ Sigma is the mid-range electric motorcycle from Oben with LFP battery technology, 140km range, 95 kmph top speed, and 5-hour charging. It holds the highest customer rating (4.7/5) in Oben's lineup.",
+      "features": ["LFP Battery Technology", "LED Headlamp", "Digital Display", "Multiple Ride Modes", "Regenerative Braking"],
+      "variants": [
+        {"name": "Rorr EZ Sigma Standard", "price": "₹1,10,004"}
+      ],
+      "colors": [
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Galaxy Grey", "hex": "#6B6B6B"},
+        {"name": "Solar White", "hex": "#F5F5F0"},
+        {"name": "Sunset Orange", "hex": "#E8600A"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "N/A",
+        "battery": "LFP Battery",
+        "range": "140 km",
+        "charging_time": "5 hrs",
+        "top_speed": "95 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "kerb_weight": "143 kg",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Oben",
       "model": "Rorr",
       "variant_name": "Rorr",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹1,49,999",
+      "engine_displacement": "N/A",
+      "mileage": "187 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
       "top_speed": "100 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Oben Rorr is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Oben Rorr is the flagship electric motorcycle from Oben with 187km range, 100 kmph top speed, and 7-hour charging. It is the most premium offering from the brand available across 21 Indian cities.",
+      "features": ["LED Headlamp", "Digital Display", "Multiple Ride Modes", "Regenerative Braking", "Mobile App Connectivity"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Rorr Standard", "price": "₹1,49,999"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Oben",
-      "model": "Rorr EZ",
-      "variant_name": "Rorr EZ",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "95 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Oben Rorr EZ is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "2.6 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "3.4 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "4.4 kWh",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Galaxy Grey", "hex": "#6B6B6B"},
+        {"name": "Solar White", "hex": "#F5F5F0"},
+        {"name": "Sunset Orange", "hex": "#E8600A"},
+        {"name": "Electric Blue", "hex": "#1A4A8B"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "187 km",
+        "charging_time": "7 hrs",
+        "top_speed": "100 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "kerb_weight": "147 kg",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

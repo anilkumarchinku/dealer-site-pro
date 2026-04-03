@@ -2,21 +2,21 @@
   "brand": "Ampere",
   "brandId": "ampere-greaves",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Ampere",
       "model": "Reo",
       "variant_name": "Reo",
-      "price": "N/A",
+      "price": "₹64,894",
       "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "mileage": "80 km (range)",
+      "max_power": "0.25 kW",
       "max_torque": "N/A",
       "top_speed": "25 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
+      "fuel_type": "Electric",
+      "source_section": "Available",
       "description": "The Ampere Reo is a two-wheeler available in India.",
       "features": [],
       "variants": [
@@ -26,20 +26,21 @@
         }
       ],
       "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {},
+      "transmission": "Automatic"
     },
     {
       "make": "Ampere",
       "model": "Nexus",
       "variant_name": "Nexus",
-      "price": "N/A",
+      "price": "₹1,24,894",
       "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "mileage": "136 km (range)",
+      "max_power": "4 kW",
       "max_torque": "N/A",
       "top_speed": "93 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
+      "fuel_type": "Electric",
+      "source_section": "Available",
       "description": "The Ampere Nexus is a two-wheeler available in India.",
       "features": [],
       "variants": [
@@ -53,20 +54,21 @@
         }
       ],
       "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {},
+      "transmission": "Automatic"
     },
     {
       "make": "Ampere",
       "model": "Magnus",
       "variant_name": "Magnus",
-      "price": "N/A",
+      "price": "₹91,991",
       "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "mileage": "95 km (range)",
+      "max_power": "1.0 kW",
       "max_torque": "N/A",
       "top_speed": "65 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
+      "fuel_type": "Electric",
+      "source_section": "Available",
       "description": "The Ampere Magnus is a two-wheeler available in India.",
       "features": [],
       "variants": [
@@ -76,20 +78,21 @@
         }
       ],
       "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {},
+      "transmission": "Automatic"
     },
     {
       "make": "Ampere",
       "model": "Magnus Grand",
       "variant_name": "Magnus Grand",
-      "price": "N/A",
+      "price": "₹94,996",
       "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "mileage": "118 km (range)",
+      "max_power": "1.2 kW",
       "max_torque": "N/A",
       "top_speed": "65 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
+      "fuel_type": "Electric",
+      "source_section": "Available",
       "description": "The Ampere Magnus Grand is a two-wheeler available in India.",
       "features": [],
       "variants": [
@@ -103,7 +106,8 @@
         }
       ],
       "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {},
+      "transmission": "Automatic"
     },
     {
       "make": "Ampere",
@@ -213,13 +217,13 @@
       "make": "Ampere",
       "model": "Magnus Pro",
       "variant_name": "Magnus Pro",
-      "price": "N/A",
+      "price": "₹1,10,000",
       "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "mileage": "100 km (range)",
+      "max_power": "2 kW",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
+      "top_speed": "70 kmph",
+      "fuel_type": "Electric",
       "source_section": "Available",
       "description": "The Ampere Magnus Pro is a two-wheeler available in India.",
       "features": [],
@@ -234,7 +238,8 @@
         }
       ],
       "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {},
+      "transmission": "Automatic"
     },
     {
       "make": "Ampere",
@@ -242,12 +247,12 @@
       "variant_name": "Zeal",
       "price": "N/A",
       "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "mileage": "N/A",
+      "max_power": "N/A",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
+      "top_speed": "N/A",
+      "fuel_type": "Electric",
+      "source_section": "Discontinued",
       "description": "The Ampere Zeal is a two-wheeler available in India.",
       "features": [],
       "variants": [
@@ -257,7 +262,8 @@
         }
       ],
       "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {},
+      "transmission": "Automatic"
     },
     {
       "make": "Ampere",

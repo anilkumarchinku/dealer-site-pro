@@ -2,124 +2,81 @@
   "brand": "Kinetic Green",
   "brandId": "kinetic",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Kinetic Green",
-      "model": "E Luna",
-      "variant_name": "E Luna",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "model": "DX",
+      "variant_name": "Kinetic DX",
+      "price": "₹1,11,499",
+      "engine_displacement": "N/A",
+      "mileage": "102 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
-      "top_speed": "50 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Kinetic Green E Luna is a two-wheeler available in India.",
-      "features": [],
+      "top_speed": "80 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Kinetic DX is the electric scooter marking the comeback of the iconic Kinetic brand in India. Made by Kinetic Watts and Volts Ltd., it offers 102km range, 80 kmph top speed, and 4-hour charging. Rated 4.8/5 by owners.",
+      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Disc Brakes"],
       "variants": [
-        {
-          "name": "X2",
-          "price": "N/A"
-        },
-        {
-          "name": "X3 Go",
-          "price": "N/A"
-        },
-        {
-          "name": "X3",
-          "price": "N/A"
-        },
-        {
-          "name": "X3 Plus",
-          "price": "N/A"
-        },
-        {
-          "name": "X3 Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "X3 Prime",
-          "price": "N/A"
-        }
+        {"name": "DX Standard", "price": "₹1,11,499"},
+        {"name": "DX+", "price": "₹1,17,000"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "White", "hex": "#F5F5F0"},
+        {"name": "Red", "hex": "#C41E3A"},
+        {"name": "Blue", "hex": "#1A4A8B"}
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "102 km",
+        "charging_time": "4 hrs",
+        "top_speed": "80 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "90 kg",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Kinetic Green",
-      "model": "Zing",
-      "variant_name": "Zing",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "model": "E Luna",
+      "variant_name": "Kinetic E Luna",
+      "price": "₹69,990",
+      "engine_displacement": "N/A",
+      "mileage": "60 km (range)",
+      "max_power": "N/A",
       "max_torque": "N/A",
       "top_speed": "25 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Kinetic Green Zing is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Big B",
-          "price": "N/A"
-        }
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Kinetic E Luna is an electric revival of the iconic Kinetic Luna moped with 60km range, 25 kmph top speed, and retro styling. It captures nostalgia while bringing EV efficiency.",
+      "features": ["Retro Luna Design", "LED Headlamp", "Digital Speedometer", "Lightweight"],
+      "variants": [{"name": "E Luna Standard", "price": "₹69,990"}],
+      "colors": [
+        {"name": "Classic Black", "hex": "#1A1A1A"},
+        {"name": "Ivory White", "hex": "#F5F5F0"},
+        {"name": "Retro Red", "hex": "#C41E3A"},
+        {"name": "Sky Blue", "hex": "#87CEEB"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Kinetic Green",
-      "model": "Flex",
-      "variant_name": "Flex",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "72 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Kinetic Green Flex is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Kinetic Green",
-      "model": "Zulu",
-      "variant_name": "Zulu",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "60 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Kinetic Green Zulu is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "60 km",
+        "charging_time": "N/A",
+        "top_speed": "25 kmph",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

@@ -2,563 +2,435 @@
   "brand": "Harley-Davidson",
   "brandId": "harley-davidson-india",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Harley-Davidson",
       "model": "X440",
-      "variant_name": "Harley-Davidson X440",
-      "price": "₹2,34,516 - ₹2,54,916",
+      "variant_name": "X440",
+      "price": "₹2,34,516",
       "engine_displacement": "440 cc",
       "mileage": "35 kmpl",
+      "max_power": "27 bhp",
+      "max_torque": "38 Nm",
       "top_speed": "135 kmph",
       "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Harley-Davidson X440 is a jointly developed motorcycle with Hero MotoCorp, bringing the Harley-Davidson brand ethos to the accessible mid-segment with a 440cc air-cooled single-cylinder engine and classic styling. It offers ABS, a 6-speed gearbox, and multiple colour options at an accessible price point for first-time Harley buyers.",
-      "features": [
-        "440cc air-cooled single-cylinder engine",
-        "Dual-channel ABS",
-        "6-speed manual transmission",
-        "Dual disc brakes",
-        "LED lighting",
-        "Classic Harley-Davidson styling",
-        "Multiple colour variants",
-        "Self-start ignition"
-      ],
+      "description": "The Harley-Davidson X440 is the most affordable Harley in India — a 440cc Indian-made retro roadster with 27 bhp, ABS, 13.5L tank, 190.5kg weight, and 805mm seat height. Made in collaboration with Hero MotoCorp. Available in 2 variants from ₹2,34,516 to ₹2,54,916 with 6 colors.",
+      "features": ["440cc Single Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Retro Styling", "Self Start", "Made in India", "Hero Dealership Network", "BS6 Phase 2"],
       "variants": [
-        {
-          "name": "X440 Vivid",
-          "price": "₹2,34,516"
-        },
-        {
-          "name": "X440 S",
-          "price": "₹2,54,916"
-        }
+        {"name": "X440 Standard", "price": "₹2,34,516"},
+        {"name": "X440 Vivid", "price": "₹2,54,916"},
+        {"name": "X440 T", "price": "₹2,79,500"}
       ],
       "colors": [
-        "Vivid Mustard",
-        "Vivid Metallic Thick Red",
-        "Vivid Metallic Dark Silver",
-        "Vivid Goldfish Silver",
-        "Baja Orange",
-        "Matte Black"
+        {"name": "Vivid Mustard", "hex": "#C8A820"},
+        {"name": "Vivid Metallic Thick Red", "hex": "#AA2200"},
+        {"name": "Vivid Metallic Dark Silver", "hex": "#6A6A6A"},
+        {"name": "Vivid Goldfish Silver", "hex": "#C8A870"},
+        {"name": "Baja Orange", "hex": "#E8600A"},
+        {"name": "Matte Black", "hex": "#2A2A2A"}
       ],
       "technical_specifications": {
-        "engine_type": "Air-cooled, Single-cylinder",
-        "power": "27 bhp",
-        "torque": "38 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "13.5 litres",
-        "seat_height": "805 mm",
+        "engine": "440 cc, Single Cylinder, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "27 bhp",
+        "max_torque": "38 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
         "kerb_weight": "190.5 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      },
-      "max_torque": "40 Nm"
+        "fuel_tank_capacity": "13.5 L",
+        "seat_height": "805 mm"
+      }
     },
     {
       "make": "Harley-Davidson",
       "model": "Nightster",
-      "variant_name": "Harley-Davidson Nightster",
-      "price": "₹14,54,000 - ₹14,63,700",
+      "variant_name": "Nightster",
+      "price": "₹14,54,000",
       "engine_displacement": "975 cc",
       "mileage": "18 kmpl",
+      "max_power": "88.5 bhp",
+      "max_torque": "95 Nm",
       "top_speed": "180 kmph",
       "fuel_type": "Petrol",
-      "max_torque": "95 Nm",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Harley-Davidson Nightster is a modern Sportster-lineage motorcycle powered by the liquid-cooled Revolution Max 975T V-twin engine making 88.5 bhp. It introduces a new era of performance-focused Harley-Davidson motorcycles with a low 705 mm seat height and modern rider assistance electronics.",
-      "features": [
-        "Revolution Max 975T V-twin engine, 88.5 bhp",
-        "Liquid-cooled engine for better performance",
-        "Dual-channel ABS",
-        "Selectable riding modes (Road, Sport, Rain)",
-        "Drag-style handlebar",
-        "Low 705 mm seat height",
-        "TFT display with Bluetooth",
-        "Assist and slipper clutch"
-      ],
+      "description": "The Harley-Davidson Nightster is a 975cc modern cruiser with 88.5 bhp, smooth and friendly engine, low 705mm seat, 11.7L tank, 221kg weight, and easy traffic handling. Available in 2 variants from ₹14,54,000 to ₹14,63,700.",
+      "features": ["975cc V-Twin Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Low Seat Height", "Sporty Cruiser", "Self Start", "BS6 Phase 2"],
       "variants": [
-        {
-          "name": "Nightster Standard",
-          "price": "₹14,54,000"
-        },
-        {
-          "name": "Nightster Premium",
-          "price": "₹14,63,700"
-        }
+        {"name": "Nightster Standard", "price": "₹14,54,000"},
+        {"name": "Nightster S", "price": "₹14,63,700"}
       ],
       "colors": [
-        "Whiskey Fire",
-        "Billiard Gray",
-        "Vivid Black"
+        {"name": "Whiskey Fire", "hex": "#8B4513"},
+        {"name": "Billiard Gray", "hex": "#7A7A7A"},
+        {"name": "Vivid Black", "hex": "#1A1A1A"}
       ],
       "technical_specifications": {
-        "engine_type": "Liquid-cooled, V-twin (Revolution Max 975T)",
-        "power": "88.5 bhp",
-        "torque": "95 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "11.7 litres",
-        "seat_height": "705 mm",
+        "engine": "975 cc, V-Twin, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "88.5 bhp",
+        "max_torque": "95 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
         "kerb_weight": "221 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
+        "fuel_tank_capacity": "11.7 L",
+        "seat_height": "705 mm"
       }
     },
     {
       "make": "Harley-Davidson",
       "model": "Nightster Special",
-      "variant_name": "Harley-Davidson Nightster Special",
-      "price": "₹15,38,000 - ₹15,49,000",
+      "variant_name": "Nightster Special",
+      "price": "₹15,38,000",
       "engine_displacement": "975 cc",
       "mileage": "18 kmpl",
+      "max_power": "88.5 bhp",
+      "max_torque": "95 Nm",
       "top_speed": "180 kmph",
       "fuel_type": "Petrol",
-      "max_torque": "95 Nm",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Harley-Davidson Nightster Special is a step up from the Nightster with Showa front forks, a higher specification suspension setup, and additional colour options. It retains the same Revolution Max 975T engine but adds sportier ergonomics and a firmer suspension tune for more dynamic riding.",
-      "features": [
-        "Revolution Max 975T V-twin engine, 88.5 bhp",
-        "Showa front forks",
-        "Assist and slipper clutch",
-        "Belt drive",
-        "Adjustable traction control",
-        "Multiple ride modes",
-        "Dual-channel ABS",
-        "TFT display"
-      ],
+      "description": "The Harley-Davidson Nightster Special is the premium 975cc cruiser variant with enhanced features, 705mm low seat, and distinctive styling at ₹15,38,000.",
+      "features": ["975cc V-Twin Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Low Seat Height", "Premium Features", "Self Start", "BS6 Phase 2"],
       "variants": [
-        {
-          "name": "Nightster Special Standard",
-          "price": "₹15,38,000"
-        },
-        {
-          "name": "Nightster Special Premium",
-          "price": "₹15,49,000"
-        }
+        {"name": "Nightster Special Standard", "price": "₹15,38,000"},
+        {"name": "Nightster Special S", "price": "₹15,49,000"}
       ],
       "colors": [
-        "Blue Burst",
-        "Whiskey Fire",
-        "Billiard Gray",
-        "Black Denim"
+        {"name": "Whiskey Fire", "hex": "#8B4513"},
+        {"name": "Billiard Gray", "hex": "#7A7A7A"},
+        {"name": "Vivid Black", "hex": "#1A1A1A"}
       ],
       "technical_specifications": {
-        "engine_type": "Liquid-cooled, V-twin (Revolution Max 975T)",
-        "power": "88.5 bhp",
-        "torque": "95 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "11.7 litres",
-        "seat_height": "715 mm",
-        "kerb_weight": "225 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "Assist and slipper clutch, Belt drive, Showa front forks, Adjustable traction control, Ride modes"
+        "engine": "975 cc, V-Twin, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "88.5 bhp",
+        "max_torque": "95 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "224 kg",
+        "fuel_tank_capacity": "11.7 L",
+        "seat_height": "705 mm"
       }
     },
     {
       "make": "Harley-Davidson",
       "model": "Sportster S",
-      "variant_name": "Harley-Davidson Sportster S",
-      "price": "₹18,05,000 - ₹18,21,500",
+      "variant_name": "Sportster S",
+      "price": "₹18,05,000",
       "engine_displacement": "1252 cc",
       "mileage": "20 kmpl",
+      "max_power": "120.69 bhp",
+      "max_torque": "125 Nm",
       "top_speed": "194 kmph",
       "fuel_type": "Petrol",
-      "max_torque": "96 Nm",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Harley-Davidson Sportster S is a performance-focused neo-retro motorcycle powered by the Revolution Max 1250T V-twin engine producing 120.69 bhp. It features a TFT display with Bluetooth, multiple ride modes, and a low centre of gravity for dynamic handling.",
-      "features": [
-        "Revolution Max 1250T V-twin, 120.69 bhp",
-        "TFT display with Bluetooth connectivity",
-        "Multiple ride modes (Sport, Road, Rain, Custom)",
-        "Cornering-enhanced ABS and traction control",
-        "Assist and slipper clutch",
-        "Belt drive",
-        "Low 765 mm seat height",
-        "Inverted front forks"
-      ],
+      "description": "The Harley-Davidson Sportster S is a 1252cc modern performance cruiser with 120.69 bhp, TFT display with Bluetooth, 765mm seat, 11.8L tank, and 228kg weight. Available in 2 variants from ₹18,05,000 to ₹18,21,500 with 4 colors.",
+      "features": ["1252cc V-Twin Engine", "Liquid Cooled", "ABS", "TFT Display with Bluetooth", "Multiple Riding Modes", "Disc Brakes", "Self Start", "BS6 Phase 2"],
       "variants": [
-        {
-          "name": "Sportster S Standard",
-          "price": "₹18,05,000"
-        },
-        {
-          "name": "Sportster S Premium",
-          "price": "₹18,21,500"
-        }
+        {"name": "Sportster S Standard", "price": "₹18,05,000"},
+        {"name": "Sportster S Custom", "price": "₹18,21,500"}
       ],
       "colors": [
-        "Mystic Shift",
-        "Brilliant Red",
-        "Billiard Gray",
-        "Vivid Black"
+        {"name": "Mystic Shift", "hex": "#4A4A6A"},
+        {"name": "Brilliant Red", "hex": "#CC0000"},
+        {"name": "Billiard Gray", "hex": "#7A7A7A"},
+        {"name": "Vivid Black", "hex": "#1A1A1A"}
       ],
       "technical_specifications": {
-        "engine_type": "Liquid-cooled, V-twin (Revolution Max 1250T)",
-        "power": "120.69 bhp",
-        "torque": "125 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "11.8 litres",
-        "seat_height": "765 mm",
+        "engine": "1252 cc, V-Twin, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "120.69 bhp",
+        "max_torque": "125 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
         "kerb_weight": "228 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "TFT display with Bluetooth"
+        "fuel_tank_capacity": "11.8 L",
+        "seat_height": "765 mm"
       }
     },
     {
       "make": "Harley-Davidson",
-      "model": "Pan America 1250 Special",
-      "variant_name": "Harley-Davidson Pan America 1250 Special",
-      "price": "₹27,16,000",
-      "engine_displacement": "1252 cc",
-      "mileage": "18.2 kmpl",
-      "top_speed": "200 kmph",
+      "model": "Street Bob",
+      "variant_name": "Street Bob",
+      "price": "₹20,23,000",
+      "engine_displacement": "1923 cc",
+      "mileage": "18 kmpl",
+      "max_power": "91.18 bhp",
+      "max_torque": "156 Nm",
+      "top_speed": "N/A",
       "fuel_type": "Petrol",
-      "max_torque": "128 Nm",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Harley-Davidson Pan America 1250 Special is a full-featured adventure motorcycle powered by the Revolution Max 1250 engine producing 150 bhp with an innovative Adaptive Ride Height system that lowers the bike at standstill. It is Harley-Davidson's most technologically advanced motorcycle for on and off-road adventures.",
-      "features": [
-        "Revolution Max 1250 V-twin, 150.19 bhp",
-        "Adaptive Ride Height (ARH) system",
-        "Cornering ABS",
-        "Multiple ride modes including Off-Road",
-        "5-inch TFT display with navigation",
-        "Adjustable front and rear suspension",
-        "Traction control",
-        "21.2-litre fuel tank"
-      ],
+      "description": "The Harley-Davidson Street Bob is a 1923cc stripped-down bobber with 91.18 bhp, ape handlebars, keyless ignition, spoke wheels, 13.2L tank, 293kg weight, and 680mm ultra-low seat. Available in 4 variants from ₹20,23,000 to ₹20,41,000.",
+      "features": ["1923cc V-Twin Engine", "Air/Oil Cooled", "ABS", "Keyless Ignition", "Ape Handlebars", "Spoke Wheels", "Bobber Styling", "Self Start", "BS6 Phase 2B"],
       "variants": [
-        {
-          "name": "Pan America 1250 Special",
-          "price": "₹27,16,000"
-        }
+        {"name": "Street Bob Standard", "price": "₹20,23,000"},
+        {"name": "Street Bob Custom", "price": "₹20,41,000"}
       ],
       "colors": [
-        "Vivid Black",
-        "Baja Orange"
+        {"name": "Billiard Gray", "hex": "#7A7A7A"},
+        {"name": "Vivid Black", "hex": "#1A1A1A"},
+        {"name": "Centerline", "hex": "#C8C8C8"},
+        {"name": "Purple Abyss Denim", "hex": "#4A2A6A"},
+        {"name": "Iron Horse Metallic", "hex": "#5A5A5A"}
       ],
       "technical_specifications": {
-        "engine_type": "Liquid-cooled, V-twin (Revolution Max 1250)",
-        "power": "150.19 bhp",
-        "torque": "127 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "21.2 litres",
-        "seat_height": "807 mm",
-        "kerb_weight": "258 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "Top-spec electronics, Adaptive ride height, Multiple ride modes"
+        "engine": "1923 cc, V-Twin, Air/Oil Cooled",
+        "cooling": "Air/Oil Cooled",
+        "max_power": "91.18 bhp",
+        "max_torque": "156 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "293 kg",
+        "fuel_tank_capacity": "13.2 L",
+        "seat_height": "680 mm"
       }
     },
     {
       "make": "Harley-Davidson",
       "model": "Heritage Classic",
-      "variant_name": "Harley-Davidson Heritage Classic",
-      "price": "₹25,71,000 - ₹26,36,000",
+      "variant_name": "Heritage Classic",
+      "price": "₹25,71,000",
       "engine_displacement": "1868 cc",
       "mileage": "18 kmpl",
+      "max_power": "93.87 bhp",
+      "max_torque": "155 Nm",
       "top_speed": "177 kmph",
       "fuel_type": "Petrol",
-      "max_torque": "155 Nm",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Harley-Davidson Heritage Classic is a timeless cruiser inspired by Harley's classic FL touring bikes of the 1950s, powered by the Milwaukee-Eight 114 air-cooled V-twin engine delivering 155 Nm of torque. It features classic fender styling, a comfortable two-up seat, and chrome detailing for authentic nostalgic riding.",
-      "features": [
-        "Milwaukee-Eight 114 V-twin engine",
-        "Classic 1950s-inspired styling",
-        "Dual-channel ABS",
-        "Chrome detailing throughout",
-        "Comfortable two-up touring seat",
-        "Spoke wheels",
-        "Low 680 mm seat height",
-        "Multiple riding modes"
-      ],
+      "description": "The Harley-Davidson Heritage Classic is a 1868cc premium touring cruiser with 93.87 bhp, spoke wheels, 18.9L tank, 330kg weight, 680mm seat, and relaxed torque for long-distance riding. Available in 4 variants from ₹25,71,000 to ₹26,36,000.",
+      "features": ["1868cc V-Twin Engine", "Air/Oil Cooled", "ABS", "Spoke Wheels", "Heritage Styling", "Large Fuel Tank", "Self Start", "BS6 Phase 2"],
       "variants": [
-        {
-          "name": "Heritage Classic Standard",
-          "price": "₹25,71,000"
-        },
-        {
-          "name": "Heritage Classic 114",
-          "price": "₹25,95,000"
-        },
-        {
-          "name": "Heritage Classic Premium",
-          "price": "₹26,36,000"
-        }
+        {"name": "Heritage Classic Standard", "price": "₹25,71,000"},
+        {"name": "Heritage Classic 3 Standard", "price": "₹26,36,000"}
       ],
       "colors": [
-        "Billiard Gray",
-        "Vivid Black",
-        "Iron Horse Metallic",
-        "White Onyx Pearl",
-        "Whiskey Fire/Vivid Black"
+        {"name": "Billiard Gray", "hex": "#7A7A7A"},
+        {"name": "Vivid Black", "hex": "#1A1A1A"},
+        {"name": "Iron Horse Metallic", "hex": "#5A5A5A"},
+        {"name": "White Onyx Pearl", "hex": "#F0F0E8"},
+        {"name": "Whiskey Fire/Vivid Black", "hex": "#8B4513"}
       ],
       "technical_specifications": {
-        "engine_type": "Air-cooled, V-twin (Milwaukee-Eight 114)",
-        "power": "93.87 bhp",
-        "torque": "155 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "18.9 litres",
-        "seat_height": "680 mm",
+        "engine": "1868 cc, V-Twin, Air/Oil Cooled",
+        "cooling": "Air/Oil Cooled",
+        "max_power": "93.87 bhp",
+        "max_torque": "155 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
         "kerb_weight": "330 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Spoke",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
+        "fuel_tank_capacity": "18.9 L",
+        "seat_height": "680 mm"
+      }
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "PAN America 1250 Special",
+      "variant_name": "PAN America 1250 Special",
+      "price": "₹27,16,000",
+      "engine_displacement": "1252 cc",
+      "mileage": "18 kmpl",
+      "max_power": "150.19 bhp",
+      "max_torque": "128 Nm",
+      "top_speed": "200 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Harley-Davidson PAN America 1250 Special is a 1252cc adventure motorcycle with 150.19 bhp, semi-active suspension, 21.2L tank, 258kg weight, 875mm seat, and off-road capable ergonomics. Available in 2 variants from ₹27,16,000 to ₹27,27,000.",
+      "features": ["1252cc V-Twin Engine", "Liquid Cooled", "ABS", "Semi-Active Suspension", "Adventure Ergonomics", "21.2L Fuel Tank", "Off-Road Capable", "Self Start", "BS6 Phase 2"],
+      "variants": [
+        {"name": "PAN America 1250 Special Standard", "price": "₹27,16,000"},
+        {"name": "PAN America 1250 Special S", "price": "₹27,27,000"}
+      ],
+      "colors": [
+        {"name": "Whiskey Fire/Raven Metallic", "hex": "#8B4513"},
+        {"name": "Blue Burst", "hex": "#1A4A8B"},
+        {"name": "Billiard Gray", "hex": "#7A7A7A"},
+        {"name": "Vivid Black", "hex": "#1A1A1A"}
+      ],
+      "technical_specifications": {
+        "engine": "1252 cc, V-Twin, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "max_power": "150.19 bhp",
+        "max_torque": "128 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "258 kg",
+        "fuel_tank_capacity": "21.2 L",
+        "seat_height": "875 mm"
       }
     },
     {
       "make": "Harley-Davidson",
       "model": "Fat Boy",
-      "variant_name": "Harley-Davidson Fat Boy",
-      "price": "₹28,03,000 - ₹28,56,000",
+      "variant_name": "Fat Boy",
+      "price": "₹28,03,000",
       "engine_displacement": "1868 cc",
       "mileage": "18 kmpl",
+      "max_power": "93.87 bhp",
+      "max_torque": "155 Nm",
       "top_speed": "177 kmph",
       "fuel_type": "Petrol",
-      "max_torque": "161 Nm",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Harley-Davidson Fat Boy is an iconic American cruiser instantly recognisable by its solid-disc alloy wheels and wide, muscular stance, powered by the Milwaukee-Eight 114 engine delivering massive low-end torque. It was famously featured in Terminator 2 and remains one of Harley's most recognisable icons.",
-      "features": [
-        "Milwaukee-Eight 114 V-twin engine",
-        "Iconic solid-disc alloy wheels",
-        "Wide, muscular cruiser stance",
-        "Dual-channel ABS",
-        "Chrome engine, exhaust and controls",
-        "Low 675 mm seat height",
-        "Multiple riding modes",
-        "LED lighting"
-      ],
+      "description": "The Harley-Davidson Fat Boy is a 1868cc iconic heavyweight cruiser with 93.87 bhp, smooth V-twin, massive 18.9L tank, 317kg weight, 675mm low seat, and relaxed touring ergonomics. Available in 3 variants from ₹28,03,000 to ₹28,56,000.",
+      "features": ["1868cc V-Twin Engine", "Air/Oil Cooled", "ABS", "Disc Brakes", "Iconic Fat Boy Styling", "Large Fuel Tank", "Self Start", "BS6 Phase 2"],
       "variants": [
-        {
-          "name": "Fat Boy Standard",
-          "price": "₹28,03,000"
-        },
-        {
-          "name": "Fat Boy 114",
-          "price": "₹28,30,000"
-        },
-        {
-          "name": "Fat Boy Premium",
-          "price": "₹28,56,000"
-        }
+        {"name": "Fat Boy Standard", "price": "₹28,03,000"},
+        {"name": "Fat Boy 30th Anniversary", "price": "₹28,56,000"}
       ],
       "colors": [
-        "Blue Burst",
-        "Billiard Gray",
-        "Vivid Black",
-        "Whiskey Fire/Vivid Black"
+        {"name": "Blue Burst", "hex": "#1A4A8B"},
+        {"name": "Billiard Gray", "hex": "#7A7A7A"},
+        {"name": "Vivid Black", "hex": "#1A1A1A"},
+        {"name": "Whiskey Fire/Vivid Black", "hex": "#8B4513"}
       ],
       "technical_specifications": {
-        "engine_type": "Air-cooled, V-twin (Milwaukee-Eight 114)",
-        "power": "93.87 bhp",
-        "torque": "155 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "18.9 litres",
-        "seat_height": "675 mm",
+        "engine": "1868 cc, V-Twin, Air/Oil Cooled",
+        "cooling": "Air/Oil Cooled",
+        "max_power": "93.87 bhp",
+        "max_torque": "155 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
         "kerb_weight": "317 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy (Solid Disc)",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
+        "fuel_tank_capacity": "18.9 L",
+        "seat_height": "675 mm"
       }
     },
     {
       "make": "Harley-Davidson",
       "model": "Breakout",
-      "variant_name": "Harley-Davidson Breakout",
-      "price": "₹34,36,000 - ₹34,54,000",
+      "variant_name": "Breakout",
+      "price": "₹34,36,000",
       "engine_displacement": "1923 cc",
       "mileage": "17.8 kmpl",
+      "max_power": "101.9 bhp",
+      "max_torque": "168 Nm",
       "top_speed": "210 kmph",
       "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Harley-Davidson Breakout is a long, low drag-style chopper powered by the Milwaukee-Eight 117 engine producing a massive 168 Nm of torque. Its elongated design, very low 665 mm seat height, and wide rear tyre create a bold, drag-race-inspired aesthetic.",
-      "features": [
-        "Milwaukee-Eight 117 V-twin engine, 168 Nm torque",
-        "Very low 665 mm seat height",
-        "Drag-style chopper design",
-        "Dual-channel ABS",
-        "Wide rear tyre",
-        "Chrome detailing",
-        "Multiple riding modes",
-        "18.9-litre fuel tank"
-      ],
+      "description": "The Harley-Davidson Breakout is a 1923cc performance cruiser with 101.9 bhp, massive 168 Nm torque, ultra-low 665mm seat, 18.9L tank, and 310kg weight. Available in 3 variants from ₹34,36,000 to ₹34,54,000.",
+      "features": ["1923cc V-Twin Engine", "Air/Oil Cooled", "ABS", "Disc Brakes", "Ultra-Low Seat", "Performance Cruiser", "Self Start", "BS6 Phase 2"],
       "variants": [
-        {
-          "name": "Breakout Standard",
-          "price": "₹34,36,000"
-        },
-        {
-          "name": "Breakout Premium",
-          "price": "₹34,54,000"
-        }
+        {"name": "Breakout Standard", "price": "₹34,36,000"},
+        {"name": "Breakout Custom", "price": "₹34,54,000"}
       ],
       "colors": [
-        "Midnight Firestorm",
-        "Brilliant Red",
-        "Billiard Gray",
-        "Vivid Black",
-        "Centerline"
+        {"name": "Midnight Firestorm", "hex": "#2A1A1A"},
+        {"name": "Brilliant Red", "hex": "#CC0000"},
+        {"name": "Billiard Gray", "hex": "#7A7A7A"},
+        {"name": "Vivid Black", "hex": "#1A1A1A"},
+        {"name": "Centerline", "hex": "#C8C8C8"}
       ],
       "technical_specifications": {
-        "engine_type": "Air-cooled, V-twin (Milwaukee-Eight 117)",
-        "power": "101.9 bhp",
-        "torque": "168 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "18.9 litres",
-        "seat_height": "665 mm",
+        "engine": "1923 cc, V-Twin, Air/Oil Cooled",
+        "cooling": "Air/Oil Cooled",
+        "max_power": "101.9 bhp",
+        "max_torque": "168 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
         "kerb_weight": "310 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2"
-      },
-      "max_torque": "161 Nm"
+        "fuel_tank_capacity": "18.9 L",
+        "seat_height": "665 mm"
+      }
     },
     {
       "make": "Harley-Davidson",
       "model": "Street Glide",
-      "variant_name": "Harley-Davidson Street Glide",
-      "price": "₹42,50,000 - ₹43,03,000",
+      "variant_name": "Street Glide",
+      "price": "₹42,50,000",
       "engine_displacement": "1923 cc",
       "mileage": "16 kmpl",
+      "max_power": "107.2 bhp",
+      "max_torque": "175 Nm",
       "top_speed": "177 kmph",
       "fuel_type": "Petrol",
-      "max_torque": "171 Nm",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Harley-Davidson Street Glide is a premium batwing-faired touring motorcycle powered by the Milwaukee-Eight 117 engine with a full infotainment system, large windscreen, and integrated luggage. It is designed for long-distance cross-country touring with exceptional comfort and connectivity.",
-      "features": [
-        "Milwaukee-Eight 117 V-twin, 175 Nm torque",
-        "Batwing fairing with integrated stereo",
-        "Full infotainment with Bluetooth and navigation",
-        "Multiple ride modes",
-        "Dual-channel ABS",
-        "Comfortable touring ergonomics",
-        "22.7-litre fuel tank",
-        "Heated grips (available)"
-      ],
+      "description": "The Harley-Davidson Street Glide is a 1923cc premium bagger-tourer with 107.2 bhp, 715mm low seat, adjustable ride modes, 22.7L tank, 368kg weight, and exceptional highway touring capability. Available in 3 variants from ₹42,50,000 to ₹43,03,000.",
+      "features": ["1923cc V-Twin Engine", "Air/Oil Cooled", "ABS", "Bagger Styling", "Adjustable Ride Modes", "22.7L Fuel Tank", "Low Seat Height", "Self Start", "BS6 Phase 2"],
       "variants": [
-        {
-          "name": "Street Glide Standard",
-          "price": "₹42,50,000"
-        },
-        {
-          "name": "Street Glide Premium",
-          "price": "₹43,03,000"
-        }
+        {"name": "Street Glide Standard", "price": "₹42,50,000"},
+        {"name": "Street Glide Custom", "price": "₹43,03,000"}
       ],
       "colors": [
-        "Mystic Shift",
-        "Billiard Gray",
-        "Vivid Black",
-        "Iron Horse Metallic",
-        "Brilliant Red",
-        "Blue Burst",
-        "Atlas Silver Metallic"
+        {"name": "Mystic Shift", "hex": "#4A4A6A"},
+        {"name": "Billiard Gray", "hex": "#7A7A7A"},
+        {"name": "Vivid Black", "hex": "#1A1A1A"},
+        {"name": "Iron Horse Metallic", "hex": "#5A5A5A"},
+        {"name": "Brilliant Red", "hex": "#CC0000"},
+        {"name": "Blue Burst", "hex": "#1A4A8B"},
+        {"name": "Atlas Silver Metallic", "hex": "#C0C0C0"}
       ],
       "technical_specifications": {
-        "engine_type": "Air-cooled, V-twin (Milwaukee-Eight 117)",
-        "power": "107.2 bhp",
-        "torque": "175 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "22.7 litres",
-        "seat_height": "715 mm",
+        "engine": "1923 cc, V-Twin, Air/Oil Cooled",
+        "cooling": "Air/Oil Cooled",
+        "max_power": "107.2 bhp",
+        "max_torque": "175 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
         "kerb_weight": "368 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "Ride modes, Infotainment system"
+        "fuel_tank_capacity": "22.7 L",
+        "seat_height": "715 mm"
       }
     },
     {
       "make": "Harley-Davidson",
       "model": "Road Glide",
-      "variant_name": "Harley-Davidson Road Glide",
-      "price": "₹45,75,000 - ₹46,30,000",
+      "variant_name": "Road Glide",
+      "price": "₹45,75,000",
       "engine_displacement": "1923 cc",
       "mileage": "16 kmpl",
+      "max_power": "107.2 bhp",
+      "max_torque": "175 Nm",
       "top_speed": "177 kmph",
       "fuel_type": "Petrol",
-      "max_torque": "171 Nm",
+      "transmission": "6-Speed Manual",
       "source_section": "Available",
-      "description": "The Harley-Davidson Road Glide is the shark-nose faired flagship tourer with a frame-mounted fairing that eliminates wind buffeting at high speeds and features a premium infotainment system. The Road Glide's distinct shark-nose fairing and larger windscreen make it the preferred choice for serious long-haul riders.",
-      "features": [
-        "Milwaukee-Eight 117 V-twin, 175 Nm torque",
-        "Frame-mounted shark-nose fairing",
-        "Full infotainment with Bluetooth and navigation",
-        "Road, Sport, Rain and Custom ride modes",
-        "Dual-channel ABS",
-        "Comfortable two-up touring seat",
-        "22.7-litre fuel tank",
-        "LED lighting"
-      ],
+      "description": "The Harley-Davidson Road Glide is the flagship 1923cc bagger-tourer with 107.2 bhp, 175 Nm torque, multiple riding modes (Road, Sport, Rain, Custom), 22.7L tank, 380kg weight, and 720mm seat height. Available in 3 variants from ₹45,75,000 to ₹46,30,000.",
+      "features": ["1923cc V-Twin Engine", "Air/Oil Cooled", "ABS", "Bagger Styling", "Multiple Riding Modes", "22.7L Fuel Tank", "Frame-Mounted Fairing", "Self Start", "BS6 Phase 2"],
       "variants": [
-        {
-          "name": "Road Glide Standard",
-          "price": "₹45,75,000"
-        },
-        {
-          "name": "Road Glide Premium",
-          "price": "₹46,30,000"
-        }
+        {"name": "Road Glide Standard", "price": "₹45,75,000"},
+        {"name": "Road Glide Custom", "price": "₹46,30,000"}
       ],
       "colors": [
-        "Mystic Shift",
-        "Billiard Gray",
-        "Vivid Black",
-        "Iron Horse Metallic",
-        "Brilliant Red",
-        "Blue Burst",
-        "Atlas Silver Metallic"
+        {"name": "Mystic Shift", "hex": "#4A4A6A"},
+        {"name": "Billiard Gray", "hex": "#7A7A7A"},
+        {"name": "Vivid Black", "hex": "#1A1A1A"},
+        {"name": "Iron Horse Metallic", "hex": "#5A5A5A"},
+        {"name": "Brilliant Red", "hex": "#CC0000"},
+        {"name": "Blue Burst", "hex": "#1A4A8B"},
+        {"name": "Atlas Silver Metallic", "hex": "#C0C0C0"}
       ],
       "technical_specifications": {
-        "engine_type": "Air-cooled, V-twin (Milwaukee-Eight 117)",
-        "power": "107.2 bhp",
-        "torque": "175 Nm",
-        "gearbox": "6-Speed Manual",
-        "fuel_tank": "22.7 litres",
-        "seat_height": "720 mm",
+        "engine": "1923 cc, V-Twin, Air/Oil Cooled",
+        "cooling": "Air/Oil Cooled",
+        "max_power": "107.2 bhp",
+        "max_torque": "175 Nm",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
         "kerb_weight": "380 kg",
-        "brakes_front": "Disc",
-        "brakes_rear": "Disc",
-        "abs": "Yes",
-        "wheel_type": "Alloy",
-        "start_type": "Self Start",
-        "emission": "BS6 Phase 2",
-        "features": "Road, Sport, Rain and Custom ride modes, V-Twin 175Nm touring engine"
+        "fuel_tank_capacity": "22.7 L",
+        "seat_height": "720 mm"
       }
     }
   ]

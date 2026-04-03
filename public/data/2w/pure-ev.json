@@ -2,102 +2,152 @@
   "brand": "Pure EV",
   "brandId": "pure-ev",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
-      "make": "Pure EV",
+      "make": "PURE EV",
+      "model": "ETrance Neo",
+      "variant_name": "ETrance Neo",
+      "price": "₹79,699",
+      "engine_displacement": "N/A",
+      "mileage": "101 km (range)",
+      "max_power": "N/A",
+      "max_torque": "N/A",
+      "top_speed": "47 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The PURE EV ETrance Neo is an entry-level electric scooter with 101km range, 47 kmph top speed, and 86kg lightweight build. IIT Hyderabad incubated brand. Available across 52 cities at ₹79,699.",
+      "features": ["Electric Motor", "101km Range", "Lightweight 86kg", "Self Start"],
+      "variants": [
+        {"name": "ETrance Neo Standard", "price": "₹79,699"}
+      ],
+      "colors": [
+        {"name": "Blue", "hex": "#1A4A8B"},
+        {"name": "Red", "hex": "#CC0000"},
+        {"name": "White", "hex": "#F5F5F0"}
+      ],
+      "technical_specifications": {
+        "motor": "Electric Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "101 km",
+        "charging_time": "N/A",
+        "top_speed": "47 kmph",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "86 kg",
+        "seat_height": "N/A"
+      }
+    },
+    {
+      "make": "PURE EV",
       "model": "EPluto 7G",
-      "variant_name": "Pure EV EPluto 7G",
-      "price": "₹1,14,990",
+      "variant_name": "EPluto 7G",
+      "price": "₹80,799",
+      "engine_displacement": "N/A",
+      "mileage": "101 km (range)",
+      "max_power": "N/A",
+      "max_torque": "N/A",
+      "top_speed": "47 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
-      "description": "The Pure EV EPluto 7G is the top-selling electric scooter from IIT Hyderabad incubated Pure EV, offering an exceptional 171 km range backed by a 72V 45Ah battery and multiple smart features for long-range urban commuting.",
-      "features": [
-        "171 km Exceptional Range",
-        "Mobile App Connectivity",
-        "GPS Tracking & Anti-Theft",
-        "Digital TFT Display",
-        "Fast Charging",
-        "Ride Modes (Eco/Normal/Sport)",
-        "Regenerative Braking"
-      ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "171 km",
-        "Battery Capacity": "72V 45Ah",
-        "Top Speed": "55 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "32 Nm",
-      "colors": ["Glam White", "Jet Black", "Atomic Orange", "Electric Blue"],
+      "description": "The PURE EV EPluto 7G is a lightweight 76kg electric scooter with 101km range, 47 kmph top speed, and value pricing. One of Pure EV's most popular models at ₹80,799.",
+      "features": ["Electric Motor", "101km Range", "Lightweight 76kg", "Self Start"],
       "variants": [
-        { "name": "EPluto 7G 72V 45Ah", "price": "₹1,14,990" },
-        { "name": "EPluto 7G Max 72V 50Ah", "price": "₹1,24,990" }
-      ]
+        {"name": "EPluto 7G Standard", "price": "₹80,799"}
+      ],
+      "colors": [
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "Blue", "hex": "#1A4A8B"},
+        {"name": "White", "hex": "#F5F5F0"}
+      ],
+      "technical_specifications": {
+        "motor": "Electric Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "101 km",
+        "charging_time": "N/A",
+        "top_speed": "47 kmph",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "76 kg",
+        "seat_height": "N/A"
+      }
     },
     {
-      "make": "Pure EV",
-      "model": "eTrance Neo",
-      "variant_name": "Pure EV eTrance Neo",
-      "price": "₹78,990",
+      "make": "PURE EV",
+      "model": "EcoDryft",
+      "variant_name": "EcoDryft",
+      "price": "₹1,18,700",
+      "engine_displacement": "N/A",
+      "mileage": "151 km (range)",
+      "max_power": "N/A",
+      "max_torque": "N/A",
+      "top_speed": "75 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
-      "description": "The Pure EV eTrance Neo is an affordable entry-level electric scooter with 120 km range, designed for daily commuters seeking a reliable and cost-effective electric two-wheeler from a research-backed Indian brand.",
-      "features": [
-        "Digital Instrument Cluster",
-        "Anti-Theft Alarm",
-        "Ride Modes (Eco/Power)",
-        "Fast Charging",
-        "Regenerative Braking",
-        "USB Charging Port",
-        "Lightweight BLDC Motor"
-      ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "120 km",
-        "Battery Capacity": "60V 30Ah",
-        "Top Speed": "50 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "32 Nm",
-      "colors": ["Glam White", "Jet Black", "Atomic Orange", "Electric Blue"],
+      "description": "The PURE EV EcoDryft is a high-speed electric scooter with 151km range, 75 kmph top speed, 101kg weight, and a 4.4/5 user rating. Popular model at ₹1,18,700.",
+      "features": ["Electric Motor", "151km Range", "75 kmph Top Speed", "CBS Brakes", "Self Start"],
       "variants": [
-        { "name": "eTrance Neo 60V 30Ah", "price": "₹78,990" }
-      ]
+        {"name": "EcoDryft Standard", "price": "₹1,18,700"}
+      ],
+      "colors": [
+        {"name": "Red", "hex": "#CC0000"},
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "White", "hex": "#F5F5F0"}
+      ],
+      "technical_specifications": {
+        "motor": "Electric Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "151 km",
+        "charging_time": "N/A",
+        "top_speed": "75 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum with CBS",
+        "kerb_weight": "101 kg",
+        "seat_height": "N/A"
+      }
     },
     {
-      "make": "Pure EV",
-      "model": "ecoDryft 350",
-      "variant_name": "Pure EV ecoDryft 350",
-      "price": "₹1,29,990",
+      "make": "PURE EV",
+      "model": "Etryst 350",
+      "variant_name": "Etryst 350",
+      "price": "₹1,49,999",
+      "engine_displacement": "N/A",
+      "mileage": "171 km (range)",
+      "max_power": "N/A",
+      "max_torque": "N/A",
+      "top_speed": "94 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
-      "description": "The Pure EV ecoDryft 350 is a performance-oriented electric motorcycle with a 3.5 kW motor, 75 kmph top speed, and 171 km range, targeting riders who want a capable electric alternative to 150-200cc petrol bikes.",
-      "features": [
-        "3.5 kW High-Performance Motor",
-        "171 km Long Range",
-        "Mobile App with Remote Monitoring",
-        "GPS Tracking & Anti-Theft",
-        "DC Fast Charging",
-        "Ride Modes (Eco/Normal/Sport)",
-        "Regenerative Braking"
-      ],
-      "specifications": {
-        "Motor Power": "3.5 kW",
-        "Range": "171 km",
-        "Battery Capacity": "72V 45Ah",
-        "Top Speed": "75 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "38 Nm",
-      "colors": ["Glam White", "Jet Black", "Atomic Orange", "Electric Blue"],
+      "description": "The PURE EV Etryst 350 is the flagship premium electric scooter with 171km range, 94 kmph top speed, 120kg weight, and advanced features at ₹1,49,999.",
+      "features": ["Electric Motor", "171km Range", "94 kmph Top Speed", "CBS Brakes", "Self Start", "Premium Features"],
       "variants": [
-        { "name": "ecoDryft 350 72V 45Ah", "price": "₹1,29,990" }
-      ]
+        {"name": "Etryst 350 Standard", "price": "₹1,49,999"}
+      ],
+      "colors": [
+        {"name": "Red", "hex": "#CC0000"},
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "White", "hex": "#F5F5F0"}
+      ],
+      "technical_specifications": {
+        "motor": "Electric Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "171 km",
+        "charging_time": "N/A",
+        "top_speed": "94 kmph",
+        "brakes_front": "Disc with CBS",
+        "brakes_rear": "Disc with CBS",
+        "kerb_weight": "120 kg",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

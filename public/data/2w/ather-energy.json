@@ -2,296 +2,162 @@
   "brand": "Ather",
   "brandId": "ather-energy",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Ather",
       "model": "Rizta",
       "variant_name": "Rizta",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹1,11,665",
+      "engine_displacement": "N/A",
+      "mileage": "123 km (range)",
+      "max_power": "4.3 kW",
       "max_torque": "N/A",
       "top_speed": "80 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Ather Rizta is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Ather Rizta is an affordable family electric scooter with 123km true range, 80 kmph top speed, 4.3kW motor, and 20+ colour and variant options starting at ₹1.11 lakh. It features a practical design with generous storage space.",
+      "features": ["Disc Brake Front", "Drum Brake Rear", "Alloy Wheels", "LED Headlamp", "Self Start", "Reverse Mode", "Touchscreen Display", "OTA Updates"],
       "variants": [
-        {
-          "name": "S - 2.9 kwh - Mono",
-          "price": "N/A"
-        },
-        {
-          "name": "S - 2.9 kwh - Mono - Ather Stack Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "S - 2.9 kwh - Super Matte",
-          "price": "N/A"
-        },
-        {
-          "name": "S - 2.9 kwh - Super Matte - Ather Stack Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "Z - 2.9 kwh - Mono",
-          "price": "N/A"
-        },
-        {
-          "name": "Z - 2.9 kwh - Mono - Ather Stack Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "Z - 2.9 kwh - Duo",
-          "price": "N/A"
-        },
-        {
-          "name": "Z - 2.9 kwh - Duo - Ather Stack Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "Z - 2.9 kwh - Super Matte",
-          "price": "N/A"
-        },
-        {
-          "name": "Z - 2.9 kwh - Super Matte - Ather Stack Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "S - 3.7 kwh - Mono",
-          "price": "N/A"
-        },
-        {
-          "name": "S - 3.7 kwh - Mono - Ather Stack Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "S - 3.7 kwh - Super Matte",
-          "price": "N/A"
-        },
-        {
-          "name": "S - 3.7 kwh - Super Matte - Ather Stack Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "Z - 3.7 kwh - Mono",
-          "price": "N/A"
-        },
-        {
-          "name": "Z - 3.7 kwh - Mono - Ather Stack Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "Z - 3.7 kwh - Duo",
-          "price": "N/A"
-        },
-        {
-          "name": "Z - 3.7 kwh - Duo - Ather Stack Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "Z - 3.7 kwh - Super Matte",
-          "price": "N/A"
-        },
-        {
-          "name": "Z - 3.7 kwh - Super Matte - Ather Stack Pro",
-          "price": "N/A"
-        }
+        {"name": "Rizta Z 2.9 kWh", "price": "₹1,11,665"},
+        {"name": "Rizta Z 3.7 kWh", "price": "₹1,24,866"},
+        {"name": "Rizta S 2.9 kWh", "price": "₹1,34,166"},
+        {"name": "Rizta S 3.7 kWh", "price": "₹1,52,089"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ather",
-      "model": "450X",
-      "variant_name": "450X",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "90 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Ather 450X is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "2.9 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "2.9 kWh - Ather Stack Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "3.7 kWh",
-          "price": "N/A"
-        },
-        {
-          "name": "3.7 kWh - Ather Stack Pro",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Pearl White", "hex": "#F5F5F0"},
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Space Grey", "hex": "#6B6B6B"},
+        {"name": "Mint Green", "hex": "#B2D8C8"},
+        {"name": "Coral Red", "hex": "#D94F3D"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ather",
-      "model": "450 Apex",
-      "variant_name": "450 Apex",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "100 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Ather 450 Apex is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "4.3 kW peak",
+        "battery": "2.9 kWh / 3.7 kWh LFP",
+        "range": "123 km (True Range, 3.7 kWh)",
+        "charging_time": "8.3 hrs (standard charger)",
+        "top_speed": "80 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "125 kg",
+        "seat_height": "780 mm"
+      }
     },
     {
       "make": "Ather",
       "model": "450S",
       "variant_name": "450S",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹1,23,001",
+      "engine_displacement": "N/A",
+      "mileage": "115 km (range)",
+      "max_power": "5.4 kW",
       "max_torque": "N/A",
       "top_speed": "90 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Ather 450S is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Ather 450S is a performance electric scooter with 5.4kW motor, 115km true range, 90 kmph top speed, and dual disc brakes. It is the mid-range sibling of the 450X offering a balance of performance and price.",
+      "features": ["Disc Brake Front", "Disc Brake Rear", "Alloy Wheels", "LED Headlamp", "Self Start", "Reverse Mode", "Digital Display", "OTA Updates", "3 Ride Modes"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Ather Stack Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "3.7 kWh Ather Stack Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "3.7 kWh",
-          "price": "N/A"
-        }
+        {"name": "450S 2.9 kWh", "price": "₹1,23,001"},
+        {"name": "450S 3.7 kWh", "price": "₹1,44,354"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Space Grey", "hex": "#6B6B6B"},
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Pearl White", "hex": "#F5F5F0"},
+        {"name": "Turquoise", "hex": "#40E0D0"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "5.4 kW peak",
+        "battery": "2.9 kWh / 3.7 kWh",
+        "range": "115 km (True Range, 3.7 kWh)",
+        "charging_time": "8.3 hrs (standard charger)",
+        "top_speed": "90 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "kerb_weight": "108 kg",
+        "seat_height": "780 mm"
+      }
     },
     {
       "make": "Ather",
-      "model": "EL Scooter",
-      "variant_name": "EL Scooter",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "model": "450X",
+      "variant_name": "450X",
+      "price": "₹1,46,907",
+      "engine_displacement": "N/A",
+      "mileage": "126 km (range)",
+      "max_power": "6.4 kW",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
+      "top_speed": "90 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
-      "description": "The Ather EL Scooter is a two-wheeler available in India.",
-      "features": [],
+      "description": "The Ather 450X is a feature-packed performance electric scooter with 6.4kW motor, 126km true range, 7-inch touchscreen, Google Maps navigation, OTA updates, 5 ride modes including Warp mode, reverse mode, and 4.3-hour fast charging.",
+      "features": ["7-inch Touchscreen", "Google Maps Navigation", "OTA Updates", "5 Ride Modes (incl. Warp)", "Reverse Mode", "Fast Charging 4.3 hrs", "Disc Brake Front", "Disc Brake Rear", "Alloy Wheels", "LED Headlamp", "Self Start"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "450X 2.9 kWh", "price": "₹1,46,907"},
+        {"name": "450X 3.7 kWh", "price": "₹1,57,403"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Space Grey", "hex": "#6B6B6B"},
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Pearl White", "hex": "#F5F5F0"},
+        {"name": "Turquoise", "hex": "#40E0D0"},
+        {"name": "Green", "hex": "#4CAF50"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "6.4 kW peak",
+        "battery": "2.9 kWh / 3.7 kWh",
+        "range": "126 km (True Range, 3.7 kWh)",
+        "charging_time": "4.3 hrs (fast charger), 8.3 hrs (standard)",
+        "top_speed": "90 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "kerb_weight": "108 kg",
+        "seat_height": "780 mm"
+      }
     },
     {
       "make": "Ather",
-      "model": "340",
-      "variant_name": "340",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "model": "450 Apex",
+      "variant_name": "450 Apex",
+      "price": "₹1,89,916",
+      "engine_displacement": "N/A",
+      "mileage": "157 km (range)",
+      "max_power": "7 kW",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
+      "top_speed": "100 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
-      "description": "The Ather 340 is a two-wheeler available in India.",
-      "features": [],
+      "description": "The Ather 450 Apex is Ather's flagship electric scooter with 7kW peak power, 157km IDC range, 3.7kWh battery, 100 kmph top speed, 7-inch TFT touchscreen, Google Maps, Amazon Alexa integration, Magic Twist regenerative braking, 22L storage, and 5-year battery warranty.",
+      "features": ["7-inch TFT Touchscreen", "Amazon Alexa", "Google Maps Navigation", "Magic Twist Regenerative Braking", "5 Ride Modes", "Reverse Mode", "22L Storage", "Fast Charging", "Disc Brake Front", "Disc Brake Rear", "LED Headlamp", "OTA Updates", "Bluetooth Connectivity"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "450 Apex 3.7 kWh", "price": "₹1,89,916"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ather",
-      "model": "450",
-      "variant_name": "450",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Ather 450 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Indium Blue", "hex": "#3B4F7A"},
+        {"name": "Midnight Black", "hex": "#1A1A1A"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ather",
-      "model": "450X Gen 2",
-      "variant_name": "450X Gen 2",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Ather 450X Gen 2 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Plus",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "7 kW peak",
+        "battery": "3.7 kWh",
+        "range": "157 km (IDC range)",
+        "charging_time": "5.45 hrs (fast charger)",
+        "top_speed": "100 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "kerb_weight": "111.6 kg",
+        "seat_height": "780 mm",
+        "storage": "22 L"
+      }
     }
   ]
 }

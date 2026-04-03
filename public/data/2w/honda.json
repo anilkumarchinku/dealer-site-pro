@@ -1,3330 +1,888 @@
 {
-  "brand": "Honda",
-  "brandId": "honda",
+  "brand": "Honda Motorcycle & Scooter India",
+  "brandId": "honda-hmsi",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Honda",
-      "model": "SP 125",
-      "variant_name": "SP 125",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "model": "Activa 6G",
+      "variant_name": "Activa 6G",
+      "price": "₹78,166",
+      "engine_displacement": "109.51 cc",
+      "mileage": "47 kmpl",
+      "max_power": "7.88 bhp",
+      "max_torque": "9.05 Nm",
+      "top_speed": "85 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda SP 125 is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "Automatic CVT",
+      "source_section": "Available",
+      "description": "The Honda Activa 6G is India's most popular scooter with BS6 Phase 2B engine. It offers reliable performance with combined braking system, LED headlight, and alloy wheels.",
+      "features": ["LED Headlamp", "Combined Braking System", "Alloy Wheels", "USB Charging Port", "Self Start", "Kick Start"],
       "variants": [
-        {
-          "name": "Drum",
-          "price": "N/A"
-        },
-        {
-          "name": "25-year Anniversary Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹78,166"},
+        {"name": "Deluxe", "price": "₹84,000"},
+        {"name": "Anniversary Edition", "price": "₹88,000"},
+        {"name": "Premium", "price": "₹91,981"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Activa",
-      "variant_name": "Activa",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda Activa is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "25-year Anniversary Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Deluxe",
-          "price": "N/A"
-        },
-        {
-          "name": "H-Smart",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Rebel Red Metallic", "hex": "#A52020"},
+        {"name": "Pearl Siren Blue", "hex": "#1A3A6B"},
+        {"name": "Pearl Precious White", "hex": "#F5F5F0"},
+        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
+        {"name": "Mat Axis Gray Metallic", "hex": "#6B6B6B"},
+        {"name": "Decent Blue Metallic", "hex": "#2A4A7A"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Unicorn",
-      "variant_name": "Unicorn",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda Unicorn is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Shine",
-      "variant_name": "Shine",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda Shine is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Drum",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "Limited Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB350RS",
-      "variant_name": "CB350RS",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda CB350RS is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "DLX",
-          "price": "N/A"
-        },
-        {
-          "name": "DLX Pro",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB 125 Hornet",
-      "variant_name": "CB 125 Hornet",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda CB 125 Hornet is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB350",
-      "variant_name": "CB350",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda CB350 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "DLX",
-          "price": "N/A"
-        },
-        {
-          "name": "DLX Pro",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "engine": "109.51 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Kick and Self Start",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "suspension_front": "Telescopic",
+        "suspension_rear": "Spring Loaded Hydraulic",
+        "kerb_weight": "106 kg",
+        "fuel_tank_capacity": "5.3 L",
+        "seat_height": "764 mm"
+      }
     },
     {
       "make": "Honda",
       "model": "Activa 125",
       "variant_name": "Activa 125",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹92,529",
+      "engine_displacement": "123.92 cc",
+      "mileage": "47 kmpl",
+      "max_power": "8.3 bhp",
+      "max_torque": "10.5 Nm",
+      "top_speed": "90 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda Activa 125 is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "Automatic CVT",
+      "source_section": "Available",
+      "description": "The Honda Activa 125 is a premium scooter offering a 125cc BS6 Phase 2 engine with disc brake option, digital instrument cluster, and USB charging port for a refined commuting experience.",
+      "features": ["LED Headlamp", "USB Charging Port", "Digital Instrument Cluster", "Combined Braking System", "Alloy Wheels", "Kick Start", "Self Start"],
       "variants": [
-        {
-          "name": "25-year Anniversary Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "DLX",
-          "price": "N/A"
-        },
-        {
-          "name": "H-Smart",
-          "price": "N/A"
-        }
+        {"name": "Drum", "price": "₹92,529"},
+        {"name": "Disc", "price": "₹95,000"},
+        {"name": "H-Smart", "price": "₹97,903"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "SP160",
-      "variant_name": "SP160",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda SP160 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Single Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "Double Disc",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Mat Axis Gray Metallic", "hex": "#6B6B6B"},
+        {"name": "Pearl Deep Ground Gray", "hex": "#4A4A4A"},
+        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
+        {"name": "Pearl Precious White", "hex": "#F5F5F0"},
+        {"name": "Pearl Siren Blue", "hex": "#1A3A6B"},
+        {"name": "Rebel Red Metallic", "hex": "#A52020"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Hness CB350",
-      "variant_name": "Hness CB350",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda Hness CB350 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "DLX",
-          "price": "N/A"
-        },
-        {
-          "name": "DLX Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "DLX Pro Chrome",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Hornet 2.0",
-      "variant_name": "Hornet 2.0",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda Hornet 2.0 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "engine": "123.92 cc, Single Cylinder, BS6 Phase 2",
+        "cooling": "Air Cooled",
+        "starting": "Kick and Self Start",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "107 kg",
+        "fuel_tank_capacity": "5.3 L",
+        "seat_height": "765 mm"
+      }
     },
     {
       "make": "Honda",
       "model": "Dio",
       "variant_name": "Dio",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹74,298",
+      "engine_displacement": "109.51 cc",
+      "mileage": "48 kmpl",
+      "max_power": "7.75 bhp",
+      "max_torque": "9.03 Nm",
+      "top_speed": "83 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda Dio is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "Automatic CVT",
+      "source_section": "Available",
+      "description": "The Honda Dio is a sporty scooter with a 109cc BS6 Phase 2B engine, tubeless tyres, and a youthful design with USB charging port option.",
+      "features": ["USB Charging Port", "Combined Braking System", "Kick Start", "Self Start", "Tubeless Tyres"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Deluxe",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹74,298"},
+        {"name": "Deluxe", "price": "₹86,333"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Pearl Igneous Black + Pearl Deep Ground Gray", "hex": "#1A1A1A"},
+        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
+        {"name": "Mat Marvel Blue", "hex": "#1A2A5A"},
+        {"name": "Mat Axis Gray Metallic", "hex": "#6B6B6B"},
+        {"name": "Imperial Red Metallic", "hex": "#8B0000"}
+      ],
+      "technical_specifications": {
+        "engine": "109.51 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Kick and Self Start",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "suspension_front": "Telescopic",
+        "kerb_weight": "106 kg",
+        "fuel_tank_capacity": "5.3 L",
+        "seat_height": "765 mm"
+      }
     },
     {
       "make": "Honda",
       "model": "Dio 125",
       "variant_name": "Dio 125",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹93,289",
+      "engine_displacement": "123.92 cc",
+      "mileage": "47 kmpl",
+      "max_power": "8.19 bhp",
+      "max_torque": "10.5 Nm",
+      "top_speed": "95 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda Dio 125 is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "Automatic CVT",
+      "source_section": "Available",
+      "description": "The Honda Dio 125 is a premium 125cc scooter with PGM-FI fuel injection, disc brakes, USB charging port, and lightweight fiber body with external fuel filler cap.",
+      "features": ["USB Charging Port", "Disc Brake", "Combined Braking System", "ACG Silent Start", "Side-stand Engine Cut-off", "External Fuel Filler Cap", "Alloy Wheels"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "X Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "H-Smart",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹93,289"},
+        {"name": "Deluxe", "price": "₹95,500"},
+        {"name": "H-Smart", "price": "₹98,240"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR650R",
-      "variant_name": "CBR650R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda CBR650R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Pearl Deep Ground Gray (Stripe)", "hex": "#4A4A4A"},
+        {"name": "Imperial Red", "hex": "#8B0000"},
+        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
+        {"name": "Pearl Sports Yellow", "hex": "#E8C200"},
+        {"name": "Mat Marvel Blue Metallic", "hex": "#1A2A5A"},
+        {"name": "Pearl Siren Blue", "hex": "#1A3A6B"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Activa e",
-      "variant_name": "Activa e",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "80 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda Activa e is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Honda RoadSync Duo",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "NX200",
-      "variant_name": "NX200",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda NX200 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "engine": "123.92 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Kick and Self Start",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "suspension_front": "Telescopic",
+        "kerb_weight": "105 kg",
+        "fuel_tank_capacity": "5.3 L"
+      }
     },
     {
       "make": "Honda",
       "model": "Shine 100",
       "variant_name": "Shine 100",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹65,717",
+      "engine_displacement": "98.98 cc",
+      "mileage": "65 kmpl",
+      "max_power": "7.28 bhp",
+      "max_torque": "8.05 Nm",
+      "top_speed": "85 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda Shine 100 is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "4-Speed Manual",
+      "source_section": "Available",
+      "description": "The Honda Shine 100 is an entry-level commuter bike with a 100cc BS6 Phase 2B engine, E20 fuel compatibility, tubeless tyres, and excellent fuel efficiency at 65 kmpl.",
+      "features": ["Alloy Wheels", "Tubeless Tyres", "Combined Braking System", "Kick Start", "Self Start", "E20 Compatible"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "DX",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹65,717"},
+        {"name": "DX", "price": "₹71,672"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Orange with Black", "hex": "#E8600A"},
+        {"name": "Green with Black", "hex": "#2A6B2A"},
+        {"name": "Gray with Black", "hex": "#6B6B6B"},
+        {"name": "Blue with Black", "hex": "#1A3A6B"},
+        {"name": "Red with Black", "hex": "#A52020"},
+        {"name": "Geny Gray Metallic", "hex": "#8A8A8A"},
+        {"name": "Athletic Blue Metallic", "hex": "#1A4A8B"},
+        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
+        {"name": "Imperial Red Metallic", "hex": "#8B0000"}
+      ],
+      "technical_specifications": {
+        "engine": "98.98 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Kick and Self Start",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "99 kg",
+        "fuel_tank_capacity": "9 L",
+        "seat_height": "786 mm"
+      }
     },
     {
       "make": "Honda",
-      "model": "QC1",
-      "variant_name": "QC1",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "50 kmph",
+      "model": "Shine",
+      "variant_name": "Shine",
+      "price": "₹82,449",
+      "engine_displacement": "123.94 cc",
+      "mileage": "55 kmpl",
+      "max_power": "10.59 bhp",
+      "max_torque": "11 Nm",
+      "top_speed": "102 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda QC1 is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Honda Shine is a popular 125cc commuter motorcycle with smooth engine, 5-speed gearbox, and combined braking system offering excellent daily performance.",
+      "features": ["Combined Braking System", "Alloy Wheels", "Kick Start", "Self Start"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Drum", "price": "₹82,449"},
+        {"name": "Disc", "price": "₹85,000"},
+        {"name": "Limited Edition", "price": "₹87,838"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB650R",
-      "variant_name": "CB650R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda CB650R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Pearl Siren Blue", "hex": "#1A3A6B"},
+        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
+        {"name": "Decent Blue Metallic", "hex": "#2A4A7A"},
+        {"name": "Genny Grey Metallic", "hex": "#8A8A8A"},
+        {"name": "Matte Axis Gray Metallic", "hex": "#6B6B6B"},
+        {"name": "Rebel Red Metallic", "hex": "#A52020"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB300F Flex-Fuel",
-      "variant_name": "CB300F Flex-Fuel",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda CB300F Flex-Fuel is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "engine": "123.94 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Kick and Self Start",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "113 kg",
+        "fuel_tank_capacity": "10.5 L",
+        "seat_height": "791 mm"
+      }
     },
     {
       "make": "Honda",
       "model": "Livo",
       "variant_name": "Livo",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "price": "₹80,752",
+      "engine_displacement": "109.51 cc",
+      "mileage": "60 kmpl",
+      "max_power": "8.67 bhp",
+      "max_torque": "9.3 Nm",
+      "top_speed": "85 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "4-Speed Manual",
+      "source_section": "Available",
+      "description": "The Honda Livo is a stylish 110cc commuter motorcycle with excellent fuel efficiency, adjustable rear suspension, and available in both drum and disc variants.",
+      "features": ["Alloy Wheels", "Kick Start", "Self Start", "Combined Braking System", "5-Step Adjustable Rear Suspension"],
+      "variants": [
+        {"name": "Drum", "price": "₹80,752"},
+        {"name": "Disc", "price": "₹83,319"}
+      ],
+      "colors": [
+        {"name": "Pearl Siren Blue A", "hex": "#1A3A6B"},
+        {"name": "Pearl Igneous Black (Blue Stripes)", "hex": "#1A1A1A"},
+        {"name": "Pearl Igneous Black (Orange Stripes)", "hex": "#1A1A1A"}
+      ],
+      "technical_specifications": {
+        "engine": "109.51 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Kick and Self Start",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "suspension_rear": "5-Step Adjustable",
+        "kerb_weight": "112 kg",
+        "fuel_tank_capacity": "9 L",
+        "seat_height": "790 mm"
+      }
+    },
+    {
+      "make": "Honda",
+      "model": "SP 125",
+      "variant_name": "SP 125",
+      "price": "₹89,406",
+      "engine_displacement": "123.94 cc",
+      "mileage": "62 kmpl",
+      "max_power": "10.72 bhp",
+      "max_torque": "10.9 Nm",
+      "top_speed": "100 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Honda SP 125 is a feature-rich 125cc commuter motorcycle with PGM-FI fuel injection, BS6 Phase 2B compliance, and excellent fuel efficiency of 62 kmpl.",
+      "features": ["PGM-FI Fuel Injection", "Combined Braking System", "Alloy Wheels", "Kick Start", "Self Start"],
+      "variants": [
+        {"name": "Drum", "price": "₹89,406"},
+        {"name": "Disc", "price": "₹92,500"},
+        {"name": "Anniversary Edition", "price": "₹96,267"}
+      ],
+      "colors": [
+        {"name": "Matte Marvel Blue Metallic", "hex": "#1A2A5A"},
+        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
+        {"name": "Pearl Siren Blue", "hex": "#1A3A6B"},
+        {"name": "Matte Axis Gray Metallic", "hex": "#6B6B6B"},
+        {"name": "Imperial Red Metallic", "hex": "#8B0000"}
+      ],
+      "technical_specifications": {
+        "engine": "123.94 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Kick and Self Start",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "116 kg",
+        "fuel_tank_capacity": "11 L",
+        "seat_height": "790 mm"
+      }
+    },
+    {
+      "make": "Honda",
+      "model": "CB 125 Hornet",
+      "variant_name": "CB 125 Hornet",
+      "price": "₹1,15,065",
+      "engine_displacement": "123.94 cc",
+      "mileage": "55 kmpl",
+      "max_power": "10.99 bhp",
+      "max_torque": "11.2 Nm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda Livo is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Honda CB 125 Hornet is a sporty street motorcycle with USD front forks, full-color TFT display, Bluetooth connectivity, and single-channel ABS for enhanced safety.",
+      "features": ["TFT Display", "Bluetooth Connectivity", "USD Front Forks", "Disc Brake", "Single-Channel ABS", "LED Headlamps", "Alloy Wheels", "Self Start"],
       "variants": [
-        {
-          "name": "Drum",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹1,15,065"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Pearl Siren Blue with Sports Red", "hex": "#1A3A6B"},
+        {"name": "Pearl Siren Blue with Athletic Blue", "hex": "#1A3A6B"},
+        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
+        {"name": "Pearl Siren Blue with Lemon Ice Yellow", "hex": "#1A3A6B"}
+      ],
+      "technical_specifications": {
+        "engine": "123.94 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Drum",
+        "suspension_front": "USD (Upside Down) Forks",
+        "kerb_weight": "124 kg",
+        "fuel_tank_capacity": "12 L",
+        "seat_height": "796 mm"
+      }
+    },
+    {
+      "make": "Honda",
+      "model": "SP160",
+      "variant_name": "SP160",
+      "price": "₹1,16,270",
+      "engine_displacement": "162.71 cc",
+      "mileage": "50 kmpl",
+      "max_power": "13.27 bhp",
+      "max_torque": "14.58 Nm",
+      "top_speed": "110 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Honda SP160 is a sporty 160cc commuter with single or double disc options, 5-speed gearbox, and ABS. Offers good performance and refinement for city riding.",
+      "features": ["Disc Brake", "ABS", "Alloy Wheels", "Self Start"],
+      "variants": [
+        {"name": "Single Disc", "price": "₹1,16,270"},
+        {"name": "Double Disc", "price": "₹1,21,780"}
+      ],
+      "colors": [
+        {"name": "Athletic Blue Metallic", "hex": "#1A4A8B"},
+        {"name": "Radiant Red Metallic", "hex": "#CC2020"},
+        {"name": "Pearl Deep Ground Gray", "hex": "#4A4A4A"},
+        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"}
+      ],
+      "technical_specifications": {
+        "engine": "162.71 cc, Single Cylinder, BS6 Phase 2",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "138 kg",
+        "fuel_tank_capacity": "12 L",
+        "seat_height": "796 mm"
+      }
+    },
+    {
+      "make": "Honda",
+      "model": "Unicorn",
+      "variant_name": "Unicorn",
+      "price": "₹1,13,613",
+      "engine_displacement": "162.71 cc",
+      "mileage": "50 kmpl",
+      "max_power": "13 bhp",
+      "max_torque": "14.58 Nm",
+      "top_speed": "106 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Honda Unicorn is a premium 163cc street bike focused on comfort and daily commuting with disc brake and ABS, offering a smooth engine and strong build quality.",
+      "features": ["Disc Brake", "ABS", "Alloy Wheels", "Kick Start", "Self Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹1,13,613"}
+      ],
+      "colors": [
+        {"name": "Radiant Red Metallic", "hex": "#CC2020"},
+        {"name": "Mat Axis Gray Metallic", "hex": "#6B6B6B"},
+        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"}
+      ],
+      "technical_specifications": {
+        "engine": "162.71 cc, Single Cylinder, BS6 Phase 2",
+        "cooling": "Air Cooled",
+        "starting": "Kick and Self Start",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "139 kg",
+        "fuel_tank_capacity": "13 L",
+        "seat_height": "798 mm"
+      }
+    },
+    {
+      "make": "Honda",
+      "model": "Hornet 2.0",
+      "variant_name": "Hornet 2.0",
+      "price": "₹1,47,864",
+      "engine_displacement": "184.4 cc",
+      "mileage": "42.3 kmpl",
+      "max_power": "17.03 bhp",
+      "max_torque": "15.9 Nm",
+      "top_speed": "130 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Honda Hornet 2.0 is a sporty naked street bike with 184cc engine, TFT display, Bluetooth connectivity, inverted front forks, and single-channel ABS.",
+      "features": ["Digital TFT Display", "Bluetooth Connectivity", "Inverted Front Forks", "Slip and Assist Clutch", "LED Headlamps", "ABS", "Alloy Wheels", "Self Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹1,47,864"}
+      ],
+      "colors": [
+        {"name": "Radiant Red Metallic", "hex": "#CC2020"},
+        {"name": "Athletic Blue Metallic", "hex": "#1A4A8B"},
+        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
+        {"name": "Matte Axis Grey Metallic", "hex": "#6B6B6B"}
+      ],
+      "technical_specifications": {
+        "engine": "184.4 cc, Single Cylinder, BS6 Phase 2",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc",
+        "suspension_front": "Inverted (USD) Forks",
+        "kerb_weight": "142 kg",
+        "fuel_tank_capacity": "12 L",
+        "seat_height": "790 mm"
+      }
+    },
+    {
+      "make": "Honda",
+      "model": "NX200",
+      "variant_name": "NX200",
+      "price": "₹1,58,607",
+      "engine_displacement": "184.4 cc",
+      "mileage": "42 kmpl",
+      "max_power": "16.76 bhp",
+      "max_torque": "15.7 Nm",
+      "top_speed": "130 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Honda NX200 is a crossover/adventure motorcycle with 184cc engine, dual-channel ABS, USD forks, monoshock rear, TFT display with Honda RoadSync, and MRF Zapper CURRV tyres.",
+      "features": ["TFT Display", "Honda RoadSync", "USD Front Forks", "Monoshock", "Dual Channel ABS", "Assist & Slipper Clutch", "Alloy Wheels", "Self Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹1,58,607"}
+      ],
+      "colors": [
+        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
+        {"name": "Radiant Red Metallic", "hex": "#CC2020"},
+        {"name": "Athletic Blue Metallic", "hex": "#1A4A8B"}
+      ],
+      "technical_specifications": {
+        "engine": "184.4 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "suspension_front": "USD (Upside Down) Forks",
+        "suspension_rear": "Monoshock",
+        "ground_clearance": "167 mm",
+        "kerb_weight": "148 kg",
+        "fuel_tank_capacity": "12 L",
+        "seat_height": "810 mm"
+      }
+    },
+    {
+      "make": "Honda",
+      "model": "CB300F Flex-Fuel",
+      "variant_name": "CB300F Flex-Fuel",
+      "price": "₹1,55,658",
+      "engine_displacement": "293.52 cc",
+      "mileage": "35.5 kmpl",
+      "max_power": "24.54 bhp",
+      "max_torque": "25.9 Nm",
+      "top_speed": "155 kmph",
+      "fuel_type": "Flex Fuel (E85)",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Honda CB300F Flex-Fuel is India's first flex-fuel motorcycle compatible with E85 ethanol blend, featuring dual-channel ABS with traction control, Bluetooth connectivity, and LED lighting.",
+      "features": ["Flex Fuel (E85 Compatible)", "Dual Channel ABS", "Traction Control", "Bluetooth Connectivity", "LED Lighting", "Digital Cluster", "Alloy Wheels", "Self Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹1,55,658"}
+      ],
+      "colors": [
+        {"name": "Mat Marvel Blue Metallic", "hex": "#1A2A5A"},
+        {"name": "Matte Axis Grey Metallic", "hex": "#6B6B6B"},
+        {"name": "Sports Red", "hex": "#CC2020"}
+      ],
+      "technical_specifications": {
+        "engine": "293.52 cc, Single Cylinder, BS6 Phase 2",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "153 kg",
+        "fuel_tank_capacity": "14.1 L",
+        "seat_height": "789 mm"
+      }
+    },
+    {
+      "make": "Honda",
+      "model": "H'ness CB350",
+      "variant_name": "H'ness CB350",
+      "price": "₹1,93,117",
+      "engine_displacement": "348.36 cc",
+      "mileage": "35 kmpl",
+      "max_power": "20.78 bhp",
+      "max_torque": "30 Nm",
+      "top_speed": "125 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Honda H'ness CB350 is a premium retro-classic motorcycle with a 348cc single-cylinder engine, dual ABS disc brakes, and classic styling with round headlamp and chrome finishing.",
+      "features": ["Dual Channel ABS", "Disc Brakes", "Alloy Wheels", "Self Start", "Classic Retro Styling", "Chrome Finishing"],
+      "variants": [
+        {"name": "DLX", "price": "₹1,93,117"},
+        {"name": "DLX Pro", "price": "₹1,97,914"}
+      ],
+      "colors": [
+        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
+        {"name": "Pearl Deep Ground Grey", "hex": "#4A4A4A"},
+        {"name": "Rebel Red Metallic", "hex": "#A52020"},
+        {"name": "Athletic Blue Metallic", "hex": "#1A4A8B"}
+      ],
+      "technical_specifications": {
+        "engine": "348.36 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "181 kg",
+        "fuel_tank_capacity": "15 L",
+        "seat_height": "800 mm"
+      }
+    },
+    {
+      "make": "Honda",
+      "model": "CB350",
+      "variant_name": "CB350",
+      "price": "₹1,97,045",
+      "engine_displacement": "348.36 cc",
+      "mileage": "35 kmpl",
+      "max_power": "20.7 bhp",
+      "max_torque": "29.5 Nm",
+      "top_speed": "130 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Honda CB350 is a modern retro-style motorcycle with 348cc engine, dual-channel ABS, traction control, and Bluetooth connectivity for a refined riding experience.",
+      "features": ["Dual Channel ABS", "Traction Control", "Bluetooth Connectivity", "Disc Brakes", "Alloy Wheels", "Self Start"],
+      "variants": [
+        {"name": "DLX", "price": "₹1,97,045"},
+        {"name": "DLX Pro", "price": "₹2,00,474"}
+      ],
+      "colors": [
+        {"name": "Rebel Red Metallic DLX", "hex": "#A52020"},
+        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
+        {"name": "Pearl Deep Ground Gray", "hex": "#4A4A4A"},
+        {"name": "Mat Dune Brown", "hex": "#7A5A3A"},
+        {"name": "Mat Axis Gray Metallic", "hex": "#6B6B6B"}
+      ],
+      "technical_specifications": {
+        "engine": "348.36 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "186 kg",
+        "fuel_tank_capacity": "15.2 L",
+        "seat_height": "800 mm"
+      }
+    },
+    {
+      "make": "Honda",
+      "model": "CB350RS",
+      "variant_name": "CB350RS",
+      "price": "₹1,97,914",
+      "engine_displacement": "348.36 cc",
+      "mileage": "35 kmpl",
+      "max_power": "20.78 bhp",
+      "max_torque": "30 Nm",
+      "top_speed": "150 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Honda CB350RS is a scrambler-styled motorcycle based on the CB350 platform, featuring Honda RoadSync app connectivity, slipper clutch, and dual ABS disc brakes.",
+      "features": ["Honda RoadSync App", "Slipper Clutch", "Dual Channel ABS", "Disc Brakes", "Alloy Wheels", "Self Start", "Scrambler Styling"],
+      "variants": [
+        {"name": "DLX", "price": "₹1,97,914"},
+        {"name": "DLX Pro", "price": "₹2,00,363"}
+      ],
+      "colors": [
+        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
+        {"name": "Pearl Deep Ground Grey", "hex": "#4A4A4A"},
+        {"name": "Rebel Red Metallic", "hex": "#A52020"},
+        {"name": "Pearl Igneous Black Yellow", "hex": "#1A1A1A"},
+        {"name": "Mat Axis Grey Metallic", "hex": "#6B6B6B"}
+      ],
+      "technical_specifications": {
+        "engine": "348.36 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "180 kg",
+        "fuel_tank_capacity": "15 L",
+        "seat_height": "800 mm"
+      }
     },
     {
       "make": "Honda",
       "model": "CB350C",
       "variant_name": "CB350C",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹1,98,120",
+      "engine_displacement": "348.36 cc",
+      "mileage": "37 kmpl",
+      "max_power": "20.7 bhp",
+      "max_torque": "29.5 Nm",
+      "top_speed": "130 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda CB350C is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Honda CB350C is a cruiser-styled variant of the CB350 with upright ergonomics, dual-channel ABS, and classic-meets-modern design language.",
+      "features": ["Dual Channel ABS", "Disc Brakes", "Alloy Wheels", "Self Start"],
       "variants": [
-        {
-          "name": "DLX",
-          "price": "N/A"
-        },
-        {
-          "name": "DLX Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "Special Edition",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹1,98,120"},
+        {"name": "DLX", "price": "₹2,00,000"},
+        {"name": "DLX Pro", "price": "₹2,02,200"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "DLX Pearl Igneous Black", "hex": "#1A1A1A"},
+        {"name": "DLX Pearl Deep Ground Grey", "hex": "#4A4A4A"},
+        {"name": "DLX Mat Dune Brown", "hex": "#7A5A3A"},
+        {"name": "DLX Mat Axis Grey Metallic", "hex": "#6B6B6B"},
+        {"name": "DLX Rebel Red Metallic", "hex": "#A52020"}
+      ],
+      "technical_specifications": {
+        "engine": "348.36 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "186 kg",
+        "fuel_tank_capacity": "15.2 L",
+        "seat_height": "800 mm"
+      }
     },
     {
       "make": "Honda",
-      "model": "Goldwing Tour",
-      "variant_name": "Goldwing Tour",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "model": "Activa e",
+      "variant_name": "Activa e",
+      "price": "₹1,19,909",
+      "engine_displacement": "N/A",
+      "mileage": "102 km (range)",
+      "max_power": "6 kW",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda Goldwing Tour is a two-wheeler available in India.",
-      "features": [],
+      "top_speed": "80 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Honda Activa e is Honda's first electric scooter in India with swappable battery technology, fast charging (C-type), TFT display, and 102 km range per charge.",
+      "features": ["Swappable Battery", "Fast Charging (USB-C)", "TFT Display", "LED Lights", "Disc Brake", "Combined Braking System", "10-inch Front Tyre", "Joystick Control"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹1,19,909"},
+        {"name": "Premium", "price": "₹1,52,463"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
+        {"name": "Matt Foggy Silver Metallic", "hex": "#9A9A9A"},
+        {"name": "Pearl Serenity Blue", "hex": "#3A5A8A"},
+        {"name": "Pearl Misty White", "hex": "#F5F5F0"},
+        {"name": "Pearl Shallow Blue", "hex": "#7A9ABB"}
+      ],
+      "technical_specifications": {
+        "engine": "Electric Motor, 6 kW",
+        "battery": "Dual swappable batteries",
+        "range": "102 km",
+        "charging_time": "Fast charge (C-type)",
+        "starting": "Self Start",
+        "brakes_front": "Disc",
+        "brakes_rear": "Drum",
+        "kerb_weight": "118 kg"
+      }
     },
     {
       "make": "Honda",
-      "model": "X-ADV",
-      "variant_name": "X-ADV",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "model": "QC1",
+      "variant_name": "QC1",
+      "price": "₹90,486",
+      "engine_displacement": "N/A",
+      "mileage": "80 km (range)",
+      "max_power": "1.8 kW",
       "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda X-ADV is a two-wheeler available in India.",
-      "features": [],
+      "top_speed": "50 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Honda QC1 is an entry-level electric scooter with 1.5 kWh fixed battery, 80 km range, 6.5-hour charging, 26L under-seat storage, and 5-year warranty on battery.",
+      "features": ["5-inch LCD Display", "LED Headlights", "USB Type-C Port", "26L Under-seat Storage", "Combined Braking System", "Alloy Wheels", "Telescopic Front Forks"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹90,486"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "NX500",
-      "variant_name": "NX500",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda NX500 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
+        {"name": "Pearl Misty White", "hex": "#F5F5F0"},
+        {"name": "Matt Foggy Silver Metallic", "hex": "#9A9A9A"},
+        {"name": "Pearl Shallow Blue", "hex": "#7A9ABB"},
+        {"name": "Pearl Serenity Blue", "hex": "#3A5A8A"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "engine": "Electric Motor, 1.8 kW",
+        "battery": "1.5 kWh (fixed)",
+        "range": "80 km",
+        "charging_time": "6.5 hours (0-100%)",
+        "starting": "Self Start",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "suspension_front": "Telescopic",
+        "suspension_rear": "Dual Springs"
+      }
     },
     {
       "make": "Honda",
       "model": "CB750 Hornet",
       "variant_name": "CB750 Hornet",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "price": "₹9,20,954",
+      "engine_displacement": "755 cc",
+      "mileage": "25 kmpl",
+      "max_power": "90.5 bhp",
+      "max_torque": "75 Nm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda CB750 Hornet is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Honda CB750 Hornet is a middleweight naked street motorcycle with a 755cc parallel-twin engine, dual ABS disc brakes, and outstanding suspension for city and highway riding.",
+      "features": ["Dual Channel ABS", "Disc Brakes", "Alloy Wheels", "Self Start"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
+        {"name": "Standard", "price": "₹9,20,954"}
       ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB1000 Hornet",
-      "variant_name": "CB1000 Hornet",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda CB1000 Hornet is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "SP",
-          "price": "N/A"
-        }
+      "colors": [
+        {"name": "Matte Black Metallic", "hex": "#1A1A1A"},
+        {"name": "Matte Pearl White", "hex": "#F5F5F0"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "technical_specifications": {
+        "engine": "755 cc, Parallel Twin, BS6 Phase 2B",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "191 kg",
+        "fuel_tank_capacity": "15 L",
+        "seat_height": "795 mm"
+      }
     },
     {
       "make": "Honda",
       "model": "Transalp XL750",
       "variant_name": "Transalp XL750",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Honda Transalp XL750 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "NX500 [2026]",
-      "variant_name": "NX500 [2026]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda NX500 [2026] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB1000GT",
-      "variant_name": "CB1000GT",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB1000GT is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB1000R",
-      "variant_name": "CB1000R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB1000R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CRF300 Rally",
-      "variant_name": "CRF300 Rally",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CRF300 Rally is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CRF300L",
-      "variant_name": "CRF300L",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CRF300L is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Activa 7G",
-      "variant_name": "Activa 7G",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Activa 7G is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB500F",
-      "variant_name": "CB500F",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB500F is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR500R",
-      "variant_name": "CBR500R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR500R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR300R",
-      "variant_name": "CBR300R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR300R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB300R",
-      "variant_name": "CB300R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB300R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB200X",
-      "variant_name": "CB200X",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB200X is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard - BS6",
-          "price": "N/A"
-        },
-        {
-          "name": "DX",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Rebel 500",
-      "variant_name": "Rebel 500",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Rebel 500 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR1000RR-R Fireblade",
-      "variant_name": "CBR1000RR-R Fireblade",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR1000RR-R Fireblade is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "SP",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "PCX 125",
-      "variant_name": "PCX 125",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda PCX 125 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR250R",
-      "variant_name": "CBR250R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR250R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "ABS",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "X-Blade",
-      "variant_name": "X-Blade",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda X-Blade is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard - Non ABS",
-          "price": "N/A"
-        },
-        {
-          "name": "ABS",
-          "price": "N/A"
-        },
-        {
-          "name": "Dual Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "Single Disc",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CD 110 Dream",
-      "variant_name": "CD 110 Dream",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CD 110 Dream is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Kick Drum Alloy (BS III)",
-          "price": "N/A"
-        },
-        {
-          "name": "Self Drum Alloy (BS III)",
-          "price": "N/A"
-        },
-        {
-          "name": "Kick",
-          "price": "N/A"
-        },
-        {
-          "name": "Self",
-          "price": "N/A"
-        },
-        {
-          "name": "Kick (Carrier)",
-          "price": "N/A"
-        },
-        {
-          "name": "Self (Carrier)",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard Carrier (CBS) BS IV",
-          "price": "N/A"
-        },
-        {
-          "name": "Deluxe Carrier (CBS) BS IV",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard - BS VI",
-          "price": "N/A"
-        },
-        {
-          "name": "Deluxe - -BS VI",
-          "price": "N/A"
-        },
-        {
-          "name": "Deluxe [2022]",
-          "price": "N/A"
-        },
-        {
-          "name": "Deluxe",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB Shine SP",
-      "variant_name": "CB Shine SP",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB Shine SP is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Drum (BS III)",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc (BS III)",
-          "price": "N/A"
-        },
-        {
-          "name": "CBS (BS III)",
-          "price": "N/A"
-        },
-        {
-          "name": "CBS (BS IV) [2017]",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc (BS IV) [2017]",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum (BS IV) [2017]",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc - CBS",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum - CBS",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR1000RR-R Fireblade [2024]",
-      "variant_name": "CBR1000RR-R Fireblade [2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR1000RR-R Fireblade [2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "SP",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB Hornet 160R",
-      "variant_name": "CB Hornet 160R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB Hornet 160R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "STD - 2017",
-          "price": "N/A"
-        },
-        {
-          "name": "CBS - 2017",
-          "price": "N/A"
-        },
-        {
-          "name": "Special Edition - STD [2017]",
-          "price": "N/A"
-        },
-        {
-          "name": "Special Edition - CBS [2017]",
-          "price": "N/A"
-        },
-        {
-          "name": "ABS - Std",
-          "price": "N/A"
-        },
-        {
-          "name": "ABS - Dlx",
-          "price": "N/A"
-        },
-        {
-          "name": "STD",
-          "price": "N/A"
-        },
-        {
-          "name": "CBS",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Activa 5G",
-      "variant_name": "Activa 5G",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Activa 5G is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Deluxe",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard - Limited Edition",
-          "price": "N/A"
-        },
-        {
-          "name": "Deluxe - Limited Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB300F",
-      "variant_name": "CB300F",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB300F is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Deluxe",
-          "price": "N/A"
-        },
-        {
-          "name": "Deluxe Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB Unicorn 150",
-      "variant_name": "CB Unicorn 150",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB Unicorn 150 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "ABS",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB Unicorn 160",
-      "variant_name": "CB Unicorn 160",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB Unicorn 160 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Disc (BS III)",
-          "price": "N/A"
-        },
-        {
-          "name": "CBS (BS III)",
-          "price": "N/A"
-        },
-        {
-          "name": "CBS (BS IV)",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc (BS IV)",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR150 R",
-      "variant_name": "CBR150 R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR150 R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Deluxe",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Navi",
-      "variant_name": "Navi",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Navi is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "CBS",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Africa Twin",
-      "variant_name": "Africa Twin",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Africa Twin is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "DCT",
-          "price": "N/A"
-        },
-        {
-          "name": "Manual",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Grazia",
-      "variant_name": "Grazia",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Grazia is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Std Alloy",
-          "price": "N/A"
-        },
-        {
-          "name": "Dlx",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "Sports Edition - Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "Repsol Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Goldwing [2018-2019]",
-      "variant_name": "Goldwing [2018-2019]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Goldwing [2018-2019] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "DCT",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Africa Twin [2019-2020]",
-      "variant_name": "Africa Twin [2019-2020]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Africa Twin [2019-2020] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Adventure Sports - Manual",
-          "price": "N/A"
-        },
-        {
-          "name": "Adventure Sports - DCT",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR1000RR Fireblade [2019]",
-      "variant_name": "CBR1000RR Fireblade [2019]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR1000RR Fireblade [2019] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "SP",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR 650R [2018-2019]",
-      "variant_name": "CBR 650R [2018-2019]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR 650R [2018-2019] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB650R [2018-2023]",
-      "variant_name": "CB650R [2018-2023]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB650R [2018-2023] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Aviator",
-      "variant_name": "Aviator",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Aviator is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Drum",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum Alloy",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Activa i",
-      "variant_name": "Activa i",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Activa i is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB Unicorn Dazzler",
-      "variant_name": "CB Unicorn Dazzler",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB Unicorn Dazzler is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Deluxe",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB1000R+ [2018-2019]",
-      "variant_name": "CB1000R+ [2018-2019]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB1000R+ [2018-2019] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Africa Twin [2017-2018]",
-      "variant_name": "Africa Twin [2017-2018]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Africa Twin [2017-2018] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB300R [2018-2019]",
-      "variant_name": "CB300R [2018-2019]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB300R [2018-2019] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Gold Wing [2017-2018]",
-      "variant_name": "Gold Wing [2017-2018]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Gold Wing [2017-2018] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Tour",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Cliq",
-      "variant_name": "Cliq",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Cliq is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Deluxe",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBF Stunner",
-      "variant_name": "CBF Stunner",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBF Stunner is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Kick",
-          "price": "N/A"
-        },
-        {
-          "name": "FI",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc Self",
-          "price": "N/A"
-        },
-        {
-          "name": "Self",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Aviator [2016-2017]",
-      "variant_name": "Aviator [2016-2017]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Aviator [2016-2017] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Drum (BS III)",
-          "price": "N/A"
-        },
-        {
-          "name": "Deluxe (BS III)",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum (BS IV)",
-          "price": "N/A"
-        },
-        {
-          "name": "Deluxe (BS IV)",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum Alloy (BS-IV)",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB Twister",
-      "variant_name": "CB Twister",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB Twister is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Drum/Kick",
-          "price": "N/A"
-        },
-        {
-          "name": "Drum/Electric start",
-          "price": "N/A"
-        },
-        {
-          "name": "Disc/Electric start",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR650R [2024]",
-      "variant_name": "CBR650R [2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR650R [2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB650R [2024]",
-      "variant_name": "CB650R [2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB650R [2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Dream Yuga",
-      "variant_name": "Dream Yuga",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Dream Yuga is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Kick/Non-Alloy",
-          "price": "N/A"
-        },
-        {
-          "name": "Kick/Alloy",
-          "price": "N/A"
-        },
-        {
-          "name": "Electric Start/Alloy",
-          "price": "N/A"
-        },
-        {
-          "name": "CBS",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB500X",
-      "variant_name": "CB500X",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB500X is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Transalp XL750 [2024]",
-      "variant_name": "Transalp XL750 [2024]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Transalp XL750 [2024] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Goldwing [2022-2023]",
-      "variant_name": "Goldwing [2022-2023]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Goldwing [2022-2023] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "DCT + Airbag",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Africa Twin [2018-2019]",
-      "variant_name": "Africa Twin [2018-2019]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Africa Twin [2018-2019] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB350RS [2021-2022]",
-      "variant_name": "CB350RS [2021-2022]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB350RS [2021-2022] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Monotone",
-          "price": "N/A"
-        },
-        {
-          "name": "Dual Tone",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Africa Twin [2021]",
-      "variant_name": "Africa Twin [2021]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Africa Twin [2021] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Adventure Sports - DCT",
-          "price": "N/A"
-        },
-        {
-          "name": "Adventure Sports - Manual",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Hness CB350 [2020-2022]",
-      "variant_name": "Hness CB350 [2020-2022]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Hness CB350 [2020-2022] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "DLX",
-          "price": "N/A"
-        },
-        {
-          "name": "DLX Pro",
-          "price": "N/A"
-        },
-        {
-          "name": "Anniversary Edition",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB Unicorn",
-      "variant_name": "CB Unicorn",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB Unicorn is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "GP E",
-          "price": "N/A"
-        },
-        {
-          "name": "Kick Start",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Goldwing [2020-2021]",
-      "variant_name": "Goldwing [2020-2021]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Goldwing [2020-2021] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Manual Transmission",
-          "price": "N/A"
-        },
-        {
-          "name": "Dual Clutch Transmission (DCT)",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB300R [2020-2022]",
-      "variant_name": "CB300R [2020-2022]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB300R [2020-2022] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Old Generation CBR 650R 2021",
-      "variant_name": "Old Generation CBR 650R 2021",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Old Generation CBR 650R 2021 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Activa 4G",
-      "variant_name": "Activa 4G",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Activa 4G is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard (BS IV)",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR 600F2",
-      "variant_name": "CBR 600F2",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR 600F2 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Super Magna",
-      "variant_name": "Super Magna",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Super Magna is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "VF750C",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "S65",
-      "variant_name": "S65",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda S65 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "VTR100",
-      "variant_name": "VTR100",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda VTR100 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "FireStorm",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "NSR",
-      "variant_name": "NSR",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda NSR is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "150SP",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Eterno",
-      "variant_name": "Eterno",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Eterno is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CRM",
-      "variant_name": "CRM",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CRM is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "250",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CR",
-      "variant_name": "CR",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CR is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "125",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBX",
-      "variant_name": "CBX",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBX is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "750F",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Valkyrie",
-      "variant_name": "Valkyrie",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Valkyrie is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Rune",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB 400",
-      "variant_name": "CB 400",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB 400 is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB 250N",
-      "variant_name": "CB 250N",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB 250N is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR 954RR",
-      "variant_name": "CBR 954RR",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR 954RR is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR 900RR",
-      "variant_name": "CBR 900RR",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR 900RR is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR 600RR",
-      "variant_name": "CBR 600RR",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR 600RR is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR 400RR",
-      "variant_name": "CBR 400RR",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR 400RR is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR Fireblade",
-      "variant_name": "CBR Fireblade",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR Fireblade is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "1000R",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB Trigger",
-      "variant_name": "CB Trigger",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB Trigger is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "DLX",
-          "price": "N/A"
-        },
-        {
-          "name": "CBS",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR1000RR Fireblade [2014]",
-      "variant_name": "CBR1000RR Fireblade [2014]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR1000RR Fireblade [2014] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "C-ABS",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "VFR1200F",
-      "variant_name": "VFR1200F",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda VFR1200F is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "DCT",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Africa Twin[2017]",
-      "variant_name": "Africa Twin[2017]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Africa Twin[2017] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Navi [2016-2017]",
-      "variant_name": "Navi [2016-2017]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Navi [2016-2017] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR-250R",
-      "variant_name": "CBR-250R",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR-250R is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Sports Red-STD",
-          "price": "N/A"
-        },
-        {
-          "name": "ABS",
-          "price": "N/A"
-        },
-        {
-          "name": "Sports Red-ABS",
-          "price": "N/A"
-        },
-        {
-          "name": "Repsol-ABS",
-          "price": "N/A"
-        },
-        {
-          "name": "Repsol-Std",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Activa [2000-2015]",
-      "variant_name": "Activa [2000-2015]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Activa [2000-2015] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Deluxe",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Activa 3G",
-      "variant_name": "Activa 3G",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Activa 3G is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard (BS III)",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Gold Wing GL1800 [2016-2017]",
-      "variant_name": "Gold Wing GL1800 [2016-2017]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Gold Wing GL1800 [2016-2017] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Airbag",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB1000R [2017-2018]",
-      "variant_name": "CB1000R [2017-2018]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB1000R [2017-2018] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "ABS",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR1000RR Fireblade [2018]",
-      "variant_name": "CBR1000RR Fireblade [2018]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR1000RR Fireblade [2018] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "SP",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CBR650F",
-      "variant_name": "CBR650F",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CBR650F is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "CB500X [2021]",
-      "variant_name": "CB500X [2021]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda CB500X [2021] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Activa 125 [2016-2017]",
-      "variant_name": "Activa 125 [2016-2017]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Activa 125 [2016-2017] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Std",
-          "price": "N/A"
-        },
-        {
-          "name": "Dlx",
-          "price": "N/A"
-        },
-        {
-          "name": "Std Alloy (BS-IV)",
-          "price": "N/A"
-        },
-        {
-          "name": "Std (BS-IV)",
-          "price": "N/A"
-        },
-        {
-          "name": "Dlx (BS-IV)",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Activa i [2016-2017]",
-      "variant_name": "Activa i [2016-2017]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Activa i [2016-2017] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Deluxe",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "VT 1300CX",
-      "variant_name": "VT 1300CX",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda VT 1300CX is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "Dream Neo",
-      "variant_name": "Dream Neo",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda Dream Neo is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Self",
-          "price": "N/A"
-        },
-        {
-          "name": "Kick Start-Drum Brake-Spoke",
-          "price": "N/A"
-        },
-        {
-          "name": "Kick Start-Drum Brake-Alloy",
-          "price": "N/A"
-        },
-        {
-          "name": "Self Carrier",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "XL",
-      "variant_name": "XL",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda XL is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "1000V",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Honda",
-      "model": "VFR",
-      "variant_name": "VFR",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Available",
-      "description": "The Honda VFR is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "400",
-          "price": "N/A"
-        },
-        {
-          "name": "800",
-          "price": "N/A"
-        },
-        {
-          "name": "1200 F",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
+      "price": "₹11,78,649",
+      "engine_displacement": "755 cc",
+      "mileage": "21 kmpl",
+      "max_power": "90.5 bhp",
+      "max_torque": "75 Nm",
+      "top_speed": "180 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Honda Transalp XL750 is a capable adventure-tourer with a 755cc parallel-twin engine, spoke wheels, ABS, and excellent suspension for both on and off-road adventures.",
+      "features": ["ABS", "Disc Brakes", "Spoke Wheels", "Self Start", "Adventure Touring"],
+      "variants": [
+        {"name": "Standard", "price": "₹11,78,649"}
+      ],
+      "colors": [
+        {"name": "Graphite Black", "hex": "#2A2A2A"},
+        {"name": "Ross White", "hex": "#F0EDE8"}
+      ],
+      "technical_specifications": {
+        "engine": "755 cc, Parallel Twin, BS6 Phase 2B",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "208 kg",
+        "fuel_tank_capacity": "16.9 L",
+        "seat_height": "850 mm"
+      }
+    },
+    {
+      "make": "Honda",
+      "model": "CB1000 Hornet",
+      "variant_name": "CB1000 Hornet",
+      "price": "₹13,29,329",
+      "engine_displacement": "999 cc",
+      "mileage": "N/A kmpl",
+      "max_power": "155 bhp",
+      "max_torque": "107 Nm",
+      "top_speed": "N/A kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Honda CB1000 Hornet is a litre-class naked superbike with Showa SFF-BP forks, Ohlins TTX36 monoshock, traction control, and full electronics package for track and road performance.",
+      "features": ["Showa SFF-BP Forks", "Ohlins TTX36 Monoshock", "Traction Control", "ABS", "TFT Display", "Alloy Wheels", "Self Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹13,29,329"}
+      ],
+      "colors": [
+        {"name": "Matte Black Metallic", "hex": "#1A1A1A"}
+      ],
+      "technical_specifications": {
+        "engine": "999 cc, Inline-4, BS6 Phase 2B",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc",
+        "suspension_front": "Showa SFF-BP Fork",
+        "suspension_rear": "Ohlins TTX36 Monoshock",
+        "kerb_weight": "211 kg",
+        "fuel_tank_capacity": "17 L",
+        "seat_height": "810 mm"
+      }
+    },
+    {
+      "make": "Honda",
+      "model": "Goldwing Tour",
+      "variant_name": "Goldwing Tour",
+      "price": "₹43,12,654",
+      "engine_displacement": "1833 cc",
+      "mileage": "16 kmpl",
+      "max_power": "124.7 bhp",
+      "max_torque": "170 Nm",
+      "top_speed": "230 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "7-Speed Automatic (DCT)",
+      "source_section": "Available",
+      "description": "The Honda Goldwing Tour is Honda's flagship super-touring motorcycle with a 1833cc flat-6 engine, airbag, cruise control, DCT transmission, and TFT display for ultimate long-distance touring.",
+      "features": ["Airbag", "Cruise Control", "DCT Automatic Transmission", "TFT Display", "ABS", "Alloy Wheels", "Self Start"],
+      "variants": [
+        {"name": "DCT with Airbag", "price": "₹43,12,654"}
+      ],
+      "colors": [
+        {"name": "Gunmetal Black Metallic", "hex": "#2A2A2A"}
+      ],
+      "technical_specifications": {
+        "engine": "1833 cc, Flat-6, BS6 Phase 2",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "390 kg",
+        "fuel_tank_capacity": "21.1 L",
+        "seat_height": "745 mm"
+      }
     }
   ]
 }

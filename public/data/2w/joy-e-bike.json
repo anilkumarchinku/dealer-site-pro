@@ -2,132 +2,152 @@
   "brand": "Joy e-bike",
   "brandId": "joy-e-bike",
   "type": "2w",
-  "lastUpdated": "2026-04-01",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Joy e-bike",
-      "model": "Wolf Plus",
-      "variant_name": "Joy e-bike Wolf Plus",
-      "price": "₹89,399",
+      "model": "Gen Nxt",
+      "variant_name": "Gen Nxt",
+      "price": "₹60,827",
+      "engine_displacement": "N/A",
+      "mileage": "90 km (range)",
+      "max_power": "N/A",
+      "max_torque": "N/A",
+      "top_speed": "25 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
-      "description": "The Joy e-bike Wolf Plus is a sporty commuter electric scooter from Wardwizard Innovations, offering 90 km range and a sharp design for young urban riders in India.",
-      "features": [
-        "Digital Instrument Cluster",
-        "Anti-Theft Alarm",
-        "Reverse Mode",
-        "Ride Modes (Eco/Sport)",
-        "Fast Charging",
-        "Regenerative Braking",
-        "USB Charging Port"
-      ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "90 km",
-        "Battery Capacity": "60V 24Ah",
-        "Top Speed": "55 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "55 Nm",
-      "colors": ["Cosmic Black", "Arctic White", "Lava Red", "Ocean Blue"],
+      "description": "The Joy e-bike Gen Nxt is an entry-level electric scooter with 90km range, 25 kmph top speed, 70kg lightweight build, and 5-hour charging at ₹60,827.",
+      "features": ["Electric Motor", "90km Range", "Lightweight 70kg", "USB Charging", "Self Start"],
       "variants": [
-        { "name": "Wolf Plus 60V 24Ah", "price": "₹89,399" }
-      ]
+        {"name": "Gen Nxt Standard", "price": "₹60,827"}
+      ],
+      "colors": [
+        {"name": "Blue", "hex": "#1A4A8B"},
+        {"name": "Red", "hex": "#CC0000"},
+        {"name": "White", "hex": "#F5F5F0"}
+      ],
+      "technical_specifications": {
+        "motor": "Electric Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "90 km",
+        "charging_time": "5 hrs",
+        "top_speed": "25 kmph",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "70 kg",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Joy e-bike",
-      "model": "Mihos",
-      "variant_name": "Joy e-bike Mihos",
-      "price": "₹79,999",
+      "model": "Wolf",
+      "variant_name": "Wolf",
+      "price": "₹61,877",
+      "engine_displacement": "N/A",
+      "mileage": "90 km (range)",
+      "max_power": "N/A",
+      "max_torque": "N/A",
+      "top_speed": "25 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
-      "description": "The Joy e-bike Mihos is a budget-friendly electric scooter designed for hassle-free city commuting, offering 90 km range with practical features at an attractive price point.",
-      "features": [
-        "Digital Speedometer",
-        "Anti-Theft Alarm",
-        "Ride Modes (Eco/Power)",
-        "Regenerative Braking",
-        "USB Charging Port",
-        "BLDC Hub Motor",
-        "Low Maintenance Design"
-      ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "90 km",
-        "Battery Capacity": "60V 24Ah",
-        "Top Speed": "55 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "35 Nm",
-      "colors": ["Cosmic Black", "Arctic White", "Lava Red", "Ocean Blue"],
+      "description": "The Joy e-bike Wolf is a lightweight 67kg electric scooter with 90km range, 25 kmph top speed, and 5-hour charging at ₹61,877.",
+      "features": ["Electric Motor", "90km Range", "Lightweight 67kg", "5hr Charging", "Self Start"],
       "variants": [
-        { "name": "Mihos 60V 24Ah", "price": "₹79,999" }
-      ]
-    },
-    {
-      "make": "Joy e-bike",
-      "model": "Monster",
-      "variant_name": "Joy e-bike Monster",
-      "price": "₹95,999",
-      "fuel_type": "Electric",
-      "source_section": "Available",
-      "description": "The Joy e-bike Monster lives up to its name with bold aggressive styling, a 100 km range, and strong 55 Nm torque, making it Joy's premium offering for performance-seeking urban riders.",
-      "features": [
-        "Aggressive Muscular Design",
-        "Digital Console with Speedometer",
-        "Anti-Theft with Remote Immobilizer",
-        "Reverse Mode",
-        "Ride Modes (Eco/Sport)",
-        "Fast Charging",
-        "Regenerative Braking"
+        {"name": "Wolf Standard", "price": "₹61,877"}
       ],
-      "specifications": {
-        "Motor Power": "1.5 kW",
-        "Range": "100 km",
-        "Battery Capacity": "60V 28Ah",
-        "Top Speed": "55 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "55 Nm",
-      "colors": ["Cosmic Black", "Arctic White", "Lava Red", "Ocean Blue"],
-      "variants": [
-        { "name": "Monster 60V 28Ah", "price": "₹95,999" }
-      ]
+      "colors": [
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "Red", "hex": "#CC0000"},
+        {"name": "White", "hex": "#F5F5F0"}
+      ],
+      "technical_specifications": {
+        "motor": "Electric Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "90 km",
+        "charging_time": "5 hrs",
+        "top_speed": "25 kmph",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "67 kg",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Joy e-bike",
       "model": "Glob",
-      "variant_name": "Joy e-bike Glob",
-      "price": "₹64,999",
+      "variant_name": "Glob",
+      "price": "₹70,000",
+      "engine_displacement": "N/A",
+      "mileage": "60 km (range)",
+      "max_power": "N/A",
+      "max_torque": "N/A",
+      "top_speed": "25 kmph",
       "fuel_type": "Electric",
+      "transmission": "Automatic",
       "source_section": "Available",
-      "description": "The Joy e-bike Glob is an ultra-affordable low-speed electric scooter ideal for short-distance urban trips, senior citizens, and those seeking a no-licence commuter option under ₹65,000.",
-      "features": [
-        "No Driving Licence Required",
-        "Lightweight & Compact",
-        "Digital Speedometer",
-        "Anti-Theft Alarm",
-        "USB Charging Port",
-        "Regenerative Braking",
-        "Easy Park Assist"
-      ],
-      "specifications": {
-        "Motor Power": "250 W",
-        "Range": "60 km",
-        "Battery Capacity": "48V 20Ah",
-        "Top Speed": "25 kmph",
-        "Riding Modes": "Yes",
-        "Fast Charging": "Yes"
-      },
-      "max_torque": "20 Nm",
-      "colors": ["Cosmic Black", "Arctic White", "Lava Red", "Ocean Blue"],
+      "description": "The Joy e-bike Glob is a compact 66kg electric scooter with 60km range, 25 kmph top speed, and affordable pricing at ₹70,000.",
+      "features": ["Electric Motor", "60km Range", "Compact 66kg", "5hr Charging", "Self Start"],
       "variants": [
-        { "name": "Glob 48V 20Ah", "price": "₹64,999" }
-      ]
+        {"name": "Glob Standard", "price": "₹70,000"}
+      ],
+      "colors": [
+        {"name": "Yellow", "hex": "#FFD700"},
+        {"name": "Blue", "hex": "#1A4A8B"},
+        {"name": "White", "hex": "#F5F5F0"}
+      ],
+      "technical_specifications": {
+        "motor": "Electric Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "60 km",
+        "charging_time": "5 hrs",
+        "top_speed": "25 kmph",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "66 kg",
+        "seat_height": "N/A"
+      }
+    },
+    {
+      "make": "Joy e-bike",
+      "model": "Mihos",
+      "variant_name": "Mihos",
+      "price": "₹1,12,997",
+      "engine_displacement": "N/A",
+      "mileage": "130 km (range)",
+      "max_power": "N/A",
+      "max_torque": "N/A",
+      "top_speed": "65 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Joy e-bike Mihos is the premium 110kg performance electric scooter with 130km range, 65 kmph top speed, and 5-hour charging at ₹1,12,997.",
+      "features": ["Electric Motor", "130km Range", "65 kmph Top Speed", "5hr Charging", "Self Start", "CBS Brakes"],
+      "variants": [
+        {"name": "Mihos Standard", "price": "₹1,12,997"}
+      ],
+      "colors": [
+        {"name": "Red", "hex": "#CC0000"},
+        {"name": "Black", "hex": "#1A1A1A"},
+        {"name": "White", "hex": "#F5F5F0"}
+      ],
+      "technical_specifications": {
+        "motor": "Electric Motor",
+        "motor_power": "N/A",
+        "battery": "N/A",
+        "range": "130 km",
+        "charging_time": "5 hrs",
+        "top_speed": "65 kmph",
+        "brakes_front": "Drum with CBS",
+        "brakes_rear": "Drum with CBS",
+        "kerb_weight": "110 kg",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

@@ -2,62 +2,77 @@
   "brand": "Moto Morini",
   "brandId": "motomorini",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Moto Morini",
       "model": "Seiemmezzo",
       "variant_name": "Seiemmezzo",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹4,79,143",
+      "engine_displacement": "649 cc",
+      "mileage": "N/A",
+      "max_power": "54.24 bhp",
+      "max_torque": "54 Nm",
+      "top_speed": "160 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Moto Morini Seiemmezzo is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Moto Morini Seiemmezzo is a premium 649cc retro-scrambler motorcycle with liquid-cooled parallel-twin engine, 54.24 bhp, disc brakes with ABS, and classic Italian styling. Available through 3 Indian dealerships. Rated 4.4/5.",
+      "features": ["649cc Parallel-Twin Engine", "Disc Brakes", "ABS", "LED Lighting", "Retro-Scrambler Styling"],
       "variants": [
-        {
-          "name": "Retro Street",
-          "price": "N/A"
-        },
-        {
-          "name": "Scrambler",
-          "price": "N/A"
-        }
+        {"name": "Seiemmezzo STR", "price": "₹4,79,143"},
+        {"name": "Seiemmezzo SCR", "price": "₹5,10,000"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Classic Red", "hex": "#C41E3A"},
+        {"name": "Sand Beige", "hex": "#C2B280"},
+        {"name": "Matte Black", "hex": "#1A1A1A"}
+      ],
+      "technical_specifications": {
+        "engine": "649 cc, Parallel-Twin, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "215 kg",
+        "fuel_tank_capacity": "N/A",
+        "seat_height": "N/A"
+      }
     },
     {
       "make": "Moto Morini",
       "model": "X-Cape",
       "variant_name": "X-Cape",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
-      "top_speed": "N/A kmph",
+      "price": "₹6,39,973",
+      "engine_displacement": "649 cc",
+      "mileage": "N/A",
+      "max_power": "59.17 bhp",
+      "max_torque": "54 Nm",
+      "top_speed": "175 kmph",
       "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Moto Morini X-Cape is a two-wheeler available in India.",
-      "features": [],
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Moto Morini X-Cape is a premium 649cc adventure-touring motorcycle with liquid-cooled parallel-twin engine, 59.17 bhp, disc brakes with ABS, and adventure-focused ergonomics. Rated 4.1/5.",
+      "features": ["649cc Parallel-Twin Engine", "Disc Brakes", "ABS", "LED Lighting", "Adventure Ergonomics", "Long-travel Suspension"],
       "variants": [
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "X",
-          "price": "N/A"
-        }
+        {"name": "X-Cape Standard", "price": "₹6,39,973"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Red Black", "hex": "#C41E3A"},
+        {"name": "Grey", "hex": "#6B6B6B"},
+        {"name": "White", "hex": "#F5F5F0"}
+      ],
+      "technical_specifications": {
+        "engine": "649 cc, Parallel-Twin, Liquid Cooled",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "215 kg",
+        "fuel_tank_capacity": "N/A",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

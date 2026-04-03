@@ -2,39 +2,48 @@
   "brand": "Bounce",
   "brandId": "bounce-infinity",
   "type": "2w",
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Bounce",
       "model": "Infinity E1",
       "variant_name": "Infinity E1",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
+      "price": "₹1,15,605",
+      "engine_displacement": "N/A",
+      "mileage": "70 km (range)",
+      "max_power": "1.5 kW",
       "max_torque": "N/A",
       "top_speed": "65 kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Bounce Infinity E1 is a two-wheeler available in India.",
-      "features": [],
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Bounce Infinity E1 is an electric scooter with swappable battery technology, 70km range (up to 110km reported by users), 65 kmph top speed, 1.5kW motor, dual disc brakes, and a monthly battery subscription option. BPCL partnerships expand swap network across India.",
+      "features": ["Swappable Battery", "Battery Subscription Option", "Dual Disc Brakes", "Combined Braking System", "USB Charging", "LED Headlamp"],
       "variants": [
-        {
-          "name": "Plus",
-          "price": "N/A"
-        },
-        {
-          "name": "Standard",
-          "price": "N/A"
-        },
-        {
-          "name": "Limited Edition",
-          "price": "N/A"
-        }
+        {"name": "E1 Standard", "price": "₹1,15,605"},
+        {"name": "E1 Plus", "price": "₹1,20,990"},
+        {"name": "E1 Limited Edition", "price": "₹1,25,615"}
       ],
-      "colors": [],
-      "technical_specifications": {}
+      "colors": [
+        {"name": "Wild Brown", "hex": "#8B4513"},
+        {"name": "Pearl White", "hex": "#F5F5F0"},
+        {"name": "Sporty Red", "hex": "#C41E3A"},
+        {"name": "Comet Gray", "hex": "#6B6B6B"},
+        {"name": "Sparkle Black", "hex": "#1A1A1A"}
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Motor",
+        "motor_power": "1.5 kW",
+        "battery": "2.5 kWh (swappable)",
+        "range": "70 km (claimed) / ~100 km (user-reported)",
+        "charging_time": "4 hrs",
+        "top_speed": "65 kmph",
+        "brakes_front": "Disc with CBS",
+        "brakes_rear": "Disc with CBS",
+        "kerb_weight": "94 kg",
+        "seat_height": "780 mm"
+      }
     }
   ]
 }
