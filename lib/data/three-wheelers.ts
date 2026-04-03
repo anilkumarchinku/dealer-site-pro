@@ -9,6 +9,34 @@ import brandData from '@/lib/data/brand-models.json'
 import { brandNameToId, modelToSlug } from '@/lib/utils/brand-model-images'
 import { get3WModelEnrichment } from '@/lib/data/3w-brand-data'
 import { THREE_WHEELER_MODEL_COLORS } from '@/lib/data/3w-model-colors'
+import vehicleImageUrls from '@/public/data/vehicle-image-urls.json'
+
+const BRAND_IMG_FOLDER: Record<string, string> = {
+    'Bajaj Auto (3W)':        'bajaj',
+    'Piaggio Ape':            'piaggio',
+    'Mahindra (3W)':          'mahindra',
+    'TVS King':               'tvs',
+    'Euler Motors':           'euler',
+    'Atul Auto':              'atul',
+    'Greaves Electric Mobility': 'greaves',
+    'Kinetic Green':          'kinetic',
+    'Lohia Auto':             'lohia',
+    'Altigreen':              'altigreen',
+    'Montra Electric':        'montra',
+    'Omega Seiki Mobility':   'omega',
+    'OSM':                    'osm',
+    'YOUDHA':                 'youdha',
+}
+
+function get3WImageUrl(brand: string, model: string): string | null {
+    const folder = BRAND_IMG_FOLDER[brand]
+    if (!folder) return null
+    // Strip fuel type suffix e.g. "Maxima C/CNG" → "Maxima C", "King Kargo CNG HD/PF" → "King Kargo CNG HD"
+    const baseName = model.split('/')[0].trim()
+    const slug = baseName.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')
+    const key = `3w/${folder}/${slug}.jpg`
+    return (vehicleImageUrls as Record<string, string>)[key] ?? null
+}
 
 function lookup3WColors(brand: string, model: string) {
     return THREE_WHEELER_MODEL_COLORS[`${brand} ${model}`] ?? []
@@ -1930,7 +1958,7 @@ export function getThreeWheelerCatalog(brand: string, dealerId: string): ThreeWh
     if (staticEntries && staticEntries.length > 0) {
         return staticEntries.map((entry, idx) => {
             const slug       = modelToSlug(entry.model)
-            const imageUrl   = `/data/brand-model-images/3w/${brandId}/${slug}.jpg`
+            const imageUrl   = get3WImageUrl(entry.brand, entry.model) ?? `/data/brand-model-images/3w/${brandId}/${slug}.jpg`
             const enrichment = get3WModelEnrichment(brandId, entry.model)
 
             // Real specs from JSON override fake static defaults
