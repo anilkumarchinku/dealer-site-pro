@@ -151,7 +151,7 @@ type CatalogEntry = Omit<ThreeWheelerVehicle,
 const BAJAJ_AUTO_3W: CatalogEntry[] = [
     {
         brand: 'Bajaj Auto (3W)', model: 'RE Compact 4S/Petrol', variant: 'Standard',
-        type: 'cargo', fuel_type: 'petrol', year: CURRENT_YEAR,
+        type: 'passenger', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 236, mileage_kmpl: 40, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 22200000, on_road_price_paise: Math.round(22200000 * 1.12), emi_starting_paise: 650000,
@@ -161,7 +161,7 @@ const BAJAJ_AUTO_3W: CatalogEntry[] = [
     },
     {
         brand: 'Bajaj Auto (3W)', model: 'RE Compact 4S/CNG', variant: 'Standard',
-        type: 'cargo', fuel_type: 'cng', year: CURRENT_YEAR,
+        type: 'passenger', fuel_type: 'cng', year: CURRENT_YEAR,
         engine_cc: 236, mileage_kmpl: 35, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25300000, on_road_price_paise: Math.round(25300000 * 1.12), emi_starting_paise: 650000,
@@ -171,7 +171,7 @@ const BAJAJ_AUTO_3W: CatalogEntry[] = [
     },
     {
         brand: 'Bajaj Auto (3W)', model: 'RE Compact 4S/LPG', variant: 'Standard',
-        type: 'cargo', fuel_type: 'lpg', year: CURRENT_YEAR,
+        type: 'passenger', fuel_type: 'lpg', year: CURRENT_YEAR,
         engine_cc: 236, mileage_kmpl: 30, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 22200000, on_road_price_paise: Math.round(22200000 * 1.12), emi_starting_paise: 650000,
@@ -181,7 +181,7 @@ const BAJAJ_AUTO_3W: CatalogEntry[] = [
     },
     {
         brand: 'Bajaj Auto (3W)', model: 'RE Compact 4S/Diesel', variant: 'Standard',
-        type: 'cargo', fuel_type: 'diesel', year: CURRENT_YEAR,
+        type: 'passenger', fuel_type: 'diesel', year: CURRENT_YEAR,
         engine_cc: 471, mileage_kmpl: 40, range_km: null, max_speed_kmph: 55,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25300000, on_road_price_paise: Math.round(25300000 * 1.12), emi_starting_paise: 650000,
@@ -1941,7 +1941,7 @@ const YOUDHA: CatalogEntry[] = [
 const YC_ELECTRIC: CatalogEntry[] = [
     {
         brand: 'YC Electric', model: 'Yatri/Electric', variant: 'Standard',
-        type: 'passenger', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 90, max_speed_kmph: 25,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 13000000, on_road_price_paise: Math.round(13000000 * 1.12), emi_starting_paise: 400000,
@@ -1951,7 +1951,7 @@ const YC_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'YC Electric', model: 'Yatri Deluxe/Electric', variant: 'Standard',
-        type: 'passenger', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 90, max_speed_kmph: 25,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 14000000, on_road_price_paise: Math.round(14000000 * 1.12), emi_starting_paise: 400000,
@@ -1961,7 +1961,7 @@ const YC_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'YC Electric', model: 'Yatri Super/Electric', variant: 'Standard',
-        type: 'passenger', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 90, max_speed_kmph: 25,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 17300000, on_road_price_paise: Math.round(17300000 * 1.12), emi_starting_paise: 400000,
@@ -1971,7 +1971,7 @@ const YC_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'YC Electric', model: 'Yatri Plus/Electric', variant: 'Standard',
-        type: 'passenger', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 90, max_speed_kmph: 25,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 18000000, on_road_price_paise: Math.round(18000000 * 1.12), emi_starting_paise: 400000,
@@ -1981,7 +1981,7 @@ const YC_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'YC Electric', model: 'Yatri Cart/Electric', variant: 'Standard',
-        type: 'cargo', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 90, max_speed_kmph: 25,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 16700000, on_road_price_paise: Math.round(16700000 * 1.12), emi_starting_paise: 400000,
@@ -1991,7 +1991,7 @@ const YC_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'YC Electric', model: 'E Loader/Electric', variant: 'Standard',
-        type: 'cargo', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 90, max_speed_kmph: 25,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 13500000, on_road_price_paise: Math.round(13500000 * 1.12), emi_starting_paise: 400000,
@@ -2005,7 +2005,7 @@ const YC_ELECTRIC: CatalogEntry[] = [
 const SAERA_ELECTRIC: CatalogEntry[] = [
     {
         brand: 'Saera Electric (Mayuri)', model: 'Mayuri Grand/Electric', variant: 'Standard',
-        type: 'passenger', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 80, max_speed_kmph: 25,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 11500000, on_road_price_paise: Math.round(11500000 * 1.12), emi_starting_paise: 350000,
@@ -2015,7 +2015,7 @@ const SAERA_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Saera Electric (Mayuri)', model: 'Mayuri Star/Electric', variant: 'Standard',
-        type: 'passenger', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 100, max_speed_kmph: 25,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 9300000, on_road_price_paise: Math.round(9300000 * 1.12), emi_starting_paise: 300000,
@@ -2025,7 +2025,7 @@ const SAERA_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Saera Electric (Mayuri)', model: 'Mayuri Pro Star/Electric', variant: 'Standard',
-        type: 'passenger', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 80, max_speed_kmph: 25,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 13500000, on_road_price_paise: Math.round(13500000 * 1.12), emi_starting_paise: 400000,
@@ -2035,7 +2035,7 @@ const SAERA_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Saera Electric (Mayuri)', model: 'Mayuri Auto Shape/Electric', variant: 'Standard',
-        type: 'passenger', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 90, max_speed_kmph: 25,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 13500000, on_road_price_paise: Math.round(13500000 * 1.12), emi_starting_paise: 400000,
@@ -2045,7 +2045,7 @@ const SAERA_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Saera Electric (Mayuri)', model: 'Mayuri Pro 1000/Electric', variant: 'Standard',
-        type: 'passenger', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 80, max_speed_kmph: 25,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 25000000, on_road_price_paise: Math.round(25000000 * 1.12), emi_starting_paise: 500000,
@@ -2055,7 +2055,7 @@ const SAERA_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Saera Electric (Mayuri)', model: 'Mayuri E Cart Loader/Electric', variant: 'Standard',
-        type: 'cargo', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 75, max_speed_kmph: 25,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 17500000, on_road_price_paise: Math.round(17500000 * 1.12), emi_starting_paise: 400000,
@@ -2065,7 +2065,7 @@ const SAERA_ELECTRIC: CatalogEntry[] = [
     },
     {
         brand: 'Saera Electric (Mayuri)', model: 'Mayuri DV/Electric', variant: 'Standard',
-        type: 'cargo', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 100, max_speed_kmph: 25,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 40000000, on_road_price_paise: Math.round(40000000 * 1.12), emi_starting_paise: 700000,
@@ -2079,7 +2079,7 @@ const SAERA_ELECTRIC: CatalogEntry[] = [
 const TERRA_MOTORS: CatalogEntry[] = [
     {
         brand: 'Terra Motors', model: 'Y4A/Electric', variant: 'Standard',
-        type: 'passenger', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: null, max_speed_kmph: null,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 13000000, on_road_price_paise: Math.round(13000000 * 1.12), emi_starting_paise: 400000,
@@ -2089,7 +2089,7 @@ const TERRA_MOTORS: CatalogEntry[] = [
     },
     {
         brand: 'Terra Motors', model: 'Pace-E Cargo/Electric', variant: 'Standard',
-        type: 'cargo', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: null, max_speed_kmph: null,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 13500000, on_road_price_paise: Math.round(13500000 * 1.12), emi_starting_paise: 400000,
@@ -2099,7 +2099,7 @@ const TERRA_MOTORS: CatalogEntry[] = [
     },
     {
         brand: 'Terra Motors', model: 'Sumo/Electric', variant: 'Standard',
-        type: 'passenger', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: null, max_speed_kmph: null,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 14100000, on_road_price_paise: Math.round(14100000 * 1.12), emi_starting_paise: 400000,
@@ -2109,7 +2109,7 @@ const TERRA_MOTORS: CatalogEntry[] = [
     },
     {
         brand: 'Terra Motors', model: 'Kyoro L5/Electric', variant: 'Standard',
-        type: 'cargo', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: null, max_speed_kmph: null,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 0, on_road_price_paise: 0, emi_starting_paise: 0,
@@ -2119,7 +2119,7 @@ const TERRA_MOTORS: CatalogEntry[] = [
     },
     {
         brand: 'Terra Motors', model: 'Kyoro Plus/Electric', variant: 'Standard',
-        type: 'cargo', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 200, max_speed_kmph: null,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 36500000, on_road_price_paise: Math.round(36500000 * 1.12), emi_starting_paise: 700000,
@@ -2133,7 +2133,7 @@ const TERRA_MOTORS: CatalogEntry[] = [
 const ETRIO: CatalogEntry[] = [
     {
         brand: 'ETrio', model: 'Touro Mini Cargo/Electric', variant: 'Standard',
-        type: 'cargo', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 90, max_speed_kmph: null,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 17000000, on_road_price_paise: Math.round(17000000 * 1.12), emi_starting_paise: 500000,
@@ -2143,7 +2143,7 @@ const ETRIO: CatalogEntry[] = [
     },
     {
         brand: 'ETrio', model: 'Touro Max Cargo L5N/Electric', variant: 'Standard',
-        type: 'cargo', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 157, max_speed_kmph: null,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 0, on_road_price_paise: 0, emi_starting_paise: 0,
@@ -2153,7 +2153,7 @@ const ETRIO: CatalogEntry[] = [
     },
     {
         brand: 'ETrio', model: 'Touro Max Passenger L5M/Electric', variant: 'Standard',
-        type: 'passenger', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 85, max_speed_kmph: null,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 18700000, on_road_price_paise: Math.round(18700000 * 1.12), emi_starting_paise: 500000,
@@ -2163,7 +2163,7 @@ const ETRIO: CatalogEntry[] = [
     },
     {
         brand: 'ETrio', model: 'Touro Max++/Electric', variant: 'Standard',
-        type: 'passenger', fuel_type: 'electric', year: CURRENT_YEAR,
+        type: 'electric', fuel_type: 'electric', year: CURRENT_YEAR,
         engine_cc: null, mileage_kmpl: null, range_km: 100, max_speed_kmph: null,
         battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
         ex_showroom_price_paise: 41000000, on_road_price_paise: Math.round(41000000 * 1.12), emi_starting_paise: 700000,
