@@ -4,7 +4,6 @@ import { useState } from "react"
 import { X, Fuel, Zap, Gauge, Palette, Settings, Shield, Info, Users, Package } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
-import { getScrapedImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
 
 interface Props {
     vehicle: ThreeWheelerVehicle
@@ -21,8 +20,8 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
 
     if (!open) return null
 
-    const [jpgUrl] = getScrapedImageUrls("3w", brandNameToId(vehicle.brand, "3w"), vehicle.model)
-    const imgSrc = vehicle.images[0] || jpgUrl
+    // Use the vehicle-images CDN URL — do not fall back to old brand-model-images bucket (rucks)
+    const imgSrc = vehicle.images[0] || null
 
     const price = vehicle.ex_showroom_price_paise > 0
         ? `₹${(vehicle.ex_showroom_price_paise / 100).toLocaleString("en-IN")}`
@@ -49,8 +48,11 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
             <div className="w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col" onClick={e => e.stopPropagation()}>
                 {/* Header with image */}
                 <div className="relative h-52 bg-gray-50 shrink-0">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={imgSrc} alt={`${vehicle.brand} ${vehicle.model}`} className="w-full h-full object-contain bg-white p-4" />
+                    {imgSrc
+                        ? (/* eslint-disable-next-line @next/next/no-img-element */
+                           <img src={imgSrc} alt={`${vehicle.brand} ${vehicle.model}`} className="w-full h-full object-contain bg-white p-4" />)
+                        : (<div className="flex items-center justify-center h-full text-gray-400 text-4xl">🛺</div>)
+                    }
                     <button onClick={onClose} className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/70 transition-colors">
                         <X className="w-4 h-4" />
                     </button>

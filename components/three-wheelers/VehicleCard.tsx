@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Fuel, Zap, Users, Package, Send, ChevronRight, Eye, Heart, TrendingUp, GitCompare, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
-import { getScrapedImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
+import { brandNameToId } from "@/lib/utils/brand-model-images"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 import { QuickViewModal } from "./QuickViewModal"
 import { LeadFormModal } from "./LeadFormModal"
@@ -40,8 +40,10 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", o
     const emiRaw = vehicle.emi_starting_paise
     const emi = emiRaw && emiRaw > 0 ? (emiRaw / 100).toLocaleString("en-IN") : null
 
-    const [jpgUrl, pngUrl] = getScrapedImageUrls("3w", brandNameToId(vehicle.brand, "3w"), vehicle.model)
-    const primarySrc = vehicle.images[0] || jpgUrl
+    // Use the vehicle-images CDN URL stored in vehicle.images[0].
+    // Do NOT fall back to brand-model-images Supabase bucket — it contains
+    // old scraped TrucksDekho placeholder images ("rucks").
+    const primarySrc = vehicle.images[0] ?? null
     const [imgSrc, setImgSrc] = useState(primarySrc)
     const [imgFailed, setFailed] = useState(false)
     const [quickView, setQuickView] = useState(false)
@@ -52,7 +54,6 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", o
     const brandLogoSrc = `/data/brand-logos/${brandId}.png`
 
     function handleImgError() {
-        if (imgSrc === jpgUrl) { setImgSrc(pngUrl); return }
         setFailed(true)
     }
 
@@ -81,7 +82,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", o
 
             {/* Image */}
             <div className="relative h-44 bg-gray-50 overflow-hidden">
-                {!imgFailed ? (
+                {!imgFailed && imgSrc ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
                         src={imgSrc}

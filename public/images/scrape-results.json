@@ -1,0 +1,658 @@
+{
+  "timestamp": "2026-04-03T06:40:18.067Z",
+  "summary": {
+    "3w": {
+      "total": 151,
+      "success": 71,
+      "failed": 80
+    },
+    "4w-auto": {
+      "total": 30,
+      "success": 19,
+      "failed": 11
+    }
+  },
+  "failed": {
+    "3w": [
+      {
+        "brand": "altigreen",
+        "brandSlug": "altigreen",
+        "model": "neEV Bhai Low Deck",
+        "modelSlug": "neev-bhai-low-deck",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "altigreen",
+        "brandSlug": "altigreen",
+        "model": "neEV Bhai Flatbed",
+        "modelSlug": "neev-bhai-flatbed",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "altigreen",
+        "brandSlug": "altigreen",
+        "model": "NEEV Flatbed",
+        "modelSlug": "neev-flatbed",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "atul-auto",
+        "brandSlug": "atul",
+        "model": "Shakti Cargo",
+        "modelSlug": "shakti-cargo",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "atul-auto",
+        "brandSlug": "atul",
+        "model": "Shakti Cargo XD",
+        "modelSlug": "shakti-cargo-xd",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "atul-auto",
+        "brandSlug": "atul",
+        "model": "Rik 3-Seater",
+        "modelSlug": "rik",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "atul-auto",
+        "brandSlug": "atul",
+        "model": "Smart Cargo",
+        "modelSlug": "smart-cargo",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "atul-auto",
+        "brandSlug": "atul",
+        "model": "Elite Plus Passenger",
+        "modelSlug": "elite-plus",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "atul-auto",
+        "brandSlug": "atul",
+        "model": "Energie",
+        "modelSlug": "energie",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "bajaj-auto-3w",
+        "brandSlug": "bajaj",
+        "model": "RE Compact 4S",
+        "modelSlug": "re-compact-4s",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "bajaj-auto-3w",
+        "brandSlug": "bajaj",
+        "model": "Maxima Z",
+        "modelSlug": "maxima-z",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "bajaj-auto-3w",
+        "brandSlug": "bajaj",
+        "model": "Maxima X Wide",
+        "modelSlug": "maxima-x",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "bajaj-auto-3w",
+        "brandSlug": "bajaj",
+        "model": "Maxima XL Cargo E-TEC 9.0",
+        "modelSlug": "maxima-xl-cargo-e-tec",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "bajaj-auto-3w",
+        "brandSlug": "bajaj",
+        "model": "Maxima XL Cargo E-TEC 12.0",
+        "modelSlug": "maxima-xl-cargo-e-tec-12",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "bajaj-auto-3w",
+        "brandSlug": "bajaj",
+        "model": "GoGo P5009",
+        "modelSlug": "gogo-p-5009",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "bajaj-auto-3w",
+        "brandSlug": "bajaj",
+        "model": "GoGo P7012",
+        "modelSlug": "gogo-p-7012",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "bajaj-auto-3w",
+        "brandSlug": "bajaj",
+        "model": "RE E-TEC 9.0",
+        "modelSlug": "re-e-tec",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "bajaj-auto-3w",
+        "brandSlug": "bajaj",
+        "model": "RE Optima",
+        "modelSlug": "re-optima",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "bajaj-auto-3w",
+        "brandSlug": "bajaj",
+        "model": "RE Optima Plus",
+        "modelSlug": "re-optima-plus",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "etrio",
+        "brandSlug": "etrio",
+        "model": "Touro Mini Cargo",
+        "modelSlug": "touro-mini",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "etrio",
+        "brandSlug": "etrio",
+        "model": "Touro Max Cargo L5N",
+        "modelSlug": "touro-max-cargo",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "etrio",
+        "brandSlug": "etrio",
+        "model": "Touro Max Passenger L5M",
+        "modelSlug": "touro-max-passenger",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "etrio",
+        "brandSlug": "etrio",
+        "model": "Touro Max++",
+        "modelSlug": "touro-max-plus-plus",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "euler-motors",
+        "brandSlug": "euler",
+        "model": "HiLoad EV",
+        "modelSlug": "hiload-ev",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "greaves-electric-3w",
+        "brandSlug": "greaves",
+        "model": "Eltra EV Cargo PU",
+        "modelSlug": "eltra-ev-cargo-pu",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "greaves-electric-3w",
+        "brandSlug": "greaves",
+        "model": "Eltra EV Cargo FB",
+        "modelSlug": "eltra-ev-cargo-fb",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "kinetic-green",
+        "brandSlug": "kinetic-green",
+        "model": "Super DX",
+        "modelSlug": "super-dx",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "kinetic-green",
+        "brandSlug": "kinetic-green",
+        "model": "Safar Smart",
+        "modelSlug": "safar-smart",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "kinetic-green",
+        "brandSlug": "kinetic-green",
+        "model": "Safar Shakti",
+        "modelSlug": "safar-shakti",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "kinetic-green",
+        "brandSlug": "kinetic-green",
+        "model": "Safar Jumbo",
+        "modelSlug": "safar-jumbo",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "kinetic-green",
+        "brandSlug": "kinetic-green",
+        "model": "Safar Jumbo Ranger",
+        "modelSlug": "safar-jumbo-ranger",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "lohia-auto",
+        "brandSlug": "lohia",
+        "model": "Narain LC",
+        "modelSlug": "narain-lc",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "lohia-auto",
+        "brandSlug": "lohia",
+        "model": "Comfort F2F Plus",
+        "modelSlug": "comfort-f2f-plus",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "mahindra-3w",
+        "brandSlug": "mahindra",
+        "model": "Alfa DX",
+        "modelSlug": "alfa-dx",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "mahindra-3w",
+        "brandSlug": "mahindra",
+        "model": "Alfa Plus",
+        "modelSlug": "alfa-plus",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "mahindra-3w",
+        "brandSlug": "mahindra",
+        "model": "Alfa Plus Duo",
+        "modelSlug": "alfa-plus-duo",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "mahindra-3w",
+        "brandSlug": "mahindra",
+        "model": "Alfa Champ",
+        "modelSlug": "alfa-champ",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "mahindra-3w",
+        "brandSlug": "mahindra",
+        "model": "Alfa Comfy",
+        "modelSlug": "alfa-comfy",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "mahindra-3w",
+        "brandSlug": "mahindra",
+        "model": "Treo Yaari",
+        "modelSlug": "treo-yaari",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "mahindra-3w",
+        "brandSlug": "mahindra",
+        "model": "Treo Zor",
+        "modelSlug": "treo-zor",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "mahindra-3w",
+        "brandSlug": "mahindra",
+        "model": "Zor Grand",
+        "modelSlug": "zor-grand",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "montra-ev",
+        "brandSlug": "montra",
+        "model": "Super Cargo eCx d+",
+        "modelSlug": "super-cargo",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "montra-ev",
+        "brandSlug": "montra",
+        "model": "Eviator E-350L",
+        "modelSlug": "eviator-e-350l",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "montra-ev",
+        "brandSlug": "montra",
+        "model": "Eviator E-350X",
+        "modelSlug": "eviator-e-350x",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "omega-seiki-mobility",
+        "brandSlug": "omega-seiki",
+        "model": "Stream City",
+        "modelSlug": "stream-city",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "omega-seiki-mobility",
+        "brandSlug": "omega-seiki",
+        "model": "Stream City Qik",
+        "modelSlug": "stream-city-qik",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "omega-seiki-mobility",
+        "brandSlug": "omega-seiki",
+        "model": "Stream",
+        "modelSlug": "stream",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "omega-seiki-mobility",
+        "brandSlug": "omega-seiki",
+        "model": "Rage Plus",
+        "modelSlug": "rage-plus",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "omega-seiki-mobility",
+        "brandSlug": "omega-seiki",
+        "model": "Rage Plus ATR",
+        "modelSlug": "rage-plus-atr",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "omega-seiki-mobility",
+        "brandSlug": "omega-seiki",
+        "model": "Rage Plus RapidEv Pro",
+        "modelSlug": "rage-plus-rapidev-pro",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "omega-seiki-mobility",
+        "brandSlug": "omega-seiki",
+        "model": "Rage Plus Frost",
+        "modelSlug": "rage-plus-frost",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "omega-seiki-mobility",
+        "brandSlug": "omega-seiki",
+        "model": "Rage Plus Garbage Tipper",
+        "modelSlug": "rage-plus-garbage-tipper",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "omega-seiki-mobility",
+        "brandSlug": "omega-seiki",
+        "model": "Swayamgati Cargo",
+        "modelSlug": "swayamgati-cargo",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "omega-seiki-mobility",
+        "brandSlug": "omega-seiki",
+        "model": "Swayamgati",
+        "modelSlug": "swayamgati",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "omega-seiki-mobility",
+        "brandSlug": "omega-seiki",
+        "model": "NRG",
+        "modelSlug": "nrg",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "osm",
+        "brandSlug": "osm",
+        "model": "OSM Rage+ Frost",
+        "modelSlug": "rage-frost",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "osm",
+        "brandSlug": "osm",
+        "model": "OSM Rage+ Flame",
+        "modelSlug": "rage-flame",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "osm",
+        "brandSlug": "osm",
+        "model": "OSM Rage+ Blaze",
+        "modelSlug": "rage-blaze",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "osm",
+        "brandSlug": "osm",
+        "model": "OSM Stream Highway",
+        "modelSlug": "stream-highway",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "osm",
+        "brandSlug": "osm",
+        "model": "OSM Swayamgati Cargo Plus",
+        "modelSlug": "swayamgati-cargo-plus",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "piaggio-ape",
+        "brandSlug": "piaggio",
+        "model": "Ape Auto Plus",
+        "modelSlug": "ape-auto-plus",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "piaggio-ape",
+        "brandSlug": "piaggio",
+        "model": "Ape Auto DX",
+        "modelSlug": "ape-auto-dx",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "piaggio-ape",
+        "brandSlug": "piaggio",
+        "model": "Ape Auto HT DX",
+        "modelSlug": "ape-auto-ht-dx",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "piaggio-ape",
+        "brandSlug": "piaggio",
+        "model": "Ape E Xtra FX",
+        "modelSlug": "ape-e-xtra-fx",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "piaggio-ape",
+        "brandSlug": "piaggio",
+        "model": "Ape Truk Plus",
+        "modelSlug": "ape-truk-plus",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "saera-ev",
+        "brandSlug": "saera",
+        "model": "Mayuri Pro Star",
+        "modelSlug": "mayuri-pro-star",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "terra-motors",
+        "brandSlug": "terra-motors",
+        "model": "Kyoro Plus",
+        "modelSlug": "kyoro-plus",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "tvs-king",
+        "brandSlug": "tvs",
+        "model": "King Deluxe",
+        "modelSlug": "king-deluxe",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "tvs-king",
+        "brandSlug": "tvs",
+        "model": "King EV MAX",
+        "modelSlug": "king-ev-max",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "yc-ev",
+        "brandSlug": "yc-electric",
+        "model": "YC Electric Yatri Deluxe",
+        "modelSlug": "yatri-deluxe",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "yc-ev",
+        "brandSlug": "yc-electric",
+        "model": "YC Electric Yatri Cart",
+        "modelSlug": "yatri-cart",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "yc-ev",
+        "brandSlug": "yc-electric",
+        "model": "YC Electric E Loader",
+        "modelSlug": "e-loader",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "youdha",
+        "brandSlug": "youdha",
+        "model": "YOUDHA Trevo Cargo",
+        "modelSlug": "trevo-cargo",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "youdha",
+        "brandSlug": "youdha",
+        "model": "YOUDHA Trevo Cargo Plus",
+        "modelSlug": "trevo-cargo-plus",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "youdha",
+        "brandSlug": "youdha",
+        "model": "YOUDHA EPOD Cargo",
+        "modelSlug": "epod-cargo",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "youdha",
+        "brandSlug": "youdha",
+        "model": "YOUDHA EPOD Cargo Plus",
+        "modelSlug": "epod-cargo-plus",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "youdha",
+        "brandSlug": "youdha",
+        "model": "YOUDHA G-Van Cargo",
+        "modelSlug": "g-van-cargo",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "youdha",
+        "brandSlug": "youdha",
+        "model": "YOUDHA G-Van Cargo Plus",
+        "modelSlug": "g-van-cargo-plus",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "youdha",
+        "brandSlug": "youdha",
+        "model": "YOUDHA Passenger E-Rickshaw Standard",
+        "modelSlug": "passenger-e-rickshaw",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "youdha",
+        "brandSlug": "youdha",
+        "model": "YOUDHA Passenger E-Rickshaw Deluxe",
+        "modelSlug": "passenger-e-rickshaw-deluxe",
+        "error": "No image URL found"
+      }
+    ],
+    "4w-auto": [
+      {
+        "brand": "ashok-leyland",
+        "brandSlug": "ashok-leyland",
+        "model": "Saathi FSD",
+        "modelSlug": "saathi-fsd",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "ashok-leyland",
+        "brandSlug": "ashok-leyland",
+        "model": "Dost+",
+        "modelSlug": "dost-plus",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "ashok-leyland",
+        "brandSlug": "ashok-leyland",
+        "model": "Bada Dost i3+ 2590",
+        "modelSlug": "bada-dost-i3-plus",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "eicher",
+        "brandSlug": "eicher",
+        "model": "Pro X 2610",
+        "modelSlug": "pro-x-2610",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "eicher",
+        "brandSlug": "eicher",
+        "model": "Pro X 2730",
+        "modelSlug": "pro-x-2730",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "eicher",
+        "brandSlug": "eicher",
+        "model": "Pro X MSC 3.0T",
+        "modelSlug": "pro-x-msc",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "eicher",
+        "brandSlug": "eicher",
+        "model": "Pro 2049",
+        "modelSlug": "pro-2049-bs6",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "mahindra",
+        "brandSlug": "mahindra",
+        "model": "Supro Profit Truck Mini",
+        "modelSlug": "supro-profit-truck-mini",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "tata",
+        "brandSlug": "tata",
+        "model": "Ace Pro",
+        "modelSlug": "ace-pro",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "tata",
+        "brandSlug": "tata",
+        "model": "Ace HT+",
+        "modelSlug": "ace-ht-plus",
+        "error": "No image URL found"
+      },
+      {
+        "brand": "tata",
+        "brandSlug": "tata",
+        "model": "Yodha 2.0",
+        "modelSlug": "yodha-2",
+        "error": "No image URL found"
+      }
+    ]
+  }
+}
