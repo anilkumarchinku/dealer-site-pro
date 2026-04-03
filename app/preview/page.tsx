@@ -209,7 +209,7 @@ function PreviewContent() {
     };
 
     // Dealer name from store or default - include brand name
-    const dealerName = data.dealershipName || `${primaryBrand} Motors`;
+    const dealerName = data.dealershipName || (primaryBrand.toLowerCase().endsWith('motors') ? primaryBrand : `${primaryBrand} Motors`);
 
     // Template configurations with brand colors
     const templateConfigs = {
