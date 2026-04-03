@@ -71,10 +71,29 @@ export async function getDetailedCarInfo(
                 const data = await response.json();
                 if (data && data.vehicles) {
                     const normalizedSearchModel = model.toLowerCase().trim();
-                    const matchingVehicle = data.vehicles.find((vh: any) => {
+
+                    // Find best match: prefer exact match, then longest matching model name
+                    // (prevents "42" matching before "42 Bobber" when searching for "42 bobber")
+                    const candidates = (data.vehicles as any[]).filter((vh: any) => {
                         const m = (vh.model || '').toLowerCase().trim();
-                        return m === normalizedSearchModel || m.includes(normalizedSearchModel) || normalizedSearchModel.includes(m);
+                        return m === normalizedSearchModel || m === normalizedSearchModel || normalizedSearchModel === m ||
+                            (normalizedSearchModel.includes(m) && m.length > 3) ||
+                            m.includes(normalizedSearchModel);
                     });
+                    // Pick the candidate whose model name is closest in length to the search term
+                    const matchingVehicle = candidates.sort((a: any, b: any) => {
+                        const aLen = (a.model || '').length;
+                        const bLen = (b.model || '').length;
+                        const searchLen = model.length;
+                        return Math.abs(aLen - searchLen) - Math.abs(bLen - searchLen);
+                    })[0] || null;
+
+                    // Helper: strip unit suffix from a spec string, return just the number
+                    const parseNum = (val: any): number => {
+                        if (typeof val === 'number') return val;
+                        const s = String(val || '').replace(/[^\d.]/g, '');
+                        return parseFloat(s) || 0;
+                    };
 
                     if (matchingVehicle && matchingVehicle.variants && Array.isArray(matchingVehicle.variants)) {
                         return matchingVehicle.variants.map((v: any) => ({
@@ -84,10 +103,12 @@ export async function getDetailedCarInfo(
                             ex_showroom_price_min_inr: typeof v.price === 'number' ? v.price : (v.price_paise ? Math.round(v.price_paise / 100) : parseInt((v.price||'').replace(/[^0-9]/g, '')) || 0),
                             fuel_type: matchingVehicle.fuel_type === 'electric' ? 'Electric' : 'Petrol',
                             transmission: matchingVehicle.transmission || 'Manual',
-                            engine_displacement_cc: matchingVehicle.engine_cc || matchingVehicle.engine_displacement_cc || 0,
-                            power_bhp: matchingVehicle.max_power || 0,
-                            torque_nm: matchingVehicle.max_torque || matchingVehicle.torque || 0,
-                            mileage_kmpl_or_ev_range: matchingVehicle.fuel_type === 'electric' ? matchingVehicle.range_km : (matchingVehicle.mileage_kmpl || matchingVehicle.mileage || 0),
+                            engine_displacement_cc: parseNum(matchingVehicle.engine_cc || matchingVehicle.engine_displacement),
+                            power_bhp: parseNum(matchingVehicle.max_power),
+                            torque_nm: parseNum(matchingVehicle.max_torque || matchingVehicle.torque),
+                            mileage_kmpl_or_ev_range: matchingVehicle.fuel_type === 'electric'
+                                ? (matchingVehicle.range_km || String(matchingVehicle.mileage || ''))
+                                : (matchingVehicle.mileage_kmpl || matchingVehicle.mileage || 0),
                             seating_capacity: 2,
                             key_features: matchingVehicle.features?.join(', ') || '',
                             safety_features: '',
