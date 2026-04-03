@@ -78,6 +78,19 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): import("@/lib/types/c
         features: { keyFeatures: v.features ?? [] },
         images: { hero: v.images?.[0] ?? '/placeholder-car.jpg', exterior: v.images ?? [], interior: [] },
         colors: (v.colors ?? []).map(c => ({ name: c.name, type: 'Solid' as const, hex: c.hex, extraCost: 0 })),
+        variants: v.all_variants && v.all_variants.length > 0
+            ? v.all_variants.map((av, i) => ({
+                id: `${v.id}-var-${i}`,
+                name: av.name,
+                price: Math.round(av.price_paise / 100),
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                transmission: (v.transmission || 'Manual') as any,
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                fuelType: (v.fuel_type === 'electric' ? 'Electric' : 'Petrol') as any,
+                keyFeatures: v.features ?? [],
+                isPopular: i === 0,
+            }))
+            : undefined,
         meta: { viewCount: v.views ?? 0 },
         price: v.ex_showroom_price_paise > 0
             ? `₹${(v.ex_showroom_price_paise / 100).toLocaleString('en-IN')}`
