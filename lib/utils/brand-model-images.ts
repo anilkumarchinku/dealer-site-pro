@@ -1,16 +1,16 @@
 /**
  * Utility for resolving scraped brand/model fallback images.
  *
- * Images are hosted in Supabase Storage bucket 'brand-model-images':
- *   {SUPABASE_URL}/storage/v1/object/public/brand-model-images/{vehicleCategory}/{brandId}/{model-slug}.jpg
- *   {SUPABASE_URL}/storage/v1/object/public/brand-model-images/{vehicleCategory}/{brandId}/{model-slug}.png
+ * Images are hosted in Supabase Storage bucket 'vehicle-images':
+ *   {SUPABASE_URL}/storage/v1/object/public/vehicle-images/{vehicleCategory}/{brandId}/{model-slug}.jpg
+ *   {SUPABASE_URL}/storage/v1/object/public/vehicle-images/{vehicleCategory}/{brandId}/{model-slug}.png
  *
  * Naming convention: kebab-case, periods removed, spaces → hyphens.
  * e.g. "Splendor Plus Xtec 2.0" → "splendor-plus-xtec-20"
  */
 
 const SUPABASE_STORAGE_URL =
-    "https://llsvbyeumrfngjvbedbz.supabase.co/storage/v1/object/public/brand-model-images";
+    "https://llsvbyeumrfngjvbedbz.supabase.co/storage/v1/object/public/vehicle-images";
 
 /** Convert a model name to the file-system slug used during scraping */
 export function modelToSlug(model: string): string {
